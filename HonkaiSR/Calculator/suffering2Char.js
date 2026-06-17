@@ -2070,7 +2070,6 @@ const battleActions = {
                 if (!currentShield) {continue;}//shield keys can exist after getting removed, but they'll be null
 
                 currentShield.shieldRemaining -= DMGTotalAVG;
-                if (logger) {poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn},targetTurn);}
                 if (currentShield.shieldRemaining < 0) {
                     shieldsWereBroken = true;
                     shieldsBroken += 1;
@@ -2436,7 +2435,6 @@ const battleActions = {
                 if (!currentShield) {continue;}//shield keys can exist after getting removed, but they'll be null
 
                 currentShield.shieldRemaining -= DMGTotalAVG;
-                if (logger) {poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn},targetTurn);}
                 if (currentShield.shieldRemaining < 0) {
                     shieldsWereBroken = true;
                     shieldsBroken += 1;
@@ -4664,6 +4662,14 @@ const battleActions = {
         if (isAttack) {battleData.attackTechniqueUsed = true;}
         if (isDimension) {battleData.dimensionTechniqueUsed = true;}
     },
+    getUniqueGearBuffName(battleData,sourceTurn,buffNames,buffName) {
+        // const logicRef = turnLogicLightcones[lcNameRef];
+        // const buffNames = logicRef.buffNames;
+        // let buffName3 = buffNames.elationVuln;
+        const uniqueName = `${buffName} (${sourceTurn.properName})`;
+        buffNames[sourceTurn.properName] = uniqueName;
+        return uniqueName;
+    },
 }
 const pullSuperBreakDMGMulti = battleActions.pullSuperBreakDMGMulti;
 const pullBreakDMGMulti = battleActions.pullBreakDMGMulti;
@@ -6452,6 +6458,12 @@ const turnLogic = {
                     const listener3 = passiveListeners[2];
                     addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
 
+                    const allEnemiesArray = battleData.allEnemiesArray;
+                    const listener4 = passiveListeners[3];
+                    for (let enemy of allEnemiesArray) {
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,enemy,null,ownerTurn);
+                    }
+
                     getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
                 "target": "self",
@@ -6519,49 +6531,38 @@ const turnLogic = {
                         "listenerName": "Novel Concoction B.E. check",
                         "ownerTurn": {},
                     },
+                    {
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
+
+                            let buffName = this.buffName ??= turnLogic[providerTurn.properName].buffNames.besotted;
+                            let besottedWasFound = personalOwner.buffsObject[buffName];
+                            if (!besottedWasFound) {return;}
+
+                            
+                            // let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy) {return;}//is the attack coming from an allied source
+                            
+        
+                            let healCall = this.healCall ??= turnLogic[providerTurn.properName].skillFunctions.gallagherTalentHeal;
+        
+                            let enhancedCheck = providerTurn.battleValues.nextBasicEnhanced;
+                            if (sourceTurn.properName === providerTurn.properName && generalInfo.dmgSlot === "Basic ATK" && enhancedCheck) {
+                                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Activated "Bottoms Up"`});}
+                                healCall(battleData,null,providerTurn,battleData.allyPositions,1);
+                            }
+                            else {
+                                healCall(battleData,sourceTurn,providerTurn,null,1);
+                            }
+                        },
+                        "target": "allies",
+                        "isPersonal": true,
+                        "listenerName": "Besotted Healing controller",
+                        "ownerTurn": {},
+                    },
                 ],
-            },
-            {
-                "trigger": "AttackEnd",
-                condition(battleData,generalInfo) {
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.isEnemy) {return;}//is the attack coming from an allied source
-                    // let charSlot = sourceTurn.name;
-
-                    let logicRef = turnLogic[characterName];
-                    let buffName = this.buffName ??= logicRef.buffNames.besotted;
-                    const targetsGotHit = generalInfo.targetsGotHit;
-                    //CONFIRMED USING ASTA BOUNCE: healing was evaluated after the attack completed and bounces were finished, thank GOD
-                    //this would have sucked major anus if we had to evaluate it on a hit-by-hit basis
-                    let besottedWasFound = false;
-
-                    let healCall = this.healCall ??= logicRef.skillFunctions.gallagherTalentHeal;
-                    let timesToHeal = 0;
-                    const enemyTurns = battleData.enemyBasedTurns;
-                    for (let targetHit in targetsGotHit) {
-                        const currentTarget = enemyTurns[targetHit];
-                        if (currentTarget.buffsObject[buffName]) {
-                            timesToHeal += 1;
-                            besottedWasFound = true;
-                        }
-                    } 
-
-                    if (besottedWasFound) {
-                        let enhancedCheck = logicRef.characterValuesBattle.nextBasicEnhanced;
-                        if (sourceTurn.properName === characterName && generalInfo.dmgSlot === "Basic ATK" && enhancedCheck) {
-                            if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Activated "Bottoms Up"`});}
-                            healCall(battleData,null,ownerTurn,battleData.allyPositions,1);
-                        }
-                        else {
-                            healCall(battleData,sourceTurn,ownerTurn,null,timesToHeal);
-                        }
-                    }
-                },
-                "target": "allies",
-                "listenerName": "Besotted Healing controller",
-                "ownerTurn": {},
             },
             {
                 "trigger": "UltimateReady",
@@ -7662,7 +7663,11 @@ const turnLogic = {
 
                     //talent invigoration ally hit listener
                     const listener2 = passiveListeners[1];
-                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    const allAlliesArray = battleData.allAlliesArray;
+                    for (let ally of allAlliesArray) {
+                        addListenerWithPriority(battleData,listener2,listener2.trigger,ally,null,ownerTurn);
+                    }
+                    
 
                     getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
@@ -7719,33 +7724,38 @@ const turnLogic = {
                         "listenerName": "Trace & E4 skill healing listener",
                     },
                     {
-                        "trigger": "AttackEnd",
-                        condition(battleData,generalInfo) {
-                            let ownerTurn = this.ownerTurn;
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
+                            if (personalOwner.isDead) {return;}
         
                             const sourceTurn = generalInfo.sourceTurn;
                             if (!sourceTurn.isEnemy) {return;}//we only care about hostile attacks coming in
-        
-                            const targetsGotHit = generalInfo.targetsGotHit;
-                            const allyTurns = battleData.nameBasedTurns;
 
-                            const logicRef = turnLogic[ownerTurn.properName];
-                            const ATKObjects = logicRef.ATKObjects;
-                            const invigoration = this.invigoration ??= ATKObjects.bailuInvigorationSHEET;
-                            //normally don't EVER cache an ATKObjects sheet, but this sheet doesn't have stats so we don't actually care
+                            const currentAlly = personalOwner;
+
+                            const buffsObject = currentAlly.buffsObject;
+                            const invigoration = this.invigoration ??= turnLogic[providerTurn.properName].ATKObjects.bailuInvigorationSHEET;
                             const invigName = invigoration.buffName;
-                            const drName = this.drName ??= turnLogic[ownerTurn.properName].buffNames.traceDR;
-                            const rank = ownerTurn.rank;
+                            const buffCheck = buffsObject[invigName];
+                            if (!buffCheck) {return;}
+        
 
+                            const logicRef = turnLogic[providerTurn.properName];
+                            const ATKObjects = logicRef.ATKObjects;
                             
+                            //normally don't EVER cache an ATKObjects sheet, but this sheet doesn't have stats so we don't actually care
+
+                            const drName = this.drName ??= turnLogic[providerTurn.properName].buffNames.traceDR;
+                            const rank = providerTurn.rank;
 
 
                             if (!ATKObjects.bailuTalentHealHEALOBJECT) {
                                 let skillRef = ATKObjects.bailuTalentREF ??= ATKObjects.Talent["Gourdful of Elixir"].variant1;
-                                let values = ATKObjects.bailuTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                                let values = ATKObjects.bailuTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,providerTurn);
             
                                 const actionTags = ["All","Heal","Talent"];
-                                const compositeCacheTag = actionTags + ownerTurn.properName;
+                                const compositeCacheTag = actionTags + providerTurn.properName;
                                 ATKObjects.bailuTalentHealHEALOBJECT = {
                                     multipliers: {
                                         primary: values[0],
@@ -7765,36 +7775,28 @@ const turnLogic = {
                                 }
                             }
                             let healObject = ATKObjects.bailuTalentHealHEALOBJECT;
-                            
-                            for (let allyHit in targetsGotHit) {
-                                const currentAlly = allyTurns[allyHit];
 
-                                const buffsObject = currentAlly.buffsObject;
-                                const buffCheck = buffsObject[invigName];
-                                if (buffCheck) {
+                            healAlly(battleData,healObject,currentAlly,providerTurn,"Talent",1,null);
 
-                                    healAlly(battleData,healObject,currentAlly,ownerTurn,"Talent",1,null);
+                            const currentStacks = buffCheck.currentStacks;
+                            if (currentStacks === 1) {
+                                removeBuff(battleData,currentAlly,buffCheck);
+                                removeBuff(battleData,currentAlly,buffsObject[drName]);
 
-                                    const currentStacks = buffCheck.currentStacks;
-                                    if (currentStacks === 1) {
-                                        removeBuff(battleData,currentAlly,buffCheck);
-                                        removeBuff(battleData,currentAlly,buffsObject[drName]);
-
-                                        if (rank >= 1) {
-                                            const hpMaxed = currentAlly.currentHP === currentAlly.maxHP;
-                                            if (hpMaxed) {
-                                                updateEnergy(battleData,8,currentAlly,true,"Bailu E1 Invigoration Ended")
-                                            }
-                                        }
-                                    }
-                                    else {
-                                        invigoration.currentStacks = -1;
-                                        updateBuff(battleData,currentAlly,invigoration);
+                                if (rank >= 1) {
+                                    const hpMaxed = currentAlly.currentHP === currentAlly.maxHP;
+                                    if (hpMaxed) {
+                                        updateEnergy(battleData,8,currentAlly,true,"Bailu E1 Invigoration Ended")
                                     }
                                 }
                             }
+                            else {
+                                invigoration.currentStacks = -1;
+                                updateBuff(battleData,currentAlly,invigoration);
+                            }
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Attack end - allies with Invigoration hit/regen",
                         "owners": []
                     },
@@ -8314,83 +8316,64 @@ const turnLogic = {
                         "owners": []
                     },
                     {
-                        "trigger": "AttackEnd",
-                        condition(battleData,generalInfo) {
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {
                             let ownerTurn = this.ownerTurn;
-                            let characterName = ownerTurn.properName;
-                            let sourceTurn = generalInfo.sourceTurn;
+                            // let characterName = ownerTurn.properName;
+                            // let sourceTurn = generalInfo.sourceTurn;
                             // const targetTurn = generalInfo.targetTurn;
-                            if (!sourceTurn.isEnemy) {return;}
+                            // if (!sourceTurn.isEnemy) {return;}//does not care about source here
                             //only allow attacks from enemies, to natasha
         
         
-                            let targetsGotHit = generalInfo.targetsGotHit;//this is all allies hit
-                            const namedTurns = battleData.nameBasedTurns;
-                            let tashaWasHit = false;
-                            for (let allyHit in targetsGotHit) {
-                                if (namedTurns[allyHit].properName === characterName) {
-                                    tashaWasHit = true;
-                                    break;
-                                }
-                            }
         
-                            if (tashaWasHit) {
-                                const hpRatio = ownerTurn.currentHP / ownerTurn.maxHP;
-        
-                                if (hpRatio <= 0.30) {
-                                    const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
-                                        name: this.listenerName,
-                                        priority: priorityList.ability.CharacterHealSelf,
-                                        queueTag: "QueuedInsert",
-                
-                                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.natashaE1InsertHeal,
-                                        action: "Insert",
-                
-                                        isInserted: true,
-                                        dontKeepNextWave: false,//ults always clear out
-                                        isAttack: false,
-                                        isAbility: true,
-                                        useAnyTriggers: true,
-                                        eventTypeStartLOG: "GenericAbilityStart",
-                
-                                        poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.E1,
-                                    })
+                            const hpRatio = ownerTurn.currentHP / ownerTurn.maxHP;
+    
+                            if (hpRatio <= 0.30) {
+                                const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                                    name: this.listenerName,
+                                    priority: priorityList.ability.CharacterHealSelf,
+                                    queueTag: "QueuedInsert",
             
-                                    queueObject.sourceTurn = ownerTurn;
-                                    queueObject.target = [ownerTurn];
-                                    queueInsertAbility(battleData,queueObject);
+                                    actionCall: turnLogic[ownerTurn.properName].skillFunctions.natashaE1InsertHeal,
+                                    action: "Insert",
+            
+                                    isInserted: true,
+                                    dontKeepNextWave: false,//ults always clear out
+                                    isAttack: false,
+                                    isAbility: true,
+                                    useAnyTriggers: true,
+                                    eventTypeStartLOG: "GenericAbilityStart",
+            
+                                    poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.E1,
+                                })
         
-                                    removeListener(battleData,this,ownerTurn);
-                                    //remove listener as it an only happen once per fight.
-                                }
+                                queueObject.sourceTurn = ownerTurn;
+                                queueObject.target = [ownerTurn];
+                                queueInsertAbility(battleData,queueObject);
+    
+                                removeListener(battleData,this,ownerTurn);
+                                //remove listener as it an only happen once per fight.
                             }
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Natasha E1 once-per-battle healing",
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "AttackEnd",
-                        condition(battleData,generalInfo) {
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {
                             let ownerTurn = this.ownerTurn;
-                            let characterName = ownerTurn.properName;
+                            // let characterName = ownerTurn.properName;
                             let sourceTurn = generalInfo.sourceTurn;
                             // const targetTurn = generalInfo.targetTurn;
-                            if (!sourceTurn.isEnemy) {return;}
+                            // if (!sourceTurn.isEnemy) {return;}//does not care about source here
                             //only allow attacks from enemies, to natasha
-    
-    
-                            let targetsGotHit = generalInfo.targetsGotHit;//this is all allies hit
-                            // const streetwise = this.streetwise ??= turnLogicRelics["Champion of Streetwise Boxing"]["4pc"].skillFunctions.streetwise;
-                            const namedTurns = battleData.nameBasedTurns;
-                            for (let allyHit in targetsGotHit) {
-                                if (namedTurns[allyHit].properName === characterName) {
-                                    updateEnergy(battleData,5,ownerTurn,false,"E4: Miracle Cure");
-                                    break;
-                                }
-                            }
+                            updateEnergy(battleData,5,ownerTurn,false,"E4: Miracle Cure");
                         },
                         "target": "allies",
+                        "isPersonal": true,
                         "listenerName": "Natasha E4 energy gain on attacked",
                         "ownerTurn": {},
                     },
@@ -8904,7 +8887,11 @@ const turnLogic = {
 
                     //trace advanced survey
                     const listener1 = passiveListeners[0];
-                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    const allAlliesArray = battleData.allAlliesArray;
+                    for (let ally of allAlliesArray) {
+                        addListenerWithPriority(battleData,listener1,listener1.trigger,ally,null,ownerTurn);
+                    }
+
 
                     //trace exploration
                     let buffSheet = this.lynxCCRES ??= {
@@ -8929,7 +8916,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
                     }
 
-                    const allAlliesArray = battleData.allAlliesArray;
+                    
                     const listener3 = passiveListeners[2];
                     for (let ally of allAlliesArray) {
                         addListenerWithPriority(battleData,listener3,listener3.trigger,ally,null,ownerTurn);
@@ -8942,30 +8929,23 @@ const turnLogic = {
                 "ownerTurn": {},
                 "passiveListeners": [
                     {
-                        "trigger": "AttackEnd",
-                        condition(battleData,generalInfo) {
-                            let ownerTurn = this.ownerTurn;
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
+                            // let ownerTurn = this.ownerTurn;
         
                             const sourceTurn = generalInfo.sourceTurn;
                             if (!sourceTurn.isEnemy) {return;}//we only care about hostile attacks coming in
         
-                            const targetsGotHit = generalInfo.targetsGotHit;
-        
-                            const survivalName = turnLogic[ownerTurn.properName].buffNames.skillHOT;
-        
-                            const allyTurns = battleData.nameBasedTurns;
-                            let totalAlliesHit = 0;
-                            for (let allyHit in targetsGotHit) {
-                                const currentAlly = allyTurns[allyHit];
-                                const buffCheck = currentAlly.buffsObject[survivalName];
-                                if (buffCheck) {totalAlliesHit++;}
-                            }
-        
-                            if (totalAlliesHit) {
-                                updateEnergy(battleData,2 * totalAlliesHit,ownerTurn,false,"Trace: Advance Surveying - Allies hit with Survival Response");
+                            const survivalName = this.skillHOT ??= turnLogic[providerTurn.properName].buffNames.skillHOT;
+
+                            const hasBuff = personalOwner.buffsObject[survivalName];
+                            if (hasBuff) {
+                                updateEnergy(battleData,2,providerTurn,false,"Trace: Advance Surveying - Ally hit with Survival Response");
                             }
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Advance Surveying trace - allies hit with skill buff",
                         "owners": []
                     },
@@ -13444,14 +13424,20 @@ const turnLogic = {
                     }
 
                     //e6
+                    const allEnemiesArray = battleData.allEnemiesArray;
                     if (rank >= 6) {
+                        
                         const listener7 = passiveListeners[6];
-                        addListenerWithPriority(battleData,listener7,listener7.trigger,ownerTurn);
+                        for (let enemy of allEnemiesArray) {
+                            addListenerWithPriority(battleData,listener7,listener7.trigger,enemy,null,ownerTurn);
+                        }
                     }
 
                     //trace viscera
                     const listener8 = passiveListeners[7];
-                    addListenerWithPriority(battleData,listener8,listener8.trigger,ownerTurn);
+                    for (let enemy of allEnemiesArray) {
+                        addListenerWithPriority(battleData,listener8,listener8.trigger,enemy,null,ownerTurn);
+                    }
 
                     //trace goblet
                     const listener9 = passiveListeners[8];
@@ -13714,51 +13700,44 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "AttackEnd",
-                        condition(battleData,generalInfo) {
-                            const ownerTurn = this.ownerTurn;
+                        "trigger": "WasAttackedStart",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
+                            // const ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
                             if (sourceTurn.isEnemy) {return;}
     
-                            const targetsGotHit = generalInfo.targetsGotHit;
-                            const enemyTurns = battleData.enemyBasedTurns;
-                            const dotFunction = this.blackswanArcanaDOTFunction ??= turnLogic[ownerTurn.properName].skillFunctions.blackswanArcanaDOT;
-                            for (let enemy in targetsGotHit) {
-                                const enemyTurn = enemyTurns[enemy];
-                                dotFunction(battleData,ownerTurn,enemyTurn,null,1);
-                            }
+                            // const targetsGotHit = generalInfo.targetsGotHit;
+                            // const enemyTurns = battleData.enemyBasedTurns;
+                            const dotFunction = this.blackswanArcanaDOTFunction ??= turnLogic[providerTurn.properName].skillFunctions.blackswanArcanaDOT;
+                            dotFunction(battleData,providerTurn,personalOwner,null,1);
+                            // for (let enemy in targetsGotHit) {
+                            //     const enemyTurn = enemyTurns[enemy];
+                            //     dotFunction(battleData,providerTurn,enemyTurn,null,1);
+                            // }
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Black Swan E6 ally attacked listener",
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "AttackDMGEnd",
-                        condition(battleData,generalInfo) {//TODO: read note
-                            //right now I can't tell if this would ever at the start of an attack dmg or the end
-                            //technically it CANT matter yet bc BS has no detonate, and the only way it could actually impact anything is if
-                            //she had a detonate
-                            //it could technically matter for something like prisoner, but it's impossible to test bc arcana can't be removed so the stack will ALWAYS exist
-                            //so again, it could only ever matter if BS herself could ever be the provider of a detonate in that attack
-                            let ownerTurn = this.ownerTurn;
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
+                            // let ownerTurn = this.ownerTurn;
         
                             const sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.properName != ownerTurn.properName) {return;}
+                            if (sourceTurn.properName != providerTurn.properName) {return;}
         
-                            const targetsGotHit = generalInfo.targetsGotHit;
-        
-                            const enemyPositions = battleData.enemyPositions;
                             const stacks = 5;
-                            const dotFunction = this.blackswanArcanaDOTFunction ??= turnLogic[ownerTurn.properName].skillFunctions.blackswanArcanaDOT;
+                            const dotFunction = this.blackswanArcanaDOTFunction ??= turnLogic[providerTurn.properName].skillFunctions.blackswanArcanaDOT;
         
-                            for (let enemy of enemyPositions) {
-                                if (!targetsGotHit[enemy.name]) {continue;}
-                                dotFunction(battleData,ownerTurn,enemy,generalInfo,stacks,false,true);
-                            }
+                            dotFunction(battleData,providerTurn,personalOwner,generalInfo,stacks,false,true);
                         },
                         "target": "enemy",
                         "isPersonal": true,
-                        "listenerName": "Viscera's Disquiet - attack dmg end listener",
+                        "listenerName": "Viscera's Disquiet - enemy attacked by Black Swan listener",
                         "ownerTurn": {},
                     },
                     {
@@ -14390,6 +14369,13 @@ const turnLogic = {
                     const listener6 = passiveListeners[5];
                     addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
 
+                    const allEnemiesArray = battleData.allEnemiesArray;
+                    const listener7 = passiveListeners[6];
+                    //enemy weightless delay listener
+                    for (let enemy of allEnemiesArray) {
+                        addListenerWithPriority(battleData,listener7,listener7.trigger,enemy,null,ownerTurn);
+                    }
+
                     // getTechnique(battleData,ownerTurn,logicRef,1,false,true)
                 },
                 "target": "self",
@@ -14564,8 +14550,6 @@ const turnLogic = {
                                 };
                             
                                 updateBuff(battleData,sourceTurn,buffSheet);
-        
-                                actionAdvance(-0.04,targetTurn,battleData,"Delay (Weightless)");
                             }
                         },
                         "target": "enemy",
@@ -14586,6 +14570,39 @@ const turnLogic = {
                         },
                         "target": "self",
                         "listenerName": "Punishment EHR check",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WasAttackedStart",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const targetTurn = personalOwner;
+                            if (!targetTurn.weltWeightlessCounter) {return;}
+
+
+                            const providerTurn = this.providerTurn;
+                            let ownerTurn = this.ownerTurn;
+        
+                            // ownerTurn.weightlessSheetName
+                            const sourceTurn = generalInfo.sourceTurn;
+                            // const targetsGotHit = generalInfo.targetsGotHit;
+                            
+                            if (sourceTurn.isEnemy) {return;}//we only evaluate first hits, on allied attacks
+        
+                            const weightName = providerTurn.weightlessSheetName;
+                            if (!weightName) {return;}
+        
+                            const weightCheck = targetTurn.buffsObject[weightName];
+        
+                            if (weightCheck) {
+        
+                                actionAdvance(-0.04,targetTurn,battleData,"Delay (Weightless)");
+
+                                targetTurn.weltWeightlessCounter -= 1;
+                            }
+                        },
+                        "target": "enemy",
+                        "isPersonal": true,
+                        "listenerName": "Ally hit weightless target buff application",
                         "ownerTurn": {},
                     },
                 ],
@@ -15253,9 +15270,12 @@ const turnLogic = {
                     const listener3 = passiveListeners[2];
                     addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
 
-                    //blade attacked in zone
+                    //allies attacked enemies in zone
+                    const allAlliesArray = battleData.allAlliesArray;
                     const listener4 = passiveListeners[3];
-                    addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+                    for (let ally of allAlliesArray) {
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,ally,null,ownerTurn);
+                    }
 
 
                     const fullCharacterArray = battleData.fullCharacterArray;
@@ -15305,7 +15325,6 @@ const turnLogic = {
                             "expireType": null,
                             "actionTags": ["FUA"],
                         }
-                        const allAlliesArray = battleData.allAlliesArray;
 
                         updateBuffBatchTargets(battleData,allAlliesArray,buffSheet);
                     }
@@ -15317,6 +15336,10 @@ const turnLogic = {
                         const listener11 = passiveListeners[10];
                         addListenerWithPriority(battleData,listener11,listener11.trigger,ownerTurn);
                     }
+
+                    //blade attacked in zone
+                    const listener12 = passiveListeners[11];
+                    addListenerWithPriority(battleData,listener12,listener12.trigger,ownerTurn);
 
                     getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
@@ -15425,41 +15448,30 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "AttackDMGEnd",
+                        "trigger": "AttackDMGEnd",//allies use this, blade uses WasAttackedEnd though
                         condition(battleData,generalInfo) {
+                            const providerTurn = this.providerTurn;
                             const ownerTurn = this.ownerTurn;
-                            if (!ownerTurn.battleValues.bladeFuryActive) {return;}
+                            if (!providerTurn.battleValues.bladeFuryActive) {return;}
 
-                            const sourceTurn = generalInfo.sourceTurn;
+                            // const sourceTurn = generalInfo.sourceTurn;
                             const targetsGotHit = generalInfo.targetsGotHit;
-                            if (sourceTurn.isEnemy) {
-                                const bladeWasHit = targetsGotHit[ownerTurn.name];
+                            const balefireSheet = ownerTurn.bladeMBalefireDEBUFFSHEET;
 
-                                if (!bladeWasHit) {return;}
-
-                                const preObject = this.preObject ??= {pointsGained: 1,sourceString:"Mortenax Blade was Attacked in Zone"};
-                                poke("mortenaxBladeGainCharge",battleData,preObject);
-
-                                const balefireSheet = ownerTurn.bladeMBalefireDEBUFFSHEET;
-                                updateBuff(battleData,sourceTurn,balefireSheet);
+                            let targetsHitArray = [];
+                            const enemyBasedTurns = battleData.enemyBasedTurns;
+                            for (let enemySlot in targetsGotHit) {
+                                const enemyTurn = enemyBasedTurns[enemySlot];
+                                targetsHitArray.push(enemyTurn);
                             }
-                            else {
-                                const balefireSheet = ownerTurn.bladeMBalefireDEBUFFSHEET;
+                            updateBuffBatchTargets(battleData,targetsHitArray,balefireSheet);
 
-                                let targetsHitArray = [];
-                                const enemyBasedTurns = battleData.enemyBasedTurns;
-                                for (let enemySlot in targetsGotHit) {
-                                    const enemyTurn = enemyBasedTurns[enemySlot];
-                                    targetsHitArray.push(enemyTurn);
-                                }
-                                updateBuffBatchTargets(battleData,targetsHitArray,balefireSheet);
-
-                                const preObject = this.preObject2 ??= {pointsGained: 1,sourceString:"Allied Entity attacked target in Zone"};
-                                poke("mortenaxBladeGainCharge",battleData,preObject);
-                            }
+                            const preObject = this.preObject2 ??= {pointsGained: 1,sourceString:"Allied Entity attacked target in Zone"};
+                            poke("mortenaxBladeGainCharge",battleData,preObject);
                         },
                         "target": "self",
-                        "listenerName": "Soul, Tempered ad Mortem/Talent - Attack DMG end listetner, both ally/enemy",
+                        "isPersonal": true,
+                        "listenerName": "Soul, Tempered ad Mortem/Talent - ally Attack DMG end listetner",
                         "ownerTurn": {},
                     },
                     {
@@ -15591,6 +15603,26 @@ const turnLogic = {
                         "target": "self",
                         "isPersonal": true,
                         "listenerName": "E6: blade lost hp charge gain check",
+                    },
+                    {
+                        "trigger": "WasAttackedEnd",//allies use this, blade uses WasAttackedEnd though
+                        condition(battleData,generalInfo,personalOwner) {
+                            const ownerTurn = this.ownerTurn;
+                            if (!ownerTurn.battleValues.bladeFuryActive) {return;}
+
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy) {
+                                const preObject = this.preObject ??= {pointsGained: 1,sourceString:"Mortenax Blade was Attacked in Zone"};
+                                poke("mortenaxBladeGainCharge",battleData,preObject);
+
+                                const balefireSheet = ownerTurn.bladeMBalefireDEBUFFSHEET;
+                                updateBuff(battleData,sourceTurn,balefireSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Soul, Tempered ad Mortem/Talent - Blade Attacked in zone",
+                        "ownerTurn": {},
                     },
                 ],
             },
@@ -16764,11 +16796,15 @@ const turnLogic = {
                     const listener1 = passiveListeners[0];
                     addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
 
-                    //e1
-                    if (rank >= 1) {
-                        const listener2 = passiveListeners[1];
-                        addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    //e1 and numby advancement
+                    const listener2 = passiveListeners[1];
+                    const allEnemiesArray = battleData.allEnemiesArray;
+                    for (let enemy of allEnemiesArray) {
+                        addListenerWithPriority(battleData,listener2,listener2.trigger,enemy,null,ownerTurn);
                     }
+                    // if (rank >= 1) {
+                    //     addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    // }
 
                     //e4
                     if (rank >= 4) {
@@ -16837,14 +16873,19 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "HitEnemyStart",
-                        condition(battleData,generalInfo) {
-                            const ownerTurn = this.ownerTurn;
-    
-                            const sourceTurn = generalInfo.sourceTurn;
-                            const targetsGotHit = generalInfo.targetsGotHit;
-                            const targetTurn = generalInfo.targetTurn;
-                            if (sourceTurn.isEnemy || targetsGotHit[targetTurn.name] != 1) {return;}//we only evaluate first hits, from allies
+                        "trigger": "WasAttackedStart",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
+                            // const ownerTurn = this.ownerTurn;
+                            // const sourceTurn = generalInfo.sourceTurn;
+                            // const targetsGotHit = generalInfo.targetsGotHit;
+                            const targetTurn = personalOwner;
+        
+                            // const characterName = ownerTurn.properName;
+                            // const logicRef = turnLogic[characterName];
+                            const battleValues = providerTurn.battleValues;
+                            const enemyWithDebt = battleValues.enemyWithDebt;
+                            if (enemyWithDebt.properName != targetTurn.properName) {return;}
 
                             let isFUA = false;
                             const actionTags = generalInfo.ATKObject.actionTags;
@@ -16854,50 +16895,60 @@ const turnLogic = {
                                     break;
                                 }
                             }
-                            if (!isFUA) {return;}
-    
-    
-                            const characterName = ownerTurn.properName;
-                            const logicRef = turnLogic[ownerTurn.properName];
-                            const ATKObjects = logicRef.ATKObjects;
-    
-                            const enemyWithDebt = logicRef.characterValuesBattle.enemyWithDebt;
-                            // if (targetTurn.properName != enemyWithDebt.properName) {return}//can only apply to those with proof of debt, aka the primary target
-                            //in theory this is a completely useless check as topaz will only ever do single target dmg, and bc of that only the primary target will be hit
-    
-    
-                            if (enemyWithDebt.topazE1DebtorSTACKCOMPLETE) {return;}
-                            const buffName = logicRef.buffNames.e1Debtor;
-                            if (!ATKObjects.topazE1DebtorSTACKSHEET) {
         
-                                ATKObjects.topazE1DebtorSTACKSHEET = {
-                                    "stats": [CritDamageBase],
-                                    [CritDamageBase]: 0.25,
-                                    "source": characterName,
-                                    "sourceOwner": ownerTurn.properName,
-                                    "buffName": buffName,
-                                    "durationInTurn": null,
-                                    "duration": 1,
-                                    "AVApplied": 0,
-                                    "maxStacks": 2,
-                                    "currentStacks": 1,
-                                    "decay": false,
-                                    "expireType": null,
-                                    "isDebuff": true,
-                                    "actionTags": ["FUA"]
+                            const numbyTurn = providerTurn.topazNUMBYTURNEVENT;
+                            if (!numbyTurn.turnState) {//numby can't advance himself, but topaz can advance him
+                                
+                                if (isFUA) {
+                                    actionAdvance(0.5,numbyTurn,battleData,"Ally FUA - Talent");
+                                }
+                                if (battleValues.isBonanzaActive) {
+                                    const slot = generalInfo.dmgSlot;
+                                    const slotCheck = slot === "Basic ATK" || slot === "Skill" || slot === "Ultimate";
+                                    if (slotCheck) {
+                                        actionAdvance(0.5,numbyTurn,battleData,"Ally Attack - Ult Active");
+                                    }
+                                    //TODO: confirm that he can double advance off something like topaz skill/basic, cause he should
                                 }
                             }
-                            let buffSheet = ATKObjects.topazE1DebtorSTACKSHEET;
-    
-    
-                            updateBuff(battleData,enemyWithDebt,buffSheet);
-                            const buffCheck = enemyWithDebt.buffsObject[buffName];
-                            if (buffCheck.currentStacks === 2) {
-                                enemyWithDebt.topazE1DebtorSTACKCOMPLETE = true;
+                            if (isFUA) {
+                                if (enemyWithDebt.topazE1DebtorSTACKCOMPLETE) {return;}
+
+                                const logicRef = turnLogic[providerTurn.properName];
+                                const ATKObjects = logicRef.ATKObjects;
+
+                                const buffName = logicRef.buffNames.e1Debtor;
+                                if (!ATKObjects.topazE1DebtorSTACKSHEET) {
+            
+                                    ATKObjects.topazE1DebtorSTACKSHEET = {
+                                        "stats": [CritDamageBase],
+                                        [CritDamageBase]: 0.25,
+                                        "source": "E1",
+                                        "sourceOwner": providerTurn.properName,
+                                        "buffName": buffName,
+                                        "durationInTurn": null,
+                                        "duration": 1,
+                                        "AVApplied": 0,
+                                        "maxStacks": 2,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null,
+                                        "isDebuff": true,
+                                        "actionTags": ["FUA"]
+                                    }
+                                }
+                                let buffSheet = ATKObjects.topazE1DebtorSTACKSHEET;
+        
+                                updateBuff(battleData,enemyWithDebt,buffSheet);
+                                const buffCheck = enemyWithDebt.buffsObject[buffName];
+                                if (buffCheck.currentStacks === 2) {
+                                    enemyWithDebt.topazE1DebtorSTACKCOMPLETE = true;
+                                }
                             }
                         },
                         "target": "enemy",
-                        "listenerName": "Future Market Debtor controller",
+                        "isPersonal": true,
+                        "listenerName": "Numby's advancement controller/E1 Debtor controller",
                         "ownerTurn": {},
                     },
                     {
@@ -16914,7 +16965,6 @@ const turnLogic = {
                         "listenerName": "E4 Agile Operation",
                         "ownerTurn": {},
                     },
-
                 ],
             },
             {
@@ -16932,7 +16982,18 @@ const turnLogic = {
     
                         actionCall: turnLogic[ownerTurn.properName].skillFunctions.numbyTurnAttackAction,
                         action: "Insert",
-                        abortCheck: null,//(battleData,actionObject,sourceTurn)
+                        abortCheck(battleData,actionObject,sourceTurn) {
+                            const target = actionObject.target[0];
+                            if (target.isDead) {
+                                const newTarget = sourceTurn.battleValues.enemyWithDebt;
+                                if (newTarget) {
+                                    actionObject.target = [newTarget];
+                                }
+                                else {
+                                    return true;
+                                }
+                            }
+                        },
     
                         isInserted: true,
                         dontKeepNextWave: false,//ults always clear out
@@ -16948,7 +17009,7 @@ const turnLogic = {
 
                     queueObject.sourceTurn = ownerTurn;
                     queueObject.isEnhanced = isEnhanced;
-                    queueObject.target = [battleData.primaryTarget];
+                    queueObject.target = [valuesRef.enemyWithDebt];
                     queueInsertAbility(battleData,queueObject);
                 },
                 "target": "enemy",
@@ -17121,50 +17182,6 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Topaz - Ultimate queued",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "HitEnemyStart",
-                condition(battleData,generalInfo) {
-                    const ownerTurn = this.ownerTurn;
-                    const sourceTurn = generalInfo.sourceTurn;
-                    // const targetsGotHit = generalInfo.targetsGotHit;
-                    const targetTurn = generalInfo.targetTurn;
-
-                    // const characterName = ownerTurn.properName;
-                    // const logicRef = turnLogic[characterName];
-                    const battleValues = ownerTurn.battleValues;
-                    const enemyWithDebt = battleValues.enemyWithDebt;
-                    if (enemyWithDebt.properName != targetTurn.properName) {return;}
-
-                    
-                    const targetsGotHit = generalInfo.targetsGotHit;
-                    if (targetsGotHit[targetTurn.name] != 1) {return;}//we only evaluate first hits, from allies
-
-                    const numbyTurn = ownerTurn.topazNUMBYTURNEVENT;
-                    if (numbyTurn.turnState) {return}//numby can't advance himself, but topaz can advance him
-
-                    let isFUA = false;
-                    const actionTags = generalInfo.ATKObject.actionTags;
-                    for (let tag of actionTags) {
-                        if (tag === "FUA") {
-                            isFUA = true;
-                            break;
-                        }
-                    }
-                    if (isFUA) {
-                        actionAdvance(0.5,numbyTurn,battleData,"Ally FUA - Talent");
-                    }
-
-                    const slot = generalInfo.slot;
-                    const slotCheck = slot === "Basic ATK" || slot === "Skill" || slot === "Ultimate";
-                    if (battleValues.isBonanzaActive && slotCheck) {
-                        actionAdvance(0.5,numbyTurn,battleData,"Ally Attack - Ult");
-                    }
-                    //TODO: confirm that he can double advance off something like topaz skill/basic, cause he should
-                },
-                "target": "enemy",
-                "listenerName": "Numby's advancement controller",
                 "ownerTurn": {},
             },
         ],
@@ -18348,10 +18365,18 @@ const turnLogic = {
 
                     //e6
                     if (rank >= 6) {
+                        const allEnemiesArray = battleData.allEnemiesArray;
                         const listener4 = passiveListeners[3];
-                        addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+                        for (let enemy of allEnemiesArray) {
+                            addListenerWithPriority(battleData,listener4,listener4.trigger,enemy,null,ownerTurn);
+                        }
+                        
                         const listener5 = passiveListeners[4];
                         addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+                        const listener6 = passiveListeners[5];
+                        addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
+                        const listener7 = passiveListeners[6];
+                        addListenerWithPriority(battleData,listener7,listener7.trigger,ownerTurn);
                     }
 
                     getTechnique(battleData,ownerTurn,logicRef,2,true,false)
@@ -18469,8 +18494,80 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "AttackEnd",//Flitting Phantasm
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
+                            // poke("AttackEnd",battleData,generalInfo);
+                            // let ownerTurn = this.ownerTurn;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy) {return;}
+    
+                            // const instanceTag = generalInfo.ATKObject.instanceTag;
+                            // const validTag = generalInfo.ATKObject.instanceTag === "SeeleUltDMG";
+                            const buffName = providerTurn.e6FlurrySheetName;
+                            if (!buffName) {return;}
+                            //if we are neither on seele ult to start tracking, or if seele has never ulted yet to have allowed true dmg after, then abort
+    
+                            if (!this.E6FLURRYSHEET) {
+                                const logicRef = turnLogic[providerTurn.properName];
+    
+                                this.E6FLURRYSHEET = {
+                                    "stats": null,
+                                    "source": "E6",
+                                    "sourceOwner": providerTurn.properName,
+                                    "buffName": logicRef.buffNames.e6Flurry,
+                                    "durationInTurn": 4,
+                                    "duration": 3,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "isDebuff": true,
+                                    // "removeOnDeath": true,
+                                }
+                            }
+                            
+                            const buffSheet = this.E6FLURRYSHEET;
+                            const currentEnemy = personalOwner;
+                            const targetCheck = currentEnemy.buffsObject[buffSheet.buffName];
+                            if (targetCheck) {
+                                const convertedDMG = providerTurn.battleValues.e6DMGTracked;
+                                battleActions.trueDMGHitWrapper(battleData,providerTurn,currentEnemy,1,convertedDMG,convertedDMG,convertedDMG,"E6 Butterfly Flurry");
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "E6: Butterfly Flurry true dmg handler",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EnemyDied",//Flitting Phantasm
                         condition(battleData,generalInfo) {
+                            // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                            let ownerTurn = this.ownerTurn;
+                            let targetTurn = generalInfo.enemyKilled;
+    
+                            const flurryName = ownerTurn.e6FlurrySheetName;
+                            if (!targetTurn.isEnemy || !flurryName) {return;}
+    
+                            const flurryCheck = targetTurn.buffsObject[flurryName];
+    
+                            if (flurryCheck) {
+                                //E6 isn't looking for lineup with how resurgence gets queue normally, it only matters that an entity died and had butterly flurry debuff on them,
+                                //so that's the only check we need here.
+                                poke("SeeleEnterAmplification",battleData,null);
+                                poke("SeeleQueueResurgence",battleData,null);
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "E6: Butterfly Flurry - target died with flurry, queue resurgence",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            // const providerTurn = this.providerTurn;
                             // poke("AttackEnd",battleData,generalInfo);
                             let ownerTurn = this.ownerTurn;
                             let sourceTurn = generalInfo.sourceTurn;
@@ -18503,79 +18600,54 @@ const turnLogic = {
                                 }
                             }
                             
-                            if (sourceTurn.name === ownerTurn.name) {
-                                
-                                if (validTag) {
-                                    ownerTurn.battleValues.e6DMGTracked = 0.30 * generalInfo.totals.totalAVGDMG;
-                                    ownerTurn.e6FlurrySheetName = this.E6FLURRYSHEET.buffName;
-                                }
-                                
-                                const buffSheet = this.E6FLURRYSHEET;
-    
-                                const enemyTurns = battleData.enemyBasedTurns;
-                                const targetsGotHit = generalInfo.targetsGotHit;
-                                for (let enemySlot in targetsGotHit) {
-                                    const currentEnemy = enemyTurns[enemySlot];
-    
-                                    const targetCheck = currentEnemy.buffsObject[buffSheet.buffName];
-    
-                                    if (targetCheck) {
-                                        const convertedDMG = ownerTurn.battleValues.e6DMGTracked;
-                    
-                                        battleActions.trueDMGHitWrapper(battleData,ownerTurn,currentEnemy,1,convertedDMG,convertedDMG,convertedDMG,"E6 Butterfly Flurry");
-                                    }
-                                    if (validTag) {
-                                        updateBuff(battleData,currentEnemy,buffSheet);
-                                    }
-                                }
-                                
-                            }
-                            else {
-                                const buffSheet = this.E6FLURRYSHEET;
-    
-                                const enemyTurns = battleData.enemyBasedTurns;
-                                const targetsGotHit = generalInfo.targetsGotHit;
-                                for (let enemySlot in targetsGotHit) {
-                                    const currentEnemy = enemyTurns[enemySlot];
-    
-                                    const targetCheck = currentEnemy.buffsObject[buffSheet.buffName];
-    
-                                    if (targetCheck) {
-                                        const convertedDMG = ownerTurn.battleValues.e6DMGTracked;
-                    
-                                        battleActions.trueDMGHitWrapper(battleData,ownerTurn,currentEnemy,1,convertedDMG,convertedDMG,convertedDMG,"E6 Butterfly Flurry");
-                                    }
-                                }
+                            if (validTag) {
+                                ownerTurn.battleValues.e6DMGTracked = 0.30 * generalInfo.totals.totalAVGDMG;
+                                ownerTurn.e6FlurrySheetName = this.E6FLURRYSHEET.buffName;
                             }
                         },
                         "target": "self",
-                        "listenerName": "E6: Butterfly Flurry true dmg track/handler",
+                        "isPersonal": true,
+                        "listenerName": "E6: Butterfly Flurry dmg track",
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "EnemyDied",//Flitting Phantasm
-                        condition(battleData,generalInfo) {
-                            // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+                            // const providerTurn = this.providerTurn;
+                            // poke("AttackEnd",battleData,generalInfo);
                             let ownerTurn = this.ownerTurn;
-                            let targetTurn = generalInfo.enemyKilled;
+
+                            if (!this.E6FLURRYSHEET) {
+                                const logicRef = turnLogic[ownerTurn.properName];
     
-                            const flurryName = ownerTurn.e6FlurrySheetName;
-                            if (!targetTurn.isEnemy || !flurryName) {return;}
-    
-                            const flurryCheck = targetTurn.buffsObject[flurryName];
-    
-                            if (flurryCheck) {
-                                //E6 isn't looking for lineup with how resurgence gets queue normally, it only matters that an entity died and had butterly flurry debuff on them,
-                                //so that's the only check we need here.
-                                poke("SeeleEnterAmplification",battleData,null);
-                                poke("SeeleQueueResurgence",battleData,null);
+                                this.E6FLURRYSHEET = {
+                                    "stats": null,
+                                    "source": "E6",
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": logicRef.buffNames.e6Flurry,
+                                    "durationInTurn": 4,
+                                    "duration": 3,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "isDebuff": true,
+                                    // "removeOnDeath": true,
+                                }
                             }
+                            
+                            const buffSheet = this.E6FLURRYSHEET;
+                            const targets = generalInfo.target[0];
+                            updateBuff(battleData,targets,buffSheet);
                         },
                         "target": "self",
-                        "listenerName": "E6: Butterfly Flurry - target died with flurry, queue resurgence",
+                        "isPersonal": true,
+                        "listenerName": "E6: Butterfly Flurry application postult",
                         "ownerTurn": {},
                     },
-
                 ],
             },
             {
@@ -19424,6 +19496,12 @@ const turnLogic = {
                         updateBuff(battleData,ownerTurn,buffSheet);
                     }
 
+                    const allEnemiesArray = battleData.allEnemiesArray;
+                    const listener4 = passiveListeners[2];
+                    for (let enemy of allEnemiesArray) {
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,enemy,null,ownerTurn);
+                    }
+
                     getTechnique(battleData,ownerTurn,logicRef,1,false,true)
                 },
                 "target": "self",
@@ -19497,6 +19575,33 @@ const turnLogic = {
                         "listenerName": "Ratio E1 +4 summation battlestart",
                         "ownerTurn": {},
                     },
+                    {
+                        "trigger": "WasAttackedStart",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
+                            // let ownerTurn = this.ownerTurn;
+        
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName === providerTurn.properName) {return;}//can't be ratio himself
+        
+                            const targetTurn = personalOwner;
+        
+                            const wisemanNAme = this.wisemanNAme ??= turnLogic[providerTurn.properName].buffNames.wiseman;
+                            const buffCheck = targetTurn.buffsObject[wisemanNAme];
+                            if (!buffCheck) {return;}
+        
+                            const battleValues = providerTurn.battleValues;
+                            if (!battleValues.shouldQueueFUA && battleValues.wisemanStacks - battleValues.wisemanStackDebt) {
+                                battleValues.shouldQueueFUA = true;
+                                battleValues.shouldQueueFUATarget = targetTurn.name;
+                                battleValues.wisemanStackDebt += 1;
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Ratio - Wiseman FUA trigger attackedStart",
+                        "ownerTurn": {},
+                    },
                 ],
             },
             {
@@ -19542,38 +19647,9 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
-                "trigger": "HitEnemyStart",
-                condition(battleData,generalInfo) {
-                    // poke("FireflyE2QueueExtraTurn",battleData,exoTurnRef);
-                    let ownerTurn = this.ownerTurn;
-
-                    const sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.properName === ownerTurn.properName) {return;}//can't be ratio himself
-
-                    const targetTurn = generalInfo.targetTurn;
-                    const targetHitCount = generalInfo.targetsGotHit[targetTurn.name];
-
-                    if (targetHitCount != 1) {return;}//only evaluate first hits, as that is when the enemy is considered being attacked, esp for bounce type stuff
-
-                    const wisemanNAme = this.wisemanNAme ??= turnLogic[ownerTurn.properName].buffNames.wiseman;
-                    const buffCheck = targetTurn.buffsObject[wisemanNAme];
-                    if (!buffCheck) {return;}
-
-                    const battleValues = ownerTurn.battleValues;
-                    if (!battleValues.shouldQueueFUA && battleValues.wisemanStacks - battleValues.wisemanStackDebt) {
-                        battleValues.shouldQueueFUA = true;
-                        battleValues.shouldQueueFUATarget = targetTurn.name;
-                        battleValues.wisemanStackDebt += 1;
-                    }
-                },
-                "target": "self",
-                "listenerName": "Ratio - Wiseman FUA trigger",
-                "ownerTurn": {},
-            },
-            {
                 "trigger": "AttackDMGEnd",
                 condition(battleData,generalInfo) {
-                    // poke("FireflyE2QueueExtraTurn",battleData,exoTurnRef);
+                    //is global, not owner
                     let ownerTurn = this.ownerTurn;
 
                     const sourceTurn = generalInfo.sourceTurn;
@@ -19584,7 +19660,6 @@ const turnLogic = {
                         poke("RatioQueueFUA",battleData,{target: [battleData.enemyBasedTurns[battleValues.shouldQueueFUATarget]]},null);
                         battleValues.shouldQueueFUATarget = null;
                     }
-                    
                 },
                 "target": "self",
                 "listenerName": "Ratio - Wiseman FUA trigger",
@@ -26638,7 +26713,14 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
                     }
 
-                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
+                    //was attacked for charge set/reset
+                    const listener7 = passiveListeners[6];
+                    addListenerWithPriority(battleData,listener7,listener7.trigger,ownerTurn);
+                    const listener8 = passiveListeners[7];
+                    addListenerWithPriority(battleData,listener8,listener8.trigger,ownerTurn);
+
+
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false);
                 },
                 "target": "self",
                 "listenerName": "Blade Passive",
@@ -26689,7 +26771,7 @@ const turnLogic = {
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
         
-                            const wasAttack = generalInfo.wasAttack;
+                            const wasAttack = ownerTurn.bladeGettingAttackedActive;
                             if (wasAttack && !ownerTurn.bladeReadyForAttackCharge) {return;}
                             ownerTurn.bladeReadyForAttackCharge = false;
                             //blade can only gain 1 charge from an attack, so we have to monitor and make sure that we don't do it every time he loses HP in a single attack
@@ -26749,15 +26831,17 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "AttackStart",
-                        condition(battleData,generalInfo) {
+                        "trigger": "WasAttackedStart",
+                        condition(battleData,generalInfo,personalOwner) {
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
                             if (!sourceTurn.isEnemy) {return;}
                             
                             ownerTurn.bladeReadyForAttackCharge = true;
+                            ownerTurn.bladeGettingAttackedActive = true;
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Blade talent - charge from being attacked reset",
                         "ownerTurn": {},
                     },
@@ -26826,7 +26910,29 @@ const turnLogic = {
                         "isPersonal": true,
                         "listenerName": "E4 hp lost listener - hp buff application",
                         "ownerTurn": {},
-                    }
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            let ownerTurn = this.ownerTurn;
+                            ownerTurn.bladeReadyForAttackCharge = false;
+                            ownerTurn.bladeGettingAttackedActive = false;
+                        },
+                        "target": "self",
+                        "listenerName": "Blade talent - charge from being attacked reset attack end",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "Endturn",
+                        condition(battleData,generalInfo,personalOwner) {
+                            let ownerTurn = this.ownerTurn;
+                            ownerTurn.bladeReadyForAttackCharge = false;
+                            ownerTurn.bladeGettingAttackedActive = false;
+                        },
+                        "target": "self",
+                        "listenerName": "Blade talent - charge from being attacked reset turn end",
+                        "ownerTurn": {},
+                    },
                 ],
             },
             {
@@ -30010,6 +30116,7 @@ const turnLogic = {
                                         break;
                                     }
                                 }
+                                if (!allyFound) {return;}
 
                                 if (ultimateActive) {
                                     poke("ClaraQueueFUAAttack",battleData,{targetTurn: sourceTurn});
@@ -39902,7 +40009,12 @@ const turnLogic = {
 
                     //talent inherent
                     const listener1 = passiveListeners[0];
-                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    const listener9 = passiveListeners[8];
+                    const allAlliesArray = battleData.allAlliesArray;
+                    for (let ally of allAlliesArray) {
+                        addListenerWithPriority(battleData,listener1,listener1.trigger,ally,null,ownerTurn);
+                        addListenerWithPriority(battleData,listener9,listener9.trigger,ally,null,ownerTurn);
+                    }
 
                     //trace hothand
                     const listener2 = passiveListeners[1];
@@ -39939,20 +40051,21 @@ const turnLogic = {
                 "ownerTurn": {},
                 "passiveListeners": [
                     {
-                        "trigger": "ShieldWasHit",
-                        condition(battleData,generalInfo) {
-                            // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
-                            let ownerTurn = this.ownerTurn;
-                            const currentShield = generalInfo.currentShield;
-        
-                            if (currentShield.shieldClass != "Fortified Wager") {return;}//if this isn't fortified wager getting hit, then abort
-        
-                            const sourceTurn = generalInfo.sourceTurn;
-                            const stacksToGain = sourceTurn.properName === ownerTurn.properName ? 2 : 1;
-                            poke("aventurineBetGained",battleData,{pointsGained: stacksToGain,sourceString:"Ally hit with shield"},null);
+                        "trigger": "WasAttackedStart",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
+                            // let ownerTurn = this.ownerTurn;
+                            // const currentShield = generalInfo.currentShield;
+                            const shieldName = this.shieldName ??= turnLogic[providerTurn.properName].buffNames.wager;
+
+                            const shieldCheck = personalOwner.buffsObject[shieldName];
+                            if (!shieldCheck) {return;}//if this isn't fortified wager getting hit, then abort
+
+                            personalOwner.aventurineBetGainReady = true;
                         },
                         "target": "self",
-                        "listenerName": "Wager shield hit",
+                        "isPersonal": true,
+                        "listenerName": "Wager shield hit start track",
                         "ownerTurn": {},
                     },
                     {
@@ -39974,7 +40087,6 @@ const turnLogic = {
                     {
                         "trigger": "AttackDMGEnd",
                         condition(battleData,generalInfo) {
-                            // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
                             let ownerTurn = this.ownerTurn;
                             // const currentShield = generalInfo.currentShield;
                             const sourceTurn = generalInfo.sourceTurn;
@@ -40043,7 +40155,6 @@ const turnLogic = {
                     {
                         "trigger": "AttackStart",
                         condition(battleData,generalInfo) {
-                            // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
                             let ownerTurn = this.ownerTurn;
                             // const currentShield = generalInfo.currentShield;
                             const sourceTurn = generalInfo.sourceTurn;
@@ -40135,6 +40246,24 @@ const turnLogic = {
                         },
                         "target": "self",
                         "listenerName": "Stag Hunt Game shields listener (removal)",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            if (!personalOwner.aventurineBetGainReady) {return;}
+                            const providerTurn = this.providerTurn;
+                            personalOwner.aventurineBetGainReady = false;
+        
+                            // const sourceTurn = generalInfo.sourceTurn;
+                            const stacksToGain = personalOwner.properName === providerTurn.properName ? 2 : 1;
+                            const exoObject = this.exoObject ??= {pointsGained: stacksToGain,sourceString:"Ally hit with shield"};
+                            exoObject.pointsGained = stacksToGain;
+                            poke("aventurineBetGained",battleData,exoObject,null);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Wager shield hit finish",
                         "ownerTurn": {},
                     },
                 ],
@@ -40695,7 +40824,6 @@ const turnLogic = {
                     {
                         "trigger": "ActionEndPhase",
                         condition(battleData,generalInfo) {
-                            // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
                             let ownerTurn = this.ownerTurn;
 
                             const exoObject = this.exoObject ??= {pointsGained: 1,sourceString:"Turn-End Counter resets"}
@@ -40710,7 +40838,6 @@ const turnLogic = {
                     {
                         "trigger": "WasAttackedStart",
                         condition(battleData,generalInfo,targetTurn) {
-                            // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
                             const providerTurn = this.providerTurn;
                             const counterCount = providerTurn.battleValues.counterCount;
                             if (!counterCount) {return;}
@@ -40731,7 +40858,6 @@ const turnLogic = {
                     {
                         "trigger": "AttackDMGEnd",
                         condition(battleData,generalInfo) {
-                            // poke("ShieldWasHit",battleData,{battleData,currentShield,DMGTotalAVG,sourceTurn:targetTurn});
                             const providerTurn = this.providerTurn;
 
                             const sourceTurn = generalInfo.sourceTurn;

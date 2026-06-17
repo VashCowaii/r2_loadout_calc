@@ -686,7 +686,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__28427477\">Monster_XP_Elite02_Edict01_Self</a>",
           "execute": [
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "IF",

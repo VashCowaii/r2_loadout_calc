@@ -3915,7 +3915,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Being Attacked Completed [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: Completed",
           "execute": [
             "Modifier Deletes Itself"
           ]
@@ -3946,7 +3946,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             {
               "name": "IF",
@@ -4145,7 +4145,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Being Attacked Start [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: Start",
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -4168,7 +4168,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             {
               "name": "IF",

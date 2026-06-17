@@ -216,7 +216,7 @@ const configAbility = {
       ],
       "execute": [
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             "Modifier Deletes Itself"
           ]
@@ -1126,7 +1126,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Being Attacked Completed [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: Completed",
           "execute": [
             {
               "name": "IF",

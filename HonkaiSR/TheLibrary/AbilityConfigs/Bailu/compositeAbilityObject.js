@@ -126,7 +126,7 @@ const compositeAbilityObject = {
               "priorityLevel": -70
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]"
+              "eventTrigger": "Being Attacked [Owner]: End"
             }
           ]
         },
@@ -565,7 +565,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "IF",
@@ -731,7 +731,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]"
+              "eventTrigger": "Being Attacked [Owner]: End"
             }
           ]
         }

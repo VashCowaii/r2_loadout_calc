@@ -227,7 +227,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 "Modifier Deletes Itself"
               ]
@@ -1137,7 +1137,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked Completed [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: Completed",
               "execute": [
                 {
                   "name": "IF",

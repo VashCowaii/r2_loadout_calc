@@ -1733,7 +1733,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked Completed [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: Completed",
               "execute": [
                 "Modifier Deletes Itself"
               ]
@@ -1764,7 +1764,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "IF",
@@ -1963,7 +1963,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked Start [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: Start",
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -1986,7 +1986,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "IF",

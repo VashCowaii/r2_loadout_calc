@@ -90,7 +90,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -248,7 +248,7 @@ const configAbility = {
           "eventTrigger": "Entity Death [Anyone]"
         },
         {
-          "eventTrigger": "Being Attacked Start [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: Start",
           "execute": [
             {
               "name": "IF",
@@ -271,7 +271,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             {
               "name": "IF",

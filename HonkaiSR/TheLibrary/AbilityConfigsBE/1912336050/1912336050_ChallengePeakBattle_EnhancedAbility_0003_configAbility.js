@@ -23,7 +23,7 @@ const configAbility = {
       "statusName": "Inversion+",
       "execute": [
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             {
               "name": "Consume",

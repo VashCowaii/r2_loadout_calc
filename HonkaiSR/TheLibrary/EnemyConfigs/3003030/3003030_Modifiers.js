@@ -256,7 +256,7 @@ const configAbility = {
           "eventTrigger": "Entity Death [Anyone]"
         },
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             {
               "name": "IF",

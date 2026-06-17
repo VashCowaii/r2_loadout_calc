@@ -433,7 +433,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-917579162\">W2_Beast02_01_ActivityTelevision_ModifyDelay</a>",
       "execute": [
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             {
               "name": "Action Advance/Delay",

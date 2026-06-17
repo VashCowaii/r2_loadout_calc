@@ -32,7 +32,7 @@ const configAbility = {
           "eventTrigger": "When Stacking/Receiving Modifier"
         },
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             {
               "name": "IF",

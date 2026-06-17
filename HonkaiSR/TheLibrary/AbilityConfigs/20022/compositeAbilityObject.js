@@ -169,7 +169,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked Start [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: Start",
               "execute": [
                 {
                   "name": "Define Custom Variable",
@@ -179,7 +179,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked Completed [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: Completed",
               "execute": [
                 {
                   "name": "Define Custom Variable",
@@ -258,7 +258,7 @@ const compositeAbilityObject = {
               "eventTrigger": "Take Damage End [Owner]: Hit"
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "IF",

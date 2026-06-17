@@ -439,7 +439,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-463923185\">Enemy_SW_Minion01_03_Passive</a>",
           "execute": [
             {
-              "eventTrigger": "Being Attacked End [Owner]"
+              "eventTrigger": "Being Attacked [Owner]: End"
             }
           ]
         },

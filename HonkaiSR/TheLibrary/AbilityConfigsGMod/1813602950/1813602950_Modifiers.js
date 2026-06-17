@@ -16,7 +16,7 @@ const configAbility = {
       "useEntitySnapshot": true,
       "execute": [
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             {
               "name": "ATK Scaling DMG",

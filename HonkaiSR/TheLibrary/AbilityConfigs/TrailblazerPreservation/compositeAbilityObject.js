@@ -1193,7 +1193,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__63956904\">MWPlayerBoy_10_ShieldAfterBeingHit</a>",
           "execute": [
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -1274,7 +1274,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "IF",

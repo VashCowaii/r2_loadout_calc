@@ -4109,6 +4109,89 @@ const turnLogicLightcones = {
         },
         "listeners": [
             {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+
+                    const allEnemiesArray = battleData.allEnemiesArray;
+                    for (let enemy of allEnemiesArray) {
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,enemy,ownersSlots);
+                    }
+        
+                    // for (let owner of ownerRef) {
+                    //     let charSlot = owner.slot;
+                    //     let currentTurn = namedTurns[charSlot];
+        
+                    //     addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    // }
+                },
+                "target": "self",
+                "listenerName": "Why Does the Ocean Sing listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "WasAttackedStart",
+                        condition(battleData,generalInfo,personalOwner) {
+                            // let ownerRef = this.owners;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy) {return;}
+        
+                            let buffNameVuln = this.buffName2 ??= turnLogicLightcones["Why Does the Ocean Sing"].buffNames.debuffStacks;
+                            
+                            let enthrallRef = null;
+                            const buffCheck = personalOwner.buffsObject[buffNameVuln];
+                            if (buffCheck) {
+                                enthrallRef = buffCheck;
+                            }
+        
+                            if (enthrallRef) {
+                                const sourceOwner = enthrallRef.sourceOwner;
+                                const ownerSlot = battleData.nameIndex[sourceOwner];
+                                let ownersSlots = this.ownersSlots;
+                                const ownerRank = ownersSlots[ownerSlot];
+                                const ownerTurn = battleData.nameBasedTurns[ownerSlot];
+        
+                                if (!ownerTurn.oceanSingEnthrallmentSPEEDSHEET) {
+                                    let lcNameRef = "Why Does the Ocean Sing";
+                                    let lcPathing = lightcones[lcNameRef].params;
+                                    let rankParams = lcPathing[ownerRank-1];
+                                    let ownerName = ownerTurn.properName;
+
+                                    let buffName = this.buffName ??= turnLogicLightcones["Why Does the Ocean Sing"].buffNames.spdBuff;
+            
+                                    ownerTurn.oceanSingEnthrallmentSPEEDSHEET = {
+                                        "stats":[SPDP],
+                                        [SPDP]: rankParams[5],
+                                        "source": lcNameRef,
+                                        "sourceOwner": ownerName,
+                                        "buffName": buffName,
+                                        "durationInTurn": 4,
+                                        "duration": 3,
+                                        "AVApplied": 0,
+                                        "maxStacks": 1,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": "EndTurn",
+                                        "isDebuff": false
+                                    }
+                                }
+        
+                                let buffSheet = ownerTurn.oceanSingEnthrallmentSPEEDSHEET;
+                                updateBuff(battleData,sourceTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Why Does the Ocean Sing - SPD check",
+                        "owners": [],
+                    },
+                ]
+            },
+            {
                 "trigger": "DebuffApplied",
                 condition(battleData,generalInfo) {
                     // let ownerRef = this.owners;
@@ -4159,67 +4242,6 @@ const turnLogicLightcones = {
                 },
                 "target": "self",
                 "listenerName": "Why Does the Ocean Sing - debuffs owned check (removal)",
-                "owners": [],
-            },
-            {
-                "trigger": "HitEnemyStart",
-                condition(battleData,generalInfo) {
-                    // let ownerRef = this.owners;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (sourceTurn.isEnemy) {return;}
-                    const targetsGotHit = generalInfo.targetsGotHit;
-                    // let buffName = this.buffNames.debuffStacks;
-
-                    let lcNameRef = "Why Does the Ocean Sing";
-                    const buffNames = turnLogicLightcones[lcNameRef].buffNames;
-                    let buffName = buffNames.spdBuff;
-                    let buffNameVuln = buffNames.debuffStacks;
-                    
-                    const targetTurn = generalInfo.targetTurn;
-                    let enthrallRef = null;
-
-                    const buffCheck = targetTurn.buffsObject[buffNameVuln];
-                    if (buffCheck && targetsGotHit[targetTurn.name] === 1) {//ONLY EVALUATE FIRST HITS, ERGO THE START OF AN ATTACK
-                        enthrallRef = buffCheck;
-                    }
-
-                    if (enthrallRef) {
-                        const sourceOwner = enthrallRef.sourceOwner;
-                        const ownerSlot = battleData.nameIndex[sourceOwner];
-                        let ownersSlots = this.ownersSlots;
-                        const ownerRank = ownersSlots[ownerSlot];
-                        const ownerTurn = battleData.nameBasedTurns[ownerSlot];
-
-                        if (!ownerTurn.oceanSingEnthrallmentSPEEDSHEET) {
-                            let lcNameRef = "Why Does the Ocean Sing";
-                            let lcPathing = lightcones[lcNameRef].params;
-                            let rankParams = lcPathing[ownerRank-1];
-                            let ownerName = ownerTurn.properName;
-                            // let buffName = turnLogicLightcones[lcNameRef].buffNames.spdBuff;
-    
-                            ownerTurn.oceanSingEnthrallmentSPEEDSHEET = {
-                                "stats":[SPDP],
-                                [SPDP]: rankParams[5],
-                                "source": lcNameRef,
-                                "sourceOwner": ownerName,
-                                "buffName": buffName,
-                                "durationInTurn": 4,
-                                "duration": 3,
-                                "AVApplied": 0,
-                                "maxStacks": 1,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": "EndTurn",
-                                "isDebuff": false
-                            }
-                        }
-
-                        let buffSheet = ownerTurn.oceanSingEnthrallmentSPEEDSHEET;
-                        updateBuff(battleData,sourceTurn,buffSheet);
-                    }
-                },
-                "target": "self",
-                "listenerName": "Why Does the Ocean Sing - SPD check",
                 "owners": [],
             },
         ],
@@ -5372,70 +5394,116 @@ const turnLogicLightcones = {
             "breakDMG": "On the Fall of an Aeon (DMG)",
         },
     },
-    "The Unreachable Side": {//NO CHANGE YET
+    "The Unreachable Side": {
         logic(thisTurn,battleData) {},
-        "skillFunctions": {},
+        "skillFunctions": {
+            stackGain(battleData,sourceTurn,ownersSlots) {
+                if (!sourceTurn.unreachableSideDMGSHEET) {
+                    let ownerRank = ownersSlots[sourceTurn.name];
+                    let lcNameRef = "The Unreachable Side";
+                    let lcPathing = lightcones[lcNameRef].params;
+                    let rankParams = lcPathing[ownerRank-1];
+                    const logicRef = turnLogicLightcones[lcNameRef];
+
+                    sourceTurn.unreachableSideDMGSHEET = {
+                        "stats": [DamageAll],
+                        [DamageAll]: rankParams[2],
+                        "source": lcNameRef,
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.dmgBuff,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                }
+
+                const buffSheet = sourceTurn.unreachableSideDMGSHEET;
+                
+                updateBuff(battleData,sourceTurn,buffSheet);
+            },
+        },
         "listeners": [
             {
-                "trigger": "AllyLostHP",
+                "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}//if the one losing HP isn't the lc owner, then abort
-
-                    const causeTurn = generalInfo.lossSource;
-                    if (causeTurn && causeTurn.properName != sourceTurn.properName) {return;}//and if the cause of the HP loss in the case of a consume only, isn't the same as the one having their hp consumed, then abort
-
-                    if (!sourceTurn.unreachableSideDMGSHEET) {
-                        let lcNameRef = "The Unreachable Side";
-                        let lcPathing = lightcones[lcNameRef].params;
-                        let rankParams = lcPathing[ownerRank-1];
-                        const logicRef = turnLogicLightcones[lcNameRef];
-
-                        sourceTurn.unreachableSideDMGSHEET = {
-                            "stats": [DamageAll],
-                            [DamageAll]: rankParams[2],
-                            "source": lcNameRef,
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": logicRef.buffNames.dmgBuff,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                        }
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[2],subListeners[2].trigger,currentTurn,ownersSlots);
                     }
-
-                    const buffSheet = sourceTurn.unreachableSideDMGSHEET;
-                    
-                    updateBuff(battleData,sourceTurn,buffSheet);
                 },
                 "target": "self",
-                "listenerName": "The Unreachable Side - hp lost listener",
+                "listenerName": "The Unreachable Side listener setup",
                 "owners": [],
-                "ownersSlots": {},
-            },
-            {
-                "trigger": "AttackEnd",
-                condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}
+                "subListeners": [
+                    {
+                        "trigger": "AllyLostHP",
+                        condition(battleData,generalInfo) {
+                            const wasAttack = generalInfo.wasAttack;
+                            if (wasAttack) {return;}
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            const causeTurn = generalInfo.lossSource;
+                            if (causeTurn && causeTurn.properName != sourceTurn.properName) {return;}//and if the cause of the HP loss in the case of a consume only, isn't the same as the one having their hp consumed, then abort
+        
+                            let ownersSlots = this.ownersSlots;
+                            const stackGain = this.stackGain ??= turnLogicLightcones["The Unreachable Side"].skillFunctions.stackGain;
+                            stackGain(battleData,sourceTurn,ownersSlots);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "The Unreachable Side - hp lost listener",
+                        "owners": [],
+                        "ownersSlots": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            // let ownersSlots = this.ownersSlots;
+                            let sourceTurn = generalInfo.sourceTurn;;
+        
+                            const buffSheet = sourceTurn.unreachableSideDMGSHEET;
+                            if (!buffSheet || !sourceTurn.buffsObject[buffSheet.buffName]) {return;}
+                            //if the buff sheet hasn't been constructed on the owner yet, or if the owner doesn't even have the buff, then abort
+        
+                            removeBuff(battleData,sourceTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "The Unreachable Side - attack end listener",
+                        "owners": [],
+                        "ownersSlots": {},
+                    },
+                    {
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            // let ownersSlots = this.ownersSlots;
+                            // let sourceTurn = generalInfo.sourceTurn;
 
-                    const buffSheet = sourceTurn.unreachableSideDMGSHEET;
-                    if (!buffSheet || !sourceTurn.buffsObject[buffSheet.buffName]) {return;}
-                    //if the buff sheet hasn't been constructed on the owner yet, or if the owner doesn't even have the buff, then abort
-
-                    removeBuff(battleData,sourceTurn,buffSheet);
-                },
-                "target": "self",
-                "listenerName": "The Unreachable Side - attack end listener",
-                "owners": [],
-                "ownersSlots": {},
+                            let ownersSlots = this.ownersSlots;
+                            const stackGain = this.stackGain ??= turnLogicLightcones["The Unreachable Side"].skillFunctions.stackGain;
+                            stackGain(battleData,personalOwner,ownersSlots);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "The Unreachable Side - attack received listener",
+                        "owners": [],
+                        "ownersSlots": {},
+                    },
+                ]
             },
         ],
         "buffNames": {
@@ -5564,6 +5632,133 @@ const turnLogicLightcones = {
         "skillFunctions": {},
         "listeners": [
             {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+
+                    const allAlliesArray = battleData.allAlliesArray;
+                    for (let ally of allAlliesArray) {
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,ally,ownersSlots);
+                    }
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "I Shall Be My Own Sword listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            let ownersSlots = this.ownersSlots;
+                            // let sourceTurn = generalInfo.sourceTurn;
+                            // if (!sourceTurn.isEnemy) {return;}
+        
+                            const targetsGotHit = generalInfo.targetsGotHit;
+        
+                            const allyTurns = battleData.nameBasedTurns;
+                            const hitCount = Object.keys(targetsGotHit).length;
+        
+                            for (let allySlot in ownersSlots) {
+                                let ownerCheck = targetsGotHit[allySlot];
+                                if (ownerCheck && hitCount === 1) {continue;}
+        
+                                const currentOwner = allyTurns[allySlot];
+                                if (currentOwner.shallBeMyOwnSwordStackingDONETEMP) {continue;}
+        
+                                if (!currentOwner.shallBeMyOwnSwordDMGSHEET) {
+                                    let lcNameRef = "I Shall Be My Own Sword";
+                                    let lcPathing = lightcones[lcNameRef].params;
+                                    let ownerRank = ownersSlots[currentOwner.name];
+                                    let rankParams = lcPathing[ownerRank-1];
+                                    const logicRef = turnLogicLightcones[lcNameRef];
+            
+                                    currentOwner.shallBeMyOwnSwordDMGSHEET = {
+                                        "stats": [DamageAll],
+                                        [DamageAll]: rankParams[2],
+                                        "source": lcNameRef,
+                                        "sourceOwner": currentOwner.properName,
+                                        "buffName": logicRef.buffNames.dmgBuff,
+                                        "durationInTurn": null,
+                                        "duration": 1,
+                                        "AVApplied": 0,
+                                        "maxStacks": 3,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null,
+                                        "actionTags": ["All"],
+                                    }
+                                    currentOwner.shallBeMyOwnSwordSHREDSHEET = {
+                                        "stats": [DEFShredAll],
+                                        [DEFShredAll]: rankParams[3],
+                                        "source": lcNameRef,
+                                        "sourceOwner": currentOwner.properName,
+                                        "buffName": logicRef.buffNames.shredBuff,
+                                        "durationInTurn": null,
+                                        "duration": 1,
+                                        "AVApplied": 0,
+                                        "maxStacks": 1,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null,
+                                        "actionTags": ["All"],
+                                    }
+                                }
+            
+                                const buffSheet = currentOwner.shallBeMyOwnSwordDMGSHEET;
+                                buffSheet.currentStacks = hitCount - (targetsGotHit[allySlot] ? 1 : 0);
+                                updateBuff(battleData,currentOwner,buffSheet);
+                                const buffCheck = currentOwner.buffsObject[buffSheet.buffName];
+        
+                                if (buffCheck.currentStacks === buffCheck.maxStacks) {
+                                    currentOwner.shallBeMyOwnSwordStackingDONETEMP = true;
+                                    const buffSheet2 = currentOwner.shallBeMyOwnSwordSHREDSHEET;
+                                    updateBuff(battleData,currentOwner,buffSheet2);
+                                }
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "I Shall Be My Own Sword - received attack listener",
+                        "owners": [],
+                        "ownersSlots": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            let ownersSlots = this.ownersSlots;
+                            let sourceTurn = generalInfo.sourceTurn;
+                            // let ownerRank = ownersSlots[sourceTurn.name];
+                            // if (!ownerRank) {return;}
+        
+                            const buffSheet = sourceTurn.shallBeMyOwnSwordDMGSHEET;
+                            if (!buffSheet || !sourceTurn.buffsObject[buffSheet.buffName]) {return;}
+                            //if the buff sheet hasn't been constructed on the owner yet, or if the owner doesn't even have the buff, then abort
+                            removeBuff(battleData,sourceTurn,buffSheet);
+        
+                            const buffSheet2 = sourceTurn.shallBeMyOwnSwordSHREDSHEET;
+                            if (!buffSheet2 || !sourceTurn.buffsObject[buffSheet2.buffName]) {return;}
+                            removeBuff(battleData,sourceTurn,buffSheet2);
+                            sourceTurn.shallBeMyOwnSwordStackingDONETEMP = false;
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "I Shall Be My Own Sword - attack end listener buff removal",
+                        "owners": [],
+                        "ownersSlots": {},
+                    },
+                ]
+            },
+            {
                 "trigger": "AllyLostHP",
                 condition(battleData,generalInfo) {
                     let ownersSlots = this.ownersSlots;
@@ -5630,104 +5825,6 @@ const turnLogicLightcones = {
                 },
                 "target": "self",
                 "listenerName": "I Shall Be My Own Sword - hp lost listener",
-                "owners": [],
-                "ownersSlots": {},
-            },
-            {
-                "trigger": "AttackDMGEnd",
-                condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (!sourceTurn.isEnemy) {return;}
-
-                    const targetsGotHit = generalInfo.targetsGotHit;
-
-                    const allyTurns = battleData.nameBasedTurns;
-                    const hitCount = Object.keys(targetsGotHit).length;
-
-                    for (let allySlot in ownersSlots) {
-                        let ownerCheck = targetsGotHit[allySlot];
-                        if (ownerCheck && hitCount === 1) {continue;}
-
-                        const currentOwner = allyTurns[allySlot];
-                        if (currentOwner.shallBeMyOwnSwordStackingDONETEMP) {continue;}
-
-                        if (!currentOwner.shallBeMyOwnSwordDMGSHEET) {
-                            let lcNameRef = "I Shall Be My Own Sword";
-                            let lcPathing = lightcones[lcNameRef].params;
-                            let ownerRank = ownersSlots[currentOwner.name];
-                            let rankParams = lcPathing[ownerRank-1];
-                            const logicRef = turnLogicLightcones[lcNameRef];
-    
-                            currentOwner.shallBeMyOwnSwordDMGSHEET = {
-                                "stats": [DamageAll],
-                                [DamageAll]: rankParams[2],
-                                "source": lcNameRef,
-                                "sourceOwner": currentOwner.properName,
-                                "buffName": logicRef.buffNames.dmgBuff,
-                                "durationInTurn": null,
-                                "duration": 1,
-                                "AVApplied": 0,
-                                "maxStacks": 3,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": null,
-                                "actionTags": ["All"],
-                            }
-                            currentOwner.shallBeMyOwnSwordSHREDSHEET = {
-                                "stats": [DEFShredAll],
-                                [DEFShredAll]: rankParams[3],
-                                "source": lcNameRef,
-                                "sourceOwner": currentOwner.properName,
-                                "buffName": logicRef.buffNames.shredBuff,
-                                "durationInTurn": null,
-                                "duration": 1,
-                                "AVApplied": 0,
-                                "maxStacks": 1,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": null,
-                                "actionTags": ["All"],
-                            }
-                        }
-    
-                        const buffSheet = currentOwner.shallBeMyOwnSwordDMGSHEET;
-                        buffSheet.currentStacks = hitCount - (targetsGotHit[allySlot] ? 1 : 0);
-                        updateBuff(battleData,currentOwner,buffSheet);
-                        const buffCheck = currentOwner.buffsObject[buffSheet.buffName];
-
-                        if (buffCheck.currentStacks === buffCheck.maxStacks) {
-                            currentOwner.shallBeMyOwnSwordStackingDONETEMP = true;
-                            const buffSheet2 = currentOwner.shallBeMyOwnSwordSHREDSHEET;
-                            updateBuff(battleData,currentOwner,buffSheet2);
-                        }
-                    }
-                },
-                "target": "self",
-                "listenerName": "I Shall Be My Own Sword - received attack listener",
-                "owners": [],
-                "ownersSlots": {},
-            },
-            {
-                "trigger": "AttackEnd",
-                condition(battleData,generalInfo) {
-                    let ownersSlots = this.ownersSlots;
-                    let sourceTurn = generalInfo.sourceTurn;
-                    let ownerRank = ownersSlots[sourceTurn.name];
-                    if (!ownerRank) {return;}
-
-                    const buffSheet = sourceTurn.shallBeMyOwnSwordDMGSHEET;
-                    if (!buffSheet || !sourceTurn.buffsObject[buffSheet.buffName]) {return;}
-                    //if the buff sheet hasn't been constructed on the owner yet, or if the owner doesn't even have the buff, then abort
-                    removeBuff(battleData,sourceTurn,buffSheet);
-
-                    const buffSheet2 = sourceTurn.shallBeMyOwnSwordSHREDSHEET;
-                    if (!buffSheet2 || !sourceTurn.buffsObject[buffSheet2.buffName]) {return;}
-                    removeBuff(battleData,sourceTurn,buffSheet2);
-                    sourceTurn.shallBeMyOwnSwordStackingDONETEMP = false;
-                },
-                "target": "self",
-                "listenerName": "I Shall Be My Own Sword - attack end listener buff removal",
                 "owners": [],
                 "ownersSlots": {},
             },
@@ -7213,6 +7310,7 @@ const turnLogicLightcones = {
         
                             
                             if (!sourceTurn.lcMemoriesOfThePastCanRegen) {return;}//then abort non-owners
+                            sourceTurn.lcMemoriesOfThePastCanRegen = false;
         
                             let lcNameRef = "Memories of the Past";
                             const regenFunction = this.lcRegenEnergy ??= turnLogicLightcones[lcNameRef].skillFunctions.lcRegenEnergy;
@@ -7276,6 +7374,7 @@ const turnLogicLightcones = {
                         let currentTurn = namedTurns[charSlot];
         
                         addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
                     }
                 },
                 "target": "self",
@@ -7286,8 +7385,8 @@ const turnLogicLightcones = {
                         "trigger": "AttackDMGEnd",
                         condition(battleData,generalInfo) {
                             let sourceTurn = generalInfo.sourceTurn;
-        
                             if (!sourceTurn.lcMeshingCogsCanRegen) {return;}//then abort non-owners
+                            sourceTurn.lcMeshingCogsCanRegen = false;
         
                             let lcNameRef = "Meshing Cogs";
                             const regenFunction = this.lcRegenEnergy ??= turnLogicLightcones[lcNameRef].skillFunctions.lcRegenEnergy;
@@ -7304,40 +7403,29 @@ const turnLogicLightcones = {
                         "isPersonal": true,
                         "listenerName": "Meshing Cogs - owner attack listener",
                     },
-                ]
-            },
-            {
-                "trigger": "AttackDMGEnd",
-                condition(battleData,generalInfo) {
-                    let sourceTurn = generalInfo.sourceTurn;
-                    if (!sourceTurn.isEnemy) {return;}
+                    {
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            if (!personalOwner.lcMeshingCogsCanRegen) {return;}
+                            personalOwner.lcMeshingCogsCanRegen = false;
+        
+                            let ownersSlots = this.ownersSlots;
+                            let lcNameRef = "Meshing Cogs";
+                            const regenFunction = this.lcRegenEnergy ??= turnLogicLightcones[lcNameRef].skillFunctions.lcRegenEnergy;
+                            let lcPathing = lightcones[lcNameRef].params;
 
-
-                    const allyTurns = battleData.nameBasedTurns;
-                    const targetsGotHit = generalInfo.targetsGotHit;
-
-                    let ownersSlots = this.ownersSlots;
-
-                    let lcNameRef = "Meshing Cogs";
-                    const regenFunction = this.lcRegenEnergy ??= turnLogicLightcones[lcNameRef].skillFunctions.lcRegenEnergy;
-                    let lcPathing = lightcones[lcNameRef].params;
-
-                    for (let allyHit in targetsGotHit) {
-                        
-                        const currentRank = ownersSlots[allyHit];
-                        const currentAlly = allyTurns[allyHit];
-                        if (!currentRank || !currentAlly.lcMeshingCogsCanRegen) {continue;}
-                        else {
+                            const currentRank = ownersSlots[allyHit];
                             const rankParams = lcPathing[currentRank-1];
                             const regenValue = rankParams[0];
-                            regenFunction(battleData,currentAlly,regenValue);
-                        }
-                    }
-                },
-                "target": "self",
-                "listenerName": "Meshing Cogs - owner was attacked listener",
-                "owners": [],
-                "ownersSlots": {}
+                            regenFunction(battleData,personalOwner,regenValue);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Meshing Cogs - owner was attacked listener",
+                        "owners": [],
+                        "ownersSlots": {}
+                    },
+                ]
             },
             {
                 "trigger": "EndTurn",
@@ -9300,6 +9388,158 @@ const turnLogicLightcones = {
             "aggroBuff": "Moment of Victory (Aggro) [LC]",
         },
     },
+    "She Already Shut Her Eyes": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+                        currentTurn.lcSheAlreadyClosedCooldownDone = true;
+
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "She Already Shut Her Eyes listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AllyLostHP",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+                            if (!sourceTurn.lcSheAlreadyClosedCooldownDone) {return;}
+                            sourceTurn.lcSheAlreadyClosedCooldownDone = false;
+
+                            if (!sourceTurn.lcSheAlreadyClosedDMGSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+
+                                let lcNameRef = "She Already Shut Her Eyes";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+
+                                const logicRef = turnLogicLightcones[lcNameRef];
+                                const buffNames = logicRef.buffNames;
+                                let buffName = buffNames.dmg;
+                                const uniqueName = battleActions.getUniqueGearBuffName(battleData,sourceTurn,buffNames,buffName)
+        
+                                sourceTurn.lcSheAlreadyClosedDMGSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": uniqueName,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                }
+                            }
+                            const buffSheet = sourceTurn.lcSheAlreadyClosedDMGSHEET;
+                            const allyPositions = battleData.allyPositions;
+                            updateBuffBatchTargets(battleData,allyPositions,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "She Already Shut Her Eyes - hp lost listener",
+                        "owners": [],
+                        "ownersSlots": {},
+                    },
+                ]
+            },
+            {
+                "trigger": "WaveStart",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    for (let ownerSlot in ownersSlots) {
+                        const currentOwner = namedTurns[ownerSlot];
+
+                        if (!currentOwner.lcSheAlreadyClosedHEALSHEET) {
+                            let ownersSlots = this.ownersSlots;
+                            let ownerRank = ownersSlots[currentOwner.name];
+
+                            let lcNameRef = "She Already Shut Her Eyes";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let rankParams = lcPathing[ownerRank-1];
+    
+                            const actionTags = ["All","Gear","Heal"];
+                            const compositeCacheTag = actionTags + currentOwner.properName;
+    
+                            currentOwner.lcSheAlreadyClosedHEALSHEET = {
+                                multipliers: {
+                                    primary: null,
+                                    blast: null,
+                                    all: null,
+                                },
+                                flatAmounts: {
+                                    primary: null,
+                                    blast: null,
+                                    all: null,
+                                },
+                                specialMulti: rankParams[2],
+                                scalar: null,
+                                DMGTags: [],
+                                allToughness: false,
+                                slot: "Lightcone",
+                                actionTags,compositeCacheTag
+                            }
+                        }
+                        const healObject = currentOwner.lcSheAlreadyClosedHEALSHEET;
+                        const specialMulti = healObject.specialMulti;
+                        const allyPositions = battleData.allyPositions;
+                        const flats = healObject.flatAmounts;
+
+                        for (let ally of allyPositions) {
+                            const allyMax = ally.maxHP;
+                            const hpRatio = ally.currentHP / allyMax;
+                            if (hpRatio === 1) {continue;}
+
+                            const healValue = specialMulti * (1 - hpRatio) * allyMax;
+                            flats.primary = healValue;
+
+                            healAlly(battleData,healObject,ally,currentOwner,"Lightcone",1);
+                        }
+                    }
+                },
+                "target": "self",
+                "priority": -80,
+                "listenerName": "She Already Shut Her Eyes - wavestart ally healing",
+            },
+            {
+                "trigger": "EndTurn",
+                condition(battleData,generalInfo) {
+                    let ownersSlots = this.ownersSlots;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    for (let ownerSlot in ownersSlots) {
+                        const currentOwner = namedTurns[ownerSlot];
+
+                        currentOwner.lcSheAlreadyClosedCooldownDone = true;
+                    }
+                },
+                "target": "self",
+                "listenerName": "She Already Shut Her Eyes - endturn reset flag",
+            },
+        ],
+        "buffNames": {
+            "dmg": "She Already Shut Her Eyes [LC]",
+        },
+    },
         //4star
     "Landau's Choice": {//REDONE
         logic(thisTurn,battleData) {},
@@ -9353,7 +9593,324 @@ const turnLogicLightcones = {
             "drAggro": "Landau's Choice [LC]"
         },
     },
+    "Trend of the Universal Market": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Trend of the Universal Market listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {//createStandardElementDOTSHEET 
+                            // let ownersSlots = this.ownersSlots;
+                            // let sourceTurn = generalInfo.sourceTurn;
+
+                            if (!personalOwner.lcTrendDotBURNSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[personalOwner.name];
+
+                                let lcNameRef = "Trend of the Universal Market";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+
+                                const logicRef = turnLogicLightcones[lcNameRef];
+                                const buffNames = logicRef.buffNames;
+                                let buffName = buffNames.burn;
+                                const uniqueName = battleActions.getUniqueGearBuffName(battleData,personalOwner,buffNames,buffName)
+
+                                personalOwner.lcTrendDotBURNSHEET ??= superGlobal.createStandardElementDOTSHEET(personalOwner,"Fire",{
+                                    "source": lcNameRef,
+                                    "buffName": uniqueName,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+            
+                                    "multiplier": rankParams[2],
+                                    "scalar": "DEF",
+                                    "slot": "Lightcone",
+                                    "baseChance": rankParams[1],
+                                });
+                            }
+                            const dotSheet = personalOwner.lcTrendDotBURNSHEET;
+
+                            const sourceTurn = generalInfo.sourceTurn;
+                            generalApplyDOT(battleData,personalOwner,sourceTurn,dotSheet,null,null,false);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Trend of the Universal Market - attack received listener",
+                        "owners": [],
+                        "ownersSlots": {},
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "burn": "Trend of the Universal Market [LC]"
+        },
+    },
+    "We Are Wildfire": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "WaveStart",
+                condition(battleData,generalInfo) {
+                    const currentWave = generalInfo.currentWave;
+                    if (currentWave != 1) {return;}
+
+                    let ownersSlots = this.ownersSlots;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    for (let ownerSlot in ownersSlots) {
+                        const currentOwner = namedTurns[ownerSlot];
+
+                        if (!currentOwner.lcWeAreWildfireHEALSHEET) {
+                            let ownersSlots = this.ownersSlots;
+                            let ownerRank = ownersSlots[currentOwner.name];
+
+                            let lcNameRef = "We Are Wildfire";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let rankParams = lcPathing[ownerRank-1];
+    
+                            const actionTags = ["All","Gear","Heal"];
+                            const compositeCacheTag = actionTags + currentOwner.properName;
+    
+                            currentOwner.lcWeAreWildfireHEALSHEET = {
+                                multipliers: {
+                                    primary: null,
+                                    blast: null,
+                                    all: null,
+                                },
+                                flatAmounts: {
+                                    primary: null,
+                                    blast: null,
+                                    all: null,
+                                },
+                                specialMulti: rankParams[0],
+                                scalar: null,
+                                DMGTags: [],
+                                allToughness: false,
+                                slot: "Lightcone",
+                                actionTags,compositeCacheTag
+                            }
+
+                            const logicRef = turnLogicLightcones[lcNameRef];
+                            const buffNames = logicRef.buffNames;
+                            let buffName = buffNames.dr;
+                            const uniqueName = battleActions.getUniqueGearBuffName(battleData,currentOwner,buffNames,buffName)
+    
+                            currentOwner.lcWeAreWildfireDRSHEET = {
+                                "stats": [DamageReductionStandard],
+                                [DamageReductionStandard]: rankParams[1],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": uniqueName,
+                                "durationInTurn": 6,
+                                "duration": 5,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "removeOnDeath": true,
+                                "expireType": "EndTurn",
+                            }
+
+                        }
+                        const healObject = currentOwner.lcWeAreWildfireHEALSHEET;
+                        const specialMulti = healObject.specialMulti;
+                        const allyPositions = battleData.allyPositions;
+                        const flats = healObject.flatAmounts;
+
+                        for (let ally of allyPositions) {
+                            const allyMax = ally.maxHP;
+                            const hpRatio = ally.currentHP / allyMax;
+                            if (hpRatio === 1) {continue;}
+
+                            const healValue = specialMulti * (1 - hpRatio) * allyMax;
+                            flats.primary = healValue;
+
+                            healAlly(battleData,healObject,ally,currentOwner,"Lightcone",1);
+                        }
+
+                        const buffSheet = currentOwner.lcWeAreWildfireDRSHEET;
+                        updateBuffBatchTargets(battleData,allyPositions,buffSheet);
+                    }
+                },
+                "target": "self",
+                "priority": -80,
+                "listenerName": "We Are Wildfire - wavestart ally healing/DR",
+            },
+        ],
+        "buffNames": {
+            "dr": "We Are Wildfire [LC]",
+        },
+    },
         //3star
+    "Defense": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Defense listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+        
+                            // let ownerRef = this.owners;
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.lcDefenseHEALSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+
+                                let lcNameRef = "Defense";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+        
+                                const actionTags = ["All","Gear","Heal"];
+                                const compositeCacheTag = actionTags + sourceTurn.properName;
+        
+                                sourceTurn.lcDefenseHEALSHEET = {
+                                    multipliers: {
+                                        primary: rankParams[0],
+                                        blast: null,
+                                        all: null,
+                                    },
+                                    flatAmounts: {
+                                        primary: null,
+                                        blast: null,
+                                        all: null,
+                                    },
+                                    scalar: "HP",
+                                    DMGTags: [],
+                                    allToughness: false,
+                                    slot: "Lightcone",
+                                    actionTags,compositeCacheTag
+                                }
+                            }
+                            const healObject = sourceTurn.lcDefenseHEALSHEET;
+                            healAlly(battleData,healObject,sourceTurn,sourceTurn,"Lightcone",1);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Defense - ult start listener",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {},
+    },
+    "Pioneering": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Pioneering listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "BrokeEnemyWeakness",
+                        condition(battleData,generalInfo) {
+                            // let ownerRef = this.owners;
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.lcPioneerHEALSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+
+                                let lcNameRef = "Defense";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+        
+                                const actionTags = ["All","Gear","Heal"];
+                                const compositeCacheTag = actionTags + sourceTurn.properName;
+        
+                                sourceTurn.lcPioneerHEALSHEET = {
+                                    multipliers: {
+                                        primary: rankParams[0],
+                                        blast: null,
+                                        all: null,
+                                    },
+                                    flatAmounts: {
+                                        primary: null,
+                                        blast: null,
+                                        all: null,
+                                    },
+                                    scalar: "HP",
+                                    DMGTags: [],
+                                    allToughness: false,
+                                    slot: "Lightcone",
+                                    actionTags,compositeCacheTag
+                                }
+                            }
+                            const healObject = sourceTurn.lcPioneerHEALSHEET;
+                            healAlly(battleData,healObject,sourceTurn,sourceTurn,"Lightcone",1);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Pioneering - break listener",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {},
+    },
 
 
     //ERUDITON
@@ -11477,7 +12034,7 @@ const turnLogicRelics = {
             logic(thisTurn,battleData) {},
             "skillFunctions": {
                 streetwise(battleData,targetTurn) {
-                    if (targetTurn.streetwiseBoxingSTACKINGCOMPLETED) {return;}//abort finished users
+                    if (targetTurn.relicStreetwiseBoxingFinished) {return;}//abort finished users
 
                     if (!targetTurn.streetwiseBoxingATKSHEET) {
                         let relicNameRef = "Champion of Streetwise Boxing";
@@ -11505,76 +12062,70 @@ const turnLogicRelics = {
 
                     const stackCheck = targetTurn.buffsObject[buffName].currentStacks;
                     if (stackCheck === 5) {
-                        const tempLogic = battleData.battleLogicTemp;
-                        const boxingRef = tempLogic.streetwiseBoxing;
-
-                        boxingRef.completed += 1;
-                        targetTurn.streetwiseBoxingSTACKINGCOMPLETED = true;
+                        targetTurn.relicStreetwiseBoxingFinished = true;
                     } 
                 }
             },
             "listeners": [
                 {
-                    "trigger": "AttackEnd",
+                    "trigger": "PassiveCalls",
                     condition(battleData,generalInfo) {
-                        // let ownerRef = this.owners;
-                        let ownersSlots = this.ownersSlots;
-                        let sourceTurn = generalInfo.sourceTurn;
-                        let ownerRank = ownersSlots[sourceTurn.name];
-                        if (!ownerRank) {return;}//abort non-owners
+                        let ownerRef = this.owners;
 
-                        const streetwise = this.streetwise ??= turnLogicRelics["Champion of Streetwise Boxing"]["4pc"].skillFunctions.streetwise;
-                        streetwise(battleData,sourceTurn);
-
-                        const tempLogic = battleData.battleLogicTemp;
-                        const boxingRef = tempLogic.streetwiseBoxing;
-                        if (boxingRef.completed === boxingRef.total) {
-                            removeListener(battleData,this,sourceTurn);
-                            //kill the listeners so we don't keep popping them on every attack launched/received from everyone
-                        }
-                    },
-                    "target": "self",
-                    "listenerName": "Streetwise attack launched check",
-                    "owners": []
-                },
-                {
-                    "trigger": "AttackEnd",
-                    condition(battleData,generalInfo) {
-                        let ownersSlots = this.ownersSlots;
-                        let sourceTurn = generalInfo.sourceTurn;
-                        if (!sourceTurn.isEnemy) {return;}//this attack end trigger can only be used on enemy attacks, not allies
-
-                        let targetsGotHit = generalInfo.targetsGotHit;//this is all allies hit
-                        const streetwise = this.streetwise ??= turnLogicRelics["Champion of Streetwise Boxing"]["4pc"].skillFunctions.streetwise;
                         const namedTurns = battleData.nameBasedTurns;
-                        for (let allyHit in targetsGotHit) {
-                            if (ownersSlots[allyHit]) {streetwise(battleData,namedTurns[allyHit]);}
-                        }
+                        const subListeners = this.subListeners;
+                        for (let owner of ownerRef) {
+                            let charSlot = owner.slot;
+                            let currentTurn = namedTurns[charSlot];
 
-                        const tempLogic = battleData.battleLogicTemp;
-                        const boxingRef = tempLogic.streetwiseBoxing;
-                        if (boxingRef.completed === boxingRef.total) {
-                            removeListener(battleData,this,sourceTurn);//TODO: we have sourceTurn in here for uniformity atm but when moved to personal listeners later
-                            //we really need to redo that to instead check if the personal owner was in targetsGotHit and monitor for ownerTurn in that context
+                            addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn);
+                            addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn);
                         }
                     },
                     "target": "self",
-                    "listenerName": "Streetwise attack received check",
-                    "owners": []
+                    "listenerName": "Champion of Streetwise Boxing 4pc listener setup",
+                    "owners": [],
+                    "subListeners": [
+                        {
+                            "trigger": "AttackDMGEnd",
+                            condition(battleData,generalInfo) {
+                                // let ownerRef = this.owners;
+                                // let ownersSlots = this.ownersSlots;
+                                let sourceTurn = generalInfo.sourceTurn;
+        
+                                const streetwise = this.streetwise ??= turnLogicRelics["Champion of Streetwise Boxing"]["4pc"].skillFunctions.streetwise;
+                                streetwise(battleData,sourceTurn);
+
+                                if (sourceTurn.relicStreetwiseBoxingFinished) {
+                                    removeListener(battleData,this,sourceTurn);
+                                }
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "Streetwise attack launched check",
+                            "owners": []
+                        },
+                        {
+                            "trigger": "WasAttackedEnd",
+                            condition(battleData,generalInfo,personalOwner) {
+                                // let ownersSlots = this.ownersSlots;
+                                let sourceTurn = personalOwner;
+        
+                                const streetwise = this.streetwise ??= turnLogicRelics["Champion of Streetwise Boxing"]["4pc"].skillFunctions.streetwise;
+                                streetwise(battleData,sourceTurn);
+        
+                                if (sourceTurn.relicStreetwiseBoxingFinished) {
+                                    removeListener(battleData,this,sourceTurn);
+                                }
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "Streetwise attack received check",
+                            "owners": []
+                        },
+                    ]
                 },
-                {
-                    "trigger": "PreBattleEntersCombat",
-                    condition(battleData,generalInfo) {
-                        let ownerRef = this.owners;//purely for setting up temp value tracking
-                        const tempLogic = battleData.battleLogicTemp;
-                        const boxingRef = tempLogic.streetwiseBoxing ??= {};
-                        boxingRef.total = ownerRef.length;
-                        boxingRef.completed = 0;
-                    },
-                    "target": "self",
-                    "listenerName": "Streetwise owners check",
-                    "owners": []
-                },
+                
             ],
             "buffNames": {
                 "atkBuff": "Champion of Streetwise Boxing",
@@ -12932,70 +13483,38 @@ const turnLogicRelics = {
             },
         }
     },
-    //TODO: distinguish listener used for being attacked
     "Longevous Disciple": {
         "2pc": {},
         "4pc": {
             logic(thisTurn,battleData) {},
-            "skillFunctions": {},
+            "skillFunctions": {
+                longevousStack(battleData,sourceTurn) {
+                    if (!sourceTurn.longevousDiscipleCRITSHEET) {
+                        let relicNameRef = "Longevous Disciple";
+                        let pcRef = "4pc";
+                        let relicPathing = relicSets[relicNameRef].params[1];//0-2pc 1-4pc
+                        let buffName = turnLogicRelics[relicNameRef][pcRef].buffNames.critBuff;
+                        sourceTurn.longevousDiscipleCRITSHEET = {
+                            "stats": [CritRateBase],
+                            [CritRateBase]: relicPathing[0],
+                            "source": relicNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": buffName,
+                            "durationInTurn": 3,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 2,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn"
+                        }
+                    }
+
+                    let buffSheet = sourceTurn.longevousDiscipleCRITSHEET;
+                    updateBuff(battleData,sourceTurn,buffSheet);
+                },
+            },
             "listeners": [
-                // {
-                //     "trigger": "PassiveCalls",
-                //     condition(battleData,generalInfo) {
-                //         let ownerRef = this.owners;
-
-                //         const namedTurns = battleData.nameBasedTurns;
-                //         const subListeners = this.subListeners;
-                //         for (let owner of ownerRef) {
-                //             let charSlot = owner.slot;
-                //             let currentTurn = namedTurns[charSlot];
-
-                //             addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn);
-                //         }
-                //     },
-                //     "target": "self",
-                //     "listenerName": "Hunter of Glacial Forest 4pc listener setup",
-                //     "owners": [],
-                //     "subListeners": [
-                //         {
-                //             "trigger": "AbilityStart",
-                //             condition(battleData,generalInfo) {
-                //                 const action = generalInfo.action;
-                //                 if (action != "Ultimate") {return;}
-        
-                //                 let sourceTurn = generalInfo.sourceTurn;
-        
-                //                 if (!this.glacialForestCRITDMGSHEET) {
-                //                     let relicNameRef = "Hunter of Glacial Forest";
-                //                     let pcRef = "4pc";
-                //                     let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
-                //                     let buffName = this.buffName ??= turnLogicRelics[relicNameRef][pcRef].buffNames.atkBuff;
-                //                     this.glacialForestCRITDMGSHEET = {
-                //                         "stats": [CritDamageBase],
-                //                         [CritDamageBase]: relicPathing[0],
-                //                         "source": relicNameRef,
-                //                         "sourceOwner": sourceTurn.properName,
-                //                         "buffName": buffName,
-                //                         "durationInTurn": 3,
-                //                         "duration": 2,
-                //                         "AVApplied": 0,
-                //                         "maxStacks": 1,
-                //                         "currentStacks": 1,
-                //                         "decay": false,
-                //                         "expireType": "EndTurn"
-                //                     }
-                //                 }
-        
-                //                 let buffSheet = this.glacialForestCRITDMGSHEET;
-                //                 buffSheet.sourceOwner = sourceTurn.properName;
-                //                 updateBuff(battleData,sourceTurn,buffSheet);
-                //             },
-                //             "target": "self",
-                //             "isPersonal": true,
-                //             "listenerName": "Hunter of Glacial Forest ult listener",
-                //         },
-                //     ]
-                // },
                 {
                     "trigger": "PassiveCalls",
                     condition(battleData,generalInfo) {
@@ -13008,6 +13527,7 @@ const turnLogicRelics = {
                             let currentTurn = namedTurns[charSlot];
 
                             addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn);
+                            addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn);
                         }
                     },
                     "target": "self",
@@ -13018,67 +13538,31 @@ const turnLogicRelics = {
                             "trigger": "AllyLostHP",
                             condition(battleData,generalInfo) {
                                 let sourceTurn = generalInfo.sourceTurn; 
+                                if (generalInfo.wasAttack) {return;}
         
                                 const lossSource = generalInfo.lossSource;
-                                if (!generalInfo.wasAttack && lossSource && lossSource.isEnemy) {return;}
-                                //TODO: I have no clue if the desc is just flavor text and it really is an ally restriction on the consume source, but check that later if I can figure out a good test for it
+                                if (lossSource && lossSource.isEnemy) {return;}
         
-        
-                                if (!sourceTurn.longevousDiscipleCRITSHEET) {
-                                    let relicNameRef = "Longevous Disciple";
-                                    let pcRef = "4pc";
-                                    let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[1];//0-2pc 1-4pc
-                                    let buffName = this.buffName ??= turnLogicRelics[relicNameRef][pcRef].buffNames.critBuff;
-                                    sourceTurn.longevousDiscipleCRITSHEET = {
-                                        "stats": [CritRateBase],
-                                        [CritRateBase]: relicPathing[0],
-                                        "source": relicNameRef,
-                                        "sourceOwner": sourceTurn.properName,
-                                        "buffName": buffName,
-                                        "durationInTurn": 3,
-                                        "duration": 2,
-                                        "AVApplied": 0,
-                                        "maxStacks": 2,
-                                        "currentStacks": 1,
-                                        "decay": false,
-                                        "expireType": "EndTurn"
-                                    }
-                                }
-        
-                                let buffSheet = sourceTurn.longevousDiscipleCRITSHEET;
-                                updateBuff(battleData,sourceTurn,buffSheet);
+                                const addStack = this.addStack ??= turnLogicRelics["Longevous Disciple"]["4pc"].skillFunctions.longevousStack;
+                                addStack(battleData,sourceTurn);
                             },
                             "target": "self",
                             "isPersonal": true,
                             "listenerName": "Longevous Disciple - owner lost hp listener",
                         },
+                        {
+                            "trigger": "WasAttackedEnd",
+                            condition(battleData,generalInfo,personalOwner) {
+                                const addStack = this.addStack ??= turnLogicRelics["Longevous Disciple"]["4pc"].skillFunctions.longevousStack;
+                                addStack(battleData,personalOwner);
+                            },
+                            "target": "self",
+                            "isPersonal": true,
+                            "listenerName": "Longevous Disciple - owner attacked listener",
+                            "owners": []
+                        },
                     ]
                 },
-                // {
-                //     "trigger": "AttackEnd",
-                //     condition(battleData,generalInfo) {
-                //         let ownersSlots = this.ownersSlots;
-                //         let sourceTurn = generalInfo.sourceTurn;
-                //         if (!sourceTurn.isEnemy) {return;}//this attack end trigger can only be used on enemy attacks, not allies
-
-                //         let targetsGotHit = generalInfo.targetsGotHit;//this is all allies hit
-                //         const streetwise = this.streetwise ??= turnLogicRelics["Champion of Streetwise Boxing"]["4pc"].skillFunctions.streetwise;
-                //         const namedTurns = battleData.nameBasedTurns;
-                //         for (let allyHit in targetsGotHit) {
-                //             if (ownersSlots[allyHit]) {streetwise(battleData,namedTurns[allyHit]);}
-                //         }
-
-                //         const tempLogic = battleData.battleLogicTemp;
-                //         const boxingRef = tempLogic.streetwiseBoxing;
-                //         if (boxingRef.completed === boxingRef.total) {
-                //             removeListener(battleData,this,sourceTurn);//TODO: we have sourceTurn in here for uniformity atm but when moved to personal listeners later
-                //             //we really need to redo that to instead check if the personal owner was in targetsGotHit and monitor for ownerTurn in that context
-                //         }
-                //     },
-                //     "target": "self",
-                //     "listenerName": "Streetwise attack received check",
-                //     "owners": []
-                // },
             ],
             "buffNames": {
                 "critBuff": "Longevous Disciple [Relic]",

@@ -505,7 +505,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "IF",
@@ -1306,7 +1306,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-796081501\">Yunli_Trace01</a>",
           "execute": [
             {
-              "eventTrigger": "Being Attacked Start [Owner]"
+              "eventTrigger": "Being Attacked [Owner]: Start"
             }
           ]
         },
@@ -2586,7 +2586,7 @@ const compositeAbilityObject = {
               "eventTrigger": "Pre-Death [Owner]"
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "Update Energy",

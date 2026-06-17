@@ -1286,7 +1286,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1557319480\">Monster_W4_Nikadory_EnergyReady</a>",
           "execute": [
             {
-              "eventTrigger": "Being Attacked Completed [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: Completed",
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -1326,7 +1326,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Stacking/Receiving Modifier"
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "Update Energy",
@@ -2145,7 +2145,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Being Attacked Completed [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: Completed",
               "execute": [
                 {
                   "name": "IF",
@@ -2227,10 +2227,10 @@ const compositeAbilityObject = {
               "eventTrigger": "When Stacking/Receiving Modifier"
             },
             {
-              "eventTrigger": "Being Attacked Start [Owner]"
+              "eventTrigger": "Being Attacked [Owner]: Start"
             },
             {
-              "eventTrigger": "Being Attacked End [Owner]",
+              "eventTrigger": "Being Attacked [Owner]: End",
               "execute": [
                 {
                   "name": "IF",

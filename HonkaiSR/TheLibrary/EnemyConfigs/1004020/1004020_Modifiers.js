@@ -391,7 +391,7 @@ const configAbility = {
           "eventTrigger": "Take Damage End [Owner]: Hit"
         },
         {
-          "eventTrigger": "Being Attacked End [Owner]",
+          "eventTrigger": "Being Attacked [Owner]: End",
           "execute": [
             {
               "name": "IF",
