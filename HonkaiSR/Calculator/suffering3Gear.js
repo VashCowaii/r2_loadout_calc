@@ -7861,7 +7861,7 @@ const turnLogicLightcones = {
                                 let ownersSlots = this.ownersSlots;
                                 const ownerRank = ownersSlots[ownerSlot];
                                 let rankParams = lcPathing[ownerRank-1];
-                                
+
                                 sourceTurn.lcForeverVictualATKSHEET = {
                                     "stats": [ATKP],
                                     [ATKP]: rankParams[1],
@@ -7893,6 +7893,124 @@ const turnLogicLightcones = {
         ],
         "buffNames": {
             "hymn": "The Forever Victual"
+        },
+    },
+    "Dreamville Adventure": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Dreamville Adventure listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Skill" && action != "Ultimate" && action != "BasicATK") {return}
+                            
+                            const sourceTurn = generalInfo.sourceTurn;
+    
+                            if (!sourceTurn.lcDreamvilleDMGSHEETBASIC) {
+                                let lcNameRef = "Dreamville Adventure";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let ownerSlot = sourceTurn.name;
+                                let ownersSlots = this.ownersSlots;
+                                const ownerRank = ownersSlots[ownerSlot];
+                                let rankParams = lcPathing[ownerRank-1];
+                                
+                                sourceTurn.lcDreamvilleDMGSHEETBASIC = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[0],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.basic,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 3,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "removeOnDeath": true,
+                                    "actionTags": ["Basic"],
+                                }
+                                sourceTurn.lcDreamvilleDMGSHEETSkill = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[0],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.skill,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 3,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "removeOnDeath": true,
+                                    "actionTags": ["Skill"],
+                                }
+                                sourceTurn.lcDreamvilleDMGSHEETULT = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[0],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.ult,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 3,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "removeOnDeath": true,
+                                    "actionTags": ["Ultimate"],
+                                }
+                            }
+
+                            const allyPositions = battleData.allyPositions;
+
+                            if (action === "BasicATK") {
+                                const buffSheet = sourceTurn.lcDreamvilleDMGSHEETBASIC;
+                                updateBuffBatchTargets(battleData,allyPositions,buffSheet);
+                            }
+                            else if (action === "Skill") {
+                                const buffSheet = sourceTurn.lcDreamvilleDMGSHEETSkill;
+                                updateBuffBatchTargets(battleData,allyPositions,buffSheet);
+                            }
+                            else if (action === "Ultimate") {
+                                const buffSheet = sourceTurn.lcDreamvilleDMGSHEETULT;
+                                updateBuffBatchTargets(battleData,allyPositions,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Dreamville Adventure - buff application",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "basic": "Dreamville Adventure [Basic]",
+            "skill": "Dreamville Adventure [Skill]",
+            "ult": "Dreamville Adventure [Ult]",
         },
     },
         //3star
