@@ -6402,6 +6402,7 @@ const turnLogicLightcones = {
     },
 
     //HARMONY
+    //5star
     "Earthly Escapade": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {
@@ -6672,66 +6673,6 @@ const turnLogicLightcones = {
             // "buff2": "Aether Code"
             // "hruntingStack": "Hrunting Stack"
         },
-    },
-    "Dance! Dance! Dance!": {//REDONE
-        logic(thisTurn,battleData) {},
-        "skillFunctions": {},
-        "listeners": [
-            {
-                "trigger": "PassiveCalls",
-                condition(battleData,generalInfo) {
-                    let ownerRef = this.owners;
-        
-                    const namedTurns = battleData.nameBasedTurns;
-                    const subListeners = this.subListeners;
-                    const ownersSlots = this.ownersSlots;
-        
-                    for (let owner of ownerRef) {
-                        let charSlot = owner.slot;
-                        let currentTurn = namedTurns[charSlot];
-        
-                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
-                    }
-                },
-                "target": "self",
-                "listenerName": "A Grounded Ascent listener setup",
-                "owners": [],
-                "subListeners": [
-                    {
-                        "trigger": "AbilityEnd",
-                        condition(battleData,generalInfo) {
-                            const action = generalInfo.action;
-                            if (action != "Ultimate") {return;}
-        
-                            // let ownerRef = this.owners;
-                            let sourceTurn = generalInfo.sourceTurn;
-        
-                            let lcNameRef = "Dance! Dance! Dance!";
-                            if (!sourceTurn.danceDanceDanceREF) {
-                                let ownersSlots = this.ownersSlots;
-                                let ownerRank = ownersSlots[sourceTurn.name];
-                                let lcPathing = lightcones[lcNameRef].params;
-                                let rankParams = lcPathing[ownerRank-1];
-                                sourceTurn.danceDanceDanceREF = rankParams[0];//advancement value
-                            }
-                            let values = sourceTurn.danceDanceDanceREF;
-
-                            const allyPositions = battleData.allyPositions;
-                            actionAdvance(values,allyPositions,battleData,lcNameRef);
-                            
-                            //quick note for myself in the future, just checked to be certain and tingyun doing double technique
-                            //to get full energy entering the battle, and insta casting ult, DOES cast it at 0 AV, ergo
-                            //it CAN advance everyone preemptively. Kinda cool, never knew that.
-                            //calc already allowed it to work like that, just wanted to be sure. Go calc, lmao.
-                        },
-                        "target": "self",
-                        "isPersonal": true,
-                        "listenerName": "Dance! Dance! Dance! - Team Advance",
-                    },
-                ]
-            },
-        ],
-        "buffNames": {},
     },
     "A Grounded Ascent": {//REDONE
         logic(thisTurn,battleData) {},
@@ -7274,6 +7215,67 @@ const turnLogicLightcones = {
             // "hruntingStack": "Hrunting Stack"
         },
     },
+        //4star
+    "Dance! Dance! Dance!": {//REDONE
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "A Grounded Ascent listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+        
+                            // let ownerRef = this.owners;
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            let lcNameRef = "Dance! Dance! Dance!";
+                            if (!sourceTurn.danceDanceDanceREF) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+                                sourceTurn.danceDanceDanceREF = rankParams[0];//advancement value
+                            }
+                            let values = sourceTurn.danceDanceDanceREF;
+
+                            const allyPositions = battleData.allyPositions;
+                            actionAdvance(values,allyPositions,battleData,lcNameRef);
+                            
+                            //quick note for myself in the future, just checked to be certain and tingyun doing double technique
+                            //to get full energy entering the battle, and insta casting ult, DOES cast it at 0 AV, ergo
+                            //it CAN advance everyone preemptively. Kinda cool, never knew that.
+                            //calc already allowed it to work like that, just wanted to be sure. Go calc, lmao.
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Dance! Dance! Dance! - Team Advance",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {},
+    },
     "Memories of the Past": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {
@@ -7351,6 +7353,86 @@ const turnLogicLightcones = {
         ],
         "buffNames": {},
     },
+    "Poised to Bloom": {//partial rework
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "WaveStart",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    // let lcNameRef = "Poised to Bloom";
+
+                    // const updatePresage = this.updatePresage ??= turnLogicLightcones[lcNameRef].skillFunctions.updatePresage;
+                    const namedTurns = battleData.nameBasedTurns;
+
+                    let firstOwnerTurn = null;
+                    for (let ownerSlot in ownersSlots) {
+                        const currentOwner = namedTurns[ownerSlot];
+                        firstOwnerTurn = currentOwner;
+
+
+                        if (!currentOwner.lcPoisedToBloomCRITSHEET) {
+                            let lcNameRef = "Poised to Bloom";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let ownerRank = ownersSlots[currentOwner.name];
+                            let rankParams = lcPathing[ownerRank-1];
+        
+                            let buffName2 = turnLogicLightcones[lcNameRef].buffNames.buff2;
+        
+                            currentOwner.lcPoisedToBloomCRITSHEET = {
+                                "stats": [CritDamageBase],
+                                [CritDamageBase]: rankParams[1],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": buffName2,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+                            
+                        }
+
+                        break;
+                    }
+                    const buffSheet = firstOwnerTurn.lcPoisedToBloomCRITSHEET;
+
+                    let pathHolderObject = {};
+
+                    const allyPositions = battleData.allyPositions;
+                    for (let ally of allyPositions) {
+                        if (ally.isUniqueEvent) {continue;}
+
+                        const allyPath = ally.path;
+                        const allyPathArray = pathHolderObject[allyPath] ??= [];
+                        allyPathArray.push(ally);
+                    }
+
+                    for (let pathName in pathHolderObject) {
+                        const currentPathArray = pathHolderObject[pathName];
+                        if (currentPathArray.length >= 2) {
+                            for (let ally of currentPathArray) {
+        
+                                updateBuff(battleData,ally,buffSheet);
+                            }
+                        }
+                    }
+                },
+                "target": "self",
+                "priority": -80,
+                "listenerName": "Poised to Bloom - battlestart pathcounts>=2 buff",
+            },
+        ],
+        "buffNames": {
+            "buff2": "Poised to Bloom [LC]",
+        },
+    },
+        //3star
     "Meshing Cogs": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {
@@ -7448,85 +7530,6 @@ const turnLogicLightcones = {
             },
         ],
         "buffNames": {},
-    },
-    "Poised to Bloom": {//partial rework
-        logic(thisTurn,battleData) {},
-        "skillFunctions": {},
-        "listeners": [
-            {
-                "trigger": "WaveStart",
-                condition(battleData,generalInfo) {
-                    // let ownerRef = this.owners;
-                    let ownersSlots = this.ownersSlots;
-                    // let lcNameRef = "Poised to Bloom";
-
-                    // const updatePresage = this.updatePresage ??= turnLogicLightcones[lcNameRef].skillFunctions.updatePresage;
-                    const namedTurns = battleData.nameBasedTurns;
-
-                    let firstOwnerTurn = null;
-                    for (let ownerSlot in ownersSlots) {
-                        const currentOwner = namedTurns[ownerSlot];
-                        firstOwnerTurn = currentOwner;
-
-
-                        if (!currentOwner.lcPoisedToBloomCRITSHEET) {
-                            let lcNameRef = "Poised to Bloom";
-                            let lcPathing = lightcones[lcNameRef].params;
-                            let ownerRank = ownersSlots[currentOwner.name];
-                            let rankParams = lcPathing[ownerRank-1];
-        
-                            let buffName2 = turnLogicLightcones[lcNameRef].buffNames.buff2;
-        
-                            currentOwner.lcPoisedToBloomCRITSHEET = {
-                                "stats": [CritDamageBase],
-                                [CritDamageBase]: rankParams[1],
-                                "source": lcNameRef,
-                                "sourceOwner": currentOwner.properName,
-                                "buffName": buffName2,
-                                "durationInTurn": null,
-                                "duration": 1,
-                                "AVApplied": 0,
-                                "maxStacks": 1,
-                                "currentStacks": 1,
-                                "decay": false,
-                                "expireType": null,
-                            }
-                            
-                        }
-
-                        break;
-                    }
-                    const buffSheet = firstOwnerTurn.lcPoisedToBloomCRITSHEET;
-
-                    let pathHolderObject = {};
-
-                    const allyPositions = battleData.allyPositions;
-                    for (let ally of allyPositions) {
-                        if (ally.isUniqueEvent) {continue;}
-
-                        const allyPath = ally.path;
-                        const allyPathArray = pathHolderObject[allyPath] ??= [];
-                        allyPathArray.push(ally);
-                    }
-
-                    for (let pathName in pathHolderObject) {
-                        const currentPathArray = pathHolderObject[pathName];
-                        if (currentPathArray.length >= 2) {
-                            for (let ally of currentPathArray) {
-        
-                                updateBuff(battleData,ally,buffSheet);
-                            }
-                        }
-                    }
-                },
-                "target": "self",
-                "priority": -80,
-                "listenerName": "Poised to Bloom - battlestart pathcounts>=2 buff",
-            },
-        ],
-        "buffNames": {
-            "buff2": "Poised to Bloom [LC]",
-        },
     },
 
 
