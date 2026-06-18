@@ -5198,7 +5198,6 @@ const turnLogicLightcones = {
                             // const targetsGotHit = generalInfo.targetsGotHit;
                             const targetTurn = generalInfo.targetTurn;
                             const isSlowed = targetTurn.flags[SPD_DOWN];
-                            console.log(targetTurn.flags,targetTurn.flags[SPD_DOWN])
                             
                             if (!sourceTurn.lcLoopSlowDMGSHEET) {
                                 let ownersSlots = this.ownersSlots;

@@ -10275,9 +10275,9 @@ const turnLogic = {
 
                     const buffNames = logicRef.buffNames;
                     ATKObjects.applySWBugINDEX = [
-                        {buffName: buffNames.bugDEF, statIndex: DEFP, bugValue: -values[1], buffSheet: null, flags: [DEF_DOWN]},
-                        {buffName: buffNames.bugATK, statIndex: ATKP, bugValue: -values[0], buffSheet: null, flags: [ATK_DOWN]},
-                        {buffName: buffNames.bugSPD, statIndex: SPDP, bugValue: -values[2], buffSheet: null, flags: [SPD_DOWN]}
+                        {buffName: buffNames.bugDEF, statIndex: DEFP, bugValue: -values[1], buffSheet: null, flags: [DEF_DOWN,SW_DEF_DOWN]},
+                        {buffName: buffNames.bugATK, statIndex: ATKP, bugValue: -values[0], buffSheet: null, flags: [ATK_DOWN,SW_ATK_DOWN]},
+                        {buffName: buffNames.bugSPD, statIndex: SPDP, bugValue: -values[2], buffSheet: null, flags: [SPD_DOWN,SW_SPD_DOWN]}
                     ];
 
                     for (let bugEntry of ATKObjects.applySWBugINDEX) {
@@ -10299,11 +10299,30 @@ const turnLogic = {
                         }
                     }
                 }
-                
-                const bugIndex = ATKObjects.applySWBugINDEX;
+                const targetFlags = targetTurn.flags;
+                const hasDEF = targetFlags[SW_DEF_DOWN] ? 1 : 0;
+                const hasATK = targetFlags[SW_ATK_DOWN] ? 1 : 0;
+                const hasSPD = targetFlags[SW_SPD_DOWN] ? 1 : 0;
+                const hasCount = hasDEF + hasATK + hasSPD;
+                const hasAny = hasCount > 0;
+                const isMissingOne = hasCount != 3;
+
+                let finalIndex = null;
+                const normalCycle = !hasAny || !isMissingOne || hasCount === 1;//if we don't have any, or if we have ALL of them already, then it's normal
+
                 const charValuesRef = sourceTurn.battleValues;
                 charValuesRef.bugCycleCounter += 1;
-                const bugToApply = bugIndex[charValuesRef.bugCycleCounter-1];
+                if (normalCycle) {
+                    finalIndex = charValuesRef.bugCycleCounter;
+                }
+                else {
+                    if (!hasDEF) {finalIndex = 1;}
+                    else if (!hasATK) {finalIndex = 2;}
+                    else if (!hasSPD) {finalIndex = 3;}
+                }
+
+                const bugIndex = ATKObjects.applySWBugINDEX;
+                const bugToApply = bugIndex[finalIndex-1];
                 const buffSheet = bugToApply.buffSheet;
 
                 updateBuff(battleData,targetTurn,buffSheet);
