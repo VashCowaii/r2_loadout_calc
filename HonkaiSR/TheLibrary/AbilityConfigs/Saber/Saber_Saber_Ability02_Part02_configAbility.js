@@ -319,7 +319,7 @@ const configAbility = {
           ]
         },
         "Tags": [
-          "Skill"
+          "Skill (Saber)"
         ],
         "EnergyGainPercent": "10%"
       }
@@ -355,7 +355,7 @@ const configAbility = {
           ]
         },
         "Tags": [
-          "Skill"
+          "Skill (Saber)"
         ]
       }
     },
@@ -390,7 +390,7 @@ const configAbility = {
           ]
         },
         "Tags": [
-          "Skill"
+          "Skill (Saber)"
         ],
         "EnergyGainPercent": "10%"
       }
@@ -426,7 +426,7 @@ const configAbility = {
           ]
         },
         "Tags": [
-          "Skill"
+          "Skill (Saber)"
         ]
       }
     },
@@ -461,7 +461,7 @@ const configAbility = {
           ]
         },
         "Tags": [
-          "Skill"
+          "Skill (Saber)"
         ],
         "EnergyGainPercent": "10%"
       }
@@ -497,7 +497,7 @@ const configAbility = {
           ]
         },
         "Tags": [
-          "Skill"
+          "Skill (Saber)"
         ]
       }
     },
@@ -532,7 +532,7 @@ const configAbility = {
           ]
         },
         "Tags": [
-          "Skill"
+          "Skill (Saber)"
         ],
         "EnergyGainPercent": "70%"
       }
@@ -568,7 +568,7 @@ const configAbility = {
           ]
         },
         "Tags": [
-          "Skill"
+          "Skill (Saber)"
         ]
       }
     },

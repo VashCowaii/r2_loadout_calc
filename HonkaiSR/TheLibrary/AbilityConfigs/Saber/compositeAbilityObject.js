@@ -2693,7 +2693,7 @@ const compositeAbilityObject = {
               ]
             },
             "Tags": [
-              "Basic ATK"
+              "Basic ATK (Saber)"
             ],
             "EnergyGainPercent": "100%"
           }
@@ -2735,7 +2735,7 @@ const compositeAbilityObject = {
                     },
                     "Toughness": null,
                     "Tags": [
-                      "Basic ATK"
+                      "Basic ATK (Saber)"
                     ]
                   }
                 }
@@ -2762,7 +2762,7 @@ const compositeAbilityObject = {
                 },
                 "Toughness": null,
                 "Tags": [
-                  "Basic ATK"
+                  "Basic ATK (Saber)"
                 ]
               }
             }
@@ -2795,7 +2795,7 @@ const compositeAbilityObject = {
               ]
             },
             "Tags": [
-              "Basic ATK"
+              "Basic ATK (Saber)"
             ],
             "EnergyGainPercent": "100%"
           }
@@ -2917,7 +2917,7 @@ const compositeAbilityObject = {
               ]
             },
             "Tags": [
-              "Ultimate"
+              "Ultimate (Saber)"
             ],
             "EnergyGainPercent": "100%"
           }
@@ -2980,7 +2980,7 @@ const compositeAbilityObject = {
                       ]
                     },
                     "Tags": [
-                      "Ultimate"
+                      "Ultimate (Saber)"
                     ]
                   }
                 }
@@ -3022,7 +3022,7 @@ const compositeAbilityObject = {
                           ]
                         },
                         "Tags": [
-                          "Ultimate"
+                          "Ultimate (Saber)"
                         ]
                       }
                     }
@@ -3078,7 +3078,7 @@ const compositeAbilityObject = {
                   ]
                 },
                 "Tags": [
-                  "Ultimate"
+                  "Ultimate (Saber)"
                 ]
               }
             }
@@ -3121,7 +3121,7 @@ const compositeAbilityObject = {
                       ]
                     },
                     "Tags": [
-                      "Ultimate"
+                      "Ultimate (Saber)"
                     ]
                   }
                 }
@@ -3503,7 +3503,7 @@ const compositeAbilityObject = {
               ]
             },
             "Tags": [
-              "Skill"
+              "Skill (Saber)"
             ],
             "EnergyGainPercent": "10%"
           }
@@ -3539,7 +3539,7 @@ const compositeAbilityObject = {
               ]
             },
             "Tags": [
-              "Skill"
+              "Skill (Saber)"
             ]
           }
         },
@@ -3574,7 +3574,7 @@ const compositeAbilityObject = {
               ]
             },
             "Tags": [
-              "Skill"
+              "Skill (Saber)"
             ],
             "EnergyGainPercent": "10%"
           }
@@ -3610,7 +3610,7 @@ const compositeAbilityObject = {
               ]
             },
             "Tags": [
-              "Skill"
+              "Skill (Saber)"
             ]
           }
         },
@@ -3645,7 +3645,7 @@ const compositeAbilityObject = {
               ]
             },
             "Tags": [
-              "Skill"
+              "Skill (Saber)"
             ],
             "EnergyGainPercent": "10%"
           }
@@ -3681,7 +3681,7 @@ const compositeAbilityObject = {
               ]
             },
             "Tags": [
-              "Skill"
+              "Skill (Saber)"
             ]
           }
         },
@@ -3716,7 +3716,7 @@ const compositeAbilityObject = {
               ]
             },
             "Tags": [
-              "Skill"
+              "Skill (Saber)"
             ],
             "EnergyGainPercent": "70%"
           }
@@ -3752,7 +3752,7 @@ const compositeAbilityObject = {
               ]
             },
             "Tags": [
-              "Skill"
+              "Skill (Saber)"
             ]
           }
         },

@@ -183,7 +183,7 @@ const configAbility = {
           ]
         },
         "Tags": [
-          "Basic ATK"
+          "Basic ATK (Saber)"
         ],
         "EnergyGainPercent": "100%"
       }
@@ -225,7 +225,7 @@ const configAbility = {
                 },
                 "Toughness": null,
                 "Tags": [
-                  "Basic ATK"
+                  "Basic ATK (Saber)"
                 ]
               }
             }
@@ -252,7 +252,7 @@ const configAbility = {
             },
             "Toughness": null,
             "Tags": [
-              "Basic ATK"
+              "Basic ATK (Saber)"
             ]
           }
         }
@@ -285,7 +285,7 @@ const configAbility = {
           ]
         },
         "Tags": [
-          "Basic ATK"
+          "Basic ATK (Saber)"
         ],
         "EnergyGainPercent": "100%"
       }

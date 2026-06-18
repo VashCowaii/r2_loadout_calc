@@ -1321,7 +1321,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Saber",
     "entryIcon": "icon/character/1014.png",
     "lineCount": 4199,
-    "sizeCount": 151563
+    "sizeCount": 151699
   },
   {
     "entryType": "char",
