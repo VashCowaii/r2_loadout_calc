@@ -5082,6 +5082,87 @@ const turnLogicLightcones = {
             "buff1": "Void (LC)",
         },
     },
+    "Loop": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Loop listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AllyDMGStart", 
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+        
+                            // const targetsGotHit = generalInfo.targetsGotHit;
+                            const targetTurn = generalInfo.targetTurn;
+                            const isSlowed = targetTurn.flags[SPD_DOWN];
+                            console.log(targetTurn.flags,targetTurn.flags[SPD_DOWN])
+                            
+                            if (!sourceTurn.lcLoopSlowDMGSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+
+                                let lcNameRef = "Loop";
+                                let buffName = turnLogicLightcones[lcNameRef].buffNames.dmgStack;
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+        
+                                sourceTurn.lcLoopSlowDMGSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[0],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "actionTags": ["All"],
+                                }
+                            }
+                            let buffSheet = sourceTurn.lcLoopSlowDMGSHEET;
+                            const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+
+                            if (buffCheck) {
+                                if (isSlowed) {return;}
+                                removeBuff(battleData,sourceTurn,buffCheck);
+                            }
+                            else if (isSlowed) {
+                                updateBuff(battleData,sourceTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Loop - dmg start slow checker",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "dmgStack": "Loop (LC)"
+        },
+    },
 
     //DESTRUCTION
         //5star
