@@ -360,6 +360,19 @@ const customDisplayValuesLog = {
         {valueName: "Next Skill Free", refName: "nextSkillFree", isBattleValue: true, isCharacterState: true},
         {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
     ],
+    "Trailblazer - Harmony": [//tracker done
+        {valueName: "Backup Dancer Active", refName: "hmcBackupDancerActive", isBattleValue: true,hide: true},
+        // {valueName: "Counter", refName: "counterCount", isBattleValue: true,summaryValue: "march7pCounterCountSum",summaryType: "SUM",
+        //     customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "#9083FF",
+        //     displayRequiresIndex: 1, displayRequiresType: "number",
+        //     displayRequiresBoolean: false,
+        //     progressIcon: characters["March 7th - Preservation"].traces.Point04.icon
+        // },
+        // {valueName: "Counter Max", refName: "counterCountMax", isBattleValue: true,hide: true},
+        // {valueName: "Blind Bet", refName: "betStacks", isBattleValue: true,summaryValue: "avenBlindBetSum",summaryType: "SUM"},
+        // {valueName: "Hellscape", refName: "hellscapeActive", isBattleValue: true, isCharacterState: true},
+        // {valueName: "HP Loss Tally", refName: "bladeHPTally", isBattleValue: false},
+    ],
     
     //ERUDITION
     "Argenti": [//no tracker needed
@@ -606,6 +619,7 @@ const conditionsCharacterDisplayWarning = {
         "SkillPermaConditionsTarget": [permaConditionsTextLibrary.supportDefaultChar1],
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
+    "Trailblazer - Harmony": defaultStandardAbilityDisplayWarnings,
 
     //REMEMBRANCE
     "Trailblazer - Remembrance": {
@@ -2738,6 +2752,17 @@ const defaultConditions = {
                     ]
                 }
             ]
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        }
+    },
+    "Trailblazer - Harmony": {
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "AND",
+            "array": []
         },
         "Ultimate": {
             "type": "AND",
