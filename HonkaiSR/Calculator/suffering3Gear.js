@@ -5036,6 +5036,90 @@ const turnLogicLightcones = {
             "vuln": "Holiday Thermae Escapade (LC)"
         },
     },
+    "Boundless Choreo": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Boundless Choreo listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AllyDMGStart", 
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+        
+                            // const targetsGotHit = generalInfo.targetsGotHit;
+                            const targetTurn = generalInfo.targetTurn;
+                            const flags = targetTurn.flags;
+                            const isSlowed = flags[SPD_DOWN];
+                            const isReduced = flags[DEF_DOWN];
+
+                            const isValid = isSlowed || isReduced;
+                            
+                            if (!sourceTurn.lcBoundlessChoreoCRITSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+
+                                let lcNameRef = "Boundless Choreo";
+                                let buffName = turnLogicLightcones[lcNameRef].buffNames.dmgStack;
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+        
+                                sourceTurn.lcBoundlessChoreoCRITSHEET = {
+                                    "stats": [CritDamageBase],
+                                    [CritDamageBase]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "actionTags": ["All"],
+                                }
+                            }
+                            let buffSheet = sourceTurn.lcBoundlessChoreoCRITSHEET;
+                            const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+
+                            if (buffCheck) {
+                                if (isValid) {return;}
+                                removeBuff(battleData,sourceTurn,buffCheck);
+                            }
+                            else if (isValid) {
+                                updateBuff(battleData,sourceTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Boundless Choreo - dmg start slow checker",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "dmgStack": "Boundless Choreo (LC)"
+        },
+    },
         //3star
     "Void": {//REDONE
         logic(thisTurn,battleData) {},
