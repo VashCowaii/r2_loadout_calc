@@ -3583,6 +3583,7 @@ const turnLogicLightcones = {
                                 sourceTurn.lcLiesAlongBreezeSHREDSHEET1 = {
                                     "stats": [DEFP],
                                     [DEFP]: -rankParams[2],
+                                    "flags": [DEF_DOWN],
                                     "source": lcNameRef,
                                     "sourceOwner": sourceTurn.properName,
                                     "buffName": buffName,
@@ -3598,6 +3599,7 @@ const turnLogicLightcones = {
                                 sourceTurn.lcLiesAlongBreezeSHREDSHEET2 = {
                                     "stats": [DEFP],
                                     [DEFP]: -rankParams[5],
+                                    "flags": [DEF_DOWN],
                                     "source": lcNameRef,
                                     "sourceOwner": sourceTurn.properName,
                                     "buffName": buffName2,
@@ -3860,7 +3862,7 @@ const turnLogicLightcones = {
                             let targetsFound = 0;
                             for (let targetSlot in targetsGotHit) {
                                 const currentEnemy = enemyTurns[targetSlot];
-                                const DEFCheck = currentEnemy.statTable[DEFP] < 0;
+                                const DEFCheck = currentEnemy.flags[DEF_DOWN];
         
                                 if (DEFCheck) {targetsFound += 1;}
                             }
@@ -4702,6 +4704,7 @@ const turnLogicLightcones = {
                                     sourceTurn.resolutionShinesDEFSHREDSHEET = {
                                         "stats": [DEFP],
                                         [DEFP]: -rankParams[1],
+                                        "flags": [DEF_DOWN],
                                         "source": lcNameRef,
                                         "sourceOwner": sourceTurn.properName,
                                         "buffName": buffName,
@@ -10374,6 +10377,7 @@ const turnLogicLightcones = {
                                 sourceTurn.lifeShouldBeCastFlamesDEFSHEET = {
                                     "stats": [DEFP],
                                     [DEFP]: -rankParams[1],
+                                    "flags": [DEF_DOWN],
                                     "source": lcNameRef,
                                     "sourceOwner": sourceTurn.properName,
                                     "buffName": buffName2,
@@ -14974,8 +14978,7 @@ const turnLogicRelics = {
                             condition(battleData,generalInfo) {
                                 let targetTurn = generalInfo.targetTurn;
 
-                                const defShredCheck = targetTurn.statTable[DEFP] ?? 0;
-                                const isReducing = defShredCheck < 0;
+                                const isReducing = targetTurn.flags[DEF_DOWN];
 
                                 let sourceTurn = generalInfo.sourceTurn;
         
@@ -15043,8 +15046,7 @@ const turnLogicRelics = {
                         let ownerRank = ownersSlots[ownerSlot];
                         if (!ownerRank) {return;}//if the debuff owner isn't an owner of the relic, abort early
 
-                        const defShredCheck = sourceSheet[DEFP] ?? 0;
-                        const isReducing = defShredCheck < 0;
+                        const isReducing = sourceSheet.flags[DEF_DOWN];
                         if (!isReducing) {return;}
 
                         const sourceTurn = generalInfo.sourceTurn?.[0] ?? generalInfo.sourceTurn;
