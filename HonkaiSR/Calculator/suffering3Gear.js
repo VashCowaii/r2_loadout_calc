@@ -5132,6 +5132,7 @@ const turnLogicLightcones = {
                                 sourceTurn.whereaboutsDreamsRestSPDDEBUFF = {
                                     "stats": [SPDP],
                                     [SPDP]: -rankParams[2],
+                                    "flags": [SPD_DOWN],
                                     "source": lcNameRef,
                                     "sourceOwner": sourceTurn.properName,
                                     "buffName": buffName,

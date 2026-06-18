@@ -14162,6 +14162,7 @@ const turnLogic = {
                     ATKObjects.weltSkillOnlySLOWSHEET = {
                         "stats": [SPDP],
                         [SPDP]: -0.10,
+                        "flags": [SPD_DOWN],
                         "source": "Skill",
                         "sourceOwner": allyTurn.properName,
                         "buffName": logicRef.buffNames.skillSlow,
@@ -14202,7 +14203,7 @@ const turnLogic = {
                 //since the addproc from the TRACE only, can only hit an enemy once per attack, we only ever proc the dmg for hit 1, and that works to still enact the addproc
                 //without needing to monitor a tracker buff each time a hit happens
 
-                const slowCheck = targetTurn.statTable[SPDP] < 0;
+                const slowCheck = targetTurn.flags[SPD_DOWN];
                 const debuffCheck = targetTurn.debuffCounter;
 
                 if (slowCheck && debuffCheck) {
@@ -14505,7 +14506,7 @@ const turnLogic = {
                             // const slot = generalInfo.slot;
                             let validDMG = false;
                             const targetTurn = generalInfo.targetTurn;
-                            if (targetTurn.statTable[SPDP] < 0) {validDMG = true;}
+                            if (targetTurn.flags[SPD_DOWN]) {validDMG = true;}
                             //as stupid as it sounds, the crit bonus here only applies to HITS, and only from ult and skill.
                             //additional dmg despite being 60-70% of his dmg profile, will not benefit from this eidolon. Actual horse shit.
     
@@ -19376,6 +19377,7 @@ const turnLogic = {
                     ATKObjects.ratioTechSPDSHEET = {
                         "stats": [SPDP],
                         [SPDP]: -0.15,
+                        "flags": [SPD_DOWN],
                         "source": "Technique",
                         "sourceOwner": sourceTurn.properName,
                         "buffName": logicRef.buffNames.techSPD,
