@@ -961,7 +961,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1247337710\">G_MortenaxBlade_Debuff_ToEnemy</a>[<span class=\"descriptionNumberColor\">Balefire Bind</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "STAT_DefenceDown"
+        "DEF_DOWN"
       ],
       "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, and DMG taken increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue2</span>.",
       "type": "Debuff",

@@ -69,7 +69,7 @@ const compositeAbilityObject = {
                       "target": "{{Parameter Target}}"
                     },
                     "flagName": [
-                      "STAT_DefenceDown"
+                      "DEF_DOWN"
                     ]
                   },
                   "passed": [

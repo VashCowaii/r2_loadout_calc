@@ -27,7 +27,7 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1118663317\">LC_21015_Sub</a>[<span class=\"descriptionNumberColor\">Ensnarement</span>]",
           "modifierFlags": [
-            "STAT_DefenceDown"
+            "DEF_DOWN"
           ],
           "description": "DEF -<span class=\"descriptionNumberColor\">#SkillEquip_P2_DefenceDown</span>.",
           "type": "Debuff",

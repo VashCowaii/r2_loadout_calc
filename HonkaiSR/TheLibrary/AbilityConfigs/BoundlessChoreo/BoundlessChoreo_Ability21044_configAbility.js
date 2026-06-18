@@ -40,7 +40,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Ability Target TAKING DMG}}"
                     },
-                    "flagName": "STAT_DefenceDown"
+                    "flagName": "DEF_DOWN"
                   }
                 ]
               },

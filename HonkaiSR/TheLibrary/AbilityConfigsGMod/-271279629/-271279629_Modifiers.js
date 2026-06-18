@@ -2468,7 +2468,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1643246488\">MReference_DefenceDeltaDown</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "STAT_DefenceDown"
+        "DEF_DOWN"
       ],
       "execute": [
         {
@@ -2529,7 +2529,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__779501689\">MReference_DefenceRatioDown</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "STAT_DefenceDown"
+        "DEF_DOWN"
       ],
       "useEntitySnapshot": true,
       "execute": [

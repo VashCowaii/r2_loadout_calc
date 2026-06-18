@@ -44,7 +44,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__409362716\">LC_23043_Sub2</a>[<span class=\"descriptionNumberColor\">Theft</span>]",
           "stackType": "Replace",
           "modifierFlags": [
-            "STAT_DefenceDown"
+            "DEF_DOWN"
           ],
           "description": "Decreases DEF by <span class=\"descriptionNumberColor\">#SkillEquip_P6_DefenceDown</span>.",
           "type": "Debuff",
@@ -79,7 +79,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-254264378\">LC_23043_Sub</a>[<span class=\"descriptionNumberColor\">Bamboozle</span>]",
           "stackType": "Replace",
           "modifierFlags": [
-            "STAT_DefenceDown"
+            "DEF_DOWN"
           ],
           "description": "Decreases DEF by <span class=\"descriptionNumberColor\">#SkillEquip_P3_DefenceDown</span>.",
           "type": "Debuff",

@@ -276,7 +276,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-37395626\">Advanced_Welt_Weightless</a>[<span class=\"descriptionNumberColor\">Weightless</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "STAT_DefenceDown",
+        "DEF_DOWN",
         "STAT_SpeedDown",
         "RemoveWhenCasterDead"
       ],
