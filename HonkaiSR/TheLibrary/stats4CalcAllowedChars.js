@@ -130,7 +130,7 @@ const vashCharProgressList = [
     {name: "Sunday",
         completed: true, live: true, needs80OrTraces: false, owned: true},
     {name: "Trailblazer - Harmony",
-        completed: false, live: false, needs80OrTraces: false, owned: true},
+        completed: true, live: true, needs80OrTraces: false, owned: true},
     {name: "Tribbie",
         completed: true, live: true, needs80OrTraces: false, owned: true},
     //4star
