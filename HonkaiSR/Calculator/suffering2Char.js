@@ -232,9 +232,6 @@ const battleActions = {
             // const isEnemy = sourceTurn.isEnemy;
             // const log = battleData.isLoggyLogger;
 
-            // const currentDots = sourceTurn.currentDotsArray;
-            // const currentSpecialDots = sourceTurn.specialDotsArray;
-
             currentReference.duration = turnOverride ?? (sourceTurn.turnState ? buffSheet.durationInTurn : buffSheet.duration);
             currentReference.AVApplied = battleData.sumAV;
             
@@ -323,8 +320,6 @@ const battleActions = {
 
                 // PreActionPhase
                 addListenerWithPriorityDOT(battleData,currentReference,sourceTurn);
-                // if (isSpecialDOTLast) {sourceTurn.specialDotsArray.push(currentReference);}
-                // else {sourceTurn.currentDotsArray.push(currentReference);}
             }
 
             if (isAllDOTTypes) {
@@ -367,10 +362,6 @@ const battleActions = {
                 //if a dot is refreshed, then it is pushed to the end of the currentdots array to be called LAST
                 //rn this is the assumption bc with kafka + erode, if erode is added first, even as the oldest is triggered first when enemy turn starts
 
-                // if (!currentReference.isSpecialDOTLast) {
-                //     const currentDots = sourceTurn.currentDotsArray;
-                //     currentDots.push(currentDots.splice(currentDots.indexOf(currentReference), 1)[0]);
-                // }
                 const currentDots = battleData.battleListenersPersonal[sourceTurn.properName].PreActionPhase;
 
                 currentDots.splice(currentDots.indexOf(currentReference), 1);
@@ -531,11 +522,6 @@ const battleActions = {
                     poke("DOTWasModified",battleData,{sourceTurn,currentReference,dotWas: "Remove",element},sourceTurn);
                 }
 
-                // const currentDots = sourceTurn.currentDotsArray;
-                // const currentSpecialDots = sourceTurn.specialDotsArray;
-                // if (currentReference.isSpecialDOTLast) {currentSpecialDots.splice(currentSpecialDots.indexOf(currentReference), 1);}
-                // else {currentDots.splice(currentDots.indexOf(currentReference), 1);}
-
                 const currentDots = battleData.battleListenersPersonal[sourceTurn.properName].PreActionPhase;
                 currentDots.splice(currentDots.indexOf(currentReference), 1);
             }
@@ -630,10 +616,6 @@ const battleActions = {
                         sourceTurn.dots[element] -= 1;
                         poke("DOTWasModified",battleData,{sourceTurn,currentReference,dotWas: "Remove",element},sourceTurn);
                     }
-                    // const currentDots = sourceTurn.currentDotsArray;
-                    // const currentSpecialDots = sourceTurn.specialDotsArray;
-                    // if (currentReference.isSpecialDOTLast) {currentSpecialDots.splice(currentSpecialDots.indexOf(currentReference), 1);}
-                    // else {currentDots.splice(currentDots.indexOf(currentReference), 1);}
 
                     const currentDots = battleData.battleListenersPersonal[sourceTurn.properName].PreActionPhase;
                     currentDots.splice(currentDots.indexOf(currentReference), 1);
@@ -3145,9 +3127,7 @@ const battleActions = {
 
 
         const alliedTurns = battleData.nameBasedTurns;
-        // const currentDots = targetTurn.currentDotsArray;
         const currentDots = battleData.battleListenersPersonal[targetTurn.properName].PreActionPhase;
-        // const specialDots = targetTurn.specialDotsArray;
         
         let dotWrap = battleActions.dotDMGWrapper;
         // for (let dotRef of currentDots) {

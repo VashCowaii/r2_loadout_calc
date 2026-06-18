@@ -3797,13 +3797,10 @@ const turnLogicLightcones = {
 
                     let dotsOwned = [];
 
-                    const currentDots = targetTurn.currentDotsArray;
-                    const currentDotsSpecial = targetTurn.specialDotsArray;
+                    const currentDots = battleData.battleListenersPersonal[targetTurn.properName].PreActionPhase ?? [];
 
                     for (let dotEntry of currentDots) {
-                        dotsOwned.push(dotEntry.sourceOwner);
-                    }
-                    for (let dotEntry of currentDotsSpecial) {
+                        if (!dotEntry.isDOT) {continue;}
                         dotsOwned.push(dotEntry.sourceOwner);
                     }
 
@@ -4478,23 +4475,14 @@ const turnLogicLightcones = {
         
                                 let dotFound = false;
                                 if (!check2 && currentEnemy.DOTCounter) {
-                                    const enemyDots = currentEnemy.currentDotsArray;
+                                    const enemyDots = battleData.battleListenersPersonal[currentEnemy.properName].PreActionPhase ?? [];
                                     
                                     for (let dotEntry of enemyDots) {
+                                        if (!dotEntry.isDOT) {continue}
                                         if (dotEntry.sourceOwner === sourceTurn.properName) {
         
                                             dotFound = true;
                                             break;
-                                        }
-                                    }
-                                    if (!dotFound) {
-                                        const specialDots = currentEnemy.specialDotsArray;
-                                        for (let dotEntry of specialDots) {
-                                            if (dotEntry.sourceOwner === sourceTurn.properName) {
-            
-                                                dotFound = true;
-                                                break;
-                                            }
                                         }
                                     }
                                 }
