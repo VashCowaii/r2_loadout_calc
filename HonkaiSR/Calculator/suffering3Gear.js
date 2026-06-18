@@ -6801,13 +6801,16 @@ const turnLogicLightcones = {
                                     let lcPathing = lightcones[lcNameRef].params;
                                     let rankParams = lcPathing[ownerRank-1];
                                     let values = rankParams[1];
+
+                                    const logicRef = turnLogicLightcones[lcNameRef];
+                                    const uniqueName = battleActions.getUniqueGearBuffName(battleData,sourceTurn,logicRef,"nextAllyBuff")
         
                                     sourceTurn.battleIsntOverSkillEndSHEET = {
                                         "stats": [DamageAll],
                                         [DamageAll]: values,
                                         "source": lcNameRef,
                                         "sourceOwner": sourceTurn.properName,
-                                        "buffName": turnLogicLightcones[lcNameRef].buffNames.nextAllyBuff,
+                                        "buffName": uniqueName,
                                         "durationInTurn": 1,
                                         "duration": 1,
                                         "AVApplied": 0,
@@ -7376,6 +7379,104 @@ const turnLogicLightcones = {
             // "hruntingStack": "Hrunting Stack"
         },
     },
+    "Epoch Etched in Golden Blood": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Epoch Etched in Golden Blood setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Skill") {return}
+                            
+                            let sourceTurn = generalInfo.sourceTurn;
+                            const poolKey = generalInfo.poolKey;
+                            if (!alliedPoolKeys.has(poolKey)) {return;}
+                            
+                            const targets = generalInfo.target;
+                            // const subTarget = generalInfo.subTarget;
+                            if (targets.length > 1) {return};
+    
+                            const targetTurn = targets[0];
+    
+                            if (!sourceTurn.lcEpochEtchedSKILLDMGSHEET) {
+                                let lcNameRef = "Epoch Etched in Golden Blood";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let ownerSlot = sourceTurn.name;
+                                let ownersSlots = this.ownersSlots;
+                                const ownerRank = ownersSlots[ownerSlot];
+                                let rankParams = lcPathing[ownerRank-1];
+                                // greatTableIndex
+                                // greatTableKeys
+
+                                const logicRef = turnLogicLightcones["Epoch Etched in Golden Blood"]
+                                const uniqueName = battleActions.getUniqueGearBuffName(battleData,sourceTurn,logicRef,"hymn")
+                                sourceTurn.lcEpochEtchedSKILLDMGSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[3],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": uniqueName,
+                                    "durationInTurn": 4,
+                                    "duration": 3,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "removeOnDeath": true,
+                                    "actionTags": ["Skill"],
+                                }
+                            }
+                            const buffSheet = sourceTurn.lcEpochEtchedSKILLDMGSHEET;
+
+                            updateBuff(battleData,targetTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Epoch Etched in Golden Blood - buff application",
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            const slot = generalInfo.dmgSlot;
+                            if (slot != "Ultimate") {return;}
+
+                            let sourceTurn = generalInfo.sourceTurn;
+                            updateSkillPoints(battleData,1,sourceTurn,false,"Epoch Etched in Golden Blood");
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Epoch Etched in Golden Blood - ult attack SP gain",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "hymn": "Skill DMG - Epoch Etched in Golden Blood"
+        },
+    },
         //4star
     "Dance! Dance! Dance!": {//REDONE
         logic(thisTurn,battleData) {},
@@ -7651,6 +7752,344 @@ const turnLogicLightcones = {
         ],
         "buffNames": {
             "buff2": "In Pursuit of the Wind [LC]",
+        },
+    },
+    "For Tomorrow's Journey": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "For Tomorrow's Journey listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return}
+                            
+                            const sourceTurn = generalInfo.sourceTurn;
+    
+                            if (!sourceTurn.lcForTomorrowJourneyDMGSHEET) {
+                                let lcNameRef = "For Tomorrow's Journey";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let ownerSlot = sourceTurn.name;
+                                let ownersSlots = this.ownersSlots;
+                                const ownerRank = ownersSlots[ownerSlot];
+                                let rankParams = lcPathing[ownerRank-1];
+                                // greatTableIndex
+                                // greatTableKeys
+                                sourceTurn.lcForTomorrowJourneyDMGSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.hymn,
+                                    "durationInTurn": 2,
+                                    "duration": 1,//does this count as applied within own turn or applied before designating the turn as next?
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "removeOnDeath": true,
+                                }
+                            }
+                            const buffSheet = sourceTurn.lcForTomorrowJourneyDMGSHEET;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "For Tomorrow's Journey - buff application",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "hymn": "For Tomorrow's Journey"
+        },
+    },
+    "The Forever Victual": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "The Forever Victual listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Skill") {return}
+                            
+                            const sourceTurn = generalInfo.sourceTurn;
+    
+                            if (!sourceTurn.lcForeverVictualATKSHEET) {
+                                let lcNameRef = "The Forever Victual";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let ownerSlot = sourceTurn.name;
+                                let ownersSlots = this.ownersSlots;
+                                const ownerRank = ownersSlots[ownerSlot];
+                                let rankParams = lcPathing[ownerRank-1];
+
+                                sourceTurn.lcForeverVictualATKSHEET = {
+                                    "stats": [ATKP],
+                                    [ATKP]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.hymn,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 3,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "removeOnDeath": true,
+                                }
+                            }
+                            const buffSheet = sourceTurn.lcForeverVictualATKSHEET;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+
+                            const stackCheck = sourceTurn.buffsObject[buffSheet.buffName].currentStacks;
+                            if (stackCheck === 3) {removeListener(battleData,this,sourceTurn)}
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "The Forever Victual - buff application",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "hymn": "The Forever Victual"
+        },
+    },
+    "Dreamville Adventure": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Dreamville Adventure listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Skill" && action != "Ultimate" && action != "BasicATK") {return}
+                            
+                            const sourceTurn = generalInfo.sourceTurn;
+    
+                            if (!sourceTurn.lcDreamvilleDMGSHEETBASIC) {
+                                let lcNameRef = "Dreamville Adventure";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let ownerSlot = sourceTurn.name;
+                                let ownersSlots = this.ownersSlots;
+                                const ownerRank = ownersSlots[ownerSlot];
+                                let rankParams = lcPathing[ownerRank-1];
+                                
+                                sourceTurn.lcDreamvilleDMGSHEETBASIC = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[0],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.basic,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 3,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "removeOnDeath": true,
+                                    "actionTags": ["Basic"],
+                                }
+                                sourceTurn.lcDreamvilleDMGSHEETSkill = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[0],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.skill,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 3,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "removeOnDeath": true,
+                                    "actionTags": ["Skill"],
+                                }
+                                sourceTurn.lcDreamvilleDMGSHEETULT = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[0],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.ult,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 3,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "removeOnDeath": true,
+                                    "actionTags": ["Ultimate"],
+                                }
+                            }
+
+                            const allyPositions = battleData.allyPositions;
+
+                            if (action === "BasicATK") {
+                                const buffSheet = sourceTurn.lcDreamvilleDMGSHEETBASIC;
+                                updateBuffBatchTargets(battleData,allyPositions,buffSheet);
+                            }
+                            else if (action === "Skill") {
+                                const buffSheet = sourceTurn.lcDreamvilleDMGSHEETSkill;
+                                updateBuffBatchTargets(battleData,allyPositions,buffSheet);
+                            }
+                            else if (action === "Ultimate") {
+                                const buffSheet = sourceTurn.lcDreamvilleDMGSHEETULT;
+                                updateBuffBatchTargets(battleData,allyPositions,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Dreamville Adventure - buff application",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "basic": "Dreamville Adventure [Basic]",
+            "skill": "Dreamville Adventure [Skill]",
+            "ult": "Dreamville Adventure [Ult]",
+        },
+    },
+    "Past and Future": {//REDONE
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Past and Future listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Skill") {return;}
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+                            const nextAllyTurn = sim.getNextQueuedAllyTurnBuffableOnly(battleData);
+                            if (!nextAllyTurn) {return;}
+    
+                            if (!sourceTurn.lcPastAndFutureDMGSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let lcNameRef = "Past and Future";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+
+                                const logicRef = turnLogicLightcones[lcNameRef];
+                                const uniqueName = battleActions.getUniqueGearBuffName(battleData,sourceTurn,logicRef,"nextAllyBuff")
+    
+                                sourceTurn.lcPastAndFutureDMGSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[0],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": uniqueName,
+                                    "durationInTurn": 1,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn"
+                                }
+                            }
+    
+                            let buffSheet = sourceTurn.lcPastAndFutureDMGSHEET
+                            updateBuff(battleData,nextAllyTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Past and Future buff prep controller",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "nextAllyBuff": "Past and Future",
+            // "buff2": "Aether Code"
+            // "hruntingStack": "Hrunting Stack"
         },
     },
         //3star
