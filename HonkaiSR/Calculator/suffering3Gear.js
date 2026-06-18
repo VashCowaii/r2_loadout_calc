@@ -7751,6 +7751,77 @@ const turnLogicLightcones = {
             "buff2": "In Pursuit of the Wind [LC]",
         },
     },
+    "For Tomorrow's Journey": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "For Tomorrow's Journey listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return}
+                            
+                            const sourceTurn = generalInfo.sourceTurn;
+    
+                            if (!sourceTurn.lcForTomorrowJourneyDMGSHEET) {
+                                let lcNameRef = "For Tomorrow's Journey";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let ownerSlot = sourceTurn.name;
+                                let ownersSlots = this.ownersSlots;
+                                const ownerRank = ownersSlots[ownerSlot];
+                                let rankParams = lcPathing[ownerRank-1];
+                                // greatTableIndex
+                                // greatTableKeys
+                                sourceTurn.lcForTomorrowJourneyDMGSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.hymn,
+                                    "durationInTurn": 2,
+                                    "duration": 1,//does this count as applied within own turn or applied before designating the turn as next?
+                                    "AVApplied": 0,
+                                    "maxStacks": 3,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "removeOnDeath": true,
+                                }
+                            }
+                            const buffSheet = sourceTurn.lcForTomorrowJourneyDMGSHEET;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "For Tomorrow's Journey - buff application",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "hymn": "For Tomorrow's Journey"
+        },
+    },
         //3star
     "Meshing Cogs": {//REDONE
         logic(thisTurn,battleData) {},
