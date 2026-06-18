@@ -67,7 +67,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Ability Target TAKING DMG}}"
                 },
-                "flagName": "STAT_SpeedDown"
+                "flagName": "SPD_DOWN"
               },
               "passed": [
                 {

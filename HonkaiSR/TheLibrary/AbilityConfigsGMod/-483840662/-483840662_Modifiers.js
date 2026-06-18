@@ -2989,7 +2989,7 @@ const configAbility = {
         "STAT_Confine",
         "DisableAction",
         "STAT_CTRL",
-        "STAT_SpeedDown"
+        "SPD_DOWN"
       ],
       "description": "Action is delayed and SPD is reduced.",
       "type": "Debuff",
@@ -5236,7 +5236,7 @@ const configAbility = {
         "STAT_CTRL",
         "STAT_Confine",
         "DisableAction",
-        "STAT_SpeedDown",
+        "SPD_DOWN",
         "AvatarBreak"
       ],
       "description": "Action is delayed and SPD is reduced.",

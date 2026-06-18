@@ -1142,7 +1142,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1437509790\">Modifier_FantasticStory_BaseAbility_2260_plus3_defDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
           "stackType": "Replace",
           "modifierFlags": [
-            "STAT_DefenceDown"
+            "DEF_DOWN"
           ],
           "description": "Each stack decreases DEF by <span class=\"descriptionNumberColor\">MDF_DefDown</span>. This effect can stack up to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span> time(s).",
           "type": "Debuff",

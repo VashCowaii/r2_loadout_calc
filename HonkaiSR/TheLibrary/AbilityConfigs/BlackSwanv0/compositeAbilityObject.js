@@ -6131,7 +6131,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__2093125302\">BlackSwan_DefenceDown</a>[<span class=\"descriptionNumberColor\">Decadence, False Twilight</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "STAT_DefenceDown"
+            "DEF_DOWN"
           ],
           "stackData": [
             "MDF_PropertyValue"

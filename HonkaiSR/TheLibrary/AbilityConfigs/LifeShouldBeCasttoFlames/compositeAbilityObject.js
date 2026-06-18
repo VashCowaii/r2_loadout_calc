@@ -28,7 +28,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-969142096\">LC_23041_Sub</a>[<span class=\"descriptionNumberColor\">DEF Reduced</span>]",
           "stackType": "Replace",
           "modifierFlags": [
-            "STAT_DefenceDown"
+            "DEF_DOWN"
           ],
           "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Debuff",

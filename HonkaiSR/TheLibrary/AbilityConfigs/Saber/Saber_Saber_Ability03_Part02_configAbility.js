@@ -43,7 +43,7 @@ const configAbility = {
           ]
         },
         "Tags": [
-          "Ultimate"
+          "Ultimate (Saber)"
         ],
         "EnergyGainPercent": "100%"
       }
@@ -106,7 +106,7 @@ const configAbility = {
                   ]
                 },
                 "Tags": [
-                  "Ultimate"
+                  "Ultimate (Saber)"
                 ]
               }
             }
@@ -148,7 +148,7 @@ const configAbility = {
                       ]
                     },
                     "Tags": [
-                      "Ultimate"
+                      "Ultimate (Saber)"
                     ]
                   }
                 }
@@ -204,7 +204,7 @@ const configAbility = {
               ]
             },
             "Tags": [
-              "Ultimate"
+              "Ultimate (Saber)"
             ]
           }
         }
@@ -247,7 +247,7 @@ const configAbility = {
                   ]
                 },
                 "Tags": [
-                  "Ultimate"
+                  "Ultimate (Saber)"
                 ]
               }
             }

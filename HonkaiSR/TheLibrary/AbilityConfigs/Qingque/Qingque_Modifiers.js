@@ -48,7 +48,7 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
-        "STAT_DefenceDown"
+        "DEF_DOWN"
       ],
       "description": "DEF -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",

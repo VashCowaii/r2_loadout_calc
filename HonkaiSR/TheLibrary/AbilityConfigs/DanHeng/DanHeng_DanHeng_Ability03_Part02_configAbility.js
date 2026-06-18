@@ -29,7 +29,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Ability Target(ST)}}"
         },
-        "flagName": "STAT_SpeedDown"
+        "flagName": "SPD_DOWN"
       },
       "passed": [
         {

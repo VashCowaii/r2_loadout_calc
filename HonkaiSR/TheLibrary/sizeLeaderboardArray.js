@@ -53,7 +53,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Cyrene",
     "entryIcon": "icon/character/1415.png",
     "lineCount": 12905,
-    "sizeCount": 477525
+    "sizeCount": 477509
   },
   {
     "entryType": "enemy",
@@ -233,13 +233,13 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 3003016,
     "lineCount": 8169,
-    "sizeCount": 330624
+    "sizeCount": 330618
   },
   {
     "entryType": "enemy",
     "enemyID": 3003015,
     "lineCount": 8158,
-    "sizeCount": 329982
+    "sizeCount": 329976
   },
   {
     "entryType": "enemy",
@@ -443,7 +443,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "BlackSwanv0",
     "entryIcon": "icon/character/1307.png",
     "lineCount": 6561,
-    "sizeCount": 259376
+    "sizeCount": 259368
   },
   {
     "entryType": "char",
@@ -451,7 +451,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Qingque",
     "entryIcon": "icon/character/1201.png",
     "lineCount": 5924,
-    "sizeCount": 259364
+    "sizeCount": 259356
   },
   {
     "entryType": "enemy",
@@ -493,7 +493,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 8015012,
     "lineCount": 6648,
-    "sizeCount": 247208
+    "sizeCount": 247202
   },
   {
     "entryType": "enemy",
@@ -557,7 +557,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 4053011,
     "lineCount": 5613,
-    "sizeCount": 222531
+    "sizeCount": 222523
   },
   {
     "entryType": "enemy",
@@ -587,7 +587,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 4053013,
     "lineCount": 5480,
-    "sizeCount": 218180
+    "sizeCount": 218172
   },
   {
     "entryType": "enemy",
@@ -649,7 +649,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Hysilens",
     "entryIcon": "icon/character/1410.png",
     "lineCount": 5361,
-    "sizeCount": 207315
+    "sizeCount": 207307
   },
   {
     "entryType": "enemy",
@@ -695,19 +695,19 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 3003013,
     "lineCount": 4903,
-    "sizeCount": 201551
+    "sizeCount": 201545
   },
   {
     "entryType": "enemy",
     "enemyID": 3003017,
     "lineCount": 4903,
-    "sizeCount": 201551
+    "sizeCount": 201545
   },
   {
     "entryType": "enemy",
     "enemyID": 3003018,
     "lineCount": 4903,
-    "sizeCount": 201551
+    "sizeCount": 201545
   },
   {
     "entryType": "enemy",
@@ -741,7 +741,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Ashveil",
     "entryIcon": "icon/character/1504.png",
     "lineCount": 5338,
-    "sizeCount": 195594
+    "sizeCount": 195586
   },
   {
     "entryType": "enemy",
@@ -815,7 +815,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "TheDahlia",
     "entryIcon": "icon/character/1321.png",
     "lineCount": 4989,
-    "sizeCount": 186169
+    "sizeCount": 186161
   },
   {
     "entryType": "enemy",
@@ -845,7 +845,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "SilverWolf",
     "entryIcon": "icon/character/1006.png",
     "lineCount": 4536,
-    "sizeCount": 181037
+    "sizeCount": 181015
   },
   {
     "entryType": "char",
@@ -873,7 +873,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 3003010,
     "lineCount": 4459,
-    "sizeCount": 177433
+    "sizeCount": 177427
   },
   {
     "entryType": "enemy",
@@ -911,7 +911,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "MortenaxBlade",
     "entryIcon": "icon/character/1507.png",
     "lineCount": 4863,
-    "sizeCount": 175391
+    "sizeCount": 175383
   },
   {
     "entryType": "char",
@@ -925,7 +925,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 3003014,
     "lineCount": 4370,
-    "sizeCount": 174500
+    "sizeCount": 174494
   },
   {
     "entryType": "enemy",
@@ -949,7 +949,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 3003012,
     "lineCount": 4362,
-    "sizeCount": 174199
+    "sizeCount": 174193
   },
   {
     "entryType": "enemy",
@@ -973,7 +973,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 3003011,
     "lineCount": 4330,
-    "sizeCount": 173190
+    "sizeCount": 173184
   },
   {
     "entryType": "enemy",
@@ -1033,19 +1033,19 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 4053010,
     "lineCount": 4217,
-    "sizeCount": 169867
+    "sizeCount": 169859
   },
   {
     "entryType": "enemy",
     "enemyID": 4053012,
     "lineCount": 4217,
-    "sizeCount": 169867
+    "sizeCount": 169859
   },
   {
     "entryType": "enemy",
     "enemyID": 4053014,
     "lineCount": 4217,
-    "sizeCount": 169867
+    "sizeCount": 169859
   },
   {
     "entryType": "enemy",
@@ -1321,7 +1321,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Saber",
     "entryIcon": "icon/character/1014.png",
     "lineCount": 4199,
-    "sizeCount": 151563
+    "sizeCount": 151699
   },
   {
     "entryType": "char",
@@ -1431,19 +1431,19 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 1014011,
     "lineCount": 4047,
-    "sizeCount": 143617
+    "sizeCount": 143601
   },
   {
     "entryType": "enemy",
     "enemyID": 1014012,
     "lineCount": 4047,
-    "sizeCount": 143617
+    "sizeCount": 143601
   },
   {
     "entryType": "enemy",
     "enemyID": 1014016,
     "lineCount": 4043,
-    "sizeCount": 143560
+    "sizeCount": 143544
   },
   {
     "entryType": "char",
@@ -1471,7 +1471,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 1014014,
     "lineCount": 3829,
-    "sizeCount": 136351
+    "sizeCount": 136335
   },
   {
     "entryType": "enemy",
@@ -1491,7 +1491,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "DrRatio",
     "entryIcon": "icon/character/1305.png",
     "lineCount": 3874,
-    "sizeCount": 134884
+    "sizeCount": 134878
   },
   {
     "entryType": "enemy",
@@ -1503,7 +1503,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 1014015,
     "lineCount": 3740,
-    "sizeCount": 133752
+    "sizeCount": 133736
   },
   {
     "entryType": "enemy",
@@ -1641,7 +1641,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 1014013,
     "lineCount": 3388,
-    "sizeCount": 119821
+    "sizeCount": 119805
   },
   {
     "entryType": "char",
@@ -1681,7 +1681,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Fugue",
     "entryIcon": "icon/character/1225.png",
     "lineCount": 3256,
-    "sizeCount": 116808
+    "sizeCount": 116800
   },
   {
     "entryType": "char",
@@ -1697,7 +1697,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "SilverWolfv0",
     "entryIcon": "icon/character/1006.png",
     "lineCount": 3180,
-    "sizeCount": 116374
+    "sizeCount": 116352
   },
   {
     "entryType": "char",
@@ -1705,7 +1705,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Lingsha",
     "entryIcon": "icon/character/1222.png",
     "lineCount": 3260,
-    "sizeCount": 116231
+    "sizeCount": 116223
   },
   {
     "entryType": "char",
@@ -2121,7 +2121,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "DanHeng",
     "entryIcon": "icon/character/1002.png",
     "lineCount": 2399,
-    "sizeCount": 82992
+    "sizeCount": 82974
   },
   {
     "entryType": "enemy",
@@ -2135,7 +2135,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Welt",
     "entryIcon": "icon/character/1004.png",
     "lineCount": 2333,
-    "sizeCount": 81590
+    "sizeCount": 81558
   },
   {
     "entryType": "enemy",
@@ -2265,7 +2265,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 1014010,
     "lineCount": 2179,
-    "sizeCount": 73860
+    "sizeCount": 73852
   },
   {
     "entryType": "enemy",
@@ -2491,7 +2491,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Misha",
     "entryIcon": "icon/character/1312.png",
     "lineCount": 1862,
-    "sizeCount": 62520
+    "sizeCount": 62512
   },
   {
     "entryType": "enemy",
@@ -2637,7 +2637,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Pela",
     "entryIcon": "icon/character/1106.png",
     "lineCount": 1726,
-    "sizeCount": 56127
+    "sizeCount": 56111
   },
   {
     "entryType": "enemy",
@@ -2657,7 +2657,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Gepard",
     "entryIcon": "icon/character/1104.png",
     "lineCount": 1688,
-    "sizeCount": 55395
+    "sizeCount": 55389
   },
   {
     "entryType": "enemy",
@@ -2785,7 +2785,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Weltv0",
     "entryIcon": "icon/character/1004.png",
     "lineCount": 1531,
-    "sizeCount": 48802
+    "sizeCount": 48790
   },
   {
     "entryType": "enemy",
@@ -3971,13 +3971,13 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 1002040,
     "lineCount": 378,
-    "sizeCount": 11619
+    "sizeCount": 11611
   },
   {
     "entryType": "enemy",
     "enemyID": 1002041,
     "lineCount": 378,
-    "sizeCount": 11619
+    "sizeCount": 11611
   },
   {
     "entryType": "relic",
@@ -4391,7 +4391,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "LifeShouldBeCasttoFlames",
     "entryIcon": "icon/light_cone/23041.png",
     "lineCount": 272,
-    "sizeCount": 8965
+    "sizeCount": 8957
   },
   {
     "entryType": "lc",
@@ -4533,7 +4533,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "LiesDanceontheBreeze",
     "entryIcon": "icon/light_cone/23043.png",
     "lineCount": 250,
-    "sizeCount": 8110
+    "sizeCount": 8094
   },
   {
     "entryType": "lc",
@@ -4835,7 +4835,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "DivineQueryingMasterSmith",
     "entryIcon": "icon/relic/132.png",
     "lineCount": 187,
-    "sizeCount": 6359
+    "sizeCount": 6351
   },
   {
     "entryType": "lc",
@@ -4991,7 +4991,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "WhereaboutsShouldDreamsRest",
     "entryIcon": "icon/light_cone/23025.png",
     "lineCount": 180,
-    "sizeCount": 5773
+    "sizeCount": 5767
   },
   {
     "entryType": "lc",
@@ -5269,7 +5269,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "ResolutionShinesAsPearlsofSweat",
     "entryIcon": "icon/light_cone/21015.png",
     "lineCount": 144,
-    "sizeCount": 4689
+    "sizeCount": 4681
   },
   {
     "entryType": "lc",
@@ -5697,14 +5697,6 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "lc",
-    "entryName": "Before the Tutorial Mission Starts",
-    "trimCharacterName": "BeforetheTutorialMissionStarts",
-    "entryIcon": "icon/light_cone/22000.png",
-    "lineCount": 116,
-    "sizeCount": 3052
-  },
-  {
-    "entryType": "lc",
     "entryName": "Quid Pro Quo",
     "trimCharacterName": "QuidProQuo",
     "entryIcon": "icon/light_cone/21021.png",
@@ -5713,11 +5705,19 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "lc",
+    "entryName": "Before the Tutorial Mission Starts",
+    "trimCharacterName": "BeforetheTutorialMissionStarts",
+    "entryIcon": "icon/light_cone/22000.png",
+    "lineCount": 116,
+    "sizeCount": 3044
+  },
+  {
+    "entryType": "lc",
     "entryName": "Boundless Choreo",
     "trimCharacterName": "BoundlessChoreo",
     "entryIcon": "icon/light_cone/21044.png",
     "lineCount": 116,
-    "sizeCount": 3035
+    "sizeCount": 3021
   },
   {
     "entryType": "enemy",
@@ -5901,7 +5901,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Loop",
     "entryIcon": "icon/light_cone/20011.png",
     "lineCount": 82,
-    "sizeCount": 2105
+    "sizeCount": 2099
   },
   {
     "entryType": "lc",

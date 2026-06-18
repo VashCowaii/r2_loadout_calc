@@ -6622,7 +6622,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1569804105\">MLevel_BattleEventAbility_Challenge_Month_08</a>[<span class=\"descriptionNumberColor\">Memory Imprint</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "STAT_DefenceDown"
+            "DEF_DOWN"
           ],
           "description": "Each stack decreases DEF by <span class=\"descriptionNumberColor\">ADF_1</span>, up to <span class=\"descriptionNumberColor\">ADF_2</span> stack(s).",
           "type": "Debuff",

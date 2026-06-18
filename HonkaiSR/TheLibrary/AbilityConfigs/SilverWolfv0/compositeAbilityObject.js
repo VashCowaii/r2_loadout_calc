@@ -44,7 +44,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
-            "STAT_DefenceDown"
+            "DEF_DOWN"
           ],
           "description": "DEF -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Debuff",
@@ -150,7 +150,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1817488961\">Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "STAT_SpeedDown"
+            "SPD_DOWN"
           ],
           "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Debuff",
@@ -187,7 +187,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1834266580\">Silwolf_Normal_Bug2</a>[<span class=\"descriptionNumberColor\">Type-2 Bug</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "STAT_DefenceDown"
+            "DEF_DOWN"
           ],
           "description": "DEF -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Debuff",

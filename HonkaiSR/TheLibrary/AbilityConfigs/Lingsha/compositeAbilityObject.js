@@ -159,7 +159,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-350940925\">Lingsha_Eidolon1_PassiveStackProperty</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "STAT_DefenceDown"
+            "DEF_DOWN"
           ],
           "execute": [
             {

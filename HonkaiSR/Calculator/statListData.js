@@ -1,3 +1,91 @@
+const greatFlagsKnowerOfAll = [
+    //ACTION STUFF
+    "OFF_FIELD",
+    "BLOCK_ACTION",
+    "BLOCK_HEAL",
+    "ZONE",
+
+    //WEAKEN
+    "WEAKEN",
+
+    //SPEED
+    "SPD_DOWN",
+    "SPD_UP",
+
+    //DEF
+    "DEF_DOWN",
+
+    //ATK
+    "ATK_DOWN",
+
+    //DEBUFF
+    "DEBUFF",
+    "DEBUFF_IMMUNE",
+
+    //DOT TYPES
+    "DOT",
+    "DOT_IMMUNE",
+    "DOT_BLEED",
+    "DOT_BURN",
+    "DOT_SHEAR",
+    "DOT_SHOCK",
+
+    //CROWD CONTROL
+    "CROWD_CONTROL",
+    "STUN",
+    "STUN_EFFECT",
+    "FROZEN",
+    "FROZEN_EFFECT",
+    "SLEEP",
+
+    "IMPRISON",
+    "ENTANGLE",
+
+    //IMPLANT
+    "WEAKNESS_IMPLANT",
+
+    //WEAKNESS
+    "TOUGHNESS_EXO",
+    "FORCE_SUPERBREAK",
+    "SUPERBREAK_BONUS",
+
+    //RESIST
+    "RESIST_ALL",
+    "BLOCK_DMG",
+    "BLOCK_HITS",
+
+    //SHIELD
+    "SHIELD",
+    "SHIELD_STACK",
+
+    //CERTIFIED BANGER
+    "CERITIFIED_BANGER",
+
+    //CHEATING, shit that doesn't really exist but we use it for stuff to make things faster
+    "SW_DEF_DOWN",
+    "SW_ATK_DOWN",
+    "SW_SPD_DOWN",
+]
+const greatFlagIndex = {};
+const greatFlagsLength = greatFlagsKnowerOfAll.length;
+for (let i = 0; i < greatFlagsLength; i++) {
+    greatFlagIndex[greatFlagsKnowerOfAll[i]] = i;
+}
+
+const DEF_DOWN = greatFlagIndex.DEF_DOWN;
+const SPD_DOWN = greatFlagIndex.SPD_DOWN;
+const ATK_DOWN = greatFlagIndex.ATK_DOWN;
+
+const SW_DEF_DOWN = greatFlagIndex.SW_DEF_DOWN;
+const SW_ATK_DOWN = greatFlagIndex.SW_ATK_DOWN;
+const SW_SPD_DOWN = greatFlagIndex.SW_SPD_DOWN;
+
+
+
+
+
+
+
 const greatTableKnowerOfAll = {
     "": 0,
     // "Multiplier": 0,

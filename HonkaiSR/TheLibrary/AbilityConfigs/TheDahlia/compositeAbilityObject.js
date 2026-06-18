@@ -402,7 +402,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "STAT_AttachWeakness",
-            "STAT_DefenceDown"
+            "DEF_DOWN"
           ],
           "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. Gains Weaknesses of all Dance Partners' Types.",
           "type": "Debuff",

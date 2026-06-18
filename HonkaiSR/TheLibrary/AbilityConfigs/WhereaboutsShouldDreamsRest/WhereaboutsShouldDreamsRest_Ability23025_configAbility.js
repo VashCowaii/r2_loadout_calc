@@ -19,7 +19,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1728787246\">LC_23025_Sub</a>[<span class=\"descriptionNumberColor\">Routed</span>]",
       "stackType": "Replace",
       "modifierFlags": [
-        "STAT_SpeedDown"
+        "SPD_DOWN"
       ],
       "description": "Increase Break DMG dealt by the wearer by <span class=\"descriptionNumberColor\">#SkillEquip_P2_BreakDamageAddedRatio</span> and decrease SPD by <span class=\"descriptionNumberColor\">#SkillEquip_P3_SpeedDownRatio</span>.",
       "type": "Debuff",

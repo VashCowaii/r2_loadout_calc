@@ -2434,7 +2434,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1761981801\">MModifier_Monster_W3_Dinosaur_SpeedDownRatio</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "STAT_SpeedDown"
+        "SPD_DOWN"
       ],
       "description": "Decreases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",

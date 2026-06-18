@@ -77,7 +77,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__275559829\">Pela_Ultimate_DroneAnalysis</a>[<span class=\"descriptionNumberColor\">Exposed</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "STAT_DefenceDown"
+        "DEF_DOWN"
       ],
       "stackData": [
         "MDF_DefenceDownRatio"

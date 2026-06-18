@@ -27,7 +27,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1535177927\">Dr_Ratio_Maze_SpeedDown</a>[<span class=\"descriptionNumberColor\">SPD Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "STAT_SpeedDown"
+        "SPD_DOWN"
       ],
       "description": "Decreases SPD by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",

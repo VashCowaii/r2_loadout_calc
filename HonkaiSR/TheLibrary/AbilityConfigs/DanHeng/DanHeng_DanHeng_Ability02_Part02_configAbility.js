@@ -189,7 +189,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1147035290\">DanHeng_BPAbility_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "STAT_SpeedDown"
+        "SPD_DOWN"
       ],
       "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",

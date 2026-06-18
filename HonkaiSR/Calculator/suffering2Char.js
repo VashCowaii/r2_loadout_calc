@@ -232,9 +232,6 @@ const battleActions = {
             // const isEnemy = sourceTurn.isEnemy;
             // const log = battleData.isLoggyLogger;
 
-            // const currentDots = sourceTurn.currentDotsArray;
-            // const currentSpecialDots = sourceTurn.specialDotsArray;
-
             currentReference.duration = turnOverride ?? (sourceTurn.turnState ? buffSheet.durationInTurn : buffSheet.duration);
             currentReference.AVApplied = battleData.sumAV;
             
@@ -283,6 +280,14 @@ const battleActions = {
         let changeStats = true;
         let timesToApply = currentStacks;
 
+        const flags = currentReference.flags;
+        if (flags) {
+            const targetFlags = sourceTurn.flags;
+            for (let flag of flags) {//DEF_DOWN
+                targetFlags[flag] += 1;
+            }
+        }
+
         if (isShield) {
             sourceTurn.shieldCounter += 1;
             sourceTurn.activeShields[buffName] = currentReference;
@@ -315,8 +320,6 @@ const battleActions = {
 
                 // PreActionPhase
                 addListenerWithPriorityDOT(battleData,currentReference,sourceTurn);
-                // if (isSpecialDOTLast) {sourceTurn.specialDotsArray.push(currentReference);}
-                // else {sourceTurn.currentDotsArray.push(currentReference);}
             }
 
             if (isAllDOTTypes) {
@@ -359,10 +362,6 @@ const battleActions = {
                 //if a dot is refreshed, then it is pushed to the end of the currentdots array to be called LAST
                 //rn this is the assumption bc with kafka + erode, if erode is added first, even as the oldest is triggered first when enemy turn starts
 
-                // if (!currentReference.isSpecialDOTLast) {
-                //     const currentDots = sourceTurn.currentDotsArray;
-                //     currentDots.push(currentDots.splice(currentDots.indexOf(currentReference), 1)[0]);
-                // }
                 const currentDots = battleData.battleListenersPersonal[sourceTurn.properName].PreActionPhase;
 
                 currentDots.splice(currentDots.indexOf(currentReference), 1);
@@ -501,6 +500,13 @@ const battleActions = {
         const changeStats = currentReference.stats != undefined;
         if (changeStats) {buffStatChange(battleData,sourceTurn,currentReference,currentReference,currentReference.currentStacks,-1,ignoreFamilyPokes);}
 
+        const flags = currentReference.flags;
+        if (flags) {
+            const targetFlags = sourceTurn.flags;
+            for (let flag of flags) {//DEF_DOWN
+                targetFlags[flag] -= 1;
+            }
+        }
 
         if (currentReference.isDebuff) {
             sourceTurn.debuffCounter -= 1;
@@ -515,11 +521,6 @@ const battleActions = {
                     sourceTurn.dots[element] -= 1;
                     poke("DOTWasModified",battleData,{sourceTurn,currentReference,dotWas: "Remove",element},sourceTurn);
                 }
-
-                // const currentDots = sourceTurn.currentDotsArray;
-                // const currentSpecialDots = sourceTurn.specialDotsArray;
-                // if (currentReference.isSpecialDOTLast) {currentSpecialDots.splice(currentSpecialDots.indexOf(currentReference), 1);}
-                // else {currentDots.splice(currentDots.indexOf(currentReference), 1);}
 
                 const currentDots = battleData.battleListenersPersonal[sourceTurn.properName].PreActionPhase;
                 currentDots.splice(currentDots.indexOf(currentReference), 1);
@@ -594,6 +595,14 @@ const battleActions = {
             
             if (changeStats) {buffStatChange(battleData,sourceTurn,currentReference,currentReference,currentReference.currentStacks,-1,ignoreFamilyPokes);}
 
+            const flags = currentReference.flags;
+            if (flags) {
+                const targetFlags = sourceTurn.flags;
+                for (let flag of flags) {//DEF_DOWN
+                    targetFlags[flag] -= 1;
+                }
+            }
+
             if (isDebuff) {
                 sourceTurn.debuffCounter -= 1;
                 if (!ignoreDebuffPokes) {poke("DebuffRemoved",battleData,{sourceTurn,currentReference},sourceTurn);}
@@ -607,10 +616,6 @@ const battleActions = {
                         sourceTurn.dots[element] -= 1;
                         poke("DOTWasModified",battleData,{sourceTurn,currentReference,dotWas: "Remove",element},sourceTurn);
                     }
-                    // const currentDots = sourceTurn.currentDotsArray;
-                    // const currentSpecialDots = sourceTurn.specialDotsArray;
-                    // if (currentReference.isSpecialDOTLast) {currentSpecialDots.splice(currentSpecialDots.indexOf(currentReference), 1);}
-                    // else {currentDots.splice(currentDots.indexOf(currentReference), 1);}
 
                     const currentDots = battleData.battleListenersPersonal[sourceTurn.properName].PreActionPhase;
                     currentDots.splice(currentDots.indexOf(currentReference), 1);
@@ -3122,9 +3127,7 @@ const battleActions = {
 
 
         const alliedTurns = battleData.nameBasedTurns;
-        // const currentDots = targetTurn.currentDotsArray;
         const currentDots = battleData.battleListenersPersonal[targetTurn.properName].PreActionPhase;
-        // const specialDots = targetTurn.specialDotsArray;
         
         let dotWrap = battleActions.dotDMGWrapper;
         // for (let dotRef of currentDots) {
@@ -4662,10 +4665,9 @@ const battleActions = {
         if (isAttack) {battleData.attackTechniqueUsed = true;}
         if (isDimension) {battleData.dimensionTechniqueUsed = true;}
     },
-    getUniqueGearBuffName(battleData,sourceTurn,buffNames,buffName) {
-        // const logicRef = turnLogicLightcones[lcNameRef];
-        // const buffNames = logicRef.buffNames;
-        // let buffName3 = buffNames.elationVuln;
+    getUniqueGearBuffName(battleData,sourceTurn,logicRef,buffNameTag) {
+        const buffNames = logicRef.buffNames;
+        let buffName = buffNames[buffNameTag];
         const uniqueName = `${buffName} (${sourceTurn.properName})`;
         buffNames[sourceTurn.properName] = uniqueName;
         return uniqueName;
@@ -10198,6 +10200,7 @@ const turnLogic = {
                     ATKObjects.silverwolfUltimateDEFDEBUFFSHEET = {
                         "stats": [DEFP],
                         [DEFP]: -values[2],
+                        "flags": [DEF_DOWN],
                         "source": "Ultimate",
                         "sourceOwner": sourceTurn.properName,
                         "buffName": logicRef.buffNames.defDebuff,
@@ -10244,7 +10247,6 @@ const turnLogic = {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
-                let characterName = sourceTurn.properName;
                 // let skillPathing = characters[characterName].skills;
                 const skillRef = ATKObjects.applySWBugREF ??= ATKObjects.Talent["Awaiting System Response..."].variant1;
 
@@ -10253,15 +10255,16 @@ const turnLogic = {
 
                     const buffNames = logicRef.buffNames;
                     ATKObjects.applySWBugINDEX = [
-                        {buffName: buffNames.bugDEF, statIndex: DEFP, bugValue: -values[1], buffSheet: null},
-                        {buffName: buffNames.bugATK, statIndex: ATKP, bugValue: -values[0], buffSheet: null},
-                        {buffName: buffNames.bugSPD, statIndex: SPDP, bugValue: -values[2], buffSheet: null}
+                        {buffName: buffNames.bugDEF, statIndex: DEFP, bugValue: -values[1], buffSheet: null, flags: [DEF_DOWN,SW_DEF_DOWN]},
+                        {buffName: buffNames.bugATK, statIndex: ATKP, bugValue: -values[0], buffSheet: null, flags: [ATK_DOWN,SW_ATK_DOWN]},
+                        {buffName: buffNames.bugSPD, statIndex: SPDP, bugValue: -values[2], buffSheet: null, flags: [SPD_DOWN,SW_SPD_DOWN]}
                     ];
 
                     for (let bugEntry of ATKObjects.applySWBugINDEX) {
                         bugEntry.buffSheet = {
                             "stats": [bugEntry.statIndex],
                             [bugEntry.statIndex]: bugEntry.bugValue,
+                            "flags": bugEntry.flags,
                             "source": "Talent",
                             "sourceOwner": sourceTurn.properName,
                             "buffName":  bugEntry.buffName,
@@ -10276,11 +10279,30 @@ const turnLogic = {
                         }
                     }
                 }
-                
-                const bugIndex = ATKObjects.applySWBugINDEX;
+                const targetFlags = targetTurn.flags;
+                const hasDEF = targetFlags[SW_DEF_DOWN] ? 1 : 0;
+                const hasATK = targetFlags[SW_ATK_DOWN] ? 1 : 0;
+                const hasSPD = targetFlags[SW_SPD_DOWN] ? 1 : 0;
+                const hasCount = hasDEF + hasATK + hasSPD;
+                const hasAny = hasCount > 0;
+                const isMissingOne = hasCount != 3;
+
+                let finalIndex = null;
+                const normalCycle = !hasAny || !isMissingOne || hasCount === 1;//if we don't have any, or if we have ALL of them already, then it's normal
+
                 const charValuesRef = sourceTurn.battleValues;
                 charValuesRef.bugCycleCounter += 1;
-                const bugToApply = bugIndex[charValuesRef.bugCycleCounter-1];
+                if (normalCycle) {
+                    finalIndex = charValuesRef.bugCycleCounter;
+                }
+                else {
+                    if (!hasDEF) {finalIndex = 1;}
+                    else if (!hasATK) {finalIndex = 2;}
+                    else if (!hasSPD) {finalIndex = 3;}
+                }
+
+                const bugIndex = ATKObjects.applySWBugINDEX;
+                const bugToApply = bugIndex[finalIndex-1];
                 const buffSheet = bugToApply.buffSheet;
 
                 updateBuff(battleData,targetTurn,buffSheet);
@@ -10457,6 +10479,12 @@ const turnLogic = {
                     if (rank >= 2) {
                         const listener2 = passiveListeners[1];
                         addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+
+                        const listene9 = passiveListeners[8];
+                        const allEnemiesArray = battleData.allEnemiesArray;
+                        for (let enemy of allEnemiesArray) {
+                            addListenerWithPriority(battleData,listene9,listene9.trigger,enemy,null,ownerTurn);
+                        }
                     }
 
                     //e4
@@ -10474,6 +10502,10 @@ const turnLogic = {
                     //trace implant weakbreak
                     const listener5 = passiveListeners[4];
                     addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+
+                    //talent bug application
+                    const listener8 = passiveListeners[7];
+                    addListenerWithPriority(battleData,listener8,listener8.trigger,ownerTurn);
                     
                     getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
@@ -10547,10 +10579,6 @@ const turnLogic = {
                         "trigger": "AllyDMGStart",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
-                            let characterName = ownerTurn.properName;
-        
-                            let sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.properName != characterName) {return;}
     
                             let targetTurn = generalInfo.targetTurn;
                             let targetDebuffs = Math.min(5,targetTurn.debuffCounter);
@@ -10559,8 +10587,8 @@ const turnLogic = {
                                 "stats": [DamageAll],
                                 [DamageAll]: 0.20,
                                 "source": "E6",
-                                "sourceOwner": sourceTurn.properName,
-                                "buffName": turnLogic[characterName].buffNames.e6,
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": turnLogic[ownerTurn.properName].buffNames.e6,
                                 "durationInTurn": null,
                                 "duration": 1,
                                 "AVApplied": 0,
@@ -10570,28 +10598,29 @@ const turnLogic = {
                                 "expireType": null
                             }
                             let buffName = buffSheet.buffName;
-                            const buffCheck = sourceTurn.buffsObject[buffName];
+                            const buffCheck = ownerTurn.buffsObject[buffName];
     
                             if (buffCheck) {//if the buff exists
                                 const currentStacks = buffCheck.currentStacks;
                                 if (currentStacks < targetDebuffs) {//and if the current stacks are lower than the stacks we need
                                     const stackDiff = targetDebuffs - currentStacks;//then get the diff and add that diff in stacks
                                     buffSheet.currentStacks = stackDiff;
-                                    updateBuff(battleData,sourceTurn,buffSheet);
+                                    updateBuff(battleData,ownerTurn,buffSheet);
                                 }
                                 else if (currentStacks === targetDebuffs) {//but if stacks are equal, then abort bc nothing should be done
                                     return;
                                 }
                                 else {//but if stacks are greater than they should be, then remove the buff and reapply with the correct amount
                                     //logging for the removal will be silent if the target has debuffs at all
-                                    removeBuff(battleData,sourceTurn,buffSheet,targetDebuffs>0);
+                                    removeBuff(battleData,ownerTurn,buffSheet,targetDebuffs>0);
                                 }
                             }
         
                             buffSheet.currentStacks = targetDebuffs;
-                            updateBuff(battleData,sourceTurn,buffSheet);
+                            updateBuff(battleData,ownerTurn,buffSheet);
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Silver Wolf E6 bonus DMG ONHIT",
                         "ownerTurn": {},
                     },
@@ -10638,6 +10667,40 @@ const turnLogic = {
                         "listenerName": "Silver Wolf - Major Trace: Inject",
                         "ownerTurn": {},
                     },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+
+                            const targetsGotHit = generalInfo.targetsGotHit;
+                            const enemyTurns = battleData.enemyBasedTurns;
+                            const applySWBug = this.applySWBug ??= turnLogic[ownerTurn.properName].skillFunctions.applySWBug
+                            for (let enemySlot in targetsGotHit) {
+                                const currentEnemy = enemyTurns[enemySlot];
+                                if (currentEnemy.isDead) {continue;}
+                                applySWBug(battleData,currentEnemy,ownerTurn);
+                            }
+                        },
+                        "target": "enemy",
+                        "isPersonal": true,
+                        "listenerName": "Talent bug application",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WasAttackedStart",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
+                            const targetTurn = personalOwner;
+        
+        
+                            const applySWBug = this.applySWBug ??= turnLogic[providerTurn.properName].skillFunctions.applySWBug
+                            applySWBug(battleData,targetTurn,providerTurn);
+                        },
+                        "target": "enemy",
+                        "isPersonal": true,
+                        "listenerName": "Silver Wolf E2 Bug Controller",
+                        "ownerTurn": {},
+                    },
                 ],
             },
             {
@@ -10676,29 +10739,29 @@ const turnLogic = {
                 "listenerName": "Silver Wolf death implant switch controller",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "HitEnemyStart",//TODO: revisit later
-                condition(battleData,generalInfo) {
-                    const sourceTurn = generalInfo.sourceTurn;
-                    const targetsGotHit = generalInfo.targetsGotHit;
-                    const targetTurn = generalInfo.targetTurn;
-                    if (sourceTurn.isEnemy || targetsGotHit[targetTurn.name] != 1) {return;}//we only evaluate first hits, on allied attacks
+            // {
+            //     "trigger": "HitEnemyStart",//TODO: revisit later
+            //     condition(battleData,generalInfo) {
+            //         const sourceTurn = generalInfo.sourceTurn;
+            //         const targetsGotHit = generalInfo.targetsGotHit;
+            //         const targetTurn = generalInfo.targetTurn;
+            //         if (sourceTurn.isEnemy || targetsGotHit[targetTurn.name] != 1) {return;}//we only evaluate first hits, on allied attacks
 
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-                    let e2 = ownerTurn.rank >= 2;
-                    if (!e2 && sourceTurn.properName != characterName) {return;}//if it's not sw and it's not e2sw as an ally, then abort
+            //         let ownerTurn = this.ownerTurn;
+            //         let characterName = ownerTurn.properName;
+            //         let e2 = ownerTurn.rank >= 2;
+            //         if (!e2 && sourceTurn.properName != characterName) {return;}//if it's not sw and it's not e2sw as an ally, then abort
 
-                    let isSWE2 = sourceTurn.properName === characterName && e2;
+            //         let isSWE2 = sourceTurn.properName === characterName && e2;
 
-                    const applySWBug = this.applySWBug ??= turnLogic[characterName].skillFunctions.applySWBug
-                    applySWBug(battleData,targetTurn,ownerTurn);
-                    if (isSWE2) {applySWBug(battleData,targetTurn,ownerTurn);}//sw applies TWO bugs in her attacks at e2
-                },
-                "target": "enemy",
-                "listenerName": "Silver Wolf Talent Bug Controller",
-                "ownerTurn": {},
-            },
+            //         const applySWBug = this.applySWBug ??= turnLogic[characterName].skillFunctions.applySWBug
+            //         applySWBug(battleData,targetTurn,ownerTurn);
+            //         if (isSWE2) {applySWBug(battleData,targetTurn,ownerTurn);}//sw applies TWO bugs in her attacks at e2
+            //     },
+            //     "target": "enemy",
+            //     "listenerName": "Silver Wolf Talent Bug Controller",
+            //     "ownerTurn": {},
+            // },
             {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
@@ -11934,6 +11997,7 @@ const turnLogic = {
                         [ATKP]: -values[5],
                         [DEFP]: -values[2],
                         [ResistanceAll]: rank >= 4 ? -0.20 : 0,
+                        "flags": [DEF_DOWN],
                         "source": "Zone",
                         "sourceOwner": sourceTurn.properName,
                         "buffName": buffNames.zoneName,
@@ -13361,6 +13425,7 @@ const turnLogic = {
                     ATKObjects.blackswanSkillDEBUFFSHEET = {
                         "stats": [DEFP],
                         [DEFP]: -values[3],
+                        "flags": [DEF_DOWN],
                         "source": "Skill",
                         "sourceOwner": ownerTurn.properName,
                         "buffName": buffNames.skillShred,
@@ -14143,6 +14208,7 @@ const turnLogic = {
                     ATKObjects.weltSkillOnlySLOWSHEET = {
                         "stats": [SPDP],
                         [SPDP]: -0.10,
+                        "flags": [SPD_DOWN],
                         "source": "Skill",
                         "sourceOwner": allyTurn.properName,
                         "buffName": logicRef.buffNames.skillSlow,
@@ -14183,7 +14249,7 @@ const turnLogic = {
                 //since the addproc from the TRACE only, can only hit an enemy once per attack, we only ever proc the dmg for hit 1, and that works to still enact the addproc
                 //without needing to monitor a tracker buff each time a hit happens
 
-                const slowCheck = targetTurn.statTable[SPDP] < 0;
+                const slowCheck = targetTurn.flags[SPD_DOWN];
                 const debuffCheck = targetTurn.debuffCounter;
 
                 if (slowCheck && debuffCheck) {
@@ -14403,6 +14469,7 @@ const turnLogic = {
                                     "stats": [SPDP,DEFP,ResistanceAll],
                                     [SPDP]: -values[2],
                                     [DEFP]: -values[1],
+                                    "flags": [DEF_DOWN,SPD_DOWN],
                                     [ResistanceAll]: ownerTurn.rank >= 4 ? -0.30 : 0,
                                     "source": "Talent",
                                     "sourceOwner": ownerTurn.properName,
@@ -14485,7 +14552,7 @@ const turnLogic = {
                             // const slot = generalInfo.slot;
                             let validDMG = false;
                             const targetTurn = generalInfo.targetTurn;
-                            if (targetTurn.statTable[SPDP] < 0) {validDMG = true;}
+                            if (targetTurn.flags[SPD_DOWN]) {validDMG = true;}
                             //as stupid as it sounds, the crit bonus here only applies to HITS, and only from ult and skill.
                             //additional dmg despite being 60-70% of his dmg profile, will not benefit from this eidolon. Actual horse shit.
     
@@ -14832,6 +14899,7 @@ const turnLogic = {
                         "stats": [DEFP,VulnAll],
                         [DEFP]: -values[6],
                         [VulnAll]: values[3],
+                        "flags": [DEF_DOWN],
                         "source": "Ultimate",
                         "sourceOwner": sourceTurn.properName,
                         "buffName": turnLogic[sourceTurn.properName].buffNames.balefire,
@@ -15997,8 +16065,8 @@ const turnLogic = {
                     };
 
                     ATKObjects.pelaSkillDispelDMGSHEET = {
-                        "stats": [DEFP],
-                        [DEFP]: 0.20,
+                        "stats": [DamageAll],
+                        [DamageAll]: 0.20,
                         "source": "Trace",
                         "sourceOwner": sourceTurn.properName,
                         "buffName": logicRef.buffNames.skillDispelDMG,
@@ -16100,6 +16168,7 @@ const turnLogic = {
                     ATKObjects.pelaUltimateDEFDEBUFFSHEET = {
                         "stats": [DEFP],
                         [DEFP]: -values[1],
+                        "flags": [DEF_DOWN],
                         "source": "Ultimate",
                         "sourceOwner": sourceTurn.properName,
                         "buffName": logicRef.buffNames.defDebuff,
@@ -16162,6 +16231,7 @@ const turnLogic = {
                     ATKObjects.pelaTechniqueDEFDEBUFFSHEET = {
                         "stats": [DEFP],
                         [DEFP]: -values[1],
+                        "flags": [DEF_DOWN],
                         "source": "Technique",
                         "sourceOwner": sourceTurn.properName,
                         "buffName": logicRef.buffNames.defDebuff,
@@ -19353,6 +19423,7 @@ const turnLogic = {
                     ATKObjects.ratioTechSPDSHEET = {
                         "stats": [SPDP],
                         [SPDP]: -0.15,
+                        "flags": [SPD_DOWN],
                         "source": "Technique",
                         "sourceOwner": sourceTurn.properName,
                         "buffName": logicRef.buffNames.techSPD,
@@ -24977,6 +25048,7 @@ const turnLogic = {
                                     ATKObjects.sparkleFigmentDEBUFFSHEET = {
                                         "stats": [DEFP],
                                         [DEFP]: ownerTurn.rank >= 2 ? -0.10 : 0,
+                                        "flags": ownerTurn.rank >= 2 ? [DEF_DOWN] : null,
                                         "source": "Talent",
                                         "sourceOwner": sourceTurn.properName,
                                         "buffName": buffNames.figmentDebuff,
@@ -32698,6 +32770,7 @@ const turnLogic = {
                         
                         statTable: rmcMenuStats,
                         buffsObject: {},
+                        flags: new Array(greatFlagsLength).fill(0),
                         buffsStartTurn: [],
                         buffsEndTurn: [],
                         tagSpecific: {},
@@ -34142,6 +34215,7 @@ const turnLogic = {
                         
                         statTable: aggyMenuStats,
                         buffsObject: {},
+                        flags: new Array(greatFlagsLength).fill(0),
                         buffsStartTurn: [],
                         buffsEndTurn: [],
                         tagSpecific: {},
@@ -35592,6 +35666,7 @@ const turnLogic = {
                         
                         statTable: evernightMenuStats,
                         buffsObject: {},
+                        flags: new Array(greatFlagsLength).fill(0),
                         buffsStartTurn: [],
                         buffsEndTurn: [],
                         tagSpecific: {},
@@ -36886,6 +36961,7 @@ const turnLogic = {
                         
                         statTable: hyacineMenuStats,
                         buffsObject: {},
+                        flags: new Array(greatFlagsLength).fill(0),
                         buffsStartTurn: [],
                         buffsEndTurn: [],
                         tagSpecific: {},
@@ -38611,6 +38687,7 @@ const turnLogic = {
                         
                         statTable: casMenuStats,
                         buffsObject: {},
+                        flags: new Array(greatFlagsLength).fill(0),
                         buffsStartTurn: [],
                         buffsEndTurn: [],
                         tagSpecific: {},
@@ -41251,29 +41328,6 @@ const turnLogic = {
                 let characterName = sourceTurn.properName;
                 let skillRef = ATKObjects.marchTechniqueREF ??= ATKObjects.Technique["Freezing Beauty"].variant1;
 
-                // if (!ATKObjects.aventurineTechDEFSHEET) {
-                //     let values = ATKObjects.aventurineTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
-
-                //     let buffName = turnLogic[characterName].buffNames.technique;
-                //     ATKObjects.aventurineTechDEFSHEET = {
-                //         "stats": [DEFP],
-                //         [DEFP]: values[1],//we do assume the middle value for the def buff, but later we can look into specifying it based on technique uses
-                //         "source": "Technique",
-                //         "sourceOwner": sourceTurn.properName,
-                //         "buffName": buffName,
-                //         "durationInTurn": 4,
-                //         "duration": 3,
-                //         "AVApplied": 0,
-                //         "maxStacks": 1,
-                //         "currentStacks": 1,
-                //         "decay": false,
-                //         "expireType": "EndTurn"
-                //     }
-                // }
-                // const buffSheet = ATKObjects.aventurineTechDEFSHEET
-                //TODO: since this is like tingyun and can be stacked before going into battle, look at adding multiple use counters based on how many uses the rest of the team needs
-                //like obv if the other 3 used theirs and they are one time use, he can use his twice instead, or if there are 2 dmg techniques, he can use his 3 times
-
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 // const allies = battleData.allyPositions;
@@ -42935,6 +42989,7 @@ const turnLogic = {
                                 ATKObjects.anaxaE1SkillShred = {
                                     "stats": [DEFP],
                                     [DEFP]: -0.16,
+                                    "flags": [DEF_DOWN],
                                     "source": "E1",
                                     "sourceOwner": characterName,
                                     "buffName": buffNames.e1DEFReduce,

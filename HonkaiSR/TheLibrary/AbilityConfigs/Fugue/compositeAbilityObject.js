@@ -234,7 +234,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-375769760\">Fugue_DefenceDown</a>[<span class=\"descriptionNumberColor\">Virtue Beckons Bliss</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "STAT_DefenceDown"
+            "DEF_DOWN"
           ],
           "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_DefenceDownRatio</span>.",
           "type": "Debuff",

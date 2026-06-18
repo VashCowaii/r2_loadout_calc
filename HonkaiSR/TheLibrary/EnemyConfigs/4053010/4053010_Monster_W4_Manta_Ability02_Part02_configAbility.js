@@ -91,7 +91,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1240691682\">Enemy_W4_Manta_DefenseDown</a>[<span class=\"descriptionNumberColor\">Inebriated Daze</span>]",
       "stackType": "Replace",
       "modifierFlags": [
-        "STAT_DefenceDown"
+        "DEF_DOWN"
       ],
       "stackData": [
         "MDF_PropertyValue",

@@ -407,7 +407,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1428052703\">Misha_Eidolon2_DefenceDown</a>[<span class=\"descriptionNumberColor\">Yearning of Youth</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "STAT_DefenceDown"
+        "DEF_DOWN"
       ],
       "stackData": [
         "MDF_PropertyRatio"

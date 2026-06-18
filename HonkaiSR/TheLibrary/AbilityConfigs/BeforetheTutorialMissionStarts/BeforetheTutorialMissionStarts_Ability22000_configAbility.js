@@ -36,7 +36,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "flagName": "STAT_DefenceDown"
+                "flagName": "DEF_DOWN"
               },
               "ifTargetFound": [
                 {
