@@ -6801,13 +6801,16 @@ const turnLogicLightcones = {
                                     let lcPathing = lightcones[lcNameRef].params;
                                     let rankParams = lcPathing[ownerRank-1];
                                     let values = rankParams[1];
+
+                                    const logicRef = turnLogicLightcones[lcNameRef];
+                                    const uniqueName = battleActions.getUniqueGearBuffName(battleData,sourceTurn,logicRef,"nextAllyBuff")
         
                                     sourceTurn.battleIsntOverSkillEndSHEET = {
                                         "stats": [DamageAll],
                                         [DamageAll]: values,
                                         "source": lcNameRef,
                                         "sourceOwner": sourceTurn.properName,
-                                        "buffName": turnLogicLightcones[lcNameRef].buffNames.nextAllyBuff,
+                                        "buffName": uniqueName,
                                         "durationInTurn": 1,
                                         "duration": 1,
                                         "AVApplied": 0,
@@ -8011,6 +8014,82 @@ const turnLogicLightcones = {
             "basic": "Dreamville Adventure [Basic]",
             "skill": "Dreamville Adventure [Skill]",
             "ult": "Dreamville Adventure [Ult]",
+        },
+    },
+    "Past and Future": {//REDONE
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Past and Future listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Skill") {return;}
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+                            const nextAllyTurn = sim.getNextQueuedAllyTurnBuffableOnly(battleData);
+                            if (!nextAllyTurn) {return;}
+    
+                            if (!sourceTurn.lcPastAndFutureDMGSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let lcNameRef = "Past and Future";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+
+                                const logicRef = turnLogicLightcones[lcNameRef];
+                                const uniqueName = battleActions.getUniqueGearBuffName(battleData,sourceTurn,logicRef,"nextAllyBuff")
+    
+                                sourceTurn.lcPastAndFutureDMGSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[0],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": uniqueName,
+                                    "durationInTurn": 1,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn"
+                                }
+                            }
+    
+                            let buffSheet = sourceTurn.lcPastAndFutureDMGSHEET
+                            updateBuff(battleData,nextAllyTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Past and Future buff prep controller",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "nextAllyBuff": "Past and Future",
+            // "buff2": "Aether Code"
+            // "hruntingStack": "Hrunting Stack"
         },
     },
         //3star
