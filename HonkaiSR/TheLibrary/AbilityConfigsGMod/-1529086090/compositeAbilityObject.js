@@ -267,7 +267,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "flagName": "STAT_SpeedDown"
+                        "flagName": "SPD_DOWN"
                       },
                       {
                         "name": "NOT",

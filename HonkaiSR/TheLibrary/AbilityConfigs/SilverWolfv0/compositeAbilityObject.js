@@ -150,7 +150,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1817488961\">Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "STAT_SpeedDown"
+            "SPD_DOWN"
           ],
           "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Debuff",

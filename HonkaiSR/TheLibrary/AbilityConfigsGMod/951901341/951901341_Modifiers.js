@@ -816,7 +816,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1325963283\">Standard_SpeedDown</a>[<span class=\"descriptionNumberColor\">Speed Reduction</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "STAT_SpeedDown"
+        "SPD_DOWN"
       ],
       "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",

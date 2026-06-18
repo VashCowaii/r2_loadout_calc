@@ -594,7 +594,7 @@ const configAbility = {
       "modifierFlags": [
         "STAT_Entangle",
         "STAT_Confine",
-        "STAT_SpeedDown",
+        "SPD_DOWN",
         "DisableAction",
         "AvatarBreak",
         "STAT_CTRL"

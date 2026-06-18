@@ -2677,7 +2677,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1537721393\">Modifier_BattleEventAbility_Challenge_Month_23_RandomDebuff3</a>[<span class=\"descriptionNumberColor\">SPD Reduction</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "STAT_SpeedDown"
+            "SPD_DOWN"
           ],
           "description": "Decreases SPD by <span class=\"descriptionNumberColor\">BattleEvent_P2_ADF_Get</span>.",
           "type": "Debuff",

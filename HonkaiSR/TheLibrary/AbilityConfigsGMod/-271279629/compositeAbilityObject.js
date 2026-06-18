@@ -380,7 +380,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-2103710956\">MReference_SpeedRatioDown</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "STAT_SpeedDown"
+            "SPD_DOWN"
           ],
           "execute": [
             {
@@ -444,7 +444,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-619484091\">MReference_SpeedDeltaDown</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "STAT_SpeedDown"
+            "SPD_DOWN"
           ],
           "execute": [
             {
