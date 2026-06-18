@@ -25487,6 +25487,7 @@ const turnLogic = {
                 sourceTurn.battleValues.hmcBackupDancerActive = true;
 
                 updateBuff(battleData,sourceTurn,ownerSheet);
+                poke("HMCGainBackupDancerCount",battleData,{pointsGained: 3,sourceString:"HMC Ultimate"});
 
                 if (!buffCheck) {
                     //only if numinosity countdown wasn't already on tribbie when the skill started, do we bother with applying the buff to all allies
@@ -25509,6 +25510,8 @@ const turnLogic = {
                 const allyArray = battleData.allAlliesArray;
 
                 removeBuffFromBatch(battleData,allyArray,buffSheet);
+
+                poke("HMCGainBackupDancerCount",battleData,{pointsGained: -3,sourceString:"Backup Dancer Expired"});
             },
             hmcTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -25746,6 +25749,61 @@ const turnLogic = {
                 ],
             },
             {
+                "trigger": "PreActionPhaseEnd",
+                condition(battleData,generalInfo) {
+                    // poke("HMCGainBackupDancerCount",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.battleValues.hmcBackupDancerActive) {
+                        const exoObject = this.exoObject ??= {pointsGained: -1,sourceString:"Backup Dancer Decrement"}
+                        poke("HMCGainBackupDancerCount",battleData,exoObject);
+                    }
+                },
+                "target": "self",
+                "isPersonal": true,
+                "listenerName": "Backup Dancer decrement",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "HMCGainBackupDancerCount",
+                condition(battleData,generalInfo) {
+                    // poke("HMCGainBackupDancerCount",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    // coreResonance
+                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
+                    const pointsGained = generalInfo.pointsGained;
+                    const valuesRef = ownerTurn.battleValues;
+
+                    const oldValue = valuesRef.hmcDancerTime;
+                    const maxValue = valuesRef.hmcDancerTimeMax;
+                    valuesRef.hmcDancerTime = Math.max(0, Math.min(maxValue, oldValue + pointsGained));
+                    const newValue = valuesRef.hmcDancerTime;
+                    const valueWasDiff = oldValue != newValue;
+
+                    const sourceString = generalInfo.sourceString
+                    if (valueWasDiff && battleData.isLoggyLogger) {
+                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point03.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Backup Dancer (HMC): ${oldValue} --> ${valuesRef.hmcDancerTime}/${maxValue} [${sourceString}]`});
+                        
+                        if (pointsGained > 0) {
+                            ownerTurn.hmcDancerTimeSum ??= 0;
+                            ownerTurn.hmcDancerTimeSum += valuesRef.hmcDancerTime - oldValue;
+                            
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "hmcDancerTimeSum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.hmcDancerTime,
+                            currentSumValue: ownerTurn.hmcDancerTimeSum,
+                            currentAddedValue: valuesRef.hmcDancerTime - oldValue
+                        });
+                    }
+                },
+                "target": "self",
+                "listenerName": "March Counter Handler",
+                "ownerTurn": {},
+            },
+            {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -25805,6 +25863,8 @@ const turnLogic = {
         "ATKObjects": {},
         "characterValues": {
             "hmcBackupDancerActive": false,
+            "hmcDancerTime": 0,
+            "hmcDancerTimeMax": 3,
         },
         "useTechnique": true,
         "techniqueType": "Attack",

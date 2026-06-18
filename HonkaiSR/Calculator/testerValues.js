@@ -362,16 +362,14 @@ const customDisplayValuesLog = {
     ],
     "Trailblazer - Harmony": [//tracker done
         {valueName: "Backup Dancer Active", refName: "hmcBackupDancerActive", isBattleValue: true,hide: true},
-        // {valueName: "Counter", refName: "counterCount", isBattleValue: true,summaryValue: "march7pCounterCountSum",summaryType: "SUM",
-        //     customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "#9083FF",
-        //     displayRequiresIndex: 1, displayRequiresType: "number",
-        //     displayRequiresBoolean: false,
-        //     progressIcon: characters["March 7th - Preservation"].traces.Point04.icon
-        // },
-        // {valueName: "Counter Max", refName: "counterCountMax", isBattleValue: true,hide: true},
-        // {valueName: "Blind Bet", refName: "betStacks", isBattleValue: true,summaryValue: "avenBlindBetSum",summaryType: "SUM"},
-        // {valueName: "Hellscape", refName: "hellscapeActive", isBattleValue: true, isCharacterState: true},
-        // {valueName: "HP Loss Tally", refName: "bladeHPTally", isBattleValue: false},
+        {valueName: "Backup Dancer Count", refName: "hmcDancerTime", isBattleValue: true,summaryValue: "hmcDancerTimeSum",summaryType: "SUM",
+            customDisplay: "marks", customDisplayType: "diamond", markMax: null, innerMarkColor: "Imaginary",
+            displayRequiresIndex: 2, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: characters["Trailblazer - Harmony"].traces.Point03.icon
+        },
+        {valueName: "Backup Dancer Max", refName: "hmcDancerTimeMax", isBattleValue: true,hide: true},
     ],
     
     //ERUDITION
