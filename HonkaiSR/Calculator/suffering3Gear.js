@@ -7801,7 +7801,7 @@ const turnLogicLightcones = {
                                     "durationInTurn": 2,
                                     "duration": 1,//does this count as applied within own turn or applied before designating the turn as next?
                                     "AVApplied": 0,
-                                    "maxStacks": 3,
+                                    "maxStacks": 1,
                                     "currentStacks": 1,
                                     "decay": false,
                                     "expireType": "EndTurn",
@@ -7820,6 +7820,79 @@ const turnLogicLightcones = {
         ],
         "buffNames": {
             "hymn": "For Tomorrow's Journey"
+        },
+    },
+    "The Forever Victual": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "The Forever Victual listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Skill") {return}
+                            
+                            const sourceTurn = generalInfo.sourceTurn;
+    
+                            if (!sourceTurn.lcForeverVictualATKSHEET) {
+                                let lcNameRef = "The Forever Victual";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let ownerSlot = sourceTurn.name;
+                                let ownersSlots = this.ownersSlots;
+                                const ownerRank = ownersSlots[ownerSlot];
+                                let rankParams = lcPathing[ownerRank-1];
+                                
+                                sourceTurn.lcForeverVictualATKSHEET = {
+                                    "stats": [ATKP],
+                                    [ATKP]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.hymn,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 3,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "removeOnDeath": true,
+                                }
+                            }
+                            const buffSheet = sourceTurn.lcForeverVictualATKSHEET;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+
+                            const stackCheck = sourceTurn.buffsObject[buffSheet.buffName].currentStacks;
+                            if (stackCheck === 3) {removeListener(battleData,this,sourceTurn)}
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "The Forever Victual - buff application",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "hymn": "The Forever Victual"
         },
     },
         //3star
