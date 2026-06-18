@@ -10571,10 +10571,6 @@ const turnLogic = {
                         "trigger": "AllyDMGStart",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
-                            let characterName = ownerTurn.properName;
-        
-                            let sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.properName != characterName) {return;}
     
                             let targetTurn = generalInfo.targetTurn;
                             let targetDebuffs = Math.min(5,targetTurn.debuffCounter);
@@ -10583,8 +10579,8 @@ const turnLogic = {
                                 "stats": [DamageAll],
                                 [DamageAll]: 0.20,
                                 "source": "E6",
-                                "sourceOwner": sourceTurn.properName,
-                                "buffName": turnLogic[characterName].buffNames.e6,
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": turnLogic[ownerTurn.properName].buffNames.e6,
                                 "durationInTurn": null,
                                 "duration": 1,
                                 "AVApplied": 0,
@@ -10594,28 +10590,29 @@ const turnLogic = {
                                 "expireType": null
                             }
                             let buffName = buffSheet.buffName;
-                            const buffCheck = sourceTurn.buffsObject[buffName];
+                            const buffCheck = ownerTurn.buffsObject[buffName];
     
                             if (buffCheck) {//if the buff exists
                                 const currentStacks = buffCheck.currentStacks;
                                 if (currentStacks < targetDebuffs) {//and if the current stacks are lower than the stacks we need
                                     const stackDiff = targetDebuffs - currentStacks;//then get the diff and add that diff in stacks
                                     buffSheet.currentStacks = stackDiff;
-                                    updateBuff(battleData,sourceTurn,buffSheet);
+                                    updateBuff(battleData,ownerTurn,buffSheet);
                                 }
                                 else if (currentStacks === targetDebuffs) {//but if stacks are equal, then abort bc nothing should be done
                                     return;
                                 }
                                 else {//but if stacks are greater than they should be, then remove the buff and reapply with the correct amount
                                     //logging for the removal will be silent if the target has debuffs at all
-                                    removeBuff(battleData,sourceTurn,buffSheet,targetDebuffs>0);
+                                    removeBuff(battleData,ownerTurn,buffSheet,targetDebuffs>0);
                                 }
                             }
         
                             buffSheet.currentStacks = targetDebuffs;
-                            updateBuff(battleData,sourceTurn,buffSheet);
+                            updateBuff(battleData,ownerTurn,buffSheet);
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Silver Wolf E6 bonus DMG ONHIT",
                         "ownerTurn": {},
                     },
