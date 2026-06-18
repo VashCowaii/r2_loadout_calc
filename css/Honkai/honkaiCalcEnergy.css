@@ -103,6 +103,7 @@
     box-sizing: border-box;
     padding: 5px;
     padding-left: 15px;
+    height: 25px;
     white-space: normal;
     position: relative;
 
@@ -120,6 +121,15 @@
     width:  13px;
     margin-left:    3px;
     margin-right:   3px;
+}
+.customEnergyBodyMarksDIAMOND {
+    /* border-radius: 50%; */
+    border: 1px solid white;
+    height: 8px;
+    width:  8px;
+    rotate: 45deg;
+    margin-left:    4px;
+    margin-right:   4px;
 }
 
 

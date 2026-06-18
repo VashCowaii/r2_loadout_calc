@@ -4729,13 +4729,15 @@ const userTriggers = {
                                 else if (entry.customDisplay) {
                                     const customDisplay = entry.customDisplay;
                                     if (customDisplay === "marks") {
-                                        const markMax = entry.markMax;
+                                        const markMax = entry.markMax ?? (requiresIndex ? requiredIndexValue : null);
                                         let marksStringer = "";
                                         const markType = entry.customDisplayType;
+
+                                        const baseFillColor = specialEnergyData[entry.innerMarkColor]?.energyColor1 ?? entry.innerMarkColor
                                         for (let i=1;i<=markMax;i++) {
                                             const isFilled = valueAdjusted >= i;
                                             // marksStringer += `<div class="customEnergyBodyMarksCIRCLE" style="background: ${isFilled ? entry.innerMarkColor : "transparent"};"></div>`
-                                            const markFillColor = isFilled ? entry.innerMarkColor : "transparent";
+                                            const markFillColor = isFilled ? baseFillColor : "transparent";
 
                                             if (markType === "image") {
                                                 // marksStringer += `<div class="customEnergyBodyMarksCIRCLE"
@@ -4747,11 +4749,22 @@ const userTriggers = {
                                                 marksStringer += `<div class="customEnergyBodyMarksCIRCLE"
                                                 style="background: radial-gradient(circle at center,${markFillColor} 60%,transparent 100%); box-shadow: 0px 0px 8px ${markFillColor};"></div>`
                                             }
+                                            else if (markType === "diamond") {
+                                                marksStringer += `<div class="customEnergyBodyMarksDIAMOND"
+                                                style="background: ${markFillColor}; box-shadow: 0px 0px 8px ${markFillColor};"></div>`
+                                            }
 
                                             // customEnergyBodyMarksCIRCLE
                                         }
 
-                                        customValuesString += `<div class="customEnergyBodyMarksBar">${marksStringer}</div>`
+                                        const isOnAtAll = valueAdjusted > 0 ? 100 : 0;
+                                        customValuesString += `<div class="customEnergyBodyMarksBar">
+                                            ${entry.showProgressIconAnyways ? `<div class="customEnergyBodyMarksCIRCLEPROGRESS"
+                                                    style="background:conic-gradient(${baseFillColor} 0 ${isOnAtAll}%,#3333337c ${isOnAtAll}% 100%);">
+                                                    <img src="/HonkaiSR/${entry.progressIcon}" class="customEnergyBodyMarksCIRCLEPROGRESSIcon" onclick="customMenu.createCharacterStatScreenBattleLogged(${logIndex},true)"/>
+                                                </div>` : ""}
+                                            ${marksStringer}
+                                        </div>`
                                     }
                                     else if (customDisplay === "progress") {
                                         const customDisplayType = entry.customDisplayType;

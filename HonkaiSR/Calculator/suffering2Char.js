@@ -1713,17 +1713,17 @@ const battleActions = {
         
         const targetCache = targetTurn.cacheTagValues;
 
-        const actionTagsPre = ATKObject.actionTags;
+        // const actionTagsPre = ATKObject.actionTags;
         const preCacheTag = ATKObject.compositeCacheTag;
         const breakTagging = sourceTurn.breakCacheTags ??= {};
 
         if (!breakTagging[preCacheTag]) {
             const keyShortcut = basicShorthand.makeKeysArray;
-            let newTags = [...tags,"Break"];
+            let newTags = ["All","Break"];
 
             breakTagging[preCacheTag] = {
-                realTag: preCacheTag + "Break",
-                actionTags: [...actionTagsPre,"Break"],
+                realTag: newTags + sourceTurn.properName,
+                actionTags: ["All","Break"],
                 newTags,
                 realPENKeys: keyShortcut(resPENKeys,newTags),
                 realShredKeys: keyShortcut(defShredKeys,newTags),
@@ -1833,17 +1833,17 @@ const battleActions = {
 
         const targetCache = targetTurn.cacheTagValues;
 
-        const actionTagsPre = ATKObject.actionTags;
+        // const actionTagsPre = ATKObject.actionTags;
         const preCacheTag = ATKObject.compositeCacheTag;
         const breakTagging = sourceTurn.breakSuperCacheTags ??= {};
 
         if (!breakTagging[preCacheTag]) {
             const keyShortcut = basicShorthand.makeKeysArray;
-            let newTags = [...tags,"Break","BreakSuper"];
+            let newTags = ["All","Break","BreakSuper"];
 
             breakTagging[preCacheTag] = {
-                realTag: preCacheTag + "Break" + "BreakSuper",
-                actionTags: [...actionTagsPre,"Break","BreakSuper"],
+                realTag: newTags + sourceTurn.properName,
+                actionTags: ["All","Break","BreakSuper"],
                 newTags,
                 realPENKeys: keyShortcut(resPENKeys,newTags),
                 realShredKeys: keyShortcut(defShredKeys,newTags),
@@ -25288,6 +25288,592 @@ const turnLogic = {
 
             "cipher": "Cipher",
             "dreamdiver": "Dreamdiver"
+        },
+        "characterValuesBattle": {},
+    },
+    "Trailblazer - Harmony": {
+        logic(thisTurn,battleData) {
+            let currentSP = battleData.skillPointCurrent;
+            let minimum = currentSP >= 1;
+
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                const skillCall = this.returnSkillCall;
+                skillCall.target = [battleData.primaryTarget];
+                skillCall.subTarget = battleData.bounceOrder;
+                return skillCall;;
+            }
+
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.hmcSkill,
+                action: "Skill",
+                points: -1, 
+
+                isAttack: true,
+                isAbility: true,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "SkillStart",
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
+
+            this.returnBasicCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.hmcBasic,
+                action: "BasicATK",
+                points: 1, 
+
+                isAttack: true,
+                isAbility: true,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "BasicATKStart",
+
+                poolKey: this.abilityTargetPools.BasicATK,
+            })
+            this.returnBasicCall.sourceTurn = thisTurn;
+        },
+        "abilityTargetPools": {
+            "BasicATK": "Enemies (On-Field)",
+            "Skill": "Enemies (On-Field)",
+            "Ultimate": "Allies (On-Field)",
+        },
+        "skillFunctions": {
+            hmcBasic(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.hmcBasicREF ??= ATKObjects["Basic ATK"]["Swing Dance Etiquette"].variant1;
+
+                if (!ATKObjects.hmcBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    // let characterName = sourceTurn.properName;
+                    let values = ATKObjects.hmcBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Imaginary"];
+                    const actionTags = ["All","Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.hmcBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                    }
+                }
+                let ATKObject = ATKObjects.hmcBasicATKOBJECT;
+
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+            },
+            hmcSkill(battleData,actionObject,sourceTurn) {
+                const characterName = sourceTurn.properName;
+                const logicRef = turnLogic[characterName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.hmcSkillREF ??= ATKObjects["Skill"]["Halftime to Make It Rain"].variant1;
+                let values = ATKObjects.hmcSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                const rank = sourceTurn.rank;
+                
+                if (!ATKObjects.hmcSkillATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
+                    // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Imaginary"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    const actionTags = ["All","Skill","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    ATKObjects.hmcSkillATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        bounceData: superGlobal.createATKBounceObject({
+                            multi: values[0],
+                            bounceCount: rank >= 6 ? 6 : 4,
+                            energy: skillRef.energyRegen,
+                            target: {
+                                "hitRatio": 1,
+                                "energyRatio": 1,
+                                "toughness": 10/2
+                            },
+                        })
+                    }
+                }
+                let ATKObject = ATKObjects.hmcSkillATKOBJECT;
+
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+            },
+            hmcUltimate(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.hmcUltimateREF ??= ATKObjects.Ultimate["All-Out Footlight Parade"].variant1;
+
+                let values = ATKObjects.hmcUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                if (!ATKObjects.hmcBackupDancerOWNERSHEET) {
+                    const logicRef = turnLogic[characterName];
+                    const buffRef = logicRef.buffNames;
+                    ATKObjects.hmcBackupDancerOWNERSHEET = {
+                        "stats": null,
+                        "source": "Ultimate",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffRef.backupOwner,
+                        "durationInTurn": 3,
+                        "duration": 3,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "StartTurn",
+                        expireFunction: logicRef.skillFunctions.backupDancerExpired,
+                        expireParam: sourceTurn.name,
+                        "removeOnDeath": true,
+                    }
+                    ATKObjects.hmcBackupDancerBUFFSHEET = {
+                        "stats": [DamageBreak],
+                        [DamageBreak]: values[2],
+                        "source": "Ultimate",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffRef.backup,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "removeOnDeath": false,
+                    }
+                }
+
+                const ownerSheet = ATKObjects.hmcBackupDancerOWNERSHEET;
+                const buffSheet = ATKObjects.hmcBackupDancerBUFFSHEET;
+
+                const countdownName = ownerSheet.buffName;
+                const buffCheck = sourceTurn.buffsObject[countdownName];
+                sourceTurn.battleValues.hmcBackupDancerActive = true;
+
+                updateBuff(battleData,sourceTurn,ownerSheet);
+                poke("HMCGainBackupDancerCount",battleData,{pointsGained: 3,sourceString:"HMC Ultimate"});
+
+                if (!buffCheck) {
+                    //only if numinosity countdown wasn't already on tribbie when the skill started, do we bother with applying the buff to all allies
+                    //since the allied buff doesn't expire unless the countdown does
+                    const allyArray = battleData.allAlliesArray;
+                    updateBuffBatchTargets(battleData,allyArray,buffSheet);
+                }
+
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                sourceTurn.ultyQueued = false;
+            },
+            backupDancerExpired(battleData,hmcSlot) {
+                const hmcTurn = battleData.nameBasedTurns[hmcSlot];
+                hmcTurn.battleValues.hmcBackupDancerActive = false;
+
+                const logicRef = turnLogic[hmcTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const buffSheet = ATKObjects.hmcBackupDancerBUFFSHEET;
+                const allyArray = battleData.allAlliesArray;
+
+                removeBuffFromBatch(battleData,allyArray,buffSheet);
+
+                poke("HMCGainBackupDancerCount",battleData,{pointsGained: -3,sourceString:"Backup Dancer Expired"});
+            },
+            hmcTechnique(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.hmcTechniqueREF ??= ATKObjects.Technique["Now! I'm the Band!"].variant1;
+
+                if (!ATKObjects.hmcTechBREAKSHEET) {
+                    ATKObjects.hmcTechBREAKSHEET = {
+                        "stats": [DamageBreak],
+                        [DamageBreak]: 0.30,
+                        "source": "Technique",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.techBreak,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                    }
+                }
+                const buffSheet = ATKObjects.hmcTechBREAKSHEET;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                
+                const allyPositions = battleData.allyPositions;
+                updateBuffBatchTargets(battleData,allyPositions,buffSheet);
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+                    if (rank >= 4) {
+                        const listener1 = passiveListeners[0];
+                        addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+
+                        //don't wanna do a separated statcheck function, so just invoke the listener condition here instead
+                        listener1.condition(battleData,null,ownerTurn);
+                    }
+
+                    //trace hat of theater
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+
+                    if (rank >= 1) {
+                        const listener3 = passiveListeners[2];
+                        addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                    }
+
+                    if (rank >= 2) {
+                        const buffSheet = this.buffSheet ??= {
+                            "stats": [EnergyRegenRate],
+                            [EnergyRegenRate]: 0.25,
+                            "source": "E2",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": logicRef.buffNames.e2Regen,
+                            "durationInTurn": 4,
+                            "duration": 3,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                        }
+                        updateBuff(battleData,ownerTurn,buffSheet);
+                    }
+
+                    const ATKObjects = logicRef.ATKObjects;
+                    let skillRef = ATKObjects.hmcTalentREF ??= ATKObjects["Talent"]["Full-on Aerial Dance"].variant1;
+                    let values = ATKObjects.hmcTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                    ownerTurn.hmcTalentRegen = values[0];
+
+                    const listener4 = passiveListeners[3];
+                    addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+
+                    const allAlliesArray = battleData.allAlliesArray;
+                    const listener5 = passiveListeners[4];
+                    for (let ally of allAlliesArray) {
+                        addListenerWithPriority(battleData,listener5,listener5.trigger,ally,null,ownerTurn);
+                    }
+
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,false)
+                },
+                "target": "self",
+                "listenerName": "HMC Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "UpdateStatBreak",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+
+                            let buffName1 = this.buffName ??= turnLogic[ownerTurn.properName].buffNames.e4Break;
+
+                            const statTable = ownerTurn.statTable;
+
+                            let currentBE = statTable[DamageBreak] + statTable[DamageBreakNULL];
+                            let conversion = +(currentBE * 0.15).toFixed(7);
+
+                            const newAlliesArray = [];
+                            const allAlliesArray = battleData.allAlliesArray;
+                            let buffCheck = null;
+                            let firstCheckFound = false;
+                            for (let ally of allAlliesArray) {
+                                if (ally.properName != ownerTurn.properName) {
+                                    newAlliesArray.push(ally);
+                                    if (!firstCheckFound) {
+                                        buffCheck = ally.buffsObject[buffName1];
+                                        firstCheckFound = true;
+                                    }
+                                }
+                            }
+
+                            if (buffCheck) {
+                                const currentValue = buffCheck[DamageBreak];
+                                if (currentValue === conversion) {return;}
+                                else {
+                                    removeBuffFromBatch(battleData,newAlliesArray,buffCheck,conversion,null,false,conversion);
+                                }
+                            }
+
+                            //then apply the new buff, which we can announce instead of keeping it silent.
+                            //bc if we're adding a new one it's bc the amount changed, and if the amount changed then the action SHOULD be visible in the log.
+                            const buffSheet = this.buffSheet ??= {
+                                "stats": [DamageBreak,DamageBreakNULL],
+                                [DamageBreak]: conversion,
+                                [DamageBreakNULL]: -conversion,
+                                "source": "E4",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": buffName1,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null
+                            }
+                            buffSheet[DamageBreak] = conversion;
+                            buffSheet[DamageBreakNULL] = -conversion;
+
+                            updateBuffBatchTargets(battleData,newAlliesArray,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "HMC E4 updated BE check",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "BrokeEnemyWeakness",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy) {return;}
+
+                            let targetTurn = generalInfo.targetTurn;
+        
+                            actionAdvance(-0.30,targetTurn,battleData,"HMC: Hat of Theater")
+                        },
+                        "target": "enemy",
+                        "listenerName": "HMC trace extra break delay",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Skill") {return;}
+
+                            let ownerTurn = this.ownerTurn;
+
+                            updateSkillPoints(battleData,1,ownerTurn,false,"HMC E1 First Skill")
+                            removeListener(battleData,this,ownerTurn)
+                        },
+                        "target": "enemy",
+                        "listenerName": "HMC E1 first skill use skill point",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "BrokeEnemyWeakness",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            // const sourceTurn = generalInfo.sourceTurn;
+                            // if (sourceTurn.isEnemy) {return;}
+
+                            // let targetTurn = generalInfo.targetTurn;
+                            updateEnergy(battleData,ownerTurn.hmcTalentRegen,ownerTurn,false,"HMC Talent: Target Weakness Broken")
+                        },
+                        "target": "enemy",
+                        "listenerName": "HMC talent broken target energy regen",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            const providerTurn = this.providerTurn;
+                            if (!providerTurn.battleValues.hmcBackupDancerActive) {return;}
+
+                            const enemyPositions = battleData.enemyPositions;
+                            let counter = 0;
+                            for (let enemy of enemyPositions) {
+                                if (enemy.isDead || enemy.isLimbo) {continue;}
+                                counter++;
+                            }
+                            counter = Math.min(5,counter);
+
+                            if (counter) {
+                                const breakMultiArray = this.breakMultiArray ??= [0.60,0.50,0.40,0.30,0.20];
+                                counter -= 1;
+                                const breakMultiFinal = 1 * (1 + breakMultiArray[counter]);
+
+                                const sourceTurn = generalInfo.sourceTurn;
+                                const superBreakArray = this.break1 ??= [1.5,"Backup Dancer"];
+                                superBreakArray[0] = breakMultiFinal;
+                                generalSuperBreak(battleData,sourceTurn,generalInfo,superBreakArray,sourceTurn.element)
+                            }
+                        },
+                        "target": "self",
+                        "priority": 100,
+                        "isPersonal": true,
+                        "listenerName": "Allies with backup attacked targets in Broken state",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
+                "trigger": "PreActionPhaseEnd",
+                condition(battleData,generalInfo) {
+                    // poke("HMCGainBackupDancerCount",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.battleValues.hmcBackupDancerActive) {
+                        const exoObject = this.exoObject ??= {pointsGained: -1,sourceString:"Backup Dancer Decrement"}
+                        poke("HMCGainBackupDancerCount",battleData,exoObject);
+                    }
+                },
+                "target": "self",
+                "isPersonal": true,
+                "listenerName": "Backup Dancer decrement",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "HMCGainBackupDancerCount",
+                condition(battleData,generalInfo) {
+                    // poke("HMCGainBackupDancerCount",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    // coreResonance
+                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
+                    const pointsGained = generalInfo.pointsGained;
+                    const valuesRef = ownerTurn.battleValues;
+
+                    const oldValue = valuesRef.hmcDancerTime;
+                    const maxValue = valuesRef.hmcDancerTimeMax;
+                    valuesRef.hmcDancerTime = Math.max(0, Math.min(maxValue, oldValue + pointsGained));
+                    const newValue = valuesRef.hmcDancerTime;
+                    const valueWasDiff = oldValue != newValue;
+
+                    const sourceString = generalInfo.sourceString
+                    if (valueWasDiff && battleData.isLoggyLogger) {
+                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point03.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Backup Dancer (HMC): ${oldValue} --> ${valuesRef.hmcDancerTime}/${maxValue} [${sourceString}]`});
+                        
+                        if (pointsGained > 0) {
+                            ownerTurn.hmcDancerTimeSum ??= 0;
+                            ownerTurn.hmcDancerTimeSum += valuesRef.hmcDancerTime - oldValue;
+                            
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "hmcDancerTimeSum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.hmcDancerTime,
+                            currentSumValue: ownerTurn.hmcDancerTimeSum,
+                            currentAddedValue: valuesRef.hmcDancerTime - oldValue
+                        });
+                    }
+                },
+                "target": "self",
+                "listenerName": "March Counter Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                            name: this.listenerName,
+                            priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.hmcUltimate,
+                            action: "Ultimate",
+
+                            energyCost: ownerTurn.maxEnergy,
+
+                            dontKeepNextWave: true,//ults always clear out
+                            isAttack: false,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                        })
+                        queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = battleData.allyPositions;
+                        queueUltimate(battleData,queueObject);
+                    }
+                },
+                "target": "team",
+                "listenerName": "HMC - Ultimate queued",
+                "ownerTurn": {},
+            },
+        ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.hmcTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "HMC Technique",
+            "ownerTurn": {},
+        },
+        "ATKObjects": {},
+        "characterValues": {
+            "hmcBackupDancerActive": false,
+            "hmcDancerTime": 0,
+            "hmcDancerTimeMax": 3,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "e4Break": "E4: Dove in Tophat",
+            "e2Regen": "E2: Jailbreaking Rainbowwalk",
+            "techBreak": "Now! I'm the Band!",
+            "backupOwner": "Backup Dancer (Countdown)",
+            "backup": "Backup Dancer",
         },
         "characterValuesBattle": {},
     },

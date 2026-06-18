@@ -478,6 +478,28 @@ const hitSplitters = {
       }
     ]
   },
+  "Trailblazer - Harmony": {
+    "basic": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10,
+          "target": "primary"
+        },
+      }
+    ],
+    "skill": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 20,//first hit double toughness bc trace, not eidolon
+          "target": "primary"
+        },
+      }
+    ],
+  },
 
   //DESTRUCTION
   "Saber": {

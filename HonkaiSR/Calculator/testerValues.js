@@ -360,6 +360,17 @@ const customDisplayValuesLog = {
         {valueName: "Next Skill Free", refName: "nextSkillFree", isBattleValue: true, isCharacterState: true},
         {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
     ],
+    "Trailblazer - Harmony": [//tracker done
+        {valueName: "Backup Dancer Active", refName: "hmcBackupDancerActive", isBattleValue: true,hide: true},
+        {valueName: "Backup Dancer Count", refName: "hmcDancerTime", isBattleValue: true,summaryValue: "hmcDancerTimeSum",summaryType: "SUM",
+            customDisplay: "marks", customDisplayType: "diamond", markMax: null, innerMarkColor: "Imaginary",
+            displayRequiresIndex: 2, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: characters["Trailblazer - Harmony"].traces.Point03.icon
+        },
+        {valueName: "Backup Dancer Max", refName: "hmcDancerTimeMax", isBattleValue: true,hide: true},
+    ],
     
     //ERUDITION
     "Argenti": [//no tracker needed
@@ -606,6 +617,7 @@ const conditionsCharacterDisplayWarning = {
         "SkillPermaConditionsTarget": [permaConditionsTextLibrary.supportDefaultChar1],
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
+    "Trailblazer - Harmony": defaultStandardAbilityDisplayWarnings,
 
     //REMEMBRANCE
     "Trailblazer - Remembrance": {
@@ -2738,6 +2750,17 @@ const defaultConditions = {
                     ]
                 }
             ]
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        }
+    },
+    "Trailblazer - Harmony": {
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "AND",
+            "array": []
         },
         "Ultimate": {
             "type": "AND",

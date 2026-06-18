@@ -3990,6 +3990,61 @@ const maslowCharactersHarmony = {
             addTeamWant: [],
         },
     },
+    "Trailblazer - Harmony": {
+        // ["HP%","EffectRES","SPDFlat","CritDamageBase"]
+        defaultMainSubs: ["SPDFlat","DamageBreak","HP%","EffectRES"],
+        // ["HP%","CritDamageBase","EffectRES","SPDFlat"]
+        defaultTrashSub: ["ATKFlat","ATK%","HPFlat","DEF%"],
+        0: {
+            gives: ["SuperBreak"],
+            givesTeam: ["Break","SuperBreak"],
+            wants: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        1: {
+            gives: ["SuperBreak"],
+            givesTeam: ["Break","SuperBreak"],
+            wants: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        2: {
+            gives: ["SuperBreak"],
+            givesTeam: ["Break","SuperBreak"],
+            wants: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        3: {
+            gives: ["SuperBreak"],
+            givesTeam: ["Break","SuperBreak"],
+            wants: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        4: {
+            gives: ["SuperBreak"],
+            givesTeam: ["Break","SuperBreak"],
+            wants: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        5: {
+            gives: ["SuperBreak"],
+            givesTeam: ["Break","SuperBreak"],
+            wants: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        6: {
+            gives: ["SuperBreak"],
+            givesTeam: ["Break","SuperBreak"],
+            wants: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...wantsBreak,...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+    },
 }
 const maslowCharactersPreservation = {
     //PRESERVATION
