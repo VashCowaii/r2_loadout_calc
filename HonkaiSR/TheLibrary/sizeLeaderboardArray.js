@@ -233,13 +233,13 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 3003016,
     "lineCount": 8169,
-    "sizeCount": 330624
+    "sizeCount": 330618
   },
   {
     "entryType": "enemy",
     "enemyID": 3003015,
     "lineCount": 8158,
-    "sizeCount": 329982
+    "sizeCount": 329976
   },
   {
     "entryType": "enemy",
@@ -493,7 +493,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 8015012,
     "lineCount": 6648,
-    "sizeCount": 247208
+    "sizeCount": 247202
   },
   {
     "entryType": "enemy",
@@ -695,19 +695,19 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 3003013,
     "lineCount": 4903,
-    "sizeCount": 201551
+    "sizeCount": 201545
   },
   {
     "entryType": "enemy",
     "enemyID": 3003017,
     "lineCount": 4903,
-    "sizeCount": 201551
+    "sizeCount": 201545
   },
   {
     "entryType": "enemy",
     "enemyID": 3003018,
     "lineCount": 4903,
-    "sizeCount": 201551
+    "sizeCount": 201545
   },
   {
     "entryType": "enemy",
@@ -845,7 +845,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "SilverWolf",
     "entryIcon": "icon/character/1006.png",
     "lineCount": 4536,
-    "sizeCount": 181021
+    "sizeCount": 181015
   },
   {
     "entryType": "char",
@@ -873,7 +873,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 3003010,
     "lineCount": 4459,
-    "sizeCount": 177433
+    "sizeCount": 177427
   },
   {
     "entryType": "enemy",
@@ -925,7 +925,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 3003014,
     "lineCount": 4370,
-    "sizeCount": 174500
+    "sizeCount": 174494
   },
   {
     "entryType": "enemy",
@@ -949,7 +949,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 3003012,
     "lineCount": 4362,
-    "sizeCount": 174199
+    "sizeCount": 174193
   },
   {
     "entryType": "enemy",
@@ -973,7 +973,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 3003011,
     "lineCount": 4330,
-    "sizeCount": 173190
+    "sizeCount": 173184
   },
   {
     "entryType": "enemy",
@@ -1491,7 +1491,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "DrRatio",
     "entryIcon": "icon/character/1305.png",
     "lineCount": 3874,
-    "sizeCount": 134884
+    "sizeCount": 134878
   },
   {
     "entryType": "enemy",
@@ -1697,7 +1697,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "SilverWolfv0",
     "entryIcon": "icon/character/1006.png",
     "lineCount": 3180,
-    "sizeCount": 116358
+    "sizeCount": 116352
   },
   {
     "entryType": "char",
@@ -2121,7 +2121,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "DanHeng",
     "entryIcon": "icon/character/1002.png",
     "lineCount": 2399,
-    "sizeCount": 82992
+    "sizeCount": 82974
   },
   {
     "entryType": "enemy",
@@ -2135,7 +2135,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Welt",
     "entryIcon": "icon/character/1004.png",
     "lineCount": 2333,
-    "sizeCount": 81582
+    "sizeCount": 81558
   },
   {
     "entryType": "enemy",
@@ -2657,7 +2657,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Gepard",
     "entryIcon": "icon/character/1104.png",
     "lineCount": 1688,
-    "sizeCount": 55395
+    "sizeCount": 55389
   },
   {
     "entryType": "enemy",
@@ -2785,7 +2785,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Weltv0",
     "entryIcon": "icon/character/1004.png",
     "lineCount": 1531,
-    "sizeCount": 48802
+    "sizeCount": 48790
   },
   {
     "entryType": "enemy",
@@ -4991,7 +4991,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "WhereaboutsShouldDreamsRest",
     "entryIcon": "icon/light_cone/23025.png",
     "lineCount": 180,
-    "sizeCount": 5773
+    "sizeCount": 5767
   },
   {
     "entryType": "lc",
@@ -5717,7 +5717,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "BoundlessChoreo",
     "entryIcon": "icon/light_cone/21044.png",
     "lineCount": 116,
-    "sizeCount": 3027
+    "sizeCount": 3021
   },
   {
     "entryType": "enemy",
@@ -5901,7 +5901,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Loop",
     "entryIcon": "icon/light_cone/20011.png",
     "lineCount": 82,
-    "sizeCount": 2105
+    "sizeCount": 2099
   },
   {
     "entryType": "lc",

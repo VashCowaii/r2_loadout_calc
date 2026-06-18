@@ -1724,7 +1724,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Ability Target(ST)}}"
             },
-            "flagName": "STAT_SpeedDown"
+            "flagName": "SPD_DOWN"
           },
           "passed": [
             {
@@ -2089,7 +2089,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1147035290\">DanHeng_BPAbility_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "STAT_SpeedDown"
+            "SPD_DOWN"
           ],
           "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Debuff",
@@ -2336,7 +2336,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Ability Target TAKING DMG}}"
                     },
-                    "flagName": "STAT_SpeedDown"
+                    "flagName": "SPD_DOWN"
                   },
                   "passed": [
                     {

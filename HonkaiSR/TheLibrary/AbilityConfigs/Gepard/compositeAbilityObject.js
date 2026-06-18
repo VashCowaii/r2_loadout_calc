@@ -73,7 +73,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1613152679\">Gepard_Eidolon2_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
           "stackType": "Replace",
           "modifierFlags": [
-            "STAT_SpeedDown"
+            "SPD_DOWN"
           ],
           "description": "SPD -<span class=\"descriptionNumberColor\">MDF_PropertyRaito</span>.",
           "type": "Debuff",

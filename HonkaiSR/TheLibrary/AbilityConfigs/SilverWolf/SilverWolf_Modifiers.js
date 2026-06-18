@@ -316,7 +316,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1638641576\">Advanced_Silwolf_Normal_Bug3</a>[<span class=\"descriptionNumberColor\">Type-3 Bug</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "STAT_SpeedDown"
+        "SPD_DOWN"
       ],
       "description": "SPD decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",

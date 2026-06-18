@@ -245,7 +245,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Ability Target TAKING DMG}}"
                     },
-                    "flagName": "STAT_SpeedDown"
+                    "flagName": "SPD_DOWN"
                   }
                 ]
               },
@@ -277,7 +277,7 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "DEF_DOWN",
-        "STAT_SpeedDown",
+        "SPD_DOWN",
         "RemoveWhenCasterDead"
       ],
       "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, SPD decreases by <span class=\"descriptionNumberColor\">MDF_SpeedDownRatio</span>. When receiving an attack, action is delayed by <span class=\"descriptionNumberColor\">MDF_ActionDelayRatio</span>. This effect can be triggered <span class=\"descriptionNumberColor\">MDF_WeightlessTriggerCount</span> more time(s).",
@@ -686,7 +686,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-432037034\">Advanced_Welt_BPAbility_SpeedDown</a>[<span class=\"descriptionNumberColor\">Slow</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "STAT_SpeedDown"
+        "SPD_DOWN"
       ],
       "description": "SPD decreases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>.",
       "type": "Debuff",
