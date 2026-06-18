@@ -283,6 +283,14 @@ const battleActions = {
         let changeStats = true;
         let timesToApply = currentStacks;
 
+        const flags = currentReference.flags;
+        if (flags) {
+            const targetFlags = sourceTurn.flags;
+            for (let flag of flags) {//DEF_DOWN
+                targetFlags[flag] += 1;
+            }
+        }
+
         if (isShield) {
             sourceTurn.shieldCounter += 1;
             sourceTurn.activeShields[buffName] = currentReference;
@@ -593,6 +601,14 @@ const battleActions = {
             //if I forget how this works later, go look at earthly escapade(sparkle lc) for a good example
             
             if (changeStats) {buffStatChange(battleData,sourceTurn,currentReference,currentReference,currentReference.currentStacks,-1,ignoreFamilyPokes);}
+
+            const flags = currentReference.flags;
+            if (flags) {
+                const targetFlags = sourceTurn.flags;
+                for (let flag of flags) {//DEF_DOWN
+                    targetFlags[flag] -= 1;
+                }
+            }
 
             if (isDebuff) {
                 sourceTurn.debuffCounter -= 1;
@@ -10197,6 +10213,7 @@ const turnLogic = {
                     ATKObjects.silverwolfUltimateDEFDEBUFFSHEET = {
                         "stats": [DEFP],
                         [DEFP]: -values[2],
+                        "flags": [DEF_DOWN],
                         "source": "Ultimate",
                         "sourceOwner": sourceTurn.properName,
                         "buffName": logicRef.buffNames.defDebuff,
@@ -10252,15 +10269,16 @@ const turnLogic = {
 
                     const buffNames = logicRef.buffNames;
                     ATKObjects.applySWBugINDEX = [
-                        {buffName: buffNames.bugDEF, statIndex: DEFP, bugValue: -values[1], buffSheet: null},
-                        {buffName: buffNames.bugATK, statIndex: ATKP, bugValue: -values[0], buffSheet: null},
-                        {buffName: buffNames.bugSPD, statIndex: SPDP, bugValue: -values[2], buffSheet: null}
+                        {buffName: buffNames.bugDEF, statIndex: DEFP, bugValue: -values[1], buffSheet: null, flags: [DEF_DOWN]},
+                        {buffName: buffNames.bugATK, statIndex: ATKP, bugValue: -values[0], buffSheet: null, flags: [ATK_DOWN]},
+                        {buffName: buffNames.bugSPD, statIndex: SPDP, bugValue: -values[2], buffSheet: null, flags: [SPD_DOWN]}
                     ];
 
                     for (let bugEntry of ATKObjects.applySWBugINDEX) {
                         bugEntry.buffSheet = {
                             "stats": [bugEntry.statIndex],
                             [bugEntry.statIndex]: bugEntry.bugValue,
+                            "flags": bugEntry.flags,
                             "source": "Talent",
                             "sourceOwner": sourceTurn.properName,
                             "buffName":  bugEntry.buffName,
@@ -11933,6 +11951,7 @@ const turnLogic = {
                         [ATKP]: -values[5],
                         [DEFP]: -values[2],
                         [ResistanceAll]: rank >= 4 ? -0.20 : 0,
+                        "flags": [DEF_DOWN],
                         "source": "Zone",
                         "sourceOwner": sourceTurn.properName,
                         "buffName": buffNames.zoneName,
@@ -13360,6 +13379,7 @@ const turnLogic = {
                     ATKObjects.blackswanSkillDEBUFFSHEET = {
                         "stats": [DEFP],
                         [DEFP]: -values[3],
+                        "flags": [DEF_DOWN],
                         "source": "Skill",
                         "sourceOwner": ownerTurn.properName,
                         "buffName": buffNames.skillShred,
@@ -14402,6 +14422,7 @@ const turnLogic = {
                                     "stats": [SPDP,DEFP,ResistanceAll],
                                     [SPDP]: -values[2],
                                     [DEFP]: -values[1],
+                                    "flags": [DEF_DOWN,SPD_DOWN],
                                     [ResistanceAll]: ownerTurn.rank >= 4 ? -0.30 : 0,
                                     "source": "Talent",
                                     "sourceOwner": ownerTurn.properName,
@@ -14831,6 +14852,7 @@ const turnLogic = {
                         "stats": [DEFP,VulnAll],
                         [DEFP]: -values[6],
                         [VulnAll]: values[3],
+                        "flags": [DEF_DOWN],
                         "source": "Ultimate",
                         "sourceOwner": sourceTurn.properName,
                         "buffName": turnLogic[sourceTurn.properName].buffNames.balefire,
@@ -15996,8 +16018,8 @@ const turnLogic = {
                     };
 
                     ATKObjects.pelaSkillDispelDMGSHEET = {
-                        "stats": [DEFP],
-                        [DEFP]: 0.20,
+                        "stats": [DamageAll],
+                        [DamageAll]: 0.20,
                         "source": "Trace",
                         "sourceOwner": sourceTurn.properName,
                         "buffName": logicRef.buffNames.skillDispelDMG,
@@ -16099,6 +16121,7 @@ const turnLogic = {
                     ATKObjects.pelaUltimateDEFDEBUFFSHEET = {
                         "stats": [DEFP],
                         [DEFP]: -values[1],
+                        "flags": [DEF_DOWN],
                         "source": "Ultimate",
                         "sourceOwner": sourceTurn.properName,
                         "buffName": logicRef.buffNames.defDebuff,
@@ -16161,6 +16184,7 @@ const turnLogic = {
                     ATKObjects.pelaTechniqueDEFDEBUFFSHEET = {
                         "stats": [DEFP],
                         [DEFP]: -values[1],
+                        "flags": [DEF_DOWN],
                         "source": "Technique",
                         "sourceOwner": sourceTurn.properName,
                         "buffName": logicRef.buffNames.defDebuff,
@@ -24976,6 +25000,7 @@ const turnLogic = {
                                     ATKObjects.sparkleFigmentDEBUFFSHEET = {
                                         "stats": [DEFP],
                                         [DEFP]: ownerTurn.rank >= 2 ? -0.10 : 0,
+                                        "flags": ownerTurn.rank >= 2 ? [DEF_DOWN] : null,
                                         "source": "Talent",
                                         "sourceOwner": sourceTurn.properName,
                                         "buffName": buffNames.figmentDebuff,
@@ -32697,6 +32722,7 @@ const turnLogic = {
                         
                         statTable: rmcMenuStats,
                         buffsObject: {},
+                        flags: new Array(greatFlagsLength).fill(0),
                         buffsStartTurn: [],
                         buffsEndTurn: [],
                         tagSpecific: {},
@@ -34141,6 +34167,7 @@ const turnLogic = {
                         
                         statTable: aggyMenuStats,
                         buffsObject: {},
+                        flags: new Array(greatFlagsLength).fill(0),
                         buffsStartTurn: [],
                         buffsEndTurn: [],
                         tagSpecific: {},
@@ -35591,6 +35618,7 @@ const turnLogic = {
                         
                         statTable: evernightMenuStats,
                         buffsObject: {},
+                        flags: new Array(greatFlagsLength).fill(0),
                         buffsStartTurn: [],
                         buffsEndTurn: [],
                         tagSpecific: {},
@@ -36885,6 +36913,7 @@ const turnLogic = {
                         
                         statTable: hyacineMenuStats,
                         buffsObject: {},
+                        flags: new Array(greatFlagsLength).fill(0),
                         buffsStartTurn: [],
                         buffsEndTurn: [],
                         tagSpecific: {},
@@ -38610,6 +38639,7 @@ const turnLogic = {
                         
                         statTable: casMenuStats,
                         buffsObject: {},
+                        flags: new Array(greatFlagsLength).fill(0),
                         buffsStartTurn: [],
                         buffsEndTurn: [],
                         tagSpecific: {},
@@ -41250,29 +41280,6 @@ const turnLogic = {
                 let characterName = sourceTurn.properName;
                 let skillRef = ATKObjects.marchTechniqueREF ??= ATKObjects.Technique["Freezing Beauty"].variant1;
 
-                // if (!ATKObjects.aventurineTechDEFSHEET) {
-                //     let values = ATKObjects.aventurineTechREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
-
-                //     let buffName = turnLogic[characterName].buffNames.technique;
-                //     ATKObjects.aventurineTechDEFSHEET = {
-                //         "stats": [DEFP],
-                //         [DEFP]: values[1],//we do assume the middle value for the def buff, but later we can look into specifying it based on technique uses
-                //         "source": "Technique",
-                //         "sourceOwner": sourceTurn.properName,
-                //         "buffName": buffName,
-                //         "durationInTurn": 4,
-                //         "duration": 3,
-                //         "AVApplied": 0,
-                //         "maxStacks": 1,
-                //         "currentStacks": 1,
-                //         "decay": false,
-                //         "expireType": "EndTurn"
-                //     }
-                // }
-                // const buffSheet = ATKObjects.aventurineTechDEFSHEET
-                //TODO: since this is like tingyun and can be stacked before going into battle, look at adding multiple use counters based on how many uses the rest of the team needs
-                //like obv if the other 3 used theirs and they are one time use, he can use his twice instead, or if there are 2 dmg techniques, he can use his 3 times
-
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
                 // const allies = battleData.allyPositions;
@@ -42934,6 +42941,7 @@ const turnLogic = {
                                 ATKObjects.anaxaE1SkillShred = {
                                     "stats": [DEFP],
                                     [DEFP]: -0.16,
+                                    "flags": [DEF_DOWN],
                                     "source": "E1",
                                     "sourceOwner": characterName,
                                     "buffName": buffNames.e1DEFReduce,
