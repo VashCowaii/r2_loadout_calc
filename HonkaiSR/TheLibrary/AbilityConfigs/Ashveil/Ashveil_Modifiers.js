@@ -1533,7 +1533,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__942921741\">Ashveil_Ability02_Debuff_DefenceDown</a>[<span class=\"descriptionNumberColor\">Flog: Smite Evil</span>]",
       "modifierFlags": [
         "RemoveWhenCasterDead",
-        "STAT_DefenceDown"
+        "DEF_DOWN"
       ],
       "description": "While \"Bait\" is on the field, DEF decreases by <span class=\"descriptionNumberColor\">MDF_DefenceDown</span>.",
       "type": "Debuff",

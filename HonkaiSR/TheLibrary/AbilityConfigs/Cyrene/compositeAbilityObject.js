@@ -4094,7 +4094,7 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2147220756\">Memosprite_CyreneServant_Eidolon6_Sub</a>[<span class=\"descriptionNumberColor\">Remembrance, Sung in Ripples ♪</span>]",
           "modifierFlags": [
-            "STAT_DefenceDown"
+            "DEF_DOWN"
           ],
           "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Debuff",
@@ -5011,7 +5011,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1917936936\">Memosprite_CyreneServant_AmazingBonus_Cipher_Sub</a>[<span class=\"descriptionNumberColor\">Ode to Trickery</span>]",
           "modifierFlags": [
             "RemoveWhenCasterDead",
-            "STAT_DefenceDown"
+            "DEF_DOWN"
           ],
           "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_FinalDefDown</span>.",
           "type": "Debuff",

@@ -912,7 +912,7 @@ const compositeAbilityObject = {
           "stackType": "Replace",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
-            "STAT_DefenceDown"
+            "DEF_DOWN"
           ],
           "description": "Reduces DEF by <span class=\"descriptionNumberColor\">MDF_DefenceAddedRatio_PerLayer</span>. This effect can stack.",
           "type": "Debuff",
@@ -1619,7 +1619,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__700810271\">Svarog_Electric_Modifier</a>[<span class=\"descriptionNumberColor\">Grievous</span>]",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
-            "STAT_DefenceDown"
+            "DEF_DOWN"
           ],
           "description": "For a certain number of turns, DEF is reduced by <span class=\"descriptionNumberColor\">Modifier_DefenceAddedRatio</span>, and takes Physical DMG at the beginning of each turn.",
           "type": "Debuff",
