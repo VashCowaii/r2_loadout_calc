@@ -509,6 +509,13 @@ const battleActions = {
         const changeStats = currentReference.stats != undefined;
         if (changeStats) {buffStatChange(battleData,sourceTurn,currentReference,currentReference,currentReference.currentStacks,-1,ignoreFamilyPokes);}
 
+        const flags = currentReference.flags;
+        if (flags) {
+            const targetFlags = sourceTurn.flags;
+            for (let flag of flags) {//DEF_DOWN
+                targetFlags[flag] -= 1;
+            }
+        }
 
         if (currentReference.isDebuff) {
             sourceTurn.debuffCounter -= 1;
