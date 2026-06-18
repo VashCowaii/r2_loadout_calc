@@ -3242,12 +3242,16 @@ const turnLogicLightcones = {
                         "listenerName": "Incessant Rain - Crit rate check",
                     },
                     {
-                        "trigger": "AttackEnd",
+                        "trigger": "AbilityEnd",
                         condition(battleData,generalInfo) {
+                            const poolKey = generalInfo.poolKey;
+                            if (alliedPoolKeys.has(poolKey)) {return;}//if this is ally targeting we bounce
+
                             let sourceTurn = generalInfo.sourceTurn;
-                            // console.log(generalInfo.dmgSlot)
-                            let skillType = generalInfo.dmgSlot;
-                            if (skillType != "Skill" && skillType != "Ultimate" && skillType != "Basic ATK") {return;}//will only apply when these attack types happen
+
+                            // let skillType = generalInfo.dmgSlot;
+                            // if (skillType != "Skill" && skillType != "Ultimate" && skillType != "Basic ATK") {return;}
+                            //jebait, the usetype doesn't matter, this is like hyacine sig all over again watch them patch this later too
         
                             if (!sourceTurn.incessantRainVULNSHEET) {
                                 let ownersSlots = this.ownersSlots;
@@ -3277,20 +3281,21 @@ const turnLogicLightcones = {
                             }
                             let buffSheet = sourceTurn.incessantRainVULNSHEET;
                             let buffName = buffSheet.buffName;
-                            const targetsAttacked = generalInfo.targetsGotHit;
-                            
-                            const enemyTurns = battleData.enemyBasedTurns;
-                            for (let targetHit in targetsAttacked) {
-                                const currentEnemy = enemyTurns[targetHit];
-                                if (currentEnemy.buffsObject[buffName]) {continue;}//do not consider those who already have the buff
-        
-                                buffSheet.target = currentEnemy.properName;
-                                // 
-                                updateBuff(battleData,currentEnemy,buffSheet);
-                                break;//we look from left to right to find the first person who doesn't have it among all those hit
-                                //NOT A GREAT METHOD TBH, but we can look at it later. It's not as if she's only hitting enemies with her ult, she single-targets enemies all the time.
-                                //that said, she may not always be the one to use this(fr tho who the fuck uses this lc anymore)
-                            }  
+
+                            const target = generalInfo.target;
+                            for (let enemy of target) {
+                                if (enemy.buffsObject[buffName]) {continue;}//do not consider those who already have the buff
+
+                                updateBuff(battleData,enemy,buffSheet);
+                                return;
+                            }
+                            const subTarget = generalInfo.subTarget;
+                            for (let enemy of subTarget) {
+                                if (enemy.buffsObject[buffName]) {continue;}//do not consider those who already have the buff
+
+                                updateBuff(battleData,enemy,buffSheet);
+                                return;
+                            }
                         },
                         "target": "enemy",
                         "isPersonal": true,
