@@ -912,8 +912,8 @@ const propertyImagePaths = {
                 "unit": "%"
             },
             [greatTableIndex["DamageBreakBonus"]]: {
-                "display": "Break Effect",
-                "specific": "Break Effect DMG",
+                "display": "Break Bonus Multi",
+                "specific": "Break Bonus Multi",
                 "unit": "%"
             },
             // [greatTableIndex["DamageBreakUNUSED"]]: {

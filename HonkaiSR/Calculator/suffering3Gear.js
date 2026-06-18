@@ -7432,6 +7432,66 @@ const turnLogicLightcones = {
             "buff2": "Poised to Bloom [LC]",
         },
     },
+    "In Pursuit of the Wind": {//partial rework
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "WaveStart",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    // let lcNameRef = "Poised to Bloom";
+
+                    // const updatePresage = this.updatePresage ??= turnLogicLightcones[lcNameRef].skillFunctions.updatePresage;
+                    const namedTurns = battleData.nameBasedTurns;
+
+                    let firstOwnerTurn = null;
+                    for (let ownerSlot in ownersSlots) {
+                        const currentOwner = namedTurns[ownerSlot];
+                        firstOwnerTurn = currentOwner;
+
+
+                        if (!currentOwner.lcPursuitOfTheWindBREAKMULTISHEET) {
+                            let lcNameRef = "In Pursuit of the Wind";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let ownerRank = ownersSlots[currentOwner.name];
+                            let rankParams = lcPathing[ownerRank-1];
+        
+                            let buffName2 = turnLogicLightcones[lcNameRef].buffNames.buff2;
+        
+                            currentOwner.lcPursuitOfTheWindBREAKMULTISHEET = {
+                                "stats": [DamageBreakBonus],
+                                [DamageBreakBonus]: rankParams[0],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": buffName2,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+                            
+                        }
+
+                        break;
+                    }
+                    const buffSheet = firstOwnerTurn.lcPursuitOfTheWindBREAKMULTISHEET;
+                    const allAlliesArray = battleData.allAlliesArray;
+                    updateBuffBatchTargets(battleData,allAlliesArray,buffSheet);
+                },
+                "target": "self",
+                "priority": -80,
+                "listenerName": "In Pursuit of the Wind - battlestart break multi buff",
+            },
+        ],
+        "buffNames": {
+            "buff2": "In Pursuit of the Wind [LC]",
+        },
+    },
         //3star
     "Meshing Cogs": {//REDONE
         logic(thisTurn,battleData) {},
