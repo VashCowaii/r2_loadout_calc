@@ -10267,7 +10267,6 @@ const turnLogic = {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
-                let characterName = sourceTurn.properName;
                 // let skillPathing = characters[characterName].skills;
                 const skillRef = ATKObjects.applySWBugREF ??= ATKObjects.Talent["Awaiting System Response..."].variant1;
 
@@ -10481,6 +10480,12 @@ const turnLogic = {
                     if (rank >= 2) {
                         const listener2 = passiveListeners[1];
                         addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+
+                        const listene9 = passiveListeners[8];
+                        const allEnemiesArray = battleData.allEnemiesArray;
+                        for (let enemy of allEnemiesArray) {
+                            addListenerWithPriority(battleData,listene9,listene9.trigger,enemy,null,ownerTurn);
+                        }
                     }
 
                     //e4
@@ -10498,6 +10503,10 @@ const turnLogic = {
                     //trace implant weakbreak
                     const listener5 = passiveListeners[4];
                     addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+
+                    //talent bug application
+                    const listener8 = passiveListeners[7];
+                    addListenerWithPriority(battleData,listener8,listener8.trigger,ownerTurn);
                     
                     getTechnique(battleData,ownerTurn,logicRef,1,true,false)
                 },
@@ -10659,6 +10668,40 @@ const turnLogic = {
                         "listenerName": "Silver Wolf - Major Trace: Inject",
                         "ownerTurn": {},
                     },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+
+                            const targetsGotHit = generalInfo.targetsGotHit;
+                            const enemyTurns = battleData.enemyBasedTurns;
+                            const applySWBug = this.applySWBug ??= turnLogic[ownerTurn.properName].skillFunctions.applySWBug
+                            for (let enemySlot in targetsGotHit) {
+                                const currentEnemy = enemyTurns[enemySlot];
+                                if (currentEnemy.isDead) {continue;}
+                                applySWBug(battleData,currentEnemy,ownerTurn);
+                            }
+                        },
+                        "target": "enemy",
+                        "isPersonal": true,
+                        "listenerName": "Talent bug application",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WasAttackedStart",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
+                            const targetTurn = personalOwner;
+        
+        
+                            const applySWBug = this.applySWBug ??= turnLogic[providerTurn.properName].skillFunctions.applySWBug
+                            applySWBug(battleData,targetTurn,providerTurn);
+                        },
+                        "target": "enemy",
+                        "isPersonal": true,
+                        "listenerName": "Silver Wolf E2 Bug Controller",
+                        "ownerTurn": {},
+                    },
                 ],
             },
             {
@@ -10697,29 +10740,29 @@ const turnLogic = {
                 "listenerName": "Silver Wolf death implant switch controller",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "HitEnemyStart",//TODO: revisit later
-                condition(battleData,generalInfo) {
-                    const sourceTurn = generalInfo.sourceTurn;
-                    const targetsGotHit = generalInfo.targetsGotHit;
-                    const targetTurn = generalInfo.targetTurn;
-                    if (sourceTurn.isEnemy || targetsGotHit[targetTurn.name] != 1) {return;}//we only evaluate first hits, on allied attacks
+            // {
+            //     "trigger": "HitEnemyStart",//TODO: revisit later
+            //     condition(battleData,generalInfo) {
+            //         const sourceTurn = generalInfo.sourceTurn;
+            //         const targetsGotHit = generalInfo.targetsGotHit;
+            //         const targetTurn = generalInfo.targetTurn;
+            //         if (sourceTurn.isEnemy || targetsGotHit[targetTurn.name] != 1) {return;}//we only evaluate first hits, on allied attacks
 
-                    let ownerTurn = this.ownerTurn;
-                    let characterName = ownerTurn.properName;
-                    let e2 = ownerTurn.rank >= 2;
-                    if (!e2 && sourceTurn.properName != characterName) {return;}//if it's not sw and it's not e2sw as an ally, then abort
+            //         let ownerTurn = this.ownerTurn;
+            //         let characterName = ownerTurn.properName;
+            //         let e2 = ownerTurn.rank >= 2;
+            //         if (!e2 && sourceTurn.properName != characterName) {return;}//if it's not sw and it's not e2sw as an ally, then abort
 
-                    let isSWE2 = sourceTurn.properName === characterName && e2;
+            //         let isSWE2 = sourceTurn.properName === characterName && e2;
 
-                    const applySWBug = this.applySWBug ??= turnLogic[characterName].skillFunctions.applySWBug
-                    applySWBug(battleData,targetTurn,ownerTurn);
-                    if (isSWE2) {applySWBug(battleData,targetTurn,ownerTurn);}//sw applies TWO bugs in her attacks at e2
-                },
-                "target": "enemy",
-                "listenerName": "Silver Wolf Talent Bug Controller",
-                "ownerTurn": {},
-            },
+            //         const applySWBug = this.applySWBug ??= turnLogic[characterName].skillFunctions.applySWBug
+            //         applySWBug(battleData,targetTurn,ownerTurn);
+            //         if (isSWE2) {applySWBug(battleData,targetTurn,ownerTurn);}//sw applies TWO bugs in her attacks at e2
+            //     },
+            //     "target": "enemy",
+            //     "listenerName": "Silver Wolf Talent Bug Controller",
+            //     "ownerTurn": {},
+            // },
             {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
