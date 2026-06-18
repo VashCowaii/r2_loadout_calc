@@ -4662,10 +4662,9 @@ const battleActions = {
         if (isAttack) {battleData.attackTechniqueUsed = true;}
         if (isDimension) {battleData.dimensionTechniqueUsed = true;}
     },
-    getUniqueGearBuffName(battleData,sourceTurn,buffNames,buffName) {
-        // const logicRef = turnLogicLightcones[lcNameRef];
-        // const buffNames = logicRef.buffNames;
-        // let buffName3 = buffNames.elationVuln;
+    getUniqueGearBuffName(battleData,sourceTurn,logicRef,buffNameTag) {
+        const buffNames = logicRef.buffNames;
+        let buffName = buffNames[buffNameTag];
         const uniqueName = `${buffName} (${sourceTurn.properName})`;
         buffNames[sourceTurn.properName] = uniqueName;
         return uniqueName;

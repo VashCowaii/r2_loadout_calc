@@ -7651,6 +7651,67 @@ const turnLogicLightcones = {
             "buff2": "Chorus [LC]",
         },
     },
+    "Mediation": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "WaveStart",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    // let lcNameRef = "Poised to Bloom";
+
+                    // const updatePresage = this.updatePresage ??= turnLogicLightcones[lcNameRef].skillFunctions.updatePresage;
+                    const namedTurns = battleData.nameBasedTurns;
+
+                    // let firstOwnerTurn = null;
+                    const allAlliesArray = battleData.allAlliesArray;
+                    for (let ownerSlot in ownersSlots) {
+                        const currentOwner = namedTurns[ownerSlot];
+
+
+                        if (!currentOwner.lcMediationSPDSHEET) {
+                            let lcNameRef = "Mediation";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let ownerRank = ownersSlots[currentOwner.name];
+                            let rankParams = lcPathing[ownerRank-1];
+
+                            const logicRef = turnLogicLightcones[lcNameRef];
+                            const uniqueName = battleActions.getUniqueGearBuffName(battleData,currentOwner,logicRef,"buff2")
+        
+                            currentOwner.lcMediationSPDSHEET = {
+                                "stats": [SPDFlat],
+                                [SPDFlat]: rankParams[0],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": uniqueName,
+                                "durationInTurn": 2,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": "EndTurn",
+                            }
+                            
+                        }
+                        const buffSheet = currentOwner.lcMediationSPDSHEET;
+                        // const allAlliesArray = battleData.allAlliesArray;
+                        updateBuffBatchTargets(battleData,allAlliesArray,buffSheet);
+
+                        // break;
+                    }
+                },
+                "target": "self",
+                "priority": -80,
+                "listenerName": "Mediation - battlestart SPD buff",
+            },
+        ],
+        "buffNames": {
+            "buff2": "Mediation [LC]",
+        },
+    },
 
 
     //REMEMBRANCE
@@ -9552,9 +9613,7 @@ const turnLogicLightcones = {
                                 let rankParams = lcPathing[ownerRank-1];
 
                                 const logicRef = turnLogicLightcones[lcNameRef];
-                                const buffNames = logicRef.buffNames;
-                                let buffName = buffNames.dmg;
-                                const uniqueName = battleActions.getUniqueGearBuffName(battleData,sourceTurn,buffNames,buffName)
+                                const uniqueName = battleActions.getUniqueGearBuffName(battleData,sourceTurn,logicRef,"dmg")
         
                                 sourceTurn.lcSheAlreadyClosedDMGSHEET = {
                                     "stats": [DamageAll],
@@ -9755,9 +9814,7 @@ const turnLogicLightcones = {
                                 let rankParams = lcPathing[ownerRank-1];
 
                                 const logicRef = turnLogicLightcones[lcNameRef];
-                                const buffNames = logicRef.buffNames;
-                                let buffName = buffNames.burn;
-                                const uniqueName = battleActions.getUniqueGearBuffName(battleData,personalOwner,buffNames,buffName)
+                                const uniqueName = battleActions.getUniqueGearBuffName(battleData,personalOwner,logicRef,"burn")
 
                                 personalOwner.lcTrendDotBURNSHEET ??= superGlobal.createStandardElementDOTSHEET(personalOwner,"Fire",{
                                     "source": lcNameRef,
@@ -9838,9 +9895,7 @@ const turnLogicLightcones = {
                             }
 
                             const logicRef = turnLogicLightcones[lcNameRef];
-                            const buffNames = logicRef.buffNames;
-                            let buffName = buffNames.dr;
-                            const uniqueName = battleActions.getUniqueGearBuffName(battleData,currentOwner,buffNames,buffName)
+                            const uniqueName = battleActions.getUniqueGearBuffName(battleData,currentOwner,logicRef,"dr")
     
                             currentOwner.lcWeAreWildfireDRSHEET = {
                                 "stats": [DamageReductionStandard],
