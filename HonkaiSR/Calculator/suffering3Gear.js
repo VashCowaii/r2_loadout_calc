@@ -7376,6 +7376,104 @@ const turnLogicLightcones = {
             // "hruntingStack": "Hrunting Stack"
         },
     },
+    "Epoch Etched in Golden Blood": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Epoch Etched in Golden Blood setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Skill") {return}
+                            
+                            let sourceTurn = generalInfo.sourceTurn;
+                            const poolKey = generalInfo.poolKey;
+                            if (!alliedPoolKeys.has(poolKey)) {return;}
+                            
+                            const targets = generalInfo.target;
+                            // const subTarget = generalInfo.subTarget;
+                            if (targets.length > 1) {return};
+    
+                            const targetTurn = targets[0];
+    
+                            if (!sourceTurn.lcEpochEtchedSKILLDMGSHEET) {
+                                let lcNameRef = "Epoch Etched in Golden Blood";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let ownerSlot = sourceTurn.name;
+                                let ownersSlots = this.ownersSlots;
+                                const ownerRank = ownersSlots[ownerSlot];
+                                let rankParams = lcPathing[ownerRank-1];
+                                // greatTableIndex
+                                // greatTableKeys
+
+                                const logicRef = turnLogicLightcones["Epoch Etched in Golden Blood"]
+                                const uniqueName = battleActions.getUniqueGearBuffName(battleData,sourceTurn,logicRef,"hymn")
+                                sourceTurn.lcEpochEtchedSKILLDMGSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[3],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": uniqueName,
+                                    "durationInTurn": 4,
+                                    "duration": 3,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "removeOnDeath": true,
+                                    "actionTags": ["Skill"],
+                                }
+                            }
+                            const buffSheet = sourceTurn.lcEpochEtchedSKILLDMGSHEET;
+
+                            updateBuff(battleData,targetTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Epoch Etched in Golden Blood - buff application",
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            const slot = generalInfo.dmgSlot;
+                            if (slot != "Ultimate") {return;}
+
+                            let sourceTurn = generalInfo.sourceTurn;
+                            updateSkillPoints(battleData,1,sourceTurn,false,"Epoch Etched in Golden Blood");
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Epoch Etched in Golden Blood - ult attack SP gain",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "hymn": "Skill DMG - Epoch Etched in Golden Blood"
+        },
+    },
         //4star
     "Dance! Dance! Dance!": {//REDONE
         logic(thisTurn,battleData) {},
