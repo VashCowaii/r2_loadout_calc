@@ -15046,7 +15046,15 @@ const turnLogicRelics = {
                         let ownerRank = ownersSlots[ownerSlot];
                         if (!ownerRank) {return;}//if the debuff owner isn't an owner of the relic, abort early
 
-                        const isReducing = sourceSheet.flags[DEF_DOWN];
+                        const sheetFlags = sourceSheet.flags;
+                        if (!sheetFlags) {return;}
+                        let isReducing = false;
+                        for (let flag of sheetFlags) {
+                            if (flag === DEF_DOWN) {
+                                isReducing = true;
+                                break;
+                            }
+                        }
                         if (!isReducing) {return;}
 
                         const sourceTurn = generalInfo.sourceTurn?.[0] ?? generalInfo.sourceTurn;
