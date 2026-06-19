@@ -192,7 +192,7 @@ const battleActions = {
             timesToApply = newCheck.timesToApply;
         }
         else {
-            if (!isDebuff && !isShield && (currentReference.maxStacks === 1 || (currentReference.maxStacks === currentReference.currentStacks && buffSheet.currentStacks > 0))) {
+            if (!isDebuff && !isImplant && !isShield && (currentReference.maxStacks === 1 || (currentReference.maxStacks === currentReference.currentStacks && buffSheet.currentStacks > 0))) {
                 if (!silent && battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BuffApply", buffName, applicationType: "Renew", isShield,oldShield,newShield:currentReference.shieldRemaining,shieldCap:currentReference.shieldCap, name:sourceTurn.properName, source: buffSheet.source, sourceOwner: buffSheet.sourceOwner, enemyRealName: sourceTurn.isEnemy ? sourceTurn.enemyRealName : null,AV: battleData.sumAV, stacks: currentReference.currentStacks});}
                 return;
             }
@@ -251,7 +251,7 @@ const battleActions = {
                 timesToApply = newCheck.timesToApply;
             }
             else {
-                if (!isDebuff && !isShield && (maxStacks === 1 || maxStacks === currentReference.currentStacks)) {
+                if (!isDebuff && !isImplant && !isShield && (maxStacks === 1 || maxStacks === currentReference.currentStacks)) {
                     if (!silent && battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BuffApply", buffName, applicationType: "Renew", isShield,oldShield,newShield:currentReference.shieldRemaining,shieldCap:currentReference.shieldCap, name:sourceTurn.properName, source: buffSheet.source, sourceOwner: buffSheet.sourceOwner, enemyRealName: sourceTurn.isEnemy ? sourceTurn.enemyRealName : null,AV: battleData.sumAV, stacks: currentReference.currentStacks});}
                     continue;
                 }
