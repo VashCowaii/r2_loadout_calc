@@ -5870,10 +5870,6 @@ const userTriggers = {
         battleSettings.useTechniquesChar4 = useTechniquesChar4;
 
 
-        const useStartToughness = readSelection("queriesUseStartToughness").checked;
-        battleSettings.useStartToughness = useStartToughness;
-
-
 
         const substatRollValue = +readSelection("queriesSubstatRollValue").value;
         const substatRollValueDisplayArray = ["Low","Mid","High"];
