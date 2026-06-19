@@ -80,6 +80,8 @@ const SW_DEF_DOWN = greatFlagIndex.SW_DEF_DOWN;
 const SW_ATK_DOWN = greatFlagIndex.SW_ATK_DOWN;
 const SW_SPD_DOWN = greatFlagIndex.SW_SPD_DOWN;
 
+const FORCE_SUPERBREAK = greatFlagIndex.FORCE_SUPERBREAK;
+
 
 
 

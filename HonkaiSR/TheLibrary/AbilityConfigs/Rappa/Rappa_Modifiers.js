@@ -778,7 +778,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "flagName": "STAT_ForceSuperBreakDamage"
+                    "flagName": "FORCE_SUPERBREAK"
                   },
                   {
                     "name": "Has Flag",
@@ -786,7 +786,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "flagName": "STAT_ForceSuperBreakDamage"
+                    "flagName": "FORCE_SUPERBREAK"
                   }
                 ]
               },

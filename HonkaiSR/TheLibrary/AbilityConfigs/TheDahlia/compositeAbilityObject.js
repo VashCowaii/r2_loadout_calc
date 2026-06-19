@@ -660,7 +660,7 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1701170235\">Constance_Aura_OnEnemy</a>[<span class=\"descriptionNumberColor\">Lick... Enkindled Betrayal</span>]",
           "modifierFlags": [
-            "STAT_ForceSuperBreakDamage"
+            "FORCE_SUPERBREAK"
           ],
           "description": "Toughness Reduction taken when not Weakness Broken can also be converted to Super Break DMG.",
           "type": "Debuff",
@@ -2732,7 +2732,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "flagName": "STAT_ForceSuperBreakDamage"
+                        "flagName": "FORCE_SUPERBREAK"
                       },
                       {
                         "name": "Has Flag",
@@ -2740,7 +2740,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "flagName": "STAT_ForceSuperBreakDamage"
+                        "flagName": "FORCE_SUPERBREAK"
                       }
                     ]
                   },
