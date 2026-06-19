@@ -450,7 +450,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__529435553\">Phainon_Ultimate_Weakness</a>[<span class=\"descriptionNumberColor\">Ruinous Irontomb</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "STAT_AttachWeakness"
+        "WEAKNESS_IMPLANT"
       ],
       "description": "Additionally implanted Physical Weakness.",
       "type": "Debuff",

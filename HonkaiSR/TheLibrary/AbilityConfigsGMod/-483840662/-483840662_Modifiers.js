@@ -2059,7 +2059,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1118024096\">Standard_WeakType_Imaginary</a>[<span class=\"descriptionNumberColor\">Additional Imaginary Weakness</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "STAT_AttachWeakness"
+        "WEAKNESS_IMPLANT"
       ],
       "description": "Additionally implanted Imaginary Weakness.",
       "type": "Debuff",
@@ -2136,7 +2136,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1012677236\">Standard_WeakType_Quantum</a>[<span class=\"descriptionNumberColor\">Additional Quantum Weakness</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "STAT_AttachWeakness"
+        "WEAKNESS_IMPLANT"
       ],
       "description": "Additionally implanted Quantum Weakness.",
       "type": "Debuff",
@@ -2213,7 +2213,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1930557999\">Standard_WeakType_Thunder</a>[<span class=\"descriptionNumberColor\">Additional Lightning Weakness</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "STAT_AttachWeakness"
+        "WEAKNESS_IMPLANT"
       ],
       "description": "Additionally implanted Lightning Weakness.",
       "type": "Debuff",
@@ -2290,7 +2290,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1724958950\">Standard_WeakType_Physical</a>[<span class=\"descriptionNumberColor\">Additional Physical Weakness</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "STAT_AttachWeakness"
+        "WEAKNESS_IMPLANT"
       ],
       "description": "Additionally implanted Physical Weakness.",
       "type": "Debuff",
@@ -2367,7 +2367,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1938125975\">Standard_WeakType_Wind</a>[<span class=\"descriptionNumberColor\">Additional Wind Weakness</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "STAT_AttachWeakness"
+        "WEAKNESS_IMPLANT"
       ],
       "description": "Additionally implanted Wind Weakness.",
       "type": "Debuff",
@@ -2444,7 +2444,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1497676034\">Standard_WeakType_Ice</a>[<span class=\"descriptionNumberColor\">Additional Ice Weakness</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "STAT_AttachWeakness"
+        "WEAKNESS_IMPLANT"
       ],
       "description": "Additionally implanted Ice Weakness.",
       "type": "Debuff",
@@ -2521,7 +2521,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-2009288629\">Standard_WeakType_Fire</a>[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "STAT_AttachWeakness"
+        "WEAKNESS_IMPLANT"
       ],
       "description": "Additionally implanted Fire Weakness.",
       "type": "Debuff",

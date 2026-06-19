@@ -293,7 +293,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__551921933\">Silwolf_BPAbility_WeakType_Extra</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
       "stackType": "Replace",
       "modifierFlags": [
-        "STAT_AttachWeakness"
+        "WEAKNESS_IMPLANT"
       ],
       "description": "Extra Weakness implanted. Corresponding RES is lowered by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
@@ -335,7 +335,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-56897788\">Silwolf_BPAbility_WeakType</a>[<span class=\"descriptionNumberColor\">Extra Weakness</span>]",
       "stackType": "Replace",
       "modifierFlags": [
-        "STAT_AttachWeakness"
+        "WEAKNESS_IMPLANT"
       ],
       "description": "Extra Weakness implanted. Corresponding RES is lowered by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",

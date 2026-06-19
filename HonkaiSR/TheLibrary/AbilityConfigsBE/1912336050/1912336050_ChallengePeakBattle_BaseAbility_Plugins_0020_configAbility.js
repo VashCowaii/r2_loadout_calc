@@ -19,7 +19,7 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__96867120\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0020_02</a>[<span class=\"descriptionNumberColor\">Electrical Firestorm</span>]",
       "modifierFlags": [
-        "STAT_AttachWeakness"
+        "WEAKNESS_IMPLANT"
       ],
       "description": "Has additional Fire and Lightning Weaknesses applied, and Fire and Lightning RES decreases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0020_ADF_1</span>.",
       "type": "Other",

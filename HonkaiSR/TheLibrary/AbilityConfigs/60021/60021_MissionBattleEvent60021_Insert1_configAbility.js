@@ -56,7 +56,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__591807962\">StageSpecialAbility_20412061_InBattle_Weakness_Wind</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "STAT_AttachWeakness"
+        "WEAKNESS_IMPLANT"
       ],
       "stackData": [
         "MDF_PropertyValue"

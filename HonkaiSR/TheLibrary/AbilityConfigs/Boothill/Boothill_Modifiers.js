@@ -345,7 +345,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1234556186\">Boothill_Ultimate_PhysicalWeakness</a>[<span class=\"descriptionNumberColor\">Extra Physical Weakness</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "STAT_AttachWeakness"
+        "WEAKNESS_IMPLANT"
       ],
       "description": "Implanted with extra Physical Weakness.",
       "type": "Debuff",

@@ -25,7 +25,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1189881261\">BAttleEventAbility_Weakness_Imaginary</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "STAT_AttachWeakness"
+            "WEAKNESS_IMPLANT"
           ],
           "execute": [
             {
@@ -93,7 +93,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1163813471\">BAttleEventAbility_Weakness_Quantum</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "STAT_AttachWeakness"
+            "WEAKNESS_IMPLANT"
           ],
           "execute": [
             {
@@ -161,7 +161,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__436644401\">BAttleEventAbility_Weakness_Ice</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "STAT_AttachWeakness"
+            "WEAKNESS_IMPLANT"
           ],
           "execute": [
             {
@@ -229,7 +229,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__89731232\">BAttleEventAbility_Weakness_Thunder</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "STAT_AttachWeakness"
+            "WEAKNESS_IMPLANT"
           ],
           "execute": [
             {
@@ -297,7 +297,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-944583698\">BAttleEventAbility_Weakness_Fire</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "STAT_AttachWeakness"
+            "WEAKNESS_IMPLANT"
           ],
           "execute": [
             {
@@ -365,7 +365,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1329707912\">BAttleEventAbility_Weakness_Wind</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "STAT_AttachWeakness"
+            "WEAKNESS_IMPLANT"
           ],
           "execute": [
             {
@@ -433,7 +433,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__853477559\">BAttleEventAbility_Weakness_Physical</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "STAT_AttachWeakness"
+            "WEAKNESS_IMPLANT"
           ],
           "execute": [
             {

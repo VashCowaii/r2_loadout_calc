@@ -48,7 +48,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1351694549\">StageSpecialAbility_20412061_InBattle_Weakness_Ice</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "STAT_AttachWeakness"
+        "WEAKNESS_IMPLANT"
       ],
       "stackData": [
         "MDF_PropertyValue"
