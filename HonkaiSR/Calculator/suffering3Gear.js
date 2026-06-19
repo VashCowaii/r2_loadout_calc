@@ -3830,69 +3830,6 @@ const turnLogicLightcones = {
             "buff1": "Solitary Healing [Ult]",
         },
     },
-    "Before the Tutorial Mission Starts": {//REDONE
-        logic(thisTurn,battleData) {},
-        "skillFunctions": {},
-        "listeners": [
-            {
-                "trigger": "PassiveCalls",
-                condition(battleData,generalInfo) {
-                    let ownerRef = this.owners;
-        
-                    const namedTurns = battleData.nameBasedTurns;
-                    const subListeners = this.subListeners;
-                    const ownersSlots = this.ownersSlots;
-        
-                    for (let owner of ownerRef) {
-                        let charSlot = owner.slot;
-                        let currentTurn = namedTurns[charSlot];
-        
-                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
-                    }
-                },
-                "target": "self",
-                "listenerName": "Before the Tutorial Mission Starts listener setup",
-                "owners": [],
-                "subListeners": [
-                    {
-                        "trigger": "AttackDMGEnd",
-                        condition(battleData,generalInfo) {
-                            let sourceTurn = generalInfo.sourceTurn;
-        
-                            const targetsGotHit = generalInfo.targetsGotHit;
-                            const enemyTurns = battleData.enemyBasedTurns;
-                            let targetsFound = 0;
-                            for (let targetSlot in targetsGotHit) {
-                                const currentEnemy = enemyTurns[targetSlot];
-                                const DEFCheck = currentEnemy.flags[DEF_DOWN];
-        
-                                if (DEFCheck) {targetsFound += 1;}
-                            }
-        
-                            
-                            if (targetsFound) {
-                                if (!sourceTurn.tutorialMissionLCEnergyValues) {
-                                    let ownersSlots = this.ownersSlots;
-                                    let ownerRank = ownersSlots[sourceTurn.name];
-                                    let lcNameRef = "Before the Tutorial Mission Starts";
-                                    let lcPathing = lightcones[lcNameRef].params;
-                                    sourceTurn.tutorialMissionLCEnergyValues = lcPathing[ownerRank-1];
-                                }
-        
-                                //only ONE regen happens, no matter how many def reduced targets there were
-                                const energyToRegen = sourceTurn.tutorialMissionLCEnergyValues[1];
-                                updateEnergy(battleData,energyToRegen,sourceTurn,false,"Before the Tutorial Mission Starts");
-                            }
-                        },
-                        "target": "enemy",
-                        "isPersonal": true,
-                        "listenerName": "Before the Tutorial Mission Starts energy controller",
-                    },
-                ]
-            },
-        ],
-        "buffNames": {},
-    },
     "Patience Is All You Need": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
@@ -4651,6 +4588,69 @@ const turnLogicLightcones = {
         },
     },
         //4star
+    "Before the Tutorial Mission Starts": {//REDONE
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Before the Tutorial Mission Starts listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            const targetsGotHit = generalInfo.targetsGotHit;
+                            const enemyTurns = battleData.enemyBasedTurns;
+                            let targetsFound = 0;
+                            for (let targetSlot in targetsGotHit) {
+                                const currentEnemy = enemyTurns[targetSlot];
+                                const DEFCheck = currentEnemy.flags[DEF_DOWN];
+        
+                                if (DEFCheck) {targetsFound += 1;}
+                            }
+        
+                            
+                            if (targetsFound) {
+                                if (!sourceTurn.tutorialMissionLCEnergyValues) {
+                                    let ownersSlots = this.ownersSlots;
+                                    let ownerRank = ownersSlots[sourceTurn.name];
+                                    let lcNameRef = "Before the Tutorial Mission Starts";
+                                    let lcPathing = lightcones[lcNameRef].params;
+                                    sourceTurn.tutorialMissionLCEnergyValues = lcPathing[ownerRank-1];
+                                }
+        
+                                //only ONE regen happens, no matter how many def reduced targets there were
+                                const energyToRegen = sourceTurn.tutorialMissionLCEnergyValues[1];
+                                updateEnergy(battleData,energyToRegen,sourceTurn,false,"Before the Tutorial Mission Starts");
+                            }
+                        },
+                        "target": "enemy",
+                        "isPersonal": true,
+                        "listenerName": "Before the Tutorial Mission Starts energy controller",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {},
+    },
     "Resolution Shines As Pearls of Sweat": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
