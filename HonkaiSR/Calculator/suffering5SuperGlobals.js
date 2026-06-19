@@ -48,23 +48,10 @@ const superGlobal = {
         battleActions.updateBuff(battleData,targetTurn,preSheet);
     },
     getStartingAttacker(battleData) {//for getting whoever is starting the fight, usually with a technique, otherwise default char1
-        const allyPositions = battleData.allyPositions;
-        let targetOverride = null;
-        for (let ally of allyPositions) {
-            if (ally.isUniqueEvent) {continue;}
-            const currentTurnLogic = turnLogic[ally.properName];
-            const useTechnique = currentTurnLogic.useTechnique;
-            const techniqueType = currentTurnLogic.techniqueType;
+        const combatStarterSlot = battleData.combatStarterSlot;
+        const newTurn = battleData.nameBasedTurns[combatStarterSlot];
 
-            // console.log(ally.properName,useTechnique,techniqueType)
-
-            if (useTechnique && techniqueType === "Attack") {
-                targetOverride = ally;
-                break;
-            }
-        }
-
-        return targetOverride ?? battleData.nameBasedTurns.char1;
+        return newTurn;
     },
     getStarterBattleTable() {
         return {
