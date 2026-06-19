@@ -11369,7 +11369,7 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "AttackEnd",
+                        "trigger": "AttackDMGEnd",
                         condition(battleData,generalInfo) {
                             const sourceTurn = generalInfo.sourceTurn;
                             if (sourceTurn.isEnemy) {return;}
@@ -11378,8 +11378,9 @@ const turnLogic = {
                             const characterName = ownerTurn.properName;
                             
                             const valuesRef = ownerTurn.battleValues;
-                            const debtCheck = (valuesRef.fuaStacks - valuesRef.fuaStackDebt) > 0;
-                            if (sourceTurn.properName != characterName && debtCheck) {//kafka can't proc her own FUA, but also if a FUA is already queued(the debt stacks) and we don't have any spare stacks left, then abort
+                            if (!valuesRef.fuaStacks) {return;}
+                            const debtCheck = valuesRef.fuaStackDebt;
+                            if (sourceTurn.properName != characterName && !debtCheck) {//kafka can't proc her own FUA, but also if a FUA is already queued(the debt stacks) and we don't have any spare stacks left, then abort
                                 // console.log("reached queue")
                                 
                                 const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
