@@ -23611,7 +23611,7 @@ const turnLogic = {
                     const sourceString = generalInfo.sourceString;
                     if (pointsGained && battleData.isLoggyLogger) {
                         // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Charge (Asta): ${oldValue} --> ${newValue}/5 [${sourceString}]`});
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/misc/asta/Icon1009Passive.png" ,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Charge (Asta): ${oldValue} --> ${newValue}/5 [${sourceString}]`});
                     
                         if (pointsGained > 0) {
                             ownerTurn.astaChargeSummer ??= 0;

@@ -384,7 +384,13 @@ const customDisplayValuesLog = {
         {valueName: "E4 Follow-up Ready", refName: "e4FUAReady", isBattleValue: true, isCharacterState: true, requiresEidolon: 4},
     ],  
     "Asta": [//tracker done
-        {valueName: "Charging Stacks", refName: "chargeStacks", isBattleValue: true,summaryValue: "astaChargeSummer",summaryType: "SUM"},
+        {valueName: "Charging Stacks", refName: "chargeStacks", isBattleValue: true,summaryValue: "astaChargeSummer",summaryType: "SUM",
+            customDisplay: "marks", customDisplayType: "diamond", markMax: 5, innerMarkColor: "Fire",
+            // displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/asta/Icon1009Passive.png"
+        },
         {valueName: "Skip Charge Decay", refName: "skipCost", isBattleValue: true, isCharacterState: true},
     ],
     "Sparkle": [//tracker done
