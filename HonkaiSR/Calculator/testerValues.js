@@ -371,6 +371,27 @@ const customDisplayValuesLog = {
         },
         {valueName: "Backup Dancer Max", refName: "hmcDancerTimeMax", isBattleValue: true,hide: true},
     ],
+    "Hanya": [//tracker done
+        {valueName: "Burden Triggers", refName: "burdenStacks", isBattleValue: true,summaryValue: "hanyaBurdenTriggerSum",summaryType: "SUM",
+            customDisplay: "marks", customDisplayType: "diamond", markMax: null, innerMarkColor: "Physical",
+            displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: characters["Hanya"].traces.Point02.icon
+        },
+        {valueName: "Burden Triggers Max", refName: "burdenStacksMax", isBattleValue: true,hide: true},
+
+        {valueName: "Burden Hits", refName: "burdenHits", isBattleValue: true,summaryValue: "hanyaBurdenHitsSum",summaryType: "SUM",
+            customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "Physical",
+            displayRequiresIndex: 3, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            progressIcon: "misc/hanya/burden.png"
+        },
+        {valueName: "Burden Hits Max", refName: "burdenHitsMax", isBattleValue: true,hide: true},
+
+        // {valueName: "Charging Stacks", refName: "chargeStacks", isBattleValue: true,summaryValue: "astaChargeSummer",summaryType: "SUM"},
+        // {valueName: "Skip Charge Decay", refName: "skipCost", isBattleValue: true, isCharacterState: true},
+    ],
     
     //ERUDITION
     "Argenti": [//no tracker needed
@@ -618,6 +639,7 @@ const conditionsCharacterDisplayWarning = {
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Trailblazer - Harmony": defaultStandardAbilityDisplayWarnings,
+    "Hanya": defaultStandardAbilityDisplayWarnings,
 
     //REMEMBRANCE
     "Trailblazer - Remembrance": {
@@ -2766,6 +2788,110 @@ const defaultConditions = {
             "type": "AND",
             "array": []
         }
+    },
+    "Hanya": {
+        "hasEnhancedState": false,
+        "validTargetChecks": [
+            "Ultimate",
+        ],
+        "Skill": {
+            "type": "OR",
+            "array": [
+                {
+                    "type": "COMPARE",
+                    "comparison": "<",
+                    "array": [
+                        {
+                            "type": "Character: Special Value",
+                            "target": "Self",
+                            "specialValue": "burdenStacks",
+                            "isBattleValue": true
+                        },
+                        {
+                            "type": "Character: Special Value",
+                            "target": "Self",
+                            "specialValue": "burdenStacksMax",
+                            "isBattleValue": true
+                        }
+                    ]
+                },
+                {
+                    "type": "COMPARE",
+                    "comparison": "=",
+                    "array": [
+                        {
+                            "type": "Team: Value",
+                            "teamValue": "Skill Points: Current"
+                        },
+                        {
+                            "type": "Team: Value",
+                            "teamValue": "Skill Points: Max"
+                        }
+                    ]
+                }
+            ]
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        },
+        "UltimateTarget": {
+            "type": "Target Priority",
+            "array": [
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Filter Ally",
+                                    "target": "char1",
+                                    "targetType": "Character"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "COMPARE",
+                            "comparison": "!=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "char1",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                },
+                                {
+                                    "type": "Character: Value",
+                                    "target": "Self",
+                                    "targetType": "Character",
+                                    "characterValue": "properName"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": [
+                                {
+                                    "type": "Filter Ally",
+                                    "target": "char2",
+                                    "targetType": "Character"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "AND",
+                            "array": []
+                        }
+                    ]
+                }
+            ]
+        },
     },
 
     //ABUNDANCE

@@ -25949,6 +25949,680 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    "Hanya": {
+        logic(thisTurn,battleData) {
+            let currentSP = battleData.skillPointCurrent;
+            let minimum = currentSP >= 1;
+
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                const skillCall = this.returnSkillCall;
+                skillCall.target = [battleData.primaryTarget];
+                // skillCall.subTarget = battleData.bounceOrder;
+                return skillCall;;
+            }
+
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.hanyaSkill,
+                action: "Skill",
+                points: -1, 
+
+                isAttack: true,
+                isAbility: true,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "SkillStart",
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
+
+            this.returnBasicCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.hanyaBasic,
+                action: "BasicATK",
+                points: 1, 
+
+                isAttack: true,
+                isAbility: true,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "BasicATKStart",
+
+                poolKey: this.abilityTargetPools.BasicATK,
+            })
+            this.returnBasicCall.sourceTurn = thisTurn;
+        },
+        "abilityTargetPools": {
+            "BasicATK": "Enemies (On-Field)",
+            "Skill": "Enemies (On-Field)",
+            "Ultimate": "Allies (On-Field)",
+        },
+        "skillFunctions": {
+            hanyaBasic(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.hanyaBasicREF ??= ATKObjects["Basic ATK"]["Oracle Brush"].variant1;
+
+                if (!ATKObjects.hanyaBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = ATKObjects.hanyaBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Physical"];
+                    const actionTags = ["All","Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.hanyaBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                    }
+                }
+                let ATKObject = ATKObjects.hanyaBasicATKOBJECT;
+
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+            },
+            hanyaSkill(battleData,actionObject,sourceTurn,skipAttack) {
+                const characterName = sourceTurn.properName;
+                const logicRef = turnLogic[characterName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.hanyaSkillREF ??= ATKObjects["Skill"]["Samsara, Locked"].variant1;
+                let values = ATKObjects.hanyaSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                
+                if (!ATKObjects.hanyaSkillATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
+                    const scalar = "ATK";
+                    const tags = ["All","Physical"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["All","Skill","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    ATKObjects.hanyaSkillATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                    }
+
+                    const buffNames = logicRef.buffNames;
+                    ATKObjects.hanyaBurdenSHEET = {
+                        "stats": null,
+                        "source": "Skill",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffNames.burden,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "removeOnDeath": true,
+
+                        "buffDisplayIcon": "misc/hanya/burden.png",
+
+                        expireFunction: logicRef.skillFunctions.burdenExpired,
+                        expireParam: sourceTurn.name,
+                    }
+                }
+                let ATKObject = ATKObjects.hanyaSkillATKOBJECT;
+
+                if (!skipAttack) {attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);}
+
+                const target = actionObject.target[0];
+                if (!target.isDead) {
+                    const buffSheet = ATKObjects.hanyaBurdenSHEET;
+                    const burdenName = buffSheet.buffName;
+                    const enemyPositions = battleData.enemyPositions;
+                    let sameTarget = false;
+                    for (let enemy of enemyPositions) {
+                        const buffCheck = enemy.buffsObject[burdenName];
+                        if (buffCheck) {
+                            if (enemy.properName === target.properName) {
+                                sameTarget = true;
+                                break;
+                            }//if we're reapplying to the same target, just break nothing to do
+                            removeBuff(battleData,enemy,buffCheck);
+                            break;
+                        }
+                    }
+
+                    if (!sameTarget) {updateBuff(battleData,target,buffSheet);}
+                    poke("HanyaBurdenGained",battleData,{pointsGained: 2,sourceString:"Applied Burden to Target"});
+                }
+            },
+            burdenExpired(battleData,hanyaSlot) {
+                const hanyaTurn = battleData.nameBasedTurns[hanyaSlot];
+
+                const currentTriggers = hanyaTurn.battleValues.burdenStacks;
+                if (currentTriggers) {
+                    poke("HanyaBurdenGained",battleData,{pointsGained: -currentTriggers,sourceString:"Burden Removed from Old Target"});
+                }
+
+                poke("HanyaBurdenHitsGained",battleData,{pointsGained: -2,sourceString:"Burden moved to new Target, hitcount reset"});
+            },
+            hanyaUltimate(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.hanyaUltimateREF ??= ATKObjects.Ultimate["Ten-Lords' Decree, All Shall Obey"].variant1;
+                let values = ATKObjects.hanyaUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                if (!ATKObjects.hanyaUltimateSPDSHEET) {
+                    let rank = sourceTurn.rank;
+
+                    let buffName = logicRef.buffNames.ultSPD;
+                    ATKObjects.hanyaUltimateSPDSHEET = {
+                        "stats": [SPDFlat,SPDFlatNULL,ATKP],
+                        [SPDFlat]: 0,
+                        [SPDFlatNULL]: -0,
+                        [ATKP]: values[0],
+                        "source": "Ultimate",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffName,
+                        "durationInTurn": 3 + (rank >= 4 ? 1 : 0),
+                        "duration": 2 + (rank >= 4 ? 1 : 0),
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        "removeOnDeath": true,
+                    }
+                }
+
+                const targetTurn = actionObject.target[0];
+
+                const statTable = sourceTurn.statTable;
+                const SPDFinal = calcs.getSPDFinal(statTable).SPDFinal;
+
+                const validSPD = +((SPDFinal + statTable[SPDFlatNULL]) * values[2]).toFixed(7);
+                let buffSheet = ATKObjects.hanyaUltimateSPDSHEET;
+                buffSheet[SPDFlat] = validSPD
+                buffSheet[SPDFlatNULL] = -validSPD;
+
+                const buffCheck = targetTurn.buffsObject[buffSheet.buffName];
+                if (buffCheck) {
+                    //if the target already had it, but now hanya's spd has changed, update the value
+                    const compareSPD = buffCheck[SPDFlat];
+                    if (compareSPD != validSPD) {
+                        removeBuff(battleData,targetTurn,buffCheck,true,null,false,true);
+                    }
+                }
+                updateBuff(battleData,targetTurn,buffSheet);
+
+                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
+                sourceTurn.ultyQueued = false;
+            },
+            hanyaTechnique(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.hanyaTechniqueREF ??= ATKObjects.Technique["Netherworld Judgment"].variant1;
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+
+                logicRef.skillFunctions.hanyaSkill(battleData,{target: [battleData.primaryTarget]},sourceTurn,true)
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+                    if (rank >= 2) {
+                        const listener1 = passiveListeners[0];
+                        addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    }
+
+                    if (rank >= 1) {
+                        const listener2 = passiveListeners[1];
+                        addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                        const listener3 = passiveListeners[2];
+                        addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                    }
+
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
+                },
+                "target": "self",
+                "listenerName": "Hanya Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Skill") {return;}
+        
+                            const ownerTurn = this.ownerTurn;
+                            const e2Sheet = this.e2Sheet ??= {
+                                "stats": [SPDP],
+                                [SPDP]: 0.20,
+                                "source": "Trace",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": turnLogic[ownerTurn.properName].buffNames.e2Speed,
+                                "durationInTurn": 2,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": "EndTurn",
+                                "removeOnDeath": true,
+                            }
+                            
+                            updateBuff(battleData,ownerTurn,e2Sheet)
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Hanya skill e2 spd",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "ActionEndPhase",
+                        condition(battleData,generalInfo) {
+                            const ownerTurn = this.ownerTurn;
+                            ownerTurn.battleValues.e1AdvanceReady = true;
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Hanya e1 advance cooldown reset",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EnemyDied",
+                        condition(battleData,generalInfo) {
+                            // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed},sourceTurn);
+                            let ownerTurn = this.ownerTurn;
+                            if (!ownerTurn.battleValues.e1AdvanceReady) {return;}
+                            // let characterName = ownerTurn.properName;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            const buffName = this.buffName ??= turnLogic[ownerTurn.properName].buffNames.ultSPD;
+        
+                            const buffCheck = sourceTurn.buffsObject[buffName];
+                            if (buffCheck) {
+                                ownerTurn.battleValues.e1AdvanceReady = false;
+
+                                actionAdvance(0.15,ownerTurn,battleData,"Hanya E1 target killed by Ult Target");
+                            }
+                        },
+                        "target": "self",
+                        "listenerName": "Hanya e1 Target killed by ult target",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
+                "trigger": "EnemyDied",
+                condition(battleData,generalInfo) {
+                    // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed},sourceTurn);
+                    let ownerTurn = this.ownerTurn;
+                    // let characterName = ownerTurn.properName;
+                    let targetTurn = generalInfo.enemyKilled;
+                    const buffName = this.buffName ??= turnLogic[ownerTurn.properName].buffNames.burden;
+
+                    const buffCheck = targetTurn.buffsObject[buffName];
+                    if (buffCheck) {
+                        const triggerCount = ownerTurn.battleValues.burdenStacks;
+
+                        if (triggerCount <= 1) {
+                            updateSkillPoints(battleData,1,ownerTurn,false,"Target died with Burden <=1");
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "Enemy died with burden",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AbilityStart",
+                condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "BasicATK" && action != "Skill" && action != "Ultimate") {return;}
+
+                    const poolKey = generalInfo.poolKey;
+                    if (alliedPoolKeys.has(poolKey)) {return;}//if it's not hostile targeting, abort
+
+                    let ownerTurn = this.ownerTurn;
+                    const buffName = this.buffName ??= turnLogic[ownerTurn.properName].buffNames.burden;
+
+                    const triggerCount = ownerTurn.battleValues.burdenStacks;
+                    if (triggerCount) {
+                        const target = generalInfo.target;
+                        let targetFound = false;
+                        for (let enemy of target) {
+                            const buffCheck = enemy.buffsObject[buffName];
+                            if (buffCheck) {
+                                targetFound = true;
+                                break;
+                            }
+                        }
+                        if (!targetFound) {
+                            const subTarget = generalInfo.subTarget;
+                            for (let enemy of subTarget) {
+                                const buffCheck = enemy.buffsObject[buffName];
+                                if (buffCheck) {
+                                    targetFound = true;
+                                    break;
+                                }
+                            }
+                        }
+
+                        if (targetFound) {
+                            const logicRef = turnLogic[ownerTurn.properName];
+                            const ATKObjects = logicRef.ATKObjects;
+
+                            if (!ATKObjects.hanyaSanctionSHEET) {
+                                let skillRef = ATKObjects.hanyaTalentREF ??= ATKObjects.Talent["Sanction"].variant1;
+
+                                let rank = ownerTurn.rank;
+
+                                let values = ATKObjects.hanyaTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+
+                                let buffName = logicRef.buffNames.talentSanction;
+                                ATKObjects.hanyaSanctionSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: values[0] + (rank >= 6 ? 0.10 : 0),
+                                    "source": "Ultimate",
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "removeOnDeath": true,
+                                }
+                            }
+                            const buffSheet = ATKObjects.hanyaSanctionSHEET;
+                            const sourceTurn = generalInfo.sourceTurn;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "Targeted enemy with burden",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AbilityEnd",
+                condition(battleData,generalInfo) {
+                    const action = generalInfo.action;
+                    if (action != "BasicATK" && action != "Skill" && action != "Ultimate") {return;}
+
+                    const poolKey = generalInfo.poolKey;
+                    if (alliedPoolKeys.has(poolKey)) {return;}//if it's not hostile targeting, abort
+
+                    let ownerTurn = this.ownerTurn;
+                    const buffName = this.buffName ??= turnLogic[ownerTurn.properName].buffNames.burden;
+
+                    const triggerCount = ownerTurn.battleValues.burdenStacks;
+                    if (triggerCount) {
+                        const target = generalInfo.target;
+                        let targetFound = false;
+                        let targetActual = null;
+                        for (let enemy of target) {
+                            const buffCheck = enemy.buffsObject[buffName];
+                            if (buffCheck) {
+                                targetFound = true;
+                                targetActual = enemy;
+                                break;
+                            }
+                        }
+                        if (!targetFound) {
+                            const subTarget = generalInfo.subTarget;
+                            for (let enemy of subTarget) {
+                                const buffCheck = enemy.buffsObject[buffName];
+                                if (buffCheck) {
+                                    targetFound = true;
+                                    targetActual = enemy;
+                                    break;
+                                }
+                            }
+                        }
+
+                        if (targetFound) {
+                            const exoObject1 = this.exoObject1 ??= {pointsGained: 1,sourceString:"Ability ended with Burden Target"};
+                            poke("HanyaBurdenHitsGained",battleData,exoObject1);
+
+                            const battleValues = ownerTurn.battleValues;
+                            const hitCount = battleValues.burdenHits;
+
+                            if (hitCount === 2) {
+                                const exoObject2 = this.exoObject2 ??= {pointsGained: -2,sourceString:"Hit-Count reset on Target with Burden"};
+                                poke("HanyaBurdenHitsGained",battleData,exoObject2);
+
+                                const exoObject3 = this.exoObject3 ??= {pointsGained: -1,sourceString:"Triggered Burden Skill Point"};
+                                poke("HanyaBurdenGained",battleData,exoObject3);
+                                updateSkillPoints(battleData,1,ownerTurn,false,"Burden Skill Point Regen");
+
+                                //trace atk bonus
+                                const traceSheet = this.traceSheet ??= {
+                                    "stats": [ATKP],
+                                    [ATKP]: 0.10,
+                                    "source": "Trace",
+                                    "sourceOwner": ownerTurn.properName,
+                                    "buffName": turnLogic[ownerTurn.properName].buffNames.traceATK,
+                                    "durationInTurn": 2,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "removeOnDeath": true,
+                                }
+                                updateBuff(battleData,ownerTurn,traceSheet);
+
+                                //trace regen
+                                updateEnergy(battleData,2,ownerTurn,false,"Trace: Reanimated");
+
+                                const triggerCount = battleValues.burdenStacks;
+                                if (!triggerCount) {
+                                    const burdenSheet = targetActual.buffsObject[buffName];
+                                    removeBuff(battleData,targetActual,burdenSheet);
+                                }
+                                
+                            }
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "Targeted enemy with burden",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "HanyaBurdenGained",
+                condition(battleData,generalInfo) {
+                    // poke("HanyaBurdenGained",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    const pointsGained = generalInfo.pointsGained;
+                    const valuesRef = ownerTurn.battleValues;
+
+                    const oldValue = valuesRef.burdenStacks;
+                    const maxValue = valuesRef.burdenStacksMax;
+                    valuesRef.burdenStacks = Math.max(0, Math.min(maxValue, oldValue + pointsGained));
+                    const newValue = valuesRef.burdenStacks;
+                    const valueWasDiff = oldValue != newValue;
+
+                    const sourceString = generalInfo.sourceString
+                    if (valueWasDiff && battleData.isLoggyLogger) {
+                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point02.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Burden Triggers (Hanya): ${oldValue} --> ${valuesRef.burdenStacks}/${maxValue} [${sourceString}]`});
+                        
+                        if (pointsGained > 0) {
+                            ownerTurn.hanyaBurdenTriggerSum ??= 0;
+                            ownerTurn.hanyaBurdenTriggerSum += valuesRef.burdenStacks - oldValue;
+                            
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "hanyaBurdenTriggerSum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.burdenStacks,
+                            currentSumValue: ownerTurn.hanyaBurdenTriggerSum,
+                            currentAddedValue: valuesRef.burdenStacks - oldValue
+                        });
+                    }
+                },
+                "target": "self",
+                "listenerName": "Hanya Burden Trigger Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "HanyaBurdenHitsGained",
+                condition(battleData,generalInfo) {
+                    // poke("HanyaBurdenHitsGained",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    // coreResonance
+                    const pointsGained = generalInfo.pointsGained;
+                    const valuesRef = ownerTurn.battleValues;
+
+                    const oldValue = valuesRef.burdenHits;
+                    const maxValue = valuesRef.burdenHitsMax;
+                    valuesRef.burdenHits = Math.max(0, Math.min(maxValue, oldValue + pointsGained));
+                    const newValue = valuesRef.burdenHits;
+                    const valueWasDiff = oldValue != newValue;
+
+                    const sourceString = generalInfo.sourceString
+                    if (valueWasDiff && battleData.isLoggyLogger) {
+                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/misc/hanya/burden.png",sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Burden Hits (Hanya): ${oldValue} --> ${valuesRef.burdenHits}/${maxValue} [${sourceString}]`});
+                        
+                        if (pointsGained > 0) {
+                            ownerTurn.hanyaBurdenHitsSum ??= 0;
+                            ownerTurn.hanyaBurdenHitsSum += valuesRef.burdenHits - oldValue;
+                            
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "hanyaBurdenHitsSum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.burdenHits,
+                            currentSumValue: ownerTurn.hanyaBurdenHitsSum,
+                            currentAddedValue: valuesRef.burdenHits - oldValue
+                        });
+                    }
+                },
+                "target": "self",
+                "listenerName": "Hanya Burden Trigger Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                            name: this.listenerName,
+                            priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.hanyaUltimate,
+                            action: "Ultimate",
+
+                            energyCost: ownerTurn.maxEnergy,
+
+                            dontKeepNextWave: true,//ults always clear out
+                            isAttack: false,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                        })
+                        queueObject.sourceTurn = ownerTurn;
+                        // queueObject.target = battleData.allyPositions;
+                        queueObject.target = checkAbilityTarget(battleData,ownerTurn,queueObject.poolKey,"char1","UltimateTarget");
+                        queueUltimate(battleData,queueObject);
+                    }
+                },
+                "target": "team",
+                "listenerName": "Hanya - Ultimate queued",
+                "ownerTurn": {},
+            },
+        ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.hanyaTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Hanya Technique",
+            "ownerTurn": {},
+        },
+        "ATKObjects": {},
+        "characterValues": {
+            "burdenStacks": 0,
+            "burdenStacksMax": 2,
+            "burdenHits": 0,
+            "burdenHitsMax": 2,
+            "e1AdvanceReady": true,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "ultSPD": "Edict (Hanya)",
+            "burden": "Burden (Hanya)",
+            "talentSanction": "Saction (Hanya)",
+            "traceATK": "Scrivener (Trace)",
+            "e2Speed": "E2: Two Views",
+        },
+        "characterValuesBattle": {},
+    },
     
     //Destruction
     "Saber": {
@@ -33673,8 +34347,8 @@ const turnLogic = {
                     const currentStatsGarment = garmentTurnRef.statTable;
 
                     const getSpeed = calcs.getSPDFinal;
-                    const aggySpeed = getSpeed(currentStatsAggy).SPDFinal + currentStatsAggy[SPDFlatNull];
-                    const garmentSpeed = getSpeed(currentStatsGarment).SPDFinal + currentStatsGarment[SPDFlatNull]
+                    const aggySpeed = getSpeed(currentStatsAggy).SPDFinal + currentStatsAggy[SPDFlatNULL];
+                    const garmentSpeed = getSpeed(currentStatsGarment).SPDFinal + currentStatsGarment[SPDFlatNULL]
                     const conversion = +(aggySpeed*aggyRatio + garmentSpeed*garmentRatio).toFixed(7);
 
                     if (buffCheck) {
@@ -36277,7 +36951,7 @@ const turnLogic = {
 
                 const SPDBeyondThis = 200;
                 const currentStats = currentTurn.statTable;
-                const currentSPD = calcs.getSPDFinal(currentStats).SPDFinal + currentStats[SPDFlatNull];
+                const currentSPD = calcs.getSPDFinal(currentStats).SPDFinal + currentStats[SPDFlatNULL];
                 const validSPD = Math.max(0,currentSPD-SPDBeyondThis);
                 const usableSPD = Math.min(200,Math.floor(validSPD));
 
@@ -45051,7 +45725,7 @@ const turnLogic = {
                 const SPDBeyondThis = 120;
                 const maxStacks = 200;
                 const currentStats = currentTurn.statTable;
-                const currentSPD = calcs.getSPDFinal(currentStats).SPDFinal + currentStats[SPDFlatNull];
+                const currentSPD = calcs.getSPDFinal(currentStats).SPDFinal + currentStats[SPDFlatNULL];
                 const validSPD = Math.max(0,currentSPD-SPDBeyondThis);
                 const usableSPD = Math.min(maxStacks,Math.floor(validSPD));
 
@@ -48602,7 +49276,7 @@ const turnLogic = {
                 const SPDBeyondThis = 160;
                 const maxStacks = 100;
                 const currentStats = currentTurn.statTable;
-                const currentSPD = calcs.getSPDFinal(currentStats).SPDFinal + currentStats[SPDFlatNull];
+                const currentSPD = calcs.getSPDFinal(currentStats).SPDFinal + currentStats[SPDFlatNULL];
                 const validSPD = Math.max(0,currentSPD-SPDBeyondThis);
                 const usableSPD = Math.min(maxStacks,Math.floor(validSPD));
 

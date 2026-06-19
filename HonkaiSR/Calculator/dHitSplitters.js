@@ -500,6 +500,28 @@ const hitSplitters = {
       }
     ],
   },
+  "Hanya": {
+    "basic": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10,
+          "target": "primary"
+        },
+      }
+    ],
+    "skill": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 20,
+          "target": "primary"
+        },
+      }
+    ],
+  },
 
   //DESTRUCTION
   "Saber": {
