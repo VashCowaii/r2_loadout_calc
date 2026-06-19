@@ -219,7 +219,14 @@ const customDisplayValuesLog = {
 
     //NIHILITY
     "Kafka": [//tracker done
-        {valueName: "FUA Stacks", refName: "fuaStacks", isBattleValue: true,summaryValue: "kafkaFUAStackSum",summaryType: "SUM"},
+        // {valueName: "FUA Stacks", refName: "fuaStacks", isBattleValue: true,summaryValue: "kafkaFUAStackSum",summaryType: "SUM"},
+        {valueName: "FUA Stacks", refName: "fuaStacks", isBattleValue: true,summaryValue: "kafkaFUAStackSum",summaryType: "SUM",
+            customDisplay: "marks", customDisplayType: "diamond", markMax: 2, innerMarkColor: "Lightning",
+            // displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/kafka/Icon1005Passive.png"
+        },
     ],
     "Hysilens": [//no tracker needed?
         {valueName: "Zone Active", refName: "hysilensFieldActive", isBattleValue: false},
