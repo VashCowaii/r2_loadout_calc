@@ -39784,6 +39784,7 @@ const turnLogic = {
                         "currentStacks": 1,
                         "decay": false,
                         "expireType": null,
+                        "buffDisplayIcon": "misc/dhpt/Icon1414Skill02.png"
                     }
                 }
                 const statTable = sourceTurn.statTable;

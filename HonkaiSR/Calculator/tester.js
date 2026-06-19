@@ -4758,8 +4758,12 @@ const userTriggers = {
                                                 marksStringer += `<div class="customEnergyBodyMarksDIAMOND"
                                                 style="background: ${markFillColor}; box-shadow: 0px 0px 8px ${markFillColor};"></div>`
                                             }
+                                            
 
                                             // customEnergyBodyMarksCIRCLE
+                                        }
+                                        if (markType === "number") {
+                                            marksStringer += `${valueAdjusted} / ${markMax} ${entry.valueName}`
                                         }
 
                                         const isOnAtAll = valueAdjusted > 0 ? 100 : 0;
