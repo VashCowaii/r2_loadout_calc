@@ -4587,6 +4587,145 @@ const turnLogicLightcones = {
             "buff3": "Cornered (LC)",
         },
     },
+    "Never Forget Her Flame": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        currentTurn.lcNeverForgetFlameReady = true;
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Never Forget Her Flame listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+                            const sourceTurn = generalInfo.sourceTurn;
+
+                            sourceTurn.lcNeverForgetFlameReady = true;
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Never Forget Her Flame ult start listener",
+                    },
+                ]
+            },
+            {
+                "trigger": "WaveStart",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    const namedTurns = battleData.nameBasedTurns;
+
+                    let firstOwnerTurn = null;
+                    for (let ownerSlot in ownersSlots) {
+                        const currentOwner = namedTurns[ownerSlot];
+                        firstOwnerTurn = currentOwner;
+
+
+                        if (!currentOwner.lcNeverForgetFlameBREAKMULTISHEET) {
+                            let lcNameRef = "Never Forget Her Flame";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let ownerRank = ownersSlots[currentOwner.name];
+                            let rankParams = lcPathing[ownerRank-1];
+        
+                            let buffName2 = turnLogicLightcones[lcNameRef].buffNames.buff2;
+        
+                            currentOwner.lcNeverForgetFlameBREAKMULTISHEET = {
+                                "stats": [DamageBreakBonus],
+                                [DamageBreakBonus]: rankParams[1],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": buffName2,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+                            
+                        }
+
+                        break;
+                    }
+                    const buffSheet = firstOwnerTurn.lcNeverForgetFlameBREAKMULTISHEET;
+                    updateBuff(battleData,firstOwnerTurn,buffSheet);
+
+                    let battleStarter = superGlobal.getStartingAttacker(battleData);
+                    if (!battleStarter || battleStarter.properName === firstOwnerTurn) {
+                        const allyPositions = battleData.allyPositions;
+
+                        let highestBreak = -Infinity;
+                        let highestAlly = null;
+                        for (let ally of allyPositions) {
+                            if (ally.properName === firstOwnerTurn.properName) {continue;}
+                            const breakCheck = ally.statTable[DamageBreak];
+                            if (breakCheck > highestBreak) {
+                                highestBreak = breakCheck;
+                                highestAlly = ally;
+                            }
+                        }
+
+                        if (highestAlly) {
+                            updateBuff(battleData,highestAlly,buffSheet);
+                        }
+                    }
+                    else {
+                        updateBuff(battleData,battleStarter,buffSheet);
+                    }
+                },
+                "target": "self",
+                "priority": -80,
+                "listenerName": "Never Forget Her Flame - battlestart break multi buff",
+            },
+            {
+                "trigger": "WeaknessApplied",
+                condition(battleData,generalInfo) {
+                    // poke("WeaknessApplied",battleData,{sourceTurn,currentReference},sourceTurn);
+
+                    const oldBuffSheet = generalInfo.currentReference;
+                    const nameslot = oldBuffSheet.sourceOwner;
+                    const nameTurnSlot = battleData.nameIndex[nameslot];
+
+                    let ownersSlots = this.ownersSlots;
+                    const ownerRank = ownersSlots[nameTurnSlot];
+                    if (!ownerRank) {return;}
+
+                    const fullTurn = battleData.nameBasedTurns[nameTurnSlot];
+
+                    if (fullTurn.lcNeverForgetFlameReady) {
+                        fullTurn.lcNeverForgetFlameReady = false;
+                        updateSkillPoints(battleData,1,fullTurn,false,"Never Forget Her Flame")
+                    }
+                },
+                "target": "enemy",
+                "listenerName": "Never Forget Her Flame weakness application controller",
+            },
+        ],
+        "buffNames": {
+            "buff2": "Immolation [LC]",
+        },
+    },
         //4star
     "Before the Tutorial Mission Starts": {//REDONE
         logic(thisTurn,battleData) {},
