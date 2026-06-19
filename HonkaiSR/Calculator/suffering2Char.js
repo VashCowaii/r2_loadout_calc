@@ -180,13 +180,14 @@ const battleActions = {
         const isShield = currentReference.isShield;
         const isDOT = currentReference.isDOT;
         const isDebuff = currentReference.isDebuff;
+        const isImplant = currentReference.isImplant;
 
         if (isShield) {
             getShieldValue(battleData,sourceTurn,currentReference,buffSheet,shieldSource);
         }
 
         if (!buffExisted) {//if it doesn't exist at all yet and we're applying, then make it
-            const newCheck = didntExistAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,ignoreDebuffPokes,silent,oldShield);
+            const newCheck = didntExistAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,isImplant,ignoreDebuffPokes,silent,oldShield);
             changeStats = newCheck.changeStats;
             timesToApply = newCheck.timesToApply;
         }
@@ -195,7 +196,7 @@ const battleActions = {
                 if (!silent && battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BuffApply", buffName, applicationType: "Renew", isShield,oldShield,newShield:currentReference.shieldRemaining,shieldCap:currentReference.shieldCap, name:sourceTurn.properName, source: buffSheet.source, sourceOwner: buffSheet.sourceOwner, enemyRealName: sourceTurn.isEnemy ? sourceTurn.enemyRealName : null,AV: battleData.sumAV, stacks: currentReference.currentStacks});}
                 return;
             }
-            const existsCheck = buffAlreadyExistsAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,ignoreDebuffPokes,silent,oldShield);
+            const existsCheck = buffAlreadyExistsAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,isImplant,ignoreDebuffPokes,silent,oldShield);
             if (existsCheck) {
                 changeStats = existsCheck.changeStats;
                 timesToApply = existsCheck.timesToApply;
@@ -208,7 +209,7 @@ const battleActions = {
     },
     updateBuffBatchTargets(battleData,sourceTurnArray,buffSheet,silent,shieldSource,ignoreDebuffPokes,ignoreFamilyPokes,turnOverride) {
         // const buffName = buffSheet.buffName;
-        const {buffName,isShield,isDOT,isDebuff,maxStacks} = buffSheet;
+        const {buffName,isShield,isDOT,isDebuff,isImplant,maxStacks} = buffSheet;
 
         const isBatchDebuff = !ignoreDebuffPokes && isDebuff;
         const ignoreSinglePokes = ignoreDebuffPokes || isBatchDebuff;
@@ -245,7 +246,7 @@ const battleActions = {
             // const maxStacks = currentReference.maxStacks;
             // const currentStacks = currentReference.currentStacks;
             if (!buffExisted) {//if it doesn't exist at all yet and we're applying, then make it
-                const newCheck = didntExistAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,ignoreSinglePokes,silent,oldShield);
+                const newCheck = didntExistAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,isImplant,ignoreSinglePokes,silent,oldShield);
                 changeStats = newCheck.changeStats;
                 timesToApply = newCheck.timesToApply;
             }
@@ -254,7 +255,7 @@ const battleActions = {
                     if (!silent && battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BuffApply", buffName, applicationType: "Renew", isShield,oldShield,newShield:currentReference.shieldRemaining,shieldCap:currentReference.shieldCap, name:sourceTurn.properName, source: buffSheet.source, sourceOwner: buffSheet.sourceOwner, enemyRealName: sourceTurn.isEnemy ? sourceTurn.enemyRealName : null,AV: battleData.sumAV, stacks: currentReference.currentStacks});}
                     continue;
                 }
-                const existsCheck = buffAlreadyExistsAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,ignoreSinglePokes,silent,oldShield);
+                const existsCheck = buffAlreadyExistsAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,isImplant,ignoreSinglePokes,silent,oldShield);
                 if (existsCheck) {
                     changeStats = existsCheck.changeStats;
                     timesToApply = existsCheck.timesToApply;
@@ -268,7 +269,7 @@ const battleActions = {
 
         if (isBatchDebuff) {poke("DebuffApplied",battleData,{sourceTurn: sourceTurnArray, currentReference: buffSheet},null);}
     },
-    buffDidntExistAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,ignoreDebuffPokes,silent,oldShield) {
+    buffDidntExistAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,isImplant,ignoreDebuffPokes,silent,oldShield) {
         // const maxStacks = currentReference.maxStacks;
         // const currentStacks = currentReference.currentStacks;
         // const buffName = currentReference.buffName;
@@ -306,6 +307,7 @@ const battleActions = {
                 activeTable[buffName] = currentReference;
             }
         }
+        if (isImplant) {poke("WeaknessApplied",battleData,{sourceTurn,currentReference},sourceTurn);}
         if (isDebuff) {
             sourceTurn.debuffCounter += 1;
             if (!ignoreDebuffPokes) {poke("DebuffApplied",battleData,{sourceTurn,currentReference},sourceTurn);}
@@ -343,7 +345,7 @@ const battleActions = {
 
         return {changeStats,timesToApply}
     },
-    buffAlreadyExistsAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,ignoreDebuffPokes,silent,oldShield) {
+    buffAlreadyExistsAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,isImplant,ignoreDebuffPokes,silent,oldShield) {
         const log = battleData.isLoggyLogger;
         const buffName = currentReference.buffName;
         const currentStacks = currentReference.currentStacks;
@@ -354,6 +356,7 @@ const battleActions = {
         // console.log(buffSheet.source,buffSheet.sourceOwner)
         // console.log(currentReference.source,currentReference.sourceOwner)
         
+        if (isImplant) {poke("WeaknessApplied",battleData,{sourceTurn,currentReference},sourceTurn);}
         if (isDebuff) {
             if (!ignoreDebuffPokes) {poke("DebuffApplied",battleData,{sourceTurn,currentReference},sourceTurn);}
             
@@ -10119,6 +10122,7 @@ const turnLogic = {
                             ],
                             [finalIndex]: 1,
                             [finalResIndex]: 0,
+                            "flags": [WEAKNESS_IMPLANT],
                             "source": "Skill",
                             "sourceOwner": characterName,
                             "buffName": buffNames[`implant${elementKey}`],
@@ -17634,6 +17638,7 @@ const turnLogic = {
                             "stats": [ResistanceQuantum,WeaknessQuantum],
                             [ResistanceQuantum]: -0.20,
                             [WeaknessQuantum]: 1,
+                            "flags": [WEAKNESS_IMPLANT],
                             "source": characterName,
                             "sourceOwner": sourceTurn.properName,
                             "buffName": logicRef.buffNames.implant,
@@ -29548,6 +29553,7 @@ const turnLogic = {
                     ATKObjects.fireflySkillEnhancedIMPLANTSHEET = {
                         "stats": [WeaknessFire],
                         [WeaknessFire]: 1,
+                        "flags": [WEAKNESS_IMPLANT],
                         "source": characterName,
                         "sourceOwner": sourceTurn.properName,
                         "buffName": buffName,
@@ -29557,6 +29563,8 @@ const turnLogic = {
                         "maxStacks": 1,
                         "currentStacks": 1,
                         "decay": false,
+                        "isDebuff": true,
+                        "isImplant": true,
                         "expireType": "EndTurn"
                     }
                 }
@@ -29647,6 +29655,7 @@ const turnLogic = {
                     ATKObjects.fireflyTechImplantSHEET = {
                         "stats": [WeaknessFire],
                         [WeaknessFire]: 1,
+                        "flags": [WEAKNESS_IMPLANT],
                         "source": characterName,
                         "sourceOwner": sourceTurn.properName,
                         "buffName": buffName,
@@ -29656,6 +29665,8 @@ const turnLogic = {
                         "maxStacks": 1,
                         "currentStacks": 1,
                         "decay": false,
+                        "isDebuff": true,
+                        "isImplant": true,
                         "expireType": "EndTurn"
                     }
                 }
@@ -43225,6 +43236,7 @@ const turnLogic = {
                         [WeaknessLightning]: 1,
                         [WeaknessPhysical]: 1,
                         [WeaknessQuantum]: 1,
+                        "flags": [WEAKNESS_IMPLANT],
                         "source": characterName,
                         "sourceOwner": sourceTurn.properName,
                         "buffName": logicRef.buffNames.sublimation,
@@ -43235,6 +43247,7 @@ const turnLogic = {
                         "currentStacks": 1,
                         "decay": false,
                         "isDebuff": true,
+                        "isImplant": true,
                         "expireType": "StartTurn",
                     }
                 }
@@ -49968,6 +49981,7 @@ const turnLogic = {
                                 [ResistanceIce]: 0,
                                 [ResistanceQuantum]: 0,
                                 [ResistanceImaginary]: 0,
+                                "flags": [WEAKNESS_IMPLANT],
                                 "source": "E6",
                                 "sourceOwner": ownerTurn.properName,
                                 "buffName": turnLogic[ownerTurn.properName].buffNames.e6Implant,
@@ -49977,6 +49991,7 @@ const turnLogic = {
                                 "maxStacks": 1,
                                 "currentStacks": 1,
                                 "isDebuff": true,
+                                "isImplant": true,
                                 "decay": false,
                                 "expireType": null
                             }

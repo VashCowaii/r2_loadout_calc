@@ -339,7 +339,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Phainon",
     "entryIcon": "icon/character/1408.png",
     "lineCount": 7947,
-    "sizeCount": 281838
+    "sizeCount": 281835
   },
   {
     "entryType": "enemy",
@@ -815,7 +815,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "TheDahlia",
     "entryIcon": "icon/character/1321.png",
     "lineCount": 4989,
-    "sizeCount": 186131
+    "sizeCount": 186128
   },
   {
     "entryType": "enemy",
@@ -837,7 +837,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Fireflyv0",
     "entryIcon": "icon/character/1310.png",
     "lineCount": 5176,
-    "sizeCount": 181534
+    "sizeCount": 181531
   },
   {
     "entryType": "char",
@@ -845,7 +845,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "SilverWolf",
     "entryIcon": "icon/character/1006.png",
     "lineCount": 4536,
-    "sizeCount": 181015
+    "sizeCount": 181009
   },
   {
     "entryType": "char",
@@ -919,7 +919,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Firefly",
     "entryIcon": "icon/character/1310.png",
     "lineCount": 4847,
-    "sizeCount": 174560
+    "sizeCount": 174557
   },
   {
     "entryType": "enemy",
@@ -1297,7 +1297,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Anaxa",
     "entryIcon": "icon/character/1405.png",
     "lineCount": 4231,
-    "sizeCount": 152969
+    "sizeCount": 152966
   },
   {
     "entryType": "char",
@@ -1405,7 +1405,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Boothill",
     "entryIcon": "icon/character/1315.png",
     "lineCount": 4066,
-    "sizeCount": 145910
+    "sizeCount": 145907
   },
   {
     "entryType": "enemy",
@@ -1567,7 +1567,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Archer",
     "entryIcon": "icon/character/1015.png",
     "lineCount": 3803,
-    "sizeCount": 126671
+    "sizeCount": 126668
   },
   {
     "entryType": "enemy",
@@ -1697,7 +1697,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "SilverWolfv0",
     "entryIcon": "icon/character/1006.png",
     "lineCount": 3180,
-    "sizeCount": 116352
+    "sizeCount": 116346
   },
   {
     "entryType": "char",

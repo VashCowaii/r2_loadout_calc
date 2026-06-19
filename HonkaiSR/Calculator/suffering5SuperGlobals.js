@@ -9,6 +9,7 @@ const superGlobal = {
     "generalImplants": {
         "stats": [WeaknessWind],
         // [WeaknessWind]: 1,
+        "flags": [WEAKNESS_IMPLANT],
         "source": "",
         "sourceOwner": "",
         "buffName": "",

@@ -375,7 +375,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1539081164\">Constance_Ultimate_Weakness</a>[<span class=\"descriptionNumberColor\">Wilt</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "STAT_AttachWeakness",
+        "WEAKNESS_IMPLANT",
         "DEF_DOWN"
       ],
       "description": "DEF decreases by <span class=\"descriptionNumberColor\">MDF_PropertyRatio</span>. Gains Weaknesses of all Dance Partners' Types.",

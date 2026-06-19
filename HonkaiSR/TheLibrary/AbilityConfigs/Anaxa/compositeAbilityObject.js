@@ -433,7 +433,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
-            "STAT_AttachWeakness"
+            "WEAKNESS_IMPLANT"
           ],
           "description": "Physical, Fire, Ice, Lightning, Wind, Quantum, and Imaginary Weaknesses are added at the same time.",
           "type": "Debuff",

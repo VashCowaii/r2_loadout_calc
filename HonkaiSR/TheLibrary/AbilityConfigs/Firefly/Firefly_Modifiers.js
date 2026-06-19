@@ -546,7 +546,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1165299909\">Advanced_Sam_Ability21_FireWeakType</a>[<span class=\"descriptionNumberColor\">Additional Fire Weakness</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "STAT_AttachWeakness"
+        "WEAKNESS_IMPLANT"
       ],
       "description": "Additionally implanted Fire Weakness.",
       "type": "Debuff",
