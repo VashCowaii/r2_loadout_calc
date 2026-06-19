@@ -12002,6 +12002,7 @@ const turnLogic = {
                 }
 
                 updateBuff(battleData,sourceTurn,countdownSheet);
+                sourceTurn.battleValues.hysilensFieldDuration = 3;
                 if (rank >= 2) {
                     const EHRBuff = ATKObjects.fishladyEHRtoDMGSHEET.buffName;
                     const allyPositions = battleData.allyPositions;
@@ -12819,6 +12820,25 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
+                "trigger": "PreActionPhaseEnd",
+                condition(battleData,generalInfo) {
+                    // poke("HealEnd",battleData,turnMerge);
+                    let ownerTurn = this.ownerTurn;
+
+                    if (!ownerTurn.hysilensFieldActive) {
+                        ownerTurn.battleValues.hysilensFieldDuration = 0;
+                    }
+                    else {
+                        const buffName = this.buffName ??= turnLogic[ownerTurn.properName].buffNames.zoneCountdown;
+                        ownerTurn.battleValues.hysilensFieldDuration = ownerTurn.buffsObject[buffName].duration;
+                    }
+                },
+                "target": "self",
+                "isPersonal": true,
+                "listenerName": "Zone - duration increment handler(visual)",
+                "ownerTurn": {},
+            },
+            {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -12880,7 +12900,8 @@ const turnLogic = {
         "buffsBattle": {},
         "buffsBattleTemp": {},
         "characterValues": {
-            "talentDOTCounter": 0
+            "talentDOTCounter": 0,
+            "hysilensFieldDuration": 0,
         },
         "useTechnique": true,
         "techniqueType": "Dimension",

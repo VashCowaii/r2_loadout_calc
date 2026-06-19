@@ -219,7 +219,6 @@ const customDisplayValuesLog = {
 
     //NIHILITY
     "Kafka": [//tracker done
-        // {valueName: "FUA Stacks", refName: "fuaStacks", isBattleValue: true,summaryValue: "kafkaFUAStackSum",summaryType: "SUM"},
         {valueName: "FUA Stacks", refName: "fuaStacks", isBattleValue: true,summaryValue: "kafkaFUAStackSum",summaryType: "SUM",
             customDisplay: "marks", customDisplayType: "diamond", markMax: 2, innerMarkColor: "Lightning",
             // displayRequiresIndex: 1, displayRequiresType: "number",
@@ -229,7 +228,14 @@ const customDisplayValuesLog = {
         },
     ],
     "Hysilens": [//no tracker needed?
-        {valueName: "Zone Active", refName: "hysilensFieldActive", isBattleValue: false},
+        {valueName: "Zone Active", refName: "hysilensFieldActive", isBattleValue: false, hide: true},
+        {valueName: "Zone Duration", refName: "hysilensFieldDuration", isBattleValue: true,
+            customDisplay: "marks", customDisplayType: "diamond", markMax: 3, innerMarkColor: "Physical",
+            // displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/hysilens/Icon1410UltraField.png"
+        },
     ],
     "Silver Wolf": [],
     "Pela": [],
