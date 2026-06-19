@@ -194,7 +194,20 @@ const customDisplayValuesLog = {
 
     //HUNT
     "Archer": [//tracker done
-        {valueName: "Charge Stacks", refName: "charge", isBattleValue: true,summaryValue: "archerFUAStackSum",summaryType: "SUM"},
+        // {valueName: "Charge Stacks", refName: "charge", isBattleValue: true,summaryValue: "archerFUAStackSum",summaryType: "SUM"},
+        {valueName: "Charge Stacks", refName: "charge", isBattleValue: true,summaryValue: "archerFUAStackSum",summaryType: "SUM",
+            customDisplay: "marks", customDisplayType: "image", markMax: 4, imageFilled: "misc/archer/IconDot101501.png", imageEmpty: "misc/archer/IconDot101503.png", imageFilledAlt: "misc/archer/IconDot101502.png",
+            // innerMarkColor: "#9083FF",
+            fillScale: 1.2,emptyScale: 0.5,
+        },
+        // {valueName: "Charge Stacks", refName: "charge", isBattleValue: true,summaryValue: "archerFUAStackSum",summaryType: "SUM",
+        //     customDisplay: "marks", customDisplayType: "diamond", markMax: null, innerMarkColor: "Quantum",
+        //     displayRequiresIndex: 1, displayRequiresType: "number",
+        //     displayRequiresBoolean: false,
+        //     showProgressIconAnyways: true,
+        //     progressIcon: "misc/archer/Icon1005Passive.png"
+        // },
+        {valueName: "Charge Max", refName: "chargeMax", isBattleValue: true,hide: true},
         {valueName: "In Circuit-Connection", refName: "skillStarted", isBattleValue: true,isCharacterState: true},
         {valueName: "Skill Counter", refName: "skillCounter", isBattleValue: true},
     ],

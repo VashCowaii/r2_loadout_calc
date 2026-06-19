@@ -17655,28 +17655,8 @@ const turnLogic = {
                 }
                 
                 attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
-                let chargeRef = sourceTurn.battleValues;
 
-                const oldValue = chargeRef.charge;
-                let newCharge = Math.min(4,chargeRef.charge + 2)
-                if (battleData.isLoggyLogger) {
-                    logToBattle(battleData,{logType: "GenericAction", source:"Ultimate", bodyText: `Archer Charge ${chargeRef.charge} --> ${newCharge}/4`});
-
-                    if (newCharge > oldValue) {
-                        sourceTurn.archerFUAStackSum ??= 0;
-                        sourceTurn.archerFUAStackSum += newCharge - oldValue;
-                        
-                    }
-                    logToBattle(battleData,{
-                        logType: "SUMMARY:SUM",
-                        function: "archerFUAStackSum",
-                        AV: battleData.sumAV,
-                        currentValue: newCharge,
-                        currentSumValue: sourceTurn.archerFUAStackSum,
-                        currentAddedValue: newCharge - oldValue
-                    });
-                }
-                chargeRef.charge = newCharge;
+                poke("ArcherChargeGained",battleData,{pointsGained: 2,sourceString:"Ultimate"});
                 sourceTurn.ultyQueued = false;
             },
             archerTechnique(battleData,actionObject,sourceTurn) {
@@ -17733,11 +17713,8 @@ const turnLogic = {
 
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                let chargeRef = sourceTurn.battleValues;
 
-                let newCharge = Math.min(4,chargeRef.charge + 1)
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Technique", bodyText: `Archer Charge ${chargeRef.charge} --> ${newCharge}/4`});}
-                chargeRef.charge = newCharge;
+                poke("ArcherChargeGained",battleData,{pointsGained: 1,sourceString:"Technique"});
             },
         },
         "listeners": [
@@ -17886,29 +17863,8 @@ const turnLogic = {
                             const currentWave = generalInfo.currentWave;
                             if (currentWave != 1) {return;}
         
-                            let ownerTurn = this.ownerTurn;
-        
-                            let valuesRef = ownerTurn.battleValues;
-                            const oldValue = valuesRef.charge
-                            let newCharge = Math.min(4,valuesRef.charge + 1);
-                            if (battleData.isLoggyLogger) {
-                                logToBattle(battleData,{logType: "GenericAction", source:"Hero of Justice", bodyText: `Archer Charge ${valuesRef.charge} --> ${newCharge}/4`});
-        
-                                if (newCharge > oldValue) {
-                                    ownerTurn.archerFUAStackSum ??= 0;
-                                    ownerTurn.archerFUAStackSum += newCharge - oldValue;
-                                    
-                                }
-                                logToBattle(battleData,{
-                                    logType: "SUMMARY:SUM",
-                                    function: "archerFUAStackSum",
-                                    AV: battleData.sumAV,
-                                    currentValue: newCharge,
-                                    currentSumValue: ownerTurn.archerFUAStackSum,
-                                    currentAddedValue: newCharge - oldValue
-                                });
-                            }
-                            valuesRef.charge = newCharge;
+                            // let ownerTurn = this.ownerTurn;
+                            poke("ArcherChargeGained",battleData,{pointsGained: 1,sourceString:"Hero of Justice"});
                         },
                         "target": "self",
                         "priority": -80,
@@ -17953,6 +17909,44 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                 ],
+            },
+            {
+                "trigger": "ArcherChargeGained",
+                condition(battleData,generalInfo) {
+                    // poke("ArcherChargeGained",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    const pointsGained = generalInfo.pointsGained;
+                    const valuesRef = ownerTurn.battleValues;
+
+                    const oldValue = valuesRef.charge;
+                    const maxValue = valuesRef.chargeMax;
+                    valuesRef.charge = Math.max(0, Math.min(maxValue, oldValue + pointsGained));
+                    const newValue = valuesRef.charge;
+                    const valueWasDiff = oldValue != newValue;
+
+                    const sourceString = generalInfo.sourceString
+                    if (valueWasDiff && battleData.isLoggyLogger) {
+                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters["Archer"].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `FUA Charge (Archer): ${oldValue} --> ${valuesRef.charge}/${maxValue} [${sourceString}]`});
+                        
+                        if (pointsGained > 0) {
+                            ownerTurn.archerFUAStackSum ??= 0;
+                            ownerTurn.archerFUAStackSum += valuesRef.charge - oldValue;
+                            
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "archerFUAStackSum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.charge,
+                            currentSumValue: ownerTurn.archerFUAStackSum,
+                            currentAddedValue: valuesRef.charge - oldValue
+                        });
+                    }
+                },
+                "target": "self",
+                "listenerName": "Kafka FUA Charge Handler",
+                "ownerTurn": {},
             },
             {
                 "trigger": "UltimateQueueBlockedOrDone",
@@ -18124,6 +18118,7 @@ const turnLogic = {
             "skillStarted": false,
             "charge": 0,
             "chargeDebt": 0,
+            "chargeMax": 4,
         },
         "useTechnique": true,
         "techniqueType": "Attack",

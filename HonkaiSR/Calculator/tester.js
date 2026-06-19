@@ -4733,9 +4733,13 @@ const userTriggers = {
                                         let marksStringer = "";
                                         const markType = entry.customDisplayType;
 
-                                        const baseFillColor = specialEnergyData[entry.innerMarkColor]?.energyColor1 ?? entry.innerMarkColor
+                                        const baseFillColor = specialEnergyData[entry.innerMarkColor]?.energyColor1 ?? entry.innerMarkColor;
+
+                                        const fillScale = entry.fillScale;
+                                        const emptyScale = entry.emptyScale;
                                         for (let i=1;i<=markMax;i++) {
                                             const isFilled = valueAdjusted >= i;
+                                            const isAlt = i % 2 === 0;
                                             // marksStringer += `<div class="customEnergyBodyMarksCIRCLE" style="background: ${isFilled ? entry.innerMarkColor : "transparent"};"></div>`
                                             const markFillColor = isFilled ? baseFillColor : "transparent";
 
@@ -4743,7 +4747,8 @@ const userTriggers = {
                                                 // marksStringer += `<div class="customEnergyBodyMarksCIRCLE"
                                                 // style="background: radial-gradient(circle at center,${markFillColor} 60%,transparent 100%); box-shadow: 0px 0px 8px ${markFillColor};"></div>`
 
-                                                marksStringer += `<img src="/HonkaiSR/${isFilled ? entry.imageFilled : entry.imageEmpty}" class="customEnergyBodyMarksIMAGEIcon"/>`
+                                                const imageScale = (isFilled ? fillScale : emptyScale) ?? 1;
+                                                marksStringer += `<img src="/HonkaiSR/${isFilled ? (isAlt ? (entry.imageFilledAlt ?? entry.imageFilled) : entry.imageFilled) : entry.imageEmpty}" class="customEnergyBodyMarksIMAGEIcon" style="scale: ${imageScale};"/>`
                                             }
                                             else if (markType === "circle") {
                                                 marksStringer += `<div class="customEnergyBodyMarksCIRCLE"
