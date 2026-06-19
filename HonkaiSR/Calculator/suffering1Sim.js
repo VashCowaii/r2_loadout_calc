@@ -734,7 +734,6 @@ const sim = {
 
         battleData.cyclesMax = battleSettings.cyclesToRun + 1;
         battleData.techniquesAllowed = battleSettings.useTechniques;
-        battleData.battleStartWeaknessReduction = battleSettings.useStartToughness;
 
         battleData.wavesToRun = battleSettings.totalWaves;
         battleData.wavesCompleted = 0;
@@ -787,7 +786,7 @@ const sim = {
         poke("StartBattleEnterCombat",battleData,null,null);
 
         logToBattle(battleData,{logType: "WaveStart",AV:battleData.sumAV,waveID: 1});
-        if (!battleData.attackTechniqueUsed && battleData.battleStartWeaknessReduction) {
+        if (!battleData.attackTechniqueUsed && battleData.techniquesAllowed) {
             turnLogic.Universal.skillFunctions.battleStartMatchingWeakness(battleData);
             // poke("StartBattle",battleData,{});
         }
