@@ -4045,6 +4045,61 @@ const maslowCharactersHarmony = {
             addTeamWant: [],
         },
     },
+    "Hanya": {
+        // ["HP%","EffectRES","SPDFlat","CritDamageBase"]
+        defaultMainSubs: ["SPDFlat","DamageBreak","HP%","EffectRES"],
+        // ["HP%","CritDamageBase","EffectRES","SPDFlat"]
+        defaultTrashSub: ["ATKFlat","ATK%","HPFlat","DEF%"],
+        0: {
+            gives: ["SkillPoints"],
+            givesTeam: ["SkillPoints","ATK","SPD","All"],
+            wants: [...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        1: {
+            gives: ["SkillPoints"],
+            givesTeam: ["SkillPoints","ATK","SPD","All"],
+            wants: [...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        2: {
+            gives: ["SkillPoints"],
+            givesTeam: ["SkillPoints","ATK","SPD","All"],
+            wants: [...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        3: {
+            gives: ["SkillPoints"],
+            givesTeam: ["SkillPoints","ATK","SPD","All"],
+            wants: [...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        4: {
+            gives: ["SkillPoints"],
+            givesTeam: ["SkillPoints","ATK","SPD","All"],
+            wants: [...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        5: {
+            gives: ["SkillPoints"],
+            givesTeam: ["SkillPoints","ATK","SPD","All"],
+            wants: [...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        6: {
+            gives: ["SkillPoints"],
+            givesTeam: ["SkillPoints","ATK","SPD","All"],
+            wants: [...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            wantsTeam: [...characterHasEnergy,...isGeneralSupport,...generalCharacterWants],
+            addTeamWant: [],
+        },
+    },
 }
 const maslowCharactersPreservation = {
     //PRESERVATION

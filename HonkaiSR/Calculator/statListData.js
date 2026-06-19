@@ -100,7 +100,7 @@ const greatTableKnowerOfAll = {
 
     "DEFBase": 0,"DEF%": 0,"DEFFlat": 0,"DEFFlatNULL": 0,
 
-    "SPDBase": 0,"SPD%": 0,"SPDFlat": 0,"SPDFlatNull": 0,
+    "SPDBase": 0,"SPD%": 0,"SPDFlat": 0,"SPDFlatNULL": 0,
 
     "CharacterAggroBase": 0,"AggroBase%": 0,"Aggro%": 0,"AggroFlat": 0,
 
@@ -520,7 +520,7 @@ const WeakenPercent = greatTableIndex["Weaken%"];
 
 const DamageReductionStandard = greatTableIndex["DamageReductionStandard"];
 
-const SPDFlatNull = greatTableIndex.SPDFlatNull;
+const SPDFlatNULL = greatTableIndex.SPDFlatNULL;
 
 const ElationDMGAllNULL = greatTableIndex.ElationDMGAllNULL;
 const MerryMakeAll = greatTableIndex.MerryMakeAll;
@@ -889,7 +889,7 @@ const propertyImagePaths = {
                 "specific": "SPD Flat",
                 "unit": ""
             },
-            [greatTableIndex["SPDFlatNull"]]: {
+            [greatTableIndex["SPDFlatNULL"]]: {
                 "display": "SPD (LOCKED)",
                 "specific": "SPD Flat (LOCKED)",
                 "unit": ""

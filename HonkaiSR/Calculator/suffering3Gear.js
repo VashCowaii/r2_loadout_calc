@@ -8016,7 +8016,7 @@ const turnLogicLightcones = {
             "ult": "Dreamville Adventure [Ult]",
         },
     },
-    "Past and Future": {//REDONE
+    "Past and Future": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
@@ -8088,8 +8088,6 @@ const turnLogicLightcones = {
         ],
         "buffNames": {
             "nextAllyBuff": "Past and Future",
-            // "buff2": "Aether Code"
-            // "hruntingStack": "Hrunting Stack"
         },
     },
         //3star
