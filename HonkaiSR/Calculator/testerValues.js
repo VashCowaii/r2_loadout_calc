@@ -297,7 +297,13 @@ const customDisplayValuesLog = {
             customDisplay: "marks", customDisplayType: "circle", markMax: 3, innerMarkColor: "#9083FF",
             displayRequiresIndex: 0, displayRequiresType: "boolean", displayRequiresBoolean: true,
         },
-        {valueName: "Ardent Will", refName: "ardentWillStacks", isBattleValue: true, requiresEidolon: 2},
+        // Ico1n407Rank02.png
+        {valueName: "Ardent Will", refName: "ardentWillStacks", isBattleValue: true, requiresEidolon: 2,
+            customDisplay: "progress", customDisplayType: "circle", markMax: 2, innerMarkColor: "Quantum",
+            // displayRequiresIndex: 3, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            progressIcon: "misc/castorice/Icon1407Rank02.png"
+        },
 
         {valueName: "Netherwing Enhancement Level", refName: "skillCasts", isBattleValue: true,hide: true},
         {valueName: "Netherwing Breath Attacks", refName: "totalCasts", isBattleValue: true,hide: true},
