@@ -3452,6 +3452,44 @@ const hitSplitters = {
       }
     ]
   },
+  "The Dahlia": {
+    "basic": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10,
+          "target": "primary"
+        },
+      }
+    ],
+    "skill": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10,
+          "target": "primary"
+        },
+        "subTarget": {
+          "hitRatio": 1,
+          "energyRatio": 0,
+          "toughness": 10,
+          "target": "blast"
+        },
+      }
+    ],
+    "ult": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 20,
+          "target": "all"
+        },
+      }
+    ],
+  },
 
   //HUNT
   "Topaz & Numby": {

@@ -73,6 +73,8 @@ for (let i = 0; i < greatFlagsLength; i++) {
 }
 
 const DEF_DOWN = greatFlagIndex.DEF_DOWN;
+
+const SPD_UP = greatFlagIndex.SPD_UP;
 const SPD_DOWN = greatFlagIndex.SPD_DOWN;
 const ATK_DOWN = greatFlagIndex.ATK_DOWN;
 

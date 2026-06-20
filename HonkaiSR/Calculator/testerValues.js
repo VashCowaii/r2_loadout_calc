@@ -282,6 +282,32 @@ const customDisplayValuesLog = {
         },
         {valueName: "Charge Max", refName: "chargeMax", isBattleValue: true,hide: true},
     ],
+    "The Dahlia": [//tracker done
+        {valueName: "Zone Active", refName: "skillZoneActive", isBattleValue: true, isCharacterState: true, hide: true},
+        {valueName: "Zone Duration", refName: "skillZoneDuration", isBattleValue: true,
+            customDisplay: "marks", customDisplayType: "diamond", markMax: 3, innerMarkColor: "Fire",
+            // displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/dahlia/Icon1321Aura.png"
+        },
+        {valueName: "Dance Partner", refName: "otherPartnerSlot", isBattleValue: true, isCharacterSlot:true,
+            customDisplay: "marks", customDisplayType: "entity", markMax: null, innerMarkColor: "Fire",
+            // displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/dahlia/Icon1321Passive.png"
+        },
+        // {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true, isCharacterState: true},
+        // {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
+        // {valueName: "Charge", refName: "charge", isBattleValue: true,summaryValue: "mortenaxBladeChargeSum",summaryType: "SUM",
+        //     customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "#9083FF",
+        //     displayRequiresIndex: 3, displayRequiresType: "number",
+        //     displayRequiresBoolean: false,
+        //     progressIcon: characters["Mortenax Blade"].traces.Point04.icon
+        // },
+        // {valueName: "Charge Max", refName: "chargeMax", isBattleValue: true,hide: true},
+    ],
 
     //PRESERVATION
     "Aventurine": [//tracker done
@@ -748,6 +774,7 @@ const conditionsCharacterDisplayWarning = {
         "SkillPermaConditions": [permaConditionsTextLibrary.mortenaxBladeSkill,],
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
+    "The Dahlia": defaultStandardAbilityDisplayWarnings,
     
 
     //PRESERVATION
@@ -2309,6 +2336,25 @@ const defaultConditions = {
         "Skill": {
             "type": "AND",
             "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        }
+    },
+    "The Dahlia": {
+        "hasEnhancedState": true,
+        "Skill": {
+            "type": "AND",
+            "array": [
+                {
+                    "type": "Character: State",
+                    "target": "Self",
+                    "stateName": "skillZoneActive",
+                    "state": false,
+                    "isBattleValue": true
+                }
+            ]
         },
         "Ultimate": {
             "type": "AND",
