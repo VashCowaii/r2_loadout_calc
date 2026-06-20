@@ -16292,6 +16292,8 @@ const turnLogicRelics = {
                             let charSlot = owner.slot;
                             let currentTurn = namedTurns[charSlot];
 
+                            currentTurn.relicKalpagniReady = true;
+
                             addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn);
                             addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn);
                         }
