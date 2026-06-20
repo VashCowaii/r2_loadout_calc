@@ -1767,6 +1767,7 @@ const battleActions = {
 
         let sumDMG = pullBreakDMGMulti(cacheTagValues,targetCache,compositeCacheTag,statTable,targetStats,targetStatsSourceBased,tagSpecific,actionTags,actionTablesTarget);
 
+        isBroken = isBroken ? 1 : 0.9;
         let DMGTotalEndBreak = baseBreak * sumDMG * totalMulti * isBroken;//baseBreak
 
         //TODO: circle back later and add handling if this somehow can be used on allies to hurt them instead
@@ -1807,9 +1808,6 @@ const battleActions = {
                 enemyData: JSON.stringify(targetTurn),
                 AV:battleData.sumAV
             }
-            // console.log(DMGTotalEndBreak,sumRES)
-            // logToBattle(battleData,{logType: isEnemy ? "HitAlly" : "HitEnemy", hitType: hitDisplay[hitType], target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,enemyIsBroken});
-            // if (logger) {logToBattle(battleData,{logType: "BrokeEnemyWeakness", hitType: hitDisplay[hitType], target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead});}
 
             logToBattle(battleData,{logType: "HitEnemy", hitType: "Break", target: targetTurn.properName, source:charName, hitData:hitDataBreak,enemyIsDead});
         }
@@ -1986,7 +1984,6 @@ const battleActions = {
         // } = targetTurn;
 
         const enemyStats = targetTurn.statTable;
-        const targetName = targetTurn.properName;
         const targetCache = targetTurn.cacheTagValues;
         const targetSlot = targetTurn.name;
         const actionTablesTarget = targetTurn.tagSpecific;
@@ -2003,7 +2000,7 @@ const battleActions = {
         
         const turnMerge = {targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,isBounce,instanceTag,hitType};
         
-        poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,slot,instanceTag,ATKObject},sourceTurn);
+        poke("AllyDMGStart",battleData,turnMerge,sourceTurn);
         poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge,sourceTurn);
 
         const targetStatsSourceBased = targetTurn[properName];
@@ -2074,7 +2071,6 @@ const battleActions = {
         let DMGTotalAVG = DMGTotalEnd * (1 + totalCritDMG * totalCritRate);
 
         let shieldOverflow = 0;
-        let shieldsWereBroken = false;
         const logger = battleData.isLoggyLogger;
         // if (isEnemy) {console.log(DMGTotalAVG)}
 
@@ -2090,7 +2086,6 @@ const battleActions = {
 
                 currentShield.shieldRemaining -= DMGTotalAVG;
                 if (currentShield.shieldRemaining < 0) {
-                    shieldsWereBroken = true;
                     shieldsBroken += 1;
                     const overkillShield = currentShield.shieldRemaining * -1;
 
@@ -2114,7 +2109,7 @@ const battleActions = {
                 // currentReference.shieldCap = totalShieldCap;
             }
             shieldOverflow = smallestOverflow;
-            if (logger) {poke("ShieldsWereBroken",battleData,{battleData,sourceTurn:targetTurn},targetTurn);}
+            if (shieldOverflow) {poke("ShieldsWereBroken",battleData,{battleData,sourceTurn:targetTurn},targetTurn);}
         }
         else {shieldOverflow = DMGTotalAVG;}
 
@@ -2177,60 +2172,7 @@ const battleActions = {
             }
         }
 
-
-        //TOUGHNESS MATH
-        let enemyIsBroken = false;
-        let targetWasAlreadyBroken = false;
-        let toughnessBase = 0;
-        let rawReduction = 0
-        let overBreak = 0;
-        let metWeaknessOrAll = false;
-
-        const targetBroken = targetTurn.isBroken;
-        const canAccumulateAnyways = targetTurn.flags[FORCE_SUPERBREAK];
-        
-        overBreakTotals[targetName] ??= 0;
-        if (!isEnemy) {
-            rawReduction = currentSplit * getToughnessSum(battleData,targetObject.toughness ?? 0,sourceTurn,targetTurn);
-            // if (ATKObject.toughnessCondition) {toughnessBase = ATKObject.toughnessCondition(rawReduction,sourceTurn,targetTurn)}
-            toughnessBase = ATKObject.toughnessCondition ? ATKObject.toughnessCondition(rawReduction,sourceTurn,targetTurn) : rawReduction;
-
-            targetWasAlreadyBroken = targetBroken;
-            // toughnessBase = currentSplit * rawReduction;
-
-            let enemyWeakness = enemyStats[weaknessKeys[element]];
-            metWeaknessOrAll = enemyWeakness || ATKObject.allToughness;
-            // console.log(targetTurn.currentToughness,targetTurn.maxToughness,currentSplit,toughnessBase)
-            if (toughnessBase && metWeaknessOrAll) {//only reduce toughness when the attack even has a stat to do so, but also only when matching weakness or forced all-type reductions are in effect.
-                
-                if (!targetBroken) {
-                    targetTurn.currentToughness -= toughnessBase;
-                    let enemyHasNoToughness = targetTurn.currentToughness <= 0;
-                    // let notAlreadyBrokenCheck = enemyHasNoToughness;// && !targetTurn.isBroken;
-                    if (enemyHasNoToughness) {
-                        enemyIsBroken = true;
-                        targetTurn.isBroken = true;
-                        overBreak = targetTurn.currentToughness * -1;
-                        // overBreakRef[targetName] += overBreak;
-                        // overBreakRef[targetName] += toughnessBase;
-                    }
-                    if (targetTurn.currentToughness < 0) {targetTurn.currentToughness = 0;}
-
-                    if (canAccumulateAnyways) {
-                        overBreakTotals[targetName] += rawReduction;
-                    }
-                }
-                else {//if the target IS broken already
-                    overBreakTotals[targetName] += rawReduction;
-                }
-            }
-            else if (targetBroken || (metWeaknessOrAll && canAccumulateAnyways)) {
-                overBreakTotals[targetName] += rawReduction;
-            }
-
-            else {toughnessBase = 0;}//for log purposes we completely nullify the tracked toughness of the attack so we don't fuck up displays later
-        }
-
+        let toughnessComposite = isEnemy ? null : dealToughnessDMG(battleData,sourceTurn,enemyIsDead,targetTurn,currentSplit,targetObject.toughness,overBreakTotals,ATKObject,element,generalInfo,slot);
 
         if (logger) {
             const hitDisplay = {
@@ -2254,15 +2196,15 @@ const battleActions = {
                 ...pulledComposite,
 
                 isBroken,
-                rawReduction,toughnessBase,targetWasAlreadyBroken,
-                // breakerDMG,
-                overBreak,
-                enemyIsDead,enemyIsBroken,
+                ...toughnessComposite,
+                // rawReduction,toughnessBase,targetWasAlreadyBroken,
+
+                enemyIsDead,
                 playerData: JSON.stringify(sourceTurn),
                 enemyData: JSON.stringify(targetTurn),
                 AV:battleData.sumAV
             };
-            logToBattle(battleData,{logType: isEnemy ? "HitAlly" : "HitEnemy", hitType: hitDisplay[hitType], target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,enemyIsBroken,position:targetTurn.isEnemy ? battleData.enemyPositions.indexOf(targetTurn) : null,positionCount:targetTurn.isEnemy ? battleData.enemyPositions.length : null});
+            logToBattle(battleData,{logType: isEnemy ? "HitAlly" : "HitEnemy", hitType: hitDisplay[hitType], target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,enemyIsBroken: toughnessComposite?.enemyIsBroken,position:targetTurn.isEnemy ? battleData.enemyPositions.indexOf(targetTurn) : null,positionCount:targetTurn.isEnemy ? battleData.enemyPositions.length : null});
         }
 
         if (enemyIsDead) {
@@ -2274,18 +2216,87 @@ const battleActions = {
             }
         }
 
-        if (!isEnemy) {
-            if (enemyIsBroken) {
-                let breakObject = {//isBroken tied to the enemy here is important bc we need to trigger break dmg REGARDLESS of if this attack actually broke them or not bc break dmg happens when broken anyways, regardless of who did it or what element.
-                    toughnessBase,
-                    element,
-                    rawReduction
-                }
-                // console.log(DMGTags)
-                poke("BrokeEnemyWeaknessStart",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo},sourceTurn);
-                battleActions.getBreakDamage(battleData,breakObject,sourceTurn,targetTurn,DMGTags,isBroken,generalInfo);
-                generalInfo.enemiesThatBroke.push(targetTurn);
+        turnMerge.DMGTotalEnd = DMGTotalEnd;
+        turnMerge.DMGTotalCrit = DMGTotalCrit;
+        turnMerge.DMGTotalAVG = DMGTotalAVG;
+        poke("AllyDMGEnd",battleData,turnMerge,sourceTurn);
+        if (isEnemy) {
+            poke("HitAllyEnd",battleData,turnMerge,sourceTurn);
+        }
+        else {
+            turnMerge.superReduction = toughnessComposite.wouldHaveSuperToughness ? toughnessComposite.rawReduction : 0;
+            // console.log(turnMerge.superReduction,targetBroken,canAccumulateAnyways,battleData.sumAV)
+            poke("HitEnemyEnd",battleData,turnMerge,sourceTurn);
+        }
 
+        if (battleData.attackIsActive) {battleData.addedDMGTallyAttack += DMGTotalAVG;}
+
+        totals.totalAVGDMG += DMGTotalAVG;
+        totals.totalOverkill += DMGOverkill;
+    },
+    dealToughnessDMG(battleData,sourceTurn,enemyIsDead,targetTurn,currentSplit,toughnessPre,overBreakTotals,ATKObject,element,generalInfo,slot) {
+        if (enemyIsDead) {return;}
+        //TOUGHNESS MATH
+        let enemyIsBroken = false;
+        let targetWasAlreadyBroken = false;
+        let overBreak = 0;
+
+        const targetBroken = targetTurn.isBroken;
+        const canAccumulateAnyways = targetTurn.flags[FORCE_SUPERBREAK];
+        const targetName = targetTurn.properName;
+        
+        overBreakTotals[targetName] ??= 0;
+        let rawReduction = currentSplit * getToughnessSum(battleData,toughnessPre ?? 0,sourceTurn,targetTurn);
+        let toughnessBase = ATKObject.toughnessCondition ? ATKObject.toughnessCondition(rawReduction,sourceTurn,targetTurn) : rawReduction;
+
+        targetWasAlreadyBroken = targetBroken;
+        let enemyWeakness = targetTurn.statTable[weaknessKeys[element]];
+        let metWeaknessOrAll = enemyWeakness || ATKObject.allToughness;
+        // console.log(targetTurn.currentToughness,targetTurn.maxToughness,currentSplit,toughnessBase)
+        if (toughnessBase && metWeaknessOrAll) {//only reduce toughness when the attack even has a stat to do so, but also only when matching weakness or forced all-type reductions are in effect.
+            //if the target is not yet broken
+            if (!targetBroken) {
+                targetTurn.currentToughness -= toughnessBase;
+                let enemyHasNoToughness = targetTurn.currentToughness <= 0;
+                // let notAlreadyBrokenCheck = enemyHasNoToughness;// && !targetTurn.isBroken;
+                if (enemyHasNoToughness) {
+                    enemyIsBroken = true;
+                    targetTurn.isBroken = true;
+                    overBreak = targetTurn.currentToughness * -1;
+                    // overBreakRef[targetName] += overBreak;
+                    // overBreakRef[targetName] += toughnessBase;
+                }
+                if (targetTurn.currentToughness < 0) {targetTurn.currentToughness = 0;}
+
+                if (canAccumulateAnyways) {
+                    overBreakTotals[targetName] += rawReduction;
+                }
+            }
+            else {//if the target IS broken already
+                overBreakTotals[targetName] += rawReduction;
+            }
+        }
+        else if (targetBroken || (metWeaknessOrAll && canAccumulateAnyways)) {
+            overBreakTotals[targetName] += rawReduction;
+        }
+        else {toughnessBase = 0;}//for log purposes we completely nullify the tracked toughness of the attack so we don't fuck up displays later
+
+        const wouldHaveSuperToughness = targetBroken || (canAccumulateAnyways && metWeaknessOrAll);
+        let toughnessComposite = {enemyIsBroken,targetWasAlreadyBroken,overBreak,targetBroken,canAccumulateAnyways,rawReduction,toughnessBase,element,slot,wouldHaveSuperToughness};
+
+        if (enemyIsBroken) {
+            // let breakObject = {//isBroken tied to the enemy here is important bc we need to trigger break dmg REGARDLESS of if this attack actually broke them or not bc break dmg happens when broken anyways, regardless of who did it or what element.
+            //     toughnessBase,
+            //     element,
+            //     rawReduction
+            // }
+            let breakObject = toughnessComposite;
+
+            // console.log(DMGTags)
+            poke("BrokeEnemyWeaknessStart",battleData,generalInfo,sourceTurn);
+            getBreakDamage(battleData,breakObject,sourceTurn,targetTurn,null,targetBroken,generalInfo);
+
+            if (true) {
                 const isDOT = battleActions.breakDOTisDOT[element];
                 if (isDOT) {
                     if (!sourceTurn.breakDOTSheet) {
@@ -2322,32 +2333,13 @@ const battleActions = {
                     const dotSheet = sourceTurn.breakDOTSheet;
                     updateBuff(battleData,targetTurn,dotSheet);
                 }
-                // if (logger) {logToBattle(battleData,{logType: "BrokeEnemyWeakness", target: targetTurn.properName, source:sourceTurn.properName,enemyIsDead});}
-                poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo},sourceTurn);
+                poke("BrokeEnemyWeakness",battleData,breakObject,sourceTurn);
 
-                if (!targetTurn.isDead) {actionAdvance(-0.25,targetTurn,battleData,"Break: Action Delay",true);}
+                actionAdvance(-0.25,targetTurn,battleData,"Break: Action Delay",true);
             }
         }
 
-
-        poke("AllyDMGEnd",battleData,{targetTurn,sourceTurn,slot,DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,instanceTag},sourceTurn);
-
-        if (isEnemy) {
-            poke("HitAllyEnd",battleData,turnMerge,sourceTurn);
-        }
-        else {
-            turnMerge.superReduction = (targetBroken || metWeaknessOrAll) ? rawReduction : 0;
-            // console.log(turnMerge.superReduction,targetBroken,canAccumulateAnyways,battleData.sumAV)
-            poke("HitEnemyEnd",battleData,turnMerge,sourceTurn);
-        }
-
-        if (battleData.attackIsActive) {battleData.addedDMGTallyAttack += DMGTotalAVG;}
-
-        // else if (hit.enemyIsBroken) {enemiesThatBroke.push(targetTurn);}
-        // totalsRef.totalAVGDMG += DMGTotalAVG;
-        // totalsRef.totalOverkill += DMGOverkill;
-        totals.totalAVGDMG += DMGTotalAVG;
-        totals.totalOverkill += DMGOverkill;
+        return toughnessComposite
     },
     elationHitWrapperTEST(battleData,targetTurn,atkEntry,targetObject,hitType,generalInfo,isLastHit,isBounce,distributedTargetCount) {
         const {sourceTurn,ATKObject,element,overBreakTotals,targetsGotHit,overKillTotals,totals} = generalInfo;
@@ -2378,7 +2370,7 @@ const battleActions = {
         
         const turnMerge = {targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,isBounce,instanceTag};
         
-        poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,slot,instanceTag,ATKObject},sourceTurn);
+        poke("AllyDMGStart",battleData,turnMerge,sourceTurn);
         poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge,sourceTurn);
         const targetStatsSourceBased = targetTurn[properName];
 
@@ -2454,7 +2446,6 @@ const battleActions = {
         let DMGTotalCrit = DMGTotalEnd * (1 + totalCritDMG);
         let DMGTotalAVG = DMGTotalEnd * (1 + totalCritDMG * totalCritRate);
         let shieldOverflow = 0;
-        let shieldsWereBroken = false;
         const logger = battleData.isLoggyLogger;
         // if (isEnemy) {console.log(DMGTotalAVG)}
 
@@ -2470,7 +2461,6 @@ const battleActions = {
 
                 currentShield.shieldRemaining -= DMGTotalAVG;
                 if (currentShield.shieldRemaining < 0) {
-                    shieldsWereBroken = true;
                     shieldsBroken += 1;
                     const overkillShield = currentShield.shieldRemaining * -1;
 
@@ -2494,7 +2484,7 @@ const battleActions = {
                 // currentReference.shieldCap = totalShieldCap;
             }
             shieldOverflow = smallestOverflow;
-            if (logger) {poke("ShieldsWereBroken",battleData,{battleData,sourceTurn:targetTurn},targetTurn);}
+            if (shieldOverflow) {poke("ShieldsWereBroken",battleData,{battleData,sourceTurn:targetTurn},targetTurn);}
         }
         else {shieldOverflow = DMGTotalAVG;}
 
@@ -2557,54 +2547,7 @@ const battleActions = {
             }
         }
 
-
-        //TOUGHNESS MATH
-        let enemyIsBroken = false;
-        let targetWasAlreadyBroken = false;
-        let toughnessBase = 0;
-        let rawReduction = 0
-        let overBreak = 0;
-        
-        overBreakTotals[targetName] ??= 0;
-        if (!isEnemy) {
-            rawReduction = currentSplit * getToughnessSum(battleData,targetObject.toughness ?? 0,sourceTurn,targetTurn);
-            // if (ATKObject.toughnessCondition) {toughnessBase = ATKObject.toughnessCondition(rawReduction,sourceTurn,targetTurn)}
-            toughnessBase = ATKObject.toughnessCondition ? ATKObject.toughnessCondition(rawReduction,sourceTurn,targetTurn) : rawReduction;
-
-            targetWasAlreadyBroken = targetTurn.isBroken;
-            // toughnessBase = currentSplit * rawReduction;
-
-            let enemyWeakness = enemyStats[weaknessKeys[element]];
-            // console.log(targetTurn.currentToughness,targetTurn.maxToughness,currentSplit,toughnessBase)
-            if (toughnessBase && (enemyWeakness || ATKObject.allToughness)) {//only reduce toughness when the attack even has a stat to do so, but also only when matching weakness or forced all-type reductions are in effect.
-                
-                if (!targetTurn.isBroken) {
-                    targetTurn.currentToughness -= toughnessBase;
-                    let enemyHasNoToughness = targetTurn.currentToughness <= 0;
-                    // let notAlreadyBrokenCheck = enemyHasNoToughness;// && !targetTurn.isBroken;
-                    if (enemyHasNoToughness) {
-                        enemyIsBroken = true;
-                        targetTurn.isBroken = true;
-                        overBreak = targetTurn.currentToughness * -1;
-                        // overBreakRef[targetName] += overBreak;
-                        // overBreakRef[targetName] += toughnessBase;
-                    }
-                    if (targetTurn.currentToughness < 0) {targetTurn.currentToughness = 0;}
-
-                    if (targetTurn.flags[FORCE_SUPERBREAK]) {
-                        overBreakTotals[targetName] += rawReduction;
-                    }
-                }
-                else {//if the target IS broken already
-                    overBreakTotals[targetName] += rawReduction;
-                }
-            }
-            else if (targetTurn.isBroken || targetTurn.flags[FORCE_SUPERBREAK]) {
-                overBreakTotals[targetName] += rawReduction;
-            }
-            else {toughnessBase = 0;}//for log purposes we completely nullify the tracked toughness of the attack so we don't fuck up displays later
-        }
-
+        let toughnessComposite = isEnemy ? null : dealToughnessDMG(battleData,sourceTurn,enemyIsDead,targetTurn,currentSplit,targetObject.toughness,overBreakTotals,ATKObject,element,generalInfo,slot);
 
         if (logger) {
             const hitDisplay = {
@@ -2627,15 +2570,14 @@ const battleActions = {
                 sumDMG,
                 ...pulledComposite,
                 isBroken,
-                rawReduction,toughnessBase,targetWasAlreadyBroken,
-                // breakerDMG,
-                overBreak,
-                enemyIsDead,enemyIsBroken,
+                ...toughnessComposite,
+                
+                enemyIsDead,
                 playerData: JSON.stringify(sourceTurn),
                 enemyData: JSON.stringify(targetTurn),
                 AV:battleData.sumAV
             };
-            logToBattle(battleData,{logType: isEnemy ? "HitAlly" : "HitEnemy", hitType: "Elation", target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,enemyIsBroken,position:targetTurn.isEnemy ? battleData.enemyPositions.indexOf(targetTurn) : null,positionCount:targetTurn.isEnemy ? battleData.enemyPositions.length : null});
+            logToBattle(battleData,{logType: isEnemy ? "HitAlly" : "HitEnemy", hitType: "Elation", target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,enemyIsBroken: toughnessComposite.enemyIsBroken,position:targetTurn.isEnemy ? battleData.enemyPositions.indexOf(targetTurn) : null,positionCount:targetTurn.isEnemy ? battleData.enemyPositions.length : null});
         }
 
         if (enemyIsDead) {
@@ -2647,67 +2589,26 @@ const battleActions = {
             }
         }
 
-        if (!isEnemy) {
-            if (enemyIsBroken) {
-                let breakObject = {//isBroken tied to the enemy here is important bc we need to trigger break dmg REGARDLESS of if this attack actually broke them or not bc break dmg happens when broken anyways, regardless of who did it or what element.
-                    toughnessBase,
-                    element,
-                    rawReduction
-                }
-                // console.log(DMGTags)
-                poke("BrokeEnemyWeaknessStart",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo},sourceTurn);
-                battleActions.getBreakDamage(battleData,breakObject,sourceTurn,targetTurn,DMGTags,isBroken,generalInfo);
-                generalInfo.enemiesThatBroke.push(targetTurn);
-
-                const isDOT = battleActions.breakDOTisDOT[element];
-                if (isDOT) {
-                    if (!sourceTurn.breakDOTSheet) {
-                        sourceTurn.breakDOTSheet = {
-                            "stats": null,
-                            "source": "Break",
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": battleActions.breakDOTNames[element],
-                            "durationInTurn": battleActions.breakDOTDuration[element] + 1,
-                            "duration": battleActions.breakDOTDuration[element],
-                            "AVApplied": 0,
-                            "maxStacks": element === "Wind" ? 5 : 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                            "isDOT": isDOT,
-                            "isDebuff": true,
-                            "element": element,
-                            isBreakDOT: true,
-                            multiplier: battleActions.breakDOTElementMultipliers[element],
-                            slot: "BreakDOT",
-                            ownerIsAllied: true,
-                            ownerSlot: sourceTurn.name,
-                            avgChanceApplied: 1,
-                            baseChance: 1.5,
-                        }
-                    }
-                    const dotSheet = sourceTurn.breakDOTSheet;
-                    updateBuff(battleData,targetTurn,dotSheet);
-                }
-                // if (logger) {logToBattle(battleData,{logType: "BrokeEnemyWeakness", target: targetTurn.properName, source:sourceTurn.properName,enemyIsDead});}
-                poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo},sourceTurn);
-
-                if (!targetTurn.isDead) {actionAdvance(-0.25,targetTurn,battleData,"Break: Action Delay",true);}
-            }
+        turnMerge.DMGTotalEnd = DMGTotalEnd;
+        turnMerge.DMGTotalCrit = DMGTotalCrit;
+        turnMerge.DMGTotalAVG = DMGTotalAVG;
+        poke("AllyDMGEnd",battleData,turnMerge,sourceTurn);
+        if (isEnemy) {
+            poke("HitAllyEnd",battleData,turnMerge,sourceTurn);
+        }
+        else {
+            turnMerge.superReduction = toughnessComposite.wouldHaveSuperToughness ? toughnessComposite.rawReduction : 0;
+            // console.log(turnMerge.superReduction,targetBroken,canAccumulateAnyways,battleData.sumAV)
+            poke("HitEnemyEnd",battleData,turnMerge,sourceTurn);
         }
 
 
-        poke("AllyDMGEnd",battleData,{targetTurn,sourceTurn,slot,DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,instanceTag},sourceTurn);
-        poke(isEnemy ? "HitAllyEnd" : "HitEnemyEnd",battleData,turnMerge,sourceTurn);
         if (battleData.attackIsActive) {battleData.addedDMGTallyAttack += DMGTotalAVG;}
 
-        // else if (hit.enemyIsBroken) {enemiesThatBroke.push(targetTurn);}
-        // totalsRef.totalAVGDMG += DMGTotalAVG;
-        // totalsRef.totalOverkill += DMGOverkill;
         totals.totalAVGDMG += DMGTotalAVG;
         totals.totalOverkill += DMGOverkill;
     },
-    hitWrapperBattleStart(battleData,targetTurn,hitType,generalInfo,forceEntryWeakness) {
+    hitWrapperBattleStart(battleData,targetTurn,hitType,generalInfo,overBreakTotals,forceEntryWeakness) {
         const sourceTurn = generalInfo.sourceTurn;
         const ATKObject = generalInfo.ATKObject;
         const tags = ATKObject.DMGTags;
@@ -2718,144 +2619,55 @@ const battleActions = {
         let enemyStats = targetTurn.statTable;
         let isEnemy = false;
 
-
-
-        // battleTotal.Actions
-        // let ATKObject = {
-        //     multipliers: {
-        //         primary: values[0],
-        //         blast: null,
-        //         all: null,
-        //     },
-        //     scalar: "ATKFinal",
-        //     DMGTags: ["All","Fire"]
-            // isEnemy: true
-            // slot: skillRef.slot
-        // }
         
         let slot = ATKObject.slot;
         const turnMerge = {targetTurn,sourceTurn,slot,ATKObject};
         
+        let toughnessComposite = dealToughnessDMG(battleData,sourceTurn,false,targetTurn,1,10,overBreakTotals,ATKObject,element,generalInfo,slot);
 
-
-
-        //TOUGHNESS MATH
-        let enemyIsBroken = false;
-        let toughnessBase = 0;
-        let rawReduction = 0
-        let overBreak = 0;
-        let breakerDMG = 0;
-        // const overBreakRef = generalInfo.overBreakTotals;
-        // const targetName = targetTurn.properName;
-        // overBreakRef[targetName] ??= 0;
-        if (!isEnemy) {
-            rawReduction = battleActions.getToughnessSum(battleData,10,sourceTurn,targetTurn);
-            // if (ATKObject.toughnessCondition) {toughnessBase = ATKObject.toughnessCondition(rawReduction,sourceTurn,targetTurn)}
-            toughnessBase = ATKObject.toughnessCondition ? ATKObject.toughnessCondition(rawReduction,sourceTurn,targetTurn) : rawReduction;
-            // toughnessBase = currentSplit * rawReduction;
-
-            let enemyWeakness = enemyStats[weaknessKeys[element]];
-            // console.log(targetTurn.currentToughness,targetTurn.maxToughness,currentSplit,toughnessBase)
-            if (toughnessBase && (enemyWeakness || ATKObject.allToughness || forceEntryWeakness)) {//only reduce toughness when the attack even has a stat to do so, but also only when matching weakness or forced all-type reductions are in effect.
-                
-                // console.log(targetTurn.currentToughness)
-                if (!targetTurn.isBroken) {
-                    targetTurn.currentToughness -= toughnessBase;
-                    // console.log(targetTurn.currentToughness)
-                    let enemyHasNoToughness = targetTurn.currentToughness <= 0;
-                    // let notAlreadyBrokenCheck = enemyHasNoToughness;// && !targetTurn.isBroken;
-                    if (enemyHasNoToughness) {
-                        enemyIsBroken = true;
-                        targetTurn.isBroken = true;
-                        overBreak = targetTurn.currentToughness * -1;
-                    }
-                    if (targetTurn.currentToughness < 0) {targetTurn.currentToughness = 0;}
-                }
-                // else {//if the target IS broken already
-                //     overBreakRef[targetName] += rawReduction;
-                // }
-            }
-            else if (targetTurn.isBroken) {
-                // overBreakRef[targetName] += rawReduction;
-            }
-            else {toughnessBase = 0;}//for log purposes we completely nullify the tracked toughness of the attack so we don't fuck up displays later
-        }
-
-        const logger = battleData.isLoggyLogger;
-        if (logger) {
+        if (battleData.isLoggyLogger) {
             const hitDisplay = {
                 "primary": "Single Target",
                 "blast": "Blast",
+                "blastAOE": "Blast AOE",
                 "all": "AoE"
             };
-            // console.log(sourceTurn.statTable)
+            
             const hitData = {
                 scalar: "",
-                currentSplit:0,currentMulti:0,multiOf:0,
-                tags: [...tags],
-                actionTags: [],
-                element:0,finalMulti:0,
-                DMGTotalEnd:0,DMGTotalCrit:0,DMGTotalAVG:0,DMGOverkill:0,shieldOverflow:0,
-                strongestShieldRef:null,
-                // breakerDMG,
-                overBreak,
-                enemyIsDead:false,enemyIsBroken,toughnessBase,
-                playerData: logger ? JSON.stringify(sourceTurn) : null,
-                enemyData: logger ? JSON.stringify(targetTurn) : null,
+                bonusDMGCustom: null,
+                bonudDMGCustomRefName: null,
+                bonusDMGMulti: null,
+                bonusDMGScalar: null,
+                currentSplit: 1,
+                currentMulti: 0,
+                multiOf: 0,
+                // secondaryScalar,secondaryScalarSum,secondaryScalarMulti,
+                tags:["BattleStart Toughness"],
+                // actionTags: [...actionTags],
+                element,
+                finalMulti: 1,
+
+                DMGTotalEnd: 0,
+                DMGTotalCrit: 0,
+                DMGTotalAVG: 0,
+                DMGOverkill: 0,
+                shieldOverflow: 0,
+
+                sumDMG: 0,
+                // ...pulledComposite,
+
+                isBroken: false,
+                ...toughnessComposite,
+                // rawReduction,toughnessBase,targetWasAlreadyBroken,
+
+                enemyIsDead: false,
+                playerData: JSON.stringify(sourceTurn),
+                enemyData: JSON.stringify(targetTurn),
                 AV:battleData.sumAV
             };
-            logToBattle(battleData,{logType: isEnemy ? "HitAlly" : "HitEnemy", hitType: hitType, target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead:false,enemyIsBroken});
+            logToBattle(battleData,{logType:"HitEnemy", hitType: hitDisplay["primary"], target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead:false,enemyIsBroken: toughnessComposite?.enemyIsBroken,position:targetTurn.isEnemy ? battleData.enemyPositions.indexOf(targetTurn) : null,positionCount:targetTurn.isEnemy ? battleData.enemyPositions.length : null});
         }
-
-        if (enemyIsBroken) {
-            let breakObject = {//isBroken tied to the enemy here is important bc we need to trigger break dmg REGARDLESS of if this attack actually broke them or not bc break dmg happens when broken anyways, regardless of who did it or what element.
-                toughnessBase,
-                element,
-                rawReduction
-            }
-            breakerDMG = battleActions.getBreakDamage(battleData,breakObject,sourceTurn,targetTurn,tags,isBroken,generalInfo);
-            // generalInfo.enemiesThatBroke.push(targetTurn);
-            poke("BrokeEnemyWeaknessStart",battleData,{targetTurn,sourceTurn,slot,targetsGotHit:null,ATKObject,breakObject,tags,isBroken,generalInfo},sourceTurn);
-            const isDOT = battleActions.breakDOTisDOT[element];
-            if (isDOT) {
-                if (!sourceTurn.breakDOTSheet) {
-                    sourceTurn.breakDOTSheet = {
-                        "stats": null,
-                        "source": "Break",
-                        "sourceOwner": sourceTurn.properName,
-                        "buffName": battleActions.breakDOTNames[element],
-                        "durationInTurn": battleActions.breakDOTDuration[element] + 1,
-                        "duration": battleActions.breakDOTDuration[element],
-                        "AVApplied": 0,
-                        "maxStacks": element === "Wind" ? 5 : 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": "EndTurn",
-                        "isDOT": isDOT,
-                        "isDebuff": true,
-                        "element": element,
-                        isBreakDOT: true,
-                        multiplier: battleActions.breakDOTElementMultipliers[element],
-                        // scalar: "ATK",
-                        slot: "BreakDOT",
-                        ownerIsAllied: true,
-                        ownerSlot: sourceTurn.name,
-                        avgChanceApplied: 1,
-                        baseChance: 1.5,
-                    }
-                }
-                const dotSheet = sourceTurn.breakDOTSheet;
-                updateBuff(battleData,targetTurn,dotSheet);
-            }
-            // if (logger) {logToBattle(battleData,{logType: "BrokeEnemyWeakness", target: targetTurn.properName, source:sourceTurn.properName,enemyIsDead});}
-            poke("BrokeEnemyWeakness",battleData,turnMerge,sourceTurn);
-        }
-
-        // const totalsRef = generalInfo.totals;
-        // totalsRef.totalBreakDMG += breakerDMG;
-        // totalsRef.totalBreakSuperDMG += breakerDMGSuper;
-
-        //TODO: circle back here and get the character tracking enabled for the correct slots on the battlestart break if it happens
     },
     additionalDMGHitWrapper(battleData,charName,sourceTurn,targetTurn,ATKObject,element,enemiesAttackedThisAction,sourceString) {
         // let playerStats = sourceTurn.statTable;
@@ -3567,13 +3379,9 @@ const battleActions = {
 
         let totalHits = 0;
         const totals = {totalAVGDMG: 0,totalBreakDMG: 0,totalBreakSuperDMG: 0,totalOverkill: 0,totalHits: 0};
-        if (chainedAttackRef) {
-            chainedAttackRef.enemiesThatBroke = [];
-        }
         const targetsGotHit = chainedAttackRef ? chainedAttackRef.targetsGotHit : {};
         const overBreakTotals = chainedAttackRef ? chainedAttackRef.overBreakTotals : {};
         const overKillTotals = chainedAttackRef ? chainedAttackRef.overKillTotals : {};
-        let enemiesThatBroke = chainedAttackRef ? chainedAttackRef.enemiesThatBroke : [];
 
         let isEnemy = sourceTurn.isEnemy;
 
@@ -3582,7 +3390,7 @@ const battleActions = {
 
         let hitWrap = isElation ? elationHitWrapper : hitWrapper;
 
-        const generalInfo = chainedAttackRef ?? {sourceTurn,targetsGotHit,enemiesThatBroke,dmgSlot,ATKObject,element,totals,overBreakTotals,overKillTotals,primaryTargetArray,subTargetArray};
+        const generalInfo = chainedAttackRef ?? {sourceTurn,targetsGotHit,dmgSlot,ATKObject,element,totals,overBreakTotals,overKillTotals,primaryTargetArray,subTargetArray};
         generalInfo.ATKObject = ATKObject;
         if (stateIsStart) {poke("AttackStart",battleData,generalInfo,sourceTurn);}
 
@@ -4749,6 +4557,9 @@ const generalSuperBreak = battleActions.generalSuperBreakHandling;
 const attackWrapper = battleActions.attackWrapperTEST;
 const elationHitWrapper = battleActions.elationHitWrapperTEST;
 const hitWrapper = battleActions.hitWrapperTEST;
+const dealToughnessDMG = battleActions.dealToughnessDMG;
+const getBreakDamage = battleActions.getBreakDamage;
+const hitWrapperBattleStart = battleActions.hitWrapperBattleStart;
 
 
 const turnLogic = {
@@ -4764,7 +4575,7 @@ const turnLogic = {
 
                 const scalar = "HP";//does not actually matter, break doesn't reference a scalar
                 const tags = ["All",firstTurnElement];
-                const actionTags = ["Attack"];
+                const actionTags = ["All"];
                 const keyShortcut = basicShorthand.makeKeysArray;
                 const realDMGKeys = keyShortcut(dmgKeys,tags);
                 const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -4785,17 +4596,17 @@ const turnLogic = {
                     actionTags
                 }
 
-                enemiesThatBroke = [];
-                const generalInfo = {sourceTurn:firstTurn,enemiesThatBroke,hitType:"BattleStart",ATKObject,element:firstTurnElement};
+                const generalInfo = {sourceTurn:firstTurn,hitType:"BattleStart",ATKObject,element:firstTurnElement};
+
+                const overBreakTotals = {};
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BattleStartWeakness", name:firstTurn.properName, target:"enemy", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:"BattleStartWeakness"});}
                 for (let enemy of enemyPositions) {
                     if (!enemy.statTable[greatTableIndex[`Weakness${firstTurnElement}`]] && !battleData.forceEntryWeakness) {continue;}
 
                     //battleData.forceEntryWeakness right now only anaxa can force this to be true
-
-                    battleActions.hitWrapperBattleStart(battleData,enemy,"BattleStart",generalInfo,battleData.forceEntryWeakness)
-                                    // hitWrapperBattleStart(battleData,targetTurn,hitType,generalInfo)
+                    //technically acheron? also firefly I think
+                    hitWrapperBattleStart(battleData,enemy,"BattleStart",generalInfo,overBreakTotals,battleData.forceEntryWeakness)
                 }
 
             }
@@ -25409,17 +25220,13 @@ const turnLogic = {
                             let skillRef = ATKObjects.ruanmeiTalentREF ??= ATKObjects.Talent["Somatotypical Helix"].variant1;
                             let values = ATKObjects.ruanmeiTalentREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
                             const breakMulti = values[1] + (ownerTurn.rank >= 6 ? 2 : 0);
-                            const breakObject = generalInfo.breakObject;
-                            const tags = [generalInfo[ownerTurn.element]];
-                            const isBroken =  generalInfo.isBroken;
+                            const breakObject = generalInfo;
         
                             const genInfoNew = this.ruanTalentBreakInstanceObject ??= {
-                                ATKObject: {actionTags: ["All","Break"]}
+                                ATKObject: {actionTags: ["All","Break"]},
                             }
         
-                            battleActions.getBreakDamage(battleData,breakObject,ownerTurn,targetTurn,tags,true,genInfoNew,breakMulti);
-        
-                            // poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags,isBroken,generalInfo});
+                            getBreakDamage(battleData,breakObject,ownerTurn,targetTurn,null,true,genInfoNew,breakMulti);
                         },
                         "target": "self",
                         "listenerName": "Talent break dmg on break instance",
@@ -30946,7 +30753,6 @@ const turnLogic = {
                     {
                         "trigger": "BrokeEnemyWeakness",
                         condition(battleData,generalInfo) {
-                            // poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
                             let ownerTurn = this.ownerTurn;
         
                             const logicRefValues = ownerTurn.battleValues;
@@ -30964,7 +30770,6 @@ const turnLogic = {
                     {
                         "trigger": "PreActionPhase",
                         condition(battleData,generalInfo) {
-                            // poke("BrokeEnemyWeakness",battleData,turnMerge);
                             let ownerTurn = this.ownerTurn;
         
                             const logicRefValues = ownerTurn.battleValues;
@@ -30991,7 +30796,6 @@ const turnLogic = {
                         condition(battleData,generalInfo) {
                             const action = generalInfo.action;
                             if (action != "Skill" || !generalInfo.isEnhanced) {return}
-                            // poke("BrokeEnemyWeakness",battleData,turnMerge);
                             let ownerTurn = this.ownerTurn;
 
 
@@ -31020,7 +30824,6 @@ const turnLogic = {
                         condition(battleData,generalInfo) {
                             const action = generalInfo.action;
                             if (action != "Skill" || !generalInfo.isEnhanced) {return}
-                            // poke("BrokeEnemyWeakness",battleData,turnMerge);
                             let ownerTurn = this.ownerTurn;
 
                             const e1Sheet = this.e1Sheet ??= {
@@ -31076,7 +30879,6 @@ const turnLogic = {
             {
                 "trigger": "BrokeEnemyWeakness",
                 condition(battleData,generalInfo) {
-                    // poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
                     let ownerTurn = this.ownerTurn;
                     let sourceTurn = generalInfo.sourceTurn;
                     if (sourceTurn.name != ownerTurn.name) {return;}
@@ -42628,7 +42430,6 @@ const turnLogic = {
                     {
                         "trigger": "ShieldEnd",
                         condition(battleData,generalInfo) {
-                            // poke("ShieldsWereBroken",battleData,{battleData,sourceTurn:targetTurn});
                             let ownerTurn = this.ownerTurn;
                             // const currentShield = generalInfo.currentShield;
                             const sourceTurn = generalInfo.sourceTurn;
@@ -46180,7 +45981,6 @@ const turnLogic = {
                     {
                         "trigger": "BrokeEnemyWeakness",
                         condition(battleData,generalInfo) {
-                            // poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
                             let ownerTurn = this.ownerTurn;
                             //we don't actually need to verify WHO broke the weakness, only THAT an enemy was weakness broken AT ALL, from anything
 

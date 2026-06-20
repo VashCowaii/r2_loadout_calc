@@ -3221,7 +3221,7 @@ const customMenu = {
                 "TechniqueStart": "Tech.",
                 "MemoSkillStart": "Skill",
                 "SummonOnFieldAdjustment": "",
-                "BattleStartWeakness": "Weakness",
+                "BattleStartWeakness": "Toughness",
             }
             if (basicMiniAction[currentLogType] || basicMiniAction[currentLogType] === "") {
                 let characterRef = characters[actionNameSource];
