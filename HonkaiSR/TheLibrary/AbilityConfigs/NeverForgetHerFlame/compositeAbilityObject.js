@@ -169,7 +169,7 @@ const compositeAbilityObject = {
               "priorityLevel": -80
             },
             {
-              "eventTrigger": "When Stacking/Receiving Weaknesses",
+              "eventTrigger": "When Applying Weaknesses",
               "execute": [
                 {
                   "name": "IF",
