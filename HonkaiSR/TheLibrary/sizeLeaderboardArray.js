@@ -551,7 +551,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 8032031,
     "lineCount": 5319,
-    "sizeCount": 224501
+    "sizeCount": 224507
   },
   {
     "entryType": "enemy",
@@ -588,6 +588,14 @@ let sizeLeaderboardArray = [
     "enemyID": 4053013,
     "lineCount": 5480,
     "sizeCount": 218172
+  },
+  {
+    "entryType": "char",
+    "entryName": "Hysilens",
+    "trimCharacterName": "Hysilens",
+    "entryIcon": "icon/character/1410.png",
+    "lineCount": 5563,
+    "sizeCount": 215915
   },
   {
     "entryType": "enemy",
@@ -629,7 +637,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 8032032,
     "lineCount": 4893,
-    "sizeCount": 209691
+    "sizeCount": 209697
   },
   {
     "entryType": "enemy",
@@ -644,18 +652,10 @@ let sizeLeaderboardArray = [
     "sizeCount": 209218
   },
   {
-    "entryType": "char",
-    "entryName": "Hysilens",
-    "trimCharacterName": "Hysilens",
-    "entryIcon": "icon/character/1410.png",
-    "lineCount": 5361,
-    "sizeCount": 207307
-  },
-  {
     "entryType": "enemy",
     "enemyID": 8032034,
     "lineCount": 4926,
-    "sizeCount": 207294
+    "sizeCount": 207297
   },
   {
     "entryType": "char",
@@ -759,7 +759,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 8032033,
     "lineCount": 4505,
-    "sizeCount": 193053
+    "sizeCount": 193056
   },
   {
     "entryType": "enemy",
@@ -790,6 +790,14 @@ let sizeLeaderboardArray = [
     "enemyID": 5014021,
     "lineCount": 5275,
     "sizeCount": 192160
+  },
+  {
+    "entryType": "char",
+    "entryName": "Firefly_v0",
+    "trimCharacterName": "Fireflyv0",
+    "entryIcon": "icon/character/1310.png",
+    "lineCount": 5393,
+    "sizeCount": 190413
   },
   {
     "entryType": "enemy",
@@ -833,11 +841,11 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "char",
-    "entryName": "Firefly_v0",
-    "trimCharacterName": "Fireflyv0",
+    "entryName": "Firefly",
+    "trimCharacterName": "Firefly",
     "entryIcon": "icon/character/1310.png",
-    "lineCount": 5176,
-    "sizeCount": 181531
+    "lineCount": 5064,
+    "sizeCount": 183427
   },
   {
     "entryType": "char",
@@ -903,7 +911,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 8032030,
     "lineCount": 4002,
-    "sizeCount": 175583
+    "sizeCount": 175586
   },
   {
     "entryType": "char",
@@ -912,14 +920,6 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1507.png",
     "lineCount": 4863,
     "sizeCount": 175383
-  },
-  {
-    "entryType": "char",
-    "entryName": "Firefly",
-    "trimCharacterName": "Firefly",
-    "entryIcon": "icon/character/1310.png",
-    "lineCount": 4847,
-    "sizeCount": 174557
   },
   {
     "entryType": "enemy",
@@ -1337,7 +1337,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Moze",
     "entryIcon": "icon/character/1223.png",
     "lineCount": 4274,
-    "sizeCount": 151191
+    "sizeCount": 151187
   },
   {
     "entryType": "enemy",
@@ -1721,7 +1721,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Sparkle",
     "entryIcon": "icon/character/1306.png",
     "lineCount": 3160,
-    "sizeCount": 113332
+    "sizeCount": 113328
   },
   {
     "entryType": "enemy",
@@ -1735,7 +1735,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Seele",
     "entryIcon": "icon/character/1102.png",
     "lineCount": 3194,
-    "sizeCount": 112450
+    "sizeCount": 112446
   },
   {
     "entryType": "enemy",
@@ -1793,7 +1793,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Sparklev0",
     "entryIcon": "icon/character/1306.png",
     "lineCount": 2929,
-    "sizeCount": 107458
+    "sizeCount": 107454
   },
   {
     "entryType": "enemy",
@@ -2159,7 +2159,7 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 2033022,
     "lineCount": 2246,
-    "sizeCount": 78952
+    "sizeCount": 78955
   },
   {
     "entryType": "char",
@@ -2167,7 +2167,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Seelev0",
     "entryIcon": "icon/character/1102.png",
     "lineCount": 2400,
-    "sizeCount": 78931
+    "sizeCount": 78927
   },
   {
     "entryType": "enemy",
@@ -2361,13 +2361,13 @@ let sizeLeaderboardArray = [
     "entryType": "enemy",
     "enemyID": 8015010,
     "lineCount": 2107,
-    "sizeCount": 69330
+    "sizeCount": 69333
   },
   {
     "entryType": "enemy",
     "enemyID": 8015011,
     "lineCount": 2107,
-    "sizeCount": 69330
+    "sizeCount": 69333
   },
   {
     "entryType": "enemy",
@@ -4211,7 +4211,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "NeverForgetHerFlame",
     "entryIcon": "icon/light_cone/23050.png",
     "lineCount": 273,
-    "sizeCount": 9873
+    "sizeCount": 9863
   },
   {
     "entryType": "lc",

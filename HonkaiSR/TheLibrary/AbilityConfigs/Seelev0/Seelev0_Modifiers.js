@@ -35,7 +35,7 @@ const configAbility = {
                 "target": "{{Task Action Target}}"
               },
               "modifier": null,
-              "ID": "1000118(null)"
+              "ID": "1000118()"
             }
           ]
         }
