@@ -1887,7 +1887,8 @@ const battleActions = {
 
         //TODO: later in the future if some unnamed character happens to have an ability that lets us superbreak when not broken, we do need to factor
         //for the isBroken dr multi.
-        let DMGTotalEndBreak = baseBreak * sumDMG * totalMulti;//baseBreak
+        const isBroken = targetTurn.isBroken ? 1 : 0.9;
+        let DMGTotalEndBreak = baseBreak * sumDMG * totalMulti * isBroken;//baseBreak
 
         //TODO: circle back later and add handling if this somehow can be used on allies to hurt them instead
         let hurtResult = targetTurn.isEnemy ? hurtEnemyHealth(battleData,sourceTurn,targetTurn,DMGTotalEndBreak,isEnemy) : null;
@@ -1949,14 +1950,24 @@ const battleActions = {
         const DMGTags = generalInfo.ATKObject.DMGTags;
 
         const superBreakage = battleActions.getSuperBreakDamage;
-        for (let enemySlot in targetsGotHit) {
-            const currentEnemy = enemyBasedTurns[enemySlot];
-            if (currentEnemy.isDead) {continue;}
 
-            const accumulatedToughness = overBreakTotals[currentEnemy.properName];
-            if (!accumulatedToughness) {continue;}
+        const isHitBased = generalInfo.superReduction;
+        if (isHitBased) {
+            const currentEnemy = generalInfo.targetTurn;
+            if (currentEnemy.isDead) {return;}
+
+            const accumulatedToughness = isHitBased;
             superBreakage(battleData,element,sourceTurn,currentEnemy,DMGTags,superBreakArray[0],superBreakArray[1],accumulatedToughness,generalInfo);
-
+        }
+        else {
+            for (let enemySlot in targetsGotHit) {
+                const currentEnemy = enemyBasedTurns[enemySlot];
+                if (currentEnemy.isDead) {continue;}
+    
+                const accumulatedToughness = overBreakTotals[currentEnemy.properName];
+                if (!accumulatedToughness) {continue;}
+                superBreakage(battleData,element,sourceTurn,currentEnemy,DMGTags,superBreakArray[0],superBreakArray[1],accumulatedToughness,generalInfo);
+            }
         }
     },
     hitWrapperTEST(battleData,targetTurn,atkEntry,targetObject,hitType,generalInfo,isLastHit,isBounce,distributedTargetCount) {
@@ -2173,6 +2184,10 @@ const battleActions = {
         let toughnessBase = 0;
         let rawReduction = 0
         let overBreak = 0;
+        let metWeaknessOrAll = false;
+
+        const targetBroken = targetTurn.isBroken;
+        const canAccumulateAnyways = targetTurn.flags[FORCE_SUPERBREAK];
         
         overBreakTotals[targetName] ??= 0;
         if (!isEnemy) {
@@ -2180,14 +2195,15 @@ const battleActions = {
             // if (ATKObject.toughnessCondition) {toughnessBase = ATKObject.toughnessCondition(rawReduction,sourceTurn,targetTurn)}
             toughnessBase = ATKObject.toughnessCondition ? ATKObject.toughnessCondition(rawReduction,sourceTurn,targetTurn) : rawReduction;
 
-            targetWasAlreadyBroken = targetTurn.isBroken;
+            targetWasAlreadyBroken = targetBroken;
             // toughnessBase = currentSplit * rawReduction;
 
             let enemyWeakness = enemyStats[weaknessKeys[element]];
+            metWeaknessOrAll = enemyWeakness || ATKObject.allToughness;
             // console.log(targetTurn.currentToughness,targetTurn.maxToughness,currentSplit,toughnessBase)
-            if (toughnessBase && (enemyWeakness || ATKObject.allToughness)) {//only reduce toughness when the attack even has a stat to do so, but also only when matching weakness or forced all-type reductions are in effect.
+            if (toughnessBase && metWeaknessOrAll) {//only reduce toughness when the attack even has a stat to do so, but also only when matching weakness or forced all-type reductions are in effect.
                 
-                if (!targetTurn.isBroken) {
+                if (!targetBroken) {
                     targetTurn.currentToughness -= toughnessBase;
                     let enemyHasNoToughness = targetTurn.currentToughness <= 0;
                     // let notAlreadyBrokenCheck = enemyHasNoToughness;// && !targetTurn.isBroken;
@@ -2200,7 +2216,7 @@ const battleActions = {
                     }
                     if (targetTurn.currentToughness < 0) {targetTurn.currentToughness = 0;}
 
-                    if (sourceTurn.accumulateAllToughness) {
+                    if (canAccumulateAnyways) {
                         overBreakTotals[targetName] += rawReduction;
                     }
                 }
@@ -2208,9 +2224,10 @@ const battleActions = {
                     overBreakTotals[targetName] += rawReduction;
                 }
             }
-            else if (targetTurn.isBroken || sourceTurn.accumulateAllToughness) {
+            else if (targetBroken || (metWeaknessOrAll && canAccumulateAnyways)) {
                 overBreakTotals[targetName] += rawReduction;
             }
+
             else {toughnessBase = 0;}//for log purposes we completely nullify the tracked toughness of the attack so we don't fuck up displays later
         }
 
@@ -2314,7 +2331,16 @@ const battleActions = {
 
 
         poke("AllyDMGEnd",battleData,{targetTurn,sourceTurn,slot,DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,instanceTag},sourceTurn);
-        poke(isEnemy ? "HitAllyEnd" : "HitEnemyEnd",battleData,turnMerge,sourceTurn);
+
+        if (isEnemy) {
+            poke("HitAllyEnd",battleData,turnMerge,sourceTurn);
+        }
+        else {
+            turnMerge.superReduction = (targetBroken || metWeaknessOrAll) ? rawReduction : 0;
+            // console.log(turnMerge.superReduction,targetBroken,canAccumulateAnyways,battleData.sumAV)
+            poke("HitEnemyEnd",battleData,turnMerge,sourceTurn);
+        }
+
         if (battleData.attackIsActive) {battleData.addedDMGTallyAttack += DMGTotalAVG;}
 
         // else if (hit.enemyIsBroken) {enemiesThatBroke.push(targetTurn);}
@@ -2565,7 +2591,7 @@ const battleActions = {
                     }
                     if (targetTurn.currentToughness < 0) {targetTurn.currentToughness = 0;}
 
-                    if (sourceTurn.accumulateAllToughness) {
+                    if (targetTurn.flags[FORCE_SUPERBREAK]) {
                         overBreakTotals[targetName] += rawReduction;
                     }
                 }
@@ -2573,7 +2599,7 @@ const battleActions = {
                     overBreakTotals[targetName] += rawReduction;
                 }
             }
-            else if (targetTurn.isBroken || sourceTurn.accumulateAllToughness) {
+            else if (targetTurn.isBroken || targetTurn.flags[FORCE_SUPERBREAK]) {
                 overBreakTotals[targetName] += rawReduction;
             }
             else {toughnessBase = 0;}//for log purposes we completely nullify the tracked toughness of the attack so we don't fuck up displays later
@@ -4775,6 +4801,24 @@ const turnLogic = {
             }
         },
         "listeners": [
+            {
+                "trigger": "WaveStart",
+                condition(battleData,generalInfo) {
+                    // const currentWave = generalInfo.currentWave;
+                    // if (currentWave != 1) {return;}
+                    
+                    if (!battleData.attackTechniqueUsed && battleData.techniquesAllowed) {
+                        const battleStartMatchingWeakness = this.battleStartMatchingWeakness ??= turnLogic.Universal.skillFunctions.battleStartMatchingWeakness
+                        battleStartMatchingWeakness(battleData);
+                    }
+                },
+                "target": "self",
+                "priority": -70,
+                "listenerName": "BattleStart toughness reduction",
+                "ownerTurn": {},
+            },
+
+
             {
                 "trigger": "UpdateStatSPD",//SPD stat change
                 condition(battleData,generalInfo) {
@@ -16575,12 +16619,12 @@ const turnLogic = {
             let currentSP = battleData.skillPointCurrent;
             let minimum = currentSP >= 1;
 
-            // if (minimum && checkSkill(battleData,thisTurn)) {
-            //     const skillCall = this.returnSkillCall;
-            //     skillCall.target = [battleData.primaryTarget];
-            //     skillCall.subTarget = battleData.bounceOrder;
-            //     return skillCall;
-            // }
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                const skillCall = this.returnSkillCall;
+                skillCall.target = [battleData.primaryTarget];
+                skillCall.subTarget = battleData.blastTargets;
+                return skillCall;
+            }
 
             const basicCall = this.returnBasicCall;
             basicCall.target = [battleData.primaryTarget];
@@ -16588,7 +16632,7 @@ const turnLogic = {
         },
         preLogic(thisTurn,battleData) {
             this.returnSkillCall ??= createQueueObject(thisTurn,{
-                actionCall: this.skillFunctions.hmcSkill,
+                actionCall: this.skillFunctions.dahliaSkill,
                 action: "Skill",
                 points: -1, 
 
@@ -16618,7 +16662,7 @@ const turnLogic = {
         "abilityTargetPools": {
             "BasicATK": "Enemies (On-Field)",
             "Skill": "Enemies (On-Field)",
-            "Ultimate": "Allies (On-Field)",
+            "Ultimate": "Enemies (On-Field)",
         },
         "skillFunctions": {
             dahliaBasic(battleData,actionObject,sourceTurn) {
@@ -16663,20 +16707,24 @@ const turnLogic = {
 
                 attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
             },
-            hmcSkill(battleData,actionObject,sourceTurn) {
+            dahliaSkill(battleData,actionObject,sourceTurn) {
                 const characterName = sourceTurn.properName;
                 const logicRef = turnLogic[characterName];
                 const ATKObjects = logicRef.ATKObjects;
 
-                let skillRef = ATKObjects.hmcSkillREF ??= ATKObjects["Skill"]["Halftime to Make It Rain"].variant1;
-                let values = ATKObjects.hmcSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                let skillRef = ATKObjects.dahliaSkillREF ??= ATKObjects["Skill"]["Lick... Enkindled Betrayal"].variant1;
+                let values = ATKObjects.dahliaSkillREFVALUES ??= [//TODO: remove later
+                    1.5,
+                    3,
+                    0.5
+                  ];//battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                 const rank = sourceTurn.rank;
                 
-                if (!ATKObjects.hmcSkillATKOBJECT) {
+                if (!ATKObjects.dahliaSkillATKOBJECT) {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
                     // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
                     const scalar = "ATK";
-                    const tags = ["All","Imaginary"];
+                    const tags = ["All","Fire"];
                     const keyShortcut = basicShorthand.makeKeysArray;
                     const realDMGKeys = keyShortcut(dmgKeys,tags);
                     const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -16685,9 +16733,257 @@ const turnLogic = {
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     const actionTags = ["All","Skill","Attack"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
-                    ATKObjects.hmcSkillATKOBJECT = {
+                    ATKObjects.dahliaSkillATKOBJECT = {
                         multipliers: {
                             primary: values[0],
+                            blast: values[0],
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                    }
+                }
+                let ATKObject = ATKObjects.dahliaSkillATKOBJECT;
+
+                const applySkillZone = ATKObjects.applySkillZone ??= turnLogic[sourceTurn.properName].skillFunctions.applySkillZone;
+                applySkillZone(battleData,sourceTurn);
+
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+            },
+            applySkillZone(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.dahliaSkillREF ??= ATKObjects["Skill"]["Lick... Enkindled Betrayal"].variant1;
+                let values = ATKObjects.dahliaSkillREFVALUES ??= [//TODO: remove later
+                    1.5,
+                    3,
+                    0.5
+                  ];//battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                
+                if (!ATKObjects.dahliaSkillOWNERSHEET) {
+                    const rank = sourceTurn.rank;
+                    const buffRef = logicRef.buffNames;
+                    ATKObjects.dahliaSkillOWNERSHEET = {
+                        "stats": null,
+                        "source": "Skill",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffRef.skillZoneOwner,
+                        "durationInTurn": 3,
+                        "duration": 3,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "StartTurn",
+                        expireFunction: logicRef.skillFunctions.skillZoneExpired,
+                        expireParam: sourceTurn.name,
+                        "removeOnDeath": true,
+                    }
+                    ATKObjects.dahliaSkillSHEET = {
+                        "stats": [DamageBreakEfficiency],
+                        [DamageBreakEfficiency]: values[2],
+                        "source": "Skill",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffRef.skillZone,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "removeOnDeath": true,
+                    }
+                    ATKObjects.dahliaSkillDebuffSHEET = {
+                        "stats": null,
+                        "flags": [FORCE_SUPERBREAK],
+                        "source": "Skill",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffRef.skillZoneDebuff,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "isDebuff": true,
+                        "expireType": null,
+                        "removeOnDeath": true,
+                    }
+                }
+
+                const ownerSheet = ATKObjects.dahliaSkillOWNERSHEET;
+                const buffSheet = ATKObjects.dahliaSkillSHEET;
+                const debuffSheet = ATKObjects.dahliaSkillDebuffSHEET;
+
+                const countdownName = ownerSheet.buffName;
+                const buffCheck = sourceTurn.buffsObject[countdownName];
+                sourceTurn.battleValues.skillZoneActive = true;
+                sourceTurn.battleValues.skillZoneDuration = 3;
+
+                updateBuff(battleData,sourceTurn,ownerSheet);
+
+                if (!buffCheck) {
+                    //only if numinosity countdown wasn't already on tribbie when the skill started, do we bother with applying the buff to all allies
+                    //since the allied buff doesn't expire unless the countdown does
+                    const allyArray = battleData.allAlliesArray;
+                    updateBuffBatchTargets(battleData,allyArray,buffSheet);
+
+                    const enemyPositions = battleData.enemyPositions;
+                    updateBuffBatchTargets(battleData,enemyPositions,debuffSheet);
+                }
+            },
+            skillZoneExpired(battleData,dahliaSlot) {
+                const dahliaTurn = battleData.nameBasedTurns[dahliaSlot];
+                dahliaTurn.battleValues.skillZoneActive = false;
+                dahliaTurn.battleValues.skillZoneDuration = 0;
+
+                const logicRef = turnLogic[dahliaTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const buffSheet = ATKObjects.dahliaSkillSHEET;
+                const allyArray = battleData.allAlliesArray;
+                removeBuffFromBatch(battleData,allyArray,buffSheet);
+
+                const debuffSheet = ATKObjects.dahliaSkillDebuffSHEET;
+                const enemyPositions = battleData.enemyPositions;
+                removeBuffFromBatch(battleData,enemyPositions,debuffSheet);
+            },
+
+            dahliaUltimate(battleData,actionObject,sourceTurn) {
+                const characterName = sourceTurn.properName;
+                const logicRef = turnLogic[characterName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.dahliaUltimateREF ??= ATKObjects["Ultimate"]["Wallow... Entombed Ash"].variant1;
+                let values = ATKObjects.dahliaUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                const rank = sourceTurn.rank;
+                
+                if (!ATKObjects.dahliaUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    const actionTags = ["All","Ultimate","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    ATKObjects.dahliaUltimateATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        isDistributed: true,
+                    }
+
+                    ATKObjects.dahliaUltDebuffSHEET = {
+                        "stats": [DEFP,WeaknessFire,WeaknessIce,WeaknessWind,WeaknessLightning,WeaknessImaginary,WeaknessQuantum,WeaknessPhysical],
+                        [DEFP]: values[2],
+                        [WeaknessFire]: 1,
+                        [WeaknessIce]: 0,
+                        [WeaknessWind]: 0,
+                        [WeaknessLightning]: 0,
+                        [WeaknessImaginary]: 0,
+                        [WeaknessQuantum]: 0,
+                        [WeaknessPhysical]: 0,
+                        "flags": [DEF_DOWN,WEAKNESS_IMPLANT],
+                        "source": "Ultimate",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.wilt,
+                        "durationInTurn": 5,
+                        "duration": 4,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "isDebuff": true,
+                        "isImplant": true,
+                        "expireType": "EndTurn",
+                        "removeOnDeath": true,
+                    }
+
+                    ATKObjects.dahliaUltImplantIndex = {
+                        // "Fire": WeaknessFire,
+                        "Ice": WeaknessIce,
+                        "Wind": WeaknessWind,
+                        "Lightning": WeaknessLightning,
+                        "Imaginary": WeaknessImaginary,
+                        "Quantum": WeaknessQuantum,
+                        "Physical": WeaknessPhysical
+                    }
+                }
+                let ATKObject = ATKObjects.dahliaUltimateATKOBJECT;
+
+                const debuffSheet = ATKObjects.dahliaUltDebuffSHEET;
+
+                const partnerSlot = sourceTurn.battleValues.otherPartnerSlot;
+                if (partnerSlot) {
+                    const partnerTurn = battleData.nameBasedTurns[partnerSlot];
+                    const partnerElement = partnerTurn.element;
+                    if (partnerElement != "Fire") {
+                        const refIndex = ATKObjects.dahliaUltImplantIndex
+                        const implantIndex = refIndex[partnerElement];
+                        debuffSheet[implantIndex] = 1;
+                        //TODO: at the moment we aren't going to have any handling that allows for dance partner to swap yet
+                        //this is just bc if you're dying then you fuckin suck and that's not optimal anyways so why are you calculating for death
+                        //and as far as I can see at present there is no means to actually change partners without a death involved.
+                    }
+                }
+
+
+
+                const enemyPositions = battleData.enemyPositions;
+                updateBuffBatchTargets(battleData,enemyPositions,debuffSheet);
+
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+
+                sourceTurn.ultyQueued = false;
+            },
+            dahliaFUA(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.dahliaTalentREF ??= ATKObjects.Talent["Who's Afraid of Constance?"].variant1;
+                let values = ATKObjects.dahliaTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+
+                if (!ATKObjects.dahliaTalentATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].passive;
+                    const rank = sourceTurn.rank;
+
+                    const scalar = "ATK";
+                    const tags = ["All","Fire"];
+                    const actionTags = ["All","FUA","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.dahliaTalentATKOBJECT = {
+                        multipliers: {
+                            primary: null,
                             blast: null,
                             all: null,
                         },
@@ -16701,85 +16997,35 @@ const turnLogic = {
                         compositeCacheTag,
                         bounceData: superGlobal.createATKBounceObject({
                             multi: values[0],
-                            bounceCount: rank >= 6 ? 6 : 4,
+                            bounceCount: 5 + (rank >= 4 ? 5 : 0),
                             energy: skillRef.energyRegen,
                             target: {
                                 "hitRatio": 1,
                                 "energyRatio": 1,
-                                "toughness": 10/2
+                                "toughness": 3
                             },
                         })
                     }
                 }
-                let ATKObject = ATKObjects.hmcSkillATKOBJECT;
 
+                const ATKObject = ATKObjects.dahliaTalentATKOBJECT;
+                const battleValues = sourceTurn.battleValues;
+
+                battleValues.traceFUACounter += 1;
+                if (battleValues.traceFUACounter === 2) {
+                    updateSkillPoints(battleData,1,sourceTurn,false,"Trace: Lament, Lost Soul");
+                    battleValues.traceFUACounter = 0;
+                }
+
+                battleValues.bounceActive = true;
                 attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                battleValues.bounceActive = false;
+                // if (isEnhanced) {poke("ClaraGainCounterCount",battleData,{pointsGained: -1,sourceString:"Clara Enhanced Counter"});}
+
+                battleValues.fuaIsReady = false;
+                battleValues.fuaIsQueued = false;
             },
-            hmcUltimate(battleData,actionObject,sourceTurn) {
-                const logicRef = turnLogic[sourceTurn.properName];
-                const ATKObjects = logicRef.ATKObjects;
-
-                let characterName = sourceTurn.properName;
-                let skillRef = ATKObjects.hmcUltimateREF ??= ATKObjects.Ultimate["All-Out Footlight Parade"].variant1;
-
-                let values = ATKObjects.hmcUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
-
-                if (!ATKObjects.hmcBackupDancerOWNERSHEET) {
-                    const logicRef = turnLogic[characterName];
-                    const buffRef = logicRef.buffNames;
-                    ATKObjects.hmcBackupDancerOWNERSHEET = {
-                        "stats": null,
-                        "source": "Ultimate",
-                        "sourceOwner": sourceTurn.properName,
-                        "buffName": buffRef.backupOwner,
-                        "durationInTurn": 3,
-                        "duration": 3,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": "StartTurn",
-                        expireFunction: logicRef.skillFunctions.backupDancerExpired,
-                        expireParam: sourceTurn.name,
-                        "removeOnDeath": true,
-                    }
-                    ATKObjects.hmcBackupDancerBUFFSHEET = {
-                        "stats": [DamageBreak],
-                        [DamageBreak]: values[2],
-                        "source": "Ultimate",
-                        "sourceOwner": sourceTurn.properName,
-                        "buffName": buffRef.backup,
-                        "durationInTurn": null,
-                        "duration": 1,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null,
-                        "removeOnDeath": false,
-                    }
-                }
-
-                const ownerSheet = ATKObjects.hmcBackupDancerOWNERSHEET;
-                const buffSheet = ATKObjects.hmcBackupDancerBUFFSHEET;
-
-                const countdownName = ownerSheet.buffName;
-                const buffCheck = sourceTurn.buffsObject[countdownName];
-                sourceTurn.battleValues.hmcBackupDancerActive = true;
-
-                updateBuff(battleData,sourceTurn,ownerSheet);
-                poke("HMCGainBackupDancerCount",battleData,{pointsGained: 3,sourceString:"HMC Ultimate"});
-
-                if (!buffCheck) {
-                    //only if numinosity countdown wasn't already on tribbie when the skill started, do we bother with applying the buff to all allies
-                    //since the allied buff doesn't expire unless the countdown does
-                    const allyArray = battleData.allAlliesArray;
-                    updateBuffBatchTargets(battleData,allyArray,buffSheet);
-                }
-
-                updateEnergy(battleData,skillRef.energyRegen,sourceTurn);
-                sourceTurn.ultyQueued = false;
-            },
+            
             backupDancerExpired(battleData,hmcSlot) {
                 const hmcTurn = battleData.nameBasedTurns[hmcSlot];
                 hmcTurn.battleValues.hmcBackupDancerActive = false;
@@ -16794,35 +17040,17 @@ const turnLogic = {
 
                 poke("HMCGainBackupDancerCount",battleData,{pointsGained: -3,sourceString:"Backup Dancer Expired"});
             },
-            hmcTechnique(battleData,actionObject,sourceTurn) {
+            dahliaTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
                 let characterName = sourceTurn.properName;
-                let skillRef = ATKObjects.hmcTechniqueREF ??= ATKObjects.Technique["Now! I'm the Band!"].variant1;
+                let skillRef = ATKObjects.dahliaTechniqueREF ??= ATKObjects.Technique["The Heart Makes the Finest Tomb"].variant1;
 
-                if (!ATKObjects.hmcTechBREAKSHEET) {
-                    ATKObjects.hmcTechBREAKSHEET = {
-                        "stats": [DamageBreak],
-                        [DamageBreak]: 0.30,
-                        "source": "Technique",
-                        "sourceOwner": sourceTurn.properName,
-                        "buffName": logicRef.buffNames.techBreak,
-                        "durationInTurn": 3,
-                        "duration": 2,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": "EndTurn",
-                    }
-                }
-                const buffSheet = ATKObjects.hmcTechBREAKSHEET;
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target:null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                
-                const allyPositions = battleData.allyPositions;
-                updateBuffBatchTargets(battleData,allyPositions,buffSheet);
+                const applySkillZone = ATKObjects.applySkillZone ??= turnLogic[sourceTurn.properName].skillFunctions.applySkillZone;
+                applySkillZone(battleData,sourceTurn);
             },
         },
         "listeners": [
@@ -16836,9 +17064,58 @@ const turnLogic = {
 
                     const passiveListeners = this.passiveListeners;
 
+                    //talent inherents
+                    const ATKObjects = logicRef.ATKObjects;
+                    let skillRef = ATKObjects.dahliaTalentREF ??= ATKObjects.Talent["Who's Afraid of Constance?"].variant1;
+                    let values = ATKObjects.dahliaTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+
+                    if (!ATKObjects.dahliaDancePartnerSHEET) {
+                        const rank = ownerTurn.rank;
+                        
+                        const buffRef = logicRef.buffNames;
+                        ATKObjects.dahliaDancePartnerSHEET = {
+                            "stats": [DamageBreak],
+                            [DamageBreak]: rank >= 6 ? 1.5 : 0,
+                            "source": "Talent",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": buffRef.dancePartner,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "removeOnDeath": false,
+
+                            "buffDisplayIcon": "misc/dahlia/Icon1321Passive.png"
+                        }
+                    }
+                    ownerTurn.dancePartnerSheet = ATKObjects.dahliaDancePartnerSHEET;
+                    ownerTurn.dahliaPassiveDancerBreakMulti = values[4];
+                    ownerTurn.dahliaFUABreakMulti= values[2];
+
+                    //dancer partner superbreak
+                    const listener1 = passiveListeners[0];
+                    const allAlliesArray = battleData.allAlliesArray;
+                    for (let ally of allAlliesArray) {
+                        addListenerWithPriority(battleData,listener1,listener1.trigger,ally,null,ownerTurn);
+                    }
+                    
+                    //enemies attacked by dance partner
+                    const allEnemiesArray = battleData.allEnemiesArray;
+                    const listener2 = passiveListeners[1];
+                    for (let enemy of allEnemiesArray) {
+                        addListenerWithPriority(battleData,listener2,listener2.trigger,enemy,null,ownerTurn);
+                    }
+
+                    //fua hits superbreak
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+
                     // if (rank >= 4) {
-                    //     const listener1 = passiveListeners[0];
-                    //     addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                        // const listener1 = passiveListeners[0];
+                        // addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
 
                     //     //don't wanna do a separated statcheck function, so just invoke the listener condition here instead
                     //     listener1.condition(battleData,null,ownerTurn);
@@ -16885,12 +17162,74 @@ const turnLogic = {
                     //     addListenerWithPriority(battleData,listener5,listener5.trigger,ally,null,ownerTurn);
                     // }
 
-                    // getTechnique(battleData,ownerTurn,logicRef,1,false,false)
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,true)
                 },
                 "target": "self",
                 "listenerName": "Dahlia Passive",
                 "ownerTurn": {},
                 "passiveListeners": [
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+                            const providerTurn = this.providerTurn;
+                            const rank = providerTurn.rank;
+                            if (sourceTurn.isEnemy) {return;}//can't be enemies or non-character entities(memos can technically be the dance partner as fucked as that is? E1 wouldn't extend to them though)
+                            const isE1 = rank >= 1
+
+                            if (!sourceTurn.isDahliaPartner && (sourceTurn.isUniqueEvent || !isE1)) {return;}
+                            
+                            const breakMultiFinal = providerTurn.dahliaPassiveDancerBreakMulti;
+
+                            const superBreakArray = this.break1 ??= [1.5,"Dance Partner"];
+                            superBreakArray[0] = breakMultiFinal + (isE1 ? 0.40 : 0);
+                            generalSuperBreak(battleData,sourceTurn,generalInfo,superBreakArray,sourceTurn.element);
+                        },
+                        "target": "self",
+                        "priority": 100,
+                        "isPersonal": true,
+                        "listenerName": "Dahlia - Allies with Dance Partner attacked targets with superbreak ready",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
+                            const battleValues = providerTurn.battleValues;
+                            if (!battleValues.fuaIsReady || battleValues.fuaIsQueued) {return;}
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName === providerTurn.properName) {return;}
+
+                            poke("DahliaQueueFUAAttack",battleData,null,null)
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Dahlia - target attacked by dancer partner(other)",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "HitEnemyEnd",
+                        condition(battleData,generalInfo) {
+                            const ownerTurn = this.ownerTurn;
+                            if (!ownerTurn.battleValues.bounceActive) {return;}
+
+                            
+                            const superReduction = generalInfo.superReduction;
+                            if (!superReduction) {return;}
+
+                            const superBreakArray = this.break1 ??= [1.5,"Dahlia FUA Hits"];
+                            superBreakArray[0] = ownerTurn.dahliaFUABreakMulti;
+                            generalSuperBreak(battleData,ownerTurn,generalInfo,superBreakArray,ownerTurn.element);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Dahlia - FUA hits superbreak",
+                        "ownerTurn": {},
+                    },
+
+
+
+
                     {
                         "trigger": "UpdateStatBreak",
                         condition(battleData,generalInfo) {
@@ -17029,6 +17368,141 @@ const turnLogic = {
                     },
                 ],
             },
+            {
+                "trigger": "DahliaQueueFUAAttack",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const battleValues = ownerTurn.battleValues;
+                    const fuaIsReady = battleValues.fuaIsReady;
+                    const fuaIsQueued = battleValues.fuaIsQueued;
+
+                    if (fuaIsReady && !fuaIsQueued) {
+                        battleValues.fuaIsQueued = true;
+
+                        const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                            name: this.listenerName,
+                            priority: priorityList.ability.CharacterAttackFromSelf,
+                            queueTag: "QueuedInsert",
+        
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.dahliaFUA,
+                            action: "Insert",
+                            abortCheck: null,//(battleData,actionObject,ownerTurn) {},
+        
+                            isInserted: true,
+                            dontKeepNextWave: false,//ults always clear out
+                            isAttack: true,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "GenericAbilityStart",
+        
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.FUA,
+                        })
+                        queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = battleData.enemyPositions;
+                        queueInsertAbility(battleData,queueObject);
+                    }
+
+                },
+                "target": "self",
+                "listenerName": "Dahlia FUA queued",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "EnemyCreated",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let targetTurn = generalInfo.slotRef;
+
+                    if (!ownerTurn.battleValues.skillZoneActive) {return;}
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    let buffSheet = ATKObjects.dahliaSkillDebuffSHEET;
+                    updateBuff(battleData,targetTurn,buffSheet);
+                },
+                "target": "enemy",
+                "listenerName": "Dahlia - Enemy created while zone active debuff application",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "ActionEndPhase",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    ownerTurn.battleValues.fuaIsReady = true;
+                },
+                "target": "enemy",
+                "isPersonal": true,
+                "priority": 100,
+                "listenerName": "Dahlia - FUA cooldown reset",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreActionPhaseEnd",
+                condition(battleData,generalInfo) {
+                    // poke("HealEnd",battleData,turnMerge);
+                    let ownerTurn = this.ownerTurn;
+
+                    if (!ownerTurn.battleValues.skillZoneActive) {
+                        ownerTurn.battleValues.skillZoneDuration = 0;
+                    }
+                    else {
+                        const buffName = this.buffName ??= turnLogic[ownerTurn.properName].buffNames.skillZoneOwner;
+                        ownerTurn.battleValues.skillZoneDuration = ownerTurn.buffsObject[buffName].duration;
+                    }
+                },
+                "target": "self",
+                "isPersonal": true,
+                "listenerName": "Dahlia Zone - duration increment handler(visual)",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "WaveStart",
+                condition(battleData,generalInfo) {
+                    const currentWave = generalInfo.currentWave;
+                    if (currentWave != 1) {return;}
+
+                    const ownerTurn = this.ownerTurn;
+
+                    updateEnergy(battleData,35,ownerTurn,false,"Talent Regen");
+
+                    const buffSheet = ownerTurn.dancePartnerSheet;
+                    updateBuff(battleData,ownerTurn,buffSheet);
+                    ownerTurn.isDahliaPartner = true;
+
+                    let battleStarter = superGlobal.getStartingAttacker(battleData);
+                    if (!battleStarter || battleStarter.properName === ownerTurn.properName) {
+                        const allyPositions = battleData.allyPositions;
+
+                        let highestBreak = -Infinity;
+                        let highestAlly = null;
+                        for (let ally of allyPositions) {
+                            if (ally.properName === ownerTurn.properName) {continue;}
+                            const breakCheck = ally.statTable[DamageBreak];
+                            if (breakCheck > highestBreak) {
+                                highestBreak = breakCheck;
+                                highestAlly = ally;
+                            }
+                        }
+
+                        if (highestAlly) {
+                            ownerTurn.battleValues.otherPartnerSlot = highestAlly.name;
+                            highestAlly.isDahliaPartner = true;
+                            updateBuff(battleData,highestAlly,buffSheet);
+                        }
+                    }
+                    else {
+                        ownerTurn.battleValues.otherPartnerSlot = battleStarter.name;
+                        battleStarter.isDahliaPartner = true;
+                        updateBuff(battleData,battleStarter,buffSheet);
+                    }
+                },
+                "target": "self",
+                "priority": -80,
+                "listenerName": "Dahlia battlestart regen/dance partner application",
+            },
             // {
             //     "trigger": "PreActionPhaseEnd",
             //     condition(battleData,generalInfo) {
@@ -17084,45 +17558,45 @@ const turnLogic = {
             //     "listenerName": "March Counter Handler",
             //     "ownerTurn": {},
             // },
-            // {
-            //     "trigger": "UltimateReady",
-            //     condition(battleData,generalInfo) {
-            //         let ownerTurn = this.ownerTurn;
-            //         if (ownerTurn.ultyQueued) {return;}
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
 
-            //         let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
-            //         let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
 
-            //         if (otherObscureCondition) {
-            //             ownerTurn.ultyQueued = true;
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
 
-            //             const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
-            //                 name: this.listenerName,
-            //                 priority: priorityList.turn.Default,
-            //                 queueTag: "QueuedUltimate",
+                        const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                            name: this.listenerName,
+                            priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
-            //                 actionCall: turnLogic[ownerTurn.properName].skillFunctions.hmcUltimate,
-            //                 action: "Ultimate",
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.dahliaUltimate,
+                            action: "Ultimate",
 
-            //                 energyCost: ownerTurn.maxEnergy,
+                            energyCost: ownerTurn.maxEnergy,
 
-            //                 dontKeepNextWave: true,//ults always clear out
-            //                 isAttack: false,
-            //                 isAbility: true,
-            //                 useAnyTriggers: true,
-            //                 eventTypeStartLOG: "UltimateStart",
+                            dontKeepNextWave: true,//ults always clear out
+                            isAttack: true,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
 
-            //                 poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-            //             })
-            //             queueObject.sourceTurn = ownerTurn;
-            //             queueObject.target = battleData.allyPositions;
-            //             queueUltimate(battleData,queueObject);
-            //         }
-            //     },
-            //     "target": "team",
-            //     "listenerName": "HMC - Ultimate queued",
-            //     "ownerTurn": {},
-            // },
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                        })
+                        queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = battleData.enemyPositions;
+                        queueUltimate(battleData,queueObject);
+                    }
+                },
+                "target": "team",
+                "listenerName": "Dahlia - Ultimate queued",
+                "ownerTurn": {},
+            },
         ],
         "techniqueListener": {
             "trigger": "WaveStart",
@@ -17133,23 +17607,38 @@ const turnLogic = {
 
                 let ownerTurn = this.ownerTurn;
 
-                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.hmcTechnique;
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.dahliaTechnique;
                 callTech(battleData,null,ownerTurn);
             },
             "target": "self",
             "priority": -80,
-            "listenerName": "HMC Technique",
+            "listenerName": "Dahlia Technique",
             "ownerTurn": {},
         },
         "ATKObjects": {},
         "characterValues": {
-            "hmcBackupDancerActive": false,
-            "hmcDancerTime": 0,
-            "hmcDancerTimeMax": 3,
+            "skillZoneDuration": 0,
+            "skillZoneActive": false,
+            "otherPartnerSlot": null,
+            "fuaIsReady": true,
+            "fuaIsQueued": false,
+            "traceFUACounter": 1,
+
+
+            // "hmcBackupDancerActive": false,
+            // "hmcDancerTime": 0,
+            // "hmcDancerTimeMax": 3,
         },
         "useTechnique": true,
         "techniqueType": "Attack",
         "buffNames": {
+            "skillZoneOwner": "Lick... Enkindled Betrayal (Countdown)",
+            "skillZone": "Lick... Enkindled Betrayal",
+            "skillZoneDebuff": "Lick... Enkindled Betrayal (Debuff)",
+            "dancePartner": "Dance Partner (Dahlia)",
+            "wilt": "Wilt (Ultimate)",
+
+
             "e4Break": "E4: Dove in Tophat",
             "e2Regen": "E2: Jailbreaking Rainbowwalk",
             "techBreak": "Now! I'm the Band!",
