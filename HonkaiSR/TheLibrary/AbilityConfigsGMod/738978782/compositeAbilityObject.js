@@ -324,7 +324,7 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1856806253\">Standard_MuteAttachWeakness</a>",
           "modifierFlags": [
-            "MuteAttachWeakness"
+            "WEAKNESS_IMPLANT_MUTE"
           ]
         },
         {

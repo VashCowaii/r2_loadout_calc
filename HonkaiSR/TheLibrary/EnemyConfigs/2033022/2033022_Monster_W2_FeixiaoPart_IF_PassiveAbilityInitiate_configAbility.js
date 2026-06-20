@@ -285,7 +285,7 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1586170110\">Monster_W2_FeixiaoPart_IF_Status</a>",
       "modifierFlags": [
-        "MuteAttachWeakness",
+        "WEAKNESS_IMPLANT_MUTE",
         "ImmuneDebuff"
       ],
       "execute": [

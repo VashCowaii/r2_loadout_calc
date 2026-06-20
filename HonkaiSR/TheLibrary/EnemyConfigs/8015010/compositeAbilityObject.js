@@ -2084,7 +2084,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__228774752\">Enemy_AML_Boss_ChangeWeakness</a>",
           "modifierFlags": [
             "MuteHitH",
-            "MuteAttachWeakness"
+            "WEAKNESS_IMPLANT_MUTE"
           ],
           "execute": [
             {

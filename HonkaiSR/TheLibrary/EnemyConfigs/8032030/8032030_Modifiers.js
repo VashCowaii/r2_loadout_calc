@@ -2882,7 +2882,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1657959613\">Monster_W3_AventurinePart_BlockDamage</a>",
       "modifierFlags": [
         "BlockDamage",
-        "MuteAttachWeakness"
+        "WEAKNESS_IMPLANT_MUTE"
       ],
       "execute": [
         {

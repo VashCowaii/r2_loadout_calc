@@ -491,7 +491,7 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1404216721\">Monster_W3_AventurinePart_01_BlockDamage_RL</a>[<span class=\"descriptionNumberColor\">Fickle Fortune</span>]",
           "modifierFlags": [
-            "MuteAttachWeakness",
+            "WEAKNESS_IMPLANT_MUTE",
             "Deathrattle",
             "KeepOnDeathrattle"
           ],
@@ -3645,7 +3645,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1657959613\">Monster_W3_AventurinePart_BlockDamage</a>",
           "modifierFlags": [
             "BlockDamage",
-            "MuteAttachWeakness"
+            "WEAKNESS_IMPLANT_MUTE"
           ],
           "execute": [
             {
