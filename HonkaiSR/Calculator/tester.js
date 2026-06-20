@@ -4792,7 +4792,9 @@ const userTriggers = {
                                             customValuesString += `<div class="customEnergyBodyPROGRESSBar">
                                                 <div class="customEnergyBodyMarksCIRCLEPROGRESS"
                                                     style="background:conic-gradient(${markFillColor} 0 ${fillProgress}%,#3333337c ${fillProgress}% 100%);">
-                                                    <img src="/HonkaiSR/${entry.progressIcon}" class="customEnergyBodyMarksCIRCLEPROGRESSIcon" onclick="customMenu.createCharacterStatScreenBattleLogged(${logIndex},true)"/>
+                                                    <div class="customEnergyBodyMarksCIRCLEPROGRESSIconBOX">
+                                                        <img src="/HonkaiSR/${entry.progressIcon}" class="customEnergyBodyMarksCIRCLEPROGRESSIcon" onclick="customMenu.createCharacterStatScreenBattleLogged(${logIndex},true)"/>
+                                                    </div>
                                                 </div>
                                                 ${valueAdjusted} / ${markMax} ${entry.valueName}
                                             </div>`
