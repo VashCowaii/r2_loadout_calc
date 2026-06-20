@@ -4497,6 +4497,11 @@ const battleActions = {
             const listenerToInject = logicRef.techniqueListener2;
             listenerToInject.ownerTurn = ownerTurn;
             addListenerWithPriority(battleData,listenerToInject,listenerToInject.trigger);
+            if (techCount > 2) {
+                const listenerToInject = logicRef.techniqueListener3;
+                listenerToInject.ownerTurn = ownerTurn;
+                addListenerWithPriority(battleData,listenerToInject,listenerToInject.trigger);
+            }
         }
 
         if (isAttack) {
@@ -4568,8 +4573,7 @@ const turnLogic = {
         logic(thisTurn,battleData) {},
         "skillFunctions": {
             battleStartMatchingWeakness(battleData) {
-                const firstTurn = battleData.nameBasedTurns.char1;
-                battleData.combatStarterSlot = firstTurn.name;
+                const firstTurn = battleData.nameBasedTurns[battleData.combatStarterSlot];
                 const firstTurnElement = firstTurn.element;
                 const enemyPositions = battleData.enemyPositions;
 
@@ -4596,9 +4600,9 @@ const turnLogic = {
                     actionTags
                 }
 
-                const generalInfo = {sourceTurn:firstTurn,hitType:"BattleStart",ATKObject,element:firstTurnElement};
-
                 const overBreakTotals = {};
+                const targetsGotHit = {};
+                const generalInfo = {sourceTurn:firstTurn,hitType:"BattleStart",ATKObject,element:firstTurnElement,overBreakTotals,targetsGotHit};
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BattleStartWeakness", name:firstTurn.properName, target:"enemy", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:"BattleStartWeakness"});}
                 for (let enemy of enemyPositions) {
@@ -4606,9 +4610,12 @@ const turnLogic = {
 
                     //battleData.forceEntryWeakness right now only anaxa can force this to be true
                     //technically acheron? also firefly I think
-                    hitWrapperBattleStart(battleData,enemy,"BattleStart",generalInfo,overBreakTotals,battleData.forceEntryWeakness)
+                    hitWrapperBattleStart(battleData,enemy,"BattleStart",generalInfo,overBreakTotals,battleData.forceEntryWeakness);
+                    targetsGotHit[enemy.name] = 1;
                 }
 
+                battleData.battleStartOverBreakTotals = generalInfo;
+                // console.log(battleData.battleStartOverBreakTotals)
             }
         },
         "listeners": [
@@ -16973,7 +16980,7 @@ const turnLogic = {
                     //     addListenerWithPriority(battleData,listener5,listener5.trigger,ally,null,ownerTurn);
                     // }
 
-                    getTechnique(battleData,ownerTurn,logicRef,1,false,true)
+                    getTechnique(battleData,ownerTurn,logicRef,2,false,true)
                 },
                 "target": "self",
                 "listenerName": "Dahlia Passive",
@@ -17420,11 +17427,59 @@ const turnLogic = {
 
                 const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.dahliaTechnique;
                 callTech(battleData,null,ownerTurn);
+
+                const battleStarter = superGlobal.getStartingAttacker(battleData);
+                const subListeners = this.subListeners;
+                addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,battleStarter,null,ownerTurn);
             },
             "target": "self",
             "priority": -80,
             "listenerName": "Dahlia Technique",
             "ownerTurn": {},
+            "subListeners": [
+                {
+                    "trigger": "AttackDMGEnd",
+                    condition(battleData,generalInfo) {
+                        const sourceTurn = generalInfo.sourceTurn;
+                        const providerTurn = this.providerTurn;
+                        if (providerTurn.techToughnessUsed) {
+                            removeListener(battleData,this,sourceTurn);
+                            return;
+                        }
+                        else {providerTurn.techToughnessUsed = true;}
+                        
+                        const breakMultiFinal = 0.60;
+                        const superBreakArray = this.break1 ??= [breakMultiFinal,"Dahlia Technique"];
+                        generalSuperBreak(battleData,sourceTurn,generalInfo,superBreakArray,sourceTurn.element);
+                    },
+                    "target": "self",
+                    "priority": 100,
+                    "isPersonal": true,
+                    "listenerName": "Dahlia Technique ally attacked for tech/battlestart",
+                    "ownerTurn": {},
+                }
+            ]
+        },
+        "techniqueListener2": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                const ownerTurn = this.ownerTurn;
+                const battleStarter = superGlobal.getStartingAttacker(battleData);
+                if (ownerTurn.techToughnessUsed) {
+                    removeListener(battleData,this,battleStarter);
+                    return;
+                }
+                else {ownerTurn.techToughnessUsed = true;}
+
+                
+                const battleStartOverBreakTotals = battleData.battleStartOverBreakTotals;
+                const breakMultiFinal = 0.60;
+                const superBreakArray = this.break1 ??= [breakMultiFinal,"Dahlia Technique"];
+                generalSuperBreak(battleData,battleStarter,battleStartOverBreakTotals,superBreakArray,battleStarter.element);
+            },
+            "target": "self",
+            "priority": -59,
+            "listenerName": "Dahlia Technique no attack tech used yet",
         },
         "ATKObjects": {},
         "characterValues": {

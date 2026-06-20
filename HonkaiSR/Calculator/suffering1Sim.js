@@ -786,6 +786,10 @@ const sim = {
         poke("StartBattleEnterCombat",battleData,null,null);
 
         logToBattle(battleData,{logType: "WaveStart",AV:battleData.sumAV,waveID: 1});
+        if (!battleData.attackTechniqueUsed && battleData.techniquesAllowed) {
+            const firstTurn = battleData.nameBasedTurns.char1;
+            battleData.combatStarterSlot = firstTurn.name;
+        }
         poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1},null);
         
         if (battleData.followUpQueue.length) {sim.clearFollowUpAttackQueue(battleData);}//some techniques can trigger stack-based FUA's like archer's charges, so gotta call that here
