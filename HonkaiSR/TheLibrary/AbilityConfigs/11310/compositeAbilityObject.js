@@ -440,7 +440,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__639093534\">Sam_Ability21_FireWeakType</a>[<span class=\"descriptionNumberColor\">Extra Fire Weakness</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "STAT_AttachWeakness"
+            "WEAKNESS_IMPLANT"
           ],
           "description": "Implanted with extra Fire Weakness.",
           "type": "Debuff",

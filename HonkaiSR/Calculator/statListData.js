@@ -73,12 +73,17 @@ for (let i = 0; i < greatFlagsLength; i++) {
 }
 
 const DEF_DOWN = greatFlagIndex.DEF_DOWN;
+
+const SPD_UP = greatFlagIndex.SPD_UP;
 const SPD_DOWN = greatFlagIndex.SPD_DOWN;
 const ATK_DOWN = greatFlagIndex.ATK_DOWN;
 
 const SW_DEF_DOWN = greatFlagIndex.SW_DEF_DOWN;
 const SW_ATK_DOWN = greatFlagIndex.SW_ATK_DOWN;
 const SW_SPD_DOWN = greatFlagIndex.SW_SPD_DOWN;
+
+const FORCE_SUPERBREAK = greatFlagIndex.FORCE_SUPERBREAK;
+const WEAKNESS_IMPLANT = greatFlagIndex.WEAKNESS_IMPLANT;
 
 
 

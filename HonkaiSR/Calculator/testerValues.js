@@ -194,7 +194,20 @@ const customDisplayValuesLog = {
 
     //HUNT
     "Archer": [//tracker done
-        {valueName: "Charge Stacks", refName: "charge", isBattleValue: true,summaryValue: "archerFUAStackSum",summaryType: "SUM"},
+        // {valueName: "Charge Stacks", refName: "charge", isBattleValue: true,summaryValue: "archerFUAStackSum",summaryType: "SUM"},
+        {valueName: "Charge Stacks", refName: "charge", isBattleValue: true,summaryValue: "archerFUAStackSum",summaryType: "SUM",
+            customDisplay: "marks", customDisplayType: "image", markMax: 4, imageFilled: "misc/archer/IconDot101501.png", imageEmpty: "misc/archer/IconDot101503.png", imageFilledAlt: "misc/archer/IconDot101502.png",
+            // innerMarkColor: "#9083FF",
+            fillScale: 1.2,emptyScale: 0.5,
+        },
+        // {valueName: "Charge Stacks", refName: "charge", isBattleValue: true,summaryValue: "archerFUAStackSum",summaryType: "SUM",
+        //     customDisplay: "marks", customDisplayType: "diamond", markMax: null, innerMarkColor: "Quantum",
+        //     displayRequiresIndex: 1, displayRequiresType: "number",
+        //     displayRequiresBoolean: false,
+        //     showProgressIconAnyways: true,
+        //     progressIcon: "misc/archer/Icon1005Passive.png"
+        // },
+        {valueName: "Charge Max", refName: "chargeMax", isBattleValue: true,hide: true},
         {valueName: "In Circuit-Connection", refName: "skillStarted", isBattleValue: true,isCharacterState: true},
         {valueName: "Skill Counter", refName: "skillCounter", isBattleValue: true},
     ],
@@ -219,10 +232,23 @@ const customDisplayValuesLog = {
 
     //NIHILITY
     "Kafka": [//tracker done
-        {valueName: "FUA Stacks", refName: "fuaStacks", isBattleValue: true,summaryValue: "kafkaFUAStackSum",summaryType: "SUM"},
+        {valueName: "FUA Stacks", refName: "fuaStacks", isBattleValue: true,summaryValue: "kafkaFUAStackSum",summaryType: "SUM",
+            customDisplay: "marks", customDisplayType: "diamond", markMax: 2, innerMarkColor: "Lightning",
+            // displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/kafka/Icon1005Passive.png"
+        },
     ],
     "Hysilens": [//no tracker needed?
-        {valueName: "Zone Active", refName: "hysilensFieldActive", isBattleValue: false},
+        {valueName: "Zone Active", refName: "hysilensFieldActive", isBattleValue: false, hide: true},
+        {valueName: "Zone Duration", refName: "hysilensFieldDuration", isBattleValue: true,
+            customDisplay: "marks", customDisplayType: "diamond", markMax: 3, innerMarkColor: "Physical",
+            // displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/hysilens/Icon1410UltraField.png"
+        },
     ],
     "Silver Wolf": [],
     "Pela": [],
@@ -256,6 +282,32 @@ const customDisplayValuesLog = {
         },
         {valueName: "Charge Max", refName: "chargeMax", isBattleValue: true,hide: true},
     ],
+    "The Dahlia": [//tracker done
+        {valueName: "Zone Active", refName: "skillZoneActive", isBattleValue: true, isCharacterState: true, hide: true},
+        {valueName: "Zone Duration", refName: "skillZoneDuration", isBattleValue: true,
+            customDisplay: "marks", customDisplayType: "diamond", markMax: 3, innerMarkColor: "Fire",
+            // displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/dahlia/Icon1321Aura.png"
+        },
+        {valueName: "Dance Partner", refName: "otherPartnerSlot", isBattleValue: true, isCharacterSlot:true,
+            customDisplay: "marks", customDisplayType: "entity", markMax: null, innerMarkColor: "Fire",
+            // displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/dahlia/Icon1321Passive.png"
+        },
+        // {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true, isCharacterState: true},
+        // {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
+        // {valueName: "Charge", refName: "charge", isBattleValue: true,summaryValue: "mortenaxBladeChargeSum",summaryType: "SUM",
+        //     customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "#9083FF",
+        //     displayRequiresIndex: 3, displayRequiresType: "number",
+        //     displayRequiresBoolean: false,
+        //     progressIcon: characters["Mortenax Blade"].traces.Point04.icon
+        // },
+        // {valueName: "Charge Max", refName: "chargeMax", isBattleValue: true,hide: true},
+    ],
 
     //PRESERVATION
     "Aventurine": [//tracker done
@@ -265,7 +317,15 @@ const customDisplayValuesLog = {
     ],
     "Dan Heng • Permansor Terrae": [
         {valueName: "Bondmate", refName: "bondmateSlot", isBattleValue: true, isCharacterSlot:true},
-        {valueName: "Enhanced Turns", refName: "souldragonEnhancedTurns", isBattleValue: true},
+        // {valueName: "Enhanced Turns", refName: "souldragonEnhancedTurns", isBattleValue: true},
+        {valueName: "Enhanced Turns", refName: "souldragonEnhancedTurns", isBattleValue: true,//summaryValue: "hanyaBurdenTriggerSum",summaryType: "SUM",
+            customDisplay: "marks", customDisplayType: "number", markMax: 99, innerMarkColor: "Physical",
+            // displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/dhpt/Icon1414Passive.png"
+        },
+        {valueName: "Burden Triggers Max", refName: "burdenStacksMax", isBattleValue: true,hide: true},
         {valueName: "Souldragon on Field", refName: "souldragonActive", isBattleValue: true, isCharacterState: true},
     ], 
     "March 7th - Preservation": [//tracker done
@@ -297,7 +357,13 @@ const customDisplayValuesLog = {
             customDisplay: "marks", customDisplayType: "circle", markMax: 3, innerMarkColor: "#9083FF",
             displayRequiresIndex: 0, displayRequiresType: "boolean", displayRequiresBoolean: true,
         },
-        {valueName: "Ardent Will", refName: "ardentWillStacks", isBattleValue: true, requiresEidolon: 2},
+        // Ico1n407Rank02.png
+        {valueName: "Ardent Will", refName: "ardentWillStacks", isBattleValue: true, requiresEidolon: 2,
+            customDisplay: "progress", customDisplayType: "circle", markMax: 2, innerMarkColor: "Quantum",
+            // displayRequiresIndex: 3, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            progressIcon: "misc/castorice/Icon1407Rank02.png"
+        },
 
         {valueName: "Netherwing Enhancement Level", refName: "skillCasts", isBattleValue: true,hide: true},
         {valueName: "Netherwing Breath Attacks", refName: "totalCasts", isBattleValue: true,hide: true},
@@ -352,7 +418,13 @@ const customDisplayValuesLog = {
         {valueName: "E4 Follow-up Ready", refName: "e4FUAReady", isBattleValue: true, isCharacterState: true, requiresEidolon: 4},
     ],  
     "Asta": [//tracker done
-        {valueName: "Charging Stacks", refName: "chargeStacks", isBattleValue: true,summaryValue: "astaChargeSummer",summaryType: "SUM"},
+        {valueName: "Charging Stacks", refName: "chargeStacks", isBattleValue: true,summaryValue: "astaChargeSummer",summaryType: "SUM",
+            customDisplay: "marks", customDisplayType: "diamond", markMax: 5, innerMarkColor: "Fire",
+            // displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/asta/Icon1009Passive.png"
+        },
         {valueName: "Skip Charge Decay", refName: "skipCost", isBattleValue: true, isCharacterState: true},
     ],
     "Sparkle": [//tracker done
@@ -702,6 +774,7 @@ const conditionsCharacterDisplayWarning = {
         "SkillPermaConditions": [permaConditionsTextLibrary.mortenaxBladeSkill,],
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
+    "The Dahlia": defaultStandardAbilityDisplayWarnings,
     
 
     //PRESERVATION
@@ -2263,6 +2336,25 @@ const defaultConditions = {
         "Skill": {
             "type": "AND",
             "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        }
+    },
+    "The Dahlia": {
+        "hasEnhancedState": true,
+        "Skill": {
+            "type": "AND",
+            "array": [
+                {
+                    "type": "Character: State",
+                    "target": "Self",
+                    "stateName": "skillZoneActive",
+                    "state": false,
+                    "isBattleValue": true
+                }
+            ]
         },
         "Ultimate": {
             "type": "AND",

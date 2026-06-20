@@ -14,7 +14,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "modifier": null,
-          "ID": "1000111(null)"
+          "ID": "1000111(StageAbility_MazeCommon_EnterBattle_Physical)"
         }
       ]
     }

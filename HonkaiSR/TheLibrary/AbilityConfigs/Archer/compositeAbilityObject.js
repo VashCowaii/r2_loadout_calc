@@ -407,7 +407,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1473893661\">Archer_Eidolon2_AddWeak</a>[<span class=\"descriptionNumberColor\">The Unfulfilled Happiness</span>]",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "STAT_AttachWeakness"
+            "WEAKNESS_IMPLANT"
           ],
           "description": "Additionally implanted Quantum Weakness. Quantum RES decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Debuff",

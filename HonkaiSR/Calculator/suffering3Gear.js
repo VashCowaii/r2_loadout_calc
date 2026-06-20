@@ -3830,69 +3830,6 @@ const turnLogicLightcones = {
             "buff1": "Solitary Healing [Ult]",
         },
     },
-    "Before the Tutorial Mission Starts": {//REDONE
-        logic(thisTurn,battleData) {},
-        "skillFunctions": {},
-        "listeners": [
-            {
-                "trigger": "PassiveCalls",
-                condition(battleData,generalInfo) {
-                    let ownerRef = this.owners;
-        
-                    const namedTurns = battleData.nameBasedTurns;
-                    const subListeners = this.subListeners;
-                    const ownersSlots = this.ownersSlots;
-        
-                    for (let owner of ownerRef) {
-                        let charSlot = owner.slot;
-                        let currentTurn = namedTurns[charSlot];
-        
-                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
-                    }
-                },
-                "target": "self",
-                "listenerName": "Before the Tutorial Mission Starts listener setup",
-                "owners": [],
-                "subListeners": [
-                    {
-                        "trigger": "AttackDMGEnd",
-                        condition(battleData,generalInfo) {
-                            let sourceTurn = generalInfo.sourceTurn;
-        
-                            const targetsGotHit = generalInfo.targetsGotHit;
-                            const enemyTurns = battleData.enemyBasedTurns;
-                            let targetsFound = 0;
-                            for (let targetSlot in targetsGotHit) {
-                                const currentEnemy = enemyTurns[targetSlot];
-                                const DEFCheck = currentEnemy.flags[DEF_DOWN];
-        
-                                if (DEFCheck) {targetsFound += 1;}
-                            }
-        
-                            
-                            if (targetsFound) {
-                                if (!sourceTurn.tutorialMissionLCEnergyValues) {
-                                    let ownersSlots = this.ownersSlots;
-                                    let ownerRank = ownersSlots[sourceTurn.name];
-                                    let lcNameRef = "Before the Tutorial Mission Starts";
-                                    let lcPathing = lightcones[lcNameRef].params;
-                                    sourceTurn.tutorialMissionLCEnergyValues = lcPathing[ownerRank-1];
-                                }
-        
-                                //only ONE regen happens, no matter how many def reduced targets there were
-                                const energyToRegen = sourceTurn.tutorialMissionLCEnergyValues[1];
-                                updateEnergy(battleData,energyToRegen,sourceTurn,false,"Before the Tutorial Mission Starts");
-                            }
-                        },
-                        "target": "enemy",
-                        "isPersonal": true,
-                        "listenerName": "Before the Tutorial Mission Starts energy controller",
-                    },
-                ]
-            },
-        ],
-        "buffNames": {},
-    },
     "Patience Is All You Need": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
@@ -4650,7 +4587,209 @@ const turnLogicLightcones = {
             "buff3": "Cornered (LC)",
         },
     },
+    "Never Forget Her Flame": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        currentTurn.lcNeverForgetFlameReady = true;
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Never Forget Her Flame listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+                            const sourceTurn = generalInfo.sourceTurn;
+
+                            sourceTurn.lcNeverForgetFlameReady = true;
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Never Forget Her Flame ult start listener",
+                    },
+                ]
+            },
+            {
+                "trigger": "WaveStart",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    const namedTurns = battleData.nameBasedTurns;
+
+                    let firstOwnerTurn = null;
+                    for (let ownerSlot in ownersSlots) {
+                        const currentOwner = namedTurns[ownerSlot];
+                        firstOwnerTurn = currentOwner;
+
+
+                        if (!currentOwner.lcNeverForgetFlameBREAKMULTISHEET) {
+                            let lcNameRef = "Never Forget Her Flame";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let ownerRank = ownersSlots[currentOwner.name];
+                            let rankParams = lcPathing[ownerRank-1];
+        
+                            let buffName2 = turnLogicLightcones[lcNameRef].buffNames.buff2;
+        
+                            currentOwner.lcNeverForgetFlameBREAKMULTISHEET = {
+                                "stats": [DamageBreakBonus],
+                                [DamageBreakBonus]: rankParams[1],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": buffName2,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+                            
+                        }
+
+                        break;
+                    }
+                    const buffSheet = firstOwnerTurn.lcNeverForgetFlameBREAKMULTISHEET;
+                    updateBuff(battleData,firstOwnerTurn,buffSheet);
+
+                    let battleStarter = superGlobal.getStartingAttacker(battleData);
+                    if (!battleStarter || battleStarter.properName === firstOwnerTurn) {
+                        const allyPositions = battleData.allyPositions;
+
+                        let highestBreak = -Infinity;
+                        let highestAlly = null;
+                        for (let ally of allyPositions) {
+                            if (ally.properName === firstOwnerTurn.properName) {continue;}
+                            const breakCheck = ally.statTable[DamageBreak];
+                            if (breakCheck > highestBreak) {
+                                highestBreak = breakCheck;
+                                highestAlly = ally;
+                            }
+                        }
+
+                        if (highestAlly) {
+                            updateBuff(battleData,highestAlly,buffSheet);
+                        }
+                    }
+                    else {
+                        updateBuff(battleData,battleStarter,buffSheet);
+                    }
+                },
+                "target": "self",
+                "priority": -80,
+                "listenerName": "Never Forget Her Flame - battlestart break multi buff",
+            },
+            {
+                "trigger": "WeaknessApplied",
+                condition(battleData,generalInfo) {
+                    // poke("WeaknessApplied",battleData,{sourceTurn,currentReference},sourceTurn);
+
+                    const oldBuffSheet = generalInfo.currentReference;
+                    const nameslot = oldBuffSheet.sourceOwner;
+                    const nameTurnSlot = battleData.nameIndex[nameslot];
+
+                    let ownersSlots = this.ownersSlots;
+                    const ownerRank = ownersSlots[nameTurnSlot];
+                    if (!ownerRank) {return;}
+
+                    const fullTurn = battleData.nameBasedTurns[nameTurnSlot];
+
+                    if (fullTurn.lcNeverForgetFlameReady) {
+                        fullTurn.lcNeverForgetFlameReady = false;
+                        updateSkillPoints(battleData,1,fullTurn,false,"Never Forget Her Flame")
+                    }
+                },
+                "target": "enemy",
+                "listenerName": "Never Forget Her Flame weakness application controller",
+            },
+        ],
+        "buffNames": {
+            "buff2": "Immolation [LC]",
+        },
+    },
         //4star
+    "Before the Tutorial Mission Starts": {//REDONE
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Before the Tutorial Mission Starts listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            const targetsGotHit = generalInfo.targetsGotHit;
+                            const enemyTurns = battleData.enemyBasedTurns;
+                            let targetsFound = 0;
+                            for (let targetSlot in targetsGotHit) {
+                                const currentEnemy = enemyTurns[targetSlot];
+                                const DEFCheck = currentEnemy.flags[DEF_DOWN];
+        
+                                if (DEFCheck) {targetsFound += 1;}
+                            }
+        
+                            
+                            if (targetsFound) {
+                                if (!sourceTurn.tutorialMissionLCEnergyValues) {
+                                    let ownersSlots = this.ownersSlots;
+                                    let ownerRank = ownersSlots[sourceTurn.name];
+                                    let lcNameRef = "Before the Tutorial Mission Starts";
+                                    let lcPathing = lightcones[lcNameRef].params;
+                                    sourceTurn.tutorialMissionLCEnergyValues = lcPathing[ownerRank-1];
+                                }
+        
+                                //only ONE regen happens, no matter how many def reduced targets there were
+                                const energyToRegen = sourceTurn.tutorialMissionLCEnergyValues[1];
+                                updateEnergy(battleData,energyToRegen,sourceTurn,false,"Before the Tutorial Mission Starts");
+                            }
+                        },
+                        "target": "enemy",
+                        "isPersonal": true,
+                        "listenerName": "Before the Tutorial Mission Starts energy controller",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {},
+    },
     "Resolution Shines As Pearls of Sweat": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
@@ -16152,6 +16291,8 @@ const turnLogicRelics = {
                         for (let owner of ownerRef) {
                             let charSlot = owner.slot;
                             let currentTurn = namedTurns[charSlot];
+
+                            currentTurn.relicKalpagniReady = true;
 
                             addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn);
                             addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn);

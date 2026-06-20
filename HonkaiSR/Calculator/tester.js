@@ -3221,7 +3221,7 @@ const customMenu = {
                 "TechniqueStart": "Tech.",
                 "MemoSkillStart": "Skill",
                 "SummonOnFieldAdjustment": "",
-                "BattleStartWeakness": "Weakness",
+                "BattleStartWeakness": "Toughness",
             }
             if (basicMiniAction[currentLogType] || basicMiniAction[currentLogType] === "") {
                 let characterRef = characters[actionNameSource];
@@ -4665,7 +4665,7 @@ const userTriggers = {
                         if (typeOfValue === "number") {valueAdjusted = valueActual.toLocaleString();}
                         else {valueAdjusted = valueActual;}
 
-                        if (entry.isCharacterSlot && valueActual) {valueAdjusted = battleData.nameBasedTurns[valueActual].properName;}
+                        if (entry.isCharacterSlot) {valueAdjusted = battleData.nameBasedTurns[valueActual]?.properName ?? "No Entity Found";}
 
                         return valueAdjusted;
                     }
@@ -4728,14 +4728,19 @@ const userTriggers = {
                                 }
                                 else if (entry.customDisplay) {
                                     const customDisplay = entry.customDisplay;
+
                                     if (customDisplay === "marks") {
                                         const markMax = entry.markMax ?? (requiresIndex ? requiredIndexValue : null);
                                         let marksStringer = "";
                                         const markType = entry.customDisplayType;
 
-                                        const baseFillColor = specialEnergyData[entry.innerMarkColor]?.energyColor1 ?? entry.innerMarkColor
+                                        const baseFillColor = specialEnergyData[entry.innerMarkColor]?.energyColor1 ?? entry.innerMarkColor;
+
+                                        const fillScale = entry.fillScale;
+                                        const emptyScale = entry.emptyScale;
                                         for (let i=1;i<=markMax;i++) {
                                             const isFilled = valueAdjusted >= i;
+                                            const isAlt = i % 2 === 0;
                                             // marksStringer += `<div class="customEnergyBodyMarksCIRCLE" style="background: ${isFilled ? entry.innerMarkColor : "transparent"};"></div>`
                                             const markFillColor = isFilled ? baseFillColor : "transparent";
 
@@ -4743,7 +4748,8 @@ const userTriggers = {
                                                 // marksStringer += `<div class="customEnergyBodyMarksCIRCLE"
                                                 // style="background: radial-gradient(circle at center,${markFillColor} 60%,transparent 100%); box-shadow: 0px 0px 8px ${markFillColor};"></div>`
 
-                                                marksStringer += `<img src="/HonkaiSR/${isFilled ? entry.imageFilled : entry.imageEmpty}" class="customEnergyBodyMarksIMAGEIcon"/>`
+                                                const imageScale = (isFilled ? fillScale : emptyScale) ?? 1;
+                                                marksStringer += `<img src="/HonkaiSR/${isFilled ? (isAlt ? (entry.imageFilledAlt ?? entry.imageFilled) : entry.imageFilled) : entry.imageEmpty}" class="customEnergyBodyMarksIMAGEIcon" style="scale: ${imageScale};"/>`
                                             }
                                             else if (markType === "circle") {
                                                 marksStringer += `<div class="customEnergyBodyMarksCIRCLE"
@@ -4753,15 +4759,24 @@ const userTriggers = {
                                                 marksStringer += `<div class="customEnergyBodyMarksDIAMOND"
                                                 style="background: ${markFillColor}; box-shadow: 0px 0px 8px ${markFillColor};"></div>`
                                             }
+                                            
 
                                             // customEnergyBodyMarksCIRCLE
+                                        }
+                                        if (markType === "number") {
+                                            marksStringer += `${valueAdjusted} / ${markMax} ${entry.valueName}`;
+                                        }
+                                        if (markType === "entity") {
+                                            marksStringer += valueAdjusted;
                                         }
 
                                         const isOnAtAll = valueAdjusted > 0 ? 100 : 0;
                                         customValuesString += `<div class="customEnergyBodyMarksBar">
                                             ${entry.showProgressIconAnyways ? `<div class="customEnergyBodyMarksCIRCLEPROGRESS"
                                                     style="background:conic-gradient(${baseFillColor} 0 ${isOnAtAll}%,#3333337c ${isOnAtAll}% 100%);">
-                                                    <img src="/HonkaiSR/${entry.progressIcon}" class="customEnergyBodyMarksCIRCLEPROGRESSIcon" onclick="customMenu.createCharacterStatScreenBattleLogged(${logIndex},true)"/>
+                                                    <div class="customEnergyBodyMarksCIRCLEPROGRESSIconBOX">
+                                                        <img src="/HonkaiSR/${entry.progressIcon}" class="customEnergyBodyMarksCIRCLEPROGRESSIcon" onclick="customMenu.createCharacterStatScreenBattleLogged(${logIndex},true)"/>
+                                                    </div>
                                                 </div>` : ""}
                                             ${marksStringer}
                                         </div>`
@@ -4777,7 +4792,9 @@ const userTriggers = {
                                             customValuesString += `<div class="customEnergyBodyPROGRESSBar">
                                                 <div class="customEnergyBodyMarksCIRCLEPROGRESS"
                                                     style="background:conic-gradient(${markFillColor} 0 ${fillProgress}%,#3333337c ${fillProgress}% 100%);">
-                                                    <img src="/HonkaiSR/${entry.progressIcon}" class="customEnergyBodyMarksCIRCLEPROGRESSIcon" onclick="customMenu.createCharacterStatScreenBattleLogged(${logIndex},true)"/>
+                                                    <div class="customEnergyBodyMarksCIRCLEPROGRESSIconBOX">
+                                                        <img src="/HonkaiSR/${entry.progressIcon}" class="customEnergyBodyMarksCIRCLEPROGRESSIcon" onclick="customMenu.createCharacterStatScreenBattleLogged(${logIndex},true)"/>
+                                                    </div>
                                                 </div>
                                                 ${valueAdjusted} / ${markMax} ${entry.valueName}
                                             </div>`
@@ -5859,10 +5876,6 @@ const userTriggers = {
         battleSettings.useTechniquesChar2 = useTechniquesChar2;
         battleSettings.useTechniquesChar3 = useTechniquesChar3;
         battleSettings.useTechniquesChar4 = useTechniquesChar4;
-
-
-        const useStartToughness = readSelection("queriesUseStartToughness").checked;
-        battleSettings.useStartToughness = useStartToughness;
 
 
 

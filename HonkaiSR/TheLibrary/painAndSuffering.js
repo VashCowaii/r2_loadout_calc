@@ -9696,6 +9696,25 @@ const megaParsingFuckeryPain = {
         //     </div>
         // `;
     },
+    "Set Current Turn-Action Entity"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            // "passed",
+            // "failed"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Set Current Turn-Action Entity");
+
+
+        return `
+            <div class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                <div class="rotationConditionOperatorHeaderCondition">${parseRef.name}</div>
+            </div>
+            <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
+        </div>
+        `;
+    },
     "Target Chess Base"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",

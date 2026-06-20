@@ -89,7 +89,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1487905304\">StageSpecialAbility_20412061_InBattle_Weakness_Fire</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "STAT_AttachWeakness"
+            "WEAKNESS_IMPLANT"
           ],
           "stackData": [
             "MDF_PropertyValue"
@@ -285,7 +285,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__808836798\">StageSpecialAbility_20412061_InBattle_Weakness_Thunder</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "STAT_AttachWeakness"
+            "WEAKNESS_IMPLANT"
           ],
           "stackData": [
             "MDF_PropertyValue"
@@ -391,7 +391,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1351694549\">StageSpecialAbility_20412061_InBattle_Weakness_Ice</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "STAT_AttachWeakness"
+            "WEAKNESS_IMPLANT"
           ],
           "stackData": [
             "MDF_PropertyValue"
@@ -505,7 +505,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__591807962\">StageSpecialAbility_20412061_InBattle_Weakness_Wind</a>",
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
-            "STAT_AttachWeakness"
+            "WEAKNESS_IMPLANT"
           ],
           "stackData": [
             "MDF_PropertyValue"

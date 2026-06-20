@@ -734,7 +734,6 @@ const sim = {
 
         battleData.cyclesMax = battleSettings.cyclesToRun + 1;
         battleData.techniquesAllowed = battleSettings.useTechniques;
-        battleData.battleStartWeaknessReduction = battleSettings.useStartToughness;
 
         battleData.wavesToRun = battleSettings.totalWaves;
         battleData.wavesCompleted = 0;
@@ -787,11 +786,12 @@ const sim = {
         poke("StartBattleEnterCombat",battleData,null,null);
 
         logToBattle(battleData,{logType: "WaveStart",AV:battleData.sumAV,waveID: 1});
-        poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1},null);
-        if (!battleData.attackTechniqueUsed && battleData.battleStartWeaknessReduction) {
-            turnLogic.Universal.skillFunctions.battleStartMatchingWeakness(battleData);
-            // poke("StartBattle",battleData,{});
+        if (!battleData.attackTechniqueUsed && battleData.techniquesAllowed) {
+            const firstTurn = battleData.nameBasedTurns.char1;
+            battleData.combatStarterSlot = firstTurn.name;
         }
+        poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1},null);
+        
         if (battleData.followUpQueue.length) {sim.clearFollowUpAttackQueue(battleData);}//some techniques can trigger stack-based FUA's like archer's charges, so gotta call that here
         const turnWrapper = sim.turnWrapper;
         const turnWrapperEnemy = sim.turnWrapperEnemy;

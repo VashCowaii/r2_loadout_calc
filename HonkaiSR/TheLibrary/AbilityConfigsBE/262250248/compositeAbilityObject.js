@@ -589,7 +589,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-44392521\">BoxingGym_Break_OneMoreWeak</a>",
           "stackType": "Replace",
           "modifierFlags": [
-            "STAT_AttachWeakness"
+            "WEAKNESS_IMPLANT"
           ],
           "execute": [
             {

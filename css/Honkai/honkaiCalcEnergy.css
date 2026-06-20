@@ -197,13 +197,22 @@
     margin-left: 5px;
 }
 
-.customEnergyBodyMarksCIRCLEPROGRESSIcon {
+.customEnergyBodyMarksCIRCLEPROGRESSIconBOX {
     height: 80%;
     width:  80%;
     object-fit: contain;
     scale: 1;
     background-color: black;
     border-radius: 50%;
+    overflow: hidden;
+}
+.customEnergyBodyMarksCIRCLEPROGRESSIcon {
+    height: 100%;
+    width:  100%;
+    object-fit: contain;
+    scale: 1.35;
+    /* background-color: black; */
+    /* border-radius: 50%; */
 }
 
 .customEnergyMargin, .customEnergyBodyMarksBar, .customEnergyBodyPROGRESSBar {
@@ -221,6 +230,7 @@
     padding: 5px;
     padding-left: 10px;
     height: 25px;
+    max-height: 25px;
     white-space: normal;
     position: relative;
 

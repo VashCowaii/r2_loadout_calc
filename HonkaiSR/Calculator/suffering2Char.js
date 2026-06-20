@@ -180,22 +180,23 @@ const battleActions = {
         const isShield = currentReference.isShield;
         const isDOT = currentReference.isDOT;
         const isDebuff = currentReference.isDebuff;
+        const isImplant = currentReference.isImplant;
 
         if (isShield) {
             getShieldValue(battleData,sourceTurn,currentReference,buffSheet,shieldSource);
         }
 
         if (!buffExisted) {//if it doesn't exist at all yet and we're applying, then make it
-            const newCheck = didntExistAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,ignoreDebuffPokes,silent,oldShield);
+            const newCheck = didntExistAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,isImplant,ignoreDebuffPokes,silent,oldShield);
             changeStats = newCheck.changeStats;
             timesToApply = newCheck.timesToApply;
         }
         else {
-            if (!isDebuff && !isShield && (currentReference.maxStacks === 1 || (currentReference.maxStacks === currentReference.currentStacks && buffSheet.currentStacks > 0))) {
+            if (!isDebuff && !isImplant && !isShield && (currentReference.maxStacks === 1 || (currentReference.maxStacks === currentReference.currentStacks && buffSheet.currentStacks > 0))) {
                 if (!silent && battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BuffApply", buffName, applicationType: "Renew", isShield,oldShield,newShield:currentReference.shieldRemaining,shieldCap:currentReference.shieldCap, name:sourceTurn.properName, source: buffSheet.source, sourceOwner: buffSheet.sourceOwner, enemyRealName: sourceTurn.isEnemy ? sourceTurn.enemyRealName : null,AV: battleData.sumAV, stacks: currentReference.currentStacks});}
                 return;
             }
-            const existsCheck = buffAlreadyExistsAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,ignoreDebuffPokes,silent,oldShield);
+            const existsCheck = buffAlreadyExistsAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,isImplant,ignoreDebuffPokes,silent,oldShield);
             if (existsCheck) {
                 changeStats = existsCheck.changeStats;
                 timesToApply = existsCheck.timesToApply;
@@ -208,7 +209,7 @@ const battleActions = {
     },
     updateBuffBatchTargets(battleData,sourceTurnArray,buffSheet,silent,shieldSource,ignoreDebuffPokes,ignoreFamilyPokes,turnOverride) {
         // const buffName = buffSheet.buffName;
-        const {buffName,isShield,isDOT,isDebuff,maxStacks} = buffSheet;
+        const {buffName,isShield,isDOT,isDebuff,isImplant,maxStacks} = buffSheet;
 
         const isBatchDebuff = !ignoreDebuffPokes && isDebuff;
         const ignoreSinglePokes = ignoreDebuffPokes || isBatchDebuff;
@@ -245,16 +246,16 @@ const battleActions = {
             // const maxStacks = currentReference.maxStacks;
             // const currentStacks = currentReference.currentStacks;
             if (!buffExisted) {//if it doesn't exist at all yet and we're applying, then make it
-                const newCheck = didntExistAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,ignoreSinglePokes,silent,oldShield);
+                const newCheck = didntExistAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,isImplant,ignoreSinglePokes,silent,oldShield);
                 changeStats = newCheck.changeStats;
                 timesToApply = newCheck.timesToApply;
             }
             else {
-                if (!isDebuff && !isShield && (maxStacks === 1 || maxStacks === currentReference.currentStacks)) {
+                if (!isDebuff && !isImplant && !isShield && (maxStacks === 1 || maxStacks === currentReference.currentStacks)) {
                     if (!silent && battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BuffApply", buffName, applicationType: "Renew", isShield,oldShield,newShield:currentReference.shieldRemaining,shieldCap:currentReference.shieldCap, name:sourceTurn.properName, source: buffSheet.source, sourceOwner: buffSheet.sourceOwner, enemyRealName: sourceTurn.isEnemy ? sourceTurn.enemyRealName : null,AV: battleData.sumAV, stacks: currentReference.currentStacks});}
                     continue;
                 }
-                const existsCheck = buffAlreadyExistsAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,ignoreSinglePokes,silent,oldShield);
+                const existsCheck = buffAlreadyExistsAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,isImplant,ignoreSinglePokes,silent,oldShield);
                 if (existsCheck) {
                     changeStats = existsCheck.changeStats;
                     timesToApply = existsCheck.timesToApply;
@@ -268,7 +269,7 @@ const battleActions = {
 
         if (isBatchDebuff) {poke("DebuffApplied",battleData,{sourceTurn: sourceTurnArray, currentReference: buffSheet},null);}
     },
-    buffDidntExistAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,ignoreDebuffPokes,silent,oldShield) {
+    buffDidntExistAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,isImplant,ignoreDebuffPokes,silent,oldShield) {
         // const maxStacks = currentReference.maxStacks;
         // const currentStacks = currentReference.currentStacks;
         // const buffName = currentReference.buffName;
@@ -306,6 +307,7 @@ const battleActions = {
                 activeTable[buffName] = currentReference;
             }
         }
+        if (isImplant) {poke("WeaknessApplied",battleData,{sourceTurn,currentReference},sourceTurn);}
         if (isDebuff) {
             sourceTurn.debuffCounter += 1;
             if (!ignoreDebuffPokes) {poke("DebuffApplied",battleData,{sourceTurn,currentReference},sourceTurn);}
@@ -343,7 +345,7 @@ const battleActions = {
 
         return {changeStats,timesToApply}
     },
-    buffAlreadyExistsAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,ignoreDebuffPokes,silent,oldShield) {
+    buffAlreadyExistsAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,isImplant,ignoreDebuffPokes,silent,oldShield) {
         const log = battleData.isLoggyLogger;
         const buffName = currentReference.buffName;
         const currentStacks = currentReference.currentStacks;
@@ -354,6 +356,7 @@ const battleActions = {
         // console.log(buffSheet.source,buffSheet.sourceOwner)
         // console.log(currentReference.source,currentReference.sourceOwner)
         
+        if (isImplant) {poke("WeaknessApplied",battleData,{sourceTurn,currentReference},sourceTurn);}
         if (isDebuff) {
             if (!ignoreDebuffPokes) {poke("DebuffApplied",battleData,{sourceTurn,currentReference},sourceTurn);}
             
@@ -1764,6 +1767,7 @@ const battleActions = {
 
         let sumDMG = pullBreakDMGMulti(cacheTagValues,targetCache,compositeCacheTag,statTable,targetStats,targetStatsSourceBased,tagSpecific,actionTags,actionTablesTarget);
 
+        isBroken = isBroken ? 1 : 0.9;
         let DMGTotalEndBreak = baseBreak * sumDMG * totalMulti * isBroken;//baseBreak
 
         //TODO: circle back later and add handling if this somehow can be used on allies to hurt them instead
@@ -1804,9 +1808,6 @@ const battleActions = {
                 enemyData: JSON.stringify(targetTurn),
                 AV:battleData.sumAV
             }
-            // console.log(DMGTotalEndBreak,sumRES)
-            // logToBattle(battleData,{logType: isEnemy ? "HitAlly" : "HitEnemy", hitType: hitDisplay[hitType], target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,enemyIsBroken});
-            // if (logger) {logToBattle(battleData,{logType: "BrokeEnemyWeakness", hitType: hitDisplay[hitType], target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead});}
 
             logToBattle(battleData,{logType: "HitEnemy", hitType: "Break", target: targetTurn.properName, source:charName, hitData:hitDataBreak,enemyIsDead});
         }
@@ -1884,7 +1885,8 @@ const battleActions = {
 
         //TODO: later in the future if some unnamed character happens to have an ability that lets us superbreak when not broken, we do need to factor
         //for the isBroken dr multi.
-        let DMGTotalEndBreak = baseBreak * sumDMG * totalMulti;//baseBreak
+        const isBroken = targetTurn.isBroken ? 1 : 0.9;
+        let DMGTotalEndBreak = baseBreak * sumDMG * totalMulti * isBroken;//baseBreak
 
         //TODO: circle back later and add handling if this somehow can be used on allies to hurt them instead
         let hurtResult = targetTurn.isEnemy ? hurtEnemyHealth(battleData,sourceTurn,targetTurn,DMGTotalEndBreak,isEnemy) : null;
@@ -1913,7 +1915,7 @@ const battleActions = {
                 DMGTotalEndBreak,
                 DMGTotalAVG:DMGTotalEndBreak,DMGOverkill,element,
 
-                isBroken:targetTurn.isBroken,
+                isBroken:isBroken,
                 sumDMG,
                 ...pulledComposite,
 
@@ -1946,14 +1948,24 @@ const battleActions = {
         const DMGTags = generalInfo.ATKObject.DMGTags;
 
         const superBreakage = battleActions.getSuperBreakDamage;
-        for (let enemySlot in targetsGotHit) {
-            const currentEnemy = enemyBasedTurns[enemySlot];
-            if (currentEnemy.isDead) {continue;}
 
-            const accumulatedToughness = overBreakTotals[currentEnemy.properName];
-            if (!accumulatedToughness) {continue;}
+        const isHitBased = generalInfo.superReduction;
+        if (isHitBased) {
+            const currentEnemy = generalInfo.targetTurn;
+            if (currentEnemy.isDead) {return;}
+
+            const accumulatedToughness = isHitBased;
             superBreakage(battleData,element,sourceTurn,currentEnemy,DMGTags,superBreakArray[0],superBreakArray[1],accumulatedToughness,generalInfo);
-
+        }
+        else {
+            for (let enemySlot in targetsGotHit) {
+                const currentEnemy = enemyBasedTurns[enemySlot];
+                if (currentEnemy.isDead) {continue;}
+    
+                const accumulatedToughness = overBreakTotals[currentEnemy.properName];
+                if (!accumulatedToughness) {continue;}
+                superBreakage(battleData,element,sourceTurn,currentEnemy,DMGTags,superBreakArray[0],superBreakArray[1],accumulatedToughness,generalInfo);
+            }
         }
     },
     hitWrapperTEST(battleData,targetTurn,atkEntry,targetObject,hitType,generalInfo,isLastHit,isBounce,distributedTargetCount) {
@@ -1972,7 +1984,6 @@ const battleActions = {
         // } = targetTurn;
 
         const enemyStats = targetTurn.statTable;
-        const targetName = targetTurn.properName;
         const targetCache = targetTurn.cacheTagValues;
         const targetSlot = targetTurn.name;
         const actionTablesTarget = targetTurn.tagSpecific;
@@ -1989,7 +2000,7 @@ const battleActions = {
         
         const turnMerge = {targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,isBounce,instanceTag,hitType};
         
-        poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,slot,instanceTag,ATKObject},sourceTurn);
+        poke("AllyDMGStart",battleData,turnMerge,sourceTurn);
         poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge,sourceTurn);
 
         const targetStatsSourceBased = targetTurn[properName];
@@ -2060,7 +2071,6 @@ const battleActions = {
         let DMGTotalAVG = DMGTotalEnd * (1 + totalCritDMG * totalCritRate);
 
         let shieldOverflow = 0;
-        let shieldsWereBroken = false;
         const logger = battleData.isLoggyLogger;
         // if (isEnemy) {console.log(DMGTotalAVG)}
 
@@ -2076,7 +2086,6 @@ const battleActions = {
 
                 currentShield.shieldRemaining -= DMGTotalAVG;
                 if (currentShield.shieldRemaining < 0) {
-                    shieldsWereBroken = true;
                     shieldsBroken += 1;
                     const overkillShield = currentShield.shieldRemaining * -1;
 
@@ -2100,7 +2109,7 @@ const battleActions = {
                 // currentReference.shieldCap = totalShieldCap;
             }
             shieldOverflow = smallestOverflow;
-            if (logger) {poke("ShieldsWereBroken",battleData,{battleData,sourceTurn:targetTurn},targetTurn);}
+            if (shieldOverflow) {poke("ShieldsWereBroken",battleData,{battleData,sourceTurn:targetTurn},targetTurn);}
         }
         else {shieldOverflow = DMGTotalAVG;}
 
@@ -2163,54 +2172,7 @@ const battleActions = {
             }
         }
 
-
-        //TOUGHNESS MATH
-        let enemyIsBroken = false;
-        let targetWasAlreadyBroken = false;
-        let toughnessBase = 0;
-        let rawReduction = 0
-        let overBreak = 0;
-        
-        overBreakTotals[targetName] ??= 0;
-        if (!isEnemy) {
-            rawReduction = currentSplit * getToughnessSum(battleData,targetObject.toughness ?? 0,sourceTurn,targetTurn);
-            // if (ATKObject.toughnessCondition) {toughnessBase = ATKObject.toughnessCondition(rawReduction,sourceTurn,targetTurn)}
-            toughnessBase = ATKObject.toughnessCondition ? ATKObject.toughnessCondition(rawReduction,sourceTurn,targetTurn) : rawReduction;
-
-            targetWasAlreadyBroken = targetTurn.isBroken;
-            // toughnessBase = currentSplit * rawReduction;
-
-            let enemyWeakness = enemyStats[weaknessKeys[element]];
-            // console.log(targetTurn.currentToughness,targetTurn.maxToughness,currentSplit,toughnessBase)
-            if (toughnessBase && (enemyWeakness || ATKObject.allToughness)) {//only reduce toughness when the attack even has a stat to do so, but also only when matching weakness or forced all-type reductions are in effect.
-                
-                if (!targetTurn.isBroken) {
-                    targetTurn.currentToughness -= toughnessBase;
-                    let enemyHasNoToughness = targetTurn.currentToughness <= 0;
-                    // let notAlreadyBrokenCheck = enemyHasNoToughness;// && !targetTurn.isBroken;
-                    if (enemyHasNoToughness) {
-                        enemyIsBroken = true;
-                        targetTurn.isBroken = true;
-                        overBreak = targetTurn.currentToughness * -1;
-                        // overBreakRef[targetName] += overBreak;
-                        // overBreakRef[targetName] += toughnessBase;
-                    }
-                    if (targetTurn.currentToughness < 0) {targetTurn.currentToughness = 0;}
-
-                    if (sourceTurn.accumulateAllToughness) {
-                        overBreakTotals[targetName] += rawReduction;
-                    }
-                }
-                else {//if the target IS broken already
-                    overBreakTotals[targetName] += rawReduction;
-                }
-            }
-            else if (targetTurn.isBroken || sourceTurn.accumulateAllToughness) {
-                overBreakTotals[targetName] += rawReduction;
-            }
-            else {toughnessBase = 0;}//for log purposes we completely nullify the tracked toughness of the attack so we don't fuck up displays later
-        }
-
+        let toughnessComposite = isEnemy ? null : dealToughnessDMG(battleData,sourceTurn,enemyIsDead,targetTurn,currentSplit,targetObject.toughness,overBreakTotals,ATKObject,element,generalInfo,slot);
 
         if (logger) {
             const hitDisplay = {
@@ -2234,15 +2196,15 @@ const battleActions = {
                 ...pulledComposite,
 
                 isBroken,
-                rawReduction,toughnessBase,targetWasAlreadyBroken,
-                // breakerDMG,
-                overBreak,
-                enemyIsDead,enemyIsBroken,
+                ...toughnessComposite,
+                // rawReduction,toughnessBase,targetWasAlreadyBroken,
+
+                enemyIsDead,
                 playerData: JSON.stringify(sourceTurn),
                 enemyData: JSON.stringify(targetTurn),
                 AV:battleData.sumAV
             };
-            logToBattle(battleData,{logType: isEnemy ? "HitAlly" : "HitEnemy", hitType: hitDisplay[hitType], target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,enemyIsBroken,position:targetTurn.isEnemy ? battleData.enemyPositions.indexOf(targetTurn) : null,positionCount:targetTurn.isEnemy ? battleData.enemyPositions.length : null});
+            logToBattle(battleData,{logType: isEnemy ? "HitAlly" : "HitEnemy", hitType: hitDisplay[hitType], target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,enemyIsBroken: toughnessComposite?.enemyIsBroken,position:targetTurn.isEnemy ? battleData.enemyPositions.indexOf(targetTurn) : null,positionCount:targetTurn.isEnemy ? battleData.enemyPositions.length : null});
         }
 
         if (enemyIsDead) {
@@ -2254,18 +2216,88 @@ const battleActions = {
             }
         }
 
-        if (!isEnemy) {
-            if (enemyIsBroken) {
-                let breakObject = {//isBroken tied to the enemy here is important bc we need to trigger break dmg REGARDLESS of if this attack actually broke them or not bc break dmg happens when broken anyways, regardless of who did it or what element.
-                    toughnessBase,
-                    element,
-                    rawReduction
-                }
-                // console.log(DMGTags)
-                poke("BrokeEnemyWeaknessStart",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo},sourceTurn);
-                battleActions.getBreakDamage(battleData,breakObject,sourceTurn,targetTurn,DMGTags,isBroken,generalInfo);
-                generalInfo.enemiesThatBroke.push(targetTurn);
+        turnMerge.DMGTotalEnd = DMGTotalEnd;
+        turnMerge.DMGTotalCrit = DMGTotalCrit;
+        turnMerge.DMGTotalAVG = DMGTotalAVG;
+        poke("AllyDMGEnd",battleData,turnMerge,sourceTurn);
+        if (isEnemy) {
+            poke("HitAllyEnd",battleData,turnMerge,sourceTurn);
+        }
+        else {
+            turnMerge.superReduction = toughnessComposite.wouldHaveSuperToughness ? toughnessComposite.rawReduction : 0;
+            // console.log(turnMerge.superReduction,targetBroken,canAccumulateAnyways,battleData.sumAV)
+            poke("HitEnemyEnd",battleData,turnMerge,sourceTurn);
+        }
 
+        if (battleData.attackIsActive) {battleData.addedDMGTallyAttack += DMGTotalAVG;}
+
+        totals.totalAVGDMG += DMGTotalAVG;
+        totals.totalOverkill += DMGOverkill;
+    },
+    dealToughnessDMG(battleData,sourceTurn,enemyIsDead,targetTurn,currentSplit,toughnessPre,overBreakTotals,ATKObject,element,generalInfo,slot,fixed,alone) {
+        if (enemyIsDead) {return;}
+        //TOUGHNESS MATH
+        let enemyIsBroken = false;
+        let targetWasAlreadyBroken = false;
+        let overBreak = 0;
+
+        const targetBroken = targetTurn.isBroken;
+        const canAccumulateAnyways = targetTurn.flags[FORCE_SUPERBREAK];
+        const targetName = targetTurn.properName;
+        
+        overBreakTotals[targetName] ??= 0;
+        toughnessPre = toughnessPre ?? 0;
+        let rawReduction = currentSplit * (fixed ? toughnessPre : getToughnessSum(battleData,toughnessPre,sourceTurn,targetTurn));
+        let toughnessBase = ATKObject.toughnessCondition ? ATKObject.toughnessCondition(rawReduction,sourceTurn,targetTurn) : rawReduction;
+
+        targetWasAlreadyBroken = targetBroken;
+        let enemyWeakness = targetTurn.statTable[weaknessKeys[element]];
+        let metWeaknessOrAll = enemyWeakness || ATKObject.allToughness;
+        // console.log(targetTurn.currentToughness,targetTurn.maxToughness,currentSplit,toughnessBase)
+        if (toughnessBase && metWeaknessOrAll) {//only reduce toughness when the attack even has a stat to do so, but also only when matching weakness or forced all-type reductions are in effect.
+            //if the target is not yet broken
+            if (!targetBroken) {
+                targetTurn.currentToughness -= toughnessBase;
+                let enemyHasNoToughness = targetTurn.currentToughness <= 0;
+                // let notAlreadyBrokenCheck = enemyHasNoToughness;// && !targetTurn.isBroken;
+                if (enemyHasNoToughness) {
+                    enemyIsBroken = true;
+                    targetTurn.isBroken = true;
+                    overBreak = targetTurn.currentToughness * -1;
+                    // overBreakRef[targetName] += overBreak;
+                    // overBreakRef[targetName] += toughnessBase;
+                }
+                if (targetTurn.currentToughness < 0) {targetTurn.currentToughness = 0;}
+
+                if (canAccumulateAnyways) {
+                    overBreakTotals[targetName] += rawReduction;
+                }
+            }
+            else {//if the target IS broken already
+                overBreakTotals[targetName] += rawReduction;
+            }
+        }
+        else if (targetBroken || (metWeaknessOrAll && canAccumulateAnyways)) {
+            overBreakTotals[targetName] += rawReduction;
+        }
+        else {toughnessBase = 0;}//for log purposes we completely nullify the tracked toughness of the attack so we don't fuck up displays later
+
+        const wouldHaveSuperToughness = targetBroken || (canAccumulateAnyways && metWeaknessOrAll);
+        let toughnessComposite = {sourceTurn,targetTurn,enemyIsBroken,targetWasAlreadyBroken,overBreak,targetBroken,canAccumulateAnyways,rawReduction,toughnessBase,element,slot,wouldHaveSuperToughness};
+
+        if (enemyIsBroken) {
+            // let breakObject = {//isBroken tied to the enemy here is important bc we need to trigger break dmg REGARDLESS of if this attack actually broke them or not bc break dmg happens when broken anyways, regardless of who did it or what element.
+            //     toughnessBase,
+            //     element,
+            //     rawReduction
+            // }
+            let breakObject = toughnessComposite;
+
+            // console.log(DMGTags)
+            poke("BrokeEnemyWeaknessStart",battleData,generalInfo,sourceTurn);
+            getBreakDamage(battleData,breakObject,sourceTurn,targetTurn,null,targetBroken,generalInfo);
+
+            if (true) {
                 const isDOT = battleActions.breakDOTisDOT[element];
                 if (isDOT) {
                     if (!sourceTurn.breakDOTSheet) {
@@ -2302,23 +2334,58 @@ const battleActions = {
                     const dotSheet = sourceTurn.breakDOTSheet;
                     updateBuff(battleData,targetTurn,dotSheet);
                 }
-                // if (logger) {logToBattle(battleData,{logType: "BrokeEnemyWeakness", target: targetTurn.properName, source:sourceTurn.properName,enemyIsDead});}
-                poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo},sourceTurn);
+                poke("BrokeEnemyWeakness",battleData,breakObject,sourceTurn);
 
-                if (!targetTurn.isDead) {actionAdvance(-0.25,targetTurn,battleData,"Break: Action Delay",true);}
+                actionAdvance(-0.25,targetTurn,battleData,"Break: Action Delay",true);
             }
         }
 
+        if (alone && battleData.isLoggyLogger) {
+            const hitDisplay = {
+                "primary": "Single Target",
+                "blast": "Blast",
+                "blastAOE": "Blast AOE",
+                "all": "AoE"
+            };
+            
+            const hitData = {
+                scalar: "",
+                bonusDMGCustom: null,
+                bonudDMGCustomRefName: null,
+                bonusDMGMulti: null,
+                bonusDMGScalar: null,
+                currentSplit: 1,
+                currentMulti: 0,
+                multiOf: 0,
+                // secondaryScalar,secondaryScalarSum,secondaryScalarMulti,
+                tags:["Toughness"],
+                // actionTags: [...actionTags],
+                element,
+                finalMulti: 1,
 
-        poke("AllyDMGEnd",battleData,{targetTurn,sourceTurn,slot,DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,instanceTag},sourceTurn);
-        poke(isEnemy ? "HitAllyEnd" : "HitEnemyEnd",battleData,turnMerge,sourceTurn);
-        if (battleData.attackIsActive) {battleData.addedDMGTallyAttack += DMGTotalAVG;}
+                DMGTotalEnd: 0,
+                DMGTotalCrit: 0,
+                DMGTotalAVG: 0,
+                DMGOverkill: 0,
+                shieldOverflow: 0,
 
-        // else if (hit.enemyIsBroken) {enemiesThatBroke.push(targetTurn);}
-        // totalsRef.totalAVGDMG += DMGTotalAVG;
-        // totalsRef.totalOverkill += DMGOverkill;
-        totals.totalAVGDMG += DMGTotalAVG;
-        totals.totalOverkill += DMGOverkill;
+                sumDMG: 0,
+                // ...pulledComposite,
+
+                isBroken: false,
+                ...toughnessComposite,
+                // rawReduction,toughnessBase,targetWasAlreadyBroken,
+
+                enemyIsDead: false,
+                playerData: JSON.stringify(sourceTurn),
+                enemyData: JSON.stringify(targetTurn),
+                AV:battleData.sumAV
+            };
+            logToBattle(battleData,{logType:"HitEnemy", hitType: "Toughness", target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead:false,enemyIsBroken: toughnessComposite?.enemyIsBroken,position:targetTurn.isEnemy ? battleData.enemyPositions.indexOf(targetTurn) : null,positionCount:targetTurn.isEnemy ? battleData.enemyPositions.length : null});
+        
+        }
+
+        return toughnessComposite
     },
     elationHitWrapperTEST(battleData,targetTurn,atkEntry,targetObject,hitType,generalInfo,isLastHit,isBounce,distributedTargetCount) {
         const {sourceTurn,ATKObject,element,overBreakTotals,targetsGotHit,overKillTotals,totals} = generalInfo;
@@ -2349,7 +2416,7 @@ const battleActions = {
         
         const turnMerge = {targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,isBounce,instanceTag};
         
-        poke("AllyDMGStart",battleData,{targetTurn,sourceTurn,slot,instanceTag,ATKObject},sourceTurn);
+        poke("AllyDMGStart",battleData,turnMerge,sourceTurn);
         poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge,sourceTurn);
         const targetStatsSourceBased = targetTurn[properName];
 
@@ -2425,7 +2492,6 @@ const battleActions = {
         let DMGTotalCrit = DMGTotalEnd * (1 + totalCritDMG);
         let DMGTotalAVG = DMGTotalEnd * (1 + totalCritDMG * totalCritRate);
         let shieldOverflow = 0;
-        let shieldsWereBroken = false;
         const logger = battleData.isLoggyLogger;
         // if (isEnemy) {console.log(DMGTotalAVG)}
 
@@ -2441,7 +2507,6 @@ const battleActions = {
 
                 currentShield.shieldRemaining -= DMGTotalAVG;
                 if (currentShield.shieldRemaining < 0) {
-                    shieldsWereBroken = true;
                     shieldsBroken += 1;
                     const overkillShield = currentShield.shieldRemaining * -1;
 
@@ -2465,7 +2530,7 @@ const battleActions = {
                 // currentReference.shieldCap = totalShieldCap;
             }
             shieldOverflow = smallestOverflow;
-            if (logger) {poke("ShieldsWereBroken",battleData,{battleData,sourceTurn:targetTurn},targetTurn);}
+            if (shieldOverflow) {poke("ShieldsWereBroken",battleData,{battleData,sourceTurn:targetTurn},targetTurn);}
         }
         else {shieldOverflow = DMGTotalAVG;}
 
@@ -2528,54 +2593,7 @@ const battleActions = {
             }
         }
 
-
-        //TOUGHNESS MATH
-        let enemyIsBroken = false;
-        let targetWasAlreadyBroken = false;
-        let toughnessBase = 0;
-        let rawReduction = 0
-        let overBreak = 0;
-        
-        overBreakTotals[targetName] ??= 0;
-        if (!isEnemy) {
-            rawReduction = currentSplit * getToughnessSum(battleData,targetObject.toughness ?? 0,sourceTurn,targetTurn);
-            // if (ATKObject.toughnessCondition) {toughnessBase = ATKObject.toughnessCondition(rawReduction,sourceTurn,targetTurn)}
-            toughnessBase = ATKObject.toughnessCondition ? ATKObject.toughnessCondition(rawReduction,sourceTurn,targetTurn) : rawReduction;
-
-            targetWasAlreadyBroken = targetTurn.isBroken;
-            // toughnessBase = currentSplit * rawReduction;
-
-            let enemyWeakness = enemyStats[weaknessKeys[element]];
-            // console.log(targetTurn.currentToughness,targetTurn.maxToughness,currentSplit,toughnessBase)
-            if (toughnessBase && (enemyWeakness || ATKObject.allToughness)) {//only reduce toughness when the attack even has a stat to do so, but also only when matching weakness or forced all-type reductions are in effect.
-                
-                if (!targetTurn.isBroken) {
-                    targetTurn.currentToughness -= toughnessBase;
-                    let enemyHasNoToughness = targetTurn.currentToughness <= 0;
-                    // let notAlreadyBrokenCheck = enemyHasNoToughness;// && !targetTurn.isBroken;
-                    if (enemyHasNoToughness) {
-                        enemyIsBroken = true;
-                        targetTurn.isBroken = true;
-                        overBreak = targetTurn.currentToughness * -1;
-                        // overBreakRef[targetName] += overBreak;
-                        // overBreakRef[targetName] += toughnessBase;
-                    }
-                    if (targetTurn.currentToughness < 0) {targetTurn.currentToughness = 0;}
-
-                    if (sourceTurn.accumulateAllToughness) {
-                        overBreakTotals[targetName] += rawReduction;
-                    }
-                }
-                else {//if the target IS broken already
-                    overBreakTotals[targetName] += rawReduction;
-                }
-            }
-            else if (targetTurn.isBroken || sourceTurn.accumulateAllToughness) {
-                overBreakTotals[targetName] += rawReduction;
-            }
-            else {toughnessBase = 0;}//for log purposes we completely nullify the tracked toughness of the attack so we don't fuck up displays later
-        }
-
+        let toughnessComposite = isEnemy ? null : dealToughnessDMG(battleData,sourceTurn,enemyIsDead,targetTurn,currentSplit,targetObject.toughness,overBreakTotals,ATKObject,element,generalInfo,slot);
 
         if (logger) {
             const hitDisplay = {
@@ -2598,15 +2616,14 @@ const battleActions = {
                 sumDMG,
                 ...pulledComposite,
                 isBroken,
-                rawReduction,toughnessBase,targetWasAlreadyBroken,
-                // breakerDMG,
-                overBreak,
-                enemyIsDead,enemyIsBroken,
+                ...toughnessComposite,
+                
+                enemyIsDead,
                 playerData: JSON.stringify(sourceTurn),
                 enemyData: JSON.stringify(targetTurn),
                 AV:battleData.sumAV
             };
-            logToBattle(battleData,{logType: isEnemy ? "HitAlly" : "HitEnemy", hitType: "Elation", target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,enemyIsBroken,position:targetTurn.isEnemy ? battleData.enemyPositions.indexOf(targetTurn) : null,positionCount:targetTurn.isEnemy ? battleData.enemyPositions.length : null});
+            logToBattle(battleData,{logType: isEnemy ? "HitAlly" : "HitEnemy", hitType: "Elation", target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,enemyIsBroken: toughnessComposite.enemyIsBroken,position:targetTurn.isEnemy ? battleData.enemyPositions.indexOf(targetTurn) : null,positionCount:targetTurn.isEnemy ? battleData.enemyPositions.length : null});
         }
 
         if (enemyIsDead) {
@@ -2618,215 +2635,76 @@ const battleActions = {
             }
         }
 
-        if (!isEnemy) {
-            if (enemyIsBroken) {
-                let breakObject = {//isBroken tied to the enemy here is important bc we need to trigger break dmg REGARDLESS of if this attack actually broke them or not bc break dmg happens when broken anyways, regardless of who did it or what element.
-                    toughnessBase,
-                    element,
-                    rawReduction
-                }
-                // console.log(DMGTags)
-                poke("BrokeEnemyWeaknessStart",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo},sourceTurn);
-                battleActions.getBreakDamage(battleData,breakObject,sourceTurn,targetTurn,DMGTags,isBroken,generalInfo);
-                generalInfo.enemiesThatBroke.push(targetTurn);
-
-                const isDOT = battleActions.breakDOTisDOT[element];
-                if (isDOT) {
-                    if (!sourceTurn.breakDOTSheet) {
-                        sourceTurn.breakDOTSheet = {
-                            "stats": null,
-                            "source": "Break",
-                            "sourceOwner": sourceTurn.properName,
-                            "buffName": battleActions.breakDOTNames[element],
-                            "durationInTurn": battleActions.breakDOTDuration[element] + 1,
-                            "duration": battleActions.breakDOTDuration[element],
-                            "AVApplied": 0,
-                            "maxStacks": element === "Wind" ? 5 : 1,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": "EndTurn",
-                            "isDOT": isDOT,
-                            "isDebuff": true,
-                            "element": element,
-                            isBreakDOT: true,
-                            multiplier: battleActions.breakDOTElementMultipliers[element],
-                            slot: "BreakDOT",
-                            ownerIsAllied: true,
-                            ownerSlot: sourceTurn.name,
-                            avgChanceApplied: 1,
-                            baseChance: 1.5,
-                        }
-                    }
-                    const dotSheet = sourceTurn.breakDOTSheet;
-                    updateBuff(battleData,targetTurn,dotSheet);
-                }
-                // if (logger) {logToBattle(battleData,{logType: "BrokeEnemyWeakness", target: targetTurn.properName, source:sourceTurn.properName,enemyIsDead});}
-                poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo},sourceTurn);
-
-                if (!targetTurn.isDead) {actionAdvance(-0.25,targetTurn,battleData,"Break: Action Delay",true);}
-            }
+        turnMerge.DMGTotalEnd = DMGTotalEnd;
+        turnMerge.DMGTotalCrit = DMGTotalCrit;
+        turnMerge.DMGTotalAVG = DMGTotalAVG;
+        poke("AllyDMGEnd",battleData,turnMerge,sourceTurn);
+        if (isEnemy) {
+            poke("HitAllyEnd",battleData,turnMerge,sourceTurn);
+        }
+        else {
+            turnMerge.superReduction = toughnessComposite.wouldHaveSuperToughness ? toughnessComposite.rawReduction : 0;
+            // console.log(turnMerge.superReduction,targetBroken,canAccumulateAnyways,battleData.sumAV)
+            poke("HitEnemyEnd",battleData,turnMerge,sourceTurn);
         }
 
 
-        poke("AllyDMGEnd",battleData,{targetTurn,sourceTurn,slot,DMGTotalEnd,DMGTotalCrit,DMGTotalAVG,instanceTag},sourceTurn);
-        poke(isEnemy ? "HitAllyEnd" : "HitEnemyEnd",battleData,turnMerge,sourceTurn);
         if (battleData.attackIsActive) {battleData.addedDMGTallyAttack += DMGTotalAVG;}
 
-        // else if (hit.enemyIsBroken) {enemiesThatBroke.push(targetTurn);}
-        // totalsRef.totalAVGDMG += DMGTotalAVG;
-        // totalsRef.totalOverkill += DMGOverkill;
         totals.totalAVGDMG += DMGTotalAVG;
         totals.totalOverkill += DMGOverkill;
     },
-    hitWrapperBattleStart(battleData,targetTurn,hitType,generalInfo,forceEntryWeakness) {
+    hitWrapperBattleStart(battleData,targetTurn,hitType,generalInfo,overBreakTotals,forceEntryWeakness) {
         const sourceTurn = generalInfo.sourceTurn;
         const ATKObject = generalInfo.ATKObject;
-        const tags = ATKObject.DMGTags;
         const element = generalInfo.element;
-
-
-        let playerStats = sourceTurn.statTable;
-        let enemyStats = targetTurn.statTable;
-        let isEnemy = false;
-
-
-
-        // battleTotal.Actions
-        // let ATKObject = {
-        //     multipliers: {
-        //         primary: values[0],
-        //         blast: null,
-        //         all: null,
-        //     },
-        //     scalar: "ATKFinal",
-        //     DMGTags: ["All","Fire"]
-            // isEnemy: true
-            // slot: skillRef.slot
-        // }
-        
         let slot = ATKObject.slot;
-        const turnMerge = {targetTurn,sourceTurn,slot,ATKObject};
         
+        let toughnessComposite = dealToughnessDMG(battleData,sourceTurn,false,targetTurn,1,10,overBreakTotals,ATKObject,element,generalInfo,slot);
 
-
-
-        //TOUGHNESS MATH
-        let enemyIsBroken = false;
-        let toughnessBase = 0;
-        let rawReduction = 0
-        let overBreak = 0;
-        let breakerDMG = 0;
-        // const overBreakRef = generalInfo.overBreakTotals;
-        // const targetName = targetTurn.properName;
-        // overBreakRef[targetName] ??= 0;
-        if (!isEnemy) {
-            rawReduction = battleActions.getToughnessSum(battleData,10,sourceTurn,targetTurn);
-            // if (ATKObject.toughnessCondition) {toughnessBase = ATKObject.toughnessCondition(rawReduction,sourceTurn,targetTurn)}
-            toughnessBase = ATKObject.toughnessCondition ? ATKObject.toughnessCondition(rawReduction,sourceTurn,targetTurn) : rawReduction;
-            // toughnessBase = currentSplit * rawReduction;
-
-            let enemyWeakness = enemyStats[weaknessKeys[element]];
-            // console.log(targetTurn.currentToughness,targetTurn.maxToughness,currentSplit,toughnessBase)
-            if (toughnessBase && (enemyWeakness || ATKObject.allToughness || forceEntryWeakness)) {//only reduce toughness when the attack even has a stat to do so, but also only when matching weakness or forced all-type reductions are in effect.
-                
-                // console.log(targetTurn.currentToughness)
-                if (!targetTurn.isBroken) {
-                    targetTurn.currentToughness -= toughnessBase;
-                    // console.log(targetTurn.currentToughness)
-                    let enemyHasNoToughness = targetTurn.currentToughness <= 0;
-                    // let notAlreadyBrokenCheck = enemyHasNoToughness;// && !targetTurn.isBroken;
-                    if (enemyHasNoToughness) {
-                        enemyIsBroken = true;
-                        targetTurn.isBroken = true;
-                        overBreak = targetTurn.currentToughness * -1;
-                    }
-                    if (targetTurn.currentToughness < 0) {targetTurn.currentToughness = 0;}
-                }
-                // else {//if the target IS broken already
-                //     overBreakRef[targetName] += rawReduction;
-                // }
-            }
-            else if (targetTurn.isBroken) {
-                // overBreakRef[targetName] += rawReduction;
-            }
-            else {toughnessBase = 0;}//for log purposes we completely nullify the tracked toughness of the attack so we don't fuck up displays later
-        }
-
-        const logger = battleData.isLoggyLogger;
-        if (logger) {
+        if (battleData.isLoggyLogger) {
             const hitDisplay = {
                 "primary": "Single Target",
                 "blast": "Blast",
+                "blastAOE": "Blast AOE",
                 "all": "AoE"
             };
-            // console.log(sourceTurn.statTable)
+            
             const hitData = {
                 scalar: "",
-                currentSplit:0,currentMulti:0,multiOf:0,
-                tags: [...tags],
-                actionTags: [],
-                element:0,finalMulti:0,
-                DMGTotalEnd:0,DMGTotalCrit:0,DMGTotalAVG:0,DMGOverkill:0,shieldOverflow:0,
-                strongestShieldRef:null,
-                // breakerDMG,
-                overBreak,
-                enemyIsDead:false,enemyIsBroken,toughnessBase,
-                playerData: logger ? JSON.stringify(sourceTurn) : null,
-                enemyData: logger ? JSON.stringify(targetTurn) : null,
+                bonusDMGCustom: null,
+                bonudDMGCustomRefName: null,
+                bonusDMGMulti: null,
+                bonusDMGScalar: null,
+                currentSplit: 1,
+                currentMulti: 0,
+                multiOf: 0,
+                // secondaryScalar,secondaryScalarSum,secondaryScalarMulti,
+                tags:["BattleStart Toughness"],
+                // actionTags: [...actionTags],
+                element,
+                finalMulti: 1,
+
+                DMGTotalEnd: 0,
+                DMGTotalCrit: 0,
+                DMGTotalAVG: 0,
+                DMGOverkill: 0,
+                shieldOverflow: 0,
+
+                sumDMG: 0,
+                // ...pulledComposite,
+
+                isBroken: false,
+                ...toughnessComposite,
+                // rawReduction,toughnessBase,targetWasAlreadyBroken,
+
+                enemyIsDead: false,
+                playerData: JSON.stringify(sourceTurn),
+                enemyData: JSON.stringify(targetTurn),
                 AV:battleData.sumAV
             };
-            logToBattle(battleData,{logType: isEnemy ? "HitAlly" : "HitEnemy", hitType: hitType, target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead:false,enemyIsBroken});
+            logToBattle(battleData,{logType:"HitEnemy", hitType: "Toughness", target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead:false,enemyIsBroken: toughnessComposite?.enemyIsBroken,position:targetTurn.isEnemy ? battleData.enemyPositions.indexOf(targetTurn) : null,positionCount:targetTurn.isEnemy ? battleData.enemyPositions.length : null});
         }
-
-        if (enemyIsBroken) {
-            let breakObject = {//isBroken tied to the enemy here is important bc we need to trigger break dmg REGARDLESS of if this attack actually broke them or not bc break dmg happens when broken anyways, regardless of who did it or what element.
-                toughnessBase,
-                element,
-                rawReduction
-            }
-            breakerDMG = battleActions.getBreakDamage(battleData,breakObject,sourceTurn,targetTurn,tags,isBroken,generalInfo);
-            // generalInfo.enemiesThatBroke.push(targetTurn);
-            poke("BrokeEnemyWeaknessStart",battleData,{targetTurn,sourceTurn,slot,targetsGotHit:null,ATKObject,breakObject,tags,isBroken,generalInfo},sourceTurn);
-            const isDOT = battleActions.breakDOTisDOT[element];
-            if (isDOT) {
-                if (!sourceTurn.breakDOTSheet) {
-                    sourceTurn.breakDOTSheet = {
-                        "stats": null,
-                        "source": "Break",
-                        "sourceOwner": sourceTurn.properName,
-                        "buffName": battleActions.breakDOTNames[element],
-                        "durationInTurn": battleActions.breakDOTDuration[element] + 1,
-                        "duration": battleActions.breakDOTDuration[element],
-                        "AVApplied": 0,
-                        "maxStacks": element === "Wind" ? 5 : 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": "EndTurn",
-                        "isDOT": isDOT,
-                        "isDebuff": true,
-                        "element": element,
-                        isBreakDOT: true,
-                        multiplier: battleActions.breakDOTElementMultipliers[element],
-                        // scalar: "ATK",
-                        slot: "BreakDOT",
-                        ownerIsAllied: true,
-                        ownerSlot: sourceTurn.name,
-                        avgChanceApplied: 1,
-                        baseChance: 1.5,
-                    }
-                }
-                const dotSheet = sourceTurn.breakDOTSheet;
-                updateBuff(battleData,targetTurn,dotSheet);
-            }
-            // if (logger) {logToBattle(battleData,{logType: "BrokeEnemyWeakness", target: targetTurn.properName, source:sourceTurn.properName,enemyIsDead});}
-            poke("BrokeEnemyWeakness",battleData,turnMerge,sourceTurn);
-        }
-
-        // const totalsRef = generalInfo.totals;
-        // totalsRef.totalBreakDMG += breakerDMG;
-        // totalsRef.totalBreakSuperDMG += breakerDMGSuper;
-
-        //TODO: circle back here and get the character tracking enabled for the correct slots on the battlestart break if it happens
     },
     additionalDMGHitWrapper(battleData,charName,sourceTurn,targetTurn,ATKObject,element,enemiesAttackedThisAction,sourceString) {
         // let playerStats = sourceTurn.statTable;
@@ -3538,13 +3416,9 @@ const battleActions = {
 
         let totalHits = 0;
         const totals = {totalAVGDMG: 0,totalBreakDMG: 0,totalBreakSuperDMG: 0,totalOverkill: 0,totalHits: 0};
-        if (chainedAttackRef) {
-            chainedAttackRef.enemiesThatBroke = [];
-        }
         const targetsGotHit = chainedAttackRef ? chainedAttackRef.targetsGotHit : {};
         const overBreakTotals = chainedAttackRef ? chainedAttackRef.overBreakTotals : {};
         const overKillTotals = chainedAttackRef ? chainedAttackRef.overKillTotals : {};
-        let enemiesThatBroke = chainedAttackRef ? chainedAttackRef.enemiesThatBroke : [];
 
         let isEnemy = sourceTurn.isEnemy;
 
@@ -3553,7 +3427,7 @@ const battleActions = {
 
         let hitWrap = isElation ? elationHitWrapper : hitWrapper;
 
-        const generalInfo = chainedAttackRef ?? {sourceTurn,targetsGotHit,enemiesThatBroke,dmgSlot,ATKObject,element,totals,overBreakTotals,overKillTotals,primaryTargetArray,subTargetArray};
+        const generalInfo = chainedAttackRef ?? {sourceTurn,targetsGotHit,dmgSlot,ATKObject,element,totals,overBreakTotals,overKillTotals,primaryTargetArray,subTargetArray};
         generalInfo.ATKObject = ATKObject;
         if (stateIsStart) {poke("AttackStart",battleData,generalInfo,sourceTurn);}
 
@@ -4660,9 +4534,17 @@ const battleActions = {
             const listenerToInject = logicRef.techniqueListener2;
             listenerToInject.ownerTurn = ownerTurn;
             addListenerWithPriority(battleData,listenerToInject,listenerToInject.trigger);
+            if (techCount > 2) {
+                const listenerToInject = logicRef.techniqueListener3;
+                listenerToInject.ownerTurn = ownerTurn;
+                addListenerWithPriority(battleData,listenerToInject,listenerToInject.trigger);
+            }
         }
 
-        if (isAttack) {battleData.attackTechniqueUsed = true;}
+        if (isAttack) {
+            battleData.attackTechniqueUsed = true;
+            battleData.combatStarterSlot = ownerTurn.name;
+        }
         if (isDimension) {battleData.dimensionTechniqueUsed = true;}
     },
     getUniqueGearBuffName(battleData,sourceTurn,logicRef,buffNameTag) {
@@ -4717,6 +4599,9 @@ const generalSuperBreak = battleActions.generalSuperBreakHandling;
 const attackWrapper = battleActions.attackWrapperTEST;
 const elationHitWrapper = battleActions.elationHitWrapperTEST;
 const hitWrapper = battleActions.hitWrapperTEST;
+const dealToughnessDMG = battleActions.dealToughnessDMG;
+const getBreakDamage = battleActions.getBreakDamage;
+const hitWrapperBattleStart = battleActions.hitWrapperBattleStart;
 
 
 const turnLogic = {
@@ -4725,13 +4610,13 @@ const turnLogic = {
         logic(thisTurn,battleData) {},
         "skillFunctions": {
             battleStartMatchingWeakness(battleData) {
-                const firstTurn = battleData.nameBasedTurns.char1;
+                const firstTurn = battleData.nameBasedTurns[battleData.combatStarterSlot];
                 const firstTurnElement = firstTurn.element;
                 const enemyPositions = battleData.enemyPositions;
 
                 const scalar = "HP";//does not actually matter, break doesn't reference a scalar
                 const tags = ["All",firstTurnElement];
-                const actionTags = ["Attack"];
+                const actionTags = ["All"];
                 const keyShortcut = basicShorthand.makeKeysArray;
                 const realDMGKeys = keyShortcut(dmgKeys,tags);
                 const realPENKeys = keyShortcut(resPENKeys,tags);
@@ -4752,22 +4637,41 @@ const turnLogic = {
                     actionTags
                 }
 
-                enemiesThatBroke = [];
-                const generalInfo = {sourceTurn:firstTurn,enemiesThatBroke,hitType:"BattleStart",ATKObject,element:firstTurnElement};
+                const overBreakTotals = {};
+                const targetsGotHit = {};
+                const generalInfo = {sourceTurn:firstTurn,hitType:"BattleStart",ATKObject,element:firstTurnElement,overBreakTotals,targetsGotHit};
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "BattleStartWeakness", name:firstTurn.properName, target:"enemy", isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:"BattleStartWeakness"});}
                 for (let enemy of enemyPositions) {
                     if (!enemy.statTable[greatTableIndex[`Weakness${firstTurnElement}`]] && !battleData.forceEntryWeakness) {continue;}
 
                     //battleData.forceEntryWeakness right now only anaxa can force this to be true
-
-                    battleActions.hitWrapperBattleStart(battleData,enemy,"BattleStart",generalInfo,battleData.forceEntryWeakness)
-                                    // hitWrapperBattleStart(battleData,targetTurn,hitType,generalInfo)
+                    //technically acheron? also firefly I think
+                    hitWrapperBattleStart(battleData,enemy,"BattleStart",generalInfo,overBreakTotals,battleData.forceEntryWeakness);
+                    targetsGotHit[enemy.name] = 1;
                 }
 
+                battleData.battleStartOverBreakTotals = generalInfo;
+                // console.log(battleData.battleStartOverBreakTotals)
             }
         },
         "listeners": [
+            {
+                "trigger": "WaveStart",
+                condition(battleData,generalInfo) {
+                    // const currentWave = generalInfo.currentWave;
+                    // if (currentWave != 1) {return;}
+                    
+                    if (!battleData.attackTechniqueUsed && battleData.techniquesAllowed) {
+                        const battleStartMatchingWeakness = this.battleStartMatchingWeakness ??= turnLogic.Universal.skillFunctions.battleStartMatchingWeakness
+                        battleStartMatchingWeakness(battleData);
+                    }
+                },
+                "target": "self",
+                "priority": -70,
+                "listenerName": "BattleStart toughness reduction",
+                "ownerTurn": {},
+            },
             {
                 "trigger": "UpdateStatSPD",//SPD stat change
                 condition(battleData,generalInfo) {
@@ -10119,6 +10023,7 @@ const turnLogic = {
                             ],
                             [finalIndex]: 1,
                             [finalResIndex]: 0,
+                            "flags": [WEAKNESS_IMPLANT],
                             "source": "Skill",
                             "sourceOwner": characterName,
                             "buffName": buffNames[`implant${elementKey}`],
@@ -11065,25 +10970,8 @@ const turnLogic = {
                 const valuesRef = sourceTurn.battleValues;
                 const oldValue = valuesRef.fuaStacks;
                 //stack debt is accrued when the FUA is queued, as such we not only need to reduce the stack count, but also clear associated stack debt so the correct amount of FUA's can be queued
-                valuesRef.fuaStacks -= 1;
+                poke("KafkaChargeGained",battleData,{pointsGained: -1,sourceString:"FUA Launched"});
                 valuesRef.fuaStackDebt -= 1;
-                if (battleData.isLoggyLogger) {
-                    logToBattle(battleData,{logType: "GenericAction", source:"FUA Launched", bodyText: `Kafka FUA Stacks ${valuesRef.fuaStacks + 1} --> ${valuesRef.fuaStacks}/2`});
-
-                    // if (valuesRef.fuaStacks > oldValue) {
-                    //     sourceTurn.kafkaFUAStackSum ??= 0;
-                    //     sourceTurn.kafkaFUAStackSum += valuesRef.fuaStacks - oldValue;
-                        
-                    // }
-                    logToBattle(battleData,{
-                        logType: "SUMMARY:SUM",
-                        function: "kafkaFUAStackSum",
-                        AV: battleData.sumAV,
-                        currentValue: valuesRef.fuaStacks,
-                        currentSumValue: sourceTurn.kafkaFUAStackSum,
-                        currentAddedValue: valuesRef.fuaStacks - oldValue
-                    });
-                }
 
                 if (!ATKObjects.kafkaFUAATKOBJECT) {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].passive;
@@ -11211,26 +11099,7 @@ const turnLogic = {
                 kafkaUltimateDetonate(battleData,sourceTurn,chainedAttackRef,values[4])
                 attackWrapper(battleData,skillRef,sourceTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
 
-                const valuesRef = sourceTurn.battleValues;
-                const oldValue = valuesRef.fuaStacks;
-                valuesRef.fuaStacks = Math.min(2,valuesRef.fuaStacks + 1);
-                if (battleData.isLoggyLogger) {
-                    logToBattle(battleData,{logType: "GenericAction", source:"Thorns - Post ult stack gain", bodyText: `Kafka FUA Stacks ${oldValue} --> ${valuesRef.fuaStacks}/2`});
-
-                    if (valuesRef.fuaStacks > oldValue) {
-                        sourceTurn.kafkaFUAStackSum ??= 0;
-                        sourceTurn.kafkaFUAStackSum += valuesRef.fuaStacks - oldValue;
-                        
-                    }
-                    logToBattle(battleData,{
-                        logType: "SUMMARY:SUM",
-                        function: "kafkaFUAStackSum",
-                        AV: battleData.sumAV,
-                        currentValue: valuesRef.fuaStacks,
-                        currentSumValue: sourceTurn.kafkaFUAStackSum,
-                        currentAddedValue: valuesRef.fuaStacks - oldValue
-                    });
-                }
+                poke("KafkaChargeGained",battleData,{pointsGained: 1,sourceString:"Thorns - Post ult stack gain"});
 
                 sourceTurn.ultyQueued = false;
             },
@@ -11396,36 +11265,16 @@ const turnLogic = {
                         "trigger": "ActionEndPhase",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
-                            let sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.properName != ownerTurn.properName) {return;}
-        
-                            const valuesRef = ownerTurn.battleValues;
-                            const oldValue = valuesRef.fuaStacks;
-                            valuesRef.fuaStacks = Math.min(2,valuesRef.fuaStacks + 1);
-                            if (battleData.isLoggyLogger) {
-                                logToBattle(battleData,{logType: "GenericAction", source:"Kafka Turn-End stack gain", bodyText: `Kafka FUA Stacks ${oldValue} --> ${valuesRef.fuaStacks}/2`});
-        
-                                if (valuesRef.fuaStacks > oldValue) {
-                                    ownerTurn.kafkaFUAStackSum ??= 0;
-                                    ownerTurn.kafkaFUAStackSum += valuesRef.fuaStacks - oldValue;
-                                    
-                                }
-                                logToBattle(battleData,{
-                                    logType: "SUMMARY:SUM",
-                                    function: "kafkaFUAStackSum",
-                                    AV: battleData.sumAV,
-                                    currentValue: valuesRef.fuaStacks,
-                                    currentSumValue: ownerTurn.kafkaFUAStackSum,
-                                    currentAddedValue: valuesRef.fuaStacks - oldValue
-                                });
-                            }
+
+                            poke("KafkaChargeGained",battleData,{pointsGained: 1,sourceString:"Kafka Turn-End stack gain"});
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Kafka turnend stack gain",
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "AttackEnd",
+                        "trigger": "AttackDMGEnd",
                         condition(battleData,generalInfo) {
                             const sourceTurn = generalInfo.sourceTurn;
                             if (sourceTurn.isEnemy) {return;}
@@ -11434,8 +11283,9 @@ const turnLogic = {
                             const characterName = ownerTurn.properName;
                             
                             const valuesRef = ownerTurn.battleValues;
-                            const debtCheck = (valuesRef.fuaStacks - valuesRef.fuaStackDebt) > 0;
-                            if (sourceTurn.properName != characterName && debtCheck) {//kafka can't proc her own FUA, but also if a FUA is already queued(the debt stacks) and we don't have any spare stacks left, then abort
+                            if (!valuesRef.fuaStacks) {return;}
+                            const debtCheck = valuesRef.fuaStackDebt;
+                            if (sourceTurn.properName != characterName && !debtCheck) {//kafka can't proc her own FUA, but also if a FUA is already queued(the debt stacks) and we don't have any spare stacks left, then abort
                                 // console.log("reached queue")
                                 
                                 const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
@@ -11665,6 +11515,44 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                 ],
+            },
+            {
+                "trigger": "KafkaChargeGained",
+                condition(battleData,generalInfo) {
+                    // poke("KafkaChargeGained",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    const pointsGained = generalInfo.pointsGained;
+                    const valuesRef = ownerTurn.battleValues;
+
+                    const oldValue = valuesRef.fuaStacks;
+                    const maxValue = 2;
+                    valuesRef.fuaStacks = Math.max(0, Math.min(maxValue, oldValue + pointsGained));
+                    const newValue = valuesRef.fuaStacks;
+                    const valueWasDiff = oldValue != newValue;
+
+                    const sourceString = generalInfo.sourceString
+                    if (valueWasDiff && battleData.isLoggyLogger) {
+                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/misc/kafka/Icon1005Passive.png",sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `FUA Charge (Kafka): ${oldValue} --> ${valuesRef.fuaStacks}/${maxValue} [${sourceString}]`});
+                        
+                        if (pointsGained > 0) {
+                            ownerTurn.kafkaFUAStackSum ??= 0;
+                            ownerTurn.kafkaFUAStackSum += valuesRef.fuaStacks - oldValue;
+                            
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "kafkaFUAStackSum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.fuaStacks,
+                            currentSumValue: ownerTurn.kafkaFUAStackSum,
+                            currentAddedValue: valuesRef.fuaStacks - oldValue
+                        });
+                    }
+                },
+                "target": "self",
+                "listenerName": "Kafka FUA Charge Handler",
+                "ownerTurn": {},
             },
             {
                 "trigger": "UltimateReady",
@@ -12020,6 +11908,7 @@ const turnLogic = {
                 }
 
                 updateBuff(battleData,sourceTurn,countdownSheet);
+                sourceTurn.battleValues.hysilensFieldDuration = 3;
                 if (rank >= 2) {
                     const EHRBuff = ATKObjects.fishladyEHRtoDMGSHEET.buffName;
                     const allyPositions = battleData.allyPositions;
@@ -12837,6 +12726,25 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
+                "trigger": "PreActionPhaseEnd",
+                condition(battleData,generalInfo) {
+                    // poke("HealEnd",battleData,turnMerge);
+                    let ownerTurn = this.ownerTurn;
+
+                    if (!ownerTurn.hysilensFieldActive) {
+                        ownerTurn.battleValues.hysilensFieldDuration = 0;
+                    }
+                    else {
+                        const buffName = this.buffName ??= turnLogic[ownerTurn.properName].buffNames.zoneCountdown;
+                        ownerTurn.battleValues.hysilensFieldDuration = ownerTurn.buffsObject[buffName].duration;
+                    }
+                },
+                "target": "self",
+                "isPersonal": true,
+                "listenerName": "Zone - duration increment handler(visual)",
+                "ownerTurn": {},
+            },
+            {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -12898,7 +12806,8 @@ const turnLogic = {
         "buffsBattle": {},
         "buffsBattleTemp": {},
         "characterValues": {
-            "talentDOTCounter": 0
+            "talentDOTCounter": 0,
+            "hysilensFieldDuration": 0,
         },
         "useTechnique": true,
         "techniqueType": "Dimension",
@@ -16558,6 +16467,1237 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    "The Dahlia": {
+        logic(thisTurn,battleData) {
+            let currentSP = battleData.skillPointCurrent;
+            let minimum = currentSP >= 1;
+
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                const skillCall = this.returnSkillCall;
+                skillCall.target = [battleData.primaryTarget];
+                skillCall.subTarget = battleData.blastTargets;
+                return skillCall;
+            }
+
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.dahliaSkill,
+                action: "Skill",
+                points: -1, 
+
+                isAttack: true,
+                isAbility: true,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "SkillStart",
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
+
+            this.returnBasicCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.dahliaBasic,
+                action: "BasicATK",
+                points: 1, 
+
+                isAttack: true,
+                isAbility: true,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "BasicATKStart",
+
+                poolKey: this.abilityTargetPools.BasicATK,
+            })
+            this.returnBasicCall.sourceTurn = thisTurn;
+        },
+        "abilityTargetPools": {
+            "BasicATK": "Enemies (On-Field)",
+            "Skill": "Enemies (On-Field)",
+            "Ultimate": "Enemies (On-Field)",
+            "FUA": "Enemies (On-Field)",
+        },
+        "skillFunctions": {
+            dahliaBasic(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.dahliaBasicREF ??= ATKObjects["Basic ATK"]["Fiddle... Fissured Memory"].variant1;
+
+                if (!ATKObjects.dahliaBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = ATKObjects.dahliaBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Fire"];
+                    const actionTags = ["All","Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.dahliaBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                    }
+                }
+                let ATKObject = ATKObjects.dahliaBasicATKOBJECT;
+
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+            },
+            dahliaSkill(battleData,actionObject,sourceTurn) {
+                const characterName = sourceTurn.properName;
+                const logicRef = turnLogic[characterName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.dahliaSkillREF ??= ATKObjects["Skill"]["Lick... Enkindled Betrayal"].variant1;
+                let values = ATKObjects.dahliaSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                // const rank = sourceTurn.rank;
+                
+                if (!ATKObjects.dahliaSkillATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
+                    // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    const actionTags = ["All","Skill","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    ATKObjects.dahliaSkillATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: values[0],
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                    }
+                }
+                let ATKObject = ATKObjects.dahliaSkillATKOBJECT;
+
+                const applySkillZone = ATKObjects.applySkillZone ??= turnLogic[sourceTurn.properName].skillFunctions.applySkillZone;
+                applySkillZone(battleData,sourceTurn);
+
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+            },
+            applySkillZone(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.dahliaSkillREF ??= ATKObjects["Skill"]["Lick... Enkindled Betrayal"].variant1;
+                let values = ATKObjects.dahliaSkillREFVALUES ??= [//TODO: remove later
+                    1.5,
+                    3,
+                    0.5
+                  ];//battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                
+                if (!ATKObjects.dahliaSkillOWNERSHEET) {
+                    const rank = sourceTurn.rank;
+                    const buffRef = logicRef.buffNames;
+                    ATKObjects.dahliaSkillOWNERSHEET = {
+                        "stats": null,
+                        "source": "Skill",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffRef.skillZoneOwner,
+                        "durationInTurn": 3,
+                        "duration": 3,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "StartTurn",
+                        expireFunction: logicRef.skillFunctions.skillZoneExpired,
+                        expireParam: sourceTurn.name,
+                        "removeOnDeath": true,
+                    }
+                    ATKObjects.dahliaSkillSHEET = {
+                        "stats": [DamageBreakEfficiency],
+                        [DamageBreakEfficiency]: values[2],
+                        "source": "Skill",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffRef.skillZone,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "removeOnDeath": true,
+                    }
+                    ATKObjects.dahliaSkillDebuffSHEET = {
+                        "stats": null,
+                        "flags": [FORCE_SUPERBREAK],
+                        "source": "Skill",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffRef.skillZoneDebuff,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "isDebuff": true,
+                        "expireType": null,
+                        "removeOnDeath": true,
+                    }
+                }
+
+                const ownerSheet = ATKObjects.dahliaSkillOWNERSHEET;
+                const buffSheet = ATKObjects.dahliaSkillSHEET;
+                const debuffSheet = ATKObjects.dahliaSkillDebuffSHEET;
+
+                const countdownName = ownerSheet.buffName;
+                const buffCheck = sourceTurn.buffsObject[countdownName];
+                sourceTurn.battleValues.skillZoneActive = true;
+                sourceTurn.battleValues.skillZoneDuration = 3;
+
+                updateBuff(battleData,sourceTurn,ownerSheet);
+
+                if (!buffCheck) {
+                    //only if numinosity countdown wasn't already on tribbie when the skill started, do we bother with applying the buff to all allies
+                    //since the allied buff doesn't expire unless the countdown does
+                    const allyArray = battleData.allAlliesArray;
+                    updateBuffBatchTargets(battleData,allyArray,buffSheet);
+
+                    const enemyPositions = battleData.enemyPositions;
+                    updateBuffBatchTargets(battleData,enemyPositions,debuffSheet);
+                }
+            },
+            skillZoneExpired(battleData,dahliaSlot) {
+                const dahliaTurn = battleData.nameBasedTurns[dahliaSlot];
+                dahliaTurn.battleValues.skillZoneActive = false;
+                dahliaTurn.battleValues.skillZoneDuration = 0;
+
+                const logicRef = turnLogic[dahliaTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const buffSheet = ATKObjects.dahliaSkillSHEET;
+                const allyArray = battleData.allAlliesArray;
+                removeBuffFromBatch(battleData,allyArray,buffSheet);
+
+                const debuffSheet = ATKObjects.dahliaSkillDebuffSHEET;
+                const enemyPositions = battleData.enemyPositions;
+                removeBuffFromBatch(battleData,enemyPositions,debuffSheet);
+            },
+            dahliaUltimate(battleData,actionObject,sourceTurn) {
+                const characterName = sourceTurn.properName;
+                const logicRef = turnLogic[characterName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.dahliaUltimateREF ??= ATKObjects["Ultimate"]["Wallow... Entombed Ash"].variant1;
+                let values = ATKObjects.dahliaUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                const rank = sourceTurn.rank;
+                
+                if (!ATKObjects.dahliaUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Fire"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    const actionTags = ["All","Ultimate","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    ATKObjects.dahliaUltimateATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        isDistributed: true,
+                    }
+                }
+                let ATKObject = ATKObjects.dahliaUltimateATKOBJECT;
+
+                const debuffSheet = ATKObjects.dahliaUltDebuffSHEET;
+
+                const partnerSlot = sourceTurn.battleValues.otherPartnerSlot;
+                if (partnerSlot) {
+                    const partnerTurn = battleData.nameBasedTurns[partnerSlot];
+                    const partnerElement = partnerTurn.element;
+                    if (partnerElement != "Fire") {
+                        const refIndex = ATKObjects.dahliaUltImplantIndex
+                        const implantIndex = refIndex[partnerElement];
+                        debuffSheet[implantIndex] = 1;
+                        //TODO: at the moment we aren't going to have any handling that allows for dance partner to swap yet
+                        //this is just bc if you're dying then you fuckin suck and that's not optimal anyways so why are you calculating for death
+                        //and as far as I can see at present there is no means to actually change partners without a death involved.
+                    }
+                }
+
+
+
+                const enemyPositions = battleData.enemyPositions;
+                updateBuffBatchTargets(battleData,enemyPositions,debuffSheet);
+
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+
+                sourceTurn.ultyQueued = false;
+            },
+            dahliaFUA(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.dahliaTalentREF ??= ATKObjects.Talent["Who's Afraid of Constance?"].variant1;
+                let values = ATKObjects.dahliaTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+
+                const rank = sourceTurn.rank;
+                if (!ATKObjects.dahliaTalentATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].passive;
+
+                    const scalar = "ATK";
+                    const tags = ["All","Fire"];
+                    const actionTags = ["All","FUA","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.dahliaTalentATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        bounceData: superGlobal.createATKBounceObject({
+                            multi: values[0],
+                            bounceCount: 5 + (rank >= 4 ? 5 : 0),
+                            energy: skillRef.energyRegen,
+                            target: {
+                                "hitRatio": 1,
+                                "energyRatio": 1,
+                                "toughness": 3
+                            },
+                        })
+                    }
+
+                    ATKObjects.dahliaE4FUASHEET = {
+                        "stats": [VulnAll],
+                        [VulnAll]: 0.12,
+                        // "flags": [DEF_DOWN,WEAKNESS_IMPLANT],
+                        "source": "E4",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.e4Vuln,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "isDebuff": true,
+                        "expireType": "EndTurn",
+                        "removeOnDeath": true,
+                    }
+                }
+
+                const ATKObject = ATKObjects.dahliaTalentATKOBJECT;
+                const battleValues = sourceTurn.battleValues;
+
+                //e4
+                if (rank >= 4) {
+                    const enemyPositions = battleData.enemyPositions;
+                    const e4Sheet = ATKObjects.dahliaE4FUASHEET;
+                    updateBuffBatchTargets(battleData,enemyPositions,e4Sheet);
+                }
+
+                battleValues.traceFUACounter += 1;
+                if (battleValues.traceFUACounter === 2) {
+                    updateSkillPoints(battleData,1,sourceTurn,false,"Trace: Lament, Lost Soul");
+                    battleValues.traceFUACounter = 0;
+                }
+
+                //e6
+                if (rank >= 6) {
+                    const partnerTurn = battleData.nameBasedTurns[battleValues.otherPartnerSlot];
+                    actionAdvance(0.20,[sourceTurn,partnerTurn],battleData,"Dahlia E6");
+                }
+
+                battleValues.bounceActive = true;
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                battleValues.bounceActive = false;
+                // if (isEnhanced) {poke("ClaraGainCounterCount",battleData,{pointsGained: -1,sourceString:"Clara Enhanced Counter"});}
+
+                battleValues.fuaIsReady = false;
+                battleValues.fuaIsQueued = false;
+            },
+            backupDancerExpired(battleData,hmcSlot) {
+                const hmcTurn = battleData.nameBasedTurns[hmcSlot];
+                hmcTurn.battleValues.hmcBackupDancerActive = false;
+
+                const logicRef = turnLogic[hmcTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const buffSheet = ATKObjects.hmcBackupDancerBUFFSHEET;
+                const allyArray = battleData.allAlliesArray;
+
+                removeBuffFromBatch(battleData,allyArray,buffSheet);
+
+                poke("HMCGainBackupDancerCount",battleData,{pointsGained: -3,sourceString:"Backup Dancer Expired"});
+            },
+            dahliaTechnique(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.dahliaTechniqueREF ??= ATKObjects.Technique["The Heart Makes the Finest Tomb"].variant1;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target:null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+
+                const applySkillZone = ATKObjects.applySkillZone ??= turnLogic[sourceTurn.properName].skillFunctions.applySkillZone;
+                applySkillZone(battleData,sourceTurn);
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+                    //talent inherents
+                    const ATKObjects = logicRef.ATKObjects;
+                    let skillRef = ATKObjects.dahliaTalentREF ??= ATKObjects.Talent["Who's Afraid of Constance?"].variant1;
+                    let values = ATKObjects.dahliaTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+
+                    if (!ATKObjects.dahliaDancePartnerSHEET) {
+                        
+                        const buffRef = logicRef.buffNames;
+                        ATKObjects.dahliaDancePartnerSHEET = {
+                            "stats": [DamageBreak],
+                            [DamageBreak]: rank >= 6 ? 1.5 : 0,
+                            "source": "Talent",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": buffRef.dancePartner,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "removeOnDeath": false,
+
+                            "buffDisplayIcon": "misc/dahlia/Icon1321Passive.png"
+                        }
+
+                        let skillRef2 = ATKObjects.dahliaUltimateREF ??= ATKObjects["Ultimate"]["Wallow... Entombed Ash"].variant1;
+                        let values2 = ATKObjects.dahliaUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef2,ownerTurn);
+                        ATKObjects.dahliaUltDebuffSHEET = {
+                            "stats": [DEFP,WeaknessFire,WeaknessIce,WeaknessWind,WeaknessLightning,WeaknessImaginary,WeaknessQuantum,WeaknessPhysical],
+                            [DEFP]: -values2[2],
+                            [WeaknessFire]: 1,
+                            [WeaknessIce]: 0,
+                            [WeaknessWind]: 0,
+                            [WeaknessLightning]: 0,
+                            [WeaknessImaginary]: 0,
+                            [WeaknessQuantum]: 0,
+                            [WeaknessPhysical]: 0,
+                            "flags": [DEF_DOWN,WEAKNESS_IMPLANT],
+                            "source": "Ultimate",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": logicRef.buffNames.wilt,
+                            "durationInTurn": 5,
+                            "duration": 4,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "isDebuff": true,
+                            "isImplant": true,
+                            "expireType": "EndTurn",
+                            "removeOnDeath": true,
+                        }
+
+                        ATKObjects.dahliaUltImplantIndex = {
+                            // "Fire": WeaknessFire,
+                            "Ice": WeaknessIce,
+                            "Wind": WeaknessWind,
+                            "Lightning": WeaknessLightning,
+                            "Imaginary": WeaknessImaginary,
+                            "Quantum": WeaknessQuantum,
+                            "Physical": WeaknessPhysical
+                        }
+                    }
+                    ownerTurn.dancePartnerSheet = ATKObjects.dahliaDancePartnerSHEET;
+                    ownerTurn.dahliaWiltSheet = ATKObjects.dahliaUltDebuffSHEET;
+                    ownerTurn.dahliaPassiveDancerBreakMulti = values[4];
+                    ownerTurn.dahliaFUABreakMulti= values[2];
+
+                    //dancer partner superbreak
+                    const listener1 = passiveListeners[0];
+                    const allAlliesArray = battleData.allAlliesArray;
+                    for (let ally of allAlliesArray) {
+                        addListenerWithPriority(battleData,listener1,listener1.trigger,ally,null,ownerTurn);
+                    }
+                    
+                    //enemies attacked by dance partner
+                    const allEnemiesArray = battleData.allEnemiesArray;
+                    const listener2 = passiveListeners[1];
+                    for (let enemy of allEnemiesArray) {
+                        addListenerWithPriority(battleData,listener2,listener2.trigger,enemy,null,ownerTurn);
+                    }
+
+                    //fua hits superbreak
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+
+                    //trace weakness checker spd
+                    const listener4 = passiveListeners[3];
+                    addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+
+                    //implant/attack tracking from allies
+                    const listener5 = passiveListeners[4];
+                    const listener6 = passiveListeners[5];
+                    const listener7 = passiveListeners[6];
+                    for (let ally of allAlliesArray) {
+                        addListenerWithPriority(battleData,listener5,listener5.trigger,ally,null,ownerTurn);
+                        addListenerWithPriority(battleData,listener6,listener6.trigger,ally,null,ownerTurn);
+                        addListenerWithPriority(battleData,listener7,listener7.trigger,ally,null,ownerTurn);
+                    }
+                    const listener8 = passiveListeners[7];
+                    addListenerWithPriority(battleData,listener8,listener8.trigger,ownerTurn);
+                    const listener9 = passiveListeners[8];
+                    addListenerWithPriority(battleData,listener9,listener9.trigger,ownerTurn);
+
+                    //dance partner manager // break trace too
+                    const listener10 = passiveListeners[9];
+                    addListenerWithPriority(battleData,listener10,listener10.trigger,ownerTurn);
+
+                    if (rank >= 2) {
+                        const listener11 = passiveListeners[10];
+                        addListenerWithPriority(battleData,listener11,listener11.trigger,ownerTurn);
+                        const listener12 = passiveListeners[11];
+                        addListenerWithPriority(battleData,listener12,listener12.trigger,ownerTurn);
+                    }
+
+                    if (rank >= 1) {
+                        const listener13 = passiveListeners[12];
+                        for (let ally of allAlliesArray) {
+                            addListenerWithPriority(battleData,listener13,listener13.trigger,ally,null,ownerTurn);
+                        }
+                    }
+
+                    getTechnique(battleData,ownerTurn,logicRef,2,false,true)
+                },
+                "target": "self",
+                "listenerName": "Dahlia Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+                            const providerTurn = this.providerTurn;
+                            const rank = providerTurn.rank;
+                            const isE1 = rank >= 1
+                            if (!sourceTurn.isDahliaPartner && (sourceTurn.isUniqueEvent || !isE1)) {return;}
+                            
+                            const breakMultiFinal = providerTurn.dahliaPassiveDancerBreakMulti;
+
+                            const superBreakArray = this.break1 ??= [1.5,"Dance Partner"];
+                            superBreakArray[0] = breakMultiFinal + (isE1 ? 0.40 : 0);
+                            generalSuperBreak(battleData,sourceTurn,generalInfo,superBreakArray,sourceTurn.element);
+                        },
+                        "target": "self",
+                        "priority": 100,
+                        "isPersonal": true,
+                        "listenerName": "Dahlia - Allies with Dance Partner attacked targets with superbreak ready",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
+                            const battleValues = providerTurn.battleValues;
+                            if (!battleValues.fuaIsReady || battleValues.fuaIsQueued) {return;}
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName === providerTurn.properName) {return;}
+
+                            poke("DahliaQueueFUAAttack",battleData,null,null)
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Dahlia - target attacked by dancer partner(other)",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "HitEnemyEnd",
+                        condition(battleData,generalInfo) {
+                            const ownerTurn = this.ownerTurn;
+                            if (!ownerTurn.battleValues.bounceActive) {return;}
+
+                            
+                            const superReduction = generalInfo.superReduction;
+                            if (!superReduction) {return;}
+
+                            const superBreakArray = this.break1 ??= [1.5,"Dahlia FUA Hits"];
+                            superBreakArray[0] = ownerTurn.dahliaFUABreakMulti;
+                            generalSuperBreak(battleData,ownerTurn,generalInfo,superBreakArray,ownerTurn.element);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Dahlia - FUA hits superbreak",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WeaknessApplied",
+                        condition(battleData,generalInfo) {
+                            // poke("WeaknessApplied",battleData,{sourceTurn,currentReference},sourceTurn);
+                            //despite saying "on an enemy" there is no such check for that
+        
+                            const oldBuffSheet = generalInfo.currentReference;
+                            const nameslot = oldBuffSheet.sourceOwner;
+                            const nameTurnSlot = battleData.nameIndex[nameslot];
+                            const fullTurn = battleData.nameBasedTurns[nameTurnSlot];
+
+                            if (fullTurn.dahliaTrackingImplant && !fullTurn.isUniqueEvent && fullTurn.element === "Fire") {
+                                const sourceTurn = generalInfo.sourceTurn;
+                                sourceTurn.dahliaEnemyImplanted = true;
+                                fullTurn.dahliaTrackingImplantCounter = (fullTurn.dahliaTrackingImplantCounter ?? 0) + 1;
+                            }
+
+                            const buffSheet = this.buffSheet ??= {
+                                "stats": [SPDP],
+                                [SPDP]: 0.30,
+                                "flags": [SPD_UP],
+                                "source": "Trace",
+                                "sourceOwner": this.ownerTurn.properName,
+                                "buffName": turnLogic[this.ownerTurn.properName].buffNames.traceSPD,
+                                "durationInTurn": 3,
+                                "duration": 2,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": "EndTurn",
+                                "removeOnDeath": true,
+                            }
+                            
+                            updateBuff(battleData,fullTurn,buffSheet)
+                        },
+                        "target": "enemy",
+                        "listenerName": "Outgrow the Old, Espouse the New - weakness application listener",
+                    },
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+                            sourceTurn.dahliaTrackingImplant = true;
+                        },
+                        "target": "enemy",
+                        "isPersonal": true,
+                        "listenerName": "Dahlia ally action started",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+                            sourceTurn.dahliaTrackingImplant = false;
+                        },
+                        "target": "enemy",
+                        "isPersonal": true,
+                        "listenerName": "Dahlia ally action ended",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isUniqueEvent || sourceTurn.element != "Fire") {return;}//only fire characters
+
+                            const wasTracking = sourceTurn.dahliaTrackingImplant;
+                            sourceTurn.dahliaTrackingImplant = false;
+                            const hadImplanted = sourceTurn.dahliaTrackingImplantCounter;
+                            sourceTurn.dahliaTrackingImplantCounter = 0;
+                            if (wasTracking && hadImplanted) {
+                                const enemyTurns = battleData.enemyBasedTurns;
+                                const targetsGotHit = generalInfo.targetsGotHit;
+
+                                const ATKObject = generalInfo.ATKObject
+                                const slot = generalInfo.slot;
+                                const overBreakTotals = generalInfo.overBreakTotals;
+                                for (let enemySlot in targetsGotHit) {
+                                    const enemyTurn = enemyTurns[enemySlot];
+                                    if (enemyTurn.dahliaEnemyImplanted) {
+                                        enemyTurn.dahliaEnemyImplanted = false;
+                                        if (enemyTurn.isDead) {continue;}
+
+                                        dealToughnessDMG(battleData,sourceTurn,false,enemyTurn,1,20,overBreakTotals,ATKObject,"Fire",generalInfo,slot,true,true)
+                                    }
+                                }
+
+                                const specialEnergy = sourceTurn.specialEnergy;
+                                if (!specialEnergy) {
+                                    const currentEnergy = sourceTurn.currentEnergy;
+                                    const maxEnergy = sourceTurn.maxEnergy;
+
+                                    const max = (maxEnergy * .5) - currentEnergy;
+                                    const tenPercent = maxEnergy * 0.10;
+                                    if (max > tenPercent) {
+                                        updateEnergy(battleData,tenPercent,sourceTurn,true,"Fire Ally implanted weakness in attack")
+                                    }
+                                }
+                            }
+                        },
+                        "target": "self",
+                        "priority": 0,
+                        "isPersonal": true,
+                        "listenerName": "Dahlia - ally attacked in-action",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const allAlliesArray = battleData.allAlliesArray;
+                            for (let ally of allAlliesArray) {
+                                ally.dahliaTrackingImplant = true;
+                            }
+                        },
+                        "target": "self",
+                        "priority": -85,
+                        "listenerName": "Dahlia battlestart implant tracking force begin",
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const allAlliesArray = battleData.allAlliesArray;
+                            for (let ally of allAlliesArray) {
+                                ally.dahliaTrackingImplant = false;
+                            }
+                        },
+                        "target": "self",
+                        "priority": Infinity,
+                        "listenerName": "Dahlia battlestart implant tracking force end",
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+                            const ownerTurn = this.ownerTurn;
+
+                            poke("DahliaTriggerBreakBonus",battleData,true,null)
+        
+                            updateEnergy(battleData,35,ownerTurn,false,"Talent Regen");
+        
+                            const buffSheet = ownerTurn.dancePartnerSheet;
+                            updateBuff(battleData,ownerTurn,buffSheet);
+                            ownerTurn.isDahliaPartner = true;
+        
+                            let battleStarter = superGlobal.getStartingAttacker(battleData);
+                            if (!battleStarter || battleStarter.properName === ownerTurn.properName) {
+                                const allyPositions = battleData.allyPositions;
+        
+                                let highestBreak = -Infinity;
+                                let highestAlly = null;
+                                for (let ally of allyPositions) {
+                                    if (ally.properName === ownerTurn.properName) {continue;}
+                                    const breakCheck = ally.statTable[DamageBreak];
+                                    if (breakCheck > highestBreak) {
+                                        highestBreak = breakCheck;
+                                        highestAlly = ally;
+                                    }
+                                }
+        
+                                if (highestAlly) {
+                                    ownerTurn.battleValues.otherPartnerSlot = highestAlly.name;
+                                    highestAlly.isDahliaPartner = true;
+                                    updateBuff(battleData,highestAlly,buffSheet);
+                                }
+                            }
+                            else {
+                                ownerTurn.battleValues.otherPartnerSlot = battleStarter.name;
+                                battleStarter.isDahliaPartner = true;
+                                updateBuff(battleData,battleStarter,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Dahlia battlestart regen/dance partner application",
+                    },
+                    {
+                        "trigger": "EnemyCreated",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+
+                            const buffSheet = this.buffSheet ??= {
+                                "stats": [ResistanceAll],
+                                [ResistanceAll]: -0.20,
+                                "source": "E2",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": turnLogic[ownerTurn.properName].buffNames.e2RES,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "isDebuff": true,
+                                "expireType": null
+                            }
+
+                            const enemy = generalInfo.slotRef;
+                            updateBuff(battleData,enemy,buffSheet);
+                        },
+                        "target": "enemy",
+                        "listenerName": "Dahlia - e2 enemy created debuff",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+                            const ownerTurn = this.ownerTurn;
+
+                            const wiltSheet = ownerTurn.dahliaWiltSheet;
+
+                            const partnerSlot = ownerTurn.battleValues.otherPartnerSlot;
+                            if (partnerSlot) {
+                                const partnerTurn = battleData.nameBasedTurns[partnerSlot];
+                                const partnerElement = partnerTurn.element;
+                                if (partnerElement != "Fire") {
+                                    const refIndex = turnLogic[ownerTurn.properName].ATKObjects.dahliaUltImplantIndex
+                                    const implantIndex = refIndex[partnerElement];
+                                    wiltSheet[implantIndex] = 1;
+                                    //TODO: at the moment we aren't going to have any handling that allows for dance partner to swap yet
+                                    //this is just bc if you're dying then you fuckin suck and that's not optimal anyways so why are you calculating for death
+                                    //and as far as I can see at present there is no means to actually change partners without a death involved.
+                                }
+                            }
+
+
+
+
+                            const enemyPositions = battleData.enemyPositions;
+                            updateBuffBatchTargets(battleData,enemyPositions,wiltSheet);
+
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Dahlia E2 wilt application",
+                        "subListeners": [
+                            {
+                                "trigger": "EnemyCreated",
+                                condition(battleData,generalInfo) {
+                                    let ownerTurn = this.ownerTurn;
+
+                                    const wiltSheet = ownerTurn.dahliaWiltSheet;
+        
+                                    const enemy = generalInfo.slotRef;
+                                    updateBuff(battleData,enemy,wiltSheet);
+                                },
+                                "target": "enemy",
+                                "listenerName": "Dahlia - e2 enemy created debuff",
+                                "ownerTurn": {},
+                            },
+                        ]
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (!sourceTurn.isDahliaPartner) {return;}
+                            // const providerTurn = this.providerTurn;
+
+
+                            const enemyTurns = battleData.enemyBasedTurns;
+                            const targetsGotHit = generalInfo.targetsGotHit;
+
+                            const ATKObject = generalInfo.ATKObject
+                            const slot = generalInfo.slot;
+                            const overBreakTotals = generalInfo.overBreakTotals;
+
+                            const e1Ratio = 0.25;
+                            const wasAlreadyAllToughness = ATKObject.allToughness;
+                            const sourceElement = sourceTurn.element;
+
+                            if (!wasAlreadyAllToughness) {ATKObject.allToughness = true;}
+                            for (let enemySlot in targetsGotHit) {
+                                const enemyTurn = enemyTurns[enemySlot];
+                                if (enemyTurn.dahliaE1ProcDone || enemyTurn.isDead) {continue;}
+                                enemyTurn.dahliaE1ProcDone = true;//TODO: later when we allow multiphase bosses(which is actually soon) we need to allow the boss on regenerating their bars, to proc this false again.
+
+                                const maxToughness = enemyTurn.maxToughness;
+
+                                const finalToughness = Math.max(10, Math.min(300, maxToughness * e1Ratio));
+
+                                dealToughnessDMG(battleData,sourceTurn,false,enemyTurn,1,finalToughness,overBreakTotals,ATKObject,sourceElement,generalInfo,slot,true,true)
+                            }
+                            if (!wasAlreadyAllToughness) {ATKObject.allToughness = false;}
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Dahlia - Allies with Dance Partner attacked targets with superbreak ready",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
+                "trigger": "HealEnd",
+                condition(battleData,generalInfo) {
+                    // poke("HealEnd",battleData,{targetTurn,sourceTurn,totalHealed,overHeal,actualHeal},sourceTurn);
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.traceBreakCalcDone || generalInfo.sourceTurn.isEnemy || generalInfo.targetTurn.properName != ownerTurn.properName) {return;}
+
+                    ownerTurn.traceBreakCalcDone = true;
+                    poke("DahliaTriggerBreakBonus",battleData,true,null)
+                },
+                "target": "enemy",
+                "listenerName": "Dahlia healed reproc trace",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "ShieldEnd",
+                condition(battleData,generalInfo) {
+                    // poke("ShieldEnd",battleData,turnMerge,sourceTurn);
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.traceBreakCalcDone || generalInfo.sourceTurn.isEnemy || generalInfo.targetTurn.properName != ownerTurn.properName) {return;}
+
+                    ownerTurn.traceBreakCalcDone = true;
+                    poke("DahliaTriggerBreakBonus",battleData,true,null)
+                },
+                "target": "enemy",
+                "listenerName": "Dahlia shielded reproc trace",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "EndTurn",
+                condition(battleData,generalInfo) {
+                    // poke("ShieldEnd",battleData,turnMerge,sourceTurn);
+                    let ownerTurn = this.ownerTurn;
+                    ownerTurn.traceBreakCalcDone = false;
+                },
+                "target": "enemy",
+                "listenerName": "Dahlia trace reproc cooldown",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "DahliaTriggerBreakBonus",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const buffSheet = this.buffSheet ??= {
+                        "stats": [DamageBreak,DamageBreakNULL],
+                        [DamageBreak]: 0,
+                        [DamageBreakNULL]: -0,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[this.ownerTurn.properName].buffNames.traceBreak,
+                        "durationInTurn": 4,
+                        "duration": 3,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        "removeOnDeath": true,
+                    }
+                    const buffName = buffSheet.buffName;
+                    const isBattleStart = generalInfo
+
+                    const rate = 0.24;
+                    const flat = 0.50;
+                    const currentBreak = ownerTurn.statTable[DamageBreak];
+
+                    const converstion = +((currentBreak * rate) + flat).toFixed(7);
+                    buffSheet[DamageBreak] = converstion;
+                    buffSheet[DamageBreakNULL] = -converstion;
+
+                    const fullCharacterArray = battleData.fullCharacterArray;
+                    for (let ally of fullCharacterArray) {
+                        if (ally.properName === ownerTurn.properName) {continue;}
+
+                        const buffCheck = ally.buffsObject[buffName];
+                        if (buffCheck) {
+                            const currentBonus = buffCheck[DamageBreak];
+                            if (currentBonus === converstion) {
+                                updateBuff(battleData,ally,buffSheet);
+                            }
+                            else {
+                                removeBuff(battleData,ally,buffCheck,false,null,null,true);
+                                updateBuff(battleData,ally,buffSheet);
+                            }
+                        }
+                        else {
+                            updateBuff(battleData,ally,buffSheet,null,null,null,null,isBattleStart ? 1 : null);
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "Dahlia Trace break conversion application",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "DahliaQueueFUAAttack",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const battleValues = ownerTurn.battleValues;
+                    const fuaIsReady = battleValues.fuaIsReady;
+                    const fuaIsQueued = battleValues.fuaIsQueued;
+
+                    if (fuaIsReady && !fuaIsQueued) {
+                        battleValues.fuaIsQueued = true;
+
+                        const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                            name: this.listenerName,
+                            priority: priorityList.ability.CharacterAttackFromSelf,
+                            queueTag: "QueuedInsert",
+        
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.dahliaFUA,
+                            action: "Insert",
+                            abortCheck: null,//(battleData,actionObject,ownerTurn) {},
+        
+                            isInserted: true,
+                            dontKeepNextWave: false,//ults always clear out
+                            isAttack: true,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "GenericAbilityStart",
+        
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.FUA,
+                        })
+                        queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = battleData.enemyPositions;
+                        queueInsertAbility(battleData,queueObject);
+                    }
+
+                },
+                "target": "self",
+                "listenerName": "Dahlia FUA queued",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "EnemyCreated",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    let targetTurn = generalInfo.slotRef;
+
+                    if (!ownerTurn.battleValues.skillZoneActive) {return;}
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    let buffSheet = ATKObjects.dahliaSkillDebuffSHEET;
+                    updateBuff(battleData,targetTurn,buffSheet);
+                },
+                "target": "enemy",
+                "listenerName": "Dahlia - Enemy created while zone active debuff application",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "ActionEndPhase",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    ownerTurn.battleValues.fuaIsReady = true;
+                },
+                "target": "enemy",
+                "isPersonal": true,
+                "priority": 100,
+                "listenerName": "Dahlia - FUA cooldown reset",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreActionPhaseEnd",
+                condition(battleData,generalInfo) {
+                    // poke("HealEnd",battleData,turnMerge);
+                    let ownerTurn = this.ownerTurn;
+
+                    if (!ownerTurn.battleValues.skillZoneActive) {
+                        ownerTurn.battleValues.skillZoneDuration = 0;
+                    }
+                    else {
+                        const buffName = this.buffName ??= turnLogic[ownerTurn.properName].buffNames.skillZoneOwner;
+                        ownerTurn.battleValues.skillZoneDuration = ownerTurn.buffsObject[buffName].duration;
+                    }
+                },
+                "target": "self",
+                "isPersonal": true,
+                "listenerName": "Dahlia Zone - duration increment handler(visual)",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                            name: this.listenerName,
+                            priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.dahliaUltimate,
+                            action: "Ultimate",
+
+                            energyCost: ownerTurn.maxEnergy,
+
+                            dontKeepNextWave: true,//ults always clear out
+                            isAttack: true,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                        })
+                        queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = battleData.enemyPositions;
+                        queueUltimate(battleData,queueObject);
+                    }
+                },
+                "target": "team",
+                "listenerName": "Dahlia - Ultimate queued",
+                "ownerTurn": {},
+            },
+        ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.dahliaTechnique;
+                callTech(battleData,null,ownerTurn);
+
+                const battleStarter = superGlobal.getStartingAttacker(battleData);
+                const subListeners = this.subListeners;
+                addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,battleStarter,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Dahlia Technique",
+            "ownerTurn": {},
+            "subListeners": [
+                {
+                    "trigger": "AttackDMGEnd",
+                    condition(battleData,generalInfo) {
+                        const sourceTurn = generalInfo.sourceTurn;
+                        const providerTurn = this.providerTurn;
+                        if (providerTurn.techToughnessUsed) {
+                            removeListener(battleData,this,sourceTurn);
+                            return;
+                        }
+                        else {providerTurn.techToughnessUsed = true;}
+                        
+                        const breakMultiFinal = 0.60;
+                        const superBreakArray = this.break1 ??= [breakMultiFinal,"Dahlia Technique"];
+                        generalSuperBreak(battleData,sourceTurn,generalInfo,superBreakArray,sourceTurn.element);
+                    },
+                    "target": "self",
+                    "priority": 100,
+                    "isPersonal": true,
+                    "listenerName": "Dahlia Technique ally attacked for tech/battlestart",
+                    "ownerTurn": {},
+                }
+            ]
+        },
+        "techniqueListener2": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                const ownerTurn = this.ownerTurn;
+                const battleStarter = superGlobal.getStartingAttacker(battleData);
+                if (ownerTurn.techToughnessUsed) {
+                    removeListener(battleData,this,battleStarter);
+                    return;
+                }
+                else {ownerTurn.techToughnessUsed = true;}
+
+                
+                const battleStartOverBreakTotals = battleData.battleStartOverBreakTotals;
+                const breakMultiFinal = 0.60;
+                const superBreakArray = this.break1 ??= [breakMultiFinal,"Dahlia Technique"];
+                generalSuperBreak(battleData,battleStarter,battleStartOverBreakTotals,superBreakArray,battleStarter.element);
+            },
+            "target": "self",
+            "priority": -59,
+            "listenerName": "Dahlia Technique no attack tech used yet",
+        },
+        "ATKObjects": {},
+        "characterValues": {
+            "skillZoneDuration": 0,
+            "skillZoneActive": false,
+            "otherPartnerSlot": null,
+            "fuaIsReady": true,
+            "fuaIsQueued": false,
+            "traceFUACounter": 1,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "skillZoneOwner": "Lick... Enkindled Betrayal (Countdown)",
+            "skillZone": "Lick... Enkindled Betrayal",
+            "skillZoneDebuff": "Lick... Enkindled Betrayal (Debuff)",
+            "dancePartner": "Dance Partner (Dahlia)",
+            "wilt": "Wilt (Ultimate)",
+            "traceSPD": "Outgrow the Old, Espouse the New",
+            "traceBreak": "Yet Another Funeral",
+            "e4Vuln": "E4: Pity Its Heart Gnawed by Worms",
+            "e2RES": "E2: Fresh, Ethereal, and Beloved",
+        },
+        "characterValuesBattle": {},
+    },
 
 
     //Hunt
@@ -17630,6 +18770,7 @@ const turnLogic = {
                             "stats": [ResistanceQuantum,WeaknessQuantum],
                             [ResistanceQuantum]: -0.20,
                             [WeaknessQuantum]: 1,
+                            "flags": [WEAKNESS_IMPLANT],
                             "source": characterName,
                             "sourceOwner": sourceTurn.properName,
                             "buffName": logicRef.buffNames.implant,
@@ -17651,28 +18792,8 @@ const turnLogic = {
                 }
                 
                 attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
-                let chargeRef = sourceTurn.battleValues;
 
-                const oldValue = chargeRef.charge;
-                let newCharge = Math.min(4,chargeRef.charge + 2)
-                if (battleData.isLoggyLogger) {
-                    logToBattle(battleData,{logType: "GenericAction", source:"Ultimate", bodyText: `Archer Charge ${chargeRef.charge} --> ${newCharge}/4`});
-
-                    if (newCharge > oldValue) {
-                        sourceTurn.archerFUAStackSum ??= 0;
-                        sourceTurn.archerFUAStackSum += newCharge - oldValue;
-                        
-                    }
-                    logToBattle(battleData,{
-                        logType: "SUMMARY:SUM",
-                        function: "archerFUAStackSum",
-                        AV: battleData.sumAV,
-                        currentValue: newCharge,
-                        currentSumValue: sourceTurn.archerFUAStackSum,
-                        currentAddedValue: newCharge - oldValue
-                    });
-                }
-                chargeRef.charge = newCharge;
+                poke("ArcherChargeGained",battleData,{pointsGained: 2,sourceString:"Ultimate"});
                 sourceTurn.ultyQueued = false;
             },
             archerTechnique(battleData,actionObject,sourceTurn) {
@@ -17729,11 +18850,8 @@ const turnLogic = {
 
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                let chargeRef = sourceTurn.battleValues;
 
-                let newCharge = Math.min(4,chargeRef.charge + 1)
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Technique", bodyText: `Archer Charge ${chargeRef.charge} --> ${newCharge}/4`});}
-                chargeRef.charge = newCharge;
+                poke("ArcherChargeGained",battleData,{pointsGained: 1,sourceString:"Technique"});
             },
         },
         "listeners": [
@@ -17882,29 +19000,8 @@ const turnLogic = {
                             const currentWave = generalInfo.currentWave;
                             if (currentWave != 1) {return;}
         
-                            let ownerTurn = this.ownerTurn;
-        
-                            let valuesRef = ownerTurn.battleValues;
-                            const oldValue = valuesRef.charge
-                            let newCharge = Math.min(4,valuesRef.charge + 1);
-                            if (battleData.isLoggyLogger) {
-                                logToBattle(battleData,{logType: "GenericAction", source:"Hero of Justice", bodyText: `Archer Charge ${valuesRef.charge} --> ${newCharge}/4`});
-        
-                                if (newCharge > oldValue) {
-                                    ownerTurn.archerFUAStackSum ??= 0;
-                                    ownerTurn.archerFUAStackSum += newCharge - oldValue;
-                                    
-                                }
-                                logToBattle(battleData,{
-                                    logType: "SUMMARY:SUM",
-                                    function: "archerFUAStackSum",
-                                    AV: battleData.sumAV,
-                                    currentValue: newCharge,
-                                    currentSumValue: ownerTurn.archerFUAStackSum,
-                                    currentAddedValue: newCharge - oldValue
-                                });
-                            }
-                            valuesRef.charge = newCharge;
+                            // let ownerTurn = this.ownerTurn;
+                            poke("ArcherChargeGained",battleData,{pointsGained: 1,sourceString:"Hero of Justice"});
                         },
                         "target": "self",
                         "priority": -80,
@@ -17949,6 +19046,44 @@ const turnLogic = {
                         "ownerTurn": {},
                     },
                 ],
+            },
+            {
+                "trigger": "ArcherChargeGained",
+                condition(battleData,generalInfo) {
+                    // poke("ArcherChargeGained",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    const pointsGained = generalInfo.pointsGained;
+                    const valuesRef = ownerTurn.battleValues;
+
+                    const oldValue = valuesRef.charge;
+                    const maxValue = valuesRef.chargeMax;
+                    valuesRef.charge = Math.max(0, Math.min(maxValue, oldValue + pointsGained));
+                    const newValue = valuesRef.charge;
+                    const valueWasDiff = oldValue != newValue;
+
+                    const sourceString = generalInfo.sourceString
+                    if (valueWasDiff && battleData.isLoggyLogger) {
+                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters["Archer"].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `FUA Charge (Archer): ${oldValue} --> ${valuesRef.charge}/${maxValue} [${sourceString}]`});
+                        
+                        if (pointsGained > 0) {
+                            ownerTurn.archerFUAStackSum ??= 0;
+                            ownerTurn.archerFUAStackSum += valuesRef.charge - oldValue;
+                            
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "archerFUAStackSum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.charge,
+                            currentSumValue: ownerTurn.archerFUAStackSum,
+                            currentAddedValue: valuesRef.charge - oldValue
+                        });
+                    }
+                },
+                "target": "self",
+                "listenerName": "Kafka FUA Charge Handler",
+                "ownerTurn": {},
             },
             {
                 "trigger": "UltimateQueueBlockedOrDone",
@@ -18120,6 +19255,7 @@ const turnLogic = {
             "skillStarted": false,
             "charge": 0,
             "chargeDebt": 0,
+            "chargeMax": 4,
         },
         "useTechnique": true,
         "techniqueType": "Attack",
@@ -23612,7 +24748,7 @@ const turnLogic = {
                     const sourceString = generalInfo.sourceString;
                     if (pointsGained && battleData.isLoggyLogger) {
                         // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Charge (Asta): ${oldValue} --> ${newValue}/5 [${sourceString}]`});
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/misc/asta/Icon1009Passive.png" ,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Charge (Asta): ${oldValue} --> ${newValue}/5 [${sourceString}]`});
                     
                         if (pointsGained > 0) {
                             ownerTurn.astaChargeSummer ??= 0;
@@ -24324,17 +25460,13 @@ const turnLogic = {
                             let skillRef = ATKObjects.ruanmeiTalentREF ??= ATKObjects.Talent["Somatotypical Helix"].variant1;
                             let values = ATKObjects.ruanmeiTalentREFPARAM ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
                             const breakMulti = values[1] + (ownerTurn.rank >= 6 ? 2 : 0);
-                            const breakObject = generalInfo.breakObject;
-                            const tags = [generalInfo[ownerTurn.element]];
-                            const isBroken =  generalInfo.isBroken;
+                            const breakObject = generalInfo;
         
                             const genInfoNew = this.ruanTalentBreakInstanceObject ??= {
-                                ATKObject: {actionTags: ["All","Break"]}
+                                ATKObject: {actionTags: ["All","Break"]},
                             }
         
-                            battleActions.getBreakDamage(battleData,breakObject,ownerTurn,targetTurn,tags,true,genInfoNew,breakMulti);
-        
-                            // poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags,isBroken,generalInfo});
+                            getBreakDamage(battleData,breakObject,ownerTurn,targetTurn,null,true,genInfoNew,breakMulti);
                         },
                         "target": "self",
                         "listenerName": "Talent break dmg on break instance",
@@ -29549,6 +30681,7 @@ const turnLogic = {
                     ATKObjects.fireflySkillEnhancedIMPLANTSHEET = {
                         "stats": [WeaknessFire],
                         [WeaknessFire]: 1,
+                        "flags": [WEAKNESS_IMPLANT],
                         "source": characterName,
                         "sourceOwner": sourceTurn.properName,
                         "buffName": buffName,
@@ -29558,6 +30691,8 @@ const turnLogic = {
                         "maxStacks": 1,
                         "currentStacks": 1,
                         "decay": false,
+                        "isDebuff": true,
+                        "isImplant": true,
                         "expireType": "EndTurn"
                     }
                 }
@@ -29648,6 +30783,7 @@ const turnLogic = {
                     ATKObjects.fireflyTechImplantSHEET = {
                         "stats": [WeaknessFire],
                         [WeaknessFire]: 1,
+                        "flags": [WEAKNESS_IMPLANT],
                         "source": characterName,
                         "sourceOwner": sourceTurn.properName,
                         "buffName": buffName,
@@ -29657,6 +30793,8 @@ const turnLogic = {
                         "maxStacks": 1,
                         "currentStacks": 1,
                         "decay": false,
+                        "isDebuff": true,
+                        "isImplant": true,
                         "expireType": "EndTurn"
                     }
                 }
@@ -29855,7 +30993,6 @@ const turnLogic = {
                     {
                         "trigger": "BrokeEnemyWeakness",
                         condition(battleData,generalInfo) {
-                            // poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
                             let ownerTurn = this.ownerTurn;
         
                             const logicRefValues = ownerTurn.battleValues;
@@ -29873,7 +31010,6 @@ const turnLogic = {
                     {
                         "trigger": "PreActionPhase",
                         condition(battleData,generalInfo) {
-                            // poke("BrokeEnemyWeakness",battleData,turnMerge);
                             let ownerTurn = this.ownerTurn;
         
                             const logicRefValues = ownerTurn.battleValues;
@@ -29900,7 +31036,6 @@ const turnLogic = {
                         condition(battleData,generalInfo) {
                             const action = generalInfo.action;
                             if (action != "Skill" || !generalInfo.isEnhanced) {return}
-                            // poke("BrokeEnemyWeakness",battleData,turnMerge);
                             let ownerTurn = this.ownerTurn;
 
 
@@ -29929,7 +31064,6 @@ const turnLogic = {
                         condition(battleData,generalInfo) {
                             const action = generalInfo.action;
                             if (action != "Skill" || !generalInfo.isEnhanced) {return}
-                            // poke("BrokeEnemyWeakness",battleData,turnMerge);
                             let ownerTurn = this.ownerTurn;
 
                             const e1Sheet = this.e1Sheet ??= {
@@ -29985,7 +31119,6 @@ const turnLogic = {
             {
                 "trigger": "BrokeEnemyWeakness",
                 condition(battleData,generalInfo) {
-                    // poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
                     let ownerTurn = this.ownerTurn;
                     let sourceTurn = generalInfo.sourceTurn;
                     if (sourceTurn.name != ownerTurn.name) {return;}
@@ -32548,7 +33681,6 @@ const turnLogic = {
         "characterValuesBattle": {},
     },
     
-    // ,actionObject.target,actionObject.subTarget
     //Remembrance
     "Trailblazer - Remembrance": {
         logic(thisTurn,battleData) {
@@ -37916,7 +39048,7 @@ const turnLogic = {
 
             if (checkSkill(battleData,thisTurn)) {
                 if (isEnhanced) {
-                    const skillCall = this.returnSkillCall;
+                    const skillCall = this.returnSkillCallEnh;
                     skillCall.target = battleData.enemyPositions;
                     // skillCall.subTarget = battleData.blastTargets;
                     return skillCall;
@@ -39785,6 +40917,7 @@ const turnLogic = {
                         "currentStacks": 1,
                         "decay": false,
                         "expireType": null,
+                        "buffDisplayIcon": "misc/dhpt/Icon1414Skill02.png"
                     }
                 }
                 const statTable = sourceTurn.statTable;
@@ -41536,7 +42669,6 @@ const turnLogic = {
                     {
                         "trigger": "ShieldEnd",
                         condition(battleData,generalInfo) {
-                            // poke("ShieldsWereBroken",battleData,{battleData,sourceTurn:targetTurn});
                             let ownerTurn = this.ownerTurn;
                             // const currentShield = generalInfo.currentShield;
                             const sourceTurn = generalInfo.sourceTurn;
@@ -43225,6 +44357,7 @@ const turnLogic = {
                         [WeaknessLightning]: 1,
                         [WeaknessPhysical]: 1,
                         [WeaknessQuantum]: 1,
+                        "flags": [WEAKNESS_IMPLANT],
                         "source": characterName,
                         "sourceOwner": sourceTurn.properName,
                         "buffName": logicRef.buffNames.sublimation,
@@ -43235,6 +44368,7 @@ const turnLogic = {
                         "currentStacks": 1,
                         "decay": false,
                         "isDebuff": true,
+                        "isImplant": true,
                         "expireType": "StartTurn",
                     }
                 }
@@ -45086,7 +46220,6 @@ const turnLogic = {
                     {
                         "trigger": "BrokeEnemyWeakness",
                         condition(battleData,generalInfo) {
-                            // poke("BrokeEnemyWeakness",battleData,{targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,breakObject,tags:DMGTags,isBroken,generalInfo});
                             let ownerTurn = this.ownerTurn;
                             //we don't actually need to verify WHO broke the weakness, only THAT an enemy was weakness broken AT ALL, from anything
 
@@ -46059,8 +47192,6 @@ const turnLogic = {
                 })
                 queueObject.sourceTurn = sourceTurn;
                 queueObject.target = [sourceTurn];
-                // let targetOverride = superGlobal.getStartingAttacker(battleData);
-                // queueObject.target = [targetOverride]
                 queueExtraTurn(battleData,queueObject);
             },
             elationSkill(battleData,actionObject,sourceTurn) {
@@ -49968,6 +51099,7 @@ const turnLogic = {
                                 [ResistanceIce]: 0,
                                 [ResistanceQuantum]: 0,
                                 [ResistanceImaginary]: 0,
+                                "flags": [WEAKNESS_IMPLANT],
                                 "source": "E6",
                                 "sourceOwner": ownerTurn.properName,
                                 "buffName": turnLogic[ownerTurn.properName].buffNames.e6Implant,
@@ -49977,6 +51109,7 @@ const turnLogic = {
                                 "maxStacks": 1,
                                 "currentStacks": 1,
                                 "isDebuff": true,
+                                "isImplant": true,
                                 "decay": false,
                                 "expireType": null
                             }

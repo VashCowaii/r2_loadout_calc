@@ -704,6 +704,50 @@ const customHTML = {
             customHTML.populateFilters(filterName.tableElem,filterName.tableName,0);
         }
     },
+    forceAllExclusion() {
+        globalUI.filters[`char${globalUI.currentCharacterDisplayed}`].tagFilters = [];
+        const charRef = globalUI.filters[`char${globalUI.currentCharacterDisplayed}`];
+        const updateFilter = customHTML.populateFilters;
+
+
+        const filterSet = [
+            {tableName: "lightcone",tableElem: "lightconeOcclusion"},
+            {tableName: "armorSet",tableElem: "armorSetOcclusion"},
+            {tableName: "planarSet",tableElem: "planarSetOcclusion"},
+            {tableName: "mainstatBody",tableElem: "mainstatBodyOcclusion"},
+            {tableName: "mainstatFeet",tableElem: "mainstatFeetOcclusion"},
+            {tableName: "mainstatOrb",tableElem: "mainstatOrbOcclusion"},
+            {tableName: "mainstatRope",tableElem: "mainstatRopeOcclusion"},
+        ]
+
+        const updateToggle = customHTML.updateOcclusion;
+        for (let filterName of filterSet) {
+            readSelection(filterName.tableElem).checked = false;
+            updateToggle(filterName.tableName,filterName.tableElem)
+        }
+    },
+    forceAllInclusion() {
+        globalUI.filters[`char${globalUI.currentCharacterDisplayed}`].tagFilters = [];
+        const charRef = globalUI.filters[`char${globalUI.currentCharacterDisplayed}`];
+        const updateFilter = customHTML.populateFilters;
+
+
+        const filterSet = [
+            {tableName: "lightcone",tableElem: "lightconeOcclusion"},
+            {tableName: "armorSet",tableElem: "armorSetOcclusion"},
+            {tableName: "planarSet",tableElem: "planarSetOcclusion"},
+            {tableName: "mainstatBody",tableElem: "mainstatBodyOcclusion"},
+            {tableName: "mainstatFeet",tableElem: "mainstatFeetOcclusion"},
+            {tableName: "mainstatOrb",tableElem: "mainstatOrbOcclusion"},
+            {tableName: "mainstatRope",tableElem: "mainstatRopeOcclusion"},
+        ]
+
+        const updateToggle = customHTML.updateOcclusion;
+        for (let filterName of filterSet) {
+            readSelection(filterName.tableElem).checked = true;
+            updateToggle(filterName.tableName,filterName.tableElem)
+        }
+    },
     clearLocksFilter() {
         globalUI.filters[`char${globalUI.currentCharacterDisplayed}`].tagFilters = [];
         const charRef = globalUI.filters[`char${globalUI.currentCharacterDisplayed}`];

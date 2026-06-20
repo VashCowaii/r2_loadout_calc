@@ -1,4 +1,5 @@
 let megaMappingPathing = {
+  "545784093": "AbilityConfigsGModADV",
   "884306140": "AbilityConfigsGMod",
   "1265477859": "AbilityConfigsBE",
   "1331461059": "EnemyConfigs",

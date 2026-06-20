@@ -140,7 +140,7 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "modifier": null,
-          "ID": "1000112(null)"
+          "ID": "1000112(StageAbility_MazeCommon_EnterBattle_Fire)"
         }
       ],
       "entryTargetType": "AllHitTarget"

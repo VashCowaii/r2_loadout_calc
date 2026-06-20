@@ -663,14 +663,6 @@
                                                 <input type="range" id="queriesCycleCountSlider" name="slider" min="0" max="6" value="3" step="1" list="tickmarks" onchange="userTriggers.updateQuerySearchSettings(true)">
                                             </div>
                                         </div>
-                                        <div class="statisticSettingsRow hasHoverTooltip" id="queriesExplainToughnessBattlestart">
-                                            <div class="statsRowName">Entry Toughness Reduction [?]</div>
-                                            <div class="statsRowToggle">
-                                                <label class="toggleContainer">
-                                                    <input type="checkbox" class="toggleCheckbox" id="queriesUseStartToughness" onchange="userTriggers.updateQuerySearchSettings(true)" checked><span class="toggleSlider"></span>
-                                                </label>
-                                            </div>
-                                        </div>
                                         <div class="statisticSettingsRow hasHoverTooltip" id="cyclesStartingEnergyCustomExplainer">
                                             <div class="statsRowName">Starting Energy:&nbsp;<span id="cyclesStartingEnergyCustomDisplay">50</span>%</div>
                                             <div class="statsRowToggle">
@@ -873,6 +865,11 @@
                                     <br><b>Exclusions</b> are used when you do not want to see an item(s) from a category in your results.
                                     <br><b>Inclusions</b> are used when you ONLY want to see an item(s) from a category in your results.
                                     <!-- <br>Example: you're running a Hardcore character, and you want to provide the only items you have, as the list for that category. -->
+                                </div>
+
+                                <div class="filtersQuarterDescriptionDarkRowForceToggles">
+                                    <input type="button" class="forceOcclusionToggleSwitch clickable" onclick="customHTML.forceAllExclusion()" value="Force All: Exclusions">
+                                    <input type="button" class="forceOcclusionToggleSwitch clickable" onclick="customHTML.forceAllInclusion()" value="Force All: Inclusions">
                                 </div>
                                 
                                 <!-- ALL ITEM OCCLUSION UI ELEMENTS -->

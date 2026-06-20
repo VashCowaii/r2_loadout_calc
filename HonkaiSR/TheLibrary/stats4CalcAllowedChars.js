@@ -20,7 +20,7 @@ const vashCharProgressList = [
     {name: "Silver Wolf",
         completed: true, live: true, needs80OrTraces: false, owned: true},
     {name: "The Dahlia",
-        completed: false, live: false, needs80OrTraces: false, owned: true},
+        completed: true, live: true, needs80OrTraces: false, owned: true},
     {name: "Welt",
         completed: true, live: true, needs80OrTraces: false, owned: true},
     //4star
