@@ -4665,7 +4665,7 @@ const userTriggers = {
                         if (typeOfValue === "number") {valueAdjusted = valueActual.toLocaleString();}
                         else {valueAdjusted = valueActual;}
 
-                        if (entry.isCharacterSlot && valueActual) {valueAdjusted = battleData.nameBasedTurns[valueActual].properName;}
+                        if (entry.isCharacterSlot) {valueAdjusted = battleData.nameBasedTurns[valueActual]?.properName ?? "No Entity Found";}
 
                         return valueAdjusted;
                     }
@@ -4728,6 +4728,7 @@ const userTriggers = {
                                 }
                                 else if (entry.customDisplay) {
                                     const customDisplay = entry.customDisplay;
+
                                     if (customDisplay === "marks") {
                                         const markMax = entry.markMax ?? (requiresIndex ? requiredIndexValue : null);
                                         let marksStringer = "";
@@ -4763,14 +4764,19 @@ const userTriggers = {
                                             // customEnergyBodyMarksCIRCLE
                                         }
                                         if (markType === "number") {
-                                            marksStringer += `${valueAdjusted} / ${markMax} ${entry.valueName}`
+                                            marksStringer += `${valueAdjusted} / ${markMax} ${entry.valueName}`;
+                                        }
+                                        if (markType === "entity") {
+                                            marksStringer += valueAdjusted;
                                         }
 
                                         const isOnAtAll = valueAdjusted > 0 ? 100 : 0;
                                         customValuesString += `<div class="customEnergyBodyMarksBar">
                                             ${entry.showProgressIconAnyways ? `<div class="customEnergyBodyMarksCIRCLEPROGRESS"
                                                     style="background:conic-gradient(${baseFillColor} 0 ${isOnAtAll}%,#3333337c ${isOnAtAll}% 100%);">
-                                                    <img src="/HonkaiSR/${entry.progressIcon}" class="customEnergyBodyMarksCIRCLEPROGRESSIcon" onclick="customMenu.createCharacterStatScreenBattleLogged(${logIndex},true)"/>
+                                                    <div class="customEnergyBodyMarksCIRCLEPROGRESSIconBOX">
+                                                        <img src="/HonkaiSR/${entry.progressIcon}" class="customEnergyBodyMarksCIRCLEPROGRESSIcon" onclick="customMenu.createCharacterStatScreenBattleLogged(${logIndex},true)"/>
+                                                    </div>
                                                 </div>` : ""}
                                             ${marksStringer}
                                         </div>`
