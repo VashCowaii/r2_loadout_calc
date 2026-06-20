@@ -16675,7 +16675,6 @@ const turnLogic = {
                 const enemyPositions = battleData.enemyPositions;
                 removeBuffFromBatch(battleData,enemyPositions,debuffSheet);
             },
-
             dahliaUltimate(battleData,actionObject,sourceTurn) {
                 const characterName = sourceTurn.properName;
                 const logicRef = turnLogic[characterName];
@@ -16843,7 +16842,6 @@ const turnLogic = {
                 battleValues.fuaIsReady = false;
                 battleValues.fuaIsQueued = false;
             },
-            
             backupDancerExpired(battleData,hmcSlot) {
                 const hmcTurn = battleData.nameBasedTurns[hmcSlot];
                 hmcTurn.battleValues.hmcBackupDancerActive = false;
@@ -38864,7 +38862,7 @@ const turnLogic = {
 
             if (checkSkill(battleData,thisTurn)) {
                 if (isEnhanced) {
-                    const skillCall = this.returnSkillCall;
+                    const skillCall = this.returnSkillCallEnh;
                     skillCall.target = battleData.enemyPositions;
                     // skillCall.subTarget = battleData.blastTargets;
                     return skillCall;
