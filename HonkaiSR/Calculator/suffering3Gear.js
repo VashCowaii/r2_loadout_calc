@@ -12134,7 +12134,55 @@ const turnLogicLightcones = {
         },
     },
         //3star
-    
+    "Data Bank": {//REDONE
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let lcNameRef = "Data Bank";
+                    let lcPathing = lightcones[lcNameRef].params;
+
+                    // let buffName = this.buffNames.fuaDMG;
+                    let buffSheet = this.buffSheet ??= {
+                        "stats": [DamageAll],
+                        [DamageAll]: 0,
+                        "source": lcNameRef,
+                        "sourceOwner": "",
+                        "buffName": turnLogicLightcones[lcNameRef].buffNames.ultDMGBonus,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "actionTags": ["Ultimate"],
+                    }
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let rankParams = lcPathing[owner.rank-1];
+                        let currentTurn = battleData.nameBasedTurns[charSlot];
+
+                        const totalBonus = rankParams[0]
+
+                        buffSheet[DamageAll] = totalBonus;
+                        buffSheet.sourceOwner = currentTurn.properName;
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Data Bank - battlestart dmg bonus",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "ultDMGBonus": "Data Bank [LC]",
+        },
+    },
     "Sagacity": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
