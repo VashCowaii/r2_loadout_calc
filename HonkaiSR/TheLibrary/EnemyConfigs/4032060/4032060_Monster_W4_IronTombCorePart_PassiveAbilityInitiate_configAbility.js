@@ -120,7 +120,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Was Overhealed [Owner]",
+          "eventTrigger": "Was HP Overkilled [Owner]",
           "execute": [
             {
               "name": "Define Custom Variable with Changes to Stats",

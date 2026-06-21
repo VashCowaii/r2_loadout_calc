@@ -4727,7 +4727,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Was Overhealed [Owner]",
+              "eventTrigger": "Was HP Overkilled [Owner]",
               "execute": [
                 {
                   "name": "IF",
