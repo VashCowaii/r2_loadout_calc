@@ -11448,6 +11448,7 @@ const turnLogicLightcones = {
 
 
     //ERUDITON
+    //5star
     "An Instant Before A Gaze": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
@@ -11496,156 +11497,6 @@ const turnLogicLightcones = {
         ],
         "buffNames": {
             "ultDMGBonus": "A Knight's Pilgrimage [LC]",
-        },
-    },
-    "Today Is Another Peaceful Day": {//REDONE
-        logic(thisTurn,battleData) {},
-        "skillFunctions": {},
-        "listeners": [
-            {
-                "trigger": "PassiveCalls",
-                condition(battleData,generalInfo) {
-                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
-                    let lcNameRef = "Today Is Another Peaceful Day";
-                    let lcPathing = lightcones[lcNameRef].params;
-
-                    // let buffName = this.buffNames.fuaDMG;
-                    let buffSheet = this.buffSheet ??= {
-                        "stats": [DamageAll],
-                        [DamageAll]: 0,
-                        "source": lcNameRef,
-                        "sourceOwner": "",
-                        "buffName": turnLogicLightcones[lcNameRef].buffNames.ultDMGBonus,
-                        "durationInTurn": null,
-                        "duration": 1,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null
-                    }
-
-                    for (let owner of ownerRef) {
-                        let charSlot = owner.slot;
-                        let rankParams = lcPathing[owner.rank-1];
-                        let currentTurn = battleData.nameBasedTurns[charSlot];
-
-                        const energyMax = Math.min(rankParams[1],currentTurn.maxEnergy);
-                        const totalBonus = energyMax * rankParams[0]
-
-                        buffSheet[DamageAll] = totalBonus;
-                        buffSheet.sourceOwner = currentTurn.properName;
-                        updateBuff(battleData,currentTurn,buffSheet);
-                    }
-                },
-                "target": "self",
-                "listenerName": "Today Is Another Peaceful Day - battlestart energycheck dmg bonus",
-                "owners": [],
-            },
-        ],
-        "buffNames": {
-            "ultDMGBonus": "A Storm Is Coming [LC]",
-        },
-    },
-    "The Great Cosmic Enterprise": {//REDONE
-        logic(thisTurn,battleData) {},
-        "skillFunctions": {},
-        "listeners": [
-            {
-                "trigger": "PassiveCalls",
-                condition(battleData,generalInfo) {
-                    let ownerRef = this.owners;
-
-                    const namedTurns = battleData.nameBasedTurns;
-                    const subListeners = this.subListeners;
-                    const ownersSlots = this.ownersSlots
-
-                    for (let owner of ownerRef) {
-                        let charSlot = owner.slot;
-                        let currentTurn = namedTurns[charSlot];
-
-                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
-                    }
-                },
-                "target": "self",
-                "listenerName": "The Great Cosmic Enterprise listener setup",
-                "owners": [],
-                "subListeners": [
-                    {
-                        "trigger": "AllyDMGStart",
-                        condition(battleData,generalInfo) {
-                            const sourceTurn = generalInfo.sourceTurn;
-                            const checkWeakArray = this.checkWeakArray ??= [WeaknessFire,WeaknessIce,WeaknessImaginary,WeaknessLightning,WeaknessPhysical,WeaknessQuantum,WeaknessWind];
-        
-                            const targetTurn = generalInfo.targetTurn;
-                            const targetStats = targetTurn.statTable;
-        
-                            let weaknessCount = 0;
-                            for (let weakName of checkWeakArray) {
-                                weaknessCount += targetStats[weakName] ? 1 : 0;
-                            }
-        
-                            if (!sourceTurn.greatCosmicDMGSHEET) {
-                                let ownersSlots = this.ownersSlots;
-                                const ownerRank = ownersSlots[sourceTurn.name];
-                                let lcNameRef = "The Great Cosmic Enterprise";
-                                let lcPathing = lightcones[lcNameRef].params;
-                                let rankParams = lcPathing[ownerRank-1];
-                                
-                                let buffName = turnLogicLightcones[lcNameRef].buffNames.cosmicDMG;
-                                sourceTurn.greatCosmicDMGSHEET = {
-                                    "stats": [DamageAll],
-                                    [DamageAll]: rankParams[1],
-                                    "source": lcNameRef,
-                                    "sourceOwner": sourceTurn.properName,
-                                    "buffName": buffName,
-                                    "durationInTurn": null,
-                                    "duration": 1,
-                                    "AVApplied": 0,
-                                    "maxStacks": 7,
-                                    "currentStacks": 1,
-                                    "decay": false,
-                                    "expireType": null,
-                                    "actionTags": ["All"],
-                                }
-                            }
-        
-                            const buffSheet = sourceTurn.greatCosmicDMGSHEET;
-                            const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
-        
-                            if (buffCheck) {
-                                const currentStacks = buffCheck.currentStacks;
-                                if (currentStacks === weaknessCount) {return;}
-                                else if (currentStacks < weaknessCount) {
-                                    const stackDiff = weaknessCount - currentStacks;
-                                    buffSheet.currentStacks = stackDiff;
-                                    updateBuff(battleData,sourceTurn,buffSheet);
-                                }
-                                else {//if stacks are higher than they should be
-                                    if (weaknessCount) {//if we have stacks then update
-                                        removeBuff(battleData,sourceTurn,buffSheet,true,null,true);
-                                        buffSheet.currentStacks = weaknessCount;
-                                        updateBuff(battleData,sourceTurn,buffSheet,false,null)
-                                    }
-                                    else {//otherwise remove
-                                        removeBuff(battleData,sourceTurn,buffSheet);
-                                    }
-                                }
-                            }
-                            else if (weaknessCount) {
-                                buffSheet.currentStacks = weaknessCount;
-                                updateBuff(battleData,sourceTurn,buffSheet,false,null);
-                            }
-                        },
-                        "target": "self",
-                        "isPersonal": true,
-                        "listenerName": "The Great Cosmic Enterprise weakness dmg listener",
-                    },
-                ]
-            },
-        ],
-        "buffNames": {
-            "cosmicDMG": "The Great Cosmic Enterprise",
         },
     },
     "Life Should Be Cast to Flames": {//REDONE
@@ -11926,6 +11777,158 @@ const turnLogicLightcones = {
             "buff2": "Somnus Corpus (LC)",
         },
     },
+        //4star
+    "Today Is Another Peaceful Day": {//REDONE
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let lcNameRef = "Today Is Another Peaceful Day";
+                    let lcPathing = lightcones[lcNameRef].params;
+
+                    // let buffName = this.buffNames.fuaDMG;
+                    let buffSheet = this.buffSheet ??= {
+                        "stats": [DamageAll],
+                        [DamageAll]: 0,
+                        "source": lcNameRef,
+                        "sourceOwner": "",
+                        "buffName": turnLogicLightcones[lcNameRef].buffNames.ultDMGBonus,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let rankParams = lcPathing[owner.rank-1];
+                        let currentTurn = battleData.nameBasedTurns[charSlot];
+
+                        const energyMax = Math.min(rankParams[1],currentTurn.maxEnergy);
+                        const totalBonus = energyMax * rankParams[0]
+
+                        buffSheet[DamageAll] = totalBonus;
+                        buffSheet.sourceOwner = currentTurn.properName;
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Today Is Another Peaceful Day - battlestart energycheck dmg bonus",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "ultDMGBonus": "A Storm Is Coming [LC]",
+        },
+    },
+    "The Great Cosmic Enterprise": {//REDONE
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "The Great Cosmic Enterprise listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+                            const checkWeakArray = this.checkWeakArray ??= [WeaknessFire,WeaknessIce,WeaknessImaginary,WeaknessLightning,WeaknessPhysical,WeaknessQuantum,WeaknessWind];
+        
+                            const targetTurn = generalInfo.targetTurn;
+                            const targetStats = targetTurn.statTable;
+        
+                            let weaknessCount = 0;
+                            for (let weakName of checkWeakArray) {
+                                weaknessCount += targetStats[weakName] ? 1 : 0;
+                            }
+        
+                            if (!sourceTurn.greatCosmicDMGSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                const ownerRank = ownersSlots[sourceTurn.name];
+                                let lcNameRef = "The Great Cosmic Enterprise";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+                                
+                                let buffName = turnLogicLightcones[lcNameRef].buffNames.cosmicDMG;
+                                sourceTurn.greatCosmicDMGSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 7,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "actionTags": ["All"],
+                                }
+                            }
+        
+                            const buffSheet = sourceTurn.greatCosmicDMGSHEET;
+                            const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+        
+                            if (buffCheck) {
+                                const currentStacks = buffCheck.currentStacks;
+                                if (currentStacks === weaknessCount) {return;}
+                                else if (currentStacks < weaknessCount) {
+                                    const stackDiff = weaknessCount - currentStacks;
+                                    buffSheet.currentStacks = stackDiff;
+                                    updateBuff(battleData,sourceTurn,buffSheet);
+                                }
+                                else {//if stacks are higher than they should be
+                                    if (weaknessCount) {//if we have stacks then update
+                                        removeBuff(battleData,sourceTurn,buffSheet,true,null,true);
+                                        buffSheet.currentStacks = weaknessCount;
+                                        updateBuff(battleData,sourceTurn,buffSheet,false,null)
+                                    }
+                                    else {//otherwise remove
+                                        removeBuff(battleData,sourceTurn,buffSheet);
+                                    }
+                                }
+                            }
+                            else if (weaknessCount) {
+                                buffSheet.currentStacks = weaknessCount;
+                                updateBuff(battleData,sourceTurn,buffSheet,false,null);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "The Great Cosmic Enterprise weakness dmg listener",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "cosmicDMG": "The Great Cosmic Enterprise",
+        },
+    },
+        //3star
 
     //ELATION
     //5star
