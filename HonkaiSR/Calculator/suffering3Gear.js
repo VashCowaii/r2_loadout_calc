@@ -12134,6 +12134,76 @@ const turnLogicLightcones = {
             "river": "A Dream Scented in Wheat (LC)",
         },
     },
+    "Sagacity": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Sagacity listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (!sourceTurn.lcSagacityATKSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                const ownerRank = ownersSlots[sourceTurn.name];
+                                let lcNameRef = "Sagacity";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+                                
+                                const lcBuffNames = turnLogicLightcones[lcNameRef].buffNames;
+                                let buffName = lcBuffNames.atk;
+                                sourceTurn.lcSagacityATKSHEET = {
+                                    "stats": [ATKP],
+                                    [ATKP]: rankParams[0],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                }
+                            }
+        
+                            const buffSheet = sourceTurn.lcSagacityATKSHEET;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Sagacity, ult start atk",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "atk": "Sagacity [LC]",
+        },
+    },
 
     //ELATION
     //5star
