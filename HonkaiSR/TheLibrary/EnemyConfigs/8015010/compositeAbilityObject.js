@@ -249,7 +249,7 @@ const compositeAbilityObject = {
                   ]
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -754,7 +754,7 @@ const compositeAbilityObject = {
               "eventTrigger": "Being Limbo [Owner]",
               "execute": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Target Part 0}}"
@@ -762,7 +762,7 @@ const compositeAbilityObject = {
                   "phase": "Phase0"
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Target Part 1}}"
@@ -770,7 +770,7 @@ const compositeAbilityObject = {
                   "phase": "Phase0"
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Target Part 3}}"
@@ -1430,7 +1430,7 @@ const compositeAbilityObject = {
           ],
           "failed": [
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
@@ -1576,7 +1576,7 @@ const compositeAbilityObject = {
           },
           "passed": [
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
@@ -1586,7 +1586,7 @@ const compositeAbilityObject = {
           ],
           "failed": [
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
@@ -1927,7 +1927,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1881731748\">Enemy_AML_Boss_DamageTakenUp</a>"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"

@@ -75,7 +75,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1577499411\">Monster_W2_Huanlong_IF_PartController</a>"
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"

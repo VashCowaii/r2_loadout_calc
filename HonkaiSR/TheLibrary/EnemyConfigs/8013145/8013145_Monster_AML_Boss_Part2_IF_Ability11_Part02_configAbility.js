@@ -32,7 +32,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1128742763\">Enemy_AML_Boss_Part2_Ability11_Charge</a>"
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Target Part 0}}"
@@ -40,7 +40,7 @@ const configAbility = {
       "phase": "Phase1"
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Target Part 1}}"
@@ -48,7 +48,7 @@ const configAbility = {
       "phase": "Phase1"
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Target Part 2}}"
@@ -56,7 +56,7 @@ const configAbility = {
       "phase": "Phase1"
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Target Part 3}}"

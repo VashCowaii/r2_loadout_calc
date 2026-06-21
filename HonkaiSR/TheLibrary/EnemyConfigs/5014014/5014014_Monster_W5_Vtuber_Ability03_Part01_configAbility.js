@@ -5,7 +5,7 @@ const configAbility = {
   "toughnessList": null,
   "parse": [
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"
@@ -13,7 +13,7 @@ const configAbility = {
       "revertDefault": true
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Caster's Minions}}"

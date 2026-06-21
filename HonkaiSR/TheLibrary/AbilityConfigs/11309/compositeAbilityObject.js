@@ -350,7 +350,7 @@ const compositeAbilityObject = {
                   "reset": true
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -389,7 +389,7 @@ const compositeAbilityObject = {
                   "name": "Set Hit-Class"
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"

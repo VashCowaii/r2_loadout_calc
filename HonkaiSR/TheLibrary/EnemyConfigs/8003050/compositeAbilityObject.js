@@ -669,7 +669,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -752,7 +752,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1780037570\">Enemy_AML_Elite01_01_ShootEff_Body</a>"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -1093,7 +1093,7 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End",
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -1179,7 +1179,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1517316347\">Monster_AML_Elite01_01_DieChargeEffHide</a>"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -1488,7 +1488,7 @@ const compositeAbilityObject = {
           "stackFlag": "CharacterSkill"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -1642,7 +1642,7 @@ const compositeAbilityObject = {
           "stackFlag": "CharacterSkill"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"

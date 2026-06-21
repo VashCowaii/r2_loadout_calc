@@ -13,7 +13,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1386061477\">Yunli_SuperCounter_Achevement</a>"
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"

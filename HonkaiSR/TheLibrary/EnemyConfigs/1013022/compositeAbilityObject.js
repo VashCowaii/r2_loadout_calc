@@ -603,7 +603,7 @@ const compositeAbilityObject = {
                   "onlyRemoveOwnersInstance": true
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -659,7 +659,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1755632757\">Monster_W1_Mecha04_RL_Stealth</a>"
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -2106,7 +2106,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Constructing Modifier",
               "execute": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -2119,7 +2119,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Modifier Destroyed/Removed",
               "execute": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"

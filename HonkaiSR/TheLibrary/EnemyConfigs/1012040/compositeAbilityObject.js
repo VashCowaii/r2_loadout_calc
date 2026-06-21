@@ -401,7 +401,7 @@ const compositeAbilityObject = {
               "value": 1
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
@@ -494,7 +494,7 @@ const compositeAbilityObject = {
           ]
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -551,7 +551,7 @@ const compositeAbilityObject = {
           "value": 1
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
@@ -1035,7 +1035,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-733983508\">Svarog_Control_OnPart_Modifier</a>"
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -1092,7 +1092,7 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit",
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"

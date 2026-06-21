@@ -45,7 +45,7 @@ const configAbility = {
               "whitelistTag": 30
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"

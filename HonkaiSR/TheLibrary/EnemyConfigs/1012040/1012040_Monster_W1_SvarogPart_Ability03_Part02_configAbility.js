@@ -309,7 +309,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-733983508\">Svarog_Control_OnPart_Modifier</a>"
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"

@@ -1692,7 +1692,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Modifier Destroyed/Removed",
               "execute": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -1732,7 +1732,7 @@ const compositeAbilityObject = {
                   "threshold": 1.0011718e-7
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -1752,7 +1752,7 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
-                      "name": "Change Character Transformation",
+                      "name": "Change Entity Turn-State",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
@@ -1774,7 +1774,7 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
-                      "name": "Change Character Transformation",
+                      "name": "Change Entity Turn-State",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
@@ -2328,7 +2328,7 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
-                      "name": "Change Character Transformation",
+                      "name": "Change Entity Turn-State",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
@@ -6135,7 +6135,7 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -6291,7 +6291,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1956673523\">MModifier_Monster_W4_Claymore_LocalLegend03_Ability03_Aim</a>[<span class=\"descriptionNumberColor\">Charging</span>]"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"

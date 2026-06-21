@@ -255,7 +255,7 @@ const compositeAbilityObject = {
                   ]
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -760,7 +760,7 @@ const compositeAbilityObject = {
               "eventTrigger": "Being Limbo [Owner]",
               "execute": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Target Part 0}}"
@@ -768,7 +768,7 @@ const compositeAbilityObject = {
                   "phase": "Phase0"
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Target Part 1}}"
@@ -776,7 +776,7 @@ const compositeAbilityObject = {
                   "phase": "Phase0"
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Target Part 3}}"
@@ -1081,7 +1081,7 @@ const compositeAbilityObject = {
           ]
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Target Part 0}}"
@@ -1089,7 +1089,7 @@ const compositeAbilityObject = {
           "phase": "Phase0"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
@@ -1097,7 +1097,7 @@ const compositeAbilityObject = {
           "phase": "Phase0"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Target Part 2}}"
@@ -1105,7 +1105,7 @@ const compositeAbilityObject = {
           "phase": "Phase0"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Target Part 3}}"
@@ -1203,7 +1203,7 @@ const compositeAbilityObject = {
           }
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Target Part 0}}"
@@ -1211,7 +1211,7 @@ const compositeAbilityObject = {
           "phase": "Phase1"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Target Part 1}}"
@@ -1219,7 +1219,7 @@ const compositeAbilityObject = {
           "phase": "Phase1"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Target Part 2}}"
@@ -1227,7 +1227,7 @@ const compositeAbilityObject = {
           "phase": "Phase1"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Target Part 3}}"

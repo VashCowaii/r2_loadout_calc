@@ -4413,7 +4413,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-578037600\">Enemy_W4_FireProwler_ChargeEff_Halo</a>"
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -5130,7 +5130,7 @@ const compositeAbilityObject = {
                           }
                         },
                         {
-                          "name": "Change Character Transformation",
+                          "name": "Change Entity Turn-State",
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
@@ -8547,7 +8547,7 @@ const compositeAbilityObject = {
           },
           "ifTargetFound": [
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
@@ -8757,7 +8757,7 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit",
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -8875,7 +8875,7 @@ const compositeAbilityObject = {
           },
           "ifTargetFound": [
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
@@ -9078,7 +9078,7 @@ const compositeAbilityObject = {
           },
           "ifTargetFound": [
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
@@ -9120,7 +9120,7 @@ const compositeAbilityObject = {
           },
           "ifTargetFound": [
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
@@ -9622,7 +9622,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
@@ -9666,7 +9666,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
@@ -9977,7 +9977,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
                     },
                     {
-                      "name": "Change Character Transformation",
+                      "name": "Change Entity Turn-State",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
@@ -10021,7 +10021,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
                     },
                     {
-                      "name": "Change Character Transformation",
+                      "name": "Change Entity Turn-State",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"

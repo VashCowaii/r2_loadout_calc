@@ -16,7 +16,7 @@ const configAbility = {
           "eventTrigger": "When Constructing Modifier",
           "execute": [
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
@@ -40,7 +40,7 @@ const configAbility = {
               },
               "passed": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -50,7 +50,7 @@ const configAbility = {
               ],
               "failed": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"

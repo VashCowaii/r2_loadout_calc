@@ -37,7 +37,7 @@ const configAbility = {
           "eventTrigger": "Being Limbo [Owner]",
           "execute": [
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
@@ -71,7 +71,7 @@ const configAbility = {
           "eventTrigger": "Being Weakness Broken: End [Owner]",
           "execute": [
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
@@ -439,7 +439,7 @@ const configAbility = {
               "value": 0
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
@@ -513,7 +513,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1705533057\">Yunli_Blocking_BeingAttackMark</a>"
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"

@@ -1958,7 +1958,7 @@ const configAbility = {
               "includeMaxValueInRange": true,
               "whenEnteringRange": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -2209,7 +2209,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1043458445\">Monster_W2_HuanlongPart_01_Dormancy</a>[<span class=\"descriptionNumberColor\">Repose</span>]"
                     },
                     {
-                      "name": "Change Character Transformation",
+                      "name": "Change Entity Turn-State",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
@@ -2586,7 +2586,7 @@ const configAbility = {
                   "multiBase": 1
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -3046,7 +3046,7 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1043458445\">Monster_W2_HuanlongPart_01_Dormancy</a>[<span class=\"descriptionNumberColor\">Repose</span>]"
                     },
                     {
-                      "name": "Change Character Transformation",
+                      "name": "Change Entity Turn-State",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"

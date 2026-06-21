@@ -114,7 +114,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1836586522\">Monster_SW_Boss_Deathrattle</a>"
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"

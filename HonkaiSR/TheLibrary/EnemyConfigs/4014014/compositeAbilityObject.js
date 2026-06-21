@@ -3632,7 +3632,7 @@ const compositeAbilityObject = {
               "eventTrigger": "Locked HP Floor Reached [Owner]",
               "execute": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"

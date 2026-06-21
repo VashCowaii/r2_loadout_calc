@@ -162,7 +162,7 @@ const compositeAbilityObject = {
           }
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -359,7 +359,7 @@ const compositeAbilityObject = {
                   "includeMaxValueInRange": true,
                   "whenEnteringRange": [
                     {
-                      "name": "Change Character Transformation",
+                      "name": "Change Entity Turn-State",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Caster}}"

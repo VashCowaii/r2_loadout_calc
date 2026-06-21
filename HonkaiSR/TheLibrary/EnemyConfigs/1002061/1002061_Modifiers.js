@@ -16,7 +16,7 @@ const configAbility = {
           "eventTrigger": "When Constructing Modifier",
           "execute": [
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"

@@ -38,7 +38,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-836809540\">Enemy_W3_Sam_01_Ability04Command</a>"
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"

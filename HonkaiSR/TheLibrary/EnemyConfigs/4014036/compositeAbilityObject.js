@@ -1055,7 +1055,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"586169347\">Monster_W4_Pollux_Strengthen_BreakMark</a>"
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -1127,7 +1127,7 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
-                      "name": "Change Character Transformation",
+                      "name": "Change Entity Turn-State",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
@@ -1638,7 +1638,7 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
-                      "name": "Change Character Transformation",
+                      "name": "Change Entity Turn-State",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
@@ -3461,7 +3461,7 @@ const compositeAbilityObject = {
                   }
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -3652,7 +3652,7 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
-                      "name": "Change Character Transformation",
+                      "name": "Change Entity Turn-State",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
@@ -7548,7 +7548,7 @@ const compositeAbilityObject = {
           "trigger": "SpEff_Trigger"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"

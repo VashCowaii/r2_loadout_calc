@@ -1672,7 +1672,7 @@ const configAbility = {
           "eventTrigger": "When Modifier Destroyed/Removed",
           "execute": [
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
@@ -1712,7 +1712,7 @@ const configAbility = {
               "threshold": 1.0011718e-7
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
@@ -1732,7 +1732,7 @@ const configAbility = {
               },
               "passed": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -1754,7 +1754,7 @@ const configAbility = {
               },
               "passed": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"

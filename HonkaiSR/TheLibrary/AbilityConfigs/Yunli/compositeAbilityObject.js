@@ -66,7 +66,7 @@ const compositeAbilityObject = {
               "eventTrigger": "Being Limbo [Owner]",
               "execute": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -100,7 +100,7 @@ const compositeAbilityObject = {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
               "execute": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -468,7 +468,7 @@ const compositeAbilityObject = {
                   "value": 0
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -542,7 +542,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1705533057\">Yunli_Blocking_BeingAttackMark</a>"
                     },
                     {
-                      "name": "Change Character Transformation",
+                      "name": "Change Entity Turn-State",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
@@ -2565,7 +2565,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -2801,7 +2801,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1693627544\">Yunli_Blocking_Effect</a>"
                         },
                         {
-                          "name": "Change Character Transformation",
+                          "name": "Change Entity Turn-State",
                           "target": {
                             "name": "Target Name",
                             "target": "{{Caster}}"
@@ -2839,7 +2839,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1386061477\">Yunli_SuperCounter_Achevement</a>"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"

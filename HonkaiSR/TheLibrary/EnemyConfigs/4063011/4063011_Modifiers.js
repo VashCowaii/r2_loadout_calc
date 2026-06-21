@@ -74,7 +74,7 @@ const configAbility = {
           "eventTrigger": "When Stacking/Receiving Modifier",
           "execute": [
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
@@ -87,7 +87,7 @@ const configAbility = {
           "eventTrigger": "End Broken State [Owner]",
           "execute": [
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
@@ -126,7 +126,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"

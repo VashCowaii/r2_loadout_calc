@@ -28,7 +28,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1695851719\">Monster_W4_PolluxPart_Status</a>"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"

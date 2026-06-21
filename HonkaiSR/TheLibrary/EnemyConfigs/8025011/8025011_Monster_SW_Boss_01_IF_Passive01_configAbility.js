@@ -63,7 +63,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1923762583\">Enemy_SW_Boss_01_IF_PartController</a>"
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"

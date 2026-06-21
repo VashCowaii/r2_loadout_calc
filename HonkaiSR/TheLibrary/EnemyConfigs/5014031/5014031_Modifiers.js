@@ -816,7 +816,7 @@ const configAbility = {
           "eventTrigger": "Pre-Death [Owner]",
           "execute": [
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"

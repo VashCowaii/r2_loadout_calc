@@ -184,7 +184,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1198782929\">Enemy_W2_Yanqing_StandByEffect_Part03</a>"
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"

@@ -21,7 +21,7 @@ const configAbility = {
           "eventTrigger": "When Constructing Modifier",
           "execute": [
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
@@ -65,7 +65,7 @@ const configAbility = {
           "eventTrigger": "When Constructing Modifier",
           "execute": [
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
@@ -78,7 +78,7 @@ const configAbility = {
           "eventTrigger": "When Modifier Destroyed/Removed",
           "execute": [
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
@@ -1355,7 +1355,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"965815896\">Enemy_W4_Mascot_EscapingCharge02_LoopEffect</a>"
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
@@ -1376,7 +1376,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"965815896\">Enemy_W4_Mascot_EscapingCharge02_LoopEffect</a>"
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
@@ -1507,7 +1507,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1417889137\">Enemy_W4_Mascot_EscapingCharge01_LoopEffect</a>"
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
@@ -1528,7 +1528,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1417889137\">Enemy_W4_Mascot_EscapingCharge01_LoopEffect</a>"
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
@@ -1665,7 +1665,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-936810546\">Enemy_W4_Mascot_EscapingCharge00_LoopEffect</a>"
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
@@ -1686,7 +1686,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-936810546\">Enemy_W4_Mascot_EscapingCharge00_LoopEffect</a>"
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"

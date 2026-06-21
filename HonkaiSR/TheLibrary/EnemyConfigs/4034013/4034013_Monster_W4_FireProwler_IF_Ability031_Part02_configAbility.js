@@ -100,7 +100,7 @@ const configAbility = {
       },
       "ifTargetFound": [
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"

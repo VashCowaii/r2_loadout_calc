@@ -44,7 +44,7 @@ const configAbility = {
     },
     "Deleted bullshit",
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"
@@ -52,7 +52,7 @@ const configAbility = {
       "phase": "Phase03"
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{@Sparxiecon: Output Port 1}}"

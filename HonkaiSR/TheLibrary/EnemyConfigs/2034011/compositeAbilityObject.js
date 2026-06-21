@@ -948,7 +948,7 @@ const compositeAbilityObject = {
               "eventTrigger": "Locked HP Floor Reached [Owner]",
               "execute": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -987,7 +987,7 @@ const compositeAbilityObject = {
                   }
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -2315,7 +2315,7 @@ const compositeAbilityObject = {
           ],
           "failed": [
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster}}"

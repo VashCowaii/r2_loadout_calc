@@ -2011,7 +2011,7 @@ const compositeAbilityObject = {
                   "includeMaxValueInRange": true,
                   "whenEnteringRange": [
                     {
-                      "name": "Change Character Transformation",
+                      "name": "Change Entity Turn-State",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
@@ -2262,7 +2262,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1043458445\">Monster_W2_HuanlongPart_01_Dormancy</a>[<span class=\"descriptionNumberColor\">Repose</span>]"
                         },
                         {
-                          "name": "Change Character Transformation",
+                          "name": "Change Entity Turn-State",
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
@@ -2639,7 +2639,7 @@ const compositeAbilityObject = {
                       "multiBase": 1
                     },
                     {
-                      "name": "Change Character Transformation",
+                      "name": "Change Entity Turn-State",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
@@ -3099,7 +3099,7 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1043458445\">Monster_W2_HuanlongPart_01_Dormancy</a>[<span class=\"descriptionNumberColor\">Repose</span>]"
                         },
                         {
-                          "name": "Change Character Transformation",
+                          "name": "Change Entity Turn-State",
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
@@ -4497,7 +4497,7 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -4620,7 +4620,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1577499411\">Monster_W2_Huanlong_IF_PartController</a>"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"

@@ -137,7 +137,7 @@ const configAbility = {
       "trigger": "SpEff_Trigger"
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"

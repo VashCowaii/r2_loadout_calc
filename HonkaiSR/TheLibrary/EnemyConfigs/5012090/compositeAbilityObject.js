@@ -224,7 +224,7 @@ const compositeAbilityObject = {
                       "value": 0
                     },
                     {
-                      "name": "Change Character Transformation",
+                      "name": "Change Entity Turn-State",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
@@ -320,7 +320,7 @@ const compositeAbilityObject = {
                           "value": 0
                         },
                         {
-                          "name": "Change Character Transformation",
+                          "name": "Change Entity Turn-State",
                           "target": {
                             "name": "Target Name",
                             "target": "{{Caster}}"
@@ -383,7 +383,7 @@ const compositeAbilityObject = {
                       "value": 0
                     },
                     {
-                      "name": "Change Character Transformation",
+                      "name": "Change Entity Turn-State",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
@@ -491,7 +491,7 @@ const compositeAbilityObject = {
           "value": 0
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -593,7 +593,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1466426252\">Monster_W3_Clock_03_Charge</a>[<span class=\"descriptionNumberColor\">Strength Boost!</span>]"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"

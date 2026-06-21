@@ -47,7 +47,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1258256002\">Enemy_W4_IronTombCore_Status</a>"
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"

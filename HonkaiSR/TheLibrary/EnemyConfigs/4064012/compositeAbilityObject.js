@@ -5312,7 +5312,7 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit",
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"

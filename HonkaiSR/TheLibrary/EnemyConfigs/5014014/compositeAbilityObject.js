@@ -10129,7 +10129,7 @@ const compositeAbilityObject = {
       "toughnessList": null,
       "parse": [
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -10137,7 +10137,7 @@ const compositeAbilityObject = {
           "revertDefault": true
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
@@ -10238,7 +10238,7 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit",
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -10246,7 +10246,7 @@ const compositeAbilityObject = {
           "phase": "Phase03"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{@Sparxiecon: Output Port 1}}"

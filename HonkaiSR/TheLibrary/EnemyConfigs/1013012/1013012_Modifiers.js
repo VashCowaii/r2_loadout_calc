@@ -447,7 +447,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
@@ -503,7 +503,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1212340220\">Monster_W1_Mecha03_RL_Stealth</a>"
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster}}"

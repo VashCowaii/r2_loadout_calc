@@ -233,7 +233,7 @@ const configAbility = {
               ]
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
@@ -738,7 +738,7 @@ const configAbility = {
           "eventTrigger": "Being Limbo [Owner]",
           "execute": [
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Target Part 0}}"
@@ -746,7 +746,7 @@ const configAbility = {
               "phase": "Phase0"
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Target Part 1}}"
@@ -754,7 +754,7 @@ const configAbility = {
               "phase": "Phase0"
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Target Part 3}}"

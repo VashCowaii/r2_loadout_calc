@@ -1087,7 +1087,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1845649491\">Acheron_Ability03_StancePreview</a>"
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
@@ -1124,7 +1124,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1845649491\">Acheron_Ability03_StancePreview</a>"
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster}}"

@@ -4046,7 +4046,7 @@ const compositeAbilityObject = {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
               "execute": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -7241,7 +7241,7 @@ const compositeAbilityObject = {
           ]
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -7442,7 +7442,7 @@ const compositeAbilityObject = {
         },
         "Deleted bullshit",
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
