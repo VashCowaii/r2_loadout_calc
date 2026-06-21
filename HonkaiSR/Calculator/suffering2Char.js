@@ -19122,12 +19122,14 @@ const turnLogic = {
                         else if (noFUA && noULT && !exTurnQueue) {
                             ownerTurn.battleValues.skillCounter = 0;
                             ownerTurn.ArcherCanDoExtraTurn = false;
+                            ownerTurn.battleValues.skillStarted = false;
                         }
                         
                     }
                     else if (ownerTurn.ArcherCanDoExtraTurn) {
                         ownerTurn.battleValues.skillCounter = 0;
                         ownerTurn.ArcherCanDoExtraTurn = false;
+                        ownerTurn.battleValues.skillStarted = false;
                     }
                 },
                 "target": "self",
