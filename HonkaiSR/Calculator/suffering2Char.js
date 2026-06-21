@@ -3426,6 +3426,7 @@ const battleActions = {
 
                 const targetObject = atkEntry.target;
                 const subTargetObject = atkEntry.subTarget;
+                const distributedTargetCount = battleData.activeEnemies ?? 1;
 
                 if (targetObject) {
                     const energyGain = ATKObjectEnergy * (targetObject.energyRatio ?? 0);
@@ -3437,8 +3438,7 @@ const battleActions = {
                     for (let ee=0;ee<primaryLength;ee++) {
                         const currentTarget = primaryTarget[ee];
                         // if (currentTarget.isUnselectable) {continue;}
-                        // console.log(atkEntry,hitType)
-                        hitWrap(battleData,currentTarget,atkEntry,targetObject,hitType,generalInfo,isLastHit,false,primaryLength);
+                        hitWrap(battleData,currentTarget,atkEntry,targetObject,hitType,generalInfo,isLastHit,false,distributedTargetCount);
                     }
                 }
                 if (subTargetObject) {
@@ -3448,7 +3448,7 @@ const battleActions = {
                     for (let ee=0;ee<subLength;ee++) {
                         const currentTarget = subTarget[ee];
                         // if (currentTarget.isUnselectable) {continue;}
-                        hitWrap(battleData,currentTarget,atkEntry,subTargetObject,hitType,generalInfo,isLastHit,false,subLength);
+                        hitWrap(battleData,currentTarget,atkEntry,subTargetObject,hitType,generalInfo,isLastHit,false,distributedTargetCount);
                     }
                 }
             }
@@ -3489,9 +3489,11 @@ const battleActions = {
 
                 const energyGain = bounceEnergy * (targetObject.energyRatio ?? 0);
                 if (energyGain) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split [BOUNCE]");}
+                const distributedTargetCount = battleData.activeEnemies ?? 1;
 
-                hitWrap(battleData,currentEnemy,atkEntry,targetObject,"primary",generalInfo,isLastHit,isBounce);
+                hitWrap(battleData,currentEnemy,atkEntry,targetObject,"primary",generalInfo,isLastHit,isBounce,distributedTargetCount);
                 totalHits += 1;//since we skip dead guys, gotta increments hits inside the loop
+                
 
                 if (blastTargetObject) {
 
@@ -3515,7 +3517,7 @@ const battleActions = {
                         const blastLength = targetsBlast.length;
                         totalHits += blastLength;
                         for (let enemyEntry of targetsBlast) {
-                            hitWrap(battleData,enemyEntry,atkEntry,blastTargetObject,"blast",generalInfo,isLastHit,isBounce,blastLength+1);
+                            hitWrap(battleData,enemyEntry,atkEntry,blastTargetObject,"blast",generalInfo,isLastHit,isBounce,distributedTargetCount);
                         }
                     }
                 } 
