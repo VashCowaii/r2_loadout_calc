@@ -20,7 +20,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1074851259\">MStrongChallengeEX_Talent_StageAbility_PLY_034</a>",
       "execute": [
         {
-          "eventTrigger": "Caused a Limbo/DeathState [Owner]",
+          "eventTrigger": "Caused Limbo [Owner]",
           "execute": [
             {
               "name": "Use Custom Character Function",

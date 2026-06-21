@@ -51,7 +51,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Caused a Limbo/DeathState [Owner]",
+          "eventTrigger": "Caused Limbo [Owner]",
           "execute": [
             {
               "name": "IF",
