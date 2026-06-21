@@ -5370,6 +5370,127 @@ const turnLogicLightcones = {
             // "dmgStack": "Boundless Choreo (LC)"
         },
     },
+    "It's Showtime": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+
+                        subListeners[0].condition(battleData,{sourceTurn: currentTurn});
+                    }
+                },
+                "target": "self",
+                "listenerName": "It's Showtime listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "UpdateStatEffectHitRate",//EffectHitRate stat family
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+
+                            const EHRCheck = sourceTurn.statTable[EffectHitRate];
+                            const valid = EHRCheck >= 0.80
+        
+                            if (!sourceTurn.lcItsShowtimeATKSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                const ownerRank = ownersSlots[sourceTurn.name];
+                                let lcNameRef = "It's Showtime";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+        
+                                sourceTurn.lcItsShowtimeATKSHEET = {
+                                    "stats":[ATKP],
+                                    [ATKP]: rankParams[4],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.atkBuff,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                }
+                            }
+    
+                            let buffSheet = sourceTurn.lcItsShowtimeATKSHEET;
+
+                            const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+                            if (buffCheck) {
+                                if (valid) {return;}
+                                removeBuff(battleData,sourceTurn,buffCheck);
+                            }
+                            else if (valid) {
+                                updateBuff(battleData,sourceTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "It's Showtime EHR check",
+                    },
+                ]
+            },
+            {
+                "trigger": "DebuffApplied",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    const source = generalInfo.currentReference.sourceOwner;
+                    const ownerSlot = battleData.nameIndex[source];
+
+                    let ownersSlots = this.ownersSlots;
+                    let ownerRank = ownersSlots[ownerSlot];
+                    if (!ownerRank) {return;}//if the debuff owner isn't an owner of the lightcone, abort early
+
+                    const sourceTurn = battleData.nameBasedTurns[ownerSlot];
+
+                    if (!sourceTurn.lcItsShowtimeTRICKSHEET) {
+                        let lcNameRef = "It's Showtime";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+
+                        sourceTurn.lcItsShowtimeTRICKSHEET = {
+                            "stats":[DamageAll],
+                            [DamageAll]: rankParams[0],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.trick,
+                            "durationInTurn": 2,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 3,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                        }
+                    }
+
+                    let buffSheet = sourceTurn.lcItsShowtimeTRICKSHEET;
+                    updateBuff(battleData,sourceTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "It's Showtime - debuffs owned check (application)",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "atkBuff": "It's Showtime [LC]",
+            "trick": "Trick [LC]"
+        },
+    },
         //3star
     "Void": {//REDONE
         logic(thisTurn,battleData) {},
