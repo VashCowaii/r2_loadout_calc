@@ -5252,6 +5252,124 @@ const turnLogicLightcones = {
             "dmgStack": "Boundless Choreo (LC)"
         },
     },
+    "We Will Meet Again": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[2],subListeners[2].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "We Will Meet Again listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AttackDMGEnd", 
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (!sourceTurn.lcWeWillMeetAgainReady) {return;}
+
+                            if (!sourceTurn.lcWeWillMeetAgainPROCSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+
+                                let lcNameRef = "We Will Meet Again";
+                                // let buffName = turnLogicLightcones[lcNameRef].buffNames.dmgStack;
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+
+                                const scalar = "ATK";
+                                const tags = ["All",sourceTurn.element];
+                                const actionTags = ["All","Additional"];
+                                const keyShortcut = basicShorthand.makeKeysArray;
+                                const realDMGKeys = keyShortcut(dmgKeys,tags);
+                                const realPENKeys = keyShortcut(resPENKeys,tags);
+                                const realShredKeys = keyShortcut(defShredKeys,tags);
+                                const realVulnKeys = keyShortcut(vulnKeys,tags);
+                                const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                                //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                                sourceTurn.lcWeWillMeetAgainPROCSHEET = {
+                                    multipliers: {
+                                        primary: null,
+                                        blast: null,
+                                        all: null,
+                                        additional: rankParams[0]
+                                    },
+                                    scalar,
+                                    element: sourceTurn.element,//override for additional dmg, not used otherwise
+                                    DMGTags: tags,
+                                    allToughness: false,
+                                    slot: null,
+                                    realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                                    actionTags,
+                                    compositeCacheTag
+                                }
+                            }
+                            let ATKObject = sourceTurn.lcWeWillMeetAgainPROCSHEET;
+
+                            const allyAssignedName = sourceTurn.properName;
+                            const enemyTurns = battleData.enemyBasedTurns;
+                            const addedWrapper = battleActions.additionalDMGWrapper;
+                            const targetsGotHit = generalInfo.targetsGotHit;
+                            for (let enemySlot in targetsGotHit) {
+                                const currentEnemy = enemyTurns[enemySlot];
+                                if (currentEnemy.isDead) {continue;}
+
+                                addedWrapper(battleData,sourceTurn,allyAssignedName,ATKObject,currentEnemy,"We Will Meet Again");
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "We Will Meet Again - additional dmg proc",
+                    },
+                    {
+                        "trigger": "AbilityStart", 
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "BasicATK" && action != "Skill") {return;}
+
+                            const sourceTurn = generalInfo.sourceTurn;
+                            sourceTurn.lcWeWillMeetAgainReady = true;
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "We Will Meet Again - ability check",
+                    },
+                    {
+                        "trigger": "AbilityEnd", 
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "BasicATK" && action != "Skill") {return;}
+
+                            const sourceTurn = generalInfo.sourceTurn;
+                            sourceTurn.lcWeWillMeetAgainReady = false;
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "We Will Meet Again - ability end clear",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            // "dmgStack": "Boundless Choreo (LC)"
+        },
+    },
         //3star
     "Void": {//REDONE
         logic(thisTurn,battleData) {},
