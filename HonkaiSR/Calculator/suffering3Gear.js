@@ -11928,6 +11928,77 @@ const turnLogicLightcones = {
             "cosmicDMG": "The Great Cosmic Enterprise",
         },
     },
+    "After the Charmony Fall": {//REDONE
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "After the Charmony Fall listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (!sourceTurn.lcAfterCharmonySPDSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                const ownerRank = ownersSlots[sourceTurn.name];
+                                let lcNameRef = "After the Charmony Fall";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+                                
+                                const lcBuffNames = turnLogicLightcones[lcNameRef].buffNames;
+                                let buffName = lcBuffNames.spd;
+                                sourceTurn.lcAfterCharmonySPDSHEET = {
+                                    "stats": [SPDP],
+                                    [SPDP]: rankParams[1],
+                                    "flags": [SPD_UP],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                }
+                            }
+        
+                            const buffSheet = sourceTurn.lcAfterCharmonySPDSHEET;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "After the Charmony Fall, ult end spd",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "spd": "After the Charmony Fall [LC]",
+        },
+    },
         //3star
     "A Dream Scented in Wheat": {//REDONE
         logic(thisTurn,battleData) {},
