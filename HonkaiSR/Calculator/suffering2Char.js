@@ -3569,9 +3569,9 @@ const battleActions = {
                     updateEnergy(battleData,sumEnergyGain,currentTurn,false,"Hit(s) Received");
                 }
             }
+            clearPendingDeaths(battleData)
         }
-        clearPendingDeaths(battleData)
-
+    
         return generalInfo
     },
     markEnemyForDeath(battleData,targetTurn,sourceTurn) {
