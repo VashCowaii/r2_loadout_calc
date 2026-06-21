@@ -716,8 +716,8 @@ const turnLogicLightcones = {
             {
                 "trigger": "WaveStart",
                 condition(battleData,generalInfo) {
-                    const currentWave = generalInfo.currentWave;
-                    if (currentWave != 1) {return;}
+                    // const currentWave = generalInfo.currentWave;
+                    // if (currentWave != 1) {return;}
 
                     let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
@@ -3235,7 +3235,7 @@ const turnLogicLightcones = {
             {
                 "trigger": "WaveStart",
                 condition(battleData,generalInfo) {
-                    // const currentWave = generalInfo.currentWave;
+                    const currentWave = generalInfo.currentWave;
                     if (currentWave != 1) {return;}
                     let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
                     let lcNameRef = "Fine Fruit";
@@ -4814,6 +4814,8 @@ const turnLogicLightcones = {
             {
                 "trigger": "WaveStart",
                 condition(battleData,generalInfo) {
+                    const currentWave = generalInfo.currentWave;
+                    if (currentWave != 1) {return;}
                     // let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
                     const namedTurns = battleData.nameBasedTurns;
@@ -8388,6 +8390,8 @@ const turnLogicLightcones = {
             {
                 "trigger": "WaveStart",
                 condition(battleData,generalInfo) {
+                    const currentWave = generalInfo.currentWave;
+                    if (currentWave != 1) {return;}
                     // let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
                     // let lcNameRef = "Poised to Bloom";
@@ -8784,6 +8788,8 @@ const turnLogicLightcones = {
             {
                 "trigger": "WaveStart",
                 condition(battleData,generalInfo) {
+                    const currentWave = generalInfo.currentWave;
+                    if (currentWave != 1) {return;}
                     // let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
                     // let lcNameRef = "Poised to Bloom";
@@ -8954,6 +8960,8 @@ const turnLogicLightcones = {
             {
                 "trigger": "WaveStart",
                 condition(battleData,generalInfo) {
+                    const currentWave = generalInfo.currentWave;
+                    if (currentWave != 1) {return;}
                     // let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
                     // let lcNameRef = "Poised to Bloom";
@@ -9014,6 +9022,9 @@ const turnLogicLightcones = {
             {
                 "trigger": "WaveStart",
                 condition(battleData,generalInfo) {
+                    const currentWave = generalInfo.currentWave;
+                    if (currentWave != 1) {return;}
+
                     // let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
                     // let lcNameRef = "Poised to Bloom";
@@ -12166,7 +12177,7 @@ const turnLogicLightcones = {
                         let rankParams = lcPathing[owner.rank-1];
                         let currentTurn = battleData.nameBasedTurns[charSlot];
 
-                        const totalBonus = rankParams[0]
+                        const totalBonus = rankParams[0];
 
                         buffSheet[DamageAll] = totalBonus;
                         buffSheet.sourceOwner = currentTurn.properName;
