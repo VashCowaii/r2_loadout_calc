@@ -1952,7 +1952,7 @@ const battleActions = {
         const isHitBased = generalInfo.superReduction;
         if (isHitBased) {
             const currentEnemy = generalInfo.targetTurn;
-            if (currentEnemy.isDead) {return;}
+            if (currentEnemy.isDead || currentEnemy.isLimbo) {return;}
 
             const accumulatedToughness = isHitBased;
             superBreakage(battleData,element,sourceTurn,currentEnemy,DMGTags,superBreakArray[0],superBreakArray[1],accumulatedToughness,generalInfo);
@@ -1960,7 +1960,7 @@ const battleActions = {
         else {
             for (let enemySlot in targetsGotHit) {
                 const currentEnemy = enemyBasedTurns[enemySlot];
-                if (currentEnemy.isDead) {continue;}
+                if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
     
                 const accumulatedToughness = overBreakTotals[currentEnemy.properName];
                 if (!accumulatedToughness) {continue;}
@@ -2157,6 +2157,7 @@ const battleActions = {
             if (enemyHasNoHP && !targetTurn.isDead) {
                 enemyIsDead = true;
                 targetTurn.isDead = true;
+                targetTurn.isLimbo = true;
             }//we only want to declare the enemy dead once, bc an attack might have 30 hits but if they die at hit 10 we don't want to say they died 20 times after
             else {
                 const enemyName = targetTurn.properName;
@@ -2578,6 +2579,7 @@ const battleActions = {
             if (enemyHasNoHP && !targetTurn.isDead) {
                 enemyIsDead = true;
                 targetTurn.isDead = true;
+                targetTurn.isLimbo = true;
             }//we only want to declare the enemy dead once, bc an attack might have 30 hits but if they die at hit 10 we don't want to say they died 20 times after
             else {
                 const enemyName = targetTurn.properName;
@@ -3010,7 +3012,7 @@ const battleActions = {
         let dotWrap = battleActions.dotDMGWrapper;
         // for (let dotRef of currentDots) {
         for (let i=currentDots.length-1;i>=0;i--) {
-            if (targetTurn.isDead) {break;}
+            if (targetTurn.isDead || targetTurn.isLimbo) {break;}
             const dotRef = currentDots[i];
             if (!dotRef.isDOT) {continue;}
             // currentBuff = buffsRef[buffName];
@@ -7633,7 +7635,7 @@ const turnLogic = {
                         "trigger": "WasAttackedEnd",
                         condition(battleData,generalInfo,personalOwner) {
                             const providerTurn = this.providerTurn;
-                            if (personalOwner.isDead) {return;}
+                            if (personalOwner.isDead || personalOwner.isLimbo) {return;}
         
                             const sourceTurn = generalInfo.sourceTurn;
                             if (!sourceTurn.isEnemy) {return;}//we only care about hostile attacks coming in
@@ -11297,7 +11299,7 @@ const turnLogic = {
                                     action: "Insert",
                                     abortCheck(battleData,actionObject,sourceTurn) {
                                         const target = actionObject.target;
-                                        if (target.isDead || target.isLimbo) {
+                                        if (target.isDead) {
                                             sourceTurn.battleValues.fuaStackDebt -= 1;
                                             return true;
                                         }
@@ -11324,7 +11326,7 @@ const turnLogic = {
                                 else if (primaryTargetArray.length > 1) {
                                     let potentialTargets = [];
                                     for (let target of primaryTargetArray) {
-                                        if (!target.isDead && !target.isLimbo) {
+                                        if (!target.isDead) {
                                             potentialTargets.push(target);
                                         }
                                     }
@@ -11342,7 +11344,7 @@ const turnLogic = {
                                     else if (subTargetArray.length > 1) {
                                         let potentialTargets = [];
                                         for (let target of subTargetArray) {
-                                            if (!target.isDead && !target.isLimbo) {
+                                            if (!target.isDead) {
                                                 potentialTargets.push(target);
                                             }
                                         }
@@ -12502,7 +12504,7 @@ const turnLogic = {
                     {
                         "trigger": "WasAttackedEnd",
                         condition(battleData,generalInfo,personalOwner) {
-                            if (!personalOwner.hysilensFieldProcCounter || personalOwner.isDead) {return;}
+                            if (!personalOwner.hysilensFieldProcCounter || personalOwner.isDead || personalOwner.isLimbo) {return;}
 
                             const providerTurn = this.providerTurn;
                             // const ownerTurn = this.ownerTurn;
@@ -16206,7 +16208,7 @@ const turnLogic = {
                 const addedWrapper = battleActions.additionalDMGWrapper;
                 for (let enemySlot in targetsGotHit) {
                     const currentEnemy = enemyTurns[enemySlot];
-                    if (currentEnemy.isDead) {continue;}
+                    if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
                     let debuffCount = currentEnemy.debuffCounter;
 
                     if (debuffCount) {addedWrapper(battleData,allyTurn,allyAssignedName,ATKObject,currentEnemy,"E6 Feeble Pursuit");}
@@ -17171,7 +17173,7 @@ const turnLogic = {
                                     const enemyTurn = enemyTurns[enemySlot];
                                     if (enemyTurn.dahliaEnemyImplanted) {
                                         enemyTurn.dahliaEnemyImplanted = false;
-                                        if (enemyTurn.isDead) {continue;}
+                                        if (enemyTurn.isDead || enemyTurn.isLimbo) {continue;}
 
                                         dealToughnessDMG(battleData,sourceTurn,false,enemyTurn,1,20,overBreakTotals,ATKObject,"Fire",generalInfo,slot,true,true)
                                     }
@@ -17366,7 +17368,7 @@ const turnLogic = {
                             if (!wasAlreadyAllToughness) {ATKObject.allToughness = true;}
                             for (let enemySlot in targetsGotHit) {
                                 const enemyTurn = enemyTurns[enemySlot];
-                                if (enemyTurn.dahliaE1ProcDone || enemyTurn.isDead) {continue;}
+                                if (enemyTurn.dahliaE1ProcDone || enemyTurn.isDead || enemyTurn.isLimbo) {continue;}
                                 enemyTurn.dahliaE1ProcDone = true;//TODO: later when we allow multiphase bosses(which is actually soon) we need to allow the boss on regenerating their bars, to proc this false again.
 
                                 const maxToughness = enemyTurn.maxToughness;
@@ -19897,7 +19899,7 @@ const turnLogic = {
                             action: "Skill",
                             abortCheck(battleData,actionObject,sourceTurn) {
                                 const target = actionObject.target[0];
-                                if (target.isDead || target.isLimbo) {
+                                if (target.isDead) {
                                     const enemyPositions = battleData.enemyPositions;
 
                                     let lowestHP = Infinity;
@@ -20829,7 +20831,7 @@ const turnLogic = {
                         action: "Insert",
                         abortCheck(battleData,actionObject,sourceTurn) {
                             const target = actionObject.target[0];
-                            if (target.isDead || target.isLimbo) {
+                            if (target.isDead) {
                                 if (!enemyPositions.length) {return true;}
                                 else {
                                     actionObject.target = [battleData.primaryTarget];
@@ -21979,7 +21981,7 @@ const turnLogic = {
                             const target = generalInfo.target;
                             let enemyToFUA = null;
                             for (let enemySlot of target) {
-                                if (enemySlot.isDead || enemySlot.isLimbo) {continue;}
+                                if (enemySlot.isDead) {continue;}
                                 if (enemySlot.statTable[WeaknessWind]) {
                                     enemyToFUA = enemySlot;
                                     break;
@@ -21988,7 +21990,7 @@ const turnLogic = {
                             if (!enemyToFUA) {
                                 const subTarget = generalInfo.subTarget;
                                 for (let enemySlot of subTarget) {
-                                    if (enemySlot.isDead || enemySlot.isLimbo) {continue;}
+                                    if (enemySlot.isDead) {continue;}
                                     if (enemySlot.statTable[WeaknessWind]) {
                                         enemyToFUA = enemySlot;
                                         break;
@@ -22008,7 +22010,7 @@ const turnLogic = {
                                     action: "Insert",
                                     abortCheck(battleData,actionObject,sourceTurn) {
                                         const target = actionObject.target[0];
-                                        if (target.isDead || target.isLimbo) {
+                                        if (target.isDead) {
                                             sourceTurn.battleValues.e4FUAReady = true;
                                             return true;
                                         }
@@ -23299,7 +23301,7 @@ const turnLogic = {
                 let HPTally = 0;
                 const getHPFinal = calcs.getHPFinal;
                 for (let ally of allyPositions) {
-                    if (ally.isDead || ally.isUnselectable || ally.isMemosprite) {continue;}
+                    if (ally.isDead || ally.isUniqueEvent) {continue;}
                     const allyStatTable = ally.statTable;
                     const finalHP = getHPFinal(allyStatTable).HPFinal;
                     const nullHP = allyStatTable[HPFlatNULL];
@@ -23374,7 +23376,7 @@ const turnLogic = {
                 for (let enemyHit in targetsGotHit) {
                     hitsToDo++;
                     const currentEnemy = enemyTurns[enemyHit];
-                    if (currentEnemy.isDead) {continue;}
+                    if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
                     const currentHP = currentEnemy.currentHP;
                     if (!highestHPEnemy) {
                         highestHPEnemy = currentEnemy;
@@ -23397,7 +23399,7 @@ const turnLogic = {
                     const addedWrapper = battleActions.additionalDMGWrapper;
                     const characterName = sourceTurn.properName;
                     for (let i=0;i<hitsToDo;i++) {3
-                        if (highestHPEnemy.isDead) {break;}
+                        if (highestHPEnemy.isDead || highestHPEnemy.isLimbo) {break;}
                         addedWrapper(battleData,sourceTurn,characterName,ATKObject,highestHPEnemy,"Tribbie Zone");
                         // tallyRef.push({
                         //     ...addedHit.hit
@@ -24126,7 +24128,7 @@ const turnLogic = {
                 let targetFound = null;
                 for (let enemyHit in targetsGotHit) {
                     const currentEnemy = enemyTurns[enemyHit];
-                    if (!currentEnemy.isDead) {
+                    if (!currentEnemy.isDead && !currentEnemy.isLimbo) {
                         if (currentEnemy.properName === primaryTarget.properName) {
                             targetFound = currentEnemy;
                             break;
@@ -41526,10 +41528,10 @@ const turnLogic = {
                 let enemiesChecked = 0;
                 for (let enemyHit in targetsGotHit) {
                     const currentEnemy = enemyTurns[enemyHit];
-                    if (currentEnemy.isDead) {continue;}
+                    if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
                     addedDMG(battleData,allyTurn,allyTurn.properName,ATKObject,currentEnemy,"Bondmate");
 
-                    if (!currentEnemy.isDead) {
+                    if (!currentEnemy.isDead && !currentEnemy.isLimbo) {
                         if (enemiesChecked === 0) {highestHPEnemy = currentEnemy;}
                         else if (currentEnemy.currentHP > highestHPEnemy.currentHP) {highestHPEnemy = currentEnemy}
                         enemiesChecked++;
@@ -41586,7 +41588,7 @@ const turnLogic = {
 
                 for (let enemyHit in targetsGotHit) {
                     const currentEnemy = enemyTurns[enemyHit];
-                    if (currentEnemy.isDead) {continue;}
+                    if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
                     addedDMG(battleData,allyTurn,allyTurn.properName,ATKObject,currentEnemy,"Bondmate");
                 }
             },
@@ -48297,7 +48299,7 @@ const turnLogic = {
                         const currentEnemy = fullTargetHitArray[enemyIndex];
                         enemyIndex++;
                         // console.log(fullTargetHitArray.length,enemyIndex,battleData.sumAV)
-                        if (currentEnemy.isDead) {
+                        if (currentEnemy.isDead || currentEnemy.isLimbo) {
                             i--;
                             enemyIndex--;
                             fullTargetHitArray.splice(enemyIndex,1);
@@ -49097,7 +49099,7 @@ const turnLogic = {
 
                 const elationProc = battleActions.elationDMGWrapper;
                 for (let enemy of enemyPositions) {
-                    if (enemy.isDead) {continue;}
+                    if (enemy.isDead || enemy.isLimbo) {continue;}
 
                     elationProc(battleData,sourceTurn,sourceTurn.properName,ATKObject,targetTurn,"EMC Talent Elation DMG");
                 }
@@ -50705,7 +50707,7 @@ const turnLogic = {
                 const addProc = battleActions.elationDMGWrapper;
                 for (let enemySlot in targetsGotHit) {
                     const currentEnemy = enemyTurns[enemySlot];
-                    if (currentEnemy.isDead) {continue;}
+                    if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
 
                     addProc(battleData,ownerTurn,ownerTurn.properName,ATKObject,currentEnemy,"SW999 Basic/Skill Elation DMG");
                 }
@@ -51908,7 +51910,7 @@ const turnLogic = {
                     const addProc = battleActions.elationDMGWrapper;
                     for (let enemySlot in targetsGotHit) {
                         const currentEnemy = enemyTurns[enemySlot];
-                        if (currentEnemy.isDead) {continue;}
+                        if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
 
                         const currentBanger = ownerTurn.certifiedBanger;
                         ATKObject.BangerValueOverride = currentBanger > maxEnergy ? null : maxEnergy;
@@ -51920,7 +51922,7 @@ const turnLogic = {
                     let ATKObject = ATKObjects.evaTalentCertifiedElationADDEDATKOBJECT3;
                     const targetTurn = generalInfo.targetTurn;
 
-                    if (!targetTurn.isDead) {
+                    if (!targetTurn.isDead && !targetTurn.isLimbo) {
                         const currentBanger = ownerTurn.certifiedBanger;
                         ATKObject.BangerValueOverride = currentBanger > maxEnergy ? null : maxEnergy;
 
@@ -51936,7 +51938,7 @@ const turnLogic = {
                         const addProc = battleActions.elationDMGWrapper;
                         for (let enemySlot in targetsGotHit) {
                             const currentEnemy = enemyTurns[enemySlot];
-                            if (currentEnemy.isDead) {continue;}
+                            if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
 
                             addProc(battleData,ownerTurn,ownerTurn.properName,ATKObject,currentEnemy,"Evanescia Skill/Ult Elation DMG");
                         }
@@ -51948,7 +51950,7 @@ const turnLogic = {
                         const addProc = battleActions.elationDMGWrapper;
                         for (let enemySlot in targetsGotHit) {
                             const currentEnemy = enemyTurns[enemySlot];
-                            if (currentEnemy.isDead) {continue;}
+                            if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
 
                             addProc(battleData,ownerTurn,ownerTurn.properName,ATKObject,currentEnemy,"Master Fox Elation DMG");
                         }

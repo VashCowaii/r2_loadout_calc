@@ -2087,7 +2087,7 @@ const turnLogicLightcones = {
                 const addedWrapper = battleActions.additionalDMGWrapper;
                 const characterName = sourceTurn.properName;
                 
-                if (!primaryTarget || primaryTarget.isDead) {
+                if (!primaryTarget || primaryTarget.isDead || primaryTarget.isLimbo) {
                     const enemyPositions = battleData.enemyPositions;
                     if (enemyPositions.length) {
                         //cursed, but additional dmg doesn't happen if the target is dead, so if the primary target
@@ -2095,12 +2095,12 @@ const turnLogicLightcones = {
                         const enemyTurns = battleData.enemyBasedTurns;
                         for (let enemyHit in targetsGotHit) {
                             const currentEnemy = enemyTurns[enemyHit];
-                            if (!currentEnemy || currentEnemy.isDead) {continue;}
+                            if (!currentEnemy || currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
                             primaryTarget = currentEnemy;
                         }
                     }
                 }
-                if (primaryTarget && !primaryTarget.isDead) {
+                if (primaryTarget && !primaryTarget.isDead && !primaryTarget.isLimbo) {
                     addedWrapper(battleData,sourceTurn,characterName,ATKObject,primaryTarget,"Time Waits for No One [LC]");
                     // tallyRef.push({
                     //     ...addedHit.hit
@@ -5337,7 +5337,7 @@ const turnLogicLightcones = {
         
                             for (let enemySlot in targetsGotHit) {
                                 const currentEnemy = enemyTurns[enemySlot];
-                                if (currentEnemy.isDead) {continue;}
+                                if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
         
                                 updateBuff(battleData,currentEnemy,buffSheet);
                             }
@@ -5513,7 +5513,7 @@ const turnLogicLightcones = {
                             const targetsGotHit = generalInfo.targetsGotHit;
                             for (let enemySlot in targetsGotHit) {
                                 const currentEnemy = enemyTurns[enemySlot];
-                                if (currentEnemy.isDead) {continue;}
+                                if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
 
                                 addedWrapper(battleData,sourceTurn,allyAssignedName,ATKObject,currentEnemy,"We Will Meet Again");
                             }
@@ -5878,7 +5878,7 @@ const turnLogicLightcones = {
                             const targetsGotHit = generalInfo.targetsGotHit;
                             for (let enemySlot in targetsGotHit) {
                                 const currentEnemy = enemyTurns[enemySlot];
-                                if (currentEnemy.isDead) {continue;}
+                                if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
 
                                 addedWrapper(battleData,sourceTurn,allyAssignedName,ATKObject,currentEnemy,"Hidden Shadow");
                             }
@@ -9538,7 +9538,7 @@ const turnLogicLightcones = {
                 const enemyTurns = battleData.enemyBasedTurns;
                 for (let enemyHit in targetsGotHit) {
                     const currentEnemy = enemyTurns[enemyHit];
-                    if (!currentEnemy || currentEnemy.isDead) {continue;}
+                    if (!currentEnemy || currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
                     // primaryTarget = currentEnemy;
                     addedWrapper(battleData,memoTurn,memoTurn.properName,ATKObject,currentEnemy,"Long May Rainbows Adorn the Sky [LC]");
                 }

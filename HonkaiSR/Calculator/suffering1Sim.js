@@ -897,7 +897,7 @@ const sim = {
                 //     triggerTurnDots(battleData,null,null,sourceTurn,"Turn-Start DOTs");
                 //     // poke("TurnStartDotEnd", battleData, exoTurnRef,sourceTurn);
                 // }
-                if (!sourceTurn.isDead) {
+                if (!sourceTurn.isDead && !sourceTurn.isLimbo) {
                     let turnShouldEnd = false;
                     if (sourceTurn.currentToughness === 0) {
                         // currentToughness: finalStats.Toughness,
@@ -1117,7 +1117,7 @@ const sim = {
                     for (let i = listenerRef.length-1; i>=0; i--) {
                         const currentCondition = listenerRef[i];
                         if (currentCondition.isDOT) {
-                            if (personalOwner.isDead) {continue;}
+                            if (personalOwner.isDead || personalOwner.isLimbo) {continue;}
                             const dotOwner = alliedTurns[currentCondition.ownerSlot];
                             const turnStartFunction = currentCondition.customTurnStartFunction;
                             if (turnStartFunction) {
