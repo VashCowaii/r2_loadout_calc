@@ -1067,6 +1067,189 @@ const turnLogicLightcones = {
             "dmgStack": "Cruising in the Stellar Sea (ATK)"
         },
     },
+    "The Finale of a Lie": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {
+            expireFunction(battleData,expireParam) {
+                // const uniqueBuffName = expireParam.uniqueName;
+
+                battleData.lcFinaleOfALieZONECOUNT -= 1;
+                //only one zone can actually be active, so even if an owner's umbra expires,
+                //so long as someone else's zone is active if multiple wearers are on the field, then leave the zone up
+                //only if ALL zones are dead, kill the actual zone debuff.
+
+                if (battleData.lcFinaleOfALieZONECOUNT === 0) {
+                    const ownerName = expireParam.sourceTurn;
+                    const ownerTurn = battleData.nameBasedTurns[ownerName];
+
+                    battleData.lcFinaleOfALieZONEACTIVESLOT = null;
+
+                    const zoneSheet = ownerTurn.lcFinaleOfALieZONESHEET;
+                    const enemyPositions = battleData.enemyPositions;
+                    removeBuffFromBatch(battleData,enemyPositions,zoneSheet);
+                }
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        currentTurn.lcFinaleOfALieCount = 0;
+
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "The Finale of a Lie listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AttackStart",
+                        condition(battleData,generalInfo) {
+                            // let ownerRef = this.owners;
+        
+                            let isFUA = false;
+                            const actionTags = generalInfo.ATKObject.actionTags;
+                            for (let tag of actionTags) {
+                                if (tag === "FUA") {
+                                    isFUA = true;
+                                    break;
+                                }
+                            }
+                            if (!isFUA) {return;}
+
+                            const sourceTurn = generalInfo.sourceTurn;
+
+                            sourceTurn.lcFinaleOfALieCount += 1;
+                            if (sourceTurn.lcFinaleOfALieCount < 4) {return;}
+                            sourceTurn.lcFinaleOfALieCount = 0;
+
+
+                            const buffSheet = sourceTurn.lcFinaleOfALieATKSHEET;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+
+                            if (!battleData.lcFinaleOfALieZONECOUNT) {
+                                const enemyPositions = battleData.enemyPositions;
+                                const zoneSheet = sourceTurn.lcFinaleOfALieZONESHEET;
+                                updateBuffBatchTargets(battleData,enemyPositions,zoneSheet);
+
+                                battleData.lcFinaleOfALieZONEACTIVESLOT = sourceTurn.name;
+                            }
+                            battleData.lcFinaleOfALieZONECOUNT += 1;
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "The Finale of a Lie - FUA listener",
+                    },
+                ]
+            },
+            {
+                "trigger": "WaveStart",
+                condition(battleData,generalInfo) {
+                    const currentWave = generalInfo.currentWave;
+                    if (currentWave != 1) {return;}
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    const namedTurns = battleData.nameBasedTurns;
+
+                    battleData.lcFinaleOfALieZONECOUNT = 0;
+
+                    for (let owner in ownersSlots) {
+                        let ownerRank = ownersSlots[owner];
+                        let currentTurn = namedTurns[owner];
+
+                        if (!currentTurn.lcFinaleOfALieATKSHEET) {
+                            const lcNameRef = "The Finale of a Lie";
+                            const lcPathing = lightcones[lcNameRef].params;
+                            const rankParams = lcPathing[ownerRank-1];
+
+                            const zoneName = turnLogicLightcones[lcNameRef].buffNames.umbraZONE;
+
+                            currentTurn.lcFinaleOfALieATKSHEET = {
+                                "stats": [ATKP],
+                                [ATKP]: rankParams[3],
+                                "source": lcNameRef,
+                                "sourceOwner": currentTurn.properName,
+                                "buffName": turnLogicLightcones[lcNameRef].buffNames.umbraATK,
+                                "durationInTurn": 4,
+                                "duration": 3,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": "EndTurn",
+                                "expireFunction": turnLogicLightcones[lcNameRef].skillFunctions.expireFunction,
+                                "expireParam": {sourceTurn:currentTurn.name,uniqueName:zoneName}//owner, in this case
+                            }
+
+                            currentTurn.lcFinaleOfALieZONESHEET = {
+                                "stats": [VulnAll],
+                                [VulnAll]: rankParams[4],
+                                "source": lcNameRef,
+                                "sourceOwner": currentTurn.properName,
+                                "buffName": zoneName,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                                "isDebuff": true,
+                            }
+                        }
+                        const buffSheet = currentTurn.lcFinaleOfALieATKSHEET;
+                        updateBuff(battleData,currentTurn,buffSheet);
+
+                        if (!battleData.lcFinaleOfALieZONECOUNT) {
+                            const enemyPositions = battleData.enemyPositions;
+                            const zoneSheet = currentTurn.lcFinaleOfALieZONESHEET;
+                            updateBuffBatchTargets(battleData,enemyPositions,zoneSheet);
+                            battleData.lcFinaleOfALieZONEACTIVESLOT = currentTurn.name;
+
+                            //we're caching who has the active zone so we can yoink the slot for later
+                            //when enemy is created.
+                        }
+                        battleData.lcFinaleOfALieZONECOUNT += 1;
+                    }
+                },
+                "target": "self",
+                "priority": -80,
+                "listenerName": "The Finale of a Lie - battlestart umbra devourer application",
+                "owners": [],
+                "ownersSlots": {}
+            },
+            {
+                "trigger": "EnemyCreated",
+                condition(battleData,generalInfo) {
+                    if (!battleData.lcFinaleOfALieZONEACTIVESLOT) {return;}
+                    const enemyTurn = generalInfo.slotRef;
+
+                    const ownerTurn = battleData.nameBasedTurns[battleData.lcFinaleOfALieZONEACTIVESLOT];
+                    const zoneSheet = ownerTurn.lcFinaleOfALieZONESHEET;
+                    updateBuff(battleData,enemyTurn,zoneSheet);
+                },
+                "target": "self",
+                "listenerName": "The Finale of a Lie - enemy created while umbra active",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            "umbraATK": "Umbra Devourer ATK (LC)",
+            "umbraZONE": "Umbra Devourer ZONE (LC)",
+        },
+    },
         //4star
     //TODO: rework this later, swordplay needs some tweaking after the event rework, but it functions for now just not ideally
     "Swordplay": {
