@@ -11999,7 +11999,7 @@ const turnLogicLightcones = {
             "spd": "After the Charmony Fall [LC]",
         },
     },
-    "Geniuses' Repose": {//REDONE
+    "Geniuses' Repose": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
@@ -12133,8 +12133,81 @@ const turnLogicLightcones = {
             "river": "A Dream Scented in Wheat (LC)",
         },
     },
+    "Make the World Clamor": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    let lcNameRef = "Make the World Clamor";
+                    let lcPathing = lightcones[lcNameRef].params;
+
+                    // let buffName = this.buffNames.fuaDMG;
+                    let buffSheet = this.buffSheet ??= {
+                        "stats": [DamageAll],
+                        [DamageAll]: 0,
+                        "source": lcNameRef,
+                        "sourceOwner": "",
+                        "buffName": turnLogicLightcones[lcNameRef].buffNames.ultDMGBonus,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "actionTags": ["Ultimate"],
+                    }
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let rankParams = lcPathing[owner.rank-1];
+                        let currentTurn = battleData.nameBasedTurns[charSlot];
+
+                        const totalBonus = rankParams[0]
+
+                        buffSheet[DamageAll] = totalBonus;
+                        buffSheet.sourceOwner = currentTurn.properName;
+                        updateBuff(battleData,currentTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Make the World Clamor - battlestart dmg bonus",
+                "owners": [],
+            },
+            {
+                "trigger": "WaveStart",
+                condition(battleData,generalInfo) {
+                    const currentWave = generalInfo.currentWave;
+                    if (currentWave != 1) {return;}
+                    let ownerRef = this.owners;
+
+                    let lcNameRef = "Make the World Clamor";
+                    let lcPathing = lightcones[lcNameRef].params;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let rankParams = lcPathing[owner.rank-1];
+                        let currentTurn = namedTurns[charSlot];
+
+                        const totalBonus = rankParams[1];
+                        updateEnergy(battleData,totalBonus,currentTurn,false,"Make the World Clamor")
+                    }
+                },
+                "target": "self",
+                "priority": -80,
+                "listenerName": "Make the World Clamor - battlestart regen",
+            },
+        ],
+        "buffNames": {
+            "ultDMGBonus": "Make the World Clamor [LC]",
+        },
+    },
         //3star
-    "Data Bank": {//REDONE
+    "Data Bank": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
