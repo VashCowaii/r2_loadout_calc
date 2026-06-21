@@ -12046,8 +12046,7 @@ const turnLogicLightcones = {
             "buff1": "Geniuses' Repose [LC]",
         },
     },
-        //3star
-    "A Dream Scented in Wheat": {//REDONE
+    "A Dream Scented in Wheat": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
@@ -12134,6 +12133,8 @@ const turnLogicLightcones = {
             "river": "A Dream Scented in Wheat (LC)",
         },
     },
+        //3star
+    
     "Sagacity": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
