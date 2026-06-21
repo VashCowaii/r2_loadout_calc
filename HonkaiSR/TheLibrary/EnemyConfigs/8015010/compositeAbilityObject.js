@@ -1235,7 +1235,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Stacking/Receiving Modifier"
             },
             {
-              "eventTrigger": "Waiting for Healing in Limbo",
+              "eventTrigger": "Waiting in Limbo [Owner]",
               "execute": [
                 {
                   "name": "IF",

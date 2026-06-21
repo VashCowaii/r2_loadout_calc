@@ -1878,7 +1878,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__2022798929\">Enemy_W4_FireProwler_10_Main03_ChangePhaseController</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",

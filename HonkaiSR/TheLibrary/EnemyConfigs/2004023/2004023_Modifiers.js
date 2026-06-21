@@ -266,7 +266,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__2018294690\">Enemy_W2_Yanqing_AbilityP01_ChangePhaseController</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "Remove Events/Bonuses",
@@ -4187,7 +4187,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-2138840050\">Enemy_W2_Yanqing_IF_AbilityP01_ChangePhaseController</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "Remove Events/Bonuses",

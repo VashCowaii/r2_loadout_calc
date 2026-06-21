@@ -381,7 +381,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1293250966\">Monster_SW_Boss_01_PartController</a>",
           "execute": [
             {
-              "eventTrigger": "Waiting for Healing in Limbo",
+              "eventTrigger": "Waiting in Limbo [Owner]",
               "execute": [
                 {
                   "name": "IF",

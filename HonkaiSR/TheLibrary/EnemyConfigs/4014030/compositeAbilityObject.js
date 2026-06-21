@@ -402,7 +402,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-289587260\">Monster_W4_Pollux_StoryMode_LockHP</a>",
           "execute": [
             {
-              "eventTrigger": "Waiting for Healing in Limbo",
+              "eventTrigger": "Waiting in Limbo [Owner]",
               "execute": [
                 {
                   "name": "IF",
@@ -497,7 +497,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-720682465\">Monster_W4_Pollux_PartController_LockHP</a>",
           "execute": [
             {
-              "eventTrigger": "Waiting for Healing in Limbo",
+              "eventTrigger": "Waiting in Limbo [Owner]",
               "execute": [
                 {
                   "name": "IF",

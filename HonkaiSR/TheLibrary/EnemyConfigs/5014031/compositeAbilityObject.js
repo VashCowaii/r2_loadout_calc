@@ -1130,7 +1130,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Modifier Destroyed/Removed"
             },
             {
-              "eventTrigger": "Waiting for Healing in Limbo",
+              "eventTrigger": "Waiting in Limbo [Owner]",
               "execute": [
                 {
                   "name": "IF",

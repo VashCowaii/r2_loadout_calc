@@ -558,7 +558,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1763194403\">Monster_W4_Griffin_LocalLegend_PartController_LockHP</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",

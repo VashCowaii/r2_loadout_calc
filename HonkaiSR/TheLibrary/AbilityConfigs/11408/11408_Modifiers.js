@@ -2085,7 +2085,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "Add Events/Bonuses",

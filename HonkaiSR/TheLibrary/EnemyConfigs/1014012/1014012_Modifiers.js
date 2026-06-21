@@ -171,7 +171,7 @@ const configAbility = {
       ],
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "Find New Target",
@@ -462,7 +462,7 @@ const configAbility = {
           "eventTrigger": "When Stacking/Receiving Modifier"
         },
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",
@@ -1138,7 +1138,7 @@ const configAbility = {
       ],
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "Find New Target",

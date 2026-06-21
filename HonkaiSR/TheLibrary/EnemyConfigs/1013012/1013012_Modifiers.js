@@ -610,7 +610,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1494789360\">Monster_W1_Mecha03_RL_PartController</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",

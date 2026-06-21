@@ -129,7 +129,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-613973055\">Monster_W3_Sam_PartController</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",

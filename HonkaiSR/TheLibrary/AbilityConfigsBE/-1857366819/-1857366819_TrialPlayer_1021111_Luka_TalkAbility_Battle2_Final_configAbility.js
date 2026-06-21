@@ -45,7 +45,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-58718825\">TrialPlayer_101111_Luka_Final_SpecialWin</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "Set HP Value",

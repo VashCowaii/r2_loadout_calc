@@ -643,7 +643,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",
@@ -3633,7 +3633,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1325047787\">Monster_W2_Huanlong_PartController</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",

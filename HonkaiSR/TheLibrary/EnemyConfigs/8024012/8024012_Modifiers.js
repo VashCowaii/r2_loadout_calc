@@ -680,7 +680,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__721379857\">Monster_SW_Boss_PartController</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",

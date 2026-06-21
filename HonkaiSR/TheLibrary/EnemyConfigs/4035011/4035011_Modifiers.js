@@ -5109,7 +5109,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__2029275245\">Enemy_W4_IronTombCore_P3_PartController</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",
@@ -5172,7 +5172,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1187676843\">Enemy_W4_IronTombCore_PartController</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",

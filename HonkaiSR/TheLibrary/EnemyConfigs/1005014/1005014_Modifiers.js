@@ -2619,7 +2619,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__225344728\">Monster_W1_CocoliaP1_IF_02_Revive</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",

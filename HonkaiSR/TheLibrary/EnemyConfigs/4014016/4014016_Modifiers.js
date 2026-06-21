@@ -3851,7 +3851,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__2056345398\">Monster_W4_Nikadory_PartController_RLBoss</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",
@@ -4131,7 +4131,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__342206128\">Monster_W4_Nikadory_PartControllerWithHearse</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",
@@ -4292,7 +4292,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-849627116\">Monster_W4_Nikadory_PartController</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",

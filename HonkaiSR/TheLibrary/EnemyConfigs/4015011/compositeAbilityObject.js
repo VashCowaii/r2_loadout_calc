@@ -1005,7 +1005,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Waiting for Healing in Limbo",
+              "eventTrigger": "Waiting in Limbo [Owner]",
               "execute": [
                 {
                   "name": "IF",
@@ -6039,7 +6039,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Waiting for Healing in Limbo",
+              "eventTrigger": "Waiting in Limbo [Owner]",
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
@@ -7476,7 +7476,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Waiting for Healing in Limbo",
+              "eventTrigger": "Waiting in Limbo [Owner]",
               "execute": [
                 {
                   "name": "Find New Target",

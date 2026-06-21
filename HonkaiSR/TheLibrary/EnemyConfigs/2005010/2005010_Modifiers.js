@@ -2768,7 +2768,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__130339168\">Monster_W2_Feixiao_PartController</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",

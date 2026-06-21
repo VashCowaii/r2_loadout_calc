@@ -56,7 +56,7 @@ const configAbility = {
       ],
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo"
+          "eventTrigger": "Waiting in Limbo [Owner]"
         },
         {
           "eventTrigger": "Was Killed (Queued) [Owner]",

@@ -835,7 +835,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__990819121\">Monster_XP_Elite01_02_LocalLegend_PartController_LockHP</a>",
           "execute": [
             {
-              "eventTrigger": "Waiting for Healing in Limbo",
+              "eventTrigger": "Waiting in Limbo [Owner]",
               "execute": [
                 {
                   "name": "IF",
