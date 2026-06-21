@@ -11928,7 +11928,7 @@ const turnLogicLightcones = {
             "cosmicDMG": "The Great Cosmic Enterprise",
         },
     },
-    "After the Charmony Fall": {//REDONE
+    "After the Charmony Fall": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
         "listeners": [
@@ -11997,6 +11997,53 @@ const turnLogicLightcones = {
         ],
         "buffNames": {
             "spd": "After the Charmony Fall [LC]",
+        },
+    },
+    "Geniuses' Repose": {//REDONE
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "EnemyDied",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+
+                    const sourceTurn = generalInfo.sourceTurn;
+                    const ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+                    if (!sourceTurn.lcGeniusReposeCRITSHEET) {
+                        let lcNameRef = "Geniuses' Repose";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        
+                        sourceTurn.lcGeniusReposeCRITSHEET = {
+                            "stats": [CritDamageBase],
+                            [CritDamageBase]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.buff1,
+                            "durationInTurn": 4,
+                            "duration": 3,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                        }
+                    }
+                    let buffSheet = sourceTurn.lcGeniusReposeCRITSHEET;
+                    updateBuff(battleData,sourceTurn,buffSheet);
+                },
+                "target": "self",
+                "listenerName": "Geniuses' Repose - holder killed an enemy",
+                "owners": [],
+                "ownersSlots": {},
+            },
+        ],
+        "buffNames": {
+            "buff1": "Geniuses' Repose [LC]",
         },
     },
         //3star

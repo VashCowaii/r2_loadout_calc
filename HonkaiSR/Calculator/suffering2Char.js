@@ -2224,7 +2224,7 @@ const battleActions = {
             poke("HitAllyEnd",battleData,turnMerge,sourceTurn);
         }
         else {
-            turnMerge.superReduction = toughnessComposite.wouldHaveSuperToughness ? toughnessComposite.rawReduction : 0;
+            turnMerge.superReduction = toughnessComposite?.wouldHaveSuperToughness ? toughnessComposite.rawReduction : 0;
             // console.log(turnMerge.superReduction,targetBroken,canAccumulateAnyways,battleData.sumAV)
             poke("HitEnemyEnd",battleData,turnMerge,sourceTurn);
         }
@@ -2643,7 +2643,7 @@ const battleActions = {
             poke("HitAllyEnd",battleData,turnMerge,sourceTurn);
         }
         else {
-            turnMerge.superReduction = toughnessComposite.wouldHaveSuperToughness ? toughnessComposite.rawReduction : 0;
+            turnMerge.superReduction = toughnessComposite?.wouldHaveSuperToughness ? toughnessComposite.rawReduction : 0;
             // console.log(turnMerge.superReduction,targetBroken,canAccumulateAnyways,battleData.sumAV)
             poke("HitEnemyEnd",battleData,turnMerge,sourceTurn);
         }
