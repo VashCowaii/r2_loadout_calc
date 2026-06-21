@@ -1509,7 +1509,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "When Put in Deathstate Limbo"
+              "eventTrigger": "Being Limbo [Owner]"
             },
             {
               "eventTrigger": "Entity Created [Anyone]",

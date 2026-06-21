@@ -1676,7 +1676,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-537143412\">Jingliu_Passive</a>",
       "execute": [
         {
-          "eventTrigger": "When Put in Deathstate Limbo"
+          "eventTrigger": "Being Limbo [Owner]"
         },
         {
           "eventTrigger": "Ability Use [Owner]: End",

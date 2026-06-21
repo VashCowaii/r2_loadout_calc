@@ -928,7 +928,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "When Put in Deathstate Limbo",
+          "eventTrigger": "Being Limbo [Owner]",
           "execute": [
             {
               "name": "Force Entity Death",

@@ -842,7 +842,7 @@ const configAbility = {
           "eventTrigger": "When Constructing Modifier"
         },
         {
-          "eventTrigger": "When Put in Deathstate Limbo",
+          "eventTrigger": "Being Limbo [Owner]",
           "execute": [
             {
               "name": "IF",

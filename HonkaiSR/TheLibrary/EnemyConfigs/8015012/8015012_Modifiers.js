@@ -2140,7 +2140,7 @@ const configAbility = {
       "modifierFlags": [],
       "execute": [
         {
-          "eventTrigger": "When Put in Deathstate Limbo",
+          "eventTrigger": "Being Limbo [Owner]",
           "execute": [
             {
               "name": "Declare Custom Variable",
@@ -2217,7 +2217,7 @@ const configAbility = {
       "modifierFlags": [],
       "execute": [
         {
-          "eventTrigger": "When Put in Deathstate Limbo",
+          "eventTrigger": "Being Limbo [Owner]",
           "execute": [
             {
               "name": "Declare Custom Variable",
@@ -2294,7 +2294,7 @@ const configAbility = {
       "modifierFlags": [],
       "execute": [
         {
-          "eventTrigger": "When Put in Deathstate Limbo",
+          "eventTrigger": "Being Limbo [Owner]",
           "execute": [
             {
               "name": "Declare Custom Variable",
@@ -2601,7 +2601,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "When Put in Deathstate Limbo",
+          "eventTrigger": "Being Limbo [Owner]",
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -2686,7 +2686,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "When Put in Deathstate Limbo",
+          "eventTrigger": "Being Limbo [Owner]",
           "execute": [
             "Modifier Deletes Itself"
           ]

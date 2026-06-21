@@ -128,7 +128,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "When Put in Deathstate Limbo",
+              "eventTrigger": "Being Limbo [Owner]",
               "execute": [
                 {
                   "name": "Define Custom Variable with Varying Data",
@@ -278,7 +278,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "When Put in Deathstate Limbo",
+              "eventTrigger": "Being Limbo [Owner]",
               "execute": [
                 {
                   "name": "Define Custom Variable with Varying Data",

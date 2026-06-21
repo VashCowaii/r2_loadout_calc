@@ -73,7 +73,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "When Put in Deathstate Limbo",
+              "eventTrigger": "Being Limbo [Owner]",
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
@@ -555,7 +555,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Modifier Destroyed/Removed"
             },
             {
-              "eventTrigger": "When Put in Deathstate Limbo",
+              "eventTrigger": "Being Limbo [Owner]",
               "execute": [
                 "Modifier Deletes Itself"
               ]

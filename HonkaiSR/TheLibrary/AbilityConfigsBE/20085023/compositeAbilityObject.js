@@ -45,7 +45,7 @@ const compositeAbilityObject = {
           "statusName": "Fate's Convergence",
           "execute": [
             {
-              "eventTrigger": "When Put in Deathstate Limbo",
+              "eventTrigger": "Being Limbo [Owner]",
               "execute": [
                 {
                   "name": "Consume",

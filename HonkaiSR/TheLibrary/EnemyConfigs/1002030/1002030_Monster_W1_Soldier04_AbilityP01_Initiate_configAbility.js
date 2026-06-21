@@ -137,7 +137,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__2088832510\">Enemy_W1_Soldier04_AbilityP01_ListenSelfDie</a>",
       "execute": [
         {
-          "eventTrigger": "When Put in Deathstate Limbo",
+          "eventTrigger": "Being Limbo [Owner]",
           "execute": [
             {
               "name": "Remove Events/Bonuses",

@@ -1359,7 +1359,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__2084822160\">M_Monster_W1_CocoliaP1_LimboHandleEffect</a>",
           "execute": [
             {
-              "eventTrigger": "When Put in Deathstate Limbo"
+              "eventTrigger": "Being Limbo [Owner]"
             }
           ]
         }

@@ -1517,7 +1517,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1898412116\">Enemy_W2_LycanKing_IF_LycanDeathrattle</a>",
       "execute": [
         {
-          "eventTrigger": "When Put in Deathstate Limbo",
+          "eventTrigger": "Being Limbo [Owner]",
           "execute": [
             {
               "name": "IF",

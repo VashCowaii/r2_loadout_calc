@@ -138,7 +138,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1589154351\">Enemy_W2_Beast02_RLElite_BreakListener</a>",
           "execute": [
             {
-              "eventTrigger": "When Put in Deathstate Limbo"
+              "eventTrigger": "Being Limbo [Owner]"
             },
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",

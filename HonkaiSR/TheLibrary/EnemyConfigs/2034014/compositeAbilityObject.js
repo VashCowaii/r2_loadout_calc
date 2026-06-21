@@ -1560,7 +1560,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1898412116\">Enemy_W2_LycanKing_IF_LycanDeathrattle</a>",
           "execute": [
             {
-              "eventTrigger": "When Put in Deathstate Limbo",
+              "eventTrigger": "Being Limbo [Owner]",
               "execute": [
                 {
                   "name": "IF",
@@ -7504,7 +7504,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1496443322\">Enemy_W2_LycanKing_RageEffect</a>",
           "execute": [
             {
-              "eventTrigger": "When Put in Deathstate Limbo",
+              "eventTrigger": "Being Limbo [Owner]",
               "execute": [
                 "Modifier Deletes Itself"
               ]

@@ -3117,7 +3117,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1361193715\">Enemy_W1_CocoliaP2_SpinSpeedController</a>",
       "execute": [
         {
-          "eventTrigger": "When Put in Deathstate Limbo"
+          "eventTrigger": "Being Limbo [Owner]"
         },
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]"

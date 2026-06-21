@@ -688,7 +688,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "When Put in Deathstate Limbo",
+              "eventTrigger": "Being Limbo [Owner]",
               "execute": [
                 {
                   "name": "IF",
@@ -1447,7 +1447,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "When Put in Deathstate Limbo",
+              "eventTrigger": "Being Limbo [Owner]",
               "execute": [
                 {
                   "name": "Find New Target",
@@ -2047,7 +2047,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1614912264\">Monster_W1_Svarog_RL_ReviveEffect</a>",
           "execute": [
             {
-              "eventTrigger": "When Put in Deathstate Limbo"
+              "eventTrigger": "Being Limbo [Owner]"
             }
           ]
         },

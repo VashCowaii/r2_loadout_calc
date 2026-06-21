@@ -2165,7 +2165,7 @@ const compositeAbilityObject = {
           "modifierFlags": [],
           "execute": [
             {
-              "eventTrigger": "When Put in Deathstate Limbo",
+              "eventTrigger": "Being Limbo [Owner]",
               "execute": [
                 {
                   "name": "Declare Custom Variable",
@@ -2242,7 +2242,7 @@ const compositeAbilityObject = {
           "modifierFlags": [],
           "execute": [
             {
-              "eventTrigger": "When Put in Deathstate Limbo",
+              "eventTrigger": "Being Limbo [Owner]",
               "execute": [
                 {
                   "name": "Declare Custom Variable",
@@ -2319,7 +2319,7 @@ const compositeAbilityObject = {
           "modifierFlags": [],
           "execute": [
             {
-              "eventTrigger": "When Put in Deathstate Limbo",
+              "eventTrigger": "Being Limbo [Owner]",
               "execute": [
                 {
                   "name": "Declare Custom Variable",
@@ -2626,7 +2626,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "When Put in Deathstate Limbo",
+              "eventTrigger": "Being Limbo [Owner]",
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -2711,7 +2711,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "When Put in Deathstate Limbo",
+              "eventTrigger": "Being Limbo [Owner]",
               "execute": [
                 "Modifier Deletes Itself"
               ]

@@ -1165,7 +1165,7 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
-              "eventTrigger": "When Put in Deathstate Limbo"
+              "eventTrigger": "Being Limbo [Owner]"
             },
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
