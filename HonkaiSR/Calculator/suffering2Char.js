@@ -854,7 +854,7 @@ const battleActions = {
         if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "QueueFUA", name: entry.name});}
     },
     queueUltimateUse(battleData,entry) {
-        const enemyChecker = battleData.enemyPositions.length;
+        const enemyChecker = battleData.activeEnemies;
         if (enemyChecker) {
             battleData.ultimateQueue.push(entry);
             battleData.totalUltsQueued += 1;
@@ -3468,7 +3468,7 @@ const battleActions = {
 
             const bounceEnergy = bounceRef.energy;
             const targetObject = atkEntry.target;
-            const subTargetObject = atkEntry.subTarget;//unused for NOW
+            // const subTargetObject = atkEntry.subTarget;//unused for NOW
             const blastTargetObject = atkEntry.blast;
 
             const enemyPositions = battleData.enemyPositions;
@@ -3478,7 +3478,7 @@ const battleActions = {
                 const presetIndex = currentEnemyIndex;
                 const currentEnemy = bounceOrder[currentEnemyIndex];
                 currentEnemyIndex++;
-                if (!enemyPositions.length || battleData.battleIsOver) {break;}
+                if (!battleData.activeEnemies || battleData.battleIsOver) {break;}
                 // if (currentEnemy === undefined) {continue;}
 
                 if (currentEnemy.isDead || currentEnemy.isLimbo) {
@@ -4231,7 +4231,12 @@ const battleActions = {
             battleData.blastTargets = [];
             battleData.fullBlastTargets = [];
             battleData.bounceOrder = [];
-            battleData.allEnemyTargets = [...battleData.enemyPositions];
+            // battleData.allEnemyTargets = [...battleData.enemyPositions];
+            battleData.allEnemyTargets = [];
+            const enemyTargets = battleData.allEnemyTargets;
+            for (let enemy of enemies) {
+                enemyTargets.push(enemy);
+            }
             return;
         };
       
@@ -4253,7 +4258,12 @@ const battleActions = {
             battleData.blastTargets = [];
             battleData.fullBlastTargets = [];
             battleData.bounceOrder = [];
-            battleData.allEnemyTargets = [...battleData.enemyPositions];
+            // battleData.allEnemyTargets = [...battleData.enemyPositions];
+            battleData.allEnemyTargets = [];
+            const enemyTargets = battleData.allEnemyTargets;
+            for (let enemy of enemies) {
+                enemyTargets.push(enemy);
+            }
             return;
         }
       
@@ -4297,7 +4307,12 @@ const battleActions = {
         battleData.blastTargets = blastTargets;
         battleData.fullBlastTargets = fullBlastTargets;
         battleData.bounceOrder = bounceOrder;
-        battleData.allEnemyTargets = [...battleData.enemyPositions];
+        // battleData.allEnemyTargets = [...battleData.enemyPositions];
+        battleData.allEnemyTargets = [];
+        const enemyTargets = battleData.allEnemyTargets;
+        for (let enemy of enemies) {
+            enemyTargets.push(enemy);
+        }
     },
     assignAttackTargetsEnemy(battleData) {
         let allyPositions = battleData.allyPositions;
@@ -8120,13 +8135,6 @@ const turnLogic = {
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
 
-                // let skillRef2 = ATKObjects.gallagherTalentHealREF ??= ATKObjects.Talent["Tipsy Tussle"].variant1;
-                // let values2 = ATKObjects.gallagherTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef2,sourceTurn);
-                // let besotted = ATKObjects.besottedFunction ??= turnLogic[characterName].skillFunctions.besotted;
-                // for (let enemySlot of battleData.enemyPositions) {
-                //     besotted(battleData,sourceTurn,enemySlot,false,values2);
-                // }
-
                 attackWrapper(battleData,skillRef,sourceTurn,ATKObject,battleData.enemyPositions,[]);
 
 
@@ -11652,21 +11660,6 @@ const turnLogic = {
 
                 let ownerTurn = this.ownerTurn;
 
-                // const techCall = this.returnTechCall ??= createQueueObject(ownerTurn,{
-                //     actionCall: this.skillFunctions.kafkaTechnique,
-                //     action: "Technique",
-                //     points: 0, 
-    
-                //     isAttack: true,
-                //     isAbility: false,
-                //     useAnyTriggers: false,
-                //     eventTypeStartLOG: "TechniqueStart",
-    
-                //     poolKey: this.abilityTargetPools.Technique,
-                // })
-                // techCall.sourceTurn = thisTurn;
-                // techCall.target = battleData.enemyPositions;
-
                 const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.kafkaTechnique;
                 callTech(battleData,null,ownerTurn);
             },
@@ -12663,11 +12656,6 @@ const turnLogic = {
 
                             const sourceTurn = generalInfo.sourceTurn;
                             sourceTurn.hysilensFieldProcCounter = 0;
-        
-                            // const enemyPositions = battleData.enemyPositions;
-                            // for (let enemy of enemyPositions) {
-                            //     enemy.hysilensFieldProcCounter = 0;
-                            // }
                         },
                         "priority": -11,
                         "target": "self",
@@ -13773,14 +13761,16 @@ const turnLogic = {
                             if (dmgSlot != "Ultimate" && dmgSlot != "Basic ATK") {return;}
         
                             const targetsGotHit = generalInfo.targetsGotHit;
-                            const enemyPositions = battleData.enemyPositions;
                             
                             const logicRef = turnLogic[ownerTurn.properName];
                             const ATKObjects = logicRef.ATKObjects;
                             const debuffSheet = ATKObjects.blackswanSkillDEBUFFSHEET;
+
+                            const enemyTurns = battleData.enemyBasedTurns;
         
-                            for (let enemy of enemyPositions) {
-                                if (!targetsGotHit[enemy.name]) {continue;}
+                            for (let enemySlot in targetsGotHit) {
+                                const enemy = enemyTurns[enemySlot];
+                                if (enemy.isDead || enemy.isLimbo) {continue;}
                                 updateBuff(battleData,enemy,debuffSheet);
                             }
                         },
@@ -19950,6 +19940,7 @@ const turnLogic = {
                                     let lowestHP = Infinity;
                                     let lowestTarget = null;
                                     for (let enemy of enemyPositions) {
+                                        if (enemy.isDead || enemy.isLimbo) {continue;}
                                         if (enemy.currentHP < lowestHP) {
                                             lowestHP = enemy.currentHP;
                                             lowestTarget = enemy;
@@ -26269,8 +26260,8 @@ const turnLogic = {
                                 const debuffSheet = ATKObjects.sparkleFigmentDEBUFFSHEET;
                                 // const debuffName = debuffSheet.buffName;
 
+                                if (!battleData.activeEnemies) {return;}
                                 const enemyPositions = battleData.enemyPositions;
-                                if (!enemyPositions.length) {return;}
                                 debuffSheet.currentStacks = totalChange;
                                 // const debuffCheck = enemyPositions[0].buffsObject[debuffName];
                                 updateBuffBatchTargets(battleData,enemyPositions,debuffSheet,false,null
@@ -26974,13 +26965,7 @@ const turnLogic = {
                             const providerTurn = this.providerTurn;
                             if (!providerTurn.battleValues.hmcBackupDancerActive) {return;}
 
-                            const enemyPositions = battleData.enemyPositions;
-                            let counter = 0;
-                            for (let enemy of enemyPositions) {
-                                if (enemy.isDead || enemy.isLimbo) {continue;}
-                                counter++;
-                            }
-                            counter = Math.min(5,counter);
+                            let counter = Math.min(5,battleData.activeEnemies);
 
                             if (counter) {
                                 const breakMultiArray = this.breakMultiArray ??= [0.60,0.50,0.40,0.30,0.20];
@@ -28129,9 +28114,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.saberBasicEnhancedATKOBJECT;
 
-                const enemyPositions = battleData.enemyPositions;
-                if (enemyPositions.length <= 2) {
-                    if (enemyPositions.length === 1) {
+                const enemyCount = battleData.activeEnemies;
+                if (enemyCount.length <= 2) {
+                    if (enemyCount.length === 1) {
                         skillRef.hitSplits = hitSplitters[characterName].eba3;
                     }
                     else {
@@ -30850,9 +30835,9 @@ const turnLogic = {
                 const buffSheet = ATKObjects.fireflyTechImplantSHEET;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                for (let enemy of battleData.enemyPositions) {
-                    updateBuff(battleData,enemy,buffSheet);
-                }
+
+                const enemyPositions = battleData.enemyPositions;
+                updateBuffBatchTargets(battleData,enemyPositions,buffSheet);
             },
             statCheck(battleData,currentTurn) {
                 const logicRef = turnLogic[currentTurn.properName];
@@ -37057,7 +37042,7 @@ const turnLogic = {
                 removeBuff(battleData,eveyTurn,dmgSheet);
 
                 const enemyPositions = battleData.enemyPositions;
-                for (let enemy of enemyPositions) {removeBuff(battleData,enemy,vulnSheet);}
+                removeBuffFromBatch(battleData,enemyPositions,vulnSheet);
             },
             evernightTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -37076,8 +37061,7 @@ const turnLogic = {
             },
             evernightE1FinalMulti(battleData,ownerTurn) {
                 if (battleData.battleIsOver) {return;}
-                const enemyPositions = battleData.enemyPositions;
-                const currentEnemies = Math.min(4,enemyPositions?.length ?? 0);
+                const currentEnemies = Math.min(4,battleData.activeEnemies ?? 0);
                 const buffArray = [1,1.5,1.3,1.25,1.2];
                 const lastBuffGiven = ownerTurn.evernightE1LastMultiGiven ?? 0;
 
@@ -39512,12 +39496,12 @@ const turnLogic = {
                 attackState = skillCasts === 1 ? "Start" : "Middle";
                 const finalRef = chainedAttackRef = attackWrapper(battleData,skillRef,memoTurn,ATKObject,actionObject.target,actionObject.subTarget,attackState,chainedAttackRef);
 
-                const enemyPositions = battleData.enemyPositions;
-                if (!enemyPositions.length) {
+                if (!battleData.activeEnemies) {
                     battleValues.netherTurnShouldEnd = true;
                 }
                 else {
                     let foundLivingEnemy = false;
+                    const enemyPositions = battleData.enemyPositions;
                     for (let enemy of enemyPositions) {
                         const currentHP = enemy.currentHP;
                         if (currentHP > 0) {
@@ -43700,7 +43684,7 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.argentiSkillATKOBJECT;
 
-                const enemyAmount = battleData.enemyPositions.length;
+                const enemyAmount = battleData.activeEnemies;
                 poke("ArgentiGainApotheosis",battleData,{pointsGained: enemyAmount,sourceString:"Skill"},null);
 
                 attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
@@ -43796,7 +43780,7 @@ const turnLogic = {
                 const useEnhancedUlt = sourceTurn.thisUltEnhanced;
                 sourceTurn.thisUltEnhanced = false;
 
-                const enemyAmount = battleData.enemyPositions.length;
+                const enemyAmount = battleData.activeEnemies;
                 
 
                 if (rank >= 2 && enemyAmount >= 3) {
@@ -44344,7 +44328,7 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.anaxaSkillATKOBJECT;
 
-                const enemyTargets = battleData.enemyPositions.length;
+                const enemyTargets = battleData.activeEnemies;
                 const buffSheet = ATKObjects.anaxaSkillPerTargetDMGSHEET;
                 buffSheet.currentStacks = enemyTargets;
                 updateBuff(battleData,sourceTurn,buffSheet);
@@ -44733,7 +44717,7 @@ const turnLogic = {
                                             if (target.isDead) {
                                                 actionObject.target = [battleData.primaryTarget];
                                             }
-                                            else if (!battleData.enemyPositions.length) {
+                                            else if (!battleData.activeEnemies) {
                                                 sourceTurn.battleValues.extraSkillActive = false;
                                                 return true;
                                             }
@@ -44772,7 +44756,7 @@ const turnLogic = {
                                             if (target.isDead) {
                                                 actionObject.target = [battleData.primaryTarget];
                                             }
-                                            else if (!battleData.enemyPositions.length) {
+                                            else if (!battleData.activeEnemies) {
                                                 sourceTurn.battleValues.extraSkillActive = false;
                                                 return true;
                                             }
@@ -46427,7 +46411,7 @@ const turnLogic = {
                         actionCall: turnLogic[ownerTurn.properName].skillFunctions.himekoFUA,
                         action: "Insert",
                         abortCheck(battleData,actionObject,sourceTurn) {
-                            if (!battleData.enemyPositions.length) {
+                            if (!battleData.activeEnemies) {
                                 sourceTurn.battleValues.himekoFUAQueued = false;
                                 return true;
                             }
@@ -48031,7 +48015,7 @@ const turnLogic = {
                 // let targetTurn = battleData.primaryTarget;
                 const enemyPositions = battleData.enemyPositions;
                 const addProc = battleActions.elationDMGWrapper;
-                if (enemyPositions.length) {
+                if (battleData.activeEnemies) {
                     for (let enemy of enemyPositions) {
                         addProc(battleData,ownerTurn,ownerTurn.properName,ATKObject,enemy,"Sparxie Talent Ult Elation DMG");
                     }
@@ -48307,8 +48291,6 @@ const turnLogic = {
                 let ATKObjectBlast = ATKObjects.sparxEBABlastCertifiedElationADDEDATKOBJECT;
                 let ATKObjectBounce = ATKObjects.sparxEBABounceCertifiedElationADDEDATKOBJECT;
                 
-                // let targetTurn = battleData.primaryTarget;
-                // const enemyPositions = battleData.enemyPositions;
                 const addProc = battleActions.elationDMGWrapper;
 
                 const targetsGotHit = generalInfo.targetsGotHit;
@@ -50064,7 +50046,6 @@ const turnLogic = {
                 let attackEndedEarly = false;
 
                 const burstBounceData = ATKObject1.bounceData;
-                // console.log(battleData.enemyPositions.length)
                 while (itemsLeft && !battleData.battleIsOver) {
 
                     const hitCountPre = chainedAttackRef?.totals?.totalHits ?? 0;
@@ -50086,7 +50067,7 @@ const turnLogic = {
                     itemsLeft -= 1;
                     
 
-                    if (!battleData.enemyPositions.length) {
+                    if (!battleData.activeEnemies) {
                         attackEndedEarly = true;
                         break;
                     }
@@ -50345,7 +50326,7 @@ const turnLogic = {
                 }
 
                 const enemyPositions = battleData.enemyPositions;
-                if (enemyPositions.length) {
+                if (battleData.activeEnemies) {
                     let starterTarget = enemyPositions[0];
                     for (let enemy of enemyPositions) {
                         let compareHP = enemy.currentHP > starterTarget.currentHP;
@@ -50756,15 +50737,6 @@ const turnLogic = {
 
                     addProc(battleData,ownerTurn,ownerTurn.properName,ATKObject,currentEnemy,"SW999 Basic/Skill Elation DMG");
                 }
-                
-                // // let targetTurn = battleData.primaryTarget;
-                // const enemyPositions = battleData.enemyPositions;
-                // const addProc = battleActions.elationDMGWrapper;
-                // if (enemyPositions.length) {
-                //     for (let enemy of enemyPositions) {
-                //         addProc(battleData,ownerTurn,ownerTurn.properName,ATKObject,enemy,"SW999 Basic/Skill Elation DMG");
-                //     }
-                // }
             },
             elationSkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -52156,7 +52128,7 @@ const turnLogic = {
                 let ATKObject2 = ATKObjects.evaUltimateATKOBJECT2;
                 const evaTalentCertifiedAdditionalDMG = logicRef.skillFunctions.evaTalentCertifiedAdditionalDMG;
 
-                const enemyTargets = battleData.enemyPositions.length;
+                const enemyTargets = battleData.activeEnemies;
                 //trace checks for current targets when determining bounce count, on top of the base 5, so will never be less than 6 bounces
                 if (enemyTargets < 3) {
                     if (enemyTargets > 1) {
@@ -52644,7 +52616,7 @@ const turnLogic = {
                                 abortCheck(battleData,actionObject,sourceTurn) {
                                     if (!actionObject.target) {
                                         actionObject.target = battleData.enemyPositions;
-                                        if (!battleData.enemyPositions?.length) {
+                                        if (!battleData.activeEnemies) {
                                             return true;
                                         }
                                     }

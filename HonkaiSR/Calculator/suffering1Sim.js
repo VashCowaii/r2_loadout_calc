@@ -192,9 +192,7 @@ const sim = {
 
         const nameIndex = battleData.nameIndex;
         const enemyTurns = battleData.enemyBasedTurns ??= {};
-        // const enemyPositions = battleData.enemyPositions ??= [];
         const allEnemiesArray = battleData.allEnemiesArray ??= [];
-        // const nextTurn = battleData.nextTurnAV;
 
         const enemyRankID = {
             "boss": 5,
@@ -295,14 +293,10 @@ const sim = {
         }
     },
     createEnemyTargets(battleData,enemiesToMake) {
-        // const attackTypes = sim.attackTypes;
-
-        // const nameIndex = battleData.nameIndex;
-        // const enemyTurns = battleData.enemyBasedTurns ??= [];
         const enemyPositions = battleData.enemyPositions ??= [];
         const nextTurn = battleData.nextTurnAV;
 
-
+        const logger = battleData.isLoggyLogger;
         for (let i=0;i<enemiesToMake.length;i++) {
             let currentEntry = enemiesToMake[i];
 
@@ -310,12 +304,11 @@ const sim = {
             enemyPositions.push(currentEntry);
             // allEnemiesArray.push(currentEntry);
 
-            if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "EnemyCreated", name:currentEntry.name, AV: battleData.sumAV, turnRef: JSON.stringify(currentEntry)});}
+            if (logger) {logToBattle(battleData,{logType: "EnemyCreated", name:currentEntry.name, AV: battleData.sumAV, turnRef: JSON.stringify(currentEntry)});}
             poke("EnemyCreated",battleData,{slotRef: currentEntry},currentEntry);
             battleData.enemiesRemaining += 1;
             battleData.activeEnemies += 1;
         }
-        // battleData.enemyPositions = sim.sortEnemyTargets(enemyPositions);
         battleActions.assignAttackTargets(battleData);
         battleActions.assignAttackTargetsEnemy(battleData);
     },
@@ -1229,7 +1222,7 @@ const sim = {
             
             while (queue.length > 0 && !battleData.battleIsOver) {
 
-                const enemyChecker = battleData.enemyPositions.length;
+                const enemyChecker = battleData.enemiesRemaining;
                 if (!enemyChecker) {
                     battleActions.waveStartQueueHandling(battleData);
                     return;
@@ -1326,7 +1319,7 @@ const sim = {
                     //if we're already in an extra turn, and the next queued ult instance is ALSO an extra turn, then abort the ult queue empty
                 }
                 
-                const enemyChecker = battleData.enemyPositions.length;
+                const enemyChecker = battleData.enemiesRemaining;
                 if (!enemyChecker) {
                     battleActions.waveStartQueueHandling(battleData);
                     return;
@@ -1359,13 +1352,6 @@ const sim = {
                     // totalUltsQueued: 0,
                     // totalExTurnsQueued: 0,
                     battleData.totalUltsQueued -= 1;
-                    
-                    // const enemyChecker = battleData.enemyPositions.length;
-                    // if (!enemyChecker) {
-                    //     sourceTurn.ultyQueued = false;
-                    //     logToBattle(battleData,{logType: "GenericAction", source:"Failed Ult", bodyText: `No enemies remaining, ult queue aborted for ${sourceTurn.properName}`});
-                    //     continue;
-                    // }
 
                     const energyCost = currentUltimate.energyCost;
                     //cost function rn is only used for argenti to determine full or half drain, but later for castorice overflow it'll get used too.

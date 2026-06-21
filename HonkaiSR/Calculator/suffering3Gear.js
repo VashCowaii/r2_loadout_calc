@@ -1470,7 +1470,7 @@ const turnLogicLightcones = {
                     let lcNameRef = "Only Silence Remains";
                     let lcPathing = lightcones[lcNameRef].params;
 
-                    const enemyCount = battleData.enemyPositions.length;
+                    const enemyCount = battleData.enemiesRemaining;
                     const validCount = enemyCount <= 2;
 
                     if (battleData.lcOnlySilenceRemainsValidCount && validCount) {return;}
@@ -2088,8 +2088,8 @@ const turnLogicLightcones = {
                 const characterName = sourceTurn.properName;
                 
                 if (!primaryTarget || primaryTarget.isDead || primaryTarget.isLimbo) {
-                    const enemyPositions = battleData.enemyPositions;
-                    if (enemyPositions.length) {
+                    const activeEnemies = battleData.activeEnemies;
+                    if (activeEnemies) {
                         //cursed, but additional dmg doesn't happen if the target is dead, so if the primary target
                         //is dead then loop through all targets hit in the attack, and if we find one living, then attack it
                         const enemyTurns = battleData.enemyBasedTurns;
