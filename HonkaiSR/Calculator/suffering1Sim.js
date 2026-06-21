@@ -313,6 +313,7 @@ const sim = {
             if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "EnemyCreated", name:currentEntry.name, AV: battleData.sumAV, turnRef: JSON.stringify(currentEntry)});}
             poke("EnemyCreated",battleData,{slotRef: currentEntry},currentEntry);
             battleData.enemiesRemaining += 1;
+            battleData.activeEnemies += 1;
         }
         // battleData.enemyPositions = sim.sortEnemyTargets(enemyPositions);
         battleActions.assignAttackTargets(battleData);
@@ -376,8 +377,10 @@ const sim = {
             familyRef: {},//used to cache buff family names for their stats
             familyCacheRef: {},//similar to above, but for caching-specific purposes on pull-type functions in damage instances
             enemiesRemaining: 0,
+            activeEnemies: 0,
             enemiesCreated: 0,
             charactersRemaining: 0,
+            pendingDeaths: [],
             backupHPOnField: 0,
             backupHPObject: {},
             territoryActive: false,
@@ -1235,13 +1238,9 @@ const sim = {
                 let currentFUA = queue.shift();
                 let characterName = currentFUA.properName;
                 let sourceTurn = currentFUA.sourceTurn;
-                // let actionName = currentFUA.name;
-                // let generalInfo = {sourceTurn,actionName};
-                const targetTurn = currentFUA.target;
 
-                const useAnyTrigger = currentFUA.useAnyTriggers;
-
-
+                // const targetTurn = currentFUA.target;
+                // const useAnyTrigger = currentFUA.useAnyTriggers;
                 const shouldAbort = currentFUA.abortCheck?.(battleData,currentFUA,sourceTurn);
                 if (shouldAbort) {
                     if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Inserted Ability Queue", bodyText: `Abort Check passed, canceled queued insert ${currentFUA.action} from ${characterName}`});}
@@ -1275,6 +1274,7 @@ const sim = {
                 if (isAbility) {poke("AbilityStart",battleData,currentFUA,sourceTurn);}
                 currentFUA.actionCall(battleData,currentFUA,sourceTurn);
                 if (isAbility) {poke("AbilityEnd",battleData,currentFUA,sourceTurn);}
+                clearPendingDeaths(battleData)
             }
         }
     },
@@ -1447,6 +1447,7 @@ const sim = {
                     
                 }
 
+                clearPendingDeaths(battleData)
                 poke("UltimateReady",battleData);
                 if (FUAQueue.length) {
                     //yes, I want to check ulty readiness before AND after the followup queue gets dumped, there could be various reasons for this honestly, fuckin hate this game lmao

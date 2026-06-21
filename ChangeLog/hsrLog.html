@@ -7,10 +7,28 @@
 </div> -->
 
 <div>
-    <h1>June 21th, 2026</h1>
+    <h1>June 21th, 2026 - THE REVIVES UPDATE</h1>
     <ul>
         <h3>Calculator</h3>
         <h4>Additions</h4>
+        <li>Added the ability for revive-type instances to actually work.
+            <ul>
+                <li>These were on the TO-DO list for a very very long time lol but they were crazy low priority given what else I had to do.</li>
+                <ul>
+                    <li>Revives were added to the following characters/instances:
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </li>
+                </ul>
+            </ul>
+        </li>
+        <li>Given that revives can now work properly, we're making a pretty big change to the calc: if any character manages to fully die even after revives, the simulation will terminate and the battle will immediately end.
+            <ul>
+                <li>The reasoning here is just that, if you did manage to lose a character after revives you're sure as shit NEVER gonna 3star whatever activity you're attempting to simulate and there is no point in doing the math anymore</li>
+                <li>A benefit here is that this will also improve optimizer times by aborting simulations that don't need to be calculated anymore since a stray death here and there happens more often than you'd think.</li>
+            </ul>
+        </li>
         <!-- <li>Added the following new characters:
             <ul>
                 <li>The Dahlia</li>

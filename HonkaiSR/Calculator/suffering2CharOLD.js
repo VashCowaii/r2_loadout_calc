@@ -5604,3 +5604,62 @@ const turnLogic = {
     //     }
     //     return nextOrder;
     // },
+
+
+
+    // killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn) {
+    //     let giveEnergy = !isEnemy;
+    //     let energyDeath = 10;
+    //     //kinda counterintuitive on my part but if it !isEnemy that means an ally was responsible for killing these targets
+
+    //     let killer = sourceTurn.isMemosprite ? battleData.nameBasedTurns[sourceTurn.eventOwner] : sourceTurn;
+    //     let killed = targetTurn;
+    //     if (!isEnemy) {//{sourceTurn,targetTurn:currentTarget}
+    //         // console.log(enemyDeath.properName)
+
+
+            
+
+
+    //         //find the enemy position and remove it from the enemy lineup and turn order
+    //         const indexToRemove = battleData.enemyPositions.indexOf(killed);
+    //         const indexToRemove2 = battleData.nextTurnAV.indexOf(killed);
+    //         battleData.enemyPositions.splice(indexToRemove, 1);
+    //         battleData.nextTurnAV.splice(indexToRemove2, 1);
+
+    //         poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed},sourceTurn);
+            
+    //         if (battleData.isLoggyLogger) {
+    //             logToBattle(battleData,{logType: "EnemyDiedNote", enemyKilled:killed.properName});
+    //             logToBattle(battleData,{logType: "EnemyDied", source:killer.properName, enemyKilled:killed.properName});
+    //         }
+    //         if (giveEnergy) {updateEnergy(battleData,energyDeath,killer,false,"Killed Enemy");}
+    //         battleData.enemiesRemaining -= 1;
+            
+        
+    //     }
+
+    //     if (battleData.enemiesRemaining === 0) {
+    //         // battleData.wavesToRun = battleSettings.totalWaves;
+    //         battleData.wavesCompleted += 1;
+    //         if (battleData.wavesCompleted === battleData.wavesToRun) {
+    //             battleData.battleIsOver = true;
+    //         }
+    //         else {
+    //             battleData.readyForNewWave = true;
+    //             const nextAV = battleData.nextTurnAV;
+
+    //             for (let turnEntity of nextAV) {turnEntity.turnShouldEnd = true;}
+    //             //if anything was in the middle of a turn with no action assigned yet, this should break their turn and return to the turn order so we can apply a new wave
+
+    //             return;
+    //         }
+
+            
+    //     }
+    //     if (!isEnemy) {
+    //         //then once done, redefine the enemy targets available
+    //         battleActions.assignAttackTargets(battleData);
+    //     }
+    //     // console.log(battleData.enemiesRemaining)
+    // },

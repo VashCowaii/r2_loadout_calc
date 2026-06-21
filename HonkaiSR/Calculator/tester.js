@@ -4295,6 +4295,7 @@ const userTriggers = {
         "WaveStart",
         "SummonOnFieldAdjustment",
         "BattleStartWeakness",
+        "EnemyDied",
     ]),
     barActionHeaders: new Set ([
         "BattlePrep",
@@ -4304,7 +4305,7 @@ const userTriggers = {
         "WaveStart",
     ]),
     awkwardLogTypes: {
-        "EnemyDied": 1,
+        // "EnemyDied": 1,
         "SpeedAdvanced": 1,
         "ActionAdvancedBreakDelay": 1,
         "ActionAdvanced": 1,
@@ -4986,10 +4987,12 @@ const userTriggers = {
                     returnString = `
                     <div class="actionDetailHeaderRow"><span class="detailHeaderName">${action.enemyKilled} died</span></div>
                     ${controlsString}
-                    <div class="actionDetailBody">Energy awarded to ${action.source} for the kill</div>
-                    <div class="actionDetailBody">If viewed from the action order, this death took place in the attack just prior on the list.</div>
-                    <div class="actionDetailBody">Events triggered after the death of this target will still show within the bounds of the attack event that killed this target, to avoid breaking up the event log in ways that don't make sense</div>
-                    `
+                    ${action.isEnemy ? `<div class="actionDetailBody">An allied character managed to completely die, even with revives.
+                        <br>When this happens the simulation is terminated as the whole point of the calc here is to try and help you understand how best to handle your characters.
+                        <br>If your characters are actually dying in spite of whatever revives you had available then you are NOT handling your characters in a good way and there is no point in doing the rest of the math.
+                        <br><br>IF YOU THINK A REVIVE SHOULD HAVE HAPPENED HERE, let me know in the discord.
+                    </div>` 
+                        : `<div class="actionDetailBody">Energy awarded to ${action.source} for the kill</div>`}`
                     break;
                 case "EnergyChange":
                     // battleData.battleLog.push({logType: "EnergyChange", target: battleDataCharacterRow.properName, amount, oldEnergy, newEnergy:battleDataCharacterRow.currentEnergy, maximum, source:sourceName})
@@ -5187,8 +5190,7 @@ const userTriggers = {
                     // if (isLoggyLogger) {logToBattle(battleData,{logType: "RecoveredFromBreak", name:turnName, isEnemy: sourceTurn.isEnemy, isCharacter:true, AV: battleData.sumAV, turnRef: null});}
                     break;
                 case "EnemyDiedNote":
-                    returnString = `<div class="actionDetailBody">--${action.enemyKilled} was killed.</div>`;
-                    // logToBattle(battleData,{logType: "EnemyDiedNote", enemyKilled:enemyDeath.properName});
+                    returnString = `<div class="actionDetailBody">--${action.enemyKilled} was queued for death.</div>`;
                     break;
                 case "HitAlly":
                 case "HitEnemy":

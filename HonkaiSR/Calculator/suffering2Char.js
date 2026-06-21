@@ -2154,10 +2154,9 @@ const battleActions = {
             else {targetTurn.currentHP -= shieldOverflow;}
             
             let enemyHasNoHP = targetTurn.currentHP <= 0;
-            if (enemyHasNoHP && !targetTurn.isDead) {
+            if (enemyHasNoHP && !targetTurn.isLimbo) {
+                markEnemyForDeath(battleData,targetTurn,sourceTurn)
                 enemyIsDead = true;
-                targetTurn.isDead = true;
-                targetTurn.isLimbo = true;
             }//we only want to declare the enemy dead once, bc an attack might have 30 hits but if they die at hit 10 we don't want to say they died 20 times after
             else {
                 const enemyName = targetTurn.properName;
@@ -2206,15 +2205,6 @@ const battleActions = {
                 AV:battleData.sumAV
             };
             logToBattle(battleData,{logType: isEnemy ? "HitAlly" : "HitEnemy", hitType: hitDisplay[hitType], target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,enemyIsBroken: toughnessComposite?.enemyIsBroken,position:targetTurn.isEnemy ? battleData.enemyPositions.indexOf(targetTurn) : null,positionCount:targetTurn.isEnemy ? battleData.enemyPositions.length : null});
-        }
-
-        if (enemyIsDead) {
-            if (targetTurn.isEnemy) {
-                killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn);
-            }
-            else {
-                battleActions.killDesignatedAllies(battleData,targetTurn,isEnemy,sourceTurn);
-            }
         }
 
         turnMerge.DMGTotalEnd = DMGTotalEnd;
@@ -2576,10 +2566,9 @@ const battleActions = {
             else {targetTurn.currentHP -= shieldOverflow;}
             
             let enemyHasNoHP = targetTurn.currentHP <= 0;
-            if (enemyHasNoHP && !targetTurn.isDead) {
+            if (enemyHasNoHP && !targetTurn.isLimbo) {
+                markEnemyForDeath(battleData,targetTurn,sourceTurn)
                 enemyIsDead = true;
-                targetTurn.isDead = true;
-                targetTurn.isLimbo = true;
             }//we only want to declare the enemy dead once, bc an attack might have 30 hits but if they die at hit 10 we don't want to say they died 20 times after
             else {
                 const enemyName = targetTurn.properName;
@@ -2626,15 +2615,6 @@ const battleActions = {
                 AV:battleData.sumAV
             };
             logToBattle(battleData,{logType: isEnemy ? "HitAlly" : "HitEnemy", hitType: "Elation", target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,enemyIsBroken: toughnessComposite.enemyIsBroken,position:targetTurn.isEnemy ? battleData.enemyPositions.indexOf(targetTurn) : null,positionCount:targetTurn.isEnemy ? battleData.enemyPositions.length : null});
-        }
-
-        if (enemyIsDead) {
-            if (targetTurn.isEnemy) {
-                killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn);
-            }
-            else {
-                battleActions.killDesignatedAllies(battleData,targetTurn,isEnemy,sourceTurn);
-            }
         }
 
         turnMerge.DMGTotalEnd = DMGTotalEnd;
@@ -3378,12 +3358,11 @@ const battleActions = {
     hurtEnemyHealth(battleData,sourceTurn,targetTurn,DMGTotalAVG,isEnemy) {
         targetTurn.currentHP -= DMGTotalAVG;
         let enemyHasNoHP = targetTurn.currentHP <= 0;
-        let enemyIsDeadCheck = enemyHasNoHP && !targetTurn.isDead;
+        let enemyIsDeadCheck = enemyHasNoHP && !targetTurn.isLimbo;
         let enemyIsDead = false;
         if (enemyIsDeadCheck) {
+            markEnemyForDeath(battleData,targetTurn,sourceTurn)
             enemyIsDead = true;
-            targetTurn.isDead = true;
-            killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn);
         }//we only want to declare the enemy dead once, bc an attack might have 30 hits but if they die at hit 10 we don't want to say they died 20 times after
         let DMGOverkill = 0;
 
@@ -3589,64 +3568,128 @@ const battleActions = {
                 }
             }
         }
+        clearPendingDeaths(battleData)
 
         return generalInfo
     },
-    killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn) {
-        let giveEnergy = !isEnemy;
-        let energyDeath = 10;
-        //kinda counterintuitive on my part but if it !isEnemy that means an ally was responsible for killing these targets
+    markEnemyForDeath(battleData,targetTurn,sourceTurn) {
+        // targetTurn.isDead = true;
+        targetTurn.isLimbo = true;
+        targetTurn.killerSlot = sourceTurn.name;
+        battleData.pendingDeaths.push(targetTurn);
+        battleData.activeEnemies -= 1;
+        targetTurn.turnShouldEnd = true;
+    },
+    clearPendingDeaths(battleData) {
+        const deathQueue = battleData.pendingDeaths;
+        if (!deathQueue.length) {return;}
+        let enemiesKilled = 0;
+        let alliesKilled = 0;
 
-        let killer = sourceTurn.isMemosprite ? battleData.nameBasedTurns[sourceTurn.eventOwner] : sourceTurn;
-        let killed = targetTurn;
-        if (!isEnemy) {//{sourceTurn,targetTurn:currentTarget}
-            // console.log(enemyDeath.properName)
+        const allyTurns = battleData.nameBasedTurns;
+        const enemyTurns = battleData.enemyBasedTurns;
+        const logger = battleData.isLoggyLogger;
 
+        const actionOrder = battleData.nextTurnAV;
+        const enemyPositions = battleData.enemyPositions;
+        const allyPositions = battleData.allyPositions;
+        for (let deathTurn of deathQueue) {
+            if (!deathTurn.isLimbo) {continue;}//if an ally/enemy was revived before we reached them, kick em from the queue
+            const isEnemy = deathTurn.isEnemy;
 
-            
+            if (isEnemy) {
+                // let giveEnergy = !isEnemy;
+                let energyDeath = 10;
+                //kinda counterintuitive on my part but if it !isEnemy that means an ally was responsible for killing these targets
 
+                const killerSlot = deathTurn.killerSlot;
+                const killerTurn = allyTurns[killerSlot] ?? enemyTurns[killerSlot];
+                const killer = killerTurn.isMemosprite ? battleData.nameBasedTurns[killerTurn.eventOwner] : killerTurn;
 
-            //find the enemy position and remove it from the enemy lineup and turn order
-            const indexToRemove = battleData.enemyPositions.indexOf(killed);
-            const indexToRemove2 = battleData.nextTurnAV.indexOf(killed);
-            battleData.enemyPositions.splice(indexToRemove, 1);
-            battleData.nextTurnAV.splice(indexToRemove2, 1);
+                //find the enemy position and remove it from the enemy lineup and turn order
+                const indexToRemove = enemyPositions.indexOf(deathTurn);
+                const indexToRemove2 = actionOrder.indexOf(deathTurn);
+                enemyPositions.splice(indexToRemove, 1);
+                actionOrder.splice(indexToRemove2, 1);
+                
+                if (logger) {
+                    logToBattle(battleData,{logType: "EnemyDiedNote", enemyKilled:deathTurn.properName});
+                    logToBattle(battleData,{logType: "EnemyDied", source:killer.properName, enemyKilled:deathTurn.properName});
+                }
+                poke("EnemyDied",battleData,{sourceTurn: killer, enemyKilled:deathTurn},killer);
+                updateEnergy(battleData,energyDeath,killer,false,"Killed Enemy");
+                battleData.enemiesRemaining -= 1;
+                enemiesKilled += 1;
 
-            poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed},sourceTurn);
-            
-            if (battleData.isLoggyLogger) {
-                logToBattle(battleData,{logType: "EnemyDiedNote", enemyKilled:killed.properName});
-                logToBattle(battleData,{logType: "EnemyDied", source:killer.properName, enemyKilled:killed.properName});
-            }
-            if (giveEnergy) {updateEnergy(battleData,energyDeath,killer,false,"Killed Enemy");}
-            battleData.enemiesRemaining -= 1;
-            
-        
-        }
+                if (battleData.enemiesRemaining === 0) {
+                    // battleData.wavesToRun = battleSettings.totalWaves;
+                    battleData.wavesCompleted += 1;
+                    if (battleData.wavesCompleted === battleData.wavesToRun) {
+                        battleData.battleIsOver = true;
+                    }
+                    else {
+                        battleData.readyForNewWave = true;
 
-        if (battleData.enemiesRemaining === 0) {
-            // battleData.wavesToRun = battleSettings.totalWaves;
-            battleData.wavesCompleted += 1;
-            if (battleData.wavesCompleted === battleData.wavesToRun) {
-                battleData.battleIsOver = true;
+                        for (let turnEntity of actionOrder) {turnEntity.turnShouldEnd = true;}
+                        //if anything was in the middle of a turn with no action assigned yet, this should break their turn and return to the turn order so we can apply a new wave
+
+                        return;
+                    }
+
+                    
+                }
             }
             else {
-                battleData.readyForNewWave = true;
-                const nextAV = battleData.nextTurnAV;
 
-                for (let turnEntity of nextAV) {turnEntity.turnShouldEnd = true;}
-                //if anything was in the middle of a turn with no action assigned yet, this should break their turn and return to the turn order so we can apply a new wave
+                const killerSlot = deathTurn.killerSlot;
+                const killerTurn = allyTurns[killerSlot] ?? enemyTurns[killerSlot];
+                const killer = killerTurn.isMemosprite ? battleData.nameBasedTurns[killerTurn.eventOwner] : killerTurn;
+                
+                // let killer = sourceTurn;
+                // let killed = targetTurn;
+                // console.log(enemyDeath.properName)
+                poke("AllyDied",battleData,{sourceTurn: killer, targetTurn:deathTurn},deathTurn);
+                if (battleData.isLoggyLogger) {
+                    logToBattle(battleData,{logType: "EnemyDiedNote", enemyKilled:deathTurn.properName, isEnemy: true});
+                    if (!deathTurn.isMemosprite) {logToBattle(battleData,{logType: "EnemyDied", source:killer.properName, enemyKilled:deathTurn.properName, isEnemy: true});}
+                }
 
-                return;
+                //find the enemy position and remove it from the enemy lineup and turn order
+                const indexToRemove = allyPositions.indexOf(deathTurn);
+                const indexToRemove2 = actionOrder.indexOf(deathTurn);
+                allyPositions.splice(indexToRemove, 1);
+                actionOrder.splice(indexToRemove2, 1);
+                //TODO: revive handling here
+
+                if (!deathTurn.isUniqueEvent) {
+                    battleData.charactersRemaining -= 1;
+                    battleData.battleIsOver = true;
+                    battleData.battleFailed = true;
+                }
+                else if (deathTurn.isMemosprite) {deathTurn?.deathFunction?.(battleData,deathTurn,deathTurn.deathParam)}
+                //obv there can be cases where the memo owner dies but the memo itself would still be left before their function procs
+
+                if (battleData.charactersRemaining === 0) {
+                    battleData.battleIsOver = true;
+                    battleData.battleFailed = true;
+                }
+                else {
+                    if (deathTurn.memospriteEventRef) {
+                        const memoTurn = deathTurn[deathTurn.memospriteEventRef];
+                        if (memoTurn.isActive) {deathTurn?.deathFunction?.(battleData,deathTurn,deathTurn.deathParam)}
+                    }
+                }
             }
 
-            
         }
-        if (!isEnemy) {
+        battleData.pendingDeaths = [];
+        if (enemiesKilled) {
             //then once done, redefine the enemy targets available
             battleActions.assignAttackTargets(battleData);
         }
-        // console.log(battleData.enemiesRemaining)
+        if (alliesKilled) {
+            battleActions.assignAttackTargetsEnemy(battleData);
+        }
     },
     killDesignatedAllies(battleData,targetTurn,isEnemy,sourceTurn) {
 
@@ -4604,6 +4647,8 @@ const hitWrapper = battleActions.hitWrapperTEST;
 const dealToughnessDMG = battleActions.dealToughnessDMG;
 const getBreakDamage = battleActions.getBreakDamage;
 const hitWrapperBattleStart = battleActions.hitWrapperBattleStart;
+const clearPendingDeaths = battleActions.clearPendingDeaths;
+const markEnemyForDeath = battleActions.markEnemyForDeath
 
 
 const turnLogic = {
