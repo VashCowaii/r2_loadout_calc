@@ -24010,7 +24010,7 @@ const turnLogic = {
                 updateBuffBatchTargets(battleData,allyTargets,buffSheetFUA);
                 
                 const nextAV = battleData.nextTurnAV;
-                sourceTurn.notPresentInActionOrder = true;
+                if (sourceTurn.turnState) {sourceTurn.turnShouldEnd = true;}
                 const robinIndex = nextAV.indexOf(sourceTurn);
                 nextAV.splice(robinIndex, 1);
                 //TODO: I have no clue how performant indexOf is, so possibly revert this later but we'll see
@@ -24067,7 +24067,6 @@ const turnLogic = {
                 const ATKObjects = logicRef.ATKObjects;
                 
                 robinTurn.battleValues.robinConcertoActive = false;
-                robinTurn.notPresentInActionOrder = false;
 
                 const buffSheet = ATKObjects.robinConcertoCountdownBuffSHEET;
                 const buffSheetFUA = ATKObjects.robinConcertoCountdownBuffFUASHEET;

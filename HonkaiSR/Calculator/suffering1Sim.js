@@ -507,7 +507,6 @@ const sim = {
                 activeMemosprites: 0,
                 actionCounter: 0,
                 certifiedBanger: 0,
-                notPresentInActionOrder: false,
                 accumulateAllToughness: false,
                 battleValues: logicRef?.characterValuesBattle,
             };
@@ -917,7 +916,7 @@ const sim = {
                     }
                 }
             }
-            else if (turnLogic[turnName] && !sourceTurn.notPresentInActionOrder && !sourceTurn.turnShouldEnd) {
+            else if (turnLogic[turnName] && !sourceTurn.turnShouldEnd) {
                 turnWrapper(turnName,sourceTurn,battleData);
             }
             poke("ActionEndPhase", battleData, exoTurnRef,sourceTurn);
