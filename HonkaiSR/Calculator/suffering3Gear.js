@@ -8777,6 +8777,77 @@ const turnLogicLightcones = {
             "nextAllyBuff": "Past and Future",
         },
     },
+    "Planetary Rendezvous": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "WaveStart",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    // let lcNameRef = "Poised to Bloom";
+
+                    // const updatePresage = this.updatePresage ??= turnLogicLightcones[lcNameRef].skillFunctions.updatePresage;
+                    const namedTurns = battleData.nameBasedTurns;
+
+                    const dmgIndex = this.dmgIndex ??= {
+                        "Physical": DamagePhysical,
+                        "Wind": DamageWind,
+                        "Lightning": DamageLightning,
+                        "Fire": DamageFire,
+                        "Ice": DamageIce,
+                        "Quantum": DamageQuantum,
+                        "Imaginary": DamageImaginary,
+                    }
+
+                    // let firstOwnerTurn = null;
+                    const allAlliesArray = battleData.allAlliesArray;
+                    for (let ownerSlot in ownersSlots) {
+                        const currentOwner = namedTurns[ownerSlot];
+
+
+                        if (!currentOwner.lcMediationSPDSHEET) {
+                            let lcNameRef = "Planetary Rendezvous";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let ownerRank = ownersSlots[currentOwner.name];
+                            let rankParams = lcPathing[ownerRank-1];
+
+                            const logicRef = turnLogicLightcones[lcNameRef];
+                            const uniqueName = battleActions.getUniqueGearBuffName(battleData,currentOwner,logicRef,"buff2");
+
+                            const dmgParam = dmgIndex[currentOwner.element];
+        
+                            currentOwner.lcMediationSPDSHEET = {
+                                "stats": [dmgParam],
+                                [dmgParam]: rankParams[0],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": uniqueName,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+                            
+                        }
+                        const buffSheet = currentOwner.lcMediationSPDSHEET;
+                        // const allAlliesArray = battleData.allAlliesArray;
+                        updateBuffBatchTargets(battleData,allAlliesArray,buffSheet);
+                    }
+                },
+                "target": "self",
+                "priority": -80,
+                "listenerName": "Planetary Rendezvous - battlestart DMG buff",
+            },
+        ],
+        "buffNames": {
+            "buff2": "Planetary Rendezvous [LC]",
+        },
+    },
         //3star
     "Meshing Cogs": {//REDONE
         logic(thisTurn,battleData) {},
