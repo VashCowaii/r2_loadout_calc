@@ -5496,6 +5496,132 @@ const turnLogicLightcones = {
             "dmgStack": "Loop (LC)"
         },
     },
+    "Hidden Shadow": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[2],subListeners[2].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Hidden Shadow listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AttackDMGEnd", 
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (!sourceTurn.lcHiddenShadowBasicReady) {return;}
+
+                            if (!sourceTurn.lcHiddenShadowPROCSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+
+                                let lcNameRef = "Hidden Shadow";
+                                // let buffName = turnLogicLightcones[lcNameRef].buffNames.dmgStack;
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+
+                                const scalar = "ATK";
+                                const tags = ["All",sourceTurn.element];
+                                const actionTags = ["All","Additional"];
+                                const keyShortcut = basicShorthand.makeKeysArray;
+                                const realDMGKeys = keyShortcut(dmgKeys,tags);
+                                const realPENKeys = keyShortcut(resPENKeys,tags);
+                                const realShredKeys = keyShortcut(defShredKeys,tags);
+                                const realVulnKeys = keyShortcut(vulnKeys,tags);
+                                const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                                //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                                sourceTurn.lcHiddenShadowPROCSHEET = {
+                                    multipliers: {
+                                        primary: null,
+                                        blast: null,
+                                        all: null,
+                                        additional: rankParams[0]
+                                    },
+                                    scalar,
+                                    element: sourceTurn.element,//override for additional dmg, not used otherwise
+                                    DMGTags: tags,
+                                    allToughness: false,
+                                    slot: null,
+                                    realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                                    actionTags,
+                                    compositeCacheTag
+                                }
+                            }
+                            let ATKObject = sourceTurn.lcHiddenShadowPROCSHEET;
+
+                            const allyAssignedName = sourceTurn.properName;
+                            const enemyTurns = battleData.enemyBasedTurns;
+                            const addedWrapper = battleActions.additionalDMGWrapper;
+                            const targetsGotHit = generalInfo.targetsGotHit;
+                            for (let enemySlot in targetsGotHit) {
+                                const currentEnemy = enemyTurns[enemySlot];
+                                if (currentEnemy.isDead) {continue;}
+
+                                addedWrapper(battleData,sourceTurn,allyAssignedName,ATKObject,currentEnemy,"Hidden Shadow");
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Hidden Shadow - additional dmg proc",
+                    },
+                    {
+                        "trigger": "AbilityStart", 
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "BasicATK") {return;}
+
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.lcHiddenShadowSkillReady) {
+                                sourceTurn.lcHiddenShadowSkillReady = false;
+                                sourceTurn.lcHiddenShadowBasicReady = true;
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Hidden Shadow - ability check",
+                    },
+                    {
+                        "trigger": "AbilityEnd", 
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "BasicATK" && action != "Skill") {return;}
+
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (action === "Skill") {
+                                sourceTurn.lcHiddenShadowSkillReady = true;
+                            }
+                            else {
+                                sourceTurn.lcHiddenShadowBasicReady = false;
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Hidden Shadow - ability end clear",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            // "dmgStack": "Boundless Choreo (LC)"
+        },
+    },
 
     //DESTRUCTION
         //5star
