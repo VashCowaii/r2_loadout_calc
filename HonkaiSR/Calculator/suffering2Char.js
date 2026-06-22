@@ -3582,7 +3582,7 @@ const battleActions = {
         const turnMerge = {sourceTurn,targetTurn};
         poke("CausedLimbo",battleData,turnMerge,sourceTurn);
         poke("EnteredLimbo",battleData,turnMerge,targetTurn);
-        battleData.activeEnemies -= 1;
+        if (targetTurn.isEnemy) {battleData.activeEnemies -= 1;}
         targetTurn.turnShouldEnd = true;
     },
     clearPendingDeaths(battleData) {
@@ -8069,7 +8069,7 @@ const turnLogic = {
                         "trigger": "WaitingLimbo",
                         condition(battleData,generalInfo,personalOwner) {
                             const providerTurn = this.providerTurn;
-                            // if (personalOwner.isDead || personalOwner.isLimbo) {return;}
+                            if (personalOwner.properName === providerTurn.properName) {return;}
 
                             const battleValues = providerTurn.battleValues;
                             if (!battleValues.reviveCharges) {return;}
@@ -8092,6 +8092,7 @@ const turnLogic = {
                                         let charsInLimbo = false;
                                         let charInLimbo = null;
                                         for (let character of fullCharacterArray) {
+                                            if (character.properName === sourceTurn.properName) {continue;}
                                             if (character.isLimbo) {
                                                 charsInLimbo = true;
                                                 charInLimbo = character;
@@ -8146,6 +8147,7 @@ const turnLogic = {
                                         let charsInLimbo = false;
                                         let charInLimbo = null;
                                         for (let character of fullCharacterArray) {
+                                            if (character.properName === sourceTurn.properName) {continue;}
                                             if (character.isLimbo) {
                                                 charsInLimbo = true;
                                                 charInLimbo = character;
@@ -15456,6 +15458,9 @@ const turnLogic = {
                     uniqueEventFunction: logicRef.skillFunctions.infiniteFuryQueuedExpired,
                     eventImage: "BEicons/BattleEvent_1507.png",
                 };
+                const newAV = 10000/70;
+                ActionEntry.AV = newAV;
+                ActionEntry.AVBase = newAV;
                 const nextAV = battleData.nextTurnAV;
                 nextAV.push(ActionEntry);
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Mortenax Blade Ultimate", bodyText: `Mortenax Blade countdown added to the turn order.`});}
@@ -15487,6 +15492,40 @@ const turnLogic = {
                     const e1Sheet = ATKObjects.bladeMBalefireE1DEBUFFSHEET;
                     const enemyPositions = battleData.enemyPositions;
                     removeBuffFromBatch(battleData,enemyPositions,e1Sheet);
+                }
+
+                if (sourceTurn.markedForRevive) {
+                    if (!ATKObjects.mBladeReviveHEALOBJECT) {
+                        // let values = ATKObjects.bailuTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+    
+                        const actionTags = ["All","Heal"];
+                        const compositeCacheTag = actionTags + sourceTurn.properName;
+                        ATKObjects.mBladeReviveHEALOBJECT = {
+                            multipliers: {
+                                primary: 0.50,
+                                blast: null,
+                                all: null,
+                            },
+                            flatAmounts: {
+                                primary: null,
+                                blast: null,
+                                all: null,
+                            },
+                            scalar: null,//"HP",
+                            DMGTags: [],
+                            allToughness: false,
+                            slot: "Talent",
+                            actionTags,compositeCacheTag
+                        }
+                    }
+                    let healObject = ATKObjects.mBladeReviveHEALOBJECT;
+                    const targetTurn = sourceTurn;
+    
+                    targetTurn.isLimbo = false;
+                    targetTurn.markedForRevive = false;
+                    targetTurn.currentHP = 0;
+    
+                    healAlly(battleData,healObject,targetTurn,sourceTurn,"Talent",1);
                 }
 
                 logicRef.skillFunctions.bladeTraceRegen(battleData,sourceTurn);//trace ad nauseum
@@ -16145,32 +16184,75 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
-                    const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
-                        name: this.listenerName,
-                        priority: priorityList.ability.CharacterBuffOthers,
-                        queueTag: "QueuedInsert",
+                    if (generalInfo) {
+                        const queueObject = this.queueObjectRevive ??= createQueueObject(ownerTurn,{
+                            name: this.listenerName,
+                            priority: priorityList.ability.CharacterReviveSelf,
+                            queueTag: "QueuedInsert",
+        
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.infiniteFuryExpired,
+                            action: "Revive",
+                            abortCheck: null,//(battleData,actionObject,sourceTurn)
+        
+                            isInserted: true,
+                            dontKeepNextWave: false,//ults always clear out
+                            isAttack: false,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "ReviveStart",
+        
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Exit,
+                        })
     
-                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.infiniteFuryExpired,
-                        action: "Insert",
-                        abortCheck: null,//(battleData,actionObject,sourceTurn)
+                        queueObject.sourceTurn = ownerTurn;
+                        ownerTurn.markedForRevive = true;
+                        queueObject.target = [ownerTurn];
+                        queueInsertAbility(battleData,queueObject);
+                    }
+                    else {
+                        const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                            name: this.listenerName,
+                            priority: priorityList.ability.CharacterBuffOthers,
+                            queueTag: "QueuedInsert",
+        
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.infiniteFuryExpired,
+                            action: "Insert",
+                            abortCheck: null,//(battleData,actionObject,sourceTurn)
+        
+                            isInserted: true,
+                            dontKeepNextWave: false,//ults always clear out
+                            isAttack: false,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "GenericAbilityStart",
+        
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Exit,
+                        })
     
-                        isInserted: true,
-                        dontKeepNextWave: false,//ults always clear out
-                        isAttack: false,
-                        isAbility: true,
-                        useAnyTriggers: true,
-                        eventTypeStartLOG: "GenericAbilityStart",
-    
-                        poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Exit,
-                    })
-
-                    queueObject.sourceTurn = ownerTurn;
-                    queueObject.target = [ownerTurn];
-                    queueInsertAbility(battleData,queueObject);
+                        queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = [ownerTurn];
+                        queueInsertAbility(battleData,queueObject);
+                    }
                 },
                 "target": "self",
                 "listenerName": "Mortenax Blade Queue Exit Infinity Fury",
                 "ownerTurn": {},
+            },
+            {
+                "trigger": "WaitingLimbo",
+                condition(battleData,generalInfo,personalOwner) {
+                    const ownerTurn = this.ownerTurn;
+                    // if (personalOwner.isDead || personalOwner.isLimbo) {return;}
+
+                    const battleValues = ownerTurn.battleValues;
+                    if (!battleValues.bladeFuryActive) {return;}
+
+                    poke("mortenaxBladeQueueExit",battleData,true);
+                },
+                "target": "self",
+                "priority": -80,
+                "isPersonal": true,
+                "listenerName": "MBlade mid-fury revive handling",
             },
             {
                 "trigger": "mortenaxBladeQueueFUA",
@@ -16198,7 +16280,7 @@ const turnLogic = {
                         actionCall: turnLogic[ownerTurn.properName].skillFunctions.bladeSkillFUA,
                         action: "Skill",
                         abortCheck(battleData,actionObject,sourceTurn) {
-                            if (sourceTurn.currentHP <= 1) {
+                            if (sourceTurn.currentHP <= 1 || !sourceTurn.battleValues.bladeFuryActive) {
                                 sourceTurn.battleValues.fuaIsQueued = false;
                                 return true;
                             }
@@ -16240,57 +16322,48 @@ const turnLogic = {
                     if (otherObscureCondition) {
                         ownerTurn.ultyQueued = true;
 
-                        const isEnhanced = ownerTurn.battleValues.bladeFuryActive;
+                        const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                            name: this.listenerName,
+                            priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
-                        if (isEnhanced) {
-                            const queueObject = this.queueObjectEnh ??= createQueueObject(ownerTurn,{
-                                name: this.listenerName,
-                                priority: priorityList.turn.Default,
-                                queueTag: "QueuedUltimate",
-    
-                                actionCall: turnLogic[ownerTurn.properName].skillFunctions.bladeUltimateEnh,
-                                action: "Ultimate",
-    
-                                energyCost: ownerTurn.maxEnergy,
-    
-                                dontKeepNextWave: true,//ults always clear out
-                                isEnhanced: true,
-                                isAttack: true,
-                                isAbility: true,
-                                useAnyTriggers: true,
-                                eventTypeStartLOG: "UltimateStart",
-    
-                                poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.UltimateEnh,
-                            })
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.bladeUltimateEnh,
+                            action: "Ultimate",
+                            abortCheck(battleData,actionObject,sourceTurn) {
+                                const isEnhanced = sourceTurn.battleValues.bladeFuryActive;
 
-                            queueObject.target = battleData.enemyPositions;
-                            queueObject.sourceTurn = ownerTurn;
-                            queueUltimate(battleData,queueObject);
-                        }
-                        else {
-                            const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
-                                name: this.listenerName,
-                                priority: priorityList.turn.Default,
-                                queueTag: "QueuedUltimate",
-    
-                                actionCall: turnLogic[ownerTurn.properName].skillFunctions.bladeUltimate,
-                                action: "Ultimate",
-    
-                                energyCost: ownerTurn.maxEnergy,
-    
-                                dontKeepNextWave: true,//ults always clear out
-                                isAttack: false,
-                                isAbility: true,
-                                useAnyTriggers: true,
-                                eventTypeStartLOG: "UltimateStart",
-    
-                                poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-                            })
+                                const logicRef = turnLogic[sourceTurn.properName];
 
-                            queueObject.target = [ownerTurn];
-                            queueObject.sourceTurn = ownerTurn;
-                            queueUltimate(battleData,queueObject);
-                        }
+                                if (isEnhanced) {
+                                    actionObject.actionCall = logicRef.skillFunctions.bladeUltimateEnh;
+                                    actionObject.isEnhanced = true;
+                                    actionObject.isAttack = true;
+                                    actionObject.target = battleData.enemyPositions;
+                                    actionObject.poolKey = logicRef.abilityTargetPools.UltimateEnh;
+                                }
+                                else {
+                                    actionObject.actionCall = logicRef.skillFunctions.bladeUltimate;
+                                    actionObject.isEnhanced = false;
+                                    actionObject.isAttack = false;
+                                    actionObject.target = [sourceTurn];
+                                    actionObject.poolKey = logicRef.abilityTargetPools.Ultimate;
+                                }
+                            },
+
+                            energyCost: ownerTurn.maxEnergy,
+
+                            dontKeepNextWave: true,//ults always clear out
+                            isEnhanced: true,
+                            isAttack: true,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.UltimateEnh,
+                        })
+
+                        queueObject.sourceTurn = ownerTurn;
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "Self",
