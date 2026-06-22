@@ -3645,7 +3645,7 @@ const battleActions = {
                 }
             }
             else {
-                poke("WaitingLimbo",battleData,null,deathTurn);
+                if (!deathTurn.markedForDeath) {poke("WaitingLimbo",battleData,null,deathTurn);}
                 if (deathTurn.markedForRevive) {continue;}
 
                 const killerSlot = deathTurn.killerSlot;
@@ -4721,9 +4721,307 @@ const turnLogic = {
 
                 battleData.battleStartOverBreakTotals = generalInfo;
                 // console.log(battleData.battleStartOverBreakTotals)
-            }
+            },
+            casGlobalRevive(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic.Universal;
+
+                // let skillRef = ATKObjects.bailuTalentREF ??= ATKObjects.Talent["Gourdful of Elixir"].variant1;
+                // let rank = sourceTurn.rank;
+                // const target = actionObject.target;
+
+                if (!logicRef.casGlobalReviveHEALOBJECT) {
+                    // let values = ATKObjects.bailuTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                    const actionTags = ["All","Heal"];
+                    const compositeCacheTag = actionTags + "CASTORICEGLOBAL";
+                    logicRef.casGlobalReviveHEALOBJECT = {
+                        multipliers: {
+                            primary: 0,
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: 1,
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: null,//"HP",
+                        DMGTags: [],
+                        allToughness: false,
+                        slot: "GlobalPassive",
+                        actionTags,compositeCacheTag
+                    }
+
+                    logicRef.castGlobalMoonCocoon = {
+                        "stats": null,
+                        "source": "Global Passive",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": "Mooncocoon",
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 2,
+                        "currentStacks": 2,
+                        "decay": false,
+                        "expireType": null,
+                        "buffDisplayIcon": "misc/castorice/globalPassive.png"
+                    }
+                }
+                let healObject = logicRef.casGlobalReviveHEALOBJECT;
+
+                const fullCharacterArray = battleData.fullCharacterArray;
+                const reviveSheet = logicRef.castGlobalMoonCocoon;
+                reviveSheet.currentStacks = 2;
+                let charactersWithCocoon = 0;
+                for (let character of fullCharacterArray) {
+                    if (!character.isLimbo) {continue;}
+
+                    character.isLimbo = false;
+                    character.markedForRevive = false;
+                    character.currentHP = 0;
+
+                    healAlly(battleData,healObject,character,sourceTurn,"GlobalPassive",1);
+
+                    updateBuff(battleData,character,reviveSheet);
+                    charactersWithCocoon += 1;
+                }
+
+                battleData.charactersWithCocoon = charactersWithCocoon;
+                battleData.castoriceGlobalPassive = false;
+            },
         },
         "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    // let ownerTurn = this.ownerTurn;
+                    const passiveListeners = this.passiveListeners;
+
+                    const casGlobal = battleData.castoriceGlobalPassive;
+                    if (casGlobal) {
+                        const listener1 = passiveListeners[0];
+                        const listener2 = passiveListeners[1];
+                        const listener3 = passiveListeners[2];
+                        const listener4 = passiveListeners[3];
+
+                        const fullCharacterArray = battleData.fullCharacterArray;
+                        for (let character of fullCharacterArray) {
+                            addListenerWithPriority(battleData,listener1,listener1.trigger,character,null,null);
+                            addListenerWithPriority(battleData,listener2,listener2.trigger,character,null,null);
+                            addListenerWithPriority(battleData,listener3,listener3.trigger,character,null,null);
+                        }
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,null,null,null);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Global Passive checks",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "WaitingLimbo",
+                        condition(battleData,generalInfo,personalOwner) {
+                            if (!battleData.castoriceGlobalPassive) {removeListener(battleData,this,personalOwner)}
+                            if (battleData.castoriceGlobalPassiveQueued) {return;}
+
+                            battleData.castoriceGlobalPassiveQueued = true;
+
+                            const levelEntity = turnLogic.Universal.battleDataLevelEntity;
+                            const queueObject = this.queueObject ??= createQueueObject(levelEntity,{
+                                name: this.listenerName,
+                                priority: priorityList.ability.CharacterReviveOthers,
+                                queueTag: "QueuedInsert",
+        
+                                actionCall: turnLogic.Universal.skillFunctions.casGlobalRevive,
+                                action: "Revive",
+                                abortCheck(battleData,actionObject,sourceTurn) {
+                                    let failed = false;
+
+                                    const fullCharacterArray = battleData.fullCharacterArray;
+                                    let charsInLimbo = false;
+                                    for (let character of fullCharacterArray) {
+                                        if (character.isLimbo) {
+                                            charsInLimbo = true;
+                                            break;
+                                        }
+                                    }
+                                    if (!charsInLimbo) {failed = true;}
+
+                                    if (failed) {
+                                        battleData.castoriceGlobalPassiveQueued = false;
+                                        return true;
+                                    }
+                                },
+        
+                                isInserted: true,
+                                dontKeepNextWave: false,//ults always clear out
+                                isAttack: false,
+                                isAbility: true,
+                                useAnyTriggers: true,
+                                eventTypeStartLOG: "ReviveStart",
+
+                                // properName: "Castorice Global Passive",
+                                eventOverrideImage: characters["Castorice"].icon,
+        
+                                poolKey: "Characters",
+                            })
+
+                            const fullCharacterArray = battleData.fullCharacterArray;
+                            for (let character of fullCharacterArray) {
+                                if (!character.isLimbo) {continue;}
+                                character.markedForRevive = true;
+                            }
+
+                            queueObject.sourceTurn = levelEntity;
+                            queueInsertAbility(battleData,queueObject);
+                        },
+                        "target": "self",
+                        "priority": -69,
+                        "isPersonal": true,
+                        "listenerName": "Castorice Global Passive revive handling",
+                    },
+                    {
+                        "trigger": "PreActionPhase",
+                        condition(battleData,generalInfo,personalOwner) {
+                            if (battleData.castoriceGlobalPassive) {return;}
+                            //this listener will only ever be injected if cas global was toggled on to begin with, so if it still shows true
+                            //that means we haven't actually queued any shit and shouldn't be doing anything here YET
+
+                            if (!battleData.charactersWithCocoon) {removeListener(battleData,this,personalOwner);}
+                            //if we reach this point on a character and have no more mooncocoon active then remove this listener instead of continuing to check the same shit.
+
+                            const buffName = "Mooncocoon";
+                            const buffCheck = personalOwner.buffsObject[buffName];
+
+                            if (buffCheck) {
+                                const currentStacks = buffCheck.currentStacks;
+                                if (currentStacks === 2) {
+                                    const reviveSheet = turnLogic.Universal.castGlobalMoonCocoon;
+                                    reviveSheet.currentStacks = -1;
+                                    updateBuff(battleData,personalOwner,reviveSheet);
+                                }
+                                else {
+                                    const levelEntity = turnLogic.Universal.battleDataLevelEntity;
+                                    removeBuff(battleData,personalOwner,buffCheck);
+                                    markEnemyForDeath(battleData,personalOwner,levelEntity)
+                                    personalOwner.markedForDeath = true;
+                                    clearPendingDeaths(battleData);
+                                    battleData.charactersWithCocoon -= 1;
+                                }
+                            }
+                        },
+                        "target": "self",
+                        "priority": 0,
+                        "isPersonal": true,
+                        "listenerName": "Castorice Global Passive mooncocoon handling",
+                    },
+                    {
+                        "trigger": "AllyHPChange",
+                        condition(battleData,generalInfo,personalOwner) {
+                            if (battleData.castoriceGlobalPassive) {return;}
+                            //this listener will only ever be injected if cas global was toggled on to begin with, so if it still shows true
+                            //that means we haven't actually queued any shit and shouldn't be doing anything here YET
+
+                            if (!battleData.charactersWithCocoon) {removeListener(battleData,this,personalOwner);}
+                            //if we reach this point on a character and have no more mooncocoon active then remove this listener instead of continuing to check the same shit.
+
+                            const buffName = "Mooncocoon";
+                            const buffCheck = personalOwner.buffsObject[buffName];
+
+                            if (buffCheck) {
+                                const currentHPValid = personalOwner.currentHP > 1;
+
+                                if (currentHPValid) {
+                                    removeBuff(battleData,personalOwner,buffCheck);
+                                    battleData.charactersWithCocoon -= 1;
+                                }
+                            }
+                        },
+                        "target": "self",
+                        "priority": 0,
+                        "isPersonal": true,
+                        "listenerName": "Castorice Global Passive mooncocoon was healed handling",
+                    },
+                    {
+                        "trigger": "ShieldEnd",
+                        condition(battleData,generalInfo) {
+                            if (battleData.castoriceGlobalPassive) {return;}
+                            //this listener will only ever be injected if cas global was toggled on to begin with, so if it still shows true
+                            //that means we haven't actually queued any shit and shouldn't be doing anything here YET
+
+                            if (!battleData.charactersWithCocoon) {removeListener(battleData,this,personalOwner);}
+                            //if we reach this point on a character and have no more mooncocoon active then remove this listener instead of continuing to check the same shit.
+
+                            const targetTurn = generalInfo.targetTurn;
+
+                            const buffName = "Mooncocoon";
+                            const buffCheck = targetTurn.buffsObject[buffName];
+
+                            if (buffCheck) {
+                                const hasAnyShield = targetTurn.shieldCounter;
+
+                                if (hasAnyShield) {
+                                    removeBuff(battleData,personalOwner,buffCheck);
+                                    battleData.charactersWithCocoon -= 1;
+                                }
+                            }
+                        },
+                        "target": "self",
+                        "priority": 0,
+                        "listenerName": "Castorice Global Passive mooncocoon was shielded handling",
+                    },
+                ],
+            },
+            {
+                "trigger": "EntityConstruction",
+                condition(battleData,generalInfo) {
+
+                    const logicRef = turnLogic.Universal;
+
+                    let stats = new Array(greatTableSize).fill(0);
+
+                    logicRef.battleDataLevelEntity = {
+                        // name:characterEntry,
+
+                        AV:10000,
+                        AVBase:10000,
+                        SPD:1,
+                        // AV:10000/60,
+                        // AVBase:10000/60,
+                        // SPD:60,
+
+                        actionCounter: 0,
+                        turnState: 0,
+                        name: "battleDataLevelEntity",
+                        properName: "Level Entity",
+
+                        statTable: stats,
+                        tagSpecific: {},
+                        buffsObject: {},
+                        cacheTagValues: superGlobal.createEntityCache(),
+                        
+                        // buffsObject: {},
+                        // buffsStartTurn: [],
+                        // buffsEndTurn: [],
+                        // additionalDMGObject: {},
+                        isUnselectable: true,
+                        diesWithOwner: false,
+                        isUniqueEvent: true,
+                        isSummon: false,
+                        isActive: false,
+                        isMemosprite: false,
+                        currentlyOwnedBy: null,
+                        eventOwner: null,//pass through the slot of the character who owns the event, avoids cyclic issues when logging
+                        uniqueEventFunction: null,//logicRef.skillFunctions.combustionExpired,
+                        eventImage: graphs.summonCustomImages["Level Entity"],
+                    };
+
+                    battleData.nameBasedTurns["battleDataLevelEntity"] = logicRef.battleDataLevelEntity;
+                    // poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: ownerTurn.jingYuanLORDTURNEVENT},ownerTurn);
+                },
+                "target": "self",
+                "listenerName": "Level Entity event creation",
+                "ownerTurn": {},
+            },
             {
                 "trigger": "WaveStart",
                 condition(battleData,generalInfo) {
