@@ -733,7 +733,7 @@ const sim = {
         battleData.wavesToRun = battleSettings.totalWaves;
         battleData.wavesCompleted = 0;
 
-        battleData.castoriceGlobalPassive = true;//TODO: circle back here and hookup from battlesettings and some toggle somewhere we'll add
+        battleData.castoriceGlobalPassive = battleSettings.castoriceGlobalPassive;//TODO: circle back here and hookup from battlesettings and some toggle somewhere we'll add
         
         // battleSettings.totalWaves
 

@@ -438,7 +438,6 @@ details[open] > summary::before {
 
     /* background-color: rgba(255, 255, 255, 0.082); */
 }
-/* rotationsPermaConditionsExpand */
 .rotationsPermaConditionsExpandTargetBox {
     width: 100%;
     display: flex;
@@ -4273,6 +4272,22 @@ details[open] > summary::before {
     flex-direction: column;
     /* border: 1px solid green; */
     background: linear-gradient(200deg, transparent,transparent, #0d393b3d);
+    border-bottom: 2px solid #ffffff1A;
+    border-top: 2px solid #ffffff1A;
+
+}
+.rotationsPermaConditionsExpandGlobalPassives {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 5px;
+    white-space: normal;
+    flex-direction: column;
+    /* border: 1px solid green; */
+    /* background: linear-gradient(200deg, transparent,transparent, #0d393b3d); */
     border-bottom: 2px solid #ffffff1A;
     border-top: 2px solid #ffffff1A;
 

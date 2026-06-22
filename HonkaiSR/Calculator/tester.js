@@ -5824,8 +5824,8 @@ const userTriggers = {
         readSelection("cyclesToRunQueriesDisplay").innerHTML = cycleValue;
         readSelection("queriesBattleSummaryCycles").innerHTML = currentAVConversion.hasCycles ? cycleValue : "N/A";
 
-
-
+        const useCasGlobal = readSelection("queriesUseGlobalCastorice").checked;
+        battleSettings.castoriceGlobalPassive = useCasGlobal;
 
         const queries4starSuperValue = +readSelection("queries4starSuperValue").value;
         readSelection("queries4starSuperValueDisplay").innerHTML = queries4starSuperValue;
