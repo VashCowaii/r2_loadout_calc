@@ -3213,6 +3213,7 @@ const customMenu = {
             let basicMiniAction = {
                 "FUAStart": "FuA",
                 "GenericAbilityStart": "Insert",
+                "ReviveStart": "Revive",
                 "SkillStart": "Skill",
                 "ElationSkillStart": "Elation",
                 "AhaInstantEnd": "End",
@@ -4279,6 +4280,7 @@ const userTriggers = {
         // "SpeedAdvanced",
         "FUAStart",
         "GenericAbilityStart",
+        "ReviveStart",
         "SkillStart",
         "ElationSkillStart",
         "AhaInstantEnd",
@@ -4322,6 +4324,9 @@ const userTriggers = {
         "UltimateStart": "Ultimate Start",
         "FUAStart": "Follow-up Attack (Action Queue)",
         "GenericAbilityStart": "Insert Instance",
+        "ReviveStart": "Revive Instance",
+
+        
         "SkillStart": "Skill Start",
         "ElationSkillStart": "Elation Skill Start",
         "AhaInstantEnd": "Aha Instant End",
@@ -4932,6 +4937,15 @@ const userTriggers = {
                     // battleData.battleLog.push({logType: "FUAStart", name:currentUltimate.nameProper, target: currentUltimate.target, AV: battleData.sumAV, fuaName: currentFUA.attack.name});
                     returnString = `
                     <div class="actionDetailHeaderRow"><span class="detailHeaderName">${action.name}'s Inserted Instance</span><span class="detailHeaderAV">AV ${+action.AV.toFixed(7)}</span></div>
+                    ${controlsString}
+                    <div class="actionDetailBody">Target: ${action.target}</div>
+                    <div class="actionDetailBody">Call: ${action.fuaName}</div>
+                    `
+                    break;
+                case "ReviveStart": 
+                    // battleData.battleLog.push({logType: "FUAStart", name:currentUltimate.nameProper, target: currentUltimate.target, AV: battleData.sumAV, fuaName: currentFUA.attack.name});
+                    returnString = `
+                    <div class="actionDetailHeaderRow"><span class="detailHeaderName">${action.name}'s Inserted Revive</span><span class="detailHeaderAV">AV ${+action.AV.toFixed(7)}</span></div>
                     ${controlsString}
                     <div class="actionDetailBody">Target: ${action.target}</div>
                     <div class="actionDetailBody">Call: ${action.fuaName}</div>

@@ -528,6 +528,14 @@ const customDisplayValuesLog = {
         {valueName: "Abyss Flower", refName: "abyssFlowerStacks", isBattleValue: true,summaryValue: "luochaAbyssSummer",summaryType: "SUM"}, 
     ],
     "Bailu": [//tracker done
+        {valueName: "Revive Charges", refName: "reviveCharges", isBattleValue: true,summaryValue: "bailuReviveSum",summaryType: "SUM",
+            customDisplay: "marks", customDisplayType: "diamond", markMax: null, innerMarkColor: "Lightning",
+            displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/bailu/Icon1211Passive.png"
+        },
+        {valueName: "Revive Charges Max", refName: "reviveChargesMax", isBattleValue: true, hide: true},
         // {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true, isCharacterState: true},
         // {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
         // {valueName: "Charge", refName: "charge", isBattleValue: true,summaryValue: "mortenaxBladeChargeSum",summaryType: "SUM",
