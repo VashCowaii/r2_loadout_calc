@@ -1327,21 +1327,15 @@ const sim = {
                 let currentUltimate = queue.shift();
                 let characterName = currentUltimate.properName;
                 let sourceTurn = currentUltimate.sourceTurn;
-                // let actionName = currentUltimate.name;
-                // let target = currentUltimate.target;
-                const isAttack = currentUltimate.isAttack;
-                const queueTag = currentUltimate.queueTag;
-                // let generalInfo = {sourceTurn,target,isAttack,queueTag};
                 let skipEXDisplay = currentUltimate.skipEXDisplay;
                 
 
                 const isExtraTurn = currentUltimate.isExtraTurn;
 
+                const shouldAbort = currentUltimate.abortCheck?.(battleData,currentUltimate,sourceTurn);
                 const currentUltyFunction = currentUltimate.actionCall;
                 const poolKey = currentUltimate.poolKey;
                 const target = currentUltimate.target;
-
-                const shouldAbort = currentUltimate.abortCheck?.(battleData,currentUltimate,sourceTurn);
                 if (shouldAbort) {
                     if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Extra-Turn Queue", bodyText: `Abort Check passed, canceled queued Ex-Turn ${currentUltimate.action} from ${characterName}`});}
                     continue;
