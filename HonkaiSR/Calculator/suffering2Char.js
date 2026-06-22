@@ -6611,7 +6611,6 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    //TODO: e2: ally revive shit, later when I allow for ally deaths
     "Huohuo": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
@@ -6753,10 +6752,11 @@ const turnLogic = {
 
                 const rank = sourceTurn.rank;
                 const e1 = rank>=1;
+                const battleValues = sourceTurn.battleValues;
                 if (!ATKObjects.huohuoTalentOwnerSHEET) {
                     const buffNames = logicRef.buffNames;
 
-                    const baseDuration = e1 ? 4 : 3;
+                    const baseDuration = battleValues.talentProvisionDurationMax;
                     ATKObjects.huohuoTalentOwnerSHEET = {
                         "stats": [HealingOutgoing],
                         [HealingOutgoing]: e1 ? 0.20 : 0,
@@ -6796,6 +6796,7 @@ const turnLogic = {
                 sourceTurn.talentProvisionIsActive = true;
                 sourceTurn.talentCleanseCounter = 0;
                 updateBuff(battleData,sourceTurn,countdownSheet,null,null,null,null,turnOverride);
+                battleValues.talentProvisionDuration = battleValues.talentProvisionDurationMax;
 
                 if (e1) {
                     const spdSheet = ATKObjects.huohuoTalentE1SPDSHEET;
@@ -6803,8 +6804,6 @@ const turnLogic = {
                     
                     updateBuffBatchTargets(battleData,allyPositions,spdSheet);
                 }
-                
-                // const buffCheck = 
             },
             provisionExpired(battleData,expireParam) {
                 const huohuoTurn = battleData.nameBasedTurns[expireParam];
@@ -6825,7 +6824,6 @@ const turnLogic = {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
-                // sourceTurn.talentProvisionIsActive = true;
                 // sourceTurn.talentCleanseCounter = 0;
                 let skillRef = ATKObjects.huohuoTalentREF ??= ATKObjects.Talent["Possession: Ethereal Metaflow"].variant1;
                 let values = ATKObjects.huohuoTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
@@ -6994,6 +6992,48 @@ const turnLogic = {
                 const enemyPositions = battleData.enemyPositions;
                 updateBuffBatchTargets(battleData,enemyPositions,buffSheet);
             },
+            huohuoRevive(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                // let skillRef = ATKObjects.bailuTalentREF ??= ATKObjects.Talent["Gourdful of Elixir"].variant1;
+                // let rank = sourceTurn.rank;
+                // const target = actionObject.target;
+
+                if (!ATKObjects.huohuoReviveHEALOBJECT) {
+                    // let values = ATKObjects.bailuTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                    const actionTags = ["All","Heal"];
+                    const compositeCacheTag = actionTags + sourceTurn.properName;
+                    ATKObjects.huohuoReviveHEALOBJECT = {
+                        multipliers: {
+                            primary: 0.50,
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: null,//"HP",
+                        DMGTags: [],
+                        allToughness: false,
+                        slot: "E2",
+                        actionTags,compositeCacheTag
+                    }
+                }
+                let healObject = ATKObjects.huohuoReviveHEALOBJECT;
+                const targetTurn = actionObject.target[0];
+
+                targetTurn.isLimbo = false;
+                targetTurn.markedForRevive = false;
+                targetTurn.currentHP = 0;
+
+                poke("HuohuoReviveChargeUsed",battleData,{pointsGained: -1,sourceString:"Revive Charge Consumed"});
+
+                healAlly(battleData,healObject,targetTurn,sourceTurn,"E2",1);
+            },
         },
         "listeners": [
             {
@@ -7006,7 +7046,8 @@ const turnLogic = {
 
                     const passiveListeners = this.passiveListeners;
 
-
+                    const battleValues = ownerTurn.battleValues;
+                    battleValues.talentProvisionDurationMax = 3 + (rank >= 1 ? 1 : 0);
                     //e6
                     if (rank >= 6) {
                         const listener5 = passiveListeners[3];
@@ -7053,6 +7094,13 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener7,listener7.trigger,ally,null,ownerTurn);
                     }
 
+                    if (rank >= 2) {
+                        const fullCharacterArray = battleData.fullCharacterArray;
+                        const listener8 = passiveListeners[6];
+                        for (let character of fullCharacterArray) {
+                            addListenerWithPriority(battleData,listener8,listener8.trigger,character,null,ownerTurn);
+                        }
+                    }
 
                     getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
@@ -7219,7 +7267,193 @@ const turnLogic = {
                         "listenerName": "Divine Provision Healing controller (ultimate used)",
                         "ownerTurn": {},
                     },
+                    {
+                        "trigger": "WaitingLimbo",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
+                            // if (personalOwner.isDead || personalOwner.isLimbo) {return;}
+
+                            const battleValues = providerTurn.battleValues;
+                            if (!battleValues.reviveCharges) {return;}
+
+                            if (!battleValues.reviveIsQueued) {
+                                battleValues.reviveIsQueued = true;
+                                const queueObject = this.queueObject ??= createQueueObject(providerTurn,{
+                                    name: this.listenerName,
+                                    priority: priorityList.ability.CharacterReviveOthers,
+                                    queueTag: "QueuedInsert",
+            
+                                    actionCall: turnLogic[providerTurn.properName].skillFunctions.huohuoRevive,
+                                    action: "Revive",
+                                    abortCheck(battleData,actionObject,sourceTurn) {
+                                        const battleValues = sourceTurn.battleValues;
+                                        let failed = false;
+                                        if (!battleValues.reviveCharges || !sourceTurn.talentProvisionIsActive) {failed = true;}
+
+                                        const fullCharacterArray = battleData.fullCharacterArray;
+                                        let charsInLimbo = false;
+                                        let charInLimbo = null;
+                                        for (let character of fullCharacterArray) {
+                                            if (character.isLimbo) {
+                                                charsInLimbo = true;
+                                                charInLimbo = character;
+                                                break;
+                                            }
+                                        }
+                                        if (!charsInLimbo) {failed = true;}
+
+                                        if (!failed && !actionObject.target[0].isLimbo) {
+                                            actionObject.target = [charInLimbo];
+                                            charInLimbo.markedForRevive = true;
+                                        }
+
+                                        if (failed) {
+                                            battleValues.reviveIsQueued = false;
+                                            return true;
+                                        }
+                                    },
+            
+                                    isInserted: true,
+                                    dontKeepNextWave: false,//ults always clear out
+                                    isAttack: false,
+                                    isAbility: true,
+                                    useAnyTriggers: true,
+                                    eventTypeStartLOG: "ReviveStart",
+            
+                                    poolKey: turnLogic[providerTurn.properName].abilityTargetPools.Revive,
+                                })
+
+                                queueObject.target = [personalOwner];
+                                personalOwner.markedForRevive = true;
+                                queueObject.sourceTurn = providerTurn;
+                                queueInsertAbility(battleData,queueObject);
+                                return;
+                            }
+
+                            if (!battleValues.reviveIsQueued2) {
+                                battleValues.reviveIsQueued2 = true;
+                                const queueObject = this.queueObject2 ??= createQueueObject(providerTurn,{
+                                    name: this.listenerName,
+                                    priority: priorityList.ability.CharacterReviveOthers,
+                                    queueTag: "QueuedInsert",
+            
+                                    actionCall: turnLogic[providerTurn.properName].skillFunctions.huohuoRevive,
+                                    action: "Revive",
+                                    abortCheck(battleData,actionObject,sourceTurn) {
+                                        const battleValues = sourceTurn.battleValues;
+                                        let failed = false;
+                                        if (!battleValues.reviveCharges || !sourceTurn.talentProvisionIsActive) {failed = true;}
+
+                                        const fullCharacterArray = battleData.fullCharacterArray;
+                                        let charsInLimbo = false;
+                                        let charInLimbo = null;
+                                        for (let character of fullCharacterArray) {
+                                            if (character.isLimbo) {
+                                                charsInLimbo = true;
+                                                charInLimbo = character;
+                                                break;
+                                            }
+                                        }
+                                        if (!charsInLimbo) {failed = true;}
+
+                                        if (!failed && !actionObject.target[0].isLimbo) {
+                                            actionObject.target = [charInLimbo];
+                                            charInLimbo.markedForRevive = true;
+                                        }
+
+                                        if (failed) {
+                                            battleValues.reviveIsQueued2 = false;
+                                            return true;
+                                        }
+                                    },
+            
+                                    isInserted: true,
+                                    dontKeepNextWave: false,//ults always clear out
+                                    isAttack: false,
+                                    isAbility: true,
+                                    useAnyTriggers: true,
+                                    eventTypeStartLOG: "ReviveStart",
+            
+                                    poolKey: turnLogic[providerTurn.properName].abilityTargetPools.Revive,
+                                })
+
+                                queueObject.target = [personalOwner];
+                                personalOwner.markedForRevive = true;
+                                queueObject.sourceTurn = providerTurn;
+                                queueInsertAbility(battleData,queueObject);
+                                return;
+                            }
+                        },
+                        "target": "self",
+                        "priority": -70,
+                        "isPersonal": true,
+                        "listenerName": "Huohuo e2 revive handling",
+                    },
                 ],
+            },
+            {
+                "trigger": "HuohuoReviveChargeUsed",
+                condition(battleData,generalInfo) {
+                    // poke("HuohuoReviveChargeUsed",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    const pointsGained = generalInfo.pointsGained;
+                    const valuesRef = ownerTurn.battleValues;
+
+                    const oldValue = valuesRef.reviveCharges;
+                    const maxValue = valuesRef.reviveChargesMax;
+                    valuesRef.reviveCharges = Math.max(0, Math.min(maxValue, oldValue + pointsGained));
+                    const newValue = valuesRef.reviveCharges;
+                    const valueWasDiff = oldValue != newValue;
+
+                    const buffName = this.buffName ??= turnLogic[ownerTurn.properName].buffNames.talentCountdown;
+                    const buffCheck = ownerTurn.buffsObject[buffName];
+                    if (buffCheck.duration === 1) {
+                        removeBuff(battleData,ownerTurn,buffCheck);
+                    }
+                    else {buffCheck.duration -= 1;}
+
+                    const sourceString = generalInfo.sourceString
+                    if (valueWasDiff && battleData.isLoggyLogger) {
+                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/misc/huohuo/IconBuffRebirth.png",sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Revives (Huohuo): ${oldValue} --> ${valuesRef.reviveCharges}/${maxValue} [${sourceString}]`});
+                        
+                        if (pointsGained > 0) {
+                            ownerTurn.huohuoReviveSum ??= 0;
+                            ownerTurn.huohuoReviveSum += valuesRef.reviveCharges - oldValue;
+                            
+                        }
+                        logToBattle(battleData,{
+                            logType: "SUMMARY:SUM",
+                            function: "huohuoReviveSum",
+                            AV: battleData.sumAV,
+                            currentValue: valuesRef.reviveCharges,
+                            currentSumValue: ownerTurn.huohuoReviveSum,
+                            currentAddedValue: valuesRef.reviveCharges - oldValue
+                        });
+                    }
+                },
+                "target": "self",
+                "listenerName": "Bailu Revive Charge Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreActionPhaseEnd",
+                condition(battleData,generalInfo) {
+                    // poke("HealEnd",battleData,turnMerge);
+                    let ownerTurn = this.ownerTurn;
+
+                    if (!ownerTurn.talentProvisionIsActive) {
+                        ownerTurn.battleValues.talentProvisionDuration = 0;
+                    }
+                    else {
+                        const buffName = this.buffName ??= turnLogic[ownerTurn.properName].buffNames.talentCountdown;
+                        ownerTurn.battleValues.talentProvisionDuration = ownerTurn.buffsObject[buffName].duration;
+                    }
+                },
+                "target": "self",
+                "isPersonal": true,
+                "listenerName": "Huohuo Zone - duration increment handler(visual)",
+                "ownerTurn": {},
             },
             {
                 "trigger": "UltimateReady",
@@ -7280,8 +7514,14 @@ const turnLogic = {
         },
         "ATKObjects": {},
         "characterValues": {
-            "talentProvisionIsActive": false,
-            "cleanseCounter": 0
+            // "talentProvisionIsActive": false,
+            "cleanseCounter": 0,
+            "reviveCharges": 2,
+            "reviveChargesMax": 2,
+            "reviveIsQueued": false,
+            "reviveIsQueued2": false,
+            "talentProvisionDuration": 3,
+            "talentProvisionDurationMax": 3,
         },
         "useTechnique": true,
         "techniqueType": "Impair",
@@ -7850,13 +8090,20 @@ const turnLogic = {
 
                                         const fullCharacterArray = battleData.fullCharacterArray;
                                         let charsInLimbo = false;
+                                        let charInLimbo = null;
                                         for (let character of fullCharacterArray) {
                                             if (character.isLimbo) {
                                                 charsInLimbo = true;
+                                                charInLimbo = character;
                                                 break;
                                             }
                                         }
                                         if (!charsInLimbo) {failed = true;}
+
+                                        if (!failed && !actionObject.target[0].isLimbo) {
+                                            actionObject.target = [charInLimbo];
+                                            charInLimbo.markedForRevive = true;
+                                        }
 
                                         if (failed) {
                                             battleValues.reviveIsQueued = false;
@@ -7897,13 +8144,20 @@ const turnLogic = {
 
                                         const fullCharacterArray = battleData.fullCharacterArray;
                                         let charsInLimbo = false;
+                                        let charInLimbo = null;
                                         for (let character of fullCharacterArray) {
                                             if (character.isLimbo) {
                                                 charsInLimbo = true;
+                                                charInLimbo = character;
                                                 break;
                                             }
                                         }
                                         if (!charsInLimbo) {failed = true;}
+
+                                        if (!failed && !actionObject.target[0].isLimbo) {
+                                            actionObject.target = [charInLimbo];
+                                            charInLimbo.markedForRevive = true;
+                                        }
 
                                         if (failed) {
                                             battleValues.reviveIsQueued2 = false;
@@ -12982,7 +13236,7 @@ const turnLogic = {
                 },
                 "target": "self",
                 "isPersonal": true,
-                "listenerName": "Zone - duration increment handler(visual)",
+                "listenerName": "Hysilens Zone - duration increment handler(visual)",
                 "ownerTurn": {},
             },
             {

@@ -516,7 +516,24 @@ const customDisplayValuesLog = {
         {valueName: "Basic Enhanced", refName: "nextBasicEnhanced", isBattleValue: true, isCharacterState: true},
     ],
     "Huohuo": [//prob no tracker needed
-        {valueName: "Divine Provision Active", refName: "talentProvisionIsActive", isCharacterState: true},
+        {valueName: "Divine Provision Active", refName: "talentProvisionIsActive", isCharacterState: true, hide:true},
+        {valueName: "Zone Duration", refName: "talentProvisionDuration", isBattleValue: true,
+            customDisplay: "marks", customDisplayType: "diamond", markMax: null, innerMarkColor: "Wind",
+            displayRequiresIndex: 2, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/huohuo/Icon1217Passive.png"
+        },
+        {valueName: "Revive Charges Max", refName: "talentProvisionDurationMax", isBattleValue: true, hide: true},
+
+        {valueName: "Revive Charges", refName: "reviveCharges", isBattleValue: true,summaryValue: "huohuoReviveSum",summaryType: "SUM", requiresEidolon: 2,
+            customDisplay: "marks", customDisplayType: "diamond", markMax: null, innerMarkColor: "Wind",
+            displayRequiresIndex: 4, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/huohuo/IconBuffRebirth.png"
+        },
+        {valueName: "Revive Charges Max", refName: "reviveChargesMax", isBattleValue: true, requiresEidolon: 2, hide: true},
         // {valueName: "Clease Remaining", refName: "cleanseCounter"},
     ],
     "Luocha": [//tracker done
