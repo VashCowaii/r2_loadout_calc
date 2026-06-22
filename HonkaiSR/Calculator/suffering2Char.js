@@ -16334,14 +16334,14 @@ const turnLogic = {
 
                                 const logicRef = turnLogic[sourceTurn.properName];
 
-                                if (isEnhanced) {
+                                if (isEnhanced && !actionObject.isEnhanced) {
                                     actionObject.actionCall = logicRef.skillFunctions.bladeUltimateEnh;
                                     actionObject.isEnhanced = true;
                                     actionObject.isAttack = true;
                                     actionObject.target = battleData.enemyPositions;
                                     actionObject.poolKey = logicRef.abilityTargetPools.UltimateEnh;
                                 }
-                                else {
+                                else if (!isEnhanced && actionObject.isEnhanced){
                                     actionObject.actionCall = logicRef.skillFunctions.bladeUltimate;
                                     actionObject.isEnhanced = false;
                                     actionObject.isAttack = false;
