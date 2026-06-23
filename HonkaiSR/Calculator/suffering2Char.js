@@ -16378,7 +16378,7 @@ const turnLogic = {
                     // poke("mortenaxBladeGainCharge",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
 
-                    const generalData = this.generalData ??= {summerName: "mortenaxBladeChargeSum",baseName: "charge",maxName: null,maxNameDisplay: "chargeMax",minName: null,
+                    const generalData = this.generalData ??= {summerName: "mortenaxBladeChargeSum",baseName: "charge",maxName: null,maxNameDisplay: "chargeMax",minName: null,isRealSubEnergy: true,
                         baseString: "Charge (Mortenax Blade)",displayIcon:"/HonkaiSR/misc/mortenaxBlade/Icon1507Passive.png"};
                     const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
                     

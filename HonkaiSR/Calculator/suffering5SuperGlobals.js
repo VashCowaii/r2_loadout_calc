@@ -295,6 +295,8 @@ const superGlobal = {
         const maxValue = valuesRef[maxName];
         const minValue = valuesRef[minName] ?? 0;
 
+        const isRealSubEnergy = generalData.isRealSubEnergy;//for cerydra later
+
         const preAdd = oldValue + pointsGained;
         valuesRef[baseName] = Math.max(minValue, maxValue ? Math.min(maxValue,preAdd) : preAdd);
 
