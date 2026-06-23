@@ -281,6 +281,52 @@ const superGlobal = {
             }
         }
     },
+    genericSubEnergyHandling(battleData,ownerTurn,generalInfo,generalData) {
+        // coreResonance
+        //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
+        const pointsGained = generalInfo.pointsGained;
+        const valuesRef = ownerTurn.battleValues;
+
+        const baseName = generalData.baseName;
+        const maxName = generalData.maxName;
+        const minName = generalData.minName;
+
+        const oldValue = valuesRef[baseName];
+        const maxValue = valuesRef[maxName];
+        const minValue = valuesRef[minName] ?? 0;
+
+        const preAdd = oldValue + pointsGained;
+        valuesRef[baseName] = Math.max(minValue, maxValue ? Math.min(maxValue,preAdd) : preAdd);
+
+        if (pointsGained && battleData.isLoggyLogger) {
+            const summerName = generalData.summerName;
+            const baseString = generalData.baseString;
+            const sourceString = generalInfo.sourceString
+            const maxNameDisplay = generalData.maxNameDisplay;
+            const displayIcon = generalData.displayIcon;
+
+            const newValue = valuesRef[baseName];
+            const displayMax = maxValue ?? valuesRef[maxNameDisplay];
+
+            // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
+            logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:displayIcon,sourceName: ownerTurn.properName, source:this.listenerName,
+                bodyText: `${baseString}: ${oldValue} --> ${newValue}${displayMax ? `/${displayMax}` : ""} [${sourceString}]`});
+            
+            if (pointsGained > 0) {
+                ownerTurn[summerName] ??= 0;
+                ownerTurn[summerName] += newValue - oldValue;
+            }
+            logToBattle(battleData,{
+                logType: "SUMMARY:SUM",
+                function: summerName,
+                AV: battleData.sumAV,
+                currentValue: newValue,
+                currentSumValue: ownerTurn[summerName],
+                currentAddedValue: newValue - oldValue
+            });
+        }
+    },
 }
 const createQueueObject = superGlobal.createQueueObject;
 const genericEnergyOverflow = superGlobal.genericEnergyOverflowHandling;
+const genericSubEnergy = superGlobal.genericSubEnergyHandling;

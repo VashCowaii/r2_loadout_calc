@@ -16377,36 +16377,12 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("mortenaxBladeGainCharge",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    // coreResonance
-                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
-                    const pointsGained = generalInfo.pointsGained;
-                    const valuesRef = ownerTurn.battleValues;
 
-                    const oldValue = valuesRef.charge;
-                    const maxValue = valuesRef.chargeMax;
-                    valuesRef.charge = oldValue + pointsGained;
-                    const newValue = valuesRef.charge;
-
-                    const sourceString = generalInfo.sourceString
-                    if (pointsGained && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/misc/mortenaxBlade/Icon1507Passive.png",sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Charge (Mortenax Blade): ${oldValue} --> ${valuesRef.charge}/${maxValue} [${sourceString}]`});
-                        
-                        if (pointsGained > 0) {
-                            ownerTurn.mortenaxBladeChargeSum ??= 0;
-                            ownerTurn.mortenaxBladeChargeSum += valuesRef.charge - oldValue;
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "mortenaxBladeChargeSum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.charge,
-                            currentSumValue: ownerTurn.mortenaxBladeChargeSum,
-                            currentAddedValue: valuesRef.charge - oldValue
-                        });
-                    }
-
-                    poke("mortenaxBladeQueueFUA",battleData,null)
+                    const generalData = this.generalData ??= {summerName: "mortenaxBladeChargeSum",baseName: "charge",maxName: null,maxNameDisplay: "chargeMax",minName: null,
+                        baseString: "Charge (Mortenax Blade)",displayIcon:"/HonkaiSR/misc/mortenaxBlade/Icon1507Passive.png"};
+                    genericSubEnergy(battleData,ownerTurn,generalInfo,generalData)
+                    
+                    poke("mortenaxBladeQueueFUA",battleData,null);
                 },
                 "target": "self",
                 "listenerName": "Mortenax Blade Charge Handler",
