@@ -28486,34 +28486,9 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("HanyaBurdenGained",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    const pointsGained = generalInfo.pointsGained;
-                    const valuesRef = ownerTurn.battleValues;
-
-                    const oldValue = valuesRef.burdenStacks;
-                    const maxValue = valuesRef.burdenStacksMax;
-                    valuesRef.burdenStacks = Math.max(0, Math.min(maxValue, oldValue + pointsGained));
-                    const newValue = valuesRef.burdenStacks;
-                    const valueWasDiff = oldValue != newValue;
-
-                    const sourceString = generalInfo.sourceString
-                    if (valueWasDiff && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point02.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Burden Triggers (Hanya): ${oldValue} --> ${valuesRef.burdenStacks}/${maxValue} [${sourceString}]`});
-                        
-                        if (pointsGained > 0) {
-                            ownerTurn.hanyaBurdenTriggerSum ??= 0;
-                            ownerTurn.hanyaBurdenTriggerSum += valuesRef.burdenStacks - oldValue;
-                            
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "hanyaBurdenTriggerSum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.burdenStacks,
-                            currentSumValue: ownerTurn.hanyaBurdenTriggerSum,
-                            currentAddedValue: valuesRef.burdenStacks - oldValue
-                        });
-                    }
+                    const generalData = this.generalData ??= {summerName: "hanyaBurdenTriggerSum",baseName: "burdenStacks",maxName: "burdenStacksMax",maxNameDisplay: null,minName: null,isRealSubEnergy: false,
+                        baseString: "Burden Triggers (Hanya)",displayIcon:"/HonkaiSR/misc/hanya/Icon1215BPStatus.png"};
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
                 },
                 "target": "self",
                 "listenerName": "Hanya Burden Trigger Handler",
@@ -28524,35 +28499,9 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("HanyaBurdenHitsGained",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    // coreResonance
-                    const pointsGained = generalInfo.pointsGained;
-                    const valuesRef = ownerTurn.battleValues;
-
-                    const oldValue = valuesRef.burdenHits;
-                    const maxValue = valuesRef.burdenHitsMax;
-                    valuesRef.burdenHits = Math.max(0, Math.min(maxValue, oldValue + pointsGained));
-                    const newValue = valuesRef.burdenHits;
-                    const valueWasDiff = oldValue != newValue;
-
-                    const sourceString = generalInfo.sourceString
-                    if (valueWasDiff && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/misc/hanya/burden.png",sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Burden Hits (Hanya): ${oldValue} --> ${valuesRef.burdenHits}/${maxValue} [${sourceString}]`});
-                        
-                        if (pointsGained > 0) {
-                            ownerTurn.hanyaBurdenHitsSum ??= 0;
-                            ownerTurn.hanyaBurdenHitsSum += valuesRef.burdenHits - oldValue;
-                            
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "hanyaBurdenHitsSum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.burdenHits,
-                            currentSumValue: ownerTurn.hanyaBurdenHitsSum,
-                            currentAddedValue: valuesRef.burdenHits - oldValue
-                        });
-                    }
+                    const generalData = this.generalData ??= {summerName: "hanyaBurdenHitsSum",baseName: "burdenHits",maxName: "burdenHitsMax",maxNameDisplay: null,minName: null,isRealSubEnergy: false,
+                        baseString: "Burden Hits (Hanya)",displayIcon:"/HonkaiSR/misc/hanya/burden.png"};
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
                 },
                 "target": "self",
                 "listenerName": "Hanya Burden Trigger Handler",

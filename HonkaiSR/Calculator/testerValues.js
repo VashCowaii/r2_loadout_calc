@@ -458,7 +458,7 @@ const customDisplayValuesLog = {
             displayRequiresIndex: 1, displayRequiresType: "number",
             displayRequiresBoolean: false,
             showProgressIconAnyways: true,
-            progressIcon: characters["Hanya"].traces.Point02.icon
+            progressIcon: "misc/hanya/Icon1215BPStatus.png"
         },
         {valueName: "Burden Triggers Max", refName: "burdenStacksMax", isBattleValue: true,hide: true},
 
