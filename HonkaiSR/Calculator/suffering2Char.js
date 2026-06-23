@@ -4632,6 +4632,16 @@ const clearPendingDeaths = battleActions.clearPendingDeaths;
 const markEnemyForDeath = battleActions.markEnemyForDeath;
 const dotDetonateWrapper = battleActions.dotDetonateWrapper;
 
+const weaknessIndexConversion = {
+    "Fire": WeaknessFire,
+    "Ice": WeaknessIce,
+    "Lightning": WeaknessLightning,
+    "Wind": WeaknessWind,
+    "Quantum": WeaknessQuantum,
+    "Imaginary": WeaknessImaginary,
+    "Physical": WeaknessPhysical,
+};
+
 
 const turnLogic = {
 

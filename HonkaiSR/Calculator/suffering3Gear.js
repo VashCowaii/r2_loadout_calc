@@ -12217,6 +12217,90 @@ const turnLogicLightcones = {
             "ultDMGBonus": "Make the World Clamor [LC]",
         },
     },
+    "The Day The Cosmos Fell": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "The Day The Cosmos Fell listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+
+                            const sourceElement = sourceTurn.element;
+                            const weaknessIndex = weaknessIndexConversion[sourceElement];
+
+                            const targetsGotHit = generalInfo.targetsGotHit;
+
+                            let validTargets = 0;
+                            const enemyTurns = battleData.enemyBasedTurns;
+                            for (let enemySlot in targetsGotHit) {
+                                const enemy = enemyTurns[enemySlot];
+                                const validWeakness = enemy.statTable[weaknessIndex];
+                                if (validWeakness) {
+                                    validTargets++;
+                                    if (validTargets >= 2) {break;}
+                                }
+                            }
+
+                            if (validTargets >= 2) {
+                                if (!sourceTurn.lcDayCosmosFellCRITSHEET ) {
+                                    let lcNameRef = "The Day The Cosmos Fell";
+                                    let lcPathing = lightcones[lcNameRef].params;
+    
+                                    let ownersSlots = this.ownersSlots;
+                                    let ownerRank = ownersSlots[sourceTurn.name];
+                                    let rankParams = lcPathing[ownerRank-1];
+    
+                                    sourceTurn.lcDayCosmosFellCRITSHEET ??= {
+                                        "stats": [CritDamageBase],
+                                        [CritDamageBase]: rankParams[1],
+                                        "source": lcNameRef,
+                                        "sourceOwner": sourceTurn.properName,
+                                        "buffName": turnLogicLightcones[lcNameRef].buffNames.river,
+                                        "durationInTurn": 3,
+                                        "duration": 2,
+                                        "AVApplied": 0,
+                                        "maxStacks": 1,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": "EndTurn",
+                                    }
+                                }
+                                let buffSheet = sourceTurn.lcDayCosmosFellCRITSHEET;
+                                updateBuff(battleData,sourceTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "The Day The Cosmos Fell weakness check",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "river": "The Day The Cosmos Fell [LC]",
+        },
+    },
         //3star
     "Data Bank": {
         logic(thisTurn,battleData) {},
