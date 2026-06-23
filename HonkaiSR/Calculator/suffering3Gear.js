@@ -1470,7 +1470,7 @@ const turnLogicLightcones = {
                     let lcNameRef = "Only Silence Remains";
                     let lcPathing = lightcones[lcNameRef].params;
 
-                    const enemyCount = battleData.enemiesRemaining;
+                    const enemyCount = battleData.activeEnemies;
                     const validCount = enemyCount <= 2;
 
                     if (battleData.lcOnlySilenceRemainsValidCount && validCount) {return;}

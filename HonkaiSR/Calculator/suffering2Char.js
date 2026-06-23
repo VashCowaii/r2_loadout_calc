@@ -3582,7 +3582,10 @@ const battleActions = {
         const turnMerge = {sourceTurn,targetTurn};
         poke("CausedLimbo",battleData,turnMerge,sourceTurn);
         poke("EnteredLimbo",battleData,turnMerge,targetTurn);
-        if (targetTurn.isEnemy) {battleData.activeEnemies -= 1;}
+        if (targetTurn.isEnemy) {
+            battleData.activeEnemies -= 1;
+            poke("EnemyCountAdjustment",battleData,null,null);
+        }
         targetTurn.turnShouldEnd = true;
     },
     clearPendingDeaths(battleData) {
@@ -3738,7 +3741,6 @@ const battleActions = {
         
             //then once done, redefine the enemy targets available
         battleActions.assignAttackTargetsEnemy(battleData);
-        // console.log(battleData.enemiesRemaining)
     },
     actionLogWrapper(battleData,action,charName) {
         battleData.battleTotal.Actions ??= {};
@@ -38150,17 +38152,19 @@ const turnLogic = {
                     {
                         "trigger": "EnemyCreated",
                         condition(battleData,generalInfo) {
-                            let ownerTurn = this.ownerTurn;
-                            // let targetTurn = generalInfo.slotRef;
-                            const evernightE1FinalMulti = this.evernightE1FinalMulti ??= turnLogic[ownerTurn.properName].skillFunctions.evernightE1FinalMulti;
-                            evernightE1FinalMulti(battleData,ownerTurn);
+                            //TODO: deprecate and remove this later
+
+                            // let ownerTurn = this.ownerTurn;
+                            // // let targetTurn = generalInfo.slotRef;
+                            // const evernightE1FinalMulti = this.evernightE1FinalMulti ??= turnLogic[ownerTurn.properName].skillFunctions.evernightE1FinalMulti;
+                            // evernightE1FinalMulti(battleData,ownerTurn);
                         },
                         "target": "team",
                         "listenerName": "Enemy created E1 buff application",
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "EnemyDied",
+                        "trigger": "EnemyCountAdjustment",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
                             //so I took Marr's E1 evernight into echo of war divine seed, and the two buds the lady summons can both be killed with evey enhanced skill
