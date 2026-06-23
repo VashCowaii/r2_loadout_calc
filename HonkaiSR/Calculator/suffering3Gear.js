@@ -11898,6 +11898,134 @@ const turnLogicLightcones = {
             "river": "Ninjutsu Inscription: Dazzling Evilbreaker (LC)",
         },
     },
+    "Night on the Milky Way": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Night on the Milky Way - passive setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "BrokeEnemyWeakness",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+
+                            if (!sourceTurn.lcNightMilkyWayBREAKSHEET ) {
+                                let lcNameRef = "Night on the Milky Way";
+                                let lcPathing = lightcones[lcNameRef].params;
+
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let rankParams = lcPathing[ownerRank-1];
+
+                                sourceTurn.lcNightMilkyWayBREAKSHEET ??= {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[0],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.broken,
+                                    "durationInTurn": 2,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                }
+                            }
+
+                            const buffSheet = sourceTurn.lcNightMilkyWayBREAKSHEET;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Night on the Milky Way - broke enemy listener",
+                    },
+                ],
+            },
+            {
+                "trigger": "EnemyCountAdjustment",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+
+                    const enemyCount = battleData.activeEnemies;
+                    const validCount = Math.min(5,enemyCount);
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = battleData.nameBasedTurns[charSlot];
+
+                        if (!currentTurn.lcNightMilkyWayATKSHEET) {
+                            let lcNameRef = "Night on the Milky Way";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let rankParams = lcPathing[owner.rank-1];
+                            let ownerName = currentTurn.properName;
+
+                            currentTurn.lcNightMilkyWayATKSHEET = {
+                                "stats": [ATKP],
+                                [ATKP]: rankParams[1],
+                                "source": lcNameRef,
+                                "sourceOwner": ownerName,
+                                "buffName": turnLogicLightcones[lcNameRef].buffNames.enemyATK,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 5,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null
+                            }
+                        }
+
+                        const buffSheet = currentTurn.lcNightMilkyWayATKSHEET;
+                        const buffCheck = currentTurn.buffsObject[buffSheet.buffName];
+
+                        if (buffCheck) {
+                            const currentStacks = buffCheck.currentStacks;
+                            if (currentStacks === validCount) {return;}
+                            else {
+                                const stackDiff = validCount - currentStacks;
+                                if (-stackDiff === currentStacks) {
+                                    removeBuff(battleData,sourceTurn,buffCheck);
+                                    return;//if we have to remove the whole thing it's bc there are 0 fielded enemies right now, so just kill the whole thing
+                                }
+
+                                buffSheet.currentStacks = stackDiff;
+                                updateBuff(battleData,currentTurn,buffSheet);
+                            }
+                        }
+                        else if (validCount) {
+                            buffSheet.currentStacks = validCount
+                            updateBuff(battleData,currentTurn,buffSheet);
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "Night on the Milky Way enemy count listener",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            "enemyATK": "Night on the Milky Way (LC)",
+            "broken": "Night on the Milky Way (LC) BREAK",
+        },
+    },
         //4star
     "Today Is Another Peaceful Day": {//REDONE
         logic(thisTurn,battleData) {},

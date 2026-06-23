@@ -305,9 +305,9 @@ const sim = {
             // allEnemiesArray.push(currentEntry);
 
             if (logger) {logToBattle(battleData,{logType: "EnemyCreated", name:currentEntry.name, AV: battleData.sumAV, turnRef: JSON.stringify(currentEntry)});}
-            poke("EnemyCreated",battleData,{slotRef: currentEntry},currentEntry);
             battleData.enemiesRemaining += 1;
             battleData.activeEnemies += 1;
+            poke("EnemyCreated",battleData,{slotRef: currentEntry},currentEntry);
         }
         battleActions.assignAttackTargets(battleData);
         battleActions.assignAttackTargetsEnemy(battleData);
