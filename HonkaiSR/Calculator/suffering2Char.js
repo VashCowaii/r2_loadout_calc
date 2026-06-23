@@ -15584,6 +15584,7 @@ const turnLogic = {
                         "decay": false,
                         "expireType": "EndTurn",
                         "isDebuff": true,
+                        "buffDisplayIcon": "misc/mortenaxBlade/Icon1507Ultra01.png",
                     }
                     ATKObjects.bladeMBalefireE1DEBUFFSHEET = {
                         "stats": [ResistanceAll],
@@ -15617,6 +15618,7 @@ const turnLogic = {
                         "currentStacks": 1,
                         "decay": false,
                         "expireType": null,
+                        "buffDisplayIcon": "misc/mortenaxBlade/Icon1507Ultra02.png",
                     }
 
                     ATKObjects.bladeMFuryTraceSHEET = {
@@ -16102,6 +16104,7 @@ const turnLogic = {
                             "decay": false,
                             "expireType": null,
                             "actionTags": ["FUA"],
+                            "buffDisplayIcon": "misc/mortenaxBlade/Icon1507Rank02.png"
                         }
 
                         updateBuffBatchTargets(battleData,allAlliesArray,buffSheet);
