@@ -160,7 +160,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Constructing Modifier",
               "execute": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -184,7 +184,7 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
-                      "name": "Change Character Transformation",
+                      "name": "Change Entity Turn-State",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
@@ -194,7 +194,7 @@ const compositeAbilityObject = {
                   ],
                   "failed": [
                     {
-                      "name": "Change Character Transformation",
+                      "name": "Change Entity Turn-State",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Caster}}"

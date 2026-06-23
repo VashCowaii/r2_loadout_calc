@@ -13,7 +13,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__653281472\">Monster_W1_Bronya_RL_Revive</a>",
       "execute": [
         {
-          "eventTrigger": "When Put in Deathstate Limbo",
+          "eventTrigger": "Being Limbo [Owner]",
           "execute": [
             {
               "name": "IF",

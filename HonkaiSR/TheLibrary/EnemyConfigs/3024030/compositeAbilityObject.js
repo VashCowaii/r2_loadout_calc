@@ -2104,7 +2104,7 @@ const compositeAbilityObject = {
               "eventTrigger": "Locked HP Floor Reached [Owner]",
               "execute": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -2280,7 +2280,7 @@ const compositeAbilityObject = {
               "eventTrigger": "End Broken State [Owner]",
               "execute": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -2317,7 +2317,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1922120036\">Enemy_W3_Sam_01_Enhance</a>[<span class=\"descriptionNumberColor\">Gene Duplication</span>]"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -2863,7 +2863,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-836809540\">Enemy_W3_Sam_01_Ability04Command</a>"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -3191,7 +3191,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1438369584\">Enemy_W3_Sam_01_Ability04Unselectable</a>"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"

@@ -3901,6 +3901,7 @@ const graphs = {
         "Demiurge": "misc/11415B.png",
         "Aha Instant": "BEicons/HoshinoKami_007.png",
         "Lightning Lord": "misc/jingYuan/1204Shadow.png",
+        "Level Entity": "misc/swagCat.png",
     },
     enemyCustomImages: {
         "default": "misc/glorp.png",

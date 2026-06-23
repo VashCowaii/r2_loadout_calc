@@ -39,7 +39,7 @@ const configAbility = {
       }
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"
@@ -157,7 +157,7 @@ const configAbility = {
     },
     "Trigger: Attack End",
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"

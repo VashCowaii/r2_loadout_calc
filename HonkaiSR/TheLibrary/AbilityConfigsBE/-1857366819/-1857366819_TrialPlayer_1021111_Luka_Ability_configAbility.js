@@ -94,7 +94,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1091533610\">TrialPlayer_101111_Luka_Talk_Modifier_ForLuka</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "Define Custom Variable",

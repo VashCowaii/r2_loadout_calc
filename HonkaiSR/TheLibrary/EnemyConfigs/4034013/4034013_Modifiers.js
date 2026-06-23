@@ -1854,7 +1854,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1531014099\">Enemy_W4_FireProwler_IF_ChangePhaseController</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",
@@ -4411,7 +4411,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-578037600\">Enemy_W4_FireProwler_ChargeEff_Halo</a>"
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster}}"

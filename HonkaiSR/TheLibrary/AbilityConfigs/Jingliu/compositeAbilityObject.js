@@ -656,7 +656,7 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
-                      "name": "Change Character Transformation",
+                      "name": "Change Entity Turn-State",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
@@ -666,7 +666,7 @@ const compositeAbilityObject = {
                   ],
                   "failed": [
                     {
-                      "name": "Change Character Transformation",
+                      "name": "Change Entity Turn-State",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
@@ -764,7 +764,7 @@ const compositeAbilityObject = {
                   ]
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -1509,7 +1509,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "When Put in Deathstate Limbo"
+              "eventTrigger": "Being Limbo [Owner]"
             },
             {
               "eventTrigger": "Entity Created [Anyone]",
@@ -2149,7 +2149,7 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
-                      "name": "Change Character Transformation",
+                      "name": "Change Entity Turn-State",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Caster}}"

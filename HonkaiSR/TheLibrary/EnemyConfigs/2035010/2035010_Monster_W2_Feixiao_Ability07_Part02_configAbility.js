@@ -159,7 +159,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1302036093\">Monster_W2_FeixiaoPart_Part3Effect</a>"
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"
@@ -167,7 +167,7 @@ const configAbility = {
       "phase": "Phase2"
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Nebula Devourer: Self}}"
@@ -175,7 +175,7 @@ const configAbility = {
       "phase": "Phase2"
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Feixiao Parts: Head}}"
@@ -183,7 +183,7 @@ const configAbility = {
       "phase": "Phase2"
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Feixiao Parts: Claws}}"
@@ -191,7 +191,7 @@ const configAbility = {
       "phase": "Phase2"
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Feixiao Parts: Tail}}"

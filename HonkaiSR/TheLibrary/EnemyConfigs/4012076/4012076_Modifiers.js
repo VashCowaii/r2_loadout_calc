@@ -142,7 +142,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1837027601\">Monster_W4_Pollux_IF_PartController_LockHP</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",
@@ -757,7 +757,7 @@ const configAbility = {
               }
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
@@ -948,7 +948,7 @@ const configAbility = {
               },
               "passed": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -3905,7 +3905,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "When Put in Deathstate Limbo",
+          "eventTrigger": "Being Limbo [Owner]",
           "execute": [
             {
               "name": "Remove Events/Bonuses",

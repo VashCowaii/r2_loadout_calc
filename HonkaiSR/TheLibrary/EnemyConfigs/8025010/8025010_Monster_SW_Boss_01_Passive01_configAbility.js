@@ -63,7 +63,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1293250966\">Monster_SW_Boss_01_PartController</a>"
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"
@@ -94,7 +94,7 @@ const configAbility = {
       ],
       "execute": [
         {
-          "eventTrigger": "When Put in Deathstate Limbo"
+          "eventTrigger": "Being Limbo [Owner]"
         },
         {
           "eventTrigger": "When Stacking/Receiving Modifier"

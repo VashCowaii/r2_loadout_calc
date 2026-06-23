@@ -351,7 +351,7 @@ const compositeAbilityObject = {
                       },
                       "passed": [
                         {
-                          "name": "Change Character Transformation",
+                          "name": "Change Entity Turn-State",
                           "target": {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
@@ -446,7 +446,7 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
-                      "name": "Change Character Transformation",
+                      "name": "Change Entity Turn-State",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
@@ -1245,7 +1245,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-605749584\">Monster_W5_Pam_PartController</a>",
           "execute": [
             {
-              "eventTrigger": "Waiting for Healing in Limbo",
+              "eventTrigger": "Waiting in Limbo [Owner]",
               "execute": [
                 {
                   "name": "IF",
@@ -2795,7 +2795,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-94545998\">Monster_W5_Pam_MainStory_ActionImmediately</a>"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -4328,7 +4328,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"2047455110\">Monster_APShow</a>"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -4458,7 +4458,7 @@ const compositeAbilityObject = {
         },
         "Ability Start",
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -4852,7 +4852,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-458099336\">Monster_W5_Pam_zangshui_layer_display_02</a>"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"

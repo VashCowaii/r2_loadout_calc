@@ -19,7 +19,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-477903589\">RO_015_DeadTimeSlowModifier</a>",
       "execute": [
         {
-          "eventTrigger": "When Put in Deathstate Limbo"
+          "eventTrigger": "Being Limbo [Owner]"
         }
       ]
     }

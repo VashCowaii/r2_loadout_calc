@@ -32,7 +32,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__481524779\">Monster_W2_FeixiaoPart_IF_PartController</a>",
           "execute": [
             {
-              "eventTrigger": "Waiting for Healing in Limbo",
+              "eventTrigger": "Waiting in Limbo [Owner]",
               "execute": [
                 {
                   "name": "IF",
@@ -132,7 +132,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-2121118445\">Monster_W2_FeixiaoPart_PartController</a>",
           "execute": [
             {
-              "eventTrigger": "Waiting for Healing in Limbo",
+              "eventTrigger": "Waiting in Limbo [Owner]",
               "execute": [
                 {
                   "name": "IF",
@@ -1408,7 +1408,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
@@ -1416,7 +1416,7 @@ const compositeAbilityObject = {
                   "phase": "Phase1"
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Nebula Devourer: Self}}"
@@ -1424,7 +1424,7 @@ const compositeAbilityObject = {
                   "phase": "Phase1"
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Feixiao Parts: Head}}"
@@ -1432,7 +1432,7 @@ const compositeAbilityObject = {
                   "phase": "Phase1"
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Feixiao Parts: Claws}}"
@@ -1440,7 +1440,7 @@ const compositeAbilityObject = {
                   "phase": "Phase1"
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Feixiao Parts: Tail}}"
@@ -1521,7 +1521,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"284964038\">Monster_W2_Feixiao_Unselectable</a>"
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
@@ -1529,7 +1529,7 @@ const compositeAbilityObject = {
                   "phase": "Phase1"
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Nebula Devourer: Self}}"
@@ -1537,7 +1537,7 @@ const compositeAbilityObject = {
                   "phase": "Phase1"
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Feixiao Parts: Head}}"
@@ -1545,7 +1545,7 @@ const compositeAbilityObject = {
                   "phase": "Phase1"
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Feixiao Parts: Claws}}"
@@ -1553,7 +1553,7 @@ const compositeAbilityObject = {
                   "phase": "Phase1"
                 },
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Feixiao Parts: Tail}}"

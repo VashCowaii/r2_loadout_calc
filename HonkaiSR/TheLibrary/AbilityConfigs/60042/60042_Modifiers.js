@@ -2641,7 +2641,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1759914466\">Monster_W5_Ripper_PartController</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",

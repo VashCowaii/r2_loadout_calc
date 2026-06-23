@@ -988,7 +988,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-580159473\">Monster_W4_Hearse_PartController</a>",
           "execute": [
             {
-              "eventTrigger": "Waiting for Healing in Limbo",
+              "eventTrigger": "Waiting in Limbo [Owner]",
               "execute": [
                 {
                   "name": "IF",
@@ -3868,7 +3868,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-545445682\">Monster_W4_Nikadory_EnduranceLockWeakness</a>"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -4401,7 +4401,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-672192540\">Monster_W4_Hearse_Ability03_Prepare</a>"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"

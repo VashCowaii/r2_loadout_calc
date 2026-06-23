@@ -1564,7 +1564,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Constructing Modifier"
             },
             {
-              "eventTrigger": "When Put in Deathstate Limbo"
+              "eventTrigger": "Being Limbo [Owner]"
             }
           ]
         }
@@ -2042,7 +2042,7 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End",
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -2103,7 +2103,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-668499328\">Monster_XP_Elite02_Edict03</a>[<span class=\"descriptionNumberColor\">Ban</span>]"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -2163,7 +2163,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-651721709\">Monster_XP_Elite02_Edict02</a>[<span class=\"descriptionNumberColor\">Ban</span>]"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -2231,7 +2231,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"28427477\">Monster_XP_Elite02_Edict01_Self</a>"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -2337,7 +2337,7 @@ const compositeAbilityObject = {
         },
         "Trigger: Attack End",
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"

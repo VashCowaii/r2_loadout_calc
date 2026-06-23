@@ -45,7 +45,7 @@ const configAbility = {
               "whitelistTag": 30
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
@@ -120,7 +120,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Was Overhealed [Owner]",
+          "eventTrigger": "Was HP Overkilled [Owner]",
           "execute": [
             {
               "name": "Define Custom Variable with Changes to Stats",

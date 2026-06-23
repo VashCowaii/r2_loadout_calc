@@ -67,7 +67,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-540425908\">Enemy_W3_Sam_RLBoss_Revive</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "Remove Events/Bonuses",

@@ -4158,7 +4158,7 @@ const configAbility = {
               },
               "passed": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -4168,7 +4168,7 @@ const configAbility = {
               ],
               "failed": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -4213,7 +4213,7 @@ const configAbility = {
               },
               "passed": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -4223,7 +4223,7 @@ const configAbility = {
               ],
               "failed": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
@@ -4298,7 +4298,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1262350181\">MModifier_W4_IronTombCorePart_Ability07_Charge</a>"
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
@@ -4404,7 +4404,7 @@ const configAbility = {
               "spot": "BeforeCaster"
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
@@ -5109,7 +5109,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__2029275245\">Enemy_W4_IronTombCore_P3_PartController</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",
@@ -5172,7 +5172,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1187676843\">Enemy_W4_IronTombCore_PartController</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",
@@ -5527,7 +5527,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-2003232733\">Enemy_W4_IronTombCore_BreakDisableAction</a>"
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Irontomb: Part 1}}"
@@ -5535,7 +5535,7 @@ const configAbility = {
               "phase": "Phase2"
             },
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Irontomb: Part 2}}"

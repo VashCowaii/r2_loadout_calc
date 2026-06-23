@@ -377,7 +377,7 @@ const configAbility = {
       }
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"
@@ -429,7 +429,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1496443322\">Enemy_W2_LycanKing_RageEffect</a>",
       "execute": [
         {
-          "eventTrigger": "When Put in Deathstate Limbo",
+          "eventTrigger": "Being Limbo [Owner]",
           "execute": [
             "Modifier Deletes Itself"
           ]

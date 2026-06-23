@@ -42,7 +42,7 @@ const configAbility = {
       }
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Target Part 0}}"
@@ -50,7 +50,7 @@ const configAbility = {
       "phase": "Phase1"
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Target Part 1}}"
@@ -58,7 +58,7 @@ const configAbility = {
       "phase": "Phase1"
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Target Part 2}}"
@@ -66,7 +66,7 @@ const configAbility = {
       "phase": "Phase1"
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Target Part 3}}"

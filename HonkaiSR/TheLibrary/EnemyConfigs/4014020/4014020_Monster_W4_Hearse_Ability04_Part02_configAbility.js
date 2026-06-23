@@ -602,7 +602,7 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-545445682\">Monster_W4_Nikadory_EnduranceLockWeakness</a>"
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"

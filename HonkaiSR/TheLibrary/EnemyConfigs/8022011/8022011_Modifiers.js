@@ -174,7 +174,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1923762583\">Enemy_SW_Boss_01_IF_PartController</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",

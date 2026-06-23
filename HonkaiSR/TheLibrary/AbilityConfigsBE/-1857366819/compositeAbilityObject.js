@@ -288,7 +288,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-58718825\">TrialPlayer_101111_Luka_Final_SpecialWin</a>",
           "execute": [
             {
-              "eventTrigger": "Waiting for Healing in Limbo",
+              "eventTrigger": "Waiting in Limbo [Owner]",
               "execute": [
                 {
                   "name": "Set HP Value",
@@ -491,7 +491,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Waiting for Healing in Limbo",
+              "eventTrigger": "Waiting in Limbo [Owner]",
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
@@ -744,7 +744,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1091533610\">TrialPlayer_101111_Luka_Talk_Modifier_ForLuka</a>",
           "execute": [
             {
-              "eventTrigger": "Waiting for Healing in Limbo",
+              "eventTrigger": "Waiting in Limbo [Owner]",
               "execute": [
                 {
                   "name": "Define Custom Variable",
@@ -1323,7 +1323,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Caused a Limbo/DeathState [Owner]",
+              "eventTrigger": "Caused Limbo [Owner]",
               "execute": [
                 {
                   "name": "IF",

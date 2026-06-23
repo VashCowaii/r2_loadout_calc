@@ -107,7 +107,15 @@ const customEnergyBar = {
 }
 
 
-
+function createGenericPunchlineTracker(charName) {
+    return {valueName: "Punchline Generated", refName: "punchlineGenerated",summaryValue: `punchlineSummer${charName}`,summaryType: "SUM", hide: true}
+}
+function createGenericBangerTracker(charName) {
+    return {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummer${charName}`,summaryType: "SUM",
+        customDisplay: "marks", customDisplayType: "banger", markMax: null, innerMarkColor: null,
+        displayRequiresBoolean: false,
+    }
+}
 
 const customDisplayValuesLog = {
     "TEAM": [
@@ -146,10 +154,25 @@ const customDisplayValuesLog = {
         // {valueName: "E6 Ult Counter", refName: "e6UltCounter", isBattleValue: true, requiresEidolon: 6},
     ],
     "Jingliu": [//tracker done
-        {valueName: "Syzygy", refName: "weirdStacks", isBattleValue: true,summaryValue: "jingliuSyzygySum",summaryType: "SUM"},
-        {valueName: "HP Loss Counter", refName: "hpLossCount", isBattleValue: true,summaryValue: "jingliuHPCounterSUm",summaryType: "SUM"},
+        // {valueName: "Syzygy", refName: "weirdStacks", isBattleValue: true,summaryValue: "jingliuSyzygySum",summaryType: "SUM"},
+        {valueName: "Syzygy", refName: "weirdStacks", isBattleValue: true,summaryValue: "jingliuSyzygySum",summaryType: "SUM",
+            customDisplay: "marks", customDisplayType: "image", markMax: null, innerMarkColor: "Ice",
+            displayRequiresIndex: 1, displayRequiresType: "number",
+            imageFilled: "misc/jingliu/IconDotColorFullMoon.png", imageEmpty: "misc/jingliu/IconDotColorMoonBlack.png",
+            showProgressIconAnyways: true,
+            progressIcon: "misc/jingliu/Icon1212EnergyBar.png"
+        },
+        {valueName: "Syzygy Max", refName: "weirdStacksMax", isBattleValue: true, hide: true},
+
+        {valueName: "HP Loss Counter", refName: "hpLossCount", isBattleValue: true,summaryValue: "jingliuHPCounterSUm",summaryType: "SUM",
+            customDisplay: "progress", customDisplayType: "circle", markMax: 40, innerMarkColor: "Ice",
+            // displayRequiresIndex: 2, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            progressIcon: "misc/jingliu/Icon1212Passive01.png"
+        },
+
         {valueName: "Spectral Transmigration", refName: "enhancedActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "Queued Enhanced State", refName: "enhancedQueued", isBattleValue: true, isCharacterState: true},
+        {valueName: "Queued Enhanced State", refName: "enhancedQueued", isBattleValue: true, isCharacterState: true,hide: true},
         
         // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
     ],
@@ -161,15 +184,6 @@ const customDisplayValuesLog = {
         {valueName: "Squama Sacrosancta Max", refName: "fakePointsMax", isBattleValue: true,hide: true},
         {valueName: "EBA Enhancement Level", refName: "skillCounter", isBattleValue: true,hide: true},
         {valueName: "E6 Ult Stacks", refName: "e6UltStacks", isBattleValue: true, requiresEidolon: 6},
-
-
-        // {valueName: "Netherwing on Field", refName: "netherIsActive", isBattleValue: true, isCharacterState: true,
-        //     isMemoSpriteDisplay: true,
-        // },
-        // {valueName: "Nether Turns Remaining", refName: "netherRemainingTurns", isBattleValue: true,
-        //     customDisplay: "marks", customDisplayType: "circle", markMax: 3, innerMarkColor: "#9083FF",
-        //     displayRequiresIndex: 0, displayRequiresType: "boolean", displayRequiresBoolean: true,
-        // },
     ],
     "Clara": [//tracker done
         // valuesRef.prana;
@@ -178,18 +192,9 @@ const customDisplayValuesLog = {
             customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "#9083FF",
             displayRequiresIndex: 1, displayRequiresType: "number",
             displayRequiresBoolean: false,
-            progressIcon: characters["Clara"].traces.Point04.icon
+            progressIcon: "misc/clara/Icon1107Passive.png",
         },
         {valueName: "Counter Max", refName: "counterCountMax", isBattleValue: true,hide: true},
-
-        // {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true, isCharacterState: true},
-        // {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
-        
-
-        // {valueName: "Nether Turns Remaining", refName: "netherRemainingTurns", isBattleValue: true,
-        //     customDisplay: "marks", customDisplayType: "circle", markMax: 3, innerMarkColor: "#9083FF",
-        //     displayRequiresIndex: 0, displayRequiresType: "boolean", displayRequiresBoolean: true,
-        // },
     ],
 
     //HUNT
@@ -200,13 +205,6 @@ const customDisplayValuesLog = {
             // innerMarkColor: "#9083FF",
             fillScale: 1.2,emptyScale: 0.5,
         },
-        // {valueName: "Charge Stacks", refName: "charge", isBattleValue: true,summaryValue: "archerFUAStackSum",summaryType: "SUM",
-        //     customDisplay: "marks", customDisplayType: "diamond", markMax: null, innerMarkColor: "Quantum",
-        //     displayRequiresIndex: 1, displayRequiresType: "number",
-        //     displayRequiresBoolean: false,
-        //     showProgressIconAnyways: true,
-        //     progressIcon: "misc/archer/Icon1005Passive.png"
-        // },
         {valueName: "Charge Max", refName: "chargeMax", isBattleValue: true,hide: true},
         {valueName: "In Circuit-Connection", refName: "skillStarted", isBattleValue: true,isCharacterState: true},
         {valueName: "Skill Counter", refName: "skillCounter", isBattleValue: true},
@@ -273,14 +271,23 @@ const customDisplayValuesLog = {
     ],
     "Mortenax Blade": [//tracker done
         {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
+        // {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
+        
         {valueName: "Charge", refName: "charge", isBattleValue: true,summaryValue: "mortenaxBladeChargeSum",summaryType: "SUM",
             customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "#9083FF",
-            displayRequiresIndex: 3, displayRequiresType: "number",
+            displayRequiresIndex: 2, displayRequiresType: "number",
             displayRequiresBoolean: false,
-            progressIcon: characters["Mortenax Blade"].traces.Point04.icon
+            progressIcon: "misc/mortenaxBlade/Icon1507Passive.png"
         },
         {valueName: "Charge Max", refName: "chargeMax", isBattleValue: true,hide: true},
+
+        {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM",
+            customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "#9083FF",
+            displayRequiresIndex: 4, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            progressIcon: "misc/mortenaxBlade/Icon1507SkillTree01.png"
+        },
+        {valueName: "Overflow Energy Max", refName: "overflowEnergyMax", isBattleValue: true,hide: true},
     ],
     "The Dahlia": [//tracker done
         {valueName: "Zone Active", refName: "skillZoneActive", isBattleValue: true, isCharacterState: true, hide: true},
@@ -298,15 +305,6 @@ const customDisplayValuesLog = {
             showProgressIconAnyways: true,
             progressIcon: "misc/dahlia/Icon1321Passive.png"
         },
-        // {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true, isCharacterState: true},
-        // {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
-        // {valueName: "Charge", refName: "charge", isBattleValue: true,summaryValue: "mortenaxBladeChargeSum",summaryType: "SUM",
-        //     customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "#9083FF",
-        //     displayRequiresIndex: 3, displayRequiresType: "number",
-        //     displayRequiresBoolean: false,
-        //     progressIcon: characters["Mortenax Blade"].traces.Point04.icon
-        // },
-        // {valueName: "Charge Max", refName: "chargeMax", isBattleValue: true,hide: true},
     ],
 
     //PRESERVATION
@@ -318,14 +316,14 @@ const customDisplayValuesLog = {
     "Dan Heng • Permansor Terrae": [
         {valueName: "Bondmate", refName: "bondmateSlot", isBattleValue: true, isCharacterSlot:true},
         // {valueName: "Enhanced Turns", refName: "souldragonEnhancedTurns", isBattleValue: true},
-        {valueName: "Enhanced Turns", refName: "souldragonEnhancedTurns", isBattleValue: true,//summaryValue: "hanyaBurdenTriggerSum",summaryType: "SUM",
+        {valueName: "Enhanced Turns", refName: "souldragonEnhancedTurns", isBattleValue: true,summaryValue: "dhptDragonAttackSummer",summaryType: "SUM",
             customDisplay: "marks", customDisplayType: "number", markMax: 99, innerMarkColor: "Physical",
             // displayRequiresIndex: 1, displayRequiresType: "number",
             displayRequiresBoolean: false,
             showProgressIconAnyways: true,
             progressIcon: "misc/dhpt/Icon1414Passive.png"
         },
-        {valueName: "Burden Triggers Max", refName: "burdenStacksMax", isBattleValue: true,hide: true},
+        {valueName: "Enhanced Turns Max", refName: "souldragonEnhancedTurnsMax", isBattleValue: true,hide: true},
         {valueName: "Souldragon on Field", refName: "souldragonActive", isBattleValue: true, isCharacterState: true},
     ], 
     "March 7th - Preservation": [//tracker done
@@ -333,7 +331,7 @@ const customDisplayValuesLog = {
             customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "#9083FF",
             displayRequiresIndex: 1, displayRequiresType: "number",
             displayRequiresBoolean: false,
-            progressIcon: characters["March 7th - Preservation"].traces.Point04.icon
+            progressIcon: "misc/m7Pres/Icon1001Passive.png"
         },
         {valueName: "Counter Max", refName: "counterCountMax", isBattleValue: true,hide: true},
         // {valueName: "Blind Bet", refName: "betStacks", isBattleValue: true,summaryValue: "avenBlindBetSum",summaryType: "SUM"},
@@ -449,7 +447,7 @@ const customDisplayValuesLog = {
             displayRequiresIndex: 1, displayRequiresType: "number",
             displayRequiresBoolean: false,
             showProgressIconAnyways: true,
-            progressIcon: characters["Hanya"].traces.Point02.icon
+            progressIcon: "misc/hanya/Icon1215BPStatus.png"
         },
         {valueName: "Burden Triggers Max", refName: "burdenStacksMax", isBattleValue: true,hide: true},
 
@@ -477,18 +475,9 @@ const customDisplayValuesLog = {
             customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "#9083FF",
             displayRequiresIndex: 1, displayRequiresType: "number",
             displayRequiresBoolean: false,
-            progressIcon: characters["Jing Yuan"].traces.Point04.icon
+            progressIcon: "misc/jingYuan/Icon1204Passive.png"
         },
         {valueName: "Prana Max", refName: "pranaMax", isBattleValue: true,hide: true},
-
-        // {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true, isCharacterState: true},
-        // {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
-        
-
-        // {valueName: "Nether Turns Remaining", refName: "netherRemainingTurns", isBattleValue: true,
-        //     customDisplay: "marks", customDisplayType: "circle", markMax: 3, innerMarkColor: "#9083FF",
-        //     displayRequiresIndex: 0, displayRequiresType: "boolean", displayRequiresBoolean: true,
-        // },
     ],
     "Himeko": [//tracker done
         // valuesRef.prana;
@@ -497,18 +486,9 @@ const customDisplayValuesLog = {
             customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "#9083FF",
             displayRequiresIndex: 1, displayRequiresType: "number",
             displayRequiresBoolean: false,
-            progressIcon: characters["Himeko"].traces.Point04.icon
+            progressIcon: "misc/himeko/Icon1003Passive.png"
         },
         {valueName: "Charge Max", refName: "chargeMax", isBattleValue: true,hide: true},
-
-        // {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true, isCharacterState: true},
-        // {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
-        
-
-        // {valueName: "Nether Turns Remaining", refName: "netherRemainingTurns", isBattleValue: true,
-        //     customDisplay: "marks", customDisplayType: "circle", markMax: 3, innerMarkColor: "#9083FF",
-        //     displayRequiresIndex: 0, displayRequiresType: "boolean", displayRequiresBoolean: true,
-        // },
     ],
     
     //ABUNDANCE
@@ -516,7 +496,24 @@ const customDisplayValuesLog = {
         {valueName: "Basic Enhanced", refName: "nextBasicEnhanced", isBattleValue: true, isCharacterState: true},
     ],
     "Huohuo": [//prob no tracker needed
-        {valueName: "Divine Provision Active", refName: "talentProvisionIsActive", isCharacterState: true},
+        {valueName: "Divine Provision Active", refName: "talentProvisionIsActive", isCharacterState: true, hide:true},
+        {valueName: "Zone Duration", refName: "talentProvisionDuration", isBattleValue: true,
+            customDisplay: "marks", customDisplayType: "diamond", markMax: null, innerMarkColor: "Wind",
+            displayRequiresIndex: 2, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/huohuo/Icon1217Passive.png"
+        },
+        {valueName: "Revive Charges Max", refName: "talentProvisionDurationMax", isBattleValue: true, hide: true},
+
+        {valueName: "Revive Charges", refName: "reviveCharges", isBattleValue: true,summaryValue: "huohuoReviveSum",summaryType: "SUM", requiresEidolon: 2,
+            customDisplay: "marks", customDisplayType: "diamond", markMax: null, innerMarkColor: "Wind",
+            displayRequiresIndex: 4, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/huohuo/IconBuffRebirth.png"
+        },
+        {valueName: "Revive Charges Max", refName: "reviveChargesMax", isBattleValue: true, requiresEidolon: 2, hide: true},
         // {valueName: "Clease Remaining", refName: "cleanseCounter"},
     ],
     "Luocha": [//tracker done
@@ -528,56 +525,65 @@ const customDisplayValuesLog = {
         {valueName: "Abyss Flower", refName: "abyssFlowerStacks", isBattleValue: true,summaryValue: "luochaAbyssSummer",summaryType: "SUM"}, 
     ],
     "Bailu": [//tracker done
-        // {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true, isCharacterState: true},
-        // {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
-        // {valueName: "Charge", refName: "charge", isBattleValue: true,summaryValue: "mortenaxBladeChargeSum",summaryType: "SUM",
-        //     customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "#9083FF",
-        //     displayRequiresIndex: 3, displayRequiresType: "number",
-        //     displayRequiresBoolean: false,
-        //     progressIcon: characters["Mortenax Blade"].traces.Point04.icon
-        // },
-        // {valueName: "Charge Max", refName: "chargeMax", isBattleValue: true,hide: true},
+        {valueName: "Revive Charges", refName: "reviveCharges", isBattleValue: true,summaryValue: "bailuReviveSum",summaryType: "SUM",
+            customDisplay: "marks", customDisplayType: "diamond", markMax: null, innerMarkColor: "Lightning",
+            displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/bailu/Icon1211Passive.png"
+        },
+        {valueName: "Revive Charges Max", refName: "reviveChargesMax", isBattleValue: true, hide: true},
     ],
     "Natasha": [],  
     "Lynx": [], 
 
     //ELATION
     "Yao Guang": [//tracker done
-        {valueName: "Zone Active", refName: "skillZoneActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerYao Guang`,summaryType: "SUM"},
-        {valueName: "Punchline Generated", refName: "punchlineGenerated",summaryValue: `punchlineSummerYao Guang`,summaryType: "SUM"},
+        {valueName: "Zone Active", refName: "skillZoneActive", isBattleValue: true, isCharacterState: true,hide:true},
+        {valueName: "Zone Duration", refName: "yaoGuangFieldDuration", isBattleValue: true,
+            customDisplay: "marks", customDisplayType: "diamond", markMax: 3, innerMarkColor: "Physical",
+            // displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/yaoGuang/Icon1502BP.png"
+        },
     ],
     "Sparxie": [//tracker done
-        {valueName: "Enhance Count", refName: "skillCounter", isBattleValue: true,summaryValue: "sparxieEnhanceSum",summaryType: "SUM"},
-        {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerSparxie`,summaryType: "SUM"},
-        {valueName: "Punchline Generated", refName: "punchlineGenerated",summaryValue: `punchlineSummerSparxie`,summaryType: "SUM"},
-        {valueName: "Thrill Stacks", refName: "thrill", isBattleValue: true,summaryValue: "sparxieThrillSum",summaryType: "SUM"},
+        {valueName: "Thrill", refName: "thrill", isBattleValue: true,summaryValue: "sparxieThrillSum",summaryType: "SUM",
+            customDisplay: "marks", customDisplayType: "number", markMax: null, innerMarkColor: "Fire",
+            displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/sparxie/Icon1501Elation.png"
+        },
+        {valueName: "Thrill Max", refName: "thrillMax", isBattleValue: true,hide: true},
+
+        {valueName: "Enhance Count", refName: "skillCounter", isBattleValue: true,summaryValue: "sparxieEnhanceSum",summaryType: "SUM",hide:true},
     ],
     "Trailblazer - Elation": [//tracker done
         // {valueName: "Zone Active", refName: "skillZoneActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerTrailblazer - Elation`,summaryType: "SUM"},
-        {valueName: "Punchline Generated", refName: "punchlineGenerated",summaryValue: `punchlineSummerTrailblazer - Elation`,summaryType: "SUM"},
     ],
     "Silver Wolf LV.999": [//tracker done
-        {valueName: "MMR Overflow", refName: "MMROverflow", isBattleValue: true},
+        {valueName: "MMR Overflow", refName: "MMROverflow", isBattleValue: true,hide:true},
         // {valueName: "HP Loss Counter", refName: "hpLossCount", isBattleValue: true,summaryValue: "jingliuHPCounterSUm",summaryType: "SUM"},
         // {valueName: "Spectral Transmigration", refName: "enhancedActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "Godmode State", refName: "godModeActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Godmode State", refName: "godModeActive", isBattleValue: true, isCharacterState: true,hide:true},
         {valueName: "E2 EX-Turn Tally", refName: "e2Accumulation", isBattleValue: true, requiresEidolon: 2},
         
         
         // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
-
-        {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerSilver Wolf LV.999`,summaryType: "SUM"},
-        {valueName: "Punchline Generated", refName: "punchlineGenerated",summaryValue: `punchlineSummerSilver Wolf LV.999`,summaryType: "SUM"},
     ],
     "Evanescia": [//tracker done
-        {valueName: "FUA Accumulation", refName: "fuaTrackerValue", isBattleValue: true},
+        {valueName: "FUA Accumulation", refName: "fuaTrackerValue", isBattleValue: true,//summaryValue: "mortenaxBladeChargeSum",summaryType: "SUM",
+            customDisplay: "progress", customDisplayType: "circle", markMax: 240, innerMarkColor: "Physical",
+            // displayRequiresIndex: 2, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            needPercent: true,
+            hideName: true,
+            progressIcon: "misc/evanescia/Icon1505Passive.png"
+        },
         {valueName: "E6 Ult Counter", refName: "E6UltCounter", isBattleValue: true, requiresEidolon: 6},
         
-
-        {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerEvanescia`,summaryType: "SUM"},
-        {valueName: "Punchline Generated", refName: "punchlineGenerated",summaryValue: `punchlineSummerEvanescia`,summaryType: "SUM"},
         // {valueName: "MMR Overflow", refName: "MMROverflow", isBattleValue: true},
         // {valueName: "HP Loss Counter", refName: "hpLossCount", isBattleValue: true,summaryValue: "jingliuHPCounterSUm",summaryType: "SUM"},
         // {valueName: "Spectral Transmigration", refName: "enhancedActive", isBattleValue: true, isCharacterState: true},
@@ -585,6 +591,14 @@ const customDisplayValuesLog = {
         
         // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
     ],
+}
+for (let charName in characters) {
+    const characterEntry = characters[charName];
+    if (characterEntry.path === "Elation") {
+        const currentDisplayEntry = customDisplayValuesLog[charName] ??= [];
+
+        currentDisplayEntry.push(createGenericBangerTracker(charName),createGenericPunchlineTracker(charName))
+    }
 }
 
 const permaConditionsTextLibrary = {

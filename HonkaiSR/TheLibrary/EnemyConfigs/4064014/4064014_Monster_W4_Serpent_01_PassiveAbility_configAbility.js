@@ -245,7 +245,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1413842812\">Enemy_W4_Serpent_01_RLBoss_ChangePhaseController</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",
@@ -446,7 +446,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__2038153082\">Enemy_W4_Serpent_01_ChangePhaseController</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",

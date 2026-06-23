@@ -14,7 +14,7 @@ const configAbility = {
   ],
   "parse": [
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Add Target by Unique Identifier",
         "identifier": "W4_Serpent_01"

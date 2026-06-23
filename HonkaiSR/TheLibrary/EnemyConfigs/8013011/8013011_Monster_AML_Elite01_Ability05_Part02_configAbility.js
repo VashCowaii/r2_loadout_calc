@@ -99,7 +99,7 @@ const configAbility = {
       "onlyRemoveOwnersInstance": true
     },
     {
-      "name": "Change Character Transformation",
+      "name": "Change Entity Turn-State",
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"

@@ -858,7 +858,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Waiting for Healing in Limbo",
+              "eventTrigger": "Waiting in Limbo [Owner]",
               "execute": [
                 {
                   "name": "IF",
@@ -2374,7 +2374,7 @@ const compositeAbilityObject = {
       "parse": [
         "Ability Start",
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -2430,7 +2430,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Modifier Destroyed/Removed",
               "execute": [
                 {
-                  "name": "Change Character Transformation",
+                  "name": "Change Entity Turn-State",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -2889,7 +2889,7 @@ const compositeAbilityObject = {
           ]
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -2897,7 +2897,7 @@ const compositeAbilityObject = {
           "phase": "Phase1"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Nebula Devourer: Self}}"
@@ -2905,7 +2905,7 @@ const compositeAbilityObject = {
           "phase": "Phase1"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Feixiao Parts: Head}}"
@@ -2913,7 +2913,7 @@ const compositeAbilityObject = {
           "phase": "Phase1"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Feixiao Parts: Claws}}"
@@ -2921,7 +2921,7 @@ const compositeAbilityObject = {
           "phase": "Phase1"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Feixiao Parts: Tail}}"
@@ -3124,7 +3124,7 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1302036093\">Monster_W2_FeixiaoPart_Part3Effect</a>"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
@@ -3132,7 +3132,7 @@ const compositeAbilityObject = {
           "phase": "Phase2"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Nebula Devourer: Self}}"
@@ -3140,7 +3140,7 @@ const compositeAbilityObject = {
           "phase": "Phase2"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Feixiao Parts: Head}}"
@@ -3148,7 +3148,7 @@ const compositeAbilityObject = {
           "phase": "Phase2"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Feixiao Parts: Claws}}"
@@ -3156,7 +3156,7 @@ const compositeAbilityObject = {
           "phase": "Phase2"
         },
         {
-          "name": "Change Character Transformation",
+          "name": "Change Entity Turn-State",
           "target": {
             "name": "Target Name",
             "target": "{{Feixiao Parts: Tail}}"

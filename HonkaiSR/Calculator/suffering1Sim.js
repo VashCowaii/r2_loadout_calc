@@ -192,9 +192,7 @@ const sim = {
 
         const nameIndex = battleData.nameIndex;
         const enemyTurns = battleData.enemyBasedTurns ??= {};
-        // const enemyPositions = battleData.enemyPositions ??= [];
         const allEnemiesArray = battleData.allEnemiesArray ??= [];
-        // const nextTurn = battleData.nextTurnAV;
 
         const enemyRankID = {
             "boss": 5,
@@ -295,14 +293,10 @@ const sim = {
         }
     },
     createEnemyTargets(battleData,enemiesToMake) {
-        // const attackTypes = sim.attackTypes;
-
-        // const nameIndex = battleData.nameIndex;
-        // const enemyTurns = battleData.enemyBasedTurns ??= [];
         const enemyPositions = battleData.enemyPositions ??= [];
         const nextTurn = battleData.nextTurnAV;
 
-
+        const logger = battleData.isLoggyLogger;
         for (let i=0;i<enemiesToMake.length;i++) {
             let currentEntry = enemiesToMake[i];
 
@@ -310,11 +304,11 @@ const sim = {
             enemyPositions.push(currentEntry);
             // allEnemiesArray.push(currentEntry);
 
-            if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "EnemyCreated", name:currentEntry.name, AV: battleData.sumAV, turnRef: JSON.stringify(currentEntry)});}
-            poke("EnemyCreated",battleData,{slotRef: currentEntry},currentEntry);
+            if (logger) {logToBattle(battleData,{logType: "EnemyCreated", name:currentEntry.name, AV: battleData.sumAV, turnRef: JSON.stringify(currentEntry)});}
             battleData.enemiesRemaining += 1;
+            battleData.activeEnemies += 1;
+            poke("EnemyCreated",battleData,{slotRef: currentEntry},currentEntry);
         }
-        // battleData.enemyPositions = sim.sortEnemyTargets(enemyPositions);
         battleActions.assignAttackTargets(battleData);
         battleActions.assignAttackTargetsEnemy(battleData);
     },
@@ -376,8 +370,10 @@ const sim = {
             familyRef: {},//used to cache buff family names for their stats
             familyCacheRef: {},//similar to above, but for caching-specific purposes on pull-type functions in damage instances
             enemiesRemaining: 0,
+            activeEnemies: 0,
             enemiesCreated: 0,
             charactersRemaining: 0,
+            pendingDeaths: [],
             backupHPOnField: 0,
             backupHPObject: {},
             territoryActive: false,
@@ -511,7 +507,6 @@ const sim = {
                 activeMemosprites: 0,
                 actionCounter: 0,
                 certifiedBanger: 0,
-                notPresentInActionOrder: false,
                 accumulateAllToughness: false,
                 battleValues: logicRef?.characterValuesBattle,
             };
@@ -737,6 +732,8 @@ const sim = {
 
         battleData.wavesToRun = battleSettings.totalWaves;
         battleData.wavesCompleted = 0;
+
+        battleData.castoriceGlobalPassive = battleSettings.castoriceGlobalPassive;//TODO: circle back here and hookup from battlesettings and some toggle somewhere we'll add
         
         // battleSettings.totalWaves
 
@@ -799,12 +796,7 @@ const sim = {
         const getNext = sim.getNextQueuedTurn;
         const adjustAllAV = sim.pullToCurrentAV;
         const expireControl = battleActions.buffExpireController;
-        const triggerTurnDots = battleActions.dotDetonateWrapper;
         
-
-        // if (targetTurn.DOTCounter) {
-        //     let addedHit = battleActions.dotDetonateWrapper(battleData,sourceTurn,detonateMulti,targetTurn,"Kafka Talent Detonate");
-        // }
 
 
         // const extraTurnObject = {
@@ -848,7 +840,7 @@ const sim = {
             sourceTurn.turnState = true;
             if (!isExtraTurn) {adjustAllAV(battleData,sourceTurn);}
             
-            if (isLoggyLogger) {logToBattle(battleData,{logType: "StartTurn", name:turnName, isEnemy: sourceTurn.isEnemy, position:sourceTurn.isEnemy ? enemyPositions.indexOf(sourceTurn) : null,positionCount:sourceTurn.isEnemy ? enemyPositions.length : null, isCharacter:true, AV: battleData.sumAV, turnRef: JSON.stringify(sourceTurn)});}
+            if (isLoggyLogger) {logToBattle(battleData,{logType: "StartTurn", name:turnName, isEnemy: sourceTurn.isEnemy, position:sourceTurn.isEnemy ? enemyPositions.indexOf(sourceTurn) : null,positionCount:sourceTurn.isEnemy ? enemyPositions.length : null, isCharacter:true, AV: battleData.sumAV, turnRef: JSON.stringify(sourceTurn), eventOverrideImage: sourceTurn.eventOverrideImage,});}
             // poke("StartTurn", battleData, {sourceTurn});
             
             const isMemo = sourceTurn.isMemosprite;
@@ -879,11 +871,6 @@ const sim = {
 
             pokeWithDots("PreActionPhase", battleData, exoTurnRef,sourceTurn);
 
-            // if (sourceTurn.DOTCounter) {
-            //     triggerTurnDots(battleData,null,null,sourceTurn,"Turn-Start DOTs");
-            //     // poke("TurnStartDotEnd", battleData, exoTurnRef,sourceTurn);
-            // }
-
             
             const startTurnBuffs = sourceTurn.buffsStartTurn;
             if (canLoseBuffsThisTurn && startTurnBuffs.length) {expireControl(battleData,sourceTurn,startTurnBuffs);}
@@ -893,11 +880,7 @@ const sim = {
             clearULT(battleData);//need to be able to account for ulty cast within a turn, like gallagher won't give himself an extra turn if cast DURING his own turn, no advance can happen there.
 
             if (sourceTurn.isEnemy) {
-                // if (sourceTurn.DOTCounter) {
-                //     triggerTurnDots(battleData,null,null,sourceTurn,"Turn-Start DOTs");
-                //     // poke("TurnStartDotEnd", battleData, exoTurnRef,sourceTurn);
-                // }
-                if (!sourceTurn.isDead) {
+                if (!sourceTurn.isDead && !sourceTurn.isLimbo) {
                     let turnShouldEnd = false;
                     if (sourceTurn.currentToughness === 0) {
                         // currentToughness: finalStats.Toughness,
@@ -921,7 +904,7 @@ const sim = {
                     }
                 }
             }
-            else if (turnLogic[turnName] && !sourceTurn.notPresentInActionOrder && !sourceTurn.turnShouldEnd) {
+            else if (turnLogic[turnName] && !sourceTurn.turnShouldEnd) {
                 turnWrapper(turnName,sourceTurn,battleData);
             }
             poke("ActionEndPhase", battleData, exoTurnRef,sourceTurn);
@@ -988,6 +971,7 @@ const sim = {
                     logToBattle(battleData,{
                         logType: displayTypeStart,
                         name:designatedAction.properName,
+                        eventOverrideImage: sourceTurn.eventOverrideImage,
                         target: Array.isArray(target) && target.length === 1 ? target[0].properName : poolKey,
                         isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:designatedAction.action, isEnhanced: designatedAction.isEnhanced});
                 }
@@ -1117,7 +1101,7 @@ const sim = {
                     for (let i = listenerRef.length-1; i>=0; i--) {
                         const currentCondition = listenerRef[i];
                         if (currentCondition.isDOT) {
-                            if (personalOwner.isDead) {continue;}
+                            if (personalOwner.isDead || personalOwner.isLimbo) {continue;}
                             const dotOwner = alliedTurns[currentCondition.ownerSlot];
                             const turnStartFunction = currentCondition.customTurnStartFunction;
                             if (turnStartFunction) {
@@ -1151,7 +1135,6 @@ const sim = {
                                 //     ownerSlot: sourceTurn.name,
                                 // }
                             }
-                            // triggerTurnDots(battleData,null,null,personalOwner,"Turn-Start DOTs");
                         }
                         else {
                             currentCondition.condition(battleData,generalInfo,personalOwner);//TODO: later look into passing the sourceTurn object as a 3rd param, just not rn
@@ -1226,7 +1209,7 @@ const sim = {
             
             while (queue.length > 0 && !battleData.battleIsOver) {
 
-                const enemyChecker = battleData.enemyPositions.length;
+                const enemyChecker = battleData.enemiesRemaining;
                 if (!enemyChecker) {
                     battleActions.waveStartQueueHandling(battleData);
                     return;
@@ -1235,13 +1218,9 @@ const sim = {
                 let currentFUA = queue.shift();
                 let characterName = currentFUA.properName;
                 let sourceTurn = currentFUA.sourceTurn;
-                // let actionName = currentFUA.name;
-                // let generalInfo = {sourceTurn,actionName};
-                const targetTurn = currentFUA.target;
 
-                const useAnyTrigger = currentFUA.useAnyTriggers;
-
-
+                // const targetTurn = currentFUA.target;
+                // const useAnyTrigger = currentFUA.useAnyTriggers;
                 const shouldAbort = currentFUA.abortCheck?.(battleData,currentFUA,sourceTurn);
                 if (shouldAbort) {
                     if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Inserted Ability Queue", bodyText: `Abort Check passed, canceled queued insert ${currentFUA.action} from ${characterName}`});}
@@ -1267,7 +1246,7 @@ const sim = {
                         isInsertedAbility: true,
                         name:characterName,
                         target: Array.isArray(target) && target.length === 1 ? target[0].properName : poolKey,
-                        AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage, isEnhanced: currentFUA.isEnhanced});
+                        AV: battleData.sumAV, fuaName: currentFUA.actionCall.name, eventOverrideImage: currentFUA.eventOverrideImage ?? sourceTurn.eventOverrideImage, isEnhanced: currentFUA.isEnhanced});
                     battleActions.actionLogWrapper(battleData,currentFUA.action,currentFUA.sourceTurn.properName);
                 }
                     
@@ -1275,6 +1254,7 @@ const sim = {
                 if (isAbility) {poke("AbilityStart",battleData,currentFUA,sourceTurn);}
                 currentFUA.actionCall(battleData,currentFUA,sourceTurn);
                 if (isAbility) {poke("AbilityEnd",battleData,currentFUA,sourceTurn);}
+                clearPendingDeaths(battleData)
             }
         }
     },
@@ -1303,11 +1283,8 @@ const sim = {
         }
         //NOTE: this is for shit like archer's extra turn, where it relies on the queue being empty at a given moment in order to determine if it should queue itself or not
 
-
+        clearPendingDeaths(battleData)
         if (queue.length) {
-
-            
-            
 
             let isLog = battleData.isLoggyLogger;
             const currentAV = battleData.sumAV;
@@ -1326,7 +1303,7 @@ const sim = {
                     //if we're already in an extra turn, and the next queued ult instance is ALSO an extra turn, then abort the ult queue empty
                 }
                 
-                const enemyChecker = battleData.enemyPositions.length;
+                const enemyChecker = battleData.enemiesRemaining;
                 if (!enemyChecker) {
                     battleActions.waveStartQueueHandling(battleData);
                     return;
@@ -1335,21 +1312,15 @@ const sim = {
                 let currentUltimate = queue.shift();
                 let characterName = currentUltimate.properName;
                 let sourceTurn = currentUltimate.sourceTurn;
-                // let actionName = currentUltimate.name;
-                // let target = currentUltimate.target;
-                const isAttack = currentUltimate.isAttack;
-                const queueTag = currentUltimate.queueTag;
-                // let generalInfo = {sourceTurn,target,isAttack,queueTag};
                 let skipEXDisplay = currentUltimate.skipEXDisplay;
                 
 
                 const isExtraTurn = currentUltimate.isExtraTurn;
 
+                const shouldAbort = currentUltimate.abortCheck?.(battleData,currentUltimate,sourceTurn);
                 const currentUltyFunction = currentUltimate.actionCall;
                 const poolKey = currentUltimate.poolKey;
                 const target = currentUltimate.target;
-
-                const shouldAbort = currentUltimate.abortCheck?.(battleData,currentUltimate,sourceTurn);
                 if (shouldAbort) {
                     if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Extra-Turn Queue", bodyText: `Abort Check passed, canceled queued Ex-Turn ${currentUltimate.action} from ${characterName}`});}
                     continue;
@@ -1359,13 +1330,6 @@ const sim = {
                     // totalUltsQueued: 0,
                     // totalExTurnsQueued: 0,
                     battleData.totalUltsQueued -= 1;
-                    
-                    // const enemyChecker = battleData.enemyPositions.length;
-                    // if (!enemyChecker) {
-                    //     sourceTurn.ultyQueued = false;
-                    //     logToBattle(battleData,{logType: "GenericAction", source:"Failed Ult", bodyText: `No enemies remaining, ult queue aborted for ${sourceTurn.properName}`});
-                    //     continue;
-                    // }
 
                     const energyCost = currentUltimate.energyCost;
                     //cost function rn is only used for argenti to determine full or half drain, but later for castorice overflow it'll get used too.
@@ -1375,7 +1339,7 @@ const sim = {
                             logType: "UltimateStart",
                             name:characterName,
                             isEnhanced: currentUltimate.isEnhanced,
-                            eventOverrideImage: currentUltimate.eventOverrideImage,
+                            eventOverrideImage: currentUltimate.eventOverrideImage ?? sourceTurn.eventOverrideImage,
                             target: Array.isArray(target) && target.length === 1 ? target[0].properName : poolKey,
                             AV: currentAV, ultName: currentUltyFunction.name});
                         battleActions.actionLogWrapper(battleData,currentUltimate.action,currentUltimate.sourceTurn.properName);
@@ -1416,7 +1380,7 @@ const sim = {
                     else {
                         if (isLog) {
                             logToBattle(battleData,{logType: currentUltimate.eventTypeStartLOG, isExTurnQueue:true, name:currentUltimate.properName,
-                                eventOverrideImage: currentUltimate.eventOverrideImage,
+                                eventOverrideImage: currentUltimate.eventOverrideImage ?? sourceTurn.eventOverrideImage,
                                 target: Array.isArray(target) && target.length === 1 ? target[0].properName : poolKey,
                                 isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:currentUltimate.action, isEnhanced: currentUltimate.isEnhanced});
                             battleActions.actionLogWrapper(battleData,currentUltimate.action,currentUltimate.sourceTurn.properName);
@@ -1447,6 +1411,7 @@ const sim = {
                     
                 }
 
+                clearPendingDeaths(battleData);
                 poke("UltimateReady",battleData);
                 if (FUAQueue.length) {
                     //yes, I want to check ulty readiness before AND after the followup queue gets dumped, there could be various reasons for this honestly, fuckin hate this game lmao
@@ -1479,5 +1444,4 @@ const poke = sim.pokeListenersOwnership;
 const pokeWithDots = sim.pokeListenersOwnershipDOTS;
 const pokeArray = sim.pokeListenersArray;
 const pokeSet = sim.pokeListenersSet;
-const triggerTurnDots = battleActions.dotDetonateWrapper;
 const dotWrap = battleActions.dotDMGWrapper;

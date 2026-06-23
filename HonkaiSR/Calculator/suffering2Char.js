@@ -854,7 +854,7 @@ const battleActions = {
         if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "QueueFUA", name: entry.name});}
     },
     queueUltimateUse(battleData,entry) {
-        const enemyChecker = battleData.enemyPositions.length;
+        const enemyChecker = battleData.activeEnemies;
         if (enemyChecker) {
             battleData.ultimateQueue.push(entry);
             battleData.totalUltsQueued += 1;
@@ -1952,7 +1952,7 @@ const battleActions = {
         const isHitBased = generalInfo.superReduction;
         if (isHitBased) {
             const currentEnemy = generalInfo.targetTurn;
-            if (currentEnemy.isDead) {return;}
+            if (currentEnemy.isDead || currentEnemy.isLimbo) {return;}
 
             const accumulatedToughness = isHitBased;
             superBreakage(battleData,element,sourceTurn,currentEnemy,DMGTags,superBreakArray[0],superBreakArray[1],accumulatedToughness,generalInfo);
@@ -1960,7 +1960,7 @@ const battleActions = {
         else {
             for (let enemySlot in targetsGotHit) {
                 const currentEnemy = enemyBasedTurns[enemySlot];
-                if (currentEnemy.isDead) {continue;}
+                if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
     
                 const accumulatedToughness = overBreakTotals[currentEnemy.properName];
                 if (!accumulatedToughness) {continue;}
@@ -2154,9 +2154,9 @@ const battleActions = {
             else {targetTurn.currentHP -= shieldOverflow;}
             
             let enemyHasNoHP = targetTurn.currentHP <= 0;
-            if (enemyHasNoHP && !targetTurn.isDead) {
+            if (enemyHasNoHP && !targetTurn.isLimbo) {
+                markEnemyForDeath(battleData,targetTurn,sourceTurn)
                 enemyIsDead = true;
-                targetTurn.isDead = true;
             }//we only want to declare the enemy dead once, bc an attack might have 30 hits but if they die at hit 10 we don't want to say they died 20 times after
             else {
                 const enemyName = targetTurn.properName;
@@ -2205,15 +2205,6 @@ const battleActions = {
                 AV:battleData.sumAV
             };
             logToBattle(battleData,{logType: isEnemy ? "HitAlly" : "HitEnemy", hitType: hitDisplay[hitType], target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,enemyIsBroken: toughnessComposite?.enemyIsBroken,position:targetTurn.isEnemy ? battleData.enemyPositions.indexOf(targetTurn) : null,positionCount:targetTurn.isEnemy ? battleData.enemyPositions.length : null});
-        }
-
-        if (enemyIsDead) {
-            if (targetTurn.isEnemy) {
-                killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn);
-            }
-            else {
-                battleActions.killDesignatedAllies(battleData,targetTurn,isEnemy,sourceTurn);
-            }
         }
 
         turnMerge.DMGTotalEnd = DMGTotalEnd;
@@ -2575,9 +2566,9 @@ const battleActions = {
             else {targetTurn.currentHP -= shieldOverflow;}
             
             let enemyHasNoHP = targetTurn.currentHP <= 0;
-            if (enemyHasNoHP && !targetTurn.isDead) {
+            if (enemyHasNoHP && !targetTurn.isLimbo) {
+                markEnemyForDeath(battleData,targetTurn,sourceTurn)
                 enemyIsDead = true;
-                targetTurn.isDead = true;
             }//we only want to declare the enemy dead once, bc an attack might have 30 hits but if they die at hit 10 we don't want to say they died 20 times after
             else {
                 const enemyName = targetTurn.properName;
@@ -2623,16 +2614,7 @@ const battleActions = {
                 enemyData: JSON.stringify(targetTurn),
                 AV:battleData.sumAV
             };
-            logToBattle(battleData,{logType: isEnemy ? "HitAlly" : "HitEnemy", hitType: "Elation", target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,enemyIsBroken: toughnessComposite.enemyIsBroken,position:targetTurn.isEnemy ? battleData.enemyPositions.indexOf(targetTurn) : null,positionCount:targetTurn.isEnemy ? battleData.enemyPositions.length : null});
-        }
-
-        if (enemyIsDead) {
-            if (targetTurn.isEnemy) {
-                killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn);
-            }
-            else {
-                battleActions.killDesignatedAllies(battleData,targetTurn,isEnemy,sourceTurn);
-            }
+            logToBattle(battleData,{logType: isEnemy ? "HitAlly" : "HitEnemy", hitType: "Elation", target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,enemyIsBroken: toughnessComposite?.enemyIsBroken,position:targetTurn.isEnemy ? battleData.enemyPositions.indexOf(targetTurn) : null,positionCount:targetTurn.isEnemy ? battleData.enemyPositions.length : null});
         }
 
         turnMerge.DMGTotalEnd = DMGTotalEnd;
@@ -2990,7 +2972,6 @@ const battleActions = {
 
         return {enemiesAttackedThisAction,hit}
     },
-    // dotDetonateWrapper(battleData,sourceTurn,ATKObject,targetTurn,"Kafka Talent Detonate");
     dotDetonateWrapper(battleData,sourceTurn,detonateMulti,targetTurn) {
         if (!targetTurn.DOTCounter) {return;}
         let logging = battleData.isLoggyLogger;
@@ -3010,7 +2991,7 @@ const battleActions = {
         let dotWrap = battleActions.dotDMGWrapper;
         // for (let dotRef of currentDots) {
         for (let i=currentDots.length-1;i>=0;i--) {
-            if (targetTurn.isDead) {break;}
+            if (targetTurn.isDead || targetTurn.isLimbo) {break;}
             const dotRef = currentDots[i];
             if (!dotRef.isDOT) {continue;}
             // currentBuff = buffsRef[buffName];
@@ -3376,12 +3357,11 @@ const battleActions = {
     hurtEnemyHealth(battleData,sourceTurn,targetTurn,DMGTotalAVG,isEnemy) {
         targetTurn.currentHP -= DMGTotalAVG;
         let enemyHasNoHP = targetTurn.currentHP <= 0;
-        let enemyIsDeadCheck = enemyHasNoHP && !targetTurn.isDead;
+        let enemyIsDeadCheck = enemyHasNoHP && !targetTurn.isLimbo;
         let enemyIsDead = false;
         if (enemyIsDeadCheck) {
+            markEnemyForDeath(battleData,targetTurn,sourceTurn)
             enemyIsDead = true;
-            targetTurn.isDead = true;
-            killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn);
         }//we only want to declare the enemy dead once, bc an attack might have 30 hits but if they die at hit 10 we don't want to say they died 20 times after
         let DMGOverkill = 0;
 
@@ -3445,6 +3425,7 @@ const battleActions = {
 
                 const targetObject = atkEntry.target;
                 const subTargetObject = atkEntry.subTarget;
+                const distributedTargetCount = battleData.activeEnemies ?? 1;
 
                 if (targetObject) {
                     const energyGain = ATKObjectEnergy * (targetObject.energyRatio ?? 0);
@@ -3456,8 +3437,7 @@ const battleActions = {
                     for (let ee=0;ee<primaryLength;ee++) {
                         const currentTarget = primaryTarget[ee];
                         // if (currentTarget.isUnselectable) {continue;}
-                        // console.log(atkEntry,hitType)
-                        hitWrap(battleData,currentTarget,atkEntry,targetObject,hitType,generalInfo,isLastHit,false,primaryLength);
+                        hitWrap(battleData,currentTarget,atkEntry,targetObject,hitType,generalInfo,isLastHit,false,distributedTargetCount);
                     }
                 }
                 if (subTargetObject) {
@@ -3467,7 +3447,7 @@ const battleActions = {
                     for (let ee=0;ee<subLength;ee++) {
                         const currentTarget = subTarget[ee];
                         // if (currentTarget.isUnselectable) {continue;}
-                        hitWrap(battleData,currentTarget,atkEntry,subTargetObject,hitType,generalInfo,isLastHit,false,subLength);
+                        hitWrap(battleData,currentTarget,atkEntry,subTargetObject,hitType,generalInfo,isLastHit,false,distributedTargetCount);
                     }
                 }
             }
@@ -3487,7 +3467,7 @@ const battleActions = {
 
             const bounceEnergy = bounceRef.energy;
             const targetObject = atkEntry.target;
-            const subTargetObject = atkEntry.subTarget;//unused for NOW
+            // const subTargetObject = atkEntry.subTarget;//unused for NOW
             const blastTargetObject = atkEntry.blast;
 
             const enemyPositions = battleData.enemyPositions;
@@ -3497,7 +3477,7 @@ const battleActions = {
                 const presetIndex = currentEnemyIndex;
                 const currentEnemy = bounceOrder[currentEnemyIndex];
                 currentEnemyIndex++;
-                if (!enemyPositions.length || battleData.battleIsOver) {break;}
+                if (!battleData.activeEnemies || battleData.battleIsOver) {break;}
                 // if (currentEnemy === undefined) {continue;}
 
                 if (currentEnemy.isDead || currentEnemy.isLimbo) {
@@ -3508,9 +3488,11 @@ const battleActions = {
 
                 const energyGain = bounceEnergy * (targetObject.energyRatio ?? 0);
                 if (energyGain) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split [BOUNCE]");}
+                const distributedTargetCount = battleData.activeEnemies ?? 1;
 
-                hitWrap(battleData,currentEnemy,atkEntry,targetObject,"primary",generalInfo,isLastHit,isBounce);
+                hitWrap(battleData,currentEnemy,atkEntry,targetObject,"primary",generalInfo,isLastHit,isBounce,distributedTargetCount);
                 totalHits += 1;//since we skip dead guys, gotta increments hits inside the loop
+                
 
                 if (blastTargetObject) {
 
@@ -3534,7 +3516,7 @@ const battleActions = {
                         const blastLength = targetsBlast.length;
                         totalHits += blastLength;
                         for (let enemyEntry of targetsBlast) {
-                            hitWrap(battleData,enemyEntry,atkEntry,blastTargetObject,"blast",generalInfo,isLastHit,isBounce,blastLength+1);
+                            hitWrap(battleData,enemyEntry,atkEntry,blastTargetObject,"blast",generalInfo,isLastHit,isBounce,distributedTargetCount);
                         }
                     }
                 } 
@@ -3586,107 +3568,137 @@ const battleActions = {
                     updateEnergy(battleData,sumEnergyGain,currentTurn,false,"Hit(s) Received");
                 }
             }
+            clearPendingDeaths(battleData);
         }
-
+    
         return generalInfo
     },
-    killDesignatedEnemies(battleData,targetTurn,isEnemy,sourceTurn) {
-        let giveEnergy = !isEnemy;
-        let energyDeath = 10;
-        //kinda counterintuitive on my part but if it !isEnemy that means an ally was responsible for killing these targets
-
-        let killer = sourceTurn.isMemosprite ? battleData.nameBasedTurns[sourceTurn.eventOwner] : sourceTurn;
-        let killed = targetTurn;
-        if (!isEnemy) {//{sourceTurn,targetTurn:currentTarget}
-            // console.log(enemyDeath.properName)
-
-
-            
-
-
-            //find the enemy position and remove it from the enemy lineup and turn order
-            const indexToRemove = battleData.enemyPositions.indexOf(killed);
-            const indexToRemove2 = battleData.nextTurnAV.indexOf(killed);
-            battleData.enemyPositions.splice(indexToRemove, 1);
-            battleData.nextTurnAV.splice(indexToRemove2, 1);
-
-            poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed},sourceTurn);
-            
-            if (battleData.isLoggyLogger) {
-                logToBattle(battleData,{logType: "EnemyDiedNote", enemyKilled:killed.properName});
-                logToBattle(battleData,{logType: "EnemyDied", source:killer.properName, enemyKilled:killed.properName});
-            }
-            if (giveEnergy) {updateEnergy(battleData,energyDeath,killer,false,"Killed Enemy");}
-            battleData.enemiesRemaining -= 1;
-            
-        
+    markEnemyForDeath(battleData,targetTurn,sourceTurn) {
+        // targetTurn.isDead = true;
+        targetTurn.isLimbo = true;
+        targetTurn.killerSlot = sourceTurn.name;
+        battleData.pendingDeaths.push(targetTurn);
+        const turnMerge = {sourceTurn,targetTurn};
+        poke("CausedLimbo",battleData,turnMerge,sourceTurn);
+        poke("EnteredLimbo",battleData,turnMerge,targetTurn);
+        if (targetTurn.isEnemy) {
+            battleData.activeEnemies -= 1;
+            poke("EnemyCountAdjustment",battleData,null,null);
         }
+        targetTurn.turnShouldEnd = true;
+    },
+    clearPendingDeaths(battleData) {
+        const deathQueue = battleData.pendingDeaths;
+        if (!deathQueue.length) {return;}
+        let enemiesKilled = 0;
+        let alliesKilled = 0;
 
-        if (battleData.enemiesRemaining === 0) {
-            // battleData.wavesToRun = battleSettings.totalWaves;
-            battleData.wavesCompleted += 1;
-            if (battleData.wavesCompleted === battleData.wavesToRun) {
-                battleData.battleIsOver = true;
+        const allyTurns = battleData.nameBasedTurns;
+        const enemyTurns = battleData.enemyBasedTurns;
+        const logger = battleData.isLoggyLogger;
+
+        const actionOrder = battleData.nextTurnAV;
+        const enemyPositions = battleData.enemyPositions;
+        const allyPositions = battleData.allyPositions;
+        for (let deathTurn of deathQueue) {
+            if (!deathTurn.isLimbo) {continue;}//if an ally/enemy was revived before we reached them, kick em from the queue
+            const isEnemy = deathTurn.isEnemy;
+
+            if (isEnemy) {
+                // let giveEnergy = !isEnemy;
+                let energyDeath = 10;
+                //kinda counterintuitive on my part but if it !isEnemy that means an ally was responsible for killing these targets
+
+                const killerSlot = deathTurn.killerSlot;
+                const killerTurn = allyTurns[killerSlot] ?? enemyTurns[killerSlot];
+                const killer = killerTurn.isMemosprite ? battleData.nameBasedTurns[killerTurn.eventOwner] : killerTurn;
+
+                //find the enemy position and remove it from the enemy lineup and turn order
+                const indexToRemove = enemyPositions.indexOf(deathTurn);
+                const indexToRemove2 = actionOrder.indexOf(deathTurn);
+                enemyPositions.splice(indexToRemove, 1);
+                actionOrder.splice(indexToRemove2, 1);
+                
+                if (logger) {
+                    logToBattle(battleData,{logType: "EnemyDiedNote", enemyKilled:deathTurn.properName});
+                    logToBattle(battleData,{logType: "EnemyDied", source:killer.properName, enemyKilled:deathTurn.properName});
+                }
+                poke("EnemyDied",battleData,{sourceTurn: killer, enemyKilled:deathTurn},killer);
+                updateEnergy(battleData,energyDeath,killer,false,"Killed Enemy");
+                battleData.enemiesRemaining -= 1;
+                enemiesKilled += 1;
+
+                if (battleData.enemiesRemaining === 0) {
+                    // battleData.wavesToRun = battleSettings.totalWaves;
+                    battleData.wavesCompleted += 1;
+                    if (battleData.wavesCompleted === battleData.wavesToRun) {
+                        battleData.battleIsOver = true;
+                    }
+                    else {
+                        battleData.readyForNewWave = true;
+
+                        for (let turnEntity of actionOrder) {turnEntity.turnShouldEnd = true;}
+                        //if anything was in the middle of a turn with no action assigned yet, this should break their turn and return to the turn order so we can apply a new wave
+
+                        return;
+                    }
+
+                    
+                }
             }
             else {
-                battleData.readyForNewWave = true;
-                const nextAV = battleData.nextTurnAV;
+                if (!deathTurn.markedForDeath) {poke("WaitingLimbo",battleData,null,deathTurn);}
+                if (deathTurn.markedForRevive) {continue;}
 
-                for (let turnEntity of nextAV) {turnEntity.turnShouldEnd = true;}
-                //if anything was in the middle of a turn with no action assigned yet, this should break their turn and return to the turn order so we can apply a new wave
+                const killerSlot = deathTurn.killerSlot;
+                const killerTurn = allyTurns[killerSlot] ?? enemyTurns[killerSlot];
+                const killer = killerTurn.isMemosprite ? battleData.nameBasedTurns[killerTurn.eventOwner] : killerTurn;
+                
+                // let killer = sourceTurn;
+                // let killed = targetTurn;
+                // console.log(enemyDeath.properName)
+                poke("AllyDied",battleData,{sourceTurn: killer, targetTurn:deathTurn},deathTurn);
+                if (battleData.isLoggyLogger) {
+                    logToBattle(battleData,{logType: "EnemyDiedNote", enemyKilled:deathTurn.properName, isEnemy: true});
+                    if (!deathTurn.isMemosprite) {logToBattle(battleData,{logType: "EnemyDied", source:killer.properName, enemyKilled:deathTurn.properName, isEnemy: true});}
+                }
 
-                return;
+                //find the enemy position and remove it from the enemy lineup and turn order
+                const indexToRemove = allyPositions.indexOf(deathTurn);
+                const indexToRemove2 = actionOrder.indexOf(deathTurn);
+                allyPositions.splice(indexToRemove, 1);
+                actionOrder.splice(indexToRemove2, 1);
+                //TODO: revive handling here
+
+                if (!deathTurn.isUniqueEvent) {
+                    battleData.charactersRemaining -= 1;
+                    battleData.battleIsOver = true;
+                    battleData.battleFailed = true;
+                }
+                else if (deathTurn.isMemosprite) {deathTurn?.deathFunction?.(battleData,deathTurn,deathTurn.deathParam)}
+                //obv there can be cases where the memo owner dies but the memo itself would still be left before their function procs
+
+                if (battleData.charactersRemaining === 0) {
+                    battleData.battleIsOver = true;
+                    battleData.battleFailed = true;
+                }
+                else {
+                    if (deathTurn.memospriteEventRef) {
+                        const memoTurn = deathTurn[deathTurn.memospriteEventRef];
+                        if (memoTurn.isActive) {deathTurn?.deathFunction?.(battleData,deathTurn,deathTurn.deathParam)}
+                    }
+                }
             }
 
-            
         }
-        if (!isEnemy) {
+        battleData.pendingDeaths = [];
+        if (enemiesKilled) {
             //then once done, redefine the enemy targets available
             battleActions.assignAttackTargets(battleData);
         }
-        // console.log(battleData.enemiesRemaining)
-    },
-    killDesignatedAllies(battleData,targetTurn,isEnemy,sourceTurn) {
-
-        const allyPositions = battleData.allyPositions;
-        const nextAV = battleData.nextTurnAV;
-        let killer = sourceTurn;
-        let killed = targetTurn;
-        // console.log(enemyDeath.properName)
-        poke("AllyDied",battleData,{sourceTurn, targetTurn:killed},killed);
-        // poke("AllyDied",battleData,{targetTurn:deathTurn});
-        if (battleData.isLoggyLogger) {
-            logToBattle(battleData,{logType: "EnemyDiedNote", enemyKilled:killed.properName, isEnemy: true});
-            if (!targetTurn.isMemosprite) {logToBattle(battleData,{logType: "EnemyDied", source:killer.properName, enemyKilled:killed.properName, isEnemy: true});}
+        if (alliesKilled) {
+            battleActions.assignAttackTargetsEnemy(battleData);
         }
-
-        //find the enemy position and remove it from the enemy lineup and turn order
-        const indexToRemove = allyPositions.indexOf(killed);
-        const indexToRemove2 = nextAV.indexOf(killed);
-        allyPositions.splice(indexToRemove, 1);
-        nextAV.splice(indexToRemove2, 1);
-        //TODO: revive handling here
-
-        if (!targetTurn.isUniqueEvent) {
-            battleData.charactersRemaining -= 1;
-        }
-        else if (targetTurn.isMemosprite) {targetTurn?.deathFunction?.(battleData,targetTurn,targetTurn.deathParam)}
-        //obv there can be cases where the memo owner dies but the memo itself would still be left before their function procs
-
-        if (battleData.charactersRemaining === 0) {
-            battleData.battleIsOver = true;
-            battleData.battleFailed = true;
-        }
-        else {
-            if (targetTurn.memospriteEventRef) {
-                const memoTurn = targetTurn[targetTurn.memospriteEventRef];
-                if (memoTurn.isActive) {targetTurn?.deathFunction?.(battleData,targetTurn,targetTurn.deathParam)}
-            }
-        }
-        
-            //then once done, redefine the enemy targets available
-        battleActions.assignAttackTargetsEnemy(battleData);
-        // console.log(battleData.enemiesRemaining)
     },
     actionLogWrapper(battleData,action,charName) {
         battleData.battleTotal.Actions ??= {};
@@ -3846,7 +3858,7 @@ const battleActions = {
             poke("HealAllyStart",battleData,{sourceTurn,targetTurn},sourceTurn);
             for (let i=0;i<timesToHeal;i++) {
                 for (let batchMember of batchArray) {
-                    if ((batchMember.cantBeHealed && !forceHeal) || (filterFunction && !filterFunction(battleData,sourceTurn,batchMember))) {continue}
+                    if ((batchMember.cantBeHealed && !forceHeal) || batchMember.isLimbo || (filterFunction && !filterFunction(battleData,sourceTurn,batchMember))) {continue}
                     healer(battleData,batchMember,skillSlot,percent,flat,generalInfo,isFixedHealing);
                 }
             }
@@ -4186,7 +4198,12 @@ const battleActions = {
             battleData.blastTargets = [];
             battleData.fullBlastTargets = [];
             battleData.bounceOrder = [];
-            battleData.allEnemyTargets = [...battleData.enemyPositions];
+            // battleData.allEnemyTargets = [...battleData.enemyPositions];
+            battleData.allEnemyTargets = [];
+            const enemyTargets = battleData.allEnemyTargets;
+            for (let enemy of enemies) {
+                enemyTargets.push(enemy);
+            }
             return;
         };
       
@@ -4208,7 +4225,12 @@ const battleActions = {
             battleData.blastTargets = [];
             battleData.fullBlastTargets = [];
             battleData.bounceOrder = [];
-            battleData.allEnemyTargets = [...battleData.enemyPositions];
+            // battleData.allEnemyTargets = [...battleData.enemyPositions];
+            battleData.allEnemyTargets = [];
+            const enemyTargets = battleData.allEnemyTargets;
+            for (let enemy of enemies) {
+                enemyTargets.push(enemy);
+            }
             return;
         }
       
@@ -4252,7 +4274,12 @@ const battleActions = {
         battleData.blastTargets = blastTargets;
         battleData.fullBlastTargets = fullBlastTargets;
         battleData.bounceOrder = bounceOrder;
-        battleData.allEnemyTargets = [...battleData.enemyPositions];
+        // battleData.allEnemyTargets = [...battleData.enemyPositions];
+        battleData.allEnemyTargets = [];
+        const enemyTargets = battleData.allEnemyTargets;
+        for (let enemy of enemies) {
+            enemyTargets.push(enemy);
+        }
     },
     assignAttackTargetsEnemy(battleData) {
         let allyPositions = battleData.allyPositions;
@@ -4587,7 +4614,6 @@ const queueUltimate = battleActions.queueUltimateUse;
 const queueInsertAbility = battleActions.queueFollowUpAttack;
 const queueExtraTurn = battleActions.queueInstantUltimateUse;
 const hurtEnemyHealth = battleActions.hurtEnemyHealth;
-const killDesignatedEnemies = battleActions.killDesignatedEnemies;
 const addListenerWithPriority = battleActions.addListenerWithPriority;
 const addListenerWithPriorityDOT = battleActions.addListenerWithPriorityDOT;
 const addListenerPREPPriority = battleActions.addListenerPREPPriority;
@@ -4602,6 +4628,19 @@ const hitWrapper = battleActions.hitWrapperTEST;
 const dealToughnessDMG = battleActions.dealToughnessDMG;
 const getBreakDamage = battleActions.getBreakDamage;
 const hitWrapperBattleStart = battleActions.hitWrapperBattleStart;
+const clearPendingDeaths = battleActions.clearPendingDeaths;
+const markEnemyForDeath = battleActions.markEnemyForDeath;
+const dotDetonateWrapper = battleActions.dotDetonateWrapper;
+
+const weaknessIndexConversion = {
+    "Fire": WeaknessFire,
+    "Ice": WeaknessIce,
+    "Lightning": WeaknessLightning,
+    "Wind": WeaknessWind,
+    "Quantum": WeaknessQuantum,
+    "Imaginary": WeaknessImaginary,
+    "Physical": WeaknessPhysical,
+};
 
 
 const turnLogic = {
@@ -4653,9 +4692,307 @@ const turnLogic = {
 
                 battleData.battleStartOverBreakTotals = generalInfo;
                 // console.log(battleData.battleStartOverBreakTotals)
-            }
+            },
+            casGlobalRevive(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic.Universal;
+
+                // let skillRef = ATKObjects.bailuTalentREF ??= ATKObjects.Talent["Gourdful of Elixir"].variant1;
+                // let rank = sourceTurn.rank;
+                // const target = actionObject.target;
+
+                if (!logicRef.casGlobalReviveHEALOBJECT) {
+                    // let values = ATKObjects.bailuTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                    const actionTags = ["All","Heal"];
+                    const compositeCacheTag = actionTags + "CASTORICEGLOBAL";
+                    logicRef.casGlobalReviveHEALOBJECT = {
+                        multipliers: {
+                            primary: 0,
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: 1,
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: null,//"HP",
+                        DMGTags: [],
+                        allToughness: false,
+                        slot: "GlobalPassive",
+                        actionTags,compositeCacheTag
+                    }
+
+                    logicRef.castGlobalMoonCocoon = {
+                        "stats": null,
+                        "source": "Global Passive",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": "Mooncocoon",
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 2,
+                        "currentStacks": 2,
+                        "decay": false,
+                        "expireType": null,
+                        "buffDisplayIcon": "misc/castorice/globalPassive.png"
+                    }
+                }
+                let healObject = logicRef.casGlobalReviveHEALOBJECT;
+
+                const fullCharacterArray = battleData.fullCharacterArray;
+                const reviveSheet = logicRef.castGlobalMoonCocoon;
+                reviveSheet.currentStacks = 2;
+                let charactersWithCocoon = 0;
+                for (let character of fullCharacterArray) {
+                    if (!character.isLimbo) {continue;}
+
+                    character.isLimbo = false;
+                    character.markedForRevive = false;
+                    character.currentHP = 0;
+
+                    healAlly(battleData,healObject,character,sourceTurn,"GlobalPassive",1);
+
+                    updateBuff(battleData,character,reviveSheet);
+                    charactersWithCocoon += 1;
+                }
+
+                battleData.charactersWithCocoon = charactersWithCocoon;
+                battleData.castoriceGlobalPassive = false;
+            },
         },
         "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    // let ownerTurn = this.ownerTurn;
+                    const passiveListeners = this.passiveListeners;
+
+                    const casGlobal = battleData.castoriceGlobalPassive;
+                    if (casGlobal) {
+                        const listener1 = passiveListeners[0];
+                        const listener2 = passiveListeners[1];
+                        const listener3 = passiveListeners[2];
+                        const listener4 = passiveListeners[3];
+
+                        const fullCharacterArray = battleData.fullCharacterArray;
+                        for (let character of fullCharacterArray) {
+                            addListenerWithPriority(battleData,listener1,listener1.trigger,character,null,null);
+                            addListenerWithPriority(battleData,listener2,listener2.trigger,character,null,null);
+                            addListenerWithPriority(battleData,listener3,listener3.trigger,character,null,null);
+                        }
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,null,null,null);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Global Passive checks",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "WaitingLimbo",
+                        condition(battleData,generalInfo,personalOwner) {
+                            if (!battleData.castoriceGlobalPassive) {removeListener(battleData,this,personalOwner)}
+                            if (battleData.castoriceGlobalPassiveQueued) {return;}
+
+                            battleData.castoriceGlobalPassiveQueued = true;
+
+                            const levelEntity = turnLogic.Universal.battleDataLevelEntity;
+                            const queueObject = this.queueObject ??= createQueueObject(levelEntity,{
+                                name: this.listenerName,
+                                priority: priorityList.ability.CharacterReviveOthers,
+                                queueTag: "QueuedInsert",
+        
+                                actionCall: turnLogic.Universal.skillFunctions.casGlobalRevive,
+                                action: "Revive",
+                                abortCheck(battleData,actionObject,sourceTurn) {
+                                    let failed = false;
+
+                                    const fullCharacterArray = battleData.fullCharacterArray;
+                                    let charsInLimbo = false;
+                                    for (let character of fullCharacterArray) {
+                                        if (character.isLimbo) {
+                                            charsInLimbo = true;
+                                            break;
+                                        }
+                                    }
+                                    if (!charsInLimbo) {failed = true;}
+
+                                    if (failed) {
+                                        battleData.castoriceGlobalPassiveQueued = false;
+                                        return true;
+                                    }
+                                },
+        
+                                isInserted: true,
+                                dontKeepNextWave: false,//ults always clear out
+                                isAttack: false,
+                                isAbility: true,
+                                useAnyTriggers: true,
+                                eventTypeStartLOG: "ReviveStart",
+
+                                // properName: "Castorice Global Passive",
+                                eventOverrideImage: characters["Castorice"].icon,
+        
+                                poolKey: "Characters",
+                            })
+
+                            const fullCharacterArray = battleData.fullCharacterArray;
+                            for (let character of fullCharacterArray) {
+                                if (!character.isLimbo) {continue;}
+                                character.markedForRevive = true;
+                            }
+
+                            queueObject.sourceTurn = levelEntity;
+                            queueInsertAbility(battleData,queueObject);
+                        },
+                        "target": "self",
+                        "priority": -69,
+                        "isPersonal": true,
+                        "listenerName": "Castorice Global Passive revive handling",
+                    },
+                    {
+                        "trigger": "PreActionPhase",
+                        condition(battleData,generalInfo,personalOwner) {
+                            if (battleData.castoriceGlobalPassive) {return;}
+                            //this listener will only ever be injected if cas global was toggled on to begin with, so if it still shows true
+                            //that means we haven't actually queued any shit and shouldn't be doing anything here YET
+
+                            if (!battleData.charactersWithCocoon) {removeListener(battleData,this,personalOwner);}
+                            //if we reach this point on a character and have no more mooncocoon active then remove this listener instead of continuing to check the same shit.
+
+                            const buffName = "Mooncocoon";
+                            const buffCheck = personalOwner.buffsObject[buffName];
+
+                            if (buffCheck) {
+                                const currentStacks = buffCheck.currentStacks;
+                                if (currentStacks === 2) {
+                                    const reviveSheet = turnLogic.Universal.castGlobalMoonCocoon;
+                                    reviveSheet.currentStacks = -1;
+                                    updateBuff(battleData,personalOwner,reviveSheet);
+                                }
+                                else {
+                                    const levelEntity = turnLogic.Universal.battleDataLevelEntity;
+                                    removeBuff(battleData,personalOwner,buffCheck);
+                                    markEnemyForDeath(battleData,personalOwner,levelEntity)
+                                    personalOwner.markedForDeath = true;
+                                    clearPendingDeaths(battleData);
+                                    battleData.charactersWithCocoon -= 1;
+                                }
+                            }
+                        },
+                        "target": "self",
+                        "priority": 0,
+                        "isPersonal": true,
+                        "listenerName": "Castorice Global Passive mooncocoon handling",
+                    },
+                    {
+                        "trigger": "AllyHPChange",
+                        condition(battleData,generalInfo,personalOwner) {
+                            if (battleData.castoriceGlobalPassive) {return;}
+                            //this listener will only ever be injected if cas global was toggled on to begin with, so if it still shows true
+                            //that means we haven't actually queued any shit and shouldn't be doing anything here YET
+
+                            if (!battleData.charactersWithCocoon) {removeListener(battleData,this,personalOwner);}
+                            //if we reach this point on a character and have no more mooncocoon active then remove this listener instead of continuing to check the same shit.
+
+                            const buffName = "Mooncocoon";
+                            const buffCheck = personalOwner.buffsObject[buffName];
+
+                            if (buffCheck) {
+                                const currentHPValid = personalOwner.currentHP > 1;
+
+                                if (currentHPValid) {
+                                    removeBuff(battleData,personalOwner,buffCheck);
+                                    battleData.charactersWithCocoon -= 1;
+                                }
+                            }
+                        },
+                        "target": "self",
+                        "priority": 0,
+                        "isPersonal": true,
+                        "listenerName": "Castorice Global Passive mooncocoon was healed handling",
+                    },
+                    {
+                        "trigger": "ShieldEnd",
+                        condition(battleData,generalInfo) {
+                            if (battleData.castoriceGlobalPassive) {return;}
+                            //this listener will only ever be injected if cas global was toggled on to begin with, so if it still shows true
+                            //that means we haven't actually queued any shit and shouldn't be doing anything here YET
+
+                            if (!battleData.charactersWithCocoon) {removeListener(battleData,this,personalOwner);}
+                            //if we reach this point on a character and have no more mooncocoon active then remove this listener instead of continuing to check the same shit.
+
+                            const targetTurn = generalInfo.targetTurn;
+
+                            const buffName = "Mooncocoon";
+                            const buffCheck = targetTurn.buffsObject[buffName];
+
+                            if (buffCheck) {
+                                const hasAnyShield = targetTurn.shieldCounter;
+
+                                if (hasAnyShield) {
+                                    removeBuff(battleData,personalOwner,buffCheck);
+                                    battleData.charactersWithCocoon -= 1;
+                                }
+                            }
+                        },
+                        "target": "self",
+                        "priority": 0,
+                        "listenerName": "Castorice Global Passive mooncocoon was shielded handling",
+                    },
+                ],
+            },
+            {
+                "trigger": "EntityConstruction",
+                condition(battleData,generalInfo) {
+
+                    const logicRef = turnLogic.Universal;
+
+                    let stats = new Array(greatTableSize).fill(0);
+
+                    logicRef.battleDataLevelEntity = {
+                        // name:characterEntry,
+
+                        AV:10000,
+                        AVBase:10000,
+                        SPD:1,
+                        // AV:10000/60,
+                        // AVBase:10000/60,
+                        // SPD:60,
+
+                        actionCounter: 0,
+                        turnState: 0,
+                        name: "battleDataLevelEntity",
+                        properName: "Level Entity",
+
+                        statTable: stats,
+                        tagSpecific: {},
+                        buffsObject: {},
+                        cacheTagValues: superGlobal.createEntityCache(),
+                        
+                        // buffsObject: {},
+                        // buffsStartTurn: [],
+                        // buffsEndTurn: [],
+                        // additionalDMGObject: {},
+                        isUnselectable: true,
+                        diesWithOwner: false,
+                        isUniqueEvent: true,
+                        isSummon: false,
+                        isActive: false,
+                        isMemosprite: false,
+                        currentlyOwnedBy: null,
+                        eventOwner: null,//pass through the slot of the character who owns the event, avoids cyclic issues when logging
+                        uniqueEventFunction: null,//logicRef.skillFunctions.combustionExpired,
+                        eventImage: graphs.summonCustomImages["Level Entity"],
+                    };
+
+                    battleData.nameBasedTurns["battleDataLevelEntity"] = logicRef.battleDataLevelEntity;
+                    // poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: ownerTurn, summonedBy: ownerTurn, summonEvent: ownerTurn.jingYuanLORDTURNEVENT},ownerTurn);
+                },
+                "target": "self",
+                "listenerName": "Level Entity event creation",
+                "ownerTurn": {},
+            },
             {
                 "trigger": "WaveStart",
                 condition(battleData,generalInfo) {
@@ -5103,7 +5440,8 @@ const turnLogic = {
                         "decay": false,
                         "expireType": "EndTurn",
                         "expireFunction": turnLogic["Aha Instant"].skillFunctions.expireCertified,
-                        "expireParam": null
+                        "expireParam": null,
+                        "buffDisplayIcon": "misc/certifiedBanger/OutlineElationBless_Grey.png",
                     }
                     const buffSheet = battleData.ahaInstantBangerSHEET ??= this.bangerSheet;
 
@@ -6543,7 +6881,6 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    //TODO: e2: ally revive shit, later when I allow for ally deaths
     "Huohuo": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
@@ -6685,10 +7022,11 @@ const turnLogic = {
 
                 const rank = sourceTurn.rank;
                 const e1 = rank>=1;
+                const battleValues = sourceTurn.battleValues;
                 if (!ATKObjects.huohuoTalentOwnerSHEET) {
                     const buffNames = logicRef.buffNames;
 
-                    const baseDuration = e1 ? 4 : 3;
+                    const baseDuration = battleValues.talentProvisionDurationMax;
                     ATKObjects.huohuoTalentOwnerSHEET = {
                         "stats": [HealingOutgoing],
                         [HealingOutgoing]: e1 ? 0.20 : 0,
@@ -6728,6 +7066,7 @@ const turnLogic = {
                 sourceTurn.talentProvisionIsActive = true;
                 sourceTurn.talentCleanseCounter = 0;
                 updateBuff(battleData,sourceTurn,countdownSheet,null,null,null,null,turnOverride);
+                battleValues.talentProvisionDuration = battleValues.talentProvisionDurationMax;
 
                 if (e1) {
                     const spdSheet = ATKObjects.huohuoTalentE1SPDSHEET;
@@ -6735,8 +7074,6 @@ const turnLogic = {
                     
                     updateBuffBatchTargets(battleData,allyPositions,spdSheet);
                 }
-                
-                // const buffCheck = 
             },
             provisionExpired(battleData,expireParam) {
                 const huohuoTurn = battleData.nameBasedTurns[expireParam];
@@ -6757,7 +7094,6 @@ const turnLogic = {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
-                // sourceTurn.talentProvisionIsActive = true;
                 // sourceTurn.talentCleanseCounter = 0;
                 let skillRef = ATKObjects.huohuoTalentREF ??= ATKObjects.Talent["Possession: Ethereal Metaflow"].variant1;
                 let values = ATKObjects.huohuoTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
@@ -6926,6 +7262,48 @@ const turnLogic = {
                 const enemyPositions = battleData.enemyPositions;
                 updateBuffBatchTargets(battleData,enemyPositions,buffSheet);
             },
+            huohuoRevive(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                // let skillRef = ATKObjects.bailuTalentREF ??= ATKObjects.Talent["Gourdful of Elixir"].variant1;
+                // let rank = sourceTurn.rank;
+                // const target = actionObject.target;
+
+                if (!ATKObjects.huohuoReviveHEALOBJECT) {
+                    // let values = ATKObjects.bailuTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                    const actionTags = ["All","Heal"];
+                    const compositeCacheTag = actionTags + sourceTurn.properName;
+                    ATKObjects.huohuoReviveHEALOBJECT = {
+                        multipliers: {
+                            primary: 0.50,
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: null,//"HP",
+                        DMGTags: [],
+                        allToughness: false,
+                        slot: "E2",
+                        actionTags,compositeCacheTag
+                    }
+                }
+                let healObject = ATKObjects.huohuoReviveHEALOBJECT;
+                const targetTurn = actionObject.target[0];
+
+                targetTurn.isLimbo = false;
+                targetTurn.markedForRevive = false;
+                targetTurn.currentHP = 0;
+
+                poke("HuohuoReviveChargeUsed",battleData,{pointsGained: -1,sourceString:"Revive Charge Consumed"});
+
+                healAlly(battleData,healObject,targetTurn,sourceTurn,"E2",1);
+            },
         },
         "listeners": [
             {
@@ -6938,7 +7316,8 @@ const turnLogic = {
 
                     const passiveListeners = this.passiveListeners;
 
-
+                    const battleValues = ownerTurn.battleValues;
+                    battleValues.talentProvisionDurationMax = 3 + (rank >= 1 ? 1 : 0);
                     //e6
                     if (rank >= 6) {
                         const listener5 = passiveListeners[3];
@@ -6985,6 +7364,13 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener7,listener7.trigger,ally,null,ownerTurn);
                     }
 
+                    if (rank >= 2) {
+                        const fullCharacterArray = battleData.fullCharacterArray;
+                        const listener8 = passiveListeners[6];
+                        for (let character of fullCharacterArray) {
+                            addListenerWithPriority(battleData,listener8,listener8.trigger,character,null,ownerTurn);
+                        }
+                    }
 
                     getTechnique(battleData,ownerTurn,logicRef,1,false,false)
                 },
@@ -7151,7 +7537,162 @@ const turnLogic = {
                         "listenerName": "Divine Provision Healing controller (ultimate used)",
                         "ownerTurn": {},
                     },
+                    {
+                        "trigger": "WaitingLimbo",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
+                            // if (personalOwner.isDead || personalOwner.isLimbo) {return;}
+
+                            const battleValues = providerTurn.battleValues;
+                            if (!battleValues.reviveCharges) {return;}
+
+                            if (!battleValues.reviveIsQueued) {
+                                battleValues.reviveIsQueued = true;
+                                const queueObject = this.queueObject ??= createQueueObject(providerTurn,{
+                                    name: this.listenerName,
+                                    priority: priorityList.ability.CharacterReviveOthers,
+                                    queueTag: "QueuedInsert",
+            
+                                    actionCall: turnLogic[providerTurn.properName].skillFunctions.huohuoRevive,
+                                    action: "Revive",
+                                    abortCheck(battleData,actionObject,sourceTurn) {
+                                        const battleValues = sourceTurn.battleValues;
+                                        let failed = false;
+                                        if (!battleValues.reviveCharges || !sourceTurn.talentProvisionIsActive) {failed = true;}
+
+                                        const fullCharacterArray = battleData.fullCharacterArray;
+                                        let charsInLimbo = false;
+                                        let charInLimbo = null;
+                                        for (let character of fullCharacterArray) {
+                                            if (character.isLimbo) {
+                                                charsInLimbo = true;
+                                                charInLimbo = character;
+                                                break;
+                                            }
+                                        }
+                                        if (!charsInLimbo) {failed = true;}
+
+                                        if (!failed && !actionObject.target[0].isLimbo) {
+                                            actionObject.target = [charInLimbo];
+                                            charInLimbo.markedForRevive = true;
+                                        }
+
+                                        if (failed) {
+                                            battleValues.reviveIsQueued = false;
+                                            return true;
+                                        }
+                                    },
+            
+                                    isInserted: true,
+                                    dontKeepNextWave: false,//ults always clear out
+                                    isAttack: false,
+                                    isAbility: true,
+                                    useAnyTriggers: true,
+                                    eventTypeStartLOG: "ReviveStart",
+            
+                                    poolKey: turnLogic[providerTurn.properName].abilityTargetPools.Revive,
+                                })
+
+                                queueObject.target = [personalOwner];
+                                personalOwner.markedForRevive = true;
+                                queueObject.sourceTurn = providerTurn;
+                                queueInsertAbility(battleData,queueObject);
+                                return;
+                            }
+
+                            if (!battleValues.reviveIsQueued2) {
+                                battleValues.reviveIsQueued2 = true;
+                                const queueObject = this.queueObject2 ??= createQueueObject(providerTurn,{
+                                    name: this.listenerName,
+                                    priority: priorityList.ability.CharacterReviveOthers,
+                                    queueTag: "QueuedInsert",
+            
+                                    actionCall: turnLogic[providerTurn.properName].skillFunctions.huohuoRevive,
+                                    action: "Revive",
+                                    abortCheck(battleData,actionObject,sourceTurn) {
+                                        const battleValues = sourceTurn.battleValues;
+                                        let failed = false;
+                                        if (!battleValues.reviveCharges || !sourceTurn.talentProvisionIsActive) {failed = true;}
+
+                                        const fullCharacterArray = battleData.fullCharacterArray;
+                                        let charsInLimbo = false;
+                                        let charInLimbo = null;
+                                        for (let character of fullCharacterArray) {
+                                            if (character.isLimbo) {
+                                                charsInLimbo = true;
+                                                charInLimbo = character;
+                                                break;
+                                            }
+                                        }
+                                        if (!charsInLimbo) {failed = true;}
+
+                                        if (!failed && !actionObject.target[0].isLimbo) {
+                                            actionObject.target = [charInLimbo];
+                                            charInLimbo.markedForRevive = true;
+                                        }
+
+                                        if (failed) {
+                                            battleValues.reviveIsQueued2 = false;
+                                            return true;
+                                        }
+                                    },
+            
+                                    isInserted: true,
+                                    dontKeepNextWave: false,//ults always clear out
+                                    isAttack: false,
+                                    isAbility: true,
+                                    useAnyTriggers: true,
+                                    eventTypeStartLOG: "ReviveStart",
+            
+                                    poolKey: turnLogic[providerTurn.properName].abilityTargetPools.Revive,
+                                })
+
+                                queueObject.target = [personalOwner];
+                                personalOwner.markedForRevive = true;
+                                queueObject.sourceTurn = providerTurn;
+                                queueInsertAbility(battleData,queueObject);
+                                return;
+                            }
+                        },
+                        "target": "self",
+                        "priority": -70,
+                        "isPersonal": true,
+                        "listenerName": "Huohuo e2 revive handling",
+                    },
                 ],
+            },
+            {
+                "trigger": "HuohuoReviveChargeUsed",
+                condition(battleData,generalInfo) {
+                    // poke("HuohuoReviveChargeUsed",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    const generalData = this.generalData ??= {summerName: "huohuoReviveSum",baseName: "reviveCharges",maxName: "reviveChargesMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "Revives (Huohuo)",displayIcon:"/HonkaiSR/misc/huohuo/IconBuffRebirth.png"};
+                    // const oldValue = ownerTurn.battleValues.chargeStacks;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
+                },
+                "target": "self",
+                "listenerName": "Huohuo Revive Charge Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "PreActionPhaseEnd",
+                condition(battleData,generalInfo) {
+                    // poke("HealEnd",battleData,turnMerge);
+                    let ownerTurn = this.ownerTurn;
+
+                    if (!ownerTurn.talentProvisionIsActive) {
+                        ownerTurn.battleValues.talentProvisionDuration = 0;
+                    }
+                    else {
+                        const buffName = this.buffName ??= turnLogic[ownerTurn.properName].buffNames.talentCountdown;
+                        ownerTurn.battleValues.talentProvisionDuration = ownerTurn.buffsObject[buffName].duration;
+                    }
+                },
+                "target": "self",
+                "isPersonal": true,
+                "listenerName": "Huohuo Zone - duration increment handler(visual)",
+                "ownerTurn": {},
             },
             {
                 "trigger": "UltimateReady",
@@ -7212,8 +7753,14 @@ const turnLogic = {
         },
         "ATKObjects": {},
         "characterValues": {
-            "talentProvisionIsActive": false,
-            "cleanseCounter": 0
+            // "talentProvisionIsActive": false,
+            "cleanseCounter": 0,
+            "reviveCharges": 2,
+            "reviveChargesMax": 2,
+            "reviveIsQueued": false,
+            "reviveIsQueued2": false,
+            "talentProvisionDuration": 3,
+            "talentProvisionDurationMax": 3,
         },
         "useTechnique": true,
         "techniqueType": "Impair",
@@ -7229,7 +7776,6 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
-    //TODO: talent revive shit, which also would extend to E6 as well
     "Bailu": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;
@@ -7278,6 +7824,7 @@ const turnLogic = {
             "Skill": "Allies (On-Field)",
             "Ultimate": "Allies (On-Field)",
             "BasicATK": "Enemies (On-Field)",
+            "Revive": "Characters",
         },
         "skillFunctions": {
             bailuBasic(battleData,actionObject,sourceTurn) {
@@ -7522,8 +8069,50 @@ const turnLogic = {
                 updateBuffBatchTargets(battleData,allyPositions,invigoration);
                 updateBuffBatchTargets(battleData,allyPositions,drSheet);
             },
+            bailuRevive(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.bailuTalentREF ??= ATKObjects.Talent["Gourdful of Elixir"].variant1;
+                // let rank = sourceTurn.rank;
+                // const target = actionObject.target;
+
+                if (!ATKObjects.bailuReviveHEALOBJECT) {
+                    let values = ATKObjects.bailuTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                    const actionTags = ["All","Heal","Talent"];
+                    const compositeCacheTag = actionTags + sourceTurn.properName;
+                    ATKObjects.bailuReviveHEALOBJECT = {
+                        multipliers: {
+                            primary: values[2],
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: values[3],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: "HP",
+                        DMGTags: [],
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        actionTags,compositeCacheTag
+                    }
+                }
+                let healObject = ATKObjects.bailuReviveHEALOBJECT;
+                const targetTurn = actionObject.target[0];
+
+                targetTurn.isLimbo = false;
+                targetTurn.markedForRevive = false;
+                targetTurn.currentHP = 0;
+
+                poke("BailuReviveChargeUsed",battleData,{pointsGained: -1,sourceString:"Revive Charge Consumed"});
+
+                healAlly(battleData,healObject,targetTurn,sourceTurn,skillRef.slot,1);
+            },
         },
-        "listeners": [//skillHOT
+        "listeners": [
             {
                 "trigger": "PassiveCalls",
                 condition(battleData,generalInfo) {
@@ -7534,6 +8123,10 @@ const turnLogic = {
                     const ATKObjects = logicRef.ATKObjects;
 
                     const passiveListeners = this.passiveListeners;
+
+                    const battleValues = ownerTurn.battleValues;
+                    battleValues.reviveChargesMax = rank >= 6 ? 2 : 1;
+                    battleValues.reviveCharges = battleValues.reviveChargesMax
 
                     ATKObjects.bailuInvigorationSHEET ??= {
                         "stats": null, 
@@ -7572,6 +8165,12 @@ const turnLogic = {
                     const allAlliesArray = battleData.allAlliesArray;
                     for (let ally of allAlliesArray) {
                         addListenerWithPriority(battleData,listener2,listener2.trigger,ally,null,ownerTurn);
+                    }
+
+                    const fullCharacterArray = battleData.fullCharacterArray;
+                    const listener3 = passiveListeners[2];
+                    for (let character of fullCharacterArray) {
+                        addListenerWithPriority(battleData,listener3,listener3.trigger,character,null,ownerTurn);
                     }
                     
 
@@ -7633,7 +8232,7 @@ const turnLogic = {
                         "trigger": "WasAttackedEnd",
                         condition(battleData,generalInfo,personalOwner) {
                             const providerTurn = this.providerTurn;
-                            if (personalOwner.isDead) {return;}
+                            if (personalOwner.isDead || personalOwner.isLimbo) {return;}
         
                             const sourceTurn = generalInfo.sourceTurn;
                             if (!sourceTurn.isEnemy) {return;}//we only care about hostile attacks coming in
@@ -7704,10 +8303,146 @@ const turnLogic = {
                         "target": "self",
                         "isPersonal": true,
                         "listenerName": "Attack end - allies with Invigoration hit/regen",
-                        "owners": []
                     },
+                    {
+                        "trigger": "WaitingLimbo",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
+                            if (personalOwner.properName === providerTurn.properName) {return;}
 
+                            const battleValues = providerTurn.battleValues;
+                            if (!battleValues.reviveCharges) {return;}
+
+                            if (!battleValues.reviveIsQueued) {
+                                battleValues.reviveIsQueued = true;
+                                const queueObject = this.queueObject ??= createQueueObject(providerTurn,{
+                                    name: this.listenerName,
+                                    priority: priorityList.ability.CharacterReviveOthers,
+                                    queueTag: "QueuedInsert",
+            
+                                    actionCall: turnLogic[providerTurn.properName].skillFunctions.bailuRevive,
+                                    action: "Revive",
+                                    abortCheck(battleData,actionObject,sourceTurn) {
+                                        const battleValues = sourceTurn.battleValues;
+                                        let failed = false;
+                                        if (!battleValues.reviveCharges) {failed = true;}
+
+                                        const fullCharacterArray = battleData.fullCharacterArray;
+                                        let charsInLimbo = false;
+                                        let charInLimbo = null;
+                                        for (let character of fullCharacterArray) {
+                                            if (character.properName === sourceTurn.properName) {continue;}
+                                            if (character.isLimbo) {
+                                                charsInLimbo = true;
+                                                charInLimbo = character;
+                                                break;
+                                            }
+                                        }
+                                        if (!charsInLimbo) {failed = true;}
+
+                                        if (!failed && !actionObject.target[0].isLimbo) {
+                                            actionObject.target = [charInLimbo];
+                                            charInLimbo.markedForRevive = true;
+                                        }
+
+                                        if (failed) {
+                                            battleValues.reviveIsQueued = false;
+                                            return true;
+                                        }
+                                    },
+            
+                                    isInserted: true,
+                                    dontKeepNextWave: false,//ults always clear out
+                                    isAttack: false,
+                                    isAbility: true,
+                                    useAnyTriggers: true,
+                                    eventTypeStartLOG: "ReviveStart",
+            
+                                    poolKey: turnLogic[providerTurn.properName].abilityTargetPools.Revive,
+                                })
+
+                                queueObject.target = [personalOwner];
+                                personalOwner.markedForRevive = true;
+                                queueObject.sourceTurn = providerTurn;
+                                queueInsertAbility(battleData,queueObject);
+                                return;
+                            }
+
+                            if (!battleValues.reviveIsQueued2) {
+                                battleValues.reviveIsQueued2 = true;
+                                const queueObject = this.queueObject2 ??= createQueueObject(providerTurn,{
+                                    name: this.listenerName,
+                                    priority: priorityList.ability.CharacterReviveOthers,
+                                    queueTag: "QueuedInsert",
+            
+                                    actionCall: turnLogic[providerTurn.properName].skillFunctions.bailuRevive,
+                                    action: "Revive",
+                                    abortCheck(battleData,actionObject,sourceTurn) {
+                                        const battleValues = sourceTurn.battleValues;
+                                        let failed = false;
+                                        if (!battleValues.reviveCharges) {failed = true;}
+
+                                        const fullCharacterArray = battleData.fullCharacterArray;
+                                        let charsInLimbo = false;
+                                        let charInLimbo = null;
+                                        for (let character of fullCharacterArray) {
+                                            if (character.properName === sourceTurn.properName) {continue;}
+                                            if (character.isLimbo) {
+                                                charsInLimbo = true;
+                                                charInLimbo = character;
+                                                break;
+                                            }
+                                        }
+                                        if (!charsInLimbo) {failed = true;}
+
+                                        if (!failed && !actionObject.target[0].isLimbo) {
+                                            actionObject.target = [charInLimbo];
+                                            charInLimbo.markedForRevive = true;
+                                        }
+
+                                        if (failed) {
+                                            battleValues.reviveIsQueued2 = false;
+                                            return true;
+                                        }
+                                    },
+            
+                                    isInserted: true,
+                                    dontKeepNextWave: false,//ults always clear out
+                                    isAttack: false,
+                                    isAbility: true,
+                                    useAnyTriggers: true,
+                                    eventTypeStartLOG: "ReviveStart",
+            
+                                    poolKey: turnLogic[providerTurn.properName].abilityTargetPools.Revive,
+                                })
+
+                                queueObject.target = [personalOwner];
+                                personalOwner.markedForRevive = true;
+                                queueObject.sourceTurn = providerTurn;
+                                queueInsertAbility(battleData,queueObject);
+                                return;
+                            }
+                        },
+                        "target": "self",
+                        "priority": -70,
+                        "isPersonal": true,
+                        "listenerName": "Bailu revive handling",
+                    },
                 ],
+            },
+            {
+                "trigger": "BailuReviveChargeUsed",
+                condition(battleData,generalInfo) {
+                    // poke("BailuReviveChargeUsed",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    const generalData = this.generalData ??= {summerName: "bailuReviveSum",baseName: "reviveCharges",maxName: "reviveChargesMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "Revives (Bailu)",displayIcon:"/HonkaiSR/misc/bailu/Icon1211Passive.png"};
+                    // const oldValue = ownerTurn.battleValues.chargeStacks;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
+                },
+                "target": "self",
+                "listenerName": "Bailu Revive Charge Handler",
+                "ownerTurn": {},
             },
             {
                 "trigger": "UltimateReady",
@@ -7770,6 +8505,10 @@ const turnLogic = {
         "characterValues": {
             "inSkillHealing": false,
             "skillRandoCycler": 0,
+            "reviveIsQueued": false,
+            "reviveIsQueued2": false,
+            "reviveCharges": 0,
+            "reviveChargesMax": 1,
         },
         "useTechnique": true,
         "techniqueType": "Restore",
@@ -8072,13 +8811,6 @@ const turnLogic = {
                 const debuffSheet = ATKObjects.natashaTechWEAKENSHEET;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-
-                // let skillRef2 = ATKObjects.gallagherTalentHealREF ??= ATKObjects.Talent["Tipsy Tussle"].variant1;
-                // let values2 = ATKObjects.gallagherTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef2,sourceTurn);
-                // let besotted = ATKObjects.besottedFunction ??= turnLogic[characterName].skillFunctions.besotted;
-                // for (let enemySlot of battleData.enemyPositions) {
-                //     besotted(battleData,sourceTurn,enemySlot,false,values2);
-                // }
 
                 attackWrapper(battleData,skillRef,sourceTurn,ATKObject,battleData.enemyPositions,[]);
 
@@ -10628,9 +11360,21 @@ const turnLogic = {
                         }
                     }
 
+                    let livingTarget = null;
+                    let livingRank = 0;
+                    const enemyPositions = battleData.enemyPositions;
+                    for (let enemy of enemyPositions) {
+                        if (enemy.isLimbo || enemy.isDead) {continue;}
+
+                        if (enemy.enemyRank > livingRank) {
+                            livingTarget = enemy;
+                            livingRank = enemyRank;
+                        }
+                    }
+
                     //and if the new primary target has no implant yet, then implant it from the enemy that died
                     //obv can't implant though if everyone is dead and a primary target is missing
-                    const primaryRef = battleData.primaryTarget;
+                    const primaryRef = livingTarget;
                     if (implantNameFound && primaryRef && !primaryRef.buffsObject[implantNameFound]) {
                         const implantSheetToTransfer = enemyKilledBuffs[implantNameFound]
                         updateBuff(battleData,primaryRef,implantSheetToTransfer);
@@ -10949,16 +11693,14 @@ const turnLogic = {
                 const primaryMulti = values[1];
                 const blastMulti = values[3];
 
-                const detonate = battleActions.dotDetonateWrapper;
-
                 const primaryTargetArray = generalInfo.primaryTargetArray;
                 const subTargetArray = generalInfo.subTargetArray;
 
                 for (let enemy of primaryTargetArray) {
-                    detonate(battleData,sourceTurn,primaryMulti,enemy);
+                    dotDetonateWrapper(battleData,sourceTurn,primaryMulti,enemy);
                 }
                 for (let enemy of subTargetArray) {
-                    detonate(battleData,sourceTurn,blastMulti,enemy);
+                    dotDetonateWrapper(battleData,sourceTurn,blastMulti,enemy);
                 }
             },
             kafkaFUA(battleData,actionObject,sourceTurn) {
@@ -11032,9 +11774,8 @@ const turnLogic = {
                 const talentMulti = 0.80;
 
                 const primaryTargetArray = generalInfo.primaryTargetArray;
-                const detonate = battleActions.dotDetonateWrapper;
                 for (let enemy of primaryTargetArray) {
-                    detonate(battleData,sourceTurn,talentMulti,enemy);
+                    dotDetonateWrapper(battleData,sourceTurn,talentMulti,enemy);
                 }
             },
             kafkaUltimate(battleData,actionObject,sourceTurn) {
@@ -11160,9 +11901,8 @@ const turnLogic = {
             },
             kafkaUltimateDetonate(battleData,sourceTurn,generalInfo,ultMulti) {
                 const primaryTargetArray = generalInfo.primaryTargetArray;
-                const detonate = battleActions.dotDetonateWrapper;
                 for (let enemy of primaryTargetArray) {
-                    detonate(battleData,sourceTurn,ultMulti,enemy);
+                    dotDetonateWrapper(battleData,sourceTurn,ultMulti,enemy);
                 }
             },
             kafkaTechnique(battleData,actionObject,sourceTurn) {
@@ -11297,7 +12037,7 @@ const turnLogic = {
                                     action: "Insert",
                                     abortCheck(battleData,actionObject,sourceTurn) {
                                         const target = actionObject.target;
-                                        if (target.isDead || target.isLimbo) {
+                                        if (target.isDead) {
                                             sourceTurn.battleValues.fuaStackDebt -= 1;
                                             return true;
                                         }
@@ -11324,7 +12064,7 @@ const turnLogic = {
                                 else if (primaryTargetArray.length > 1) {
                                     let potentialTargets = [];
                                     for (let target of primaryTargetArray) {
-                                        if (!target.isDead && !target.isLimbo) {
+                                        if (!target.isDead) {
                                             potentialTargets.push(target);
                                         }
                                     }
@@ -11342,7 +12082,7 @@ const turnLogic = {
                                     else if (subTargetArray.length > 1) {
                                         let potentialTargets = [];
                                         for (let target of subTargetArray) {
-                                            if (!target.isDead && !target.isLimbo) {
+                                            if (!target.isDead) {
                                                 potentialTargets.push(target);
                                             }
                                         }
@@ -11508,7 +12248,6 @@ const turnLogic = {
         
                             const energyToRegen = 5;
                             updateEnergy(battleData,energyToRegen,ownerTurn,false,"Plunder");
-                            //TODO: verify this works with energy regen, the assumption rn is that it does
                         },
                         "target": "self",
                         "listenerName": "Plunder enemy death listener",
@@ -11521,34 +12260,10 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("KafkaChargeGained",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    const pointsGained = generalInfo.pointsGained;
-                    const valuesRef = ownerTurn.battleValues;
-
-                    const oldValue = valuesRef.fuaStacks;
-                    const maxValue = 2;
-                    valuesRef.fuaStacks = Math.max(0, Math.min(maxValue, oldValue + pointsGained));
-                    const newValue = valuesRef.fuaStacks;
-                    const valueWasDiff = oldValue != newValue;
-
-                    const sourceString = generalInfo.sourceString
-                    if (valueWasDiff && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/misc/kafka/Icon1005Passive.png",sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `FUA Charge (Kafka): ${oldValue} --> ${valuesRef.fuaStacks}/${maxValue} [${sourceString}]`});
-                        
-                        if (pointsGained > 0) {
-                            ownerTurn.kafkaFUAStackSum ??= 0;
-                            ownerTurn.kafkaFUAStackSum += valuesRef.fuaStacks - oldValue;
-                            
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "kafkaFUAStackSum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.fuaStacks,
-                            currentSumValue: ownerTurn.kafkaFUAStackSum,
-                            currentAddedValue: valuesRef.fuaStacks - oldValue
-                        });
-                    }
+                    const generalData = this.generalData ??= {summerName: "kafkaFUAStackSum",baseName: "fuaStacks",maxName: "fuaStacksMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "FUA Charge (Kafka)",displayIcon:"/HonkaiSR/misc/kafka/Icon1005Passive.png"};
+                    // const oldValue = ownerTurn.battleValues.prana;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
                 },
                 "target": "self",
                 "listenerName": "Kafka FUA Charge Handler",
@@ -11605,21 +12320,6 @@ const turnLogic = {
 
                 let ownerTurn = this.ownerTurn;
 
-                // const techCall = this.returnTechCall ??= createQueueObject(ownerTurn,{
-                //     actionCall: this.skillFunctions.kafkaTechnique,
-                //     action: "Technique",
-                //     points: 0, 
-    
-                //     isAttack: true,
-                //     isAbility: false,
-                //     useAnyTriggers: false,
-                //     eventTypeStartLOG: "TechniqueStart",
-    
-                //     poolKey: this.abilityTargetPools.Technique,
-                // })
-                // techCall.sourceTurn = thisTurn;
-                // techCall.target = battleData.enemyPositions;
-
                 const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.kafkaTechnique;
                 callTech(battleData,null,ownerTurn);
             },
@@ -11635,6 +12335,7 @@ const turnLogic = {
         "characterValues": {
             "fuaStacks": 2,
             "fuaStackDebt": 0,
+            "fuaStacksMax": 2,
         },
         "useTechnique": true,
         "techniqueType": "Attack",
@@ -12346,9 +13047,8 @@ const turnLogic = {
 
                 const target = chainedAttackRef.primaryTargetArray;
 
-                const detonate = battleActions.dotDetonateWrapper;
                 for (let enemy of target) {
-                    detonate(battleData,sourceTurn,ultMulti,enemy);
+                    dotDetonateWrapper(battleData,sourceTurn,ultMulti,enemy);
                 }
             },
             fishladyTechnique(battleData,actionObject,sourceTurn) {
@@ -12502,7 +13202,7 @@ const turnLogic = {
                     {
                         "trigger": "WasAttackedEnd",
                         condition(battleData,generalInfo,personalOwner) {
-                            if (!personalOwner.hysilensFieldProcCounter || personalOwner.isDead) {return;}
+                            if (!personalOwner.hysilensFieldProcCounter || personalOwner.isDead || personalOwner.isLimbo) {return;}
 
                             const providerTurn = this.providerTurn;
                             // const ownerTurn = this.ownerTurn;
@@ -12616,11 +13316,6 @@ const turnLogic = {
 
                             const sourceTurn = generalInfo.sourceTurn;
                             sourceTurn.hysilensFieldProcCounter = 0;
-        
-                            // const enemyPositions = battleData.enemyPositions;
-                            // for (let enemy of enemyPositions) {
-                            //     enemy.hysilensFieldProcCounter = 0;
-                            // }
                         },
                         "priority": -11,
                         "target": "self",
@@ -12741,7 +13436,7 @@ const turnLogic = {
                 },
                 "target": "self",
                 "isPersonal": true,
-                "listenerName": "Zone - duration increment handler(visual)",
+                "listenerName": "Hysilens Zone - duration increment handler(visual)",
                 "ownerTurn": {},
             },
             {
@@ -13726,14 +14421,16 @@ const turnLogic = {
                             if (dmgSlot != "Ultimate" && dmgSlot != "Basic ATK") {return;}
         
                             const targetsGotHit = generalInfo.targetsGotHit;
-                            const enemyPositions = battleData.enemyPositions;
                             
                             const logicRef = turnLogic[ownerTurn.properName];
                             const ATKObjects = logicRef.ATKObjects;
                             const debuffSheet = ATKObjects.blackswanSkillDEBUFFSHEET;
+
+                            const enemyTurns = battleData.enemyBasedTurns;
         
-                            for (let enemy of enemyPositions) {
-                                if (!targetsGotHit[enemy.name]) {continue;}
+                            for (let enemySlot in targetsGotHit) {
+                                const enemy = enemyTurns[enemySlot];
+                                if (enemy.isDead || enemy.isLimbo) {continue;}
                                 updateBuff(battleData,enemy,debuffSheet);
                             }
                         },
@@ -14820,6 +15517,7 @@ const turnLogic = {
                         "decay": false,
                         "expireType": "EndTurn",
                         "isDebuff": true,
+                        "buffDisplayIcon": "misc/mortenaxBlade/Icon1507Ultra01.png",
                     }
                     ATKObjects.bladeMBalefireE1DEBUFFSHEET = {
                         "stats": [ResistanceAll],
@@ -14853,6 +15551,7 @@ const turnLogic = {
                         "currentStacks": 1,
                         "decay": false,
                         "expireType": null,
+                        "buffDisplayIcon": "misc/mortenaxBlade/Icon1507Ultra02.png",
                     }
 
                     ATKObjects.bladeMFuryTraceSHEET = {
@@ -14959,6 +15658,9 @@ const turnLogic = {
                     uniqueEventFunction: logicRef.skillFunctions.infiniteFuryQueuedExpired,
                     eventImage: "BEicons/BattleEvent_1507.png",
                 };
+                const newAV = 10000/70;
+                ActionEntry.AV = newAV;
+                ActionEntry.AVBase = newAV;
                 const nextAV = battleData.nextTurnAV;
                 nextAV.push(ActionEntry);
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Mortenax Blade Ultimate", bodyText: `Mortenax Blade countdown added to the turn order.`});}
@@ -14990,6 +15692,40 @@ const turnLogic = {
                     const e1Sheet = ATKObjects.bladeMBalefireE1DEBUFFSHEET;
                     const enemyPositions = battleData.enemyPositions;
                     removeBuffFromBatch(battleData,enemyPositions,e1Sheet);
+                }
+
+                if (sourceTurn.markedForRevive) {
+                    if (!ATKObjects.mBladeReviveHEALOBJECT) {
+                        // let values = ATKObjects.bailuTalentHealREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+    
+                        const actionTags = ["All","Heal"];
+                        const compositeCacheTag = actionTags + sourceTurn.properName;
+                        ATKObjects.mBladeReviveHEALOBJECT = {
+                            multipliers: {
+                                primary: 0.50,
+                                blast: null,
+                                all: null,
+                            },
+                            flatAmounts: {
+                                primary: null,
+                                blast: null,
+                                all: null,
+                            },
+                            scalar: null,//"HP",
+                            DMGTags: [],
+                            allToughness: false,
+                            slot: "Talent",
+                            actionTags,compositeCacheTag
+                        }
+                    }
+                    let healObject = ATKObjects.mBladeReviveHEALOBJECT;
+                    const targetTurn = sourceTurn;
+    
+                    targetTurn.isLimbo = false;
+                    targetTurn.markedForRevive = false;
+                    targetTurn.currentHP = 0;
+    
+                    healAlly(battleData,healObject,targetTurn,sourceTurn,"Talent",1);
                 }
 
                 logicRef.skillFunctions.bladeTraceRegen(battleData,sourceTurn);//trace ad nauseum
@@ -15301,6 +16037,7 @@ const turnLogic = {
                             "decay": false,
                             "expireType": null,
                             "actionTags": ["FUA"],
+                            "buffDisplayIcon": "misc/mortenaxBlade/Icon1507Rank02.png"
                         }
 
                         updateBuffBatchTargets(battleData,allAlliesArray,buffSheet);
@@ -15344,43 +16081,8 @@ const turnLogic = {
                         condition(battleData,generalInfo) {
                             // poke("EnergyChanged",battleData,{sourceTurn,newAmount,overFill,amount});
                             const ownerTurn = this.ownerTurn;
-                            
-                            //TODO: cleanse upon reaching full, which would be when this is either gonna recognize overfill or if we can see we're at full from something like cyrene I guess, something for later
-                            const overflow = generalInfo.overFill;
-                            if (overflow) {
-                                // const characterName = ownerTurn.properName;
-                                // const logicRef = turnLogic[characterName];
-                                const valuesRef = ownerTurn.battleValues;
-                                // const rank = ownerTurn.rank;
-                                // overflowEnergy
-                                const oldAmount = valuesRef.overflowEnergy;
-                                const cap = 80;
-                                valuesRef.overflowEnergy = Math.min(cap,valuesRef.overflowEnergy + overflow);
-                                const amountGained = valuesRef.overflowEnergy - oldAmount;
-                                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Energy Overflow (Saber): ${oldAmount.toLocaleString()} --> ${valuesRef.overflowEnergy.toLocaleString()}/${cap}`});}
-        
-        
-                                if (battleData.isLoggyLogger) {
-                                    logToBattle(battleData,{logType: "EnergyChange", isOverflow: true, target: ownerTurn.properName, amount: amountGained, oldEnergy:oldAmount, newEnergy:valuesRef.overflowEnergy, maximum:cap, source:"Bone, Hardened ad Nauseam [Overflow Handler]"});
-                                
-                                    if (valuesRef.overflowEnergy > oldAmount) {
-                                        ownerTurn.mortenaxBladeOverflowSummer ??= 0;
-                                        ownerTurn.mortenaxBladeOverflowSummer += amountGained;
-                                        // console.log(ownerTurn.saberSumResonance)
-                                    }
-                                    logToBattle(battleData,{
-                                        logType: "SUMMARY:SUM",
-                                        function: "mortenaxBladeOverflowSummer",
-                                        AV: battleData.sumAV,
-                                        currentValue: valuesRef.overflowEnergy,
-                                        currentSumValue: ownerTurn.mortenaxBladeOverflowSummer,
-                                        currentAddedValue: amountGained
-                                    });
-                                }
-                            }
-        
-                            // const pseudoObject = this.pseudoObject ??= {pointsGained: 0,sourceString:null};
-                            // poke("SaberGainCoreResonance",battleData,pseudoObject,null);//this will pseudo check if she has manaburst and can be advanced, instead of having it in its own listener
+                            const generalData = this.generalData ??= {summerName: "mortenaxBladeOverflowSummer",sourceString: "Bone, Hardened ad Nauseam",energyOverrideIcon:"misc/mortenaxBlade/Icon1507SkillTree01.png"};
+                            genericEnergyOverflow(battleData,ownerTurn,generalInfo,generalData);
                         },
                         "target": "self",
                         "isPersonal": true,
@@ -15608,36 +16310,13 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("mortenaxBladeGainCharge",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    // coreResonance
-                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
-                    const pointsGained = generalInfo.pointsGained;
-                    const valuesRef = ownerTurn.battleValues;
 
-                    const oldValue = valuesRef.charge;
-                    const maxValue = valuesRef.chargeMax;
-                    valuesRef.charge = oldValue + pointsGained;
-                    const newValue = valuesRef.charge;
-
-                    const sourceString = generalInfo.sourceString
-                    if (pointsGained && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Charge (Mortenax Blade): ${oldValue} --> ${valuesRef.charge}/${maxValue} [${sourceString}]`});
-                        
-                        if (pointsGained > 0) {
-                            ownerTurn.mortenaxBladeChargeSum ??= 0;
-                            ownerTurn.mortenaxBladeChargeSum += valuesRef.charge - oldValue;
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "mortenaxBladeChargeSum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.charge,
-                            currentSumValue: ownerTurn.mortenaxBladeChargeSum,
-                            currentAddedValue: valuesRef.charge - oldValue
-                        });
-                    }
-
-                    poke("mortenaxBladeQueueFUA",battleData,null)
+                    const generalData = this.generalData ??= {summerName: "mortenaxBladeChargeSum",baseName: "charge",maxName: null,maxNameDisplay: "chargeMax",minName: null,isRealSubEnergy: true,
+                        baseString: "Charge (Mortenax Blade)",displayIcon:"/HonkaiSR/misc/mortenaxBlade/Icon1507Passive.png"};
+                    // const oldValue = ownerTurn.battleValues.prana;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
+                    
+                    poke("mortenaxBladeQueueFUA",battleData,null);
                 },
                 "target": "self",
                 "listenerName": "Mortenax Blade Charge Handler",
@@ -15648,32 +16327,75 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
-                    const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
-                        name: this.listenerName,
-                        priority: priorityList.ability.CharacterBuffOthers,
-                        queueTag: "QueuedInsert",
+                    if (generalInfo) {
+                        const queueObject = this.queueObjectRevive ??= createQueueObject(ownerTurn,{
+                            name: this.listenerName,
+                            priority: priorityList.ability.CharacterReviveSelf,
+                            queueTag: "QueuedInsert",
+        
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.infiniteFuryExpired,
+                            action: "Revive",
+                            abortCheck: null,//(battleData,actionObject,sourceTurn)
+        
+                            isInserted: true,
+                            dontKeepNextWave: false,//ults always clear out
+                            isAttack: false,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "ReviveStart",
+        
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Exit,
+                        })
     
-                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.infiniteFuryExpired,
-                        action: "Insert",
-                        abortCheck: null,//(battleData,actionObject,sourceTurn)
+                        queueObject.sourceTurn = ownerTurn;
+                        ownerTurn.markedForRevive = true;
+                        queueObject.target = [ownerTurn];
+                        queueInsertAbility(battleData,queueObject);
+                    }
+                    else {
+                        const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                            name: this.listenerName,
+                            priority: priorityList.ability.CharacterBuffOthers,
+                            queueTag: "QueuedInsert",
+        
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.infiniteFuryExpired,
+                            action: "Insert",
+                            abortCheck: null,//(battleData,actionObject,sourceTurn)
+        
+                            isInserted: true,
+                            dontKeepNextWave: false,//ults always clear out
+                            isAttack: false,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "GenericAbilityStart",
+        
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Exit,
+                        })
     
-                        isInserted: true,
-                        dontKeepNextWave: false,//ults always clear out
-                        isAttack: false,
-                        isAbility: true,
-                        useAnyTriggers: true,
-                        eventTypeStartLOG: "GenericAbilityStart",
-    
-                        poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Exit,
-                    })
-
-                    queueObject.sourceTurn = ownerTurn;
-                    queueObject.target = [ownerTurn];
-                    queueInsertAbility(battleData,queueObject);
+                        queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = [ownerTurn];
+                        queueInsertAbility(battleData,queueObject);
+                    }
                 },
                 "target": "self",
                 "listenerName": "Mortenax Blade Queue Exit Infinity Fury",
                 "ownerTurn": {},
+            },
+            {
+                "trigger": "WaitingLimbo",
+                condition(battleData,generalInfo,personalOwner) {
+                    const ownerTurn = this.ownerTurn;
+                    // if (personalOwner.isDead || personalOwner.isLimbo) {return;}
+
+                    const battleValues = ownerTurn.battleValues;
+                    if (!battleValues.bladeFuryActive) {return;}
+
+                    poke("mortenaxBladeQueueExit",battleData,true);
+                },
+                "target": "self",
+                "priority": -80,
+                "isPersonal": true,
+                "listenerName": "MBlade mid-fury revive handling",
             },
             {
                 "trigger": "mortenaxBladeQueueFUA",
@@ -15701,7 +16423,7 @@ const turnLogic = {
                         actionCall: turnLogic[ownerTurn.properName].skillFunctions.bladeSkillFUA,
                         action: "Skill",
                         abortCheck(battleData,actionObject,sourceTurn) {
-                            if (sourceTurn.currentHP <= 1) {
+                            if (sourceTurn.currentHP <= 1 || !sourceTurn.battleValues.bladeFuryActive) {
                                 sourceTurn.battleValues.fuaIsQueued = false;
                                 return true;
                             }
@@ -15743,57 +16465,48 @@ const turnLogic = {
                     if (otherObscureCondition) {
                         ownerTurn.ultyQueued = true;
 
-                        const isEnhanced = ownerTurn.battleValues.bladeFuryActive;
+                        const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                            name: this.listenerName,
+                            priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
 
-                        if (isEnhanced) {
-                            const queueObject = this.queueObjectEnh ??= createQueueObject(ownerTurn,{
-                                name: this.listenerName,
-                                priority: priorityList.turn.Default,
-                                queueTag: "QueuedUltimate",
-    
-                                actionCall: turnLogic[ownerTurn.properName].skillFunctions.bladeUltimateEnh,
-                                action: "Ultimate",
-    
-                                energyCost: ownerTurn.maxEnergy,
-    
-                                dontKeepNextWave: true,//ults always clear out
-                                isEnhanced: true,
-                                isAttack: true,
-                                isAbility: true,
-                                useAnyTriggers: true,
-                                eventTypeStartLOG: "UltimateStart",
-    
-                                poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.UltimateEnh,
-                            })
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.bladeUltimateEnh,
+                            action: "Ultimate",
+                            abortCheck(battleData,actionObject,sourceTurn) {
+                                const isEnhanced = sourceTurn.battleValues.bladeFuryActive;
 
-                            queueObject.target = battleData.enemyPositions;
-                            queueObject.sourceTurn = ownerTurn;
-                            queueUltimate(battleData,queueObject);
-                        }
-                        else {
-                            const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
-                                name: this.listenerName,
-                                priority: priorityList.turn.Default,
-                                queueTag: "QueuedUltimate",
-    
-                                actionCall: turnLogic[ownerTurn.properName].skillFunctions.bladeUltimate,
-                                action: "Ultimate",
-    
-                                energyCost: ownerTurn.maxEnergy,
-    
-                                dontKeepNextWave: true,//ults always clear out
-                                isAttack: false,
-                                isAbility: true,
-                                useAnyTriggers: true,
-                                eventTypeStartLOG: "UltimateStart",
-    
-                                poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
-                            })
+                                const logicRef = turnLogic[sourceTurn.properName];
 
-                            queueObject.target = [ownerTurn];
-                            queueObject.sourceTurn = ownerTurn;
-                            queueUltimate(battleData,queueObject);
-                        }
+                                if (isEnhanced && !actionObject.isEnhanced) {
+                                    actionObject.actionCall = logicRef.skillFunctions.bladeUltimateEnh;
+                                    actionObject.isEnhanced = true;
+                                    actionObject.isAttack = true;
+                                    actionObject.target = battleData.enemyPositions;
+                                    actionObject.poolKey = logicRef.abilityTargetPools.UltimateEnh;
+                                }
+                                else if (!isEnhanced && actionObject.isEnhanced){
+                                    actionObject.actionCall = logicRef.skillFunctions.bladeUltimate;
+                                    actionObject.isEnhanced = false;
+                                    actionObject.isAttack = false;
+                                    actionObject.target = [sourceTurn];
+                                    actionObject.poolKey = logicRef.abilityTargetPools.Ultimate;
+                                }
+                            },
+
+                            energyCost: ownerTurn.maxEnergy,
+
+                            dontKeepNextWave: true,//ults always clear out
+                            isEnhanced: true,
+                            isAttack: true,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.UltimateEnh,
+                        })
+
+                        queueObject.sourceTurn = ownerTurn;
+                        queueUltimate(battleData,queueObject);
                     }
                 },
                 "target": "Self",
@@ -15824,6 +16537,7 @@ const turnLogic = {
         "buffsBattleTemp": {},
         "characterValues": {
             "overflowEnergy": 0,
+            "overflowEnergyMax": 80,
             "hasNilityCharacters": false,
             "charge": 0,
             "chargeMax": null,
@@ -16206,7 +16920,7 @@ const turnLogic = {
                 const addedWrapper = battleActions.additionalDMGWrapper;
                 for (let enemySlot in targetsGotHit) {
                     const currentEnemy = enemyTurns[enemySlot];
-                    if (currentEnemy.isDead) {continue;}
+                    if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
                     let debuffCount = currentEnemy.debuffCounter;
 
                     if (debuffCount) {addedWrapper(battleData,allyTurn,allyAssignedName,ATKObject,currentEnemy,"E6 Feeble Pursuit");}
@@ -17171,7 +17885,7 @@ const turnLogic = {
                                     const enemyTurn = enemyTurns[enemySlot];
                                     if (enemyTurn.dahliaEnemyImplanted) {
                                         enemyTurn.dahliaEnemyImplanted = false;
-                                        if (enemyTurn.isDead) {continue;}
+                                        if (enemyTurn.isDead || enemyTurn.isLimbo) {continue;}
 
                                         dealToughnessDMG(battleData,sourceTurn,false,enemyTurn,1,20,overBreakTotals,ATKObject,"Fire",generalInfo,slot,true,true)
                                     }
@@ -17366,7 +18080,7 @@ const turnLogic = {
                             if (!wasAlreadyAllToughness) {ATKObject.allToughness = true;}
                             for (let enemySlot in targetsGotHit) {
                                 const enemyTurn = enemyTurns[enemySlot];
-                                if (enemyTurn.dahliaE1ProcDone || enemyTurn.isDead) {continue;}
+                                if (enemyTurn.dahliaE1ProcDone || enemyTurn.isDead || enemyTurn.isLimbo) {continue;}
                                 enemyTurn.dahliaE1ProcDone = true;//TODO: later when we allow multiphase bosses(which is actually soon) we need to allow the boss on regenerating their bars, to proc this false again.
 
                                 const maxToughness = enemyTurn.maxToughness;
@@ -17847,10 +18561,31 @@ const turnLogic = {
                 }
                 else {ATKObject.bonusMultiplier = 0;}
 
+                let debtSheet = sourceTurn.topazSkillProofDebtVULNSHEET;
+
+                const debtTarget = valuesRef.enemyWithDebt;
+                const newTarget = actionObject.target[0];
+                if (!debtTarget) {
+                    updateBuff(battleData,newTarget,debtSheet);
+                }
+                else if (debtTarget.properName != newTarget.properName) {
+                    removeBuff(battleData,debtTarget,debtSheet);
+
+                    if (rank >= 1) {
+                        const buffName = logicRef.buffNames.e1Debtor;
+                        const debtorCheck = debtTarget.buffsObject[buffName];
+                        if (debtorCheck) {
+                            removeBuff(battleData,debtTarget,debtorCheck);
+                        }
+                    }
+
+                    updateBuff(battleData,newTarget,debtSheet);
+                    newTarget.topazE1DebtorSTACKCOMPLETE = false;
+                    valuesRef.enemyWithDebt = newTarget;
+                }
+
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);//no split energy, all at once before dmg
                 attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
-
-                
 
                 if (isEnhanced) {
                     valuesRef.bonanzaStacks -= 1;
@@ -18001,6 +18736,26 @@ const turnLogic = {
 
                     const passiveListeners = this.passiveListeners;
 
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    let skillRef = ATKObjects.topazSkillEnhancedREF;
+                    let buffSheet = ATKObjects.topazSkillProofDebtVULNSHEET ??= {
+                        "stats": [VulnAll],
+                        [VulnAll]: battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn)[1],
+                        "source": ownerTurn.properName,
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": logicRef.buffNames.debt,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "isDebuff": true,
+                        "actionTags": ["FUA"]
+                    }
+                    ownerTurn.topazSkillProofDebtVULNSHEET = buffSheet;
 
                     //trace fin turmoil
                     const listener1 = passiveListeners[0];
@@ -18299,32 +19054,10 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
-                    const logicRef = turnLogic[ownerTurn.properName];
-                    const ATKObjects = logicRef.ATKObjects;
-
-                    const buffNames = logicRef.buffNames;
                     let charValuesRef = ownerTurn.battleValues;
                     charValuesRef.enemyWithDebt = battleData.primaryTarget;
                     let targetTurn = charValuesRef.enemyWithDebt;
-
-                    // let values = ATKObjects.topazSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
-                    let skillRef = ATKObjects.topazSkillEnhancedREF;
-                    let buffSheet = ATKObjects.topazSkillProofDebtVULNSHEET ??= {
-                        "stats": [VulnAll],
-                        [VulnAll]: battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn)[1],
-                        "source": ownerTurn.properName,
-                        "sourceOwner": ownerTurn.properName,
-                        "buffName": buffNames.debt,
-                        "durationInTurn": null,
-                        "duration": 1,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null,
-                        "isDebuff": true,
-                        "actionTags": ["FUA"]
-                    }
+                    let buffSheet = ownerTurn.topazSkillProofDebtVULNSHEET;
                     updateBuff(battleData,targetTurn,buffSheet);
                 },
                 "target": "self",
@@ -18336,23 +19069,108 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
                     let ownerTurn = this.ownerTurn;
+                    const battleValues = ownerTurn.battleValues;
+                    let targetTurn = battleValues.enemyWithDebt;
 
-                    const logicRef = turnLogic[ownerTurn.properName];
-                    const ATKObjects = logicRef.ATKObjects;
-
-                    let charValuesRef = logicRef.characterValuesBattle;
-                    charValuesRef.enemyWithDebt = battleData.primaryTarget;
-                    let targetTurn = charValuesRef.enemyWithDebt;
-
-                    if (targetTurn === null || targetTurn.isDead) {return}//if the enemy with debt is NOT one of the dead ones in this batch, leave it be
-
-                    charValuesRef.enemyWithDebt = battleData.primaryTarget;
-                    if (!charValuesRef.enemyWithDebt) {return}//battle would be over, in this case
-                    let buffSheet = ATKObjects.topazSkillProofDebtVULNSHEET;
-                    updateBuff(battleData,charValuesRef.enemyWithDebt,buffSheet);
+                    if (!targetTurn || targetTurn.isDead) {
+                        battleValues.enemyWithDebt = null;
+                    }//if the enemy with debt is NOT one of the dead ones in this batch, leave it be
                 },
                 "target": "self",
-                "listenerName": "Topaz: Proof of Debt death swap",
+                "listenerName": "Topaz: Proof of Debt death set owner to null",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AbilityStart",
+                condition(battleData,generalInfo) {
+                    // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                    let ownerTurn = this.ownerTurn;
+                    const battleValues = ownerTurn.battleValues;
+                    const enemyWithDebt = battleValues.enemyWithDebt;
+                    if (enemyWithDebt) {return;}
+
+                    let livingTarget = null;
+                    let livingRank = 0;
+                    const enemyPositions = battleData.enemyPositions;
+                    for (let enemy of enemyPositions) {
+                        if (enemy.isDead) {continue;}
+
+                        if (enemy.enemyRank > livingRank) {
+                            livingTarget = enemy;
+                            livingRank = enemyRank;
+                        }
+                    }
+
+                    battleValues.enemyWithDebt = livingTarget;
+                    if (!livingTarget) {return}//battle would be over, in this case
+                    let buffSheet = ownerTurn.topazSkillProofDebtVULNSHEET;
+                    updateBuff(battleData,livingTarget,buffSheet);
+                    livingTarget.topazE1DebtorSTACKCOMPLETE = false;
+                },
+                "target": "self",
+                "listenerName": "Topaz: Proof of Debt application if missing - ability",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "TurnStart",
+                condition(battleData,generalInfo) {
+                    // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                    let ownerTurn = this.ownerTurn;
+                    const battleValues = ownerTurn.battleValues;
+                    const enemyWithDebt = battleValues.enemyWithDebt;
+                    if (enemyWithDebt) {return;}
+
+                    let livingTarget = null;
+                    let livingRank = 0;
+                    const enemyPositions = battleData.enemyPositions;
+                    for (let enemy of enemyPositions) {
+                        if (enemy.isDead) {continue;}
+
+                        if (enemy.enemyRank > livingRank) {
+                            livingTarget = enemy;
+                            livingRank = enemyRank;
+                        }
+                    }
+
+                    battleValues.enemyWithDebt = livingTarget;
+                    if (!livingTarget) {return}//battle would be over, in this case
+                    let buffSheet = ownerTurn.topazSkillProofDebtVULNSHEET;
+                    updateBuff(battleData,livingTarget,buffSheet);
+                    livingTarget.topazE1DebtorSTACKCOMPLETE = false;
+                },
+                "target": "self",
+                "listenerName": "Topaz: Proof of Debt application if missing - ability",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "ExtraTurnStart",
+                condition(battleData,generalInfo) {
+                    // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                    let ownerTurn = this.ownerTurn;
+                    const battleValues = ownerTurn.battleValues;
+                    const enemyWithDebt = battleValues.enemyWithDebt;
+                    if (enemyWithDebt) {return;}
+
+                    let livingTarget = null;
+                    let livingRank = 0;
+                    const enemyPositions = battleData.enemyPositions;
+                    for (let enemy of enemyPositions) {
+                        if (enemy.isDead) {continue;}
+
+                        if (enemy.enemyRank > livingRank) {
+                            livingTarget = enemy;
+                            livingRank = enemyRank;
+                        }
+                    }
+
+                    battleValues.enemyWithDebt = livingTarget;
+                    if (!livingTarget) {return}//battle would be over, in this case
+                    let buffSheet = ownerTurn.topazSkillProofDebtVULNSHEET;
+                    updateBuff(battleData,livingTarget,buffSheet);
+                    livingTarget.topazE1DebtorSTACKCOMPLETE = false;
+                },
+                "target": "self",
+                "listenerName": "Topaz: Proof of Debt application if missing - ability",
                 "ownerTurn": {},
             },
             {
@@ -18585,24 +19403,8 @@ const turnLogic = {
                 const ATKObjects = logicRef.ATKObjects;
 
                 const valuesRef = sourceTurn.battleValues;
-                const oldValue = valuesRef.charge;
-                valuesRef.charge -= 1;
                 valuesRef.chargeDebt -= 1;
-                if (battleData.isLoggyLogger) {
-                    // if (newCharge > oldValue) {
-                    //     sourceTurn.archerFUAStackSum ??= 0;
-                    //     sourceTurn.archerFUAStackSum += newCharge - oldValue;
-                        
-                    // }
-                    logToBattle(battleData,{
-                        logType: "SUMMARY:SUM",
-                        function: "archerFUAStackSum",
-                        AV: battleData.sumAV,
-                        currentValue: valuesRef.charge,
-                        currentSumValue: sourceTurn.archerFUAStackSum,
-                        currentAddedValue: valuesRef.charge - oldValue
-                    });
-                }
+                poke("ArcherChargeGained",battleData,{pointsGained: -1,sourceString:"FUA Launched"});
 
                 let skillRef = ATKObjects.archerFUAREF ??= ATKObjects.Talent["Mind's Eye (True)"].variant1;
 
@@ -18960,7 +19762,7 @@ const turnLogic = {
                             let chargeRef = providerTurn.battleValues;
         
                             if (sourceTurn.isEnemy) {return;}
-                            if (sourceTurn.properName != characterName && (chargeRef.charge - chargeRef.chargeDebt) > 0) {//fail condition right off if no source exists or it's archer
+                            if (sourceTurn.properName != characterName && !chargeRef.chargeDebt) {//fail condition right off if no source exists or it's archer
         
                                 const queueObject = this.queueObject ??= createQueueObject(providerTurn,{
                                     name: this.listenerName,
@@ -18984,7 +19786,6 @@ const turnLogic = {
                                 queueObject.sourceTurn = providerTurn;
                                 queueObject.target = [battleData.primaryTarget];
                                 queueInsertAbility(battleData,queueObject);
-                                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Archer Charge ${chargeRef.charge} --> ${chargeRef.charge-1}/4`});}
                                 // chargeRef.charge -= 1;
                                 chargeRef.chargeDebt += 1;
                             }
@@ -19052,37 +19853,13 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("ArcherChargeGained",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    const pointsGained = generalInfo.pointsGained;
-                    const valuesRef = ownerTurn.battleValues;
-
-                    const oldValue = valuesRef.charge;
-                    const maxValue = valuesRef.chargeMax;
-                    valuesRef.charge = Math.max(0, Math.min(maxValue, oldValue + pointsGained));
-                    const newValue = valuesRef.charge;
-                    const valueWasDiff = oldValue != newValue;
-
-                    const sourceString = generalInfo.sourceString
-                    if (valueWasDiff && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters["Archer"].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `FUA Charge (Archer): ${oldValue} --> ${valuesRef.charge}/${maxValue} [${sourceString}]`});
-                        
-                        if (pointsGained > 0) {
-                            ownerTurn.archerFUAStackSum ??= 0;
-                            ownerTurn.archerFUAStackSum += valuesRef.charge - oldValue;
-                            
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "archerFUAStackSum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.charge,
-                            currentSumValue: ownerTurn.archerFUAStackSum,
-                            currentAddedValue: valuesRef.charge - oldValue
-                        });
-                    }
+                    const generalData = this.generalData ??= {summerName: "archerFUAStackSum",baseName: "charge",maxName: "chargeMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "FUA Charge (Archer)",displayIcon:"/HonkaiSR/" + characters["Archer"].traces.Point04.icon};
+                    // const oldValue = ownerTurn.battleValues.prana;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
                 },
                 "target": "self",
-                "listenerName": "Kafka FUA Charge Handler",
+                "listenerName": "Archer FUA Charge Handler",
                 "ownerTurn": {},
             },
             {
@@ -19897,12 +20674,13 @@ const turnLogic = {
                             action: "Skill",
                             abortCheck(battleData,actionObject,sourceTurn) {
                                 const target = actionObject.target[0];
-                                if (target.isDead || target.isLimbo) {
+                                if (target.isDead) {
                                     const enemyPositions = battleData.enemyPositions;
 
                                     let lowestHP = Infinity;
                                     let lowestTarget = null;
                                     for (let enemy of enemyPositions) {
+                                        if (enemy.isDead || enemy.isLimbo) {continue;}
                                         if (enemy.currentHP < lowestHP) {
                                             lowestHP = enemy.currentHP;
                                             lowestTarget = enemy;
@@ -20829,7 +21607,7 @@ const turnLogic = {
                         action: "Insert",
                         abortCheck(battleData,actionObject,sourceTurn) {
                             const target = actionObject.target[0];
-                            if (target.isDead || target.isLimbo) {
+                            if (target.isDead) {
                                 if (!enemyPositions.length) {return true;}
                                 else {
                                     actionObject.target = [battleData.primaryTarget];
@@ -21979,7 +22757,7 @@ const turnLogic = {
                             const target = generalInfo.target;
                             let enemyToFUA = null;
                             for (let enemySlot of target) {
-                                if (enemySlot.isDead || enemySlot.isLimbo) {continue;}
+                                if (enemySlot.isDead) {continue;}
                                 if (enemySlot.statTable[WeaknessWind]) {
                                     enemyToFUA = enemySlot;
                                     break;
@@ -21988,7 +22766,7 @@ const turnLogic = {
                             if (!enemyToFUA) {
                                 const subTarget = generalInfo.subTarget;
                                 for (let enemySlot of subTarget) {
-                                    if (enemySlot.isDead || enemySlot.isLimbo) {continue;}
+                                    if (enemySlot.isDead) {continue;}
                                     if (enemySlot.statTable[WeaknessWind]) {
                                         enemyToFUA = enemySlot;
                                         break;
@@ -22008,7 +22786,7 @@ const turnLogic = {
                                     action: "Insert",
                                     abortCheck(battleData,actionObject,sourceTurn) {
                                         const target = actionObject.target[0];
-                                        if (target.isDead || target.isLimbo) {
+                                        if (target.isDead) {
                                             sourceTurn.battleValues.e4FUAReady = true;
                                             return true;
                                         }
@@ -23299,7 +24077,7 @@ const turnLogic = {
                 let HPTally = 0;
                 const getHPFinal = calcs.getHPFinal;
                 for (let ally of allyPositions) {
-                    if (ally.isDead || ally.isUnselectable || ally.isMemosprite) {continue;}
+                    if (ally.isDead || ally.isUniqueEvent) {continue;}
                     const allyStatTable = ally.statTable;
                     const finalHP = getHPFinal(allyStatTable).HPFinal;
                     const nullHP = allyStatTable[HPFlatNULL];
@@ -23374,7 +24152,7 @@ const turnLogic = {
                 for (let enemyHit in targetsGotHit) {
                     hitsToDo++;
                     const currentEnemy = enemyTurns[enemyHit];
-                    if (currentEnemy.isDead) {continue;}
+                    if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
                     const currentHP = currentEnemy.currentHP;
                     if (!highestHPEnemy) {
                         highestHPEnemy = currentEnemy;
@@ -23397,7 +24175,7 @@ const turnLogic = {
                     const addedWrapper = battleActions.additionalDMGWrapper;
                     const characterName = sourceTurn.properName;
                     for (let i=0;i<hitsToDo;i++) {3
-                        if (highestHPEnemy.isDead) {break;}
+                        if (highestHPEnemy.isDead || highestHPEnemy.isLimbo) {break;}
                         addedWrapper(battleData,sourceTurn,characterName,ATKObject,highestHPEnemy,"Tribbie Zone");
                         // tallyRef.push({
                         //     ...addedHit.hit
@@ -23970,7 +24748,7 @@ const turnLogic = {
                 updateBuffBatchTargets(battleData,allyTargets,buffSheetFUA);
                 
                 const nextAV = battleData.nextTurnAV;
-                sourceTurn.notPresentInActionOrder = true;
+                if (sourceTurn.turnState) {sourceTurn.turnShouldEnd = true;}
                 const robinIndex = nextAV.indexOf(sourceTurn);
                 nextAV.splice(robinIndex, 1);
                 //TODO: I have no clue how performant indexOf is, so possibly revert this later but we'll see
@@ -24027,7 +24805,6 @@ const turnLogic = {
                 const ATKObjects = logicRef.ATKObjects;
                 
                 robinTurn.battleValues.robinConcertoActive = false;
-                robinTurn.notPresentInActionOrder = false;
 
                 const buffSheet = ATKObjects.robinConcertoCountdownBuffSHEET;
                 const buffSheetFUA = ATKObjects.robinConcertoCountdownBuffFUASHEET;
@@ -24126,7 +24903,7 @@ const turnLogic = {
                 let targetFound = null;
                 for (let enemyHit in targetsGotHit) {
                     const currentEnemy = enemyTurns[enemyHit];
-                    if (!currentEnemy.isDead) {
+                    if (!currentEnemy.isDead && !currentEnemy.isLimbo) {
                         if (currentEnemy.properName === primaryTarget.properName) {
                             targetFound = currentEnemy;
                             break;
@@ -24727,17 +25504,14 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("astaChargeGained",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    // coreResonance
-                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
-                    const pointsGained = generalInfo.pointsGained;
-                    const valuesRef = ownerTurn.battleValues;
+                    const generalData = this.generalData ??= {summerName: "astaChargeSummer",baseName: "chargeStacks",maxName: "chargeStacksMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "Charge (Asta)",displayIcon:"/HonkaiSR/misc/asta/Icon1009Passive.png"};
+                    const oldValue = ownerTurn.battleValues.chargeStacks;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
 
-                    const oldValue = valuesRef.chargeStacks;
-                    const chargeMax = 5;
-                    valuesRef.chargeStacks = Math.max(0,Math.min(chargeMax,oldValue + pointsGained));
-                    const newValue = valuesRef.chargeStacks;
-
-                    if (newValue === oldValue) {return;}
+                    if (!valueWasDiff) {return;}
+                    const newValue = ownerTurn.battleValues.chargeStacks;
+                    const chargeMax = ownerTurn.battleValues.chargeStacksMax;
 
                     const logicRef = turnLogic[ownerTurn.properName];
                     const ATKObjects = logicRef.ATKObjects;
@@ -24745,27 +25519,6 @@ const turnLogic = {
 
                     const atkName = buffNames.traceATK;
                     const defName = buffNames.traceDEF;
-
-
-                    const sourceString = generalInfo.sourceString;
-                    if (pointsGained && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/misc/asta/Icon1009Passive.png" ,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Charge (Asta): ${oldValue} --> ${newValue}/5 [${sourceString}]`});
-                    
-                        if (pointsGained > 0) {
-                            ownerTurn.astaChargeSummer ??= 0;
-                            ownerTurn.astaChargeSummer += valuesRef.chargeStacks - oldValue;
-                            // console.log(ownerTurn.saberSumResonance)
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "astaChargeSummer",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.chargeStacks,
-                            currentSumValue: ownerTurn.astaChargeSummer,
-                            currentAddedValue: valuesRef.chargeStacks - oldValue
-                        });
-                    }
 
                     if (!ATKObjects.astaChargeATKSHEET) {
 
@@ -24940,6 +25693,7 @@ const turnLogic = {
         "ATKObjects": {},
         "characterValues": {
             "chargeStacks": 0,
+            "chargeStacksMax": 5,
             "skipCost": true,
         },
         "useTechnique": true,
@@ -26222,8 +26976,8 @@ const turnLogic = {
                                 const debuffSheet = ATKObjects.sparkleFigmentDEBUFFSHEET;
                                 // const debuffName = debuffSheet.buffName;
 
+                                if (!battleData.activeEnemies) {return;}
                                 const enemyPositions = battleData.enemyPositions;
-                                if (!enemyPositions.length) {return;}
                                 debuffSheet.currentStacks = totalChange;
                                 // const debuffCheck = enemyPositions[0].buffsObject[debuffName];
                                 updateBuffBatchTargets(battleData,enemyPositions,debuffSheet,false,null
@@ -26927,13 +27681,7 @@ const turnLogic = {
                             const providerTurn = this.providerTurn;
                             if (!providerTurn.battleValues.hmcBackupDancerActive) {return;}
 
-                            const enemyPositions = battleData.enemyPositions;
-                            let counter = 0;
-                            for (let enemy of enemyPositions) {
-                                if (enemy.isDead || enemy.isLimbo) {continue;}
-                                counter++;
-                            }
-                            counter = Math.min(5,counter);
+                            let counter = Math.min(5,battleData.activeEnemies);
 
                             if (counter) {
                                 const breakMultiArray = this.breakMultiArray ??= [0.60,0.50,0.40,0.30,0.20];
@@ -27608,34 +28356,10 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("HanyaBurdenGained",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    const pointsGained = generalInfo.pointsGained;
-                    const valuesRef = ownerTurn.battleValues;
-
-                    const oldValue = valuesRef.burdenStacks;
-                    const maxValue = valuesRef.burdenStacksMax;
-                    valuesRef.burdenStacks = Math.max(0, Math.min(maxValue, oldValue + pointsGained));
-                    const newValue = valuesRef.burdenStacks;
-                    const valueWasDiff = oldValue != newValue;
-
-                    const sourceString = generalInfo.sourceString
-                    if (valueWasDiff && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point02.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Burden Triggers (Hanya): ${oldValue} --> ${valuesRef.burdenStacks}/${maxValue} [${sourceString}]`});
-                        
-                        if (pointsGained > 0) {
-                            ownerTurn.hanyaBurdenTriggerSum ??= 0;
-                            ownerTurn.hanyaBurdenTriggerSum += valuesRef.burdenStacks - oldValue;
-                            
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "hanyaBurdenTriggerSum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.burdenStacks,
-                            currentSumValue: ownerTurn.hanyaBurdenTriggerSum,
-                            currentAddedValue: valuesRef.burdenStacks - oldValue
-                        });
-                    }
+                    const generalData = this.generalData ??= {summerName: "hanyaBurdenTriggerSum",baseName: "burdenStacks",maxName: "burdenStacksMax",maxNameDisplay: null,minName: null,isRealSubEnergy: false,
+                        baseString: "Burden Triggers (Hanya)",displayIcon:"/HonkaiSR/misc/hanya/Icon1215BPStatus.png"};
+                    // const oldValue = ownerTurn.battleValues.prana;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
                 },
                 "target": "self",
                 "listenerName": "Hanya Burden Trigger Handler",
@@ -27646,38 +28370,13 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("HanyaBurdenHitsGained",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    // coreResonance
-                    const pointsGained = generalInfo.pointsGained;
-                    const valuesRef = ownerTurn.battleValues;
-
-                    const oldValue = valuesRef.burdenHits;
-                    const maxValue = valuesRef.burdenHitsMax;
-                    valuesRef.burdenHits = Math.max(0, Math.min(maxValue, oldValue + pointsGained));
-                    const newValue = valuesRef.burdenHits;
-                    const valueWasDiff = oldValue != newValue;
-
-                    const sourceString = generalInfo.sourceString
-                    if (valueWasDiff && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/misc/hanya/burden.png",sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Burden Hits (Hanya): ${oldValue} --> ${valuesRef.burdenHits}/${maxValue} [${sourceString}]`});
-                        
-                        if (pointsGained > 0) {
-                            ownerTurn.hanyaBurdenHitsSum ??= 0;
-                            ownerTurn.hanyaBurdenHitsSum += valuesRef.burdenHits - oldValue;
-                            
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "hanyaBurdenHitsSum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.burdenHits,
-                            currentSumValue: ownerTurn.hanyaBurdenHitsSum,
-                            currentAddedValue: valuesRef.burdenHits - oldValue
-                        });
-                    }
+                    const generalData = this.generalData ??= {summerName: "hanyaBurdenHitsSum",baseName: "burdenHits",maxName: "burdenHitsMax",maxNameDisplay: null,minName: null,isRealSubEnergy: false,
+                        baseString: "Burden Hits (Hanya)",displayIcon:"/HonkaiSR/misc/hanya/burden.png"};
+                    // const oldValue = ownerTurn.battleValues.prana;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
                 },
                 "target": "self",
-                "listenerName": "Hanya Burden Trigger Handler",
+                "listenerName": "Hanya Burden Hits Trigger Handler",
                 "ownerTurn": {},
             },
             {
@@ -28082,9 +28781,9 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.saberBasicEnhancedATKOBJECT;
 
-                const enemyPositions = battleData.enemyPositions;
-                if (enemyPositions.length <= 2) {
-                    if (enemyPositions.length === 1) {
+                const enemyCount = battleData.activeEnemies;
+                if (enemyCount.length <= 2) {
+                    if (enemyCount.length === 1) {
                         skillRef.hitSplits = hitSplitters[characterName].eba3;
                     }
                     else {
@@ -29762,6 +30461,7 @@ const turnLogic = {
                         "currentStacks": 1,
                         "decay": false,
                         "expireType": null,
+                        "buffDisplayIcon": "misc/jingliu/Icon1212Passive.png",
                     }
                     ATKObjects.jingliuTalentEnhancedSHEETULT = {
                         "stats": [DamageAll],
@@ -29883,6 +30583,8 @@ const turnLogic = {
                     const logicRef = turnLogic[ownerTurn.properName];
 
                     const passiveListeners = this.passiveListeners;
+
+                    ownerTurn.battleValues.weirdStacksMax = rank >= 6 ? 5 : 4;
 
 
                     //talent inherents
@@ -30067,16 +30769,14 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("jingliuWeirdStackGained",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    // coreResonance
-                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
-                    const pointsGained = generalInfo.pointsGained;
+                    const generalData = this.generalData ??= {summerName: "jingliuSyzygySum",baseName: "weirdStacks",maxName: "weirdStacksMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "Syzygy (Jingliu)",displayIcon:"/HonkaiSR/misc/jingliu/Icon1212EnergyBar.png"};
+                    // const oldValue = ownerTurn.battleValues.weirdStacks;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
+                    const newValue = ownerTurn.battleValues.weirdStacks;
+
                     const valuesRef = ownerTurn.battleValues;
-
-                    const oldValue = valuesRef.weirdStacks;
-                    const maxValue = ownerTurn.rank >= 6 ? 5 : 4;
-                    valuesRef.weirdStacks = Math.min(maxValue,oldValue + pointsGained);
-
-                    const newValue = valuesRef.weirdStacks;
+                    const maxValue = valuesRef.weirdStacksMax;
 
                     if (newValue === maxValue) {
                         const buffSheet = this.traceBuffSheet ??= {
@@ -30102,27 +30802,6 @@ const turnLogic = {
                     if (!valuesRef.enhancedActive && newValue >= 2) {
                         enteredState = true;
                     }
-
-                    const sourceString = generalInfo.sourceString
-                    if (pointsGained && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Syzygy (Jingliu): ${oldValue} --> ${valuesRef.weirdStacks}/${maxValue} [${sourceString}]`});
-                        
-                        if (pointsGained > 0) {
-                            ownerTurn.jingliuSyzygySum ??= 0;
-                            ownerTurn.jingliuSyzygySum += valuesRef.weirdStacks - oldValue;
-                            
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "jingliuSyzygySum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.weirdStacks,
-                            currentSumValue: ownerTurn.jingliuSyzygySum,
-                            currentAddedValue: valuesRef.weirdStacks - oldValue
-                        });
-                    }
-
 
                     if (enteredState && !valuesRef.enhancedQueued) {
                         valuesRef.enhancedQueued = true;
@@ -30220,6 +30899,7 @@ const turnLogic = {
         "characterValues": {
             "enhancedActive": false,
             "weirdStacks": 0,
+            "weirdStacksMax": 4,
             "hpLossCount": 0,
             "traceShredActive": false,
             "moonlightFinished": false,
@@ -30803,9 +31483,9 @@ const turnLogic = {
                 const buffSheet = ATKObjects.fireflyTechImplantSHEET;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
-                for (let enemy of battleData.enemyPositions) {
-                    updateBuff(battleData,enemy,buffSheet);
-                }
+
+                const enemyPositions = battleData.enemyPositions;
+                updateBuffBatchTargets(battleData,enemyPositions,buffSheet);
             },
             statCheck(battleData,currentTurn) {
                 const logicRef = turnLogic[currentTurn.properName];
@@ -31973,34 +32653,10 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("dhilFakePointsGained",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    // coreResonance
-                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
-                    const pointsGained = generalInfo.pointsGained;
-                    const valuesRef = ownerTurn.battleValues;
-
-                    const oldValue = valuesRef.fakePoints;
-                    const maxValue = valuesRef.fakePointsMax;
-                    valuesRef.fakePoints = Math.min(maxValue,oldValue + pointsGained);
-
-                    const sourceString = generalInfo.sourceString
-                    if (pointsGained && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point03.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Squama Sacrosancta (DHIL): ${oldValue} --> ${valuesRef.fakePoints}/${maxValue} [${sourceString}]`});
-                    
-                        if (pointsGained > 0) {
-                            ownerTurn.dhilFakePointSum ??= 0;
-                            ownerTurn.dhilFakePointSum += valuesRef.fakePoints - oldValue;
-                            
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "dhilFakePointSum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.fakePoints,
-                            currentSumValue: ownerTurn.dhilFakePointSum,
-                            currentAddedValue: valuesRef.fakePoints - oldValue
-                        });
-                    }
+                    const generalData = this.generalData ??= {summerName: "dhilFakePointSum",baseName: "fakePoints",maxName: "fakePointsMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "Squama Sacrosancta (DHIL)",displayIcon:"/HonkaiSR/misc/dhil/Icon1213SpecialBP.png"};
+                    // const oldValue = ownerTurn.battleValues.prana;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
                 },
                 "target": "self",
                 "listenerName": "DHIL fake skill point Handler",
@@ -32743,36 +33399,10 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("ClaraGainCounterCount",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    // coreResonance
-                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
-                    const pointsGained = generalInfo.pointsGained;
-                    const valuesRef = ownerTurn.battleValues;
-
-                    const oldValue = valuesRef.counterCount;
-                    const maxValue = valuesRef.counterCountMax;
-                    valuesRef.counterCount = Math.min(maxValue, oldValue + pointsGained);
-                    const newValue = valuesRef.counterCount;
-                    const valueWasDiff = oldValue != newValue;
-
-                    const sourceString = generalInfo.sourceString
-                    if (valueWasDiff && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Counter (Clara): ${oldValue} --> ${valuesRef.counterCount}/${maxValue} [${sourceString}]`});
-                        
-                        if (pointsGained > 0) {
-                            ownerTurn.claraCounterCountSum ??= 0;
-                            ownerTurn.claraCounterCountSum += valuesRef.counterCount - oldValue;
-                            
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "claraCounterCountSum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.counterCount,
-                            currentSumValue: ownerTurn.claraCounterCountSum,
-                            currentAddedValue: valuesRef.counterCount - oldValue
-                        });
-                    }
+                    const generalData = this.generalData ??= {summerName: "claraCounterCountSum",baseName: "counterCount",maxName: "counterCountMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "Counter (Clara)",displayIcon:"/HonkaiSR/misc/clara/Icon1107Passive.png"};
+                    // const oldValue = ownerTurn.battleValues.prana;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
                 },
                 "target": "self",
                 "listenerName": "Clara Counter Handler",
@@ -37010,7 +37640,7 @@ const turnLogic = {
                 removeBuff(battleData,eveyTurn,dmgSheet);
 
                 const enemyPositions = battleData.enemyPositions;
-                for (let enemy of enemyPositions) {removeBuff(battleData,enemy,vulnSheet);}
+                removeBuffFromBatch(battleData,enemyPositions,vulnSheet);
             },
             evernightTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -37029,8 +37659,7 @@ const turnLogic = {
             },
             evernightE1FinalMulti(battleData,ownerTurn) {
                 if (battleData.battleIsOver) {return;}
-                const enemyPositions = battleData.enemyPositions;
-                const currentEnemies = Math.min(4,enemyPositions?.length ?? 0);
+                const currentEnemies = Math.min(4,battleData.activeEnemies ?? 0);
                 const buffArray = [1,1.5,1.3,1.25,1.2];
                 const lastBuffGiven = ownerTurn.evernightE1LastMultiGiven ?? 0;
 
@@ -37289,17 +37918,19 @@ const turnLogic = {
                     {
                         "trigger": "EnemyCreated",
                         condition(battleData,generalInfo) {
-                            let ownerTurn = this.ownerTurn;
-                            // let targetTurn = generalInfo.slotRef;
-                            const evernightE1FinalMulti = this.evernightE1FinalMulti ??= turnLogic[ownerTurn.properName].skillFunctions.evernightE1FinalMulti;
-                            evernightE1FinalMulti(battleData,ownerTurn);
+                            //TODO: deprecate and remove this later
+
+                            // let ownerTurn = this.ownerTurn;
+                            // // let targetTurn = generalInfo.slotRef;
+                            // const evernightE1FinalMulti = this.evernightE1FinalMulti ??= turnLogic[ownerTurn.properName].skillFunctions.evernightE1FinalMulti;
+                            // evernightE1FinalMulti(battleData,ownerTurn);
                         },
                         "target": "team",
                         "listenerName": "Enemy created E1 buff application",
                         "ownerTurn": {},
                     },
                     {
-                        "trigger": "EnemyDied",
+                        "trigger": "EnemyCountAdjustment",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
                             //so I took Marr's E1 evernight into echo of war divine seed, and the two buds the lady summons can both be killed with evey enhanced skill
@@ -39458,19 +40089,19 @@ const turnLogic = {
                     consumeHP(battleData,null,values[0],memoTurn,memoTurn,skillRef.slot,false,false);
                 }
                 else {//this is for E2's ardent will stacks that subvert the HP drain
-                    battleValues.ardentWillStacks -= 1;
+                    poke("CastoriceGainArdentWill",battleData,{pointsGained: -1,sourceString:"HP Cost offset"});
                 }
                 battleValues.netherShouldDie = memoTurn.currentHP <= 1;
 
                 attackState = skillCasts === 1 ? "Start" : "Middle";
                 const finalRef = chainedAttackRef = attackWrapper(battleData,skillRef,memoTurn,ATKObject,actionObject.target,actionObject.subTarget,attackState,chainedAttackRef);
 
-                const enemyPositions = battleData.enemyPositions;
-                if (!enemyPositions.length) {
+                if (!battleData.activeEnemies) {
                     battleValues.netherTurnShouldEnd = true;
                 }
                 else {
                     let foundLivingEnemy = false;
+                    const enemyPositions = battleData.enemyPositions;
                     for (let enemy of enemyPositions) {
                         const currentHP = enemy.currentHP;
                         if (currentHP > 0) {
@@ -39536,7 +40167,7 @@ const turnLogic = {
                 }
 
                 const charValuesRef = sourceTurn.battleValues;
-                charValuesRef.netherRemainingTurns = 3;
+                poke("CastoriceGainNetherTurns",battleData,{pointsGained: 3,sourceString:"Netherwing Added to Field"});
                 charValuesRef.casE2NewbudReady = true;
                 const rank = sourceTurn.rank;
 
@@ -39548,7 +40179,7 @@ const turnLogic = {
                 charValuesRef.netherShouldDie = false;
                 charValuesRef.skillCasts = 0;
                 charValuesRef.totalCasts = 0;
-                charValuesRef.ardentWillStacks = rank >= 2 ? 2 : 0;
+                if (rank >= 2) {poke("CastoriceGainArdentWill",battleData,{pointsGained: 2,sourceString:"Netherwing Added to Field"});}
 
                 //inserting into the actual turn order
                 battleData.nextTurnAV.push(netherTurnObject);
@@ -39745,6 +40376,7 @@ const turnLogic = {
                 
                 ownerTurn.activeSummons -= 1;
                 ownerTurn.activeMemosprites -= 1;
+                poke("CastoriceGainNetherTurns",battleData,{pointsGained: -3,sourceString:"Netherwing Died"});
                 battleData.backupHPOnField -= 1;
                 battleData.territoryActive = false;
 
@@ -40298,7 +40930,7 @@ const turnLogic = {
         
                             const valuesRef = ownerTurn.battleValues;
                             valuesRef.netherTurnShouldEnd = false;
-                            valuesRef.netherRemainingTurns -= 1;
+                            poke("CastoriceGainNetherTurns",battleData,{pointsGained: -1,sourceString:"Netherwing Turn Started"});
                         },
                         "target": "self",
                         "isPersonal": true,
@@ -40418,6 +41050,34 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Netherwing HP Backup Drained, Queued Suicide",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "CastoriceGainNetherTurns",
+                condition(battleData,generalInfo) {
+                    // poke("CastoriceGainNetherTurns",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    const generalData = this.generalData ??= {summerName: "casNetherTurnsSummer",baseName: "netherRemainingTurns",maxName: "netherRemainingTurnsMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "Netherwing Turns (Cas)",displayIcon:"/HonkaiSR/misc/castorice/Icon1407Passive.png"};
+                    // const oldValue = ownerTurn.battleValues.chargeStacks;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
+                },
+                "target": "self",
+                "listenerName": "Castorice Nether Turns Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "CastoriceGainArdentWill",
+                condition(battleData,generalInfo) {
+                    // poke("CastoriceGainArdentWill",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    const generalData = this.generalData ??= {summerName: "casArdentSummer",baseName: "ardentWillStacks",maxName: "ardentWillStacksMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "Ardent Will (Cas)",displayIcon:"/HonkaiSR/misc/castorice/Icon1407Rank02.png"};
+                    // const oldValue = ownerTurn.battleValues.chargeStacks;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
+                },
+                "target": "self",
+                "listenerName": "Castorice Nether Turns Handler",
                 "ownerTurn": {},
             },
             {
@@ -40646,8 +41306,10 @@ const turnLogic = {
             "specialEnergyCurrentName": null,
             "specialEnergyMaxName": null,
             "netherIsActive": false,
-            "netherRemainingTurns": 3,
+            "netherRemainingTurns": 0,
+            "netherRemainingTurnsMax": 3,
             "ardentWillStacks": 0,
+            "ardentWillStacksMax": 0,
 
             "netherTurnShouldEnd": false,
             "netherShouldDie": false,
@@ -41211,6 +41873,7 @@ const turnLogic = {
             souldragonTurnAttackEnhanced(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
+                poke("dhptGainDragonAttacks",battleData,{pointsGained: -1,sourceString:"FUA Launched"});
 
                 let skillRef = ATKObjects.dhptTalentREF ??= ATKObjects["Talent"]["Of Virtue, Forms Unfold"].variant1;
                 let values = ATKObjects.dhptTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
@@ -41344,7 +42007,7 @@ const turnLogic = {
                 const ATKObject2 = ATKObjects.dhptUltimateATKOBJECTPOST;
 
                 const battleValues = sourceTurn.battleValues;
-                battleValues.souldragonEnhancedTurns = 2 + (rank>=2 ? 2 : 0);
+                poke("dhptGainDragonAttacks",battleData,{pointsGained: 2 + (rank>=2 ? 2 : 0),sourceString:"Ultimate"});
                 logicRef.skillFunctions.dhptUltimateShield(battleData,sourceTurn);
 
                 let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget,"Start",null);
@@ -41526,10 +42189,10 @@ const turnLogic = {
                 let enemiesChecked = 0;
                 for (let enemyHit in targetsGotHit) {
                     const currentEnemy = enemyTurns[enemyHit];
-                    if (currentEnemy.isDead) {continue;}
+                    if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
                     addedDMG(battleData,allyTurn,allyTurn.properName,ATKObject,currentEnemy,"Bondmate");
 
-                    if (!currentEnemy.isDead) {
+                    if (!currentEnemy.isDead && !currentEnemy.isLimbo) {
                         if (enemiesChecked === 0) {highestHPEnemy = currentEnemy;}
                         else if (currentEnemy.currentHP > highestHPEnemy.currentHP) {highestHPEnemy = currentEnemy}
                         enemiesChecked++;
@@ -41586,7 +42249,7 @@ const turnLogic = {
 
                 for (let enemyHit in targetsGotHit) {
                     const currentEnemy = enemyTurns[enemyHit];
-                    if (currentEnemy.isDead) {continue;}
+                    if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
                     addedDMG(battleData,allyTurn,allyTurn.properName,ATKObject,currentEnemy,"Bondmate");
                 }
             },
@@ -41757,6 +42420,20 @@ const turnLogic = {
                 ],
             },
             {
+                "trigger": "dhptGainDragonAttacks",
+                condition(battleData,generalInfo) {
+                    // poke("dhptGainDragonAttacks",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    const generalData = this.generalData ??= {summerName: "dhptDragonAttackSummer",baseName: "souldragonEnhancedTurns",maxName: "souldragonEnhancedTurnsMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "Enhanced Turns (DHPT)",displayIcon:"/HonkaiSR/misc/dhpt/Icon1414Passive.png"};
+                    // const oldValue = ownerTurn.battleValues.chargeStacks;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
+                },
+                "target": "self",
+                "listenerName": "DHPT Dragon attacks Handler",
+                "ownerTurn": {},
+            },
+            {
                 "trigger": "DHPTFUAQueue",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -41765,8 +42442,6 @@ const turnLogic = {
                     const dragonTurn = generalInfo.eventTurn;
 
                     if (valuesRef.souldragonEnhancedTurns) {
-                        valuesRef.souldragonEnhancedTurns -= 1;
-
                         const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
                             name: this.listenerName + " [FUA ATTACK]",
                             priority: priorityList.ability.CharacterAttackFromSelf,
@@ -41934,6 +42609,7 @@ const turnLogic = {
         "ATKObjects": {},
         "characterValues": {
             "souldragonEnhancedTurns": 0,
+            "souldragonEnhancedTurnsMax": 99,
             "bondmateSlot": null,
             "souldragonActive": false,
         },
@@ -43415,36 +44091,10 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("MarchGainCounterCount",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    // coreResonance
-                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
-                    const pointsGained = generalInfo.pointsGained;
-                    const valuesRef = ownerTurn.battleValues;
-
-                    const oldValue = valuesRef.counterCount;
-                    const maxValue = valuesRef.counterCountMax;
-                    valuesRef.counterCount = Math.min(maxValue, oldValue + pointsGained);
-                    const newValue = valuesRef.counterCount;
-                    const valueWasDiff = oldValue != newValue;
-
-                    const sourceString = generalInfo.sourceString
-                    if (valueWasDiff && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Counter (March): ${oldValue} --> ${valuesRef.counterCount}/${maxValue} [${sourceString}]`});
-                        
-                        if (pointsGained > 0) {
-                            ownerTurn.march7pCounterCountSum ??= 0;
-                            ownerTurn.march7pCounterCountSum += valuesRef.counterCount - oldValue;
-                            
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "march7pCounterCountSum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.counterCount,
-                            currentSumValue: ownerTurn.march7pCounterCountSum,
-                            currentAddedValue: valuesRef.counterCount - oldValue
-                        });
-                    }
+                    const generalData = this.generalData ??= {summerName: "march7pCounterCountSum",baseName: "counterCount",maxName: "counterCountMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "Counter (March)",displayIcon:"/HonkaiSR/misc/m7Pres/Icon1001Passive.png"};
+                    // const oldValue = ownerTurn.battleValues.prana;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
                 },
                 "target": "self",
                 "listenerName": "March Counter Handler",
@@ -43653,7 +44303,7 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.argentiSkillATKOBJECT;
 
-                const enemyAmount = battleData.enemyPositions.length;
+                const enemyAmount = battleData.activeEnemies;
                 poke("ArgentiGainApotheosis",battleData,{pointsGained: enemyAmount,sourceString:"Skill"},null);
 
                 attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
@@ -43749,7 +44399,7 @@ const turnLogic = {
                 const useEnhancedUlt = sourceTurn.thisUltEnhanced;
                 sourceTurn.thisUltEnhanced = false;
 
-                const enemyAmount = battleData.enemyPositions.length;
+                const enemyAmount = battleData.activeEnemies;
                 
 
                 if (rank >= 2 && enemyAmount >= 3) {
@@ -44297,7 +44947,7 @@ const turnLogic = {
                 }
                 let ATKObject = ATKObjects.anaxaSkillATKOBJECT;
 
-                const enemyTargets = battleData.enemyPositions.length;
+                const enemyTargets = battleData.activeEnemies;
                 const buffSheet = ATKObjects.anaxaSkillPerTargetDMGSHEET;
                 buffSheet.currentStacks = enemyTargets;
                 updateBuff(battleData,sourceTurn,buffSheet);
@@ -44686,7 +45336,7 @@ const turnLogic = {
                                             if (target.isDead) {
                                                 actionObject.target = [battleData.primaryTarget];
                                             }
-                                            else if (!battleData.enemyPositions.length) {
+                                            else if (!battleData.activeEnemies) {
                                                 sourceTurn.battleValues.extraSkillActive = false;
                                                 return true;
                                             }
@@ -44725,7 +45375,7 @@ const turnLogic = {
                                             if (target.isDead) {
                                                 actionObject.target = [battleData.primaryTarget];
                                             }
-                                            else if (!battleData.enemyPositions.length) {
+                                            else if (!battleData.activeEnemies) {
                                                 sourceTurn.battleValues.extraSkillActive = false;
                                                 return true;
                                             }
@@ -45649,19 +46299,13 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("jingYuanGainPrana",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    // coreResonance
-                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
-                    const pointsGained = generalInfo.pointsGained;
-                    const valuesRef = ownerTurn.battleValues;
-
-                    const oldValue = valuesRef.prana;
-                    const maxValue = valuesRef.pranaMax;
-                    valuesRef.prana = Math.max(3, Math.min(maxValue, oldValue + pointsGained));
-                    const newValue = valuesRef.prana;
-
-                    const valueWasDiff = (newValue - oldValue) != 0;
+                    const generalData = this.generalData ??= {summerName: "jingYuanPranaSum",baseName: "prana",maxName: "pranaMax",maxNameDisplay: null,minName: "pranaMin",isRealSubEnergy: false,
+                        baseString: "Prana (Jing Yuan)",displayIcon:"/HonkaiSR/misc/jingYuan/Icon1204Passive.png"};
+                    const oldValue = ownerTurn.battleValues.prana;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
 
                     if (valueWasDiff) {
+                        const newValue = ownerTurn.battleValues.prana;;
                         const valueDiff = newValue - oldValue;
 
                         const buffSheet = this.lightningSPDSHEET ??= {
@@ -45689,26 +46333,6 @@ const turnLogic = {
                             buffSheet.currentStacks = valueDiff;
                             updateBuff(battleData,lightningLordTurn,buffSheet);
                         }
-                    }
-
-                    const sourceString = generalInfo.sourceString
-                    if (valueWasDiff && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Prana (Jing Yuan): ${oldValue} --> ${valuesRef.prana}/${maxValue} [${sourceString}]`});
-                        
-                        if (pointsGained > 0) {
-                            ownerTurn.jingYuanPranaSum ??= 0;
-                            ownerTurn.jingYuanPranaSum += valuesRef.prana - oldValue;
-                            
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "jingYuanPranaSum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.prana,
-                            currentSumValue: ownerTurn.jingYuanPranaSum,
-                            currentAddedValue: valuesRef.prana - oldValue
-                        });
                     }
                 },
                 "target": "self",
@@ -45872,6 +46496,7 @@ const turnLogic = {
         "characterValues": {
             "prana": 3,
             "pranaMax": 10,
+            "pranaMin": 3,
         },
         "useTechnique": true,
         "techniqueType": "Attack",
@@ -46332,36 +46957,10 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("HimekoGainCharge",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    // coreResonance
-                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
-                    const pointsGained = generalInfo.pointsGained;
-                    const valuesRef = ownerTurn.battleValues;
-
-                    const oldValue = valuesRef.charge;
-                    const maxValue = valuesRef.chargeMax;
-                    valuesRef.charge = Math.min(maxValue, oldValue + pointsGained);
-                    const newValue = valuesRef.charge;
-                    const valueWasDiff = oldValue != newValue;
-
-                    const sourceString = generalInfo.sourceString
-                    if (valueWasDiff && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Charge (Himeko): ${oldValue} --> ${valuesRef.charge}/${maxValue} [${sourceString}]`});
-                        
-                        if (pointsGained > 0) {
-                            ownerTurn.himekoChargeSum ??= 0;
-                            ownerTurn.himekoChargeSum += valuesRef.charge - oldValue;
-                            
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "himekoChargeSum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.charge,
-                            currentSumValue: ownerTurn.himekoChargeSum,
-                            currentAddedValue: valuesRef.charge - oldValue
-                        });
-                    }
+                    const generalData = this.generalData ??= {summerName: "himekoChargeSum",baseName: "charge",maxName: "chargeMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "Charge (Himeko)",displayIcon:"/HonkaiSR/misc/himeko/Icon1003Passive.png"};
+                    // const oldValue = ownerTurn.battleValues.prana;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
                 },
                 "target": "self",
                 "listenerName": "Himeko Charge Handler",
@@ -46380,7 +46979,7 @@ const turnLogic = {
                         actionCall: turnLogic[ownerTurn.properName].skillFunctions.himekoFUA,
                         action: "Insert",
                         abortCheck(battleData,actionObject,sourceTurn) {
-                            if (!battleData.enemyPositions.length) {
+                            if (!battleData.activeEnemies) {
                                 sourceTurn.battleValues.himekoFUAQueued = false;
                                 return true;
                             }
@@ -46959,6 +47558,7 @@ const turnLogic = {
                         expireFunction: logicRef.skillFunctions.skillZoneExpired,
                         expireParam: sourceTurn.name,
                         "removeOnDeath": true,
+                        buffDisplayIcon: "misc/yaoGuang/Icon1502BP.png",
                     }
 
                     ATKObjects.yaoSkillBUFFSHEETE2 = {
@@ -46983,6 +47583,7 @@ const turnLogic = {
                 const countdownName = ownerSheet.buffName;
                 const buffCheck = sourceTurn.buffsObject[countdownName];
                 sourceTurn.battleValues.skillZoneActive = true;
+                sourceTurn.battleValues.yaoGuangFieldDuration = 3;
 
                 if (!buffCheck && rank >= 2) {
                     const spdSHEET = ATKObjects.yaoSkillBUFFSHEETE2;
@@ -47020,6 +47621,7 @@ const turnLogic = {
                         "currentStacks": 1,
                         "decay": false,
                         "expireType": null,
+                        buffDisplayIcon: "misc/yaoGuang/Icon1502BP.png",
                     }
                 }
 
@@ -47556,6 +48158,25 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
+                "trigger": "PreActionPhaseEnd",
+                condition(battleData,generalInfo) {
+                    // poke("HealEnd",battleData,turnMerge);
+                    let ownerTurn = this.ownerTurn;
+
+                    if (!ownerTurn.battleValues.skillZoneActive) {
+                        ownerTurn.battleValues.yaoGuangFieldDuration = 0;
+                    }
+                    else {
+                        const buffName = this.buffName ??= turnLogic[ownerTurn.properName].buffNames.decalightCountdown;
+                        ownerTurn.battleValues.yaoGuangFieldDuration = ownerTurn.buffsObject[buffName].duration;
+                    }
+                },
+                "target": "self",
+                "isPersonal": true,
+                "listenerName": "Yao Guang Zone - duration increment handler(visual)",
+                "ownerTurn": {},
+            },
+            {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -47619,9 +48240,7 @@ const turnLogic = {
         "buffsBattleTemp": {},
         "characterValues": {
             "skillZoneActive": false,
-
-            "bonanzaStacks": 0,
-            "isBonanzaActive": false,
+            "yaoGuangFieldDuration": 0,
         },
         "useTechnique": true,
         "techniqueType": "Support",
@@ -47984,7 +48603,7 @@ const turnLogic = {
                 // let targetTurn = battleData.primaryTarget;
                 const enemyPositions = battleData.enemyPositions;
                 const addProc = battleActions.elationDMGWrapper;
-                if (enemyPositions.length) {
+                if (battleData.activeEnemies) {
                     for (let enemy of enemyPositions) {
                         addProc(battleData,ownerTurn,ownerTurn.properName,ATKObject,enemy,"Sparxie Talent Ult Elation DMG");
                     }
@@ -48260,8 +48879,6 @@ const turnLogic = {
                 let ATKObjectBlast = ATKObjects.sparxEBABlastCertifiedElationADDEDATKOBJECT;
                 let ATKObjectBounce = ATKObjects.sparxEBABounceCertifiedElationADDEDATKOBJECT;
                 
-                // let targetTurn = battleData.primaryTarget;
-                // const enemyPositions = battleData.enemyPositions;
                 const addProc = battleActions.elationDMGWrapper;
 
                 const targetsGotHit = generalInfo.targetsGotHit;
@@ -48297,7 +48914,7 @@ const turnLogic = {
                         const currentEnemy = fullTargetHitArray[enemyIndex];
                         enemyIndex++;
                         // console.log(fullTargetHitArray.length,enemyIndex,battleData.sumAV)
-                        if (currentEnemy.isDead) {
+                        if (currentEnemy.isDead || currentEnemy.isLimbo) {
                             i--;
                             enemyIndex--;
                             fullTargetHitArray.splice(enemyIndex,1);
@@ -48676,37 +49293,13 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("sparxieThrillGained",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    // coreResonance
-                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
-                    const pointsGained = generalInfo.pointsGained;
-                    const valuesRef = ownerTurn.battleValues;
-
-                    const oldValue = valuesRef.thrill;
-                    valuesRef.thrill = Math.min(999,oldValue + pointsGained);
-
-                    const sourceString = generalInfo.sourceString
-                    if (pointsGained && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Thrill (Sparxie): ${oldValue} --> ${valuesRef.thrill} [${sourceString}]`});
-                    
-                        if (pointsGained > 0) {
-                            ownerTurn.sparxieThrillSum ??= 0;
-                            ownerTurn.sparxieThrillSum += valuesRef.thrill - oldValue;
-                            
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "sparxieThrillSum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.thrill,
-                            currentSumValue: ownerTurn.sparxieThrillSum,
-                            currentAddedValue: valuesRef.thrill - oldValue
-                        });
-                    }
-
+                    const generalData = this.generalData ??= {summerName: "sparxieThrillSum",baseName: "thrill",maxName: "thrillMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "Thrill (Sparxie)",displayIcon:"/HonkaiSR/misc/sparxie/Icon1501Elation.png"};
+                    // const oldValue = ownerTurn.battleValues.chargeStacks;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
 
                     const rank = ownerTurn.rank;
-                    if (pointsGained<0 && rank>=2) {
+                    if (valueWasDiff && generalInfo.pointsGained<0 && rank>=2) {
                         const buffSheet = this.sparxieE2ThrillCRITDMGSHEET ??= {
                             "stats": [CritDamageBase],
                             [CritDamageBase]: 0.10,
@@ -48796,6 +49389,7 @@ const turnLogic = {
             "skillStarted": false,
             "rngCurrentIndex": 0,
             "thrill": 0,
+            "thrillMax": 9999,
         },
         "useTechnique": true,
         "techniqueType": "Impair",
@@ -49097,7 +49691,7 @@ const turnLogic = {
 
                 const elationProc = battleActions.elationDMGWrapper;
                 for (let enemy of enemyPositions) {
-                    if (enemy.isDead) {continue;}
+                    if (enemy.isDead || enemy.isLimbo) {continue;}
 
                     elationProc(battleData,sourceTurn,sourceTurn.properName,ATKObject,targetTurn,"EMC Talent Elation DMG");
                 }
@@ -50017,7 +50611,6 @@ const turnLogic = {
                 let attackEndedEarly = false;
 
                 const burstBounceData = ATKObject1.bounceData;
-                // console.log(battleData.enemyPositions.length)
                 while (itemsLeft && !battleData.battleIsOver) {
 
                     const hitCountPre = chainedAttackRef?.totals?.totalHits ?? 0;
@@ -50039,7 +50632,7 @@ const turnLogic = {
                     itemsLeft -= 1;
                     
 
-                    if (!battleData.enemyPositions.length) {
+                    if (!battleData.activeEnemies) {
                         attackEndedEarly = true;
                         break;
                     }
@@ -50158,6 +50751,10 @@ const turnLogic = {
                 const battleValues = sourceTurn.battleValues;
                 const buffSheet = ATKObjects.sw999UltimateGODSHEET;
                 battleValues.godModeActive = false;
+                if (battleData.isLoggyLogger) {
+                    sourceTurn.turnStartImageOverride = null;
+                    sourceTurn.eventOverrideImage = null;
+                }
                 removeBuff(battleData,sourceTurn,buffSheet);
 
                 const elationSkillObject = logicRef.elationSkillObject;
@@ -50298,7 +50895,7 @@ const turnLogic = {
                 }
 
                 const enemyPositions = battleData.enemyPositions;
-                if (enemyPositions.length) {
+                if (battleData.activeEnemies) {
                     let starterTarget = enemyPositions[0];
                     for (let enemy of enemyPositions) {
                         let compareHP = enemy.currentHP > starterTarget.currentHP;
@@ -50705,19 +51302,10 @@ const turnLogic = {
                 const addProc = battleActions.elationDMGWrapper;
                 for (let enemySlot in targetsGotHit) {
                     const currentEnemy = enemyTurns[enemySlot];
-                    if (currentEnemy.isDead) {continue;}
+                    if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
 
                     addProc(battleData,ownerTurn,ownerTurn.properName,ATKObject,currentEnemy,"SW999 Basic/Skill Elation DMG");
                 }
-                
-                // // let targetTurn = battleData.primaryTarget;
-                // const enemyPositions = battleData.enemyPositions;
-                // const addProc = battleActions.elationDMGWrapper;
-                // if (enemyPositions.length) {
-                //     for (let enemy of enemyPositions) {
-                //         addProc(battleData,ownerTurn,ownerTurn.properName,ATKObject,enemy,"SW999 Basic/Skill Elation DMG");
-                //     }
-                // }
             },
             elationSkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -50840,6 +51428,10 @@ const turnLogic = {
 
                 const battleValues = sourceTurn.battleValues;
                 battleValues.godModeActive = true;
+                if (battleData.isLoggyLogger) {
+                    sourceTurn.turnStartImageOverride = "misc/sw999/1506B_02.png";
+                    sourceTurn.eventOverrideImage = "misc/sw999/1506_03.png";
+                }
 
                 const elationSkillObject = logicRef.elationSkillObject;
                 elationSkillObject.isAttack = true;
@@ -51908,7 +52500,7 @@ const turnLogic = {
                     const addProc = battleActions.elationDMGWrapper;
                     for (let enemySlot in targetsGotHit) {
                         const currentEnemy = enemyTurns[enemySlot];
-                        if (currentEnemy.isDead) {continue;}
+                        if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
 
                         const currentBanger = ownerTurn.certifiedBanger;
                         ATKObject.BangerValueOverride = currentBanger > maxEnergy ? null : maxEnergy;
@@ -51920,7 +52512,7 @@ const turnLogic = {
                     let ATKObject = ATKObjects.evaTalentCertifiedElationADDEDATKOBJECT3;
                     const targetTurn = generalInfo.targetTurn;
 
-                    if (!targetTurn.isDead) {
+                    if (!targetTurn.isDead && !targetTurn.isLimbo) {
                         const currentBanger = ownerTurn.certifiedBanger;
                         ATKObject.BangerValueOverride = currentBanger > maxEnergy ? null : maxEnergy;
 
@@ -51936,7 +52528,7 @@ const turnLogic = {
                         const addProc = battleActions.elationDMGWrapper;
                         for (let enemySlot in targetsGotHit) {
                             const currentEnemy = enemyTurns[enemySlot];
-                            if (currentEnemy.isDead) {continue;}
+                            if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
 
                             addProc(battleData,ownerTurn,ownerTurn.properName,ATKObject,currentEnemy,"Evanescia Skill/Ult Elation DMG");
                         }
@@ -51948,7 +52540,7 @@ const turnLogic = {
                         const addProc = battleActions.elationDMGWrapper;
                         for (let enemySlot in targetsGotHit) {
                             const currentEnemy = enemyTurns[enemySlot];
-                            if (currentEnemy.isDead) {continue;}
+                            if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
 
                             addProc(battleData,ownerTurn,ownerTurn.properName,ATKObject,currentEnemy,"Master Fox Elation DMG");
                         }
@@ -52109,7 +52701,7 @@ const turnLogic = {
                 let ATKObject2 = ATKObjects.evaUltimateATKOBJECT2;
                 const evaTalentCertifiedAdditionalDMG = logicRef.skillFunctions.evaTalentCertifiedAdditionalDMG;
 
-                const enemyTargets = battleData.enemyPositions.length;
+                const enemyTargets = battleData.activeEnemies;
                 //trace checks for current targets when determining bounce count, on top of the base 5, so will never be less than 6 bounces
                 if (enemyTargets < 3) {
                     if (enemyTargets > 1) {
@@ -52597,7 +53189,7 @@ const turnLogic = {
                                 abortCheck(battleData,actionObject,sourceTurn) {
                                     if (!actionObject.target) {
                                         actionObject.target = battleData.enemyPositions;
-                                        if (!battleData.enemyPositions?.length) {
+                                        if (!battleData.activeEnemies) {
                                             return true;
                                         }
                                     }

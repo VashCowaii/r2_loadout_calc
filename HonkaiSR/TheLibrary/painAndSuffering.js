@@ -2944,14 +2944,14 @@ const megaParsingFuckeryPain = {
             </div>` : ""}
         </div>`;
     },
-    "Change Character Transformation"(parseRef,initialCounter) {
+    "Change Entity Turn-State"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
             "target",
             "phase",
             "revertDefault",
         ])
-        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Change Character Transformation");
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Change Entity Turn-State");
 
         // initialCounter++;
         return `<div class="actionDetailBody">

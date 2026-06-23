@@ -5,6 +5,90 @@
         <li>asdf</li>
     </ul>
 </div> -->
+
+<div>
+    <h1>June 23th, 2026 - THE REVIVES UPDATE</h1>
+    <ul>
+        <h3>Calculator</h3>
+        <h4>Additions</h4>
+        <li>Added the ability for revive-type instances to actually work.
+            <ul>
+                <li>These were on the TO-DO list for a very very long time lol but they were crazy low priority given what else I had to do.</li>
+                <ul>
+                    <li>Revives were added to the following characters/instances:
+                        <ul>
+                            <li>Bailu - Talent revive/E6 extra count</li>
+                            <li>Huohuo - E2 revives</li>
+                            <li>Mortenax Blade - Kicked out of Infinity Fury revive</li>
+                            <li>Castorice Global Passive Revive</li>
+                        </ul>
+                    </li>
+                </ul>
+            </ul>
+        </li>
+        <li>Added the ability to toggle on/off the Castorice Global Passive for a battle. This can be found in Battle Settings where you'd go to alter Technique usage.</li>
+        <li>Given that revives can now work properly, we're making a pretty big change to the calc: if any character manages to fully die even after revives, the simulation will terminate and the battle will immediately end.
+            <ul>
+                <li>The reasoning here is just that, if you did manage to lose a character after revives you're sure as shit NEVER gonna 3star whatever activity you're attempting to simulate and there is no point in doing the math anymore</li>
+                <li>A benefit here is that this will also improve optimizer times by aborting simulations that don't need to be calculated anymore since a stray death here and there happens more often than you'd think.</li>
+            </ul>
+        </li>
+        <!-- <li>Added the following new characters:
+            <ul>
+                <li>The Dahlia</li>
+            </ul>
+        </li> -->
+        <li>Added the following new lightcones:
+            <ul>
+                <li>Passkey</li>
+                <li>The Day The Cosmos Fell</li>
+                <li>The Seriousness of Breakfast</li>
+                <li>The Birth of the Self</li>
+                <li>Ninjutsu Inscription: Dazzling Evilbreaker</li>
+                <li>Night on the Milky Way</li>
+                <li>Eternal Calculus</li>
+            </ul>
+        </li>
+        <li>Updated SW999's display handling to show her enhanced form while enhanced in the action order/turn inspect, as well as special handling for her SSS ranking on her ultimate energy bar.</li>
+        <li>Added special sub-energy displays for the following characters/instances:
+            <ul>
+                <li>ANYONE(Elation) - Certified Banger</li>
+                <li>Bailu - Revive Charges</li>
+                <li>Huohuo - E2 Revive Charges</li>
+                <li>Huohuo - Divine Provision duration</li>
+                <li>Mortenax Blade - Overflow energy</li>
+                <li>Evanescia - FUA energy accumulation</li>
+                <li>Jingliu - Syzygy stacks</li>
+                <li>Jingliu - HP loss counter</li>
+                <li>Yao Guang - Skill duration</li>
+            </ul>
+        </li>
+        <li>Updated handling for Silver Wolf's implant switch on enemy death, to look at still living enemies and decide the implant based on the highest enemy rank first.</li>
+        <li>Updated handling for Topaz's Proof of Debt to instead of switching the proof of debt application on enemy death, to rather apply it on any action starting if it doesn't exist on an on-field enemy yet.</li>
+
+        <h4>Fixes</h4>
+        <li>Fixed an issue where if certain types of elation DMG ever broke an entity in a UI-facing non-optimizer battle, it could cause an error.</li>
+        <li>Fixed an issue where if you clicked on sub-energy displays on an entity inspection, it could pop an error due to leftover code from memosprite image inspects.</li>
+        <li>Fixed an issue where lc Mediation was allowed to proc on waves other than 1</li>
+        <li>Fixed an issue where lc Fine Fruit had a typo that would break whichever character equipped it.</li>
+        <li>Fixed an issue where if an Ultimate changes targets just before casting due to an Abort Check, it would still try to target the old target instead of the updated one.</li>
+
+        <!-- <h4>Optimization</h4>
+        <li></li> -->
+
+        <h3>Library</h3>
+        <h4>Additions</h4>
+        <li>Renamed the following events for format consistency or accuracy:
+            <ul>
+                <li>Caused a Limbo/DeathState [Owner] -> Caused Limbo [Owner]</li>
+                <li>When Put in Deathstate Limbo -> Being Limbo [Owner]</li>
+                <li>Change Character Transformation -> Change Entity Turn-State</li>
+                <li>Waiting for Healing in Limbo -> Waiting in Limbo [Owner]</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
 <div>
     <h1>June 20th, 2026</h1>
     <ul>
@@ -55,20 +139,6 @@
         <li>Fixed an issue where if shields were broken on an ally, it didn't properly trigger events for things that needed it(Aventurine eidolons)</li>
         <li>Fixed an issue where Castorice could fail to select her enhanced skill in specific cases.</li>
         <li>Fixed an issue where Forge of the Kalpagni Lantern would fail to apply its bonus in the very first attack of a battle.</li>
-
-        <!-- <h4>Optimization</h4>
-        <li></li> -->
-
-        <!-- <h3>Library</h3>
-        <h4>Additions</h4>
-        <li>Renamed the following events for format consistency or accuracy:
-            <ul>
-                <li>Being Attacked End [Owner] [ADV?] -> Being Attacked [Owner]: End [EVENT]</li>
-                <li>Being Attacked Completed [Owner] -> Being Attacked [Owner]: Completed</li>
-                <li>Being Attacked Start [Owner] -> Being Attacked [Owner]: Start</li>
-                <li>Being Attacked End [Owner] -> Being Attacked [Owner]: End</li>
-            </ul>
-        </li> -->
     </ul>
 </div>
 

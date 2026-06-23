@@ -95,7 +95,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1062600240\">Enemy_AML_Minion02_01_LocalLegend_NegativeBlood_OnAvatarStatus</a>",
       "execute": [
         {
-          "eventTrigger": "When Put in Deathstate Limbo",
+          "eventTrigger": "Being Limbo [Owner]",
           "execute": [
             {
               "name": "IF",
@@ -812,7 +812,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__990819121\">Monster_XP_Elite01_02_LocalLegend_PartController_LockHP</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",

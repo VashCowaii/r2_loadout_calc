@@ -1282,7 +1282,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1959235815\">Monster_W2_LycanKing_IF_Revive</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "Force Entity Death",
@@ -1517,7 +1517,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1898412116\">Enemy_W2_LycanKing_IF_LycanDeathrattle</a>",
       "execute": [
         {
-          "eventTrigger": "When Put in Deathstate Limbo",
+          "eventTrigger": "Being Limbo [Owner]",
           "execute": [
             {
               "name": "IF",
@@ -4028,7 +4028,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__545997619\">Monster_W2_LycanKing_Revive</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "Dispel Debuffs",

@@ -2619,7 +2619,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__225344728\">Monster_W1_CocoliaP1_IF_02_Revive</a>",
       "execute": [
         {
-          "eventTrigger": "Waiting for Healing in Limbo",
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",
@@ -3117,7 +3117,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1361193715\">Enemy_W1_CocoliaP2_SpinSpeedController</a>",
       "execute": [
         {
-          "eventTrigger": "When Put in Deathstate Limbo"
+          "eventTrigger": "Being Limbo [Owner]"
         },
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]"
@@ -3184,7 +3184,7 @@ const configAbility = {
           "eventTrigger": "When Modifier Destroyed/Removed",
           "execute": [
             {
-              "name": "Change Character Transformation",
+              "name": "Change Entity Turn-State",
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
