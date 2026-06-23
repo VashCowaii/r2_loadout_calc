@@ -4775,9 +4775,22 @@ const userTriggers = {
                                         if (markType === "entity") {
                                             marksStringer += valueAdjusted;
                                         }
+                                        let isBanger = false;
+                                        if (markType === "banger") {
+                                            isBanger = true;
+                                            const hasAnyBanger = valueAdjusted > 0;
+                                            marksStringer += `<div class="customEnergyBodyMarksBANGERHOLDER" style="">
+                                                <div class="actionDetailHeaderRowCharacterCUSTOMBANGERBOX">
+                                                    <img src="/HonkaiSR/misc/certifiedBanger/${hasAnyBanger ? "OutlineElationBless_Color.png" : "OutlineElationBless_Grey.png"}" class="actionDetailHeaderRowCharacterCUSTOMBANGER ${!hasAnyBanger ? "actionDetailHeaderRowCharacterCUSTOMBANGEREMPTY" : ""}"/>
+                                                    <img src="/HonkaiSR/misc/certifiedBanger/OutlineElationBless.png" class="actionDetailHeaderRowCharacterCUSTOMBANGERSHUTTER ${hasAnyBanger ? "actionDetailHeaderRowCharacterCUSTOMBANGERSHUTTERFILL" : "actionDetailHeaderRowCharacterCUSTOMBANGERSHUTTEREMPTY"}"/>
+                                                    <img src="/HonkaiSR/misc/certifiedBanger/IconElationBless.png" class="actionDetailHeaderRowCharacterCUSTOMBANGERMASK ${hasAnyBanger ? "actionDetailHeaderRowCharacterCUSTOMBANGERMASKFILL" : "actionDetailHeaderRowCharacterCUSTOMBANGERMASKEMPTY"}"/>
+                                                </div>
+                                                
+                                            </div>${valueAdjusted == "0" ? "" : valueAdjusted}`
+                                        }
 
                                         const isOnAtAll = valueAdjusted > 0 ? 100 : 0;
-                                        customValuesString += `<div class="customEnergyBodyMarksBar">
+                                        customValuesString += `<div class="customEnergyBodyMarksBar ${isBanger ? "customEnergyBodyMarksBarBANGER" : ""}">
                                             ${entry.showProgressIconAnyways ? `<div class="customEnergyBodyMarksCIRCLEPROGRESS"
                                                     style="background:conic-gradient(${baseFillColor} 0 ${isOnAtAll}%,#3333337c ${isOnAtAll}% 100%);">
                                                     <div class="customEnergyBodyMarksCIRCLEPROGRESSIconBOX">

@@ -107,7 +107,15 @@ const customEnergyBar = {
 }
 
 
-
+function createGenericPunchlineTracker(charName) {
+    return {valueName: "Punchline Generated", refName: "punchlineGenerated",summaryValue: `punchlineSummer${charName}`,summaryType: "SUM", hide: true}
+}
+function createGenericBangerTracker(charName) {
+    return {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummer${charName}`,summaryType: "SUM",
+        customDisplay: "marks", customDisplayType: "banger", markMax: null, innerMarkColor: null,
+        displayRequiresBoolean: false,
+    }
+}
 
 const customDisplayValuesLog = {
     "TEAM": [
@@ -551,19 +559,21 @@ const customDisplayValuesLog = {
     //ELATION
     "Yao Guang": [//tracker done
         {valueName: "Zone Active", refName: "skillZoneActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerYao Guang`,summaryType: "SUM"},
-        {valueName: "Punchline Generated", refName: "punchlineGenerated",summaryValue: `punchlineSummerYao Guang`,summaryType: "SUM"},
     ],
     "Sparxie": [//tracker done
-        {valueName: "Enhance Count", refName: "skillCounter", isBattleValue: true,summaryValue: "sparxieEnhanceSum",summaryType: "SUM"},
-        {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerSparxie`,summaryType: "SUM"},
-        {valueName: "Punchline Generated", refName: "punchlineGenerated",summaryValue: `punchlineSummerSparxie`,summaryType: "SUM"},
-        {valueName: "Thrill Stacks", refName: "thrill", isBattleValue: true,summaryValue: "sparxieThrillSum",summaryType: "SUM"},
+        {valueName: "Thrill", refName: "thrill", isBattleValue: true,summaryValue: "sparxieThrillSum",summaryType: "SUM",
+            customDisplay: "marks", customDisplayType: "number", markMax: null, innerMarkColor: "Fire",
+            displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/sparxie/Icon1501Elation.png"
+        },
+        {valueName: "Thrill Max", refName: "thrillMax", isBattleValue: true,hide: true},
+
+        {valueName: "Enhance Count", refName: "skillCounter", isBattleValue: true,summaryValue: "sparxieEnhanceSum",summaryType: "SUM",hide:true},
     ],
     "Trailblazer - Elation": [//tracker done
         // {valueName: "Zone Active", refName: "skillZoneActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerTrailblazer - Elation`,summaryType: "SUM"},
-        {valueName: "Punchline Generated", refName: "punchlineGenerated",summaryValue: `punchlineSummerTrailblazer - Elation`,summaryType: "SUM"},
     ],
     "Silver Wolf LV.999": [//tracker done
         {valueName: "MMR Overflow", refName: "MMROverflow", isBattleValue: true},
@@ -574,17 +584,11 @@ const customDisplayValuesLog = {
         
         
         // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
-
-        {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerSilver Wolf LV.999`,summaryType: "SUM"},
-        {valueName: "Punchline Generated", refName: "punchlineGenerated",summaryValue: `punchlineSummerSilver Wolf LV.999`,summaryType: "SUM"},
     ],
     "Evanescia": [//tracker done
         {valueName: "FUA Accumulation", refName: "fuaTrackerValue", isBattleValue: true},
         {valueName: "E6 Ult Counter", refName: "E6UltCounter", isBattleValue: true, requiresEidolon: 6},
         
-
-        {valueName: "Certified Banger", refName: "certifiedBanger",summaryValue: `certifiedBangerSummerEvanescia`,summaryType: "SUM"},
-        {valueName: "Punchline Generated", refName: "punchlineGenerated",summaryValue: `punchlineSummerEvanescia`,summaryType: "SUM"},
         // {valueName: "MMR Overflow", refName: "MMROverflow", isBattleValue: true},
         // {valueName: "HP Loss Counter", refName: "hpLossCount", isBattleValue: true,summaryValue: "jingliuHPCounterSUm",summaryType: "SUM"},
         // {valueName: "Spectral Transmigration", refName: "enhancedActive", isBattleValue: true, isCharacterState: true},
@@ -592,6 +596,14 @@ const customDisplayValuesLog = {
         
         // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
     ],
+}
+for (let charName in characters) {
+    const characterEntry = characters[charName];
+    if (characterEntry.path === "Elation") {
+        const currentDisplayEntry = customDisplayValuesLog[charName] ??= [];
+
+        currentDisplayEntry.push(createGenericBangerTracker(charName),createGenericPunchlineTracker(charName))
+    }
 }
 
 const permaConditionsTextLibrary = {

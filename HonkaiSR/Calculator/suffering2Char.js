@@ -5430,7 +5430,8 @@ const turnLogic = {
                         "decay": false,
                         "expireType": "EndTurn",
                         "expireFunction": turnLogic["Aha Instant"].skillFunctions.expireCertified,
-                        "expireParam": null
+                        "expireParam": null,
+                        "buffDisplayIcon": "misc/certifiedBanger/OutlineElationBless_Grey.png",
                     }
                     const buffSheet = battleData.ahaInstantBangerSHEET ??= this.bangerSheet;
 
@@ -48226,9 +48227,6 @@ const turnLogic = {
         "buffsBattleTemp": {},
         "characterValues": {
             "skillZoneActive": false,
-
-            "bonanzaStacks": 0,
-            "isBonanzaActive": false,
         },
         "useTechnique": true,
         "techniqueType": "Support",
@@ -49281,37 +49279,13 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("sparxieThrillGained",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    // coreResonance
-                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
-                    const pointsGained = generalInfo.pointsGained;
-                    const valuesRef = ownerTurn.battleValues;
-
-                    const oldValue = valuesRef.thrill;
-                    valuesRef.thrill = Math.min(999,oldValue + pointsGained);
-
-                    const sourceString = generalInfo.sourceString
-                    if (pointsGained && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Thrill (Sparxie): ${oldValue} --> ${valuesRef.thrill} [${sourceString}]`});
-                    
-                        if (pointsGained > 0) {
-                            ownerTurn.sparxieThrillSum ??= 0;
-                            ownerTurn.sparxieThrillSum += valuesRef.thrill - oldValue;
-                            
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "sparxieThrillSum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.thrill,
-                            currentSumValue: ownerTurn.sparxieThrillSum,
-                            currentAddedValue: valuesRef.thrill - oldValue
-                        });
-                    }
-
+                    const generalData = this.generalData ??= {summerName: "sparxieThrillSum",baseName: "thrill",maxName: "thrillMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "Thrill (Sparxie)",displayIcon:"/HonkaiSR/misc/sparxie/Icon1501Elation.png"};
+                    // const oldValue = ownerTurn.battleValues.chargeStacks;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
 
                     const rank = ownerTurn.rank;
-                    if (pointsGained<0 && rank>=2) {
+                    if (valueWasDiff && generalInfo.pointsGained<0 && rank>=2) {
                         const buffSheet = this.sparxieE2ThrillCRITDMGSHEET ??= {
                             "stats": [CritDamageBase],
                             [CritDamageBase]: 0.10,
@@ -49401,6 +49375,7 @@ const turnLogic = {
             "skillStarted": false,
             "rngCurrentIndex": 0,
             "thrill": 0,
+            "thrillMax": 9999,
         },
         "useTechnique": true,
         "techniqueType": "Impair",
