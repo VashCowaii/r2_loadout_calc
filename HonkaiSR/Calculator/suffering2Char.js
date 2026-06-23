@@ -3568,7 +3568,7 @@ const battleActions = {
                     updateEnergy(battleData,sumEnergyGain,currentTurn,false,"Hit(s) Received");
                 }
             }
-            clearPendingDeaths(battleData)
+            clearPendingDeaths(battleData);
         }
     
         return generalInfo
@@ -16145,43 +16145,8 @@ const turnLogic = {
                         condition(battleData,generalInfo) {
                             // poke("EnergyChanged",battleData,{sourceTurn,newAmount,overFill,amount});
                             const ownerTurn = this.ownerTurn;
-                            
-                            //TODO: cleanse upon reaching full, which would be when this is either gonna recognize overfill or if we can see we're at full from something like cyrene I guess, something for later
-                            const overflow = generalInfo.overFill;
-                            if (overflow) {
-                                // const characterName = ownerTurn.properName;
-                                // const logicRef = turnLogic[characterName];
-                                const valuesRef = ownerTurn.battleValues;
-                                // const rank = ownerTurn.rank;
-                                // overflowEnergy
-                                const oldAmount = valuesRef.overflowEnergy;
-                                const cap = 80;
-                                valuesRef.overflowEnergy = Math.min(cap,valuesRef.overflowEnergy + overflow);
-                                const amountGained = valuesRef.overflowEnergy - oldAmount;
-                                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Energy Overflow (Saber): ${oldAmount.toLocaleString()} --> ${valuesRef.overflowEnergy.toLocaleString()}/${cap}`});}
-        
-        
-                                if (battleData.isLoggyLogger) {
-                                    logToBattle(battleData,{logType: "EnergyChange", isOverflow: true, target: ownerTurn.properName, amount: amountGained, oldEnergy:oldAmount, newEnergy:valuesRef.overflowEnergy, maximum:cap, source:"Bone, Hardened ad Nauseam [Overflow Handler]"});
-                                
-                                    if (valuesRef.overflowEnergy > oldAmount) {
-                                        ownerTurn.mortenaxBladeOverflowSummer ??= 0;
-                                        ownerTurn.mortenaxBladeOverflowSummer += amountGained;
-                                        // console.log(ownerTurn.saberSumResonance)
-                                    }
-                                    logToBattle(battleData,{
-                                        logType: "SUMMARY:SUM",
-                                        function: "mortenaxBladeOverflowSummer",
-                                        AV: battleData.sumAV,
-                                        currentValue: valuesRef.overflowEnergy,
-                                        currentSumValue: ownerTurn.mortenaxBladeOverflowSummer,
-                                        currentAddedValue: amountGained
-                                    });
-                                }
-                            }
-        
-                            // const pseudoObject = this.pseudoObject ??= {pointsGained: 0,sourceString:null};
-                            // poke("SaberGainCoreResonance",battleData,pseudoObject,null);//this will pseudo check if she has manaburst and can be advanced, instead of having it in its own listener
+                            const generalData = this.generalData ??= {summerName: "mortenaxBladeOverflowSummer",sourceString: "Bone, Hardened ad Nauseam",energyOverrideIcon:"misc/mortenaxBlade/Icon1507SkillTree01.png"};
+                            genericEnergyOverflow(battleData,ownerTurn,generalInfo,generalData);
                         },
                         "target": "self",
                         "isPersonal": true,
@@ -16422,7 +16387,7 @@ const turnLogic = {
                     const sourceString = generalInfo.sourceString
                     if (pointsGained && battleData.isLoggyLogger) {
                         // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Charge (Mortenax Blade): ${oldValue} --> ${valuesRef.charge}/${maxValue} [${sourceString}]`});
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/misc/mortenaxBlade/Icon1507Passive.png",sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Charge (Mortenax Blade): ${oldValue} --> ${valuesRef.charge}/${maxValue} [${sourceString}]`});
                         
                         if (pointsGained > 0) {
                             ownerTurn.mortenaxBladeChargeSum ??= 0;
@@ -16659,6 +16624,7 @@ const turnLogic = {
         "buffsBattleTemp": {},
         "characterValues": {
             "overflowEnergy": 0,
+            "overflowEnergyMax": 80,
             "hasNilityCharacters": false,
             "charge": 0,
             "chargeMax": null,
