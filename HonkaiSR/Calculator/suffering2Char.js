@@ -30451,6 +30451,7 @@ const turnLogic = {
                         "currentStacks": 1,
                         "decay": false,
                         "expireType": null,
+                        "buffDisplayIcon": "misc/jingliu/Icon1212Passive01.png",
                     }
                     ATKObjects.jingliuTalentEnhancedSHEETULT = {
                         "stats": [DamageAll],
@@ -30572,6 +30573,8 @@ const turnLogic = {
                     const logicRef = turnLogic[ownerTurn.properName];
 
                     const passiveListeners = this.passiveListeners;
+
+                    ownerTurn.battleValues.weirdStacksMax = rank >= 6 ? 5 : 4;
 
 
                     //talent inherents
@@ -30756,16 +30759,14 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("jingliuWeirdStackGained",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    // coreResonance
-                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
-                    const pointsGained = generalInfo.pointsGained;
+                    const generalData = this.generalData ??= {summerName: "jingliuSyzygySum",baseName: "weirdStacks",maxName: "weirdStacksMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "Syzygy (Jingliu)",displayIcon:"/HonkaiSR/misc/jingliu/Icon1212EnergyBar.png"};
+                    // const oldValue = ownerTurn.battleValues.weirdStacks;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
+                    const newValue = ownerTurn.battleValues.weirdStacks;
+
                     const valuesRef = ownerTurn.battleValues;
-
-                    const oldValue = valuesRef.weirdStacks;
-                    const maxValue = ownerTurn.rank >= 6 ? 5 : 4;
-                    valuesRef.weirdStacks = Math.min(maxValue,oldValue + pointsGained);
-
-                    const newValue = valuesRef.weirdStacks;
+                    const maxValue = valuesRef.weirdStacksMax;
 
                     if (newValue === maxValue) {
                         const buffSheet = this.traceBuffSheet ??= {
@@ -30791,27 +30792,6 @@ const turnLogic = {
                     if (!valuesRef.enhancedActive && newValue >= 2) {
                         enteredState = true;
                     }
-
-                    const sourceString = generalInfo.sourceString
-                    if (pointsGained && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Syzygy (Jingliu): ${oldValue} --> ${valuesRef.weirdStacks}/${maxValue} [${sourceString}]`});
-                        
-                        if (pointsGained > 0) {
-                            ownerTurn.jingliuSyzygySum ??= 0;
-                            ownerTurn.jingliuSyzygySum += valuesRef.weirdStacks - oldValue;
-                            
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "jingliuSyzygySum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.weirdStacks,
-                            currentSumValue: ownerTurn.jingliuSyzygySum,
-                            currentAddedValue: valuesRef.weirdStacks - oldValue
-                        });
-                    }
-
 
                     if (enteredState && !valuesRef.enhancedQueued) {
                         valuesRef.enhancedQueued = true;
@@ -30909,6 +30889,7 @@ const turnLogic = {
         "characterValues": {
             "enhancedActive": false,
             "weirdStacks": 0,
+            "weirdStacksMax": 4,
             "hpLossCount": 0,
             "traceShredActive": false,
             "moonlightFinished": false,

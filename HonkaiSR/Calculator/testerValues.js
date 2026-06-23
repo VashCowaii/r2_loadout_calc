@@ -154,10 +154,25 @@ const customDisplayValuesLog = {
         // {valueName: "E6 Ult Counter", refName: "e6UltCounter", isBattleValue: true, requiresEidolon: 6},
     ],
     "Jingliu": [//tracker done
-        {valueName: "Syzygy", refName: "weirdStacks", isBattleValue: true,summaryValue: "jingliuSyzygySum",summaryType: "SUM"},
-        {valueName: "HP Loss Counter", refName: "hpLossCount", isBattleValue: true,summaryValue: "jingliuHPCounterSUm",summaryType: "SUM"},
+        // {valueName: "Syzygy", refName: "weirdStacks", isBattleValue: true,summaryValue: "jingliuSyzygySum",summaryType: "SUM"},
+        {valueName: "Syzygy", refName: "weirdStacks", isBattleValue: true,summaryValue: "jingliuSyzygySum",summaryType: "SUM",
+            customDisplay: "marks", customDisplayType: "image", markMax: null, innerMarkColor: "Ice",
+            displayRequiresIndex: 1, displayRequiresType: "number",
+            imageFilled: "misc/jingliu/IconDotColorFullMoon.png", imageEmpty: "misc/jingliu/IconDotColorMoonBlack.png",
+            showProgressIconAnyways: true,
+            progressIcon: "misc/jingliu/Icon1212EnergyBar.png"
+        },
+        {valueName: "Syzygy Max", refName: "weirdStacksMax", isBattleValue: true, hide: true},
+
+        {valueName: "HP Loss Counter", refName: "hpLossCount", isBattleValue: true,summaryValue: "jingliuHPCounterSUm",summaryType: "SUM",
+            customDisplay: "progress", customDisplayType: "circle", markMax: 40, innerMarkColor: "Ice",
+            // displayRequiresIndex: 2, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            progressIcon: "misc/jingliu/Icon1212Passive01.png"
+        },
+
         {valueName: "Spectral Transmigration", refName: "enhancedActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "Queued Enhanced State", refName: "enhancedQueued", isBattleValue: true, isCharacterState: true},
+        {valueName: "Queued Enhanced State", refName: "enhancedQueued", isBattleValue: true, isCharacterState: true,hide: true},
         
         // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
     ],
@@ -169,15 +184,6 @@ const customDisplayValuesLog = {
         {valueName: "Squama Sacrosancta Max", refName: "fakePointsMax", isBattleValue: true,hide: true},
         {valueName: "EBA Enhancement Level", refName: "skillCounter", isBattleValue: true,hide: true},
         {valueName: "E6 Ult Stacks", refName: "e6UltStacks", isBattleValue: true, requiresEidolon: 6},
-
-
-        // {valueName: "Netherwing on Field", refName: "netherIsActive", isBattleValue: true, isCharacterState: true,
-        //     isMemoSpriteDisplay: true,
-        // },
-        // {valueName: "Nether Turns Remaining", refName: "netherRemainingTurns", isBattleValue: true,
-        //     customDisplay: "marks", customDisplayType: "circle", markMax: 3, innerMarkColor: "#9083FF",
-        //     displayRequiresIndex: 0, displayRequiresType: "boolean", displayRequiresBoolean: true,
-        // },
     ],
     "Clara": [//tracker done
         // valuesRef.prana;
@@ -199,13 +205,6 @@ const customDisplayValuesLog = {
             // innerMarkColor: "#9083FF",
             fillScale: 1.2,emptyScale: 0.5,
         },
-        // {valueName: "Charge Stacks", refName: "charge", isBattleValue: true,summaryValue: "archerFUAStackSum",summaryType: "SUM",
-        //     customDisplay: "marks", customDisplayType: "diamond", markMax: null, innerMarkColor: "Quantum",
-        //     displayRequiresIndex: 1, displayRequiresType: "number",
-        //     displayRequiresBoolean: false,
-        //     showProgressIconAnyways: true,
-        //     progressIcon: "misc/archer/Icon1005Passive.png"
-        // },
         {valueName: "Charge Max", refName: "chargeMax", isBattleValue: true,hide: true},
         {valueName: "In Circuit-Connection", refName: "skillStarted", isBattleValue: true,isCharacterState: true},
         {valueName: "Skill Counter", refName: "skillCounter", isBattleValue: true},
@@ -306,15 +305,6 @@ const customDisplayValuesLog = {
             showProgressIconAnyways: true,
             progressIcon: "misc/dahlia/Icon1321Passive.png"
         },
-        // {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true, isCharacterState: true},
-        // {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
-        // {valueName: "Charge", refName: "charge", isBattleValue: true,summaryValue: "mortenaxBladeChargeSum",summaryType: "SUM",
-        //     customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "#9083FF",
-        //     displayRequiresIndex: 3, displayRequiresType: "number",
-        //     displayRequiresBoolean: false,
-        //     progressIcon: characters["Mortenax Blade"].traces.Point04.icon
-        // },
-        // {valueName: "Charge Max", refName: "chargeMax", isBattleValue: true,hide: true},
     ],
 
     //PRESERVATION
@@ -543,15 +533,6 @@ const customDisplayValuesLog = {
             progressIcon: "misc/bailu/Icon1211Passive.png"
         },
         {valueName: "Revive Charges Max", refName: "reviveChargesMax", isBattleValue: true, hide: true},
-        // {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true, isCharacterState: true},
-        // {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
-        // {valueName: "Charge", refName: "charge", isBattleValue: true,summaryValue: "mortenaxBladeChargeSum",summaryType: "SUM",
-        //     customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "#9083FF",
-        //     displayRequiresIndex: 3, displayRequiresType: "number",
-        //     displayRequiresBoolean: false,
-        //     progressIcon: characters["Mortenax Blade"].traces.Point04.icon
-        // },
-        // {valueName: "Charge Max", refName: "chargeMax", isBattleValue: true,hide: true},
     ],
     "Natasha": [],  
     "Lynx": [], 
