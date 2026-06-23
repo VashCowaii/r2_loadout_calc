@@ -298,7 +298,9 @@ const superGlobal = {
         const preAdd = oldValue + pointsGained;
         valuesRef[baseName] = Math.max(minValue, maxValue ? Math.min(maxValue,preAdd) : preAdd);
 
-        if (pointsGained && battleData.isLoggyLogger) {
+        const valueWasDiff = valuesRef[baseName] != oldValue;
+
+        if (valueWasDiff && battleData.isLoggyLogger) {
             const summerName = generalData.summerName;
             const baseString = generalData.baseString;
             const sourceString = generalInfo.sourceString
@@ -325,6 +327,8 @@ const superGlobal = {
                 currentAddedValue: newValue - oldValue
             });
         }
+
+        return valueWasDiff;
     },
 }
 const createQueueObject = superGlobal.createQueueObject;

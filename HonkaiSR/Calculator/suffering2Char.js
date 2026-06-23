@@ -16380,7 +16380,7 @@ const turnLogic = {
 
                     const generalData = this.generalData ??= {summerName: "mortenaxBladeChargeSum",baseName: "charge",maxName: null,maxNameDisplay: "chargeMax",minName: null,
                         baseString: "Charge (Mortenax Blade)",displayIcon:"/HonkaiSR/misc/mortenaxBlade/Icon1507Passive.png"};
-                    genericSubEnergy(battleData,ownerTurn,generalInfo,generalData)
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
                     
                     poke("mortenaxBladeQueueFUA",battleData,null);
                 },
