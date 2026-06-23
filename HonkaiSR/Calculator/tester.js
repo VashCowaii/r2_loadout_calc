@@ -3157,7 +3157,7 @@ const customMenu = {
     
                 eventString += `<div class="${action.isEnemy ? "turnStarterBarEnemy" : "turnStarterBarAlly"} clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">
                     <div class="${action.isEnemy ? "weirdSideSemiCircleThingerEnemy" : "weirdSideSemiCircleThingerAlly"}"></div>
-                    ${action.isEnemy ? `<img src="/HonkaiSR/misc/${actionNameSource.toLowerCase().includes("boss") ? "Glorpard.png" : "glorp.png"}" class="turnOrderDisplayPreviewEnemyGlorp"/>` : `<img src="/HonkaiSR/${isEvent ? turnRef.eventImage : characterRef.preview}" class="${isEvent ? "turnOrderDisplayPreviewEventIcon" : "turnOrderDisplayPreview"}"/>`}
+                    ${action.isEnemy ? `<img src="/HonkaiSR/misc/${actionNameSource.toLowerCase().includes("boss") ? "Glorpard.png" : "glorp.png"}" class="turnOrderDisplayPreviewEnemyGlorp"/>` : `<img src="/HonkaiSR/${turnRef.eventOverrideImage ?? (isEvent ? turnRef.eventImage : characterRef.preview)}" class="${isEvent || turnRef.eventOverrideImage ? "turnOrderDisplayPreviewEventIcon" : "turnOrderDisplayPreview"}"/>`}
                     <div class="turnOrderAVBox">${action.AV.toFixed(1)}</div>
                 </div>`;
             }
@@ -4490,6 +4490,18 @@ const userTriggers = {
                 },
                 
             }
+
+            const specialDisplayFunctions = {
+                "Silver Wolf LV.999"(turnRef,action) {
+                    const battleValues = turnRef.battleValues;
+                    const godModeActive = battleValues.godModeActive;
+
+                    if (godModeActive) {
+                        return turnRef.turnStartImageOverride
+                    }
+                    return null
+                },
+            }
             const specialEnergyDisplayFunctions = {
                 "STANDARDBAR"(turnRef,action) {//this is ONLY for standard circle energy bars
                     return `
@@ -4568,6 +4580,92 @@ const userTriggers = {
                             <div class="actionDetailHeaderRowCharacterEnergyValueBox">
                                 <div class="actionDetailHeaderRowCharacterEnergyValue">${(turnRef.specialEnergy ? turnRef.specialEnergyCurrent : turnRef.currentEnergy).toLocaleString()}/</div>
                                 <div class="actionDetailHeaderRowCharacterEnergyValue">${(turnRef.specialEnergy ? turnRef.specialEnergyMax : turnRef.maxEnergy).toLocaleString()}</div>
+                            </div>
+                        </div>`;
+                },
+                "Silver Wolf LV.999"(turnRef,action) {
+
+                    let slashStringer = "";
+
+                    const battleValues = turnRef.battleValues;
+                    const godModeActive = battleValues.godModeActive;
+                    const overFlow = battleValues.MMROverflow;
+
+                    const current = turnRef.specialEnergyCurrent;
+                    const compositeValue = current + overFlow;
+
+                    /*
+                        0-anything in reg mode = normal cartridge
+
+                        0-60 s
+                        60-120 ss
+                        120+ sss
+                    */
+
+                    let swPathing = "/HonkaiSR/misc/sw999/";
+                    let cartridge = swPathing;
+                    let backFill = swPathing;
+                    let shutterFill = swPathing;
+                    let outline = swPathing;
+
+                    let stage = null;
+                    let fillPercent = null;
+
+                    if (!godModeActive) {
+                        stage = 0;
+                        cartridge += "Bg_SpecialUltraSkill_1506_Chips.png";
+                        backFill += "Bg_SpecialUltraSkill_1506_01_ProgressBar.png";
+                        shutterFill += "ProgressBar_SpecialUltraSkill_1506_01.png";
+                        outline += "Outline_SpecialUltraSkill_1506_01_ProgressBar.png";
+                    }
+                    else {
+                        cartridge += "Bg_SpecialUltraSkill_1506_Chips_Cyber_01.png";
+                        if (compositeValue < 60) {
+                            stage = 1;
+                            backFill += "Bg_SpecialUltraSkill_1506_02_ProgressBar_S.png";
+                            shutterFill += "ProgressBar_SpecialUltraSkill_1506_02_S.png";
+                            outline += "Outline_ProgressBar_SpecialUltraSkill_1506_02_S.png";
+                        }
+                        else if (compositeValue >= 60 && compositeValue < 120) {
+                            stage = 2;
+                            backFill += "Bg_SpecialUltraSkill_1506_02_ProgressBar_SS.png";
+                            shutterFill += "ProgressBar_SpecialUltraSkill_1506_02_SS.png";
+                            outline += "Outline_ProgressBar_SpecialUltraSkill_1506_02_SS.png";
+                        }
+                        else {
+                            stage = 3;
+                            backFill += "Bg_SpecialUltraSkill_1506_02_ProgressBar_SSS.png";
+                            shutterFill += "ProgressBar_SpecialUltraSkill_1506_02_SSS.png";
+                            outline += "Outline_ProgressBar_SpecialUltraSkill_1506_02_SSS.png";
+                        }
+                    }
+
+
+                    switch (stage) {
+                        case 0: 
+                        case 1: fillPercent = Math.min(1, turnRef.specialEnergyCurrent/60) * 75; break;
+                        case 2: fillPercent = Math.min(1, (turnRef.specialEnergyCurrent - 60)/60) * 75; break;
+                        case 3: fillPercent = 1 * 75; break;
+                    }
+
+                    slashStringer = `
+                        <img src="${cartridge}" class="sw999CartridgeBackground"/>
+                        <div class="sw999CartridgeFillBox">
+                            <img src="${backFill}" class="sw999CartridgeBackFill"/>
+                            <div class="sw999CartridgeFillBoxSHUTTER" style="height: ${fillPercent + 10}%;">
+                                <img src="${shutterFill}" class="sw999CartridgeBackFillFiller"/>
+                            </div>
+                            <img src="${outline}" class="sw999CartridgeOutline"/>
+                        </div>
+                    `;
+
+                    return `
+                        <div class="actionDetailHeaderRowCharacterCUSTOMEnergyBox">
+                            ${slashStringer}
+                            
+                            <div class="actionDetailHeaderRowCharacterEnergyValueBox">
+                                <div class="actionDetailHeaderRowCharacterEnergyValue">${(compositeValue).toLocaleString()}/</div>
+                                <div class="actionDetailHeaderRowCharacterEnergyValue">${(300).toLocaleString()}</div>
                             </div>
                         </div>`;
                 },
@@ -4794,7 +4892,7 @@ const userTriggers = {
                                             ${entry.showProgressIconAnyways ? `<div class="customEnergyBodyMarksCIRCLEPROGRESS"
                                                     style="background:conic-gradient(${baseFillColor} 0 ${isOnAtAll}%,#3333337c ${isOnAtAll}% 100%);">
                                                     <div class="customEnergyBodyMarksCIRCLEPROGRESSIconBOX">
-                                                        <img src="/HonkaiSR/${entry.progressIcon}" class="customEnergyBodyMarksCIRCLEPROGRESSIcon" onclick="customMenu.createCharacterStatScreenBattleLogged(${logIndex},true)"/>
+                                                        <img src="/HonkaiSR/${entry.progressIcon}" class="customEnergyBodyMarksCIRCLEPROGRESSIcon"/>
                                                     </div>
                                                 </div>` : ""}
                                             ${marksStringer}
@@ -4812,7 +4910,7 @@ const userTriggers = {
                                                 <div class="customEnergyBodyMarksCIRCLEPROGRESS"
                                                     style="background:conic-gradient(${markFillColor} 0 ${fillProgress}%,#3333337c ${fillProgress}% 100%);">
                                                     <div class="customEnergyBodyMarksCIRCLEPROGRESSIconBOX">
-                                                        <img src="/HonkaiSR/${entry.progressIcon}" class="customEnergyBodyMarksCIRCLEPROGRESSIcon" onclick="customMenu.createCharacterStatScreenBattleLogged(${logIndex},true)"/>
+                                                        <img src="/HonkaiSR/${entry.progressIcon}" class="customEnergyBodyMarksCIRCLEPROGRESSIcon"/>
                                                     </div>
                                                 </div>
                                                 ${entry.needPercent ? `${(100 * valueAdjusted/markMax).toLocaleString()}%` : `${valueAdjusted} / ${markMax}`} ${!entry.hideName ? entry.valueName : ""}
@@ -4893,12 +4991,17 @@ const userTriggers = {
                     
                     
                     // onclick="customMenu.createRelicSearchMenu(3)"
+
+                    const hasCustomImage = specialDisplayFunctions[action.name]?.(turnRef,action);
+                    let imageString = `<img src="/HonkaiSR/${isEnemy ? graphs.enemyCustomImages?.[turnRef.enemyRealName] ?? action.name.toLowerCase().includes("boss") ? "misc/Glorpard.png" : graphs.enemyCustomImages.default : (hasCustomImage ?? characters[action.name]?.preview ?? graphs.summonCustomImages[action.name] ?? turnRef.eventImage)}"
+                    class="${isEnemy || turnRef.isUniqueEvent || hasCustomImage ? "actionDetailHeaderRowEnemyImage" : "actionDetailHeaderRowCharacterImage"}"/>`;
+
                     returnString = `
                     <div class="actionDetailHeaderRow"><span class="detailHeaderName">${action.name === "Little Ica" ? "Fat Fuck" : action.name}'s Turn Start</span><span class="detailHeaderAV">AV ${+action.AV.toFixed(7)}</span></div>
                     ${controlsString}
                     <div class="actionDetailHeaderRowCharacterImageBox">
                         <div class="actionDetailHeaderRowCharacterImageAndEnergyBox">
-                            <img src="/HonkaiSR/${isEnemy ? graphs.enemyCustomImages?.[turnRef.enemyRealName] ?? action.name.toLowerCase().includes("boss") ? "misc/Glorpard.png" : graphs.enemyCustomImages.default : (characters[action.name]?.preview ?? graphs.summonCustomImages[action.name] ?? turnRef.eventImage)}" class="${isEnemy || turnRef.isUniqueEvent ? "actionDetailHeaderRowEnemyImage" : "actionDetailHeaderRowCharacterImage"}"/>
+                            ${imageString}
 
                             ${!isEnemy && (!turnRef.isSummon && !turnRef.isUniqueEvent) ? (specialEnergyDisplayFunctions[turnRef.properName] ? specialEnergyDisplayFunctions[turnRef.properName](turnRef,action) : specialEnergyDisplayFunctions.STANDARDBAR(turnRef,action)) : ""}
                             ${isEnemy ? weaknessString : ""}

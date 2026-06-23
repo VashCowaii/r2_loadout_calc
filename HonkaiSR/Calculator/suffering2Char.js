@@ -50741,6 +50741,10 @@ const turnLogic = {
                 const battleValues = sourceTurn.battleValues;
                 const buffSheet = ATKObjects.sw999UltimateGODSHEET;
                 battleValues.godModeActive = false;
+                if (battleData.isLoggyLogger) {
+                    sourceTurn.turnStartImageOverride = null;
+                    sourceTurn.eventOverrideImage = null;
+                }
                 removeBuff(battleData,sourceTurn,buffSheet);
 
                 const elationSkillObject = logicRef.elationSkillObject;
@@ -51414,6 +51418,10 @@ const turnLogic = {
 
                 const battleValues = sourceTurn.battleValues;
                 battleValues.godModeActive = true;
+                if (battleData.isLoggyLogger) {
+                    sourceTurn.turnStartImageOverride = "misc/sw999/1506B_02.png";
+                    sourceTurn.eventOverrideImage = "misc/sw999/1506_03.png";
+                }
 
                 const elationSkillObject = logicRef.elationSkillObject;
                 elationSkillObject.isAttack = true;

@@ -564,10 +564,10 @@ const customDisplayValuesLog = {
         // {valueName: "Zone Active", refName: "skillZoneActive", isBattleValue: true, isCharacterState: true},
     ],
     "Silver Wolf LV.999": [//tracker done
-        {valueName: "MMR Overflow", refName: "MMROverflow", isBattleValue: true},
+        {valueName: "MMR Overflow", refName: "MMROverflow", isBattleValue: true,hide:true},
         // {valueName: "HP Loss Counter", refName: "hpLossCount", isBattleValue: true,summaryValue: "jingliuHPCounterSUm",summaryType: "SUM"},
         // {valueName: "Spectral Transmigration", refName: "enhancedActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "Godmode State", refName: "godModeActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Godmode State", refName: "godModeActive", isBattleValue: true, isCharacterState: true,hide:true},
         {valueName: "E2 EX-Turn Tally", refName: "e2Accumulation", isBattleValue: true, requiresEidolon: 2},
         
         
