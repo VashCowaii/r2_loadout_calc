@@ -12301,6 +12301,59 @@ const turnLogicLightcones = {
             "river": "The Day The Cosmos Fell [LC]",
         },
     },
+    "The Seriousness of Breakfast": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "EnemyDied",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.lcSeriousBreakfastDone) {return;}
+
+                    const ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+                    if (!sourceTurn.lcSeriousBreakfastATKSHEET) {
+                        let lcNameRef = "The Seriousness of Breakfast";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+                        
+                        sourceTurn.lcSeriousBreakfastATKSHEET = {
+                            "stats": [ATKP],
+                            [ATKP]: rankParams[1],
+                            "source": lcNameRef,
+                            "sourceOwner": sourceTurn.properName,
+                            "buffName": turnLogicLightcones[lcNameRef].buffNames.buff1,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 3,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        }
+                    }
+                    let buffSheet = sourceTurn.lcSeriousBreakfastATKSHEET;
+                    updateBuff(battleData,sourceTurn,buffSheet);
+
+                    const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+                    if (buffCheck.currentStacks === 3) {
+                        sourceTurn.lcSeriousBreakfastDone = true;
+                    }
+                },
+                "target": "self",
+                "listenerName": "The Seriousness of Breakfast - holder killed an enemy",
+                "owners": [],
+                "ownersSlots": {},
+            },
+        ],
+        "buffNames": {
+            "buff1": "The Seriousness of Breakfast [LC]",
+        },
+    },
         //3star
     "Data Bank": {
         logic(thisTurn,battleData) {},
