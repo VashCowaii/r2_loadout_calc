@@ -11788,6 +11788,116 @@ const turnLogicLightcones = {
             "buff2": "Somnus Corpus (LC)",
         },
     },
+    "Ninjutsu Inscription: Dazzling Evilbreaker": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;//would apply at the start to any and all owners, each, hence owners instead of ownersSlots
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Ninjutsu Inscription: Dazzling Evilbreaker - passive setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "BasicATK" && action != "Ultimate") {return;}
+                            let sourceTurn = generalInfo.sourceTurn;
+
+                            if (action === "Ultimate") {
+                                if (!sourceTurn.lcDazzlingEvilSHEET ) {
+                                    let lcNameRef = "Ninjutsu Inscription: Dazzling Evilbreaker";
+                                    let lcPathing = lightcones[lcNameRef].params;
+    
+                                    let ownersSlots = this.ownersSlots;
+                                    let ownerRank = ownersSlots[sourceTurn.name];
+                                    let rankParams = lcPathing[ownerRank-1];
+    
+                                    sourceTurn.lcDazzlingEvilSHEET ??= {
+                                        "stats": null,
+                                        "source": lcNameRef,
+                                        "sourceOwner": sourceTurn.properName,
+                                        "buffName": turnLogicLightcones[lcNameRef].buffNames.raiton,
+                                        "durationInTurn": null,
+                                        "duration": 1,
+                                        "AVApplied": 0,
+                                        "maxStacks": 3,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null,
+                                    }
+                                    sourceTurn.lcDazzlingEvilAdvanceValue = rankParams[2]
+                                }
+
+                                const buffSheet = sourceTurn.lcDazzlingEvilSHEET;
+                                const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+                                if (buffCheck) {removeBuff(battleData,sourceTurn,buffCheck);}
+                                updateBuff(battleData,sourceTurn,buffSheet);
+                            }
+                            else {
+                                const buffSheet = sourceTurn.lcDazzlingEvilSHEET;
+                                const buffCheck = sourceTurn.buffsObject[buffSheet?.buffName];
+                                if (buffCheck) {
+                                    updateBuff(battleData,sourceTurn,buffSheet);
+
+                                    const currentStacks = buffCheck.currentStacks;
+                                    if (currentStacks === 3) {
+                                        removeBuff(battleData,sourceTurn,buffCheck);
+                                        actionAdvance(sourceTurn.lcDazzlingEvilAdvanceValue,sourceTurn,battleData,"Ninjutsu Inscription: Dazzling Evilbreaker")
+                                    }
+                                }
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Ninjutsu Inscription: Dazzling Evilbreaker - basic/ult listener",
+                    },
+                ],
+            },
+            {
+                "trigger": "WaveStart",
+                condition(battleData,generalInfo) {
+                    const currentWave = generalInfo.currentWave;
+                    if (currentWave != 1) {return;}
+                    let ownerRef = this.owners;
+
+                    let lcNameRef = "Ninjutsu Inscription: Dazzling Evilbreaker";
+                    let lcPathing = lightcones[lcNameRef].params;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let rankParams = lcPathing[owner.rank-1];
+                        let currentTurn = namedTurns[charSlot];
+
+                        const totalBonus = rankParams[1];
+                        updateEnergy(battleData,totalBonus,currentTurn,false,"Ninjutsu Inscription: Dazzling Evilbreaker");
+                    }
+                },
+                "target": "self",
+                "priority": -80,
+                "listenerName": "Ninjutsu Inscription: Dazzling Evilbreaker - battlestart regen",
+            },
+        ],
+        "buffNames": {
+            "raiton": "Raiton (LC)",
+            "river": "Ninjutsu Inscription: Dazzling Evilbreaker (LC)",
+        },
+    },
         //4star
     "Today Is Another Peaceful Day": {//REDONE
         logic(thisTurn,battleData) {},
