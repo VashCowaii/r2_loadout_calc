@@ -2614,7 +2614,7 @@ const battleActions = {
                 enemyData: JSON.stringify(targetTurn),
                 AV:battleData.sumAV
             };
-            logToBattle(battleData,{logType: isEnemy ? "HitAlly" : "HitEnemy", hitType: "Elation", target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,enemyIsBroken: toughnessComposite.enemyIsBroken,position:targetTurn.isEnemy ? battleData.enemyPositions.indexOf(targetTurn) : null,positionCount:targetTurn.isEnemy ? battleData.enemyPositions.length : null});
+            logToBattle(battleData,{logType: isEnemy ? "HitAlly" : "HitEnemy", hitType: "Elation", target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,enemyIsBroken: toughnessComposite?.enemyIsBroken,position:targetTurn.isEnemy ? battleData.enemyPositions.indexOf(targetTurn) : null,positionCount:targetTurn.isEnemy ? battleData.enemyPositions.length : null});
         }
 
         turnMerge.DMGTotalEnd = DMGTotalEnd;

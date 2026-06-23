@@ -12354,6 +12354,119 @@ const turnLogicLightcones = {
             "buff1": "The Seriousness of Breakfast [LC]",
         },
     },
+    "The Birth of the Self": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "The Birth of the Self - passive application",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+
+                            let isValid = false;
+                            const actionTags = generalInfo.ATKObject.actionTags ?? [];
+                            for (let tag of actionTags) {
+                                if (tag === "FUA") {
+                                    isValid = true;
+                                    break;
+                                }
+                            }
+                            // if (!isValid) {return;}
+    
+                            if (!sourceTurn.lcBirthOfSelfFUASHEET) {
+                                let lcNameRef = "The Birth of the Self";
+                                let lcPathing = lightcones[lcNameRef].params;
+
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let rankParams = lcPathing[ownerRank-1];
+
+                                sourceTurn.lcBirthOfSelfFUASHEET ??= {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[0],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.buff1,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 2,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "actionTags": ["FUA"],
+                                }
+                            }
+                            let buffSheet = sourceTurn.lcBirthOfSelfFUASHEET;
+                            const buffName = buffSheet.buffName;
+                            const buffCheck = sourceTurn.buffsObject[buffName];
+        
+                            //NOTE: we are cheating here and just double stacking the bonus in the same buff
+                            //the game ACTUALLY does it this way, but the reason it's cheating is bc the game uses
+                            //2 diff values for its buffs but we're just cheesing it with a 2stack bonus since each value is the same.
+                            if (isValid) {
+                                const targetTurn = generalInfo.targetTurn;
+                                const hpRatio = (targetTurn.currentHP / targetTurn.maxHP) <= 0.50;
+
+                                if (buffCheck) {
+                                    const currentStacks = buffCheck.currentStacks;
+
+                                    if (hpRatio) {
+                                        if (currentStacks === 2) {return;}
+                                        updateBuff(battleData,sourceTurn,buffSheet);
+                                    }
+                                    else {
+                                        if (currentStacks === 1) {return;}
+                                        buffSheet.currentStacks = -1;
+                                        updateBuff(battleData,sourceTurn,buffSheet);
+                                    }
+                                }
+                                else {
+                                    if (hpRatio) {
+                                        buffSheet.currentStacks = 2;
+                                        updateBuff(battleData,sourceTurn,buffSheet);
+                                    }
+                                    else {
+                                        buffSheet.currentStacks = 1;
+                                        updateBuff(battleData,sourceTurn,buffSheet);
+                                    }
+                                }
+                            }
+                            else if (buffCheck) {
+                                removeBuff(battleData,sourceTurn,buffCheck);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "The Birth of the Self DMG check",
+                    },
+                ],
+            },
+        ],
+        "buffNames": {
+            "buff1": "The Birth of the Self (LC)",
+        },
+    },
         //3star
     "Data Bank": {
         logic(thisTurn,battleData) {},
