@@ -12337,6 +12337,81 @@ const turnLogicLightcones = {
             "atk": "Sagacity [LC]",
         },
     },
+    "Passkey": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        currentTurn.lcPassKeyRegenReady = true;
+
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Passkey listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Skill") {return;}
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (!sourceTurn.lcPassKeyRegenReady) {return;}
+
+                            if (!sourceTurn.lcPassKeyRegenValue) {
+                                let ownersSlots = this.ownersSlots;
+                                const ownerRank = ownersSlots[sourceTurn.name];
+                                let lcNameRef = "Passkey";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+
+                                sourceTurn.lcPassKeyRegenValue = rankParams[0];
+                            }
+
+                            const value = sourceTurn.lcPassKeyRegenValue;
+                            updateEnergy(battleData,value,sourceTurn,false,"LC Passkey");
+                            sourceTurn.lcPassKeyRegenReady = false;
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Passkey, skill end",
+                    },
+                ]
+            },
+            {
+                "trigger": "EndTurn",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = battleData.nameBasedTurns[charSlot];
+
+                        currentTurn.lcPassKeyRegenReady = true;
+                    }
+                },
+                "target": "self",
+                "listenerName": "Passkey - turn ended reset flag",
+                "owners": [],
+            },
+        ],
+        "buffNames": {
+            // "atk": "Sagacity [LC]",
+        },
+    },
 
     //ELATION
     //5star
