@@ -1282,11 +1282,8 @@ const sim = {
         }
         //NOTE: this is for shit like archer's extra turn, where it relies on the queue being empty at a given moment in order to determine if it should queue itself or not
 
-
+        clearPendingDeaths(battleData)
         if (queue.length) {
-
-            
-            
 
             let isLog = battleData.isLoggyLogger;
             const currentAV = battleData.sumAV;
@@ -1413,7 +1410,7 @@ const sim = {
                     
                 }
 
-                clearPendingDeaths(battleData)
+                clearPendingDeaths(battleData);
                 poke("UltimateReady",battleData);
                 if (FUAQueue.length) {
                     //yes, I want to check ulty readiness before AND after the followup queue gets dumped, there could be various reasons for this honestly, fuckin hate this game lmao
