@@ -12304,34 +12304,10 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("KafkaChargeGained",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    const pointsGained = generalInfo.pointsGained;
-                    const valuesRef = ownerTurn.battleValues;
-
-                    const oldValue = valuesRef.fuaStacks;
-                    const maxValue = 2;
-                    valuesRef.fuaStacks = Math.max(0, Math.min(maxValue, oldValue + pointsGained));
-                    const newValue = valuesRef.fuaStacks;
-                    const valueWasDiff = oldValue != newValue;
-
-                    const sourceString = generalInfo.sourceString
-                    if (valueWasDiff && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/misc/kafka/Icon1005Passive.png",sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `FUA Charge (Kafka): ${oldValue} --> ${valuesRef.fuaStacks}/${maxValue} [${sourceString}]`});
-                        
-                        if (pointsGained > 0) {
-                            ownerTurn.kafkaFUAStackSum ??= 0;
-                            ownerTurn.kafkaFUAStackSum += valuesRef.fuaStacks - oldValue;
-                            
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "kafkaFUAStackSum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.fuaStacks,
-                            currentSumValue: ownerTurn.kafkaFUAStackSum,
-                            currentAddedValue: valuesRef.fuaStacks - oldValue
-                        });
-                    }
+                    const generalData = this.generalData ??= {summerName: "kafkaFUAStackSum",baseName: "fuaStacks",maxName: "fuaStacksMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "FUA Charge (Kafka)",displayIcon:"/HonkaiSR/misc/kafka/Icon1005Passive.png"};
+                    // const oldValue = ownerTurn.battleValues.prana;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
                 },
                 "target": "self",
                 "listenerName": "Kafka FUA Charge Handler",
@@ -12403,6 +12379,7 @@ const turnLogic = {
         "characterValues": {
             "fuaStacks": 2,
             "fuaStackDebt": 0,
+            "fuaStacksMax": 2,
         },
         "useTechnique": true,
         "techniqueType": "Attack",
