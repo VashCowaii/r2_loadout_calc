@@ -7655,44 +7655,13 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("HuohuoReviveChargeUsed",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    const pointsGained = generalInfo.pointsGained;
-                    const valuesRef = ownerTurn.battleValues;
-
-                    const oldValue = valuesRef.reviveCharges;
-                    const maxValue = valuesRef.reviveChargesMax;
-                    valuesRef.reviveCharges = Math.max(0, Math.min(maxValue, oldValue + pointsGained));
-                    const newValue = valuesRef.reviveCharges;
-                    const valueWasDiff = oldValue != newValue;
-
-                    const buffName = this.buffName ??= turnLogic[ownerTurn.properName].buffNames.talentCountdown;
-                    const buffCheck = ownerTurn.buffsObject[buffName];
-                    if (buffCheck.duration === 1) {
-                        removeBuff(battleData,ownerTurn,buffCheck);
-                    }
-                    else {buffCheck.duration -= 1;}
-
-                    const sourceString = generalInfo.sourceString
-                    if (valueWasDiff && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/misc/huohuo/IconBuffRebirth.png",sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Revives (Huohuo): ${oldValue} --> ${valuesRef.reviveCharges}/${maxValue} [${sourceString}]`});
-                        
-                        if (pointsGained > 0) {
-                            ownerTurn.huohuoReviveSum ??= 0;
-                            ownerTurn.huohuoReviveSum += valuesRef.reviveCharges - oldValue;
-                            
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "huohuoReviveSum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.reviveCharges,
-                            currentSumValue: ownerTurn.huohuoReviveSum,
-                            currentAddedValue: valuesRef.reviveCharges - oldValue
-                        });
-                    }
+                    const generalData = this.generalData ??= {summerName: "huohuoReviveSum",baseName: "reviveCharges",maxName: "reviveChargesMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "Revives (Huohuo)",displayIcon:"/HonkaiSR/misc/huohuo/IconBuffRebirth.png"};
+                    // const oldValue = ownerTurn.battleValues.chargeStacks;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
                 },
                 "target": "self",
-                "listenerName": "Bailu Revive Charge Handler",
+                "listenerName": "Huohuo Revive Charge Handler",
                 "ownerTurn": {},
             },
             {
