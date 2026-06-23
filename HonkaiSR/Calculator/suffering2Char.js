@@ -28504,7 +28504,7 @@ const turnLogic = {
                     const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
                 },
                 "target": "self",
-                "listenerName": "Hanya Burden Trigger Handler",
+                "listenerName": "Hanya Burden Hits Trigger Handler",
                 "ownerTurn": {},
             },
             {
