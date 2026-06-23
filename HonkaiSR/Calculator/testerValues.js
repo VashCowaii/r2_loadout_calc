@@ -181,15 +181,6 @@ const customDisplayValuesLog = {
             progressIcon: "misc/clara/Icon1107Passive.png",
         },
         {valueName: "Counter Max", refName: "counterCountMax", isBattleValue: true,hide: true},
-
-        // {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true, isCharacterState: true},
-        // {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
-        
-
-        // {valueName: "Nether Turns Remaining", refName: "netherRemainingTurns", isBattleValue: true,
-        //     customDisplay: "marks", customDisplayType: "circle", markMax: 3, innerMarkColor: "#9083FF",
-        //     displayRequiresIndex: 0, displayRequiresType: "boolean", displayRequiresBoolean: true,
-        // },
     ],
 
     //HUNT
@@ -342,7 +333,7 @@ const customDisplayValuesLog = {
             customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "#9083FF",
             displayRequiresIndex: 1, displayRequiresType: "number",
             displayRequiresBoolean: false,
-            progressIcon: characters["March 7th - Preservation"].traces.Point04.icon
+            progressIcon: "misc/m7Pres/Icon1001Passive.png"
         },
         {valueName: "Counter Max", refName: "counterCountMax", isBattleValue: true,hide: true},
         // {valueName: "Blind Bet", refName: "betStacks", isBattleValue: true,summaryValue: "avenBlindBetSum",summaryType: "SUM"},

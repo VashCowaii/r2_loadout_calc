@@ -44196,36 +44196,10 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("MarchGainCounterCount",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    // coreResonance
-                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
-                    const pointsGained = generalInfo.pointsGained;
-                    const valuesRef = ownerTurn.battleValues;
-
-                    const oldValue = valuesRef.counterCount;
-                    const maxValue = valuesRef.counterCountMax;
-                    valuesRef.counterCount = Math.min(maxValue, oldValue + pointsGained);
-                    const newValue = valuesRef.counterCount;
-                    const valueWasDiff = oldValue != newValue;
-
-                    const sourceString = generalInfo.sourceString
-                    if (valueWasDiff && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Counter (March): ${oldValue} --> ${valuesRef.counterCount}/${maxValue} [${sourceString}]`});
-                        
-                        if (pointsGained > 0) {
-                            ownerTurn.march7pCounterCountSum ??= 0;
-                            ownerTurn.march7pCounterCountSum += valuesRef.counterCount - oldValue;
-                            
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "march7pCounterCountSum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.counterCount,
-                            currentSumValue: ownerTurn.march7pCounterCountSum,
-                            currentAddedValue: valuesRef.counterCount - oldValue
-                        });
-                    }
+                    const generalData = this.generalData ??= {summerName: "march7pCounterCountSum",baseName: "counterCount",maxName: "counterCountMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "Counter (March)",displayIcon:"/HonkaiSR/misc/m7Pres/Icon1001Passive.png"};
+                    // const oldValue = ownerTurn.battleValues.prana;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
                 },
                 "target": "self",
                 "listenerName": "March Counter Handler",
