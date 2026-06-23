@@ -12026,6 +12026,102 @@ const turnLogicLightcones = {
             "broken": "Night on the Milky Way (LC) BREAK",
         },
     },
+    "Eternal Calculus": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Eternal Calculus - passive application",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+                            
+                            if (!sourceTurn.lcEternalCalculusATKSHEET) {
+                                const ownersSlots = this.ownersSlots;
+                                const ownerRank = ownersSlots[sourceTurn.name];
+                                const lcNameRef = "Eternal Calculus";
+                                const lcPathing = lightcones[lcNameRef].params;
+                                const rankParams = lcPathing[ownerRank-1];
+    
+                                sourceTurn.lcEternalCalculusATKSHEET = {
+                                    "stats": [ATKP],
+                                    [ATKP]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.buff1,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 5,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                }
+                                sourceTurn.lcEternalCalculusSPDSHEET = {
+                                    "stats": [SPDP],
+                                    [SPDP]: rankParams[3],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.buff2,
+                                    "durationInTurn": 2,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                }
+                            }
+                            
+                            const buffSheet = sourceTurn.lcEternalCalculusATKSHEET;
+                            const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+                            if (buffCheck) {removeBuff(battleData,sourceTurn,buffCheck);}//lc clears the entire bonus before reapplication
+
+                            const targetsGotHit = generalInfo.targetsGotHit;
+                            let targetCount = 0;
+                            for (let enemySlot in targetsGotHit) {
+                                targetCount++;
+                            }
+
+                            buffSheet.currentStacks = targetCount;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+
+                            if (targetCount >= 3) {
+                                const SPDSheet = sourceTurn.lcEternalCalculusSPDSHEET;
+                                updateBuff(battleData,sourceTurn,SPDSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Eternal Calculus - attack end listener",
+                    },
+                ],
+            },
+        ],
+        "buffNames": {
+            "buff1": "Eternal Calculus (LC)",
+            "buff2": "Eternal Calculus (LC) SPD",
+        },
+    },
         //4star
     "Today Is Another Peaceful Day": {//REDONE
         logic(thisTurn,battleData) {},
