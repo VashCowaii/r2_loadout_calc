@@ -41905,6 +41905,7 @@ const turnLogic = {
             souldragonTurnAttackEnhanced(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
+                poke("dhptGainDragonAttacks",battleData,{pointsGained: -1,sourceString:"FUA Launched"});
 
                 let skillRef = ATKObjects.dhptTalentREF ??= ATKObjects["Talent"]["Of Virtue, Forms Unfold"].variant1;
                 let values = ATKObjects.dhptTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
@@ -42038,7 +42039,7 @@ const turnLogic = {
                 const ATKObject2 = ATKObjects.dhptUltimateATKOBJECTPOST;
 
                 const battleValues = sourceTurn.battleValues;
-                battleValues.souldragonEnhancedTurns = 2 + (rank>=2 ? 2 : 0);
+                poke("dhptGainDragonAttacks",battleData,{pointsGained: 2 + (rank>=2 ? 2 : 0),sourceString:"Ultimate"});
                 logicRef.skillFunctions.dhptUltimateShield(battleData,sourceTurn);
 
                 let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget,"Start",null);
@@ -42451,6 +42452,20 @@ const turnLogic = {
                 ],
             },
             {
+                "trigger": "dhptGainDragonAttacks",
+                condition(battleData,generalInfo) {
+                    // poke("dhptGainDragonAttacks",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    const generalData = this.generalData ??= {summerName: "dhptDragonAttackSummer",baseName: "souldragonEnhancedTurns",maxName: "souldragonEnhancedTurnsMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "Enhanced Turns (DHPT)",displayIcon:"/HonkaiSR/misc/dhpt/Icon1414Passive.png"};
+                    // const oldValue = ownerTurn.battleValues.chargeStacks;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
+                },
+                "target": "self",
+                "listenerName": "DHPT Dragon attacks Handler",
+                "ownerTurn": {},
+            },
+            {
                 "trigger": "DHPTFUAQueue",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -42459,8 +42474,6 @@ const turnLogic = {
                     const dragonTurn = generalInfo.eventTurn;
 
                     if (valuesRef.souldragonEnhancedTurns) {
-                        valuesRef.souldragonEnhancedTurns -= 1;
-
                         const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
                             name: this.listenerName + " [FUA ATTACK]",
                             priority: priorityList.ability.CharacterAttackFromSelf,
@@ -42628,6 +42641,7 @@ const turnLogic = {
         "ATKObjects": {},
         "characterValues": {
             "souldragonEnhancedTurns": 0,
+            "souldragonEnhancedTurnsMax": 99,
             "bondmateSlot": null,
             "souldragonActive": false,
         },

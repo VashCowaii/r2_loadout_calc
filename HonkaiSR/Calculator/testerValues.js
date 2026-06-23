@@ -318,14 +318,14 @@ const customDisplayValuesLog = {
     "Dan Heng • Permansor Terrae": [
         {valueName: "Bondmate", refName: "bondmateSlot", isBattleValue: true, isCharacterSlot:true},
         // {valueName: "Enhanced Turns", refName: "souldragonEnhancedTurns", isBattleValue: true},
-        {valueName: "Enhanced Turns", refName: "souldragonEnhancedTurns", isBattleValue: true,//summaryValue: "hanyaBurdenTriggerSum",summaryType: "SUM",
+        {valueName: "Enhanced Turns", refName: "souldragonEnhancedTurns", isBattleValue: true,summaryValue: "dhptDragonAttackSummer",summaryType: "SUM",
             customDisplay: "marks", customDisplayType: "number", markMax: 99, innerMarkColor: "Physical",
             // displayRequiresIndex: 1, displayRequiresType: "number",
             displayRequiresBoolean: false,
             showProgressIconAnyways: true,
             progressIcon: "misc/dhpt/Icon1414Passive.png"
         },
-        {valueName: "Burden Triggers Max", refName: "burdenStacksMax", isBattleValue: true,hide: true},
+        {valueName: "Enhanced Turns Max", refName: "souldragonEnhancedTurnsMax", isBattleValue: true,hide: true},
         {valueName: "Souldragon on Field", refName: "souldragonActive", isBattleValue: true, isCharacterState: true},
     ], 
     "March 7th - Preservation": [//tracker done
