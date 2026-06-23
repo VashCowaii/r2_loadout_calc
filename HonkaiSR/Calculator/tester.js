@@ -5014,7 +5014,7 @@ const userTriggers = {
                         <div class="turnOrderDisplayPreviewActionExpandRowIconBox">
                             <img src="/HonkaiSR/${characters[action.target].icon}" class="turnOrderDisplayPreviewActionExpandRowIcon"/>
                         </div>
-                        <img src="${propertyImagePaths.EnergyRegen.icon}" class="characterDisplayLogStatIcon"/>
+                        <img src="${action.energyOverrideIcon ? `/HonkaiSR/${action.energyOverrideIcon}` : propertyImagePaths.EnergyRegen.icon}" class="characterDisplayLogStatIcon"/>
                         ${action.isOverflow ? "[OVERFLOW] " : ""}${+action.amount.toFixed(7)} || ${+action.oldEnergy.toFixed(7)}/${action.maximum} --> ${+action.newEnergy.toFixed(7)}/${action.maximum} ${action.source ? ` [${action.source}]` : ""}
                     </div>`;
                     // returnString = `<div class="actionDetailBody">

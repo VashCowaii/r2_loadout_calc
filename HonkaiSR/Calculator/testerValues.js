@@ -273,14 +273,23 @@ const customDisplayValuesLog = {
     ],
     "Mortenax Blade": [//tracker done
         {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true, isCharacterState: true},
-        {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
+        // {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
+        
         {valueName: "Charge", refName: "charge", isBattleValue: true,summaryValue: "mortenaxBladeChargeSum",summaryType: "SUM",
             customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "#9083FF",
-            displayRequiresIndex: 3, displayRequiresType: "number",
+            displayRequiresIndex: 2, displayRequiresType: "number",
             displayRequiresBoolean: false,
-            progressIcon: characters["Mortenax Blade"].traces.Point04.icon
+            progressIcon: "misc/mortenaxBlade/Icon1507Passive.png"
         },
         {valueName: "Charge Max", refName: "chargeMax", isBattleValue: true,hide: true},
+
+        {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM",
+            customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "#9083FF",
+            displayRequiresIndex: 4, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            progressIcon: "misc/mortenaxBlade/Icon1507SkillTree01.png"
+        },
+        {valueName: "Overflow Energy Max", refName: "overflowEnergyMax", isBattleValue: true,hide: true},
     ],
     "The Dahlia": [//tracker done
         {valueName: "Zone Active", refName: "skillZoneActive", isBattleValue: true, isCharacterState: true, hide: true},
