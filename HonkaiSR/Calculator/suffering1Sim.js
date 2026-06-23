@@ -796,12 +796,7 @@ const sim = {
         const getNext = sim.getNextQueuedTurn;
         const adjustAllAV = sim.pullToCurrentAV;
         const expireControl = battleActions.buffExpireController;
-        const triggerTurnDots = battleActions.dotDetonateWrapper;
         
-
-        // if (targetTurn.DOTCounter) {
-        //     let addedHit = battleActions.dotDetonateWrapper(battleData,sourceTurn,detonateMulti,targetTurn,"Kafka Talent Detonate");
-        // }
 
 
         // const extraTurnObject = {
@@ -876,11 +871,6 @@ const sim = {
 
             pokeWithDots("PreActionPhase", battleData, exoTurnRef,sourceTurn);
 
-            // if (sourceTurn.DOTCounter) {
-            //     triggerTurnDots(battleData,null,null,sourceTurn,"Turn-Start DOTs");
-            //     // poke("TurnStartDotEnd", battleData, exoTurnRef,sourceTurn);
-            // }
-
             
             const startTurnBuffs = sourceTurn.buffsStartTurn;
             if (canLoseBuffsThisTurn && startTurnBuffs.length) {expireControl(battleData,sourceTurn,startTurnBuffs);}
@@ -890,10 +880,6 @@ const sim = {
             clearULT(battleData);//need to be able to account for ulty cast within a turn, like gallagher won't give himself an extra turn if cast DURING his own turn, no advance can happen there.
 
             if (sourceTurn.isEnemy) {
-                // if (sourceTurn.DOTCounter) {
-                //     triggerTurnDots(battleData,null,null,sourceTurn,"Turn-Start DOTs");
-                //     // poke("TurnStartDotEnd", battleData, exoTurnRef,sourceTurn);
-                // }
                 if (!sourceTurn.isDead && !sourceTurn.isLimbo) {
                     let turnShouldEnd = false;
                     if (sourceTurn.currentToughness === 0) {
@@ -1148,7 +1134,6 @@ const sim = {
                                 //     ownerSlot: sourceTurn.name,
                                 // }
                             }
-                            // triggerTurnDots(battleData,null,null,personalOwner,"Turn-Start DOTs");
                         }
                         else {
                             currentCondition.condition(battleData,generalInfo,personalOwner);//TODO: later look into passing the sourceTurn object as a 3rd param, just not rn
@@ -1461,5 +1446,4 @@ const poke = sim.pokeListenersOwnership;
 const pokeWithDots = sim.pokeListenersOwnershipDOTS;
 const pokeArray = sim.pokeListenersArray;
 const pokeSet = sim.pokeListenersSet;
-const triggerTurnDots = battleActions.dotDetonateWrapper;
 const dotWrap = battleActions.dotDMGWrapper;

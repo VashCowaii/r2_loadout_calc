@@ -2972,7 +2972,6 @@ const battleActions = {
 
         return {enemiesAttackedThisAction,hit}
     },
-    // dotDetonateWrapper(battleData,sourceTurn,ATKObject,targetTurn,"Kafka Talent Detonate");
     dotDetonateWrapper(battleData,sourceTurn,detonateMulti,targetTurn) {
         if (!targetTurn.DOTCounter) {return;}
         let logging = battleData.isLoggyLogger;
@@ -4630,7 +4629,8 @@ const dealToughnessDMG = battleActions.dealToughnessDMG;
 const getBreakDamage = battleActions.getBreakDamage;
 const hitWrapperBattleStart = battleActions.hitWrapperBattleStart;
 const clearPendingDeaths = battleActions.clearPendingDeaths;
-const markEnemyForDeath = battleActions.markEnemyForDeath
+const markEnemyForDeath = battleActions.markEnemyForDeath;
+const dotDetonateWrapper = battleActions.dotDetonateWrapper;
 
 
 const turnLogic = {
@@ -11737,16 +11737,14 @@ const turnLogic = {
                 const primaryMulti = values[1];
                 const blastMulti = values[3];
 
-                const detonate = battleActions.dotDetonateWrapper;
-
                 const primaryTargetArray = generalInfo.primaryTargetArray;
                 const subTargetArray = generalInfo.subTargetArray;
 
                 for (let enemy of primaryTargetArray) {
-                    detonate(battleData,sourceTurn,primaryMulti,enemy);
+                    dotDetonateWrapper(battleData,sourceTurn,primaryMulti,enemy);
                 }
                 for (let enemy of subTargetArray) {
-                    detonate(battleData,sourceTurn,blastMulti,enemy);
+                    dotDetonateWrapper(battleData,sourceTurn,blastMulti,enemy);
                 }
             },
             kafkaFUA(battleData,actionObject,sourceTurn) {
@@ -11820,9 +11818,8 @@ const turnLogic = {
                 const talentMulti = 0.80;
 
                 const primaryTargetArray = generalInfo.primaryTargetArray;
-                const detonate = battleActions.dotDetonateWrapper;
                 for (let enemy of primaryTargetArray) {
-                    detonate(battleData,sourceTurn,talentMulti,enemy);
+                    dotDetonateWrapper(battleData,sourceTurn,talentMulti,enemy);
                 }
             },
             kafkaUltimate(battleData,actionObject,sourceTurn) {
@@ -11948,9 +11945,8 @@ const turnLogic = {
             },
             kafkaUltimateDetonate(battleData,sourceTurn,generalInfo,ultMulti) {
                 const primaryTargetArray = generalInfo.primaryTargetArray;
-                const detonate = battleActions.dotDetonateWrapper;
                 for (let enemy of primaryTargetArray) {
-                    detonate(battleData,sourceTurn,ultMulti,enemy);
+                    dotDetonateWrapper(battleData,sourceTurn,ultMulti,enemy);
                 }
             },
             kafkaTechnique(battleData,actionObject,sourceTurn) {
@@ -13118,9 +13114,8 @@ const turnLogic = {
 
                 const target = chainedAttackRef.primaryTargetArray;
 
-                const detonate = battleActions.dotDetonateWrapper;
                 for (let enemy of target) {
-                    detonate(battleData,sourceTurn,ultMulti,enemy);
+                    dotDetonateWrapper(battleData,sourceTurn,ultMulti,enemy);
                 }
             },
             fishladyTechnique(battleData,actionObject,sourceTurn) {
