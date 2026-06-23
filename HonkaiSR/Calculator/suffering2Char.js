@@ -3701,47 +3701,6 @@ const battleActions = {
             battleActions.assignAttackTargetsEnemy(battleData);
         }
     },
-    killDesignatedAllies(battleData,targetTurn,isEnemy,sourceTurn) {
-
-        const allyPositions = battleData.allyPositions;
-        const nextAV = battleData.nextTurnAV;
-        let killer = sourceTurn;
-        let killed = targetTurn;
-        // console.log(enemyDeath.properName)
-        poke("AllyDied",battleData,{sourceTurn, targetTurn:killed},killed);
-        // poke("AllyDied",battleData,{targetTurn:deathTurn});
-        if (battleData.isLoggyLogger) {
-            logToBattle(battleData,{logType: "EnemyDiedNote", enemyKilled:killed.properName, isEnemy: true});
-            if (!targetTurn.isMemosprite) {logToBattle(battleData,{logType: "EnemyDied", source:killer.properName, enemyKilled:killed.properName, isEnemy: true});}
-        }
-
-        //find the enemy position and remove it from the enemy lineup and turn order
-        const indexToRemove = allyPositions.indexOf(killed);
-        const indexToRemove2 = nextAV.indexOf(killed);
-        allyPositions.splice(indexToRemove, 1);
-        nextAV.splice(indexToRemove2, 1);
-        //TODO: revive handling here
-
-        if (!targetTurn.isUniqueEvent) {
-            battleData.charactersRemaining -= 1;
-        }
-        else if (targetTurn.isMemosprite) {targetTurn?.deathFunction?.(battleData,targetTurn,targetTurn.deathParam)}
-        //obv there can be cases where the memo owner dies but the memo itself would still be left before their function procs
-
-        if (battleData.charactersRemaining === 0) {
-            battleData.battleIsOver = true;
-            battleData.battleFailed = true;
-        }
-        else {
-            if (targetTurn.memospriteEventRef) {
-                const memoTurn = targetTurn[targetTurn.memospriteEventRef];
-                if (memoTurn.isActive) {targetTurn?.deathFunction?.(battleData,targetTurn,targetTurn.deathParam)}
-            }
-        }
-        
-            //then once done, redefine the enemy targets available
-        battleActions.assignAttackTargetsEnemy(battleData);
-    },
     actionLogWrapper(battleData,action,charName) {
         battleData.battleTotal.Actions ??= {};
         let sumSlotRef2 = battleData.battleTotal.Actions[charName] ??= {};
@@ -12325,7 +12284,6 @@ const turnLogic = {
         
                             const energyToRegen = 5;
                             updateEnergy(battleData,energyToRegen,ownerTurn,false,"Plunder");
-                            //TODO: verify this works with energy regen, the assumption rn is that it does
                         },
                         "target": "self",
                         "listenerName": "Plunder enemy death listener",
