@@ -25548,17 +25548,14 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("astaChargeGained",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    // coreResonance
-                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
-                    const pointsGained = generalInfo.pointsGained;
-                    const valuesRef = ownerTurn.battleValues;
+                    const generalData = this.generalData ??= {summerName: "astaChargeSummer",baseName: "chargeStacks",maxName: "chargeStacksMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "Charge (Asta)",displayIcon:"/HonkaiSR/misc/asta/Icon1009Passive.png"};
+                    const oldValue = ownerTurn.battleValues.chargeStacks;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
 
-                    const oldValue = valuesRef.chargeStacks;
-                    const chargeMax = 5;
-                    valuesRef.chargeStacks = Math.max(0,Math.min(chargeMax,oldValue + pointsGained));
-                    const newValue = valuesRef.chargeStacks;
-
-                    if (newValue === oldValue) {return;}
+                    if (!valueWasDiff) {return;}
+                    const newValue = ownerTurn.battleValues.chargeStacks;
+                    const chargeMax = ownerTurn.battleValues.chargeStacksMax;
 
                     const logicRef = turnLogic[ownerTurn.properName];
                     const ATKObjects = logicRef.ATKObjects;
@@ -25566,27 +25563,6 @@ const turnLogic = {
 
                     const atkName = buffNames.traceATK;
                     const defName = buffNames.traceDEF;
-
-
-                    const sourceString = generalInfo.sourceString;
-                    if (pointsGained && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/misc/asta/Icon1009Passive.png" ,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Charge (Asta): ${oldValue} --> ${newValue}/5 [${sourceString}]`});
-                    
-                        if (pointsGained > 0) {
-                            ownerTurn.astaChargeSummer ??= 0;
-                            ownerTurn.astaChargeSummer += valuesRef.chargeStacks - oldValue;
-                            // console.log(ownerTurn.saberSumResonance)
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "astaChargeSummer",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.chargeStacks,
-                            currentSumValue: ownerTurn.astaChargeSummer,
-                            currentAddedValue: valuesRef.chargeStacks - oldValue
-                        });
-                    }
 
                     if (!ATKObjects.astaChargeATKSHEET) {
 
@@ -25761,6 +25737,7 @@ const turnLogic = {
         "ATKObjects": {},
         "characterValues": {
             "chargeStacks": 0,
+            "chargeStacksMax": 5,
             "skipCost": true,
         },
         "useTechnique": true,
