@@ -30451,7 +30451,7 @@ const turnLogic = {
                         "currentStacks": 1,
                         "decay": false,
                         "expireType": null,
-                        "buffDisplayIcon": "misc/jingliu/Icon1212Passive01.png",
+                        "buffDisplayIcon": "misc/jingliu/Icon1212Passive.png",
                     }
                     ATKObjects.jingliuTalentEnhancedSHEETULT = {
                         "stats": [DamageAll],
@@ -47548,6 +47548,7 @@ const turnLogic = {
                         expireFunction: logicRef.skillFunctions.skillZoneExpired,
                         expireParam: sourceTurn.name,
                         "removeOnDeath": true,
+                        buffDisplayIcon: "misc/yaoGuang/Icon1502BP.png",
                     }
 
                     ATKObjects.yaoSkillBUFFSHEETE2 = {
@@ -47572,6 +47573,7 @@ const turnLogic = {
                 const countdownName = ownerSheet.buffName;
                 const buffCheck = sourceTurn.buffsObject[countdownName];
                 sourceTurn.battleValues.skillZoneActive = true;
+                sourceTurn.battleValues.yaoGuangFieldDuration = 3;
 
                 if (!buffCheck && rank >= 2) {
                     const spdSHEET = ATKObjects.yaoSkillBUFFSHEETE2;
@@ -47609,6 +47611,7 @@ const turnLogic = {
                         "currentStacks": 1,
                         "decay": false,
                         "expireType": null,
+                        buffDisplayIcon: "misc/yaoGuang/Icon1502BP.png",
                     }
                 }
 
@@ -48145,6 +48148,25 @@ const turnLogic = {
                 "ownerTurn": {},
             },
             {
+                "trigger": "PreActionPhaseEnd",
+                condition(battleData,generalInfo) {
+                    // poke("HealEnd",battleData,turnMerge);
+                    let ownerTurn = this.ownerTurn;
+
+                    if (!ownerTurn.battleValues.skillZoneActive) {
+                        ownerTurn.battleValues.yaoGuangFieldDuration = 0;
+                    }
+                    else {
+                        const buffName = this.buffName ??= turnLogic[ownerTurn.properName].buffNames.decalightCountdown;
+                        ownerTurn.battleValues.yaoGuangFieldDuration = ownerTurn.buffsObject[buffName].duration;
+                    }
+                },
+                "target": "self",
+                "isPersonal": true,
+                "listenerName": "Yao Guang Zone - duration increment handler(visual)",
+                "ownerTurn": {},
+            },
+            {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
@@ -48208,6 +48230,7 @@ const turnLogic = {
         "buffsBattleTemp": {},
         "characterValues": {
             "skillZoneActive": false,
+            "yaoGuangFieldDuration": 0,
         },
         "useTechnique": true,
         "techniqueType": "Support",

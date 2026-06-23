@@ -4790,7 +4790,6 @@ const userTriggers = {
                                         }
 
                                         const isOnAtAll = valueAdjusted > 0 ? 100 : 0;
-                                        console.log(valueAdjusted,isOnAtAll)
                                         customValuesString += `<div class="customEnergyBodyMarksBar ${isBanger ? "customEnergyBodyMarksBarBANGER" : ""}">
                                             ${entry.showProgressIconAnyways ? `<div class="customEnergyBodyMarksCIRCLEPROGRESS"
                                                     style="background:conic-gradient(${baseFillColor} 0 ${isOnAtAll}%,#3333337c ${isOnAtAll}% 100%);">

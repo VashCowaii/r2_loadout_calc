@@ -539,7 +539,14 @@ const customDisplayValuesLog = {
 
     //ELATION
     "Yao Guang": [//tracker done
-        {valueName: "Zone Active", refName: "skillZoneActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Zone Active", refName: "skillZoneActive", isBattleValue: true, isCharacterState: true,hide:true},
+        {valueName: "Zone Duration", refName: "yaoGuangFieldDuration", isBattleValue: true,
+            customDisplay: "marks", customDisplayType: "diamond", markMax: 3, innerMarkColor: "Physical",
+            // displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/yaoGuang/Icon1502BP.png"
+        },
     ],
     "Sparxie": [//tracker done
         {valueName: "Thrill", refName: "thrill", isBattleValue: true,summaryValue: "sparxieThrillSum",summaryType: "SUM",
