@@ -489,15 +489,6 @@ const customDisplayValuesLog = {
             progressIcon: "misc/jingYuan/Icon1204Passive.png"
         },
         {valueName: "Prana Max", refName: "pranaMax", isBattleValue: true,hide: true},
-
-        // {valueName: "Zone Active", refName: "bladeFuryActive", isBattleValue: true, isCharacterState: true},
-        // {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "mortenaxBladeOverflowSummer",summaryType: "SUM"},
-        
-
-        // {valueName: "Nether Turns Remaining", refName: "netherRemainingTurns", isBattleValue: true,
-        //     customDisplay: "marks", customDisplayType: "circle", markMax: 3, innerMarkColor: "#9083FF",
-        //     displayRequiresIndex: 0, displayRequiresType: "boolean", displayRequiresBoolean: true,
-        // },
     ],
     "Himeko": [//tracker done
         // valuesRef.prana;
@@ -506,7 +497,7 @@ const customDisplayValuesLog = {
             customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "#9083FF",
             displayRequiresIndex: 1, displayRequiresType: "number",
             displayRequiresBoolean: false,
-            progressIcon: characters["Himeko"].traces.Point04.icon
+            progressIcon: "misc/himeko/Icon1003Passive.png"
         },
         {valueName: "Charge Max", refName: "chargeMax", isBattleValue: true,hide: true},
 

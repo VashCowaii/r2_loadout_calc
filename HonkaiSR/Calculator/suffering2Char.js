@@ -32803,34 +32803,10 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("dhilFakePointsGained",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    // coreResonance
-                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
-                    const pointsGained = generalInfo.pointsGained;
-                    const valuesRef = ownerTurn.battleValues;
-
-                    const oldValue = valuesRef.fakePoints;
-                    const maxValue = valuesRef.fakePointsMax;
-                    valuesRef.fakePoints = Math.min(maxValue,oldValue + pointsGained);
-
-                    const sourceString = generalInfo.sourceString
-                    if (pointsGained && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.betStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point03.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Squama Sacrosancta (DHIL): ${oldValue} --> ${valuesRef.fakePoints}/${maxValue} [${sourceString}]`});
-                    
-                        if (pointsGained > 0) {
-                            ownerTurn.dhilFakePointSum ??= 0;
-                            ownerTurn.dhilFakePointSum += valuesRef.fakePoints - oldValue;
-                            
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "dhilFakePointSum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.fakePoints,
-                            currentSumValue: ownerTurn.dhilFakePointSum,
-                            currentAddedValue: valuesRef.fakePoints - oldValue
-                        });
-                    }
+                    const generalData = this.generalData ??= {summerName: "dhilFakePointSum",baseName: "fakePoints",maxName: "fakePointsMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "Squama Sacrosancta (DHIL)",displayIcon:"/HonkaiSR/misc/dhil/Icon1213SpecialBP.png"};
+                    // const oldValue = ownerTurn.battleValues.prana;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
                 },
                 "target": "self",
                 "listenerName": "DHIL fake skill point Handler",
@@ -47138,36 +47114,10 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("HimekoGainCharge",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    // coreResonance
-                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
-                    const pointsGained = generalInfo.pointsGained;
-                    const valuesRef = ownerTurn.battleValues;
-
-                    const oldValue = valuesRef.charge;
-                    const maxValue = valuesRef.chargeMax;
-                    valuesRef.charge = Math.min(maxValue, oldValue + pointsGained);
-                    const newValue = valuesRef.charge;
-                    const valueWasDiff = oldValue != newValue;
-
-                    const sourceString = generalInfo.sourceString
-                    if (valueWasDiff && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Charge (Himeko): ${oldValue} --> ${valuesRef.charge}/${maxValue} [${sourceString}]`});
-                        
-                        if (pointsGained > 0) {
-                            ownerTurn.himekoChargeSum ??= 0;
-                            ownerTurn.himekoChargeSum += valuesRef.charge - oldValue;
-                            
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "himekoChargeSum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.charge,
-                            currentSumValue: ownerTurn.himekoChargeSum,
-                            currentAddedValue: valuesRef.charge - oldValue
-                        });
-                    }
+                    const generalData = this.generalData ??= {summerName: "himekoChargeSum",baseName: "charge",maxName: "chargeMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "Charge (Himeko)",displayIcon:"/HonkaiSR/misc/himeko/Icon1003Passive.png"};
+                    // const oldValue = ownerTurn.battleValues.prana;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
                 },
                 "target": "self",
                 "listenerName": "Himeko Charge Handler",
