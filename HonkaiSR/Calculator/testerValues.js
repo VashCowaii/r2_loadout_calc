@@ -486,7 +486,7 @@ const customDisplayValuesLog = {
             customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "#9083FF",
             displayRequiresIndex: 1, displayRequiresType: "number",
             displayRequiresBoolean: false,
-            progressIcon: characters["Jing Yuan"].traces.Point04.icon
+            progressIcon: "misc/jingYuan/Icon1204Passive.png"
         },
         {valueName: "Prana Max", refName: "pranaMax", isBattleValue: true,hide: true},
 

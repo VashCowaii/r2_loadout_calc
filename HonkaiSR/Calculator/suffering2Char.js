@@ -16380,6 +16380,7 @@ const turnLogic = {
 
                     const generalData = this.generalData ??= {summerName: "mortenaxBladeChargeSum",baseName: "charge",maxName: null,maxNameDisplay: "chargeMax",minName: null,isRealSubEnergy: true,
                         baseString: "Charge (Mortenax Blade)",displayIcon:"/HonkaiSR/misc/mortenaxBlade/Icon1507Passive.png"};
+                    // const oldValue = ownerTurn.battleValues.prana;
                     const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
                     
                     poke("mortenaxBladeQueueFUA",battleData,null);
@@ -28488,6 +28489,7 @@ const turnLogic = {
                     let ownerTurn = this.ownerTurn;
                     const generalData = this.generalData ??= {summerName: "hanyaBurdenTriggerSum",baseName: "burdenStacks",maxName: "burdenStacksMax",maxNameDisplay: null,minName: null,isRealSubEnergy: false,
                         baseString: "Burden Triggers (Hanya)",displayIcon:"/HonkaiSR/misc/hanya/Icon1215BPStatus.png"};
+                    // const oldValue = ownerTurn.battleValues.prana;
                     const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
                 },
                 "target": "self",
@@ -28501,6 +28503,7 @@ const turnLogic = {
                     let ownerTurn = this.ownerTurn;
                     const generalData = this.generalData ??= {summerName: "hanyaBurdenHitsSum",baseName: "burdenHits",maxName: "burdenHitsMax",maxNameDisplay: null,minName: null,isRealSubEnergy: false,
                         baseString: "Burden Hits (Hanya)",displayIcon:"/HonkaiSR/misc/hanya/burden.png"};
+                    // const oldValue = ownerTurn.battleValues.prana;
                     const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
                 },
                 "target": "self",
@@ -46477,19 +46480,13 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("jingYuanGainPrana",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    // coreResonance
-                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
-                    const pointsGained = generalInfo.pointsGained;
-                    const valuesRef = ownerTurn.battleValues;
-
-                    const oldValue = valuesRef.prana;
-                    const maxValue = valuesRef.pranaMax;
-                    valuesRef.prana = Math.max(3, Math.min(maxValue, oldValue + pointsGained));
-                    const newValue = valuesRef.prana;
-
-                    const valueWasDiff = (newValue - oldValue) != 0;
+                    const generalData = this.generalData ??= {summerName: "jingYuanPranaSum",baseName: "prana",maxName: "pranaMax",maxNameDisplay: null,minName: "pranaMin",isRealSubEnergy: false,
+                        baseString: "Prana (Jing Yuan)",displayIcon:"/HonkaiSR/misc/jingYuan/Icon1204Passive.png"};
+                    const oldValue = ownerTurn.battleValues.prana;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
 
                     if (valueWasDiff) {
+                        const newValue = ownerTurn.battleValues.prana;;
                         const valueDiff = newValue - oldValue;
 
                         const buffSheet = this.lightningSPDSHEET ??= {
@@ -46517,26 +46514,6 @@ const turnLogic = {
                             buffSheet.currentStacks = valueDiff;
                             updateBuff(battleData,lightningLordTurn,buffSheet);
                         }
-                    }
-
-                    const sourceString = generalInfo.sourceString
-                    if (valueWasDiff && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Prana (Jing Yuan): ${oldValue} --> ${valuesRef.prana}/${maxValue} [${sourceString}]`});
-                        
-                        if (pointsGained > 0) {
-                            ownerTurn.jingYuanPranaSum ??= 0;
-                            ownerTurn.jingYuanPranaSum += valuesRef.prana - oldValue;
-                            
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "jingYuanPranaSum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.prana,
-                            currentSumValue: ownerTurn.jingYuanPranaSum,
-                            currentAddedValue: valuesRef.prana - oldValue
-                        });
                     }
                 },
                 "target": "self",
@@ -46700,6 +46677,7 @@ const turnLogic = {
         "characterValues": {
             "prana": 3,
             "pranaMax": 10,
+            "pranaMin": 3,
         },
         "useTechnique": true,
         "techniqueType": "Attack",
