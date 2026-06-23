@@ -586,7 +586,14 @@ const customDisplayValuesLog = {
         // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
     ],
     "Evanescia": [//tracker done
-        {valueName: "FUA Accumulation", refName: "fuaTrackerValue", isBattleValue: true},
+        {valueName: "FUA Accumulation", refName: "fuaTrackerValue", isBattleValue: true,//summaryValue: "mortenaxBladeChargeSum",summaryType: "SUM",
+            customDisplay: "progress", customDisplayType: "circle", markMax: 240, innerMarkColor: "Physical",
+            // displayRequiresIndex: 2, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            needPercent: true,
+            hideName: true,
+            progressIcon: "misc/evanescia/Icon1505Passive.png"
+        },
         {valueName: "E6 Ult Counter", refName: "E6UltCounter", isBattleValue: true, requiresEidolon: 6},
         
         // {valueName: "MMR Overflow", refName: "MMROverflow", isBattleValue: true},

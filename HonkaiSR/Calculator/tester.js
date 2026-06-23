@@ -4815,7 +4815,7 @@ const userTriggers = {
                                                         <img src="/HonkaiSR/${entry.progressIcon}" class="customEnergyBodyMarksCIRCLEPROGRESSIcon" onclick="customMenu.createCharacterStatScreenBattleLogged(${logIndex},true)"/>
                                                     </div>
                                                 </div>
-                                                ${valueAdjusted} / ${markMax} ${entry.valueName}
+                                                ${entry.needPercent ? `${(100 * valueAdjusted/markMax).toLocaleString()}%` : `${valueAdjusted} / ${markMax}`} ${!entry.hideName ? entry.valueName : ""}
                                             </div>`
                                         }
                                     }
