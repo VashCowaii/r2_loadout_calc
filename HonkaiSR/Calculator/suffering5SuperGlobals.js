@@ -248,5 +248,39 @@ const superGlobal = {
         }
         else {return false;}
     },
+
+    genericEnergyOverflowHandling(battleData,ownerTurn,generalInfo,generalData) {
+        const overflow = generalInfo.overFill;
+        if (overflow) {
+            const valuesRef = ownerTurn.battleValues;
+            const oldAmount = valuesRef.overflowEnergy;
+            const cap = valuesRef.overflowEnergyMax;
+            valuesRef.overflowEnergy = Math.min(cap,valuesRef.overflowEnergy + overflow);
+            const amountGained = valuesRef.overflowEnergy - oldAmount;
+
+            if (battleData.isLoggyLogger) {
+                const summerName = generalData.summerName;
+                const sourceString = generalData.sourceString;
+                const energyOverrideIcon = generalData.energyOverrideIcon;
+
+                logToBattle(battleData,{logType: "EnergyChange", isOverflow: true, target: ownerTurn.properName, amount: amountGained, oldEnergy:oldAmount, newEnergy:valuesRef.overflowEnergy, maximum:cap,
+                    source:sourceString, energyOverrideIcon});
+            
+                if (valuesRef.overflowEnergy > oldAmount) {
+                    ownerTurn[summerName] ??= 0;
+                    ownerTurn[summerName] += amountGained;
+                }
+                logToBattle(battleData,{
+                    logType: "SUMMARY:SUM",
+                    function: summerName,
+                    AV: battleData.sumAV,
+                    currentValue: valuesRef.overflowEnergy,
+                    currentSumValue: ownerTurn[summerName],
+                    currentAddedValue: amountGained
+                });
+            }
+        }
+    },
 }
 const createQueueObject = superGlobal.createQueueObject;
+const genericEnergyOverflow = superGlobal.genericEnergyOverflowHandling;
