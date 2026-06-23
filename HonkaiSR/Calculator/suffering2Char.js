@@ -11404,9 +11404,21 @@ const turnLogic = {
                         }
                     }
 
+                    let livingTarget = null;
+                    let livingRank = 0;
+                    const enemyPositions = battleData.enemyPositions;
+                    for (let enemy of enemyPositions) {
+                        if (enemy.isLimbo || enemy.isDead) {continue;}
+
+                        if (enemy.enemyRank > livingRank) {
+                            livingTarget = enemy;
+                            livingRank = enemyRank;
+                        }
+                    }
+
                     //and if the new primary target has no implant yet, then implant it from the enemy that died
                     //obv can't implant though if everyone is dead and a primary target is missing
-                    const primaryRef = battleData.primaryTarget;
+                    const primaryRef = livingTarget;
                     if (implantNameFound && primaryRef && !primaryRef.buffsObject[implantNameFound]) {
                         const implantSheetToTransfer = enemyKilledBuffs[implantNameFound]
                         updateBuff(battleData,primaryRef,implantSheetToTransfer);
@@ -18675,10 +18687,31 @@ const turnLogic = {
                 }
                 else {ATKObject.bonusMultiplier = 0;}
 
+                let debtSheet = sourceTurn.topazSkillProofDebtVULNSHEET;
+
+                const debtTarget = valuesRef.enemyWithDebt;
+                const newTarget = actionObject.target[0];
+                if (!debtTarget) {
+                    updateBuff(battleData,newTarget,debtSheet);
+                }
+                else if (debtTarget.properName != newTarget.properName) {
+                    removeBuff(battleData,debtTarget,debtSheet);
+
+                    if (rank >= 1) {
+                        const buffName = logicRef.buffNames.e1Debtor;
+                        const debtorCheck = debtTarget.buffsObject[buffName];
+                        if (debtorCheck) {
+                            removeBuff(battleData,debtTarget,debtorCheck);
+                        }
+                    }
+
+                    updateBuff(battleData,newTarget,debtSheet);
+                    newTarget.topazE1DebtorSTACKCOMPLETE = false;
+                    valuesRef.enemyWithDebt = newTarget;
+                }
+
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);//no split energy, all at once before dmg
                 attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
-
-                
 
                 if (isEnhanced) {
                     valuesRef.bonanzaStacks -= 1;
@@ -18829,6 +18862,26 @@ const turnLogic = {
 
                     const passiveListeners = this.passiveListeners;
 
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    let skillRef = ATKObjects.topazSkillEnhancedREF;
+                    let buffSheet = ATKObjects.topazSkillProofDebtVULNSHEET ??= {
+                        "stats": [VulnAll],
+                        [VulnAll]: battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn)[1],
+                        "source": ownerTurn.properName,
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": logicRef.buffNames.debt,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "isDebuff": true,
+                        "actionTags": ["FUA"]
+                    }
+                    ownerTurn.topazSkillProofDebtVULNSHEET = buffSheet;
 
                     //trace fin turmoil
                     const listener1 = passiveListeners[0];
@@ -19127,32 +19180,10 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     let ownerTurn = this.ownerTurn;
 
-                    const logicRef = turnLogic[ownerTurn.properName];
-                    const ATKObjects = logicRef.ATKObjects;
-
-                    const buffNames = logicRef.buffNames;
                     let charValuesRef = ownerTurn.battleValues;
                     charValuesRef.enemyWithDebt = battleData.primaryTarget;
                     let targetTurn = charValuesRef.enemyWithDebt;
-
-                    // let values = ATKObjects.topazSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
-                    let skillRef = ATKObjects.topazSkillEnhancedREF;
-                    let buffSheet = ATKObjects.topazSkillProofDebtVULNSHEET ??= {
-                        "stats": [VulnAll],
-                        [VulnAll]: battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn)[1],
-                        "source": ownerTurn.properName,
-                        "sourceOwner": ownerTurn.properName,
-                        "buffName": buffNames.debt,
-                        "durationInTurn": null,
-                        "duration": 1,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null,
-                        "isDebuff": true,
-                        "actionTags": ["FUA"]
-                    }
+                    let buffSheet = ownerTurn.topazSkillProofDebtVULNSHEET;
                     updateBuff(battleData,targetTurn,buffSheet);
                 },
                 "target": "self",
@@ -19164,23 +19195,108 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
                     let ownerTurn = this.ownerTurn;
+                    const battleValues = ownerTurn.battleValues;
+                    let targetTurn = battleValues.enemyWithDebt;
 
-                    const logicRef = turnLogic[ownerTurn.properName];
-                    const ATKObjects = logicRef.ATKObjects;
-
-                    let charValuesRef = logicRef.characterValuesBattle;
-                    charValuesRef.enemyWithDebt = battleData.primaryTarget;
-                    let targetTurn = charValuesRef.enemyWithDebt;
-
-                    if (targetTurn === null || targetTurn.isDead) {return}//if the enemy with debt is NOT one of the dead ones in this batch, leave it be
-
-                    charValuesRef.enemyWithDebt = battleData.primaryTarget;
-                    if (!charValuesRef.enemyWithDebt) {return}//battle would be over, in this case
-                    let buffSheet = ATKObjects.topazSkillProofDebtVULNSHEET;
-                    updateBuff(battleData,charValuesRef.enemyWithDebt,buffSheet);
+                    if (!targetTurn || targetTurn.isDead) {
+                        battleValues.enemyWithDebt = null;
+                    }//if the enemy with debt is NOT one of the dead ones in this batch, leave it be
                 },
                 "target": "self",
-                "listenerName": "Topaz: Proof of Debt death swap",
+                "listenerName": "Topaz: Proof of Debt death set owner to null",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "AbilityStart",
+                condition(battleData,generalInfo) {
+                    // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                    let ownerTurn = this.ownerTurn;
+                    const battleValues = ownerTurn.battleValues;
+                    const enemyWithDebt = battleValues.enemyWithDebt;
+                    if (enemyWithDebt) {return;}
+
+                    let livingTarget = null;
+                    let livingRank = 0;
+                    const enemyPositions = battleData.enemyPositions;
+                    for (let enemy of enemyPositions) {
+                        if (enemy.isDead) {continue;}
+
+                        if (enemy.enemyRank > livingRank) {
+                            livingTarget = enemy;
+                            livingRank = enemyRank;
+                        }
+                    }
+
+                    battleValues.enemyWithDebt = livingTarget;
+                    if (!livingTarget) {return}//battle would be over, in this case
+                    let buffSheet = ownerTurn.topazSkillProofDebtVULNSHEET;
+                    updateBuff(battleData,livingTarget,buffSheet);
+                    livingTarget.topazE1DebtorSTACKCOMPLETE = false;
+                },
+                "target": "self",
+                "listenerName": "Topaz: Proof of Debt application if missing - ability",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "TurnStart",
+                condition(battleData,generalInfo) {
+                    // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                    let ownerTurn = this.ownerTurn;
+                    const battleValues = ownerTurn.battleValues;
+                    const enemyWithDebt = battleValues.enemyWithDebt;
+                    if (enemyWithDebt) {return;}
+
+                    let livingTarget = null;
+                    let livingRank = 0;
+                    const enemyPositions = battleData.enemyPositions;
+                    for (let enemy of enemyPositions) {
+                        if (enemy.isDead) {continue;}
+
+                        if (enemy.enemyRank > livingRank) {
+                            livingTarget = enemy;
+                            livingRank = enemyRank;
+                        }
+                    }
+
+                    battleValues.enemyWithDebt = livingTarget;
+                    if (!livingTarget) {return}//battle would be over, in this case
+                    let buffSheet = ownerTurn.topazSkillProofDebtVULNSHEET;
+                    updateBuff(battleData,livingTarget,buffSheet);
+                    livingTarget.topazE1DebtorSTACKCOMPLETE = false;
+                },
+                "target": "self",
+                "listenerName": "Topaz: Proof of Debt application if missing - ability",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "ExtraTurnStart",
+                condition(battleData,generalInfo) {
+                    // poke("EnemyDied",battleData,{sourceTurn, enemyKilled:killed});
+                    let ownerTurn = this.ownerTurn;
+                    const battleValues = ownerTurn.battleValues;
+                    const enemyWithDebt = battleValues.enemyWithDebt;
+                    if (enemyWithDebt) {return;}
+
+                    let livingTarget = null;
+                    let livingRank = 0;
+                    const enemyPositions = battleData.enemyPositions;
+                    for (let enemy of enemyPositions) {
+                        if (enemy.isDead) {continue;}
+
+                        if (enemy.enemyRank > livingRank) {
+                            livingTarget = enemy;
+                            livingRank = enemyRank;
+                        }
+                    }
+
+                    battleValues.enemyWithDebt = livingTarget;
+                    if (!livingTarget) {return}//battle would be over, in this case
+                    let buffSheet = ownerTurn.topazSkillProofDebtVULNSHEET;
+                    updateBuff(battleData,livingTarget,buffSheet);
+                    livingTarget.topazE1DebtorSTACKCOMPLETE = false;
+                },
+                "target": "self",
+                "listenerName": "Topaz: Proof of Debt application if missing - ability",
                 "ownerTurn": {},
             },
             {
