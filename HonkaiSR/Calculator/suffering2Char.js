@@ -40152,7 +40152,7 @@ const turnLogic = {
                     consumeHP(battleData,null,values[0],memoTurn,memoTurn,skillRef.slot,false,false);
                 }
                 else {//this is for E2's ardent will stacks that subvert the HP drain
-                    battleValues.ardentWillStacks -= 1;
+                    poke("CastoriceGainArdentWill",battleData,{pointsGained: -1,sourceString:"HP Cost offset"});
                 }
                 battleValues.netherShouldDie = memoTurn.currentHP <= 1;
 
@@ -40230,7 +40230,7 @@ const turnLogic = {
                 }
 
                 const charValuesRef = sourceTurn.battleValues;
-                charValuesRef.netherRemainingTurns = 3;
+                poke("CastoriceGainNetherTurns",battleData,{pointsGained: 3,sourceString:"Netherwing Added to Field"});
                 charValuesRef.casE2NewbudReady = true;
                 const rank = sourceTurn.rank;
 
@@ -40242,7 +40242,7 @@ const turnLogic = {
                 charValuesRef.netherShouldDie = false;
                 charValuesRef.skillCasts = 0;
                 charValuesRef.totalCasts = 0;
-                charValuesRef.ardentWillStacks = rank >= 2 ? 2 : 0;
+                if (rank >= 2) {poke("CastoriceGainArdentWill",battleData,{pointsGained: 2,sourceString:"Netherwing Added to Field"});}
 
                 //inserting into the actual turn order
                 battleData.nextTurnAV.push(netherTurnObject);
@@ -40439,6 +40439,7 @@ const turnLogic = {
                 
                 ownerTurn.activeSummons -= 1;
                 ownerTurn.activeMemosprites -= 1;
+                poke("CastoriceGainNetherTurns",battleData,{pointsGained: -3,sourceString:"Netherwing Died"});
                 battleData.backupHPOnField -= 1;
                 battleData.territoryActive = false;
 
@@ -40992,7 +40993,7 @@ const turnLogic = {
         
                             const valuesRef = ownerTurn.battleValues;
                             valuesRef.netherTurnShouldEnd = false;
-                            valuesRef.netherRemainingTurns -= 1;
+                            poke("CastoriceGainNetherTurns",battleData,{pointsGained: -1,sourceString:"Netherwing Turn Started"});
                         },
                         "target": "self",
                         "isPersonal": true,
@@ -41112,6 +41113,34 @@ const turnLogic = {
                 },
                 "target": "self",
                 "listenerName": "Netherwing HP Backup Drained, Queued Suicide",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "CastoriceGainNetherTurns",
+                condition(battleData,generalInfo) {
+                    // poke("CastoriceGainNetherTurns",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    const generalData = this.generalData ??= {summerName: "casNetherTurnsSummer",baseName: "netherRemainingTurns",maxName: "netherRemainingTurnsMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "Netherwing Turns (Cas)",displayIcon:"/HonkaiSR/misc/castorice/Icon1407Passive.png"};
+                    // const oldValue = ownerTurn.battleValues.chargeStacks;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
+                },
+                "target": "self",
+                "listenerName": "Castorice Nether Turns Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "CastoriceGainArdentWill",
+                condition(battleData,generalInfo) {
+                    // poke("CastoriceGainArdentWill",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    const generalData = this.generalData ??= {summerName: "casArdentSummer",baseName: "ardentWillStacks",maxName: "ardentWillStacksMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "Ardent Will (Cas)",displayIcon:"/HonkaiSR/misc/castorice/Icon1407Rank02.png"};
+                    // const oldValue = ownerTurn.battleValues.chargeStacks;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
+                },
+                "target": "self",
+                "listenerName": "Castorice Nether Turns Handler",
                 "ownerTurn": {},
             },
             {
@@ -41340,8 +41369,10 @@ const turnLogic = {
             "specialEnergyCurrentName": null,
             "specialEnergyMaxName": null,
             "netherIsActive": false,
-            "netherRemainingTurns": 3,
+            "netherRemainingTurns": 0,
+            "netherRemainingTurnsMax": 3,
             "ardentWillStacks": 0,
+            "ardentWillStacksMax": 0,
 
             "netherTurnShouldEnd": false,
             "netherShouldDie": false,
