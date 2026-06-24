@@ -11694,7 +11694,7 @@ const turnLogicLightcones = {
             "dr": "Journey, Forever Peaceful [LC]",
         },
     },
-    "Destiny's Threads Forewoven": {//REDONE
+    "Destiny's Threads Forewoven": {
         logic(thisTurn,battleData) {},
         "skillFunctions": {
             statCheck(battleData,currentTurn,ownersSlots) {
@@ -11940,6 +11940,80 @@ const turnLogicLightcones = {
             },
         ],
         "buffNames": {},
+    },
+    "Amber": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Amber listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AllyHPChange",
+                        condition(battleData,generalInfo,personalOwner) {
+
+                            if (!personalOwner.lcAmberDEFSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[personalOwner.name];
+                                let lcNameRef = "Amber";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+
+                                personalOwner.lcAmberDEFSHEET = {
+                                    "stats": [DEFP],
+                                    [DEFP]: rankParams[2],
+                                    "source": lcNameRef,
+                                    "sourceOwner": personalOwner.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.buff1,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null
+                                }
+                            }
+                            let buffSheet = personalOwner.lcAmberDEFSHEET;
+
+                            const hpRatio = (personalOwner.currentHP / personalOwner.maxHP) < 0.50;
+
+                            const buffCheck = personalOwner.buffsObject[buffSheet.buffName];
+                            if (buffCheck) {
+                                if (hpRatio) {return;}
+                                removeBuff(battleData,personalOwner,buffCheck);
+                            }
+                            else if (hpRatio) {
+                                updateBuff(battleData,personalOwner,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Amber hp check",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "buff1": "Amber (LC)",
+        },
     },
 
 

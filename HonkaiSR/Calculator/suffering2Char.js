@@ -2162,6 +2162,7 @@ const battleActions = {
                 }
                 targetTurn.currentHP -= shieldOverflow;
                 poke("AllyLostHP",battleData,{sourceTurn:targetTurn,HPLost: shieldOverflow,wasAttack:true},targetTurn);
+                poke("AllyHPChange",battleData,null,targetTurn);
             }
             else {targetTurn.currentHP -= shieldOverflow;}
             
@@ -2580,6 +2581,7 @@ const battleActions = {
                 }
                 targetTurn.currentHP -= shieldOverflow;
                 poke("AllyLostHP",battleData,{sourceTurn:targetTurn,HPLost: shieldOverflow,wasAttack:true},targetTurn);
+                poke("AllyHPChange",battleData,null,targetTurn);
             }
             else {targetTurn.currentHP -= shieldOverflow;}
             
