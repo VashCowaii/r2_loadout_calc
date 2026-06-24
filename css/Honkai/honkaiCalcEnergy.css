@@ -369,6 +369,19 @@
     margin-right: 15px;
     margin-left: 10px;
 }
+.customEnergyBodyMarksBANGERHOLDERBUFFICON {
+    /* border-radius: 50%; */
+    height: 50px;
+    width:  50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+
+    margin-right: 0px;
+    margin-left: 10px;
+}
 
 .actionDetailHeaderRowCharacterCUSTOMBANGERBOX {
     /* width: 100%; */

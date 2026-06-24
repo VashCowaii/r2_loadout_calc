@@ -1622,6 +1622,11 @@ const customMenu = {
             let playerBuffsStringer = "";
             let buffOrOtherCounter = 0;
 
+            let certifiedBangerStringer = "";
+            let cbStringHolder = [];
+            let totalCBValue = 0;
+            // isCertifiedBanger
+
             let debuffStringerPRE = "";
             let debuffStringer = "";
             let debuffCounter = 0;
@@ -1681,67 +1686,77 @@ const customMenu = {
                         `;
                 }
 
+                // cbStringHolder
+                if (currentBuff.isCertifiedBanger) {
+                    const durationIndex = currentBuff.duration;
+                    cbStringHolder[durationIndex] ??= 0;
 
-
-                buffStringer += `
-                <details class="actionDetailBodyDetailExpandBuffs" open>
-                    <summary class="actionDetailBodyDetailExpandHeaderBackgroundINNER clickable">
-                        <div class="buffNameBreakdownClickerHeaderBox">
-                            <div class="buffNameBreakdownClickerHeaderBoxBUFFROW">
-                                <div class="buffNameBreakdownClickerHeaderBoxBUFFNAME">
-                                    ${currentBuff.buffDisplayIcon ? `<img src="/HonkaiSR/${currentBuff.buffDisplayIcon}" class="buffDOTIcon"/>` : ""}
-                                    ${dotStringer}${currentBuff.buffName} ${currentBuff.maxStacks > 1 ? `(${currentBuff.currentStacks})` : ""}
-                                </div>
-                                ${currentBuff.expireType ? `
-                                    <div class="buffNameBreakdownClickerHeaderBoxExpireHolder">
-                                    ${currentBuff.duration}
-                                    <img src="/HonkaiSR/misc/turnIcon.png" class="buffExpireIcon"/>
+                    totalCBValue += currentBuff.currentStacks;
+                    cbStringHolder[durationIndex] += currentBuff.currentStacks;
+                    
+                }
+                else {
+                    buffStringer += `
+                    <details class="actionDetailBodyDetailExpandBuffs" open>
+                        <summary class="actionDetailBodyDetailExpandHeaderBackgroundINNER clickable">
+                            <div class="buffNameBreakdownClickerHeaderBox">
+                                <div class="buffNameBreakdownClickerHeaderBoxBUFFROW">
+                                    <div class="buffNameBreakdownClickerHeaderBoxBUFFNAME">
+                                        ${currentBuff.buffDisplayIcon ? `<img src="/HonkaiSR/${currentBuff.buffDisplayIcon}" class="buffDOTIcon"/>` : ""}
+                                        ${dotStringer}${currentBuff.buffName} ${currentBuff.maxStacks > 1 ? `(${currentBuff.currentStacks})` : ""}
                                     </div>
-                                    ` : ""}
+                                    ${currentBuff.expireType ? `
+                                        <div class="buffNameBreakdownClickerHeaderBoxExpireHolder">
+                                        ${currentBuff.duration}
+                                        <img src="/HonkaiSR/misc/turnIcon.png" class="buffExpireIcon"/>
+                                        </div>
+                                        ` : ""}
+                                </div>
                             </div>
-                        </div>
-                    </summary>
-                    ${shieldStringer}
-                `;
-                // }
+                        </summary>
+                        ${shieldStringer}
+                    `;
+                    // }
 
-                // tagSpecific
-                buffStringer += `<div class="expandedBuffBodyIndented">`;
-                if (currentBuff.stats) {
-                    // if (!currentBuff.actionTags) {buffStringer += `<div class="actionDetailBody">Regular Stats:</div>`;}
+                    // tagSpecific
+                    buffStringer += `<div class="expandedBuffBodyIndented">`;
+                    if (currentBuff.stats) {
+                        // if (!currentBuff.actionTags) {buffStringer += `<div class="actionDetailBody">Regular Stats:</div>`;}
+                        
+                        if (currentBuff.actionTags) {
+                            let taggerString = `<div class="actionDetailBody">Action Tags: ${currentBuff.actionTags}${currentBuff.isSourceSpecific ? `<img src="/HonkaiSR/${characters[currentBuff.sourceOwner].icon}" class="buffSourceDisplayIconBattleLogged"/>` : ""}`
+
+                            taggerString += `</div>`
+                            buffStringer += taggerString;
+                        }
+                        
+                        let adjustedStatsObject = {};
+                        for (let statEntry of currentBuff.stats) {
+                            adjustedStatsObject[statEntry] = currentBuff[statEntry];
+                        }
+                        buffStringer += customHTML.createAlternatingStatRows(currentBuff.stats,adjustedStatsObject,null,null,true);
+                    }
+                    if (currentBuff.isFinalMulti) {
+                        if (currentBuff.actionTags) {
+                            let taggerString = `<div class="actionDetailBody">Action Tags: ${currentBuff.actionTags}</div>`
+                            buffStringer += taggerString;
+                        }
+                        // buffStringer += `<div class="actionDetailBody">Multiplier: x${currentBuff.multiplier}</div>`
+                        const multiObject = {Multiplier: currentBuff.multiplier}
+                        let displayOrder = Object.keys(multiObject);
+                        buffStringer += customHTML.createAlternatingStatRows(displayOrder,{...multiObject},null,null,true);
+                    }
+
+                    buffStringer += `<div class="actionDetailBodyBuffSource">
+                        ${currentBuff.source}
+                        ${characters[currentBuff.sourceOwner]?.icon ? `<img src="/HonkaiSR/${characters[currentBuff.sourceOwner].icon}" class="buffSourceDisplayIconBattleLogged"/>` : ""}
+                    </div>`;
+                    buffStringer += `</div>`;
                     
-                    if (currentBuff.actionTags) {
-                        let taggerString = `<div class="actionDetailBody">Action Tags: ${currentBuff.actionTags}${currentBuff.isSourceSpecific ? `<img src="/HonkaiSR/${characters[currentBuff.sourceOwner].icon}" class="buffSourceDisplayIconBattleLogged"/>` : ""}`
-
-                        taggerString += `</div>`
-                        buffStringer += taggerString;
-                    }
                     
-                    let adjustedStatsObject = {};
-                    for (let statEntry of currentBuff.stats) {
-                        adjustedStatsObject[statEntry] = currentBuff[statEntry];
-                    }
-                    buffStringer += customHTML.createAlternatingStatRows(currentBuff.stats,adjustedStatsObject,null,null,true);
-                }
-                if (currentBuff.isFinalMulti) {
-                    if (currentBuff.actionTags) {
-                        let taggerString = `<div class="actionDetailBody">Action Tags: ${currentBuff.actionTags}</div>`
-                        buffStringer += taggerString;
-                    }
-                    // buffStringer += `<div class="actionDetailBody">Multiplier: x${currentBuff.multiplier}</div>`
-                    const multiObject = {Multiplier: currentBuff.multiplier}
-                    let displayOrder = Object.keys(multiObject);
-                    buffStringer += customHTML.createAlternatingStatRows(displayOrder,{...multiObject},null,null,true);
+                    buffStringer += `</details>`;
                 }
 
-                buffStringer += `<div class="actionDetailBodyBuffSource">
-                    ${currentBuff.source}
-                    ${characters[currentBuff.sourceOwner]?.icon ? `<img src="/HonkaiSR/${characters[currentBuff.sourceOwner].icon}" class="buffSourceDisplayIconBattleLogged"/>` : ""}
-                </div>`;
-                buffStringer += `</div>`;
-                
-                
-                buffStringer += `</details>`;
 
                 if (isDebuff) {
                     debuffStringer += buffStringer;
@@ -1753,7 +1768,64 @@ const customMenu = {
                 }
             }
 
-            if (playerBuffsStringer) {
+            if (playerBuffsStringer || totalCBValue) {
+                if (totalCBValue) {
+                    let durationStringer = ``;
+                    let alternator = 0;
+                    for (let entry in cbStringHolder) {
+                        alternator++;
+                        // durationStringer += `<div class="buffNameBreakdownClickerHeaderBox">
+                        //     <div class="buffNameBreakdownClickerHeaderBoxBUFFROW">
+                        //         ${cbStringHolder[entry]}
+                        //         <div class="buffNameBreakdownClickerHeaderBoxExpireHolder">
+                        //         ${entry}
+                        //         <img src="/HonkaiSR/misc/turnIcon.png" class="buffExpireIcon"/>
+                        //         </div>
+                        //     </div>
+                        // </div>`;
+
+                        // <div class="imageRowStatisticImageBox"><img src="/HonkaiSR/icon/property/IconCriticalChance.png" class="imageRowStatisticImageStatMenu"></div>
+                        durationStringer += `<div class="imageRowStatisticBox${alternator}">
+                            
+                            <div class="imageRowStatisticNameBox">${cbStringHolder[entry]}</div>
+                            <div class="imageRowStatisticStatBox">${entry}
+                                <img src="/HonkaiSR/misc/turnIcon.png" class="buffExpireIcon"/>
+                            </div>
+                        </div>`
+
+
+                        if (alternator === 2) {alternator = 0;}
+                    }
+                    durationStringer += `</div>`;
+
+                    // ${currentBuff.buffDisplayIcon ? `<img src="/HonkaiSR/${currentBuff.buffDisplayIcon}" class="buffDOTIcon"/>` : ""}
+                    certifiedBangerStringer = `<details class="actionDetailBodyDetailExpandBuffs" open>
+                        <summary class="actionDetailBodyDetailExpandHeaderBackgroundINNER clickable">
+                        <div class="customEnergyBodyMarksBANGERHOLDERBUFFICON" style="">
+                                    <div class="actionDetailHeaderRowCharacterCUSTOMBANGERBOX">
+                                        <img src="/HonkaiSR/misc/certifiedBanger/OutlineElationBless_Color.png" class="actionDetailHeaderRowCharacterCUSTOMBANGER ">
+                                        <img src="/HonkaiSR/misc/certifiedBanger/OutlineElationBless.png" class="actionDetailHeaderRowCharacterCUSTOMBANGERSHUTTER actionDetailHeaderRowCharacterCUSTOMBANGERSHUTTERFILL">
+                                        <img src="/HonkaiSR/misc/certifiedBanger/IconElationBless.png" class="actionDetailHeaderRowCharacterCUSTOMBANGERMASK actionDetailHeaderRowCharacterCUSTOMBANGERMASKFILL">
+                                    </div>
+                                </div>
+                            <div class="buffNameBreakdownClickerHeaderBox">
+                            
+                                <div class="buffNameBreakdownClickerHeaderBoxBUFFROW">
+                                
+                                    <div class="buffNameBreakdownClickerHeaderBoxBUFFNAME">
+                                        
+                                        Certified Banger ${totalCBValue}
+                                    </div>
+                                </div>
+                            </div>
+                        </summary>
+                        ${durationStringer}
+                    </details>`;
+
+                    playerBuffsStringer = certifiedBangerStringer + playerBuffsStringer;
+                }
+
+
                 playerBuffsStringer = `<details class="actionDetailBodyDetailExpandBuffsBox">
                 <summary class="actionDetailBodyDetailExpandHeader clickable">Buffs/Other <span class="actionDetailBodyBuffCOUNTER">${buffOrOtherCounter}</span></summary>` + playerBuffsStringer + `</details>`;
             }

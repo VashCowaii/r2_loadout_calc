@@ -5441,6 +5441,7 @@ const turnLogic = {
                         "expireType": "EndTurn",
                         "expireFunction": turnLogic["Aha Instant"].skillFunctions.expireCertified,
                         "expireParam": null,
+                        "isCertifiedBanger": true,
                         "buffDisplayIcon": "misc/certifiedBanger/OutlineElationBless_Grey.png",
                     }
                     const buffSheet = battleData.ahaInstantBangerSHEET ??= this.bangerSheet;
@@ -25037,7 +25038,6 @@ const turnLogic = {
                     const battleValues = ownerTurn.battleValues;
                     if (!battleValues.robinConcertoActive) {return;}
 
-                    console.log("reached limbo")
                     const concertoExpired = this.concertoExpired ??= turnLogic[ownerTurn.properName].skillFunctions.concertoExpired;
 
                     const beTurn = ownerTurn.robinUltimateCONCERTOTURNEVENT;
