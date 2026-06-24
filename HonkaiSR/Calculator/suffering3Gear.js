@@ -360,6 +360,7 @@ const turnLogicLightcones = {
                                 else if (currentStacks < 2) {//but if we have less than total, add the amount diff
                                     // const stackDiff = debuffsCount - currentStacks;
                                     const buffSheet = sourceTurn.ventureForthToHuntSHREDSHEET;
+                                    buffSheet.currentStacks = 1;
                                     updateBuff(battleData,sourceTurn,buffSheet);
                                     return;
                                 }
@@ -390,6 +391,7 @@ const turnLogicLightcones = {
                                 }
                                 
                                 const buffSheet = sourceTurn.ventureForthToHuntSHREDSHEET;
+                                buffSheet.currentStacks = 1;
                                 updateBuff(battleData,sourceTurn,buffSheet);
                             }
                         },

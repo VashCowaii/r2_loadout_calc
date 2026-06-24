@@ -1528,33 +1528,35 @@ const battleActions = {
         const targetDeposit = targetCache[scalarFamily][fullCache] ??= {};
         const hasChanged = !sourceDeposit.valueIsCurrentAsAttacker || !targetDeposit.valueIsCurrentAsTarget;
 
+        
+
         if (hasChanged) {
             let bonus = 0;
             sourceDeposit.valueIsCurrentAsAttacker = true;
             targetDeposit.valueIsCurrentAsTarget = true;
-            // console.log(tags)
 
-            bonus += (table[base]) * (1 + table[perc]) + table[flat];
+            let baseF = table[base];
+            let percF = table[perc];
+            let flatF = table[flat];
 
             if (actionTags) {
-                // for (let tag of tags) {
-                    for (let action of actionTags) {
-                        const tableSource = actionTables[action] ?? emptyTableNeverAdd;
-                        const tableTarget = actionTablesTarget[action] ?? emptyTableNeverAdd;
-                        const actionTableTargetSources = targetStatsSourceBased?.[action] ?? emptyTableNeverAdd;
+                for (let action of actionTags) {
+                    const tableSource = actionTables[action] ?? emptyTableNeverAdd;
+                    const tableTarget = actionTablesTarget[action] ?? emptyTableNeverAdd;
+                    const actionTableTargetSources = targetStatsSourceBased?.[action] ?? emptyTableNeverAdd;
 
-                        bonus += (tableSource[base] + tableTarget[base] + actionTableTargetSources[base])
-                        * (1 + tableSource[perc] + tableTarget[perc] + actionTableTargetSources[perc])
-                        + tableSource[flat] + tableTarget[flat] + actionTableTargetSources[flat];
-                    }
-                // }
+                    baseF += tableSource[base] + tableTarget[base] + actionTableTargetSources[base];
+                    percF += tableSource[perc] + tableTarget[perc] + actionTableTargetSources[perc];
+                    flatF += tableSource[flat] + tableTarget[flat] + actionTableTargetSources[flat];
+                }
             }
+
+            bonus = baseF * (1 + percF) + flatF;
 
             sourceDeposit.cacheValue = bonus;
         }
 
         return sourceDeposit.cacheValue;
-        
     },
     pullFinalMultiplier(sourceTurn,actionTags) {
         let resultingMulti = 1;
