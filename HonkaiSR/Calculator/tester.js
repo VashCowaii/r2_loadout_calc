@@ -4560,6 +4560,11 @@ const userTriggers = {
                     energyColor1: "#CC7CFF",
                     energyColor2: "#8E55FB"
                 },
+                "Feixiao": {
+                    energyName: "Flying Aureus",
+                    energyColor1: "#CC7CFF",
+                    energyColor2: "#8E55FB"
+                },
                 
             }
 
@@ -4738,6 +4743,107 @@ const userTriggers = {
                             <div class="actionDetailHeaderRowCharacterEnergyValueBox">
                                 <div class="actionDetailHeaderRowCharacterEnergyValue">${(compositeValue).toLocaleString()}/</div>
                                 <div class="actionDetailHeaderRowCharacterEnergyValue">${(300).toLocaleString()}</div>
+                            </div>
+                        </div>`;
+                },
+                "Feixiao"(turnRef,action) {
+
+                    let slashStringer = "";
+
+                    const battleValues = turnRef.battleValues;
+
+                    const current = turnRef.specialEnergyCurrent;
+                    const max = turnRef.specialEnergyMax;
+
+                    let swPathing = "/HonkaiSR/misc/feixiao/";
+                    let cartridge = swPathing + "Bg_SpecialUltraSP_1220_In.png";
+                    let cartridge2 = swPathing + "Bg_SpecialUltraSP_1220_Out.png";
+
+                    let slashFillStringer = "";
+
+                    const isBrighterFill = current >= 6 && current != 12;
+                    const isMax = current === 12;
+
+                    if (current >= 1) {
+                        currentSlashImage = swPathing + (isBrighterFill ? "Img_SpecialSP_1220_In_Active_01.png" : "Img_SpecialSP_1220_In_UnActive_01.png");
+                        if (isMax) {currentSlashImage = swPathing + "Img_SpecialSP_1220_In_On_01.png"}
+                        slashFillStringer += `<img src="${currentSlashImage}" class="${isBrighterFill ? "feixiaoEnergyInnerBottomBRIGHT" : "feixiaoEnergyInnerBottom"}"/>`;
+
+                        if (current >= 2) {
+                            currentSlashImage = swPathing + (isBrighterFill ? "Img_SpecialSP_1220_In_Active_01.png" : "Img_SpecialSP_1220_In_UnActive_01.png")
+                            if (isMax) {currentSlashImage = swPathing + "Img_SpecialSP_1220_In_On_01.png"}
+                            slashFillStringer += `<img src="${currentSlashImage}" class="${isBrighterFill ? "feixiaoEnergyInnerBottom2BRIGHT" : "feixiaoEnergyInnerBottom2"}"/>`
+                        }
+                    }
+                    if (current >= 3) {
+                        currentSlashImage = swPathing + (isBrighterFill ? "Img_SpecialSP_1220_In_Active_02.png" : "Img_SpecialSP_1220_In_UnActive_02.png")
+                        if (isMax) {currentSlashImage = swPathing + "Img_SpecialSP_1220_In_On_02.png"}
+                        slashFillStringer += `<img src="${currentSlashImage}" class="${isBrighterFill ? "feixiaoEnergyInnerMiddleBRIGHT" : "feixiaoEnergyInnerMiddle"}"/>`;
+                        if (current >= 4) {
+                            currentSlashImage = swPathing + (isBrighterFill ? "Img_SpecialSP_1220_In_Active_02.png" : "Img_SpecialSP_1220_In_UnActive_02.png")
+                            if (isMax) {currentSlashImage = swPathing + "Img_SpecialSP_1220_In_On_02.png"}
+                            slashFillStringer += `<img src="${currentSlashImage}" class="${isBrighterFill ? "feixiaoEnergyInnerMiddle2BRIGHT" : "feixiaoEnergyInnerMiddle2"}"/>`
+                        }
+                    }
+                    if (current >= 5) {
+                        currentSlashImage = swPathing + (isBrighterFill ? "Img_SpecialSP_1220_In_Active_03.png" : "Img_SpecialSP_1220_In_UnActive_03.png")
+                        if (isMax) {currentSlashImage = swPathing + "Img_SpecialSP_1220_In_On_03.png"}
+                        slashFillStringer += `<img src="${currentSlashImage}" class="${isBrighterFill ? "feixiaoEnergyInnerUpperBRIGHT" : "feixiaoEnergyInnerUpper"}"/>`;
+                        if (current >= 6) {
+                            currentSlashImage = swPathing + (isBrighterFill ? "Img_SpecialSP_1220_In_Active_03.png" : "Img_SpecialSP_1220_In_UnActive_03.png")
+                            if (isMax) {currentSlashImage = swPathing + "Img_SpecialSP_1220_In_On_03.png"}
+                            slashFillStringer += `<img src="${currentSlashImage}" class="${isBrighterFill ? "feixiaoEnergyInnerUpper2BRIGHT" : "feixiaoEnergyInnerUpper2"}"/>`
+                        }
+                    }
+
+
+                    if (current >= 7) {
+                        currentSlashImage = swPathing + ("Img_SpecialSP_1220_Out_01.png")
+                        if (isMax) {currentSlashImage = swPathing + "Img_SpecialSP_1220_Out_On_01.png"}
+                        slashFillStringer += `<img src="${currentSlashImage}" class="feixiaoEnergyOuterBottom"/>`;
+
+                        if (current >= 8) {
+                            currentSlashImage = swPathing + ("Img_SpecialSP_1220_Out_01.png")
+                            if (isMax) {currentSlashImage = swPathing + "Img_SpecialSP_1220_Out_On_01.png"}
+                            slashFillStringer += `<img src="${currentSlashImage}" class="feixiaoEnergyOuterBottom2"/>`
+                        }
+                    }
+                    if (current >= 9) {
+                        currentSlashImage = swPathing + ("Img_SpecialSP_1220_Out_02.png")
+                        if (isMax) {currentSlashImage = swPathing + "Img_SpecialSP_1220_Out_On_02.png"}
+                        slashFillStringer += `<img src="${currentSlashImage}" class="feixiaoEnergyOuterMiddle"/>`;
+
+                        if (current >= 10) {
+                            currentSlashImage = swPathing + ("Img_SpecialSP_1220_Out_02.png")
+                            if (isMax) {currentSlashImage = swPathing + "Img_SpecialSP_1220_Out_On_02.png"}
+                            slashFillStringer += `<img src="${currentSlashImage}" class="feixiaoEnergyOuterMiddle2"/>`
+                        }
+                    }
+                    if (current >= 11) {
+                        currentSlashImage = swPathing + ("Img_SpecialSP_1220_Out_03.png")
+                        if (isMax) {currentSlashImage = swPathing + "Img_SpecialSP_1220_Out_On_03.png"}
+                        slashFillStringer += `<img src="${currentSlashImage}" class="feixiaoEnergyOuterUpper"/>`;
+
+                        if (current >= 12) {
+                            currentSlashImage = swPathing + ("Img_SpecialSP_1220_Out_03.png")
+                            if (isMax) {currentSlashImage = swPathing + "Img_SpecialSP_1220_Out_On_03.png"}
+                            slashFillStringer += `<img src="${currentSlashImage}" class="feixiaoEnergyOuterUpper2"/>`
+                        }
+                    }
+
+                    slashStringer = `
+                        <img src="${cartridge2}" class="feixiaoEnergyBackgroundOuter"/>
+                        <img src="${cartridge}" class="feixiaoEnergyBackgroundInner"/>
+                        
+                        ${slashFillStringer}
+                    `;
+
+                    return `
+                        <div class="actionDetailHeaderRowCharacterCUSTOMEnergyBox">
+                            ${slashStringer}
+                            <div class="actionDetailHeaderRowCharacterEnergyValueBox">
+                                <div class="actionDetailHeaderRowCharacterEnergyValue">${(current).toLocaleString()}/</div>
+                                <div class="actionDetailHeaderRowCharacterEnergyValue">${(max).toLocaleString()}</div>
                             </div>
                         </div>`;
                 },
