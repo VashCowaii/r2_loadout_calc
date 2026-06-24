@@ -7393,6 +7393,62 @@ const turnLogicLightcones = {
             "buff1": "Ninja Record: Sound Hunt (LC)",
         },
     },
+    "Nowhere to Run": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "EnemyDied",
+                condition(battleData,generalInfo) {
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+
+                    const sourceTurn = generalInfo.sourceTurn;
+                    const ownerRank = ownersSlots[sourceTurn.name];
+                    if (!ownerRank) {return;}
+
+                    if (!sourceTurn.lcNowheretoRunHEALSHEET) {
+                        let ownersSlots = this.ownersSlots;
+                        let ownerRank = ownersSlots[sourceTurn.name];
+
+                        let lcNameRef = "Nowhere to Run";
+                        let lcPathing = lightcones[lcNameRef].params;
+                        let rankParams = lcPathing[ownerRank-1];
+
+                        const actionTags = ["All","Gear","Heal"];
+                        const compositeCacheTag = actionTags + sourceTurn.properName;
+
+                        sourceTurn.lcNowheretoRunHEALSHEET = {
+                            multipliers: {
+                                primary: rankParams[1],
+                                blast: null,
+                                all: null,
+                            },
+                            flatAmounts: {
+                                primary: null,
+                                blast: null,
+                                all: null,
+                            },
+                            scalar: "ATK",
+                            DMGTags: [],
+                            allToughness: false,
+                            slot: "Lightcone",
+                            actionTags,compositeCacheTag
+                        }
+                    }
+                    const healObject = sourceTurn.lcNowheretoRunHEALSHEET;
+                    healAlly(battleData,healObject,sourceTurn,sourceTurn,"Lightcone",1);
+                },
+                "target": "self",
+                "listenerName": "Nowhere to Run - holder killed an enemy",
+                "owners": [],
+                "ownersSlots": {},
+            },
+        ],
+        "buffNames": {
+            // "buff1": "Geniuses' Repose [LC]",
+        },
+    },
         //3star
     "Collapsing Sky": {//REDONE
         logic(thisTurn,battleData) {},
