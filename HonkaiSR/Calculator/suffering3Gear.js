@@ -7316,6 +7316,83 @@ const turnLogicLightcones = {
             "buff1": "A Secret Vow (LC)",
         },
     },
+    "Ninja Record: Sound Hunt": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+                        currentTurn.lcNinjaSoundReady = true;
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Ninja Record: Sound Hunt listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AllyHPChange",
+                        condition(battleData,generalInfo,personalOwner) {
+                            if (!personalOwner.lcNinjaSoundReady) {return;}
+
+                            if (!personalOwner.lcNinjaSoundCRITSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[personalOwner.name];
+                                let lcNameRef = "Ninja Record: Sound Hunt";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+
+                                personalOwner.lcNinjaSoundCRITSHEET = {
+                                    "stats": [CritDamageBase],
+                                    [CritDamageBase]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": personalOwner.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.buff1,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn"
+                                }
+                            }
+                            let buffSheet = personalOwner.lcNinjaSoundCRITSHEET;
+                            updateBuff(battleData,personalOwner,buffSheet);
+                            personalOwner.lcNinjaSoundReady = false;
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Ninja Record: Sound Hunt hp check",
+                    },
+                    {
+                        "trigger": "PreActionPhase",
+                        condition(battleData,generalInfo,personalOwner) {
+                            personalOwner.lcNinjaSoundReady = true;
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Ninja Record: Sound Hunt cooldown reset",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "buff1": "Ninja Record: Sound Hunt (LC)",
+        },
+    },
         //3star
     "Collapsing Sky": {//REDONE
         logic(thisTurn,battleData) {},
