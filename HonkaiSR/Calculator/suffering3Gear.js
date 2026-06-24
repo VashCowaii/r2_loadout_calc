@@ -3492,8 +3492,6 @@ const turnLogicLightcones = {
             "buff2": "Aether Code"
         },
     },
-    //TODO: prob revisit source specific stuff, would be convenient if we could action tag them as well
-    //but in the meantime we may just keep ulty dmg as a stat
     "Along the Passing Shore": {//REDONE
         logic(thisTurn,battleData) {},
         "skillFunctions": {},
@@ -11308,6 +11306,61 @@ const turnLogicLightcones = {
         ],
         "buffNames": {
             "dr": "We Are Wildfire [LC]",
+        },
+    },
+    "Day One of My New Life": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "WaveStart",
+                condition(battleData,generalInfo) {
+                    const currentWave = generalInfo.currentWave;
+                    if (currentWave != 1) {return;}
+
+                    let ownersSlots = this.ownersSlots;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    for (let ownerSlot in ownersSlots) {
+                        const currentOwner = namedTurns[ownerSlot];
+
+                        if (!currentOwner.lcDayOneLifeRESSHEET) {
+                            let ownersSlots = this.ownersSlots;
+                            let ownerRank = ownersSlots[currentOwner.name];
+
+                            let lcNameRef = "Day One of My New Life";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let rankParams = lcPathing[ownerRank-1];
+    
+                            currentOwner.lcDayOneLifeRESSHEET = {
+                                "stats": [ResistanceAll],
+                                [ResistanceAll]: rankParams[1],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": turnLogicLightcones[lcNameRef].buffNames.dr,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+
+                        }
+                        const allAlliesArray = battleData.allAlliesArray;
+                        const buffSheet = currentOwner.lcDayOneLifeRESSHEET;
+                        updateBuffBatchTargets(battleData,allAlliesArray,buffSheet);
+                        break;
+                    }
+                },
+                "target": "self",
+                "priority": -80,
+                "listenerName": "Day One of My New Life - battlestart res",
+            },
+        ],
+        "buffNames": {
+            "dr": "Day One of My New Life [LC]",
         },
     },
         //3star
