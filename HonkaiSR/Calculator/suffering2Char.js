@@ -24780,6 +24780,9 @@ const turnLogic = {
                     uniqueEventFunction: logicRef.skillFunctions.concertoExpired,
                     eventImage: "misc/robin/BattleEvent_1309_A.png",
                 };
+                const eventAV = 10000/90;
+                ActionEntry.AV = eventAV;
+                ActionEntry.AVBase = eventAV;
                 nextAV.push(ActionEntry);
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Robin Ultimate", bodyText: `Robin was removed from the turn order`});}
 
@@ -24799,7 +24802,7 @@ const turnLogic = {
 
                 sourceTurn.ultyQueued = false;
             },
-            concertoExpired(battleData,eventTurn) {
+            concertoExpired(battleData,eventTurn,unused,skipAdvance) {
                 const robinTurn = battleData.nameBasedTurns[eventTurn.eventOwner];
                 const logicRef = turnLogic[robinTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -24824,7 +24827,7 @@ const turnLogic = {
                 }
 
                 nextAV.push(robinTurn);
-                actionAdvance(1,robinTurn,battleData,"Robin exited Concerto state");
+                if (!skipAdvance) {actionAdvance(1,robinTurn,battleData,"Robin exited Concerto state");}
             },
             ultAddedDMG(battleData,generalInfo,sourceTurn,targetsGotHit) {
                 // battleData,generalInfo,sourceTurn,targetsGotHit
@@ -25026,7 +25029,25 @@ const turnLogic = {
                     },
                 ],
             },
-            
+            {
+                "trigger": "EnteredLimbo",
+                condition(battleData,generalInfo,personalOwner) {
+                    const ownerTurn = this.ownerTurn;
+                    // if (personalOwner.isDead || personalOwner.isLimbo) {return;}
+                    const battleValues = ownerTurn.battleValues;
+                    if (!battleValues.robinConcertoActive) {return;}
+
+                    console.log("reached limbo")
+                    const concertoExpired = this.concertoExpired ??= turnLogic[ownerTurn.properName].skillFunctions.concertoExpired;
+
+                    const beTurn = ownerTurn.robinUltimateCONCERTOTURNEVENT;
+                    concertoExpired(battleData,beTurn,null,true)
+                },
+                "target": "self",
+                "priority": 0,
+                "isPersonal": true,
+                "listenerName": "Robin knocked down mid-ult",
+            },
             {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
