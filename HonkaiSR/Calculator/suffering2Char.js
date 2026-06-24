@@ -267,13 +267,14 @@ const battleActions = {
             }
         }
 
+        if (isShield) {poke("ShieldApplied",battleData,{sourceTurn: sourceTurnArray,currentReference: buffSheet},null);}
         if (isBatchDebuff) {poke("DebuffApplied",battleData,{sourceTurn: sourceTurnArray, currentReference: buffSheet},null);}
     },
     buffDidntExistAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,isImplant,ignoreDebuffPokes,silent,oldShield) {
         // const maxStacks = currentReference.maxStacks;
         // const currentStacks = currentReference.currentStacks;
         // const buffName = currentReference.buffName;
-        const {maxStacks,currentStacks,buffName,isFinalMulti,isSpecialDOTLast,expireType,actionTags,isAllDOTTypes} = currentReference;
+        const {maxStacks,currentStacks,buffName,isFinalMulti,expireType,actionTags,isAllDOTTypes} = currentReference;
 
         const log = battleData.isLoggyLogger;
         const isEnemy = sourceTurn.isEnemy;
@@ -292,6 +293,7 @@ const battleActions = {
         if (isShield) {
             sourceTurn.shieldCounter += 1;
             sourceTurn.activeShields[buffName] = currentReference;
+            poke("ShieldApplied",battleData,{sourceTurn,currentReference},null);
         }
         if (isFinalMulti) {
             sourceTurn.finalMultiCounter += 1;
@@ -357,6 +359,7 @@ const battleActions = {
         // console.log(currentReference.source,currentReference.sourceOwner)
         
         if (isImplant) {poke("WeaknessApplied",battleData,{sourceTurn,currentReference},sourceTurn);}
+        if (isShield) {poke("ShieldApplied",battleData,{sourceTurn,currentReference},null);}
         if (isDebuff) {
             if (!ignoreDebuffPokes) {poke("DebuffApplied",battleData,{sourceTurn,currentReference},sourceTurn);}
             

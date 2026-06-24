@@ -11363,6 +11363,112 @@ const turnLogicLightcones = {
             "dr": "Day One of My New Life [LC]",
         },
     },
+    "Concert for Two": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {
+            shieldBuffChange(battleData,ownerTurn,counter,buffSheet) {
+                const buffCheck = ownerTurn.buffsObject[buffSheet.buffName];
+
+                if (buffCheck) {
+                    const currentStacks = buffCheck.currentStacks;
+                    if (currentStacks === counter) {return;}
+
+                    const stackDiff = counter - currentStacks;
+                    if (-stackDiff === currentStacks) {
+                        removeBuff(battleData,ownerTurn,buffCheck);
+                        return;
+                    }
+
+                    buffSheet.currentStacks = stackDiff;
+                    updateBuff(battleData,ownerTurn,buffSheet);
+                }
+                else {
+                    buffSheet.currentStacks = counter;
+                    updateBuff(battleData,ownerTurn,buffSheet);
+                }
+            }
+        },
+        "listeners": [
+            {
+                "trigger": "ShieldApplied",
+                condition(battleData,generalInfo) {
+                    const allyPositions = battleData.allyPositions;
+                    let shieldCounter = 0;
+                    for (let ally of allyPositions) {
+                        if (ally.shieldCounter) {shieldCounter++;}
+                    }
+
+                    let ownersSlots = this.ownersSlots;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const dmgCheck = this.dmgCheck ??= turnLogicLightcones["Concert for Two"].skillFunctions.shieldBuffChange;
+                    for (let ownerSlot in ownersSlots) {
+                        const currentOwner = namedTurns[ownerSlot];
+
+                        if (!currentOwner.lcConcertTwoDMGSHEET) {
+                            let ownersSlots = this.ownersSlots;
+                            let ownerRank = ownersSlots[currentOwner.name];
+
+                            let lcNameRef = "Concert for Two";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let rankParams = lcPathing[ownerRank-1];
+    
+                            currentOwner.lcConcertTwoDMGSHEET = {
+                                "stats": [DamageAll],
+                                [DamageAll]: rankParams[1],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": turnLogicLightcones[lcNameRef].buffNames.dr,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 20,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+
+                        }
+                        const buffSheet = currentOwner.lcConcertTwoDMGSHEET;
+
+                        dmgCheck(battleData,currentOwner,shieldCounter,buffSheet)
+                    }
+                },
+                "target": "self",
+                "priority": 0,
+                "listenerName": "Concert for Two - shield applied recheck",
+            },
+            {
+                "trigger": "ShieldLost",
+                condition(battleData,generalInfo) {
+                    const allyPositions = battleData.allyPositions;
+                    let shieldCounter = 0;
+                    for (let ally of allyPositions) {
+                        if (ally.shieldCounter) {shieldCounter++;}
+                    }
+
+                    let ownersSlots = this.ownersSlots;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const dmgCheck = this.dmgCheck ??= turnLogicLightcones["Concert for Two"].skillFunctions.shieldBuffChange;
+                    for (let ownerSlot in ownersSlots) {
+                        const currentOwner = namedTurns[ownerSlot];
+
+                        const buffSheet = currentOwner.lcConcertTwoDMGSHEET;
+                        if (!buffSheet) {continue;}
+
+                        dmgCheck(battleData,currentOwner,shieldCounter,buffSheet);
+                    }
+                },
+                "target": "self",
+                "priority": 0,
+                "listenerName": "Concert for Two - shield removed recheck",
+            },
+        ],
+        "buffNames": {
+            "dr": "Concert for Two [LC]",
+        },
+    },
         //3star
     "Defense": {
         logic(thisTurn,battleData) {},
