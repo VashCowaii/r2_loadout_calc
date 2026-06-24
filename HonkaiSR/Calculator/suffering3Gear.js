@@ -7244,6 +7244,80 @@ const turnLogicLightcones = {
             "buff1": "Collapsing Sky (LC)",
         },
     },
+    "Mutual Demise": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Mutual Demise listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AllyHPChange",
+                        condition(battleData,generalInfo,personalOwner) {
+
+                            if (!personalOwner.lcMutualDemiseCRITSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[personalOwner.name];
+                                let lcNameRef = "Mutual Demise";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+
+                                personalOwner.lcMutualDemiseCRITSHEET = {
+                                    "stats": [CritRateBase],
+                                    [CritRateBase]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": personalOwner.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.buff1,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null
+                                }
+                            }
+                            let buffSheet = personalOwner.lcMutualDemiseCRITSHEET;
+
+                            const hpRatio = (personalOwner.currentHP / personalOwner.maxHP) < 0.80;
+
+                            const buffCheck = personalOwner.buffsObject[buffSheet.buffName];
+                            if (buffCheck) {
+                                if (hpRatio) {return;}
+                                removeBuff(battleData,personalOwner,buffCheck);
+                            }
+                            else if (hpRatio) {
+                                updateBuff(battleData,personalOwner,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Mutual Demise hp check",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "buff1": "Mutual Demise (LC)",
+        },
+    },
 
     //HARMONY
     //5star
