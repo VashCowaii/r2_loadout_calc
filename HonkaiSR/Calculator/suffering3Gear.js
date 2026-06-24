@@ -11087,6 +11087,157 @@ const turnLogicLightcones = {
             "dmg": "She Already Shut Her Eyes [LC]",
         },
     },
+    "Texture of Memories": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        currentTurn.lcTextureSHIELDCooldown = 0;
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[2],subListeners[2].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Texture of Memories listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "WasAttackedEnd",
+                        condition(battleData,generalInfo,personalOwner) { 
+                            if (personalOwner.lcTextureSHIELDSHEET || personalOwner.shieldCounter) {return;}
+
+                            if (!personalOwner.lcTextureSHIELDSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[personalOwner.name];
+
+                                let lcNameRef = "Texture of Memories";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+
+                                const logicRef = turnLogicLightcones[lcNameRef];
+                                const actionTags2 = ["All","Shield"];
+                                const compositeCacheTag2 = actionTags2 + personalOwner.properName;
+                                personalOwner.lcTextureSHIELDSHEET = {
+                                    "stats": null,
+                                    "source": lcNameRef,
+                                    "sourceOwner": personalOwner.properName,
+                                    "buffName": logicRef.buffNames.shield,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "isShield": true,
+                                    multipliers: rankParams[1],//to give to existing shield of the same name
+                                    flatAmounts: 0,//to give to existing shield of the same name
+                                    multipliersCAP: rankParams[1],//to limit by
+                                    flatAmountsCAP: 0,//to limit by
+                                    scalar: "HP",
+                                    shieldRemaining: 0,
+                                    shieldCap: 0,
+                                    // shieldTags: ["All","Skill","Imaginary"],
+                                    // shieldActionTags: ["Skill"],
+                                    slot: "Lightcone",
+                                    // shieldCapFixed: null,
+                                    // shieldCapPercent: 2,
+                                    removeOnDeath: true,
+                                    shieldClass: "TextureLC",
+                                    actionTags: actionTags2,
+                                    compositeCacheTag: compositeCacheTag2,
+                                }
+                            }
+                            const shieldSheet = personalOwner.lcTextureSHIELDSHEET;
+
+                            poke("TargetShield",battleData,{targetType:"Single", sourceTurn: personalOwner, targetTurn: personalOwner, targetSkill:"Lightcone"},personalOwner);
+                            updateBuff(battleData,personalOwner,shieldSheet,null,personalOwner);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Texture of Memories - attack received listener",
+                    },
+                    {
+                        "trigger": "ActionEndPhase",
+                        condition(battleData,generalInfo,personalOwner) {//createStandardElementDOTSHEET 
+                            // let ownersSlots = this.ownersSlots;
+                            let sourceTurn = generalInfo.sourceTurn;
+
+                            if (sourceTurn.lcTextureSHIELDSHEET) {sourceTurn.lcTextureSHIELDSHEET -= 1;}
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Texture of Memories - endturn cooldown",
+                    },
+                    {
+                        "trigger": "HitAllyStart",//AllyDMGStart
+                        condition(battleData,generalInfo,personalOwner) {
+                            let sourceTurn = personalOwner;
+                            const hasShield = personalOwner.shieldCounter;
+    
+                            if (!sourceTurn.lcTextureDRSHEET) {
+                                let lcNameRef = "Texture of Memories";
+                                let lcPathing = lightcones[lcNameRef].params;
+
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let rankParams = lcPathing[ownerRank-1];
+
+                                sourceTurn.lcTextureDRSHEET ??= {
+                                    "stats": [DamageReductionStandard],
+                                    [DamageReductionStandard]: rankParams[4],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.dr,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    // "actionTags": ["All"],
+                                }
+                            }
+                            let buffSheet = sourceTurn.lcTextureDRSHEET;
+                            const buffName = buffSheet.buffName;
+                            const buffCheck = sourceTurn.buffsObject[buffName];
+        
+                            if (hasShield) {
+                                if (buffCheck) {return;}
+
+                                updateBuff(battleData,sourceTurn,buffSheet);
+                            }
+                            else if (buffCheck) {
+                                removeBuff(battleData,sourceTurn,buffCheck);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Texture of Memories - hit with shield",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "shield": "Texture of Memories [LC] SHIELD",
+            "dr": "Texture of Memories [LC]",
+        },
+    },
         //4star
     "Landau's Choice": {//REDONE
         logic(thisTurn,battleData) {},
