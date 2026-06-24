@@ -314,7 +314,14 @@ const customDisplayValuesLog = {
         // {valueName: "HP Loss Tally", refName: "bladeHPTally", isBattleValue: false},
     ],
     "Dan Heng • Permansor Terrae": [
-        {valueName: "Bondmate", refName: "bondmateSlot", isBattleValue: true, isCharacterSlot:true},
+        // {valueName: "Bondmate", refName: "bondmateSlot", isBattleValue: true, isCharacterSlot:true},
+        {valueName: "Bondmate", refName: "bondmateSlot", isBattleValue: true, isCharacterSlot:true,
+            customDisplay: "marks", customDisplayType: "entity", markMax: null, innerMarkColor: "Physical",
+            // displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/dhpt/Icon1414Skill02.png"
+        },
         // {valueName: "Enhanced Turns", refName: "souldragonEnhancedTurns", isBattleValue: true},
         {valueName: "Enhanced Turns", refName: "souldragonEnhancedTurns", isBattleValue: true,summaryValue: "dhptDragonAttackSummer",summaryType: "SUM",
             customDisplay: "marks", customDisplayType: "number", markMax: 99, innerMarkColor: "Physical",
@@ -324,7 +331,7 @@ const customDisplayValuesLog = {
             progressIcon: "misc/dhpt/Icon1414Passive.png"
         },
         {valueName: "Enhanced Turns Max", refName: "souldragonEnhancedTurnsMax", isBattleValue: true,hide: true},
-        {valueName: "Souldragon on Field", refName: "souldragonActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Souldragon on Field", refName: "souldragonActive", isBattleValue: true, isCharacterState: true,hide:true},
     ], 
     "March 7th - Preservation": [//tracker done
         {valueName: "Counter", refName: "counterCount", isBattleValue: true,summaryValue: "march7pCounterCountSum",summaryType: "SUM",
@@ -569,9 +576,6 @@ const customDisplayValuesLog = {
         // {valueName: "Spectral Transmigration", refName: "enhancedActive", isBattleValue: true, isCharacterState: true},
         {valueName: "Godmode State", refName: "godModeActive", isBattleValue: true, isCharacterState: true,hide:true},
         {valueName: "E2 EX-Turn Tally", refName: "e2Accumulation", isBattleValue: true, requiresEidolon: 2},
-        
-        
-        // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
     ],
     "Evanescia": [//tracker done
         {valueName: "FUA Accumulation", refName: "fuaTrackerValue", isBattleValue: true,//summaryValue: "mortenaxBladeChargeSum",summaryType: "SUM",
@@ -583,13 +587,6 @@ const customDisplayValuesLog = {
             progressIcon: "misc/evanescia/Icon1505Passive.png"
         },
         {valueName: "E6 Ult Counter", refName: "E6UltCounter", isBattleValue: true, requiresEidolon: 6},
-        
-        // {valueName: "MMR Overflow", refName: "MMROverflow", isBattleValue: true},
-        // {valueName: "HP Loss Counter", refName: "hpLossCount", isBattleValue: true,summaryValue: "jingliuHPCounterSUm",summaryType: "SUM"},
-        // {valueName: "Spectral Transmigration", refName: "enhancedActive", isBattleValue: true, isCharacterState: true},
-        // {valueName: "Godmode State", refName: "godModeActive", isBattleValue: true, isCharacterState: true},
-        
-        // {valueName: "Talent Zone Active", refName: "talentZoneActive", isBattleValue: true, isCharacterState: true}, 
     ],
 }
 for (let charName in characters) {
