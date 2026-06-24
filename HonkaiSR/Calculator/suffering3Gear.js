@@ -16742,9 +16742,7 @@ const turnLogicRelics = {
                             "trigger": "AttackStart",
                             condition(battleData,generalInfo) {
                                 let sourceTurn = generalInfo.sourceTurn;
-                                let ownersSlots = this.ownersSlots;
-                                let ownerRank = ownersSlots[sourceTurn.name];//setAmount
-                                if (!ownerRank) {return;}
+                                // let ownersSlots = this.ownersSlots;
         
                                 let isFUA = false;
                                 const actionTags = generalInfo.ATKObject.actionTags;
