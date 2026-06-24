@@ -7449,6 +7449,93 @@ const turnLogicLightcones = {
             // "buff1": "Geniuses' Repose [LC]",
         },
     },
+    "The Moles Welcome You": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "The Moles Welcome You listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const dmgSlot = generalInfo.dmgSlot;
+                            if (dmgSlot != "Ultimate" && dmgSlot != "Skill" && dmgSlot != "Basic ATK") {return;}
+
+                            let newStacks = 0;
+                            if (dmgSlot === "Ultimate" && !personalOwner.lcMolesUltyDone) {
+                                newStacks++;
+                                personalOwner.lcMolesUltyDone = true;
+                            }
+                            if (dmgSlot === "Skill" && !personalOwner.lcMolesSkillDone) {
+                                newStacks++;
+                                personalOwner.lcMolesSkillDone = true;
+                            }
+                            if (dmgSlot === "Basic ATK" && !personalOwner.lcMolesBasicDone) {
+                                newStacks++;
+                                personalOwner.lcMolesBasicDone = true;
+                            }
+
+                            if (!newStacks) {return;}
+
+                            if (!personalOwner.lcMolesWelcomeATKSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[personalOwner.name];
+                                let lcNameRef = "The Moles Welcome You";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+
+                                personalOwner.lcMolesWelcomeATKSHEET = {
+                                    "stats": [ATKP],
+                                    [ATKP]: rankParams[0],
+                                    "source": lcNameRef,
+                                    "sourceOwner": personalOwner.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.buff1,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 3,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null
+                                }
+                            }
+                            let buffSheet = personalOwner.lcMolesWelcomeATKSHEET;
+                            buffSheet.currentStacks = newStacks;
+                            updateBuff(battleData,personalOwner,buffSheet);
+
+                            if (personalOwner.lcMolesBasicDone && personalOwner.lcMolesSkillDone && personalOwner.lcMolesUltyDone) {
+                                removeListener(battleData,this,personalOwner)
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "The Moles Welcome You skill attack check",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "buff1": "The Moles Welcome You (LC)",
+        },
+    },
         //3star
     "Collapsing Sky": {//REDONE
         logic(thisTurn,battleData) {},
