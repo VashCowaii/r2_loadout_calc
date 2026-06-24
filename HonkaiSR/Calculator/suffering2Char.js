@@ -266,8 +266,6 @@ const battleActions = {
                 buffStatChange(battleData,sourceTurn,buffSheet,currentReference,timesToApply,1,ignoreFamilyPokes);
             }
         }
-
-        if (isShield) {poke("ShieldApplied",battleData,{sourceTurn: sourceTurnArray,currentReference: buffSheet},null);}
         if (isBatchDebuff) {poke("DebuffApplied",battleData,{sourceTurn: sourceTurnArray, currentReference: buffSheet},null);}
     },
     buffDidntExistAdjustment(battleData,sourceTurn,currentReference,buffSheet,isShield,isDOT,isDebuff,isImplant,ignoreDebuffPokes,silent,oldShield) {

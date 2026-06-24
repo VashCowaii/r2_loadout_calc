@@ -11469,6 +11469,84 @@ const turnLogicLightcones = {
             "dr": "Concert for Two [LC]",
         },
     },
+    "Journey, Forever Peaceful": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "ShieldApplied",
+                condition(battleData,generalInfo) {
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.isEnemy || sourceTurn.shieldCounter > 1) {return;}
+                    //if the target already had a shield we don't need to recheck, so only check if we're lookin at the first current shield on the target
+                    let ownersSlots = this.ownersSlots;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    for (let ownerSlot in ownersSlots) {
+                        const currentOwner = namedTurns[ownerSlot];
+
+                        if (!currentOwner.lcForeverPeacefulDMGSHEET) {
+                            let ownersSlots = this.ownersSlots;
+                            let ownerRank = ownersSlots[currentOwner.name];
+
+                            let lcNameRef = "Journey, Forever Peaceful";
+                            let lcPathing = lightcones[lcNameRef].params;
+                            let rankParams = lcPathing[ownerRank-1];
+
+                            const logicRef = turnLogicLightcones[lcNameRef];
+                            const uniqueName = battleActions.getUniqueGearBuffName(battleData,currentOwner,logicRef,"dr")
+    
+                            currentOwner.lcForeverPeacefulDMGSHEET = {
+                                "stats": [DamageAll],
+                                [DamageAll]: rankParams[1],
+                                "source": lcNameRef,
+                                "sourceOwner": currentOwner.properName,
+                                "buffName": uniqueName,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            }
+
+                        }
+                        const buffSheet = currentOwner.lcForeverPeacefulDMGSHEET;
+
+                        updateBuff(battleData,sourceTurn,buffSheet);
+                    }
+                },
+                "target": "self",
+                "priority": 0,
+                "listenerName": "Journey, Forever Peaceful - shield applied recheck",
+            },
+            {
+                "trigger": "ShieldLost",
+                condition(battleData,generalInfo) {
+                    const sourceTurn = generalInfo.sourceTurn;
+                    if (sourceTurn.isEnemy || sourceTurn.shieldCounter) {return;}//only checkin a shieldCounter of 0
+
+                    let ownersSlots = this.ownersSlots;
+                    const namedTurns = battleData.nameBasedTurns;
+                    for (let ownerSlot in ownersSlots) {
+                        const currentOwner = namedTurns[ownerSlot];
+
+                        const buffSheet = currentOwner.lcForeverPeacefulDMGSHEET;
+                        if (!buffSheet) {continue;}
+                        const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+                        if (buffCheck) {removeBuff(battleData,sourceTurn,buffCheck);}
+                    }
+                },
+                "target": "self",
+                "priority": 0,
+                "listenerName": "Journey, Forever Peaceful - shield removed recheck",
+            },
+        ],
+        "buffNames": {
+            "dr": "Journey, Forever Peaceful [LC]",
+        },
+    },
         //3star
     "Defense": {
         logic(thisTurn,battleData) {},
