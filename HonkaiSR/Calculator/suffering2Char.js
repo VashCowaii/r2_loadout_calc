@@ -1196,7 +1196,7 @@ const battleActions = {
                         const currentTableTarget = actionTablesTarget[action] ?? emptyTableNeverAdd;
                         const actionTableTargetSources = targetStatsSourceBased?.[action] ?? emptyTableNeverAdd;
 
-                        sumDR += currentTable[standardDRIndex] + currentTableTarget[standardDRIndex] + actionTableTargetSources[standardDRIndex];
+                        sumDR -= (currentTable[standardDRIndex] + currentTableTarget[standardDRIndex] + actionTableTargetSources[standardDRIndex]);
                     }
                 }
             }
@@ -1228,7 +1228,9 @@ const battleActions = {
                 sourceDepositVuln.cacheValue = sumVULN;
             }
             if (hasChangedDR) {
-                sumDR += enemyTable[standardDRIndex]; 
+                sumDR -= enemyTable[standardDRIndex]; 
+
+                sumDR = Math.max(0.01,sumDR);
 
                 sourceDepositDR.valueIsCurrentAsAttacker = true;
                 targetDepositDR.valueIsCurrentAsTarget = true;
@@ -1394,7 +1396,7 @@ const battleActions = {
                         const currentTableTarget = actionTablesTarget[action] ?? emptyTableNeverAdd;
                         const actionTableTargetSources = targetStatsSourceBased?.[action] ?? emptyTableNeverAdd;
 
-                        sumDR += currentTable[standardDRIndex] + currentTableTarget[standardDRIndex] + actionTableTargetSources[standardDRIndex];
+                        sumDR -= (currentTable[standardDRIndex] + currentTableTarget[standardDRIndex] + actionTableTargetSources[standardDRIndex]);
                     }
                 }
             }
@@ -1441,7 +1443,9 @@ const battleActions = {
             }
 
             if (hasChangedDR) {
-                sumDR += enemyTable[standardDRIndex]; 
+                sumDR -= enemyTable[standardDRIndex]; 
+
+                sumDR = Math.max(0.01,sumDR);
 
                 sourceDepositDR.valueIsCurrentAsAttacker = true;
                 targetDepositDR.valueIsCurrentAsTarget = true;
@@ -2001,8 +2005,15 @@ const battleActions = {
         
         const turnMerge = {targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,isBounce,instanceTag,hitType};
         
-        poke("AllyDMGStart",battleData,turnMerge,sourceTurn);
-        poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge,sourceTurn);
+        
+        if (isEnemy) {
+            poke("HitAllyStart",battleData,turnMerge,targetTurn);
+        }
+        else {
+            poke("AllyDMGStart",battleData,turnMerge,sourceTurn);
+            poke("HitEnemyStart",battleData,turnMerge,sourceTurn);
+        }
+        
 
         const targetStatsSourceBased = targetTurn[properName];
         const dmgNeedsElationComposite = ATKObject.dmgNeedsElationComposite ? (pullElation(cacheTagValues,targetCache,realCacheTag,statTable,targetStatsSourceBased,realElationDMGKeys,tagSpecific,actionTags,actionTablesTarget)) : null;
@@ -2211,11 +2222,12 @@ const battleActions = {
         turnMerge.DMGTotalEnd = DMGTotalEnd;
         turnMerge.DMGTotalCrit = DMGTotalCrit;
         turnMerge.DMGTotalAVG = DMGTotalAVG;
-        poke("AllyDMGEnd",battleData,turnMerge,sourceTurn);
+        
         if (isEnemy) {
             poke("HitAllyEnd",battleData,turnMerge,sourceTurn);
         }
         else {
+            poke("AllyDMGEnd",battleData,turnMerge,sourceTurn);
             turnMerge.superReduction = toughnessComposite?.wouldHaveSuperToughness ? toughnessComposite.rawReduction : 0;
             // console.log(turnMerge.superReduction,targetBroken,canAccumulateAnyways,battleData.sumAV)
             poke("HitEnemyEnd",battleData,turnMerge,sourceTurn);
@@ -2408,8 +2420,13 @@ const battleActions = {
         
         const turnMerge = {targetTurn,sourceTurn,slot,targetsGotHit,ATKObject,isBounce,instanceTag};
         
-        poke("AllyDMGStart",battleData,turnMerge,sourceTurn);
-        poke(isEnemy ? "HitAllyStart" : "HitEnemyStart",battleData,turnMerge,sourceTurn);
+        if (isEnemy) {
+            poke("HitAllyStart",battleData,turnMerge,targetTurn);
+        }
+        else {
+            poke("AllyDMGStart",battleData,turnMerge,sourceTurn);
+            poke("HitEnemyStart",battleData,turnMerge,sourceTurn);
+        }
         const targetStatsSourceBased = targetTurn[properName];
 
         let currentSplit = targetObject.hitRatio / (isDistributed ? distributedTargetCount : 1);//the hit split of the current attack
@@ -2621,11 +2638,12 @@ const battleActions = {
         turnMerge.DMGTotalEnd = DMGTotalEnd;
         turnMerge.DMGTotalCrit = DMGTotalCrit;
         turnMerge.DMGTotalAVG = DMGTotalAVG;
-        poke("AllyDMGEnd",battleData,turnMerge,sourceTurn);
+        
         if (isEnemy) {
             poke("HitAllyEnd",battleData,turnMerge,sourceTurn);
         }
         else {
+            poke("AllyDMGEnd",battleData,turnMerge,sourceTurn);
             turnMerge.superReduction = toughnessComposite?.wouldHaveSuperToughness ? toughnessComposite.rawReduction : 0;
             // console.log(turnMerge.superReduction,targetBroken,canAccumulateAnyways,battleData.sumAV)
             poke("HitEnemyEnd",battleData,turnMerge,sourceTurn);
@@ -11234,7 +11252,8 @@ const turnLogic = {
                                 "maxStacks": 5,
                                 "currentStacks": 0,
                                 "decay": false,
-                                "expireType": null
+                                "expireType": null,
+                                "actionTags": ["All"],
                             }
                             let buffName = buffSheet.buffName;
                             const buffCheck = ownerTurn.buffsObject[buffName];
@@ -15155,7 +15174,6 @@ const turnLogic = {
                             let characterName = ownerTurn.properName;
         
                             let sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.properName != characterName) {return;}
     
                             // const slot = generalInfo.slot;
                             let validDMG = false;
@@ -15189,6 +15207,7 @@ const turnLogic = {
                             else if (buffCheck) {removeBuff(battleData,ownerTurn,buffCheck);}
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Welt E6 onhit HIT ONLY crit rate/dmg",
                         "ownerTurn": {},
                     },
@@ -17044,7 +17063,6 @@ const turnLogic = {
                             let characterName = ownerTurn.properName;
         
                             let sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.properName != characterName) {return;}
         
                             let targetTurn = generalInfo.targetTurn;
                             let targetDebuffs = targetTurn.debuffCounter;
@@ -17076,6 +17094,7 @@ const turnLogic = {
         
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Bash trace bonus DMG ONHIT",
                         "ownerTurn": {},
                     },
@@ -18799,7 +18818,6 @@ const turnLogic = {
                             const ATKObjects = logicRef.ATKObjects;
                             // Financial Turmoil
                             const sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.properName != ownerTurn.properName) {return;}
         
                             let targetTurn = generalInfo.targetTurn;
         
@@ -18836,6 +18854,7 @@ const turnLogic = {
                             }
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Financial Turmoil - Fire-weak bonus",
                         "ownerTurn": {},
                     },
@@ -20418,7 +20437,6 @@ const turnLogic = {
                             // let ownerRef = this.owners;
                             const ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.properName != ownerTurn.properName) {return;}
                             // const isSkill = generalInfo.slot === "Skill";
                             //if it's not sourced from nether or cas, abort bc we don't care nor need to remove a buff
                             
@@ -20462,6 +20480,7 @@ const turnLogic = {
                             else if (HPCheck80) {updateBuff(battleData,ownerTurn,buffSheet);}
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "E1 <=80%HP Target Checker",
                         "owners": []
                     },
@@ -34150,7 +34169,6 @@ const turnLogic = {
                         condition(battleData,generalInfo) {
                             const sourceTurn = generalInfo.sourceTurn;
                             const ownerTurn = this.ownerTurn;
-                            if (sourceTurn.properName != ownerTurn.properName) {return;}//only look at Hook's dmg to enemies
         
                             const targetTurn = generalInfo.targetTurn;
                             const burnCount = targetTurn.dots.Fire;
@@ -34182,6 +34200,7 @@ const turnLogic = {
                             }
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Hook E6 burn checker",
                         "ownerTurn": {},
                     },
@@ -44552,11 +44571,10 @@ const turnLogic = {
                             // let characterName = ownerTurn.properName;
                             // let sourceTurn = generalInfo.sourceTurn;
         
-                            if (ownerTurn.turnState) {
-                                poke("ArgentiGainApotheosis",battleData,{pointsGained: 1,sourceString:"Turn Start"},null);
-                            }
+                            poke("ArgentiGainApotheosis",battleData,{pointsGained: 1,sourceString:"Turn Start"},null);
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Argenti Piety trace turnstart stack gain",
                         "ownerTurn": {},
                     },
@@ -44578,8 +44596,6 @@ const turnLogic = {
                             let ownerTurn = this.ownerTurn;
         
                             const sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.properName != ownerTurn.properName) {return;}//we only want natasha's healing, not anyone else's
-        
                             const targetTurn = generalInfo.targetTurn;
                             const hpRatio = targetTurn.currentHP / targetTurn.maxHP;
         
@@ -44613,8 +44629,8 @@ const turnLogic = {
                             }
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Argenti Trace Courage <=50%HP DMG% bonus",
-                        "owners": []
                     },
 
                 ],
@@ -45611,7 +45627,6 @@ const turnLogic = {
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.properName != ownerTurn.properName) {return;}
         
                             const checkWeakArray = this.checkWeakArray ??= [WeaknessFire,WeaknessIce,WeaknessImaginary,WeaknessLightning,WeaknessPhysical,WeaknessQuantum,WeaknessWind];
         
@@ -45665,6 +45680,7 @@ const turnLogic = {
                             }
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Qualitative Shift trace weakness shred checker",
                         "ownerTurn": {},
                     },
@@ -46936,7 +46952,7 @@ const turnLogic = {
                     },
                     {
                         "trigger": "AllyDMGStart",
-                        condition(battleData,generalInfo) {//cas version
+                        condition(battleData,generalInfo) {
                             // let ownerRef = this.owners;
                             const ownerTurn = this.ownerTurn;
 
