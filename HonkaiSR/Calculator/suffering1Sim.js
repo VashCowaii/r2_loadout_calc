@@ -1364,7 +1364,7 @@ const sim = {
                     const allowUlts = currentUltimate.allowUlts;
                     battleData.inExtraTurnUseUlts = allowUlts;
 
-                    if (isLog && !skipEXDisplay) {logToBattle(battleData,{logType: "ImmediateExtraTurn", name:characterName, target: typeof target === "object" ? target.name: target, AV: currentAV, ultName: currentUltyFunction.name});}
+                    if (isLog && !skipEXDisplay) {logToBattle(battleData,{logType: "ImmediateExtraTurn", name:characterName, target: typeof target === "object" ? target.name: target, AV: currentAV, ultName: currentUltyFunction.name, eventOverrideImage: currentUltimate.eventOverrideImage ?? sourceTurn.eventOverrideImage,});}
                     
 
                     battleData.isInExtraTurn = true;

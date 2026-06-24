@@ -3244,12 +3244,12 @@ const customMenu = {
             }
             if (currentLogType === "ImmediateExtraTurn") {
                 const isCharacter = characters?.[actionNameSource];
-                let imagePath = isCharacter ? characters[actionNameSource].preview : graphs.summonCustomImages[actionNameSource];
+                let imagePath = action.eventOverrideImage ?? (isCharacter ? characters[actionNameSource].preview : graphs.summonCustomImages[actionNameSource]);
                 // turnOrderDisplayPreviewUltimateSummon
     
                 eventString += `<div class="turnStarterBarUltimate clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">
                     <div class="weirdSideSemiCircleThingerAlly"></div>
-                    <img src="/HonkaiSR/${imagePath}" class="${isCharacter ? "turnOrderDisplayPreviewUltimate" : "turnOrderDisplayPreviewUltimateSummon"}"/>
+                    <img src="/HonkaiSR/${imagePath}" class="${isCharacter && !action.eventOverrideImage ? "turnOrderDisplayPreviewUltimate" : "turnOrderDisplayPreviewUltimateSummon"}"/>
                     <div class="miniActionNameBox">Ex-Turn</div>
                 </div>`;
             }
