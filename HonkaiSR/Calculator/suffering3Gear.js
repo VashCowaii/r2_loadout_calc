@@ -7154,6 +7154,89 @@ const turnLogicLightcones = {
             "buff1": "Indelible Promise (LC)",
         },
     },
+    "Woof! Walk Time!": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Woof! Walk Time! - passive application",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+                            const targetTurn = generalInfo.targetTurn;
+
+                            const targetDOTSCheck = targetTurn.dots;
+                            let isValid = false;
+                            if (targetDOTSCheck.Fire || targetDOTSCheck.Physical) {
+                                isValid = true;
+                            }
+    
+                            if (!sourceTurn.lcWoofWalkDMGSHEET) {
+                                let lcNameRef = "Woof! Walk Time!";
+                                let lcPathing = lightcones[lcNameRef].params;
+
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let rankParams = lcPathing[ownerRank-1];
+
+                                sourceTurn.lcWoofWalkDMGSHEET ??= {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.buff1,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "actionTags": ["All"],
+                                }
+                            }
+                            let buffSheet = sourceTurn.lcWoofWalkDMGSHEET;
+                            const buffName = buffSheet.buffName;
+                            const buffCheck = sourceTurn.buffsObject[buffName];
+
+                            if (buffCheck) {
+                                if (isValid) {return;}
+                                removeBuff(battleData,sourceTurn,buffCheck);
+                            }
+                            else if (isValid) {
+                                updateBuff(battleData,sourceTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Woof! Walk Time! DMG check",
+                    },
+                ],
+            },
+        ],
+        "buffNames": {
+            "buff1": "Woof! Walk Time! (LC)",
+        },
+    },
         //3star
     "Collapsing Sky": {//REDONE
         logic(thisTurn,battleData) {},
