@@ -7237,6 +7237,85 @@ const turnLogicLightcones = {
             "buff1": "Woof! Walk Time! (LC)",
         },
     },
+    "A Secret Vow": {
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "A Secret Vow - passive application",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+                            const targetTurn = generalInfo.targetTurn;
+
+                            const hpRatio = (targetTurn.currentHP / targetTurn.maxHP) >= (sourceTurn.currentHP / sourceTurn.maxHP);
+    
+                            if (!sourceTurn.lcSecretVowDMGSHEET) {
+                                let lcNameRef = "A Secret Vow";
+                                let lcPathing = lightcones[lcNameRef].params;
+
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let rankParams = lcPathing[ownerRank-1];
+
+                                sourceTurn.lcSecretVowDMGSHEET ??= {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": turnLogicLightcones[lcNameRef].buffNames.buff1,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 1,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "actionTags": ["All"],
+                                }
+                            }
+                            let buffSheet = sourceTurn.lcSecretVowDMGSHEET;
+                            const buffName = buffSheet.buffName;
+                            const buffCheck = sourceTurn.buffsObject[buffName];
+
+                            if (buffCheck) {
+                                if (hpRatio) {return;}
+                                removeBuff(battleData,sourceTurn,buffCheck);
+                            }
+                            else if (hpRatio) {
+                                updateBuff(battleData,sourceTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "A Secret Vow DMG check",
+                    },
+                ],
+            },
+        ],
+        "buffNames": {
+            "buff1": "A Secret Vow (LC)",
+        },
+    },
         //3star
     "Collapsing Sky": {//REDONE
         logic(thisTurn,battleData) {},
