@@ -2625,14 +2625,10 @@ const turnLogicLightcones = {
                     let ownersSlots = this.ownersSlots;
 
                     if (ownerRef.length) {
-                        // let relicPathing = relicSets[relicNameRef].params[0];//0-2pc 1-4pc
-                        // const statCheck = this.statCheck ??= turnLogicLightcones["Perfect Timing"].skillFunctions.statCheck;
                         const namedTurns = battleData.nameBasedTurns;
                         for (let owner of ownerRef) {
                             let charSlot = owner.slot;
                             let currentTurn = namedTurns[charSlot];
-                            
-                            // statCheck(battleData,currentTurn,ownersSlots);
 
                             if (!currentTurn.lcPostOpHEALBONUSUSHEET) {
                                 let lcNameRef = "Post-Op Conversation";
@@ -11696,6 +11692,107 @@ const turnLogicLightcones = {
         ],
         "buffNames": {
             "dr": "Journey, Forever Peaceful [LC]",
+        },
+    },
+    "Destiny's Threads Forewoven": {//REDONE
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {
+            statCheck(battleData,currentTurn,ownersSlots) {
+                let ownerRank = ownersSlots[currentTurn.name];
+
+                if (!currentTurn.lcDestinyThreadsDMGSHEET) {
+                    let lcNameRef = "Destiny's Threads Forewoven";
+                    let lcPathing = lightcones[lcNameRef].params;
+                    let rankParams = lcPathing[ownerRank-1];
+
+                    currentTurn.lcDestinyThreadsDMGSHEET = {
+                        "stats": [DamageAll],
+                        [DamageAll]: rankParams[2],
+                        "source": lcNameRef,
+                        "sourceOwner": currentTurn.properName,
+                        "buffName": turnLogicLightcones[lcNameRef].buffNames.buff1,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 40,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                }
+                let buffSheet = currentTurn.lcDestinyThreadsDMGSHEET;
+
+                const statTable = currentTurn.statTable;
+                const finalDEF = calcs.getDEFFinal(statTable).DEFFinal;
+
+                const validStacks = Math.min(40, Math.floor(finalDEF/100));
+
+                const buffName = buffSheet.buffName;
+                const buffsRef = currentTurn.buffsObject;
+                const buffCheck = buffsRef[buffName];
+
+                if (buffCheck) {
+                    const currentStacks = buffCheck.currentStacks;
+                    if (currentStacks === validStacks) {return;}
+                    const stackDiff = validStacks - currentStacks;
+
+                    if (-stackDiff === currentStacks) {
+                        removeBuff(battleData,currentTurn,buffCheck);
+                        return;
+                    }
+
+                    buffSheet.currentStacks = stackDiff;
+                    updateBuff(battleData,currentTurn,buffSheet);
+                }
+                else {
+                    buffSheet.currentStacks = validStacks;
+                    updateBuff(battleData,currentTurn,buffSheet);
+                }
+            }
+        },
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+
+                    const statCheck = this.statCheck ??= turnLogicLightcones["Destiny's Threads Forewoven"].skillFunctions.statCheck;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+
+                        statCheck(battleData,currentTurn,ownersSlots)
+                    }
+                },
+                "target": "self",
+                "listenerName": "Destiny's Threads Forewoven listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "UpdateStatDEF",//DEF stat family
+                        condition(battleData,generalInfo) {
+                            let sourceTurn = generalInfo.sourceTurn;
+                            let ownersSlots = this.ownersSlots;
+        
+                            const statCheck = this.statCheck ??= turnLogicLightcones["Destiny's Threads Forewoven"].skillFunctions.statCheck;
+                            statCheck(battleData,sourceTurn,ownersSlots);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Destiny's Threads Forewoven DEF check",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "buff1": "Destiny's Threads Forewoven (LC)",
         },
     },
         //3star
