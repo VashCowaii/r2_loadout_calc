@@ -6944,6 +6944,102 @@ const turnLogicLightcones = {
             "buff1": "Firedance (LC)",
         },
     },
+    "Flame of Blood, Blaze My Path": {//REDONE
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {},
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Flame of Blood, Blaze My Path listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate" && action != "Skill") {return;}
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+        
+                            if (!sourceTurn.lcBlazeMyPathDMGSHEET) {
+                                let ownersSlots = this.ownersSlots;
+                                let ownerRank = ownersSlots[sourceTurn.name];
+                                let lcNameRef = "Flame of Blood, Blaze My Path";
+                                let lcPathing = lightcones[lcNameRef].params;
+                                let rankParams = lcPathing[ownerRank-1];
+                                let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
+        
+                                sourceTurn.lcBlazeMyPathDMGSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[2],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffName,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 2,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "actionTags": ["All"],
+                                }
+                                sourceTurn.lcBlazeMyPathConsume = rankParams[1]
+                            }
+                            const eatValue = sourceTurn.lcBlazeMyPathConsume;
+                            const consumeValue = consumeHP(battleData,null,eatValue,sourceTurn,sourceTurn,"Lightcone",false,false).totalEaten;
+
+                            let stackCount = 1;
+                            if (consumeValue > 500) {
+                                stackCount++;
+                            }
+        
+                            const buffSheet = sourceTurn.lcBlazeMyPathDMGSHEET;
+                            buffSheet.currentStacks = stackCount;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Flame of Blood, Blaze My Path ult/skill start listener",
+                    },
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate" && action != "Skill") {return;}
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+                            const buffName = this.buffName ??= turnLogicLightcones["Flame of Blood, Blaze My Path"].buffNames.buff1;
+                            const buffCheck = sourceTurn.buffsObject[buffName];
+                            if (buffCheck) {removeBuff(battleData,sourceTurn,buffCheck);}
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Flame of Blood, Blaze My Path ult/skill start listener",
+                    },
+                ]
+            },
+        ],
+        "buffNames": {
+            "buff1": "Flame of Blood, Blaze My Path (LC)",
+        },
+    },
         //4star
     "Under the Blue Sky": {//NO CHANGE
         logic(thisTurn,battleData) {},
@@ -7145,7 +7241,7 @@ const turnLogicLightcones = {
                         },
                         "target": "self",
                         "isPersonal": true,
-                        "listenerName": "Indelible Promise ult end listener",
+                        "listenerName": "Indelible Promise ult start listener",
                     },
                 ]
             },
