@@ -4101,6 +4101,122 @@ const hitSplitters = {
       }
     ]
   },
+  "Feixiao": {
+    "basic": [
+      {
+        "target": {
+          "hitRatio": 0.20,
+          "energyRatio": 0.20,
+          "toughness": 10,
+          "target": "primary"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.20,
+          "energyRatio": 0.20,
+          "toughness": 10,
+          "target": "primary"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.60,
+          "energyRatio": 0.60,
+          "toughness": 10,
+          "target": "primary"
+        },
+      }
+    ],
+    "skill": [
+      {
+        "target": {
+          "hitRatio": 0.34,
+          "energyRatio": 0.34,
+          "toughness": 20,
+          "target": "primary"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.33,
+          "energyRatio": 0.33,
+          "toughness": 20,
+          "target": "primary"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.33,
+          "energyRatio": 0.33,
+          "toughness": 20,
+          "target": "primary"
+        },
+      }
+    ],
+    "passive": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 5,
+          "target": "primary"
+        },
+      }
+    ],
+    "passiveE4": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10,
+          "target": "primary"
+        },
+      }
+    ],
+    "ult": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 0,
+          "target": "primary"
+        },
+        "isSourceFirstHit": true,
+        "isAttackFirstHit": true,
+        "isSourceLastHit": true,
+        "isAttackLastHit": true
+      }
+    ],
+    "ultSlash": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 5,
+          "target": "primary"
+        },
+      }
+    ],
+    "tech": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "toughness": 30,
+          "target": "all"
+        },
+      }
+    ],
+    "tech2": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "toughness": 0,
+          "target": "all"
+        },
+      }
+    ]
+  },
 
   //ELATION
   "Yao Guang": {

@@ -99,7 +99,7 @@ const vashCharProgressList = [
     {name: "Dr. Ratio",
         completed: true, live: true, needs80OrTraces: false, owned: true},
     {name: "Feixiao",
-        completed: false, live: false, needs80OrTraces: false, owned: true},
+        completed: true, live: true, needs80OrTraces: false, owned: true},
     {name: "Seele",
         completed: true, live: true, needs80OrTraces: false, owned: true},
     {name: "Topaz & Numby",
