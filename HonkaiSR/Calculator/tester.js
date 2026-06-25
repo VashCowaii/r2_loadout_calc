@@ -3957,13 +3957,16 @@ const userTriggers = {
         // readSelection(`teamBarChar4IMG`).src = "/HonkaiSR/" + characters[globalRecords.character.char4.name].icon;
 
         for (let i=1;i<=4;i++) {
-            let globalCharRef = characters[globalRecords.character[`char${i}`].name]
+            const globalRef = globalRecords.character[`char${i}`];
+            let globalCharRef = characters[globalRef.name]
             readSelection(`teamBarChar${i}IMG`).src = "/HonkaiSR/" + globalCharRef.icon;
             readSelection(`teamBarChar${i}IMG`).style.border = `2px solid ${customMenu.rarityColors[globalCharRef.rarity]}`;
             readSelection(`teamBarChar${i}IMG`).style.filter = `brightness(0.5)`;
 
             readSelection(`characterFiltersSwitchIcon${i}`).src = "/HonkaiSR/" + globalCharRef.preview;
             readSelection(`characterFiltersSwitchIcon${i}`).style.filter = `brightness(0.3)`;
+
+            // readSelection(`teamBarChar${i}IMG`).style.opacity = globalRef.disabled ? "0.5" : "1";
             
         }
         readSelection(`teamBarChar${currentSlot}IMG`).style.filter = "brightness(1)";
@@ -4565,7 +4568,11 @@ const userTriggers = {
                     energyColor1: "#CC7CFF",
                     energyColor2: "#8E55FB"
                 },
-                
+                "Cyrene": {
+                    energyName: "Recollection",
+                    energyColor1: "#CC7CFF",
+                    energyColor2: "#8E55FB"
+                },
             }
 
             const specialDisplayFunctions = {
@@ -4843,6 +4850,109 @@ const userTriggers = {
                             ${slashStringer}
                             <div class="actionDetailHeaderRowCharacterEnergyValueBox">
                                 <div class="actionDetailHeaderRowCharacterEnergyValue">${(current).toLocaleString()}/</div>
+                                <div class="actionDetailHeaderRowCharacterEnergyValue">${(max).toLocaleString()}</div>
+                            </div>
+                        </div>`;
+                },
+                "Cyrene"(turnRef,action) {
+
+                    let slashStringer = "";
+
+                    const battleValues = turnRef.battleValues;
+                    const isEnhanced = battleValues.isEnhanced;
+                    let swPathing = "/HonkaiSR/misc/cyrene/";
+                    let cartridge = swPathing + "Bg_SpecialUltraSP_1415.png";
+
+                    let slashFillStringer = "";
+
+                    let string1 = `<img src="${swPathing + "Img_SpecialSP_1415_Out_Active_01.png"}" class="cyreneEnergy1and2Row"/>`;
+                    let string2 = `<img src="${swPathing + "Img_SpecialSP_1415_Out_Active_02.png"}" class="cyreneEnergy1and2Row2"/>`;
+
+                    let string3 = `<img src="${swPathing + "Img_SpecialSP_1415_In_Active_01.png"}" class="cyreneEnergy3and4Row"/>`;
+                    let string4 = `<img src="${swPathing + "Img_SpecialSP_1415_In_Active_02.png"}" class="cyreneEnergy3and4Row2"/>`;
+
+                    let string5 = `<img src="${swPathing + "Img_SpecialSP_1415_Out_Active_03.png"}" class="cyreneEnergy5and10Row"/>`;
+                    let string10 = `<img src="${swPathing + "Img_SpecialSP_1415_Out_Active_04.png"}" class="cyreneEnergy5and10Row2"/>`;
+
+                    let string7 = `<img src="${swPathing + "Img_SpecialSP_1415_In_Active_03.png"}" class="cyreneEnergy7and8Row"/>`;
+                    let string8 = `<img src="${swPathing + "Img_SpecialSP_1415_In_Active_04.png"}" class="cyreneEnergy7and8Row2"/>`;
+
+                    let string6 = `<img src="${swPathing + "Img_SpecialSP_1415_In_Active_05.png"}" class="cyreneEnergy6and9Row"/>`;
+                    let string9 = `<img src="${swPathing + "Img_SpecialSP_1415_In_Active_06.png"}" class="cyreneEnergy6and9Row2"/>`;
+
+                    let string11 = `<img src="${swPathing + "Img_SpecialSP_1415_Out_Active_05.png"}" class="cyreneEnergy11and18Row"/>`;
+                    let string18 = `<img src="${swPathing + "Img_SpecialSP_1415_Out_Active_06.png"}" class="cyreneEnergy11and18Row2"/>`;
+
+                    let string14 = `<img src="${swPathing + "Img_SpecialSP_1415_In_Active_07.png"}" class="cyreneEnergy14and15Row"/>`;
+                    let string15 = `<img src="${swPathing + "Img_SpecialSP_1415_In_Active_08.png"}" class="cyreneEnergy14and15Row2"/>`;
+
+                    let string13 = `<img src="${swPathing + "Img_SpecialSP_1415_In_Active_09.png"}" class="cyreneEnergy13and16Row"/>`;
+                    let string16 = `<img src="${swPathing + "Img_SpecialSP_1415_In_Active_10.png"}" class="cyreneEnergy13and16Row2"/>`;
+
+                    let string12 = `<img src="${swPathing + "Img_SpecialSP_1415_In_Active_11.png"}" class="cyreneEnergy12and17Row"/>`;
+                    let string17 = `<img src="${swPathing + "Img_SpecialSP_1415_In_Active_12.png"}" class="cyreneEnergy12and17Row2"/>`;
+
+                    let string19 = `<img src="${swPathing + "Img_SpecialSP_1415_Out_Active_07.png"}" class="cyreneEnergy18and24Row"/>`;
+                    let string24 = `<img src="${swPathing + "Img_SpecialSP_1415_Out_Active_08.png"}" class="cyreneEnergy18and24Row2"/>`;
+
+                    let string20 = `<img src="${swPathing + "Img_SpecialSP_1415_Out_Active_09.png"}" class="cyreneEnergy19and23Row"/>`;
+                    let string23 = `<img src="${swPathing + "Img_SpecialSP_1415_Out_Active_10.png"}" class="cyreneEnergy19and23Row2"/>`;
+
+                    let string21 = `<img src="${swPathing + "Img_SpecialSP_1415_Out_Active_11.png"}" class="cyreneEnergy21and22Row"/>`;
+                    let string22 = `<img src="${swPathing + "Img_SpecialSP_1415_Out_Active_12.png"}" class="cyreneEnergy21and22Row2"/>`;
+
+                    const regFillOrder = [
+                        string1,string2,
+                        string3,string4,
+                        string5,string6,
+                        string7,string8,
+                        string9,string10,
+                        string11,string12,
+                        string13,string14,
+                        string15,string16,
+                        string17,string18,
+                        string19,string20,
+                        string21,string22,
+                        string23,string24
+                    ]
+
+                    const postFillOrder = [
+                        string3,string4,
+                        string7,string8,
+                        string6,string9,
+                        string14,string15,
+                        string13,string16,
+                        string12,string17, 
+                        string1,string2,
+                        string5,string10,
+                        string11,string18,
+                        string19,string24,
+                        string20,string23,
+                        string21,string22
+                    ]
+
+                    const orderToUse = isEnhanced ? postFillOrder : regFillOrder;
+
+                    const current = turnRef.specialEnergyCurrent;
+                    const max = turnRef.specialEnergyMax;
+                    const overflowValue = battleValues.recollectionOverflow;
+
+                    for (let i=1;i<=current;i++) {
+                        const realIndex = i-1;
+                        slashFillStringer += orderToUse[realIndex];
+                    }
+
+                    slashStringer = `
+                        <img src="${cartridge}" class="feixiaoEnergyBackgroundOuter"/>
+                        
+                        ${slashFillStringer}
+                    `;
+                    
+                    return `
+                        <div class="actionDetailHeaderRowCharacterCUSTOMEnergyBox">
+                            ${slashStringer}
+                            <div class="actionDetailHeaderRowCharacterEnergyValueBox">
+                                <div class="actionDetailHeaderRowCharacterEnergyValue">${(current + overflowValue).toLocaleString()}/</div>
                                 <div class="actionDetailHeaderRowCharacterEnergyValue">${(max).toLocaleString()}</div>
                             </div>
                         </div>`;
