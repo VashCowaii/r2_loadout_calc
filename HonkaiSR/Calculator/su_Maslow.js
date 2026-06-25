@@ -4767,6 +4767,61 @@ const maslowCharactersHunt = {
             addTeamWant: [],
         },
     },
+    "Feixiao": {
+        // ["CritRateBase","SPDFlat","CritDamageBase","ATK%"]
+        defaultMainSubs: ["CritRateBase","SPDFlat","CritDamageBase","ATK%"],
+        //["ATK%","CritRateBase","CritDamageBase","SPDFlat"]
+        defaultTrashSub: ["ATKFlat","DamageBreak","EffectRES","HP%"],
+        0: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource"],
+            wants: ["ATK","Wind","Skill","Ultimate",...hasFUA,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Wind","Skill","Ultimate",...hasFUA,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        1: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource"],
+            wants: ["ATK","Wind","Skill","Ultimate",...hasFUA,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Wind","Skill","Ultimate",...hasFUA,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        2: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource"],
+            wants: ["ATK","Wind","Skill","Ultimate",...hasFUA,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Wind","Skill","Ultimate",...hasFUA,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        3: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource"],
+            wants: ["ATK","Wind","Skill","Ultimate",...hasFUA,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Wind","Skill","Ultimate",...hasFUA,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        4: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource"],
+            wants: ["ATK","Wind","Skill","Ultimate",...hasFUA,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Wind","Skill","Ultimate",...hasFUA,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        5: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource"],
+            wants: ["ATK","Wind","Skill","Ultimate",...hasFUA,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Wind","Skill","Ultimate",...hasFUA,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        6: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource"],
+            wants: ["ATK","Wind","Skill","Ultimate",...hasFUA,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Wind","Skill","Ultimate",...hasFUA,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+    },
 }
 
 const maslowCharactersElation = {

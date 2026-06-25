@@ -1432,7 +1432,7 @@ const battleActions = {
 
                 sourceDepositCritRate.valueIsCurrentAsAttacker = true;
                 targetDepositCritRate.valueIsCurrentAsTarget = true;
-                sourceDepositCritRate.cacheValue = totalCritRate;
+                sourceDepositCritRate.cacheValue = Math.max(0, Math.min(1,totalCritRate));
             }
             if (hasChangedCritDMG) {
                 totalCritDMG += table[CritDamageBase];
@@ -21780,6 +21780,932 @@ const turnLogic = {
             "deduction": "Deduction (Ratio)",
             "wiseman": "Wiseman's Folly",
             "techSPD": "Mold of Idolatry (Ratio)",
+        },
+        "characterValuesBattle": {},
+    },
+    "Feixiao": {
+        logic(thisTurn,battleData) {
+            let currentSP = battleData.skillPointCurrent;
+            const minimum = currentSP >= 1;
+
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                const skillCall = this.returnSkillCall;
+                skillCall.target = [battleData.primaryTarget];
+                // skillCall.subTarget = battleData.blastTargets;
+                return skillCall;
+            }
+
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.feiSkill,
+                action: "Skill",
+                points: -1, 
+
+                isAttack: true,
+                isAbility: true,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "SkillStart",
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
+
+            this.returnBasicCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.feiBasic,
+                action: "BasicATK",
+                points: 1, 
+
+                isAttack: true,
+                isAbility: true,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "BasicATKStart",
+
+                poolKey: this.abilityTargetPools.BasicATK,
+            })
+            this.returnBasicCall.sourceTurn = thisTurn;
+        },
+        "abilityTargetPools": {
+            "Skill": "Enemies (On-Field)",
+            "Ultimate": "Enemies (On-Field)",
+            "BasicATK": "Enemies (On-Field)",
+            "FUA": "Enemies (On-Field)",
+        },
+        "skillFunctions": {
+            feiBasic(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.feiBasicREF ??= ATKObjects["Basic ATK"]["Boltsunder"].variant1;
+
+                if (!ATKObjects.feiBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = ATKObjects.feiBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Wind"];
+                    const actionTags = ["All","Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.feiBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.feiBasicATKOBJECT;
+
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+            },
+            feiFUA(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                const rank = sourceTurn.rank;
+
+                const battleValues = sourceTurn.battleValues;
+
+                if (!battleValues.inSkillFUA) {
+                    battleValues.usedTalentFUA = true;
+                }
+                else {
+                    battleValues.inSkillFUA = false;
+                }
+                battleValues.fuaIsQueued = false;
+
+                let skillRef = ATKObjects.feiFUAREF ??= ATKObjects.Talent["Thunderhunt"].variant1;
+
+                if (!ATKObjects.feiFUAATKOBJECT) {
+                    skillRef.hitSplits = rank >= 4 ? hitSplitters[sourceTurn.properName].passiveE4 : hitSplitters[sourceTurn.properName].passive;
+                    let values = ATKObjects.feiFUAREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Wind"];
+                    const actionTags = ["All","FUA","Attack"];
+                    if (rank >= 6) {
+                        actionTags.push("Ultimate");
+                    }
+
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.feiFUAATKOBJECT = {
+                        multipliers: {
+                            primary: values[0] + (rank >= 6 ? 1.4 : 0),
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+
+                    ATKObjects.feiFUADMGSHEET = {
+                        "stats": [DamageAll],
+                        [DamageAll]: values[4],
+                        "source": "Talent",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": turnLogic[sourceTurn.properName].buffNames.fuaDMG,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                    }
+
+                    ATKObjects.feiE4SPDSHEET = {
+                        "stats": [SPDP],
+                        [SPDP]: 0.08,
+                        "source": "E4",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": turnLogic[sourceTurn.properName].buffNames.e4SPD,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                    }
+                    // ATKObjects.ratioFUAATKOBJECTPOST = {
+                    //     multipliers: {
+                    //         primary: null,
+                    //         blast: null,
+                    //         all: null,
+                    //     },
+                    //     energy: skillRef.energyRegen,
+                    //     scalar,
+                    //     DMGTags: tags,
+                    //     allToughness: false,
+                    //     slot: skillRef.slot,
+                    //     realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                    //     actionTags,
+                    //     compositeCacheTag
+                    // }
+                }
+                const buffSheet = ATKObjects.feiFUADMGSHEET;
+                updateBuff(battleData,sourceTurn,buffSheet);
+                if (rank >= 4) {
+                    const spdSheet = ATKObjects.feiE4SPDSHEET;
+                    updateBuff(battleData,sourceTurn,spdSheet);
+                }
+
+                // if (rank >= 4) {
+                //     updateEnergy(battleData,15,sourceTurn,false,"Dr. Ratio E4");
+                // }
+                let ATKObject = ATKObjects.feiFUAATKOBJECT;
+                // let ATKObject2 = ATKObjects.ratioFUAATKOBJECTPOST;
+
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);//,"Start",null);
+                // if (rank >= 2) {
+                //     let enemiesAttackedThisAction = chainedAttackRef.targetsGotHit;
+        
+                //     const ratioE2DMG = logicRef.skillFunctions.ratioE2DMG;
+                //     ratioE2DMG(battleData,chainedAttackRef,sourceTurn,enemiesAttackedThisAction);
+                // }
+                // attackWrapper(battleData,skillRef,sourceTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
+            },
+            feiSkill(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                const rank = sourceTurn.rank;
+
+                let skillRef = ATKObjects.feiSkillREF ??= ATKObjects["Skill"]["Waraxe"].variant1;
+
+                if (!ATKObjects.feiSkillATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
+                    let values = ATKObjects.feiSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Wind"];
+                    const actionTags = ["All","Skill","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.feiSkillATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                    ATKObjects.feiSkillATKOBJECTEND = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.feiSkillATKOBJECT;
+                let ATKObject2 = ATKObjects.feiSkillATKOBJECTEND; 
+                const battleValues = sourceTurn.battleValues;
+
+                let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget,"Start",null);
+                battleValues.inSkillFUA = true;
+                poke("FeixiaoQueueFUA",battleData,{target: actionObject.target},null);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
+            },
+            feiUltimate(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const rank = sourceTurn.rank;
+                const battleValues = sourceTurn.battleValues;
+                battleValues.feiMidUlt = true;
+
+                let skillRef = ATKObjects.feiUltimateREF ??= ATKObjects.Ultimate["Terrasplit"].variant1;
+
+                if (!ATKObjects.feiUltimateATKOBJECT) {
+                    let skillRef2 = ATKObjects.feiUltimateREF2 ??= ATKObjects.Ultimate["Boltsunder Blitz"].variant1;
+                    // let skillRef3 = ATKObjects.feiUltimateREF3 ??= ATKObjects.Ultimate["Waraxe Skyward"].variant1;
+
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    skillRef2.hitSplits = hitSplitters[sourceTurn.properName].ultSlash;
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                    let values2 = battleActions.getLevelBasedParam(battleData,skillRef2,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Wind"];
+                    const actionTags = ["All","Ultimate","Attack","FUA"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.feiUltimateATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+
+                    ATKObjects.feiUltimateATKOBJECTSLASH = {
+                        multipliers: {
+                            primary: values2[0] + values2[1],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        bonusMultiplier: 0,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: true,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+
+                    ATKObjects.feiUltimateBREAKEFFSHEET = {
+                        "stats": [DamageBreakEfficiency],
+                        [DamageBreakEfficiency]: 1,
+                        "source": "Ultimate",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": turnLogic[sourceTurn.properName].buffNames.ultyWBE,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                    ATKObjects.E1FinalMultiSHEET = {
+                        "stats": null,
+                        "multiplier": 1,
+                        "source": "E1",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": turnLogic[sourceTurn.properName].buffNames.e1Multi,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "isFinalMulti": true,
+                        "actionTags": ["Ultimate"]
+                    }
+                }
+                let ATKObject = ATKObjects.feiUltimateATKOBJECT;
+
+                let skillRef2 = ATKObjects.feiUltimateREF2;
+                let ATKObjectSLASH = ATKObjects.feiUltimateATKOBJECTSLASH;
+
+                const wbeSheet = ATKObjects.feiUltimateBREAKEFFSHEET;
+                const wbeName = wbeSheet.buffName;
+                const sourceBuffs = sourceTurn.buffsObject;
+                
+                const primaryTarget = actionObject.target;
+                const subTarget = actionObject.subTarget
+
+                let chainedAttackRef = null;
+                let multiCount = 0;
+                const isE1 = rank >= 1;
+                const e1Sheet = ATKObjects.E1FinalMultiSHEET;
+
+                for (let i=1;i<=6;i++) {
+                    let chainState = i === 1 ? "Start" : "Middle";
+
+                    const buffCheck = sourceBuffs[wbeName];
+                    if (primaryTarget.isBroken) {
+                        if (buffCheck) {removeBuff(battleData,sourceTurn,buffCheck);}
+                    }
+                    else if (!buffCheck) {
+                        updateBuff(battleData,sourceTurn,wbeSheet);
+                    }
+                    chainedAttackRef = attackWrapper(battleData,skillRef2,sourceTurn,ATKObjectSLASH,primaryTarget,subTarget,chainState,chainedAttackRef);
+                    
+                    if (isE1) {
+                        multiCount += 1;
+                        if (multiCount > 1) {
+                            removeBuff(battleData,sourceTurn,e1Sheet);
+                        }
+                        e1Sheet.multiplier = 1 + (multiCount * 0.10);
+                        updateBuff(battleData,sourceTurn,e1Sheet);
+                    }
+                }
+
+                const buffCheck = sourceBuffs[wbeName];
+                if (buffCheck) {removeBuff(battleData,sourceTurn,buffCheck);}
+
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,primaryTarget,subTarget,"End",chainedAttackRef);
+
+                battleValues.feiMidUlt = false;
+                sourceTurn.ultyQueued = false;
+                if (isE1) {
+                    removeBuff(battleData,sourceTurn,e1Sheet);
+                }
+            },
+            feiTechnique(battleData,actionObject,sourceTurn,isWave1) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.feiTechniqueREF ??= ATKObjects.Technique["Stormborn"].variant1;
+
+                if (!ATKObjects.feiTechniqueATKObject) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
+                    let values = ATKObjects.feiTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Wind"];
+                    const actionTags = ["All","Technique","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+
+                    const waveCount = sourceTurn.battleValues.techTotalWaves;//tech2
+                    ATKObjects.feiTechniqueATKObject = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: Math.min(values[5], values[2] + ((waveCount - 1) * values[4])),
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+
+                    ATKObjects.feiTechCrit = {
+                        "stats": [CritRateBase],
+                        [CritRateBase]: 1,
+                        "source": "Technique",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": turnLogic[sourceTurn.properName].buffNames.forceCrit,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "actionTags": ["Technique"],
+                        "buffDisplayIcon": "misc/feixiao/Icon1220Maze.png"
+                    }
+                }
+                if (isWave1) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
+                }
+                else {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech2;
+                }
+                let ATKObject = ATKObjects.feiTechniqueATKObject;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                const critSheet = ATKObjects.feiTechCrit;
+                updateBuff(battleData,sourceTurn,critSheet);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,battleData.enemyPositions,[]);
+                removeBuff(battleData,sourceTurn,critSheet);
+            },
+            feiTechnique2(battleData,actionObject,sourceTurn,isWave1) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.feiTechniqueREF ??= ATKObjects.Technique["Stormborn"].variant1;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                poke("FeixiaoGainSlash",battleData,{pointsGained: 1,sourceString:"Technique"});
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+                    // const ATKObjects = logicRef.ATKObjects;
+                    // poke("FeixiaoGainSlash",battleData,{pointsGained: 1,sourceString:"asdf"});
+
+                    //talent inherents
+
+                    //trace Boltcatch
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+
+                    //trace Formshit
+                    const traceATK = this.fuaCrit ??= {
+                        "stats": [CritDamageBase],
+                        [CritDamageBase]: 0.36,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.fuaCrit,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "actionTags": ["FUA"],
+                    }
+                    updateBuff(battleData,ownerTurn,traceATK);
+
+                    //trace heavenpath
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+
+                    //talent ally attacks charging
+                    const listener4 = passiveListeners[3];
+                    addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+
+                    //talent ally attack fua launch
+                    const listener5 = passiveListeners[4];
+                    addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+
+                    if (rank >= 6) {
+                        const e6PEN = this.e6PEN ??= {
+                            "stats": [ResistanceAllPEN],
+                            [ResistanceAllPEN]: 0.20,
+                            "source": "E6",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e6PEN,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "actionTags": ["Ultimate"],
+                        }
+                        updateBuff(battleData,ownerTurn,e6PEN);
+                    }
+
+                    ownerTurn.battleValues.techTotalWaves = battleData.wavesToRun;
+                    getTechnique(battleData,ownerTurn,logicRef,2,true,false)
+                },
+                "target": "self",
+                "listenerName": "Feixiao Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Skill") {return;}
+
+                            let ownerTurn = this.ownerTurn;
+                            const traceATK = this.traceDebuffDMG ??= {
+                                "stats": [ATKP],
+                                [ATKP]: 0.48,
+                                "source": "Trace",
+                                "sourceOwner": ownerTurn.properName,
+                                "buffName": turnLogic[ownerTurn.properName].buffNames.traceATK,
+                                "durationInTurn": 4,
+                                "duration": 3,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": "EndTurn",
+                            }
+                            updateBuff(battleData,ownerTurn,traceATK);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Feixiao trace skill start listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+
+                            const exoObject = this.exoObject ??= {pointsGained: 3,sourceString:"Heavenpath battlestart Gain"};
+                            poke("FeixiaoGainSlash",battleData,exoObject);
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Feixiao battlestart slash gain",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "PreActionPhase",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+
+                            const battleValues = ownerTurn.battleValues;
+                            if (!battleValues.usedTalentFUA) {
+                                const exoObject = this.exoObject ??= {pointsGained: 1,sourceString:"Talent FUA unused on Turn-Start"}
+                                poke("FeixiaoGainHits",battleData,exoObject);
+                            }
+                            battleValues.usedTalentFUA = false;
+
+                            if (ownerTurn.rank >= 2) {
+                                const exoObject = this.exoObject2 ??= {pointsGained: 6,sourceString:"Reset E2 Proc Count"};
+                                poke("FeixiaoE2GainHits",battleData,exoObject);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Feixiao turn-start fua used check",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackStart",
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+                            const ownerTurn = this.ownerTurn;
+                            if (sourceTurn.isEnemy || ownerTurn.battleValues.feiMidUlt) {return;}
+
+                            const rank = ownerTurn.rank;
+                            if (rank >= 2 && ownerTurn.battleValues.e2CountLeft) {
+                                const actionTags = generalInfo.ATKObject.actionTags;
+                                let isFUA = false;
+                                for (let tag of actionTags) {
+                                    if (tag === "FUA") {
+                                        isFUA = true;
+                                        break;
+                                    }
+                                }
+
+                                if (isFUA) {
+                                    const exoObject = this.exoObject2 ??= {pointsGained: -1,sourceString:"Ally FUA Launched"};
+                                    poke("FeixiaoE2GainHits",battleData,exoObject);
+                                    
+                                    const exoObject2 = this.exoObject3 ??= {pointsGained: 1,sourceString:"E2 Ally FUA Launched"};
+                                    poke("FeixiaoGainSlash",battleData,exoObject2);
+
+                                    return;
+                                } 
+                            }
+
+                            const exoObject = this.exoObject ??= {pointsGained: 1,sourceString:"Ally Attack Started"};
+                            poke("FeixiaoGainHits",battleData,exoObject);
+                        },
+                        "target": "self",
+                        "listenerName": "Feixiao ally attack listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+                            const ownerTurn = this.ownerTurn;
+                            if (sourceTurn.isEnemy || sourceTurn.properName === ownerTurn.properName || ownerTurn.battleValues.usedTalentFUA) {return;}
+                            poke("FeixiaoQueueFUA",battleData,{target: [generalInfo.primaryTargetArray[0]]},null);
+                        },
+                        "target": "self",
+                        "listenerName": "Feixiao ally attack listener",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
+                "trigger": "FeixiaoGainSlash",
+                condition(battleData,generalInfo) {
+                    // poke("FeixiaoGainSlash",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    const pointsGained = generalInfo.pointsGained;
+
+                    // const valuesRef = ownerTurn.battleValues;
+
+                    const oldValue = ownerTurn.specialEnergyCurrent;
+                    const energyMax = ownerTurn.specialEnergyMax;
+
+                    const proposedFinalValue = Math.max(0, oldValue + pointsGained);
+                    ownerTurn.specialEnergyCurrent = Math.min(energyMax,proposedFinalValue);
+
+                    const resoRef = ownerTurn.specialEnergyCurrent;
+                    const valueWasDiff = resoRef != oldValue;
+
+                    
+                    const sourceString = generalInfo.sourceString;
+                    if (battleData.isLoggyLogger) {
+                        if (valueWasDiff) {
+                            // GenericActionWithImage
+                            logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Flying Aureus: ${oldValue} --> ${resoRef} [${sourceString}]`});
+                            // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Core Resonance (Saber): ${oldValue} --> ${resoRef} [${sourceString}]`});
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "Flying Aureus Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "FeixiaoGainHits",
+                condition(battleData,generalInfo) {
+                    // poke("FeixiaoGainHits",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    const generalData = this.generalData ??= {summerName: "feixiaoHitsSum",baseName: "feiHits",maxName: "feiHitsMax",maxNameDisplay: null,minName: null,isRealSubEnergy: false,
+                        baseString: "Talent Hits (Feixiao)",displayIcon:"/HonkaiSR/misc/feixiao/Icon1220Energy.png"};
+                    // const oldValue = ownerTurn.battleValues.prana;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
+
+                    const battleValues = ownerTurn.battleValues;
+                    const newValue = battleValues.feiHits;
+                    const max = battleValues.feiHitsMax;
+
+                    if (newValue === max && ownerTurn.specialEnergyCurrent < ownerTurn.specialEnergyMax) {
+                        const exoObject = this.exoObject ??= {pointsGained: -max,sourceString:"Fei Hits Reset"};
+                        poke("FeixiaoGainHits",battleData,exoObject);
+
+                        const exoObject2 = this.exoObject2 ??= {pointsGained: 1,sourceString:"Max Hits Reached"};
+                        poke("FeixiaoGainSlash",battleData,exoObject2);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Feixiao Ally Hits Trigger Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "FeixiaoE2GainHits",
+                condition(battleData,generalInfo) {
+                    // poke("FeixiaoGainHits",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    const generalData = this.generalData ??= {summerName: "feixiaoHitsE2Sum",baseName: "e2CountLeft",maxName: "e2CountLeftMax",maxNameDisplay: null,minName: null,isRealSubEnergy: false,
+                        baseString: "E2 Procs (Feixiao)",displayIcon:"/HonkaiSR/misc/feixiao/Icon1220Rank02.png"};
+                    // const oldValue = ownerTurn.battleValues.prana;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
+                },
+                "target": "self",
+                "listenerName": "Feixiao E2 Ally Hits Trigger Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "EntityConstruction",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const charValuesRef = ownerTurn.battleValues;
+                    // ownerTurn.maxEnergy = 0;
+                    ownerTurn.specialEnergy = true;
+                    ownerTurn.specialEnergyMax = 12;
+                    ownerTurn.specialEnergyCurrent = 0;
+                    ownerTurn.specialEnergyOverflowLimit = 0;
+                    charValuesRef.specialEnergyCurrentName = "slash";
+                    charValuesRef.specialEnergyMaxName = "slashMax";
+
+                },
+                "target": "self",
+                "listenerName": "Feixiao Special Energy Construction",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "FeixiaoQueueFUA",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.battleValues.fuaIsQueued) {return;}
+                    ownerTurn.battleValues.fuaIsQueued = true;
+
+                    const target = generalInfo.target;
+                    
+                    const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                        name: this.listenerName,
+                        priority: priorityList.ability.CharacterAttackFromSelf,
+                        queueTag: "QueuedInsert",
+    
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.feiFUA,
+                        action: "Insert",
+                        abortCheck(battleData,actionObject,sourceTurn) {
+                            const target = actionObject.target[0];
+                            if (target.isDead) {
+                                if (!enemyPositions.length) {
+                                    sourceTurn.battleValues.fuaIsQueued = false;
+                                    return true;
+                                }
+                                else {
+                                    actionObject.target = [battleData.primaryTarget];
+                                }
+                            }
+                        },
+    
+                        isInserted: true,
+                        dontKeepNextWave: false,//ults always clear out
+                        isAttack: true,
+                        isAbility: true,
+                        useAnyTriggers: true,
+                        eventTypeStartLOG: "GenericAbilityStart",
+    
+                        poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.FUA,
+                    })
+
+                    queueObject.sourceTurn = ownerTurn;
+                    queueObject.target = target;
+                    queueInsertAbility(battleData,queueObject);
+                },
+                "target": "enemy",
+                "listenerName": "Feixiao - Follow-up queued - Talent",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.specialEnergyCurrent >= (ownerTurn.specialEnergyMax * 0.5);
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                            name: this.listenerName,
+                            priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.feiUltimate,
+                            action: "Ultimate",
+
+                            energyCost: ownerTurn.specialEnergyMax * 0.5,
+                            specialEnergyPoke: "FeixiaoGainSlash",
+
+                            dontKeepNextWave: true,//ults always clear out
+                            isAttack: true,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                        })
+                        queueObject.target = [battleData.primaryTarget];
+                        queueObject.sourceTurn = ownerTurn;
+                        queueUltimate(battleData,queueObject);
+                    }
+                },
+                "target": "enemy",
+                "listenerName": "Feixiao - Ultimate queued",
+                "ownerTurn": {},
+            },
+        ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                // if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.feiTechnique;
+                callTech(battleData,null,ownerTurn,currentWave === 1);
+            },
+            "target": "self",
+            "priority": -60,
+            "listenerName": "Feixiao Technique",
+            "ownerTurn": {},
+        },
+        "techniqueListener2": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.feiTechnique2;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Feixiao Technique gain",
+            "ownerTurn": {},
+        },
+        "ATKObjects": {},
+        "listenersBattle": [],
+        "buffsBattle": {},
+        "buffsBattleTemp": {},
+        "characterValues": {
+            "inSkillFUA": false,
+            "usedTalentFUA": false,
+            "feiHits": 0,
+            "feiHitsMax": 2,
+            "fuaIsQueued": false,
+            "feiMidUlt": false,
+            "e2CountLeft": 6,
+            "e2CountLeftMax": 6,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "traceATK": "Boltcatch (Trace)",
+            "fuaDMG": "Thunderhunt",
+            "fuaCrit": "Formshift (Trace)",
+            "ultyWBE": "Terrasplit Break Efficiency",
+            "e1Multi": "E1: Skyward I Quell",
+            "e6PEN": "E6: Homeward I Near",
+            "e4SPD": "E4: E4: Stormward I Hear",
+            "forceCrit": "Tech Force Crit",
         },
         "characterValuesBattle": {},
     },

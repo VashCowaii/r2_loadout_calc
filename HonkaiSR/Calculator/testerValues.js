@@ -227,6 +227,23 @@ const customDisplayValuesLog = {
     "Dr. Ratio": [//tracker done
         {valueName: "Wiseman's Folly FUA Stacks", refName: "wisemanStacks", isBattleValue: true},
     ],
+    "Feixiao": [
+        {valueName: "Attack Charge", refName: "feiHits", isBattleValue: true,summaryValue: "feixiaoHitsSum",summaryType: "SUM",
+            customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "Wind",
+            displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            progressIcon: "misc/feixiao/Icon1220Energy.png"
+        },
+        {valueName: "Attack Charge Max", refName: "feiHitsMax", isBattleValue: true,hide: true},
+
+        {valueName: "E2 FUA Left", refName: "e2CountLeft", isBattleValue: true,summaryValue: "feixiaoHitsE2Sum",summaryType: "SUM", requiresEidolon: 2,
+            customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "Wind",
+            displayRequiresIndex: 3, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            progressIcon: "misc/feixiao/Icon1220Rank02.png"
+        },
+        {valueName: "E2 FUA Left Max", refName: "e2CountLeftMax", isBattleValue: true, requiresEidolon: 2,hide: true},
+    ],
 
     //NIHILITY
     "Kafka": [//tracker done
@@ -601,6 +618,7 @@ for (let charName in characters) {
 const permaConditionsTextLibrary = {
     "energyMaxed": "Energy: Current === Energy: Max",
     "energyMaxedSpecial": "Special Energy: Current === Special Energy: Max",
+    "energyHalfSpecial": "Special Energy: Current >= (Special Energy: Max * 0.5)",
     "energyHalf": "Energy Current >= (Energy Max * 0.5)",
     "energyMaxedCyrene": "First battle's ultimate: Energy: Current === Energy: Max<br>Any further ultimates: Energy Current >= 12",
     "atLeast1SP": "Skill Points: Current >= 1",
@@ -649,6 +667,15 @@ const conditionsCharacterDisplayWarning = {
     },
     "Seele": defaultStandardAbilityDisplayWarnings,
     "Dr. Ratio": defaultStandardAbilityDisplayWarnings,
+    "Feixiao": {
+        hasEnhancedState: false,
+        "Skill": "",
+        "Ultimate": "",
+        // "MemoSkillEnh": "ONLY the Enhanced MemoSkill can be used on Netherwing's 3rd turn and conditions will be ignored.",
+
+        "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyHalfSpecial]
+    },
 
     //DESTRUCTION
     "Saber": {
@@ -3943,6 +3970,17 @@ const defaultConditions = {
         "validTargetChecks": []
     },
     "Dr. Ratio": {
+        "hasEnhancedState": false,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
+        }
+    },
+    "Feixiao": {
         "hasEnhancedState": false,
         "Skill": {
             "type": "AND",
