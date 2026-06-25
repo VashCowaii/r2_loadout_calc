@@ -53,7 +53,7 @@ const calcs = {
         const SPDBonusPercent = index[SPDP];
         const SPDBonusFlat = index[SPDFlat];
 
-        const SPDFinal = SPDBaseFinal * (1 + SPDBonusPercent) + SPDBonusFlat;
+        const SPDFinal = index[SPDOverrideFlag] ? index[SPDOverride] : SPDBaseFinal * (1 + SPDBonusPercent) + SPDBonusFlat;
 
         // const SPDActionValue = +(10000/SPDFinal).toFixed(7);
         const SPDActionValue = 10000/SPDFinal;
