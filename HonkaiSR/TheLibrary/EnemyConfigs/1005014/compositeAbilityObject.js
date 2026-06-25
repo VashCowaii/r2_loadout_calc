@@ -5315,7 +5315,7 @@ const compositeAbilityObject = {
                   },
                   "abilityTarget": {
                     "name": "Target Name",
-                    "target": "{{Enemies by Aggro}}"
+                    "target": "{{Enemies by Taunt OR Aggro}}"
                   },
                   "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,
@@ -5391,7 +5391,7 @@ const compositeAbilityObject = {
                   },
                   "abilityTarget": {
                     "name": "Target Name",
-                    "target": "{{Enemies by Aggro}}"
+                    "target": "{{Enemies by Taunt OR Aggro}}"
                   },
                   "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,
@@ -5467,7 +5467,7 @@ const compositeAbilityObject = {
                   },
                   "abilityTarget": {
                     "name": "Target Name",
-                    "target": "{{Enemies by Aggro}}"
+                    "target": "{{Enemies by Taunt OR Aggro}}"
                   },
                   "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,
@@ -5543,7 +5543,7 @@ const compositeAbilityObject = {
                   },
                   "abilityTarget": {
                     "name": "Target Name",
-                    "target": "{{Enemies by Aggro}}"
+                    "target": "{{Enemies by Taunt OR Aggro}}"
                   },
                   "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,
@@ -6281,7 +6281,7 @@ const compositeAbilityObject = {
                   },
                   "abilityTarget": {
                     "name": "Target Name",
-                    "target": "{{Enemies by Aggro}}"
+                    "target": "{{Enemies by Taunt OR Aggro}}"
                   },
                   "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,
@@ -6357,7 +6357,7 @@ const compositeAbilityObject = {
                   },
                   "abilityTarget": {
                     "name": "Target Name",
-                    "target": "{{Enemies by Aggro}}"
+                    "target": "{{Enemies by Taunt OR Aggro}}"
                   },
                   "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,
@@ -6433,7 +6433,7 @@ const compositeAbilityObject = {
                   },
                   "abilityTarget": {
                     "name": "Target Name",
-                    "target": "{{Enemies by Aggro}}"
+                    "target": "{{Enemies by Taunt OR Aggro}}"
                   },
                   "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,
@@ -6509,7 +6509,7 @@ const compositeAbilityObject = {
                   },
                   "abilityTarget": {
                     "name": "Target Name",
-                    "target": "{{Enemies by Aggro}}"
+                    "target": "{{Enemies by Taunt OR Aggro}}"
                   },
                   "priorityTag": "DefaultEnemy",
                   "canHitNonTargets": true,

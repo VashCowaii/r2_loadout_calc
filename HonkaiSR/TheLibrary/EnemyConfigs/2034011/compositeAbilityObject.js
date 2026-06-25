@@ -656,7 +656,7 @@ const compositeAbilityObject = {
           },
           "abilityTarget": {
             "name": "Target Name",
-            "target": "{{Enemies by Aggro}}"
+            "target": "{{Enemies by Taunt OR Aggro}}"
           },
           "priorityTag": "EnemyChangeState",
           "canHitNonTargets": true,
@@ -3171,7 +3171,7 @@ const compositeAbilityObject = {
                           "abilityName": "Monster_W2_LycanKing_Ability05_Insert_Part01",
                           "abilityTarget": {
                             "name": "Target Name",
-                            "target": "{{Enemies by Aggro}}"
+                            "target": "{{Enemies by Taunt OR Aggro}}"
                           },
                           "priorityTag": "EnemyAttackFromOthers",
                           "canHitNonTargets": true,
@@ -3348,7 +3348,7 @@ const compositeAbilityObject = {
                           "abilityName": "Monster_W2_LycanKing_Ability05_Insert_Part01",
                           "abilityTarget": {
                             "name": "Target Name",
-                            "target": "{{Enemies by Aggro}}"
+                            "target": "{{Enemies by Taunt OR Aggro}}"
                           },
                           "priorityTag": "EnemyAttackFromOthers",
                           "canHitNonTargets": true,
