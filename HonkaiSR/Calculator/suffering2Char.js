@@ -1975,7 +1975,7 @@ const battleActions = {
             }
         }
     },
-    hitWrapperTEST(battleData,targetTurn,atkEntry,targetObject,hitType,generalInfo,isLastHit,isBounce,distributedTargetCount) {
+    hitWrapperTEST(battleData,targetTurn,atkEntry,targetObject,hitType,generalInfo,isBounce,distributedTargetCount) {
         const {sourceTurn,ATKObject,element,overBreakTotals,targetsGotHit,overKillTotals,totals} = generalInfo;
         const {actionTags,scalarSourceOverride,scalarAmountOverride,compositeCacheTag,slot,customMulti,scalar,bonusScalar,DMGTags,realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,realElationDMGKeys,
             instanceTag
@@ -2394,7 +2394,7 @@ const battleActions = {
 
         return toughnessComposite
     },
-    elationHitWrapperTEST(battleData,targetTurn,atkEntry,targetObject,hitType,generalInfo,isLastHit,isBounce,distributedTargetCount) {
+    elationHitWrapperTEST(battleData,targetTurn,atkEntry,targetObject,hitType,generalInfo,isBounce,distributedTargetCount) {
         const {sourceTurn,ATKObject,element,overBreakTotals,targetsGotHit,overKillTotals,totals} = generalInfo;
         const {actionTags,scalarSourceOverride,scalarAmountOverride,compositeCacheTag,slot,customMulti,bonusScalar,DMGTags,realElationDMGKeys,realMerryDMGKeys,realPENKeys,realShredKeys,realVulnKeys,ElationPercentOverride,
             instanceTag
@@ -3439,11 +3439,9 @@ const battleActions = {
         if (attackState && logging) {logToBattle(battleData,{logType: "AttackStartSEGMENT"});}
         if (hasHits) {
             const hitsLengthTotal = hitSplits.length;
-            let isLastHit = false;
 
             const ATKObjectEnergy = ATKObject.energy ?? 0;
             for (let i=0;i<hitsLengthTotal;i++) {
-                isLastHit = i === hitsLengthTotal-1 ? true : false;
                 const atkEntry = hitSplits[i];
 
                 const targetObject = atkEntry.target;
@@ -3460,7 +3458,7 @@ const battleActions = {
                     for (let ee=0;ee<primaryLength;ee++) {
                         const currentTarget = primaryTarget[ee];
                         // if (currentTarget.isUnselectable) {continue;}
-                        hitWrap(battleData,currentTarget,atkEntry,targetObject,hitType,generalInfo,isLastHit,false,distributedTargetCount);
+                        hitWrap(battleData,currentTarget,atkEntry,targetObject,hitType,generalInfo,false,distributedTargetCount);
                     }
                 }
                 if (subTargetObject) {
@@ -3470,7 +3468,7 @@ const battleActions = {
                     for (let ee=0;ee<subLength;ee++) {
                         const currentTarget = subTarget[ee];
                         // if (currentTarget.isUnselectable) {continue;}
-                        hitWrap(battleData,currentTarget,atkEntry,subTargetObject,hitType,generalInfo,isLastHit,false,distributedTargetCount);
+                        hitWrap(battleData,currentTarget,atkEntry,subTargetObject,hitType,generalInfo,false,distributedTargetCount);
                     }
                 }
             }
@@ -3483,7 +3481,6 @@ const battleActions = {
             const bounceCount = bounceRef.bounceCount
             // battleData.bounceOrder = bounceOrder
             const atkEntry = bounceRef;
-            const isLastHit = true;
             const bounceLength = bounceOrder.length;
             let currentEnemyIndex = bounceRef.bounceSkipFirstTarget ? 1 : 0;
             const isBounce = true;
@@ -3513,7 +3510,7 @@ const battleActions = {
                 if (energyGain) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split [BOUNCE]");}
                 const distributedTargetCount = battleData.activeEnemies ?? 1;
 
-                hitWrap(battleData,currentEnemy,atkEntry,targetObject,"primary",generalInfo,isLastHit,isBounce,distributedTargetCount);
+                hitWrap(battleData,currentEnemy,atkEntry,targetObject,"primary",generalInfo,isBounce,distributedTargetCount);
                 totalHits += 1;//since we skip dead guys, gotta increments hits inside the loop
                 
 
@@ -3539,7 +3536,7 @@ const battleActions = {
                         const blastLength = targetsBlast.length;
                         totalHits += blastLength;
                         for (let enemyEntry of targetsBlast) {
-                            hitWrap(battleData,enemyEntry,atkEntry,blastTargetObject,"blast",generalInfo,isLastHit,isBounce,distributedTargetCount);
+                            hitWrap(battleData,enemyEntry,atkEntry,blastTargetObject,"blast",generalInfo,isBounce,distributedTargetCount);
                         }
                     }
                 } 
