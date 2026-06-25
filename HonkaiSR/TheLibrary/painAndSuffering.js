@@ -6587,7 +6587,7 @@ const megaParsingFuckeryPain = {
         </div>
         `;
     },
-    "Add Target by Aggro"(parseRef,initialCounter) {return megaParsingFuckery["Add Target by Obscure Bullshit"](parseRef,initialCounter)},
+    "Add Target by Taunt/Aggro"(parseRef,initialCounter) {return megaParsingFuckery["Add Target by Obscure Bullshit"](parseRef,initialCounter)},
     "Add Target by Player's Aim-List"(parseRef,initialCounter) {return megaParsingFuckery["Add Target by Obscure Bullshit"](parseRef,initialCounter)},
     "Add Target by Unique Identifier"(parseRef,initialCounter) {return megaParsingFuckery["Add Target by Obscure Bullshit"](parseRef,initialCounter)},
     "Add Target by Adventure Team Leader(Started Combat)"(parseRef,initialCounter) {return megaParsingFuckery["Add Target by Obscure Bullshit"](parseRef,initialCounter)},
@@ -6669,7 +6669,7 @@ const megaParsingFuckeryPain = {
         ${returnString}
         <div class="modifierDetailsBox">
 
-            ${getStandardNameDisplay(initialCounter,parseRef.useRandomWhenFailed,"Random when Failed")}
+            ${getStandardNameDisplay(initialCounter,parseRef.useRandomWhenFailed,"Random by Aggro when Failed")}
             ${getStandardNameDisplay(initialCounter,parseRef.countSetting,"Count Setting")}
             ${getStandardNameDisplay(initialCounter,parseRef.errorIfFailed,"Error when Failed")}
             ${getStandardNameDisplay(initialCounter,parseRef.autoCreate,"Auto-Create")}

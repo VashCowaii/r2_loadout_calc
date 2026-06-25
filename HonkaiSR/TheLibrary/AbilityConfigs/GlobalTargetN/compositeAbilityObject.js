@@ -6470,7 +6470,7 @@ const compositeAbilityObject = {
                   "target": "{{Hostile Entities(AOE)}}"
                 },
                 {
-                  "name": "Add Target by Aggro",
+                  "name": "Add Target by Taunt/Aggro",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Battle Event's Caster}}"
@@ -6483,7 +6483,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
-          "nameTarget": "Enemies by Aggro OR Random(Exclude Memosprites)",
+          "nameTarget": "Enemies by Taunt OR Random Highest Aggro(Exclude Memosprites)",
           "isTargetOperator": false,
           "execute": [
             {
@@ -6494,7 +6494,7 @@ const compositeAbilityObject = {
                   "target": "{{Hostile Entities(AOE)}}.[[removeMemosprite]]"
                 },
                 {
-                  "name": "Add Target by Aggro",
+                  "name": "Add Target by Taunt/Aggro",
                   "useRandomWhenFailed": true
                 }
               ]
@@ -6503,7 +6503,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
-          "nameTarget": "Enemies by Aggro OR Random",
+          "nameTarget": "Enemies by Taunt OR Random Highest Aggro",
           "isTargetOperator": false,
           "execute": [
             {
@@ -6514,7 +6514,7 @@ const compositeAbilityObject = {
                   "target": "{{Hostile Entities(AOE)}}"
                 },
                 {
-                  "name": "Add Target by Aggro",
+                  "name": "Add Target by Taunt/Aggro",
                   "useRandomWhenFailed": true
                 }
               ]
@@ -6523,7 +6523,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
-          "nameTarget": "Enemies by Aggro",
+          "nameTarget": "Enemies by Taunt OR Aggro",
           "isTargetOperator": false,
           "execute": [
             {
@@ -6534,7 +6534,7 @@ const compositeAbilityObject = {
                   "target": "{{Hostile Entities(AOE)}}"
                 },
                 {
-                  "name": "Add Target by Aggro",
+                  "name": "Add Target by Taunt/Aggro",
                   "useRandomWhenFailed": false
                 }
               ]

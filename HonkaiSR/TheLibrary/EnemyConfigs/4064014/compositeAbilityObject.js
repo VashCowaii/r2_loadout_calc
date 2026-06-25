@@ -752,7 +752,7 @@ const compositeAbilityObject = {
                       "name": "Find New Target",
                       "from": {
                         "name": "Target Name",
-                        "target": "{{Enemies by Aggro OR Random}}"
+                        "target": "{{Enemies by Taunt OR Random Highest Aggro}}"
                       },
                       "searchRandom": true,
                       "maxTargets": 1,
@@ -885,7 +885,7 @@ const compositeAbilityObject = {
                       "name": "Find New Target",
                       "from": {
                         "name": "Target Name",
-                        "target": "{{Enemies by Aggro OR Random}}"
+                        "target": "{{Enemies by Taunt OR Random Highest Aggro}}"
                       },
                       "searchRandom": true,
                       "maxTargets": 1,

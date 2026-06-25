@@ -6326,7 +6326,7 @@ const compositeAbilityObject = {
                           "name": "Find New Target",
                           "from": {
                             "name": "Target Name",
-                            "target": "{{Enemies by Aggro}}"
+                            "target": "{{Enemies by Taunt OR Aggro}}"
                           },
                           "maxTargets": 1,
                           "ifTargetFound": [
@@ -6450,7 +6450,7 @@ const compositeAbilityObject = {
                       "name": "Find New Target",
                       "from": {
                         "name": "Target Name",
-                        "target": "{{Enemies by Aggro}}"
+                        "target": "{{Enemies by Taunt OR Aggro}}"
                       },
                       "maxTargets": 1,
                       "ifTargetFound": [
@@ -6513,7 +6513,7 @@ const compositeAbilityObject = {
                   "name": "Find New Target",
                   "from": {
                     "name": "Target Name",
-                    "target": "{{Enemies by Aggro}}"
+                    "target": "{{Enemies by Taunt OR Aggro}}"
                   },
                   "maxTargets": 1,
                   "ifTargetFound": [
