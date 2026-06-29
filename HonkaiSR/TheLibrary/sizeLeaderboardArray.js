@@ -115,7 +115,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Evernight",
     "entryIcon": "icon/character/1413.png",
     "lineCount": 10870,
-    "sizeCount": 402957
+    "sizeCount": 403011
   },
   {
     "entryType": "enemy",
@@ -230,6 +230,14 @@ let sizeLeaderboardArray = [
     "sizeCount": 333460
   },
   {
+    "entryType": "char",
+    "entryName": "Silver Wolf LV.999",
+    "trimCharacterName": "SilverWolfL",
+    "entryIcon": "icon/character/1506.png",
+    "lineCount": 9344,
+    "sizeCount": 330988
+  },
+  {
     "entryType": "enemy",
     "enemyID": 3003016,
     "lineCount": 8169,
@@ -339,7 +347,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Phainon",
     "entryIcon": "icon/character/1408.png",
     "lineCount": 7947,
-    "sizeCount": 281787
+    "sizeCount": 281805
   },
   {
     "entryType": "enemy",
@@ -663,7 +671,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Aglaea",
     "entryIcon": "icon/character/1402.png",
     "lineCount": 5824,
-    "sizeCount": 205122
+    "sizeCount": 205140
   },
   {
     "entryType": "enemy",
@@ -1297,7 +1305,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Anaxa",
     "entryIcon": "icon/character/1405.png",
     "lineCount": 4231,
-    "sizeCount": 152966
+    "sizeCount": 152971
   },
   {
     "entryType": "char",
@@ -1419,7 +1427,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Mydei",
     "entryIcon": "icon/character/1404.png",
     "lineCount": 4056,
-    "sizeCount": 144697
+    "sizeCount": 144715
   },
   {
     "entryType": "enemy",
@@ -1839,7 +1847,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Robin",
     "entryIcon": "icon/character/1309.png",
     "lineCount": 2857,
-    "sizeCount": 104468
+    "sizeCount": 104486
   },
   {
     "entryType": "enemy",
@@ -5958,14 +5966,6 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/light_cone/20017.png",
     "lineCount": 75,
     "sizeCount": 1874
-  },
-  {
-    "entryType": "char",
-    "entryName": "Silver Wolf LV.999",
-    "trimCharacterName": "SilverWolfL",
-    "entryIcon": "icon/character/1506.png",
-    "lineCount": 7,
-    "sizeCount": 149
   },
   {
     "entryType": "enemy",

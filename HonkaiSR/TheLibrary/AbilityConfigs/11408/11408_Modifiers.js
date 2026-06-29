@@ -1759,7 +1759,7 @@ const configAbility = {
       "modifierFlags": [
         "ListenBattleEventSkill",
         "EnduranceLogicOnly",
-        500,
+        "CLEANSE_CONTROL_ANY",
         "CustomEvent_InfiniteRefresh",
         "FormationAssetCenterWhenSingle",
         "SpecialActionState",

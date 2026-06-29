@@ -13,8 +13,8 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__221078581\">GlobalAbility_SilverWolf999_ImmuneCTRL</a>[<span class=\"descriptionNumberColor\">Firewall</span>]",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
-        "EnduranceEnemyLogicOnly",
-        501
+        "CROWD_CONTROL_IMMUNE_SPECIAL",
+        "CLEANSE_CONTROL_ENEMY"
       ],
       "description": "Immune to Crowd Control debuffs inflicted by enemy targets.",
       "type": "Buff",

@@ -82,7 +82,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "EnduranceLogicOnly",
-            500
+            "CLEANSE_CONTROL_ANY"
           ],
           "description": "This unit and their memosprite are immune to Crowd Control debuffs, and the DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Buff",
@@ -3009,7 +3009,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1513194905\">Evernight_Passive_Endurance</a>",
           "modifierFlags": [
             "EnduranceLogicOnly",
-            500
+            "CLEANSE_CONTROL_ANY"
           ]
         },
         {
@@ -5351,7 +5351,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "EnduranceLogicOnly",
-            500
+            "CLEANSE_CONTROL_ANY"
           ],
           "description": "This unit and their memosprite are immune to Crowd Control debuffs, and the DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
           "type": "Buff",

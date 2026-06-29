@@ -6933,7 +6933,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "SilverWolf999_Ultra",
+    "name": "<a class=\"gModGreen\" id=\"1358748576\">SilverWolf999_Ultra</a>",
     "realName": "Godmode Player",
     "aim": "Other",
     "desc": "Immune to Crowd Control debuffs. After fully using Enhanced Basic ATK #1[i] more time(s), exits the \"Godmode Player\" state.",
@@ -6944,7 +6944,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "SilverWolf999_SP",
+    "name": "<a class=\"gModGreen\" id=\"-1513010043\">SilverWolf999_SP</a>",
     "realName": "Hidden MMR",
     "aim": "Buff",
     "desc": "After reaching #1[i] points, can activate Ultimate. When exiting the \"Godmode Player\" state, clears \"Hidden MMR\".\\nThe current \"Hidden MMR\" increases CRIT Rate by #2[f2]% and CRIT DMG by #3[f2]%.",
@@ -6979,7 +6979,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "SilverWolf999_Ultimate_Aura",
+    "name": "<a class=\"gModGreen\" id=\"1007652550\">SilverWolf999_Ultimate_Aura</a>",
     "realName": "\"αWolf Instant\"",
     "aim": "Other",
     "desc": "The current chance of ally targets in the Zone triggering \"Top Loot Box\": #1[f2]%.",
@@ -7567,7 +7567,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "SilverWolf999_Trace01_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"-767182140\">SilverWolf999_Trace01_Bonus</a>",
     "realName": "False Ending Speedrun",
     "aim": "Buff",
     "desc": "Elation increases by #1[f1]%.",
@@ -7589,7 +7589,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "SilverWolf999_Ultimate_Aura_Eidolon6_SubOnEmemy",
+    "name": "<a class=\"gModGreen\" id=\"-1718633654\">SilverWolf999_Ultimate_Aura_Eidolon6_SubOnEmemy</a>",
     "realName": "Absolute Weakness",
     "aim": "Debuff",
     "desc": "Has All-Type Weakness. All-Type Base RES is reduced to 0 (If Base RES is already at 0, then the corresponding Type RES decreases by #1[i]% instead).",
@@ -7608,7 +7608,7 @@ let modifiersCharacter = [
     "perma": false
   },
   {
-    "name": "SilverWolf999_Eidolon2_SumScore",
+    "name": "<a class=\"gModGreen\" id=\"-1885411916\">SilverWolf999_Eidolon2_SumScore</a>",
     "realName": "It's a Feature, Not a Bug",
     "aim": "Other",
     "desc": "#1[i] point(s) of \"Hidden MMR\" has been taken into account. After reaching #2[i] points, gains 1 extra turn, and regains 1 use of Enhanced Basic ATK.",

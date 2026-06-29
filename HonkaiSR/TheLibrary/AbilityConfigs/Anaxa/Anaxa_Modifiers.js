@@ -544,7 +544,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "flagName": "EnduranceEnemyLogicOnly",
+                    "flagName": "CROWD_CONTROL_IMMUNE_SPECIAL",
                     "invertCondition": true
                   }
                 ]
