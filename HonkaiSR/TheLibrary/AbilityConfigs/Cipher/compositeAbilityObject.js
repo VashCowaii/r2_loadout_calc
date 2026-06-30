@@ -663,7 +663,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "New Enemy Wave",
+              "eventTrigger": "Batch: Enemy Arrival",
               "execute": [
                 {
                   "name": "Use Custom Character Function",
@@ -2417,7 +2417,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "New Enemy Wave",
+              "eventTrigger": "Batch: Enemy Arrival",
               "execute": [
                 {
                   "name": "IF",

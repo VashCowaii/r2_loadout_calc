@@ -6305,7 +6305,7 @@ const compositeAbilityObject = {
               "eventTrigger": "Leave Battle"
             },
             {
-              "eventTrigger": "New Enemy Wave"
+              "eventTrigger": "Batch: Enemy Arrival"
             }
           ],
           "abilityValueChange": [

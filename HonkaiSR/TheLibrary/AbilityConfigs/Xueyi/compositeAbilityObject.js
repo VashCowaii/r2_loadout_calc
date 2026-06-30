@@ -2400,7 +2400,7 @@ const compositeAbilityObject = {
               "priorityLevel": 999999
             },
             {
-              "eventTrigger": "New Enemy Wave",
+              "eventTrigger": "Batch: Enemy Arrival",
               "execute": [
                 {
                   "name": "Define Custom Variable",
@@ -2975,7 +2975,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "New Enemy Wave",
+              "eventTrigger": "Batch: Enemy Arrival",
               "execute": [
                 {
                   "name": "IF",

@@ -734,7 +734,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "New Enemy Wave",
+          "eventTrigger": "Batch: Enemy Arrival",
           "execute": [
             {
               "name": "Use Custom Character Function",

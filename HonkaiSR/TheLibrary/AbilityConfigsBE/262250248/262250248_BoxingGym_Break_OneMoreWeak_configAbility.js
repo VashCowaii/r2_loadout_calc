@@ -20,7 +20,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-492660274\">BoxingGym_Break_OneMoreWeak_Level</a>",
       "execute": [
         {
-          "eventTrigger": "New Enemy Wave",
+          "eventTrigger": "Batch: Enemy Arrival",
           "execute": [
             {
               "name": "Add Events/Bonuses",

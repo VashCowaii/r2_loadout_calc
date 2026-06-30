@@ -595,7 +595,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "New Enemy Wave",
+          "eventTrigger": "Batch: Enemy Arrival",
           "execute": [
             {
               "name": "IF",

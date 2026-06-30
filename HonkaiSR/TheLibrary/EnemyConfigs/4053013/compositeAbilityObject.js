@@ -1901,7 +1901,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "New Enemy Wave",
+              "eventTrigger": "Batch: Enemy Arrival",
               "execute": [
                 "Modifier Deletes Itself"
               ]
@@ -2767,7 +2767,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "New Enemy Wave",
+              "eventTrigger": "Batch: Enemy Arrival",
               "execute": [
                 "Modifier Deletes Itself"
               ]

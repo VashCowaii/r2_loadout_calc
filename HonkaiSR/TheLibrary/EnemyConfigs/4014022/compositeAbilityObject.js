@@ -3335,7 +3335,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "New Enemy Wave: Start",
+              "eventTrigger": "Batch: Enemy Arrival Start",
               "execute": [
                 {
                   "name": "Define Custom Variable with Varying Data",

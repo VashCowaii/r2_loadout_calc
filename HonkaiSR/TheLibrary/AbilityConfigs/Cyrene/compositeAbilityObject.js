@@ -6370,7 +6370,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "New Enemy Wave",
+              "eventTrigger": "Batch: Enemy Arrival",
               "execute": [
                 {
                   "name": "Use Custom Character Function",
@@ -6988,7 +6988,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "New Enemy Wave",
+              "eventTrigger": "Batch: Enemy Arrival",
               "execute": [
                 {
                   "name": "Use Custom Character Function",
@@ -8845,7 +8845,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Losing Modifier [Owner]"
             },
             {
-              "eventTrigger": "New Enemy Wave",
+              "eventTrigger": "Batch: Enemy Arrival",
               "execute": [
                 {
                   "name": "Use Custom Character Function",

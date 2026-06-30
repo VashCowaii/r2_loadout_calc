@@ -148,10 +148,10 @@ const configAbility = {
           "eventTrigger": "Shield Value Change [Anyone]"
         },
         {
-          "eventTrigger": "New Enemy Wave: Start"
+          "eventTrigger": "Batch: Enemy Arrival Start"
         },
         {
-          "eventTrigger": "New Enemy Wave"
+          "eventTrigger": "Batch: Enemy Arrival"
         },
         {
           "eventTrigger": "Injected Ability Use [Anyone]: Checks-Phase"

@@ -356,7 +356,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "New Enemy Wave",
+              "eventTrigger": "Batch: Enemy Arrival",
               "execute": [
                 {
                   "name": "Use Custom Character Function",
@@ -569,7 +569,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "New Enemy Wave",
+              "eventTrigger": "Batch: Enemy Arrival",
               "execute": [
                 {
                   "name": "Use Custom Character Function",
@@ -856,7 +856,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "New Enemy Wave",
+              "eventTrigger": "Batch: Enemy Arrival",
               "execute": [
                 {
                   "name": "Use Custom Character Function",
@@ -6131,28 +6131,28 @@ const compositeAbilityObject = {
           "name": "Define Custom Variable",
           "variableName": "#CL_ADF_DeltaFrame",
           "value": {
-            "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__307) || Variables[1] (ENEMIES_OBJECT_UNUSED__308) || SUB || Variables[2] (ENEMIES_OBJECT_UNUSED__297) || Constants[0] (1) || SUB || DIV || RETURN",
-            "displayLines": "((ENEMIES_OBJECT_UNUSED__307 - ENEMIES_OBJECT_UNUSED__308) / (ENEMIES_OBJECT_UNUSED__297 - 1))",
+            "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__307) || Variables[1] (ENEMIES_OBJECT_UNUSED__308) || SUB || Variables[2] (UNKNOWN_SW999_OBJECT[5]) || Constants[0] (1) || SUB || DIV || RETURN",
+            "displayLines": "((ENEMIES_OBJECT_UNUSED__307 - ENEMIES_OBJECT_UNUSED__308) / (UNKNOWN_SW999_OBJECT[5] - 1))",
             "constants": [
               1
             ],
             "variables": [
               "ENEMIES_OBJECT_UNUSED__307",
               "ENEMIES_OBJECT_UNUSED__308",
-              "ENEMIES_OBJECT_UNUSED__297"
+              "UNKNOWN_SW999_OBJECT[5]"
             ]
           }
         },
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__297) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(ENEMIES_OBJECT_UNUSED__297 - 1)",
+            "operator": "Variables[0] (UNKNOWN_SW999_OBJECT[5]) || Constants[0] (1) || SUB || RETURN",
+            "displayLines": "(UNKNOWN_SW999_OBJECT[5] - 1)",
             "constants": [
               1
             ],
             "variables": [
-              "ENEMIES_OBJECT_UNUSED__297"
+              "UNKNOWN_SW999_OBJECT[5]"
             ]
           },
           "Event": [
@@ -6185,13 +6185,13 @@ const compositeAbilityObject = {
                     },
                     "dmgFormula": "Elation Scaling",
                     "HitSplit": {
-                      "operator": "Constants[0] (1) || Variables[0] (ENEMIES_OBJECT_UNUSED__297) || DIV || RETURN",
-                      "displayLines": "(1 / ENEMIES_OBJECT_UNUSED__297)",
+                      "operator": "Constants[0] (1) || Variables[0] (UNKNOWN_SW999_OBJECT[5]) || DIV || RETURN",
+                      "displayLines": "(1 / UNKNOWN_SW999_OBJECT[5])",
                       "constants": [
                         1
                       ],
                       "variables": [
-                        "ENEMIES_OBJECT_UNUSED__297"
+                        "UNKNOWN_SW999_OBJECT[5]"
                       ]
                     },
                     "Toughness": {
@@ -6232,13 +6232,13 @@ const compositeAbilityObject = {
                     },
                     "dmgFormula": "Elation Scaling",
                     "HitSplit": {
-                      "operator": "Constants[0] (1) || Variables[0] (ENEMIES_OBJECT_UNUSED__297) || DIV || RETURN",
-                      "displayLines": "(1 / ENEMIES_OBJECT_UNUSED__297)",
+                      "operator": "Constants[0] (1) || Variables[0] (UNKNOWN_SW999_OBJECT[5]) || DIV || RETURN",
+                      "displayLines": "(1 / UNKNOWN_SW999_OBJECT[5])",
                       "constants": [
                         1
                       ],
                       "variables": [
-                        "ENEMIES_OBJECT_UNUSED__297"
+                        "UNKNOWN_SW999_OBJECT[5]"
                       ]
                     },
                     "Toughness": {
@@ -6305,13 +6305,13 @@ const compositeAbilityObject = {
                 },
                 "dmgFormula": "Elation Scaling",
                 "HitSplit": {
-                  "operator": "Constants[0] (1) || Variables[0] (ENEMIES_OBJECT_UNUSED__297) || Constants[0] (1) || SUB || Variables[0] (ENEMIES_OBJECT_UNUSED__297) || DIV || SUB || RETURN",
-                  "displayLines": "(1 - ((ENEMIES_OBJECT_UNUSED__297 - 1) / ENEMIES_OBJECT_UNUSED__297))",
+                  "operator": "Constants[0] (1) || Variables[0] (UNKNOWN_SW999_OBJECT[5]) || Constants[0] (1) || SUB || Variables[0] (UNKNOWN_SW999_OBJECT[5]) || DIV || SUB || RETURN",
+                  "displayLines": "(1 - ((UNKNOWN_SW999_OBJECT[5] - 1) / UNKNOWN_SW999_OBJECT[5]))",
                   "constants": [
                     1
                   ],
                   "variables": [
-                    "ENEMIES_OBJECT_UNUSED__297"
+                    "UNKNOWN_SW999_OBJECT[5]"
                   ]
                 },
                 "Toughness": {
@@ -6352,13 +6352,13 @@ const compositeAbilityObject = {
                 },
                 "dmgFormula": "Elation Scaling",
                 "HitSplit": {
-                  "operator": "Constants[0] (1) || Variables[0] (ENEMIES_OBJECT_UNUSED__297) || Constants[0] (1) || SUB || Variables[0] (ENEMIES_OBJECT_UNUSED__297) || DIV || SUB || RETURN",
-                  "displayLines": "(1 - ((ENEMIES_OBJECT_UNUSED__297 - 1) / ENEMIES_OBJECT_UNUSED__297))",
+                  "operator": "Constants[0] (1) || Variables[0] (UNKNOWN_SW999_OBJECT[5]) || Constants[0] (1) || SUB || Variables[0] (UNKNOWN_SW999_OBJECT[5]) || DIV || SUB || RETURN",
+                  "displayLines": "(1 - ((UNKNOWN_SW999_OBJECT[5] - 1) / UNKNOWN_SW999_OBJECT[5]))",
                   "constants": [
                     1
                   ],
                   "variables": [
-                    "ENEMIES_OBJECT_UNUSED__297"
+                    "UNKNOWN_SW999_OBJECT[5]"
                   ]
                 },
                 "Toughness": {
