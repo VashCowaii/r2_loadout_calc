@@ -860,10 +860,18 @@ const endgameModeDisplay = {
     
                         allWavesString += `<div class="statFiltersRowHeader">Wave ${waveCounter}</div>
                         ${scalarStringer}
-                        ${isPF ? `<div class="statFiltersRowHeaderSides">Field Limit: ${waveEntry.fieldMax}</div>` : ""}
+                        ${isPF ? `<div class="statFiltersRowHeaderSides">Field Limit: ${waveEntry.fieldMax}${waveEntry.abilityKey ? `
+                            &nbsp;<a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${waveEntry.abilityKey}/">
+                                Buff&nbsp;
+                                <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
+                            </a>` : ""}</div>` : ""}
                         <div class="enemyWaveSummaryHolder">
                             ${wholeWaveString}
-                        </div>`
+                        </div>
+                        
+                        `;
+                        // AbilityConfigsBE
+                        
                     }
     
                     returnString += allWavesString;

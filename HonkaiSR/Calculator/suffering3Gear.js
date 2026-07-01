@@ -10616,7 +10616,7 @@ const turnLogicLightcones = {
                     // let ownerRef = this.owners;
                     let ownersSlots = this.ownersSlots;
                     // let lcNameRef = "Poised to Bloom";
-                    const targetTurn = generalInfo.targetTurn;
+                    const targetTurn = generalInfo.slotRef;
 
                     // const updatePresage = this.updatePresage ??= turnLogicLightcones[lcNameRef].skillFunctions.updatePresage;
                     const namedTurns = battleData.nameBasedTurns;
@@ -18923,16 +18923,18 @@ const turnLogicRelics = {
                     let buffName = buffSheet.buffName;
 
                     const buffCheck = currentTurn.buffsObject[buffName];
-                    const allAlliesArray = battleData.allAlliesArray;
+                    const allAllyTargetsArray = battleData.allAllyTargetsArray;
+                    //would not apply to demiurge
 
                     //NOTE: this DOES include converted effect res, if it ever exists somehow in some weird fuck character in the future.
                     if (currentTurn.statTable[EffectRES] >= 0.3) {//if the target has enough, then we can apply it
                         if (buffCheck) {return;}//if they already have it, then abort
 
-                        updateBuffBatchTargets(battleData,allAlliesArray,buffSheet);
+                        updateBuffBatchTargets(battleData,allAllyTargetsArray,buffSheet);
                     }
                     else if (buffCheck) {//but if they don't have enough, but have the buff, then remove it
-                        removeBuffFromBatch(battleData,allAlliesArray,buffCheck);
+
+                        removeBuffFromBatch(battleData,allAllyTargetsArray,buffCheck);
                     }
                 }
             },

@@ -181,7 +181,7 @@ const vashCharProgressList = [
     {name: "Castorice",
         completed: true, live: true, needs80OrTraces: false, owned: true},
     {name: "Cyrene",
-        completed: false, live: false, needs80OrTraces: false, owned: true},
+        completed: true, live: true, needs80OrTraces: false, owned: true},
     {name: "Evernight",
         completed: true, live: true, needs80OrTraces: false, owned: true},
     {name: "Hyacine",

@@ -209,7 +209,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "New Enemy Wave",
+              "eventTrigger": "Batch: Enemy Arrival",
               "execute": [
                 {
                   "name": "Use Custom Character Function",
@@ -1515,7 +1515,7 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "ListenBattleEventSkill",
             "EnduranceLogicOnly",
-            500,
+            "CLEANSE_CONTROL_ANY",
             "CustomEvent_InfiniteRefresh",
             "FormationAssetCenterWhenSingle",
             "SpecialActionState",
@@ -2001,7 +2001,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "New Enemy Wave",
+              "eventTrigger": "Batch: Enemy Arrival",
               "execute": [
                 {
                   "name": "Use Custom Character Function",

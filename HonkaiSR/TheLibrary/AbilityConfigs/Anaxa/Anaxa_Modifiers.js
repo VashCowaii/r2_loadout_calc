@@ -270,7 +270,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "New Enemy Wave",
+          "eventTrigger": "Batch: Enemy Arrival",
           "execute": [
             {
               "name": "Use Custom Character Function",
@@ -544,7 +544,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "flagName": "EnduranceEnemyLogicOnly",
+                    "flagName": "CROWD_CONTROL_IMMUNE_SPECIAL",
                     "invertCondition": true
                   }
                 ]

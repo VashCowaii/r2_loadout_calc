@@ -2288,7 +2288,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "New Enemy Wave",
+          "eventTrigger": "Batch: Enemy Arrival",
           "execute": [
             {
               "name": "Use Custom Character Function",
@@ -2906,7 +2906,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "New Enemy Wave",
+          "eventTrigger": "Batch: Enemy Arrival",
           "execute": [
             {
               "name": "Use Custom Character Function",
@@ -4763,7 +4763,7 @@ const configAbility = {
           "eventTrigger": "When Losing Modifier [Owner]"
         },
         {
-          "eventTrigger": "New Enemy Wave",
+          "eventTrigger": "Batch: Enemy Arrival",
           "execute": [
             {
               "name": "Use Custom Character Function",

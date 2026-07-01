@@ -6,29 +6,78 @@
     </ul>
 </div> -->
 <div>
-    <h1>June 25th, 2026</h1>
+    <h1>July 1th, 2026 - THE CYRENE UPDATE</h1>
+    Cyrene is a nasty mofo, and while we tested every chrysos buff and everything else we can think of, there might be some jank that slipped through so let me know in the discord.
     <ul>
         <h3>Calculator</h3>
         <h4>Additions</h4>
         <li>Added the following new characters:
             <ul>
-                <li>Feixiao</li>
+                <li>Cyrene</li>
+            </ul>
+        </li>
+        <li>This is hopefully a given, but any Chrysos Heirs that are in the calc will also have had their relevant Cyrene buffs/quirks added as well.
+            <ul>
+                <li>Given the super granular nature of Cyrene's chrysos buffs and the possibilities present when using them, if you aren't setting any conditions for these that's almost always gonna be dumb as hell.</li>
+                <li>It's impossible for me to set a general default condition for Cyrene, since she has to tailor her conditions for EACH TEAM.</li>
+                <li>If you're struggling with setting up decent conditions for her with your team, join the discord and let me know. We'll either help you figure out how to do it, or find a way to simply a more complication condition that you need.</li>
+            </ul>
+        </li>
+        <li>Added new visual displays for Extra-Turn/Ultimates queued inside actions instead of just having text that said "queued x from y"</li>
+        <li>Updated the action order display for Extra-Turn/Ultimates to now have a double star instead of the standard semi-circle. This is something super obscure, I know, but it's something I've been meaning to do for a while now to help more easily distinguish between them and other actions besides the border.</li>
+        <li>Updated the following default conditions for characters when they are first switched to:
+            <ul>
+                <li>Huohuo</li>
+            </ul>
+        </li>
+        <li>Added the following new condition categories:
+            <ul>
+                <li>Team Energy Checks - subcheck being the following:
+                    <ul>
+                        <li>No Energy Full [NORMAL] - returns true if no character in the team has full energy(excluding the one checking)</li>
+                        <li>No Energy Full [SPECIAL] - returns true if no character in the team has full SPECIAL energy(excluding the one checking)</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Added newbud overflow as a new special character value for Castorice to use in conditions. Do note though that without cyrene's buff active, this value will ALWAYS be 0.</li>
+        <li>Added a new "State" display that will show icons relevant to the target/ally when opening their turn starts in the action order. Right now these are limited to the following only:
+            <ul>
+                <li>Ally - Cyrene buff active - will show a heart on the character display</li>
+                <li>Enemy - Proof of Debt - will display Numby's skill mark on the enemy display</li>
             </ul>
         </li>
         <!-- <li></li> -->
-        <li>Added the following new lightcones:
+        <!-- <li>Added the following new lightcones:
             <ul>
                 <li>This Love, Forever</li>
             </ul>
-        </li>
+        </li> -->
         <!-- <li>Added special sub-energy displays for the following characters/instances:
             <ul>
                 <li>DHPT - current bondmate</li>
             </ul>
         </li> -->
 
-        <!-- <h4>Fixes</h4>
-        <li></li> -->
+        <h4>Fixes</h4>
+        <li>Fixed an issue where Castorice's E1 wasn't able to apply to the suicide portion of Netherwing's attack.</li>
+        <li>Fixed an issue where Castorice's reg skill and basic attack could swap hitsplits in the enhanced state.</li>
+        <li>Fixed a visual issue in the Optimizer where if I started with character X in a slot and switched selections to update character Y in the same slot, character Y's default optimizer settings wouldn't show visually until a new selection happened in the UI, but character Y's settings would still be there correctly under the hood.</li>
+        <li>Fixed an issue where Topaz E1 debtor state was still trying to apply at E0 after recent changes to make Proof of Debt application more accurate.</li>
+        <li>Fixed an issue where Evernight's skill zone bonus crit dmg from the trace, was also being considered as converted crit dmg when it is separate. Would have only mattered if RMC was in the team as well, but it does matter overall.</li>
+        <li>Fixed an issue where due to recent changes Evernight's trace Rouse the Flame was not able to proc on Evernight's ability uses, leaving her one shy on her memoria count.</li>
+        <li>Fixed an issue where Evernight's skill zone wasn't reacting to dynamic changes in Crit DMG to update the zone value.</li>
+        <li>Fixed an issue where due to recent changes, stackable shields DHPT's weren't allowed to stack to the full limit(Aventurine was fine though)</li>
+        <li>Fixed a visual issue where if an entity with 0 SPD override(Demiurge, Little Ica) got a spd bonus, the action order would still try to display an advance/delay for them showing NaN.</li>
+        <li>Fixed an issue where Broken Keel was able to apply to entities like Demiurge(Unselectable)</li>
+        <li>Fixed an issue where the following inserted actions were counted as valid ability uses when they shouldn't be(literally only matters for Cyrene):
+            <ul>
+                <li>Topaz FUA</li>
+                <li>DHPT FUA</li>
+                <li>Funnily enough Jing Yuan's FUA is valid, so that's unchanged.</li>
+            </ul>
+        </li>
+        <li>Fixed an issue where Special Energy displays on mobile would be slight misaligned just due to missing mobile formatting</li>
 
         <!-- <h4>Optimization</h4>
         <li>Shifted some events around to clean up the process of attacks caused by allies vs enemies, reducing the overall load slightly across an entire battle in the optimizer.</li>
@@ -46,7 +95,8 @@
 
         <h3>Library</h3>
         <h4>Additions</h4>
-        <li>Updated naming on enemy target configurations that utilized search by taunt, and then random highest aggro when failed.</li>
+        <li>Added an eventreader for SW999</li>
+        <!-- <li>Updated naming on enemy target configurations that utilized search by taunt, and then random highest aggro when failed.</li> -->
         <!-- <li>Renamed the following events for format consistency or accuracy:
             <ul>
                 <li>Caused a Limbo/DeathState [Owner] -> Caused Limbo [Owner]</li>
@@ -55,6 +105,28 @@
                 <li>Waiting for Healing in Limbo -> Waiting in Limbo [Owner]</li>
             </ul>
         </li> -->
+    </ul>
+</div>
+
+<div>
+    <h1>June 25th, 2026</h1>
+    <ul>
+        <h3>Calculator</h3>
+        <h4>Additions</h4>
+        <li>Added the following new characters:
+            <ul>
+                <li>Feixiao</li>
+            </ul>
+        </li>
+        <li>Added the following new lightcones:
+            <ul>
+                <li>This Love, Forever</li>
+            </ul>
+        </li>
+
+        <h3>Library</h3>
+        <h4>Additions</h4>
+        <li>Updated naming on enemy target configurations that utilized search by taunt, and then random highest aggro when failed.</li>
     </ul>
 </div>
 

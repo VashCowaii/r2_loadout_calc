@@ -453,7 +453,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "New Enemy Wave",
+          "eventTrigger": "Batch: Enemy Arrival",
           "execute": [
             {
               "name": "Use Custom Character Function",
@@ -1759,7 +1759,7 @@ const configAbility = {
       "modifierFlags": [
         "ListenBattleEventSkill",
         "EnduranceLogicOnly",
-        500,
+        "CLEANSE_CONTROL_ANY",
         "CustomEvent_InfiniteRefresh",
         "FormationAssetCenterWhenSingle",
         "SpecialActionState",
@@ -2245,7 +2245,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "New Enemy Wave",
+          "eventTrigger": "Batch: Enemy Arrival",
           "execute": [
             {
               "name": "Use Custom Character Function",

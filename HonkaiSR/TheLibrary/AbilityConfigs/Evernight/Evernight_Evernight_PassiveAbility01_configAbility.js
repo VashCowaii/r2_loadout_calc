@@ -692,7 +692,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1513194905\">Evernight_Passive_Endurance</a>",
       "modifierFlags": [
         "EnduranceLogicOnly",
-        500
+        "CLEANSE_CONTROL_ANY"
       ]
     },
     {

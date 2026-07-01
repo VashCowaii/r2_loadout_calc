@@ -404,14 +404,23 @@ const customHTML = {
         }
 
 
+        // <details class="rotationsPermaConditionsExpandTargetBox" open="">
+        //         <summary class="calcUserTargetConditionHeader clickable">
+        //             <div class="rotationConditionOperatorHeaderCondition">User Conditions</div>
+                    
+        //         </summary>
+                
+        //     </details>
         let returnStringer = `<div class="rotationsSectionRowHolder">
-            <!-- <div class="traceTypeDisplayBox">
-                <div class="traceTypeDisplay">${refSkillString}</div>
-            </div> -->
             <div class="statFiltersRowHeader">${refSkillString}</div>
             <div class="rotationsPermaConditionsExpandHolder" id="rotationsConditionsBox${refSkillString}Perma">${permaConditionStringer}</div>
             <div class="traceContentBodyBoxRotationsWarning" id="rotationsConditionsWarningBox${refSkillString}">${warningStringer}</div>
+
             <div class="rotationsConditionsBodyBox" id="rotationsConditionsBodyBox${refSkillString}">${rotationStringer}</div>
+
+            
+
+            
         </div>`;
 
         return returnStringer;
@@ -1044,6 +1053,7 @@ const conditionListArray = [
     "Buff",
     "Character: State",
     "Sustain Checks",
+    "Team Energy Checks",
     // "Value",
     // "SP",
 
@@ -1118,7 +1128,15 @@ const conditionListSustainValueArray = [
     "Any Ally: HP <= 75%",
     "Any Ally: HP <= 50%",
     "Any Ally: HP <= 25%",
+]
 
+const conditionListEnergyValueArray = [
+    "No Energy Full [NORMAL]",
+    "No Energy Full [SPECIAL]",
+    // "Any Ally: HP < 100%",
+    // "Any Ally: HP <= 75%",
+    // "Any Ally: HP <= 50%",
+    // "Any Ally: HP <= 25%",
 ]
 const conditionListCharacterStateArray = [
     // "ultyQueued",
@@ -1551,6 +1569,10 @@ const rotationsUISuffering = {
 
             //SUSTAIN CONDITIONS
             case "Sustain Checks": return {type: "Sustain Checks", sustainValue: "Any Ally: HP <= 50%"}
+
+
+            //ENERGY CONDITIONS
+            case "Team Energy Checks": return {type: "Team Energy Checks", sustainValue: "No Energy Full [NORMAL]"}
 
             // case "":
             //     return {}
@@ -2731,6 +2753,48 @@ const rotationsUISuffering = {
         return returnString
     },
 
+    "Team Energy Checks"(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
+        // {type: "Character: Value", target: "Self", targetType: "Character", characterValue: "Energy: Current"},
+
+        // indexCounter++;
+        indexCounter++;
+        const newArray = [...arrayToPass];
+        newArray.push(indexCounter);
+        const arrayIDString = newArray.join("|");
+        const baseIDString = `rotationConditionType${skillSlot}${arrayIDString}`;
+
+        const valueNameElem = readSelection(`${baseIDString}ValueName`);
+        if (valueNameElem) {destination.teamValue = valueNameElem.value;}
+
+
+
+        
+        const getConditionList = rotationsUISuffering.getConditionList;
+
+        let returnString = `<div class="rotationsConditionsRowHolder">
+            <div class="rotationsConditionsRowHolderInner">
+
+                <div class="rotationsConditionsImageAdjacentHolderBox">
+
+                    <div class="rotationsConditionsRowHeader">
+                        <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
+                            ${getConditionList("Team Energy Checks",conditionListArray)}
+                        </select>
+                    </div>
+
+                    <div class="rotationsSectionConditionHolderBox">
+                        <select class="rotationActionSelectorSub" id="${baseIDString}ValueName" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
+                            ${rotationsUISuffering.getConditionList(destination.sustainValue ?? "No Energy Full [NORMAL]",conditionListEnergyValueArray)}
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>`;
+
+        return returnString
+    },
     "Sustain Checks"(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
         // {type: "Character: Value", target: "Self", targetType: "Character", characterValue: "Energy: Current"},
 

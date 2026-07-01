@@ -1005,7 +1005,7 @@ const compositeAbilityObject = {
                       },
                       "flagName": [
                         "Endurance",
-                        500
+                        "CLEANSE_CONTROL_ANY"
                       ],
                       "modifierName": "<a class=\"gModGreen\" id=\"-1763336434\">Mydeimos_Transfer</a>[<span class=\"descriptionNumberColor\">Vendetta</span>]"
                     }
@@ -3007,7 +3007,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "New Enemy Wave",
+              "eventTrigger": "Batch: Enemy Arrival",
               "execute": [
                 {
                   "name": "IF",

@@ -978,7 +978,7 @@ const configAbility = {
                   },
                   "flagName": [
                     "Endurance",
-                    500
+                    "CLEANSE_CONTROL_ANY"
                   ],
                   "modifierName": "<a class=\"gModGreen\" id=\"-1763336434\">Mydeimos_Transfer</a>[<span class=\"descriptionNumberColor\">Vendetta</span>]"
                 }

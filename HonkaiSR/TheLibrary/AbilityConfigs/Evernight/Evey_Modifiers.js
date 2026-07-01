@@ -34,7 +34,7 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "EnduranceLogicOnly",
-        500
+        "CLEANSE_CONTROL_ANY"
       ],
       "description": "This unit and their memosprite are immune to Crowd Control debuffs, and the DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Buff",

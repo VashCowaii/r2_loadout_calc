@@ -105,7 +105,7 @@ const greatTableKnowerOfAll = {
 
     "DEFBase": 0,"DEF%": 0,"DEFFlat": 0,"DEFFlatNULL": 0,
 
-    "SPDBase": 0,"SPD%": 0,"SPDFlat": 0,"SPDFlatNULL": 0,
+    "SPDBase": 0,"SPD%": 0,"SPDFlat": 0,"SPDFlatNULL": 0,"SPDOverride": 0,"SPDOverrideFlag": 0,
 
     "CharacterAggroBase": 0,"AggroBase%": 0,"Aggro%": 0,"AggroFlat": 0,
 
@@ -411,6 +411,8 @@ const DEFFlatNULL = greatTableIndex.DEFFlatNULL;
 const SPDBase = greatTableIndex.SPDBase;
 const SPDP = greatTableIndex["SPD%"];
 const SPDFlat = greatTableIndex.SPDFlat;
+const SPDOverride = greatTableIndex.SPDOverride;
+const SPDOverrideFlag = greatTableIndex.SPDOverrideFlag;
 
 const CharacterAggroBase = greatTableIndex.CharacterAggroBase;
 const AggroBaseP = greatTableIndex["AggroBase%"];
@@ -899,6 +901,17 @@ const propertyImagePaths = {
                 "specific": "SPD Flat (LOCKED)",
                 "unit": ""
             },
+            [greatTableIndex["SPDOverride"]]: {
+                "display": "SPD Override",
+                "specific": "SPD Override",
+                "unit": ""
+            },
+            [greatTableIndex["SPDOverrideFlag"]]: {
+                "display": "SPD Override Active",
+                "specific": "SPD Override Active",
+                "unit": ""
+            },
+
             "SPDBaseFinal": {
                 "display": "SPD",
                 "specific": "SPD Base Total",

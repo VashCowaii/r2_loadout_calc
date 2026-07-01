@@ -339,7 +339,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "modifierFlags": [
             "Endurance",
-            500
+            "CLEANSE_CONTROL_ANY"
           ],
           "execute": [
             {

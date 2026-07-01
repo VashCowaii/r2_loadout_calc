@@ -2250,6 +2250,54 @@ const hitSplitters = {
       }
     ]
   },
+  "Cyrene": {
+    "basic": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10,
+          "target": "primary"
+        },
+      }
+    ],
+    "eba": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10,
+          "target": "primary"
+        },
+      },
+      {
+        "subTarget": {
+          "hitRatio": 0.30,
+          "energyRatio": 0.30,
+          "toughness": 5,
+          "target": "all"
+        },
+      },
+      {
+        "subTarget": {
+          "hitRatio": 0.70,
+          "energyRatio": 0.70,
+          "toughness": 5,
+          "target": "all"
+        },
+      }
+    ],
+    "memoSkill": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10,
+          "target": "all"
+        },
+      }
+    ]
+  },
   "Evernight": {
     "basic": [
       {
