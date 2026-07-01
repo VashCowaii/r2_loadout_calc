@@ -60,6 +60,11 @@
         </li> -->
 
         <h4>Fixes</h4>
+        <li>Fixed an issue where Castorice's consumed newbud overflow when buffed by Demiurge, was consuming all active newbud instead of recording before entering the ult and consuming only the recorded value.
+            <ul>
+                <li>Might sound confusing, but say Huohuo's ult-start healing takes effect, that will still give newbud before Netherwing is summoned, but also not be part of the overflow count, meaning that is valid regular newbud that will ready to go after the ult finishes.</li>
+            </ul>
+        </li>
         <li>Fixed an issue where Castorice's E1 wasn't able to apply to the suicide portion of Netherwing's attack.</li>
         <li>Fixed an issue where Castorice's reg skill and basic attack could swap hitsplits in the enhanced state.</li>
         <li>Fixed a visual issue in the Optimizer where if I started with character X in a slot and switched selections to update character Y in the same slot, character Y's default optimizer settings wouldn't show visually until a new selection happened in the UI, but character Y's settings would still be there correctly under the hood.</li>
