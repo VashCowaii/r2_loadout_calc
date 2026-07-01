@@ -36921,15 +36921,17 @@ const turnLogic = {
                         const listener21 = passiveListeners[20];
                         addListenerWithPriority(battleData,listener21,listener21.trigger,evernightTurn,null,ownerTurn);
 
-                        // const listener20 = passiveListeners[19];
-                        // addListenerWithPriority(battleData,listener20,listener20.trigger,ownerTurn);
+                        
                         
                     }
 
                     const castoriceCheck = heirsActive["Castorice"];
                     if (castoriceCheck) {
                         ownerTurn.buffSlotCastorice = castoriceCheck;
-                        // const castoriceTurn = allyturns[castoriceCheck];
+                        const castoriceTurn = allyturns[castoriceCheck];
+
+                        const listener22 = passiveListeners[21];
+                        addListenerWithPriority(battleData,listener22,listener22.trigger,castoriceTurn,null,ownerTurn);
                     }
 
                     
@@ -37384,6 +37386,23 @@ const turnLogic = {
                         "target": "self",
                         "isPersonal": true,
                         "listenerName": "Evernight skill/ult cyrene memoria gain handler",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+                            
+                            const ownerTurn = this.ownerTurn;
+                            if (!ownerTurn.hasCyreneMemoBuff) {return;}
+
+                            const battleValues = ownerTurn.battleValues;
+                            battleValues.cyreneSpecialEnergyRecorded = ownerTurn.specialEnergyCurrent;
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Castorice record overflow to use/consume",
                         "ownerTurn": {},
                     },
                 ],
@@ -43775,8 +43794,9 @@ const turnLogic = {
                 //so rather than check to see if the summon is already up to heal it or not, we just always summon it
 
 
-                if (sourceTurn.hasCyreneMemoBuff && sourceTurn.specialEnergyCurrent) {
-                    const priorOverflow = sourceTurn.specialEnergyCurrent;
+                if (sourceTurn.hasCyreneMemoBuff && sourceTurn.battleValues.cyreneSpecialEnergyRecorded) {
+                    const priorOverflow = sourceTurn.battleValues.cyreneSpecialEnergyRecorded;
+                    poke("CastoriceGainNewbud",battleData,{pointsGained: -priorOverflow,sourceString:"Consume Recorded Overflow Newbuds",forcedNewbuds: true});
                     const increment = sourceTurn.specialEnergyMax / 100;
 
                     const totalCount = Math.floor(priorOverflow/increment);
@@ -44950,6 +44970,7 @@ const turnLogic = {
             "ardentWillStacksMax": 0,
             "newbudOverflow": 0,
             "cyreneBonusMulti": 0,
+            "cyreneSpecialEnergyRecorded": 0,
 
             "netherTurnShouldEnd": false,
             "netherShouldDie": false,
