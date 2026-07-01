@@ -389,6 +389,7 @@ const customDisplayValuesLog = {
 
         {valueName: "Netherwing Enhancement Level", refName: "skillCasts", isBattleValue: true,hide: true},
         {valueName: "Netherwing Breath Attacks", refName: "totalCasts", isBattleValue: true,hide: true},
+        {valueName: "Newbud Overflow", refName: "newbudOverflow", isBattleValue: true,hide: true},
     ],
     "Hyacine": [
         {valueName: "Ica on Field", refName: "icaIsActive", isBattleValue: true, isCharacterState: true,
@@ -413,6 +414,33 @@ const customDisplayValuesLog = {
         {valueName: "Memo SPD Stacks", refName: "lastSpdStacksMemo", isBattleValue: true},
         // {valueName: "Epic Stacks", refName: "epicStacks", isBattleValue: true},
     ], 
+    "Cyrene": [
+        {valueName: "Demiurge on Field", refName: "demiIsActive", isBattleValue: true, isCharacterState: true,
+            isMemoSpriteDisplay: true,
+        },
+        {valueName: "Story", refName: "cyreneStory", isBattleValue: true,summaryValue: "cyreneStoryCountSum",summaryType: "SUM",
+            customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "Ice",
+            displayRequiresIndex: 2, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            progressIcon: "misc/cyrene/Icon1415Passive2.png"
+        },
+        {valueName: "Story Max", refName: "cyreneStoryMax", isBattleValue: true,hide: true},
+
+        {valueName: "E4 Count", refName: "e4Count", isBattleValue: true,summaryValue: "cyreneE4CountSum",summaryType: "SUM", requiresEidolon: 4,
+            customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "Ice",
+            displayRequiresIndex: 4, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            progressIcon: characters.Cyrene.eidolons[3].icon
+        },
+        {valueName: "E4 Count Max", refName: "e4CountMax", isBattleValue: true,requiresEidolon: 4,hide: true},
+        
+        
+
+
+        // {valueName: "Supreme Stance", refName: "supremeStanceActive", isBattleValue: true, isCharacterState: true},
+        // {valueName: "Memo SPD Stacks", refName: "lastSpdStacksMemo", isBattleValue: true},
+        // {valueName: "Epic Stacks", refName: "epicStacks", isBattleValue: true},
+    ],
 
     //HARMONY
     "Robin": [
@@ -606,6 +634,17 @@ const customDisplayValuesLog = {
         {valueName: "E6 Ult Counter", refName: "E6UltCounter", isBattleValue: true, requiresEidolon: 6},
     ],
 }
+
+const customDisplayStatesLog = [
+    {valueName: "Cyrene Buff", refName: "hasCyreneMemoBuff", isBattleValue: false,
+        progressIcon: "misc/cyrene/buffHeart.png"
+    },
+    {valueName: "Proof of Debt", refName: null, isBattleValue: false,
+        isBuffCheck: true,buffName: turnLogic["Topaz & Numby"].buffNames.debt,
+        scale: 1.7,
+        progressIcon: "misc/topaz/Icon_SpecialSkill_Topaz.png"
+    },
+]
 for (let charName in characters) {
     const characterEntry = characters[charName];
     if (characterEntry.path === "Elation") {
@@ -634,6 +673,15 @@ const permaConditionsTextLibrary = {
 
     //TARGET DEFAULT EXPLANATIONS
     "supportDefaultChar1": "If user-defined targets fail, this ability will default to target Character 1.",
+    "supportDefaultAnyCharButSelf": "If user-defined targets fail, this ability will default to the first pooled Character that is not this Character's self.",
+    "cyreneCustomPool": `Cyrene's default targeting will put One-Time permanent buffs at the head of the pool, but permanently remove them from the pool after buffing.
+    <br>The calculator recognizes the following currently coded characters as One-Time buffs:
+    
+    <br>- Castorice
+    <br>- Evernight
+    <br>- Trailblazer - Remembrance
+    <br>- Tribbie`,
+    "cyreneCustomPoolChrysos": `Cyrene will always prioritize Chrysos Heirs for her default targeting, over regular characters. User-defined target logic can change that.`
 }
 
 const defaultStandardAbilityDisplayWarnings = {
@@ -762,15 +810,18 @@ const conditionsCharacterDisplayWarning = {
 
         "MemoSkillEnhTarget": "",
         "MemoSkillEnhPermaConditionsTarget": [permaConditionsTextLibrary.supportDefaultChar1],
-        
     },
     "Cyrene": {
         hasEnhancedState: true,
         "Skill": "Skill conditions are ignored when Cyrene's Basic ATK is enhanced.",
         "Ultimate": "",
+        "MemoSkillEnh": "Enhanced is the Buff. If the checks here fail, Demiurge's attack will be used instead.<br>PLEASE SET UP CONDITIONS IN THE TARGETING TAB TOO.",
 
         "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
-        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxedCyrene]
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxedCyrene],
+
+        "MemoSkillEnhTarget": "",
+        "MemoSkillEnhPermaConditionsTarget": [permaConditionsTextLibrary.supportDefaultAnyCharButSelf,permaConditionsTextLibrary.cyreneCustomPoolChrysos,permaConditionsTextLibrary.cyreneCustomPool],
     },
     "Aglaea": {
         hasEnhancedState: true,
@@ -866,7 +917,8 @@ const conditionsCharacterDisplayWarning = {
 const alliedPoolKeys = new Set([
     "Self",
     "char1","char2","char3","char4",
-    "Characters","Memosprites",
+    "Characters","allCharactersButOne","CyreneCustomAllCharactersButOne",
+    "Memosprites",
     "Allies (All)",
     "Allies (On-Field)",
 ])
@@ -1297,6 +1349,15 @@ const conditionLibrary = {
     "char1"(battleData,sourceTurn,condition) {
         return [battleData.nameBasedTurns.char1];
     },
+    "anyCharacterButSelf"(battleData,sourceTurn,condition) {
+        const fullCharacterArray = battleData.fullCharacterArray;
+        for (let character of fullCharacterArray) {
+            if (character.name === sourceTurn.name) {continue;}
+            return [character];
+        }
+
+        return [battleData.nameBasedTurns.char1];
+    },
     
     "Characters"(battleData,sourceTurn,condition) {
         return battleData.fullCharacterArray;
@@ -1313,6 +1374,38 @@ const conditionLibrary = {
     "Enemies (On-Field)"(battleData,sourceTurn,condition) {
         return battleData.allAllyTargetsArray;
     },
+    "allCharactersButOne"(battleData,sourceTurn,condition) {
+        return battleData.allCharactersButOne[sourceTurn.name];
+    },
+    "CyreneCustomAllCharactersButOne"(battleData,sourceTurn,condition) {
+        const initialCharacters = battleData.allCharactersButOne[sourceTurn.name];
+        let filteredSet = [];
+        let subFilterSet = [];
+        const logicRef = turnLogic.Cyrene;
+        const oneAndDoneSet = logicRef.heirsSetOneAndDone;
+        const heirsSet = logicRef.heirsSet;
+
+        for (let character of initialCharacters) {
+            const characterName = character.properName;
+            if (heirsSet.has(characterName)) {
+                if (oneAndDoneSet.has(characterName)) {
+                    if (character.hasCyreneMemoBuff) {continue}
+                    filteredSet.unshift(character);
+                    continue;
+                }
+                filteredSet.push(character);
+            }
+            else {
+                subFilterSet.push(character);
+            }
+        }
+
+        for (let subEntity of subFilterSet) {
+            filteredSet.push(subEntity)
+        }
+        return filteredSet;
+    },
+
     BLAST(battleData,sourceTurn,targetResult) {
         if (targetResult.length === 0) {return [];}//if we don't even have a primary target, wtf is the point
 
@@ -1593,6 +1686,44 @@ const conditionLibrary = {
         }
 
         return false;
+    },
+
+    //ENERGY CHECKS
+    "Team Energy Checks"(battleData,sourceTurn,condition) {
+        return conditionLibrary[condition.sustainValue](battleData,sourceTurn);
+    },
+
+    "No Energy Full [NORMAL]"(battleData,sourceTurn,condition) {
+        const fullCharacterArray = battleData.fullCharacterArray;
+        let noFull = true;
+
+        for (let character of fullCharacterArray) {
+            if (character.properName === sourceTurn.properName || character.specialEnergy) {continue;}
+
+            const energyRatio = character.currentEnergy / character.maxEnergy;
+            if (energyRatio === 1) {
+                noFull = false;
+                break;
+            }
+        }
+
+        return noFull;
+    },
+    "No Energy Full [SPECIAL]"(battleData,sourceTurn,condition) {
+        const fullCharacterArray = battleData.fullCharacterArray;
+        let noFull = true;
+
+        for (let character of fullCharacterArray) {
+            if (character.properName === sourceTurn.properName || !character.specialEnergy) {continue;}
+
+            const energyRatio = character.specialEnergyCurrent / character.specialEnergyMax;
+            if (energyRatio === 1) {
+                noFull = false;
+                break;
+            }
+        }
+
+        return noFull;
     },
 
 
@@ -2238,15 +2369,89 @@ const defaultConditions = {
         }
     },
     "Cyrene": {
-        hasEnhancedState: true,
+        "hasEnhancedState": true,
+        "extraUseConditions": ["MemoSkillEnh"],
         "Skill": {
             "type": "AND",
             "array": []
         },
         "Ultimate": {
-            type: "AND",
-            array: []
-        }
+            "type": "OR",
+            "array": [
+                {
+                    "type": "AND",
+                    "array": [
+                        {
+                            "type": "COMPARE",
+                            "comparison": "<",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "Self",
+                                    "targetType": "Character",
+                                    "characterValue": "ultsUsed"
+                                },
+                                {
+                                    "type": "User Value: Number",
+                                    "inputValue": 1
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Team Energy Checks",
+                            "sustainValue": "No Energy Full [NORMAL]"
+                        },
+                        {
+                            "type": "Team Energy Checks",
+                            "sustainValue": "No Energy Full [SPECIAL]"
+                        }
+                    ]
+                },
+                {
+                    "type": "AND",
+                    "array": [
+                        {
+                            "type": "COMPARE",
+                            "comparison": ">=",
+                            "array": [
+                                {
+                                    "type": "Character: Value",
+                                    "target": "Self",
+                                    "targetType": "Character",
+                                    "characterValue": "ultsUsed"
+                                },
+                                {
+                                    "type": "User Value: Number",
+                                    "inputValue": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "MemoSkillEnh": {
+            "type": "AND",
+            "array": []
+        },
+        "validTargetChecks": [
+            "MemoSkillEnh"
+        ],
+        "MemoSkillEnhTarget": {
+            "type": "Target Priority",
+            "array": [
+                {
+                    "type": "TARGET CHECK",
+                    "array": [
+                        {
+                            "type": "TARGET",
+                            "array": []
+                        },
+                    ]
+                },
+                
+            ]
+        },
     },
     "Hyacine": {
         hasEnhancedState: false,
@@ -3049,232 +3254,8 @@ const defaultConditions = {
             "type": "AND",
             "array": [
                 {
-                    "type": "OR",
-                    "array": [
-                        {
-                            "type": "COMPARE",
-                            "comparison": "=",
-                            "array": [
-                                {
-                                    "type": "Character: Value",
-                                    "target": "char1",
-                                    "targetType": "Character",
-                                    "characterValue": "properName"
-                                },
-                                {
-                                    "type": "Character: Value",
-                                    "target": "Self",
-                                    "targetType": "Character",
-                                    "characterValue": "properName"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "COMPARE",
-                            "comparison": "=",
-                            "array": [
-                                {
-                                    "type": "Character: Value",
-                                    "target": "char1",
-                                    "targetType": "Character",
-                                    "characterValue": "maxEnergy"
-                                },
-                                {
-                                    "type": "User Value: Number",
-                                    "inputValue": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "COMPARE",
-                            "comparison": "!=",
-                            "array": [
-                                {
-                                    "type": "Character: Value",
-                                    "target": "char1",
-                                    "targetType": "Character",
-                                    "characterValue": "currentEnergy"
-                                },
-                                {
-                                    "type": "Character: Value",
-                                    "target": "char1",
-                                    "targetType": "Character",
-                                    "characterValue": "maxEnergy"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "type": "OR",
-                    "array": [
-                        {
-                            "type": "COMPARE",
-                            "comparison": "=",
-                            "array": [
-                                {
-                                    "type": "Character: Value",
-                                    "target": "char2",
-                                    "targetType": "Character",
-                                    "characterValue": "properName"
-                                },
-                                {
-                                    "type": "Character: Value",
-                                    "target": "Self",
-                                    "targetType": "Character",
-                                    "characterValue": "properName"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "COMPARE",
-                            "comparison": "=",
-                            "array": [
-                                {
-                                    "type": "Character: Value",
-                                    "target": "char2",
-                                    "targetType": "Character",
-                                    "characterValue": "maxEnergy"
-                                },
-                                {
-                                    "type": "User Value: Number",
-                                    "inputValue": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "COMPARE",
-                            "comparison": "!=",
-                            "array": [
-                                {
-                                    "type": "Character: Value",
-                                    "target": "char2",
-                                    "targetType": "Character",
-                                    "characterValue": "currentEnergy"
-                                },
-                                {
-                                    "type": "Character: Value",
-                                    "target": "char2",
-                                    "targetType": "Character",
-                                    "characterValue": "maxEnergy"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "type": "OR",
-                    "array": [
-                        {
-                            "type": "COMPARE",
-                            "comparison": "=",
-                            "array": [
-                                {
-                                    "type": "Character: Value",
-                                    "target": "char3",
-                                    "targetType": "Character",
-                                    "characterValue": "properName"
-                                },
-                                {
-                                    "type": "Character: Value",
-                                    "target": "Self",
-                                    "targetType": "Character",
-                                    "characterValue": "properName"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "COMPARE",
-                            "comparison": "=",
-                            "array": [
-                                {
-                                    "type": "Character: Value",
-                                    "target": "char3",
-                                    "targetType": "Character",
-                                    "characterValue": "maxEnergy"
-                                },
-                                {
-                                    "type": "User Value: Number",
-                                    "inputValue": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "COMPARE",
-                            "comparison": "!=",
-                            "array": [
-                                {
-                                    "type": "Character: Value",
-                                    "target": "char3",
-                                    "targetType": "Character",
-                                    "characterValue": "currentEnergy"
-                                },
-                                {
-                                    "type": "Character: Value",
-                                    "target": "char3",
-                                    "targetType": "Character",
-                                    "characterValue": "maxEnergy"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "type": "OR",
-                    "array": [
-                        {
-                            "type": "COMPARE",
-                            "comparison": "=",
-                            "array": [
-                                {
-                                    "type": "Character: Value",
-                                    "target": "char4",
-                                    "targetType": "Character",
-                                    "characterValue": "properName"
-                                },
-                                {
-                                    "type": "Character: Value",
-                                    "target": "Self",
-                                    "targetType": "Character",
-                                    "characterValue": "properName"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "COMPARE",
-                            "comparison": "=",
-                            "array": [
-                                {
-                                    "type": "Character: Value",
-                                    "target": "char4",
-                                    "targetType": "Character",
-                                    "characterValue": "maxEnergy"
-                                },
-                                {
-                                    "type": "User Value: Number",
-                                    "inputValue": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "COMPARE",
-                            "comparison": "!=",
-                            "array": [
-                                {
-                                    "type": "Character: Value",
-                                    "target": "char4",
-                                    "targetType": "Character",
-                                    "characterValue": "currentEnergy"
-                                },
-                                {
-                                    "type": "Character: Value",
-                                    "target": "char4",
-                                    "targetType": "Character",
-                                    "characterValue": "maxEnergy"
-                                }
-                            ]
-                        }
-                    ]
+                    "type": "Team Energy Checks",
+                    "sustainValue": "No Energy Full [NORMAL]"
                 }
             ]
         },

@@ -2792,7 +2792,7 @@ details[open] > summary::before {
     box-sizing: border-box;
 }
 
-.weirdSideSemiCircleThinger, .weirdSideSemiCircleThingerAlly, .weirdSideSemiCircleThingerEnemy {
+.weirdSideSemiCircleThinger, .weirdSideSemiCircleThingerAlly, .weirdSideSemiCircleThingerEnemy, .weirdSideSemiCircleThingerEXTURN1,.weirdSideSemiCircleThingerEXTURN2 {
     position: absolute;
     width: 15px;
     height: 15px;
@@ -2811,6 +2811,155 @@ details[open] > summary::before {
 }
 .weirdSideSemiCircleThingerEnemy {
     background-color: #8b3f35;
+}
+.weirdSideSemiCircleThingerEXTURN1 {
+    /* #21c1dde5 */
+    /* width: 60px;
+    height: 60px; */
+    /* position: absolute; */
+
+    /* outline: none;
+    background-color: transparent;
+    border-radius: 100%; */
+
+    width:  20px;
+    height: 20px;
+    background: #21c1dd;
+    transform: translate(-25%,-50%) rotate(24deg);
+
+    clip-path: polygon(
+        50% 0%,
+        58% 42%,
+        100% 50%,
+        58% 58%,
+        50% 100%,
+        42% 58%,
+        0% 50%,
+        42% 42%
+    );
+}
+.weirdSideSemiCircleThingerEXTURN1Queue {
+    transform: translate(-25%,-200%) rotate(45deg);
+}
+.weirdSideSemiCircleThingerEXTURN2 {
+    /* #21c1dde5 */
+    /* width: 60px;
+    height: 60px; */
+    /* position: absolute; */
+
+    /* outline: none;
+    background-color: transparent;
+    border-radius: 100%; */
+
+    width:  20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.904);
+    transform: translate(-0%,-50%) rotate(24deg);
+
+    clip-path: polygon(
+        50% 0%,
+        58% 42%,
+        100% 50%,
+        58% 58%,
+        50% 100%,
+        42% 58%,
+        0% 50%,
+        42% 42%
+    );
+}
+.weirdSideSemiCircleThingerEXTURN2Queue {
+    transform: translate(-25%,-150%) rotate(45deg);
+}
+
+
+
+
+
+
+.inActionExtraTurnBox {
+    height: 80px;
+    width: 60px;
+    /* border: 1px solid #21c1dd; */
+
+    /* outline-offset: 2px;
+    outline: 1px solid rgba(255, 255, 255, 0.541); */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    position: relative;
+    margin: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+}
+
+.inActionExtraTurnBoxIconBox {
+    height: 100%;
+    /* max-height: 40px; */
+    width: 95%;
+    max-width: 90%;
+    position: absolute;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: absolute;
+    border-top-right-radius:    30px;
+    border-top-left-radius:     30px;
+    border: 2px solid #21c1dd;
+    right: 0px;
+
+    outline-offset: 1px;
+    outline: 2px solid rgba(255, 255, 255, 0.541);
+}
+.turnOrderDisplayPreviewActionExpandRowIconEnemyNumber {
+    position: absolute;
+    right: 10%;
+    bottom: 1%;
+    background-color: rgba(0, 0, 0, 0.411);
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.inActionExtraTurnBoxIconBoxIcon {
+    /* height: 100%;
+    max-height: 30px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 2px solid #5f656b;
+    box-sizing: border-box; */
+
+    height: 100%;
+    /* position: absolute; */
+    /* width: 100%;
+    max-width: 100px; */
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* mask-image: linear-gradient(to right, black 70%, transparent 100%); */
+    transform:translate(-50%,-50%) ;
+    /* mask-image: linear-gradient(to right, black 60%, transparent 100%); */
+    scale: 1;
+    /* border-radius: 50%;
+    border: 2px solid #5f656b; */
+    box-sizing: border-box;
+}
+.actionDetailBodyQUEUESOURCE {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 5px;
+    white-space: normal;
+    position: relative;
+
+    /* flex-wrap: wrap; */
+    /* border: 1px solid red; */
 }
 
 
@@ -4061,6 +4210,7 @@ details[open] > summary::before {
     justify-content: center;
     align-items: left;
     text-align: left;
+    margin-top: 5px;
     /* border-left: 2px solid #5f656b; */
     /* flex-direction: column; */
     /* border: 1px solid green; */

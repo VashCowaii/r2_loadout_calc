@@ -390,6 +390,7 @@ const sim = {
             punchlineForced: 0,
             bangersDone: 0,
             punchlineConsume: true,
+            forceGlobalFirst: 0,
         };
         if (isLoggyLogger) {logToBattle(battleData,{logType: "BattlePrep"});}
         const summaryTurns = battleData.battleTotal.Turns;
@@ -418,6 +419,8 @@ const sim = {
         const fullCharacterArray = battleData.fullCharacterArray;
         const allAlliesArray = battleData.allAlliesArray;
         const allAllyTargetsArray = battleData.allAllyTargetsArray;
+
+        
 
         const techSlotArray = ["useTechniquesChar1","useTechniquesChar2","useTechniquesChar3","useTechniquesChar4"]
 
@@ -600,6 +603,22 @@ const sim = {
             logicRef.preLogic(slotRef,battleData);
                 // logicRef.preLogicCompleted = true;
             // }
+        }
+
+        const allCharactersButOne = battleData.allCharactersButOne ??= {
+            "char1": [],
+            "char2": [],
+            "char3": [],
+            "char4": [],
+        };
+
+        for (let excludeKey in allCharactersButOne) {
+            const currentArray = allCharactersButOne[excludeKey];
+
+            for (let character of fullCharacterArray) {
+                if (character.name === excludeKey) {continue;}
+                currentArray.push(character);
+            }
         }
 
 
@@ -1202,6 +1221,7 @@ const sim = {
         }
     },
     clearFollowUpAttackQueue(battleData) {
+        if (battleData.forceGlobalFirst) {return;}
         let queue = battleData.followUpQueue;
         if (battleData.battleIsOver) {return;}
         if (queue.length) {
@@ -1313,6 +1333,8 @@ const sim = {
                 let characterName = currentUltimate.properName;
                 let sourceTurn = currentUltimate.sourceTurn;
                 let skipEXDisplay = currentUltimate.skipEXDisplay;
+
+                const forceGlobalFirst = currentUltimate.forceGlobalFirst;
                 
 
                 const isExtraTurn = currentUltimate.isExtraTurn;
@@ -1323,6 +1345,9 @@ const sim = {
                 const target = currentUltimate.target;
                 if (shouldAbort) {
                     if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Extra-Turn Queue", bodyText: `Abort Check passed, canceled queued Ex-Turn ${currentUltimate.action} from ${characterName}`});}
+                    if (forceGlobalFirst) {
+                        battleData.forceGlobalFirst -= 1;
+                    }
                     continue;
                 }
 
@@ -1401,6 +1426,10 @@ const sim = {
                             battleData.punchlineForced -= actionHasForcedPL;
                             battleData.punchlineConsume = true;
                         }
+                    }
+
+                    if (forceGlobalFirst) {
+                        battleData.forceGlobalFirst -= 1;
                     }
                     
                     battleData.totalExTurnsQueued -= 1;

@@ -154,6 +154,7 @@ const superGlobal = {
             allowUlts: false,
             decrementBuffs: false,
             extraTurnHasChoice: false,
+            forceGlobalFirst: false,
 
             //mainly visual, but can be used elsewhere
             isInserted: false,
@@ -249,6 +250,55 @@ const superGlobal = {
         else {return false;}
     },
 
+    genericSpecialEnergyWithOverflowHandling(battleData,ownerTurn,generalInfo,generalData) {
+        // const generalData = this.generalData ??= {summerName: "cyreneSpecialOverflowSummerTBD",overflowName: "recollectionOverflow",
+        //     baseString: "Recollection",displayIcon:"/HonkaiSR/misc/cyrene/Icon1415Passive.png"};
+
+        const pointsGained = generalInfo.pointsGained;
+
+        const valuesRef = ownerTurn.battleValues;
+        const overflowName = generalData.overflowName;
+
+        const oldValue = ownerTurn.specialEnergyCurrent;
+        const energyMax = ownerTurn.specialEnergyMax;
+        const oldOverflow = valuesRef[overflowName];
+        const overflowMax = ownerTurn.specialEnergyOverflowLimit;
+
+        const proposedFinalValue = oldValue + pointsGained + oldOverflow;
+        //we don't need to separately evaluate whether overflow stacks should enter the main energy container or not
+        //because if we add it to the proposedFinalValue, due to the fact that we already assign overflow every time based on excess
+        //this will automatically move the overflow into the standard container, hell yeah
+        const overflowValue = proposedFinalValue > energyMax ? Math.min(overflowMax,proposedFinalValue-energyMax) : 0;
+        valuesRef[overflowName] = overflowValue;
+
+        ownerTurn.specialEnergyCurrent = Math.min(energyMax,proposedFinalValue);
+
+        const resoRef = ownerTurn.specialEnergyCurrent;
+        const valueWasDiff = resoRef != oldValue;
+
+        const finalOverflow = valuesRef[overflowName]
+        const overflowWasDiff = oldOverflow != finalOverflow;
+
+        const sourceString = generalInfo.sourceString;
+        if (battleData.isLoggyLogger) {
+            const displayName = generalData.baseString;
+            const displayIcon = generalData.displayIcon;
+
+            
+            if (valueWasDiff) {
+                const displayOld = +oldValue.toFixed(7);
+                const displayNew = +resoRef.toFixed(7);
+                // GenericActionWithImage
+                logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:displayIcon,sourceName: ownerTurn.properName, source:"Special Energy Handler", bodyText: `${displayName}: ${displayOld} --> ${displayNew} [${sourceString}]`});
+            }
+            if (overflowWasDiff) {
+                const displayOld = +oldOverflow.toFixed(7);
+                const displayNew = +finalOverflow.toFixed(7);
+                // GenericActionWithImage
+                logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:displayIcon,sourceName: ownerTurn.properName, source:"Special Energy Handler", bodyText: `${displayName} (OVERFLOW): ${displayOld} --> ${displayNew} [${sourceString}]`});
+            }
+        }
+    },
     genericEnergyOverflowHandling(battleData,ownerTurn,generalInfo,generalData) {
         const overflow = generalInfo.overFill;
         if (overflow) {
@@ -335,4 +385,5 @@ const superGlobal = {
 }
 const createQueueObject = superGlobal.createQueueObject;
 const genericEnergyOverflow = superGlobal.genericEnergyOverflowHandling;
+const genericSpecialOverflow = superGlobal.genericSpecialEnergyWithOverflowHandling;
 const genericSubEnergy = superGlobal.genericSubEnergyHandling;

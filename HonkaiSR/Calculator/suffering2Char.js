@@ -778,6 +778,7 @@ const battleActions = {
         let oldAVBase = sourceTurn.AVBase;
         let oldSPD = sourceTurn.SPD;
         let SPDStats = calcs.getSPDFinal(sourceTurn.statTable);
+        if (SPDStats.SPDFinal === 0) {return;}
         let newBase = SPDStats.SPDActionValue;
 
         let AVDiff = newBase / oldAVBase;
@@ -859,7 +860,9 @@ const battleActions = {
         if (enemyChecker) {
             battleData.ultimateQueue.push(entry);
             battleData.totalUltsQueued += 1;
-            if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "QueueUltimate", name: entry.name});}
+            if (battleData.isLoggyLogger) {
+                logToBattle(battleData,{logType: "QueueUltimate", name: entry.sourceTurn.properName, source: entry.name, function: entry.actionCall.name});
+            }
         }
         else {
             entry.sourceTurn.ultyQueued = false;
@@ -871,6 +874,10 @@ const battleActions = {
         const currentQueue = battleData.ultimateQueue;
         const entryPriority = entry.priority;
         const isTieBreaker = entry.isTieBreaker;
+        const forceGlobalFirst = entry.forceGlobalFirst;
+        if (forceGlobalFirst) {
+            battleData.forceGlobalFirst += 1;
+        }
         // battleData.followUpQueue.push(entry);
         const queueLength = currentQueue.length-1;
 
@@ -899,7 +906,7 @@ const battleActions = {
             battleData.totalExTurnsQueued += 1;
         }
 
-        if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "QueueUltimate", name: entry.name, isExtraTurn: entry.isExtraTurn});}
+        if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "QueueUltimate", name: entry.sourceTurn.properName, source: entry.name, isExtraTurn: entry.isExtraTurn, function: entry.actionCall.name});}
     },
     waveStartQueueHandling(battleData) {
         const ultyQueue = battleData.ultimateQueue;
@@ -3490,6 +3497,8 @@ const battleActions = {
             // const subTargetObject = atkEntry.subTarget;//unused for NOW
             const blastTargetObject = atkEntry.blast;
 
+            const energyCondition = bounceRef.energyCondition
+
             const enemyPositions = battleData.enemyPositions;
             let cachedBlastTargets = [];
             for (let i=0;i<bounceCount;i++) {
@@ -3505,9 +3514,9 @@ const battleActions = {
                     continue;
                 }//skip dead bois
 
-
+                const energyFunctionPassed = energyCondition ? energyCondition(i+1) : true; 
                 const energyGain = bounceEnergy * (targetObject.energyRatio ?? 0);
-                if (energyGain) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split [BOUNCE]");}
+                if (energyGain && energyFunctionPassed) {updateEnergy(battleData,energyGain,sourceTurn,false,"Hit-split [BOUNCE]");}
                 const distributedTargetCount = battleData.activeEnemies ?? 1;
 
                 hitWrap(battleData,currentEnemy,atkEntry,targetObject,"primary",generalInfo,isBounce,distributedTargetCount);
@@ -3911,7 +3920,6 @@ const battleActions = {
 
                 let percentBlast = multipliers[hitTypeBlast] ?? 0;
                 let flatBlast = flatAmounts[hitTypeBlast] ?? 0;
-                if (targetTurn.isUnselectable && !forceHeal) {return;}
                 if (logger && timesToHeal>1) {logToBattle(battleData,{logType: "HealAllyStart"});}
                 poke("HealAllyStart",battleData,{sourceTurn,targetTurn});
 
@@ -3933,7 +3941,6 @@ const battleActions = {
             else {
                 let percent = multipliers[hitTypePrimary] ?? 0;
                 let flat = flatAmounts[hitTypePrimary] ?? 0;
-                if (targetTurn.isUnselectable && !forceHeal) {return;}
                 if (logger && timesToHeal>1) {logToBattle(battleData,{logType: "HealAllyStart"});}
                 poke("HealAllyStart",battleData,{sourceTurn,targetTurn},sourceTurn);
                 for (let i=0;i<timesToHeal;i++) {
@@ -4143,7 +4150,7 @@ const battleActions = {
             const min = Math.min;
             if (logger) {logToBattle(battleData,{logType: "ConsumeHPStart"});}
             for (let ally of allies) {
-                if ((ally.isUnselectable && !forceConsume) || (targetFilterFunction && !targetFilterFunction(battleData,sourceTurn,ally))) {continue;}
+                if (targetFilterFunction && !targetFilterFunction(battleData,sourceTurn,ally)) {continue;}
                 const amountToEat = isCurrentHP ? ally.currentHP * percent : ally.maxHP * percent;
                 // calcs.customCeiling
                 const currentHP = ally.currentHP - 1;//-1 here bc consuming can't reduce a character below 1hp
@@ -4158,7 +4165,7 @@ const battleActions = {
             }
             if (logger) {logToBattle(battleData,{logType: "ConsumeHPEnd", name:sourceTurn.properName,totalEaten,targetTurn:null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillSlot});}
         }
-        else if (!targetTurn.isUnselectable || forceConsume) {
+        else {
             const amountToEat = isCurrentHP ? targetTurn.currentHP * percent : targetTurn.maxHP * percent;
             const currentHP = targetTurn.currentHP - 1;//-1 here bc consuming can't reduce a character below 1hp
             const amountEaten = Math.min(amountToEat,currentHP);//then min to see if it's smaller to reduce to 1, or consume the full %
@@ -4651,6 +4658,7 @@ const hitWrapperBattleStart = battleActions.hitWrapperBattleStart;
 const clearPendingDeaths = battleActions.clearPendingDeaths;
 const markEnemyForDeath = battleActions.markEnemyForDeath;
 const dotDetonateWrapper = battleActions.dotDetonateWrapper;
+const trueDMGHitWrapper = battleActions.trueDMGHitWrapper;
 
 const weaknessIndexConversion = {
     "Fire": WeaknessFire,
@@ -13103,6 +13111,8 @@ const turnLogic = {
 
                     const passiveListeners = this.passiveListeners;
 
+                    ownerTurn.hysilensFieldProcLimit ??= ownerTurn.rank >= 6 ? 12 : 8;
+
                     //talent ally atk listener for dot applications
 
                     //trace fiddle of pearls
@@ -13338,6 +13348,7 @@ const turnLogic = {
 
                             const sourceTurn = generalInfo.sourceTurn;
                             sourceTurn.hysilensFieldProcCounter = 0;
+                            //DONT EVER CHANGE THIS FUCKING NAME WE USE IT ON CYRENE FOR THE ZONE PROC COUNTER
                         },
                         "priority": -11,
                         "target": "self",
@@ -13371,7 +13382,7 @@ const turnLogic = {
 
                     const targetTurn = generalInfo.targetTurn;
                     const procCheck = targetTurn.hysilensFieldProcCounter ??= 0;
-                    const procLimit = ownerTurn.hysilensFieldProcLimit ??= ownerTurn.rank >= 6 ? 12 : 8;
+                    const procLimit = ownerTurn.hysilensFieldProcLimit;
                     if (procCheck >= procLimit) {return;}
 
                     targetTurn.hysilensFieldProcCounter += 1;
@@ -18898,7 +18909,7 @@ const turnLogic = {
                                     //TODO: confirm that he can double advance off something like topaz skill/basic, cause he should
                                 }
                             }
-                            if (isFUA) {
+                            if (isFUA && providerTurn.rank >= 1) {
                                 if (enemyWithDebt.topazE1DebtorSTACKCOMPLETE) {return;}
 
                                 const logicRef = turnLogic[providerTurn.properName];
@@ -18985,7 +18996,7 @@ const turnLogic = {
                         isInserted: true,
                         dontKeepNextWave: false,//ults always clear out
                         isAttack: true,
-                        isAbility: true,
+                        isAbility: false,
                         useAnyTriggers: true,
                         eventTypeStartLOG: "GenericAbilityStart",
 
@@ -20540,7 +20551,7 @@ const turnLogic = {
                             const targetCheck = currentEnemy.buffsObject[buffSheet.buffName];
                             if (targetCheck) {
                                 const convertedDMG = providerTurn.battleValues.e6DMGTracked;
-                                battleActions.trueDMGHitWrapper(battleData,providerTurn,currentEnemy,1,convertedDMG,convertedDMG,convertedDMG,"E6 Butterfly Flurry");
+                                trueDMGHitWrapper(battleData,providerTurn,currentEnemy,1,convertedDMG,convertedDMG,convertedDMG,"E6 Butterfly Flurry");
                             }
                         },
                         "target": "self",
@@ -22548,6 +22559,7 @@ const turnLogic = {
                     ownerTurn.specialEnergyMax = 12;
                     ownerTurn.specialEnergyCurrent = 0;
                     ownerTurn.specialEnergyOverflowLimit = 0;
+                    ownerTurn.specialEnergyEvent = "FeixiaoGainSlash";
                     charValuesRef.specialEnergyCurrentName = "slash";
                     charValuesRef.specialEnergyMaxName = "slashMax";
 
@@ -25096,7 +25108,7 @@ const turnLogic = {
 
                 let highestHPEnemy = null;
                 const enemyTurns = battleData.enemyBasedTurns;
-                let hitsToDo = 0 + (e2 ? 1 : 0);
+                let hitsToDo = 0 + (e2 ? 1 : 0) + (sourceTurn.cyreneExtraZoneCount ?? 0);
                 for (let enemyHit in targetsGotHit) {
                     hitsToDo++;
                     const currentEnemy = enemyTurns[enemyHit];
@@ -25291,7 +25303,7 @@ const turnLogic = {
                             // battleData.attackIsActive = true;
                             // battleData.addedDMGTallyAttack = 0;
     
-                            battleActions.trueDMGHitWrapper(battleData,ownerTurn,highestHPEnemy,trueDMGMulti,trueBase,trueCrit,trueAVG,"E1 Tribbie");
+                            trueDMGHitWrapper(battleData,ownerTurn,highestHPEnemy,trueDMGMulti,trueBase,trueCrit,trueAVG,"E1 Tribbie");
                         },
                         "target": "self",
                         "listenerName": "Pebble at Crossroads?: ally attack listener",
@@ -35282,6 +35294,2612 @@ const turnLogic = {
     },
     
     //Remembrance
+    "Cyrene": {//ATKOBJECTS DONE
+        logic(thisTurn,battleData) {
+            let statCalls = thisTurn.battleValues;
+            const isEnhanced = statCalls.isEnhanced;
+
+            let currentSP = battleData.skillPointCurrent;
+            const minimum = currentSP>0;
+
+            if (!isEnhanced && minimum && checkSkill(battleData,thisTurn)) {
+                const skillCall = this.returnSkillCall;
+                // skillCall.target = [battleData.primaryTarget];
+                // skillCall.subTarget = battleData.blastTargets;
+                return skillCall;
+            }
+
+            if (isEnhanced) {
+                const basicCall = this.returnBasicCallEnh;
+                basicCall.target = [battleData.primaryTarget];
+                basicCall.subTarget = battleData.enemyPositions;
+                return basicCall;
+            }
+            else {
+                const basicCall = this.returnBasicCall;
+                basicCall.target = [battleData.primaryTarget];
+                return basicCall;
+            }
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.cyreneSkill,
+                action: "Skill",
+                points: -1, 
+
+                isAttack: true,
+                isAbility: true,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "SkillStart",
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
+            this.returnSkillCall.target = [thisTurn];
+
+            this.returnBasicCallEnh ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.cyreneBasicEnhanced,
+                action: "BasicATK",
+                points: 1, 
+
+                isEnhanced: true,
+                isAttack: true,
+                isAbility: true,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "BasicATKStart",
+
+                poolKey: this.abilityTargetPools.BasicATK,
+            })
+            this.returnBasicCallEnh.sourceTurn = thisTurn;
+
+            this.returnBasicCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.cyreneBasic,
+                action: "BasicATK",
+                points: 1, 
+
+                isAttack: true,
+                isAbility: true,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "BasicATKStart",
+
+                poolKey: this.abilityTargetPools.BasicATK,
+            })
+            this.returnBasicCall.sourceTurn = thisTurn;
+        },
+        "abilityTargetPools": {
+            "BasicATK": "Enemies (On-Field)",
+            "Skill": "Self",
+            "Ultimate": "Self",
+            "MemoSkill": "Enemies (On-Field)",
+            // "MemoSkillEnh": "allCharactersButOne",
+            "MemoSkillEnh": "CyreneCustomAllCharactersButOne",
+        },
+        "skillFunctions": {
+            cyreneBasic(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.cyreneBasicREF ??= ATKObjects["Basic ATK"]["Lo, Hope Takes Flight!"].variant1;
+        
+                if (!ATKObjects.cyreneBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = ATKObjects.cyreneBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "HP";
+                    const tags = ["All","Ice"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    const actionTags = ["All","Basic","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    ATKObjects.cyreneBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        isFUA: false,
+                    }
+                }
+                let ATKObject = ATKObjects.cyreneBasicATKOBJECT;
+
+                poke("CyreneGainRecollection",battleData,{pointsGained: 1,sourceString:"Basic ATK"});
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+            },
+            cyreneBasicEnhanced(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.cyreneBasicEnhancedREF ??= ATKObjects["Basic ATK"]["To Love and Tomorrow ♪"].variant1;
+        
+                if (!ATKObjects.cyreneBasicEnhancedATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].eba;
+                    let values = ATKObjects.cyreneBasicEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "HP";
+                    const tags = ["All","Ice"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    // console.log(values[0])
+                    const actionTags = ["All","Basic","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    ATKObjects.cyreneBasicEnhancedATKOBJECT = {
+                        multipliers: {
+                            primary: values[2],
+                            blast: null,
+                            all: values[0],
+                        },
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        isFUA: false,
+                    }
+                }
+                let ATKObject = ATKObjects.cyreneBasicEnhancedATKOBJECT;
+
+                poke("CyreneGainRecollection",battleData,{pointsGained: 3,sourceString:"Basic ATK Enhanced"});
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+            },
+            statCheck(battleData,currentTurn) {
+                const logicRef = turnLogic[currentTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                if (!ATKObjects.cyreneSPD180Sheet) {
+                    const characterName = currentTurn.properName;
+                    const buffNames = turnLogic[characterName].buffNames;
+                    ATKObjects.cyreneSPD180Sheet = {
+                        "stats": [DamageAll],
+                        [DamageAll]: 0.20,
+                        "source": "Trace",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.spdAt180,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                    ATKObjects.cyreneSPDOver180Sheet = {
+                        "stats": [ResistanceIcePEN],
+                        [ResistanceIcePEN]: 0.02,
+                        "source": "Trace",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.spdOver180,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 60,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                }
+
+                const SPDBeyondThis = 180;
+                const currentStats = currentTurn.statTable;
+                const currentSPD = calcs.getSPDFinal(currentStats).SPDFinal + currentStats[SPDFlatNULL];
+                const validSPD = Math.max(0,currentSPD-SPDBeyondThis);
+                const usableSPD = Math.min(60,Math.floor(validSPD));
+
+                const dmgSheet = ATKObjects.cyreneSPD180Sheet;
+                const penSheet = ATKObjects.cyreneSPDOver180Sheet;
+
+                const demiTurn = currentTurn.cyreneDemiTURNEVENT;
+                const buffsObject = currentTurn.buffsObject;
+
+                const buffCheck1 = buffsObject[dmgSheet.buffName];
+                if (buffCheck1) {//if the HP buff exists
+                    if (!validSPD) {//but we have no valid spd, then remove
+                        const allAlliesArray = battleData.allAlliesArray;
+                        removeBuffFromBatch(battleData,allAlliesArray,buffCheck1);
+                    }
+                }
+                else if (validSPD) {//but if the buff doesn't exist yet and we have valid spd, then apply
+                    const allAlliesArray = battleData.allAlliesArray;
+                    updateBuffBatchTargets(battleData,allAlliesArray,dmgSheet);
+                }
+
+                const buffCheck2 = buffsObject[penSheet.buffName];
+                if (buffCheck2) {//if the outgoing healing buff exists
+                    const currentStacks = buffCheck2.currentStacks;
+                    if (!validSPD) {//but we're under 200spd, then remove it
+                        removeBuff(battleData,currentTurn,buffCheck2);
+                        removeBuff(battleData,demiTurn,buffCheck2);
+                    }
+                    else if (currentStacks === usableSPD) {return;}
+                    else {//otherwise if we don't have enough healing bonus, then add the diff in stacks
+                        const stackDiff = usableSPD-currentStacks;
+
+                        if (-stackDiff === currentStacks) {
+                            removeBuff(battleData,currentTurn,buffCheck2);
+                            removeBuff(battleData,demiTurn,buffCheck2);
+                            return;
+                        }
+
+                        penSheet.currentStacks = stackDiff;
+                        
+                        updateBuff(battleData,currentTurn,penSheet);
+                        updateBuff(battleData,demiTurn,penSheet);
+                        return;
+                    }
+                }
+                if (!usableSPD) {return;}
+                
+                //the only reason we should reach this far, is if we should actually apply a buff
+                penSheet.currentStacks = usableSPD;
+                updateBuff(battleData,currentTurn,penSheet);
+                updateBuff(battleData,demiTurn,penSheet);
+            },
+            cyreneSkill(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                // let characterName = sourceTurn.properName;
+                // let skillRef = ATKObjects.cyreneSkillREF ??= ATKObjects.Skill["Bloom, Elysium of Beyond"].variant1;
+
+                // console.log(targetTurn)
+                // const targetTurn = battleData.nameBasedTurns.char1;
+
+                poke("CyreneGainRecollection",battleData,{pointsGained: 3,sourceString:"Skill"});
+                const applyTrueDMGZone = ATKObjects.applyTrueDMGZone ??= turnLogic[sourceTurn.properName].skillFunctions.applyTrueDMGZone;
+                applyTrueDMGZone(battleData,sourceTurn);
+            },
+            applyTrueDMGZone(battleData,sourceTurn,isFromUltimate) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.cyreneSkillREF ??= ATKObjects.Skill["Bloom, Elysium of Beyond"].variant1;
+
+                if (!ATKObjects.cyreneSkillZoneCountdownSHEET) {
+                    let values = ATKObjects.cyreneSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    //don't remove, used just after this IF
+
+                    const rank = sourceTurn.rank;
+                    const buffRef = logicRef.buffNames;
+                    ATKObjects.cyreneSkillZoneCountdownSHEET = {
+                        "stats": null,
+                        "source": "Skill",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffRef.skillCountdown,
+                        "durationInTurn": 2,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "StartTurn",
+                        expireFunction: logicRef.skillFunctions.skillZoneExpired,
+                        expireParam: sourceTurn.name,
+                        "removeOnDeath": true,
+                        "buffDisplayIcon": "misc/cyrene/Icon1415Skill02.png",
+                    }
+
+                    ATKObjects.cyreneSkillZoneCountdownSHEETPerma = {
+                        "stats": null,
+                        "source": "Skill [by Ultimate]",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffRef.skillCountdownPerma,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "removeOnDeath": true,
+                        "buffDisplayIcon": "misc/cyrene/Icon1415Skill02.png",
+                    }
+                }
+                sourceTurn.cyreneSkillREFVALUES = ATKObjects.cyreneSkillREFVALUES;
+
+                const ownerSheet = ATKObjects.cyreneSkillZoneCountdownSHEET;
+                
+                if (isFromUltimate) {
+                    const buffCheck = sourceTurn.buffsObject[ownerSheet.buffName];
+                    if (buffCheck) {
+                        removeBuff(battleData,sourceTurn,ownerSheet);
+                    }
+                    //first remove the expirable zone buff
+                    sourceTurn.battleValues.skillZoneActive = true;
+                    //then bc removing it would have triggered the expire function and set zone to false, set it back to true
+
+                    const permaSheet = ATKObjects.cyreneSkillZoneCountdownSHEETPerma;
+                    //then apply the new zone sheet with no expiration
+                    updateBuff(battleData,sourceTurn,permaSheet);
+                }
+                else {
+                    sourceTurn.battleValues.skillZoneActive = true;
+                    updateBuff(battleData,sourceTurn,ownerSheet);
+                }
+                
+            },
+            skillZoneExpired(battleData,cyreneSlot) {
+                const cyreneTurn = battleData.nameBasedTurns[cyreneSlot];
+                cyreneTurn.battleValues.skillZoneActive = false;
+            },
+            cyreneUltimate(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                // let skillRef = ATKObjects.cyreneUltimateREF ??= ATKObjects.Ultimate["Verse ◦ Vow ∞"].variant1;
+                // let values = ATKObjects.cyreneUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                const rank = sourceTurn.rank;
+
+                const demiTurn = sourceTurn.cyreneDemiTURNEVENT;
+
+                const valuesRef = sourceTurn.battleValues;
+                valuesRef.isEnhanced = true;
+
+                if (!demiTurn.isActive) {logicRef.skillFunctions.addDemiToField(battleData,sourceTurn);}
+
+                //REG ENERGY FIRST
+                //SPECIAL ENERGY NEXT
+                const fullCharacterArray = battleData.fullCharacterArray;
+
+                for (let character of fullCharacterArray) {
+                    if (character.specialEnergy) {continue;}
+
+                    const energyDiff = character.maxEnergy - character.currentEnergy;
+                    if (energyDiff) {
+                        updateEnergy(battleData,energyDiff,character,true,"Cyrene First Ultimate");
+                    }
+                }
+
+                for (let character of fullCharacterArray) {
+                    if (!character.specialEnergy || character.properName === sourceTurn.properName) {continue;}
+
+                    const energyDiff = character.specialEnergyMax - character.specialEnergyCurrent;
+                    if (energyDiff) {
+                        poke(character.specialEnergyEvent,battleData,{pointsGained: energyDiff,sourceString:"Cyrene First Ultimate"});
+                    }
+                }
+
+                const buffSheetCrit = ATKObjects.cyreneFirstUltCRITSHEET ??= {
+                    "stats": [CritRateBase],
+                    [CritRateBase]: ATKObjects.cyreneUltimateREFVALUES[2],
+                    "source": "Ultimate",
+                    "sourceOwner": sourceTurn.properName,
+                    "buffName": logicRef.buffNames.firstUltCrit,
+                    "durationInTurn": null,
+                    "duration": 1,
+                    "AVApplied": 0,
+                    "maxStacks": 1,
+                    "currentStacks": 1,
+                    "decay": false,
+                    "expireType": null,
+                    "buffDisplayIcon": "misc/cyrene/Icon1415Skill03.png",
+                }
+
+                updateBuff(battleData,sourceTurn,buffSheetCrit);
+                updateBuff(battleData,demiTurn,buffSheetCrit);
+
+                poke("CyreneQueueDemiTurn",battleData,null);
+                
+                if (rank >= 6) {
+                    const allyPositions = battleData.allyPositions;
+                    actionAdvance(1,allyPositions,battleData,"Cyrene E6 Ult");
+                }
+
+                const applyTrueDMGZone = logicRef.skillFunctions.applyTrueDMGZone;
+                applyTrueDMGZone(battleData,sourceTurn,true)
+
+
+                if (!sourceTurn.cyreneE2HasGottenBuff) {
+                    sourceTurn.battleValues.totalUniqueAlliesBuffed += 1;
+                    sourceTurn.cyreneE2HasGottenBuff = true;
+                }
+                sourceTurn.hasCyreneMemoBuff = true;
+
+                sourceTurn.ultyQueued = false;
+            },
+            cyreneUltimate2(battleData,actionObject,sourceTurn) {
+                poke("CyreneQueueDemiTurn",battleData,null);
+                sourceTurn.ultyQueued = false;
+            },
+            addDemiToField(battleData,sourceTurn) {
+                const demiTurn = sourceTurn.cyreneDemiTURNEVENT;
+
+                demiTurn.currentHP = sourceTurn.currentHP/sourceTurn.maxHP * demiTurn.maxHP;//demi's initial hp matches cyrene's
+                demiTurn.isDead = false;
+                demiTurn.isActive = true;
+
+                const charValuesRef = sourceTurn.battleValues;
+
+                sourceTurn.activeSummons += 1;
+                sourceTurn.activeMemosprites += 1;
+                charValuesRef.demiIsActive = true;
+
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                if (!ATKObjects.cyreneDemiOnFieldHPSHEET) {
+                    const buffNames = logicRef.buffNames;
+
+                    let skillRef = ATKObjects.cyreneMemoTalentREF ??= ATKObjects["Memosprite Talent"]["Waiting, In Every Past"].variant1;
+                    let values = ATKObjects.cyreneMemoTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                    // Waiting, In Every Past
+                    ATKObjects.cyreneDemiOnFieldHPSHEET = {
+                        "stats": [HPP],
+                        [HPP]: values[0],
+                        "source": "Memosprite Talent",
+                        "sourceOwner": demiTurn.properName,
+                        "buffName": buffNames.demiOnFieldHP,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "removeOnDeath": true
+                    }
+                }
+                const buffSheet = ATKObjects.cyreneDemiOnFieldHPSHEET;
+
+                updateBuff(battleData,demiTurn,buffSheet);
+                updateBuff(battleData,sourceTurn,buffSheet);
+                
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "SummonOnFieldAdjustment", summonWas: "Apply", assignedTo: sourceTurn.properName, summonedBy: sourceTurn.properName, isEnemy: false, isCharacter: true,eventOverrideImage: demiTurn.eventImage, AV: battleData.sumAV});}
+                poke("SummonOnFieldAdjustment",battleData,{summonWas: "Apply",assignedTo: sourceTurn, summonedBy: sourceTurn, summonEvent: demiTurn});
+                poke("AllyCreated",battleData,{targetTurn:demiTurn});
+
+                poke("CyreneGainStory",battleData,{pointsGained: 1,sourceString:"Demiurge Summoned"});
+            },
+            demiTurnAttack(battleData,actionObject,memoTurn) {
+                // const rmcTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
+                const sourceTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
+
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.demiBasicAttackREF ??= ATKObjects["Memosprite Skill"]["Minuet of Blooms and Plumes"].variant1;
+                let values = ATKObjects.demiBasicAttackREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                const rank = sourceTurn.rank;
+                if (!ATKObjects.demiBasicAttackATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].memoSkill;
+                    const scalar = "HP";
+                    const tags = ["All","Ice"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["All","Attack","MemoSkill","Summon","Memosprite"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+
+                    // if (skillRef.hitSplits.length > 1) {skillRef.hitSplits = skillRef.hitSplits.splice(4,1);}
+                    ATKObjects.demiBasicAttackATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        energy: null,//skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        isFUA: false,
+                        // scalarSourceOverride: sourceTurn.name,
+                        actionTags,compositeCacheTag,
+                        bounceData: superGlobal.createATKBounceObject({
+                            multi: values[0],
+                            bounceCount: 0,
+                            energy: null,
+                            target: {
+                                "hitRatio": 1,
+                                "energyRatio": 1,
+                                "toughness": 5/3
+                            },
+                        })
+                    }
+
+                    ATKObjects.cyreneE6ZoneSheet = {
+                        "stats": [DEFP],
+                        [DEFP]: -0.20,
+                        "flags": [DEF_DOWN],
+                        "source": "E6",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.e6Zone,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "isDebuff": true,
+                        "expireType": null,
+                        // "buffDisplayIcon": "misc/cyrene/Icon1415Passive3.png",
+                    }
+                }
+
+                const battleValues = sourceTurn.battleValues;
+                if (battleValues.cyreneStoryQueueActive) {
+                    battleValues.cyreneStoryQueueActive = false;
+                    battleValues.cyreneStoryQueued = false;
+
+                    //e1
+                    if (rank >= 1) {
+                        battleValues.e1BonusCount = 12;
+                        poke("CyreneGainRecollection",battleData,{pointsGained: 6,sourceString:"E1 Extra-Turn Launched"});
+                    }
+                    
+                    //e6
+                    if (rank >= 6) {
+                        if (battleValues.e6Used) {
+                            const allyPositions = battleData.allyPositions;
+                            actionAdvance(0.24,allyPositions,battleData,"Cyrene E6");
+                        }
+                        else {
+                            battleValues.e6Used = true;
+                            const enemyPositions = battleData.enemyPositions;
+                            const zoneSheet = ATKObjects.cyreneE6ZoneSheet;
+                            updateBuffBatchTargets(battleData,enemyPositions,zoneSheet)
+                        }
+                    }
+
+                    poke("CyreneGainStory",battleData,{pointsGained: -battleValues.cyreneStory,sourceString:"Demiurge launched Story Attack"});
+                }
+
+                const ATKObject = ATKObjects.demiBasicAttackATKOBJECT;
+                const bounceData = ATKObject.bounceData;
+                bounceData.bounceCount = battleValues.cyreneEgoTrackerSUM + battleValues.e1BonusCount;
+                if (rank >= 4) {
+                    bounceData.multi = values[0] + (0.06 * battleValues.e4Count);
+                }
+
+                attackWrapper(battleData,skillRef,memoTurn,ATKObject,actionObject.target,actionObject.subTarget);
+
+                if (rank >= 1) {battleValues.e1BonusCount = 0;}
+
+                const heirFunctions = logicRef.skillFunctions.heirFunctions;
+                const hyacineSlot = sourceTurn.buffSlotHyacine;
+                if (hyacineSlot) {
+                    const hyacineTurn = battleData.nameBasedTurns[hyacineSlot];
+                    heirFunctions[hyacineTurn.properName](battleData,actionObject,memoTurn,sourceTurn,hyacineTurn,logicRef,true);
+                }
+
+                const dhptSlot = sourceTurn.buffSlotDHPT;
+                if (dhptSlot) {
+                    const dhptTurn = battleData.nameBasedTurns[dhptSlot];
+                    heirFunctions[dhptTurn.properName](battleData,actionObject,memoTurn,sourceTurn,dhptTurn,logicRef,true);
+                }
+            },
+            demiurgeMatchHP(battleData,sourceTurn) {
+                const demiTurn = sourceTurn.cyreneDemiTURNEVENT;
+                const cyreneRatio = sourceTurn.currentHP/sourceTurn.maxHP;
+
+                const maxHP = demiTurn.maxHP;
+                const currentHP = demiTurn.currentHP;
+                const currentHPRatio = currentHP / maxHP;
+                let variance = null;
+                let consume = false;
+                let heal = false;
+
+                if (currentHPRatio > cyreneRatio) {
+                    variance = currentHPRatio - cyreneRatio;
+                    consume = true;
+                }
+                else if (currentHPRatio < cyreneRatio) {
+                    variance = cyreneRatio - currentHPRatio;
+                    heal = true;
+                }
+
+                if (consume) {
+                    consumeHP(battleData,null,variance,demiTurn,demiTurn,"Memosprite Talent",false,false);
+                }
+                else if (heal) {
+                    const healObject = demiTurn.hpChangeObject;
+                    healObject.multipliers.primary = variance;
+                    healAlly(battleData,healObject,demiTurn,demiTurn,"Memosprite Talent",1);
+                }
+            },
+            cyreneTechnique(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.cyreneTechniqueREF ??= ATKObjects.Technique["Peace at West Wind's End"].variant1;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target:null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+
+                logicRef.skillFunctions.applyTrueDMGZone(battleData,sourceTurn,false);
+            },
+            demiBuffTarget(battleData,actionObject,memoTurn) {
+                const sourceTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
+                const targetTurn = actionObject.target[0];
+                const logicRef = turnLogic[sourceTurn.properName];
+
+                const heirFunctions = logicRef.skillFunctions.heirFunctions;
+
+                const targetName = targetTurn.properName;
+                const heirCheck = heirFunctions[targetName];
+                if (heirCheck) {
+                    heirCheck(battleData,actionObject,memoTurn,sourceTurn,targetTurn,logicRef)
+                }
+                else {
+                    const ATKObjects = logicRef.ATKObjects;
+                    
+                    if (!ATKObjects.demiNormalLivesSHEET) {
+                        let skillRef = ATKObjects.demiBuffNormalREF ??= ATKObjects["Memosprite Skill"]["This Ode, to All Lives"].variant1;
+                        let values = ATKObjects.demiBuffNormalREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                        const buffNames = logicRef.buffNames;
+                        ATKObjects.demiNormalLivesSHEET = {
+                            "stats": [DamageAll],
+                            [DamageAll]: values[1],
+                            "source": "Memosprite Skill",
+                            "sourceOwner": memoTurn.properName,
+                            "buffName": buffNames.odeNormal,
+                            "durationInTurn": 3,
+                            "duration": 2,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                            expireFunction: logicRef.skillFunctions.anaxaDemiBuffExpired,//I know this says anaxa, it's generalized though
+                            expireParam: targetTurn.name,
+                            "buffDisplayIcon": "misc/cyrene/Icon1415Servantskil.png",
+                        }
+                    }
+                    const buffSheet = ATKObjects.demiNormalLivesSHEET;
+                    updateBuff(battleData,targetTurn,buffSheet);
+
+                    targetTurn.hasCyreneMemoBuff = true;
+                }
+
+                const hyacineSlot = sourceTurn.buffSlotHyacine;
+                if (hyacineSlot && targetName != "Hyacine") {
+                    const hyacineTurn = battleData.nameBasedTurns[hyacineSlot];
+                    heirFunctions["Hyacine"](battleData,actionObject,memoTurn,sourceTurn,hyacineTurn,logicRef,true)
+                }
+                //HYACINE IS BUFFED NO MATTER WHAT, but the true at the end indicates a default cast with no energy regen involved but still the entire reg buff
+                const dhptSlot = sourceTurn.buffSlotDHPT;
+                if (dhptSlot && targetName != "Dan Heng • Permansor Terrae") {
+                    const dhptTurn = battleData.nameBasedTurns[dhptSlot];
+                    heirFunctions["Dan Heng • Permansor Terrae"](battleData,actionObject,memoTurn,sourceTurn,dhptTurn,logicRef,true)
+                }
+                //SAME DEAL WITH DHPT
+
+                if (!targetTurn.cyreneE2HasGottenBuff) {
+                    sourceTurn.battleValues.totalUniqueAlliesBuffed += 1;
+                    targetTurn.cyreneE2HasGottenBuff = true;
+                }
+            },
+            heirFunctions: {
+                "Trailblazer - Remembrance"(battleData,actionObject,memoTurn,cyreneTurn,targetTurn,logicRef) {
+                    memoTurn.rmcBuffActive = true;
+
+                    if (!targetTurn.hasCyreneMemoBuff) {
+                        const skillFunctions = logicRef.skillFunctions;
+                        skillFunctions.statCheckRMCHP(battleData,memoTurn);
+                        skillFunctions.statCheckRMCCrit(battleData,memoTurn);
+                    }
+
+                    targetTurn.hasCyreneMemoBuff = true;
+                },
+                "Aglaea"(battleData,actionObject,memoTurn,cyreneTurn,targetTurn,logicRef) {
+                    // buffSlotAggy
+
+                    const ATKObjects = logicRef.ATKObjects;
+                    let skillRef = ATKObjects.demiBuffAggyREF ??= ATKObjects["Memosprite Skill"]["Ode to Romance"].variant1;
+                    let values = ATKObjects.demiBuffAggyREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,cyreneTurn);
+
+                    if (!ATKObjects.aggyRomanceSHEET) {
+                        const buffNames = logicRef.buffNames;
+                        ATKObjects.aggyRomanceSHEET = {
+                            "stats": [DamageAll,DEFShredAll],
+                            [DamageAll]: values[1],
+                            [DEFShredAll]: values[2],
+                            "source": "Memosprite Skill",
+                            "sourceOwner": memoTurn.properName,
+                            "buffName": buffNames.aggyOde,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "buffDisplayIcon": "misc/cyrene/Icon1415Servantskil.png",
+                        }
+                        ATKObjects.aggyRomanticSHEET = {
+                            "stats": null,
+                            "source": "Memosprite Skill",
+                            "sourceOwner": memoTurn.properName,
+                            "buffName": buffNames.aggyRomantic,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "buffDisplayIcon": "misc/cyrene/Icon1415Servantskil.png",
+                        }
+                    }
+                    const buffSheet = ATKObjects.aggyRomanceSHEET;
+                    const energySheet = ATKObjects.aggyRomanticSHEET;
+
+                    const garmentTurn = targetTurn.aggyGarmentTURNEVENT;
+                    updateBuff(battleData,targetTurn,buffSheet);
+                    updateBuff(battleData,garmentTurn,buffSheet);
+
+                    updateBuff(battleData,targetTurn,energySheet);
+
+                    if (garmentTurn.isActive) {
+                        const ATKObjects = turnLogic[targetTurn.properName].ATKObjects;
+                        const SPDSheet = ATKObjects.garmentTalentSPDSHEET;
+
+                        SPDSheet.currentStacks = SPDSheet.maxStacks;
+                        updateBuff(battleData,garmentTurn,SPDSheet);
+
+                        if (targetTurn.battleValues.supremeStanceActive) {
+                            const buffSheet2 = ATKObjects.aggyUltimateSTANCESHEET;
+                            buffSheet2.currentStacks = buffSheet2.maxStacks;
+                            updateBuff(battleData,targetTurn,buffSheet2);
+                        }
+                    }
+
+                    targetTurn.hasCyreneMemoBuff = true;
+                },
+                "Tribbie"(battleData,actionObject,memoTurn,cyreneTurn,targetTurn,logicRef) {
+                    // buffSlotAggy
+
+                    if (!targetTurn.hasCyreneMemoBuff) {
+                        const ATKObjects = logicRef.ATKObjects;
+                        let skillRef = ATKObjects.demiBuffTribbieREF ??= ATKObjects["Memosprite Skill"]["Ode to Passage"].variant1;
+                        let values = ATKObjects.demiBuffTribbieREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,cyreneTurn);
+
+                        if (!ATKObjects.demiTribbiePassageSHEET) {
+                            const buffNames = logicRef.buffNames;
+                            ATKObjects.demiTribbiePassageSHEET = {
+                                "stats": [DEFShredAll],
+                                [DEFShredAll]: values[1],
+                                "source": "Memosprite Skill",
+                                "sourceOwner": memoTurn.properName,
+                                "buffName": buffNames.tribbieOde,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                                "buffDisplayIcon": "misc/cyrene/Icon1415Servantskil.png",
+                            }
+                        }
+                        const buffSheet = ATKObjects.demiTribbiePassageSHEET;
+                        updateBuff(battleData,targetTurn,buffSheet);
+
+                        targetTurn.hasCyreneMemoBuff = true;
+                    }
+                },
+                "Anaxa"(battleData,actionObject,memoTurn,cyreneTurn,targetTurn,logicRef) {
+                    // buffSlotAggy
+                    updateSkillPoints(battleData,1,cyreneTurn,false,"Ode to Reason");
+                    actionAdvance(1,targetTurn,battleData,"Ode to Reason");
+
+                    const ATKObjects = logicRef.ATKObjects;
+                    let skillRef = ATKObjects.demiBuffAnaxaREF ??= ATKObjects["Memosprite Skill"]["Ode to Reason"].variant1;
+                    let values = ATKObjects.demiBuffAnaxaREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,cyreneTurn);
+
+                    if (!ATKObjects.demiAnaxaReasonSHEET) {
+                        const buffNames = logicRef.buffNames;
+                        ATKObjects.demiAnaxaReasonSHEET = {
+                            "stats": null,
+                            "source": "Memosprite Skill",
+                            "sourceOwner": targetTurn.properName,
+                            "buffName": buffNames.anaxaOde,
+                            "durationInTurn": 2,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": "EndTurn",
+                            expireFunction: logicRef.skillFunctions.anaxaDemiBuffExpired,
+                            expireParam: targetTurn.name,
+                            "buffDisplayIcon": "misc/cyrene/Icon1415Servantskil.png",
+                        }
+                    }
+                    const buffSheet = ATKObjects.demiAnaxaReasonSHEET;
+                    updateBuff(battleData,targetTurn,buffSheet);
+
+                    targetTurn.hasCyreneMemoBuff = true;
+                },
+                "Hyacine"(battleData,actionObject,memoTurn,cyreneTurn,targetTurn,logicRef,isDefaultCast) {
+                    // buffSlotAggy
+
+                    const ATKObjects = logicRef.ATKObjects;
+                    let skillRef = ATKObjects.demiBuffHyacineREF ??= ATKObjects["Memosprite Skill"]["Ode to Sky"].variant1;
+                    let values = ATKObjects.demiBuffHyacineREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,cyreneTurn);
+
+                    if (!isDefaultCast) {
+                        updateEnergy(battleData,values[1],targetTurn,true,"Ode to Sky");
+                        //this is always triggered regardless of if targeted or not
+                        //BUT the energy only happens on direct target.
+                    }
+                    
+
+                    if (!ATKObjects.demiHyacineSkySHEET) {
+                        const buffNames = logicRef.buffNames;
+                        ATKObjects.demiHyacineSkySHEET = {
+                            "stats": null,
+                            "source": "Memosprite Skill",
+                            "sourceOwner": memoTurn.properName,
+                            "buffName": buffNames.hyacineOde,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 999,
+                            "currentStacks": 2,
+                            "decay": false,
+                            "expireType": null,
+                            expireFunction: logicRef.skillFunctions.anaxaDemiBuffExpired,//I know this says anaxa, it's generalized though
+                            expireParam: targetTurn.name,
+                            "buffDisplayIcon": "misc/cyrene/Icon1415Servantskil.png",
+                        }
+                    }
+                    const buffSheet = ATKObjects.demiHyacineSkySHEET;
+                    buffSheet.currentStacks = 2;
+                    updateBuff(battleData,targetTurn,buffSheet);
+
+                    targetTurn.cyreneBonusTallyRatio = values[0];
+
+                    targetTurn.hasCyreneMemoBuff = true;
+                },
+                "Hysilens"(battleData,actionObject,memoTurn,cyreneTurn,targetTurn,logicRef) {
+                    // buffSlotAggy
+
+                    const ATKObjects = logicRef.ATKObjects;
+                    let skillRef = ATKObjects.demiBuffHysilensREF ??= ATKObjects["Memosprite Skill"]["Ode to Ocean"].variant1;
+                    let values = ATKObjects.demiBuffHysilensREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,cyreneTurn);
+
+                    if (!ATKObjects.demiHysilensOceanSHEET) {
+                        const buffNames = logicRef.buffNames;
+                        ATKObjects.demiHysilensOceanSHEET = {
+                            "stats": [DamageAll],
+                            [DamageAll]: values[0],
+                            "source": "Memosprite Skill",
+                            "sourceOwner": memoTurn.properName,
+                            "buffName": buffNames.hysilensOde,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "buffDisplayIcon": "misc/cyrene/Icon1415Servantskil.png",
+                        }
+                        ATKObjects.demiHysilensWarmthSHEET = {
+                            "stats": null,
+                            "source": "Memosprite Skill",
+                            "sourceOwner": memoTurn.properName,
+                            "buffName": buffNames.hysilensWarmth,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "buffDisplayIcon": "misc/cyrene/Icon1415Servantskil.png",
+                        }
+                    }
+
+                    if (!targetTurn.hasCyreneMemoBuff) {
+                        const buffSheet = ATKObjects.demiHysilensOceanSHEET;
+                        updateBuff(battleData,targetTurn,buffSheet);
+                        targetTurn.cyreneDetonateBasic = values[1];
+                        targetTurn.cyreneDetonateSkill = values[2];
+                    }
+                    const warmthSheet = ATKObjects.demiHysilensWarmthSHEET;
+                    updateBuff(battleData,targetTurn,warmthSheet);
+
+                    targetTurn.hasCyreneMemoBuff = true;
+                },
+                "Dan Heng • Permansor Terrae"(battleData,actionObject,memoTurn,cyreneTurn,targetTurn,logicRef,isDefaultCast) {
+                    // buffSlotAggy
+
+                    const ATKObjects = logicRef.ATKObjects;
+                    let skillRef = ATKObjects.demiBuffDHPTREF ??= ATKObjects["Memosprite Skill"]["Ode to Earth"].variant1;
+                    let values = ATKObjects.demiBuffDHPTREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,cyreneTurn);
+
+                    if (!ATKObjects.demiDHPTEarthSHEET) {
+                        const buffNames = logicRef.buffNames;
+                        ATKObjects.demiDHPTEarthSHEET = {
+                            "stats": null,
+                            "source": "Memosprite Skill",
+                            "sourceOwner": memoTurn.properName,
+                            "buffName": buffNames.dhptOde,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "buffDisplayIcon": "misc/cyrene/Icon1415Servantskil.png",
+                        }
+                        ATKObjects.demiDHPTBondmateSHEET = {
+                            "stats": [DamageAll],
+                            [DamageAll]: values[0],
+                            "source": "Memosprite Skill",
+                            "sourceOwner": memoTurn.properName,
+                            "buffName": buffNames.dhptOdeBondmate,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "buffDisplayIcon": "misc/cyrene/Icon1415Servantskil.png",
+                        }
+                    }
+
+                    if (!targetTurn.hasCyreneMemoBuff) {
+                        const buffSheet = ATKObjects.demiDHPTEarthSHEET;
+                        updateBuff(battleData,targetTurn,buffSheet);
+
+                        targetTurn.cyreneExtraAddProcRatio = values[3];
+                        targetTurn.cyreneBonusShieldRatio = values[4];
+
+                        const bondmateCyreneSheet = ATKObjects.demiDHPTBondmateSHEET;
+                        targetTurn.bondmateCyreneSheet = bondmateCyreneSheet;
+                        const bondmateSlot = targetTurn.battleValues.bondmateSlot;
+                        if (bondmateSlot) {
+                            const bondmateTurn = battleData.nameBasedTurns[bondmateSlot];
+                            updateBuff(battleData,bondmateTurn,bondmateCyreneSheet);
+                        }
+                        targetTurn.hasCyreneMemoBuff = true;
+                    }
+                    targetTurn.cyreneExtraAddProcs = 3;
+
+                    if (!isDefaultCast) {
+                        const souldragonTurn = targetTurn.dhptSouldragonTURNEVENT;
+                        actionAdvance(1,souldragonTurn,battleData,"DHPT Targeted by Demiurge")
+
+                        targetTurn.useBonusCyreneShield = true;
+                    };
+                },
+                "Evernight"(battleData,actionObject,memoTurn,cyreneTurn,targetTurn,logicRef) {
+                    // buffSlotAggy
+
+                    if (!targetTurn.hasCyreneMemoBuff) {
+                        const ATKObjects = logicRef.ATKObjects;
+                        let skillRef = ATKObjects.demiBuffEvernightREF ??= ATKObjects["Memosprite Skill"]["Ode to Time"].variant1;
+                        let values = ATKObjects.demiBuffEvernightREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,cyreneTurn);
+
+                        if (!ATKObjects.demiEvernightTimeSHEET) {
+                            const buffNames = logicRef.buffNames;
+                            ATKObjects.demiEvernightTimeSHEET = {
+                                "stats": null,
+                                "source": "Memosprite Skill",
+                                "sourceOwner": memoTurn.properName,
+                                "buffName": buffNames.evernightOde,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                                "buffDisplayIcon": "misc/cyrene/Icon1415Servantskil.png",
+                            }
+
+                            ATKObjects.demiEvernightTimeSHEETEvey = {
+                                "stats": [DamageAll],
+                                [DamageAll]: values[0],
+                                "source": "Memosprite Skill",
+                                "sourceOwner": memoTurn.properName,
+                                "buffName": buffNames.evernightOdeEvey,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                                "actionTags": ["EveyEnhanced"],
+                                "buffDisplayIcon": "misc/cyrene/Icon1415Servantskil.png",
+                            }
+                        }
+                        const buffSheet = ATKObjects.demiEvernightTimeSHEET;
+                        updateBuff(battleData,targetTurn,buffSheet);
+                        const eveyTurn = targetTurn.everEveyTURNEVENT;
+                        const buffSheet2 = ATKObjects.demiEvernightTimeSHEETEvey;
+                        updateBuff(battleData,eveyTurn,buffSheet2);
+
+                        targetTurn.cyreneConversionBonus = values[2];
+
+                        targetTurn.hasCyreneMemoBuff = true;
+
+                        if (targetTurn.evernightSkillIsActive) {
+                            turnLogic[targetTurn.properName].skillFunctions.evernightSkillCritDMG(battleData,targetTurn);
+                            //normally this would be a shit ass method, but bc this is only ever needing to forceproc ONCE per battle I'm ok with it
+                        }
+                    }
+                },
+                "Castorice"(battleData,actionObject,memoTurn,cyreneTurn,targetTurn,logicRef) {
+                    // buffSlotAggy
+
+                    if (!targetTurn.hasCyreneMemoBuff) {
+                        const ATKObjects = logicRef.ATKObjects;
+                        let skillRef = ATKObjects.demiBuffCastoriceREF ??= ATKObjects["Memosprite Skill"]["Ode to Life and Death"].variant1;
+                        let values = ATKObjects.demiBuffCastoriceREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,cyreneTurn);
+
+                        if (!ATKObjects.demiCastoriceLifeSHEET) {
+                            const buffNames = logicRef.buffNames;
+                            ATKObjects.demiCastoriceLifeSHEET = {
+                                "stats": null,
+                                "source": "Memosprite Skill",
+                                "sourceOwner": memoTurn.properName,
+                                "buffName": buffNames.casOde,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                                "buffDisplayIcon": "misc/cyrene/Icon1415Servantskil.png",
+                            }
+
+                            // ATKObjects.demiEvernightTimeSHEETEvey = {
+                            //     "stats": [DamageAll],
+                            //     [DamageAll]: values[0],
+                            //     "source": "Memosprite Skill",
+                            //     "sourceOwner": memoTurn.properName,
+                            //     "buffName": buffNames.evernightOdeEvey,
+                            //     "durationInTurn": null,
+                            //     "duration": 1,
+                            //     "AVApplied": 0,
+                            //     "maxStacks": 1,
+                            //     "currentStacks": 1,
+                            //     "decay": false,
+                            //     "expireType": null,
+                            //     "actionTags": ["EveyEnhanced"],
+                            //     "buffDisplayIcon": "misc/cyrene/Icon1415Servantskil.png",
+                            // }
+                        }
+
+
+                        targetTurn.casCyreneTargetCount = 2;
+                        targetTurn.casCyreneBaseBonus = values[1];
+                        targetTurn.casCyreneMetTargetBonus = values[4];
+
+                        const buffSheet = ATKObjects.demiCastoriceLifeSHEET;
+                        updateBuff(battleData,targetTurn,buffSheet);
+                        // const eveyTurn = targetTurn.everEveyTURNEVENT;
+                        // const buffSheet2 = ATKObjects.demiEvernightTimeSHEETEvey;
+                        // updateBuff(battleData,eveyTurn,buffSheet2);
+
+                        // targetTurn.cyreneConversionBonus = values[2];
+
+                        targetTurn.specialEnergyOverflowLimit = targetTurn.specialEnergyMax;
+                        //cas is already hooked up to genericSpecialWithOverflow(or some long name I gave it like that)
+                        //so this just needs to be done once and then overflow will always be enabled after
+
+                        targetTurn.hasCyreneMemoBuff = true;
+
+                        // if (targetTurn.evernightSkillIsActive) {
+                        //     turnLogic[targetTurn.properName].skillFunctions.evernightSkillCritDMG(battleData,targetTurn);
+                        //     //normally this would be a shit ass method, but bc this is only ever needing to forceproc ONCE per battle I'm ok with it
+                        // }
+                    }
+                },
+            },
+
+            //RMC
+            statCheckRMCHP(battleData,demiTurn) {
+                const nameBasedTurns = battleData.nameBasedTurns;
+                const currentTurn = nameBasedTurns[demiTurn.eventOwner];
+                const logicRef = turnLogic[currentTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.demiBuffRMCREF ??= ATKObjects["Memosprite Skill"]["Ode to Genesis"].variant1;
+                let values = ATKObjects.demiBuffRMCREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,currentTurn);
+
+                if (!ATKObjects.rmcATKConversionSHEET) {
+                    const characterName = demiTurn.properName;
+                    const buffNames = logicRef.buffNames;
+                    ATKObjects.rmcATKConversionSHEET = {
+                        "stats": [ATKFlat,ATKFlatNULL],
+                        [ATKFlat]: 0,
+                        [ATKFlatNULL]: -0,
+                        "source": "Memosprite Skill",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.rmcBuffATK,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "buffDisplayIcon": "misc/cyrene/Icon1415Servantskil.png",
+                    }
+                }
+                const buffSheet = ATKObjects.rmcATKConversionSHEET;
+
+                const ratio = values[0];
+
+                const currentStats = demiTurn.statTable;
+                const finalHP = calcs.getHPFinal(currentStats).HPFinal + currentStats[HPFlatNULL];
+
+                const conversion = +(finalHP * ratio).toFixed(7);
+
+                const RMCTurn = nameBasedTurns[currentTurn.buffSlotRMC];
+                console.log(currentTurn.buffSlotRMC)
+                const memTurn = RMCTurn.rmcMemTURNEVENT;
+
+                const buffCheck1 = RMCTurn.buffsObject[buffSheet.buffName];
+                if (buffCheck1) {//if the HP buff exists
+                    const currentValue = buffCheck1[ATKFlat];
+
+                    if (currentValue === conversion) {return;}
+                    else {
+                        removeBuff(battleData,RMCTurn,buffCheck1,true);
+                        removeBuff(battleData,memTurn,buffCheck1,true);
+                    }
+                }
+                buffSheet[ATKFlat] = conversion;
+                buffSheet[ATKFlatNULL] = -conversion;
+
+                updateBuff(battleData,RMCTurn,buffSheet);
+                updateBuff(battleData,memTurn,buffSheet);
+            },
+            statCheckRMCCrit(battleData,demiTurn) {
+                const nameBasedTurns = battleData.nameBasedTurns;
+                const currentTurn = nameBasedTurns[demiTurn.eventOwner];
+                const logicRef = turnLogic[currentTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.demiBuffRMCREF ??= ATKObjects["Memosprite Skill"]["Ode to Genesis"].variant1;
+                let values = ATKObjects.demiBuffRMCREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,currentTurn);
+
+                if (!ATKObjects.rmcCritConversionSHEET) {
+                    const characterName = demiTurn.properName;
+                    const buffNames = logicRef.buffNames;
+                    ATKObjects.rmcATKConversionSHEET = {
+                        "stats": [CritRateBase,CritRateBaseNULL],
+                        [CritRateBase]: 0,
+                        [CritRateBaseNULL]: -0,
+                        "source": "Memosprite Skill",
+                        "sourceOwner": characterName,
+                        "buffName": buffNames.rmcBuffCrit,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "buffDisplayIcon": "misc/cyrene/Icon1415Servantskil.png",
+                    }
+                }
+                const buffSheet = ATKObjects.rmcATKConversionSHEET;
+
+                const ratio = values[1];
+
+                const currentStats = demiTurn.statTable;
+                const finalHP = currentStats[CritRateBase];
+                const conversion = +(finalHP * ratio).toFixed(7);
+
+                const RMCTurn = nameBasedTurns[currentTurn.buffSlotRMC];
+                const memTurn = RMCTurn.rmcMemTURNEVENT;
+
+                const buffCheck1 = RMCTurn.buffsObject[buffSheet.buffName];
+                if (buffCheck1) {//if the HP buff exists
+                    const currentValue = buffCheck1[CritRateBase];
+
+                    if (currentValue === conversion) {return;}
+                    else {
+                        removeBuff(battleData,RMCTurn,buffCheck1,true);
+                        removeBuff(battleData,memTurn,buffCheck1,true);
+                    }
+                }
+                buffSheet[CritRateBase] = conversion;
+                buffSheet[CritRateBaseNULL] = -conversion;
+
+                updateBuff(battleData,RMCTurn,buffSheet);
+                updateBuff(battleData,memTurn,buffSheet);
+            },
+            //AGLAEA
+            aggyRomanticEnergy(battleData,aggyTurn,cyreneTurn) {
+                const logicRef = turnLogic[cyreneTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let values = ATKObjects.demiBuffAggyREFVALUES;
+                const regenValue = values[0];
+
+                updateEnergy(battleData,regenValue,aggyTurn,false,"Aglaea/Garmentmaker attacked and consumed Romantic");
+                const romanticSheet = ATKObjects.aggyRomanticSHEET;
+                removeBuff(battleData,aggyTurn,romanticSheet);
+            },
+            //ANAXA
+            anaxaEruditionBuff(battleData,anaxaTurn,cyreneTurn) {
+                const logicRef = turnLogic[cyreneTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                if (!ATKObjects.demiAnaxaEruditionATKSHEET) {
+                    const buffNames = logicRef.buffNames;
+
+                    let values = ATKObjects.demiBuffAnaxaREFVALUES;
+
+                    ATKObjects.demiAnaxaEruditionCOUNTDOWNSHEET = {
+                        "stats": null,
+                        "source": "Memosprite Skill",
+                        "sourceOwner": anaxaTurn.properName,
+                        "buffName": buffNames.anaxaEruditionOwner,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "StartTurn",
+                        expireFunction: logicRef.skillFunctions.anaxaBuffZoneExpired,
+                        expireParam: [buffNames.anaxaEruditionATK,buffNames.anaxaEruditionDMG,anaxaTurn.name],
+                        // "buffDisplayIcon": "misc/cyrene/Icon1415Servantskil.png",
+                    }
+                    ATKObjects.demiAnaxaEruditionATKSHEET = {
+                        "stats": [ATKP],
+                        [ATKP]: values[2],
+                        "source": "Memosprite Skill",
+                        "sourceOwner": anaxaTurn.properName,
+                        "buffName": buffNames.anaxaEruditionATK,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        // "buffDisplayIcon": "misc/cyrene/Icon1415Servantskil.png",
+                    }
+                    ATKObjects.demiAnaxaEruditionDMGSHEET = {
+                        "stats": [DamageAll],
+                        [DamageAll]: values[1],
+                        "source": "Memosprite Skill",
+                        "sourceOwner": anaxaTurn.properName,
+                        "buffName": buffNames.anaxaEruditionDMG,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "actionTags": ["Skill"],
+                        // "buffDisplayIcon": "misc/cyrene/Icon1415Servantskil.png",
+                    }
+                }
+                const zoneSheet = ATKObjects.demiAnaxaEruditionCOUNTDOWNSHEET;
+                const ATKSheet = ATKObjects.demiAnaxaEruditionATKSHEET;
+                const DMGSheet = ATKObjects.demiAnaxaEruditionDMGSHEET;
+
+                updateBuff(battleData,anaxaTurn,zoneSheet);
+
+                const fullCharacterArray = battleData.fullCharacterArray;
+                const eruditionCharacters = [];
+                for (let character of fullCharacterArray) {
+                    if (character.path === "Erudition") {
+                        eruditionCharacters.push(character);
+                    }
+                }
+
+                updateBuffBatchTargets(battleData,eruditionCharacters,ATKSheet);
+                updateBuffBatchTargets(battleData,eruditionCharacters,DMGSheet);
+            },
+            anaxaBuffZoneExpired(battleData,expireParam) {
+                const ATKName = expireParam[0]
+                const DMGName = expireParam[1];
+                const anaxaSlot = expireParam[2]
+
+                const anaxaTurn = battleData.nameBasedTurns[anaxaSlot];
+                const buffsObject = anaxaTurn.buffsObject;
+
+                const ATKBuff = buffsObject[ATKName];
+                const dmgBuff = buffsObject[DMGName];
+
+                const fullCharacterArray = battleData.fullCharacterArray;
+                const eruditionCharacters = [];
+                for (let character of fullCharacterArray) {
+                    if (character.path === "Erudition") {
+                        eruditionCharacters.push(character);
+                    }
+                }
+
+                removeBuffFromBatch(battleData,eruditionCharacters,ATKBuff);
+                removeBuffFromBatch(battleData,eruditionCharacters,dmgBuff);
+            },
+            anaxaDemiBuffExpired(battleData,expireParam) {//WE USE THIS FOR HYACINE TOO SINCE ITS THE SAME METHOD
+                const anaxaTurn = battleData.nameBasedTurns[expireParam];
+                anaxaTurn.hasCyreneMemoBuff = false;
+            },
+            //HYSILENS
+            hysilensDetonateBasic(battleData,ownerTurn,cyreneTurn,generalInfo) {
+                const basicMulti = ownerTurn.cyreneDetonateBasic;
+                const targetsGotHit = generalInfo.targetsGotHit;
+                const enemyTurns = battleData.enemyBasedTurns;
+                for (let enemySlot in targetsGotHit) {
+                    const currentEnemy = enemyTurns[enemySlot];
+                    if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
+
+                    dotDetonateWrapper(battleData,ownerTurn,basicMulti,currentEnemy);
+                }
+            },
+            hysilensDetonateSkill(battleData,ownerTurn,cyreneTurn,generalInfo) {
+                const skillMulti = ownerTurn.cyreneDetonateSkill;
+                const targetsGotHit = generalInfo.targetsGotHit;
+                const enemyTurns = battleData.enemyBasedTurns;
+                for (let enemySlot in targetsGotHit) {
+                    const currentEnemy = enemyTurns[enemySlot];
+                    if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
+
+                    dotDetonateWrapper(battleData,ownerTurn,skillMulti,currentEnemy);
+                }
+            },
+            heirsActive: null,
+        },
+        heirsSet: new Set([
+            "Phainon",                              //NO GO (yet)
+            "Cerydra",                              //NO GO
+            "Cipher",                               //NO GO
+            "Mydei",                                //NO GO
+            "Hysilens",                             //DONE
+            "Tribbie",                              //DONE
+            "Dan Heng • Permansor Terrae",          //DONE
+            "Aglaea",                               //DONE
+            "Castorice",                            //DONE
+            "Evernight",                            //DONE
+            "Hyacine",                              //DONE
+            "Trailblazer - Remembrance",            //DONE
+            "Anaxa",                                //DONE
+        ]),
+        heirsSetOneAndDone: new Set([
+            "Castorice",
+            "Evernight",
+            "Tribbie",
+            "Trailblazer - Remembrance",
+        ]),
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+                    const ATKObjects = logicRef.ATKObjects;
+
+
+                    const demiTurn = ownerTurn.cyreneDemiTURNEVENT;
+
+                    const actionTags2 = ["All","Heal"];
+                    const compositeCacheTag2 = actionTags2 + demiTurn.properName;
+                    ATKObjects.demiHPChangeHEALOBJECT ??= {
+                        multipliers: {
+                            primary: 0,
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: null,
+                        DMGTags: [],
+                        slot: "Memosprite Talent",
+                        actionTags: actionTags2,
+                        compositeCacheTag: compositeCacheTag2
+                    }
+
+                    demiTurn.hpChangeObject = ATKObjects.demiHPChangeHEALOBJECT;
+
+                    //talent inherents
+                    //trace Causality in Trichotomy
+                    const listener1 = passiveListeners[0];
+                    addListenerWithPriority(battleData,listener1,listener1.trigger,ownerTurn);
+                    listener1.condition(battleData,null);//force proc the spd conversion to start with, then all future spd changes AFTER this point will trigger it again
+
+                    const futureSheet = this.futureSheet ??= {
+                        "stats": null,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.future,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "buffDisplayIcon": "misc/cyrene/Icon1415Passive3.png",
+                    }
+                    ownerTurn.futureSheet = futureSheet;
+
+                    //trace Ripples Across Time + E2 energy
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+
+                    let skillRef = ATKObjects.cyreneTalentREF ??= ATKObjects["Talent"]["Hearts Gather as One"].variant1;
+                    let values = ATKObjects.cyreneTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                    const buffSheet = ATKObjects.cyreneTalentFieldDMGSHEET ??= {
+                        "stats": [DamageAll],
+                        [DamageAll]: values[1],
+                        "source": "Talent",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": turnLogic[ownerTurn.properName].buffNames.talentFieldDMG,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+
+                    const allAlliesArray = battleData.allAlliesArray;
+                    updateBuffBatchTargets(battleData,allAlliesArray,buffSheet);
+
+                    //ally true dmg and future action energy gain
+                    const listener3 = passiveListeners[2];
+                    const listener4 = passiveListeners[3];
+                    for (let ally of allAlliesArray) {
+                        addListenerWithPriority(battleData,listener3,listener3.trigger,ally,null,ownerTurn);
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,ally,null,ownerTurn);
+                    }
+
+                    //cyrene future reset
+                    const listener5 = passiveListeners[4];
+                    addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+                    
+                    //ult end story gain
+                    const listener6 = passiveListeners[5];
+                    addListenerWithPriority(battleData,listener6,listener6.trigger,ownerTurn);
+
+                    if (rank >= 4) {
+                        const listener7 = passiveListeners[6];
+                        addListenerWithPriority(battleData,listener7,listener7.trigger,demiTurn);
+                    }
+
+                    //story extra turn marking listener
+                    const listener8 = passiveListeners[7];
+                    addListenerWithPriority(battleData,listener8,listener8.trigger,demiTurn,null,ownerTurn);
+
+                    if (rank >= 6) {
+                        const listener9 = passiveListeners[8];
+                        addListenerWithPriority(battleData,listener9,listener9.trigger,demiTurn,null,ownerTurn);
+                    }
+
+                    //hp sync
+                    const listener10 = passiveListeners[9];
+                    addListenerWithPriority(battleData,listener10,listener10.trigger,ownerTurn);
+
+
+
+                    //--------------------------------CHRYSOS FUCKERY-------------------------------------
+
+                    const heirsActive = logicRef.skillFunctions.heirsActive = {
+                        "Phainon": false,
+                        "Cerydra": false,
+                        "Cipher": false,
+                        "Mydei": false,
+                        "Hysilens": false,
+                        "Tribbie": false,
+                        "Dan Heng • Permansor Terrae": false,
+                        "Aglaea": false,
+                        "Castorice": false,
+                        "Evernight": false,
+                        "Hyacine": false,
+                        "Trailblazer - Remembrance": false,
+                        "Anaxa": false,
+                    };
+                    // const heirsActive = logicRef.skillFunctions.heirsActive;
+                    const heirsSet = logicRef.heirsSet;
+                    const fullCharacterArray = battleData.fullCharacterArray;
+
+                    for (let character of fullCharacterArray) {
+                        if (heirsSet.has(character.properName)) {
+                            heirsActive[character.properName] = character.name;
+                        }
+                    }
+
+                    const allyturns = battleData.nameBasedTurns;
+                    const rmcCheck = heirsActive["Trailblazer - Remembrance"];
+                    if (rmcCheck) {
+                        ownerTurn.buffSlotRMC = rmcCheck;
+                        //abilityEnd
+                        const rmcTurn = allyturns[rmcCheck];
+                        const listener11 = passiveListeners[10];
+                        addListenerWithPriority(battleData,listener11,listener11.trigger,rmcTurn,null,ownerTurn);
+
+                        //hp changes on demiurge
+                        const listener12 = passiveListeners[11];
+                        addListenerWithPriority(battleData,listener12,listener12.trigger,demiTurn,null,ownerTurn);
+
+                        //crit changes on demiurge
+                        const listener13 = passiveListeners[12];
+                        addListenerWithPriority(battleData,listener13,listener13.trigger,demiTurn,null,ownerTurn);
+                    }
+
+                    const aggyCheck = heirsActive["Aglaea"];
+                    if (aggyCheck) {
+                        ownerTurn.buffSlotAggy = aggyCheck;
+                        const aggyTurn = allyturns[aggyCheck];
+
+                        const listener14 = passiveListeners[13];
+                        const listener15 = passiveListeners[14];
+                        addListenerWithPriority(battleData,listener14,listener14.trigger,aggyTurn,null,ownerTurn);
+                        addListenerWithPriority(battleData,listener15,listener15.trigger,aggyTurn,null,ownerTurn);
+                    }
+
+                    const tribbieCheck = heirsActive["Tribbie"];
+                    if (tribbieCheck) {
+                        ownerTurn.buffSlotTribbie = tribbieCheck;
+                        const tribbieTurn = allyturns[tribbieCheck];
+
+                        const listener16 = passiveListeners[15];
+                        addListenerWithPriority(battleData,listener16,listener16.trigger,tribbieTurn,null,ownerTurn);
+                    }
+
+                    const anaxaCheck = heirsActive["Anaxa"];
+                    if (anaxaCheck) {
+                        ownerTurn.buffSlotAggy = anaxaCheck;
+                        const anaxaTurn = allyturns[anaxaCheck];
+
+                        const listener17 = passiveListeners[16];
+                        addListenerWithPriority(battleData,listener17,listener17.trigger,anaxaTurn,null,ownerTurn);
+                    }
+
+                    const hyacineCheck = heirsActive["Hyacine"];
+                    if (hyacineCheck) {
+                        ownerTurn.buffSlotHyacine = hyacineCheck;
+                        const hyacineTurn = allyturns[hyacineCheck];
+
+                        const listener18 = passiveListeners[17];
+                        addListenerWithPriority(battleData,listener18,listener18.trigger,hyacineTurn,null,ownerTurn);
+                    }
+
+                    const hysilensCheck = heirsActive["Hysilens"];
+                    if (hysilensCheck) {
+                        ownerTurn.buffSlotHysilens = hysilensCheck;
+                        const hyacineTurn = allyturns[hysilensCheck];
+
+                        const listener19 = passiveListeners[18];
+                        addListenerWithPriority(battleData,listener19,listener19.trigger,hyacineTurn,null,ownerTurn);
+
+                        const listener20 = passiveListeners[19];
+                        addListenerWithPriority(battleData,listener20,listener20.trigger,ownerTurn);
+                        
+                    }
+
+                    const dhptCheck = heirsActive["Dan Heng • Permansor Terrae"];
+                    if (dhptCheck) {
+                        ownerTurn.buffSlotDHPT = dhptCheck;
+                    }
+
+                    const evernightCheck = heirsActive["Evernight"];
+                    if (evernightCheck) {
+                        ownerTurn.buffSlotEvernight = evernightCheck;
+                        const evernightTurn = allyturns[evernightCheck];
+
+                        const listener21 = passiveListeners[20];
+                        addListenerWithPriority(battleData,listener21,listener21.trigger,evernightTurn,null,ownerTurn);
+
+                        // const listener20 = passiveListeners[19];
+                        // addListenerWithPriority(battleData,listener20,listener20.trigger,ownerTurn);
+                        
+                    }
+
+                    const castoriceCheck = heirsActive["Castorice"];
+                    if (castoriceCheck) {
+                        ownerTurn.buffSlotCastorice = castoriceCheck;
+                        // const castoriceTurn = allyturns[castoriceCheck];
+                    }
+
+                    
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,true)
+                },
+                "target": "self",
+                "listenerName": "Cyrene Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "UpdateStatSPD",//SPD stat family
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck
+                            statCheck(battleData,ownerTurn);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Causality in Trichotomy SPD check",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+                            let ownerTurn = this.ownerTurn;
+
+                            const futureSheet = ownerTurn.futureSheet;
+                            const demiTurn = ownerTurn.cyreneDemiTURNEVENT;
+
+
+                            let validCharacters = 0;
+                            const heirsSet = this.heirsSet ??= turnLogic[ownerTurn.properName].heirsSet;
+                            const stackValueArray = this.stackValueArray ??= [2,3,6];
+
+                            const fullCharacterArray = battleData.fullCharacterArray;;
+
+                            for (let ally of fullCharacterArray) {
+                                const allyName = ally.properName;
+                                if (allyName === ownerTurn.properName) {continue}
+                                const allyPath = ally.path;
+
+                                if (heirsSet.has(allyName) || allyPath === "Remembrance") {
+                                    validCharacters += 1;
+                                }
+                            }
+
+                            if (validCharacters) {
+                                const stacksToGain = stackValueArray[Math.min(3,validCharacters)-1];
+                                const exoObject2 = this.exoObject2 ??= {pointsGained: 0,sourceString:"Battlestart Chrysos Heirs & Remembrance Character Count"};
+                                exoObject2.pointsGained = stacksToGain;
+                                poke("CyreneGainRecollection",battleData,exoObject2);
+                            }
+
+
+                            if (ownerTurn.rank >= 2) {
+                                const exoObject = this.exoObject ??= {pointsGained: 12,sourceString:"E2 energy gain"};
+                                poke("CyreneGainRecollection",battleData,exoObject);
+                            }
+
+                            const allAlliesArray = battleData.allAlliesArray;
+                            for (let ally of allAlliesArray) {
+                                if (ally.properName === ownerTurn.properName || ally.properName === demiTurn.properName) {continue;}
+                                updateBuff(battleData,ally,futureSheet);
+                            }
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Cyrene battlestart energy gain",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyDMGEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const providerTurn = this.providerTurn;
+                            if (!providerTurn.battleValues.skillZoneActive) {return;}
+        
+                            let trueBase = null;
+                            let trueCrit = null;
+                            let trueAVG = null;
+                            const targetTurn = generalInfo.targetTurn;
+        
+                            if (generalInfo.DMGTotalEndBreak) {
+                                trueBase = generalInfo.DMGTotalEndBreak;
+                            }
+                            else if (generalInfo.DMGTotalCrit) {
+                                trueBase = generalInfo.DMGTotalEnd;
+                                trueCrit = generalInfo.DMGTotalCrit;
+                                trueAVG = generalInfo.DMGTotalAVG;
+                            }
+                            else if (generalInfo.DMGTotalAVG) {
+                                trueBase = generalInfo.DMGTotalEnd;
+                                trueAVG = generalInfo.DMGTotalAVG;
+                            }
+                            else {
+                                trueBase = generalInfo.DMGTotalEnd;
+                            }
+        
+                            let values = providerTurn.cyreneSkillREFVALUES;
+                            const bonusMulti = providerTurn.rank >= 2 ? (providerTurn.battleValues.totalUniqueAlliesBuffed * 0.06) : 0;
+                            const trueDMGMulti = values[0] + bonusMulti;
+                            trueDMGHitWrapper(battleData,personalOwner,targetTurn,trueDMGMulti,trueBase,trueCrit,trueAVG,"Cyrene Skill Zone");
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Skill zone true dmg handling",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo,personalOwner) {
+                            // const providerTurn = this.providerTurn;
+
+                            const futureName = this.futureName ??= this.providerTurn.futureSheet.buffName;
+                            const buffCheck = personalOwner.buffsObject[futureName];
+
+                            if (buffCheck) {
+                                const exoObject2 = this.exoObject2 ??= {pointsGained: 1,sourceString:"Ally with Future took action"};
+                                poke("CyreneGainRecollection",battleData,exoObject2);
+                                if (!personalOwner.isMemosprite) {
+                                    removeBuff(battleData,personalOwner,buffCheck);
+                                }
+
+                                if (!personalOwner.cyreneEgoTracker) {
+                                    personalOwner.cyreneEgoTracker = true;
+
+                                    const providerTurn = this.providerTurn;
+                                    providerTurn.battleValues.cyreneEgoTrackerSUM += 1;
+                                }
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Cyrene ally action recollection gain",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const ownerTurn = this.ownerTurn;
+                            const futureSheet = ownerTurn.futureSheet;
+
+                            const fullCharacterArray = battleData.fullCharacterArray;
+                            for (let character of fullCharacterArray) {
+                                if (character.properName === ownerTurn.properName) {continue;}
+                                updateBuff(battleData,character,futureSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Cyrene action end future reapplication",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+
+                            const exoObject = this.exoObject ??= {pointsGained: 1,sourceString:"Cyrene Ultimate"};
+                            poke("CyreneGainStory",battleData,exoObject);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Cyrene ult end story gain",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const action = generalInfo.action;
+                            if (action != "MemoSkill" || !generalInfo.isAttack) {return;}
+
+                            const exoObject = this.exoObject ??= {pointsGained: 1,sourceString:"E4 Use Count"};
+                            poke("CyreneGainE4Count",battleData,exoObject);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Cyrene E4 demi used attack count",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "ExtraTurnStart",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const queueTag = generalInfo.queueTag;
+                            if (queueTag != "DemiurgeStoryEXTurn") {return;}
+
+                            const providerTurn = this.providerTurn;
+                            providerTurn.battleValues.cyreneStoryQueueActive = true;
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Cyrene E1 story turn start tracker",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "EnemyCreated",
+                        condition(battleData,generalInfo) {
+                            const targetTurn = generalInfo.slotRef;
+
+                            const providerTurn = this.providerTurn;
+                            if (providerTurn.battleValues.e6Used) {
+                                const zoneSheet = this.zoneSheet ??= turnLogic[providerTurn.properName].ATKObjects.cyreneE6ZoneSheet;
+                                updateBuff(battleData,targetTurn,zoneSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Cyrene E6 enemy created in zone",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyHPChange",
+                        condition(battleData,generalInfo) {
+                            const ownerTurn = this.ownerTurn;
+                            if (!ownerTurn.battleValues.demiIsActive) {return;}
+                            const demiurgeMatchHP = this.demiurgeMatchHP ??= turnLogic[ownerTurn.properName].skillFunctions.demiurgeMatchHP;
+                            demiurgeMatchHP(battleData,ownerTurn);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Cyrene HP Change to Demi",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo,personalOwner) {
+                            const action = generalInfo.action;
+                            if (action != "BasicATK" || !generalInfo.isEnhanced || !personalOwner.hasCyreneMemoBuff) {return;}
+
+                            poke("CyreneQueueDemiRMCTurn",battleData,null,null);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "RMC EBA with cyrene buff active",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UpdateStatHP",//HP stat family
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            if (!ownerTurn.isActive || !ownerTurn.rmcBuffActive) {return;}
+
+                            const statCheck = this.statCheck ??= turnLogic[battleData.nameBasedTurns[ownerTurn.eventOwner]].skillFunctions.statCheckRMCHP
+                            statCheck(battleData,ownerTurn);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Cyrene RMC Buff HP changes",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UpdateStatCrit",//HP stat family
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            if (!ownerTurn.isActive || !ownerTurn.rmcBuffActive) {return;}
+
+                            const statCheck = this.statCheck ??= turnLogic[battleData.nameBasedTurns[ownerTurn.eventOwner]].skillFunctions.statCheckRMCCrit
+                            statCheck(battleData,ownerTurn);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Cyrene RMC Buff Crit changes",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            if (!ownerTurn.hasCyreneMemoBuff) {return;}
+
+                            const romanceName = this.romanceName ??= turnLogic.Cyrene.buffNames.aggyRomantic;
+                            const buffCheck = ownerTurn.buffsObject[romanceName];
+                            if (!buffCheck) {return;}
+
+                            const providerTurn = this.providerTurn;
+                            const energyGain = this.energyGain ??= turnLogic[providerTurn.properName].skillFunctions.aggyRomanticEnergy;
+                            energyGain(battleData,ownerTurn,providerTurn)
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Aglaea attacked with Romantic Active handler",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy) {return}
+                            let ownerTurn = this.ownerTurn;
+                            if (!ownerTurn.hasCyreneMemoBuff) {return;}
+
+                            const garmentTurn = ownerTurn.aggyGarmentTURNEVENT;
+                            if (sourceTurn.properName != garmentTurn.properName) {return;}
+
+                            const romanceName = this.romanceName ??= turnLogic.Cyrene.buffNames.aggyRomantic;
+                            const buffCheck = ownerTurn.buffsObject[romanceName];
+                            if (!buffCheck) {return;}
+
+                            const providerTurn = this.providerTurn;
+                            const energyGain = this.energyGain ??= turnLogic[providerTurn.properName].skillFunctions.aggyRomanticEnergy;
+                            energyGain(battleData,ownerTurn,providerTurn)
+                        },
+                        "target": "self",
+                        // "isPersonal": true,
+                        "listenerName": "Aglaea's Garmentmaker attacked with Romantic Active handler",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackStart",
+                        condition(battleData,generalInfo) {
+                            const providerTurn = this.providerTurn;
+                            const sourceTurn = generalInfo.sourceTurn;
+
+                            const tribbieSlot = providerTurn.buffSlotTribbie;
+                            const tribbieTurn = battleData.nameBasedTurns[tribbieSlot];
+
+                            if (!tribbieTurn.hasCyreneMemoBuff) {return;}
+
+                            let isFUA = false;
+                            const actionTags = generalInfo.ATKObject.actionTags;
+                            for (let tag of actionTags) {
+                                if (tag === "FUA") {
+                                    isFUA = true;
+                                    break;
+                                }
+                            }
+
+
+                            if (isFUA && sourceTurn.name === providerTurn.buffSlotTribbie) {
+                                tribbieTurn.cyreneExtraZoneCount = 1;
+                            }
+                            else {
+                                tribbieTurn.cyreneExtraZoneCount = 0;
+                            }
+                        },
+                        "target": "self",
+                        // "isPersonal": true,
+                        "listenerName": "Tribbie buff ATKStart zonecount handler",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Skill" && action != "BasicATK") {return;}
+                            
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (!sourceTurn.hasCyreneMemoBuff) {return;}
+
+
+                            const providerTurn = this.providerTurn;
+                            const ownerTurn = this.ownerTurn;
+                            const anaxaEruditionBuff = this.anaxaEruditionBuff ??= turnLogic[providerTurn.properName].skillFunctions.anaxaEruditionBuff;
+                            anaxaEruditionBuff(battleData,ownerTurn,providerTurn);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Anaxa buffed basic/skill start erudition buff handler",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Skill" && action != "Ultimate") {return;}
+                            
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (!sourceTurn.hasCyreneMemoBuff) {return;}
+
+                            const buffSheet = this.buffSheet ??= turnLogic[this.providerTurn.properName].ATKObjects.demiHyacineSkySHEET;
+                            buffSheet.currentStacks = -1;
+
+
+                            const ownerTurn = this.ownerTurn;
+                            const buffCheck = ownerTurn.buffsObject[buffSheet.buffName];
+                            if (buffCheck.currentStacks === 1) {
+                                removeBuff(battleData,ownerTurn,buffCheck);
+                            }
+                            else {
+                                updateBuff(battleData,ownerTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Hyacine post-cyrene buff stack removal",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            const ownerTurn = this.ownerTurn;
+                            const warmthName = this.buffName ??= turnLogic[this.providerTurn.properName].buffNames.hysilensWarmth;
+                            const buffCheck = ownerTurn.buffsObject[warmthName];
+                            if (buffCheck) {
+                                updateEnergy(battleData,60,ownerTurn,false,"Flowing Warmth");
+                                removeBuff(battleData,ownerTurn,buffCheck);
+                            }
+
+                            const dmgSlot = generalInfo.dmgSlot;
+                            if (dmgSlot != "Skill" && dmgSlot != "Basic ATK") {return;}
+                            
+                            const providerTurn = this.providerTurn;
+
+                            if (dmgSlot === "Skill") {
+                                const detonateSkill = this.detonateSkill ??= turnLogic[providerTurn.properName].skillFunctions.hysilensDetonateSkill;
+                                detonateSkill(battleData,ownerTurn,providerTurn,generalInfo)
+                            }
+                            else {
+                                const detonateBasic = this.detonateBasic ??= turnLogic[providerTurn.properName].skillFunctions.hysilensDetonateBasic;
+                                detonateBasic(battleData,ownerTurn,providerTurn,generalInfo)
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Hysilens post atk checks handler",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AllyDMGStart",
+                        condition(battleData,generalInfo) {
+                            const ownerTurn = this.ownerTurn;
+
+                            const hysilensSlot = ownerTurn.buffSlotHysilens;
+                            const hysilensTurn = battleData.nameBasedTurns[hysilensSlot];
+                            if (!hysilensTurn.hasCyreneMemoBuff) {return;}
+
+                            const currentLimit = hysilensTurn.hysilensFieldProcLimit;
+                            const targetTurn = generalInfo.targetTurn;
+                            const currentCount = targetTurn.hysilensFieldProcCounter ??= 0;
+                            if (currentCount >= currentLimit) {return;}
+
+                            targetTurn.hysilensFieldProcCounter += 1;
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Hysilens listen for Cyrene dmg(not demiurge) for zone procs",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Skill" && action != "Ultimate") {return;}
+                            
+                            const ownerTurn = this.ownerTurn;
+                            if (!ownerTurn.hasCyreneMemoBuff) {return;}
+                            const exoObject = this.exoObject ??= {pointsGained: 1,sourceString:"Ode to Time"};
+                            poke("EvernightGainMemoria",battleData,exoObject);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Evernight skill/ult cyrene memoria gain handler",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
+                "trigger": "CyreneGainRecollection",
+                condition(battleData,generalInfo) {
+                    // poke("CyreneGainRecollection",battleData,{pointsGained: 1,sourceString:"asdf"});
+
+                    let ownerTurn = this.ownerTurn;
+                    const generalData = this.generalData ??= {summerName: "cyreneSpecialOverflowSummerTBD",overflowName: "recollectionOverflow",
+                        baseString: "Recollection",displayIcon:"/HonkaiSR/misc/cyrene/Icon1415Passive.png"};
+                    // const oldValue = ownerTurn.battleValues.prana;
+                    // const valueWasDiff = genericSpecialOverflow(battleData,ownerTurn,generalInfo,generalData);
+                    genericSpecialOverflow(battleData,ownerTurn,generalInfo,generalData);
+                },
+                "target": "self",
+                "listenerName": "Recollection Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "CyreneGainStory",
+                condition(battleData,generalInfo) {
+                    // poke("CyreneGainStory",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    const generalData = this.generalData ??= {summerName: "cyreneStoryCountSum",baseName: "cyreneStory",maxName: null,maxNameDisplay: "cyreneStoryMax",minName: null,isRealSubEnergy: true,
+                        baseString: "Story (Cyrene)",displayIcon:"/HonkaiSR/misc/cyrene/Icon1415Passive2.png"};
+                    // const oldValue = ownerTurn.battleValues.prana;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
+
+                    poke("CyreneQueueDemiStoryTurn",battleData,null);
+                },
+                "target": "self",
+                "listenerName": "Cyrene Story handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "CyreneGainE4Count",
+                condition(battleData,generalInfo) {
+                    // poke("CyreneGainE4Count",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+                    const generalData = this.generalData ??= {summerName: "cyreneE4CountSum",baseName: "e4Count",maxName: "e4CountMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "E4 Count (Cyrene)",displayIcon:"/HonkaiSR/misc/cyrene/Icon1415Passive2.png"};
+                    // const oldValue = ownerTurn.battleValues.prana;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
+                },
+                "target": "self",
+                "listenerName": "Cyrene E4 count handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "EntityConstruction",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const logicRef = turnLogic[ownerTurn.properName];
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    const charValuesRef = ownerTurn.battleValues;
+
+                    ownerTurn.specialEnergy = true;
+                    ownerTurn.specialEnergyMax = 24;
+                    ownerTurn.specialEnergyCurrent = 0;
+                    ownerTurn.specialEnergyOverflowLimit = 3;
+                    ownerTurn.specialEnergyEvent = "CyreneGainRecollection";
+                    charValuesRef.specialEnergyCurrentName = "recollectionCurrent";
+                    charValuesRef.specialEnergyMaxName = "recollectionMax";
+
+
+
+                    // battleData.nameIndex[properName] = characterEntry;
+                    const cyreneMenuStats = [...battleData.menuStats[ownerTurn.name]];
+                    let skillRef = ATKObjects.cyreneUltimateREF ??= ATKObjects["Ultimate"]["Verse ◦ Vow ∞"].variant1;
+                    let values = ATKObjects.cyreneUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                    //DO NOT REMOVE THIS LATER, I know it's not used HERE but it is used in the actual ult later
+
+                    cyreneMenuStats[SPDBase] = 0;
+                    cyreneMenuStats[SPDFlat] = 0;
+                    cyreneMenuStats[SPDP] = 0;
+                    cyreneMenuStats[SPDOverride] = 0;
+                    cyreneMenuStats[SPDOverrideFlag] = 1;
+
+                    cyreneMenuStats[LVL] = 80;
+
+                    // let AggroStats = calcs.getAggroFinal(cyreneMenuStats);
+                    // let SPDStats = calcs.getSPDFinal(cyreneMenuStats);
+                    let HPStats = calcs.getHPFinal(cyreneMenuStats);
+
+                    const skillFunctionsRef = logicRef.skillFunctions;
+
+                    const properName = "Demiurge";
+                    const slotName = "cyreneMemosprite";
+                    const turnKey = "cyreneDemiTURNEVENT";
+                    const ActionEntry = {
+                        AV:0,
+                        AVBase:0,
+                        SPD:0,
+
+                        currentHP: HPStats.HPFinal,
+                        maxHP: HPStats.HPFinal,
+
+                        currentAggro: 0,
+                        baseAggro: 0,
+
+                        maxEnergy: ownerTurn.maxEnergy,
+
+                        actionCounter: 0,
+                        turnState: 0,
+                        debuffCounter: 0,
+                        DOTCounter: 0,
+                        activeFinalMultipliers: {},
+                        finalMultiCounter: 0,
+                        shieldCounter: 0,
+                        shieldValueCurrent: 0,
+                        shieldValueMax: 0,
+                        activeShields: {},
+
+                        properName,
+                        name: slotName,
+                        
+                        statTable: cyreneMenuStats,
+                        flags: new Array(greatFlagsLength).fill(0),
+                        buffsObject: {},
+                        buffsStartTurn: [],
+                        buffsEndTurn: [],
+                        tagSpecific: {},
+                        cacheTagValues: superGlobal.createEntityCache(),
+                        isDead: false,
+                        rank: ownerTurn.rank,
+                        element: ownerTurn.element,
+                        path: null,
+                        isUnselectable: true,
+                        diesWithOwner: true,
+                        isUniqueEvent: true,
+                        isSummon: true,
+                        isMemosprite: true,
+                        eventOwner: ownerTurn.name,//pass through the slot of the character who owns the event, avoids cyclic issues when logging
+                        uniqueEventFunction: null,//icaTurnAttack,//logicRef.skillFunctions.combustionExpired,
+                        eventImage: graphs.summonCustomImages[properName],
+                        deathFunction: skillFunctionsRef.icaDeathFunction,
+                        deathParam: ownerTurn.name,
+                    };
+                    battleData.nameIndex[properName] = slotName;
+
+                    // summaryTurns[properName] = 0;
+                    battleData.nameBasedTurns[slotName] = ActionEntry;
+                    ownerTurn[turnKey] = ActionEntry;
+                    battleData.declaredMemosprites.push(ActionEntry);
+                    battleData.allAlliesArray.push(ActionEntry);
+                    battleData.battleTotal.Turns[ActionEntry.properName] = 0;
+                    ownerTurn.summonEventRef = turnKey;
+                    ownerTurn.memospriteEventRef = turnKey;
+                    
+                    if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Demiurge creation", bodyText: `Memosprite "${ActionEntry.properName}" entity constructed`});}
+                },
+                "target": "self",
+                "listenerName": "Cyrene Demiurge turn object construction",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "CyreneQueueDemiTurn",
+                condition(battleData,generalInfo) {
+                    // poke("CyreneQueueDemiTurn",battleData,exoTurnRef);
+                    let ownerTurn = this.ownerTurn;
+                    const demiTurn = ownerTurn.cyreneDemiTURNEVENT;
+                    
+                    const queueObject = this.queueObject ??= createQueueObject(demiTurn,{
+                        name: this.listenerName,
+                        priority: priorityList.turn.CharacterChainedSkill,
+                        queueTag: "QueuedExtraTurn",
+    
+                        actionCall: sim.turnWrapper,
+                        action: "Extra Turn",
+                        abortCheck: null,//(battleData,actionObject,sourceTurn),
+    
+                        isTieBreaker: false,
+                        isExtraTurn: true,
+                        skipEXDisplay: false,
+                        allowUlts: false,
+                        decrementBuffs: false,
+                        extraTurnHasChoice: true,
+                        forceGlobalFirst: true,
+
+                        dontKeepNextWave: false,
+                        isAttack: false,
+                        isAbility: false,
+                        useAnyTriggers: false,
+                        eventTypeStartLOG: "ExtraTurnStart",
+    
+                        poolKey: null,//turnLogic[ownerTurn.properName].abilityTargetPools.Skill,
+                    })
+                    queueObject.sourceTurn = demiTurn;
+                    queueExtraTurn(battleData,queueObject);
+                },
+                "target": "self",
+                "listenerName": "Cyrene queue Demiurge ex-turn",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "CyreneQueueDemiStoryTurn",
+                condition(battleData,generalInfo) {
+                    // poke("CyreneQueueDemiStoryTurn",battleData,exoTurnRef);
+                    let ownerTurn = this.ownerTurn;
+                    const battleValues = ownerTurn.battleValues;
+
+                    const isReady = battleValues.cyreneStory >= battleValues.cyreneStoryMax && !battleValues.cyreneStoryQueued;
+
+                    if (isReady) {
+                        battleValues.cyreneStoryQueued = true;
+
+                        const demiTurn = ownerTurn.cyreneDemiTURNEVENT;
+                    
+                        const queueObject = this.queueObject ??= createQueueObject(demiTurn,{
+                            name: this.listenerName,
+                            priority: priorityList.turn.Default,
+                            queueTag: "DemiurgeStoryEXTurn",
+        
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.demiTurnAttack,
+                            action: "MemoSkill",
+                            abortCheck: null,//(battleData,actionObject,sourceTurn),
+        
+                            isTieBreaker: false,
+                            isExtraTurn: true,
+                            skipEXDisplay: true,
+                            allowUlts: false,
+                            decrementBuffs: false,
+                            extraTurnHasChoice: false,
+
+                            dontKeepNextWave: false,
+                            isAttack: true,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "MemoSkillStart",
+        
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.MemoSkill,
+                        })
+                        queueObject.sourceTurn = demiTurn;
+                        queueObject.target = battleData.enemyPositions;
+                        queueExtraTurn(battleData,queueObject);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Cyrene queue Demiurge ex-turn from story",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "CyreneQueueDemiRMCTurn",
+                condition(battleData,generalInfo) {
+                    // poke("CyreneQueueDemiRMCTurn",battleData,exoTurnRef);
+                    let ownerTurn = this.ownerTurn;
+                    const battleValues = ownerTurn.battleValues;
+                    if (!battleValues.demiIsActive) {return;}
+
+                    const demiTurn = ownerTurn.cyreneDemiTURNEVENT;
+                
+                    const queueObject = this.queueObject ??= createQueueObject(demiTurn,{
+                        name: this.listenerName,
+                        priority: priorityList.turn.Default,
+                        queueTag: "DemiurgeRMCEXTurn",
+    
+                        actionCall: turnLogic[ownerTurn.properName].skillFunctions.demiTurnAttack,
+                        action: "MemoSkill",
+                        abortCheck: null,//(battleData,actionObject,sourceTurn),
+    
+                        isTieBreaker: false,
+                        isExtraTurn: true,
+                        skipEXDisplay: true,
+                        allowUlts: false,
+                        decrementBuffs: false,
+                        extraTurnHasChoice: false,
+
+                        dontKeepNextWave: false,
+                        isAttack: true,
+                        isAbility: true,
+                        useAnyTriggers: true,
+                        eventTypeStartLOG: "MemoSkillStart",
+    
+                        poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.MemoSkill,
+                    })
+                    queueObject.sourceTurn = demiTurn;
+                    queueObject.target = battleData.enemyPositions;
+                    queueExtraTurn(battleData,queueObject);
+                },
+                "target": "self",
+                "listenerName": "Cyrene queue Demiurge ex-turn from RMC EBA",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+                    // const valuesRef = ownerTurn.battleValues;
+
+                    let energyCheck = ownerTurn.battleValues.isEnhanced ? ownerTurn.specialEnergyCurrent >= (ownerTurn.specialEnergyMax * 0.5) : ownerTurn.specialEnergyCurrent === ownerTurn.specialEnergyMax;
+                    //energy max changes from 24 to 12 once inside the enhanced state, and the very first ult in a battle modify specialEnergyMax on the turnobject for cyrene
+                    //because of that, the check here never needs to be anything other than the standard one just adjusted to special energy
+                    //user defined conditions on the rotation will be able to read whether the enhanced state is active and users can define separate conditions in either case.
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        if (ownerTurn.battleValues.isEnhanced) {
+                            const queueObject = this.queueObject2 ??= createQueueObject(ownerTurn,{
+                                name: this.listenerName,
+                                priority: priorityList.turn.Default,
+                                queueTag: "QueuedUltimate",
+    
+                                actionCall: turnLogic[ownerTurn.properName].skillFunctions.cyreneUltimate2,
+                                action: "Ultimate",
+    
+                                energyCost: ownerTurn.specialEnergyMax * 0.5,
+                                specialEnergyPoke: "CyreneGainRecollection",
+    
+                                dontKeepNextWave: true,//ults always clear out
+                                isAttack: false,
+                                isAbility: true,
+                                useAnyTriggers: true,
+                                eventTypeStartLOG: "UltimateStart",
+    
+                                poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                            })
+                            queueObject.target = [ownerTurn];
+                            queueObject.sourceTurn = ownerTurn;
+                            queueUltimate(battleData,queueObject);
+                        }
+                        else {
+                            const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                                name: this.listenerName,
+                                priority: priorityList.turn.Default,
+                                queueTag: "QueuedUltimate",
+    
+                                actionCall: turnLogic[ownerTurn.properName].skillFunctions.cyreneUltimate,
+                                action: "Ultimate",
+    
+                                energyCost: ownerTurn.specialEnergyMax * 0.5,
+                                specialEnergyPoke: "CyreneGainRecollection",
+    
+                                dontKeepNextWave: true,//ults always clear out
+                                isAttack: false,
+                                isAbility: true,
+                                useAnyTriggers: true,
+                                eventTypeStartLOG: "UltimateStart",
+    
+                                poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                            })
+                            queueObject.target = [ownerTurn]
+                            queueObject.sourceTurn = ownerTurn;
+                            queueUltimate(battleData,queueObject);
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "Cyrene - Ultimate queued",
+                "ownerTurn": {},
+            },
+        ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.cyreneTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -80,
+            "listenerName": "Cyrene Technique",
+            "ownerTurn": {},
+        },
+        "ATKObjects": {},
+        "listenersBattle": [],
+        "buffsBattle": {},
+        "buffsBattleTemp": {},
+        "characterValues": {
+            "skillZoneActive": false,
+            "recollectionOverflow": 0,
+
+            "isEnhanced": false,
+            "demiIsActive": false,
+
+            "cyreneEgoTrackerSUM": 0,
+            "cyreneStory": 0,
+            "cyreneStoryMax": 3,
+            "cyreneStoryQueueActive": false,
+            "cyreneStoryQueued": false,
+            "e1BonusCount": 0,
+            "e4Count": 0,
+            "e4CountMax": 24,
+            "e6Used": false,
+            "totalUniqueAlliesBuffed": 0,
+        },
+        "useTechnique": true,
+        "techniqueType": "Restore",
+        "buffNames": {
+            "spdAt180": "Causality in Trichotomy (DMG)",
+            "spdOver180": "Causality in Trichotomy (PEN)",
+            "talentFieldDMG": "Hearts Gather as One",
+            "future": "Future (Cyrene)",
+            "skillCountdown": "Skill Zone Countdown",
+            "skillCountdownPerma": "Skill Zone (Permanent)",
+
+            "firstUltCrit": "Ripples of Past Reverie",
+            "demiOnFieldHP": "Waiting, In Every Past",
+            "e6Zone": "E6: Remembrance, Sung in Ripples ♪",
+
+            "rmcBuffATK": "Ode to Genesis (ATK)",
+            "rmcBuffCrit": "Ode to Genesis (Crit)",
+
+            "aggyOde": "Ode to Romance",
+            "aggyRomantic": "Romantic (Cyrene)",
+            "tribbieOde": "Ode to Passage",
+
+            "anaxaEruditionOwner": "True Knowledge (Countdown)",
+            "anaxaEruditionATK": "True Knowledge (ATK)",
+            "anaxaEruditionDMG": "True Knowledge (Skill)",
+            "anaxaOde": "Ode to Reason",
+
+            "hyacineOde": "Ode to Sky",
+
+            "hysilensOde": "Ode to Ocean",
+            "hysilensWarmth": "Flowing Warmth",
+
+            "dhptOde": "Ode to Earth",
+            "dhptOdeBondmate": "Ode to Earth [Bondmate]",
+
+            "evernightOde": "Ode to Time",
+            "evernightOdeEvey": "Ode to Time [Evey]",
+
+            "casOde": "Ode to Life and Death",
+
+            "odeNormal": "This Ode, to All Lives",
+        },
+        "characterValuesBattle": {},
+    },
+    "Demiurge": {//heirsSetOneAndDone
+        logic(thisTurn,battleData) {
+            const cyreneTurn = battleData.nameBasedTurns[thisTurn.eventOwner];
+            // const isEnhanced = rmcTurn.battleValues.memIsEnhanced;
+
+            const fullCharacterArray = battleData.fullCharacterArray;
+            const hasOtherCharacters = fullCharacterArray.length > 1;//if we have no allies we can't buff anyone, and we just do the attack instead;
+
+            const compositePreCheck = hasOtherCharacters;//TODO: add more here later to trim this down bc this skill check is going to be HUUUUUUUUUUUUUUUUUUUGe on the default
+
+            if (compositePreCheck && checkSkill(battleData,cyreneTurn,"MemoSkillEnh") && conditionLibrary.CyreneCustomAllCharactersButOne(battleData,cyreneTurn,null).length >= 1) {
+                const returnSkillCall = this.returnSkillCallEnh ??= createQueueObject(thisTurn,{
+                    actionCall: turnLogic[cyreneTurn.properName].skillFunctions.demiBuffTarget,
+                    action: "MemoSkill",
+                    points: 0, 
+    
+                    isEnhanced: true,
+                    isAttack: false,
+                    isAbility: true,
+                    useAnyTriggers: true,
+                    eventTypeStartLOG: "MemoSkillStart",
+    
+                    poolKey: turnLogic[cyreneTurn.properName].abilityTargetPools.MemoSkillEnh,
+                })
+                returnSkillCall.sourceTurn = thisTurn;
+
+                returnSkillCall.target = checkAbilityTarget(battleData,cyreneTurn,returnSkillCall.poolKey,"CyreneCustomAllCharactersButOne","MemoSkillEnhTarget");
+                // skillFunctions.memBasicAttack(battleData,memoTurn,rmcTurn);
+                return returnSkillCall;
+                // battleData.allCharactersButOne[]
+            }
+            else {
+                const returnSkillCall = this.returnSkillCall ??= createQueueObject(thisTurn,{
+                    actionCall: turnLogic[cyreneTurn.properName].skillFunctions.demiTurnAttack,
+                    action: "MemoSkill",
+                    points: 0, 
+    
+                    isAttack: true,
+                    isAbility: true,
+                    useAnyTriggers: true,
+                    eventTypeStartLOG: "MemoSkillStart",
+    
+                    poolKey: turnLogic[cyreneTurn.properName].abilityTargetPools.MemoSkill,
+                })
+                returnSkillCall.sourceTurn = thisTurn;
+                returnSkillCall.target = battleData.enemyPositions;
+                // skillFunctions.memBasicAttack(battleData,memoTurn,rmcTurn);
+                return returnSkillCall;
+            }
+            // else {
+                // const returnBasicEnhCall = this.returnBasicEnhCall ??= createQueueObject(thisTurn,{
+                //     actionCall: turnLogic[rmcTurn.properName].skillFunctions.memSkillAdvance,
+                //     action: "MemoSkill",
+                //     points: 0, 
+    
+                //     isEnhanced: true,
+                //     isAttack: false,
+                //     isAbility: true,
+                //     useAnyTriggers: true,
+                //     eventTypeStartLOG: "MemoSkillStart",
+    
+                //     poolKey: turnLogic[rmcTurn.properName].abilityTargetPools.MemoSkillEnh,
+                // })
+                // returnBasicEnhCall.sourceTurn = thisTurn;
+                // returnBasicEnhCall.target = checkAbilityTarget(battleData,rmcTurn,returnBasicEnhCall.poolKey,"char1","MemoSkillEnhTarget");
+                // return returnBasicEnhCall;
+            // }
+        },
+        preLogic(thisTurn,battleData) {},
+        "abilityTargetPools": {},
+        "skillFunctions": {},
+        "listeners": [],
+        "characterValues": {},
+        "buffNames": {},
+        "characterValuesBattle": {},
+    },
     "Trailblazer - Remembrance": {
         logic(thisTurn,battleData) {
             let statCalls = thisTurn.battleValues;
@@ -36303,7 +38921,7 @@ const turnLogic = {
                     //bc of this specificially, I went back and added the maxEnergy param on all memos when their turns are constructed
 
                     const trueDMGMulti = values[0] + addedMulti;
-                    battleActions.trueDMGHitWrapper(battleData,ownerTurn,targetTurn,trueDMGMulti,trueBase,trueCrit,trueAVG,"Mem's Support");
+                    trueDMGHitWrapper(battleData,ownerTurn,targetTurn,trueDMGMulti,trueBase,trueCrit,trueAVG,"Mem's Support");
                 },
                 "target": "self",
                 "listenerName": "Mem's support true dmg handling",
@@ -37036,6 +39654,25 @@ const turnLogic = {
 
                     if (garmentTurn.isActive) {poke("AglaeaForceGarmentDeath",battleData,{eventTurn:garmentTurn},null);}
                 }
+
+                if (aggyTurn.hasCyreneMemoBuff) {
+                    const cyreneBuffNames = turnLogic.Cyrene.buffNames;
+                    const odeName = cyreneBuffNames.aggyOde;
+                    const romanticName = cyreneBuffNames.aggyRomantic;
+
+                    const buffsObject = aggyTurn.buffsObject;
+                    const buffCheck1 = buffsObject[odeName];
+                    if (buffCheck1) {
+                        removeBuff(battleData,aggyTurn,buffCheck1);
+                        removeBuff(battleData,garmentTurn,buffCheck1);
+                    }
+
+                    const buffCheck2 = buffsObject[romanticName];
+                    if (buffCheck2) {
+                        removeBuff(battleData,aggyTurn,buffCheck2);
+                    }
+                    aggyTurn.hasCyreneMemoBuff = false;
+                }
             },
             statCheck(battleData,currentTurn) {
                 const logicRef = turnLogic[currentTurn.properName];
@@ -37322,6 +39959,33 @@ const turnLogic = {
                     const logicRef = turnLogic[ownerTurn.properName];
 
                     const passiveListeners = this.passiveListeners;
+
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    if (!ATKObjects.garmentTalentSPDSHEET) {
+                        let skillRef = ATKObjects.aggyGarmentTalentREF ??= ATKObjects["Memosprite Talent"]["A Body Brewed by Tears"].variant1;
+                        let values = ATKObjects.aggyGarmentTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+
+                        const rank = ownerTurn.rank;
+                        const buffNames = logicRef.buffNames;
+                        ATKObjects.garmentTalentSPDSHEET = {
+                            "stats": [SPDFlat],
+                            [SPDFlat]: values[0],
+                            "source": "Memo Talent",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": buffNames.spdStackMemo,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": rank>=4 ? 7 : 6,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "removeOnDeath": true,
+                            // "isDebuff": true,
+                            // "actionTags": ["FUA"]
+                        }
+                    }
 
 
                     //trace speeding sol
@@ -37798,30 +40462,6 @@ const turnLogic = {
                     const logicRef = turnLogic[ownerTurn.properName];
                     const ATKObjects = logicRef.ATKObjects;
 
-                    if (!ATKObjects.garmentTalentSPDSHEET) {
-                        let skillRef = ATKObjects.aggyGarmentTalentREF ??= ATKObjects["Memosprite Talent"]["A Body Brewed by Tears"].variant1;
-                        let values = ATKObjects.aggyGarmentTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,memoOwnerTurn);
-
-                        const rank = ownerTurn.rank;
-                        const buffNames = logicRef.buffNames;
-                        ATKObjects.garmentTalentSPDSHEET = {
-                            "stats": [SPDFlat],
-                            [SPDFlat]: values[0],
-                            "source": "Memo Talent",
-                            "sourceOwner": memoOwnerTurn.properName,
-                            "buffName": buffNames.spdStackMemo,
-                            "durationInTurn": null,
-                            "duration": 1,
-                            "AVApplied": 0,
-                            "maxStacks": rank>=4 ? 7 : 6,
-                            "currentStacks": 1,
-                            "decay": false,
-                            "expireType": null,
-                            "removeOnDeath": true,
-                            // "isDebuff": true,
-                            // "actionTags": ["FUA"]
-                        }
-                    }
                     const garmentTurn = ownerTurn.aggyGarmentTURNEVENT;
                     const buffSheet = ATKObjects.garmentTalentSPDSHEET;
                     const buffName = buffSheet.buffName;
@@ -38129,35 +40769,64 @@ const turnLogic = {
                         "expireType": null,
                         "removeOnDeath": false,
                     }
+
+                    ATKObjects.evernightSkillMemoBUFFSHEETTRACE = {
+                        "stats": [CritDamageBase],
+                        [CritDamageBase]: 0,
+                        "source": "Trace",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffRef.pathCritDMG,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "removeOnDeath": false,
+                    }
                 }
+
+                const traceSheet = ATKObjects.evernightSkillMemoBUFFSHEETTRACE;
+                const pathCountBonus = ATKObjects.remembrancePathBonusSkill ??= [0.05,0.15,0.50,0.65];
 
                 const allyPositions = battleData.allyPositions;
                 let remembranceCharacters = 0;
-                const pathCountBonus = ATKObjects.remembrancePathBonusSkill ??= [0.05,0.15,0.50,0.65];
+                
                 const ownerPath = sourceTurn.path;
                 for (let ally of allyPositions) {
                     if (ally.path === ownerPath) {remembranceCharacters += 1;}
                 }
                 const baseBonus = pathCountBonus[remembranceCharacters-1];
+                traceSheet[CritDamageBase] = baseBonus;
 
                 const statsRef = sourceTurn.statTable;
                 const critDamage = statsRef[CritDamageBase] + statsRef[CritDamageBaseNULL];
-                const conversion = (values[0] * critDamage) + baseBonus;
+                const conversion = +((values[0] + (sourceTurn.hasCyreneMemoBuff ? sourceTurn.cyreneConversionBonus : 0)) * critDamage).toFixed(7);
 
+                if (!sourceTurn.evernightSkillIsActive) {
+                    const ownerSheet = ATKObjects.evernightSkillOWNERSHEET;
+                    updateBuff(battleData,sourceTurn,ownerSheet);
+                }
 
-                const ownerSheet = ATKObjects.evernightSkillOWNERSHEET;
-
-                updateBuff(battleData,sourceTurn,ownerSheet);
                 const allySheet = ATKObjects.evernightSkillMemoBUFFSHEET;
+                const declaredMemosprites = battleData.declaredMemosprites;
+
+                const firstMemo = declaredMemosprites[0];
+                const buffCheck = firstMemo.buffsObject[allySheet.buffName];
+
+                if (buffCheck) {
+                    const currentValue = buffCheck[CritDamageBase];
+                    if (currentValue === conversion) {return;}
+                    else {
+                        removeBuffFromBatch(battleData,declaredMemosprites,buffCheck,true,null,false,true);
+                    }
+                }
+
                 allySheet[CritDamageBase] = conversion;
                 allySheet[CritDamageBaseNULL] = -conversion;
-
-
-
-                const declaredMemosprites = battleData.declaredMemosprites;
-                for (let memo of declaredMemosprites) {
-                    updateBuff(battleData,memo,allySheet,false,null,false,true);
-                }
+                updateBuffBatchTargets(battleData,declaredMemosprites,traceSheet,false,null,false,true);
+                updateBuffBatchTargets(battleData,declaredMemosprites,allySheet);
 
                 sourceTurn.evernightSkillIsActive = true;
             },
@@ -38169,10 +40838,10 @@ const turnLogic = {
                 const ATKObjects = logicRef.ATKObjects;
 
                 const buffSheet = ATKObjects.evernightSkillMemoBUFFSHEET;
+                const traceSheet = ATKObjects.evernightSkillMemoBUFFSHEETTRACE;
                 const declaredMemosprites = battleData.declaredMemosprites;
-                for (let memo of declaredMemosprites) {
-                    removeBuff(battleData,memo,buffSheet);
-                }
+                removeBuffFromBatch(battleData,declaredMemosprites,traceSheet,false,null,false,true);
+                removeBuffFromBatch(battleData,declaredMemosprites,buffSheet);
             },
             addEveyToField(battleData,sourceTurn) {
                 const eveyTurn = sourceTurn.everEveyTURNEVENT;
@@ -38331,7 +41000,7 @@ const turnLogic = {
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
                     // const actionTags = ["Basic","Attack"];
-                    const actionTags = ["All","Attack","MemoSkill","Summon","Memosprite"];
+                    const actionTags = ["All","Attack","MemoSkill","Summon","Memosprite","EveyEnhanced"];
                     const compositeCacheTag = tags + actionTags + evernightTurn.properName;
                     ATKObjects.eveyTurnAttackEnhancedATKOBJECT = {
                         multipliers: {
@@ -38789,7 +41458,7 @@ const turnLogic = {
                             let ownerTurn = this.ownerTurn;
                             const sourceTurn = generalInfo.sourceTurn;
 
-                            if (sourceTurn.isEnemy || !sourceTurn.isMemosprite || (!sourceTurn.isMemosprite && sourceTurn.properName != ownerTurn.properName)) {return}
+                            if (sourceTurn.isEnemy || (!sourceTurn.isMemosprite && sourceTurn.properName != ownerTurn.properName)) {return}
 
                             const energyToRegen = 5;
         
@@ -40196,10 +42865,14 @@ const turnLogic = {
                             const icaTurn = ownerTurn.hyacineIcaTURNEVENT;
         
                             if (sourceName != ownerTurn.properName && sourceName != icaTurn.properName) {return;}
+
+                            let bonusTallyRatio = sourceName === ownerTurn.properName && ownerTurn.hasCyreneMemoBuff ? ownerTurn.cyreneBonusTallyRatio : 0;
+                            // cyreneBonusTallyRatio = v
+                            // hasCyreneMemoBuff = true;
+
                             //we only care about healing done by ica or hyacine
                             const oldValue = ownerTurn.hyacineBattleHealingTally
-                            ownerTurn.hyacineBattleHealingTally += generalInfo.totalHealed;
-        
+                            ownerTurn.hyacineBattleHealingTally += (generalInfo.totalHealed * (1 + bonusTallyRatio));
         
                             if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Hyacine heal tally", bodyText: `Heal tally (Hyacine): ${oldValue.toLocaleString()} --> ${ownerTurn.hyacineBattleHealingTally.toLocaleString()}`});}
                         },
@@ -40322,8 +42995,10 @@ const turnLogic = {
                     // const flatHP = values[5];
                     Object.assign(hyacineMenuStats,{
                         [SPDBase]: 0,
-                        [SPDFlat]: 1,//no speed is really necessary for him, but to avoid dividing by 0, he needs at least 1 spd when receiving spd buffs and updating AV
+                        [SPDFlat]: 0,
                         [SPDP]: 0,
+                        [SPDOverride]: 0,
+                        [SPDOverrideFlag]: 1,
 
                         [HPBase]: hyacineMenuStats[HPBase] * HPScalar,
                         [HPFlat]: hyacineMenuStats[HPFlat] * HPScalar,
@@ -40465,7 +43140,6 @@ const turnLogic = {
                         sourceTurn.hyacineTargetReadyForTalentHeal = true;
                         ownerTurn.hyacineTargetReadyForTalentHealCounter = (ownerTurn.hyacineTargetReadyForTalentHealCounter ?? 0) + 1;
                     }
-                    
                 },
                 "target": "self",
                 "listenerName": "Memo talent, mark ally ready for healing",
@@ -40762,8 +43436,8 @@ const turnLogic = {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
-                let skillRef = ATKObjects.castoriceBasicREF ??= ATKObjects["Skill"]["Silence, Wraithfly's Caress"].variant1;
-                let values = ATKObjects.castoriceBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                let skillRef = ATKObjects.castoriceSkillREF ??= ATKObjects["Skill"]["Silence, Wraithfly's Caress"].variant1;
+                let values = ATKObjects.castoriceSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                 if (!ATKObjects.castoriceSkillATKOBJECT) {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
@@ -41100,6 +43774,27 @@ const turnLogic = {
                 //unlike aggy, it's impossible for cas to get ulty energy while the summon is up (outside of e2)
                 //so rather than check to see if the summon is already up to heal it or not, we just always summon it
 
+
+                if (sourceTurn.hasCyreneMemoBuff && sourceTurn.specialEnergyCurrent) {
+                    const priorOverflow = sourceTurn.specialEnergyCurrent;
+                    const increment = sourceTurn.specialEnergyMax / 100;
+
+                    const totalCount = Math.floor(priorOverflow/increment);
+
+                    const activeEnemies = battleData.activeEnemies;
+                    const targetBonusMulti = activeEnemies <= sourceTurn.casCyreneTargetCount ? sourceTurn.casCyreneMetTargetBonus : 0;
+
+                    const finalMulti = (sourceTurn.casCyreneBaseBonus + targetBonusMulti) * totalCount;
+                    valuesRef.cyreneBonusMulti = finalMulti;
+
+                    if (battleData.isLoggyLogger) {
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/misc/cyrene/buffHeart.png",sourceName: sourceTurn.properName, source:"Castorice Chrysos Buff", bodyText: `Chrysos Buff: consumed ${priorOverflow.toFixed(2)} newbud to gain +${valuesRef.cyreneBonusMulti.toFixed(5)} for suicide attack.`});
+                    }
+                }
+                else {
+                    valuesRef.cyreneBonusMulti = 0;
+                }
+
                 const netherTurn = sourceTurn.castoriceNetheringTURNEVENT;
                 if (ATKObjects.talentAnyAllyLostHPDMGSHEET) {
                     const buffName = ATKObjects.talentAnyAllyLostHPDMGSHEET.buffName;
@@ -41227,6 +43922,7 @@ const turnLogic = {
                 ownerTurn.battleValues.netherInLimbo = true;
                 if (!battleData.battleIsOver) {
                     let skillRef = ATKObjects.netherwingSuicideAttackREF ??= ATKObjects["Memosprite Skill"]["Wings Sweep the Ruins"].variant1;
+                    let values = ATKObjects.netherwingSuicideAttackREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
 
                     if (!ATKObjects.netherwingSuicideATKOBJECT) {
                         skillRef.hitSplits = hitSplitters[ownerTurn.properName].memoSkill3;
@@ -41237,10 +43933,8 @@ const turnLogic = {
                         const realPENKeys = keyShortcut(resPENKeys,tags);
                         const realShredKeys = keyShortcut(defShredKeys,tags);
                         const realVulnKeys = keyShortcut(vulnKeys,tags);
-                        const actionTags = ["Attack","MemoSkill","Summon","Memosprite"];
+                        const actionTags = ["Attack","MemoSkill","Summon","Memosprite","CasE1Ability"];
                         const compositeCacheTag = tags + actionTags + ownerTurn.properName;
-
-                        let values = ATKObjects.netherwingSuicideAttackREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
     
                         const rank = ownerTurn.rank;
                         if (skillRef.hitSplits.length) {skillRef.hitSplits.length = 0;}
@@ -41292,6 +43986,7 @@ const turnLogic = {
                         }
                     }
                     const suicideObject = ATKObjects.netherwingSuicideATKOBJECT;
+                    suicideObject.bounceData.multi = values[0] + ownerTurn.battleValues.cyreneBonusMulti;
 
                     if (deathTurn.currentHP > 0) {
                         consumeHP(battleData,null,deathTurn.currentHP,deathTurn,deathTurn,"Talent",false,false);
@@ -41320,6 +44015,7 @@ const turnLogic = {
                 battleValues.netherDeathIsQueued = false;
                 battleValues.skillCasts = 0;
                 battleValues.totalCasts = 0;
+                battleValues.cyreneBonusMulti = 0;
 
                 //remove nether from the turn order
                 const eventName = deathTurn.properName;
@@ -41911,49 +44607,23 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("CastoriceGainNewbud",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    // coreResonance
-                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
-                    const pointsGained = generalInfo.pointsGained;
                     const forcedNewbuds = generalInfo.forcedNewbuds;
-                    // ownerTurn.specialEnergyMax = (currentLevel ** 2) * 5.3125;
-                    // ownerTurn.specialEnergyCurrent = logicRef.useTechnique ? 0 : 0.30 * ownerTurn.specialEnergyMax;
-
-
-
-
 
                     // const logicRef = turnLogic[ownerTurn.properName];
                     const netherTurn = ownerTurn.castoriceNetheringTURNEVENT;
 
                     if (!netherTurn.isActive || forcedNewbuds) {
-                        const oldValue = ownerTurn.specialEnergyCurrent;
-                        const maxValue = ownerTurn.specialEnergyMax;
-                        ownerTurn.specialEnergyCurrent = Math.min(maxValue,ownerTurn.specialEnergyCurrent + pointsGained)
-                        const newbudFinal = ownerTurn.specialEnergyCurrent;
-                        const sourceString = generalInfo.sourceString;
-                        if (pointsGained && battleData.isLoggyLogger) {
-                            // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Newbud (Castorice): ${oldValue.toLocaleString()} --> ${newbudFinal.toLocaleString()}/${maxValue.toLocaleString()} [${sourceString}]`});
 
-                                // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
-                            logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Newbud (Castorice): ${oldValue.toLocaleString()} --> ${newbudFinal.toLocaleString()}/${maxValue.toLocaleString()} [${sourceString}]`});
-                            
-                            if (pointsGained > 0) {
-                                ownerTurn.castoriceNewbudGainedSum ??= 0;
-                                ownerTurn.castoriceNewbudGainedSum += newbudFinal - oldValue;
-                                
-                            }
-                            logToBattle(battleData,{
-                                logType: "SUMMARY:SUM",
-                                function: "castoriceNewbudGainedSum",
-                                AV: battleData.sumAV,
-                                currentValue: newbudFinal,
-                                currentSumValue: ownerTurn.castoriceNewbudGainedSum,
-                                currentAddedValue: newbudFinal - oldValue
-                            });
-                        }
-                        if (pointsGained<0) {return;}//if all we did was remove points, we can end it here now that we reached the log point
+                        const generalData = this.generalData ??= {summerName: "castoriceNewbudGainedSum",overflowName: "newbudOverflow",
+                            baseString: "Newbud",displayIcon:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon};
+                        // const oldValue = ownerTurn.battleValues.prana;
+                        // const valueWasDiff = genericSpecialOverflow(battleData,ownerTurn,generalInfo,generalData);
+                        genericSpecialOverflow(battleData,ownerTurn,generalInfo,generalData);
                     }
                     else {
+                        const pointsGained = generalInfo.pointsGained;
+                        if (pointsGained<0) {return;}
+
                         const healObject = this.newbudNetherwingHEALOBJECT ??= {
                             multipliers: {
                                 primary: null,
@@ -41974,8 +44644,6 @@ const turnLogic = {
                             isFixedHealing: true,
                         }
 
-
-                        if (pointsGained<0) {return;}
                         healObject.flatAmounts.primary = pointsGained;
                         // battleActions.healed(battleData,netherTurn,null,null,pointsGained,{sourceTurn:netherTurn,scalar:null,totals:battleData.battleTotal},true);
                         battleActions.healAlly(battleData,healObject,netherTurn,netherTurn,"Netherwing",1,null,true);
@@ -42065,9 +44733,11 @@ const turnLogic = {
                     ownerTurn.specialEnergy = true;
                     ownerTurn.specialEnergyMax = (currentLevel ** 2) * 5.3125;
                     ownerTurn.specialEnergyCurrent = 0;
-                    // ownerTurn.specialEnergyOverflowLimit = 240;
+                    ownerTurn.specialEnergyEvent = "CastoriceGainNewbud";
+                    ownerTurn.specialEnergyOverflowLimit = 0;
                     charValuesRef.specialEnergyCurrentName = "newbudCurrent";
                     charValuesRef.specialEnergyMaxName = "newbudMax";
+                    charValuesRef.newbudOverflow = 0;
 
                     const casMenuStats = [...battleData.menuStats[ownerTurn.name]];
                     let skillRef = ATKObjects.castoriceUltimateREF ??= ATKObjects["Ultimate"]["Doomshriek, Dawn's Chime"].variant1;
@@ -42278,6 +44948,8 @@ const turnLogic = {
             "netherRemainingTurnsMax": 3,
             "ardentWillStacks": 0,
             "ardentWillStacksMax": 0,
+            "newbudOverflow": 0,
+            "cyreneBonusMulti": 0,
 
             "netherTurnShouldEnd": false,
             "netherShouldDie": false,
@@ -42554,7 +45226,7 @@ const turnLogic = {
                 }
                 const statTable = sourceTurn.statTable;
                 const atkRatio = 0.15;
-                const conversion = atkRatio * (calcs.getATKFinal(statTable).ATKFinal + statTable[ATKFlatNULL]);
+                const conversion = +(atkRatio * (calcs.getATKFinal(statTable).ATKFinal + statTable[ATKFlatNULL])).toFixed(7);
 
                 const buffSheet = ATKObjects.dhptBondmateATKSHEET;
                 buffSheet[ATKFlat] = conversion;
@@ -42563,12 +45235,17 @@ const turnLogic = {
                 const bondmateSlot = sourceTurn.battleValues.bondmateSlot;
                 const bondmateTurn = battleData.nameBasedTurns[bondmateSlot];
 
+                const cyreneSheet = sourceTurn.hasCyreneMemoBuff ? sourceTurn.bondmateCyreneSheet : null;
+
                 const buffCheck = targetTurn.buffsObject[buffSheet.buffName];
 
                 const dragonTurn = sourceTurn.dhptSouldragonTURNEVENT;
-                if (!dragonTurn.isActive || bondmateSlot != targetTurn.name) {
+                if (bondmateSlot != targetTurn.name) {
                     //if souldragon was removed from the owner, then remove the buff and back out nothing needs to be done
-                    removeBuff(battleData,bondmateTurn,buffSheet,false,null,false,true);
+                    removeBuff(battleData,bondmateTurn,buffSheet,false,null,false);
+                    if (cyreneSheet) {
+                        removeBuff(battleData,bondmateTurn,cyreneSheet,false,null,false);
+                    }
 
                     if (dragonTurn.isActive) {
                         bondmateTurn.activeSummons -= 1;
@@ -42589,7 +45266,10 @@ const turnLogic = {
                 }
 
                 //if we reach this point, it's bc souldragon is on the field, a bondmate is designated, and there is a conversion to apply
-                updateBuff(battleData,targetTurn,buffSheet,false,null,false,true);
+                updateBuff(battleData,targetTurn,buffSheet,false,null,false);
+                if (cyreneSheet) {
+                    updateBuff(battleData,targetTurn,cyreneSheet,false,null,false);
+                }
             },
             dhptSkillShield(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -42678,8 +45358,8 @@ const turnLogic = {
                         "isShield": true,
                         multipliers: valuesTalent[0],//to give to existing shield of the same name
                         flatAmounts: valuesTalent[1],//to give to existing shield of the same name
-                        multipliersCAP: values[0]*2,//to limit by
-                        flatAmountsCAP: values[1]*2,//to limit by
+                        multipliersCAP: values[0]*3,//to limit by
+                        flatAmountsCAP: values[1]*3,//to limit by
                         scalar: "ATK",
                         shieldRemaining: 0,
                         shieldCap: 0,
@@ -42702,8 +45382,8 @@ const turnLogic = {
                         "isShield": true,
                         multipliers: 0.05,//to give to existing shield of the same name
                         flatAmounts: 100,//to give to existing shield of the same name
-                        multipliersCAP: values[0]*2,//to limit by
-                        flatAmountsCAP: values[1]*2,//to limit by
+                        multipliersCAP: values[0]*3,//to limit by
+                        flatAmountsCAP: values[1]*3,//to limit by
                         scalar: "ATK",
                         shieldRemaining: 0,
                         shieldCap: 0,
@@ -42711,27 +45391,28 @@ const turnLogic = {
                         removeOnDeath: true,
                         actionTags,compositeCacheTag,
                     }
-                    // .callWhenHit?.(battleData,currentShield,DMGTotalAVG,targetTurn)
                 }
 
                 const shieldBuffObject = ATKObjects.dhptTalentSHIELDSHEET;
+                const traceShield = ATKObjects.dhptTraceSHIELDSHEET;
                 const allyPositions = battleData.allyPositions;
                 poke("TargetShield",battleData,{targetType:"Team", sourceTurn, targetTurn:null, targetSkill:skillRefTalent.slot});
 
-
-                if (rank>=2) {
-                    if (sourceTurn.battleValues.souldragonEnhancedTurns) {
-                        shieldBuffObject.multipliers = valuesTalent[0] * 2;
-                        shieldBuffObject.flatAmounts = valuesTalent[1] * 2;
-                    }
-                    else {
-                        shieldBuffObject.multipliers = valuesTalent[0];
-                        shieldBuffObject.flatAmounts = valuesTalent[1];
-                    }
-                    
+                const hasCyreneBonusShield = sourceTurn.useBonusCyreneShield;
+                const bonusMulti = sourceTurn.cyreneBonusShieldRatio;
+                const finalCyreneMulti = hasCyreneBonusShield ? bonusMulti : 1;
+                if (rank>=2 && sourceTurn.battleValues.souldragonEnhancedTurns) {
+                    shieldBuffObject.multipliers = valuesTalent[0] * 2 * finalCyreneMulti;
+                    shieldBuffObject.flatAmounts = valuesTalent[1] * 2 * finalCyreneMulti;
+                    traceShield.multipliers = 0.05 * 2 * finalCyreneMulti;
+                    traceShield.flatAmounts = 100 * 2 * finalCyreneMulti;
                 }
-
-                // (rank>=2 ? 2 : 1)
+                else {
+                    shieldBuffObject.multipliers = valuesTalent[0] * finalCyreneMulti;
+                    shieldBuffObject.flatAmounts = valuesTalent[1] * finalCyreneMulti;
+                    traceShield.multipliers = 0.05 * finalCyreneMulti;
+                    traceShield.flatAmounts = 100 * finalCyreneMulti;
+                }
                 
                 let allyWithLowestShield = null;
                 let allyLowestAmount = 0;
@@ -42753,7 +45434,6 @@ const turnLogic = {
                     }
                 }
 
-                const traceShield = ATKObjects.dhptTraceSHIELDSHEET;
                 updateBuff(battleData,allyWithLowestShield,traceShield,false,sourceTurn);
             },
             addDragonToOrder(battleData,sourceTurn,targetTurn) {
@@ -42841,12 +45521,17 @@ const turnLogic = {
             souldragonTurnAttackEnhanced(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
-                poke("dhptGainDragonAttacks",battleData,{pointsGained: -1,sourceString:"FUA Launched"});
+
+                if (!sourceTurn.useBonusCyreneShield) {
+                    poke("dhptGainDragonAttacks",battleData,{pointsGained: -1,sourceString:"FUA Launched"});
+                }
 
                 let skillRef = ATKObjects.dhptTalentREF ??= ATKObjects["Talent"]["Of Virtue, Forms Unfold"].variant1;
                 let values = ATKObjects.dhptTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                 logicRef.skillFunctions.dhptTalentShield(battleData,battleData.allyPositions,sourceTurn);
+                sourceTurn.useBonusCyreneShield = false;
+                //THIS NEEDS TO STAY HERE, the talent shield function will check the value so it needs to be set false RIGHT after
 
                 if (!ATKObjects.dhptSouldragonAutoATKOBJECT) {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].passive;
@@ -43030,8 +45715,8 @@ const turnLogic = {
                         "isShield": true,
                         multipliers: valuesUlt[3],//to give to existing shield of the same name
                         flatAmounts: valuesUlt[4],//to give to existing shield of the same name
-                        multipliersCAP: values[0]*2,//to limit by
-                        flatAmountsCAP: values[1]*2,//to limit by
+                        multipliersCAP: values[0]*3,//to limit by
+                        flatAmountsCAP: values[1]*3,//to limit by
                         scalar: "ATK",
                         shieldRemaining: 0,
                         shieldCap: 0,
@@ -43117,9 +45802,29 @@ const turnLogic = {
                         actionTags,
                         // compositeCacheTag
                     }
+
+                    ATKObjects.bondmateAddedDMGATKOBJECTCyrene = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                            additional: 0,
+                        },
+                        scalar: null,
+                        element: "Physical",//override for additional dmg, not used otherwise
+                        // DMGTags: ["All","Quantum"],
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: null,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        // compositeCacheTag
+                    }
                 }
                 let ATKObject = ATKObjects.bondmateAddedDMGATKOBJECT;
                 let ATKObject2 = ATKObjects.bondmateAddedDMGATKOBJECT2;
+                let ATKObject3 = ATKObjects.bondmateAddedDMGATKOBJECTCyrene;
+                const hasCyreneProcs = sourceTurn.cyreneExtraAddProcs;
                 const addedDMG = battleActions.additionalDMGWrapper;
                 const targetsGotHit = generalInfo.targetsGotHit;
                 const enemyTurns = battleData.enemyBasedTurns;
@@ -43128,29 +45833,42 @@ const turnLogic = {
 
                 if (ATKObject.element != allyTurn.element) {
                     const newTags = ["All",allyTurn.element];
+                    const makeKeysArray = basicShorthand.makeKeysArray;
                     Object.assign(ATKObject,{
                         element: allyTurn.element,
                         DMGTags: newTags,
-                        compositeCacheTag: ATKObject.DMGTags + ATKObject.actionTags + sourceTurn.properName,
+                        compositeCacheTag: ATKObject.DMGTags + ATKObject.actionTags + allyTurn.properName,
 
-                        realDMGKeys: basicShorthand.makeKeysArray(dmgKeys,newTags),
-                        realPENKeys: basicShorthand.makeKeysArray(resPENKeys,newTags),
-                        realShredKeys: basicShorthand.makeKeysArray(defShredKeys,newTags),
-                        realVulnKey: basicShorthand.makeKeysArray(vulnKeys,newTags),
+                        realDMGKeys: makeKeysArray(dmgKeys,newTags),
+                        realPENKeys: makeKeysArray(resPENKeys,newTags),
+                        realShredKeys: makeKeysArray(defShredKeys,newTags),
+                        realVulnKey: makeKeysArray(vulnKeys,newTags),
                     })
 
                     Object.assign(ATKObject2,{
                         element: allyTurn.element,
                         DMGTags: newTags,
-                        compositeCacheTag: ATKObject2.DMGTags + ATKObject2.actionTags + sourceTurn.properName,
+                        compositeCacheTag: ATKObject2.DMGTags + ATKObject2.actionTags + allyTurn.properName,
 
-                        realDMGKeys: basicShorthand.makeKeysArray(dmgKeys,newTags),
-                        realPENKeys: basicShorthand.makeKeysArray(resPENKeys,newTags),
-                        realShredKeys: basicShorthand.makeKeysArray(defShredKeys,newTags),
-                        realVulnKey: basicShorthand.makeKeysArray(vulnKeys,newTags),
+                        realDMGKeys: makeKeysArray(dmgKeys,newTags),
+                        realPENKeys: makeKeysArray(resPENKeys,newTags),
+                        realShredKeys: makeKeysArray(defShredKeys,newTags),
+                        realVulnKey: makeKeysArray(vulnKeys,newTags),
                     })
 
+                    // if (hasCyreneProcs) {
+                    Object.assign(ATKObject3,{
+                        element: allyTurn.element,
+                        DMGTags: newTags,
+                        compositeCacheTag: ATKObject3.DMGTags + ATKObject3.actionTags + allyTurn.properName,
 
+                        realDMGKeys: makeKeysArray(dmgKeys,newTags),
+                        realPENKeys: makeKeysArray(resPENKeys,newTags),
+                        realShredKeys: makeKeysArray(defShredKeys,newTags),
+                        realVulnKey: makeKeysArray(vulnKeys,newTags),
+                    })
+                    // }
+                    // ATKObject3
                 }
 
                 let highestHPEnemy = null;
@@ -43160,10 +45878,30 @@ const turnLogic = {
                     if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
                     addedDMG(battleData,allyTurn,allyTurn.properName,ATKObject,currentEnemy,"Bondmate");
 
-                    if (!currentEnemy.isDead && !currentEnemy.isLimbo) {
+                    if (!hasCyreneProcs && !currentEnemy.isDead && !currentEnemy.isLimbo) {
                         if (enemiesChecked === 0) {highestHPEnemy = currentEnemy;}
                         else if (currentEnemy.currentHP > highestHPEnemy.currentHP) {highestHPEnemy = currentEnemy}
                         enemiesChecked++;
+                    }
+                }
+
+                if (hasCyreneProcs) {
+                    sourceTurn.cyreneExtraAddProcs -= 1;
+                    const shieldRatio = sourceTurn.cyreneExtraAddProcRatio;
+                    const currentShield = allyTurn.shieldValueCurrent;
+
+                    ATKObject3.multipliers.additional = shieldRatio * currentShield;
+
+                    for (let enemyHit in targetsGotHit) {
+                        const currentEnemy = enemyTurns[enemyHit];
+                        if (currentEnemy.isDead || currentEnemy.isLimbo) {continue;}
+                        addedDMG(battleData,allyTurn,allyTurn.properName,ATKObject3,currentEnemy,"Ode to Earth");
+    
+                        if (!currentEnemy.isDead && !currentEnemy.isLimbo) {
+                            if (enemiesChecked === 0) {highestHPEnemy = currentEnemy;}
+                            else if (currentEnemy.currentHP > highestHPEnemy.currentHP) {highestHPEnemy = currentEnemy}
+                            enemiesChecked++;
+                        }
                     }
                 }
 
@@ -43271,6 +46009,13 @@ const turnLogic = {
                     const logicRef = turnLogic[ownerTurn.properName];
 
                     const passiveListeners = this.passiveListeners;
+
+                    const ATKObjects = logicRef.ATKObjects;
+
+                    const skillRef = ATKObjects.dhptUltimateREF ??= ATKObjects.Ultimate["A Dragon's Zenith Knows No Rue"].variant1;
+                    let values = ATKObjects.dhptUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                    //these need to be defined NOW as cyrene can technically enable enhanced souldragon turns BEFORE the ult is ever cast
+                    //meaning no ult values would be constructed if that happened and we'd error out
 
 
                     //trace sylvanity
@@ -43409,7 +46154,7 @@ const turnLogic = {
 
                     const dragonTurn = generalInfo.eventTurn;
 
-                    if (valuesRef.souldragonEnhancedTurns) {
+                    if (valuesRef.souldragonEnhancedTurns || ownerTurn.useBonusCyreneShield) {
                         const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
                             name: this.listenerName + " [FUA ATTACK]",
                             priority: priorityList.ability.CharacterAttackFromSelf,
@@ -43422,7 +46167,7 @@ const turnLogic = {
                             isInserted: true,
                             dontKeepNextWave: false,//ults always clear out
                             isAttack: true,
-                            isAbility: true,
+                            isAbility: false,
                             useAnyTriggers: true,
                             eventTypeStartLOG: "GenericAbilityStart",
 
@@ -45871,6 +48616,9 @@ const turnLogic = {
                             multi: values[0],
                             bounceCount: 4,
                             energy: skillRef.energyRegen,
+                            energyCondition(hitCount) {
+                                if (hitCount <= 4) {return true;}
+                            },
                             bounceSkipFirstTarget: true,
                             target: {
                                 "hitRatio": 1,
@@ -45911,6 +48659,14 @@ const turnLogic = {
                     }
                 }
                 let ATKObject = ATKObjects.anaxaSkillATKOBJECT;
+
+                const bounceData = ATKObject.bounceData;
+                if (sourceTurn.hasCyreneMemoBuff) {
+                    bounceData.bounceCount = 4 + 3;
+                }
+                else {
+                    bounceData.bounceCount = 4;
+                }
 
                 const enemyTargets = battleData.activeEnemies;
                 const buffSheet = ATKObjects.anaxaSkillPerTargetDMGSHEET;
@@ -51868,7 +54624,7 @@ const turnLogic = {
                     }
 
                     const convertedDMG = sumATKDMG * 0.2;
-                    battleActions.trueDMGHitWrapper(battleData,sourceTurn,starterTarget,1,convertedDMG,convertedDMG,convertedDMG,"SW999: Sword");
+                    trueDMGHitWrapper(battleData,sourceTurn,starterTarget,1,convertedDMG,convertedDMG,convertedDMG,"SW999: Sword");
                 }
 
                 return chainedAttackRef;
@@ -52705,6 +55461,7 @@ const turnLogic = {
                     ownerTurn.specialEnergyMax = 60;
                     ownerTurn.specialEnergyCurrent = 0;
                     ownerTurn.specialEnergyOverflowLimit = 240;
+                    ownerTurn.specialEnergyEvent = "SW999GainMMR";
                     charValuesRef.specialEnergyCurrentName = "swMMR";
                     charValuesRef.specialEnergyMaxName = "swMMRMax";
 

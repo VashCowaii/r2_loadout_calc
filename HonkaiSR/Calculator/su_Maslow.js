@@ -3105,49 +3105,49 @@ const maslowCharactersRemembrance = {
         defaultMainSubs: ["SPDFlat","CritDamageBase","CritRateBase","HP%"],
         defaultTrashSub: ["HPFlat","DamageBreak","EffectRES","DEF%"],
         0: {
-            gives: [],
+            gives: ["MemoSource"],
             givesTeam: ["MemoSource","All","True","EnergyRegen"],
             wants: ["Ice","Basic",...isGeneralSupport,...generalCharacterWants,...characterDealsDamage,...isCritCharacter],
             wantsTeam: ["Ice","Basic",...isGeneralSupport,...generalCharacterWants,...characterDealsDamage,...isCritCharacter],
             addTeamWant: [],
         },
         1: {
-            gives: [],
+            gives: ["MemoSource"],
             givesTeam: ["MemoSource","All","True","EnergyRegen"],
             wants: ["Ice","Basic",...isGeneralSupport,...generalCharacterWants,...characterDealsDamage,...isCritCharacter],
             wantsTeam: ["Ice","Basic",...isGeneralSupport,...generalCharacterWants,...characterDealsDamage,...isCritCharacter],
             addTeamWant: [],
         },
         2: {
-            gives: [],
+            gives: ["MemoSource"],
             givesTeam: ["MemoSource","All","True","EnergyRegen"],
             wants: ["Ice","Basic",...isGeneralSupport,...generalCharacterWants,...characterDealsDamage,...isCritCharacter],
             wantsTeam: ["Ice","Basic",...isGeneralSupport,...generalCharacterWants,...characterDealsDamage,...isCritCharacter],
             addTeamWant: [],
         },
         3: {
-            gives: [],
+            gives: ["MemoSource"],
             givesTeam: ["MemoSource","All","True","EnergyRegen"],
             wants: ["Ice","Basic",...isGeneralSupport,...generalCharacterWants,...characterDealsDamage,...isCritCharacter],
             wantsTeam: ["Ice","Basic",...isGeneralSupport,...generalCharacterWants,...characterDealsDamage,...isCritCharacter],
             addTeamWant: [],
         },
         4: {
-            gives: [],
+            gives: ["MemoSource"],
             givesTeam: ["MemoSource","All","True","EnergyRegen"],
             wants: ["Ice","Basic",...isGeneralSupport,...generalCharacterWants,...characterDealsDamage,...isCritCharacter],
             wantsTeam: ["Ice","Basic",...isGeneralSupport,...generalCharacterWants,...characterDealsDamage,...isCritCharacter],
             addTeamWant: [],
         },
         5: {
-            gives: [],
+            gives: ["MemoSource"],
             givesTeam: ["MemoSource","All","True","EnergyRegen"],
             wants: ["Ice","Basic",...isGeneralSupport,...generalCharacterWants,...characterDealsDamage,...isCritCharacter],
             wantsTeam: ["Ice","Basic",...isGeneralSupport,...generalCharacterWants,...characterDealsDamage,...isCritCharacter],
             addTeamWant: [],
         },
         6: {
-            gives: [],
+            gives: ["MemoSource"],
             givesTeam: ["MemoSource","All","True","EnergyRegen","Shred","Advance"],
             wants: ["Ice","Basic",...isGeneralSupport,...generalCharacterWants,...characterDealsDamage,...isCritCharacter],
             wantsTeam: ["Ice","Basic",...isGeneralSupport,...generalCharacterWants,...characterDealsDamage,...isCritCharacter],
@@ -3772,9 +3772,8 @@ const maslowCharactersHarmony = {
         // defaultMainSubs: ["SPDFlat","CritDamageBase","HP%","CritRateBase"],
         defaultMainSubs: ["HPFlat","CritDamageBase","HP%","CritRateBase"],
 
-        
         // ["HP%","CritDamageBase","EffectRES","SPDFlat"]
-        defaultTrashSub: ["HPFlat","DamageBreak","EffectRES","ATK%"],
+        defaultTrashSub: ["DamageBreak","ATKFlat","EffectRES","ATK%"],
         0: {
             gives: [],
             givesTeam: ["AdditionalDMG","PEN","Vuln"],

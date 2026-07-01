@@ -3236,8 +3236,11 @@ const customMenu = {
             if (currentLogType === "UltimateStart") {
                 let characterRef = characters[actionNameSource];
     
+                // <div class="weirdSideSemiCircleThingerAlly"></div>
                 eventString += `<div class="turnStarterBarUltimate clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">
-                    <div class="weirdSideSemiCircleThingerAlly"></div>
+                    
+                    <div class="weirdSideSemiCircleThingerEXTURN2"></div>
+                    <div class="weirdSideSemiCircleThingerEXTURN1"></div>
                     <img src="/HonkaiSR/${characterRef.preview}" class="turnOrderDisplayPreviewUltimate"/>
                     <div class="miniActionNameBox">Ult${action.isEnhanced ? " Enh." : ""}</div>
                 </div>`;
@@ -3248,7 +3251,8 @@ const customMenu = {
                 // turnOrderDisplayPreviewUltimateSummon
     
                 eventString += `<div class="turnStarterBarUltimate clickable hoverOpacity" id="actionDisplayOrderEntry${actionIndex}" onclick="userTriggers.expandBattleLog(${actionIndex})">
-                    <div class="weirdSideSemiCircleThingerAlly"></div>
+                    <div class="weirdSideSemiCircleThingerEXTURN2"></div>
+                    <div class="weirdSideSemiCircleThingerEXTURN1"></div>
                     <img src="/HonkaiSR/${imagePath}" class="${isCharacter && !action.eventOverrideImage ? "turnOrderDisplayPreviewUltimate" : "turnOrderDisplayPreviewUltimateSummon"}"/>
                     <div class="miniActionNameBox">Ex-Turn</div>
                 </div>`;
@@ -3679,6 +3683,7 @@ const userTriggers = {
             }
             userTriggers.updateSelectedTraceDisplay(3);
             pagePopulation.forceCharacterDefaultSubFilters(charSlot);//default desired stat filters still need to be a thing, we do not cache search filters, people still need to export those.
+            userTriggers.renewFiltersDisplayValues();
         }
 
         if (defaultData) {
@@ -3692,7 +3697,7 @@ const userTriggers = {
         }
 
         userTriggers.updateCharacterUI(updateFormulas(charSlot),currentSlot);
-        userTriggers.updateCharacterBreakdownClicked(1)
+        userTriggers.updateCharacterBreakdownClicked(1);
     },
     updateSelectedTraceDisplay(traceID) {
         let currentSlot = globalUI.currentCharacterDisplayed;
@@ -4662,8 +4667,8 @@ const userTriggers = {
                             ${slashStringer}
                             
                             <div class="actionDetailHeaderRowCharacterEnergyValueBox">
-                                <div class="actionDetailHeaderRowCharacterEnergyValue">${(turnRef.specialEnergy ? turnRef.specialEnergyCurrent : turnRef.currentEnergy).toLocaleString()}/</div>
-                                <div class="actionDetailHeaderRowCharacterEnergyValue">${(turnRef.specialEnergy ? turnRef.specialEnergyMax : turnRef.maxEnergy).toLocaleString()}</div>
+                                <div class="actionDetailHeaderRowCharacterEnergyValue">${(turnRef.specialEnergyCurrent + turnRef.battleValues.newbudOverflow).toLocaleString()}/</div>
+                                <div class="actionDetailHeaderRowCharacterEnergyValue">${(turnRef.specialEnergyMax).toLocaleString()}</div>
                             </div>
                         </div>`;
                 },
@@ -5036,13 +5041,6 @@ const userTriggers = {
                     // ({logType: "StartTurn", name:currentTurn, isEnemy: thisTurn.isEnemy, isCharacter, AV: battleData.sumAV, turnRef: JSON.stringify(thisTurn)});
                     let percentHPRemaining = (turnRef.currentHP/turnRef.maxHP) * 100;
 
-                    // const customDisplayValuesLog = {
-                    //     "Blade": [
-                    //         {valueName: "Charge", refName: "charge", isBattleValue: true},
-                    //         {valueName: "Hellscape", refName: "hellscapeActive", isBattleValue: true},
-                    //         {valueName: "HP Tally", refName: "bladeHPTally", isBattleValue: false},
-                    //     ]
-                    // }
 
                     const isEnemy = turnRef.isEnemy;
                     const isEvent = turnRef.isUniqueEvent;
@@ -5216,6 +5214,29 @@ const userTriggers = {
                         }
                     }
 
+                    let customStatesString = "";
+                    for (let states of customDisplayStatesLog) {
+
+                        let valueAdjusted = states.isBuffCheck ? turnRef.buffsObject?.[states.buffName] : getRequiredDisplayValue(states,null,turnRef);
+                        if (valueAdjusted) {
+                            customStatesString += `<img src="/HonkaiSR/${states.progressIcon}" class="customEnergySTATESIcon" style="scale: ${states.scale ?? 1}"/>`;
+                            // `<div class="customEnergyBodyPROGRESSBar">
+                            //     <div class="customEnergyBodyMarksCIRCLEPROGRESS"
+                            //         style="background:conic-gradient(${markFillColor} 0 ${fillProgress}%,#3333337c ${fillProgress}% 100%);">
+                            //         <div class="customEnergyBodyMarksCIRCLEPROGRESSIconBOX">
+                            //             <img src="/HonkaiSR/${states.progressIcon}" class="customEnergyBodyMarksCIRCLEPROGRESSIcon"/>
+                            //         </div>
+                            //     </div>
+                            //     ${entry.needPercent ? `${(100 * valueAdjusted/markMax).toLocaleString()}%` : `${valueAdjusted} / ${markMax}`} ${!entry.hideName ? entry.valueName : ""}
+                            // </div>`
+                        }
+                    }
+                    if (customStatesString) {
+                        customStatesString = `<div class="actionDetailBodySTATES">
+                        ${customStatesString}
+                        </div>`
+                    }
+                    // let valueAdjusted = getRequiredDisplayValue(entry,customValues,turnRef);
 
                     let shieldString = "";
                     const activeShields = turnRef.activeShields;
@@ -5289,6 +5310,7 @@ const userTriggers = {
                     ${controlsString}
                     <div class="actionDetailHeaderRowCharacterImageBox">
                         <div class="actionDetailHeaderRowCharacterImageAndEnergyBox">
+                            ${customStatesString}
                             ${imageString}
 
                             ${!isEnemy && (!turnRef.isSummon && !turnRef.isUniqueEvent) ? (specialEnergyDisplayFunctions[turnRef.properName] ? specialEnergyDisplayFunctions[turnRef.properName](turnRef,action) : specialEnergyDisplayFunctions.STANDARDBAR(turnRef,action)) : ""}
@@ -5513,7 +5535,25 @@ const userTriggers = {
                     break;
                 case "QueueUltimate":
                     // logToBattle(battleData,{logType: "QueueUltimate", name: entry.name, isExtraTurn: entry.isExtraTurn});
-                    returnString = `<div class="actionDetailBody">--Queued ${action.isExtraTurn ? "Extra-Turn" : "Ultimate"} from: ${action.name}</div>`;
+                    // returnString = `<div class="actionDetailBody">--Queued ${action.isExtraTurn ? "Extra-Turn" : "Ultimate"} from: ${action.name}</div>`;
+                    // break;
+                    // call: ${action.function}
+                    returnString = `<div class="actionDetailBody">
+                        <div class="inActionExtraTurnBox">
+                        <div class="weirdSideSemiCircleThingerEXTURN2 weirdSideSemiCircleThingerEXTURN2Queue"></div>
+                        <div class="weirdSideSemiCircleThingerEXTURN1 weirdSideSemiCircleThingerEXTURN1Queue"></div>
+                            <div class="inActionExtraTurnBoxIconBox">
+                            ${action.name.toLowerCase().includes("enemy") ? `
+                                <img src="/HonkaiSR/${graphs.enemyCustomImages[action.name] ?? (isEnemySourceBossImage ? graphs.enemyCustomImages.boss : graphs.enemyCustomImages.default)}" class="turnOrderDisplayPreviewActionExpandRowIconEnemy"/>
+                                ${nameNumber ? `<div class="turnOrderDisplayPreviewActionExpandRowIconEnemyNumber">${nameNumber}</div>` : ""}` :
+                            `<img src="/HonkaiSR/${characters[action.name]?.icon ?? graphs.summonCustomImages[action.name]}" class="inActionExtraTurnBoxIconBoxIcon"/>`}
+                            </div>
+                        </div>
+                        <div class="actionDetailBodyQUEUESOURCE">
+                            <div class="actionDetailBody">${action.isExtraTurn ? `Queued Extra-Turn` : "Queued Ultimate"}</div>
+                            <div class="actionDetailBody">Source: ${action.source}</div>
+                        </div>
+                    </div>`;
                     break;
                 case "BuffApply":
                     let applyType = action.applicationType;

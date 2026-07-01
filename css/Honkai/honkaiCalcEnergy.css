@@ -765,3 +765,34 @@
 .actionDetailHeaderRowCharacterCUSTOMBANGERMASKEMPTY {
     filter: brightness(70.6%);
 }
+
+
+
+.customEnergySTATESIcon {
+    height: 20px;
+    width:  20px;
+    object-fit: contain;
+    scale: 1;
+    /* background-color: black; */
+    /* border-radius: 50%; */
+}
+.actionDetailBodySTATES {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 5px;
+    white-space: normal;
+    position: absolute;
+    top:    0.5%;
+    left:   0.5%;
+    height: 30px;
+    padding-left: 15px;
+    background: linear-gradient(to right, transparent 5px,black 30px, transparent 150px);
+    z-index: 1;
+
+    /* flex-wrap: wrap; */
+    /* border: 1px solid red; */
+}
