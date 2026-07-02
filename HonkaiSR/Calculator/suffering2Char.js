@@ -6236,7 +6236,7 @@ const turnLogic = {
 
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const returnSkillCall = this.returnSkillCall;
-                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,returnSkillCall.poolKey,"Lowest HP Ally (On-Field)","SkillTarget");
+                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,1,returnSkillCall.poolKey,"Lowest HP Ally (On-Field)","SkillTarget");
                 return returnSkillCall;
             }
 
@@ -6917,7 +6917,7 @@ const turnLogic = {
 
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const returnSkillCall = this.returnSkillCall;
-                const targetResults = checkAbilityTarget(battleData,thisTurn,returnSkillCall.poolKey,"Lowest HP Ally (On-Field)","SkillTarget","BLAST");
+                const targetResults = checkAbilityTarget(battleData,thisTurn,1,returnSkillCall.poolKey,"Lowest HP Ally (On-Field)","SkillTarget","BLAST");
                 returnSkillCall.target = targetResults[0];
                 returnSkillCall.subTarget = targetResults[1];
                 return returnSkillCall;
@@ -7812,7 +7812,7 @@ const turnLogic = {
 
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const returnSkillCall = this.returnSkillCall;
-                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,returnSkillCall.poolKey,"Lowest HP Ally (On-Field)","SkillTarget");
+                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,1,returnSkillCall.poolKey,"Lowest HP Ally (On-Field)","SkillTarget");
                 return returnSkillCall;
             }
 
@@ -8558,7 +8558,7 @@ const turnLogic = {
 
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const returnSkillCall = this.returnSkillCall;
-                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,returnSkillCall.poolKey,"Lowest HP Ally (On-Field)","SkillTarget");
+                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,1,returnSkillCall.poolKey,"Lowest HP Ally (On-Field)","SkillTarget");
                 return returnSkillCall;
             }
 
@@ -9223,7 +9223,7 @@ const turnLogic = {
 
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const returnSkillCall = this.returnSkillCall;
-                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,returnSkillCall.poolKey,"Lowest HP Ally (On-Field)","SkillTarget");
+                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,1,returnSkillCall.poolKey,"Lowest HP Ally (On-Field)","SkillTarget");
                 return returnSkillCall;
             }
 
@@ -9802,7 +9802,7 @@ const turnLogic = {
 
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const returnSkillCall = this.returnSkillCall
-                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,returnSkillCall.poolKey,"Lowest HP Ally (On-Field)","SkillTarget");
+                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,1,returnSkillCall.poolKey,"Lowest HP Ally (On-Field)","SkillTarget");
                 return returnSkillCall;
             }
 
@@ -22727,7 +22727,7 @@ const turnLogic = {
 
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const returnSkillCall = this.returnSkillCall;
-                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,returnSkillCall.poolKey,"char1","SkillTarget");
+                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,1,returnSkillCall.poolKey,"char1","SkillTarget");
                 return returnSkillCall;
             }
 
@@ -23277,7 +23277,7 @@ const turnLogic = {
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         })
                         queueObject.sourceTurn = ownerTurn;
-                        queueObject.target = checkAbilityTarget(battleData,ownerTurn,queueObject.poolKey,"char1","UltimateTarget");
+                        queueObject.target = checkAbilityTarget(battleData,ownerTurn,1,queueObject.poolKey,"char1","UltimateTarget");
                         
                         queueUltimate(battleData,queueObject);
                     }
@@ -23336,7 +23336,7 @@ const turnLogic = {
 
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const returnSkillCall = this.returnSkillCall;
-                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,returnSkillCall.poolKey,"char1","SkillTarget");
+                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,1,returnSkillCall.poolKey,"char1","SkillTarget");
                 return returnSkillCall;
             }
 
@@ -23921,7 +23921,7 @@ const turnLogic = {
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const returnSkillCall = this.returnSkillCall;
                 // returnSkillCall.target = battleData.nameBasedTurns.char1;
-                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,returnSkillCall.poolKey,"char1","SkillTarget");
+                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,1,returnSkillCall.poolKey,"char1","SkillTarget");
                 return returnSkillCall;
             }
 
@@ -24544,7 +24544,7 @@ const turnLogic = {
                             poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
                         })
 
-                        queueObject.target = checkAbilityTarget(battleData,ownerTurn,queueObject.poolKey,"char1","UltimateTarget");
+                        queueObject.target = checkAbilityTarget(battleData,ownerTurn,1,queueObject.poolKey,"char1","UltimateTarget");
                         queueObject.sourceTurn = ownerTurn;
                         queueUltimate(battleData,queueObject);
                     }
@@ -27467,7 +27467,7 @@ const turnLogic = {
             if ((minimum || skillIsFree) && checkSkill(battleData,thisTurn)) {
                 const skillCall = this.returnSkillCall;
                 // skillCall.target = battleData.nameBasedTurns.char1;
-                skillCall.target = checkAbilityTarget(battleData,thisTurn,skillCall.poolKey,"char1","SkillTarget");
+                skillCall.target = checkAbilityTarget(battleData,thisTurn,1,skillCall.poolKey,"char1","SkillTarget");
                 skillCall.points = skillIsFree ? 0 : -1;
                 return skillCall;
             }
@@ -29391,7 +29391,7 @@ const turnLogic = {
                         })
                         queueObject.sourceTurn = ownerTurn;
                         // queueObject.target = battleData.allyPositions;
-                        queueObject.target = checkAbilityTarget(battleData,ownerTurn,queueObject.poolKey,"char1","UltimateTarget");
+                        queueObject.target = checkAbilityTarget(battleData,ownerTurn,1,queueObject.poolKey,"char1","UltimateTarget");
                         queueUltimate(battleData,queueObject);
                     }
                 },
@@ -37869,7 +37869,7 @@ const turnLogic = {
                 })
                 returnSkillCall.sourceTurn = thisTurn;
 
-                returnSkillCall.target = checkAbilityTarget(battleData,cyreneTurn,returnSkillCall.poolKey,"CyreneCustomAllCharactersButOne","MemoSkillEnhTarget");
+                returnSkillCall.target = checkAbilityTarget(battleData,cyreneTurn,1,returnSkillCall.poolKey,"CyreneCustomAllCharactersButOne","MemoSkillEnhTarget");
                 // skillFunctions.memBasicAttack(battleData,memoTurn,rmcTurn);
                 return returnSkillCall;
                 // battleData.allCharactersButOne[]
@@ -37907,7 +37907,7 @@ const turnLogic = {
                 //     poolKey: turnLogic[rmcTurn.properName].abilityTargetPools.MemoSkillEnh,
                 // })
                 // returnBasicEnhCall.sourceTurn = thisTurn;
-                // returnBasicEnhCall.target = checkAbilityTarget(battleData,rmcTurn,returnBasicEnhCall.poolKey,"char1","MemoSkillEnhTarget");
+                // returnBasicEnhCall.target = checkAbilityTarget(battleData,rmcTurn,1,returnBasicEnhCall.poolKey,"char1","MemoSkillEnhTarget");
                 // return returnBasicEnhCall;
             // }
         },
@@ -39097,7 +39097,7 @@ const turnLogic = {
                     poolKey: turnLogic[rmcTurn.properName].abilityTargetPools.MemoSkillEnh,
                 })
                 returnBasicEnhCall.sourceTurn = thisTurn;
-                returnBasicEnhCall.target = checkAbilityTarget(battleData,rmcTurn,returnBasicEnhCall.poolKey,"char1","MemoSkillEnhTarget");
+                returnBasicEnhCall.target = checkAbilityTarget(battleData,rmcTurn,1,returnBasicEnhCall.poolKey,"char1","MemoSkillEnhTarget");
                 return returnBasicEnhCall;
             }
         },
@@ -45097,7 +45097,7 @@ const turnLogic = {
 
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const returnSkillCall = this.returnSkillCall;
-                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,returnSkillCall.poolKey,"char1","SkillTarget");
+                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,1,returnSkillCall.poolKey,"char1","SkillTarget");
                 return returnSkillCall;
             }
 
@@ -47299,7 +47299,7 @@ const turnLogic = {
 
             if (minimum && checkSkill(battleData,thisTurn)) {
                 const returnSkillCall = this.returnSkillCall;
-                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,returnSkillCall.poolKey,"char1","SkillTarget");
+                returnSkillCall.target = checkAbilityTarget(battleData,thisTurn,1,returnSkillCall.poolKey,"char1","SkillTarget");
                 return returnSkillCall;
             }
 
@@ -53942,7 +53942,7 @@ const turnLogic = {
                         })
 
                         queueObject.sourceTurn = ownerTurn;
-                        queueObject.target = checkAbilityTarget(battleData,ownerTurn,queueObject.poolKey,"char1","UltimateTarget");
+                        queueObject.target = checkAbilityTarget(battleData,ownerTurn,1,queueObject.poolKey,"char1","UltimateTarget");
                         queueUltimate(battleData,queueObject);
                     }
                 },

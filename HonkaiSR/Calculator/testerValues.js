@@ -1880,7 +1880,7 @@ const defaultConditions = {
         
         return result
     },
-    getAbilityTargetCondition(battleData,sourceTurn,poolKey,fallbackTarget,refKey,subTargetKey) { 
+    getAbilityTargetCondition(battleData,sourceTurn,allowedTargetCount,poolKey,fallbackTarget,refKey,subTargetKey) { 
         const conditionPath = battleData[sourceTurn.name]?.[refKey];
         // const conditionPath = defaultConditions[sourceTurn.properName]?.Skill;
         if (!conditionPath) {return conditionLibrary[fallbackTarget](battleData,sourceTurn,conditionPath);}//if someone doesn't have an ulty condition, then default to fallback targeting
@@ -1899,6 +1899,7 @@ const defaultConditions = {
         // console.log(result,"AAAAAAAAAAAAAAAAAAA")
 
         let finalTargetResult = result?.length ? result : conditionLibrary[fallbackTarget](battleData,sourceTurn,conditionPath);
+        if (allowedTargetCount && finalTargetResult.length > allowedTargetCount) {finalTargetResult.length = allowedTargetCount;} 
 
         if (subTargetKey) {
             const subTargets = conditionLibrary[subTargetKey](battleData,sourceTurn,finalTargetResult);
