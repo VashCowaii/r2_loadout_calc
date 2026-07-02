@@ -19795,7 +19795,7 @@ const turnLogic = {
                             let chargeRef = providerTurn.battleValues;
         
                             if (sourceTurn.isEnemy) {return;}
-                            if (sourceTurn.properName != characterName && !chargeRef.chargeDebt) {//fail condition right off if no source exists or it's archer
+                            if (sourceTurn.properName != characterName && chargeRef.charge && !chargeRef.chargeDebt) {//fail condition right off if no source exists or it's archer
         
                                 const queueObject = this.queueObject ??= createQueueObject(providerTurn,{
                                     name: this.listenerName,
