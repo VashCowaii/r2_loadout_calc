@@ -533,12 +533,11 @@ const customHTML = {
         //might have other ordered tables later, but right now this is the only search related setting where order actually matters.
         if (!isOrderedTable) {table.sort();}
         
-        pathHTML.innerHTML = "";
         let filterString = "";
         for (let filterName in table) {
             filterString += filterHTML(table[filterName],filterBox,filterTable);
         }
-        pathHTML.innerHTML += filterString;
+        pathHTML.innerHTML = filterString;
 
     },
     addFilter(filterID,filterBox,filterTable,compareTable,limit,valueInsert) {
