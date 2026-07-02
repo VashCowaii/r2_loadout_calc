@@ -53277,6 +53277,22 @@ const turnLogic = {
                         isFUA: false,
                         compositeCacheTag
                     }
+                    ATKObjects.emcSkillATKOBJECTPOST = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        isFUA: false,
+                        compositeCacheTag
+                    }
 
                     const buffNames = logicRef.buffNames;
                     ATKObjects.emcE1UltBonusCBSHEET = {
@@ -53294,6 +53310,7 @@ const turnLogic = {
                     }
                 }
                 let ATKObject = ATKObjects.emcSkillATKOBJECT;
+                let ATKObject2 = ATKObjects.emcSkillATKOBJECTPOST;
 
                 const exoTurnRef = {sourceTurn};
 
@@ -53302,7 +53319,11 @@ const turnLogic = {
                     updateBuff(battleData,sourceTurn,buffSheet);
                 }
 
-                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                let chainedAttackRef = attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget,"Start",null);
+                const emcDMG = logicRef.skillFunctions.emcCertifiedAdditionalDMG;
+                emcDMG(battleData,sourceTurn,sourceTurn,chainedAttackRef);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
+
                 poke("emcSkillEndingCBGain",battleData,exoTurnRef,null);
             },
             statCheck(battleData,currentTurn) {
@@ -53810,13 +53831,12 @@ const turnLogic = {
                         "trigger": "UpdateStatATK",//ATK stat family
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
-                            let sourceTurn = generalInfo.sourceTurn;
-        
-                            if (sourceTurn.isUniqueEvent || sourceTurn.properName != ownerTurn.properName) {return;}
+
                             const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck
                             statCheck(battleData,ownerTurn);
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "On Cloud Nine ATK check",
                         "ownerTurn": {},
                     },
@@ -53824,9 +53844,6 @@ const turnLogic = {
                         "trigger": "emcSkillEndingCBGain",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
-        
-                            const emcDMG = this.emcCertifiedAdditionalDMG ??= turnLogic[ownerTurn.properName].skillFunctions.emcCertifiedAdditionalDMG
-                            emcDMG(battleData,ownerTurn,ownerTurn,generalInfo);
         
                             const cbFunction = this.cbFunction ??= turnLogic["Aha Instant"].skillFunctions.addCertifiedBanger;
                             const baseValue = 20;
@@ -53884,12 +53901,10 @@ const turnLogic = {
                             if (action != "Ultimate") {return;}
 
                             let ownerTurn = this.ownerTurn;
-                            const sourceTurn = generalInfo.sourceTurn;
-                            if (ownerTurn.properName != sourceTurn.properName) {return;}//only his ult can trigger this
-        
-                            updateSkillPoints(battleData,1,sourceTurn,false,"Screw It, We Ball: Ult End")
+                            updateSkillPoints(battleData,1,ownerTurn,false,"Screw It, We Ball: Ult End")
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Screw It, We Ball ult end skill point gain",
                         "ownerTurn": {},
                     },
@@ -53897,14 +53912,12 @@ const turnLogic = {
                         "trigger": "AttackDMGEnd",
                         condition(battleData,generalInfo) {
                             let ownerTurn = this.ownerTurn;
-                            const sourceTurn = generalInfo.sourceTurn;
-                            if (sourceTurn.properName != ownerTurn.properName) {return;}
-                            //will only read EMC's attacks
         
-                            updateEnergy(battleData,10,sourceTurn,true);
-                            battleActions.updatePunchlineValue(battleData,3,sourceTurn,"Trailblazer - Elation: Attack DMG Ended");
+                            updateEnergy(battleData,10,ownerTurn,true);
+                            battleActions.updatePunchlineValue(battleData,3,ownerTurn,"Trailblazer - Elation: Attack DMG Ended");
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "listenerName": "Talent - AttackDMGEnd energy+punchline gain",
                         "ownerTurn": {},
                     },
