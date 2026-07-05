@@ -2299,6 +2299,8 @@ const battleActions = {
         const wouldHaveSuperToughness = targetBroken || (canAccumulateAnyways && metWeaknessOrAll);
         let toughnessComposite = {sourceTurn,targetTurn,enemyIsBroken,targetWasAlreadyBroken,overBreak,targetBroken,canAccumulateAnyways,rawReduction,toughnessBase,element,slot,wouldHaveSuperToughness};
 
+        poke("TakingToughnessDMG",battleData,toughnessComposite,targetTurn);
+
         if (enemyIsBroken) {
             // let breakObject = {//isBroken tied to the enemy here is important bc we need to trigger break dmg REGARDLESS of if this attack actually broke them or not bc break dmg happens when broken anyways, regardless of who did it or what element.
             //     toughnessBase,
@@ -35292,9 +35294,782 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    "Xueyi": {
+        logic(thisTurn,battleData) {
+            let currentSP = battleData.skillPointCurrent;
+            const minimum = currentSP >= 1;
+
+            if (minimum && checkSkill(battleData,thisTurn)) {
+                const returnSkillCall = this.returnSkillCall;
+                returnSkillCall.target = [battleData.primaryTarget];
+                returnSkillCall.subTarget = battleData.blastTargets;
+                return this.returnSkillCall;
+            }
+
+            const basicCall = this.returnBasicCall;
+            basicCall.target = [battleData.primaryTarget];
+            return basicCall;
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.xueyiSkill,
+                action: "Skill",
+                points: -1, 
+
+                isAttack: true,
+                isAbility: true,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "SkillStart",
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
+            this.returnSkillCall.target = [thisTurn];
+
+            this.returnBasicCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.xueyiBasic,
+                action: "BasicATK",
+                points: 1, 
+
+                isAttack: true,
+                isAbility: true,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "BasicATKStart",
+
+                poolKey: this.abilityTargetPools.BasicATK,
+            })
+            this.returnBasicCall.sourceTurn = thisTurn;
+        },
+        "abilityTargetPools": {
+            "BasicATK": "Enemies (On-Field)",
+            "FUA": "Enemies (On-Field)",
+            "Skill": "Enemies (On-Field)",
+            "Ultimate": "Enemies (On-Field)",
+        },
+        "skillFunctions": {
+            xueyiBasic(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.xueyiBasicREF ??= ATKObjects["Basic ATK"]["Mara-Sunder Awl"].variant1;
+
+                if (!ATKObjects.xueyiBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = ATKObjects.xueyiBasicREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Quantum"];
+                    const actionTags = ["All","Basic","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.xueyiBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.xueyiBasicATKOBJECT;
+
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+            },
+            xueyiSkill(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.xueyiSkillREF ??= ATKObjects["Skill"]["Iniquity Obliteration"].variant1;
+
+                if (!ATKObjects.xueyiSkillATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
+                    let values = ATKObjects.xueyiSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Quantum"];
+                    const actionTags = ["All","Skill","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.xueyiSkillATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: values[1],
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.xueyiSkillATKOBJECT;
+
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+            },
+            xueyiConvertToughness(battleData,sourceTurn,xueyiToughnessTally,isAllyConversion) {
+                // battleData,providerTurn,battleValues.xueyiToughnessTally
+                let returnCount = 0;
+
+                if (xueyiToughnessTally <= 30) {
+                    returnCount += 1;
+                }
+                else {
+                    returnCount += Math.floor(xueyiToughnessTally/30);
+                }
+
+                if (isAllyConversion) {returnCount = Math.min(1,returnCount);}
+
+                // return returnCount
+                sourceTurn.battleValues.xueyiToughnessTally = 0;
+                poke("XueyiGainKarma",battleData,{pointsGained: returnCount,sourceString:"Enemy received Toughness DMG"});
+            },
+            statCheck(battleData,currentTurn) {
+                const logicRef = turnLogic[currentTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let buffNames = logicRef.buffNames;
+                let buffName1 = buffNames.loom;
+
+                const statTable = currentTurn.statTable;
+
+                let currentBE = statTable[DamageBreak];// + statTable[DamageBreakNULL];//This DOES include converted break effect oddly enough
+                let conversion = Math.min(2.4, currentBE);
+                let buffRef = currentTurn.buffsObject;
+                let buffCheck = buffRef[buffName1];
+
+                let ownerName = currentTurn.properName;
+
+                if (buffCheck && buffCheck[DamageAll] === conversion) {return;}//if buff exists and the amount hasn't changed, then end it here
+                else if (buffCheck && buffCheck[DamageAll] != conversion) {
+                    //so if gallagher already has the buff, but the new conversion amount does NOT match the existing amount
+                    //then silently remove the old buff
+                    removeBuff(battleData,currentTurn,buffCheck,true);
+                }
+
+                if (!ATKObjects.xueyiTraceBEToDMGSHEET) {
+                    ATKObjects.xueyiTraceBEToDMGSHEET = {
+                        "stats": [DamageAll],
+                        [DamageAll]: conversion,
+                        "source": ownerName,
+                        "sourceOwner": currentTurn.properName,
+                        "buffName": buffName1,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                }
+                let buffSheet = ATKObjects.xueyiTraceBEToDMGSHEET;
+                buffSheet[DamageAll] = conversion;
+                updateBuff(battleData,currentTurn,buffSheet);
+            },
+            xueyiUltimate(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                // let characterName = sourceTurn.properName;
+                let skillRef = ATKObjects.xueyiUltimateREF ??= ATKObjects.Ultimate["Divine Castigation"].variant1;
+                let values = ATKObjects.xueyiUltimateREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                const rank = sourceTurn.rank;
+
+                if (!ATKObjects.xueyiUltimateATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    const scalar = "ATK";
+                    const tags = ["All","Quantum"];
+                    const actionTags = ["All","Ultimate","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.xueyiUltimateATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: true,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                    }
+
+                    const buffNames = logicRef.buffNames;
+                    ATKObjects.xueyiUltEstimateDMGSHEET = {
+                        "stats": [DamageAll],
+                        [DamageAll]: 0,
+                        "source": "Ultimate",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffNames.ultToughnessRemaining,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "actionTags": ["All"],
+                    }
+
+                    ATKObjects.xueyiUltTraceRatioDMGSHEET = {
+                        "stats": [DamageAll],
+                        [DamageAll]: 0.10,
+                        "source": "Trace",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffNames.traceToughnessRatio,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "actionTags": ["All"],
+                    }
+
+                    ATKObjects.xueyiUltE4BreakSHEET = {
+                        "stats": [DamageBreak],
+                        [DamageBreak]: 0.40,
+                        "source": "E4",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffNames.e4Break,
+                        "durationInTurn": 3,
+                        "duration": 2,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                    }
+                }
+                let ATKObject = ATKObjects.xueyiUltimateATKOBJECT;
+                const battleValues = sourceTurn.battleValues;
+
+                const currentTarget = actionObject.target[0];
+                const targetToughnessRemaining = currentTarget.currentToughness;
+                const targetToughnessRatio = targetToughnessRemaining / currentTarget.maxToughness;
+
+                const metTraceRatio = targetToughnessRatio >= 0.5;
+
+                if (targetToughnessRemaining) {
+                    //TODO: when weakness lock is added later that does completely kill this bonus
+                    const buffSheet = ATKObjects.xueyiUltEstimateDMGSHEET;
+                    buffSheet[DamageAll] = Math.min(4, Math.floor(targetToughnessRemaining/10)) * values[1];
+                    updateBuff(battleData,sourceTurn,buffSheet);
+                }
+
+                //remaining toughness est buff
+                battleValues.xueyiUltActive = true;
+                //e4 bonus
+                if (rank >= 4) {
+                    const buffSheet = ATKObjects.xueyiUltE4BreakSHEET;
+                    updateBuff(battleData,sourceTurn,buffSheet);
+                }
+                //trace ratio bonus
+                if (metTraceRatio) {
+                    const buffSheet = ATKObjects.xueyiUltTraceRatioDMGSHEET;
+                    updateBuff(battleData,sourceTurn,buffSheet);
+                }
+                
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                
+                //remove shit after
+                battleValues.xueyiUltActive = false;
+
+                if (metTraceRatio) {
+                    const buffSheet = ATKObjects.xueyiUltTraceRatioDMGSHEET;
+                    removeBuff(battleData,sourceTurn,buffSheet);
+                }
+                if (targetToughnessRemaining) {
+                    const buffSheet = ATKObjects.xueyiUltEstimateDMGSHEET;
+                    removeBuff(battleData,sourceTurn,buffSheet);
+                }
+
+                sourceTurn.ultyQueued = false;
+            },
+            xueyiFUA(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.xueyiFUAREF ??= ATKObjects.Talent["Karmic Perpetuation"].variant1;
+                const battleValues = sourceTurn.battleValues;
+                battleValues.fuaIsActive = true;
+                const rank = sourceTurn.rank;
+
+                if (!ATKObjects.xueyiFUAATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].passive;
+                    const rank = sourceTurn.rank;
+                    let values = ATKObjects.xueyiFUAREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Quantum"];
+                    const actionTags = ["All","FUA","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.xueyiFUAATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: rank >= 2,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        bounceData: superGlobal.createATKBounceObject({
+                            multi: values[1],
+                            bounceCount: 3,
+                            energy: skillRef.energyRegen,
+                            target: {
+                                "hitRatio": 1,
+                                "energyRatio": 1,
+                                "toughness": 5
+                            },
+                        })
+                    }
+                    const buffNames = logicRef.buffNames;
+                    ATKObjects.xueyiFUAE1DMGSHEET = {
+                        "stats": [DamageAll],
+                        [DamageAll]: 0.40,
+                        "source": "E1",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": buffNames.e1DMG,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "actionTags": ["FUA"],
+                    }
+
+                    const actionTags2 = ["All","Heal"];
+                    const compositeCacheTag2 = actionTags2 + sourceTurn.properName;
+                    ATKObjects.xueyiE2HEALOBJECT = {
+                        multipliers: {
+                            primary: 0.05,
+                            blast: null,
+                            all: null,
+                        },
+                        flatAmounts: {
+                            primary: null,
+                            blast: null,
+                            all: null,
+                        },
+                        scalar: null,
+                        DMGTags: [],
+                        slot: skillRef.slot,
+                        actionTags: actionTags2,
+                        compositeCacheTag: compositeCacheTag2,
+                    }
+                }
+                const ATKObject = ATKObjects.xueyiFUAATKOBJECT;
+                if (rank >= 1) {
+                    const e1Sheet = ATKObjects.xueyiFUAE1DMGSHEET;
+                    updateBuff(battleData,sourceTurn,e1Sheet);
+
+                    if (rank >= 2) {
+                        const healObject = ATKObjects.xueyiE2HEALOBJECT;
+
+                        healAlly(battleData,healObject,sourceTurn,sourceTurn,"E2",1);
+                    }
+                }
+
+
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+                // updateEnergy(battleData,15,sourceTurn,false,"Cyclone of Destruction");
+
+                if (rank >= 1) {
+                    const e1Sheet = ATKObjects.xueyiFUAE1DMGSHEET;
+                    removeBuff(battleData,sourceTurn,e1Sheet);
+                }
+
+                // const valuesRef = sourceTurn.battleValues;
+                // const chargeCap = sourceTurn.rank >= 6 ? 4 : 5;
+                // const oldValue = valuesRef.charge;
+                // valuesRef.charge = 0;
+                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Blade FUA Used", bodyText: `Blade Charge ${oldValue} --> ${valuesRef.charge}/${chargeCap}`});}
+                poke("XueyiGainKarma",battleData,{pointsGained: -battleValues.karmaMax,sourceString:"FUA used"});
+                battleValues.fuaQueued = false;
+                battleValues.fuaIsActive = false;
+                battleValues.xueyiToughnessTally = 0;
+            },
+            xueyiTechnique(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.xueyiTechniqueREF ??= ATKObjects.Technique["Summary Execution"].variant1;
+
+                if (!ATKObjects.xueyiTechniqueATKObject) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
+                    let values = ATKObjects.xueyiTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Quantum"];
+                    const actionTags = ["All","Technique","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.xueyiTechniqueATKObject = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.xueyiTechniqueATKObject;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,battleData.enemyPositions,[]);
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+                    const battleValues = ownerTurn.battleValues;
+                    battleValues.karmaMax = rank >= 6 ? 6 : 8;
+                    battleValues.karmaMaxReal = battleValues.karmaMax + 6;//trace overflow;
+
+                    const allEnemiesArray = battleData.allEnemiesArray;
+
+                    //enemies taking toughness
+                    const listener1 = passiveListeners[0];
+                    for (let enemy of allEnemiesArray) {
+                        addListenerWithPriority(battleData,listener1,listener1.trigger,enemy,null,ownerTurn);
+                    }
+
+                    //ally attack settlement
+                    const listener2 = passiveListeners[1];
+                    addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
+
+                    //trace BE conversion
+                    //future BE trigger
+                    const listener3 = passiveListeners[2];
+                    addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn);
+                    //battlestart trigger
+                    const listener4 = passiveListeners[3];
+                    addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+
+                    //queue on wavestart if karma met
+                    const listener5 = passiveListeners[4];
+                    addListenerWithPriority(battleData,listener5,listener5.trigger,ownerTurn);
+
+
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false);
+                },
+                "target": "self",
+                "listenerName": "Xueyi Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "TakingToughnessDMG",
+                        condition(battleData,generalInfo,personalOwner) {
+                            // let ownerTurn = this.ownerTurn;
+
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy) {return;}
+                            const providerTurn = this.providerTurn;
+                            if (providerTurn.battleValues.fuaIsActive) {return;}
+
+                            const toughnessReceived = generalInfo.toughnessBase * 3;
+                            const battleValues = providerTurn.battleValues;
+
+                            battleValues.xueyiToughnessTally = Math.floor((battleValues.xueyiToughnessTally + 0.5) + toughnessReceived);
+                            /*
+                                I can't think of a way to prove this on the live game since nobody deals a small enough instance of toughness, EVER, for me to be able to do so
+                                but in theory if an ally does such a small amount of toughness that even the +.5 there can't push the tally sum up above 1 before the floor
+                                then that would mean the tally sum would remain at 0 and DIFF would equate to 0 when checking for karma gain, resulting in NO karma gain
+                                granted this is a truly fucking obscure scenario and it will likely NEVER never be possible to show it, but if somehow this ends up being relevant
+                                in the future, I have this note here for a very confused future me.
+
+                                if an enemy had an excess of some sub .16666633333 w/e toughnesss then that could work to test with
+                                or if an ally can give some incremental scaling decimal WBE bonus that would work as well, but at present I can't think of anything
+                            */
+
+                            if (providerTurn.properName === sourceTurn.properName && battleValues.xueyiUltActive) {
+                                const xueyiConvertToughness = this.xueyiConvertToughness ??= turnLogic[providerTurn.properName].skillFunctions.xueyiConvertToughness;
+                                xueyiConvertToughness(battleData,providerTurn,battleValues.xueyiToughnessTally);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Xueyi Talent enemy taking toughness DMG handler",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo,personalOwner) {//is global
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.isEnemy) {return;}
+
+                            let ownerTurn = this.ownerTurn;
+                            const battleValues = ownerTurn.battleValues;
+                            if (sourceTurn.properName === ownerTurn.properName) {
+                                const dmgSlot = generalInfo.dmgSlot;
+                                if ((dmgSlot === "Skill" || dmgSlot === "Basic ATK") && battleValues.xueyiToughnessTally) {
+                                    const xueyiConvertToughness = this.xueyiConvertToughness ??= turnLogic[ownerTurn.properName].skillFunctions.xueyiConvertToughness;
+                                    xueyiConvertToughness(battleData,ownerTurn,battleValues.xueyiToughnessTally);
+                                }
+                            }
+                            else if (battleValues.xueyiToughnessTally) {
+                                const xueyiConvertToughness = this.xueyiConvertToughness ??= turnLogic[ownerTurn.properName].skillFunctions.xueyiConvertToughness;
+                                xueyiConvertToughness(battleData,ownerTurn,battleValues.xueyiToughnessTally,true);
+                            }
+
+                            poke("xueyiQueueFUA",battleData,null);
+                        },
+                        "target": "self",
+                        "listenerName": "Xueyi talent settle attack ending toughness karma gain",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UpdateStatBreak",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+        
+                            const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
+                            statCheck(battleData,ownerTurn);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Clairvoyant Loom - BE updated reproc",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+        
+                            const statCheck = this.statCheck ??= turnLogic[ownerTurn.properName].skillFunctions.statCheck;
+                            statCheck(battleData,ownerTurn);
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "Clairvoyant Loom - battelstart conversion proc",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            // const currentWave = generalInfo.currentWave;
+                            // if (currentWave != 1) {return;}
+                            const ownerTurn = this.ownerTurn;
+
+                            if (ownerTurn.battleValues.xueyiToughnessTally) {
+
+                                let targetOverride = superGlobal.getStartingAttacker(battleData);
+                                let starterWasNotXueyi = targetOverride.properName != ownerTurn.properName;
+
+                                const xueyiConvertToughness = this.xueyiConvertToughness ??= turnLogic[ownerTurn.properName].skillFunctions.xueyiConvertToughness;
+                                xueyiConvertToughness(battleData,ownerTurn,ownerTurn.battleValues.xueyiToughnessTally,starterWasNotXueyi);
+                            }
+
+                            poke("xueyiQueueFUA",battleData,null);
+                        },
+                        "target": "self",
+                        "priority": 999999,
+                        "listenerName": "Final call for toughness conversion/FUA queue",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
+                "trigger": "XueyiGainKarma",
+                condition(battleData,generalInfo) {
+                    // poke("XueyiGainKarma",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+
+                    const generalData = this.generalData ??= {summerName: "xueyiKarmaSum",baseName: "karma",maxName: "karmaMaxReal",maxNameDisplay: "karmaMax",minName: null,isRealSubEnergy: true,
+                        baseString: "Karma (Xueyi)",displayIcon:"/HonkaiSR/misc/xueyi/Icon1214Passive.png"};
+                    // const oldValue = ownerTurn.battleValues.prana;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
+                    
+                    poke("xueyiQueueFUA",battleData,null);
+                },
+                "target": "self",
+                "listenerName": "Xueyi Karma Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "xueyiQueueFUA",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    const battleValues = ownerTurn.battleValues;
+
+                    if (battleValues.karma >= battleValues.karmaMax && !battleValues.fuaQueued) {
+                        battleValues.fuaQueued = true;
+
+                        const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                            name: this.listenerName,
+                            priority: priorityList.ability.CharacterAttackFromSelf,
+                            queueTag: "QueuedInsert",
+        
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.xueyiFUA,
+                            action: "Insert",
+                            abortCheck: null,//(battleData,actionObject,ownerTurn),
+        
+                            isInserted: true,
+                            dontKeepNextWave: false,//ults always clear out
+                            isAttack: true,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "GenericAbilityStart",
+        
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.FUA,
+                        })
+                        queueObject.sourceTurn = ownerTurn;
+                        queueObject.target = battleData.bounceOrder;
+                        queueInsertAbility(battleData,queueObject);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Xueyi FUA Queue Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck && checkUlty(battleData,ownerTurn);
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+
+                        const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                            name: this.listenerName,
+                            priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.xueyiUltimate,
+                            action: "Ultimate",
+
+                            energyCost: ownerTurn.maxEnergy,
+
+                            dontKeepNextWave: true,//ults always clear out
+                            isAttack: true,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                        })
+                        queueObject.target = [battleData.primaryTarget]
+                        // queueObject.subTarget = battleData.blastTargets;
+                        queueObject.sourceTurn = ownerTurn;
+                        queueUltimate(battleData,queueObject);
+                    }
+                },
+                "target": "enemy",
+                "listenerName": "Xueyi - Ultimate queued",
+                "ownerTurn": {},
+            },
+        ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.xueyiTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -60,
+            "listenerName": "Xueyi Technique",
+            "ownerTurn": {},
+        },
+        "ATKObjects": {},
+        "listenersBattle": [],
+        "buffsBattle": {},
+        "buffsBattleTemp": {},
+        "characterValues": {
+            "karma": 0,
+            "karmaMax": 0,
+            "karmaMaxReal": 0,
+            "xueyiToughnessTally": 0,
+            "xueyiUltActive": false,
+            "fuaQueued": false,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "loom": "Clairvoyant Loom",
+            "ultToughnessRemaining": "Divine Castigation",
+            "traceToughnessRatio": "Intrepid Rollerbearings",
+            "e4Break": "E4: Karma, Severed",
+            "e1DMG": "E1: Dvesha, Inhibited",
+        },
+        "characterValuesBattle": {},
+    },
     
     //Remembrance
-    "Cyrene": {//ATKOBJECTS DONE
+    "Cyrene": {
         logic(thisTurn,battleData) {
             let statCalls = thisTurn.battleValues;
             const isEnhanced = statCalls.isEnhanced;
@@ -35371,7 +36146,6 @@ const turnLogic = {
             "Skill": "Self",
             "Ultimate": "Self",
             "MemoSkill": "Enemies (On-Field)",
-            // "MemoSkillEnh": "allCharactersButOne",
             "MemoSkillEnh": "CyreneCustomAllCharactersButOne",
         },
         "skillFunctions": {

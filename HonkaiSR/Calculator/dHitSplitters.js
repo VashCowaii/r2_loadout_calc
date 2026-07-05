@@ -1641,6 +1641,61 @@ const hitSplitters = {
       }
     ]
   },
+  "Xueyi": {
+    "basic": [
+      {
+        "target": {
+          "hitRatio": 0.4,
+          "energyRatio": 0.4,
+          "toughness": 10,
+          "target": "primary"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.6,
+          "energyRatio": 0.6,
+          "toughness": 10,
+          "target": "primary"
+        },
+      }
+    ],
+    "skill": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 20,
+          "target": "primary"
+        },
+        "subTarget": {
+          "hitRatio": 1,
+          "toughness": 10,
+          "target": "blast"
+        },
+      }
+    ],
+    "ult": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 40,
+          "target": "primary"
+        },
+      }
+    ],
+    "passive": [],
+    "tech": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "toughness": 20,
+          "target": "all"
+        },
+      }
+    ]
+  },
 
   //ERUDITION
   "Argenti": {
