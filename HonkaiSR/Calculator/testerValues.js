@@ -196,6 +196,18 @@ const customDisplayValuesLog = {
         },
         {valueName: "Counter Max", refName: "counterCountMax", isBattleValue: true,hide: true},
     ],
+    "Xueyi": [//tracker done
+        {valueName: "Karma", refName: "karma", isBattleValue: true,summaryValue: "xueyiKarmaSum",summaryType: "SUM",
+            customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "Quantum",
+            displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            progressIcon: "misc/xueyi/Icon1214Passive.png"
+        },
+        {valueName: "Karma Max", refName: "karmaMax", isBattleValue: true,hide: true},
+        // {valueName: "Charge", refName: "charge", isBattleValue: true,summaryValue: "bladeFUAStackSum",summaryType: "SUM"},
+        // {valueName: "Hellscape", refName: "hellscapeActive", isBattleValue: true, isCharacterState: true},
+        // {valueName: "HP Loss Tally", refName: "bladeHPTally", isBattleValue: false,summaryValue: "bladeHPTallySummer",summaryType: "SUM"},
+    ],
 
     //HUNT
     "Archer": [//tracker done
@@ -767,6 +779,7 @@ const conditionsCharacterDisplayWarning = {
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Clara": defaultStandardAbilityDisplayWarnings,
+    "Xueyi": defaultStandardAbilityDisplayWarnings,
     
     //HARMONY
     "Sunday": defaultStandardAbilityDisplayWarnings,
@@ -2078,6 +2091,17 @@ const defaultConditions = {
                     "isBattleValue": true
                 }
             ]
+        }
+    },
+    "Xueyi": {
+        "hasEnhancedState": true,
+        "Skill": {
+            "type": "AND",
+            "array": []
+        },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
         }
     },
 

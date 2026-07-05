@@ -3598,6 +3598,61 @@ const maslowCharactersDestruction = {
             addTeamWant: [],
         },
     },
+    "Xueyi": {
+        // ["CritRateBase","SPDFlat","CritDamageBase","ATK%"]
+        defaultMainSubs: ["CritRateBase","DamageBreak","CritDamageBase","ATK%"],
+        //["ATK%","CritRateBase","CritDamageBase","SPDFlat"]
+        defaultTrashSub: ["ATKFlat","SPDFlat","EffectRES","HP%"],
+        0: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource"],
+            wants: ["ATK","Quantum","Skill","Ultimate",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Quantum","Skill","Ultimate",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        1: {
+            gives: ["FUASource"],
+            givesTeam: ["FUASource"],
+            wants: ["ATK","Quantum","Skill","Ultimate",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Quantum","Skill","Ultimate",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        2: {
+            gives: ["HealingSource","FUASource"],
+            givesTeam: ["FUASource"],
+            wants: ["ATK","Quantum","Skill","Ultimate",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Quantum","Skill","Ultimate",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        3: {
+            gives: ["HealingSource","FUASource"],
+            givesTeam: ["FUASource"],
+            wants: ["ATK","Quantum","Skill","Ultimate",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Quantum","Skill","Ultimate",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        4: {
+            gives: ["HealingSource","FUASource"],
+            givesTeam: ["FUASource"],
+            wants: ["ATK","Quantum","Skill","Ultimate",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Quantum","Skill","Ultimate",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        5: {
+            gives: ["HealingSource","FUASource"],
+            givesTeam: ["FUASource"],
+            wants: ["ATK","Quantum","Skill","Ultimate",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Quantum","Skill","Ultimate",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        6: {
+            gives: ["HealingSource","FUASource"],
+            givesTeam: ["FUASource"],
+            wants: ["ATK","Quantum","Skill","Ultimate",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Quantum","Skill","Ultimate",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+    },
 }
 const maslowCharactersHarmony = {
     //HARMONY
