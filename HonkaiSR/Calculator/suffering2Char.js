@@ -2249,7 +2249,7 @@ const battleActions = {
         totals.totalOverkill += DMGOverkill;
     },
     dealToughnessDMG(battleData,sourceTurn,enemyIsDead,targetTurn,currentSplit,toughnessPre,overBreakTotals,ATKObject,element,generalInfo,slot,fixed,alone) {
-        if (enemyIsDead) {return;}
+        if (enemyIsDead || ATKObject.skipToughness) {return;}
         //TOUGHNESS MATH
         let enemyIsBroken = false;
         let targetWasAlreadyBroken = false;
@@ -2673,8 +2673,10 @@ const battleActions = {
         const ATKObject = generalInfo.ATKObject;
         const element = generalInfo.element;
         let slot = ATKObject.slot;
+
+        const starterToughness = sourceTurn.battleStartToughness;
         
-        let toughnessComposite = dealToughnessDMG(battleData,sourceTurn,false,targetTurn,1,10,overBreakTotals,ATKObject,element,generalInfo,slot);
+        let toughnessComposite = dealToughnessDMG(battleData,sourceTurn,false,targetTurn,1,starterToughness,overBreakTotals,ATKObject,element,generalInfo,slot);
 
         if (battleData.isLoggyLogger) {
             const hitDisplay = {
@@ -4572,7 +4574,7 @@ const battleActions = {
             }
         }
     },
-    getTechnique(battleData,ownerTurn,logicRef,techCount,isAttack,isDimension) {
+    getTechnique(battleData,ownerTurn,logicRef,techCount,toughnessOverride,isAttack,isDimension) {
         let useTechnique = logicRef.useTechnique && battleData.techniquesAllowed;
         if (!useTechnique) {return;}
 
@@ -4602,6 +4604,7 @@ const battleActions = {
             battleData.combatStarterSlot = ownerTurn.name;
         }
         if (isDimension) {battleData.dimensionTechniqueUsed = true;}
+        if (toughnessOverride) {ownerTurn.battleStartToughness = toughnessOverride;}
     },
     getUniqueGearBuffName(battleData,sourceTurn,logicRef,buffNameTag) {
         const buffNames = logicRef.buffNames;
@@ -5026,10 +5029,10 @@ const turnLogic = {
             {
                 "trigger": "WaveStart",
                 condition(battleData,generalInfo) {
-                    // const currentWave = generalInfo.currentWave;
-                    // if (currentWave != 1) {return;}
+                    const currentWave = generalInfo.currentWave;
+                    if (currentWave != 1) {return;}
                     
-                    if (!battleData.attackTechniqueUsed && battleData.techniquesAllowed) {
+                    if (battleData.techniquesAllowed) {
                         const battleStartMatchingWeakness = this.battleStartMatchingWeakness ??= turnLogic.Universal.skillFunctions.battleStartMatchingWeakness
                         battleStartMatchingWeakness(battleData);
                     }
@@ -32416,7 +32419,7 @@ const turnLogic = {
                         multipliers: {
                             primary: null,
                             blast: null,
-                            all: values[0],
+                            all: values[1],
                         },
                         energy: skillRef.energyRegen,
                         scalar,
@@ -32428,6 +32431,7 @@ const turnLogic = {
                     }
                 }
                 const ATKObject = ATKObjects.fireflyTechATKObject;
+                ATKObject.skipToughness = battleData.wavesCompleted === 0;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 attackWrapper(battleData,skillRef,sourceTurn,ATKObject,battleData.enemyPositions,[]);
@@ -32572,7 +32576,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener8,listener8.trigger,ownerTurn);
                     }
 
-                    getTechnique(battleData,ownerTurn,logicRef,2,true,false)
+                    getTechnique(battleData,ownerTurn,logicRef,2,20,true,false);
                 },
                 "target": "self",
                 "listenerName": "Firefly Passive",
