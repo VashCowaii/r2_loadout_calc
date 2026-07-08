@@ -58,6 +58,20 @@ const superGlobal = {
             "SPMax": 5,
         }
     },
+    getStarterTotalTable() {
+        return {
+            DMG: {},
+            DMGOverkill: {},
+            Turns: {},
+            Actions: {},
+            SP: {},
+            Healing: {},
+            OverHeal: {},
+            ShieldAmount: {},
+            Shields: {},
+            Overshield: {}
+        }
+    },
     createEntityDOTObject() {
         return {
             "Lightning": 0,
