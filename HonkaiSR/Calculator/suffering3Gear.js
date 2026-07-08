@@ -18467,6 +18467,7 @@ const turnLogicRelics = {
                                 const buffSheet = sourceTurn.relicIseeSeesItSHEETREAL;
 
                                 const stackSheet = sourceTurn.buffsObject[sourceTurn.relicIseeSeesItSHEET.buffName];
+                                if (!stackSheet) {return;}
                                 const stackCount = stackSheet.currentStacks;
         
                                 const buffName = buffSheet.buffName;
@@ -18496,7 +18497,7 @@ const turnLogicRelics = {
                                         }
                                     }
                                     else if (stackCount) {//otherwise if we didn't have the buff yet, add it
-                                        buffSheet.currentStacks = stackDiff;
+                                        buffSheet.currentStacks = stackCount;
                                         updateBuff(battleData,sourceTurn,buffSheet);
                                     }
                                 }
