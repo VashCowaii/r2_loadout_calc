@@ -7721,25 +7721,7 @@ const turnLogic = {
                 "listenerName": "Huohuo Revive Charge Handler",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "PreActionPhaseEnd",
-                condition(battleData,generalInfo) {
-                    // poke("HealEnd",battleData,turnMerge);
-                    let ownerTurn = this.ownerTurn;
-
-                    if (!ownerTurn.talentProvisionIsActive) {
-                        ownerTurn.battleValues.talentProvisionDuration = 0;
-                    }
-                    else {
-                        const buffName = this.buffName ??= turnLogic[ownerTurn.properName].buffNames.talentCountdown;
-                        ownerTurn.battleValues.talentProvisionDuration = ownerTurn.buffsObject[buffName].duration;
-                    }
-                },
-                "target": "self",
-                "isPersonal": true,
-                "listenerName": "Huohuo Zone - duration increment handler(visual)",
-                "ownerTurn": {},
-            },
+            createGenericZoneDurationVisual("Huohuo","talentProvisionIsActive",false,"talentProvisionDuration","talentCountdown"),
             {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
@@ -13472,25 +13454,7 @@ const turnLogic = {
                 "listenerName": "Zone - enemy added to field listener",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "PreActionPhaseEnd",
-                condition(battleData,generalInfo) {
-                    // poke("HealEnd",battleData,turnMerge);
-                    let ownerTurn = this.ownerTurn;
-
-                    if (!ownerTurn.hysilensFieldActive) {
-                        ownerTurn.battleValues.hysilensFieldDuration = 0;
-                    }
-                    else {
-                        const buffName = this.buffName ??= turnLogic[ownerTurn.properName].buffNames.zoneCountdown;
-                        ownerTurn.battleValues.hysilensFieldDuration = ownerTurn.buffsObject[buffName].duration;
-                    }
-                },
-                "target": "self",
-                "isPersonal": true,
-                "listenerName": "Hysilens Zone - duration increment handler(visual)",
-                "ownerTurn": {},
-            },
+            createGenericZoneDurationVisual("Hysilens","hysilensFieldActive",false,"hysilensFieldDuration","zoneCountdown"),
             {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
@@ -17375,11 +17339,7 @@ const turnLogic = {
                 const ATKObjects = logicRef.ATKObjects;
 
                 let skillRef = ATKObjects.dahliaSkillREF ??= ATKObjects["Skill"]["Lick... Enkindled Betrayal"].variant1;
-                let values = ATKObjects.dahliaSkillREFVALUES ??= [//TODO: remove later
-                    1.5,
-                    3,
-                    0.5
-                  ];//battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                let values = ATKObjects.dahliaSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
 
                 
                 if (!ATKObjects.dahliaSkillOWNERSHEET) {
@@ -17632,20 +17592,6 @@ const turnLogic = {
 
                 battleValues.fuaIsReady = false;
                 battleValues.fuaIsQueued = false;
-            },
-            backupDancerExpired(battleData,hmcSlot) {
-                const hmcTurn = battleData.nameBasedTurns[hmcSlot];
-                hmcTurn.battleValues.hmcBackupDancerActive = false;
-
-                const logicRef = turnLogic[hmcTurn.properName];
-                const ATKObjects = logicRef.ATKObjects;
-
-                const buffSheet = ATKObjects.hmcBackupDancerBUFFSHEET;
-                const allyArray = battleData.allAlliesArray;
-
-                removeBuffFromBatch(battleData,allyArray,buffSheet);
-
-                poke("HMCGainBackupDancerCount",battleData,{pointsGained: -3,sourceString:"Backup Dancer Expired"});
             },
             dahliaTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -18317,25 +18263,7 @@ const turnLogic = {
                 "listenerName": "Dahlia - FUA cooldown reset",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "PreActionPhaseEnd",
-                condition(battleData,generalInfo) {
-                    // poke("HealEnd",battleData,turnMerge);
-                    let ownerTurn = this.ownerTurn;
-
-                    if (!ownerTurn.battleValues.skillZoneActive) {
-                        ownerTurn.battleValues.skillZoneDuration = 0;
-                    }
-                    else {
-                        const buffName = this.buffName ??= turnLogic[ownerTurn.properName].buffNames.skillZoneOwner;
-                        ownerTurn.battleValues.skillZoneDuration = ownerTurn.buffsObject[buffName].duration;
-                    }
-                },
-                "target": "self",
-                "isPersonal": true,
-                "listenerName": "Dahlia Zone - duration increment handler(visual)",
-                "ownerTurn": {},
-            },
+            createGenericZoneDurationVisual("Dahlia","skillZoneActive",true,"skillZoneDuration","skillZoneOwner"),
             {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
@@ -52719,25 +52647,7 @@ const turnLogic = {
                 "listenerName": "Talent certified elation double dmg instance tracker: ult start",
                 "ownerTurn": {},
             },
-            {
-                "trigger": "PreActionPhaseEnd",
-                condition(battleData,generalInfo) {
-                    // poke("HealEnd",battleData,turnMerge);
-                    let ownerTurn = this.ownerTurn;
-
-                    if (!ownerTurn.battleValues.skillZoneActive) {
-                        ownerTurn.battleValues.yaoGuangFieldDuration = 0;
-                    }
-                    else {
-                        const buffName = this.buffName ??= turnLogic[ownerTurn.properName].buffNames.decalightCountdown;
-                        ownerTurn.battleValues.yaoGuangFieldDuration = ownerTurn.buffsObject[buffName].duration;
-                    }
-                },
-                "target": "self",
-                "isPersonal": true,
-                "listenerName": "Yao Guang Zone - duration increment handler(visual)",
-                "ownerTurn": {},
-            },
+            createGenericZoneDurationVisual("Yao Guang","skillZoneActive",true,"yaoGuangFieldDuration","decalightCountdown"),
             {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {

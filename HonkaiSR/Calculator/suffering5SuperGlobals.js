@@ -396,8 +396,66 @@ const superGlobal = {
 
         return valueWasDiff;
     },
+
+
+
+
+    createGenericZoneDurationVisual(charName,checkName,isBattleValue,battleValueName,buffNameRef) {
+        let functionToUse = null;
+        if (isBattleValue) {
+            functionToUse = function(battleData,generalInfo) {
+                // poke("HealEnd",battleData,turnMerge);
+                let ownerTurn = this.ownerTurn;
+                const battleValues = ownerTurn.battleValues;
+
+                const checkName = this.checkName;
+                const battleValueName = this.battleValueName;
+
+                if (!battleValues[checkName]) {
+                    battleValues[battleValueName] = 0;
+                }
+                else {
+                    const buffName = this.buffName ??= turnLogic[ownerTurn.properName].buffNames[this.buffNameRef];
+                    battleValues[battleValueName] = ownerTurn.buffsObject[buffName].duration;
+                }
+            }
+        }
+        else {
+            functionToUse = function(battleData,generalInfo) {
+                // poke("HealEnd",battleData,turnMerge);
+                let ownerTurn = this.ownerTurn;
+                const battleValues = ownerTurn.battleValues;
+
+                const checkName = this.checkName;
+                const battleValueName = this.battleValueName;
+
+                if (!ownerTurn[checkName]) {
+                    battleValues[battleValueName] = 0;
+                }
+                else {
+                    const buffName = this.buffName ??= turnLogic[ownerTurn.properName].buffNames[this.buffNameRef];
+                    battleValues[battleValueName] = ownerTurn.buffsObject[buffName].duration;
+                }
+            }
+        }
+
+        return {
+            "trigger": "PreActionPhaseEnd",
+            condition: functionToUse,
+            "target": "self",
+            "isPersonal": true,
+            "listenerName": `${charName} Zone - duration increment handler(visual)`,
+            "ownerTurn": {},
+            checkName,
+            isBattleValue,
+            battleValueName,
+            buffNameRef
+        }
+    }
 }
 const createQueueObject = superGlobal.createQueueObject;
 const genericEnergyOverflow = superGlobal.genericEnergyOverflowHandling;
 const genericSpecialOverflow = superGlobal.genericSpecialEnergyWithOverflowHandling;
 const genericSubEnergy = superGlobal.genericSubEnergyHandling;
+
+const createGenericZoneDurationVisual = superGlobal.createGenericZoneDurationVisual;
