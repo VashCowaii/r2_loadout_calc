@@ -37266,7 +37266,6 @@ const turnLogic = {
                 const conversion = +(finalHP * ratio).toFixed(7);
 
                 const RMCTurn = nameBasedTurns[currentTurn.buffSlotRMC];
-                console.log(currentTurn.buffSlotRMC)
                 const memTurn = RMCTurn.rmcMemTURNEVENT;
 
                 const buffCheck1 = RMCTurn.buffsObject[buffSheet.buffName];
@@ -37984,7 +37983,7 @@ const turnLogic = {
                             let ownerTurn = this.ownerTurn;
                             if (!ownerTurn.isActive || !ownerTurn.rmcBuffActive) {return;}
 
-                            const statCheck = this.statCheck ??= turnLogic[battleData.nameBasedTurns[ownerTurn.eventOwner]].skillFunctions.statCheckRMCHP
+                            const statCheck = this.statCheck ??= turnLogic[this.providerTurn.properName].skillFunctions.statCheckRMCHP;
                             statCheck(battleData,ownerTurn);
                         },
                         "target": "self",
@@ -37998,7 +37997,7 @@ const turnLogic = {
                             let ownerTurn = this.ownerTurn;
                             if (!ownerTurn.isActive || !ownerTurn.rmcBuffActive) {return;}
 
-                            const statCheck = this.statCheck ??= turnLogic[battleData.nameBasedTurns[ownerTurn.eventOwner]].skillFunctions.statCheckRMCCrit
+                            const statCheck = this.statCheck ??= turnLogic[this.providerTurn.properName].skillFunctions.statCheckRMCCrit;
                             statCheck(battleData,ownerTurn);
                         },
                         "target": "self",
