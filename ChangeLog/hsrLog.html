@@ -6,6 +6,40 @@
     </ul>
 </div> -->
 <div>
+    <h1>July 8th, 2026</h1>
+    <ul>
+        <h3>Calculator</h3>
+        <li>Pursuant to the latest vid the following changes were made:
+            <ul>
+                <li>Battlestart toughness reduction was separated from techniques and now always triggers if techniques are enabled.</li>
+                <li>Techniques that modify the battlestart toughness amount will do so.</li>
+                <li>Multi-wave techniques that both have toughness associated with them and span beyond wave 1, properly separate battlestart toughness from the technique's attack only on wave 1(Feixiao, Firefly, etc).</li>
+                <li>Multi-stage techniques were already actually in the calc so no change was made regarding this.</li>
+                <li>Technique priority levels were already actually in the calc so no change was made regarding this.</li>
+            </ul>
+        </li>
+        <!-- <h4>Additions</h4> -->
+        <!-- <li>Added the following new characters:
+            <ul>
+                <li>Xueyi (build xueyi)</li>
+            </ul>
+        </li> -->
+        <h4>Fixes</h4>
+        <li>Fixed an issue where Cyrene's RMC buff could shit itself.</li>
+        <li>Removed a console log that I forgot to remove in Cyrene's RMC buff, which wouldn't have mattered unless you were using the two in an optimizer search which would have made it super slow.</li>
+        <li>Fixed an issue where the Navigator set could sometimes break when going to apply the initial buff.</li>
+        <li>Fixed an issue where Firefly's technique damage was using the wrong multiplier.</li>
+        <li>Fixed an issue where Prisoner relic set could mistakenly apply just one extra stack of shred in some cases(if under the limit)</li>
+        <li>Fixed an issue where Tingyun's additional DMG could try to proc on a target that was dead or dying.</li>
+        <li>Fixed an edge case issue where Archer could reach his turn but fail to take any actions since he thought he was still in the Circuit Connection state from his last turn with max skill uses.
+            <ul>
+                <li>Funnily enough this happened because I made changes to allow for the Archer bug to happen later when Cerydra is added, there was just an oversight on handling the state clearing properly.</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div>
     <h1>July 5th, 2026</h1>
     <ul>
         <h3>Calculator</h3>

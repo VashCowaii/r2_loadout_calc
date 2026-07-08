@@ -729,7 +729,8 @@ let characters = {
       29,
       0.59
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": 20
   },
   "Himeko": {
     "internalID": 1003,
@@ -1374,7 +1375,8 @@ let characters = {
       178,
       0.66
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Welt": {
     "internalID": 1004,
@@ -2167,7 +2169,8 @@ let characters = {
       -32,
       0.61
     ],
-    "isBuffed": true
+    "isBuffed": true,
+    "battleStartToughness": null
   },
   "Kafka": {
     "internalID": 1005,
@@ -2946,7 +2949,8 @@ let characters = {
       -50,
       0.71
     ],
-    "isBuffed": true
+    "isBuffed": true,
+    "battleStartToughness": 20
   },
   "Silver Wolf": {
     "internalID": 1006,
@@ -3768,7 +3772,8 @@ let characters = {
       33,
       0.5
     ],
-    "isBuffed": true
+    "isBuffed": true,
+    "battleStartToughness": 20
   },
   "Asta": {
     "internalID": 1009,
@@ -4389,7 +4394,8 @@ let characters = {
       22,
       0.53
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": 20
   },
   "Bronya": {
     "internalID": 1101,
@@ -5077,7 +5083,8 @@ let characters = {
       194,
       0.77
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Seele": {
     "internalID": 1102,
@@ -5742,7 +5749,8 @@ let characters = {
       198.4,
       0.81
     ],
-    "isBuffed": true
+    "isBuffed": true,
+    "battleStartToughness": null
   },
   "Natasha": {
     "internalID": 1105,
@@ -6424,7 +6432,8 @@ let characters = {
       -35,
       0.57
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": 20
   },
   "Pela": {
     "internalID": 1106,
@@ -7111,7 +7120,8 @@ let characters = {
       68,
       0.64
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": 20
   },
   "Clara": {
     "internalID": 1107,
@@ -7828,7 +7838,8 @@ let characters = {
       -50,
       0.65
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": 20
   },
   "Hook": {
     "internalID": 1109,
@@ -8637,7 +8648,8 @@ let characters = {
       60.3,
       0.68
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": 20
   },
   "Lynx": {
     "internalID": 1110,
@@ -9392,7 +9404,8 @@ let characters = {
       42,
       0.56
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Topaz & Numby": {
     "internalID": 1112,
@@ -10091,7 +10104,8 @@ let characters = {
       -63,
       0.55
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Tingyun": {
     "internalID": 1202,
@@ -10747,7 +10761,8 @@ let characters = {
       -32,
       0.58
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Luocha": {
     "internalID": 1203,
@@ -11456,7 +11471,8 @@ let characters = {
       -36.6,
       0.63
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Jing Yuan": {
     "internalID": 1204,
@@ -12150,7 +12166,8 @@ let characters = {
       71,
       0.68
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Blade": {
     "internalID": 1205,
@@ -13044,7 +13061,8 @@ let characters = {
       -91,
       0.52
     ],
-    "isBuffed": true
+    "isBuffed": true,
+    "battleStartToughness": 20
   },
   "Bailu": {
     "internalID": 1211,
@@ -13763,7 +13781,8 @@ let characters = {
       -30,
       0.55
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Jingliu": {
     "internalID": 1212,
@@ -14631,7 +14650,8 @@ let characters = {
       -50,
       0.57
     ],
-    "isBuffed": true
+    "isBuffed": true,
+    "battleStartToughness": null
   },
   "Dan Heng • Imbibitor Lunae": {
     "internalID": 1213,
@@ -15540,7 +15560,8 @@ let characters = {
       -74.6,
       0.8
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Xueyi": {
     "internalID": 1214,
@@ -16207,7 +16228,8 @@ let characters = {
       -58,
       0.58
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": 20
   },
   "Hanya": {
     "internalID": 1215,
@@ -16844,7 +16866,8 @@ let characters = {
       11.9,
       0.66
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": 20
   },
   "Huohuo": {
     "internalID": 1217,
@@ -17632,7 +17655,8 @@ let characters = {
       11.9,
       0.66
     ],
-    "isBuffed": true
+    "isBuffed": true,
+    "battleStartToughness": null
   },
   "Jiaoqiu": {
     "internalID": 1218,
@@ -18399,7 +18423,8 @@ let characters = {
       -6,
       0.64
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Feixiao": {
     "internalID": 1220,
@@ -19487,7 +19512,8 @@ let characters = {
       45,
       0.63
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Fugue": {
     "internalID": 1225,
@@ -20262,7 +20288,8 @@ let characters = {
       97,
       0.64
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Gallagher": {
     "internalID": 1301,
@@ -20961,7 +20988,8 @@ let characters = {
       -6,
       0.455
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": 20
   },
   "Argenti": {
     "internalID": 1302,
@@ -21709,7 +21737,8 @@ let characters = {
       -1.5,
       0.74
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Ruan Mei": {
     "internalID": 1303,
@@ -22421,7 +22450,8 @@ let characters = {
       23,
       0.55
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Aventurine": {
     "internalID": 1304,
@@ -23181,7 +23211,8 @@ let characters = {
       38,
       0.61
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Dr. Ratio": {
     "internalID": 1305,
@@ -23864,7 +23895,8 @@ let characters = {
       -210,
       0.84
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Sparkle": {
     "internalID": 1306,
@@ -24595,7 +24627,8 @@ let characters = {
       51,
       0.54
     ],
-    "isBuffed": true
+    "isBuffed": true,
+    "battleStartToughness": null
   },
   "Black Swan": {
     "internalID": 1307,
@@ -25442,7 +25475,8 @@ let characters = {
       -55,
       0.69
     ],
-    "isBuffed": true
+    "isBuffed": true,
+    "battleStartToughness": null
   },
   "Acheron": {
     "internalID": 1308,
@@ -26559,7 +26593,8 @@ let characters = {
       -24,
       0.56
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": 20
   },
   "Robin": {
     "internalID": 1309,
@@ -27272,7 +27307,8 @@ let characters = {
       -64,
       0.62
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Firefly": {
     "internalID": 1310,
@@ -28284,7 +28320,8 @@ let characters = {
       45,
       0.63
     ],
-    "isBuffed": true
+    "isBuffed": true,
+    "battleStartToughness": 20
   },
   "Sunday": {
     "internalID": 1313,
@@ -28971,7 +29008,8 @@ let characters = {
       -95,
       0.64
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "The Dahlia": {
     "internalID": 1321,
@@ -29734,7 +29772,8 @@ let characters = {
       -20.74,
       0.63
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Aglaea": {
     "internalID": 1402,
@@ -31026,6 +31065,7 @@ let characters = {
       0.64
     ],
     "isBuffed": false,
+    "battleStartToughness": 20,
     "baseSummonInfo": {
       "BaseAggro": 125
     },
@@ -31715,7 +31755,8 @@ let characters = {
       26,
       0.64
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Anaxa": {
     "internalID": 1405,
@@ -32358,7 +32399,8 @@ let characters = {
       12,
       0.63
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Castorice": {
     "internalID": 1407,
@@ -33865,6 +33907,7 @@ let characters = {
       0.64
     ],
     "isBuffed": false,
+    "battleStartToughness": null,
     "baseSummonInfo": {
       "BaseAggro": 100
     },
@@ -35194,7 +35237,8 @@ let characters = {
       -13,
       0.64
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": 20
   },
   "Hyacine": {
     "internalID": 1409,
@@ -36337,6 +36381,7 @@ let characters = {
       0.64
     ],
     "isBuffed": false,
+    "battleStartToughness": null,
     "baseSummonInfo": {
       "BaseAggro": 100
     },
@@ -37143,7 +37188,8 @@ let characters = {
       12,
       0.63
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Evernight": {
     "internalID": 1413,
@@ -38518,6 +38564,7 @@ let characters = {
       0.63
     ],
     "isBuffed": false,
+    "battleStartToughness": null,
     "baseSummonInfo": {
       "BaseAggro": 125
     },
@@ -39377,7 +39424,8 @@ let characters = {
       42,
       0.63
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Cyrene": {
     "internalID": 1415,
@@ -41907,6 +41955,7 @@ let characters = {
       0.61
     ],
     "isBuffed": false,
+    "battleStartToughness": null,
     "baseSummonInfo": {
       "BaseAggro": 100
     },
@@ -43114,7 +43163,8 @@ let characters = {
       60.6,
       0.58
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Yao Guang": {
     "internalID": 1502,
@@ -44036,7 +44086,8 @@ let characters = {
       28,
       0.66
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Evanescia": {
     "internalID": 1505,
@@ -44986,7 +45037,8 @@ let characters = {
       22.72,
       0.53
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": 20
   },
   "Silver Wolf LV.999": {
     "internalID": 1506,
@@ -46328,7 +46380,8 @@ let characters = {
       -25.2,
       0.53
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Mortenax Blade": {
     "internalID": 1507,
@@ -47316,7 +47369,8 @@ let characters = {
       34.6,
       0.6
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": 20
   },
   "Trailblazer - Harmony": {
     "internalID": 8005,
@@ -47946,7 +48000,8 @@ let characters = {
     "preview": "image/character_preview/8005.png",
     "portrait": "image/character_portrait/8005.png",
     "bannerOffsets": [],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Trailblazer - Remembrance": {
     "internalID": 8007,
@@ -49160,6 +49215,7 @@ let characters = {
     "portrait": "image/character_portrait/8007.png",
     "bannerOffsets": [],
     "isBuffed": false,
+    "battleStartToughness": null,
     "baseSummonInfo": {
       "BaseAggro": 100
     },
@@ -50024,7 +50080,8 @@ let characters = {
     "preview": "image/character_preview/8009.png",
     "portrait": "image/character_portrait/8009.png",
     "bannerOffsets": [],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Saber": {
     "internalID": 1014,
@@ -50898,7 +50955,8 @@ let characters = {
       2,
       0.64
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": null
   },
   "Archer": {
     "internalID": 1015,
@@ -51610,6 +51668,7 @@ let characters = {
       33,
       0.64
     ],
-    "isBuffed": false
+    "isBuffed": false,
+    "battleStartToughness": 20
   }
 }

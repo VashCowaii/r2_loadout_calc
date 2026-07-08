@@ -512,6 +512,8 @@ const sim = {
                 certifiedBanger: 0,
                 accumulateAllToughness: false,
                 battleValues: logicRef?.characterValuesBattle,
+                battleStartToughness: characters[properName].battleStartToughness ?? 10,
+                battleStartToughnessUsed: 10,
             };
             battleData.charactersRemaining += 1;
             summaryTurns[properName] = 0;
@@ -802,7 +804,7 @@ const sim = {
         poke("StartBattleEnterCombat",battleData,null,null);
 
         logToBattle(battleData,{logType: "WaveStart",AV:battleData.sumAV,waveID: 1});
-        if (!battleData.attackTechniqueUsed && battleData.techniquesAllowed) {
+        if (battleData.techniquesAllowed) {
             const firstTurn = battleData.nameBasedTurns.char1;
             battleData.combatStarterSlot = firstTurn.name;
         }

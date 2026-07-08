@@ -4170,7 +4170,6 @@ const turnLogicLightcones = {
                     let lcPathing = lightcones[lcNameRef].params;
                     let rankParams = lcPathing[ownerRank-1];
                     let ownerName = ownerTurn.properName;
-                    
 
                     ownerTurn.oceanSingEnthrallmentSHEET = {
                         "stats": [VulnAll],
@@ -16535,6 +16534,7 @@ const turnLogicRelics = {
 
                                         buffSheet.currentStacks = stackDiff;
                                         updateBuff(battleData,sourceTurn,buffSheet);
+                                        return;
                                     }
                                     //otherwise remove the buff bc that means the stacks are mismatched and less than
                                     // removeBuff(battleData,sourceTurn,buffCheck);
@@ -18452,7 +18452,7 @@ const turnLogicRelics = {
                                         "stats": [DamageAll],
                                         [DamageAll]: relicPathing[1],
                                         "source": relicNameRef,
-                                        "sourceOwner": currentTurn.properName,
+                                        "sourceOwner": sourceTurn.properName,
                                         "buffName": buffNames.dmgBuffReal,
                                         "durationInTurn": null,
                                         "duration": 1,
@@ -18467,6 +18467,7 @@ const turnLogicRelics = {
                                 const buffSheet = sourceTurn.relicIseeSeesItSHEETREAL;
 
                                 const stackSheet = sourceTurn.buffsObject[sourceTurn.relicIseeSeesItSHEET.buffName];
+                                if (!stackSheet) {return;}
                                 const stackCount = stackSheet.currentStacks;
         
                                 const buffName = buffSheet.buffName;
@@ -18496,7 +18497,7 @@ const turnLogicRelics = {
                                         }
                                     }
                                     else if (stackCount) {//otherwise if we didn't have the buff yet, add it
-                                        buffSheet.currentStacks = stackDiff;
+                                        buffSheet.currentStacks = stackCount;
                                         updateBuff(battleData,sourceTurn,buffSheet);
                                     }
                                 }
