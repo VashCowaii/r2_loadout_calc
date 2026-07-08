@@ -18452,7 +18452,7 @@ const turnLogicRelics = {
                                         "stats": [DamageAll],
                                         [DamageAll]: relicPathing[1],
                                         "source": relicNameRef,
-                                        "sourceOwner": currentTurn.properName,
+                                        "sourceOwner": sourceTurn.properName,
                                         "buffName": buffNames.dmgBuffReal,
                                         "durationInTurn": null,
                                         "duration": 1,
