@@ -3608,6 +3608,7 @@ const battleActions = {
     },
     markEnemyForDeath(battleData,targetTurn,sourceTurn) {
         // targetTurn.isDead = true;
+        if (targetTurn.isLimbo) {return}
         targetTurn.isLimbo = true;
         targetTurn.killerSlot = sourceTurn.name;
         battleData.pendingDeaths.push(targetTurn);
@@ -3647,14 +3648,22 @@ const battleActions = {
                 const killer = killerTurn.isMemosprite ? battleData.nameBasedTurns[killerTurn.eventOwner] : killerTurn;
 
                 //find the enemy position and remove it from the enemy lineup and turn order
+
                 const indexToRemove = enemyPositions.indexOf(deathTurn);
                 const indexToRemove2 = actionOrder.indexOf(deathTurn);
+                const realTarget = actionOrder[indexToRemove2];
+                if (!realTarget || deathTurn.properName != realTarget?.properName) {
+                    let errorString = `Mismatch on entity death occurred - The entity being removed from the action order does not match the entity that died.\nIf you ever encounter this join the discord and let Vash know\n\nIndex: ${indexToRemove2}\nInitial Death: ${deathTurn.properName}\nEntity to Remove: ${realTarget?.properName}`
+                    alert(errorString);
+                    throw new Error(errorString)
+                }
                 enemyPositions.splice(indexToRemove, 1);
                 actionOrder.splice(indexToRemove2, 1);
                 
                 if (logger) {
                     logToBattle(battleData,{logType: "EnemyDiedNote", enemyKilled:deathTurn.properName});
                     logToBattle(battleData,{logType: "EnemyDied", source:killer.properName, enemyKilled:deathTurn.properName});
+                    logToBattle(battleData,{logType: "GenericAction", source:"Entity Death", bodyText: `${realTarget.properName} was removed from the action order `});
                 }
                 poke("EnemyDied",battleData,{sourceTurn: killer, enemyKilled:deathTurn},killer);
                 updateEnergy(battleData,energyDeath,killer,false,"Killed Enemy");
@@ -3672,6 +3681,7 @@ const battleActions = {
 
                         for (let turnEntity of actionOrder) {turnEntity.turnShouldEnd = true;}
                         //if anything was in the middle of a turn with no action assigned yet, this should break their turn and return to the turn order so we can apply a new wave
+                        battleData.pendingDeaths = [];
 
                         return;
                     }
