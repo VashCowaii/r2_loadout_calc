@@ -4170,7 +4170,6 @@ const turnLogicLightcones = {
                     let lcPathing = lightcones[lcNameRef].params;
                     let rankParams = lcPathing[ownerRank-1];
                     let ownerName = ownerTurn.properName;
-                    
 
                     ownerTurn.oceanSingEnthrallmentSHEET = {
                         "stats": [VulnAll],
@@ -16535,6 +16534,7 @@ const turnLogicRelics = {
 
                                         buffSheet.currentStacks = stackDiff;
                                         updateBuff(battleData,sourceTurn,buffSheet);
+                                        return;
                                     }
                                     //otherwise remove the buff bc that means the stacks are mismatched and less than
                                     // removeBuff(battleData,sourceTurn,buffCheck);
