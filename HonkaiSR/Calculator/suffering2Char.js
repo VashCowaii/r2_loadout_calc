@@ -2674,7 +2674,7 @@ const battleActions = {
         const element = generalInfo.element;
         let slot = ATKObject.slot;
 
-        const starterToughness = sourceTurn.battleStartToughness;
+        const starterToughness = sourceTurn.battleStartToughnessUsed;
         
         let toughnessComposite = dealToughnessDMG(battleData,sourceTurn,false,targetTurn,1,starterToughness,overBreakTotals,ATKObject,element,generalInfo,slot);
 
@@ -4574,7 +4574,7 @@ const battleActions = {
             }
         }
     },
-    getTechnique(battleData,ownerTurn,logicRef,techCount,toughnessOverride,isAttack,isDimension) {
+    getTechnique(battleData,ownerTurn,logicRef,techCount,isAttack,isDimension) {
         let useTechnique = logicRef.useTechnique && battleData.techniquesAllowed;
         if (!useTechnique) {return;}
 
@@ -4602,9 +4602,10 @@ const battleActions = {
         if (isAttack) {
             battleData.attackTechniqueUsed = true;
             battleData.combatStarterSlot = ownerTurn.name;
+
+            ownerTurn.battleStartToughnessUsed = ownerTurn.battleStartToughness ?? 10;
         }
         if (isDimension) {battleData.dimensionTechniqueUsed = true;}
-        if (toughnessOverride) {ownerTurn.battleStartToughness = toughnessOverride;}
     },
     getUniqueGearBuffName(battleData,sourceTurn,logicRef,buffNameTag) {
         const buffNames = logicRef.buffNames;
@@ -6670,7 +6671,8 @@ const turnLogic = {
                         slot: skillRef.slot,
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
-                        compositeCacheTag
+                        compositeCacheTag,
+                        skipToughness: true,
                     }
                 }
                 const ATKObject = ATKObjects.gallagherTechATKObject;
@@ -8821,7 +8823,8 @@ const turnLogic = {
                         slot: skillRef.slot,
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
-                        compositeCacheTag
+                        compositeCacheTag,
+                        skipToughness: true,
                     }
 
 
@@ -8937,7 +8940,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener4,listener4.trigger,ally,null,ownerTurn);
                     }
 
-                    getTechnique(battleData,ownerTurn,logicRef,1,true,false)
+                    getTechnique(battleData,ownerTurn,logicRef,1,true,false);
                 },
                 "target": "self",
                 "listenerName": "Natasha Passive",
@@ -11973,6 +11976,7 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
+                        skipToughness: true,
                     }
                 }
                 const ATKObject = ATKObjects.kafkaTechATKObject;
@@ -16886,7 +16890,8 @@ const turnLogic = {
                         slot: skillRef.slot,
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
-                        compositeCacheTag
+                        compositeCacheTag,
+                        skipToughness: true,
                     }
 
                     ATKObjects.pelaTechniqueDEFDEBUFFSHEET = {
@@ -19560,6 +19565,12 @@ const turnLogic = {
                 if (lessThanMax) {
                     sourceTurn.ArcherCanDoExtraTurn = true;
                 }
+                else {
+                    // sourceTurn.ArcherCanDoExtraTurn = false;
+                    sourceTurn.battleValues.skillCounter = 0;
+                    sourceTurn.ArcherCanDoExtraTurn = false;
+                    sourceTurn.battleValues.skillStarted = false;
+                }
             },
             archerUltimate(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -19671,7 +19682,8 @@ const turnLogic = {
                         slot: skillRef.slot,
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
-                        compositeCacheTag
+                        compositeCacheTag,
+                        skipToughness: true,
                     }
                 }
                 let ATKObject = ATKObjects.archerTechATKObject;
@@ -20334,7 +20346,8 @@ const turnLogic = {
                         slot: skillRef.slot,
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
-                        compositeCacheTag
+                        compositeCacheTag,
+                        skipToughness: true,
                     }
                 }
                 let ATKObject = ATKObjects.seeleTechniqueATKObject;
@@ -22271,6 +22284,7 @@ const turnLogic = {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech2;
                 }
                 let ATKObject = ATKObjects.feiTechniqueATKObject;
+                ATKObject.skipToughness = battleData.wavesCompleted === 0;
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
                 const critSheet = ATKObjects.feiTechCrit;
@@ -22904,7 +22918,7 @@ const turnLogic = {
                 let buffSheet2 = ATKObjects.tingyunSkillBENEDICTIONSHEETSPD;
                 updateBuff(battleData,sourceTurn,buffSheet2);
             },
-            benedictionDMG(battleData,sourceTurn,allyTurn) {
+            benedictionDMG(battleData,sourceTurn,allyTurn,generalInfo) {
                 const logicRef = turnLogic[sourceTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
 
@@ -22942,10 +22956,20 @@ const turnLogic = {
                     }
                 }
                 let ATKObject = ATKObjects.benedictionDMGADDEDATKOBJECT;
+
+                let livingTarget = null;
+                const targetsGotHit = generalInfo.targetsGotHit;
+                const enemyTurns = battleData.enemyBasedTurns;
+                for (let enemySlot in targetsGotHit) {
+                    const enemyTurn = enemyTurns[enemySlot];
+                    if (enemyTurn.isDead || enemyTurn.isLimbo) {continue;}
+
+                    livingTarget = enemyTurn;
+                    break;
+                }
                 
-                let targetTurn = battleData.primaryTarget
-                if (targetTurn) {
-                    battleActions.additionalDMGWrapper(battleData,allyTurn,allyTurn.properName,ATKObject,targetTurn,"Benediction");
+                if (livingTarget) {
+                    battleActions.additionalDMGWrapper(battleData,allyTurn,allyTurn.properName,ATKObject,livingTarget,"Benediction");
                 }
             },
             talentDMG(battleData,sourceTurn,allyTurn) {
@@ -23223,7 +23247,7 @@ const turnLogic = {
                             let sourceCheck = sourceTurn.properName === targetTurn.properName;
                             if (!sourceCheck) {return;}//is the attack coming from an allied source
                             const benedictionDMG = this.benedictionDMG ??= turnLogic[characterName].skillFunctions.benedictionDMG
-                            benedictionDMG(battleData,providerTurn,targetTurn);
+                            benedictionDMG(battleData,providerTurn,targetTurn,generalInfo);
                         },
                         "target": "enemy",
                         "isPersonal": true,
@@ -26365,7 +26389,8 @@ const turnLogic = {
                         slot: skillRef.slot,
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
-                        compositeCacheTag
+                        compositeCacheTag,
+                        skipToughness: true,
                     }
                 }
                 const ATKObject = ATKObjects.astaTechniqueATKObject;
@@ -30802,7 +30827,8 @@ const turnLogic = {
                         slot: skillRef.slot,
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
-                        compositeCacheTag
+                        compositeCacheTag,
+                        skipToughness: true,
                     }
                 }
                 const ATKObject = ATKObjects.bladeTechATKObject;
@@ -32576,7 +32602,7 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener8,listener8.trigger,ownerTurn);
                     }
 
-                    getTechnique(battleData,ownerTurn,logicRef,2,20,true,false);
+                    getTechnique(battleData,ownerTurn,logicRef,2,true,false);
                 },
                 "target": "self",
                 "listenerName": "Firefly Passive",
@@ -33359,7 +33385,8 @@ const turnLogic = {
                         slot: skillRef.slot,
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
-                        compositeCacheTag
+                        compositeCacheTag,
+                        skipToughness: true,
                     }
                 }
                 let ATKObject = ATKObjects.dhilTechniqueATKObject
@@ -34966,6 +34993,7 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
+                        skipToughness: true,
                     }
                     ATKObjects.hookTechATKObjectPOST = {
                         multipliers: {
@@ -34981,6 +35009,7 @@ const turnLogic = {
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
                         compositeCacheTag,
+                        skipToughness: true,
                     }
                 }
                 let ATKObject = ATKObjects.hookTechATKObject;
@@ -35770,7 +35799,8 @@ const turnLogic = {
                         slot: skillRef.slot,
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
-                        compositeCacheTag
+                        compositeCacheTag,
+                        skipToughness: true,
                     }
                 }
                 let ATKObject = ATKObjects.xueyiTechniqueATKObject;
@@ -39356,7 +39386,8 @@ const turnLogic = {
                         allToughness: false,
                         slot: skillRef.slot,
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
-                        actionTags,compositeCacheTag
+                        actionTags,compositeCacheTag,
+                        skipToughness: true,
                     }
                 }
                 const ATKObject = ATKObjects.rmcTechATKObject;
@@ -40650,7 +40681,8 @@ const turnLogic = {
                         slot: skillRef.slot,
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
-                        compositeCacheTag
+                        compositeCacheTag,
+                        skipToughness: true,
                     }
                 }
                 let ATKObject = ATKObjects.aggyTechATKObject
@@ -48967,7 +48999,8 @@ const turnLogic = {
                         slot: skillRef.slot,
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
-                        compositeCacheTag
+                        compositeCacheTag,
+                        skipToughness: true,
                     }
                 }
                 let ATKObject = ATKObjects.argentiTechATKObject
@@ -53545,7 +53578,8 @@ const turnLogic = {
                         slot: skillRef.slot,
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
-                        compositeCacheTag
+                        compositeCacheTag,
+                        skipToughness: true,
                     }
                 }
                 let ATKObject = ATKObjects.sparxTechniqueATKObject
@@ -57291,7 +57325,8 @@ const turnLogic = {
                         slot: skillRef.slot,
                         realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
                         actionTags,
-                        compositeCacheTag
+                        compositeCacheTag,
+                        skipToughness: true,
                     }
                 }
                 let ATKObject = ATKObjects.evaTechATKObject;

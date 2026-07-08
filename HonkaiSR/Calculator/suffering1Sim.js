@@ -512,7 +512,8 @@ const sim = {
                 certifiedBanger: 0,
                 accumulateAllToughness: false,
                 battleValues: logicRef?.characterValuesBattle,
-                battleStartToughness: 10,
+                battleStartToughness: characters[properName].battleStartToughness ?? 10,
+                battleStartToughnessUsed: 10,
             };
             battleData.charactersRemaining += 1;
             summaryTurns[properName] = 0;
