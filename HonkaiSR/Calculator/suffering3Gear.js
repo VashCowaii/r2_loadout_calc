@@ -1807,6 +1807,7 @@ const turnLogicLightcones = {
 
                         let ownerName = currentTurn.properName;
 
+                        let ownerRank = ownersSlots[currentTurn.name];
                         let rankParams = lcPathing[ownerRank-1];
                         let buffSheet = currentTurn.lcSubForMoreDMGSHEET ??= {
                             "stats": [DamageAll],
