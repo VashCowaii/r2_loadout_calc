@@ -7112,7 +7112,7 @@ const turnLogic = {
                 sourceTurn.talentProvisionIsActive = true;
                 sourceTurn.talentCleanseCounter = 0;
                 updateBuff(battleData,sourceTurn,countdownSheet,null,null,null,null,turnOverride);
-                battleValues.talentProvisionDuration = battleValues.talentProvisionDurationMax;
+                battleValues.talentProvisionDuration = turnOverride ?? battleValues.talentProvisionDurationMax;
 
                 if (e1) {
                     const spdSheet = ATKObjects.huohuoTalentE1SPDSHEET;

@@ -780,18 +780,18 @@ const turnLogicLightcones = {
                             sourceTurn.lcSleepLikeDeadCooldown ??= 0;
                             if (!sourceTurn.lcSleepLikeDeadCooldown) {return;}
 
-                            if (!currentTurn.lcSleepLikeDeadCRITSHEET) {
+                            if (!sourceTurn.lcSleepLikeDeadCRITSHEET) {
                                 let ownersSlots = this.ownersSlots;
                                 let ownerRank = ownersSlots[sourceTurn.name];//setAmount
                                 let lcNameRef = "Sleep Like the Dead";
                                 let lcPathing = lightcones[lcNameRef].params;
                                 let rankParams = lcPathing[ownerRank-1];
 
-                                currentTurn.lcSleepLikeDeadCRITSHEET = {
+                                sourceTurn.lcSleepLikeDeadCRITSHEET = {
                                     "stats": [CritRateBase],
                                     [CritRateBase]: rankParams[1],
                                     "source": lcNameRef,
-                                    "sourceOwner": currentTurn.properName,
+                                    "sourceOwner": sourceTurn.properName,
                                     "buffName": turnLogicLightcones[lcNameRef].buffNames.buff2,
                                     "durationInTurn": 2,
                                     "duration": 1,
@@ -802,10 +802,10 @@ const turnLogicLightcones = {
                                     "expireType": "EndTurn",
                                 }
                             }
-                            let buffSheet2 = currentTurn.lcSleepLikeDeadCRITSHEET;
-                            updateBuff(battleData,currentTurn,buffSheet2)
+                            let buffSheet2 = sourceTurn.lcSleepLikeDeadCRITSHEET;
+                            updateBuff(battleData,sourceTurn,buffSheet2)
 
-                            currentTurn.lcSleepLikeDeadCooldown = 3;
+                            sourceTurn.lcSleepLikeDeadCooldown = 3;
                         },
                         "target": "self",
                         "isPersonal": true,
@@ -1807,6 +1807,7 @@ const turnLogicLightcones = {
 
                         let ownerName = currentTurn.properName;
 
+                        let ownerRank = ownersSlots[currentTurn.name];
                         let rankParams = lcPathing[ownerRank-1];
                         let buffSheet = currentTurn.lcSubForMoreDMGSHEET ??= {
                             "stats": [DamageAll],
