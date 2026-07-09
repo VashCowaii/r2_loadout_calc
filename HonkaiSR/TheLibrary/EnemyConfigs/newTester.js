@@ -501,7 +501,7 @@ const megaParsingFuckery = {
                             for (let loadFileEntry in compositeAbilityObject.abilityObject) {
                                 let currentEntry = JSON.stringify(compositeAbilityObject.abilityObject[loadFileEntry]);
         
-                                console.log(elemIDAfter,currentEntry.includes(elemIDAfter))
+                                // console.log(elemIDAfter,currentEntry.includes(elemIDAfter))
                                 if (currentEntry.includes(elemIDAfter)) {
                                     configAbility = compositeAbilityObject.abilityObject[loadFileEntry];
                                     loadFile = loadFileEntry;
