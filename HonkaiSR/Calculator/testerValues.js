@@ -140,11 +140,34 @@ const customDisplayValuesLog = {
         {valueName: "E2 Cooldown", refName: "e2AdvanceCooldown", isBattleValue: true, isCharacterState: true, requiresEidolon: 2},
     ],
     "Saber": [
+        {valueName: "Core Resonance", refName: "coreResonance", isBattleValue: true,logFunction: null,summaryValue: "saberSumResonance",summaryType: "SUM",
+            customDisplay: "marks", customDisplayType: "number", markMax: null, innerMarkColor: "Wind",
+            displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/saber/Icon1014Passive.png"
+        },
+        {valueName: "Core Resonance Max", refName: "coreResonanceMax", isBattleValue: true,hide: true},
+        {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "saberOverflowSummer",summaryType: "SUM",
+            customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "Wind",
+            displayRequiresIndex: 3, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            progressIcon: "misc/saber/Icon1014SP.png"
+        },
+        {valueName: "Overflow Energy Max", refName: "overflowEnergyMax", isBattleValue: true,hide: true},
+
+        {valueName: "E6 Ult Counter", refName: "e6UltCounter", isBattleValue: true, requiresEidolon: 6,
+            customDisplay: "progress", customDisplayType: "circle", markMax: 3, innerMarkColor: "Wind",
+            // displayRequiresIndex: 3, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            // progressInverted: true,
+            // hideMax: true,
+            progressIcon: "misc/saber/Icon1014Ultra.png"
+        },
+
         {valueName: "Basic is Enhanced", refName: "isEnhanced", isBattleValue: true, isCharacterState: true},
-        {valueName: "Core Resonance", refName: "coreResonance", isBattleValue: true,logFunction: null,summaryValue: "saberSumResonance",summaryType: "SUM"},
-        {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true,summaryValue: "saberOverflowSummer",summaryType: "SUM"},
         {valueName: "Advance Ready", refName: "advanceReady", isBattleValue: true, isCharacterState: true},
-        {valueName: "E6 Ult Counter", refName: "e6UltCounter", isBattleValue: true, requiresEidolon: 6},
+        // {valueName: "E6 Ult Counter", refName: "e6UltCounter", isBattleValue: true, requiresEidolon: 6},
     ], 
     "Hook": [
         {valueName: "Skill is Enhanced", refName: "isEnhanced", isBattleValue: true, isCharacterState: true},
@@ -456,21 +479,53 @@ const customDisplayValuesLog = {
 
     //HARMONY
     "Robin": [
-        {valueName: "Aria Active", refName: "ariaIsActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Aria Active", refName: "ariaIsActive", isBattleValue: true, isCharacterState: true, hide: true},
+        {valueName: "Aria Duration", refName: "ariaZoneDuration", isBattleValue: true,
+            customDisplay: "marks", customDisplayType: "diamond", markMax: null, innerMarkColor: "Physical",
+            displayRequiresIndex: 2, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/robin/Icon1309BP.png"
+        },
+        {valueName: "Aria Duration Max", refName: "ariaZoneDurationMax", isBattleValue: true, hide: true},
         {valueName: "Concerto Active", refName: "robinConcertoActive", isBattleValue: true, isCharacterState: true},
     ],  
     "Sunday": [
         {valueName: "The Beatified", refName: "charWithBeatifiedNameSlot", isBattleValue: true, isCharacterSlot:true},
+        {valueName: "The Beatified Duration", refName: "beatifiedDuration", isBattleValue: true,
+            customDisplay: "marks", customDisplayType: "diamond", markMax: null, innerMarkColor: "Imaginary",
+            displayRequiresIndex: 2, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/sunday/Icon1313Linker.png"
+        },
+        {valueName: "The Beatified Duration Max", refName: "beatifiedDurationMax", isBattleValue: true, hide: true},
     ], 
     "Ruan Mei": [
-        {valueName: "Overtone Active", refName: "overtoneIsActive", isBattleValue: true, isCharacterState: true},
+        {valueName: "Overtone Active", refName: "overtoneIsActive", isBattleValue: true, isCharacterState: true, hide: true},
+        {valueName: "Overtone Duration", refName: "overtoneDuration", isBattleValue: true,
+            customDisplay: "marks", customDisplayType: "diamond", markMax: null, innerMarkColor: "Ice",
+            displayRequiresIndex: 2, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/ruanMei/Icon1303BP.png"
+        },
+        {valueName: "Overtone Duration Max", refName: "overtoneDurationMax", isBattleValue: true, hide: true},
         {valueName: "Zone Active", refName: "ruanmeiZoneActive", isBattleValue: true, isCharacterState: true},
     ], 
     "Tingyun": [//def no tracker needed
         {valueName: "Ally with Benediction", refName: "charWithBenediction", isBattleValue: true, isCharacterSlot:true},
     ],
     "Tribbie": [//no tracker needed
-        {valueName: "Numinosity Active", refName: "numinosityIsActive", isCharacterState: true},
+        {valueName: "Numinosity Active", refName: "numinosityIsActive", isCharacterState: true, hide: true},
+        {valueName: "Numinosity Duration", refName: "numinosityDuration", isBattleValue: true,
+            customDisplay: "marks", customDisplayType: "diamond", markMax: null, innerMarkColor: "Quantum",
+            displayRequiresIndex: 2, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/tribbie/Icon1403BP.png"
+        },
+        {valueName: "Numinosity Duration Max", refName: "numinosityDurationMax", isBattleValue: true, hide: true},
         {valueName: "Ult Zone Active", refName: "tribbieZoneActive", isCharacterState: true},
         
         // {valueName: "Clease Remaining", refName: "cleanseCounter"},
@@ -496,12 +551,12 @@ const customDisplayValuesLog = {
     ],
     "Trailblazer - Harmony": [//tracker done
         {valueName: "Backup Dancer Active", refName: "hmcBackupDancerActive", isBattleValue: true,hide: true},
-        {valueName: "Backup Dancer Count", refName: "hmcDancerTime", isBattleValue: true,summaryValue: "hmcDancerTimeSum",summaryType: "SUM",
+        {valueName: "Backup Dancer Count", refName: "hmcDancerTime", isBattleValue: true,
             customDisplay: "marks", customDisplayType: "diamond", markMax: null, innerMarkColor: "Imaginary",
             displayRequiresIndex: 2, displayRequiresType: "number",
             displayRequiresBoolean: false,
             showProgressIconAnyways: true,
-            progressIcon: characters["Trailblazer - Harmony"].traces.Point03.icon
+            progressIcon: "misc/hmc/Icon8005Ultra.png"
         },
         {valueName: "Backup Dancer Max", refName: "hmcDancerTimeMax", isBattleValue: true,hide: true},
     ],

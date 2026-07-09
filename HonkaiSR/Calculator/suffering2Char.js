@@ -24049,6 +24049,7 @@ const turnLogic = {
                             "currentStacks": 1,
                             "decay": false,
                             "expireType": "EndTurn",
+                            "buffDisplayIcon": "misc/sunday/Icon1313Rank01.png"
                         }
                         ATKObjects.sundayE1SummonSheet = {
                             "stats": [DEFShredAll],
@@ -24064,6 +24065,7 @@ const turnLogic = {
                             "decay": false,
                             "expireType": "EndTurn",
                             "actionTags": ["Summon"],
+                            "buffDisplayIcon": "misc/sunday/Icon1313Rank01.png"
                         }
                         ATKObjects.sundayE1MemoSheet = {
                             "stats": [DEFShredAll],
@@ -24079,6 +24081,7 @@ const turnLogic = {
                             "decay": false,
                             "expireType": "EndTurn",
                             "removeOnDeath": true,
+                            "buffDisplayIcon": "misc/sunday/Icon1313Rank01.png"
                         }
                     }
                     
@@ -24188,6 +24191,7 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null,
                         "removeOnDeath": true,
+                        "buffDisplayIcon": "misc/sunday/Icon1313Linker.png"
                     }
 
                     ATKObjects.sundayUltimateBeatifiedCountdownSHEET = {
@@ -24205,6 +24209,7 @@ const turnLogic = {
                         expireFunction: logicRef.skillFunctions.beatifiedExpired,
                         expireParam: sourceTurn.name,
                         "removeOnDeath": true,
+                        "buffDisplayIcon": "misc/sunday/Icon1313Linker.png"
                     }
                     
                 }
@@ -24253,6 +24258,7 @@ const turnLogic = {
                 if (memoTurn) {updateBuff(battleData,memoTurn,buffSheet);}
                 if (e6) {logicRef.skillFunctions.sundayTalent(battleData,sourceTurn,targetTurn);}
                 charValuesRef.charWithBeatifiedNameSlot = targetTurn.name;//an ofcd assign the current benediction target
+                charValuesRef.beatifiedDuration = charValuesRef.beatifiedDurationMax;
 
                 const sundayCountdown = ATKObjects.sundayUltimateBeatifiedCountdownSHEET;
                 updateBuff(battleData,sourceTurn,sundayCountdown);
@@ -24344,6 +24350,7 @@ const turnLogic = {
                 removeBuff(battleData,charWithBeatified,targetSheet);
                 if (memoTurn) {removeBuff(battleData,memoTurn,targetSheet);}
                 charValuesRef.charWithBeatifiedNameSlot = null;
+                charValuesRef.beatifiedDuration = 0;
             },
             sundayTechnique(battleData,actionObject,sourceTurn) {
                 let characterName = sourceTurn.properName;
@@ -24480,7 +24487,7 @@ const turnLogic = {
                     },
                 ],
             },
-            
+            createGenericZoneDurationVisual("Sunday","charWithBeatifiedNameSlot",true,"beatifiedDuration","beatifiedSunday"),
             {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
@@ -24570,6 +24577,7 @@ const turnLogic = {
                         "decay": false,
                         "expireType": "EndTurn",
                         "removeOnDeath": true,
+                        "buffDisplayIcon": "misc/sunday/Icon1313Maze.png"
                     }
 
                     const hasMemosprite = targetTurn.activeMemosprites;
@@ -24590,6 +24598,8 @@ const turnLogic = {
         "ATKObjects": {},
         "characterValues": {
             "charWithBeatifiedNameSlot": null,
+            "beatifiedDuration": 0,
+            "beatifiedDurationMax": 3,
         },
         "useTechnique": true,
         "techniqueType": "Support",
@@ -24736,6 +24746,7 @@ const turnLogic = {
                         expireFunction: logicRef.skillFunctions.numinosityExpired,
                         expireParam: sourceTurn.name,
                         "removeOnDeath": true,
+                        "buffDisplayIcon": "misc/tribbie/Icon1403BP.png"
                     }
                     ATKObjects.tribbieSkillBUFFSHEET = {
                         "stats": [ResistanceAllPEN,DEFShredAll],
@@ -24752,6 +24763,7 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null,
                         "removeOnDeath": true,
+                        "buffDisplayIcon": "misc/tribbie/Icon1403BP.png"
                     }
                 }
 
@@ -24761,6 +24773,8 @@ const turnLogic = {
                 const countdownName = ownerSheet.buffName;
                 const buffCheck = sourceTurn.buffsObject[countdownName];
                 sourceTurn.numinosityIsActive = true;
+                const battleValues = sourceTurn.battleValues;
+                battleValues.numinosityDuration = battleValues.numinosityDurationMax;
 
                 updateBuff(battleData,sourceTurn,ownerSheet);
 
@@ -24774,6 +24788,7 @@ const turnLogic = {
             numinosityExpired(battleData,tribbieSlot) {
                 const tribbieTurn = battleData.nameBasedTurns[tribbieSlot];
                 tribbieTurn.numinosityIsActive = false;
+                tribbieTurn.battleValues.numinosityDuration = 0;
 
                 const logicRef = turnLogic[tribbieTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -24881,7 +24896,8 @@ const turnLogic = {
                         "currentStacks": 1,
                         "decay": false,
                         "expireType": null,
-                        "removeOnDeath": true
+                        "removeOnDeath": true,
+                        "buffDisplayIcon": "misc/tribbie/Icon1403Ultra.png"
                     }
                     ATKObjects.tribbieUltimateZoneCountdownSHEET = {
                         "stats": null,
@@ -24898,6 +24914,7 @@ const turnLogic = {
                         expireFunction: logicRef.skillFunctions.ultimateZoneExpired,
                         expireParam: sourceTurn.name,
                         "removeOnDeath": true,
+                        "buffDisplayIcon": "misc/tribbie/Icon1403Ultra.png"
                     }
 
                     const scalar = "HP";
@@ -24986,7 +25003,8 @@ const turnLogic = {
                         "currentStacks": 1,
                         "decay": false,
                         "expireType": null,
-                        "removeOnDeath": true
+                        "removeOnDeath": true,
+                        "buffDisplayIcon": "misc/tribbie/Icon1403SkillTree2.png"
                     }
                 }
                 const buffSheet = ATKObjects.tribbieZoneHPBuffSHEET;
@@ -25134,22 +25152,25 @@ const turnLogic = {
                     addListenerWithPriority(battleData,listener2,listener2.trigger,ownerTurn);
 
                     //e6
-                    const buffSheet = this.tribbieE6SHEET ??= {
-                        "stats": [DamageAll],
-                        [DamageAll]: 7.29,
-                        "source": "E6",
-                        "sourceOwner": ownerTurn.properName,
-                        "buffName": turnLogic[ownerTurn.properName].buffNames.e6FUADMG,
-                        "durationInTurn": null,
-                        "duration": 1,
-                        "AVApplied": 0,
-                        "maxStacks": 1,
-                        "currentStacks": 1,
-                        "decay": false,
-                        "expireType": null,
-                        "actionTags": ["FUA"],
+                    if (rank >= 6) {
+                        const buffSheet = this.tribbieE6SHEET ??= {
+                            "stats": [DamageAll],
+                            [DamageAll]: 7.29,
+                            "source": "E6",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": turnLogic[ownerTurn.properName].buffNames.e6FUADMG,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                            "actionTags": ["FUA"],
+                            "buffDisplayIcon": "misc/tribbie/Icon1403Rank6.png"
+                        }
+                        updateBuff(battleData,ownerTurn,buffSheet);
                     }
-                    updateBuff(battleData,ownerTurn,buffSheet);
 
                     //talent ult use listener
                     const listener3 = passiveListeners[2];
@@ -25344,6 +25365,7 @@ const turnLogic = {
                 "listenerName": "Numinosity (skill) ally created listener",
                 "ownerTurn": {},
             },
+            createGenericZoneDurationVisual("Tribbie","numinosityIsActive",false,"numinosityDuration","numinosityOwner"),
             {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
@@ -25405,6 +25427,8 @@ const turnLogic = {
         "listenersToInjectLater": {},
         "characterValues": {
             "highestHPTarget": null,
+            "numinosityDuration": 0,
+            "numinosityDurationMax": 3,
         },
         "useTechnique": true,
         "techniqueType": "Enhance",
@@ -25573,9 +25597,11 @@ const turnLogic = {
 
                 const countdownName = ownerSheet.buffName;
                 const buffCheck = sourceTurn.buffsObject[countdownName];
-                sourceTurn.battleValues.ariaIsActive = true;
+                const battleValues = sourceTurn.battleValues;
+                battleValues.ariaIsActive = true;
 
                 updateBuff(battleData,sourceTurn,ownerSheet);
+                battleValues.ariaZoneDuration = battleValues.ariaZoneDurationMax;
 
                 if (!buffCheck) {
                     //only if numinosity countdown wasn't already on tribbie when the skill started, do we bother with applying the buff to all allies
@@ -25591,6 +25617,7 @@ const turnLogic = {
             robinSkillExpired(battleData,robinSlot) {
                 const robinTurn = battleData.nameBasedTurns[robinSlot];
                 robinTurn.battleValues.ariaIsActive = false;
+                robinTurn.battleValues.ariaZoneDuration = 0;
 
                 const logicRef = turnLogic[robinTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -25638,6 +25665,7 @@ const turnLogic = {
                         "currentStacks": 1,
                         "decay": false,
                         "expireType": null,
+                        "buffDisplayIcon": "misc/robin/Icon1309Ultra.png"
                     }
                     ATKObjects.robinConcertoCountdownBuffFUASHEET = {
                         "stats": [CritDamageBase],
@@ -25653,6 +25681,7 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null,
                         "actionTags": ["FUA"],
+                        "buffDisplayIcon": "misc/robin/Icon1309Ultra.png"
                     }
                 }
                 
@@ -25974,6 +26003,7 @@ const turnLogic = {
                 "isPersonal": true,
                 "listenerName": "Robin knocked down mid-ult",
             },
+            createGenericZoneDurationVisual("Robin","ariaIsActive",true,"ariaZoneDuration","robinSkillOwner"),
             {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
@@ -26040,6 +26070,8 @@ const turnLogic = {
         "characterValues": {
             "ariaIsActive": false,
             "robinConcertoActive": false,
+            "ariaZoneDuration": 0,
+            "ariaZoneDurationMax": 3,
         },
         "useTechnique": true,
         "techniqueType": "Dimension",
@@ -26772,6 +26804,7 @@ const turnLogic = {
                         expireFunction: logicRef.skillFunctions.overtoneExpired,
                         expireParam: sourceTurn.name,
                         "removeOnDeath": true,
+                        "buffDisplayIcon": "misc/ruanMei/Icon1303BP.png"
                     }
                     ATKObjects.ruanmeiSkillBUFFSHEET = {
                         "stats": [DamageAll,DamageBreakEfficiency],
@@ -26787,6 +26820,7 @@ const turnLogic = {
                         "currentStacks": 1,
                         "decay": false,
                         "expireType": null,
+                        "buffDisplayIcon": "misc/ruanMei/Icon1303BP.png"
                     }
                 }
 
@@ -26795,7 +26829,9 @@ const turnLogic = {
 
                 const countdownName = ownerSheet.buffName;
                 const buffCheck = sourceTurn.buffsObject[countdownName];
-                sourceTurn.battleValues.overtoneIsActive = true;
+                const battleValues = sourceTurn.battleValues;
+                battleValues.overtoneIsActive = true;
+                battleValues.overtoneDuration = battleValues.overtoneDurationMax;
 
                 updateBuff(battleData,sourceTurn,ownerSheet);
 
@@ -26828,6 +26864,7 @@ const turnLogic = {
             overtoneExpired(battleData,ruanmeiSlot) {
                 const ruanmeiTurn = battleData.nameBasedTurns[ruanmeiSlot];
                 ruanmeiTurn.battleValues.overtoneIsActive = false;
+                ruanmeiTurn.battleValues.overtoneDuration = 0;
 
                 const logicRef = turnLogic[ruanmeiTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -26864,6 +26901,7 @@ const turnLogic = {
                         "currentStacks": 1,
                         "decay": false,
                         "expireType": null,
+                        "buffDisplayIcon": "misc/ruanMei/Icon1303UltraBuff.png"
                     }
                     ATKObjects.ruanmeiUltimateZoneCountdownSHEET = {
                         "stats": null,
@@ -26880,6 +26918,7 @@ const turnLogic = {
                         expireFunction: logicRef.skillFunctions.ultimateZoneExpired,
                         expireParam: sourceTurn.name,
                         "removeOnDeath": true,
+                        "buffDisplayIcon": "misc/ruanMei/Icon1303UltraBuff.png"
                     }
                 }
 
@@ -27347,6 +27386,7 @@ const turnLogic = {
                 "listenerName": "Zone active - enemy recovered fully from weakness break",
                 "ownerTurn": {},
             },
+            createGenericZoneDurationVisual("Ruan Mei","overtoneIsActive",true,"overtoneDuration","skillCountdown"),
             {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
@@ -27409,6 +27449,8 @@ const turnLogic = {
         "characterValues": {
             "overtoneIsActive": false,
             "ruanmeiZoneActive": false,
+            "overtoneDuration": 0,
+            "overtoneDurationMax": 3,
         },
         "useTechnique": true,
         "techniqueType": "Enhance",
@@ -28369,6 +28411,7 @@ const turnLogic = {
                         expireFunction: logicRef.skillFunctions.backupDancerExpired,
                         expireParam: sourceTurn.name,
                         "removeOnDeath": true,
+                        "buffDisplayIcon": "misc/hmc/Icon8005Ultra.png"
                     }
                     ATKObjects.hmcBackupDancerBUFFSHEET = {
                         "stats": [DamageBreak],
@@ -28384,6 +28427,7 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null,
                         "removeOnDeath": false,
+                        "buffDisplayIcon": "misc/hmc/Icon8005Ultra.png"
                     }
                 }
 
@@ -28392,10 +28436,11 @@ const turnLogic = {
 
                 const countdownName = ownerSheet.buffName;
                 const buffCheck = sourceTurn.buffsObject[countdownName];
-                sourceTurn.battleValues.hmcBackupDancerActive = true;
+                const battleValues = sourceTurn.battleValues;
+                battleValues.hmcBackupDancerActive = true;
 
                 updateBuff(battleData,sourceTurn,ownerSheet);
-                poke("HMCGainBackupDancerCount",battleData,{pointsGained: 3,sourceString:"HMC Ultimate"});
+                battleValues.hmcDancerTime = battleValues.hmcDancerTimeMax;
 
                 if (!buffCheck) {
                     //only if numinosity countdown wasn't already on tribbie when the skill started, do we bother with applying the buff to all allies
@@ -28410,6 +28455,7 @@ const turnLogic = {
             backupDancerExpired(battleData,hmcSlot) {
                 const hmcTurn = battleData.nameBasedTurns[hmcSlot];
                 hmcTurn.battleValues.hmcBackupDancerActive = false;
+                hmcTurn.battleValues.hmcDancerTime = 0;
 
                 const logicRef = turnLogic[hmcTurn.properName];
                 const ATKObjects = logicRef.ATKObjects;
@@ -28418,8 +28464,6 @@ const turnLogic = {
                 const allyArray = battleData.allAlliesArray;
 
                 removeBuffFromBatch(battleData,allyArray,buffSheet);
-
-                poke("HMCGainBackupDancerCount",battleData,{pointsGained: -3,sourceString:"Backup Dancer Expired"});
             },
             hmcTechnique(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -28442,6 +28486,7 @@ const turnLogic = {
                         "currentStacks": 1,
                         "decay": false,
                         "expireType": "EndTurn",
+                        "buffDisplayIcon": "misc/hmc/Icon8005Maze.png"
                     }
                 }
                 const buffSheet = ATKObjects.hmcTechBREAKSHEET;
@@ -28650,61 +28695,7 @@ const turnLogic = {
                     },
                 ],
             },
-            {
-                "trigger": "PreActionPhaseEnd",
-                condition(battleData,generalInfo) {
-                    // poke("HMCGainBackupDancerCount",battleData,{pointsGained: 1,sourceString:"asdf"});
-                    let ownerTurn = this.ownerTurn;
-                    if (ownerTurn.battleValues.hmcBackupDancerActive) {
-                        const exoObject = this.exoObject ??= {pointsGained: -1,sourceString:"Backup Dancer Decrement"}
-                        poke("HMCGainBackupDancerCount",battleData,exoObject);
-                    }
-                },
-                "target": "self",
-                "isPersonal": true,
-                "listenerName": "Backup Dancer decrement",
-                "ownerTurn": {},
-            },
-            {
-                "trigger": "HMCGainBackupDancerCount",
-                condition(battleData,generalInfo) {
-                    // poke("HMCGainBackupDancerCount",battleData,{pointsGained: 1,sourceString:"asdf"});
-                    let ownerTurn = this.ownerTurn;
-                    // coreResonance
-                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
-                    const pointsGained = generalInfo.pointsGained;
-                    const valuesRef = ownerTurn.battleValues;
-
-                    const oldValue = valuesRef.hmcDancerTime;
-                    const maxValue = valuesRef.hmcDancerTimeMax;
-                    valuesRef.hmcDancerTime = Math.max(0, Math.min(maxValue, oldValue + pointsGained));
-                    const newValue = valuesRef.hmcDancerTime;
-                    const valueWasDiff = oldValue != newValue;
-
-                    const sourceString = generalInfo.sourceString
-                    if (valueWasDiff && battleData.isLoggyLogger) {
-                        // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Blind Bet (Aventurine): ${oldValue} --> ${valuesRef.weirdStacks}/10 [${sourceString}]`});
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point03.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Backup Dancer (HMC): ${oldValue} --> ${valuesRef.hmcDancerTime}/${maxValue} [${sourceString}]`});
-                        
-                        if (pointsGained > 0) {
-                            ownerTurn.hmcDancerTimeSum ??= 0;
-                            ownerTurn.hmcDancerTimeSum += valuesRef.hmcDancerTime - oldValue;
-                            
-                        }
-                        logToBattle(battleData,{
-                            logType: "SUMMARY:SUM",
-                            function: "hmcDancerTimeSum",
-                            AV: battleData.sumAV,
-                            currentValue: valuesRef.hmcDancerTime,
-                            currentSumValue: ownerTurn.hmcDancerTimeSum,
-                            currentAddedValue: valuesRef.hmcDancerTime - oldValue
-                        });
-                    }
-                },
-                "target": "self",
-                "listenerName": "March Counter Handler",
-                "ownerTurn": {},
-            },
+            createGenericZoneDurationVisual("HMC","hmcBackupDancerActive",true,"hmcDancerTime","backupOwner"),
             {
                 "trigger": "UltimateReady",
                 condition(battleData,generalInfo) {
@@ -29776,6 +29767,7 @@ const turnLogic = {
                     "currentStacks": 1,
                     "decay": false,
                     "expireType": "EndTurn",
+                    "buffDisplayIcon": "misc/saber/Icon1014Maze.png"
                 }
 
                 if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
@@ -29795,6 +29787,7 @@ const turnLogic = {
 
                     const passiveListeners = this.passiveListeners;
 
+                    ownerTurn.battleValues.overflowEnergyMax = rank>=6 ? 200 : 120;
 
                     //talent inherents
                     const listener1 = passiveListeners[0];
@@ -29833,6 +29826,7 @@ const turnLogic = {
                         "currentStacks": 1,
                         "decay": false,
                         "expireType": null,
+                        "buffDisplayIcon": "misc/saber/Icon1014SkillTree1.png"
                     }
                     const ATKObjects = logicRef.ATKObjects;
                     ATKObjects.saberManaBurstNULLSHEET = buffSheet2;
@@ -29991,40 +29985,8 @@ const turnLogic = {
                         condition(battleData,generalInfo) {
                             // poke("EnergyChanged",battleData,{sourceTurn,newAmount,overFill,amount});
                             const ownerTurn = this.ownerTurn;
-                            
-        
-                            const overflow = generalInfo.overFill;
-                            if (overflow) {
-                                // const characterName = ownerTurn.properName;
-                                // const logicRef = turnLogic[characterName];
-                                const valuesRef = ownerTurn.battleValues;
-                                const rank = ownerTurn.rank;
-                                // overflowEnergy
-                                const oldAmount = valuesRef.overflowEnergy;
-                                const cap = rank>=6 ? 200 : 120;
-                                valuesRef.overflowEnergy = Math.min(cap,valuesRef.overflowEnergy + overflow);
-                                const amountGained = valuesRef.overflowEnergy - oldAmount;
-                                // if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Energy Overflow (Saber): ${oldAmount.toLocaleString()} --> ${valuesRef.overflowEnergy.toLocaleString()}/${cap}`});}
-        
-        
-                                if (battleData.isLoggyLogger) {
-                                    logToBattle(battleData,{logType: "EnergyChange", isOverflow: true, target: ownerTurn.properName, amount: amountGained, oldEnergy:oldAmount, newEnergy:valuesRef.overflowEnergy, maximum:cap, source:"Blessing of the Lake"});
-                                
-                                    if (valuesRef.overflowEnergy > oldAmount) {
-                                        ownerTurn.saberOverflowSummer ??= 0;
-                                        ownerTurn.saberOverflowSummer += amountGained;
-                                        // console.log(ownerTurn.saberSumResonance)
-                                    }
-                                    logToBattle(battleData,{
-                                        logType: "SUMMARY:SUM",
-                                        function: "saberOverflowSummer",
-                                        AV: battleData.sumAV,
-                                        currentValue: valuesRef.overflowEnergy,
-                                        currentSumValue: ownerTurn.saberOverflowSummer,
-                                        currentAddedValue: amountGained
-                                    });
-                                }
-                            }
+                            const generalData = this.generalData ??= {summerName: "saberOverflowSummer",sourceString: "Blessing of the Lake",energyOverrideIcon:"misc/saber/Icon1014SP.png"};
+                            genericEnergyOverflow(battleData,ownerTurn,generalInfo,generalData);
         
                             const pseudoObject = this.pseudoObject ??= {pointsGained: 0,sourceString:null};
                             poke("SaberGainCoreResonance",battleData,pseudoObject,null);//this will pseudo check if she has manaburst and can be advanced, instead of having it in its own listener
@@ -30115,6 +30077,13 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("SaberGainCoreResonance",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
+                    // const generalData = this.generalData ??= {summerName: "sparxieThrillSum",baseName: "thrill",maxName: "thrillMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                    //     baseString: "Thrill (Sparxie)",displayIcon:"/HonkaiSR/misc/sparxie/Icon1501Elation.png"};
+                    // // const oldValue = ownerTurn.battleValues.chargeStacks;
+                    // const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
+
+
+
                     //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
                     const pointsGained = generalInfo.pointsGained;
                     const characterName = ownerTurn.properName;
@@ -30192,7 +30161,7 @@ const turnLogic = {
                     const sourceString = generalInfo.sourceString;
                     if (pointsGained && battleData.isLoggyLogger) {
                         // GenericActionWithImage
-                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/" + characters[ownerTurn.properName].traces.Point04.icon,sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Core Resonance: ${oldValue} --> ${resoRef} [${sourceString}]`});
+                        logToBattle(battleData,{logType: "GenericActionWithImage", imagePath:"/HonkaiSR/misc/saber/Icon1014Passive.png",sourceName: ownerTurn.properName, source:this.listenerName, bodyText: `Core Resonance: ${oldValue} --> ${resoRef} [${sourceString}]`});
                         // logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Core Resonance (Saber): ${oldValue} --> ${resoRef} [${sourceString}]`});
 
                         if (pointsGained > 0) {
@@ -30298,7 +30267,9 @@ const turnLogic = {
         "characterValues": {
             "isEnhanced": false,
             "coreResonance": 0,
+            "coreResonanceMax": 999,
             "overflowEnergy": 0,
+            "overflowEnergyMax": 0,
             "e6UltCounter": 2,
             "advanceReady": true,
             "waitingToAdvance": false,
