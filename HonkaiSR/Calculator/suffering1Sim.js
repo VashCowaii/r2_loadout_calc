@@ -158,7 +158,35 @@ const sim = {
                 AVentry.AV = Math.max(0,AVentry.AV - sourceTurn.AV);//prevent negative action value
             }
         }
-        sourceTurn.AV = sourceTurn.AVBase;
+        sourceTurn.turnDelayMulti = 1;
+        sourceTurn.turnDelayAction = 0;
+
+        sourceTurn.actionCounter = battleData.actionCounter;
+        // sourceTurn.AV = sourceTurn.AVBase;
+    },
+    setNextTurnDelay(battleData,sourceTurn) {
+        const actionType = sourceTurn.turnDelayAction;
+        const delayMulti = sourceTurn.turnDelayMulti;
+
+        if (actionType) {
+            // battleData.actionCounter += 1;
+            // if (delayMulti < 1) {
+            //     battleData.actionCounter += 1;
+            // }
+            // sourceTurn.AV = sourceTurn.AVBase * sourceTurn.turnDelayMulti;
+            // sourceTurn.actionCounter = battleData.actionCounter;
+
+            actionAdvance(delayMulti,sourceTurn,battleData,"Deferred Advance",null,true);
+        }
+        else {
+            sourceTurn.AV = sourceTurn.AVBase * sourceTurn.turnDelayMulti;
+            // sourceTurn.actionCounter -= 1000;
+        }
+
+
+        sourceTurn.AV = sourceTurn.AVBase * sourceTurn.turnDelayMulti;
+
+        // actionAdvance(percent,targetTurn,battleData,source,delayLogEntry);
     },
     sortEnemyTargets(enemyPositions) {
         const bosses = enemyPositions.filter(e => e.enemyType === "boss");
@@ -315,6 +343,7 @@ const sim = {
     battlePrep(characterObject,isLoggyLogger,querySettingsOverride,battleSettings) {
         let battleData = {
             "isLoggyLogger": isLoggyLogger ?? false,
+            "inAction": false,
             "sumAV": 0,
             "cycleAV": 150,
             "cycleAVPassed": 0,
@@ -795,7 +824,7 @@ const sim = {
         logToBattle(battleData,{logType: "WaveStart",AV:battleData.sumAV,waveID: 1});
         if (battleData.techniquesAllowed) {
             const firstTurn = battleData.nameBasedTurns.char1;
-            battleData.combatStarterSlot = firstTurn.name;
+            battleData.combatStarterSlot = battleData.combatStarterSlot ?? firstTurn.name;
         }
         poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1},null);
         
@@ -805,6 +834,7 @@ const sim = {
         const clearULT = sim.clearUltimateQueue;
         const getNext = sim.getNextQueuedTurn;
         const adjustAllAV = sim.pullToCurrentAV;
+        const setNextTurnDelay = sim.setNextTurnDelay;
         const expireControl = battleActions.buffExpireController;
         
 
@@ -866,6 +896,7 @@ const sim = {
                 }
                 
                 sourceTurn.uniqueEventFunction(battleData,sourceTurn);
+                setNextTurnDelay(battleData,sourceTurn);
                 clearULT(battleData);
 
                 if (isActualTurn) {
@@ -936,6 +967,7 @@ const sim = {
 
         let clearFUA = sim.clearFollowUpAttackQueue;
         let clearULT = sim.clearUltimateQueue;
+        const setNextTurnDelay = sim.setNextTurnDelay;
         let isLog = battleData.isLoggyLogger;
         const queueRef = battleData.followUpQueue;
 
@@ -1002,10 +1034,11 @@ const sim = {
             isContinuousTurn = preCheckContinue;
 
             if (isAbility && !isContinuousTurn) {poke("AbilityEnd",battleData,designatedAction,sourceTurn);}
+            
 
 
             if (!preCheckContinue) {
-
+                setNextTurnDelay(battleData,sourceTurn);
                 // if (designatedAction.endTurn || sourceTurn.turnShouldEnd) {
                 //     turnEnded = true;
                 //     if (battleData.extraTurnIsActive) {battleData.extraTurnIsActive = false;}
@@ -1024,6 +1057,7 @@ const sim = {
     turnWrapperEnemy(charName,enemyTypeAttack,sourceTurn,battleData) {
         let turnEnded = false;
         let isLog = battleData.isLoggyLogger;
+        const setNextTurnDelay = sim.setNextTurnDelay;
 
         while (!turnEnded && !battleData.battleIsOver) {
             sim.clearFollowUpAttackQueue(battleData);
@@ -1050,7 +1084,6 @@ const sim = {
             }
 
             
-
             poke("AbilityStart",battleData,designatedAction,sourceTurn);
             designatedAction.actionCall(battleData,designatedAction,sourceTurn);
             poke("AbilityEnd",battleData,designatedAction,sourceTurn);
@@ -1060,6 +1093,7 @@ const sim = {
             //     if (sourceTurn.turnShouldEnd) {return;}
             // }//return turn ending for everyone else
             turnEnded = true;
+            setNextTurnDelay(battleData,sourceTurn);
             
             if (battleData.followUpQueue.length) {sim.clearFollowUpAttackQueue(battleData);}
             sim.clearUltimateQueue(battleData);//readiness poke is inside the function on this one

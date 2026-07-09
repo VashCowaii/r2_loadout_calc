@@ -724,7 +724,8 @@ const battleActions = {
         familySet = new Set (familyNameArary);
         return familySet;
     },
-    actionAdvance(percent,targetTurn,battleData,source,delayLogEntry) {
+    actionAdvance(percent,targetTurn,battleData,source,delayLogEntry,isSet) {//turnDelayMulti
+        // percent = percent ?? Infinity;//can be left null for immediate actions
         if (targetTurn.length) {
             battleData.actionCounter += 1;
             let targetsAtZero = [];
@@ -735,7 +736,7 @@ const battleActions = {
                 targetInstance.actionCounter = battleData.actionCounter;
                 let isEnemy = targetInstance.isEnemy;
                 let oldAV = targetInstance.AV;
-                targetInstance.AV = Math.max(0,oldAV - targetInstance.AVBase * percent);//action advance is determined by the character's full AV per turn value, not on their remaining AV
+                targetInstance.AV = isSet ? targetInstance.AVBase * percent : Math.max(0,oldAV - targetInstance.AVBase * percent);//action advance is determined by the character's full AV per turn value, not on their remaining AV
                 //see speedAdvance() for spd changes
                 if (targetInstance.AV === 0) {targetsAtZero.push(targetInstance);}
                 
@@ -760,7 +761,7 @@ const battleActions = {
             targetTurn.actionCounter = battleData.actionCounter;
             let isEnemy = targetTurn.isEnemy;
             let oldAV = targetTurn.AV;
-            targetTurn.AV = Math.max(0,oldAV - targetTurn.AVBase * percent);//action advance is determined by the character's full AV per turn value, not on their remaining AV
+            targetTurn.AV = isSet ? targetTurn.AVBase * percent : Math.max(0,oldAV - targetTurn.AVBase * percent);//action advance is determined by the character's full AV per turn value, not on their remaining AV
             //see speedAdvance() for spd changes
             
             if (battleData.isLoggyLogger) {
@@ -29999,14 +30000,15 @@ const turnLogic = {
                     {
                         "trigger": "AbilityEnd",
                         condition(battleData,generalInfo) {
-                            // poke("EnergyChanged",battleData,{sourceTurn,newAmount,overFill,amount});
-                            const ownerTurn = this.ownerTurn;
-                            const battleValues = ownerTurn.battleValues;
-                            if (!battleValues.waitingToAdvance) {return;}
-                            actionAdvance(1,ownerTurn,battleData,"Knight of the Dragon");//TODO: later make this immediate, not 100%
-                            battleValues.waitingToAdvance = false;
+                            // // poke("EnergyChanged",battleData,{sourceTurn,newAmount,overFill,amount});
+                            // const ownerTurn = this.ownerTurn;
+                            // const battleValues = ownerTurn.battleValues;
+                            // if (!battleValues.waitingToAdvance) {return;}
+                            // actionAdvance(1,ownerTurn,battleData,"Knight of the Dragon");//TODO: later make this immediate, not 100%
+                            // battleValues.waitingToAdvance = false;
                         },
                         "target": "self",
+                        "isPersonal": true,
                         "priority": Infinity,
                         "listenerName": "Blessing of the Lake advancement listener",
                         "ownerTurn": {},
@@ -30192,7 +30194,17 @@ const turnLogic = {
                             updateSkillPoints(battleData,1,ownerTurn,false,"Knight of the Dragon");
 
                             valuesRef.advanceReady = false;
-                            valuesRef.waitingToAdvance = true;
+
+                            if (ownerTurn.turnState && ownerTurn.actionAssigned && ownerTurn.turnDelayMulti) {
+                                ownerTurn.turnDelayMulti = 0;
+                                ownerTurn.turnDelayAction = 1;
+
+                            }//battleData.inAction = true;
+                            else {
+                                actionAdvance(0,ownerTurn,battleData,"Knight of the Dragon",null,true);//TODO: later make this immediate, not 100%
+                            }
+                            // 
+                            // valuesRef.waitingToAdvance = true;
                             //in the event of souldragon from dhpt being on saber, when saber does a skill that would push her over the core resonance threshold
                             //you would think that the core reso advance from manaburst happens before souldragon's bondmate attacked advance, but it does not
                             //souldragon will trigger his advance first since the attack ends before the action is evaluated, then after
@@ -30272,7 +30284,7 @@ const turnLogic = {
             "overflowEnergyMax": 0,
             "e6UltCounter": 2,
             "advanceReady": true,
-            "waitingToAdvance": false,
+            // "waitingToAdvance": false,
         },
         "useTechnique": true,
         "techniqueType": "Attack",
