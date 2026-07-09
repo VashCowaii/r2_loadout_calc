@@ -581,7 +581,7 @@ const megaParsingFuckery = {
 
                         // console.log(paramIndex,skill,paramObject)
                         
-                        console.log(currentSkillEntryList?.[paramIndex],paramIndex)
+                        // console.log(currentSkillEntryList?.[paramIndex],paramIndex)
 
                         let paramEntry = currentSkillEntryList?.[paramIndex] && currentSkillEntryList[paramIndex] != "-" ? currentSkillEntryList[paramIndex] : baseParamList[paramIndex];
 
