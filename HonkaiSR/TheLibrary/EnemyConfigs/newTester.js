@@ -433,6 +433,7 @@ const megaParsingFuckery = {
     changeEnemyVariant() {
         enemyVariantSelected = readSelection("fileSelectionSelectorEnemyOptions").value;
         userTriggers.updateCharacterUI();
+        megaParsingFuckery.renewFileSelected();
     },
     pageLoadSetup(loadFile) {
         // const bodyBox = readSelection("eventBodyMainBox");
@@ -563,14 +564,16 @@ const megaParsingFuckery = {
                 let stringInstance = hasValidInstance ? JSON.stringify(configAbility).replace(
                     /\{\[([A-Za-z0-9_]+)\[(\d+)\]\]\}/g,
                     (_,skill,index) => {
-                        const currentSkillEntryList = paramObject[skill];
+                        const baseParamObject = paramObject[skill];
+                        const baseParamList = baseParamObject.params;
+                        const currentSkillEntryList = baseParamObject?.paramOverrides?.[0].length ? baseParamObject?.paramOverrides[0] : baseParamList;
 
                         
 
                         let paramIndex = Number(index);
 
 
-                        if (currentSkillEntryList == undefined || (currentSkillEntryList.paramOverrides?.[paramIndex] == undefined && currentSkillEntryList.params?.[paramIndex] == undefined)) {
+                        if (currentSkillEntryList == undefined || (currentSkillEntryList?.[paramIndex] == undefined && baseParamList?.[paramIndex] == undefined)) {
                             // console.log(skill,index,paramObject,currentSkillEntryList)
                             return "UnusedUnderThisBase_" + skill + index
                         }
@@ -578,7 +581,9 @@ const megaParsingFuckery = {
 
                         // console.log(paramIndex,skill,paramObject)
                         
-                        let paramEntry = currentSkillEntryList.paramOverrides?.[paramIndex] && currentSkillEntryList.paramOverrides[paramIndex] != "-" ? currentSkillEntryList.paramOverrides[paramIndex] : currentSkillEntryList.params[paramIndex];
+                        console.log(currentSkillEntryList?.[paramIndex],paramIndex)
+
+                        let paramEntry = currentSkillEntryList?.[paramIndex] && currentSkillEntryList[paramIndex] != "-" ? currentSkillEntryList[paramIndex] : baseParamList[paramIndex];
 
                         // paramOverrides
                         return paramEntry;
