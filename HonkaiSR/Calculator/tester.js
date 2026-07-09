@@ -5190,7 +5190,8 @@ const userTriggers = {
                                             const markMax = entry.markMax ?? (requiresIndex ? requiredIndexValue : null);
                                             const markFillColor = specialEnergyData[turnRef.element].energyColor1;
 
-                                            const fillProgress = Math.min(100,Math.max(1,(valueAdjusted / markMax) * 100));
+                                            const fillProgress = entry.progressInverted ? Math.min(100,Math.max(1,((markMax - valueAdjusted) / markMax) * 100)) 
+                                            : Math.min(100,Math.max(1,(valueAdjusted / markMax) * 100));
 
                                             customValuesString += `<div class="customEnergyBodyPROGRESSBar">
                                                 <div class="customEnergyBodyMarksCIRCLEPROGRESS"
@@ -5199,7 +5200,7 @@ const userTriggers = {
                                                         <img src="/HonkaiSR/${entry.progressIcon}" class="customEnergyBodyMarksCIRCLEPROGRESSIcon"/>
                                                     </div>
                                                 </div>
-                                                ${entry.needPercent ? `${(100 * valueAdjusted/markMax).toLocaleString()}%` : `${valueAdjusted} / ${markMax}`} ${!entry.hideName ? entry.valueName : ""}
+                                                ${entry.needPercent ? `${(100 * valueAdjusted/markMax).toLocaleString()}%` : `${valueAdjusted}${entry.hideMax ? "" : ` / ${markMax}`}`} ${!entry.hideName ? entry.valueName : ""}
                                             </div>`
                                         }
                                     }
