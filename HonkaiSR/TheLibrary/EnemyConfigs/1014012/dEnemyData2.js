@@ -174,8 +174,8 @@ let enemyData = {
       "overrideParams": {
         "403": [
           [
-            -1,
-            -1,
+            "-",
+            "-",
             1.2
           ],
           null,

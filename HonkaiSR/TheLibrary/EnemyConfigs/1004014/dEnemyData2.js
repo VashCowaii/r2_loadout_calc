@@ -383,7 +383,7 @@ let enemyData = {
       "overrideParams": {
         "82": [
           [
-            -1,
+            "-",
             1.5
           ],
           null,
