@@ -1368,6 +1368,7 @@ const rotationsUISuffering = {
     displayLoop(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
         const typeCheck = destination.type;
 
+        // console.log(destination)
         console.log(typeCheck)
         let returnString = rotationsUISuffering[typeCheck](characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot);
         return returnString;
@@ -1379,16 +1380,12 @@ const rotationsUISuffering = {
             case "AND":
                 return {
                     type: "AND",
-                    array: [
-                        {type: "Turn", target: "Self", targetType: "Character", phase: "Any Part", state: true},
-                    ]
+                    array: []
                 }
             case "OR":
                 return {
                     type: "OR",
-                    array: [
-                        {type: "Turn", target: "Self", targetType: "Character", phase: "Any Part", state: true},
-                    ]
+                    array: []
                 }
             case "COMPARE":
                 return {
@@ -3076,6 +3073,10 @@ const rotationsUISuffering = {
 
         const arrayIDString = newArray.join("|");
         const baseIDString = `rotationConditionType${skillSlot}${arrayIDString}`;
+
+        if (!destination.array.length) {
+            destination.array.push(rotationsUISuffering.getReturnStruct("AND"))
+        }
 
         // console.log(destination)
 
