@@ -437,9 +437,28 @@ const customDisplayValuesLog = {
         {valueName: "Mem on Field", refName: "memIsActive", isBattleValue: true, isCharacterState: true,
             isMemoSpriteDisplay: true,
         },
-        {valueName: "Mem's Charge", refName: "memCharge", isBattleValue: true},
-        {valueName: "Mem is Enhanced", refName: "memIsEnhanced", isBattleValue: true, isCharacterState: true},
-        {valueName: "Epic Stacks", refName: "epicStacks", isBattleValue: true},
+        {valueName: "Mem's Charge", refName: "memCharge", isBattleValue: true,summaryValue: "rmcMemChargeSum",summaryType: "SUM",
+            customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "Ice",
+            displayRequiresIndex: 2, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            needPercent: true,
+            hideName: true,
+            progressIcon: "misc/rmc/Icon8007Energy.png"
+        },
+        {valueName: "Mem's Charge Max", refName: "memChargeMax", isBattleValue: true, hide: true},
+
+        // {valueName: "Epic Stacks", refName: "epicStacks", isBattleValue: true},
+        {valueName: "Epic Stacks", refName: "epicStacks", isBattleValue: true,summaryValue: "rmcEpicStackSummer",summaryType: "SUM",
+            customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "Ice",
+            displayRequiresIndex: 4, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            // needPercent: true,
+            hideName: true,
+            progressIcon: "misc/rmc/Icon8007Skill11.png"
+        },
+        {valueName: "Epic Stacks Max", refName: "epicStacksMax", isBattleValue: true, hide:true},
+
+        {valueName: "Mem is Enhanced", refName: "memIsEnhanced", isBattleValue: true, isCharacterState: true, hide:true},
     ], 
     "Aglaea": [
         {valueName: "Garment on Field", refName: "garmentIsActive", isBattleValue: true, isCharacterState: true,
