@@ -13,7 +13,8 @@ const compositeAbilityObject = {
     "1012020_Monster_W1_GSMecha_01_Ability02_Part01",
     "1012020_Monster_W1_GSMecha_01_Ability01_Part02",
     "1012020_Monster_W1_GSMecha_01_Ability01_Part01",
-    "1012020_Handling"
+    "1012020_Handling",
+    "1012020_Handling_OVERRIDE_101202003"
   ],
   "abilityObject": {
     "1012020_Monster_W1_GSMecha_01_Ability04_Part02": {
@@ -512,6 +513,62 @@ const compositeAbilityObject = {
     "1012020_Handling": {
       "fileName": "1012020_Handling",
       "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "Common_SequenceThree_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSequenceSkill",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Sequence Ability Option"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Sequence Ability Use Value",
+                  "valueCheck": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": [],
+      "parsedSequence": [
+        "101202001",
+        "101202002",
+        "101202003"
+      ]
+    },
+    "1012020_Handling_OVERRIDE_101202003": {
+      "fileName": "1012020_Handling_OVERRIDE_101202003",
+      "abilityType": "Handling_101202003",
       "energy": null,
       "toughnessList": [
         0,
