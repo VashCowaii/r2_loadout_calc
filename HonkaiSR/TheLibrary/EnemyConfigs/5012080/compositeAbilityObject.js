@@ -6,7 +6,8 @@ const compositeAbilityObject = {
     "5012080_Modifiers",
     "5012080_Monster_W5_VtuberPart02_PassiveAbilityInitiate",
     "5012080_Monster_W5_VtuberPart02_Ability01_Part02",
-    "5012080_Monster_W5_VtuberPart02_Ability01_Part01"
+    "5012080_Monster_W5_VtuberPart02_Ability01_Part01",
+    "5012080_Handling"
   ],
   "abilityObject": {
     "5012080_Modifiers": {
@@ -706,6 +707,57 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
+      "references": []
+    },
+    "5012080_Handling": {
+      "fileName": "5012080_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "Common_SequenceThree_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSequenceSkill",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Sequence Ability Option"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Sequence Ability Use Value",
+                  "valueCheck": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "references": []
     }
   }

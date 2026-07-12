@@ -6,7 +6,8 @@ const compositeAbilityObject = {
     "4012060_Modifiers",
     "4012060_Monster_W4_HearsePart_Passive01",
     "4012060_Monster_W4_HearsePart_Ability01_Part02",
-    "4012060_Monster_W4_HearsePart_Ability01_Part01"
+    "4012060_Monster_W4_HearsePart_Ability01_Part01",
+    "4012060_Handling"
   ],
   "abilityObject": {
     "4012060_Modifiers": {
@@ -1369,6 +1370,57 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
+      "references": []
+    },
+    "4012060_Handling": {
+      "fileName": "4012060_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "Common_SequenceThree_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSequenceSkill",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Sequence Ability Option"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Sequence Ability Use Value",
+                  "valueCheck": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "references": []
     }
   }

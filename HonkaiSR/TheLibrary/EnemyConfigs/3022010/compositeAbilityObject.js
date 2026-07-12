@@ -10,7 +10,8 @@ const compositeAbilityObject = {
     "3022010_Monster_W3_SundayPart_Ability01_Part02",
     "3022010_Monster_W3_SundayPart_Ability01_Part01",
     "3022010_Monster_W3_SundayPart_Ability01_Assist_Part02_01",
-    "3022010_Monster_W3_SundayPart_Ability01_Assist_Part02_02"
+    "3022010_Monster_W3_SundayPart_Ability01_Assist_Part02_02",
+    "3022010_Handling"
   ],
   "abilityObject": {
     "3022010_Modifiers": {
@@ -417,6 +418,57 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "Inherent Target"
       },
+      "references": []
+    },
+    "3022010_Handling": {
+      "fileName": "3022010_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "Common_SequenceThree_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSequenceSkill",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Sequence Ability Option"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Sequence Ability Use Value",
+                  "valueCheck": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "references": []
     }
   }

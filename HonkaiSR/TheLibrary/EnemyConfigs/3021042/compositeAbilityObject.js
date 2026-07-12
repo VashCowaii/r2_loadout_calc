@@ -15,7 +15,8 @@ const compositeAbilityObject = {
     "3021042_Monster_W2_ArgentiTotem_02_AbilityP01_Insert",
     "3021042_Monster_W2_ArgentiTotem_02_Ability01_IF_Part02",
     "3021042_Monster_W2_ArgentiTotem_02_Ability01_IF_Part01",
-    "3021042_Functions"
+    "3021042_Functions",
+    "3021042_Handling"
   ],
   "abilityObject": {
     "3021042_Modifiers": {
@@ -2139,6 +2140,57 @@ const compositeAbilityObject = {
           "name": "CharacterFunctions",
           "functionName": "<a class=\"gTempYellow\" id=\"fun__1173935247\">DeathCamera_First</a>",
           "parse": []
+        }
+      ],
+      "references": []
+    },
+    "3021042_Handling": {
+      "fileName": "3021042_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "Common_SequenceThree_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSequenceSkill",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Sequence Ability Option"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Sequence Ability Use Value",
+                  "valueCheck": 1
+                }
+              ]
+            }
+          ]
         }
       ],
       "references": []

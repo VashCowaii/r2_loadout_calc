@@ -10,7 +10,8 @@ const compositeAbilityObject = {
     "8002109_Monster_XP_Minion04_01_Ability02_Part02",
     "8002109_Monster_XP_Minion04_01_Ability02_Part01",
     "8002109_Monster_XP_Minion04_01_Ability01_Part02",
-    "8002109_Monster_XP_Minion04_01_Ability01_Part01"
+    "8002109_Monster_XP_Minion04_01_Ability01_Part01",
+    "8002109_Handling"
   ],
   "abilityObject": {
     "8002109_Modifiers": {
@@ -310,6 +311,121 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
+      "references": []
+    },
+    "8002109_Handling": {
+      "fileName": "8002109_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "DG_010_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill01",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill01"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Value",
+                  "skillName": "Skill01",
+                  "firstCD": 1,
+                  "regCD": 1,
+                  "valueCheck": 0.1
+                }
+              ]
+            },
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill02",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill02"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 1,
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"605655574\">Enemy_XP_Minion04_01_EscapingCharge01</a>"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill03",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill03"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 1,
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"588877955\">Enemy_XP_Minion04_01_EscapingCharge02</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "references": []
     }
   }

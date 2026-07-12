@@ -14,7 +14,8 @@ const compositeAbilityObject = {
     "5013071_Monster_W5_Ranger_Ability02_Part01",
     "5013071_Monster_W5_Ranger_Ability01_Part02",
     "5013071_Monster_W5_Ranger_Ability01_Part01",
-    "5013071_Monster_W5_RangerGroup_Revive"
+    "5013071_Monster_W5_RangerGroup_Revive",
+    "5013071_Handling"
   ],
   "abilityObject": {
     "5013071_Modifiers": {
@@ -3491,6 +3492,57 @@ const compositeAbilityObject = {
           ]
         }
       ]
+    },
+    "5013071_Handling": {
+      "fileName": "5013071_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "Common_SequenceThree_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSequenceSkill",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Sequence Ability Option"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Sequence Ability Use Value",
+                  "valueCheck": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
     }
   }
 }

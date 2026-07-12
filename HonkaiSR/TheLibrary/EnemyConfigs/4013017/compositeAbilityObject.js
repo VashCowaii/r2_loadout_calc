@@ -11,7 +11,8 @@ const compositeAbilityObject = {
     "4013017_Monster_W4_Claymore_LocalLegend03_Ability04_Part01",
     "4013017_Monster_W4_Claymore_LocalLegend03_Ability01_Part02",
     "4013017_Monster_W4_Claymore_LocalLegend03_Ability01_Part01",
-    "4013017_Functions"
+    "4013017_Functions",
+    "4013017_Handling"
   ],
   "abilityObject": {
     "4013017_Modifiers": {
@@ -6696,6 +6697,177 @@ const compositeAbilityObject = {
                 "target": "{{EVENT[RoT] Dark Praetor: Dark Summons}}"
               },
               "modifier": "<a class=\"gModGreen\" id=\"1934316288\">Enemy_W4_Claymore_01_LocalLegend_Stealth</a>"
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "4013017_Handling": {
+      "fileName": "4013017_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "Decision01",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "HP_Bars_Remaining",
+                        "compareType": "=",
+                        "value2": 2
+                      },
+                      "passed": [
+                        {
+                          "name": "Declare Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "scope": "TargetEntity",
+                          "variableName": "AIFlag",
+                          "value": 2
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Target Count",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{EVENT[RoT] Light Praetor: Light Summons}}"
+                        },
+                        "compareType": "=",
+                        "value2": 0,
+                        "livingTargets": true
+                      },
+                      "passed": [
+                        {
+                          "name": "Use Ability Option",
+                          "skillName": "Skill04"
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Use Ability Option",
+                          "skillName": "Skill01"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 0.5,
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "AIFlag",
+                    "compareType": "=",
+                    "value2": 1
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HANDLER OPTION",
+              "option": "Decision04",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "variableName": "AIFlag",
+                      "value": 3
+                    },
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill02"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 0.5,
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "AIFlag",
+                    "compareType": "=",
+                    "value2": 2
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HANDLER OPTION",
+              "option": "Decision05",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "AIFlag",
+                      "value": 1
+                    },
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill03"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 0.5,
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "AIFlag",
+                    "compareType": "=",
+                    "value2": 3,
+                    "contextScope": "TargetEntity"
+                  }
+                }
+              ]
             }
           ]
         }

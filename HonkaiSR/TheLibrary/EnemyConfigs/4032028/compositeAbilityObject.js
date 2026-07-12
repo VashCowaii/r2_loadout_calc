@@ -10,7 +10,8 @@ const compositeAbilityObject = {
     "4032028_Monster_W4_FireProwler_01_Ability02_Part02_FantasticStory",
     "4032028_Monster_W4_FireProwler_01_Ability02_Part01_FantasticStory",
     "4032028_Monster_W4_FireProwler_01_Ability01_Part02_FantasticStory",
-    "4032028_Monster_W4_FireProwler_01_Ability01_Part01_FantasticStory"
+    "4032028_Monster_W4_FireProwler_01_Ability01_Part01_FantasticStory",
+    "4032028_Handling"
   ],
   "abilityObject": {
     "4032028_Modifiers": {
@@ -1183,6 +1184,57 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target",
         "subTarget": "Blast Targets"
       },
+      "references": []
+    },
+    "4032028_Handling": {
+      "fileName": "4032028_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "Common_SequenceThree_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSequenceSkill",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Sequence Ability Option"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Sequence Ability Use Value",
+                  "valueCheck": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "references": []
     }
   }

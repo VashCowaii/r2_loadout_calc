@@ -11,7 +11,8 @@ const compositeAbilityObject = {
     "8022011_Monster_SW_Minion01_Ability02_Part02",
     "8022011_Monster_SW_Minion01_Ability02_Part01",
     "8022011_Monster_SW_Minion01_Ability01_Part02",
-    "8022011_Monster_SW_Minion01_Ability01_Part01"
+    "8022011_Monster_SW_Minion01_Ability01_Part01",
+    "8022011_Handling"
   ],
   "abilityObject": {
     "8022011_Modifiers": {
@@ -3013,6 +3014,57 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
+      "references": []
+    },
+    "8022011_Handling": {
+      "fileName": "8022011_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "Common_SequenceThree_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSequenceSkill",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Sequence Ability Option"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Sequence Ability Use Value",
+                  "valueCheck": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "references": []
     }
   }

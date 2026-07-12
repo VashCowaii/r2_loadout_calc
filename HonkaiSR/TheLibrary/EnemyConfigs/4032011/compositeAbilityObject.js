@@ -7,7 +7,8 @@ const compositeAbilityObject = {
     "4032011_Monster_AML_Minion02_01_LocalLegend_NagetiveBlood_Enter",
     "4032011_Monster_AML_Minion02_01_LocalLegend_AbilityP01",
     "4032011_Monster_AML_Minion02_01_LocalLegend_Ability01_Part02",
-    "4032011_Monster_AML_Minion02_01_LocalLegend_Ability01_Part01"
+    "4032011_Monster_AML_Minion02_01_LocalLegend_Ability01_Part01",
+    "4032011_Handling"
   ],
   "abilityObject": {
     "4032011_Modifiers": {
@@ -617,6 +618,57 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target",
         "subTarget": "Blast Targets"
       },
+      "references": []
+    },
+    "4032011_Handling": {
+      "fileName": "4032011_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "Common_SequenceThree_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSequenceSkill",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Sequence Ability Option"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Sequence Ability Use Value",
+                  "valueCheck": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "references": []
     }
   }

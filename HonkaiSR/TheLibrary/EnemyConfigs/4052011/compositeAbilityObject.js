@@ -6,7 +6,8 @@ const compositeAbilityObject = {
     "4052011_Monster_W2_Mecha02_02_LocalLegend_PassiveAbilityInitiate",
     "4052011_Monster_W2_Mecha02_02_LocalLegend_DeathRattle_Insert",
     "4052011_Monster_W2_Mecha02_02_LocalLegend_Ability01_Part02",
-    "4052011_Monster_W2_Mecha02_02_LocalLegend_Ability01_Part01"
+    "4052011_Monster_W2_Mecha02_02_LocalLegend_Ability01_Part01",
+    "4052011_Handling"
   ],
   "abilityObject": {
     "4052011_Monster_W2_Mecha02_02_LocalLegend_PassiveAbilityInitiate": {
@@ -381,6 +382,57 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
+      "references": []
+    },
+    "4052011_Handling": {
+      "fileName": "4052011_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "Common_SequenceThree_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSequenceSkill",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Sequence Ability Option"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Sequence Ability Use Value",
+                  "valueCheck": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "references": []
     }
   }

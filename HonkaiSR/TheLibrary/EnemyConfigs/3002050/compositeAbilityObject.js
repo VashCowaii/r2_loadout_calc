@@ -10,7 +10,8 @@ const compositeAbilityObject = {
     "3002050_Monster_W3_Junk_Ability02_Part01",
     "3002050_Monster_W3_Junk_Ability01_Part02",
     "3002050_Monster_W3_Junk_Ability01_Part01",
-    "3002050_BattleEventAbility_Monster_W3_Junk_PuzzleAbility"
+    "3002050_BattleEventAbility_Monster_W3_Junk_PuzzleAbility",
+    "3002050_Handling"
   ],
   "abilityObject": {
     "3002050_Modifiers": {
@@ -1552,6 +1553,57 @@ const compositeAbilityObject = {
           ]
         }
       ]
+    },
+    "3002050_Handling": {
+      "fileName": "3002050_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "Common_SequenceThree_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSequenceSkill",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Sequence Ability Option"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Sequence Ability Use Value",
+                  "valueCheck": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
     }
   }
 }

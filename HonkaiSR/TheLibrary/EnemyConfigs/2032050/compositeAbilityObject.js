@@ -7,7 +7,8 @@ const compositeAbilityObject = {
     "2032050_Monster_W2_FeixiaoPart_02_PassiveAbilityInitiate",
     "2032050_Monster_W2_FeixiaoPart_Ability01_Part01",
     "2032050_Monster_W2_FeixiaoPart_Ability02_Part02",
-    "2032050_Monster_W2_FeixiaoPart_Ability02_Part01"
+    "2032050_Monster_W2_FeixiaoPart_Ability02_Part01",
+    "2032050_Handling"
   ],
   "abilityObject": {
     "2032050_Modifiers": {
@@ -1354,6 +1355,56 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target",
         "subTarget": "Blast Targets"
       },
+      "references": []
+    },
+    "2032050_Handling": {
+      "fileName": "2032050_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill01",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill01"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Value",
+                  "skillName": "Skill01",
+                  "firstCD": 1,
+                  "regCD": 1,
+                  "valueCheck": 0.1
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "references": []
     }
   }
