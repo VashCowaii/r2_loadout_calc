@@ -15,8 +15,7 @@ const compositeAbilityObject = {
     "2024020_Monster_Fuyan_Ability01_Part02",
     "2024020_Monster_Fuyan_Ability01_Part01",
     "2024020_Monster_W2_Fuyan_PassiveAbility_BGM",
-    "2024020_Handling",
-    "2024020_Handling_OVERRIDE_202402001"
+    "2024020_Handling"
   ],
   "abilityObject": {
     "2024020_Modifiers": {
@@ -1037,64 +1036,7 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": [],
-      "parsedSequence": [
-        "202402002"
-      ]
-    },
-    "2024020_Handling_OVERRIDE_202402001": {
-      "fileName": "2024020_Handling_OVERRIDE_202402001",
-      "abilityType": "Handling_202402001",
-      "energy": null,
-      "toughnessList": [
-        0,
-        0,
-        0
-      ],
-      "parse": [
-        {
-          "name": "Action Handling",
-          "values": [
-            {
-              "name": "Define Handler String",
-              "variableName": "CurrentPhase",
-              "value": "Common_SequenceThree_Phase01"
-            },
-            {
-              "name": "Define Handler Boolean",
-              "variableName": "ForbidClearSkillUseRecord",
-              "value": true
-            }
-          ],
-          "options": [
-            {
-              "name": "HANDLER OPTION",
-              "option": "UseSequenceSkill",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Use Sequence Ability Option"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
-                {
-                  "name": "Sequence Ability Use Value",
-                  "valueCheck": 1
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "references": [],
-      "parsedSequence": [
-        "202402002"
-      ]
+      "references": []
     }
   }
 }

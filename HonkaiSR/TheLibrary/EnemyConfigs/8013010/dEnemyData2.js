@@ -49,6 +49,13 @@ let enemyData = {
         3020,
         3021
       ],
+      "abilityOrder": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -77,6 +84,13 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
+      "abilityOrder": [
         3017,
         3018,
         3019,
@@ -117,6 +131,13 @@ let enemyData = {
         3020,
         3021
       ],
+      "abilityOrder": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -145,6 +166,13 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
+      "abilityOrder": [
         3017,
         3018,
         3019,
@@ -185,6 +213,13 @@ let enemyData = {
         3020,
         3021
       ],
+      "abilityOrder": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -213,6 +248,13 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
+      "abilityOrder": [
         3017,
         3018,
         3019,
@@ -253,6 +295,13 @@ let enemyData = {
         3020,
         3021
       ],
+      "abilityOrder": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -281,6 +330,13 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
+      "abilityOrder": [
         3017,
         3018,
         3019,
@@ -321,6 +377,13 @@ let enemyData = {
         3020,
         3021
       ],
+      "abilityOrder": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -349,6 +412,13 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
+      "abilityOrder": [
         3017,
         3018,
         3019,
@@ -389,6 +459,13 @@ let enemyData = {
         3020,
         3021
       ],
+      "abilityOrder": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -417,6 +494,13 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
+      "abilityOrder": [
         3017,
         3018,
         3019,
@@ -457,6 +541,13 @@ let enemyData = {
         3020,
         3021
       ],
+      "abilityOrder": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -485,6 +576,13 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
+      "abilityOrder": [
         3017,
         3018,
         3019,
@@ -525,6 +623,13 @@ let enemyData = {
         3020,
         3021
       ],
+      "abilityOrder": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -553,6 +658,13 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
+      "abilityOrder": [
         3017,
         3018,
         3019,
@@ -593,6 +705,13 @@ let enemyData = {
         3020,
         3021
       ],
+      "abilityOrder": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -621,6 +740,13 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
+      "abilityOrder": [
         3017,
         3018,
         3019,
@@ -661,6 +787,13 @@ let enemyData = {
         3020,
         3021
       ],
+      "abilityOrder": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -689,6 +822,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
+      "abilityOrder": [
         3017,
         3018,
         3019,
@@ -729,6 +869,13 @@ let enemyData = {
         3020,
         3021
       ],
+      "abilityOrder": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -757,6 +904,13 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
+      "abilityOrder": [
         3017,
         3018,
         3019,
@@ -797,6 +951,13 @@ let enemyData = {
         3020,
         3021
       ],
+      "abilityOrder": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -831,6 +992,13 @@ let enemyData = {
         3020,
         3021
       ],
+      "abilityOrder": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -857,6 +1025,13 @@ let enemyData = {
         "Imaginary"
       ],
       "abilities": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
+      "abilityOrder": [
         3017,
         3018,
         3019,
@@ -897,6 +1072,13 @@ let enemyData = {
         3020,
         3021
       ],
+      "abilityOrder": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -925,6 +1107,13 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        3017,
+        3018,
+        3019,
+        3020,
+        3021
+      ],
+      "abilityOrder": [
         3017,
         3018,
         3019,

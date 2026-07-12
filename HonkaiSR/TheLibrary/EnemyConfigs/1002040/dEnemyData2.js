@@ -43,6 +43,9 @@ let enemyData = {
       "abilities": [
         19
       ],
+      "abilityOrder": [
+        19
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -71,6 +74,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        19
+      ],
+      "abilityOrder": [
         19
       ],
       "enemyTag": [
@@ -103,6 +109,9 @@ let enemyData = {
       "abilities": [
         19
       ],
+      "abilityOrder": [
+        19
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -131,6 +140,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        19
+      ],
+      "abilityOrder": [
         19
       ],
       "enemyTag": [
@@ -163,6 +175,9 @@ let enemyData = {
       "abilities": [
         19
       ],
+      "abilityOrder": [
+        19
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -191,6 +206,9 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
+        19
+      ],
+      "abilityOrder": [
         19
       ],
       "enemyTag": [
@@ -223,6 +241,9 @@ let enemyData = {
       "abilities": [
         19
       ],
+      "abilityOrder": [
+        19
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -253,6 +274,9 @@ let enemyData = {
       "abilities": [
         19
       ],
+      "abilityOrder": [
+        19
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -274,6 +298,9 @@ let enemyData = {
         "Quantum"
       ],
       "abilities": [
+        19
+      ],
+      "abilityOrder": [
         19
       ],
       "enemyTag": [
@@ -299,6 +326,9 @@ let enemyData = {
       "abilities": [
         19
       ],
+      "abilityOrder": [
+        19
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -322,6 +352,9 @@ let enemyData = {
       "abilities": [
         19
       ],
+      "abilityOrder": [
+        19
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -343,6 +376,9 @@ let enemyData = {
         "Wind"
       ],
       "abilities": [
+        19
+      ],
+      "abilityOrder": [
         19
       ],
       "enemyTag": [
@@ -375,6 +411,9 @@ let enemyData = {
       "abilities": [
         19
       ],
+      "abilityOrder": [
+        19
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -403,6 +442,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        19
+      ],
+      "abilityOrder": [
         19
       ],
       "enemyTag": [
@@ -435,6 +477,9 @@ let enemyData = {
       "abilities": [
         19
       ],
+      "abilityOrder": [
+        19
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -465,6 +510,9 @@ let enemyData = {
       "abilities": [
         19
       ],
+      "abilityOrder": [
+        19
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -488,6 +536,9 @@ let enemyData = {
       "abilities": [
         19
       ],
+      "abilityOrder": [
+        19
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -509,6 +560,9 @@ let enemyData = {
         "Quantum"
       ],
       "abilities": [
+        19
+      ],
+      "abilityOrder": [
         19
       ],
       "enemyTag": [
@@ -541,6 +595,9 @@ let enemyData = {
       "abilities": [
         19
       ],
+      "abilityOrder": [
+        19
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -571,6 +628,9 @@ let enemyData = {
       "abilities": [
         19
       ],
+      "abilityOrder": [
+        19
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -594,6 +654,9 @@ let enemyData = {
       "abilities": [
         19
       ],
+      "abilityOrder": [
+        19
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -615,6 +678,9 @@ let enemyData = {
         "Quantum"
       ],
       "abilities": [
+        19
+      ],
+      "abilityOrder": [
         19
       ],
       "enemyTag": [
@@ -647,6 +713,9 @@ let enemyData = {
       "abilities": [
         19
       ],
+      "abilityOrder": [
+        19
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -675,6 +744,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        19
+      ],
+      "abilityOrder": [
         19
       ],
       "enemyTag": [
@@ -707,6 +779,9 @@ let enemyData = {
       "abilities": [
         19
       ],
+      "abilityOrder": [
+        19
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -735,6 +810,9 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        19
+      ],
+      "abilityOrder": [
         19
       ],
       "enemyTag": [
@@ -767,6 +845,9 @@ let enemyData = {
       "abilities": [
         19
       ],
+      "abilityOrder": [
+        19
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -795,6 +876,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        19
+      ],
+      "abilityOrder": [
         19
       ],
       "enemyTag": [
@@ -827,6 +911,9 @@ let enemyData = {
       "abilities": [
         19
       ],
+      "abilityOrder": [
+        19
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -855,6 +942,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        19
+      ],
+      "abilityOrder": [
         19
       ],
       "enemyTag": [

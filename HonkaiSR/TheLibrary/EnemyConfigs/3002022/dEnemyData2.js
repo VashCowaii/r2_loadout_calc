@@ -50,6 +50,9 @@ let enemyData = {
         1022,
         1023
       ],
+      "abilityOrder": [
+        1007
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha01_02",
         "MonsterType_W3_Theater"
@@ -90,6 +93,9 @@ let enemyData = {
         1021,
         1022,
         1023
+      ],
+      "abilityOrder": [
+        1007
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha01_02",
@@ -132,6 +138,9 @@ let enemyData = {
         1022,
         1023
       ],
+      "abilityOrder": [
+        1007
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha01_02",
         "MonsterType_W3_Theater"
@@ -172,6 +181,9 @@ let enemyData = {
         1021,
         1022,
         1023
+      ],
+      "abilityOrder": [
+        1007
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha01_02",
@@ -214,6 +226,9 @@ let enemyData = {
         1022,
         1023
       ],
+      "abilityOrder": [
+        1007
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha01_02",
         "MonsterType_W3_Theater"
@@ -254,6 +269,9 @@ let enemyData = {
         1021,
         1022,
         1023
+      ],
+      "abilityOrder": [
+        1007
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha01_02",

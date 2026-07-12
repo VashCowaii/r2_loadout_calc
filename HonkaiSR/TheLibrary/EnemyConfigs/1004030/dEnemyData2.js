@@ -243,6 +243,12 @@ let enemyData = {
         191,
         192
       ],
+      "abilityOrder": [
+        189,
+        190,
+        192,
+        190
+      ],
       "enemyTag": [
         "W1_Bronya"
       ],
@@ -387,6 +393,12 @@ let enemyData = {
         191,
         192
       ],
+      "abilityOrder": [
+        189,
+        190,
+        192,
+        190
+      ],
       "enemyTag": [
         "W1_Bronya"
       ],
@@ -434,6 +446,12 @@ let enemyData = {
         190,
         191,
         192
+      ],
+      "abilityOrder": [
+        189,
+        190,
+        192,
+        190
       ],
       "enemyTag": [
         "W1_Bronya"

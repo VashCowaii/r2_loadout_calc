@@ -45,6 +45,9 @@ let enemyData = {
       },
       "abilities": [
         2742
+      ],
+      "abilityOrder": [
+        2742
       ]
     },
     "800102001": {
@@ -74,6 +77,9 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
+        2742
+      ],
+      "abilityOrder": [
         2742
       ]
     },
@@ -105,6 +111,9 @@ let enemyData = {
       },
       "abilities": [
         2742
+      ],
+      "abilityOrder": [
+        2742
       ]
     },
     "800102003": {
@@ -134,6 +143,9 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
+        2742
+      ],
+      "abilityOrder": [
         2742
       ]
     },
@@ -165,6 +177,9 @@ let enemyData = {
       },
       "abilities": [
         2742
+      ],
+      "abilityOrder": [
+        2742
       ]
     },
     "800102005": {
@@ -194,6 +209,9 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
+        2742
+      ],
+      "abilityOrder": [
         2742
       ]
     },
@@ -225,6 +243,9 @@ let enemyData = {
       },
       "abilities": [
         2742
+      ],
+      "abilityOrder": [
+        2742
       ]
     },
     "800102007": {
@@ -254,6 +275,9 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
+        2742
+      ],
+      "abilityOrder": [
         2742
       ]
     },
@@ -285,6 +309,9 @@ let enemyData = {
       },
       "abilities": [
         2742
+      ],
+      "abilityOrder": [
+        2742
       ]
     },
     "800102009": {
@@ -314,6 +341,9 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
+        2742
+      ],
+      "abilityOrder": [
         2742
       ]
     },
@@ -345,6 +375,9 @@ let enemyData = {
       },
       "abilities": [
         2742
+      ],
+      "abilityOrder": [
+        2742
       ]
     },
     "800102011": {
@@ -374,6 +407,9 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
+        2742
+      ],
+      "abilityOrder": [
         2742
       ]
     },
@@ -405,6 +441,9 @@ let enemyData = {
       },
       "abilities": [
         2742
+      ],
+      "abilityOrder": [
+        2742
       ]
     },
     "800102013": {
@@ -434,6 +473,9 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
+        2742
+      ],
+      "abilityOrder": [
         2742
       ]
     },
@@ -465,6 +507,9 @@ let enemyData = {
       },
       "abilities": [
         2742
+      ],
+      "abilityOrder": [
+        2742
       ]
     },
     "800102015": {
@@ -494,6 +539,9 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
+        2742
+      ],
+      "abilityOrder": [
         2742
       ]
     },
@@ -525,6 +573,9 @@ let enemyData = {
       },
       "abilities": [
         2742
+      ],
+      "abilityOrder": [
+        2742
       ]
     },
     "800102017": {
@@ -554,6 +605,9 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
+        2742
+      ],
+      "abilityOrder": [
         2742
       ]
     },
@@ -585,6 +639,9 @@ let enemyData = {
       },
       "abilities": [
         2742
+      ],
+      "abilityOrder": [
+        2742
       ]
     },
     "800102019": {
@@ -614,6 +671,9 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
+        2742
+      ],
+      "abilityOrder": [
         2742
       ]
     },
@@ -645,6 +705,9 @@ let enemyData = {
       },
       "abilities": [
         2742
+      ],
+      "abilityOrder": [
+        2742
       ]
     },
     "800102021": {
@@ -674,6 +737,9 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
+        2742
+      ],
+      "abilityOrder": [
         2742
       ]
     }

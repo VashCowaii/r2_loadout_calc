@@ -37,6 +37,9 @@ let enemyData = {
       "abilities": [
         2363
       ],
+      "abilityOrder": [
+        2363
+      ],
       "summons": [
         {
           "name": "Memory Zone Meme \"Allseer\"",
@@ -72,6 +75,9 @@ let enemyData = {
         "Imaginary"
       ],
       "abilities": [
+        2363
+      ],
+      "abilityOrder": [
         2363
       ],
       "summons": [

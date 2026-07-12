@@ -58,6 +58,9 @@ let enemyData = {
         604,
         605
       ],
+      "abilityOrder": [
+        571
+      ],
       "enemyTag": [
         "IF_Boss",
         "IF_W2_Yanqing",

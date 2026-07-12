@@ -52,6 +52,10 @@ let enemyData = {
         473,
         474
       ],
+      "abilityOrder": [
+        470,
+        471
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ]
@@ -88,6 +92,10 @@ let enemyData = {
         472,
         473,
         474
+      ],
+      "abilityOrder": [
+        470,
+        471
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -126,6 +134,10 @@ let enemyData = {
         473,
         474
       ],
+      "abilityOrder": [
+        470,
+        471
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ]
@@ -162,6 +174,10 @@ let enemyData = {
         472,
         473,
         474
+      ],
+      "abilityOrder": [
+        470,
+        471
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -200,6 +216,10 @@ let enemyData = {
         473,
         474
       ],
+      "abilityOrder": [
+        470,
+        471
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ]
@@ -236,6 +256,10 @@ let enemyData = {
         472,
         473,
         474
+      ],
+      "abilityOrder": [
+        470,
+        471
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2",
@@ -275,6 +299,10 @@ let enemyData = {
         473,
         474
       ],
+      "abilityOrder": [
+        470,
+        471
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ]
@@ -311,6 +339,10 @@ let enemyData = {
         472,
         473,
         474
+      ],
+      "abilityOrder": [
+        470,
+        471
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -349,6 +381,10 @@ let enemyData = {
         473,
         474
       ],
+      "abilityOrder": [
+        470,
+        471
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ]
@@ -385,6 +421,10 @@ let enemyData = {
         472,
         473,
         474
+      ],
+      "abilityOrder": [
+        470,
+        471
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -423,6 +463,10 @@ let enemyData = {
         473,
         474
       ],
+      "abilityOrder": [
+        470,
+        471
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ]
@@ -459,6 +503,10 @@ let enemyData = {
         472,
         473,
         474
+      ],
+      "abilityOrder": [
+        470,
+        471
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -497,6 +545,10 @@ let enemyData = {
         473,
         474
       ],
+      "abilityOrder": [
+        470,
+        471
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ]
@@ -533,6 +585,10 @@ let enemyData = {
         472,
         473,
         474
+      ],
+      "abilityOrder": [
+        470,
+        471
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -571,6 +627,10 @@ let enemyData = {
         473,
         474
       ],
+      "abilityOrder": [
+        470,
+        471
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ]
@@ -607,6 +667,10 @@ let enemyData = {
         472,
         473,
         474
+      ],
+      "abilityOrder": [
+        470,
+        471
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -645,6 +709,10 @@ let enemyData = {
         473,
         474
       ],
+      "abilityOrder": [
+        470,
+        471
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ]
@@ -681,6 +749,10 @@ let enemyData = {
         472,
         473,
         474
+      ],
+      "abilityOrder": [
+        470,
+        471
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -719,6 +791,10 @@ let enemyData = {
         473,
         474
       ],
+      "abilityOrder": [
+        470,
+        471
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ]
@@ -755,6 +831,10 @@ let enemyData = {
         472,
         473,
         474
+      ],
+      "abilityOrder": [
+        470,
+        471
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -793,6 +873,10 @@ let enemyData = {
         473,
         474
       ],
+      "abilityOrder": [
+        470,
+        471
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ]
@@ -829,6 +913,10 @@ let enemyData = {
         472,
         473,
         474
+      ],
+      "abilityOrder": [
+        470,
+        471
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2",

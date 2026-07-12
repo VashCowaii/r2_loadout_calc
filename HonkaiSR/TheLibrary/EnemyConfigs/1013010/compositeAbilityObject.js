@@ -2126,14 +2126,7 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": [],
-      "parsedSequence": [
-        "101301009",
-        "101301001",
-        "101301002",
-        "101301003",
-        "101301004"
-      ]
+      "references": []
     },
     "1013010_Handling_OVERRIDE_101301007": {
       "fileName": "1013010_Handling_OVERRIDE_101301007",
@@ -2358,14 +2351,7 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": [],
-      "parsedSequence": [
-        "101301009",
-        "101301001",
-        "101301002",
-        "101301003",
-        "101301004"
-      ]
+      "references": []
     },
     "1013010_Handling_OVERRIDE_101301009": {
       "fileName": "1013010_Handling_OVERRIDE_101301009",
@@ -2590,14 +2576,7 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": [],
-      "parsedSequence": [
-        "101301009",
-        "101301001",
-        "101301002",
-        "101301003",
-        "101301004"
-      ]
+      "references": []
     },
     "1013010_Handling_OVERRIDE_101301012": {
       "fileName": "1013010_Handling_OVERRIDE_101301012",
@@ -2822,14 +2801,7 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": [],
-      "parsedSequence": [
-        "101301009",
-        "101301001",
-        "101301002",
-        "101301003",
-        "101301004"
-      ]
+      "references": []
     },
     "1013010_Handling_OVERRIDE_101301018": {
       "fileName": "1013010_Handling_OVERRIDE_101301018",
@@ -3054,14 +3026,7 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": [],
-      "parsedSequence": [
-        "101301009",
-        "101301001",
-        "101301002",
-        "101301003",
-        "101301004"
-      ]
+      "references": []
     },
     "1013010_Handling_OVERRIDE_101301022": {
       "fileName": "1013010_Handling_OVERRIDE_101301022",
@@ -3286,14 +3251,7 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": [],
-      "parsedSequence": [
-        "101301009",
-        "101301001",
-        "101301002",
-        "101301003",
-        "101301004"
-      ]
+      "references": []
     },
     "1013010_Handling_OVERRIDE_101301023": {
       "fileName": "1013010_Handling_OVERRIDE_101301023",
@@ -3518,14 +3476,7 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": [],
-      "parsedSequence": [
-        "101301009",
-        "101301001",
-        "101301002",
-        "101301003",
-        "101301004"
-      ]
+      "references": []
     },
     "1013010_Handling_OVERRIDE_101301024": {
       "fileName": "1013010_Handling_OVERRIDE_101301024",
@@ -3750,14 +3701,7 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": [],
-      "parsedSequence": [
-        "101301009",
-        "101301001",
-        "101301002",
-        "101301003",
-        "101301004"
-      ]
+      "references": []
     },
     "1013010_Handling_OVERRIDE_101301025": {
       "fileName": "1013010_Handling_OVERRIDE_101301025",
@@ -3982,14 +3926,7 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": [],
-      "parsedSequence": [
-        "101301009",
-        "101301001",
-        "101301002",
-        "101301003",
-        "101301004"
-      ]
+      "references": []
     }
   }
 }

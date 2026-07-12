@@ -50,6 +50,13 @@ let enemyData = {
         2918,
         2919
       ],
+      "abilityOrder": [
+        2914,
+        2915,
+        2916,
+        2917,
+        2918
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -84,6 +91,13 @@ let enemyData = {
         2917,
         2918,
         2919
+      ],
+      "abilityOrder": [
+        2914,
+        2915,
+        2916,
+        2917,
+        2918
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -120,6 +134,13 @@ let enemyData = {
         2918,
         2919
       ],
+      "abilityOrder": [
+        2914,
+        2915,
+        2916,
+        2917,
+        2918
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -155,6 +176,13 @@ let enemyData = {
         2918,
         2919
       ],
+      "abilityOrder": [
+        2914,
+        2915,
+        2916,
+        2917,
+        2918
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -188,6 +216,13 @@ let enemyData = {
         2918,
         2919
       ],
+      "abilityOrder": [
+        2914,
+        2915,
+        2916,
+        2917,
+        2918
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -220,6 +255,13 @@ let enemyData = {
         2917,
         2918,
         2919
+      ],
+      "abilityOrder": [
+        2914,
+        2915,
+        2916,
+        2917,
+        2918
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -256,6 +298,13 @@ let enemyData = {
         2918,
         2919
       ],
+      "abilityOrder": [
+        2914,
+        2915,
+        2916,
+        2917,
+        2918
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -290,6 +339,13 @@ let enemyData = {
         2917,
         2918,
         2919
+      ],
+      "abilityOrder": [
+        2914,
+        2915,
+        2916,
+        2917,
+        2918
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -326,6 +382,13 @@ let enemyData = {
         2918,
         2919
       ],
+      "abilityOrder": [
+        2914,
+        2915,
+        2916,
+        2917,
+        2918
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -360,6 +423,13 @@ let enemyData = {
         2917,
         2918,
         2919
+      ],
+      "abilityOrder": [
+        2914,
+        2915,
+        2916,
+        2917,
+        2918
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -396,6 +466,13 @@ let enemyData = {
         2918,
         2919
       ],
+      "abilityOrder": [
+        2914,
+        2915,
+        2916,
+        2917,
+        2918
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -430,6 +507,13 @@ let enemyData = {
         2917,
         2918,
         2919
+      ],
+      "abilityOrder": [
+        2914,
+        2915,
+        2916,
+        2917,
+        2918
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -466,6 +550,13 @@ let enemyData = {
         2918,
         2919
       ],
+      "abilityOrder": [
+        2914,
+        2915,
+        2916,
+        2917,
+        2918
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -500,6 +591,13 @@ let enemyData = {
         2917,
         2918,
         2919
+      ],
+      "abilityOrder": [
+        2914,
+        2915,
+        2916,
+        2917,
+        2918
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -536,6 +634,13 @@ let enemyData = {
         2918,
         2919
       ],
+      "abilityOrder": [
+        2914,
+        2915,
+        2916,
+        2917,
+        2918
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -571,6 +676,13 @@ let enemyData = {
         2918,
         2919
       ],
+      "abilityOrder": [
+        2914,
+        2915,
+        2916,
+        2917,
+        2918
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -605,6 +717,13 @@ let enemyData = {
         2917,
         2918,
         2919
+      ],
+      "abilityOrder": [
+        2914,
+        2915,
+        2916,
+        2917,
+        2918
       ],
       "enemyTag": [
         "BattleScore_Horse"
@@ -644,6 +763,13 @@ let enemyData = {
         2918,
         2919
       ],
+      "abilityOrder": [
+        2914,
+        2915,
+        2916,
+        2917,
+        2918
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -679,6 +805,13 @@ let enemyData = {
         2918,
         2919
       ],
+      "abilityOrder": [
+        2914,
+        2915,
+        2916,
+        2917,
+        2918
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]
@@ -713,6 +846,13 @@ let enemyData = {
         2917,
         2918,
         2919
+      ],
+      "abilityOrder": [
+        2914,
+        2915,
+        2916,
+        2917,
+        2918
       ],
       "enemyTag": [
         "BattleScore_Horse",

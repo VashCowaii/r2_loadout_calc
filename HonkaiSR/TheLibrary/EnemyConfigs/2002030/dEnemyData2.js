@@ -42,6 +42,9 @@ let enemyData = {
       },
       "abilities": [
         508
+      ],
+      "abilityOrder": [
+        508
       ]
     },
     "200203001": {
@@ -68,6 +71,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        508
+      ],
+      "abilityOrder": [
         508
       ]
     },
@@ -96,6 +102,9 @@ let enemyData = {
       },
       "abilities": [
         508
+      ],
+      "abilityOrder": [
+        508
       ]
     },
     "200203003": {
@@ -122,6 +131,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        508
+      ],
+      "abilityOrder": [
         508
       ]
     },
@@ -150,6 +162,9 @@ let enemyData = {
       },
       "abilities": [
         508
+      ],
+      "abilityOrder": [
+        508
       ]
     },
     "200203005": {
@@ -176,6 +191,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        508
+      ],
+      "abilityOrder": [
         508
       ]
     },
@@ -204,6 +222,9 @@ let enemyData = {
       },
       "abilities": [
         508
+      ],
+      "abilityOrder": [
+        508
       ]
     },
     "200203007": {
@@ -230,6 +251,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        508
+      ],
+      "abilityOrder": [
         508
       ]
     },
@@ -258,6 +282,9 @@ let enemyData = {
       },
       "abilities": [
         508
+      ],
+      "abilityOrder": [
+        508
       ]
     },
     "200203009": {
@@ -284,6 +311,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        508
+      ],
+      "abilityOrder": [
         508
       ],
       "enemyTag": [

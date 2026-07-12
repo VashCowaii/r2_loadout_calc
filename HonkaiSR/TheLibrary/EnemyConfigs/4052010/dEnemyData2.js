@@ -46,6 +46,9 @@ let enemyData = {
         2404,
         2405,
         2406
+      ],
+      "abilityOrder": [
+        2403
       ]
     },
     "405201001": {
@@ -76,6 +79,9 @@ let enemyData = {
         2404,
         2405,
         2406
+      ],
+      "abilityOrder": [
+        2403
       ]
     },
     "405201002": {
@@ -106,6 +112,9 @@ let enemyData = {
         2404,
         2405,
         2406
+      ],
+      "abilityOrder": [
+        2403
       ]
     },
     "405201003": {
@@ -136,6 +145,9 @@ let enemyData = {
         2404,
         2405,
         2406
+      ],
+      "abilityOrder": [
+        2403
       ]
     },
     "405201004": {
@@ -166,6 +178,9 @@ let enemyData = {
         2404,
         2405,
         2406
+      ],
+      "abilityOrder": [
+        2403
       ],
       "enemyTag": [
         "RLElite"

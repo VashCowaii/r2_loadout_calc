@@ -377,6 +377,12 @@ let enemyData = {
         707,
         708
       ],
+      "abilityOrder": [
+        705,
+        707,
+        704,
+        706
+      ],
       "summons": [
         {
           "name": "Mara-Struck Soldier",

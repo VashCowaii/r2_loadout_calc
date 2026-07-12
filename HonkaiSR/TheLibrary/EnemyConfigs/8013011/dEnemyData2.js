@@ -49,6 +49,13 @@ let enemyData = {
         3025,
         3026
       ],
+      "abilityOrder": [
+        3022,
+        3023,
+        3024,
+        3025,
+        3026
+      ],
       "enemyTag": [
         "BattleScore_Horse",
         "SPRL"
@@ -78,6 +85,13 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        3022,
+        3023,
+        3024,
+        3025,
+        3026
+      ],
+      "abilityOrder": [
         3022,
         3023,
         3024,

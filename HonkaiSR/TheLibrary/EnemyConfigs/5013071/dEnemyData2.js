@@ -46,6 +46,10 @@ let enemyData = {
         2619,
         2620
       ],
+      "abilityOrder": [
+        2618,
+        2619
+      ],
       "enemyTag": [
         "W5_Ranger"
       ],

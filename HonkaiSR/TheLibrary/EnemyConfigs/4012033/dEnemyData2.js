@@ -45,6 +45,9 @@ let enemyData = {
         1675,
         1676
       ],
+      "abilityOrder": [
+        1675
+      ],
       "enemyTag": [
         "MonsterType_W4_Shooter_00"
       ]

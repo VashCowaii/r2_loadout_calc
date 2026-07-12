@@ -50,6 +50,9 @@ let enemyData = {
         2091,
         2092
       ],
+      "abilityOrder": [
+        2090
+      ],
       "itNeverEnds": {}
     },
     "403202301": {
@@ -83,6 +86,9 @@ let enemyData = {
         2090,
         2091,
         2092
+      ],
+      "abilityOrder": [
+        2090
       ],
       "itNeverEnds": {}
     },
@@ -118,6 +124,9 @@ let enemyData = {
         2091,
         2092
       ],
+      "abilityOrder": [
+        2090
+      ],
       "itNeverEnds": {}
     },
     "403202303": {
@@ -151,6 +160,9 @@ let enemyData = {
         2090,
         2091,
         2092
+      ],
+      "abilityOrder": [
+        2090
       ],
       "itNeverEnds": {}
     },
@@ -186,6 +198,9 @@ let enemyData = {
         2091,
         2092
       ],
+      "abilityOrder": [
+        2090
+      ],
       "itNeverEnds": {}
     },
     "403202305": {
@@ -219,6 +234,9 @@ let enemyData = {
         2090,
         2091,
         2092
+      ],
+      "abilityOrder": [
+        2090
       ],
       "itNeverEnds": {}
     },
@@ -254,6 +272,9 @@ let enemyData = {
         2091,
         2092
       ],
+      "abilityOrder": [
+        2090
+      ],
       "itNeverEnds": {}
     },
     "403202307": {
@@ -287,6 +308,9 @@ let enemyData = {
         2090,
         2091,
         2092
+      ],
+      "abilityOrder": [
+        2090
       ],
       "itNeverEnds": {}
     },
@@ -322,6 +346,9 @@ let enemyData = {
         2091,
         2092
       ],
+      "abilityOrder": [
+        2090
+      ],
       "itNeverEnds": {}
     },
     "403202309": {
@@ -355,6 +382,9 @@ let enemyData = {
         2090,
         2091,
         2092
+      ],
+      "abilityOrder": [
+        2090
       ],
       "itNeverEnds": {}
     }

@@ -559,11 +559,7 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": [],
-      "parsedSequence": [
-        "101202102",
-        "101202103"
-      ]
+      "references": []
     },
     "1012021_Handling_OVERRIDE_101202103": {
       "fileName": "1012021_Handling_OVERRIDE_101202103",
@@ -614,11 +610,7 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": [],
-      "parsedSequence": [
-        "101202102",
-        "101202103"
-      ]
+      "references": []
     }
   }
 }

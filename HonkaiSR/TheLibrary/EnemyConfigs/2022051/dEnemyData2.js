@@ -42,6 +42,9 @@ let enemyData = {
       },
       "abilities": [
         685
+      ],
+      "abilityOrder": [
+        685
       ]
     },
     "202205101": {
@@ -69,6 +72,9 @@ let enemyData = {
       },
       "abilities": [
         685
+      ],
+      "abilityOrder": [
+        685
       ]
     },
     "202205102": {
@@ -95,6 +101,9 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        685
+      ],
+      "abilityOrder": [
         685
       ],
       "enemyTag": [

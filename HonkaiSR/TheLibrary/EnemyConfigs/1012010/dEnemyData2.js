@@ -44,6 +44,10 @@ let enemyData = {
       "abilities": [
         263,
         264
+      ],
+      "abilityOrder": [
+        263,
+        264
       ]
     },
     "101201001": {
@@ -70,6 +74,10 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
+        263,
+        264
+      ],
+      "abilityOrder": [
         263,
         264
       ]
@@ -100,6 +108,10 @@ let enemyData = {
       "abilities": [
         263,
         264
+      ],
+      "abilityOrder": [
+        263,
+        264
       ]
     },
     "101201003": {
@@ -126,6 +138,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        263,
+        264
+      ],
+      "abilityOrder": [
         263,
         264
       ]
@@ -156,6 +172,10 @@ let enemyData = {
       "abilities": [
         263,
         264
+      ],
+      "abilityOrder": [
+        263,
+        264
       ]
     },
     "101201005": {
@@ -182,6 +202,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        263,
+        264
+      ],
+      "abilityOrder": [
         263,
         264
       ]
@@ -212,6 +236,10 @@ let enemyData = {
       "abilities": [
         263,
         264
+      ],
+      "abilityOrder": [
+        263,
+        264
       ]
     },
     "101201007": {
@@ -238,6 +266,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        263,
+        264
+      ],
+      "abilityOrder": [
         263,
         264
       ]
@@ -268,6 +300,10 @@ let enemyData = {
       "abilities": [
         263,
         264
+      ],
+      "abilityOrder": [
+        263,
+        264
       ]
     },
     "101201009": {
@@ -294,6 +330,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        263,
+        264
+      ],
+      "abilityOrder": [
         263,
         264
       ]
@@ -324,6 +364,10 @@ let enemyData = {
       "abilities": [
         263,
         264
+      ],
+      "abilityOrder": [
+        263,
+        264
       ]
     },
     "101201011": {
@@ -350,6 +394,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        263,
+        264
+      ],
+      "abilityOrder": [
         263,
         264
       ]
@@ -380,6 +428,9 @@ let enemyData = {
       "abilities": [
         263,
         264
+      ],
+      "abilityOrder": [
+        263
       ]
     },
     "101201013": {
@@ -407,6 +458,9 @@ let enemyData = {
       },
       "abilities": [
         263,
+        264
+      ],
+      "abilityOrder": [
         264
       ]
     },
@@ -436,6 +490,9 @@ let enemyData = {
       "abilities": [
         263,
         264
+      ],
+      "abilityOrder": [
+        263
       ]
     },
     "101201015": {
@@ -464,6 +521,9 @@ let enemyData = {
       "abilities": [
         263,
         264
+      ],
+      "abilityOrder": [
+        264
       ]
     },
     "101201016": {
@@ -490,6 +550,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        263,
+        264
+      ],
+      "abilityOrder": [
         263,
         264
       ]
@@ -520,6 +584,10 @@ let enemyData = {
       "abilities": [
         263,
         264
+      ],
+      "abilityOrder": [
+        263,
+        264
       ]
     },
     "101201018": {
@@ -546,6 +614,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        263,
+        264
+      ],
+      "abilityOrder": [
         263,
         264
       ]
@@ -576,6 +648,10 @@ let enemyData = {
       "abilities": [
         263,
         264
+      ],
+      "abilityOrder": [
+        263,
+        264
       ]
     },
     "101201020": {
@@ -602,6 +678,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        263,
+        264
+      ],
+      "abilityOrder": [
         263,
         264
       ]
@@ -632,6 +712,10 @@ let enemyData = {
       "abilities": [
         263,
         264
+      ],
+      "abilityOrder": [
+        263,
+        264
       ]
     },
     "101201022": {
@@ -660,6 +744,10 @@ let enemyData = {
       "abilities": [
         263,
         264
+      ],
+      "abilityOrder": [
+        263,
+        264
       ]
     },
     "101201023": {
@@ -686,6 +774,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        263,
+        264
+      ],
+      "abilityOrder": [
         263,
         264
       ],

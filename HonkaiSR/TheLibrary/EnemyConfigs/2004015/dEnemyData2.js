@@ -55,6 +55,9 @@ let enemyData = {
         569,
         570
       ],
+      "abilityOrder": [
+        511
+      ],
       "enemyTag": [
         "W2_Kafka",
         "RL",

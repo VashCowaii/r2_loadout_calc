@@ -45,6 +45,9 @@ let enemyData = {
       },
       "abilities": [
         469
+      ],
+      "abilityOrder": [
+        469
       ]
     },
     "102202001": {
@@ -74,6 +77,9 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
+        469
+      ],
+      "abilityOrder": [
         469
       ]
     },
@@ -105,6 +111,9 @@ let enemyData = {
       },
       "abilities": [
         469
+      ],
+      "abilityOrder": [
+        469
       ]
     },
     "102202003": {
@@ -134,6 +143,9 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
+        469
+      ],
+      "abilityOrder": [
         469
       ]
     },
@@ -165,6 +177,9 @@ let enemyData = {
       },
       "abilities": [
         469
+      ],
+      "abilityOrder": [
+        469
       ]
     },
     "102202005": {
@@ -194,6 +209,9 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
+        469
+      ],
+      "abilityOrder": [
         469
       ]
     },
@@ -225,6 +243,9 @@ let enemyData = {
       },
       "abilities": [
         469
+      ],
+      "abilityOrder": [
+        469
       ]
     },
     "102202007": {
@@ -254,6 +275,9 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
+        469
+      ],
+      "abilityOrder": [
         469
       ]
     },
@@ -285,6 +309,9 @@ let enemyData = {
       },
       "abilities": [
         469
+      ],
+      "abilityOrder": [
+        469
       ]
     },
     "102202009": {
@@ -314,6 +341,9 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
+        469
+      ],
+      "abilityOrder": [
         469
       ]
     },
@@ -345,6 +375,9 @@ let enemyData = {
       },
       "abilities": [
         469
+      ],
+      "abilityOrder": [
+        469
       ]
     },
     "102202011": {
@@ -374,6 +407,9 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
+        469
+      ],
+      "abilityOrder": [
         469
       ]
     },
@@ -405,6 +441,9 @@ let enemyData = {
       },
       "abilities": [
         469
+      ],
+      "abilityOrder": [
+        469
       ]
     },
     "102202013": {
@@ -434,6 +473,9 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
+        469
+      ],
+      "abilityOrder": [
         469
       ]
     },
@@ -465,6 +507,9 @@ let enemyData = {
       },
       "abilities": [
         469
+      ],
+      "abilityOrder": [
+        469
       ]
     },
     "102202015": {
@@ -494,6 +539,9 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
+        469
+      ],
+      "abilityOrder": [
         469
       ]
     },
@@ -525,6 +573,9 @@ let enemyData = {
       },
       "abilities": [
         469
+      ],
+      "abilityOrder": [
+        469
       ]
     },
     "102202017": {
@@ -554,6 +605,9 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
+        469
+      ],
+      "abilityOrder": [
         469
       ]
     },
@@ -585,6 +639,9 @@ let enemyData = {
       },
       "abilities": [
         469
+      ],
+      "abilityOrder": [
+        469
       ]
     },
     "102202019": {
@@ -614,6 +671,9 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
+        469
+      ],
+      "abilityOrder": [
         469
       ]
     },
@@ -645,6 +705,9 @@ let enemyData = {
       },
       "abilities": [
         469
+      ],
+      "abilityOrder": [
+        469
       ]
     },
     "102202021": {
@@ -674,6 +737,9 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
+        469
+      ],
+      "abilityOrder": [
         469
       ]
     },
@@ -705,6 +771,9 @@ let enemyData = {
       },
       "abilities": [
         469
+      ],
+      "abilityOrder": [
+        469
       ]
     },
     "102202023": {
@@ -734,6 +803,9 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
+        469
+      ],
+      "abilityOrder": [
         469
       ]
     },
@@ -765,6 +837,9 @@ let enemyData = {
       },
       "abilities": [
         469
+      ],
+      "abilityOrder": [
+        469
       ]
     },
     "102202025": {
@@ -795,6 +870,9 @@ let enemyData = {
       },
       "abilities": [
         469
+      ],
+      "abilityOrder": [
+        469
       ]
     },
     "102202026": {
@@ -823,6 +901,9 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
+        469
+      ],
+      "abilityOrder": [
         469
       ]
     },
@@ -854,6 +935,9 @@ let enemyData = {
       },
       "abilities": [
         469
+      ],
+      "abilityOrder": [
+        469
       ]
     },
     "102202028": {
@@ -878,6 +962,9 @@ let enemyData = {
         "Imaginary"
       ],
       "abilities": [
+        469
+      ],
+      "abilityOrder": [
         469
       ]
     },
@@ -908,6 +995,9 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
+        469
+      ],
+      "abilityOrder": [
         469
       ],
       "enemyTag": [

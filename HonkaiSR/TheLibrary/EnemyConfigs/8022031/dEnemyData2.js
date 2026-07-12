@@ -47,6 +47,9 @@ let enemyData = {
         3147,
         3148
       ],
+      "abilityOrder": [
+        "ABILITY_DOES_NOT_EXIST"
+      ],
       "enemyTag": [
         "SW_Minion01"
       ],
@@ -82,6 +85,9 @@ let enemyData = {
         3146,
         3147,
         3148
+      ],
+      "abilityOrder": [
+        "ABILITY_DOES_NOT_EXIST"
       ],
       "enemyTag": [
         "SW_Minion01"
@@ -119,6 +125,9 @@ let enemyData = {
         3147,
         3148
       ],
+      "abilityOrder": [
+        "ABILITY_DOES_NOT_EXIST"
+      ],
       "enemyTag": [
         "SW_Minion01"
       ],
@@ -155,6 +164,9 @@ let enemyData = {
         3147,
         3148
       ],
+      "abilityOrder": [
+        "ABILITY_DOES_NOT_EXIST"
+      ],
       "enemyTag": [
         "SW_Minion01"
       ],
@@ -190,6 +202,9 @@ let enemyData = {
         3146,
         3147,
         3148
+      ],
+      "abilityOrder": [
+        "ABILITY_DOES_NOT_EXIST"
       ],
       "enemyTag": [
         "SW_Minion01"

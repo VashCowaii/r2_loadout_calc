@@ -48,6 +48,9 @@ let enemyData = {
         663,
         664,
         665
+      ],
+      "abilityOrder": [
+        660
       ]
     },
     "201302001": {
@@ -80,6 +83,9 @@ let enemyData = {
         663,
         664,
         665
+      ],
+      "abilityOrder": [
+        660
       ]
     },
     "201302002": {
@@ -112,6 +118,9 @@ let enemyData = {
         663,
         664,
         665
+      ],
+      "abilityOrder": [
+        660
       ]
     },
     "201302003": {
@@ -144,6 +153,9 @@ let enemyData = {
         663,
         664,
         665
+      ],
+      "abilityOrder": [
+        660
       ]
     },
     "201302004": {
@@ -176,6 +188,9 @@ let enemyData = {
         663,
         664,
         665
+      ],
+      "abilityOrder": [
+        660
       ]
     },
     "201302006": {
@@ -208,6 +223,9 @@ let enemyData = {
         663,
         664,
         665
+      ],
+      "abilityOrder": [
+        660
       ]
     },
     "201302007": {
@@ -240,6 +258,9 @@ let enemyData = {
         663,
         664,
         665
+      ],
+      "abilityOrder": [
+        660
       ]
     },
     "201302008": {
@@ -271,6 +292,9 @@ let enemyData = {
         663,
         664,
         665
+      ],
+      "abilityOrder": [
+        660
       ]
     },
     "201302009": {
@@ -303,6 +327,9 @@ let enemyData = {
         663,
         664,
         665
+      ],
+      "abilityOrder": [
+        660
       ]
     },
     "201302010": {
@@ -335,6 +362,9 @@ let enemyData = {
         663,
         664,
         665
+      ],
+      "abilityOrder": [
+        660
       ]
     },
     "201302011": {
@@ -367,6 +397,9 @@ let enemyData = {
         663,
         664,
         665
+      ],
+      "abilityOrder": [
+        660
       ]
     },
     "201302012": {
@@ -399,6 +432,9 @@ let enemyData = {
         663,
         664,
         665
+      ],
+      "abilityOrder": [
+        660
       ]
     },
     "201302013": {
@@ -431,6 +467,9 @@ let enemyData = {
         663,
         664,
         665
+      ],
+      "abilityOrder": [
+        660
       ]
     },
     "201302014": {
@@ -463,6 +502,9 @@ let enemyData = {
         663,
         664,
         665
+      ],
+      "abilityOrder": [
+        660
       ],
       "enemyTag": [
         "MGrid_4004"
@@ -498,6 +540,9 @@ let enemyData = {
         663,
         664,
         665
+      ],
+      "abilityOrder": [
+        660
       ]
     },
     "201302016": {
@@ -530,6 +575,9 @@ let enemyData = {
         663,
         664,
         665
+      ],
+      "abilityOrder": [
+        660
       ]
     }
   }

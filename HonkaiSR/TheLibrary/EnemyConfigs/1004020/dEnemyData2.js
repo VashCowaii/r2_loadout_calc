@@ -266,6 +266,12 @@ let enemyData = {
         111,
         112
       ],
+      "abilityOrder": [
+        108,
+        109,
+        110,
+        111
+      ],
       "summons": [
         {
           "name": "Silvermane Gunner",
@@ -365,6 +371,12 @@ let enemyData = {
         110,
         111,
         112
+      ],
+      "abilityOrder": [
+        108,
+        109,
+        110,
+        111
       ],
       "summons": [
         {
@@ -767,6 +779,12 @@ let enemyData = {
         111,
         112
       ],
+      "abilityOrder": [
+        108,
+        109,
+        110,
+        111
+      ],
       "summons": [
         {
           "name": "Silvermane Gunner",
@@ -866,6 +884,12 @@ let enemyData = {
         110,
         111,
         112
+      ],
+      "abilityOrder": [
+        109,
+        110,
+        108,
+        111
       ],
       "summons": [
         {

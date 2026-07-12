@@ -46,6 +46,9 @@ let enemyData = {
       },
       "abilities": [
         507
+      ],
+      "abilityOrder": [
+        507
       ]
     },
     "200202101": {
@@ -75,6 +78,9 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
+        507
+      ],
+      "abilityOrder": [
         507
       ]
     },
@@ -106,6 +112,9 @@ let enemyData = {
       },
       "abilities": [
         507
+      ],
+      "abilityOrder": [
+        507
       ]
     },
     "200202103": {
@@ -135,6 +144,9 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
+        507
+      ],
+      "abilityOrder": [
         507
       ],
       "enemyTag": [
@@ -169,6 +181,9 @@ let enemyData = {
       },
       "abilities": [
         507
+      ],
+      "abilityOrder": [
+        507
       ]
     },
     "200202105": {
@@ -192,6 +207,9 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
+        507
+      ],
+      "abilityOrder": [
         507
       ]
     },
@@ -222,6 +240,9 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
+        507
+      ],
+      "abilityOrder": [
         507
       ],
       "enemyTag": [

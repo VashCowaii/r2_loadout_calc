@@ -47,6 +47,10 @@ let enemyData = {
         2939,
         2940
       ],
+      "abilityOrder": [
+        2938,
+        2939
+      ],
       "enemyTag": [
         "LockTarget02"
       ]
@@ -79,6 +83,10 @@ let enemyData = {
         2939,
         2940
       ],
+      "abilityOrder": [
+        2938,
+        2939
+      ],
       "enemyTag": [
         "LockTarget02"
       ]
@@ -110,6 +118,10 @@ let enemyData = {
         2938,
         2939,
         2940
+      ],
+      "abilityOrder": [
+        2938,
+        2939
       ],
       "enemyTag": [
         "LockTarget02",
@@ -144,6 +156,10 @@ let enemyData = {
         2939,
         2940
       ],
+      "abilityOrder": [
+        2938,
+        2939
+      ],
       "enemyTag": [
         "LockTarget02",
         "LockTarge801201003"
@@ -176,6 +192,10 @@ let enemyData = {
         2938,
         2939,
         2940
+      ],
+      "abilityOrder": [
+        2938,
+        2939
       ],
       "enemyTag": [
         "LockTarget02",
@@ -210,6 +230,10 @@ let enemyData = {
         2939,
         2940
       ],
+      "abilityOrder": [
+        2938,
+        2939
+      ],
       "enemyTag": [
         "LockTarget02",
         "LockTarge801201004"
@@ -242,6 +266,10 @@ let enemyData = {
         2938,
         2939,
         2940
+      ],
+      "abilityOrder": [
+        2938,
+        2939
       ],
       "enemyTag": [
         "LockTarget02",
@@ -276,6 +304,10 @@ let enemyData = {
         2939,
         2940
       ],
+      "abilityOrder": [
+        2938,
+        2939
+      ],
       "enemyTag": [
         "LockTarget02",
         "LockTarge801201004"
@@ -308,6 +340,10 @@ let enemyData = {
         2938,
         2939,
         2940
+      ],
+      "abilityOrder": [
+        2938,
+        2939
       ],
       "enemyTag": [
         "LockTarget02",
@@ -342,6 +378,10 @@ let enemyData = {
         2939,
         2940
       ],
+      "abilityOrder": [
+        2938,
+        2939
+      ],
       "enemyTag": [
         "LockTarget02"
       ]
@@ -373,6 +413,10 @@ let enemyData = {
         2938,
         2939,
         2940
+      ],
+      "abilityOrder": [
+        2938,
+        2939
       ],
       "enemyTag": [
         "LockTarget02",
@@ -407,6 +451,10 @@ let enemyData = {
         2939,
         2940
       ],
+      "abilityOrder": [
+        2938,
+        2939
+      ],
       "enemyTag": [
         "LockTarget02"
       ]
@@ -438,6 +486,10 @@ let enemyData = {
         2938,
         2939,
         2940
+      ],
+      "abilityOrder": [
+        2938,
+        2939
       ],
       "enemyTag": [
         "LockTarget02"
@@ -471,6 +523,10 @@ let enemyData = {
         2939,
         2940
       ],
+      "abilityOrder": [
+        2938,
+        2939
+      ],
       "enemyTag": [
         "LockTarget02"
       ]
@@ -502,6 +558,10 @@ let enemyData = {
         2938,
         2939,
         2940
+      ],
+      "abilityOrder": [
+        2938,
+        2939
       ],
       "enemyTag": [
         "LockTarget02"
@@ -535,6 +595,10 @@ let enemyData = {
         2939,
         2940
       ],
+      "abilityOrder": [
+        2938,
+        2939
+      ],
       "enemyTag": [
         "LockTarget02"
       ]
@@ -566,6 +630,10 @@ let enemyData = {
         2938,
         2939,
         2940
+      ],
+      "abilityOrder": [
+        2938,
+        2939
       ],
       "enemyTag": [
         "LockTarget02",
@@ -600,6 +668,10 @@ let enemyData = {
         2939,
         2940
       ],
+      "abilityOrder": [
+        2938,
+        2939
+      ],
       "enemyTag": [
         "LockTarget02",
         "LockTarge801201004"
@@ -633,6 +705,10 @@ let enemyData = {
         2939,
         2940
       ],
+      "abilityOrder": [
+        2938,
+        2939
+      ],
       "enemyTag": [
         "LockTarget02"
       ]
@@ -664,6 +740,10 @@ let enemyData = {
         2938,
         2939,
         2940
+      ],
+      "abilityOrder": [
+        2938,
+        2939
       ],
       "enemyTag": [
         "LockTarget02"
@@ -697,6 +777,10 @@ let enemyData = {
         2939,
         2940
       ],
+      "abilityOrder": [
+        2938,
+        2939
+      ],
       "enemyTag": [
         "LockTarget02"
       ]
@@ -728,6 +812,10 @@ let enemyData = {
         2938,
         2939,
         2940
+      ],
+      "abilityOrder": [
+        2938,
+        2939
       ],
       "enemyTag": [
         "LockTarget02"
@@ -761,6 +849,10 @@ let enemyData = {
         2939,
         2940
       ],
+      "abilityOrder": [
+        2938,
+        2939
+      ],
       "enemyTag": [
         "LockTarget02"
       ]
@@ -792,6 +884,10 @@ let enemyData = {
         2938,
         2939,
         2940
+      ],
+      "abilityOrder": [
+        2938,
+        2939
       ],
       "enemyTag": [
         "LockTarget02"
@@ -825,6 +921,10 @@ let enemyData = {
         2939,
         2940
       ],
+      "abilityOrder": [
+        2938,
+        2939
+      ],
       "enemyTag": [
         "LockTarget02"
       ]
@@ -856,6 +956,10 @@ let enemyData = {
         2938,
         2939,
         2940
+      ],
+      "abilityOrder": [
+        2938,
+        2939
       ],
       "enemyTag": [
         "LockTarget02"
@@ -889,6 +993,10 @@ let enemyData = {
         2939,
         2940
       ],
+      "abilityOrder": [
+        2938,
+        2939
+      ],
       "enemyTag": [
         "LockTarget02"
       ]
@@ -920,6 +1028,10 @@ let enemyData = {
         2938,
         2939,
         2940
+      ],
+      "abilityOrder": [
+        2938,
+        2939
       ],
       "enemyTag": [
         "LockTarget02"
@@ -954,6 +1066,10 @@ let enemyData = {
         2939,
         2940
       ],
+      "abilityOrder": [
+        2938,
+        2939
+      ],
       "enemyTag": [
         "LockTarget02"
       ]
@@ -985,6 +1101,10 @@ let enemyData = {
         2938,
         2939,
         2940
+      ],
+      "abilityOrder": [
+        2938,
+        2939
       ],
       "enemyTag": [
         "LockTarget02"
@@ -1021,6 +1141,10 @@ let enemyData = {
         2939,
         2940
       ],
+      "abilityOrder": [
+        2938,
+        2939
+      ],
       "enemyTag": [
         "LockTarget02"
       ]
@@ -1053,6 +1177,10 @@ let enemyData = {
         2939,
         2940
       ],
+      "abilityOrder": [
+        2938,
+        2939
+      ],
       "enemyTag": [
         "LockTarget02"
       ]
@@ -1084,6 +1212,10 @@ let enemyData = {
         2938,
         2939,
         2940
+      ],
+      "abilityOrder": [
+        2938,
+        2939
       ],
       "enemyTag": [
         "LockTarget02",

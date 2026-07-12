@@ -55,6 +55,9 @@ let enemyData = {
         576,
         577
       ],
+      "abilityOrder": [
+        571
+      ],
       "enemyTag": [
         "SuperArmor_Behit_Small",
         "BattleScore_Yanqing"
@@ -112,6 +115,9 @@ let enemyData = {
         575,
         576,
         577
+      ],
+      "abilityOrder": [
+        571
       ],
       "enemyTag": [
         "SuperArmor_Behit_Small",
@@ -171,6 +177,9 @@ let enemyData = {
         576,
         577
       ],
+      "abilityOrder": [
+        571
+      ],
       "enemyTag": [
         "SuperArmor_Behit_Small",
         "BattleScore_Yanqing"
@@ -228,6 +237,9 @@ let enemyData = {
         575,
         576,
         577
+      ],
+      "abilityOrder": [
+        571
       ],
       "enemyTag": [
         "SuperArmor_Behit_Small",
@@ -287,6 +299,9 @@ let enemyData = {
         576,
         577
       ],
+      "abilityOrder": [
+        571
+      ],
       "enemyTag": [
         "SuperArmor_Behit_Small",
         "BattleScore_Yanqing"
@@ -344,6 +359,9 @@ let enemyData = {
         575,
         576,
         577
+      ],
+      "abilityOrder": [
+        571
       ],
       "enemyTag": [
         "SuperArmor_Behit_Small",
@@ -403,6 +421,9 @@ let enemyData = {
         576,
         577
       ],
+      "abilityOrder": [
+        571
+      ],
       "enemyTag": [
         "SuperArmor_Behit_Small",
         "BattleScore_Yanqing"
@@ -460,6 +481,9 @@ let enemyData = {
         575,
         576,
         577
+      ],
+      "abilityOrder": [
+        571
       ],
       "enemyTag": [
         "SuperArmor_Behit_Small",
@@ -519,6 +543,9 @@ let enemyData = {
         576,
         577
       ],
+      "abilityOrder": [
+        571
+      ],
       "enemyTag": [
         "SuperArmor_Behit_Small",
         "BattleScore_Yanqing"
@@ -577,6 +604,9 @@ let enemyData = {
         576,
         577
       ],
+      "abilityOrder": [
+        571
+      ],
       "enemyTag": [
         "SuperArmor_Behit_Small",
         "BattleScore_Yanqing"
@@ -632,6 +662,9 @@ let enemyData = {
         575,
         576,
         577
+      ],
+      "abilityOrder": [
+        571
       ],
       "enemyTag": [
         "SuperArmor_Behit_Small",
@@ -690,6 +723,9 @@ let enemyData = {
         575,
         576,
         577
+      ],
+      "abilityOrder": [
+        571
       ],
       "enemyTag": [
         "SuperArmor_Behit_Small",

@@ -51,6 +51,13 @@ let enemyData = {
         3240,
         3241
       ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
+      ],
       "enemyTag": [
         "Company"
       ],
@@ -102,6 +109,13 @@ let enemyData = {
         3239,
         3240,
         3241
+      ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
       ],
       "enemyTag": [
         "Company"
@@ -155,6 +169,13 @@ let enemyData = {
         3240,
         3241
       ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
+      ],
       "enemyTag": [
         "Company"
       ],
@@ -206,6 +227,13 @@ let enemyData = {
         3239,
         3240,
         3241
+      ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
       ],
       "enemyTag": [
         "Company"
@@ -259,6 +287,13 @@ let enemyData = {
         3240,
         3241
       ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
+      ],
       "enemyTag": [
         "Company"
       ],
@@ -310,6 +345,13 @@ let enemyData = {
         3239,
         3240,
         3241
+      ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
       ],
       "enemyTag": [
         "Company"
@@ -363,6 +405,13 @@ let enemyData = {
         3240,
         3241
       ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
+      ],
       "enemyTag": [
         "Company"
       ],
@@ -414,6 +463,13 @@ let enemyData = {
         3239,
         3240,
         3241
+      ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
       ],
       "enemyTag": [
         "Company"
@@ -467,6 +523,13 @@ let enemyData = {
         3240,
         3241
       ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
+      ],
       "enemyTag": [
         "Company"
       ],
@@ -518,6 +581,13 @@ let enemyData = {
         3239,
         3240,
         3241
+      ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
       ],
       "enemyTag": [
         "Company"
@@ -571,6 +641,13 @@ let enemyData = {
         3240,
         3241
       ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
+      ],
       "enemyTag": [
         "Company"
       ],
@@ -622,6 +699,13 @@ let enemyData = {
         3239,
         3240,
         3241
+      ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
       ],
       "enemyTag": [
         "Company"
@@ -675,6 +759,13 @@ let enemyData = {
         3240,
         3241
       ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
+      ],
       "enemyTag": [
         "Company"
       ],
@@ -727,6 +818,12 @@ let enemyData = {
         3240,
         3241
       ],
+      "abilityOrder": [
+        3240,
+        3235,
+        3240,
+        3236
+      ],
       "enemyTag": [
         "Company"
       ],
@@ -778,6 +875,13 @@ let enemyData = {
         3239,
         3240,
         3241
+      ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
       ],
       "enemyTag": [
         "Company"

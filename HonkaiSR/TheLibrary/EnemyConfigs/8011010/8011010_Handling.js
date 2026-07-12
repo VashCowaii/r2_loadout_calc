@@ -60,8 +60,5 @@ const configAbility = {
       ]
     }
   ],
-  "references": [],
-  "parsedSequence": [
-    "801101001"
-  ]
+  "references": []
 }

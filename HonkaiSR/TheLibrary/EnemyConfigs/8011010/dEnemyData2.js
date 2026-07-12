@@ -45,6 +45,9 @@ let enemyData = {
       "abilities": [
         2936
       ],
+      "abilityOrder": [
+        2936
+      ],
       "enemyTag": [
         "LockTarget"
       ]
@@ -73,6 +76,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2936
+      ],
+      "abilityOrder": [
         2936
       ],
       "enemyTag": [
@@ -105,6 +111,9 @@ let enemyData = {
       "abilities": [
         2936
       ],
+      "abilityOrder": [
+        2936
+      ],
       "enemyTag": [
         "LockTarget"
       ]
@@ -133,6 +142,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2936
+      ],
+      "abilityOrder": [
         2936
       ],
       "enemyTag": [
@@ -165,6 +177,9 @@ let enemyData = {
       "abilities": [
         2936
       ],
+      "abilityOrder": [
+        2936
+      ],
       "enemyTag": [
         "LockTarget"
       ]
@@ -193,6 +208,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2936
+      ],
+      "abilityOrder": [
         2936
       ],
       "enemyTag": [
@@ -225,6 +243,9 @@ let enemyData = {
       "abilities": [
         2936
       ],
+      "abilityOrder": [
+        2936
+      ],
       "enemyTag": [
         "LockTarget"
       ]
@@ -253,6 +274,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2936
+      ],
+      "abilityOrder": [
         2936
       ],
       "enemyTag": [
@@ -285,6 +309,9 @@ let enemyData = {
       "abilities": [
         2936
       ],
+      "abilityOrder": [
+        2936
+      ],
       "enemyTag": [
         "LockTarget"
       ]
@@ -313,6 +340,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2936
+      ],
+      "abilityOrder": [
         2936
       ],
       "enemyTag": [
@@ -345,6 +375,9 @@ let enemyData = {
       "abilities": [
         2936
       ],
+      "abilityOrder": [
+        2936
+      ],
       "enemyTag": [
         "LockTarget"
       ]
@@ -373,6 +406,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2936
+      ],
+      "abilityOrder": [
         2936
       ],
       "enemyTag": [

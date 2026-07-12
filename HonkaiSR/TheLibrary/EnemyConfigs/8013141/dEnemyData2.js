@@ -51,6 +51,10 @@ let enemyData = {
         3042,
         3043
       ],
+      "abilityOrder": [
+        3043,
+        "ABILITY_DOES_NOT_EXIST"
+      ],
       "enemyTag": [
         "SuperArmor_Behit_Big",
         "Week"

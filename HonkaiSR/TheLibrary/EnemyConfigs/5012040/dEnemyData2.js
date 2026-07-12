@@ -47,6 +47,9 @@ let enemyData = {
         2533,
         2534
       ],
+      "abilityOrder": [
+        2533
+      ],
       "enemyTag": [
         "IceResistance"
       ]
@@ -79,6 +82,9 @@ let enemyData = {
       "abilities": [
         2533,
         2534
+      ],
+      "abilityOrder": [
+        2533
       ],
       "enemyTag": [
         "IceResistance"

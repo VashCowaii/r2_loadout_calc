@@ -173,8 +173,5 @@ const configAbility = {
       ]
     }
   ],
-  "references": [],
-  "parsedSequence": [
-    "405202001"
-  ]
+  "references": []
 }

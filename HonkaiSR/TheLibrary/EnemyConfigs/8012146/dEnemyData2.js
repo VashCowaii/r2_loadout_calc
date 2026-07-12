@@ -51,6 +51,14 @@ let enemyData = {
         2963,
         2964
       ],
+      "abilityOrder": [
+        2953,
+        2953,
+        2955,
+        2955,
+        2954,
+        2954
+      ],
       "enemyTag": [
         "SuperArmor_Behit_Big"
       ],
@@ -91,6 +99,14 @@ let enemyData = {
         2962,
         2963,
         2964
+      ],
+      "abilityOrder": [
+        2953,
+        2953,
+        2955,
+        2955,
+        2954,
+        2954
       ],
       "enemyTag": [
         "SuperArmor_Behit_Big"
@@ -133,6 +149,14 @@ let enemyData = {
         2963,
         2964
       ],
+      "abilityOrder": [
+        2953,
+        2953,
+        2955,
+        2955,
+        2954,
+        2954
+      ],
       "enemyTag": [
         "SuperArmor_Behit_Big"
       ],
@@ -174,6 +198,14 @@ let enemyData = {
         2963,
         2964
       ],
+      "abilityOrder": [
+        2953,
+        2953,
+        2955,
+        2955,
+        2954,
+        2954
+      ],
       "enemyTag": [
         "SuperArmor_Behit_Big"
       ],
@@ -214,6 +246,14 @@ let enemyData = {
         2962,
         2963,
         2964
+      ],
+      "abilityOrder": [
+        2953,
+        2953,
+        2955,
+        2955,
+        2954,
+        2954
       ],
       "enemyTag": [
         "SuperArmor_Behit_Big"

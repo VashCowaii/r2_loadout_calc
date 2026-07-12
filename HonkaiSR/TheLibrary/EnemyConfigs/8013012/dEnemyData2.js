@@ -49,6 +49,13 @@ let enemyData = {
         3030,
         3031
       ],
+      "abilityOrder": [
+        3027,
+        3028,
+        3029,
+        3030,
+        3031
+      ],
       "enemyTag": [
         "BattleScore_Horse"
       ]

@@ -49,6 +49,9 @@ let enemyData = {
         10,
         11
       ],
+      "abilityOrder": [
+        10
+      ],
       "enemyTag": [
         "Week"
       ]
@@ -82,6 +85,9 @@ let enemyData = {
       "abilities": [
         10,
         11
+      ],
+      "abilityOrder": [
+        10
       ],
       "enemyTag": [
         "Week",
@@ -118,6 +124,9 @@ let enemyData = {
         10,
         11
       ],
+      "abilityOrder": [
+        10
+      ],
       "enemyTag": [
         "Week",
         "IF_W1_Ice"
@@ -152,6 +161,9 @@ let enemyData = {
       "abilities": [
         10,
         11
+      ],
+      "abilityOrder": [
+        10
       ],
       "enemyTag": [
         "Week",
@@ -188,6 +200,9 @@ let enemyData = {
         10,
         11
       ],
+      "abilityOrder": [
+        10
+      ],
       "enemyTag": [
         "Week",
         "IF_W1_Ice"
@@ -222,6 +237,9 @@ let enemyData = {
       "abilities": [
         10,
         11
+      ],
+      "abilityOrder": [
+        10
       ],
       "enemyTag": [
         "Week",

@@ -53,6 +53,13 @@ let enemyData = {
         2927,
         2928
       ],
+      "abilityOrder": [
+        2920,
+        2921,
+        2922,
+        2923,
+        2924
+      ],
       "enemyTag": [
         "BattleScore_Horse",
         "SPRL"
@@ -98,6 +105,13 @@ let enemyData = {
         2926,
         2927,
         2928
+      ],
+      "abilityOrder": [
+        2920,
+        2921,
+        2922,
+        2923,
+        2924
       ],
       "enemyTag": [
         "BattleScore_Horse",

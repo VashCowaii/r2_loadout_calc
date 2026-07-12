@@ -44,6 +44,9 @@ let enemyData = {
       },
       "abilities": [
         2937
+      ],
+      "abilityOrder": [
+        2937
       ]
     },
     "801102001": {
@@ -70,6 +73,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2937
+      ],
+      "abilityOrder": [
         2937
       ]
     },
@@ -98,6 +104,9 @@ let enemyData = {
       },
       "abilities": [
         2937
+      ],
+      "abilityOrder": [
+        2937
       ]
     },
     "801102003": {
@@ -124,6 +133,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2937
+      ],
+      "abilityOrder": [
         2937
       ]
     },
@@ -152,6 +164,9 @@ let enemyData = {
       },
       "abilities": [
         2937
+      ],
+      "abilityOrder": [
+        2937
       ]
     },
     "801102005": {
@@ -178,6 +193,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2937
+      ],
+      "abilityOrder": [
         2937
       ]
     },
@@ -206,6 +224,9 @@ let enemyData = {
       },
       "abilities": [
         2937
+      ],
+      "abilityOrder": [
+        2937
       ]
     },
     "801102008": {
@@ -233,6 +254,9 @@ let enemyData = {
       },
       "abilities": [
         2937
+      ],
+      "abilityOrder": [
+        2937
       ]
     },
     "801102009": {
@@ -258,6 +282,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2937
+      ],
+      "abilityOrder": [
         2937
       ]
     },
@@ -286,6 +313,9 @@ let enemyData = {
       },
       "abilities": [
         2937
+      ],
+      "abilityOrder": [
+        2937
       ]
     },
     "801102012": {
@@ -312,6 +342,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2937
+      ],
+      "abilityOrder": [
         2937
       ]
     }

@@ -60,6 +60,9 @@ let enemyData = {
         533,
         534
       ],
+      "abilityOrder": [
+        511
+      ],
       "enemyTag": [
         "W2_Kafka",
         "RL"
@@ -107,6 +110,9 @@ let enemyData = {
         533,
         534
       ],
+      "abilityOrder": [
+        511
+      ],
       "enemyTag": [
         "W2_Kafka",
         "RL"
@@ -153,6 +159,9 @@ let enemyData = {
         532,
         533,
         534
+      ],
+      "abilityOrder": [
+        511
       ],
       "enemyTag": [
         "W2_Kafka",

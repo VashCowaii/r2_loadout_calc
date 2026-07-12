@@ -45,6 +45,9 @@ let enemyData = {
         503,
         504,
         505
+      ],
+      "abilityOrder": [
+        502
       ]
     },
     "200201001": {
@@ -75,6 +78,9 @@ let enemyData = {
         503,
         504,
         505
+      ],
+      "abilityOrder": [
+        502
       ]
     },
     "200201002": {
@@ -105,6 +111,9 @@ let enemyData = {
         503,
         504,
         505
+      ],
+      "abilityOrder": [
+        502
       ]
     },
     "200201003": {
@@ -135,6 +144,9 @@ let enemyData = {
         503,
         504,
         505
+      ],
+      "abilityOrder": [
+        502
       ]
     },
     "200201004": {
@@ -165,6 +177,9 @@ let enemyData = {
         503,
         504,
         505
+      ],
+      "abilityOrder": [
+        502
       ]
     },
     "200201005": {
@@ -195,6 +210,9 @@ let enemyData = {
         503,
         504,
         505
+      ],
+      "abilityOrder": [
+        502
       ]
     },
     "200201006": {
@@ -225,6 +243,9 @@ let enemyData = {
         503,
         504,
         505
+      ],
+      "abilityOrder": [
+        502
       ]
     },
     "200201007": {
@@ -255,6 +276,9 @@ let enemyData = {
         503,
         504,
         505
+      ],
+      "abilityOrder": [
+        502
       ]
     },
     "200201008": {
@@ -285,6 +309,9 @@ let enemyData = {
         503,
         504,
         505
+      ],
+      "abilityOrder": [
+        502
       ]
     },
     "200201009": {
@@ -315,6 +342,9 @@ let enemyData = {
         503,
         504,
         505
+      ],
+      "abilityOrder": [
+        502
       ]
     },
     "200201010": {
@@ -345,6 +375,9 @@ let enemyData = {
         503,
         504,
         505
+      ],
+      "abilityOrder": [
+        502
       ]
     },
     "200201011": {
@@ -375,6 +408,9 @@ let enemyData = {
         503,
         504,
         505
+      ],
+      "abilityOrder": [
+        502
       ]
     },
     "200201012": {
@@ -403,6 +439,9 @@ let enemyData = {
         503,
         504,
         505
+      ],
+      "abilityOrder": [
+        502
       ]
     },
     "200201013": {
@@ -433,6 +472,9 @@ let enemyData = {
         503,
         504,
         505
+      ],
+      "abilityOrder": [
+        502
       ]
     },
     "200201014": {
@@ -463,6 +505,9 @@ let enemyData = {
         503,
         504,
         505
+      ],
+      "abilityOrder": [
+        502
       ],
       "enemyTag": [
         "MGrid_4004"

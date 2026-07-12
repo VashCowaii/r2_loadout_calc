@@ -51,6 +51,10 @@ let enemyData = {
         2912,
         2913
       ],
+      "abilityOrder": [
+        2910,
+        2911
+      ],
       "itNeverEnds": {
         "Monster_XP_Elite02_01_AIFlag": 4
       }

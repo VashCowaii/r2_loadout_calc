@@ -43,6 +43,9 @@ let enemyData = {
       "abilities": [
         2531,
         2532
+      ],
+      "abilityOrder": [
+        2531
       ]
     },
     "501203101": {
@@ -71,6 +74,9 @@ let enemyData = {
       "abilities": [
         2531,
         2532
+      ],
+      "abilityOrder": [
+        2531
       ],
       "overrideParams": {
         "2531": [
@@ -126,6 +132,9 @@ let enemyData = {
         2531,
         2532
       ],
+      "abilityOrder": [
+        2531
+      ],
       "overrideParams": {
         "2531": [
           [],
@@ -179,6 +188,9 @@ let enemyData = {
       "abilities": [
         2531,
         2532
+      ],
+      "abilityOrder": [
+        2531
       ],
       "overrideParams": {
         "2531": [
@@ -234,6 +246,9 @@ let enemyData = {
         2531,
         2532
       ],
+      "abilityOrder": [
+        2531
+      ],
       "overrideParams": {
         "2532": [
           [
@@ -278,6 +293,9 @@ let enemyData = {
         2531,
         2532
       ],
+      "abilityOrder": [
+        2531
+      ],
       "overrideParams": {
         "2532": [
           [
@@ -321,6 +339,9 @@ let enemyData = {
       "abilities": [
         2531,
         2532
+      ],
+      "abilityOrder": [
+        2531
       ]
     },
     "501203107": {
@@ -349,6 +370,9 @@ let enemyData = {
       "abilities": [
         2531,
         2532
+      ],
+      "abilityOrder": [
+        2531
       ],
       "overrideParams": {
         "2531": [
@@ -404,6 +428,9 @@ let enemyData = {
         2531,
         2532
       ],
+      "abilityOrder": [
+        2531
+      ],
       "overrideParams": {
         "2531": [
           [],
@@ -457,6 +484,9 @@ let enemyData = {
       "abilities": [
         2531,
         2532
+      ],
+      "abilityOrder": [
+        2531
       ],
       "overrideParams": {
         "2531": [
@@ -512,6 +542,9 @@ let enemyData = {
         2531,
         2532
       ],
+      "abilityOrder": [
+        2531
+      ],
       "overrideParams": {
         "2531": [
           [],
@@ -565,6 +598,9 @@ let enemyData = {
       "abilities": [
         2531,
         2532
+      ],
+      "abilityOrder": [
+        2531
       ],
       "overrideParams": {
         "2531": [
@@ -620,6 +656,9 @@ let enemyData = {
         2531,
         2532
       ],
+      "abilityOrder": [
+        2531
+      ],
       "overrideParams": {
         "2531": [
           [],
@@ -673,6 +712,9 @@ let enemyData = {
       "abilities": [
         2531,
         2532
+      ],
+      "abilityOrder": [
+        2531
       ],
       "overrideParams": {
         "2531": [
@@ -728,6 +770,9 @@ let enemyData = {
         2531,
         2532
       ],
+      "abilityOrder": [
+        2531
+      ],
       "overrideParams": {
         "2531": [
           [],
@@ -781,6 +826,9 @@ let enemyData = {
       "abilities": [
         2531,
         2532
+      ],
+      "abilityOrder": [
+        2531
       ]
     },
     "501203116": {
@@ -809,6 +857,9 @@ let enemyData = {
       "abilities": [
         2531,
         2532
+      ],
+      "abilityOrder": [
+        2531
       ]
     }
   }

@@ -43,6 +43,9 @@ let enemyData = {
       },
       "abilities": [
         2543
+      ],
+      "abilityOrder": [
+        2543
       ]
     },
     "501207101": {
@@ -69,6 +72,9 @@ let enemyData = {
         "Thunder": 0.2
       },
       "abilities": [
+        2543
+      ],
+      "abilityOrder": [
         2543
       ]
     },
@@ -97,6 +103,9 @@ let enemyData = {
       },
       "abilities": [
         2543
+      ],
+      "abilityOrder": [
+        2543
       ]
     },
     "501207103": {
@@ -124,6 +133,9 @@ let enemyData = {
       },
       "abilities": [
         2543
+      ],
+      "abilityOrder": [
+        2543
       ]
     },
     "501207104": {
@@ -150,6 +162,9 @@ let enemyData = {
         "Thunder": 0.2
       },
       "abilities": [
+        2543
+      ],
+      "abilityOrder": [
         2543
       ]
     }

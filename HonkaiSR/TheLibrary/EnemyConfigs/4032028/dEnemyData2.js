@@ -50,6 +50,9 @@ let enemyData = {
         2111,
         2112
       ],
+      "abilityOrder": [
+        2110
+      ],
       "itNeverEnds": {}
     }
   }

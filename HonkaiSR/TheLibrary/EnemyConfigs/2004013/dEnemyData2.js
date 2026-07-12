@@ -60,6 +60,9 @@ let enemyData = {
         546,
         547
       ],
+      "abilityOrder": [
+        511
+      ],
       "enemyTag": [
         "IF_Boss",
         "IF_W2_Kafka",

@@ -50,6 +50,9 @@ let enemyData = {
         2988,
         2989
       ],
+      "abilityOrder": [
+        2986
+      ],
       "enemyTag": [
         "Huanlong_Flower"
       ]

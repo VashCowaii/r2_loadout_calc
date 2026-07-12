@@ -5156,10 +5156,7 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": [],
-      "parsedSequence": [
-        "200402001"
-      ]
+      "references": []
     },
     "2004020_Handling_OVERRIDE_200402001": {
       "fileName": "2004020_Handling_OVERRIDE_200402001",
@@ -5572,10 +5569,7 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": [],
-      "parsedSequence": [
-        "200402001"
-      ]
+      "references": []
     },
     "2004020_Handling_OVERRIDE_200402005": {
       "fileName": "2004020_Handling_OVERRIDE_200402005",
@@ -5988,10 +5982,7 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": [],
-      "parsedSequence": [
-        "200402001"
-      ]
+      "references": []
     }
   }
 }

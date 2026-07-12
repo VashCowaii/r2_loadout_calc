@@ -2500,14 +2500,7 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": [],
-      "parsedSequence": [
-        "300303001",
-        "300303002",
-        "300303003",
-        "300303004",
-        "300303005"
-      ]
+      "references": []
     },
     "3003030_Handling_OVERRIDE_300303001": {
       "fileName": "3003030_Handling_OVERRIDE_300303001",
@@ -2918,14 +2911,7 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": [],
-      "parsedSequence": [
-        "300303001",
-        "300303002",
-        "300303003",
-        "300303004",
-        "300303005"
-      ]
+      "references": []
     }
   }
 }

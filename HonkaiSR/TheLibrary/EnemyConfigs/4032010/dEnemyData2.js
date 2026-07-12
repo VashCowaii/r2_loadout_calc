@@ -44,6 +44,9 @@ let enemyData = {
       "abilities": [
         2071,
         2072
+      ],
+      "abilityOrder": [
+        2071
       ]
     },
     "403201001": {
@@ -72,6 +75,9 @@ let enemyData = {
       "abilities": [
         2071,
         2072
+      ],
+      "abilityOrder": [
+        2071
       ],
       "enemyTag": [
         "MGrid_4009"
@@ -103,6 +109,9 @@ let enemyData = {
       "abilities": [
         2071,
         2072
+      ],
+      "abilityOrder": [
+        2071
       ],
       "overrideParams": {
         "2071": [

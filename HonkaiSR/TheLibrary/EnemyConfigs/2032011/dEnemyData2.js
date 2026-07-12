@@ -44,6 +44,9 @@ let enemyData = {
         822,
         823
       ],
+      "abilityOrder": [
+        822
+      ],
       "enemyTag": [
         "MonsterType_W2_Lycan",
         "MonsterType_W2_Lycan_00"

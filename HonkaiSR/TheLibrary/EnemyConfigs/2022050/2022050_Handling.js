@@ -125,9 +125,5 @@ const configAbility = {
       ]
     }
   ],
-  "references": [],
-  "parsedSequence": [
-    "202205002",
-    "202205001"
-  ]
+  "references": []
 }

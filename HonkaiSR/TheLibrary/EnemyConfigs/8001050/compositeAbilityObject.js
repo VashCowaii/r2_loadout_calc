@@ -200,10 +200,7 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": [],
-      "parsedSequence": [
-        "800105001"
-      ]
+      "references": []
     },
     "8001050_Handling_OVERRIDE_800105003": {
       "fileName": "8001050_Handling_OVERRIDE_800105003",
@@ -254,10 +251,7 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": [],
-      "parsedSequence": [
-        "800105001"
-      ]
+      "references": []
     }
   }
 }

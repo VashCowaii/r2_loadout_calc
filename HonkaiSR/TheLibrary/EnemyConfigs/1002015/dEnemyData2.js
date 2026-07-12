@@ -49,6 +49,9 @@ let enemyData = {
         4,
         5
       ],
+      "abilityOrder": [
+        4
+      ],
       "enemyTag": [
         "W1_Ice"
       ]
@@ -82,6 +85,9 @@ let enemyData = {
       "abilities": [
         4,
         5
+      ],
+      "abilityOrder": [
+        4
       ],
       "enemyTag": [
         "W1_Ice",
@@ -118,6 +124,9 @@ let enemyData = {
         4,
         5
       ],
+      "abilityOrder": [
+        4
+      ],
       "enemyTag": [
         "W1_Ice",
         "IF_W1_Ice"
@@ -152,6 +161,9 @@ let enemyData = {
       "abilities": [
         4,
         5
+      ],
+      "abilityOrder": [
+        4
       ],
       "enemyTag": [
         "W1_Ice",
@@ -188,6 +200,9 @@ let enemyData = {
         4,
         5
       ],
+      "abilityOrder": [
+        4
+      ],
       "enemyTag": [
         "W1_Ice",
         "IF_W1_Ice"
@@ -222,6 +237,9 @@ let enemyData = {
       "abilities": [
         4,
         5
+      ],
+      "abilityOrder": [
+        4
       ],
       "enemyTag": [
         "W1_Ice",
@@ -258,6 +276,9 @@ let enemyData = {
         4,
         5
       ],
+      "abilityOrder": [
+        4
+      ],
       "enemyTag": [
         "W1_Ice"
       ]
@@ -291,6 +312,9 @@ let enemyData = {
       "abilities": [
         4,
         5
+      ],
+      "abilityOrder": [
+        4
       ],
       "enemyTag": [
         "W1_Ice"
@@ -326,6 +350,9 @@ let enemyData = {
         4,
         5
       ],
+      "abilityOrder": [
+        4
+      ],
       "enemyTag": [
         "W1_Ice"
       ]
@@ -360,6 +387,9 @@ let enemyData = {
         4,
         5
       ],
+      "abilityOrder": [
+        4
+      ],
       "enemyTag": [
         "W1_Ice"
       ]
@@ -393,6 +423,9 @@ let enemyData = {
       "abilities": [
         4,
         5
+      ],
+      "abilityOrder": [
+        4
       ],
       "enemyTag": [
         "W1_Ice",

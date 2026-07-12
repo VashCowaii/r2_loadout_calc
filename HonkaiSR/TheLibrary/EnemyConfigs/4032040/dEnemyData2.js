@@ -45,6 +45,9 @@ let enemyData = {
         2120,
         2121,
         2122
+      ],
+      "abilityOrder": [
+        2071
       ]
     },
     "403204001": {
@@ -75,6 +78,9 @@ let enemyData = {
         2120,
         2121,
         2122
+      ],
+      "abilityOrder": [
+        2071
       ],
       "enemyTag": [
         "MGrid_4009"

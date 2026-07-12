@@ -4940,10 +4940,7 @@ const compositeAbilityObject = {
           ]
         }
       ],
-      "references": [],
-      "parsedSequence": [
-        "803203201"
-      ]
+      "references": []
     }
   }
 }

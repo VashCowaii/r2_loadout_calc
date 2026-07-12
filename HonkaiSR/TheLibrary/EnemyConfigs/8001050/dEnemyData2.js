@@ -45,6 +45,9 @@ let enemyData = {
       },
       "abilities": [
         2747
+      ],
+      "abilityOrder": [
+        2747
       ]
     },
     "800105001": {
@@ -74,6 +77,9 @@ let enemyData = {
         "STAT_DOT_Poison": 1
       },
       "abilities": [
+        2747
+      ],
+      "abilityOrder": [
         2747
       ]
     },
@@ -105,6 +111,9 @@ let enemyData = {
       },
       "abilities": [
         2747
+      ],
+      "abilityOrder": [
+        2747
       ]
     },
     "800105003": {
@@ -134,6 +143,9 @@ let enemyData = {
         "STAT_DOT_Poison": 1
       },
       "abilities": [
+        2747
+      ],
+      "abilityOrder": [
         2747
       ]
     },
@@ -165,6 +177,9 @@ let enemyData = {
       },
       "abilities": [
         2747
+      ],
+      "abilityOrder": [
+        2747
       ]
     },
     "800105005": {
@@ -194,6 +209,9 @@ let enemyData = {
         "STAT_DOT_Poison": 1
       },
       "abilities": [
+        2747
+      ],
+      "abilityOrder": [
         2747
       ]
     },
@@ -225,6 +243,9 @@ let enemyData = {
       },
       "abilities": [
         2747
+      ],
+      "abilityOrder": [
+        2747
       ]
     },
     "800105007": {
@@ -254,6 +275,9 @@ let enemyData = {
         "STAT_DOT_Poison": 1
       },
       "abilities": [
+        2747
+      ],
+      "abilityOrder": [
         2747
       ]
     }

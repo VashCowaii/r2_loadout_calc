@@ -50,6 +50,13 @@ let enemyData = {
         303,
         304
       ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ],
@@ -102,6 +109,13 @@ let enemyData = {
         303,
         304
       ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ],
@@ -147,6 +161,13 @@ let enemyData = {
         303,
         304
       ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ],
@@ -191,6 +212,13 @@ let enemyData = {
         302,
         303,
         304
+      ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -244,6 +272,13 @@ let enemyData = {
         303,
         304
       ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ],
@@ -288,6 +323,13 @@ let enemyData = {
         302,
         303,
         304
+      ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -334,6 +376,13 @@ let enemyData = {
         303,
         304
       ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ],
@@ -378,6 +427,9 @@ let enemyData = {
         302,
         303,
         304
+      ],
+      "abilityOrder": [
+        302
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -424,6 +476,13 @@ let enemyData = {
         303,
         304
       ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ],
@@ -468,6 +527,13 @@ let enemyData = {
         302,
         303,
         304
+      ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -514,6 +580,13 @@ let enemyData = {
         303,
         304
       ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ],
@@ -558,6 +631,13 @@ let enemyData = {
         302,
         303,
         304
+      ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -604,6 +684,13 @@ let enemyData = {
         303,
         304
       ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ],
@@ -648,6 +735,13 @@ let enemyData = {
         302,
         303,
         304
+      ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -694,6 +788,13 @@ let enemyData = {
         303,
         304
       ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ],
@@ -738,6 +839,13 @@ let enemyData = {
         302,
         303,
         304
+      ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -784,6 +892,13 @@ let enemyData = {
         303,
         304
       ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ],
@@ -828,6 +943,13 @@ let enemyData = {
         302,
         303,
         304
+      ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -874,6 +996,13 @@ let enemyData = {
         303,
         304
       ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ],
@@ -918,6 +1047,13 @@ let enemyData = {
         302,
         303,
         304
+      ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -964,6 +1100,13 @@ let enemyData = {
         303,
         304
       ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ],
@@ -1008,6 +1151,13 @@ let enemyData = {
         302,
         303,
         304
+      ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -1054,6 +1204,13 @@ let enemyData = {
         303,
         304
       ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ],
@@ -1098,6 +1255,13 @@ let enemyData = {
         302,
         303,
         304
+      ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -1144,6 +1308,13 @@ let enemyData = {
         303,
         304
       ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ],
@@ -1188,6 +1359,13 @@ let enemyData = {
         302,
         303,
         304
+      ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -1234,6 +1412,13 @@ let enemyData = {
         303,
         304
       ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
       ],
@@ -1278,6 +1463,13 @@ let enemyData = {
         302,
         303,
         304
+      ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2",

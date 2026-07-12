@@ -44,6 +44,9 @@ let enemyData = {
       "abilities": [
         1672,
         1673
+      ],
+      "abilityOrder": [
+        1672
       ]
     },
     "401203101": {
@@ -72,6 +75,9 @@ let enemyData = {
       "abilities": [
         1672,
         1673
+      ],
+      "abilityOrder": [
+        1672
       ]
     },
     "401203102": {
@@ -100,6 +106,9 @@ let enemyData = {
       "abilities": [
         1672,
         1673
+      ],
+      "abilityOrder": [
+        1672
       ]
     },
     "401203103": {
@@ -128,6 +137,9 @@ let enemyData = {
       "abilities": [
         1672,
         1673
+      ],
+      "abilityOrder": [
+        1672
       ]
     },
     "401203104": {
@@ -156,6 +168,9 @@ let enemyData = {
       "abilities": [
         1672,
         1673
+      ],
+      "abilityOrder": [
+        1672
       ]
     },
     "401203105": {
@@ -184,6 +199,9 @@ let enemyData = {
       "abilities": [
         1672,
         1673
+      ],
+      "abilityOrder": [
+        1672
       ]
     }
   }

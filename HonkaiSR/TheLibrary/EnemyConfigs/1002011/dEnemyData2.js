@@ -48,6 +48,9 @@ let enemyData = {
       "abilities": [
         0
       ],
+      "abilityOrder": [
+        0
+      ],
       "enemyTag": [
         "W1_Ice"
       ]
@@ -79,6 +82,9 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
+        0
+      ],
+      "abilityOrder": [
         0
       ],
       "enemyTag": [

@@ -45,6 +45,9 @@ let enemyData = {
         646,
         647
       ],
+      "abilityOrder": [
+        646
+      ],
       "enemyTag": [
         "W2_Mecha02"
       ]
@@ -75,6 +78,9 @@ let enemyData = {
       "abilities": [
         646,
         647
+      ],
+      "abilityOrder": [
+        646
       ],
       "enemyTag": [
         "W2_Mecha02"
@@ -107,6 +113,9 @@ let enemyData = {
         646,
         647
       ],
+      "abilityOrder": [
+        646
+      ],
       "enemyTag": [
         "W2_Mecha02"
       ]
@@ -137,6 +146,9 @@ let enemyData = {
       "abilities": [
         646,
         647
+      ],
+      "abilityOrder": [
+        646
       ],
       "enemyTag": [
         "W2_Mecha02"
@@ -169,6 +181,9 @@ let enemyData = {
         646,
         647
       ],
+      "abilityOrder": [
+        646
+      ],
       "enemyTag": [
         "W2_Mecha02"
       ]
@@ -199,6 +214,9 @@ let enemyData = {
       "abilities": [
         646,
         647
+      ],
+      "abilityOrder": [
+        646
       ],
       "enemyTag": [
         "W2_Mecha02"
@@ -231,6 +249,9 @@ let enemyData = {
         646,
         647
       ],
+      "abilityOrder": [
+        646
+      ],
       "enemyTag": [
         "W2_Mecha02"
       ]
@@ -261,6 +282,9 @@ let enemyData = {
       "abilities": [
         646,
         647
+      ],
+      "abilityOrder": [
+        646
       ],
       "enemyTag": [
         "W2_Mecha02"
@@ -293,6 +317,9 @@ let enemyData = {
         646,
         647
       ],
+      "abilityOrder": [
+        646
+      ],
       "enemyTag": [
         "W2_Mecha02"
       ]
@@ -323,6 +350,9 @@ let enemyData = {
       "abilities": [
         646,
         647
+      ],
+      "abilityOrder": [
+        646
       ],
       "enemyTag": [
         "W2_Mecha02"
@@ -358,6 +388,9 @@ let enemyData = {
         646,
         647
       ],
+      "abilityOrder": [
+        646
+      ],
       "enemyTag": [
         "W2_Mecha02"
       ]
@@ -388,6 +421,9 @@ let enemyData = {
       "abilities": [
         646,
         647
+      ],
+      "abilityOrder": [
+        646
       ],
       "enemyTag": [
         "W2_Mecha02"
@@ -420,6 +456,9 @@ let enemyData = {
         646,
         647
       ],
+      "abilityOrder": [
+        646
+      ],
       "enemyTag": [
         "W2_Mecha02",
         "MGrid_4004"
@@ -451,6 +490,9 @@ let enemyData = {
       "abilities": [
         646,
         647
+      ],
+      "abilityOrder": [
+        646
       ],
       "enemyTag": [
         "W2_Mecha02"
