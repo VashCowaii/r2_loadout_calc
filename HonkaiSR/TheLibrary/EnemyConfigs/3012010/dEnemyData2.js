@@ -46,7 +46,7 @@ let enemyData = {
         1318
       ],
       "abilityOrder": [
-        "ABILITY_DOES_NOT_EXIST"
+        "ABILITY__DOES_NOT_EXIST"
       ],
       "itNeverEnds": {
         "TV_01_RandomPoolID": 1,
@@ -81,7 +81,7 @@ let enemyData = {
         1318
       ],
       "abilityOrder": [
-        "ABILITY_DOES_NOT_EXIST"
+        "ABILITY__DOES_NOT_EXIST"
       ],
       "itNeverEnds": {
         "TV_01_RandomPoolID": 1,

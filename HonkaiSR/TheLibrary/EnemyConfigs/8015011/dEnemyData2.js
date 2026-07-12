@@ -43,8 +43,8 @@ let enemyData = {
         3062
       ],
       "abilityOrder": [
-        "ABILITY_DOES_NOT_EXIST",
-        "ABILITY_DOES_NOT_EXIST"
+        "ABILITY__DOES_NOT_EXIST",
+        "ABILITY__DOES_NOT_EXIST"
       ],
       "summons": [
         {
