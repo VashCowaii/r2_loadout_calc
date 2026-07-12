@@ -42,6 +42,9 @@ let enemyData = {
       },
       "abilities": [
         509
+      ],
+      "abilityOrder": [
+        509
       ]
     },
     "200203103": {
@@ -68,6 +71,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        509
+      ],
+      "abilityOrder": [
         509
       ]
     },
@@ -96,6 +102,9 @@ let enemyData = {
       },
       "abilities": [
         509
+      ],
+      "abilityOrder": [
+        509
       ]
     },
     "200203105": {
@@ -122,6 +131,9 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        509
+      ],
+      "abilityOrder": [
         509
       ]
     },
@@ -152,6 +164,9 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
+        509
+      ],
+      "abilityOrder": [
         509
       ]
     }

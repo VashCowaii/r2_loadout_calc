@@ -41,6 +41,9 @@ let enemyData = {
       "abilities": [
         2935
       ],
+      "abilityOrder": [
+        2935
+      ],
       "enemyTag": [
         "LockTarget"
       ]

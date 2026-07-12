@@ -51,6 +51,9 @@ let enemyData = {
         672,
         673
       ],
+      "abilityOrder": [
+        660
+      ],
       "summons": [
         {
           "name": "Wraith Warden",

@@ -6,7 +6,8 @@ const compositeAbilityObject = {
     "1002064_Modifiers",
     "1002064_Monster_W1_CocoliaP2_01_PassiveAbilityInitiate",
     "1002064_Monster_Boss_Cocolia_P1_Weapon_Ability04_Part02",
-    "1002064_Monster_Boss_Cocolia_P1_Weapon_Ability04_Part01"
+    "1002064_Monster_Boss_Cocolia_P1_Weapon_Ability04_Part01",
+    "1002064_Handling"
   ],
   "abilityObject": {
     "1002064_Modifiers": {
@@ -188,6 +189,57 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "{{Hostile Entities(AOE)}}"
       },
+      "references": []
+    },
+    "1002064_Handling": {
+      "fileName": "1002064_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "Common_SequenceThree_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSequenceSkill",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Sequence Ability Option"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Sequence Ability Use Value",
+                  "valueCheck": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "references": []
     }
   }

@@ -46,6 +46,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -74,6 +79,11 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -110,6 +120,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -138,6 +153,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -174,6 +194,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -202,6 +227,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -238,6 +268,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -266,6 +301,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -302,6 +342,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -330,6 +375,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -366,6 +416,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -394,6 +449,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -430,6 +490,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -458,6 +523,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -494,6 +564,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -522,6 +597,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -558,6 +638,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -586,6 +671,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -622,6 +712,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -650,6 +745,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -686,6 +786,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -714,6 +819,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -750,6 +860,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -778,6 +893,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -814,6 +934,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -842,6 +967,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -878,6 +1008,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -906,6 +1041,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -942,6 +1082,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -970,6 +1115,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -1006,6 +1156,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -1034,6 +1189,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -1070,6 +1230,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -1098,6 +1263,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -1134,6 +1304,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -1162,6 +1337,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -1198,6 +1378,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -1226,6 +1411,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -1262,6 +1452,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -1290,6 +1485,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -1326,6 +1526,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -1354,6 +1559,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -1390,6 +1600,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -1418,6 +1633,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -1454,6 +1674,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -1482,6 +1707,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -1518,6 +1748,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -1546,6 +1781,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -1582,6 +1822,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -1610,6 +1855,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -1646,6 +1896,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -1674,6 +1929,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -1710,6 +1970,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -1738,6 +2003,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -1774,6 +2044,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -1802,6 +2077,11 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -1838,6 +2118,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -1866,6 +2151,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -1902,6 +2192,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -1930,6 +2225,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -1966,6 +2266,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -1994,6 +2299,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -2030,6 +2340,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -2058,6 +2373,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -2094,6 +2414,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -2122,6 +2447,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -2158,6 +2488,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -2186,6 +2521,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -2222,6 +2562,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -2250,6 +2595,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -2286,6 +2636,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -2314,6 +2669,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -2350,6 +2710,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -2378,6 +2743,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757
@@ -2414,6 +2784,11 @@ let enemyData = {
         2756,
         2757
       ],
+      "abilityOrder": [
+        2755,
+        2756,
+        2757
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]
@@ -2442,6 +2817,11 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
+        2755,
+        2756,
+        2757
+      ],
+      "abilityOrder": [
         2755,
         2756,
         2757

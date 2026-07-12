@@ -43,6 +43,9 @@ let enemyData = {
       },
       "abilities": [
         971
+      ],
+      "abilityOrder": [
+        971
       ]
     },
     "300102001": {
@@ -69,6 +72,9 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        971
+      ],
+      "abilityOrder": [
         971
       ]
     },
@@ -97,6 +103,9 @@ let enemyData = {
       },
       "abilities": [
         971
+      ],
+      "abilityOrder": [
+        971
       ]
     },
     "300102003": {
@@ -123,6 +132,9 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        971
+      ],
+      "abilityOrder": [
         971
       ]
     },
@@ -151,6 +163,9 @@ let enemyData = {
       },
       "abilities": [
         971
+      ],
+      "abilityOrder": [
+        971
       ]
     },
     "300102005": {
@@ -177,6 +192,9 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        971
+      ],
+      "abilityOrder": [
         971
       ]
     },
@@ -205,6 +223,9 @@ let enemyData = {
       },
       "abilities": [
         971
+      ],
+      "abilityOrder": [
+        971
       ]
     },
     "300102007": {
@@ -231,6 +252,9 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        971
+      ],
+      "abilityOrder": [
         971
       ],
       "enemyTag": [

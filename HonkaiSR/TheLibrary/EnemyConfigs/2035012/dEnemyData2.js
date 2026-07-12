@@ -66,6 +66,9 @@ let enemyData = {
         968,
         969
       ],
+      "abilityOrder": [
+        "ABILITY__DOES_NOT_EXIST"
+      ],
       "enemyTag": [
         "SuperArmor_Behit_VerySmall"
       ],
@@ -127,6 +130,9 @@ let enemyData = {
         967,
         968,
         969
+      ],
+      "abilityOrder": [
+        "ABILITY__DOES_NOT_EXIST"
       ],
       "enemyTag": [
         "SuperArmor_Behit_VerySmall"
@@ -190,6 +196,9 @@ let enemyData = {
         968,
         969
       ],
+      "abilityOrder": [
+        "ABILITY__DOES_NOT_EXIST"
+      ],
       "enemyTag": [
         "SuperArmor_Behit_VerySmall"
       ],
@@ -252,6 +261,9 @@ let enemyData = {
         968,
         969
       ],
+      "abilityOrder": [
+        "ABILITY__DOES_NOT_EXIST"
+      ],
       "enemyTag": [
         "SuperArmor_Behit_VerySmall"
       ],
@@ -313,6 +325,9 @@ let enemyData = {
         967,
         968,
         969
+      ],
+      "abilityOrder": [
+        "ABILITY__DOES_NOT_EXIST"
       ],
       "enemyTag": [
         "SuperArmor_Behit_VerySmall"

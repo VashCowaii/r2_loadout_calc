@@ -65,6 +65,9 @@ let enemyData = {
         613,
         614
       ],
+      "abilityOrder": [
+        571
+      ],
       "enemyTag": [
         "SuperArmor_Behit_Small",
         "W2_Yanqing_2Phase",
@@ -133,6 +136,9 @@ let enemyData = {
         612,
         613,
         614
+      ],
+      "abilityOrder": [
+        571
       ],
       "enemyTag": [
         "SuperArmor_Behit_Small",
@@ -204,6 +210,9 @@ let enemyData = {
         613,
         614
       ],
+      "abilityOrder": [
+        571
+      ],
       "enemyTag": [
         "SuperArmor_Behit_Small",
         "W2_Yanqing_2Phase",
@@ -272,6 +281,9 @@ let enemyData = {
         612,
         613,
         614
+      ],
+      "abilityOrder": [
+        571
       ],
       "enemyTag": [
         "SuperArmor_Behit_Small",

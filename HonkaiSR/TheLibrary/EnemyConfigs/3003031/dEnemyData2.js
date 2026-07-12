@@ -50,6 +50,13 @@ let enemyData = {
         1184,
         1185
       ],
+      "abilityOrder": [
+        1172,
+        1173,
+        1174,
+        1175,
+        1176
+      ],
       "enemyTag": [
         "W3_Figure_02"
       ]
@@ -85,6 +92,13 @@ let enemyData = {
         1183,
         1184,
         1185
+      ],
+      "abilityOrder": [
+        1172,
+        1173,
+        1174,
+        1175,
+        1176
       ],
       "enemyTag": [
         "W3_Figure_02"
@@ -122,6 +136,13 @@ let enemyData = {
         1184,
         1185
       ],
+      "abilityOrder": [
+        1172,
+        1173,
+        1174,
+        1175,
+        1176
+      ],
       "enemyTag": [
         "W3_Figure_02"
       ]
@@ -157,6 +178,13 @@ let enemyData = {
         1183,
         1184,
         1185
+      ],
+      "abilityOrder": [
+        1172,
+        1173,
+        1174,
+        1175,
+        1176
       ],
       "enemyTag": [
         "W3_Figure_02",

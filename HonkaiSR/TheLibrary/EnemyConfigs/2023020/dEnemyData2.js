@@ -50,6 +50,10 @@ let enemyData = {
         719,
         720
       ],
+      "abilityOrder": [
+        716,
+        715
+      ],
       "itNeverEnds": {
         "SummonID01": 2022050,
         "SummonID02": 2022040
@@ -85,6 +89,10 @@ let enemyData = {
         718,
         719,
         720
+      ],
+      "abilityOrder": [
+        716,
+        715
       ],
       "itNeverEnds": {
         "SummonID01": 2022050,
@@ -122,6 +130,10 @@ let enemyData = {
         719,
         720
       ],
+      "abilityOrder": [
+        716,
+        715
+      ],
       "itNeverEnds": {
         "SummonID01": 2022050,
         "SummonID02": 2022040
@@ -157,6 +169,10 @@ let enemyData = {
         718,
         719,
         720
+      ],
+      "abilityOrder": [
+        716,
+        715
       ],
       "itNeverEnds": {
         "SummonID01": 2022050,
@@ -194,6 +210,10 @@ let enemyData = {
         719,
         720
       ],
+      "abilityOrder": [
+        716,
+        715
+      ],
       "itNeverEnds": {
         "SummonID01": 2022050,
         "SummonID02": 2022040
@@ -230,6 +250,10 @@ let enemyData = {
         719,
         720
       ],
+      "abilityOrder": [
+        716,
+        715
+      ],
       "itNeverEnds": {
         "SummonID01": 2022050,
         "SummonID02": 2022040
@@ -263,6 +287,10 @@ let enemyData = {
         718,
         719,
         720
+      ],
+      "abilityOrder": [
+        716,
+        715
       ],
       "itNeverEnds": {
         "SummonID01": 2022050,
@@ -300,6 +328,10 @@ let enemyData = {
         719,
         720
       ],
+      "abilityOrder": [
+        716,
+        715
+      ],
       "itNeverEnds": {
         "SummonID01": 2022050,
         "SummonID02": 2022040
@@ -335,6 +367,10 @@ let enemyData = {
         718,
         719,
         720
+      ],
+      "abilityOrder": [
+        716,
+        715
       ],
       "itNeverEnds": {
         "SummonID01": 2022050,
@@ -372,6 +408,10 @@ let enemyData = {
         719,
         720
       ],
+      "abilityOrder": [
+        716,
+        715
+      ],
       "itNeverEnds": {
         "SummonID01": 2022050,
         "SummonID02": 2022040
@@ -407,6 +447,10 @@ let enemyData = {
         718,
         719,
         720
+      ],
+      "abilityOrder": [
+        716,
+        715
       ],
       "itNeverEnds": {
         "SummonID01": 2022050,
@@ -444,6 +488,10 @@ let enemyData = {
         719,
         720
       ],
+      "abilityOrder": [
+        716,
+        715
+      ],
       "itNeverEnds": {
         "SummonID01": 2022050,
         "SummonID02": 2022040
@@ -479,6 +527,10 @@ let enemyData = {
         718,
         719,
         720
+      ],
+      "abilityOrder": [
+        716,
+        715
       ],
       "itNeverEnds": {
         "SummonID01": 2022050,
@@ -516,6 +568,10 @@ let enemyData = {
         719,
         720
       ],
+      "abilityOrder": [
+        716,
+        715
+      ],
       "itNeverEnds": {
         "SummonID01": 2022050,
         "SummonID02": 2022040
@@ -552,6 +608,10 @@ let enemyData = {
         719,
         720
       ],
+      "abilityOrder": [
+        716,
+        715
+      ],
       "itNeverEnds": {
         "SummonID01": 2022050,
         "SummonID02": 2022040
@@ -587,6 +647,10 @@ let enemyData = {
         718,
         719,
         720
+      ],
+      "abilityOrder": [
+        716,
+        715
       ],
       "enemyTag": [
         "MGrid_4005"
@@ -626,6 +690,10 @@ let enemyData = {
         718,
         719,
         720
+      ],
+      "abilityOrder": [
+        716,
+        715
       ],
       "itNeverEnds": {
         "SummonID01": 2022050,

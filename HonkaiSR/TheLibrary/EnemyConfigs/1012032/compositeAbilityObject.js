@@ -5,7 +5,8 @@ const compositeAbilityObject = {
   "abilityList": [
     "1012032_Monster_W1_Mecha01_01_FT_AbilityP01",
     "1012032_Monster_W1_Mecha01_01_FT_Ability01_Part02",
-    "1012032_Monster_W1_Mecha01_01_FT_Ability01_Part01"
+    "1012032_Monster_W1_Mecha01_01_FT_Ability01_Part01",
+    "1012032_Handling"
   ],
   "abilityObject": {
     "1012032_Monster_W1_Mecha01_01_FT_AbilityP01": {
@@ -94,6 +95,57 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
+      "references": []
+    },
+    "1012032_Handling": {
+      "fileName": "1012032_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "Common_SequenceThree_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSequenceSkill",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Sequence Ability Option"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Sequence Ability Use Value",
+                  "valueCheck": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "references": []
     }
   }

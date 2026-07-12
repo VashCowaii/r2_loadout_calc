@@ -48,6 +48,9 @@ let enemyData = {
         1039,
         1040
       ],
+      "abilityOrder": [
+        1007
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha01_02",
         "MonsterType_W3_Theater",

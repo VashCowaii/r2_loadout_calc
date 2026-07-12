@@ -48,6 +48,10 @@ let enemyData = {
         1162,
         1163
       ],
+      "abilityOrder": [
+        716,
+        715
+      ],
       "summons": [
         {
           "name": "Dreamjolt Troupe's Bubble Hound",
@@ -87,6 +91,10 @@ let enemyData = {
         1161,
         1162,
         1163
+      ],
+      "abilityOrder": [
+        716,
+        715
       ],
       "summons": [
         {
@@ -128,6 +136,10 @@ let enemyData = {
         1162,
         1163
       ],
+      "abilityOrder": [
+        716,
+        715
+      ],
       "summons": [
         {
           "name": "Dreamjolt Troupe's Bubble Hound",
@@ -167,6 +179,10 @@ let enemyData = {
         1161,
         1162,
         1163
+      ],
+      "abilityOrder": [
+        716,
+        715
       ],
       "summons": [
         {
@@ -208,6 +224,10 @@ let enemyData = {
         1162,
         1163
       ],
+      "abilityOrder": [
+        716,
+        715
+      ],
       "summons": [
         {
           "name": "Dreamjolt Troupe's Bubble Hound",
@@ -247,6 +267,10 @@ let enemyData = {
         1161,
         1162,
         1163
+      ],
+      "abilityOrder": [
+        716,
+        715
       ],
       "summons": [
         {
@@ -288,6 +312,10 @@ let enemyData = {
         1162,
         1163
       ],
+      "abilityOrder": [
+        716,
+        715
+      ],
       "summons": [
         {
           "name": "Dreamjolt Troupe's Bubble Hound",
@@ -327,6 +355,10 @@ let enemyData = {
         1161,
         1162,
         1163
+      ],
+      "abilityOrder": [
+        716,
+        715
       ],
       "summons": [
         {
@@ -368,6 +400,10 @@ let enemyData = {
         1162,
         1163
       ],
+      "abilityOrder": [
+        716,
+        715
+      ],
       "summons": [
         {
           "name": "Dreamjolt Troupe's Bubble Hound",
@@ -407,6 +443,10 @@ let enemyData = {
         1161,
         1162,
         1163
+      ],
+      "abilityOrder": [
+        716,
+        715
       ],
       "enemyTag": [
         "MGrid_4006"
@@ -451,6 +491,10 @@ let enemyData = {
         1162,
         1163
       ],
+      "abilityOrder": [
+        716,
+        715
+      ],
       "summons": [
         {
           "name": "Dreamjolt Troupe's Bubble Hound",
@@ -491,6 +535,10 @@ let enemyData = {
         1162,
         1163
       ],
+      "abilityOrder": [
+        716,
+        715
+      ],
       "summons": [
         {
           "name": "Dreamjolt Troupe's Bubble Hound",
@@ -530,6 +578,10 @@ let enemyData = {
         1160,
         1162,
         1163
+      ],
+      "abilityOrder": [
+        716,
+        715
       ],
       "summons": [
         {

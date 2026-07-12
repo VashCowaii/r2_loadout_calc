@@ -45,6 +45,9 @@ let enemyData = {
         1424,
         1425
       ],
+      "abilityOrder": [
+        1424
+      ],
       "enemyTag": [
         "Argenti_Totem"
       ]
@@ -75,6 +78,9 @@ let enemyData = {
       "abilities": [
         1424,
         1425
+      ],
+      "abilityOrder": [
+        1424
       ],
       "enemyTag": [
         "Argenti_Totem"
@@ -107,6 +113,9 @@ let enemyData = {
         1424,
         1425
       ],
+      "abilityOrder": [
+        1424
+      ],
       "enemyTag": [
         "Argenti_Totem"
       ]
@@ -137,6 +146,9 @@ let enemyData = {
       "abilities": [
         1424,
         1425
+      ],
+      "abilityOrder": [
+        1424
       ],
       "enemyTag": [
         "Argenti_Totem",

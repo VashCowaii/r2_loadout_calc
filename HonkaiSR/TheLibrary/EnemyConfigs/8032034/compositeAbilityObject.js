@@ -18,7 +18,8 @@ const compositeAbilityObject = {
     "8032034_Monster_W3_AventurinePart_Ability02_Part02",
     "8032034_Monster_W3_AventurinePart_Ability02_Part01",
     "8032034_Monster_W3_AventurinePart_Ability01_Part02",
-    "8032034_Monster_W3_AventurinePart_Ability01_Part01"
+    "8032034_Monster_W3_AventurinePart_Ability01_Part01",
+    "8032034_Handling"
   ],
   "abilityObject": {
     "8032034_Modifiers": {
@@ -4921,6 +4922,57 @@ const compositeAbilityObject = {
       "targetObjectData": {
         "primaryTarget": "{{Caster}}"
       },
+      "references": []
+    },
+    "8032034_Handling": {
+      "fileName": "8032034_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "Common_SequenceThree_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSequenceSkill",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Sequence Ability Option"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Sequence Ability Use Value",
+                  "valueCheck": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "references": []
     }
   }

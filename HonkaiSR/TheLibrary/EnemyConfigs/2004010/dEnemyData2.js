@@ -52,6 +52,9 @@ let enemyData = {
         515,
         516
       ],
+      "abilityOrder": [
+        511
+      ],
       "enemyTag": [
         "W2_Kafka"
       ]
@@ -89,6 +92,9 @@ let enemyData = {
         514,
         515,
         516
+      ],
+      "abilityOrder": [
+        511
       ],
       "enemyTag": [
         "W2_Kafka",
@@ -129,6 +135,9 @@ let enemyData = {
         515,
         516
       ],
+      "abilityOrder": [
+        511
+      ],
       "enemyTag": [
         "W2_Kafka"
       ]
@@ -166,6 +175,9 @@ let enemyData = {
         514,
         515,
         516
+      ],
+      "abilityOrder": [
+        511
       ],
       "enemyTag": [
         "W2_Kafka"
@@ -205,6 +217,9 @@ let enemyData = {
         515,
         516
       ],
+      "abilityOrder": [
+        511
+      ],
       "enemyTag": [
         "W2_Kafka"
       ]
@@ -243,6 +258,9 @@ let enemyData = {
         515,
         516
       ],
+      "abilityOrder": [
+        511
+      ],
       "enemyTag": [
         "W2_Kafka"
       ]
@@ -280,6 +298,9 @@ let enemyData = {
         514,
         515,
         516
+      ],
+      "abilityOrder": [
+        511
       ],
       "enemyTag": [
         "W2_Kafka",
@@ -320,6 +341,9 @@ let enemyData = {
         515,
         516
       ],
+      "abilityOrder": [
+        511
+      ],
       "enemyTag": [
         "W2_Kafka"
       ]
@@ -357,6 +381,9 @@ let enemyData = {
         514,
         515,
         516
+      ],
+      "abilityOrder": [
+        511
       ],
       "enemyTag": [
         "W2_Kafka"
@@ -396,6 +423,9 @@ let enemyData = {
         515,
         516
       ],
+      "abilityOrder": [
+        511
+      ],
       "enemyTag": [
         "W2_Kafka",
         "NoDieEffect"
@@ -434,6 +464,9 @@ let enemyData = {
         514,
         515,
         516
+      ],
+      "abilityOrder": [
+        511
       ],
       "enemyTag": [
         "W2_Kafka"

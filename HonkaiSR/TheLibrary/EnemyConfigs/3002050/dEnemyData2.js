@@ -35,6 +35,10 @@ let enemyData = {
         1077,
         1078
       ],
+      "abilityOrder": [
+        1076,
+        1077
+      ],
       "enemyTag": [
         "MonsterType_W3_Junk_00"
       ]
@@ -55,6 +59,10 @@ let enemyData = {
         1076,
         1077,
         1078
+      ],
+      "abilityOrder": [
+        1076,
+        1077
       ],
       "enemyTag": [
         "MonsterType_W3_Junk_00"
@@ -77,6 +85,10 @@ let enemyData = {
         1077,
         1078
       ],
+      "abilityOrder": [
+        1076,
+        1077
+      ],
       "enemyTag": [
         "MonsterType_W3_Junk_00"
       ]
@@ -97,6 +109,10 @@ let enemyData = {
         1076,
         1077,
         1078
+      ],
+      "abilityOrder": [
+        1076,
+        1077
       ],
       "enemyTag": [
         "MonsterType_W3_Junk_00"
@@ -119,6 +135,10 @@ let enemyData = {
         1077,
         1078
       ],
+      "abilityOrder": [
+        1076,
+        1077
+      ],
       "enemyTag": [
         "MonsterType_W3_Junk_00"
       ]
@@ -140,6 +160,10 @@ let enemyData = {
         1077,
         1078
       ],
+      "abilityOrder": [
+        1076,
+        1077
+      ],
       "enemyTag": [
         "MonsterType_W3_Junk_00"
       ]
@@ -160,6 +184,10 @@ let enemyData = {
         1076,
         1077,
         1078
+      ],
+      "abilityOrder": [
+        1076,
+        1077
       ],
       "enemyTag": [
         "MonsterType_W3_Junk_00"

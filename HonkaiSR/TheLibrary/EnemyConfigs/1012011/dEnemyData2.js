@@ -44,6 +44,9 @@ let enemyData = {
       "abilities": [
         265,
         266
+      ],
+      "abilityOrder": [
+        266
       ]
     },
     "101201101": {
@@ -71,6 +74,9 @@ let enemyData = {
       },
       "abilities": [
         265,
+        266
+      ],
+      "abilityOrder": [
         266
       ],
       "enemyTag": [

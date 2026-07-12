@@ -45,6 +45,9 @@ let enemyData = {
         3222,
         3223
       ],
+      "abilityOrder": [
+        3221
+      ],
       "enemyTag": [
         "Company"
       ]
@@ -76,6 +79,9 @@ let enemyData = {
         3221,
         3222,
         3223
+      ],
+      "abilityOrder": [
+        3221
       ],
       "enemyTag": [
         "Company"
@@ -109,6 +115,9 @@ let enemyData = {
         3222,
         3223
       ],
+      "abilityOrder": [
+        3221
+      ],
       "enemyTag": [
         "Company"
       ]
@@ -140,6 +149,9 @@ let enemyData = {
         3221,
         3222,
         3223
+      ],
+      "abilityOrder": [
+        3221
       ],
       "enemyTag": [
         "Company"
@@ -173,6 +185,9 @@ let enemyData = {
         3222,
         3223
       ],
+      "abilityOrder": [
+        3221
+      ],
       "enemyTag": [
         "Company"
       ]
@@ -204,6 +219,9 @@ let enemyData = {
         3221,
         3222,
         3223
+      ],
+      "abilityOrder": [
+        3221
       ],
       "enemyTag": [
         "Company"
@@ -237,6 +255,9 @@ let enemyData = {
         3222,
         3223
       ],
+      "abilityOrder": [
+        3221
+      ],
       "enemyTag": [
         "Company"
       ]
@@ -268,6 +289,9 @@ let enemyData = {
         3221,
         3222,
         3223
+      ],
+      "abilityOrder": [
+        3221
       ],
       "enemyTag": [
         "Company"
@@ -301,6 +325,9 @@ let enemyData = {
         3222,
         3223
       ],
+      "abilityOrder": [
+        3221
+      ],
       "enemyTag": [
         "Company"
       ]
@@ -332,6 +359,9 @@ let enemyData = {
         3221,
         3222,
         3223
+      ],
+      "abilityOrder": [
+        3221
       ],
       "enemyTag": [
         "Company"
@@ -365,6 +395,9 @@ let enemyData = {
         3222,
         3223
       ],
+      "abilityOrder": [
+        3221
+      ],
       "enemyTag": [
         "Company"
       ]
@@ -396,6 +429,9 @@ let enemyData = {
         3221,
         3222,
         3223
+      ],
+      "abilityOrder": [
+        3221
       ],
       "enemyTag": [
         "Company"
@@ -429,6 +465,9 @@ let enemyData = {
         3222,
         3223
       ],
+      "abilityOrder": [
+        3221
+      ],
       "enemyTag": [
         "Company"
       ]
@@ -460,6 +499,9 @@ let enemyData = {
         3221,
         3222,
         3223
+      ],
+      "abilityOrder": [
+        3221
       ],
       "enemyTag": [
         "Company"

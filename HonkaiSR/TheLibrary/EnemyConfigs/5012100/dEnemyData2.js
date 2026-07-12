@@ -46,6 +46,9 @@ let enemyData = {
         2550,
         2551,
         2552
+      ],
+      "abilityOrder": [
+        2549
       ]
     },
     "501210001": {
@@ -76,6 +79,9 @@ let enemyData = {
         2550,
         2551,
         2552
+      ],
+      "abilityOrder": [
+        2549
       ]
     }
   }

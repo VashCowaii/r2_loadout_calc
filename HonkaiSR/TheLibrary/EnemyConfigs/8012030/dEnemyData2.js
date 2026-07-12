@@ -44,6 +44,10 @@ let enemyData = {
       "abilities": [
         2945,
         2946
+      ],
+      "abilityOrder": [
+        2945,
+        2946
       ]
     },
     "801203001": {
@@ -70,6 +74,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2945,
+        2946
+      ],
+      "abilityOrder": [
         2945,
         2946
       ],
@@ -104,6 +112,10 @@ let enemyData = {
         2945,
         2946
       ],
+      "abilityOrder": [
+        2945,
+        2946
+      ],
       "enemyTag": [
         "LockTarget801203002"
       ]
@@ -134,6 +146,10 @@ let enemyData = {
       "abilities": [
         2945,
         2946
+      ],
+      "abilityOrder": [
+        2945,
+        2946
       ]
     },
     "801203004": {
@@ -160,6 +176,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2945,
+        2946
+      ],
+      "abilityOrder": [
         2945,
         2946
       ]
@@ -190,6 +210,10 @@ let enemyData = {
       "abilities": [
         2945,
         2946
+      ],
+      "abilityOrder": [
+        2945,
+        2946
       ]
     },
     "801203006": {
@@ -216,6 +240,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2945,
+        2946
+      ],
+      "abilityOrder": [
         2945,
         2946
       ]
@@ -246,6 +274,10 @@ let enemyData = {
       "abilities": [
         2945,
         2946
+      ],
+      "abilityOrder": [
+        2945,
+        2946
       ]
     },
     "801203008": {
@@ -272,6 +304,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2945,
+        2946
+      ],
+      "abilityOrder": [
         2945,
         2946
       ]
@@ -302,6 +338,10 @@ let enemyData = {
       "abilities": [
         2945,
         2946
+      ],
+      "abilityOrder": [
+        2945,
+        2946
       ]
     },
     "801203010": {
@@ -328,6 +368,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2945,
+        2946
+      ],
+      "abilityOrder": [
         2945,
         2946
       ]
@@ -359,6 +403,10 @@ let enemyData = {
         2945,
         2946
       ],
+      "abilityOrder": [
+        2945,
+        2946
+      ],
       "enemyTag": [
         "MGrid_4007"
       ]
@@ -387,6 +435,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        2945,
+        2946
+      ],
+      "abilityOrder": [
         2945,
         2946
       ]

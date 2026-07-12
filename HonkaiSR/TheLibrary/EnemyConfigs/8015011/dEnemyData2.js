@@ -42,6 +42,10 @@ let enemyData = {
       "abilities": [
         3062
       ],
+      "abilityOrder": [
+        "ABILITY__DOES_NOT_EXIST",
+        "ABILITY__DOES_NOT_EXIST"
+      ],
       "summons": [
         {
           "name": "Disaster's Right Hand",

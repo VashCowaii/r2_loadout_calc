@@ -42,6 +42,9 @@ let enemyData = {
       },
       "abilities": [
         510
+      ],
+      "abilityOrder": [
+        510
       ]
     },
     "200203201": {
@@ -69,6 +72,9 @@ let enemyData = {
       },
       "abilities": [
         510
+      ],
+      "abilityOrder": [
+        510
       ]
     },
     "200203202": {
@@ -95,6 +101,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        510
+      ],
+      "abilityOrder": [
         510
       ]
     }

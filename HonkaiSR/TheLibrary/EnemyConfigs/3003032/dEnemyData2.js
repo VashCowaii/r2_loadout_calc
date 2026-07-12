@@ -50,6 +50,13 @@ let enemyData = {
         1191,
         1192
       ],
+      "abilityOrder": [
+        1186,
+        1187,
+        1188,
+        1189,
+        1190
+      ],
       "enemyTag": [
         "W3_Figure_02"
       ],

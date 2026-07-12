@@ -10,7 +10,8 @@ const compositeAbilityObject = {
     "4043010_Monster_W4_Herta_Ability01_Part01_Insert",
     "4043010_Monster_W4_Herta_Ability01_Part02",
     "4043010_Monster_W4_Herta_Ability01_Part01",
-    "4043010_Functions"
+    "4043010_Functions",
+    "4043010_Handling"
   ],
   "abilityObject": {
     "4043010_Modifiers": {
@@ -1311,6 +1312,57 @@ const compositeAbilityObject = {
                   "name": "Set Action-State",
                   "on": null,
                   "stateName": "Monster_Herta"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "4043010_Handling": {
+      "fileName": "4043010_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "Common_SequenceThree_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSequenceSkill",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Sequence Ability Option"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Sequence Ability Use Value",
+                  "valueCheck": 1
                 }
               ]
             }

@@ -43,6 +43,9 @@ let enemyData = {
       },
       "abilities": [
         644
+      ],
+      "abilityOrder": [
+        644
       ]
     },
     "201101001": {
@@ -69,6 +72,9 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        644
+      ],
+      "abilityOrder": [
         644
       ]
     },
@@ -97,6 +103,9 @@ let enemyData = {
       },
       "abilities": [
         644
+      ],
+      "abilityOrder": [
+        644
       ]
     },
     "201101003": {
@@ -123,6 +132,9 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        644
+      ],
+      "abilityOrder": [
         644
       ]
     },
@@ -151,6 +163,9 @@ let enemyData = {
       },
       "abilities": [
         644
+      ],
+      "abilityOrder": [
+        644
       ]
     },
     "201101005": {
@@ -177,6 +192,9 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        644
+      ],
+      "abilityOrder": [
         644
       ],
       "enemyTag": [
@@ -207,6 +225,9 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
+        644
+      ],
+      "abilityOrder": [
         644
       ]
     }

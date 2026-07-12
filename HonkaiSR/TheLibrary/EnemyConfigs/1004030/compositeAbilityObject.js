@@ -13,7 +13,11 @@ const compositeAbilityObject = {
     "1004030_Monster_W1_Bronya_Ability02_Part02",
     "1004030_Monster_W1_Bronya_Ability02_Part01",
     "1004030_Monster_W1_Bronya_Ability01_Part02",
-    "1004030_Monster_W1_Bronya_Ability01_Part01"
+    "1004030_Monster_W1_Bronya_Ability01_Part01",
+    "1004030_Handling",
+    "1004030_Handling_OVERRIDE_100403004",
+    "1004030_Handling_OVERRIDE_100403007",
+    "1004030_Handling_OVERRIDE_100403008"
   ],
   "abilityObject": {
     "1004030_Modifiers": {
@@ -1124,6 +1128,1054 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
+      "references": []
+    },
+    "1004030_Handling": {
+      "fileName": "1004030_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "RO_015_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill01",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill01"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 1,
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill02",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "Bronya_AICounter_Act2",
+                      "value": 1
+                    },
+                    {
+                      "name": "Choose Ability Target",
+                      "skillName": "Skill02",
+                      "target": {
+                        "name": "Select by Target Pool",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "invertCondition": true
+                      }
+                    },
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill02"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 1,
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "NOT",
+                        "condition": {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                        }
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Bronya_AICounter_Act2",
+                        "compareType": "=",
+                        "value2": 2,
+                        "contextScope": "TargetEntity"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members(Exclude Self)}}"
+                        },
+                        "value1": "TeamCharacterCount",
+                        "compareType": ">=",
+                        "value2": 1
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill03",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "Bronya_AICounter_Act2",
+                      "value": 1
+                    },
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill03"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 1,
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "NOT",
+                        "condition": {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                        }
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Bronya_AICounter_Act2",
+                        "compareType": "=",
+                        "value2": 2,
+                        "contextScope": "TargetEntity"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members(Exclude Self)}}"
+                        },
+                        "value1": "TeamCharacterCount",
+                        "compareType": "=",
+                        "value2": 0
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill04",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "Bronya_AICounter_Act2",
+                      "value": 2
+                    },
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill04"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 1,
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "NOT",
+                        "condition": {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                        }
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Bronya_AICounter_Act2",
+                        "compareType": "=",
+                        "value2": 1,
+                        "contextScope": "TargetEntity"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "1004030_Handling_OVERRIDE_100403004": {
+      "fileName": "1004030_Handling_OVERRIDE_100403004",
+      "abilityType": "Handling_100403004",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "RO_015_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill01",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill01"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 1,
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill02",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "Bronya_AICounter_Act2",
+                      "value": 1
+                    },
+                    {
+                      "name": "Choose Ability Target",
+                      "skillName": "Skill02",
+                      "target": {
+                        "name": "Select by Target Pool",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "invertCondition": true
+                      }
+                    },
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill02"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 1,
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "NOT",
+                        "condition": {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                        }
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Bronya_AICounter_Act2",
+                        "compareType": "=",
+                        "value2": 2,
+                        "contextScope": "TargetEntity"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members(Exclude Self)}}"
+                        },
+                        "value1": "TeamCharacterCount",
+                        "compareType": ">=",
+                        "value2": 1
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill03",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "Bronya_AICounter_Act2",
+                      "value": 1
+                    },
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill03"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 1,
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "NOT",
+                        "condition": {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                        }
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Bronya_AICounter_Act2",
+                        "compareType": "=",
+                        "value2": 2,
+                        "contextScope": "TargetEntity"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members(Exclude Self)}}"
+                        },
+                        "value1": "TeamCharacterCount",
+                        "compareType": "=",
+                        "value2": 0
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill04",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "Bronya_AICounter_Act2",
+                      "value": 2
+                    },
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill04"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 1,
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "NOT",
+                        "condition": {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                        }
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Bronya_AICounter_Act2",
+                        "compareType": "=",
+                        "value2": 1,
+                        "contextScope": "TargetEntity"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "1004030_Handling_OVERRIDE_100403007": {
+      "fileName": "1004030_Handling_OVERRIDE_100403007",
+      "abilityType": "Handling_100403007",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "RO_015_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill01",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill01"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 1,
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill02",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "Bronya_AICounter_Act2",
+                      "value": 1
+                    },
+                    {
+                      "name": "Choose Ability Target",
+                      "skillName": "Skill02",
+                      "target": {
+                        "name": "Select by Target Pool",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "invertCondition": true
+                      }
+                    },
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill02"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 1,
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "NOT",
+                        "condition": {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                        }
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Bronya_AICounter_Act2",
+                        "compareType": "=",
+                        "value2": 2,
+                        "contextScope": "TargetEntity"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members(Exclude Self)}}"
+                        },
+                        "value1": "TeamCharacterCount",
+                        "compareType": ">=",
+                        "value2": 1
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill03",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "Bronya_AICounter_Act2",
+                      "value": 1
+                    },
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill03"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 1,
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "NOT",
+                        "condition": {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                        }
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Bronya_AICounter_Act2",
+                        "compareType": "=",
+                        "value2": 2,
+                        "contextScope": "TargetEntity"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members(Exclude Self)}}"
+                        },
+                        "value1": "TeamCharacterCount",
+                        "compareType": "=",
+                        "value2": 0
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill04",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "Bronya_AICounter_Act2",
+                      "value": 2
+                    },
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill04"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 1,
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "NOT",
+                        "condition": {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                        }
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Bronya_AICounter_Act2",
+                        "compareType": "=",
+                        "value2": 1,
+                        "contextScope": "TargetEntity"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "1004030_Handling_OVERRIDE_100403008": {
+      "fileName": "1004030_Handling_OVERRIDE_100403008",
+      "abilityType": "Handling_100403008",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "RO_015_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill01",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill01"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 1,
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill02",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "Bronya_AICounter_Act2",
+                      "value": 1
+                    },
+                    {
+                      "name": "Choose Ability Target",
+                      "skillName": "Skill02",
+                      "target": {
+                        "name": "Select by Target Pool",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "invertCondition": true
+                      }
+                    },
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill02"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 1,
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "NOT",
+                        "condition": {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                        }
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Bronya_AICounter_Act2",
+                        "compareType": "=",
+                        "value2": 2,
+                        "contextScope": "TargetEntity"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members(Exclude Self)}}"
+                        },
+                        "value1": "TeamCharacterCount",
+                        "compareType": ">=",
+                        "value2": 1
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill03",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "Bronya_AICounter_Act2",
+                      "value": 1
+                    },
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill03"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 1,
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "NOT",
+                        "condition": {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                        }
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Bronya_AICounter_Act2",
+                        "compareType": "=",
+                        "value2": 2,
+                        "contextScope": "TargetEntity"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members(Exclude Self)}}"
+                        },
+                        "value1": "TeamCharacterCount",
+                        "compareType": "=",
+                        "value2": 0
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill04",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "Bronya_AICounter_Act2",
+                      "value": 2
+                    },
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill04"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 1,
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "NOT",
+                        "condition": {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                        }
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "Bronya_AICounter_Act2",
+                        "compareType": "=",
+                        "value2": 1,
+                        "contextScope": "TargetEntity"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "references": []
     }
   }

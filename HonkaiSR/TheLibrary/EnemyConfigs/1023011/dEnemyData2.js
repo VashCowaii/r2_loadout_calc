@@ -54,6 +54,10 @@ let enemyData = {
         480,
         481
       ],
+      "abilityOrder": [
+        475,
+        476
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2",
         "SPRL"

@@ -43,6 +43,9 @@ let enemyData = {
       "abilities": [
         680,
         681
+      ],
+      "abilityOrder": [
+        680
       ]
     },
     "202204001": {
@@ -71,6 +74,9 @@ let enemyData = {
       "abilities": [
         680,
         681
+      ],
+      "abilityOrder": [
+        680
       ]
     },
     "202204002": {
@@ -99,6 +105,9 @@ let enemyData = {
       "abilities": [
         680,
         681
+      ],
+      "abilityOrder": [
+        680
       ]
     },
     "202204003": {
@@ -127,6 +136,9 @@ let enemyData = {
       "abilities": [
         680,
         681
+      ],
+      "abilityOrder": [
+        680
       ]
     },
     "202204004": {
@@ -155,6 +167,9 @@ let enemyData = {
       "abilities": [
         680,
         681
+      ],
+      "abilityOrder": [
+        680
       ]
     },
     "202204005": {
@@ -183,6 +198,9 @@ let enemyData = {
       "abilities": [
         680,
         681
+      ],
+      "abilityOrder": [
+        680
       ]
     },
     "202204006": {
@@ -211,6 +229,9 @@ let enemyData = {
       "abilities": [
         680,
         681
+      ],
+      "abilityOrder": [
+        680
       ],
       "enemyTag": [
         "MGrid_4005"
@@ -242,6 +263,9 @@ let enemyData = {
       "abilities": [
         680,
         681
+      ],
+      "abilityOrder": [
+        680
       ]
     }
   }

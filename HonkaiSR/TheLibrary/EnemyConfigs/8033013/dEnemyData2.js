@@ -49,6 +49,13 @@ let enemyData = {
         3262,
         3263
       ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
+      ],
       "enemyTag": [
         "Company"
       ],
@@ -100,6 +107,13 @@ let enemyData = {
         3261,
         3262,
         3263
+      ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
       ],
       "enemyTag": [
         "Company"

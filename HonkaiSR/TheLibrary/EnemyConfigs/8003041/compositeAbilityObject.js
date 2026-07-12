@@ -23,7 +23,8 @@ const compositeAbilityObject = {
     "8003041_Monster_XP_Elite02_01_AbilityP01_Part02",
     "8003041_Monster_XP_Elite02_01_AbilityP01_Part01",
     "8003041_Monster_XP_Elite02_01_Ability01_Part02",
-    "8003041_Monster_XP_Elite02_01_Ability01_Part01"
+    "8003041_Monster_XP_Elite02_01_Ability01_Part01",
+    "8003041_Handling"
   ],
   "abilityObject": {
     "8003041_Modifiers": {
@@ -9476,6 +9477,213 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "{{Caster}}"
       },
+      "references": []
+    },
+    "8003041_Handling": {
+      "fileName": "8003041_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "XP_Elite02_01_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "Decision01",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "Monster_XP_Elite02_01_AIFlag",
+                      "value": 4
+                    },
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill02"
+                    }
+                  ]
+                }
+              ],
+              "weight": 0.5,
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 0.5,
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Monster_XP_Elite02_01_AIFlag",
+                    "compareType": "=",
+                    "value2": 1,
+                    "contextScope": "TargetEntity"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HANDLER OPTION",
+              "option": "Decision02",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "Monster_XP_Elite02_01_AIFlag",
+                      "value": 5
+                    },
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill05"
+                    }
+                  ]
+                }
+              ],
+              "weight": 0.5,
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 0.5,
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Monster_XP_Elite02_01_AIFlag",
+                    "compareType": "=",
+                    "value2": 4,
+                    "contextScope": "TargetEntity"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HANDLER OPTION",
+              "option": "Decision05",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "Monster_XP_Elite02_01_AIFlag",
+                      "value": 6
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "EnergyLayer",
+                        "compareType": "=",
+                        "value2": 0
+                      },
+                      "passed": [
+                        {
+                          "name": "Use Ability Option",
+                          "skillName": "Skill06"
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Use Ability Option",
+                          "skillName": "Skill04"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "weight": 0.5,
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 0.5,
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Monster_XP_Elite02_01_AIFlag",
+                    "compareType": "=",
+                    "value2": 5,
+                    "contextScope": "TargetEntity"
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HANDLER OPTION",
+              "option": "Decision02",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "Monster_XP_Elite02_01_AIFlag",
+                      "value": 1
+                    },
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill03"
+                    }
+                  ]
+                }
+              ],
+              "weight": 0.5,
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 0.5,
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Monster_XP_Elite02_01_AIFlag",
+                    "compareType": "=",
+                    "value2": 6,
+                    "contextScope": "TargetEntity"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "references": []
     }
   }

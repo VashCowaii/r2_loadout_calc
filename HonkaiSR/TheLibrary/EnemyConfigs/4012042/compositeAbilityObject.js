@@ -7,7 +7,8 @@ const compositeAbilityObject = {
     "4012042_Monster_AML_Minion03_01_LocalLegend_Ability02_Part01",
     "4012042_Monster_AML_Minion03_01_LocalLegend_Ability01_Part02",
     "4012042_Monster_AML_Minion03_01_LocalLegend_Ability01_Part01",
-    "4012042_Monster_AML_Minion03_01_LocalLegend_Ability01_PassiveSkillInitiate"
+    "4012042_Monster_AML_Minion03_01_LocalLegend_Ability01_PassiveSkillInitiate",
+    "4012042_Handling"
   ],
   "abilityObject": {
     "4012042_Monster_AML_Minion03_01_LocalLegend_Ability02_Part02": {
@@ -195,6 +196,59 @@ const compositeAbilityObject = {
           ]
         }
       ]
+    },
+    "4012042_Handling": {
+      "fileName": "4012042_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "Decision01",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Choose Ability Target",
+                      "skillName": "Skill02",
+                      "target": {
+                        "name": "Select by Target Pool",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "invertCondition": true
+                      }
+                    },
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill02"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE"
+            }
+          ]
+        }
+      ],
+      "references": []
     }
   }
 }

@@ -48,6 +48,9 @@ let enemyData = {
       "abilities": [
         1731
       ],
+      "abilityOrder": [
+        1731
+      ],
       "enemyTag": [
         "MonsterType_W4_BossPartP3",
         "MonsterType_W4_BossPart",

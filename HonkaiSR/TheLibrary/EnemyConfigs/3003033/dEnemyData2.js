@@ -53,6 +53,13 @@ let enemyData = {
         1198,
         1199
       ],
+      "abilityOrder": [
+        1186,
+        1187,
+        1188,
+        1189,
+        1190
+      ],
       "enemyTag": [
         "W3_Figure_02"
       ],
@@ -94,6 +101,13 @@ let enemyData = {
         1197,
         1198,
         1199
+      ],
+      "abilityOrder": [
+        1186,
+        1187,
+        1188,
+        1189,
+        1190
       ],
       "enemyTag": [
         "W3_Figure_02",

@@ -8,7 +8,8 @@ const compositeAbilityObject = {
     "4034020_Monster_W4_Phainon_PassiveInsert01",
     "4034020_Monster_W4_Phainon_BattlePerform2",
     "4034020_Monster_W4_Phainon_BattlePerform1",
-    "4034020_Monster_W4_Phainon_PassiveAbilityInitiate"
+    "4034020_Monster_W4_Phainon_PassiveAbilityInitiate",
+    "4034020_Handling"
   ],
   "abilityObject": {
     "4034020_Modifiers": {
@@ -1122,6 +1123,57 @@ const compositeAbilityObject = {
           ]
         }
       ]
+    },
+    "4034020_Handling": {
+      "fileName": "4034020_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "Common_SequenceThree_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSequenceSkill",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Sequence Ability Option"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Sequence Ability Use Value",
+                  "valueCheck": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
     }
   }
 }

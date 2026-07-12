@@ -50,6 +50,13 @@ let enemyData = {
         309,
         310
       ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
+      ],
       "enemyTag": [
         "MonsterType_W1_Mecha2",
         "SPRL"
@@ -100,6 +107,13 @@ let enemyData = {
         308,
         309,
         310
+      ],
+      "abilityOrder": [
+        304,
+        299,
+        300,
+        301,
+        302
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2",

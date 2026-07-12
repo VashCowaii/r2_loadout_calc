@@ -3516,10 +3516,35 @@ const userTriggers = {
         let charRef = enemyData;//compositeAbilityObject
         const newCharRef = charRef.options[enemyVariantSelected];
         const newCharAbilitiesRef = newCharRef.abilities;
+        const newCahrAbilitiesOrder = newCharRef.abilityOrder;
         const paramOverrides = newCharRef.overrideParams;
 
         let newSkillsObject = {};
         let isForReaderObject = {};
+
+        let finalOrder = [];
+        if (newCahrAbilitiesOrder?.length) {
+            for (let entry of newCahrAbilitiesOrder) {
+                if (entry === "ABILITY__DOES_NOT_EXIST") {
+                    finalOrder.push({
+                        name: "ABILITY__DOES_NOT_EXIST",
+                        tag: "-N/A-",
+                        isAlert: null,
+                        element: null,
+                    });
+                    continue;
+                }
+                const currentSkillEntry = enemyAbilityData[entry];
+
+                finalOrder.push({
+                    name: currentSkillEntry.name ?? "-N/A-",
+                    tag: currentSkillEntry.type ?? "-N/A-",
+                    isAlert: currentSkillEntry.isAlert,
+                    element: currentSkillEntry.element,
+                });
+            }
+        }
+
 
         if (newCharAbilitiesRef?.length) {
             for (let enemyAbility of newCharAbilitiesRef) {
@@ -3636,6 +3661,12 @@ const userTriggers = {
             newSkillsObject = null;
             return isForReaderObject;
         }
+
+        if (finalOrder?.length) {
+            newSkillsObject.finalOrder = finalOrder;
+        }
+
+        
 
         return newSkillsObject;
     },
@@ -3766,9 +3797,61 @@ const userTriggers = {
 
 
         let newSkillsObject = userTriggers.getEnemySkillsObject();
+        console.log(newSkillsObject.finalOrder)
         let overviewString = ``;
+
+
+        if (newSkillsObject.finalOrder?.length) {
+            let orderString = "";
+            for (let finalEntry of newSkillsObject.finalOrder) {
+                orderString += `<div class="eidolonRowBoxHolderEnemy">
+                    <div class="eidolonRowIconHolderEnemy">
+                        <img src="/HonkaiSR/${finalEntry.element ? `icon/element/${finalEntry.element}` : "icon/sign/CommonTabIcon"}.png" class="eidolonRowIconEnemy"/>
+                    </div>
+                    ${finalEntry.isAlert ? `<div class="eidolonRowIconHolderEnemy">
+                        <img src="/HonkaiSR/misc/IconBossAlert.png" class="eidolonRowIconEnemyAlert"/>
+                    </div>` : ""}
+                    <div class="rightDescriptionBoxEidolonsEnemy smallFont" style="width: 100%;">
+                        <div class="eidolonRowNameTrigger">${finalEntry.name} <span class="traceAttackTargetType">[${finalEntry.tag}]</span></div>
+                    </div>
+                </div>`
+            }
+
+
+            overviewString += `
+
+            <details class="rotationsPermaConditionsExpand">
+                <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
+                    <div class="rotationConditionOperatorHeaderCondition">Toggle Default Ability Sequence:</div>
+                </summary>
+
+
+                <div class="rotationsSectionRowHolder1Overview">
+
+                    <div class="customMenuSearchNote">The sequence order is something enemies have to opt-in for on each ability use, and each time they opt-in it progresses the chain of abilities inside.
+                    <br>It does not necessarily dictate the real order of abilities since:
+                    <br>A) other conditions may force an ability selection outside the chain.
+                    <br>B) an ability in the sequence may not even exist on this enemy, or the sequence is completely unused.
+                    <br><br>See the Event-Reader's "_Handler" dropdown for this entity, to learn more</div>
+
+                    <div class="rotationsSectionRowHolder3Overview">
+                        ${orderString}
+                    </div>
+
+                </div>
+        </details>`;
+
+        }
+
+
+
+
+
+
+
         // let rankCounter = 0;
         for (let traceEntry in newSkillsObject) {
+            if (traceEntry === "finalOrder") {continue}
             const currentTraceRef = traceEntry;
             const currentTraceSlot = newSkillsObject[traceEntry];
             // if (!currentTraceRef.desc && !currentTraceRef.skillRef) {continue}

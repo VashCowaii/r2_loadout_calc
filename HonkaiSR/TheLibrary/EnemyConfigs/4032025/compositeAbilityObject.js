@@ -12,7 +12,8 @@ const compositeAbilityObject = {
     "4032025_Monster_W4_FireProwler_11_Main03_Ability03_Part01",
     "4032025_Monster_W4_FireProwler_11_Main03_Ability02_Assist",
     "4032025_Monster_W4_FireProwler_11_Main03_Ability01_Assist",
-    "4032025_Functions"
+    "4032025_Functions",
+    "4032025_Handling"
   ],
   "abilityObject": {
     "4032025_Modifiers": {
@@ -4260,6 +4261,91 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "variableName": "CurrentBounsIndex",
                   "value": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "4032025_Handling": {
+      "fileName": "4032025_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill04",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill04"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 0.5,
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"1578257108\">Enemy_W4_FireProwler_01_IF_Bonus</a>[<span class=\"descriptionNumberColor\">Complete Vessel</span>]"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill03",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill03"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Value",
+                  "skillName": "Skill03",
+                  "firstCD": 1,
+                  "regCD": 1,
+                  "valueCheck": 0.1
                 }
               ]
             }

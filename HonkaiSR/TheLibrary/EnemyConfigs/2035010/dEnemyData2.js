@@ -60,6 +60,9 @@ let enemyData = {
         943,
         944
       ],
+      "abilityOrder": [
+        "ABILITY__DOES_NOT_EXIST"
+      ],
       "enemyTag": [
         "SuperArmor_Behit_VerySmall"
       ],

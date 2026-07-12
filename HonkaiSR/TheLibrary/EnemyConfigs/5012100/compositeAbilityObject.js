@@ -9,7 +9,8 @@ const compositeAbilityObject = {
     "5012100_Monster_W5_Magical_Ability03_Part01",
     "5012100_Monster_W5_Magical_Ability02_Part01",
     "5012100_Monster_W5_Magical_Ability01_Part02",
-    "5012100_Monster_W5_Magical_Ability01_Part01"
+    "5012100_Monster_W5_Magical_Ability01_Part01",
+    "5012100_Handling"
   ],
   "abilityObject": {
     "5012100_Modifiers": {
@@ -1082,6 +1083,57 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
+      "references": []
+    },
+    "5012100_Handling": {
+      "fileName": "5012100_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "Common_SequenceThree_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSequenceSkill",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Sequence Ability Option"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Sequence Ability Use Value",
+                  "valueCheck": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "references": []
     }
   }

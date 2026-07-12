@@ -35,6 +35,10 @@ let enemyData = {
         1083,
         1084
       ],
+      "abilityOrder": [
+        1082,
+        1083
+      ],
       "enemyTag": [
         "MonsterType_W3_Junk_00"
       ]
@@ -55,6 +59,10 @@ let enemyData = {
         1082,
         1083,
         1084
+      ],
+      "abilityOrder": [
+        1082,
+        1083
       ],
       "enemyTag": [
         "MonsterType_W3_Junk_00"

@@ -56,6 +56,14 @@ let enemyData = {
         796,
         797
       ],
+      "abilityOrder": [
+        793,
+        794,
+        793,
+        795,
+        793,
+        794
+      ],
       "enemyTag": [
         "MonsterType_Xuanlu"
       ],
@@ -119,6 +127,14 @@ let enemyData = {
         795,
         796,
         797
+      ],
+      "abilityOrder": [
+        793,
+        794,
+        793,
+        795,
+        793,
+        794
       ],
       "enemyTag": [
         "MonsterType_Xuanlu"
@@ -184,6 +200,14 @@ let enemyData = {
         796,
         797
       ],
+      "abilityOrder": [
+        793,
+        794,
+        793,
+        795,
+        793,
+        794
+      ],
       "enemyTag": [
         "MonsterType_Xuanlu"
       ],
@@ -247,6 +271,14 @@ let enemyData = {
         795,
         796,
         797
+      ],
+      "abilityOrder": [
+        793,
+        794,
+        793,
+        795,
+        793,
+        794
       ],
       "enemyTag": [
         "MonsterType_Xuanlu"
@@ -312,6 +344,14 @@ let enemyData = {
         796,
         797
       ],
+      "abilityOrder": [
+        793,
+        794,
+        793,
+        795,
+        793,
+        794
+      ],
       "enemyTag": [
         "MonsterType_Xuanlu"
       ],
@@ -375,6 +415,14 @@ let enemyData = {
         795,
         796,
         797
+      ],
+      "abilityOrder": [
+        793,
+        794,
+        793,
+        795,
+        793,
+        794
       ],
       "enemyTag": [
         "MonsterType_Xuanlu"

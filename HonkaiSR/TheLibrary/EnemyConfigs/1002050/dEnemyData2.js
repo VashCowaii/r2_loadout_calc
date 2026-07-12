@@ -43,6 +43,9 @@ let enemyData = {
       "abilities": [
         21
       ],
+      "abilityOrder": [
+        21
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -71,6 +74,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        21
+      ],
+      "abilityOrder": [
         21
       ],
       "enemyTag": [
@@ -103,6 +109,9 @@ let enemyData = {
       "abilities": [
         21
       ],
+      "abilityOrder": [
+        21
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -131,6 +140,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        21
+      ],
+      "abilityOrder": [
         21
       ],
       "enemyTag": [
@@ -164,6 +176,9 @@ let enemyData = {
       "abilities": [
         21
       ],
+      "abilityOrder": [
+        21
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -192,6 +207,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        21
+      ],
+      "abilityOrder": [
         21
       ],
       "enemyTag": [
@@ -224,6 +242,9 @@ let enemyData = {
       "abilities": [
         21
       ],
+      "abilityOrder": [
+        21
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -247,6 +268,9 @@ let enemyData = {
       "abilities": [
         21
       ],
+      "abilityOrder": [
+        21
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -268,6 +292,9 @@ let enemyData = {
         "Ice"
       ],
       "abilities": [
+        21
+      ],
+      "abilityOrder": [
         21
       ],
       "enemyTag": [
@@ -300,6 +327,9 @@ let enemyData = {
       "abilities": [
         21
       ],
+      "abilityOrder": [
+        21
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -328,6 +358,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        21
+      ],
+      "abilityOrder": [
         21
       ],
       "enemyTag": [
@@ -360,6 +393,9 @@ let enemyData = {
       "abilities": [
         21
       ],
+      "abilityOrder": [
+        21
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -390,6 +426,9 @@ let enemyData = {
       "abilities": [
         21
       ],
+      "abilityOrder": [
+        21
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -416,6 +455,9 @@ let enemyData = {
         "Imaginary"
       ],
       "abilities": [
+        21
+      ],
+      "abilityOrder": [
         21
       ],
       "enemyTag": [
@@ -448,6 +490,9 @@ let enemyData = {
       "abilities": [
         21
       ],
+      "abilityOrder": [
+        21
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -476,6 +521,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        21
+      ],
+      "abilityOrder": [
         21
       ],
       "enemyTag": [
@@ -508,6 +556,9 @@ let enemyData = {
       "abilities": [
         21
       ],
+      "abilityOrder": [
+        21
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -536,6 +587,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        21
+      ],
+      "abilityOrder": [
         21
       ],
       "enemyTag": [
@@ -568,6 +622,9 @@ let enemyData = {
       "abilities": [
         21
       ],
+      "abilityOrder": [
+        21
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -596,6 +653,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        21
+      ],
+      "abilityOrder": [
         21
       ],
       "enemyTag": [
@@ -628,6 +688,9 @@ let enemyData = {
       "abilities": [
         21
       ],
+      "abilityOrder": [
+        21
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -656,6 +719,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        21
+      ],
+      "abilityOrder": [
         21
       ],
       "enemyTag": [
@@ -688,6 +754,9 @@ let enemyData = {
       "abilities": [
         21
       ],
+      "abilityOrder": [
+        21
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -716,6 +785,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        21
+      ],
+      "abilityOrder": [
         21
       ],
       "enemyTag": [
@@ -748,6 +820,9 @@ let enemyData = {
       "abilities": [
         21
       ],
+      "abilityOrder": [
+        21
+      ],
       "enemyTag": [
         "W1_Soldier"
       ]
@@ -776,6 +851,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        21
+      ],
+      "abilityOrder": [
         21
       ],
       "enemyTag": [

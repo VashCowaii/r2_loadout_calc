@@ -43,6 +43,9 @@ let enemyData = {
       "abilities": [
         2529,
         2530
+      ],
+      "abilityOrder": [
+        2529
       ]
     },
     "501203002": {
@@ -71,6 +74,9 @@ let enemyData = {
       "abilities": [
         2529,
         2530
+      ],
+      "abilityOrder": [
+        2529
       ],
       "overrideParams": {
         "2530": [
@@ -115,6 +121,9 @@ let enemyData = {
         2529,
         2530
       ],
+      "abilityOrder": [
+        2529
+      ],
       "overrideParams": {
         "2530": [
           [
@@ -158,6 +167,9 @@ let enemyData = {
       "abilities": [
         2529,
         2530
+      ],
+      "abilityOrder": [
+        2529
       ],
       "overrideParams": {
         "2530": [

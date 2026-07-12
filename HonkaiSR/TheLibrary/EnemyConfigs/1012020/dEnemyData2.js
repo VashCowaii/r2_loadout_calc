@@ -48,6 +48,11 @@ let enemyData = {
         270,
         271
       ],
+      "abilityOrder": [
+        267,
+        268,
+        269
+      ],
       "enemyTag": [
         "W1_Mecha01"
       ]
@@ -81,6 +86,11 @@ let enemyData = {
         269,
         270,
         271
+      ],
+      "abilityOrder": [
+        267,
+        268,
+        269
       ],
       "enemyTag": [
         "W1_Mecha01"
@@ -116,6 +126,11 @@ let enemyData = {
         270,
         271
       ],
+      "abilityOrder": [
+        267,
+        268,
+        269
+      ],
       "enemyTag": [
         "W1_Mecha01"
       ]
@@ -148,6 +163,9 @@ let enemyData = {
         268,
         269,
         270,
+        271
+      ],
+      "abilityOrder": [
         271
       ],
       "enemyTag": [

@@ -44,6 +44,9 @@ let enemyData = {
       "abilities": [
         1670,
         1671
+      ],
+      "abilityOrder": [
+        1670
       ]
     },
     "401203001": {
@@ -72,6 +75,9 @@ let enemyData = {
       "abilities": [
         1670,
         1671
+      ],
+      "abilityOrder": [
+        1670
       ]
     },
     "401203002": {
@@ -100,6 +106,9 @@ let enemyData = {
       "abilities": [
         1670,
         1671
+      ],
+      "abilityOrder": [
+        1670
       ]
     },
     "401203003": {
@@ -128,6 +137,9 @@ let enemyData = {
       "abilities": [
         1670,
         1671
+      ],
+      "abilityOrder": [
+        1670
       ]
     },
     "401203004": {
@@ -156,6 +168,9 @@ let enemyData = {
       "abilities": [
         1670,
         1671
+      ],
+      "abilityOrder": [
+        1670
       ]
     },
     "401203005": {
@@ -184,6 +199,9 @@ let enemyData = {
       "abilities": [
         1670,
         1671
+      ],
+      "abilityOrder": [
+        1670
       ]
     },
     "401203006": {
@@ -212,6 +230,9 @@ let enemyData = {
       "abilities": [
         1670,
         1671
+      ],
+      "abilityOrder": [
+        1670
       ]
     },
     "401203007": {
@@ -240,6 +261,9 @@ let enemyData = {
       "abilities": [
         1670,
         1671
+      ],
+      "abilityOrder": [
+        1670
       ],
       "enemyTag": [
         "MGrid_4008"

@@ -47,6 +47,9 @@ let enemyData = {
       },
       "abilities": [
         23
+      ],
+      "abilityOrder": [
+        23
       ]
     },
     "100206101": {
@@ -76,6 +79,9 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
+        23
+      ],
+      "abilityOrder": [
         23
       ],
       "enemyTag": [
@@ -111,6 +117,9 @@ let enemyData = {
       "abilities": [
         23
       ],
+      "abilityOrder": [
+        23
+      ],
       "enemyTag": [
         "IF_W1_Ice"
       ]
@@ -144,6 +153,9 @@ let enemyData = {
       "abilities": [
         23
       ],
+      "abilityOrder": [
+        23
+      ],
       "enemyTag": [
         "IF_W1_Ice"
       ]
@@ -175,6 +187,9 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
+        23
+      ],
+      "abilityOrder": [
         23
       ],
       "enemyTag": [

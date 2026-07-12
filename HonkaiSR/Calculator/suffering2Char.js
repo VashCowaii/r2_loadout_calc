@@ -38771,6 +38771,7 @@ const turnLogic = {
 
                 let skillRef = ATKObjects.rmcBasicEnhancedREF ??= ATKObjects["Basic ATK"]["Together, We Script Tomorrow!"].variant1;
                 let values = ATKObjects.rmcBasicEnhancedREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                const rmcEBAChargeGain = ATKObjects.rmcEBAChargeGain ??= {pointsGained: values[2],sourceString:"Enhanced Basic ATK"};
 
                 if (!ATKObjects.rmcBasicEnhancedATKOBJECT) {
                     skillRef.hitSplits = hitSplitters[sourceTurn.properName].eba;
@@ -38831,15 +38832,14 @@ const turnLogic = {
                 const ATKObject2 = ATKObjects.rmcBasicEnhancedMemATKOBJECT;
                 let skillRef2 = ATKObjects.rmcBasicEnhancedREF2;
 
-                const valuesRef = sourceTurn.battleValues;
-                valuesRef.epicStacks -= 1;
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Enhanced Basic ATK", bodyText: `Epic (RMC): ${valuesRef.epicStacks + 1} --> ${valuesRef.epicStacks}`});}
+                const rmcEBAEpicGain = logicRef.rmcEBAEpicGain ??= {pointsGained: -1,sourceString:"Enhanced Basic ATK"};
+                poke("rmcMemGainEpic",battleData,rmcEBAEpicGain);
 
                 const memTurn = sourceTurn.rmcMemTURNEVENT;
                 attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
                 attackWrapper(battleData,skillRef2,memTurn,ATKObject2,actionObject.target,actionObject.subTarget);
 
-                poke("rmcMemGainedCharge",battleData,{pointsGained: values[2],sourceString:"Enhanced Basic ATK"},null);
+                poke("rmcMemGainedCharge",battleData,rmcEBAChargeGain,null);
             },
             rmcSkill(battleData,actionObject,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -38878,7 +38878,8 @@ const turnLogic = {
                     const memTurn = sourceTurn.rmcMemTURNEVENT;
                     healAlly(battleData,healObject,memTurn,sourceTurn,skillRef.slot,1);
 
-                    poke("rmcMemGainedCharge",battleData,{pointsGained: values[1],sourceString:"RMC Skill"},null);
+                    const rmcSkillChargeGain = ATKObjects.rmcSkillChargeGain ??= {pointsGained: values[1],sourceString:"RMC Skill"};
+                    poke("rmcMemGainedCharge",battleData,rmcSkillChargeGain,null);
                 }
                 else {
                     logicRef.skillFunctions.addMemToField(battleData,sourceTurn);
@@ -38922,7 +38923,8 @@ const turnLogic = {
 
                 logicRef.skillFunctions.memTalentCritDMG(battleData,sourceTurn);
 
-                poke("rmcMemGainedCharge",battleData,{pointsGained: 0.5,sourceString:"Memo Talent: Go, Mem, Go!"},null);
+                const rmcMemSummonChargeGain = logicRef.rmcMemSummonChargeGain ??= {pointsGained: 0.5,sourceString:"Memo Talent: Go, Mem, Go!"};
+                poke("rmcMemGainedCharge",battleData,rmcMemSummonChargeGain,null);
             },
             memTalentCritDMG(battleData,sourceTurn) {
                 const logicRef = turnLogic[sourceTurn.properName];
@@ -39067,7 +39069,8 @@ const turnLogic = {
                 chainedAttackRef = attackWrapper(battleData,skillRef,memoTurn,ATKObject1,actionObject.target,actionObject.subTarget,"Start",chainedAttackRef);
                 attackWrapper(battleData,skillRef,memoTurn,ATKObject2,actionObject.target,actionObject.subTarget,"End",chainedAttackRef);
 
-                poke("rmcMemGainedCharge",battleData,{pointsGained: 0.05,sourceString:"Petite Parable"},null);
+                const rmcMemBasicChargeGain = logicRef.rmcMemBasicChargeGain ??= {pointsGained: 0.05,sourceString:"Petite Parable"};
+                poke("rmcMemGainedCharge",battleData,rmcMemBasicChargeGain,null);
             },
             memSkillAdvance(battleData,actionObject,memoTurn) {
                 // const rmcTurn = battleData.nameBasedTurns[memoTurn.eventOwner];
@@ -39097,7 +39100,8 @@ const turnLogic = {
                         "expireType": "EndTurn",
                         "removeOnDeath": false,
                         expireFunction: logicRef.skillFunctions.memsSupportExpired,
-                        expireParam: {sourceTurn:sourceTurn.name,targetTurn:null}
+                        expireParam: {sourceTurn:sourceTurn.name,targetTurn:null},
+                        "buffDisplayIcon": "misc/rmc/Icon8007Buff.png",
                     }
                     ATKObjects.rmcMemsSupportMemoSHEET = {
                         "stats": [CritRateBase],
@@ -39113,11 +39117,14 @@ const turnLogic = {
                         "decay": false,
                         "expireType": null,
                         "removeOnDeath": false,
+                        "buffDisplayIcon": "misc/rmc/Icon8007Buff.png",
                     }
                 }
 
                 const char1 = actionObject.target[0];
-                poke("rmcMemGainedCharge",battleData,{pointsGained: -1,sourceString:"Advance used: Lemme! Help You!"},null);
+
+                const rmcMemTargetChargeRemoval = logicRef.rmcMemTargetChargeRemoval ??= {pointsGained: -1,sourceString:"Advance used: Lemme! Help You!"};
+                poke("rmcMemGainedCharge",battleData,rmcMemTargetChargeRemoval,null);
 
                 actionAdvance(1,char1,battleData,"Mem's Support");
 
@@ -39256,11 +39263,11 @@ const turnLogic = {
                 const summonUp = sourceTurn.battleValues.memIsActive;
                 if (!summonUp) {logicRef.skillFunctions.addMemToField(battleData,sourceTurn);}
 
-                poke("rmcMemGainedCharge",battleData,{pointsGained: 0.4,sourceString:"RMC: Ultimate used"},null);
+                const rmcUltChargeGain = logicRef.rmcUltChargeGain ??= {pointsGained: 0.4,sourceString:"RMC: Ultimate used"};
+                poke("rmcMemGainedCharge",battleData,rmcUltChargeGain,null);
 
-                const oldValue = valuesRef.epicStacks;
-                valuesRef.epicStacks = Math.min(2,valuesRef.epicStacks + 1);
-                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:"Ultimate", bodyText: `Epic (RMC): ${oldValue} --> ${valuesRef.epicStacks}`});}
+                const rmcUltEpicGain = logicRef.rmcUltEpicGain ??= {pointsGained: 1,sourceString:"Ultimate"};
+                poke("rmcMemGainEpic",battleData,rmcUltEpicGain);
 
                 const memTurn = sourceTurn.rmcMemTURNEVENT;
                 updateEnergy(battleData,skillRef.energyRegen,sourceTurn);//energy before dmg, no splits
@@ -39406,7 +39413,9 @@ const turnLogic = {
                                     //however it does NOT ever factor overflow energy.
                 
                                     const conversion = energyAmount/1000;
-                                    poke("rmcMemGainedCharge",battleData,{pointsGained: conversion,sourceString:"Ally Gained Energy"},null);
+                                    const exoObject = this.exoObject ??= {pointsGained: conversion,sourceString:"Ally Gained Energy"};
+                                    exoObject.pointsGained = conversion;
+                                    poke("rmcMemGainedCharge",battleData,exoObject,null);
                                 },
                                 "target": "self",
                                 "listenerName": "Mem charge ally gained energy listener",
@@ -39585,34 +39594,47 @@ const turnLogic = {
                 condition(battleData,generalInfo) {
                     // poke("rmcMemGainedCharge",battleData,{pointsGained: 1,sourceString:"asdf"});
                     let ownerTurn = this.ownerTurn;
-                    // memCharge
-                    //NEVER need to check the source turn on this, bc only saber can poke this, and only she will ever have listeners for this
-                    const pointsGained = generalInfo.pointsGained;
-
                     const memTurn = ownerTurn.rmcMemTURNEVENT;
                     if (!memTurn.isActive) {return;}
 
-                    // const logicRef = turnLogic[ownerTurn.properName];
+
+                    const generalData = this.generalData ??= {summerName: "rmcMemChargeSum",baseName: "memCharge",maxName: "memChargeMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "Charge (Mem)",displayIcon:"/HonkaiSR/misc/rmc/Icon8007Energy.png"};
+                    const oldValue = ownerTurn.battleValues.memCharge;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
+
                     const valuesRef = ownerTurn.battleValues;
-                    const oldValue = valuesRef.memCharge;
-                    valuesRef.memCharge = Math.min(1, valuesRef.memCharge + pointsGained);
-                    if (oldValue === valuesRef.memCharge) {return;}
-                    const resoRef = valuesRef.memCharge;
-                    const sourceString = generalInfo.sourceString;
-                    if (pointsGained && battleData.isLoggyLogger) {logToBattle(battleData,{logType: "GenericAction", source:this.listenerName, bodyText: `Charge (Mem): ${(oldValue*100).toLocaleString()}% --> ${(resoRef*100).toLocaleString()}% [${sourceString}]`});}
-                    if (pointsGained<0) {return;}//if all we did was remove points, we can end it here now that we reached the log point
+                    if (valueWasDiff) {
+                        const pointsGained = generalInfo.pointsGained;
+
+                        if (pointsGained<0) {return;}//if all we did was remove points, we can end it here now that we reached the log point
+                    }
 
 
-                    let maxCheck = valuesRef.memCharge === 1;
+                    let maxCheck = valuesRef.memCharge === valuesRef.memChargeMax;
 
                     if (maxCheck) {
-                        
-                        actionAdvance(1,memTurn,battleData,"Friends! Together!");
+                        actionAdvance(0,memTurn,battleData,"Friends! Together!",null,true);
                         ownerTurn.battleValues.memIsEnhanced = true;
                     }
                 },
                 "target": "self",
                 "listenerName": "Mem Charge Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "rmcMemGainEpic",
+                condition(battleData,generalInfo) {
+                    // poke("rmcMemGainEpic",battleData,{pointsGained: 1,sourceString:"asdf"});
+                    let ownerTurn = this.ownerTurn;
+
+                    const generalData = this.generalData ??= {summerName: "rmcEpicStackSummer",baseName: "epicStacks",maxName: "epicStacksMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "Epic (RMC)",displayIcon:"/HonkaiSR/misc/rmc/Icon8007Skill11.png"};
+                    // const oldValue = ownerTurn.battleValues.prana;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
+                },
+                "target": "self",
+                "listenerName": "RMC Epic Handler",
                 "ownerTurn": {},
             },
             {
@@ -39686,7 +39708,9 @@ const turnLogic = {
                     const summonEvent = generalInfo.summonEvent;
                     
                     if (summonWas != "Apply" || summonAssignedTo.properName != ownerTurn.properName || summonEvent.properName != memTurn.properName) {return;}//if the summon is assigned to someone who doesn't own the set, then it doesn't matter
-                    poke("rmcMemGainedCharge",battleData,{pointsGained: 0.4,sourceString:"Rhapsode's Scepter"},null);
+
+                    const exoObject = this.exoObject ??= {pointsGained: 0.4,sourceString:"Rhapsode's Scepter"};
+                    poke("rmcMemGainedCharge",battleData,exoObject,null);
 
                     removeListener(battleData,this,ownerTurn);
                     //since it only applies to the very first summon, we have to remove this listener from the battle state
@@ -39775,8 +39799,10 @@ const turnLogic = {
         "characterValues": {
             "memIsActive": false,
             "memCharge": 0,
+            "memChargeMax": 1,
             "memIsEnhanced": false,
             "epicStacks": 0,
+            "epicStacksMax": 2,
         },
         "useTechnique": true,
         "techniqueType": "Dimension",

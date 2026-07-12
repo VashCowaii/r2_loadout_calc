@@ -46,6 +46,11 @@ let enemyData = {
         2826,
         2827
       ],
+      "abilityOrder": [
+        "ABILITY__DOES_NOT_EXIST",
+        "ABILITY__DOES_NOT_EXIST",
+        "ABILITY__DOES_NOT_EXIST"
+      ],
       "enemyTag": [
         "Monster_Minion04"
       ]

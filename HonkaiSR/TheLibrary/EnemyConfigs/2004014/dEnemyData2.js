@@ -61,6 +61,9 @@ let enemyData = {
         560,
         561
       ],
+      "abilityOrder": [
+        511
+      ],
       "enemyTag": [
         "IF_Boss",
         "IF_W2_Kafka",
@@ -133,6 +136,9 @@ let enemyData = {
         559,
         560,
         561
+      ],
+      "abilityOrder": [
+        511
       ],
       "enemyTag": [
         "IF_Boss",
@@ -207,6 +213,9 @@ let enemyData = {
         560,
         561
       ],
+      "abilityOrder": [
+        511
+      ],
       "enemyTag": [
         "IF_Boss",
         "IF_W2_Kafka",
@@ -280,6 +289,9 @@ let enemyData = {
         560,
         561
       ],
+      "abilityOrder": [
+        511
+      ],
       "enemyTag": [
         "IF_Boss",
         "IF_W2_Kafka",
@@ -352,6 +364,9 @@ let enemyData = {
         559,
         560,
         561
+      ],
+      "abilityOrder": [
+        511
       ],
       "enemyTag": [
         "IF_Boss",

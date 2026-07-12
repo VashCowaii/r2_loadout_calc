@@ -48,6 +48,9 @@ let enemyData = {
         1700,
         1701
       ],
+      "abilityOrder": [
+        1700
+      ],
       "itNeverEnds": {
         "HardLevel": 1
       }
@@ -81,6 +84,9 @@ let enemyData = {
       "abilities": [
         1700,
         1701
+      ],
+      "abilityOrder": [
+        1700
       ],
       "itNeverEnds": {
         "HardLevel": 1
@@ -116,6 +122,9 @@ let enemyData = {
         1700,
         1701
       ],
+      "abilityOrder": [
+        1700
+      ],
       "itNeverEnds": {
         "HardLevel": 2
       }
@@ -150,6 +159,9 @@ let enemyData = {
         1700,
         1701
       ],
+      "abilityOrder": [
+        1700
+      ],
       "itNeverEnds": {
         "HardLevel": 3
       }
@@ -183,6 +195,9 @@ let enemyData = {
       "abilities": [
         1700,
         1701
+      ],
+      "abilityOrder": [
+        1700
       ],
       "itNeverEnds": {
         "HardLevel": 4

@@ -66,6 +66,9 @@ let enemyData = {
         623,
         624
       ],
+      "abilityOrder": [
+        571
+      ],
       "enemyTag": [
         "SuperArmor_Behit_Small",
         "W2_Yanqing_2Phase",

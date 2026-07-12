@@ -67,6 +67,9 @@ let enemyData = {
         585,
         586
       ],
+      "abilityOrder": [
+        571
+      ],
       "enemyTag": [
         "SuperArmor_Behit_Small",
         "RL",
@@ -138,6 +141,9 @@ let enemyData = {
         585,
         586
       ],
+      "abilityOrder": [
+        571
+      ],
       "enemyTag": [
         "SuperArmor_Behit_Small",
         "RL",
@@ -208,6 +214,9 @@ let enemyData = {
         584,
         585,
         586
+      ],
+      "abilityOrder": [
+        571
       ],
       "enemyTag": [
         "SuperArmor_Behit_Small",

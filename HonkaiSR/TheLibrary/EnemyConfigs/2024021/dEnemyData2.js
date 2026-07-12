@@ -40,6 +40,9 @@ let enemyData = {
         818,
         819
       ],
+      "abilityOrder": [
+        816
+      ],
       "itNeverEnds": {
         "MonsterCount": 10
       }

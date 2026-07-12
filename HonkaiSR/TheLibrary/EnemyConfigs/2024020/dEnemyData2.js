@@ -38,6 +38,9 @@ let enemyData = {
         813,
         814
       ],
+      "abilityOrder": [
+        813
+      ],
       "itNeverEnds": {
         "MonsterCount": 10
       }
@@ -61,6 +64,10 @@ let enemyData = {
         812,
         813,
         814
+      ],
+      "abilityOrder": [
+        814,
+        813
       ],
       "itNeverEnds": {
         "MonsterCount": 10
@@ -86,6 +93,9 @@ let enemyData = {
         813,
         814
       ],
+      "abilityOrder": [
+        813
+      ],
       "itNeverEnds": {
         "MonsterCount": 3
       }
@@ -109,6 +119,9 @@ let enemyData = {
         812,
         813,
         814
+      ],
+      "abilityOrder": [
+        813
       ],
       "itNeverEnds": {
         "MonsterCount": 16
@@ -134,6 +147,9 @@ let enemyData = {
         813,
         814
       ],
+      "abilityOrder": [
+        813
+      ],
       "itNeverEnds": {
         "MonsterCount": 24
       }
@@ -157,6 +173,9 @@ let enemyData = {
         812,
         813,
         814
+      ],
+      "abilityOrder": [
+        813
       ],
       "itNeverEnds": {
         "MonsterCount": 15
@@ -182,6 +201,9 @@ let enemyData = {
         813,
         814
       ],
+      "abilityOrder": [
+        813
+      ],
       "itNeverEnds": {
         "MonsterCount": 20
       }
@@ -205,6 +227,9 @@ let enemyData = {
         812,
         813,
         814
+      ],
+      "abilityOrder": [
+        813
       ],
       "itNeverEnds": {
         "MonsterCount": 54

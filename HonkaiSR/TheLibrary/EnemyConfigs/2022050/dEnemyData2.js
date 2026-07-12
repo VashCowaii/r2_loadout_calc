@@ -45,6 +45,10 @@ let enemyData = {
         683,
         684
       ],
+      "abilityOrder": [
+        683,
+        682
+      ],
       "summons": [
         {
           "name": "Shadow Jackhyena",
@@ -83,6 +87,10 @@ let enemyData = {
         682,
         683,
         684
+      ],
+      "abilityOrder": [
+        683,
+        682
       ],
       "summons": [
         {
@@ -123,6 +131,10 @@ let enemyData = {
         683,
         684
       ],
+      "abilityOrder": [
+        683,
+        682
+      ],
       "summons": [
         {
           "name": "Shadow Jackhyena",
@@ -161,6 +173,10 @@ let enemyData = {
         682,
         683,
         684
+      ],
+      "abilityOrder": [
+        683,
+        682
       ],
       "summons": [
         {
@@ -201,6 +217,9 @@ let enemyData = {
         683,
         684
       ],
+      "abilityOrder": [
+        682
+      ],
       "summons": [
         {
           "name": "Shadow Jackhyena",
@@ -239,6 +258,10 @@ let enemyData = {
         682,
         683,
         684
+      ],
+      "abilityOrder": [
+        683,
+        682
       ],
       "summons": [
         {
@@ -279,6 +302,10 @@ let enemyData = {
         683,
         684
       ],
+      "abilityOrder": [
+        683,
+        682
+      ],
       "summons": [
         {
           "name": "Shadow Jackhyena",
@@ -317,6 +344,10 @@ let enemyData = {
         682,
         683,
         684
+      ],
+      "abilityOrder": [
+        683,
+        682
       ],
       "enemyTag": [
         "MGrid_4005"

@@ -47,6 +47,9 @@ let enemyData = {
         3122,
         3123
       ],
+      "abilityOrder": [
+        3120
+      ],
       "enemyTag": [
         "SW_Minion01",
         "SW_Minion"
@@ -87,6 +90,9 @@ let enemyData = {
         3121,
         3122,
         3123
+      ],
+      "abilityOrder": [
+        3120
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -129,6 +135,9 @@ let enemyData = {
         3122,
         3123
       ],
+      "abilityOrder": [
+        3120
+      ],
       "enemyTag": [
         "SW_Minion01",
         "SW_Minion"
@@ -169,6 +178,9 @@ let enemyData = {
         3121,
         3122,
         3123
+      ],
+      "abilityOrder": [
+        3120
       ],
       "enemyTag": [
         "SW_Minion01",

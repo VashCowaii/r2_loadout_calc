@@ -5,7 +5,8 @@ const compositeAbilityObject = {
   "abilityList": [
     "8001020_Monster_XP_Minion01_01_PassiveAbilityInitiate",
     "8001020_WMonster_Element_Slime_01_Ice_Ability01_Part02",
-    "8001020_WMonster_Element_Slime_01_Ice_Ability01_Part01"
+    "8001020_WMonster_Element_Slime_01_Ice_Ability01_Part01",
+    "8001020_Handling"
   ],
   "abilityObject": {
     "8001020_Monster_XP_Minion01_01_PassiveAbilityInitiate": {
@@ -111,6 +112,57 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
+      "references": []
+    },
+    "8001020_Handling": {
+      "fileName": "8001020_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "Common_SequenceThree_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSequenceSkill",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Sequence Ability Option"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Sequence Ability Use Value",
+                  "valueCheck": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "references": []
     }
   }

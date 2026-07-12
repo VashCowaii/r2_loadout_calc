@@ -6,7 +6,8 @@ const compositeAbilityObject = {
     "8032020_Modifiers",
     "8032020_Monster_W1_Soldier01_04_Passive01",
     "8032020_Monster_W1_Soldier01_04_Ability01_Part02",
-    "8032020_Monster_W1_Soldier01_04_Ability01_Part01"
+    "8032020_Monster_W1_Soldier01_04_Ability01_Part01",
+    "8032020_Handling"
   ],
   "abilityObject": {
     "8032020_Modifiers": {
@@ -177,6 +178,57 @@ const compositeAbilityObject = {
         "primaryTarget": "Select Hostile Target",
         "subTarget": "Blast Targets"
       },
+      "references": []
+    },
+    "8032020_Handling": {
+      "fileName": "8032020_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "Common_SequenceThree_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSequenceSkill",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Sequence Ability Option"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Sequence Ability Use Value",
+                  "valueCheck": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "references": []
     }
   }

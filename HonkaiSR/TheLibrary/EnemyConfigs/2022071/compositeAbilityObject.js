@@ -5,7 +5,8 @@ const compositeAbilityObject = {
   "abilityList": [
     "2022071_Monster_W2_Xuanlu_01_PassiveAbility_Effect",
     "2022071_Monster_W2_Xuanlu_01_Ability01_Part02_RL",
-    "2022071_Monster_W2_Xuanlu_01_Ability01_Part01_RL"
+    "2022071_Monster_W2_Xuanlu_01_Ability01_Part01_RL",
+    "2022071_Handling"
   ],
   "abilityObject": {
     "2022071_Monster_W2_Xuanlu_01_PassiveAbility_Effect": {
@@ -160,6 +161,47 @@ const compositeAbilityObject = {
       "realTargetData": {
         "primaryTarget": "Select Hostile Target"
       },
+      "references": []
+    },
+    "2022071_Handling": {
+      "fileName": "2022071_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill01",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill01"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE"
+            }
+          ]
+        }
+      ],
       "references": []
     }
   }

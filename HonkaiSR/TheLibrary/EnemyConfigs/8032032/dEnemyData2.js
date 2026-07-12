@@ -33,6 +33,9 @@ let enemyData = {
       "abilities": [
         3228,
         3229
+      ],
+      "abilityOrder": [
+        3228
       ]
     }
   }

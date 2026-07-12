@@ -35,6 +35,10 @@ let enemyData = {
         1086,
         1087
       ],
+      "abilityOrder": [
+        1085,
+        1086
+      ],
       "enemyTag": [
         "MonsterType_W3_Junk_00"
       ]

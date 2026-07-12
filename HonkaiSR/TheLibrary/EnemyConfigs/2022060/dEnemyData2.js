@@ -43,6 +43,9 @@ let enemyData = {
       },
       "abilities": [
         686
+      ],
+      "abilityOrder": [
+        686
       ]
     },
     "202206001": {
@@ -69,6 +72,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        686
+      ],
+      "abilityOrder": [
         686
       ]
     },
@@ -97,6 +103,9 @@ let enemyData = {
       },
       "abilities": [
         686
+      ],
+      "abilityOrder": [
+        686
       ]
     },
     "202206003": {
@@ -123,6 +132,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        686
+      ],
+      "abilityOrder": [
         686
       ]
     },
@@ -151,6 +163,9 @@ let enemyData = {
       },
       "abilities": [
         686
+      ],
+      "abilityOrder": [
+        686
       ]
     },
     "202206005": {
@@ -177,6 +192,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        686
+      ],
+      "abilityOrder": [
         686
       ]
     },
@@ -205,6 +223,9 @@ let enemyData = {
       },
       "abilities": [
         686
+      ],
+      "abilityOrder": [
+        686
       ]
     },
     "202206007": {
@@ -231,6 +252,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        686
+      ],
+      "abilityOrder": [
         686
       ]
     },
@@ -259,6 +283,9 @@ let enemyData = {
       },
       "abilities": [
         686
+      ],
+      "abilityOrder": [
+        686
       ]
     },
     "202206009": {
@@ -285,6 +312,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        686
+      ],
+      "abilityOrder": [
         686
       ]
     },
@@ -316,6 +346,9 @@ let enemyData = {
       },
       "abilities": [
         686
+      ],
+      "abilityOrder": [
+        686
       ]
     },
     "202206011": {
@@ -342,6 +375,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        686
+      ],
+      "abilityOrder": [
         686
       ]
     },
@@ -370,6 +406,9 @@ let enemyData = {
       },
       "abilities": [
         686
+      ],
+      "abilityOrder": [
+        686
       ]
     },
     "202206013": {
@@ -397,6 +436,9 @@ let enemyData = {
       },
       "abilities": [
         686
+      ],
+      "abilityOrder": [
+        686
       ]
     },
     "202206014": {
@@ -423,6 +465,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
+        686
+      ],
+      "abilityOrder": [
         686
       ],
       "enemyTag": [

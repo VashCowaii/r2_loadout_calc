@@ -11,7 +11,8 @@ const compositeAbilityObject = {
     "2032011_Monster_W2_Lycan_Ability01_Part01",
     "2032011_BattleEventAbility_Monster_Lycan_RageStart",
     "2032011_BattleEventAbility_Monster_Lycan_RageFinish",
-    "2032011_BE_BattleEvents"
+    "2032011_BE_BattleEvents",
+    "2032011_Handling"
   ],
   "abilityObject": {
     "2032011_Modifiers": {
@@ -2463,6 +2464,57 @@ const compositeAbilityObject = {
           ],
           "eventSpeed": 105,
           "hardLevelEvent": true
+        }
+      ],
+      "references": []
+    },
+    "2032011_Handling": {
+      "fileName": "2032011_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "Common_SequenceThree_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSequenceSkill",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Sequence Ability Option"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Sequence Ability Use Value",
+                  "valueCheck": 1
+                }
+              ]
+            }
+          ]
         }
       ],
       "references": []

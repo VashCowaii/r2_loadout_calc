@@ -51,6 +51,10 @@ let enemyData = {
         1166,
         1167
       ],
+      "abilityOrder": [
+        716,
+        715
+      ],
       "summons": [
         {
           "name": "Dreamjolt Troupe's Bubble Hound",

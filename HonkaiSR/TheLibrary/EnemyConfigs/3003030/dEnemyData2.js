@@ -50,6 +50,13 @@ let enemyData = {
         1177,
         1178
       ],
+      "abilityOrder": [
+        1172,
+        1173,
+        1174,
+        1175,
+        1176
+      ],
       "enemyTag": [
         "W3_Figure_02"
       ]
@@ -85,6 +92,13 @@ let enemyData = {
         1176,
         1177,
         1178
+      ],
+      "abilityOrder": [
+        1172,
+        1173,
+        1174,
+        1175,
+        1176
       ],
       "enemyTag": [
         "W3_Figure_02"
@@ -122,6 +136,13 @@ let enemyData = {
         1177,
         1178
       ],
+      "abilityOrder": [
+        1172,
+        1173,
+        1174,
+        1175,
+        1176
+      ],
       "enemyTag": [
         "W3_Figure_02"
       ]
@@ -157,6 +178,13 @@ let enemyData = {
         1176,
         1177,
         1178
+      ],
+      "abilityOrder": [
+        1172,
+        1173,
+        1174,
+        1175,
+        1176
       ],
       "enemyTag": [
         "W3_Figure_02"
@@ -194,6 +222,13 @@ let enemyData = {
         1177,
         1178
       ],
+      "abilityOrder": [
+        1172,
+        1173,
+        1174,
+        1175,
+        1176
+      ],
       "enemyTag": [
         "W3_Figure_02"
       ]
@@ -229,6 +264,13 @@ let enemyData = {
         1176,
         1177,
         1178
+      ],
+      "abilityOrder": [
+        1172,
+        1173,
+        1174,
+        1175,
+        1176
       ],
       "enemyTag": [
         "W3_Figure_02"
@@ -266,6 +308,13 @@ let enemyData = {
         1177,
         1178
       ],
+      "abilityOrder": [
+        1172,
+        1173,
+        1174,
+        1175,
+        1176
+      ],
       "enemyTag": [
         "W3_Figure_02"
       ]
@@ -301,6 +350,13 @@ let enemyData = {
         1176,
         1177,
         1178
+      ],
+      "abilityOrder": [
+        1172,
+        1173,
+        1174,
+        1175,
+        1176
       ],
       "enemyTag": [
         "W3_Figure_02"
@@ -338,6 +394,13 @@ let enemyData = {
         1177,
         1178
       ],
+      "abilityOrder": [
+        1172,
+        1173,
+        1174,
+        1175,
+        1176
+      ],
       "enemyTag": [
         "W3_Figure_02"
       ]
@@ -373,6 +436,13 @@ let enemyData = {
         1176,
         1177,
         1178
+      ],
+      "abilityOrder": [
+        1172,
+        1173,
+        1174,
+        1175,
+        1176
       ],
       "enemyTag": [
         "W3_Figure_02",

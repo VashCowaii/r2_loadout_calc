@@ -314,6 +314,14 @@ let enemyData = {
         743,
         744
       ],
+      "abilityOrder": [
+        793,
+        794,
+        793,
+        795,
+        793,
+        794
+      ],
       "enemyTag": [
         "MonsterType_Xuanlu"
       ],
@@ -377,6 +385,14 @@ let enemyData = {
         742,
         743,
         744
+      ],
+      "abilityOrder": [
+        793,
+        794,
+        793,
+        795,
+        793,
+        794
       ],
       "enemyTag": [
         "MonsterType_Xuanlu"
@@ -632,6 +648,14 @@ let enemyData = {
         742,
         743,
         744
+      ],
+      "abilityOrder": [
+        793,
+        794,
+        793,
+        795,
+        793,
+        794
       ],
       "enemyTag": [
         "MonsterType_Xuanlu"

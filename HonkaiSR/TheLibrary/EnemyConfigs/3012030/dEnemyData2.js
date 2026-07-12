@@ -50,6 +50,9 @@ let enemyData = {
         1322,
         1323
       ],
+      "abilityOrder": [
+        1322
+      ],
       "enemyTag": [
         "Monster_DeathPart"
       ]
