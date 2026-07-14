@@ -387,7 +387,7 @@ const customHTML = {
 
         const arrayToPass = [];
         if (ultyCheck) {
-            rotationStringer = rotationsUISuffering.displayLoop(characterName,ultyCheck,indexCounter,layerCount,arrayToPass,refSkillString);
+            rotationStringer = rotationsUISuffering.displayLoop(characterName,ultyCheck,indexCounter,layerCount,arrayToPass,refSkillString,null);
 
             const fullWarningRef = `${refSkillString}PermaConditions`;
             if (warningRef?.[fullWarningRef]?.length) {
@@ -454,7 +454,7 @@ const customHTML = {
 
             const arrayToPassSkill = [];
             if (skillCheckTarget) {
-                skillRotations.innerHTML = rotationsUISuffering.displayLoop(characterName,skillCheckTarget,indexCounterSkill,layerCountSkill,arrayToPassSkill,fullTargetName);
+                skillRotations.innerHTML = rotationsUISuffering.displayLoop(characterName,skillCheckTarget,indexCounterSkill,layerCountSkill,arrayToPassSkill,fullTargetName,null);
 
                 // rotationsConditionsWarningBoxSkill
 
@@ -1008,7 +1008,7 @@ const targetPriorityFixedArray = [
 ]
 const targetSelectOuterArray = [
     "TARGET CHECK",
-    "Delete",
+    // "Delete",
 ]
 const targetSelectInnerArray = [
     "TARGET"
@@ -1036,7 +1036,7 @@ const filterBasicListArray = [
     "Filter Ally",
     "Healing Presets",
     // "Enemy",
-    "Delete",
+    // "Delete",
 ]
 const filterHealingPresetMenuArray = [
     "Lowest HP Ally (On-Field)",
@@ -1057,7 +1057,7 @@ const conditionListArray = [
     // "SP",
 
 
-    "Delete",
+    // "Delete",
     // "AND",
     // "AND",
 ];
@@ -1365,12 +1365,147 @@ const rotationsUISuffering = {
 
         return onlyReturnFirstValid ? null : returnString;
     },
-    displayLoop(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
+
+    getConditionAsCopy(newArray,skillSlot,characterName,isFilter) {
+        let copiedInstance = JSON.stringify(rotationsUISuffering.updateRotationObject(newArray,skillSlot,characterName,null,null,null,null,null,null,true,null,isFilter));
+
+        if (isFilter) {
+            globalUI.conditionsCopyActiveFILTER = copiedInstance;
+        }
+        else {
+            globalUI.conditionsCopyActive = copiedInstance;
+        }
+        
+        rotationsUISuffering.updateRotationObject(newArray,skillSlot,characterName,null,null,null,null,null,null,null,null,true);
+
+        // console.log(JSON.parse(globalUI.conditionsCopyActive))
+    },
+    getConditionAsCut(newArray,skillSlot,characterName,isFilter) {
+        let copiedInstance = JSON.stringify(rotationsUISuffering.updateRotationObject(newArray,skillSlot,characterName,null,null,null,null,null,null,true,null,isFilter));
+        if (isFilter) {
+            globalUI.conditionsCopyActiveFILTER = copiedInstance;
+        }
+        else {
+            globalUI.conditionsCopyActive = copiedInstance;
+        }
+        // console.log(copiedInstance)
+        rotationsUISuffering.updateRotationObject(newArray,skillSlot,characterName,null,null,null,null,null,true,null,null,isFilter);
+        // rotationsUISuffering.updateRotationObject(newArray,skillSlot,characterName);
+
+        // console.log(JSON.parse(globalUI.conditionsCopyActive));
+    },
+    getConditionAsPaste(newArray,skillSlot,characterName,isFilter) {
+        rotationsUISuffering.updateRotationObject(newArray,skillSlot,characterName,null,null,null,null,null,null,null,true,isFilter);
+        rotationsUISuffering.updateRotationObject(newArray,skillSlot,characterName);
+    },                                          //arrayToPass,skillSlot,characterName,isAddedToOperator,parameterKey,eventObject,isTargetCondition,isOpenClose,isForceDelete
+    getConditionAsDeleted(newArray,skillSlot,characterName) {
+        rotationsUISuffering.updateRotationObject(newArray,skillSlot,characterName,null,null,null,null,null,true);
+    },
+    getControlsStringCondition(newArray,skillSlot,characterName,isArrayOperator,isLineOnly,emptyArrayOperator,isFilter,isDeleteOnly) {
+        const hasCopyOrCut = globalUI.conditionsCopyActive;//TODO: read the state of w/e is saved via cut/copy and only display paste if that is true
+        const hasCopyOrCutFILTER = globalUI.conditionsCopyActiveFILTER;
+
+
+        const finalUseArray = emptyArrayOperator ? [...newArray,0] : newArray; 
+
+
+        let paramsStringInitial = `[${finalUseArray}],'${skillSlot}','${characterName}'`;
+        const brickClicks = `event.stopPropagation();event.preventDefault();`;
+        const filterAdjustment = isFilter ? "rotationsConditionsControlsRowIconBoxFILTERADJUST" : "";
+        const filterAdjustmentIcon = isFilter ? "rotationsConditionsControlsIconFILTERADJUST" : "";
+
+        let copyString = `<div class="rotationsConditionsControlsRowIconBox ${filterAdjustment} clickable" onclick="${brickClicks}rotationsUISuffering.getConditionAsCopy(${paramsStringInitial},${isFilter})">
+                <img src="/HonkaiSR/misc/copy.png" class="rotationsConditionsControlsIcon ${filterAdjustmentIcon}">
+            </div>`;
+        let cutString = `<div class="rotationsConditionsControlsRowIconBox ${filterAdjustment} clickable" onclick="${brickClicks}rotationsUISuffering.getConditionAsCut(${paramsStringInitial},${isFilter})">
+                <img src="/HonkaiSR/misc/cut.png" class="rotationsConditionsControlsIcon ${filterAdjustmentIcon}">
+            </div>`;
+        let pasteString = `<div class="rotationsConditionsControlsRowIconBox clickable" onclick="${brickClicks}rotationsUISuffering.getConditionAsPaste(${paramsStringInitial})">
+                Paste&nbsp;<img src="/HonkaiSR/misc/paste.png" class="rotationsConditionsControlsIcon">
+            </div>`;
+        let pasteStringFILTER = `<div class="rotationsConditionsControlsRowIconBox ${filterAdjustment} clickable" onclick="${brickClicks}rotationsUISuffering.getConditionAsPaste(${paramsStringInitial},${isFilter})">
+            <img src="/HonkaiSR/misc/paste.png" class="rotationsConditionsControlsIcon ${filterAdjustmentIcon}">
+        </div>`;
+        let deleteString = `<div class="rotationsConditionsControlsRowIconBox conditionsDeleteButton clickable" onclick="${brickClicks}rotationsUISuffering.getConditionAsDeleted(${paramsStringInitial});">
+                X
+            </div>`;
+
+        let controlsString = "";
+
+        const finalPasteString = (isFilter ? (hasCopyOrCutFILTER ? pasteStringFILTER : "") : (hasCopyOrCut ? pasteString : ""));
+        if (isDeleteOnly) {
+            controlsString += deleteString;
+        }
+        else if (isArrayOperator) {
+            controlsString += copyString + cutString + deleteString;
+        }
+        else if (isLineOnly) {
+            controlsString += finalPasteString;
+        }
+        else {
+            controlsString += copyString + cutString + finalPasteString + deleteString;
+        }
+
+        // ${hasCopyOrCut && !isArrayOperator ? `<div class="rotationsConditionsControlsRowIconBox clickable" onclick="event.stopPropagation();event.preventDefault();rotationsUISuffering.getConditionAsPaste(${paramsStringInitial})">
+        //         <img src="/HonkaiSR/misc/paste.png" class="rotationsConditionsControlsIcon">
+        //     </div>` : ""}
+
+        // Copy&nbsp;
+        controlsString = `<div class="rotationsConditionsControlsRow">
+            ${controlsString}
+        </div>`;
+
+        return controlsString;
+    },
+    displayLoop(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot,arrayLength,isFilter,blockFirstAndLastPaste) {
         const typeCheck = destination.type;
 
         // console.log(destination)
         console.log(typeCheck)
         let returnString = rotationsUISuffering[typeCheck](characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot);
+
+        if (arrayLength && (indexCounter + 1) < arrayLength) {
+
+
+            // indexCounter++;
+            const newArray = [...arrayToPass];
+            newArray.push(indexCounter+2);
+
+            const copyActive = globalUI.conditionsCopyActiveFILTER || globalUI.conditionsCopyActive;
+
+            const controlsString = copyActive ? getControlsStringCondition(newArray,skillSlot,characterName,false,true,null,isFilter) : "";
+
+            const isFirstIndex = indexCounter + 1 === 0;//we start at -1 for shit like this, don't question it
+            if (isFirstIndex && !blockFirstAndLastPaste) {
+                if (returnString.returnString) {
+                    // returnString.returnString += dividerLine;
+
+                    //for now I'm bricking the ability to insert into comparison or math operators, not sure it's needed
+                }
+                else {
+
+                    const newArray2 = [...arrayToPass];
+                    newArray2.push(indexCounter+1);
+
+                    const controlsString = copyActive ? getControlsStringCondition(newArray2,skillSlot,characterName,false,true,null,isFilter) : "";
+                    returnString = controlsString + returnString;
+                }
+            }
+
+            
+            if (!blockFirstAndLastPaste) {
+                const dividerLine = `<div class="rotationsConditionsDividerLine"></div>` + controlsString;
+
+                if (returnString.returnString) {
+                    returnString.returnString += dividerLine;
+                }
+                else {
+                    returnString += dividerLine;
+                }
+            }
+            
+        }
+
         return returnString;
     },
     getReturnStruct(type) {
@@ -1590,7 +1725,8 @@ const rotationsUISuffering = {
         "FILTER: Statistic",
         "SORT: Statistic",
     ]),
-    updateRotationObject(arrayToPass,skillSlot,characterName,isAddedToOperator,parameterKey,eventObject,isTargetCondition) {
+// updateRotationObject([${newArray}],'${skillSlot}','${characterName}',true)
+    updateRotationObject(arrayToPass,skillSlot,characterName,isAddedToOperator,parameterKey,eventObject,isTargetCondition,isOpenClose,isForceDelete,isCopy,isPaste,isFilter) {
         // const characterConditions = defaultConditions[characterName];
         let characterConditions = null;
         const arrayOperators = rotationsUISuffering.hasArrayOperators;
@@ -1623,19 +1759,31 @@ const rotationsUISuffering = {
 
         
         if (parentTotalLength > 1) {
-            rotationsUISuffering.updateRotationObjectLoop(eventObject,parameterKey,arrayToPass,(isOperator ? currentConditions.array : currentConditions),currentIndex,parentTotalLength,skillSlot,characterName,isAddedToOperator,isTargetCondition);
+            let finalReturnValue = rotationsUISuffering.updateRotationObjectLoop(eventObject,parameterKey,arrayToPass,(isOperator ? currentConditions.array : currentConditions),currentIndex,parentTotalLength,skillSlot,characterName,isAddedToOperator,isTargetCondition,isOpenClose,isForceDelete,isCopy,isPaste,isFilter);
+        
+            if (isCopy) {
+                return finalReturnValue
+            }
         }
         else {
             const operatorJoinSet = new Set (["AND","OR"]);
             const potentialOperatorElement = readSelection(`rotationConditionType${skillSlot}${arrayToPass.join("|")}`);
-            if (operatorType && operatorType != potentialOperatorElement.value) {
+
+            if (isCopy) {
+                return currentConditions
+            }
+            // globalUI.conditionsCopyActive
+
+            const elementDidChange = operatorType != potentialOperatorElement.value;
+
+            if (operatorType && (elementDidChange || isForceDelete || isPaste)) {
                 //so if the prior operator was and/or and if the operator we switched is still and/or, then just change the internal to match and that works
-                if (operatorJoinSet.has(operatorType) && operatorJoinSet.has(potentialOperatorElement.value)) {
+                if (!isForceDelete && !isPaste && operatorJoinSet.has(operatorType) && operatorJoinSet.has(potentialOperatorElement.value)) {
                     currentConditions.type = potentialOperatorElement.value;
                 }
                 //otherwise if we switched from say and to compare, then the and array is removed in its entirety and a new compare object needs to be constructed
                 else {
-                    if (potentialOperatorElement.value === "Delete") {
+                    if (isForceDelete) {
                         // delete characterConditions[skillSlot];
 
                         // currentConditions.array = [];
@@ -1644,6 +1792,9 @@ const rotationsUISuffering = {
                         characterConditions[skillSlot] = rotationsUISuffering.getReturnStruct("AND")
                         characterConditions[skillSlot].array = [];
                         // currentConditions.splice(arrayToPass[currentIndex],1)
+                    }
+                    else if (isPaste) {
+                        //technically can't ever paste into the top layer of anything since that is reserved for only one instance, be it an array operator or not
                     }
                     else {
                         characterConditions[skillSlot] = rotationsUISuffering.getReturnStruct(potentialOperatorElement.value);
@@ -1670,7 +1821,7 @@ const rotationsUISuffering = {
             //     }
             // }
 
-            else if (!isAddedToOperator) {
+            else if (eventObject && !isAddedToOperator && !isOpenClose) {
                 // updateRotationObject([${newArray}],'${skillSlot}','${characterName}',2)
                 const conditionKeys = Object.keys(currentConditions);
                 const keyToModify = conditionKeys[parameterKey];
@@ -1693,14 +1844,17 @@ const rotationsUISuffering = {
                     newConditions.array.push(rotationsUISuffering.getReturnStruct("FILTER: Statistic"));
                 }
                 else if (isTargetCondition) {
-                    console.log("reached deposit end",isAddedToOperator,isTargetCondition)
+                    // console.log("reached deposit end",isAddedToOperator,isTargetCondition)
                     currentConditions.array.push(rotationsUISuffering.getReturnStruct("TARGET CHECK"));
-                    console.log(currentConditions.array)
+                    // console.log(currentConditions.array)
                 }
                 else {
                     currentConditions.array.push(rotationsUISuffering.getReturnStruct("Turn"));
                 }
                 
+            }
+            else if (isOpenClose) {
+                currentConditions.isClosed = !currentConditions.isClosed;
             }
         }
 
@@ -1710,26 +1864,51 @@ const rotationsUISuffering = {
 
 
     },
-    updateRotationObjectLoop(eventObject,parameterKey,arrayToPass,currentConditions,currentIndex,parentTotalLength,skillSlot,characterName,isAddedToOperator,isTargetCondition) {
+    updateRotationObjectLoop(eventObject,parameterKey,arrayToPass,currentConditions,currentIndex,parentTotalLength,skillSlot,characterName,isAddedToOperator,isTargetCondition,isOpenClose,isForceDelete,isCopy,isPaste,isFilter) {
         currentIndex++;
+
+        // console.log(currentIndex,parentTotalLength - 1,arrayToPass[currentIndex])
+        const isLessThanLength = currentIndex < parentTotalLength - 1;
+        if (!isLessThanLength && isPaste) {
+            let pasteObject = null;
+
+            if (isFilter) {
+                pasteObject = JSON.parse(globalUI.conditionsCopyActiveFILTER);
+                globalUI.conditionsCopyActiveFILTER = null;
+            }
+            else {
+                pasteObject = JSON.parse(globalUI.conditionsCopyActive);
+                globalUI.conditionsCopyActive = null;
+            }
+            
+
+            currentConditions.splice(arrayToPass[currentIndex],0,pasteObject);
+            return;
+            //if we're beyond the bounds of an array's normal length then it can cause problems if we allow it to go beyond this point
+            //I could technically add a whole bunch of exceptions to allow that OR I could just make this little blurb here
+            //and sidestep all that bullshit so until this somehow causes a problem downs the road, I leave this as is.
+        }
+        
+
         const newConditions = currentConditions[arrayToPass[currentIndex]];
         // console.log(newConditions)
         // console.log(arrayToPass,currentIndex,currentConditions)
-        const operatorType = newConditions.type;
+
+        const operatorType = newConditions?.type;
         const arrayOperators = rotationsUISuffering.hasArrayOperators;
         // console.log(newConditions)
 
 
         // console.log(parentTotalLength,arrayToPass,skillSlot,characterName,isAddedToOperator)
 
-        if (currentIndex < parentTotalLength - 1) {
+        if (isLessThanLength) {
             
             const isOperator = operatorType && arrayOperators.has(operatorType);
             
             // const newIndex = isOperator ? -1 : currentIndex;
 
             // console.log(operatorType, newConditions)
-            rotationsUISuffering.updateRotationObjectLoop(eventObject,parameterKey,arrayToPass,isOperator ? newConditions.array : newConditions,currentIndex,parentTotalLength,skillSlot,characterName,isAddedToOperator,isTargetCondition);
+            return rotationsUISuffering.updateRotationObjectLoop(eventObject,parameterKey,arrayToPass,isOperator ? newConditions.array : newConditions,currentIndex,parentTotalLength,skillSlot,characterName,isAddedToOperator,isTargetCondition,isOpenClose,isForceDelete,isCopy,isPaste,isFilter);
         }
         else {
 
@@ -1749,26 +1928,45 @@ const rotationsUISuffering = {
 
             // console.log(operatorType)
 
+            if (isCopy) {
+                return newConditions
+            }
+
             if (operatorType) {
-                if (operatorType != potentialOperatorElement.value) {
+                if (operatorType != potentialOperatorElement.value || isForceDelete || isPaste) {
                     //so if the prior operator was and/or and if the operator we switched is still and/or, then just change the internal to match and that works
-                    if (operatorJoinSet.has(operatorType) && operatorJoinSet.has(potentialOperatorElement.value)) {
+                    if (!isForceDelete && !isPaste && operatorJoinSet.has(operatorType) && operatorJoinSet.has(potentialOperatorElement.value)) {
                         newConditions.type = potentialOperatorElement.value;
                     }
                     //otherwise if we switched from say and to compare, then the and array is removed in its entirety and a new compare object needs to be constructed
                     else {
-                        if (potentialOperatorElement.value === "Delete") {
+                        if (isForceDelete) {
                             // delete currentConditions[skillSlot];
                             // console.log(currentConditions)
                             currentConditions.splice(arrayToPass[currentIndex],1)
                         }
+                        else if (isPaste) {
+                            let pasteObject = null;
+                            if (isFilter) {
+                                pasteObject = JSON.parse(globalUI.conditionsCopyActiveFILTER);
+                                globalUI.conditionsCopyActiveFILTER = null;
+                            }
+                            else {
+                                pasteObject = JSON.parse(globalUI.conditionsCopyActive);
+                                globalUI.conditionsCopyActive = null;
+                            }
+
+                            currentConditions.splice(arrayToPass[currentIndex],0,pasteObject);
+                        }
+
+                        // globalUI.conditionsCopyActive
                         else {
                             currentConditions[arrayToPass[currentIndex]] = rotationsUISuffering.getReturnStruct(potentialOperatorElement.value);
                         }
                         
                     }
                 }
-                else if (!isAddedToOperator) {
+                else if (eventObject && !isAddedToOperator && !isOpenClose) {
                     // updateRotationObject([${newArray}],'${skillSlot}','${characterName}',2)
                     const conditionKeys = Object.keys(newConditions);
                     const keyToModify = conditionKeys[parameterKey];
@@ -1782,7 +1980,7 @@ const rotationsUISuffering = {
                     else if (valueToPass === "false") {valueToPass = false;}
                     // else if (newID.toLowerCase().includes("number")) {valueToPass = +valueToPass;}
     
-                    console.log(valueToPass)
+                    // console.log(valueToPass)
                     const valueIsNumber = newID.toLowerCase().includes("number");
                     newConditions[keyToModify] = valueIsNumber ? +newPotentialElem.value : valueToPass;
                 }
@@ -1806,10 +2004,107 @@ const rotationsUISuffering = {
                     }
                     // console.log(newConditions)
                 }
+                else if (isOpenClose) {
+                    newConditions.isClosed = !newConditions.isClosed;
+                }
             }
         }
     },
 
+    getSlotNameFinal(value,slotRef) {
+        const charObject = globalRecords.character;
+
+        let targetName = null;
+        if (value === "Self" || slotRef === "Self") {
+            targetName = charObject[`char${globalUI.currentCharacterDisplayed}`].name;
+        }
+        else {
+            targetName = charObject[value]?.name ?? charObject[slotRef]?.name;
+        }
+
+        return targetName;
+    },
+    getHighlightSummary(value,slotRef,isBattleValue,layerCounter) {
+        let targetName = null;
+        let finalValue = value;
+
+        targetName = rotationsUISuffering.getSlotNameFinal(value,slotRef);
+        if (!slotRef && targetName) {
+            finalValue = targetName;
+        }
+
+        if (isBattleValue) {
+            if (!slotRef) {
+                throw new Error(`Missing slotRef passed to highlightSummary text, could not get battleValue for summary.\n\nIf you ever see this, join the discord and let Vash know.`);
+            }
+
+            const initialRef = customDisplayValuesLog[targetName ?? globalRecords.character.char1.name] ?? [];
+            const currentRef = [
+                ...conditionListCharacterStateArray
+            ];
+            if (initialRef.length) {currentRef.push(...initialRef);}
+
+            for (let condition of currentRef) {
+
+                if (condition.refName === value) {
+                    finalValue = condition.valueName;
+                    break;
+                }
+            }
+        }
+
+        if (conditionComparatorCharValueConversions[value]) {
+            finalValue = conditionComparatorCharValueConversions[value];
+        }
+
+        const shmancyColorFinal = rotationsUISuffering.getShmancyBorderColor(layerCounter);
+
+        return `<span class="traceAttackTargetTypeConditionDescHighlight" style="--schmancyColorOverride: ${shmancyColorFinal};">[${finalValue}]</span>`;
+    },
+    getSummaryCharPreviewIcon(value,slotRef) {
+        const targetName = rotationsUISuffering.getSlotNameFinal(value,slotRef);
+
+        const characterIconPath = "/HonkaiSR/" + characters[targetName].icon;
+
+        return `<div class="rotationsCharacterTargetPreviewBox">
+            <img src="${characterIconPath}" class="rotationsCharacterTargetPreviewBoxIcon">
+        </div>`;
+    },
+
+    getShmancyBorderColor(layerCounter) {
+        // border-left: 2px solid rgba(255, 255, 255, 0.527);
+        const coloring = [
+            // "#569CD6",
+            // "#D7BA7D",
+            // "#C586C0",
+            // // "#4EC9B0",
+            // // "#9CDCFE",
+            // // "#DCDCAA",
+
+
+            "#569CD6",
+            "#D7BA7D",
+            "#C586C0",
+            // "#4EC9B0",
+            // "#9CDCFE",
+            // "#DCDCAA",
+        ];
+
+        const colorLength = coloring.length;
+        const newIndex = layerCounter % colorLength;
+        
+
+        // for (let i=0;i<50;i++) {
+        //     const newIndex = i % colorLength;
+        //     const finalColor = coloring[newIndex];
+        //     console.log(i,newIndex,finalColor)
+        // }
+
+
+        const finalColor = coloring[newIndex];
+
+        return finalColor
+    },
     AND(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
         const array = destination.array;
 
@@ -1819,49 +2114,57 @@ const rotationsUISuffering = {
         
 
         const arrayIDString = newArray.join("|");
-        const baseIDString = `rotationConditionType${skillSlot}${arrayIDString}`
+        const baseIDString = `rotationConditionType${skillSlot}${arrayIDString}`;
 
         // ${adjustmentString}
-        let returnString = `
-        <div class="rotationsSectionANDBoxHolder">
-        <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
-            ${rotationsUISuffering.getConditionList("AND",conditionListArray)}
-        </select>
-        </div>`;
+        let returnString = ``;
 
         layerCounter += 1;
         let indexCounterNew = -1;
 
         // inheritedAdjustmentString += indexCounter < parentLength-1 ? "│&nbsp;&nbsp;" : "&nbsp;&nbsp;&nbsp;&nbsp;";
 
-
-        // rotationConditionOperatorBox
-        returnString += `<div class="rotationConditionOperatorBox">`;
         const displayLoop = rotationsUISuffering.displayLoop;
 
         // console.log(array)
         for (let entry of array) {
 
-            returnString += displayLoop(characterName,entry,indexCounterNew,layerCounter,newArray,skillSlot);
+            returnString += displayLoop(characterName,entry,indexCounterNew,layerCounter,newArray,skillSlot,array.length);
             
             indexCounterNew++;
         }
-        returnString += `
-            <div class="rotationsOperatorAddButtonHolder">
-                <div class="rotationsOperatorAddButton clickable" onclick="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',true)">
-                    Add Condition
+
+        // onclick="event.stopPropagation();"
+
+        const shmancyColorFinal = rotationsUISuffering.getShmancyBorderColor(layerCounter);//style="--schmancyColorOverride: ${shmancyColorFinal};"
+        returnString = `
+        <details class="rotationsPermaConditionsExpandTargetBox" ${destination.isClosed ? "" : `open=""`}>
+            <summary class="calcUserTargetConditionHeader clickable" style="--schmancyColorOverride: ${shmancyColorFinal};" onclick="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,false,false,false,true);">
+
+                <select class="rotationActionSelectorSub" id="${baseIDString}" onclick="event.stopPropagation();" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
+                    ${rotationsUISuffering.getConditionList("AND",conditionListArray)}
+                </select>
+                
+                ${getControlsStringCondition(newArray,skillSlot,characterName,true)}
+            </summary>
+            
+
+            <div class="rotationConditionOperatorBox" style="--schmancyColorOverride: ${shmancyColorFinal};">
+            
+                ${returnString}
+                ${!array.length ? getControlsStringCondition(newArray,skillSlot,characterName,false,true,true) : ""}
+
+                <div class="rotationsOperatorAddButtonHolder">
+                    <div class="rotationsOperatorAddButton clickable" onclick="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',true)">
+                        Add Condition
+                    </div>
                 </div>
+
             </div>
-        
-        </div>`;
+            
+        </details>`;
 
 
-        // returnString += `</div>`
-        // <div class="relicStatSelectionRowBuffUptime">
-        //     <div class="BuffUptimeHeaderRow">Graph by:</div>
-        //     <select class="BuffUptimeSelectionSelector" name="" id="buffUptimeGraphBy" onchange="graphs.createGraphsByBuffUptime()"></select>
-        // </div>
-        // console.log(returnString)
         return returnString;
     },
     OR(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
@@ -1876,12 +2179,7 @@ const rotationsUISuffering = {
 
 
         // ${adjustmentString}
-        let returnString = `
-        <div class="rotationsSectionANDBoxHolder">
-        <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
-            ${rotationsUISuffering.getConditionList("OR",conditionListArray)}
-        </select>
-        </div>`;
+        let returnString = ``;
 
         layerCounter += 1;
         let indexCounterNew = -1;
@@ -1889,31 +2187,39 @@ const rotationsUISuffering = {
         // inheritedAdjustmentString += indexCounter < parentLength-1 ? "│&nbsp;&nbsp;" : "&nbsp;&nbsp;&nbsp;&nbsp;";
 
 
-        // rotationConditionOperatorBox
-        returnString += `<div class="rotationConditionOperatorBox">`;
         const displayLoop = rotationsUISuffering.displayLoop;
         for (let entry of array) {
 
-            returnString += displayLoop(characterName,entry,indexCounterNew,layerCounter,newArray,skillSlot);
+            returnString += displayLoop(characterName,entry,indexCounterNew,layerCounter,newArray,skillSlot,array.length);
             
             indexCounterNew++;
         }
-        returnString += `
-            <div class="rotationsOperatorAddButtonHolder">
-                <div class="rotationsOperatorAddButton clickable" onclick="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',true)">
-                    Add Condition
+
+        const shmancyColorFinal = rotationsUISuffering.getShmancyBorderColor(layerCounter);
+        returnString = `
+        <details class="rotationsPermaConditionsExpandTargetBox" ${destination.isClosed ? "" : `open=""`}>
+            <summary class="calcUserTargetConditionHeader clickable" style="--schmancyColorOverride: ${shmancyColorFinal};" onclick="event.stopPropagation();rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,false,false,false,true);">
+
+                <select class="rotationActionSelectorSub" id="${baseIDString}" onclick="event.stopPropagation();" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
+                    ${rotationsUISuffering.getConditionList("OR",conditionListArray)}
+                </select>
+                
+                ${getControlsStringCondition(newArray,skillSlot,characterName,true)}
+            </summary>
+
+            <div class="rotationConditionOperatorBox" style="--schmancyColorOverride: ${shmancyColorFinal};">
+                ${returnString}
+                ${!array.length ? getControlsStringCondition(newArray,skillSlot,characterName,false,true,true) : ""}
+
+                <div class="rotationsOperatorAddButtonHolder">
+                    <div class="rotationsOperatorAddButton clickable" onclick="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',true)">
+                        Add Condition
+                    </div>
                 </div>
+
             </div>
             
-        </div>`
-
-
-        // returnString += `</div>`
-        // <div class="relicStatSelectionRowBuffUptime">
-        //     <div class="BuffUptimeHeaderRow">Graph by:</div>
-        //     <select class="BuffUptimeSelectionSelector" name="" id="buffUptimeGraphBy" onchange="graphs.createGraphsByBuffUptime()"></select>
-        // </div>
-        // console.log(returnString)
+        </details>`;
         return returnString;
     },
     "Target Priority"(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
@@ -1934,6 +2240,7 @@ const rotationsUISuffering = {
             <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')" style="display: none">
                 ${rotationsUISuffering.getConditionList("Target Priority",targetPriorityFixedArray)}
             </select>
+            
         </div>`;
 
         layerCounter += 1;
@@ -1947,7 +2254,7 @@ const rotationsUISuffering = {
         const displayLoop = rotationsUISuffering.displayLoop;
         for (let entry of array) {
 
-            returnString += displayLoop(characterName,entry,indexCounterNew,layerCounter,newArray,skillSlot);
+            returnString += displayLoop(characterName,entry,indexCounterNew,layerCounter,newArray,skillSlot,array.length,true,true);
             
             indexCounterNew++;
         }
@@ -2167,31 +2474,21 @@ const rotationsUISuffering = {
             buffNameOptions += `<option value="${fullBuffName}" ${destination.buffName === fullBuffName ? "selected" : ""}>${fullBuffName}</option>`;
         }
 
-
-        
-
-        // "buffNames": {
-        //     "critBuff4pc": "Self-Enshrouded Recluse (Crit DMG)",
-        //     "shieldBuff4pc": "Self-Enshrouded Recluse (4pc)",
-        // },
-        // "buffNamesPerCharacter": {
-        //     "critBuff4pc": "Self-Enshrouded Recluse (Crit DMG)",
-        // },
-
-        const target = destination.target;
-        // console.log(target)
-        const targetSlot = characterObject[target === "Self" ? `char${globalUI.currentCharacterDisplayed}` : target.toLowerCase()].name;
-        
-        const characterIconPath = "/HonkaiSR/" + characters[targetSlot].preview;
-
         const getConditionList = rotationsUISuffering.getConditionList;
 
-        let returnString = `<div class="rotationsConditionsRowHolder">
+        // const defaultsArray = [
+        //     destination.targetType ?? "Character",
+        //     destination.target ?? "Self",
+        //     destination.state ?? "true"
+        // ]
+        const default1 = destination.targetType ?? "Character";
+        const default2 = destination.target ?? "Self";
+        const default3 = destination.state ?? "true";
+
+        let returnString = `<div class="rotationsConditionsRowHolderWithDesc">
             <div style="display:flex;flex-direction:column">
                 <div class="rotationsConditionsRowHolderInner">
-                    <div class="rotationsCharacterTargetPreviewBox">
-                        <img src="${characterIconPath}" class="rotationsCharacterTargetPreviewBoxIcon">
-                    </div>
+                    ${getHighlightCharPreviewIcon(default2,null)}
 
                     <div class="rotationsConditionsImageAdjacentHolderBox">
 
@@ -2200,16 +2497,17 @@ const rotationsUISuffering = {
                                 ${getConditionList("Buff",conditionListArray)}
                             </select>
                             <select class="rotationActionSelectorSub" id="${baseIDString}TargetType" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,2,event)">
-                                ${getConditionList(destination.targetType ?? "Character",conditionListCharsTypeBuffTarget)}
+                                ${getConditionList(default1,conditionListCharsTypeBuffTarget)}
                             </select>
+                            ${getControlsStringCondition(newArray,skillSlot,characterName,true)}
                         </div>
 
                         <div class="rotationsSectionConditionHolderBox">
                             <select class="rotationActionSelectorSub" id="${baseIDString}Target" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
-                                ${getConditionList(destination.target ?? "Self",conditionListChars)}
+                                ${getConditionList(default2,conditionListChars)}
                             </select>
                             <select class="rotationActionSelectorSub" id="${baseIDString}State" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,4,event)">
-                                ${getConditionList(destination.state ?? "true",conditionListBoolean)}
+                                ${getConditionList(default3,conditionListBoolean)}
                             </select>
                         </div>
 
@@ -2224,13 +2522,17 @@ const rotationsUISuffering = {
 
             </div>
 
+            <span class="conditionSummaryDescBox">
+                If ${getHighlightSummaryText(default2,null,null,layerCounter)}'s ${getHighlightSummaryText(default1,null,null,layerCounter)} does ${default3 == true ? "" : getHighlightSummaryText("NOT",null,null,layerCounter) + " "}have ${getHighlightSummaryText(destination.buffName,null,null,layerCounter)}
+                
+            </span>
+
         </div>`;
         
 
         return returnString
     },
     Turn(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
-
         // {type: "Turn", target: "Self", targetType: "Character", phase: "Any Part", state: true},
 
         indexCounter++;
@@ -2251,20 +2553,18 @@ const rotationsUISuffering = {
         if (phaseElem && destination.phase != phaseElem.value) {destination.phase = phaseElem.value;}
         if (stateElem && destination.state != stateElem.value) {destination.state = stateElem.value === "true" ? true : false;}
 
-        const characterObject = globalRecords.character;
-        const target = destination.target;
-        const targetSlot = characterObject[target === "Self" ? `char${globalUI.currentCharacterDisplayed}` : target.toLowerCase()].name;
-        
-        const characterIconPath = "/HonkaiSR/" + characters[targetSlot].preview;
-
-        // console.log(destination.target,targetElem?.value ?? "")
+        const default1 = destination.targetType ?? "Character";
+        const default2 = destination.target ?? "Self";
+        const default3 = destination.phase ?? "Any Part";
+        const default4 = destination.state ?? "true";
 
         const getConditionList = rotationsUISuffering.getConditionList;
-        let returnString = `<div class="rotationsConditionsRowHolder">
+
+        // getHighlightCharPreviewIcon
+
+        let returnString = `<div class="rotationsConditionsRowHolderWithDesc">
             <div class="rotationsConditionsRowHolderInner">
-                <div class="rotationsCharacterTargetPreviewBox">
-                    <img src="${characterIconPath}" class="rotationsCharacterTargetPreviewBoxIcon">
-                </div>
+                ${getHighlightCharPreviewIcon(default2,null)}
 
                 <div class="rotationsConditionsImageAdjacentHolderBox">
 
@@ -2273,25 +2573,29 @@ const rotationsUISuffering = {
                             ${getConditionList("Turn",conditionListArray)}
                         </select>
                         <select class="rotationActionSelectorSub" id="${baseIDString}TargetType" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,2,event)">
-                            ${getConditionList(destination.targetType ?? "Character",conditionListCharsType)}
+                            ${getConditionList(default1,conditionListCharsType)}
                         </select>
+                        ${getControlsStringCondition(newArray,skillSlot,characterName,true)}
                     </div>
 
                     <div class="rotationsSectionConditionHolderBox">
                         <select class="rotationActionSelectorSub" id="${baseIDString}Target" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
-                            ${getConditionList(destination.target ?? "Self",conditionListChars)}
+                            ${getConditionList(default2,conditionListChars)}
                         </select>
                         <select class="rotationActionSelectorSub" id="${baseIDString}Phase" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,3,event)">
-                            ${getConditionList(destination.phase ?? "Any Part",conditionListTurnPhase)}
+                            ${getConditionList(default3,conditionListTurnPhase)}
                         </select>
                         <select class="rotationActionSelectorSub" id="${baseIDString}State" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,4,event)">
-                            ${getConditionList(destination.state ?? "true",conditionListBoolean)}
+                            ${getConditionList(default4,conditionListBoolean)}
                         </select>
                     </div>
-
-                </div>
-            </div>
             
+                </div>
+                
+            </div>
+            <span class="conditionSummaryDescBox">
+                If ${getHighlightSummaryText(default2,null,null,layerCounter)}'s ${getHighlightSummaryText(default1,null,null,layerCounter)} is ${default4 == true ? "" : getHighlightSummaryText("NOT",null,null,layerCounter) + " "}in ${getHighlightSummaryText(default3,null,null,layerCounter)} of their turn
+            </span>
         </div>`;
 
         return returnString
@@ -2316,20 +2620,15 @@ const rotationsUISuffering = {
         // if (valueNameElem && destination.characterValue != valueNameElem.value) {destination.characterValue = valueNameElem.value;}
         if (stateElem && destination.state != stateElem.value) {destination.state = stateElem.value === "true" ? true : false;}
 
-        const characterObject = globalRecords.character;
-        const target = destination.target;
-        const targetSlot = characterObject[target === "Self" ? `char${globalUI.currentCharacterDisplayed}` : target.toLowerCase()].name;
-        
-        const characterIconPath = "/HonkaiSR/" + characters[targetSlot].preview;
-
-        // console.log(destination.target,targetElem?.value ?? "")
+        const default1 = destination.targetType ?? "Character";
+        const default2 = destination.target ?? "Self";
+        const default3 = destination.state ?? "true";
 
         const getConditionList = rotationsUISuffering.getConditionList;
-        let returnString = `<div class="rotationsConditionsRowHolder">
+        let returnString = `<div class="rotationsConditionsRowHolderWithDesc">
+
             <div class="rotationsConditionsRowHolderInner">
-                <div class="rotationsCharacterTargetPreviewBox">
-                    <img src="${characterIconPath}" class="rotationsCharacterTargetPreviewBoxIcon">
-                </div>
+                ${getHighlightCharPreviewIcon(default2,null)}
 
                 <div class="rotationsConditionsImageAdjacentHolderBox">
 
@@ -2338,21 +2637,26 @@ const rotationsUISuffering = {
                             ${getConditionList("Next Turn Is:",conditionListArray)}
                         </select>
                         <select class="rotationActionSelectorSub" id="${baseIDString}TargetType" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,2,event)">
-                            ${getConditionList(destination.targetType ?? "Character",conditionListCharsType)}
+                            ${getConditionList(default1,conditionListCharsType)}
                         </select>
+                        ${getControlsStringCondition(newArray,skillSlot,characterName,true)}
                     </div>
 
                     <div class="rotationsSectionConditionHolderBox">
                         <select class="rotationActionSelectorSub" id="${baseIDString}Target" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
-                            ${getConditionList(destination.target ?? "Self",conditionListChars)}
+                            ${getConditionList(default2,conditionListChars)}
                         </select>
                         <select class="rotationActionSelectorSub" id="${baseIDString}State" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,3,event)">
-                            ${getConditionList(destination.state ?? "true",conditionListBoolean)}
+                            ${getConditionList(default3,conditionListBoolean)}
                         </select>
                     </div>
 
                 </div>
             </div>
+
+            <span class="conditionSummaryDescBox">
+                If the next detected ALLY turn in order is ${default3 == true ? "" : getHighlightSummaryText("NOT",null,null,layerCounter) + " "}${getHighlightSummaryText(default2,null,null,layerCounter)}'s ${getHighlightSummaryText(default1,null,null,layerCounter)}
+            </span>
             
         </div>`;
 
@@ -2377,38 +2681,17 @@ const rotationsUISuffering = {
         if (valueNameElem) {
             destination.statName = valueNameElem.value;
         }
-
-        const characterObject = globalRecords.character;
-        const target = destination.target;
-        const targetSlot = characterObject[target === "Self" ? `char${globalUI.currentCharacterDisplayed}` : target.toLowerCase()].name;
         const statName = destination.statName;
 
-        // indexToSpecific
-
-        const statIndex = greatTableIndex[statName];
-        const familyName = basicShorthand.mappedFamilies[statIndex];
-        const resultingPath = propertyImagePaths[familyName];
-        const setGrouping = resultingPath.sets[statIndex].specific;
-        // console.log(setGrouping)
-
-        // mappedFamilies: {},
-        // mappedCacheTags: {},
-        // mappedUpdateStatKeys: {},
-        // reverseKeyMappings: {},
-
-        // basicShorthand.reverseKeyMappings        //specific to index value  greatTableKeys
-        
-        const characterIconPath = "/HonkaiSR/" + characters[targetSlot].preview;
-        // console.log(statIndex)
-
-        
         const getConditionList = rotationsUISuffering.getConditionList;
+
+        const default1 = destination.targetType ?? "Character";
+        const default2 = destination.target ?? "Self";
+        const default3 = statName ?? "SPDFlat";
 
         let returnString = `<div class="rotationsConditionsRowHolder">
             <div class="rotationsConditionsRowHolderInner">
-                <div class="rotationsCharacterTargetPreviewBox">
-                    <img src="${characterIconPath}" class="rotationsCharacterTargetPreviewBoxIcon">
-                </div>
+            ${getHighlightCharPreviewIcon(default2,null)}
 
                 <div class="rotationsConditionsImageAdjacentHolderBox">
 
@@ -2417,16 +2700,16 @@ const rotationsUISuffering = {
                             ${getConditionList("Stat",conditionListValueArray)}
                         </select>
                         <select class="rotationActionSelectorSub" id="${baseIDString}TargetType" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,2,event)">
-                            ${getConditionList(destination.targetType ?? "Character",conditionListCharsTypeBuffTarget)}
+                            ${getConditionList(default1,conditionListCharsTypeBuffTarget)}
                         </select>
                     </div>
 
                     <div class="rotationsSectionConditionHolderBox">
                         <select class="rotationActionSelectorSub" id="${baseIDString}Target" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
-                            ${getConditionList(destination.target ?? "Self",conditionListChars)}
+                            ${getConditionList(default2,conditionListChars)}
                         </select>
                         <select class="rotationActionSelectorSub" id="${baseIDString}StatValue" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,3,event)">
-                            ${rotationsUISuffering.getConditionListStats(statName ?? "SPDFlat",conditionCharacterStatList)}
+                            ${rotationsUISuffering.getConditionListStats(default3,conditionCharacterStatList)}
                         </select>
                     </div>
 
@@ -2435,7 +2718,8 @@ const rotationsUISuffering = {
             
         </div>`;
 
-        return returnString
+        // return {returnString, displayString: `${getHighlightSummaryText(default1)}`}
+        return {returnString, displayString: `${getHighlightSummaryText(default2,null,null,layerCounter)}'s ${getHighlightSummaryText(default1,null,null,layerCounter)}: ${getHighlightSummaryText(default3,null,null,layerCounter)}`}
     },
     "User Value: Number"(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
 
@@ -2451,6 +2735,8 @@ const rotationsUISuffering = {
         if (numberElem) {destination.inputValue = +numberElem.value;}
 
         const getConditionList = rotationsUISuffering.getConditionList;
+
+        const default1 = destination.inputValue ?? 0;
         let returnString = `<div class="rotationsConditionsRowHolder">
             <div class="rotationsConditionsRowHolderInner">
 
@@ -2458,14 +2744,15 @@ const rotationsUISuffering = {
                     ${getConditionList("User Value: Number",conditionListValueArray)}
                 </select>
                 <div class="presetsSelectorBox">
-                    <input type="number" class="tagInput" id="${baseIDString}InputValueNumber" value="${destination.inputValue ?? 0}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
+                    <input type="number" class="tagInput" id="${baseIDString}InputValueNumber" value="${default1}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
                 </div>
 
             </div>
             
         </div>`;
 
-        return returnString
+        return {returnString, displayString: `${getHighlightSummaryText(default1,null,null,layerCounter)}`}
+        // return {returnString, displayString: `${getHighlightSummaryText(default2)}'s ${getHighlightSummaryText(default1)}: ${getHighlightSummaryText(default3)}`}
     },
     "User Value: Boolean"(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
 
@@ -2481,6 +2768,8 @@ const rotationsUISuffering = {
         if (booleanElem) {destination.inputValue = booleanElem.value === "true" ? true : false;}
 
         const getConditionList = rotationsUISuffering.getConditionList;
+
+        const default1 = destination.inputValue ?? "true";
         let returnString = `<div class="rotationsConditionsRowHolder">
             <div class="rotationsConditionsRowHolderInner">
 
@@ -2489,14 +2778,15 @@ const rotationsUISuffering = {
                 </select>
 
                 <select class="rotationActionSelectorSub" id="${baseIDString}InputValueBoolean" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
-                    ${getConditionList(destination.inputValue ?? "true",conditionListBoolean)}
+                    ${getConditionList(default1,conditionListBoolean)}
                 </select>
 
             </div>
             
         </div>`;
 
-        return returnString
+        return {returnString, displayString: `${getHighlightSummaryText(default1,null,null,layerCounter)}`}
+        // return {returnString, displayString: `${getHighlightSummaryText(default2)}'s ${getHighlightSummaryText(default1)}: ${getHighlightSummaryText(default3)}`}
     },
     "Character: Value"(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
         // {type: "Character: Value", target: "Self", targetType: "Character", characterValue: "Energy: Current"},
@@ -2515,31 +2805,16 @@ const rotationsUISuffering = {
         if (targetTypeElem) {destination.targetType = targetTypeElem.value;}
         if (targetElem) {destination.target = targetElem.value;}
         if (valueNameElem) {destination.characterValue = valueNameElem.value;}
-
-        const characterObject = globalRecords.character;
-        const target = destination.target;
-        const targetSlot = characterObject[target === "Self" ? `char${globalUI.currentCharacterDisplayed}` : target.toLowerCase()].name;
-
-        // console.log(setGrouping)
-
-        // mappedFamilies: {},
-        // mappedCacheTags: {},
-        // mappedUpdateStatKeys: {},
-        // reverseKeyMappings: {},
-
-        // basicShorthand.reverseKeyMappings        //specific to index value
-        
-        const characterIconPath = "/HonkaiSR/" + characters[targetSlot].preview;
-        // console.log(statIndex)
-
         
         const getConditionList = rotationsUISuffering.getConditionList;
 
+        const default1 = destination.targetType ?? "Character";
+        const default2 = destination.target ?? "Self";
+        const default3 = destination.characterValue ?? "energyCurrent";
+
         let returnString = `<div class="rotationsConditionsRowHolder">
             <div class="rotationsConditionsRowHolderInner">
-                <div class="rotationsCharacterTargetPreviewBox">
-                    <img src="${characterIconPath}" class="rotationsCharacterTargetPreviewBoxIcon">
-                </div>
+            ${getHighlightCharPreviewIcon(default2,null)}
 
                 <div class="rotationsConditionsImageAdjacentHolderBox">
 
@@ -2548,16 +2823,16 @@ const rotationsUISuffering = {
                             ${getConditionList("Character: Value",conditionListValueArray)}
                         </select>
                         <select class="rotationActionSelectorSub" id="${baseIDString}TargetType" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,2,event)">
-                            ${getConditionList(destination.targetType ?? "Character",conditionListCharsTypeBuffTarget)}
+                            ${getConditionList(default1,conditionListCharsTypeBuffTarget)}
                         </select>
                     </div>
 
                     <div class="rotationsSectionConditionHolderBox">
                         <select class="rotationActionSelectorSub" id="${baseIDString}Target" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
-                            ${getConditionList(destination.target ?? "Self",conditionListChars)}
+                            ${getConditionList(default2,conditionListChars)}
                         </select>
                         <select class="rotationActionSelectorSub" id="${baseIDString}ValueName" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,3,event)">
-                            ${rotationsUISuffering.getConditionListCharValues(destination.characterValue ?? "energyCurrent",conditionComparatorCharValueConversions)}
+                            ${rotationsUISuffering.getConditionListCharValues(default3,conditionComparatorCharValueConversions)}
                         </select>
                     </div>
 
@@ -2566,7 +2841,7 @@ const rotationsUISuffering = {
             
         </div>`;
 
-        return returnString
+        return {returnString, displayString: `${getHighlightSummaryText(default2,null,null,layerCounter)}'s ${getHighlightSummaryText(default1,null,null,layerCounter)}: ${getHighlightSummaryText(default3,null,null,layerCounter)}`}
     },
     "Team: Value"(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
         // {type: "Character: Value", target: "Self", targetType: "Character", characterValue: "Energy: Current"},
@@ -2585,6 +2860,8 @@ const rotationsUISuffering = {
 
         
         const getConditionList = rotationsUISuffering.getConditionList;
+
+        const default1 = destination.teamValue ?? "Skill Points: Current";
 
         let returnString = `<div class="rotationsConditionsRowHolder">
             <div class="rotationsConditionsRowHolderInner">
@@ -2608,7 +2885,7 @@ const rotationsUISuffering = {
             
         </div>`;
 
-        return returnString
+        return {returnString, displayString: `${getHighlightSummaryText(default1,null,null,layerCounter)}`}
     },
     "Enemy Team: Value"(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
         // {type: "Character: Value", target: "Self", targetType: "Character", characterValue: "Energy: Current"},
@@ -2628,6 +2905,8 @@ const rotationsUISuffering = {
         
         const getConditionList = rotationsUISuffering.getConditionList;
 
+        const default1 = destination.teamValue ?? "Enemies: Count";
+
         let returnString = `<div class="rotationsConditionsRowHolder">
             <div class="rotationsConditionsRowHolderInner">
 
@@ -2641,7 +2920,7 @@ const rotationsUISuffering = {
 
                     <div class="rotationsSectionConditionHolderBox">
                         <select class="rotationActionSelectorSub" id="${baseIDString}ValueName" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
-                            ${rotationsUISuffering.getConditionList(destination.teamValue ?? "Enemies: Count",conditionListEnemyTeamValueArray)}
+                            ${rotationsUISuffering.getConditionList(default1,conditionListEnemyTeamValueArray)}
                         </select>
                     </div>
 
@@ -2650,7 +2929,7 @@ const rotationsUISuffering = {
             
         </div>`;
 
-        return returnString
+        return {returnString, displayString: `${getHighlightSummaryText(default1,null,null,layerCounter)}`}
     },
     "Battle: Value"(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
         // {type: "Character: Value", target: "Self", targetType: "Character", characterValue: "Energy: Current"},
@@ -2670,6 +2949,8 @@ const rotationsUISuffering = {
         
         const getConditionList = rotationsUISuffering.getConditionList;
 
+        const default1 = destination.battleValue ?? "Cycle: AV Passed";
+
         let returnString = `<div class="rotationsConditionsRowHolder">
             <div class="rotationsConditionsRowHolderInner">
 
@@ -2683,7 +2964,7 @@ const rotationsUISuffering = {
 
                     <div class="rotationsSectionConditionHolderBox">
                         <select class="rotationActionSelectorSub" id="${baseIDString}ValueName" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
-                            ${rotationsUISuffering.getConditionList(destination.battleValue ?? "Cycle: AV Passed",conditionListBattleValueArray)}
+                            ${rotationsUISuffering.getConditionList(default1,conditionListBattleValueArray)}
                         </select>
                     </div>
 
@@ -2692,7 +2973,7 @@ const rotationsUISuffering = {
             
         </div>`;
 
-        return returnString
+        return {returnString, displayString: `${getHighlightSummaryText(default1,null,null,layerCounter)}`}
     },
     "Skill Points: Current"(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
 
@@ -2767,7 +3048,9 @@ const rotationsUISuffering = {
         
         const getConditionList = rotationsUISuffering.getConditionList;
 
-        let returnString = `<div class="rotationsConditionsRowHolder">
+        const default1 = destination.sustainValue ?? "No Energy Full [NORMAL]";
+
+        let returnString = `<div class="rotationsConditionsRowHolderWithDesc">
             <div class="rotationsConditionsRowHolderInner">
 
                 <div class="rotationsConditionsImageAdjacentHolderBox">
@@ -2776,16 +3059,21 @@ const rotationsUISuffering = {
                         <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
                             ${getConditionList("Team Energy Checks",conditionListArray)}
                         </select>
+                        ${getControlsStringCondition(newArray,skillSlot,characterName,true)}
                     </div>
 
                     <div class="rotationsSectionConditionHolderBox">
                         <select class="rotationActionSelectorSub" id="${baseIDString}ValueName" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
-                            ${rotationsUISuffering.getConditionList(destination.sustainValue ?? "No Energy Full [NORMAL]",conditionListEnergyValueArray)}
+                            ${rotationsUISuffering.getConditionList(default1,conditionListEnergyValueArray)}
                         </select>
                     </div>
 
                 </div>
             </div>
+
+            <span class="conditionSummaryDescBox">
+                If in the allied team, excluding this entity, there is ${getHighlightSummaryText(default1,null,false,layerCounter)}
+            </span>
             
         </div>`;
 
@@ -2809,7 +3097,9 @@ const rotationsUISuffering = {
         
         const getConditionList = rotationsUISuffering.getConditionList;
 
-        let returnString = `<div class="rotationsConditionsRowHolder">
+        const default1 = destination.sustainValue ?? "Any Ally: HP <= 50%";
+
+        let returnString = `<div class="rotationsConditionsRowHolderWithDesc">
             <div class="rotationsConditionsRowHolderInner">
 
                 <div class="rotationsConditionsImageAdjacentHolderBox">
@@ -2818,16 +3108,21 @@ const rotationsUISuffering = {
                         <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
                             ${getConditionList("Sustain Checks",conditionListArray)}
                         </select>
+                        ${getControlsStringCondition(newArray,skillSlot,characterName,true)}
                     </div>
 
                     <div class="rotationsSectionConditionHolderBox">
                         <select class="rotationActionSelectorSub" id="${baseIDString}ValueName" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
-                            ${rotationsUISuffering.getConditionList(destination.sustainValue ?? "Any Ally: HP <= 50%",conditionListSustainValueArray)}
+                            ${rotationsUISuffering.getConditionList(default1,conditionListSustainValueArray)}
                         </select>
                     </div>
 
                 </div>
             </div>
+
+            <span class="conditionSummaryDescBox">
+                If ${getHighlightSummaryText(default1,null,null,layerCounter)}
+            </span>
             
         </div>`;
 
@@ -2855,53 +3150,40 @@ const rotationsUISuffering = {
         const target = destination.target;
         const targetSlot = characterObject[target === "Self" ? `char${globalUI.currentCharacterDisplayed}` : target.toLowerCase()].name;
 
-        // state: true,
-
-        const characterIconPath = "/HonkaiSR/" + characters[targetSlot].preview;
-
         const firstValidState = rotationsUISuffering.getConditionListCharStates(destination.stateName,null,characterName,destination.target ?? "Self",true);
         // console.log(firstValidState)
 
         const getConditionList = rotationsUISuffering.getConditionList;
 
-        let returnString = `<div class="rotationsConditionsRowHolder">
-            <div class="rotationsConditionsRowHolderInner">
-                <div class="rotationsCharacterTargetPreviewBox">
-                    <img src="${characterIconPath}" class="rotationsCharacterTargetPreviewBoxIcon">
-                </div>
 
-                <div class="rotationsConditionsImageAdjacentHolderBox">
-
-                    <div class="rotationsConditionsRowHeader">
-                        <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
-                            ${getConditionList("Character: State",conditionListArray)}
-                        </select>
-                        <select class="rotationActionSelectorSub" id="${baseIDString}Target" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
-                            ${getConditionList(destination.target ?? "Self",conditionListChars)}
-                        </select>
-                    </div>
-
-                    <div class="rotationsSectionConditionHolderBox">
-                        
-                        <select class="rotationActionSelectorSub" id="${baseIDString}ValueName" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,2,event)">
-                            ${rotationsUISuffering.getConditionListCharStates(destination.stateName ?? firstValidState,null,characterName,destination.target ?? "Self",false)}
-                        </select>
-                        <select class="rotationActionSelectorSub" id="${baseIDString}State" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,3,event)">
-                            ${getConditionList(destination.state ?? "true",conditionListBoolean)}
-                        </select>
-                    </div>
-
-                </div>
-            </div>
-            
-        </div>`;
-
-        // const newValueNameElem = readSelection(`${baseIDString}ValueName`);
+        const default1 = destination.target ?? "Self";
+        // let default2 = destination.stateName ?? firstValidState;
+        const default3 = destination.state ?? "true";
 
         destination.stateName ??= firstValidState;//if the stateName doesn't exist yet(prob bc this was a new selection and we didn't read char states yet) then assign it the first valid state we can find
         //otherwise we leave it as is with whatever value the element provided from user selections, if this was a preexisting condition
         if (firstValidState != null) {
             const currentRef = customDisplayValuesLog[targetSlot] ?? [];
+
+            let valueFound = false;
+            for (let baseEntry of conditionListCharacterStateArray) {
+                if (destination.stateName === baseEntry.refName) {
+                    valueFound = true;
+                    break;
+                }
+            }
+            for (let baseEntry of currentRef) {
+                if (destination.stateName === baseEntry.refName) {
+                    valueFound = true;
+                    break;
+                }
+            }
+            if (!valueFound) {destination.stateName = firstValidState;}
+
+
+
+
+
             for (let battleEntry of currentRef) {
                 // {type: "Character: State", target: "Self", stateName: "currentEnergy", isBattleValue: false},
                 // destination.stateName
@@ -2921,70 +3203,76 @@ const rotationsUISuffering = {
             }
         }
 
-        // destination.stateName
+        let default2 = destination.stateName ?? firstValidState;
+
+        let returnString = `<div class="rotationsConditionsRowHolderWithDesc">
+            <div class="rotationsConditionsRowHolderInner">
+            ${getHighlightCharPreviewIcon(default1,null)}
+
+                <div class="rotationsConditionsImageAdjacentHolderBox">
+
+                    <div class="rotationsConditionsRowHeader">
+                        <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
+                            ${getConditionList("Character: State",conditionListArray)}
+                        </select>
+                        <select class="rotationActionSelectorSub" id="${baseIDString}Target" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
+                            ${getConditionList(default1,conditionListChars)}
+                        </select>
+                        ${getControlsStringCondition(newArray,skillSlot,characterName,true)}
+                    </div>
+
+                    <div class="rotationsSectionConditionHolderBox">
+                        
+                        <select class="rotationActionSelectorSub" id="${baseIDString}ValueName" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,2,event)">
+                            ${rotationsUISuffering.getConditionListCharStates(default2,null,characterName,destination.target ?? "Self",false)}
+                        </select>
+                        <select class="rotationActionSelectorSub" id="${baseIDString}State" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,3,event)">
+                            ${getConditionList(default3,conditionListBoolean)}
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+
+            <span class="conditionSummaryDescBox">
+                If ${getHighlightSummaryText(default1,null,null,layerCounter)}'s ${getHighlightSummaryText(default2,default1,true,layerCounter)} is ${getHighlightSummaryText(default3,null,null,layerCounter)}
+            </span>
+            
+        </div>`;
+
+        // destination.stateName ??= firstValidState;//if the stateName doesn't exist yet(prob bc this was a new selection and we didn't read char states yet) then assign it the first valid state we can find
+        // //otherwise we leave it as is with whatever value the element provided from user selections, if this was a preexisting condition
+        // if (firstValidState != null) {
+        //     const currentRef = customDisplayValuesLog[targetSlot] ?? [];
+        //     for (let battleEntry of currentRef) {
+        //         // {type: "Character: State", target: "Self", stateName: "currentEnergy", isBattleValue: false},
+        //         // destination.stateName
+
+        //         // "Saber": [
+        //         //     {valueName: "Basic is Enhanced", refName: "isEnhanced", isBattleValue: true},
+        //         //     {valueName: "Core Resonance", refName: "coreResonance", isBattleValue: true},
+        //         //     {valueName: "Overflow Energy", refName: "overflowEnergy", isBattleValue: true},
+        //         //     {valueName: "Advance Ready", refName: "advanceReady", isBattleValue: true},
+        //         //     {valueName: "E6 Ult Counter", refName: "e6UltCounter", isBattleValue: true, requiresEidolon: 6},
+        //         // ], 
+
+        //         if (destination.stateName === battleEntry.refName) {
+        //             destination.isBattleValue = battleEntry.isBattleValue;
+        //             break;
+        //         }
+        //     }
+        // }
 
         return returnString
     },
-    // "Skill Points: Current",
-    // "Skill Points: Max",
-
-    // "Character Specific Value"(characterName,destination,indexCounter,layerCounter,parentLength,inheritedAdjustmentString) {
-    //     // {type: "Character Specific Value", target: "Self", targetType: "Character", characterValue: "Energy: Current"},
-
-    //     const characterObject = globalRecords.character;
-    //     const target = destination.target;
-    //     const targetSlot = characterObject[target === "Self" ? `char${globalUI.currentCharacterDisplayed}` : target.toLowerCase()].name;
-
-    //     // console.log(setGrouping)
-
-    //     // mappedFamilies: {},
-    //     // mappedCacheTags: {},
-    //     // mappedUpdateStatKeys: {},
-    //     // reverseKeyMappings: {},
-
-    //     // basicShorthand.reverseKeyMappings        //specific to index value
-        
-    //     const characterIconPath = "/HonkaiSR/" + characters[targetSlot].preview;
-    //     // console.log(statIndex)
-
-        
-    //     const getConditionList = rotationsUISuffering.getConditionList;
-
-    //     let returnString = `<div class="rotationsConditionsRowHolder">
-    //         <div class="rotationsConditionsRowHolderInner">
-    //             <div class="rotationsCharacterTargetPreviewBox">
-    //                 <img src="${characterIconPath}" class="rotationsCharacterTargetPreviewBoxIcon">
-    //             </div>
-
-    //             <div class="rotationsConditionsImageAdjacentHolderBox">
-
-    //                 <div class="rotationsConditionsRowHeader">
-    //                     <select class="rotationActionSelectorSub" id="" onchange="">
-    //                         ${getConditionList("Character: Value",conditionListValueArray)}
-    //                     </select>
-    //                     <select class="rotationActionSelectorSub" id="" onchange="">
-    //                         ${getConditionList(destination.targetType ?? "Character",conditionListCharsTypeBuffTarget)}
-    //                     </select>
-    //                 </div>
-
-    //                 <div class="rotationsSectionConditionHolderBox">
-    //                     <select class="rotationActionSelectorSub" id="" onchange="">
-    //                         ${getConditionList(destination.target ?? "Self",conditionListChars)}
-    //                     </select>
-    //                     <select class="rotationActionSelectorSub" id="" onchange="">
-    //                         ${getConditionList(destination.characterValue ?? "energyCurrent",conditionListCharacterValueArray)}
-    //                     </select>
-    //                 </div>
-
-    //             </div>
-    //         </div>
-            
-    //     </div>`;
-
-    //     return returnString
-    // },
-    // "Energy: Current",
-    // "Energy: Max",
+    comparisonNaming: {
+        ">": "Greater Than",
+        ">=": "Greater Than or Equal To",
+        "=": "Equal To",
+        "!=": "NOT Equal To",
+        "<": "Less Than",
+        "<=": "Less Than or Equal To"
+    },
     COMPARE(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
 
 
@@ -2995,7 +3283,7 @@ const rotationsUISuffering = {
             value 2 selections
         */
 
-
+        layerCounter += 1;
         indexCounter++;
         const newArray = [...arrayToPass];
         newArray.push(indexCounter);
@@ -3025,22 +3313,47 @@ const rotationsUISuffering = {
 
         let newIndex = -1;
         const getConditionList = rotationsUISuffering.getConditionList;
-        let returnString = `<div class="rotationsSectionANDBoxHolder">
-        <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
-            ${rotationsUISuffering.getConditionList("COMPARE",conditionListArray)}
-        </select>
-        </div>
+        let returnString = ``;
 
-        <div class="rotationConditionOperatorBox">
-            ${rotationsUISuffering.displayLoop(characterName,destination.array[0],newIndex,layerCounter,newArray,skillSlot)}
-            <div class="rotationsConditionsRowHeader">
-                <select class="rotationActionSelectorSub" id="${baseIDString}Comparison" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
-                    ${getConditionList(destination.comparison ?? "=",conditionComparatorList)}
+        const shmancyColorFinal = rotationsUISuffering.getShmancyBorderColor(layerCounter);
+
+        const value1 = rotationsUISuffering.displayLoop(characterName,destination.array[0],newIndex,layerCounter,newArray,skillSlot,null);
+        const value2 = rotationsUISuffering.displayLoop(characterName,destination.array[1],newIndex+1,layerCounter,newArray,skillSlot,null);
+
+        const default1 = destination.comparison ?? "=";
+
+        const comparisonNaming = rotationsUISuffering.comparisonNaming;
+
+
+        // <u></u>
+        returnString = `
+        <details class="rotationsPermaConditionsExpandTargetBox" ${destination.isClosed ? "" : `open=""`}>
+            <summary class="calcUserTargetConditionHeader clickable" style="--schmancyColorOverride: ${shmancyColorFinal};" onclick="event.stopPropagation();rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,false,false,false,true);">
+
+                <select class="rotationActionSelectorSub" id="${baseIDString}" onclick="event.stopPropagation();" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
+                    ${rotationsUISuffering.getConditionList("COMPARE",conditionListArray)}
                 </select>
+                ${getControlsStringCondition(newArray,skillSlot,characterName,true)}
+                
+            </summary>
+
+            <div class="rotationConditionOperatorBox" style="--schmancyColorOverride: ${shmancyColorFinal};">
+                ${value1.returnString}
+                <div class="rotationsConditionsRowHeader">
+                    <select class="rotationActionSelectorSub" id="${baseIDString}Comparison" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
+                        ${getConditionList(default1,conditionComparatorList)}
+                    </select>
+                </div>
+                ${value2.returnString}
+                
+                <span class="conditionSummaryDescBox">
+                    If ${value1.displayString} is ${getHighlightSummaryText(comparisonNaming[default1],null,null,layerCounter)} ${value2.displayString}
+                </span>
             </div>
-            ${rotationsUISuffering.displayLoop(characterName,destination.array[1],newIndex+1,layerCounter,newArray,skillSlot)}
+
             
-        </div>`;
+            
+        </details>`;
 
         return returnString
     },
@@ -3053,6 +3366,7 @@ const rotationsUISuffering = {
         */
 
 
+        layerCounter+= 1;
         indexCounter++;
         const newArray = [...arrayToPass];
         newArray.push(indexCounter);
@@ -3082,15 +3396,26 @@ const rotationsUISuffering = {
 
         let newIndex = -1;
         const getConditionList = rotationsUISuffering.getConditionList;
-        let returnString = `<div class="rotationsSectionANDBoxHolder">
-        <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
-            ${rotationsUISuffering.getConditionList("NOT",conditionListArray)}
-        </select>
-        </div>
+        let returnString = ``;
 
-        <div class="rotationConditionOperatorBox">
-            ${rotationsUISuffering.displayLoop(characterName,destination.array[0],newIndex,layerCounter,newArray,skillSlot)}
-        </div>`;
+
+        const shmancyColorFinal = rotationsUISuffering.getShmancyBorderColor(layerCounter);
+        returnString = `
+        <details class="rotationsPermaConditionsExpandTargetBox" ${destination.isClosed ? "" : `open=""`}>
+            <summary class="calcUserTargetConditionHeader clickable" style="--schmancyColorOverride: ${shmancyColorFinal};" onclick="event.stopPropagation();rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,false,false,false,true);">
+
+                <select class="rotationActionSelectorSub" id="${baseIDString}" onclick="event.stopPropagation();" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
+                    ${rotationsUISuffering.getConditionList("NOT",conditionListArray)}
+                </select>
+                ${getControlsStringCondition(newArray,skillSlot,characterName,true)}
+                
+            </summary>
+
+            <div class="rotationConditionOperatorBox" style="--schmancyColorOverride: ${shmancyColorFinal};">
+                ${rotationsUISuffering.displayLoop(characterName,destination.array[0],newIndex,layerCounter,newArray,skillSlot,null)}
+            </div>
+            
+        </details>`;
 
         return returnString
     },
@@ -3129,44 +3454,58 @@ const rotationsUISuffering = {
 
         let varyingFilterStringer = "";
         for (let i=1;i<destination.array.length;i++) {
-            varyingFilterStringer += rotationsUISuffering.displayLoop(characterName,destination.array[i],newIndex+i,layerCounter,newArray,skillSlot)
+            varyingFilterStringer += rotationsUISuffering.displayLoop(characterName,destination.array[i],newIndex+i,layerCounter,newArray,skillSlot,destination.array.length)
         }
 
         
 
+        // let returnString = `<div class="rotationsSectionANDBoxHolder">
+        //     <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
+        //         ${rotationsUISuffering.getConditionList("TARGET CHECK",targetSelectOuterArray)}
+        //     </select>
+        //     ${getControlsStringCondition(newArray,skillSlot,characterName,true,null,null,null,true)}
+        // </div>
 
-        let returnString = `<div class="rotationsSectionANDBoxHolder">
-            <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
+        // <div class="rotationConditionOperatorBox" style="--schmancyColorOverride: ${shmancyColorFinal};">
+            
+            
+        // </div>
+        // `;
+
+
+
+        const shmancyColorFinal = rotationsUISuffering.getShmancyBorderColor(layerCounter);
+        returnString = `
+        <details class="rotationsPermaConditionsExpandTargetBox" ${destination.isClosed ? "" : `open=""`}>
+            <summary class="calcUserTargetConditionHeader clickable" style="--schmancyColorOverride: ${shmancyColorFinal};" onclick="event.stopPropagation();rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,false,false,false,true);">
+
+                <select class="rotationActionSelectorSub" id="${baseIDString}" onclick="event.stopPropagation();" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
                 ${rotationsUISuffering.getConditionList("TARGET CHECK",targetSelectOuterArray)}
-            </select>
-        </div>
+                </select>
+                ${getControlsStringCondition(newArray,skillSlot,characterName,true,null,null,null,true)}
+                
+            </summary>
 
-        <div class="rotationConditionOperatorBox">
-            ${rotationsUISuffering.displayLoop(characterName,destination.array[0],newIndex,layerCounter,newArray,skillSlot)}
+            <div class="rotationConditionOperatorBox" style="--schmancyColorOverride: ${shmancyColorFinal};">
+                ${rotationsUISuffering.displayLoop(characterName,destination.array[0],newIndex,layerCounter,newArray,skillSlot,null,true)}
 
-
-
-
-            <details class="rotationsPermaConditionsExpandTargetBox" open="">
-                <summary class="calcUserTargetConditionHeader clickable">
-                    <div class="rotationConditionOperatorHeaderCondition">Requirements</div>
-                    
-                </summary>
-                <div class="rotationsPermaConditionsExpandTargetBoxInnerReqs">
-                ${varyingFilterStringer}
-            
-        `;
-
-        returnString += `
-                <div class="rotationsOperatorAddButtonHolder">
-                    <div class="rotationsOperatorAddButton clickable" onclick="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',true,null,null,false)">
-                        Add Condition
+                <details class="rotationsPermaConditionsExpandTargetBox" open="">
+                    <summary class="calcUserTargetConditionHeader clickable" style="--schmancyColorOverride: ${shmancyColorFinal};">
+                        <div class="rotationConditionOperatorHeaderCondition">Requirements</div>
+                        
+                    </summary>
+                    <div class="rotationsPermaConditionsExpandTargetBoxInnerReqs">
+                        ${varyingFilterStringer}
+                        <div class="rotationsOperatorAddButtonHolder">
+                            <div class="rotationsOperatorAddButton clickable" onclick="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',true,null,null,false)">
+                                Add Condition
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </details>
             </div>
-        </details>
             
-        </div>`
+        </details>`;
 
         return returnString
     },
@@ -3189,61 +3528,24 @@ const rotationsUISuffering = {
 
         // targetSelectListArray
     // const targetSelectInnerArray = [
-
+        layerCounter += 1;
         let newIndex = -1;
         let varyingFilterStringer = "";
         for (let i=0;i<destination.array.length;i++) {
-            varyingFilterStringer += rotationsUISuffering.displayLoop(characterName,destination.array[i],newIndex+i,layerCounter,newArray,skillSlot)
+            varyingFilterStringer += rotationsUISuffering.displayLoop(characterName,destination.array[i],newIndex+i,layerCounter,newArray,skillSlot,destination.array.length,true)
         }
 
-        
-        // const getConditionList = rotationsUISuffering.getConditionList;
 
-        // <div class="rotationConditionOperatorBox"></div>
-
-
-
-        // <details class="rotationsPermaConditionsExpand" open="">
-        //     <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
-        //         <div class="rotationConditionOperatorHeaderCondition">IF</div>
-        //         <div class="rotationsConditionsBodyBox">
-        //             <div class="actionDetailBody">
-        //                 <div class="rotationConditionOperatorHeaderInline">Eidolon Activated:</div>&nbsp;1 
-        //             </div>
-        //         </div>
-        //     </summary>
-
-        //     <div class="rotationConditionOperatorBoxMain">
-        //         <div class="rotationConditionOperatorHeaderConditionTHEN">THEN</div>
-        //         <div class="rotationsSectionRowHolder2">
-        //             <div class="rotationsConditionsBodyBox"></div>
-        //         </div>
-                
-        //     </div>
-        // </details>
-
-
-        // <div class="statFiltersRowHeader">Filter</div>
-        // <div class="rotationsConditionsBodyBox">
-        //             <div class="actionDetailBody">
-        //                 <div class="rotationConditionOperatorHeaderInline">Eidolon Activated:</div>&nbsp;1 
-        //             </div>
-        //         </div>
-
-
-        // rotationsPermaConditionsExpandTargetBox
-        
+        const shmancyColorFinal = rotationsUISuffering.getShmancyBorderColor(layerCounter);//Requirements
         let returnString = `<details class="rotationsPermaConditionsExpandTargetBox" open="">
-
-            <summary class="calcUserTargetConditionHeader clickable">
-                <div class="rotationConditionOperatorHeaderCondition">FILTER</div>
+                <summary class="calcUserTargetConditionHeader clickable" style="--schmancyColorOverride: ${shmancyColorFinal};">
+                    <div class="rotationConditionOperatorHeaderCondition">FILTER</div>
+                    
+                </summary>
                 
-            </summary>
-
-            
-            <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')" style="display: none">
-                ${rotationsUISuffering.getConditionList("TARGET",targetSelectInnerArray)}
-            </select>
+                <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')" style="display: none">
+                    ${rotationsUISuffering.getConditionList("TARGET",targetSelectInnerArray)}
+                </select>
             <div class="rotationsPermaConditionsExpandTargetBoxInner">
         
             <div class="rotationsConditionsRowHolder">
@@ -3350,23 +3652,44 @@ const rotationsUISuffering = {
 
         // console.log(destination)
 
+        layerCounter += 1;
         let newIndex = -1;
         const getConditionList = rotationsUISuffering.getConditionList;
-        let returnString = `<div class="rotationsSectionANDBoxHolder">
-        <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
-            ${rotationsUISuffering.getConditionList("FILTER: Statistic",filterBasicListArray)}
-        </select>
-        </div>
 
-        <div class="rotationConditionOperatorBox">
-            ${rotationsUISuffering.displayLoop(characterName,destination.array[0],newIndex,layerCounter,newArray,skillSlot)}
-            <div class="rotationsConditionsRowHeader">
-                <select class="rotationActionSelectorSub" id="${baseIDString}Comparison" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
-                    ${getConditionList(destination.comparison ?? "=",conditionComparatorList)}
+        const value1 = rotationsUISuffering.displayLoop(characterName,destination.array[0],newIndex,layerCounter,newArray,skillSlot,null);
+        const value2 = rotationsUISuffering.displayLoop(characterName,destination.array[1],newIndex+1,layerCounter,newArray,skillSlot,null);
+
+        const default1 = destination.comparison ?? "=";
+
+        const comparisonNaming = rotationsUISuffering.comparisonNaming;
+
+        const shmancyColorFinal = rotationsUISuffering.getShmancyBorderColor(layerCounter);
+        returnString = `
+        <details class="rotationsPermaConditionsExpandTargetBox" ${destination.isClosed ? "" : `open=""`}>
+            <summary class="calcUserTargetConditionHeader clickable" style="--schmancyColorOverride: ${shmancyColorFinal};" onclick="event.stopPropagation();rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,false,false,false,true);">
+
+                <select class="rotationActionSelectorSub" id="${baseIDString}" onclick="event.stopPropagation();" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
+                    ${rotationsUISuffering.getConditionList("FILTER: Statistic",filterBasicListArray)}
                 </select>
+                ${getControlsStringCondition(newArray,skillSlot,characterName,true,false,false,true)}
+                
+            </summary>
+
+            <div class="rotationConditionOperatorBox" style="--schmancyColorOverride: ${shmancyColorFinal};">
+                ${value1.returnString}
+                <div class="rotationsConditionsRowHeader">
+                    <select class="rotationActionSelectorSub" id="${baseIDString}Comparison" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
+                        ${getConditionList(default1,conditionComparatorList)}
+                    </select>
+                </div>
+                ${value2.returnString}
+
+                <span class="conditionSummaryDescBox">
+                    Reduce targets to entities that meet the condition:<br> ${value1.displayString} is ${getHighlightSummaryText(comparisonNaming[default1],null,null,layerCounter)} ${value2.displayString}
+                </span>
             </div>
-            ${rotationsUISuffering.displayLoop(characterName,destination.array[1],newIndex+1,layerCounter,newArray,skillSlot)}
-        </div>`;
+            
+        </details>`;
 
         return returnString
     },
@@ -3397,26 +3720,43 @@ const rotationsUISuffering = {
 
         // console.log(destination)
 
+        layerCounter += 1;
         let newIndex = -1;
         const getConditionList = rotationsUISuffering.getConditionList;
-        let returnString = `<div class="rotationsSectionANDBoxHolder">
-        <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
-            ${rotationsUISuffering.getConditionList("FILTER: Path",filterBasicListArray)}
-        </select>
-        </div>
 
-        <div class="rotationConditionOperatorBox">
-            <div class="rotationsConditionsRowHeader">
-                <select class="rotationActionSelectorSub" id="${baseIDString}Comparison" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
-                    ${getConditionList(destination.comparison ?? "=",conditionComparatorList)}
+        const comparisonNaming = rotationsUISuffering.comparisonNaming;
+        const default1 = destination.comparison ?? "=";
+        const default2 = destination.path ?? "Erudition";
+
+        const shmancyColorFinal = rotationsUISuffering.getShmancyBorderColor(layerCounter);
+        returnString = `
+        <details class="rotationsPermaConditionsExpandTargetBox" ${destination.isClosed ? "" : `open=""`}>
+            <summary class="calcUserTargetConditionHeader clickable" style="--schmancyColorOverride: ${shmancyColorFinal};" onclick="event.stopPropagation();rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,false,false,false,true);">
+
+                <select class="rotationActionSelectorSub" id="${baseIDString}" onclick="event.stopPropagation();" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
+                    ${rotationsUISuffering.getConditionList("FILTER: Path",filterBasicListArray)}
                 </select>
+                ${getControlsStringCondition(newArray,skillSlot,characterName,true,false,false,true)}
+                
+            </summary>
+
+            <div class="rotationConditionOperatorBox" style="--schmancyColorOverride: ${shmancyColorFinal};">
+                <div class="rotationsConditionsRowHeader">
+                    <select class="rotationActionSelectorSub" id="${baseIDString}Comparison" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
+                        ${getConditionList(default1,conditionComparatorList)}
+                    </select>
+                </div>
+                <div class="rotationsSectionConditionHolderBox">
+                    <select class="rotationActionSelectorSub" id="${baseIDString}Path" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,2,event)">
+                        ${getConditionList(default2,conditionListPathType)}
+                    </select>
+                </div>
+                <span class="conditionSummaryDescBox">
+                    Reduce targets to those that are ${getHighlightSummaryText(comparisonNaming[default1],null,null,layerCounter)} the path ${getHighlightSummaryText(default2,null,null,layerCounter)}
+                </span>
             </div>
-            <div class="rotationsSectionConditionHolderBox">
-                <select class="rotationActionSelectorSub" id="${baseIDString}Path" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,2,event)">
-                    ${getConditionList(destination.path ?? "Erudition",conditionListPathType)}
-                </select>
-            </div>
-        </div>`;
+            
+        </details>`;
 
         return returnString
     },
@@ -3447,22 +3787,39 @@ const rotationsUISuffering = {
 
         // console.log(destination)
 
+        layerCounter += 1;
         let newIndex = -1;
-        const getConditionList = rotationsUISuffering.getConditionList;
-        let returnString = `<div class="rotationsSectionANDBoxHolder">
-        <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
-            ${rotationsUISuffering.getConditionList("SORT: Statistic",filterBasicListArray)}
-        </select>
-        </div>
+        const getConditionList = rotationsUISuffering.getConditionList;//rotationsConditionsRowHeader
 
-        <div class="rotationConditionOperatorBox">
-            ${rotationsUISuffering.displayLoop(characterName,destination.array[0],newIndex,layerCounter,newArray,skillSlot)}
-            <div class="rotationsConditionsRowHeader">
-                <select class="rotationActionSelectorSub" id="${baseIDString}Comparison" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
-                    ${getConditionList(destination.comparison ?? "Minimum",conditionComparatorListFilter)}
+        const default1 = destination.comparison ?? "Minimum";
+
+        const value1 = rotationsUISuffering.displayLoop(characterName,destination.array[0],newIndex,layerCounter,newArray,skillSlot,null);
+
+        const shmancyColorFinal = rotationsUISuffering.getShmancyBorderColor(layerCounter);
+        returnString = `
+        <details class="rotationsPermaConditionsExpandTargetBox" ${destination.isClosed ? "" : `open=""`}>
+            <summary class="calcUserTargetConditionHeader clickable" style="--schmancyColorOverride: ${shmancyColorFinal};" onclick="event.stopPropagation();rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,false,false,false,true);">
+
+                <select class="rotationActionSelectorSub" id="${baseIDString}" onclick="event.stopPropagation();" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
+                    ${rotationsUISuffering.getConditionList("SORT: Statistic",filterBasicListArray)}
                 </select>
+                ${getControlsStringCondition(newArray,skillSlot,characterName,true,false,false,true)}
+                
+            </summary>
+
+            <div class="rotationConditionOperatorBox" style="--schmancyColorOverride: ${shmancyColorFinal};">
+                ${value1.returnString}
+                <div class="rotationsConditionsRowHeader">
+                    <select class="rotationActionSelectorSub" id="${baseIDString}Comparison" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
+                        ${getConditionList(default1,conditionComparatorListFilter)}
+                    </select>
+                </div>
+                <span class="conditionSummaryDescBox">
+                    Organize targets by ${getHighlightSummaryText(default1,null,null,layerCounter)} ${value1.displayString}
+                </span>
             </div>
-        </div>`;
+
+        </details>`;
 
         return returnString
     },
@@ -3504,6 +3861,8 @@ const rotationsUISuffering = {
         
         const getConditionList = rotationsUISuffering.getConditionList;
 
+        const default1 = statName ?? "SPDFlat";
+
         let returnString = `<div class="rotationsConditionsRowHolder">
             <div class="rotationsConditionsRowHolderInner">
 
@@ -3526,7 +3885,7 @@ const rotationsUISuffering = {
             
         </div>`;
 
-        return returnString
+        return {returnString, displayString: `${getHighlightSummaryText(default1,null,null,layerCounter)}`}
     },
     "Filter Character: Value"(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
         // {type: "Character: Value", characterValue: "Energy: Current"},
@@ -3556,6 +3915,8 @@ const rotationsUISuffering = {
         
         const getConditionList = rotationsUISuffering.getConditionList;
 
+        const default1 = destination.characterValue ?? "energyCurrent";
+
         let returnString = `<div class="rotationsConditionsRowHolder">
             <div class="rotationsConditionsRowHolderInner">
 
@@ -3569,7 +3930,7 @@ const rotationsUISuffering = {
 
                     <div class="rotationsSectionConditionHolderBox">
                         <select class="rotationActionSelectorSub" id="${baseIDString}ValueName" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
-                            ${rotationsUISuffering.getConditionListCharValues(destination.characterValue ?? "energyCurrent",conditionComparatorCharValueConversions)}
+                            ${rotationsUISuffering.getConditionListCharValues(default1,conditionComparatorCharValueConversions)}
                         </select>
                     </div>
 
@@ -3578,7 +3939,7 @@ const rotationsUISuffering = {
             
         </div>`;
 
-        return returnString
+        return {returnString, displayString: `${getHighlightSummaryText(default1,null,null,layerCounter)}`}
     },
     "Filter User Value: Number"(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
 
@@ -3593,6 +3954,8 @@ const rotationsUISuffering = {
         const numberElem = readSelection(`${baseIDString}InputValueNumber`);
         if (numberElem) {destination.inputValue = +numberElem.value;}
 
+        const default1 = destination.inputValue ?? 0;
+
         const getConditionList = rotationsUISuffering.getConditionList;
         let returnString = `<div class="rotationsConditionsRowHolder">
             <div class="rotationsConditionsRowHolderInner">
@@ -3601,14 +3964,14 @@ const rotationsUISuffering = {
                     ${getConditionList("Filter User Value: Number",conditionListValueArrayFilter)}
                 </select>
                 <div class="presetsSelectorBox">
-                    <input type="number" class="tagInput" id="${baseIDString}InputValueNumber" value="${destination.inputValue ?? 0}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
+                    <input type="number" class="tagInput" id="${baseIDString}InputValueNumber" value="${default1}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
                 </div>
 
             </div>
             
         </div>`;
 
-        return returnString
+        return {returnString, displayString: `${getHighlightSummaryText(default1,null,null,layerCounter)}`}
     },
     "Filter Ally"(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
         // {type: "Filter Character", target: "Self", targetType: "Character"},
@@ -3626,20 +3989,14 @@ const rotationsUISuffering = {
         if (targetTypeElem) {destination.targetType = targetTypeElem.value;}
         if (targetElem) {destination.target = targetElem.value;}
 
-        const characterObject = globalRecords.character;
-        const target = destination.target;
-        const targetSlot = characterObject[target === "Self" ? `char${globalUI.currentCharacterDisplayed}` : target.toLowerCase()].name;
-        
-        const characterIconPath = "/HonkaiSR/" + characters[targetSlot].preview;
-        // console.log(statIndex)
-
         const getConditionList = rotationsUISuffering.getConditionList;
 
-        let returnString = `<div class="rotationsConditionsRowHolder">
+        const default1 = destination.targetType ?? "Character";
+        const default2 = destination.target ?? "Self";
+
+        let returnString = `<div class="rotationsConditionsRowHolderWithDesc">
             <div class="rotationsConditionsRowHolderInner">
-                <div class="rotationsCharacterTargetPreviewBox">
-                    <img src="${characterIconPath}" class="rotationsCharacterTargetPreviewBoxIcon">
-                </div>
+            ${getHighlightCharPreviewIcon(default2,null)}
 
                 <div class="rotationsConditionsImageAdjacentHolderBox">
 
@@ -3648,19 +4005,24 @@ const rotationsUISuffering = {
                             ${getConditionList("Filter Ally",filterBasicListArray)}
                         </select>
                         <select class="rotationActionSelectorSub" id="${baseIDString}TargetType" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,2,event)">
-                            ${getConditionList(destination.targetType ?? "Character",conditionListCharsTypeBuffTarget)}
+                            ${getConditionList(default1,conditionListCharsTypeBuffTarget)}
                         </select>
+                        ${getControlsStringCondition(newArray,skillSlot,characterName,true,false,false,true)}
                     </div>
 
                     <div class="rotationsSectionConditionHolderBox">
                         <select class="rotationActionSelectorSub" id="${baseIDString}Target" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
-                            ${getConditionList(destination.target ?? "Self",conditionListChars)}
+                            ${getConditionList(default2,conditionListChars)}
                         </select>
                     </div>
 
                 </div>
+                
             </div>
-            
+
+            <span class="conditionSummaryDescBox">
+                Finalize target to ${getHighlightSummaryText(default2,null,null,layerCounter)}'s ${getHighlightSummaryText(default1,null,null,layerCounter)}
+            </span>
         </div>`;
 
         return returnString
@@ -3692,7 +4054,7 @@ const rotationsUISuffering = {
         // "Healing Presets",
         // "Lowest HP Ally (On-Field)",
 
-        let returnString = `<div class="rotationsConditionsRowHolder">
+        let returnString = `<div class="rotationsConditionsRowHolderWithDesc">
             <div class="rotationsConditionsRowHolderInner">
 
                 <div class="rotationsConditionsImageAdjacentHolderBox">
@@ -3701,6 +4063,7 @@ const rotationsUISuffering = {
                         <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
                             ${getConditionList("Healing Presets",filterBasicListArray)}
                         </select>
+                        ${getControlsStringCondition(newArray,skillSlot,characterName,true,false,false,true)}
                     </div>
 
                     <div class="rotationsSectionConditionHolderBox">
@@ -3711,6 +4074,9 @@ const rotationsUISuffering = {
 
                 </div>
             </div>
+            <span class="conditionSummaryDescBox">
+                Finalize target by priority: ${getHighlightSummaryText(statName,null,null,layerCounter)}
+            </span>
             
         </div>`;
 
@@ -3739,51 +4105,34 @@ const rotationsUISuffering = {
         const characterObject = globalRecords.character;
         const target = destination.target;
         const targetSlot = characterObject[target === "Self" ? `char${globalUI.currentCharacterDisplayed}` : target.toLowerCase()].name;
-        // state: true,
-
-        const characterIconPath = "/HonkaiSR/" + characters[targetSlot].preview;
 
         const firstValidValue = rotationsUISuffering.getConditionListCharSpecialValues(destination.specialValue,null,targetSlot,destination.target ?? "Self",true);
         // console.log(firstValidState)
 
         const getConditionList = rotationsUISuffering.getConditionList;
 
-        let returnString = `<div class="rotationsConditionsRowHolder">
-            <div class="rotationsConditionsRowHolderInner">
-                <div class="rotationsCharacterTargetPreviewBox">
-                    <img src="${characterIconPath}" class="rotationsCharacterTargetPreviewBoxIcon">
-                </div>
+        const default1 = destination.target ?? "Self";
 
-                <div class="rotationsConditionsImageAdjacentHolderBox">
-
-                    <div class="rotationsConditionsRowHeader">
-                        <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
-                            ${getConditionList("Character: Special Value",conditionListValueArray)}
-                        </select>
-                        <select class="rotationActionSelectorSub" id="${baseIDString}Target" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
-                            ${getConditionList(destination.target ?? "Self",conditionListChars)}
-                        </select>
-                    </div>
-
-                    <div class="rotationsSectionConditionHolderBox">
-                        
-                        <select class="rotationActionSelectorSub" id="${baseIDString}ValueName" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,2,event)">
-                            ${rotationsUISuffering.getConditionListCharSpecialValues(destination.specialValue ?? firstValidValue,null,targetSlot,destination.target ?? "Self",false)}
-                        </select>
-                    </div>
-
-                </div>
-            </div>
-            
-        </div>`;
-
-        // const newValueNameElem = readSelection(`${baseIDString}ValueName`);
-
-        // console.log(firstValidValue)
         destination.specialValue ??= firstValidValue;//if the stateName doesn't exist yet(prob bc this was a new selection and we didn't read char states yet) then assign it the first valid state we can find
         //otherwise we leave it as is with whatever value the element provided from user selections, if this was a preexisting condition
         if (firstValidValue != null) {
-            const currentRef = customDisplayValuesLog[targetSlot];
+            const currentRef = customDisplayValuesLog[targetSlot] ?? [];
+
+            let valueFound = false;
+            for (let baseEntry of conditionListCharacterStateArray) {
+                if (destination.specialValue === baseEntry.refName) {
+                    valueFound = true;
+                    break;
+                }
+            }
+            for (let baseEntry of currentRef) {
+                if (destination.specialValue === baseEntry.refName) {
+                    valueFound = true;
+                    break;
+                }
+            }
+            if (!valueFound) {destination.specialValue = firstValidValue;}
+
             for (let battleEntry of currentRef) {
                 // {type: "Character: State", target: "Self", stateName: "currentEnergy", isBattleValue: false},
                 // destination.stateName
@@ -3803,9 +4152,38 @@ const rotationsUISuffering = {
             }
         }
 
-        // destination.stateName
+        const default2 = destination.specialValue ?? firstValidValue;
 
-        return returnString
+
+
+        let returnString = `<div class="rotationsConditionsRowHolder">
+            <div class="rotationsConditionsRowHolderInner">
+            ${getHighlightCharPreviewIcon(default1,null)}
+
+                <div class="rotationsConditionsImageAdjacentHolderBox">
+
+                    <div class="rotationsConditionsRowHeader">
+                        <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
+                            ${getConditionList("Character: Special Value",conditionListValueArray)}
+                        </select>
+                        <select class="rotationActionSelectorSub" id="${baseIDString}Target" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
+                            ${getConditionList(default1,conditionListChars)}
+                        </select>
+                    </div>
+
+                    <div class="rotationsSectionConditionHolderBox">
+                        
+                        <select class="rotationActionSelectorSub" id="${baseIDString}ValueName" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,2,event)">
+                            ${rotationsUISuffering.getConditionListCharSpecialValues(default2,null,targetSlot,destination.target ?? "Self",false)}
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>`;
+
+        return {returnString, displayString: `${getHighlightSummaryText(default1,null,null,layerCounter)}'s ${getHighlightSummaryText(default2,default1,true,layerCounter)}`}
     },
     MATH(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
 
@@ -3817,7 +4195,7 @@ const rotationsUISuffering = {
             value 2 selections
         */
 
-
+        layerCounter += 1;
         indexCounter++;
         const newArray = [...arrayToPass];
         newArray.push(indexCounter);
@@ -3851,23 +4229,36 @@ const rotationsUISuffering = {
 
         let newIndex = -1;
         const getConditionList = rotationsUISuffering.getConditionList;
-        let returnString = `<div class="rotationsSectionANDBoxHolder">
-        <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
-            ${rotationsUISuffering.getConditionList("MATH",conditionListValueArray)}
-        </select>
-        </div>
 
-        <div class="rotationConditionOperatorBox">
-            ${rotationsUISuffering.displayLoop(characterName,destination.array[0],newIndex,layerCounter,newArray,skillSlot)}
-            <div class="rotationsConditionsRowHeader">
-                <select class="rotationActionSelectorSub" id="${baseIDString}MathOperator" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
-                    ${getConditionList(destination.operator ?? "+",conditionMathList)}
+        const value1 = rotationsUISuffering.displayLoop(characterName,destination.array[0],newIndex,layerCounter,newArray,skillSlot,null);
+        const value2 = rotationsUISuffering.displayLoop(characterName,destination.array[1],newIndex+1,layerCounter,newArray,skillSlot,null);
+
+        const default1 = destination.operator ?? "+";
+
+        const shmancyColorFinal = rotationsUISuffering.getShmancyBorderColor(layerCounter);
+        returnString = `
+        <details class="rotationsPermaConditionsExpandTargetBox" ${destination.isClosed ? "" : `open=""`}>
+            <summary class="calcUserTargetConditionHeader clickable" style="--schmancyColorOverride: ${shmancyColorFinal};" onclick="event.stopPropagation();rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,false,false,false,true);">
+
+                <select class="rotationActionSelectorSub" id="${baseIDString}" onclick="event.stopPropagation();" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
+                    ${rotationsUISuffering.getConditionList("MATH",conditionListValueArray)}
                 </select>
-            </div>
-            ${rotationsUISuffering.displayLoop(characterName,destination.array[1],newIndex+1,layerCounter,newArray,skillSlot)}
-        </div>`;
+                
+            </summary>
 
-        return returnString
+            <div class="rotationConditionOperatorBox" style="--schmancyColorOverride: ${shmancyColorFinal};">
+                ${value1.returnString}
+                <div class="rotationsConditionsRowHeader">
+                    <select class="rotationActionSelectorSub" id="${baseIDString}MathOperator" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
+                        ${getConditionList(default1,conditionMathList)}
+                    </select>
+                </div>
+                ${value2.returnString}
+            </div>
+            
+        </details>`;
+
+        return {returnString, displayString: `(${value1.displayString} ${getHighlightSummaryText(default1,null,null,layerCounter)} ${value2.displayString})`}
     },
     "FILTER MATH"(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
 
@@ -3911,27 +4302,45 @@ const rotationsUISuffering = {
 
         // console.log(destination)
 
+        layerCounter += 1;
         let newIndex = -1;
+        const value1 = rotationsUISuffering.displayLoop(characterName,destination.array[0],newIndex,layerCounter,newArray,skillSlot,null);
+        const value2 = rotationsUISuffering.displayLoop(characterName,destination.array[1],newIndex+1,layerCounter,newArray,skillSlot,null);
+
+        const default1 = destination.operator ?? "+";
+
+        
         const getConditionList = rotationsUISuffering.getConditionList;
-        let returnString = `<div class="rotationsSectionANDBoxHolder">
-        <select class="rotationActionSelectorSub" id="${baseIDString}" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
-            ${rotationsUISuffering.getConditionList("FILTER MATH",conditionListValueArrayFilter)}
-        </select>
-        </div>
 
-        <div class="rotationConditionOperatorBox">
-            ${rotationsUISuffering.displayLoop(characterName,destination.array[0],newIndex,layerCounter,newArray,skillSlot)}
-            <div class="rotationsConditionsRowHeader">
-                <select class="rotationActionSelectorSub" id="${baseIDString}MathOperator" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
-                    ${getConditionList(destination.operator ?? "+",conditionMathList)}
+        const shmancyColorFinal = rotationsUISuffering.getShmancyBorderColor(layerCounter);
+        returnString = `
+        <details class="rotationsPermaConditionsExpandTargetBox" ${destination.isClosed ? "" : `open=""`}>
+            <summary class="calcUserTargetConditionHeader clickable" style="--schmancyColorOverride: ${shmancyColorFinal};" onclick="event.stopPropagation();rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,false,false,false,true);">
+
+                <select class="rotationActionSelectorSub" id="${baseIDString}" onclick="event.stopPropagation();" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}')">
+                    ${rotationsUISuffering.getConditionList("FILTER MATH",conditionListValueArrayFilter)}
                 </select>
-            </div>
-            ${rotationsUISuffering.displayLoop(characterName,destination.array[1],newIndex+1,layerCounter,newArray,skillSlot)}
-        </div>`;
+                
+            </summary>
 
-        return returnString
+            <div class="rotationConditionOperatorBox" style="--schmancyColorOverride: ${shmancyColorFinal};">
+                ${value1.returnString}
+                <div class="rotationsConditionsRowHeader">
+                    <select class="rotationActionSelectorSub" id="${baseIDString}MathOperator" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,1,event)">
+                        ${getConditionList(default1,conditionMathList)}
+                    </select>
+                </div>
+                ${value2.returnString}
+            </div>
+            
+        </details>`;
+
+        return {returnString, displayString: `(${value1.displayString} ${getHighlightSummaryText(default1,null,null,layerCounter)} ${value2.displayString})`}
     },
     actionHeader() {
 
     }
 }
+const getHighlightSummaryText = rotationsUISuffering.getHighlightSummary;
+const getHighlightCharPreviewIcon = rotationsUISuffering.getSummaryCharPreviewIcon;
+const getControlsStringCondition = rotationsUISuffering.getControlsStringCondition;
