@@ -46,9 +46,6 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        535,
-        536,
-        537,
         538,
         539,
         540,
@@ -58,10 +55,13 @@ let enemyData = {
         544,
         545,
         546,
-        547
+        547,
+        548,
+        549,
+        550
       ],
       "abilityOrder": [
-        511
+        514
       ],
       "enemyTag": [
         "IF_Boss",

@@ -43,10 +43,10 @@ let enemyData = {
         "Imaginary": 0.4
       },
       "abilities": [
-        648,
-        649,
-        650,
-        651
+        651,
+        652,
+        653,
+        654
       ],
       "summons": [
         {
@@ -83,10 +83,10 @@ let enemyData = {
         "Imaginary": 0.4
       },
       "abilities": [
-        648,
-        649,
-        650,
-        651
+        651,
+        652,
+        653,
+        654
       ],
       "summons": [
         {
@@ -123,10 +123,10 @@ let enemyData = {
         "Imaginary": 0.4
       },
       "abilities": [
-        648,
-        649,
-        650,
-        651
+        651,
+        652,
+        653,
+        654
       ],
       "summons": [
         {
@@ -163,10 +163,10 @@ let enemyData = {
         "Imaginary": 0.4
       },
       "abilities": [
-        648,
-        649,
-        650,
-        651
+        651,
+        652,
+        653,
+        654
       ],
       "summons": [
         {
@@ -203,10 +203,10 @@ let enemyData = {
         "Imaginary": 0.4
       },
       "abilities": [
-        648,
-        649,
-        650,
-        651
+        651,
+        652,
+        653,
+        654
       ],
       "summons": [
         {
@@ -243,10 +243,10 @@ let enemyData = {
         "Imaginary": 0.4
       },
       "abilities": [
-        648,
-        649,
-        650,
-        651
+        651,
+        652,
+        653,
+        654
       ],
       "summons": [
         {
@@ -283,10 +283,10 @@ let enemyData = {
         "Imaginary": 0.4
       },
       "abilities": [
-        648,
-        649,
-        650,
-        651
+        651,
+        652,
+        653,
+        654
       ],
       "summons": [
         {
@@ -323,10 +323,10 @@ let enemyData = {
         "Imaginary": 0.4
       },
       "abilities": [
-        648,
-        649,
-        650,
-        651
+        651,
+        652,
+        653,
+        654
       ],
       "summons": [
         {
@@ -363,10 +363,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        648,
-        649,
-        650,
-        651
+        651,
+        652,
+        653,
+        654
       ],
       "summons": [
         {
@@ -403,10 +403,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        648,
-        649,
-        650,
-        651
+        651,
+        652,
+        653,
+        654
       ],
       "summons": [
         {
@@ -443,10 +443,10 @@ let enemyData = {
         "Imaginary": 0.4
       },
       "abilities": [
-        648,
-        649,
-        650,
-        651
+        651,
+        652,
+        653,
+        654
       ],
       "summons": [
         {
@@ -483,10 +483,10 @@ let enemyData = {
         "Imaginary": 0.4
       },
       "abilities": [
-        648,
-        649,
-        650,
-        651
+        651,
+        652,
+        653,
+        654
       ],
       "summons": [
         {

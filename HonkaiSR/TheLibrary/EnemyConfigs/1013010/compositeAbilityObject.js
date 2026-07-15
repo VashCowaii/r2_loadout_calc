@@ -1686,11 +1686,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"118150896\">Monster_W1_Mecha03_RL_Ability03_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_7989) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_7989",
+                  "operator": "Variables[0] (UnusedUnderThisBase_7991) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_7991",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_7989"
+                    "UnusedUnderThisBase_7991"
                   ]
                 }
               }

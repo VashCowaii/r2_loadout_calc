@@ -50,18 +50,18 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        526,
-        527,
-        528,
         529,
         530,
         531,
         532,
         533,
-        534
+        534,
+        535,
+        536,
+        537
       ],
       "abilityOrder": [
-        511
+        514
       ],
       "enemyTag": [
         "W2_Kafka",
@@ -100,18 +100,18 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        526,
-        527,
-        528,
         529,
         530,
         531,
         532,
         533,
-        534
+        534,
+        535,
+        536,
+        537
       ],
       "abilityOrder": [
-        511
+        514
       ],
       "enemyTag": [
         "W2_Kafka",
@@ -150,18 +150,18 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        526,
-        527,
-        528,
         529,
         530,
         531,
         532,
         533,
-        534
+        534,
+        535,
+        536,
+        537
       ],
       "abilityOrder": [
-        511
+        514
       ],
       "enemyTag": [
         "W2_Kafka",
@@ -169,7 +169,7 @@ let enemyData = {
         "MGrid_4007"
       ],
       "overrideParams": {
-        "534": [
+        "537": [
           [
             "-",
             "-",

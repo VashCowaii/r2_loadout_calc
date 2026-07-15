@@ -45,13 +45,13 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        278,
-        279,
-        280,
         281,
         282,
         283,
-        284
+        284,
+        285,
+        286,
+        287
       ],
       "enemyTag": [
         "W1_SvarogPart"

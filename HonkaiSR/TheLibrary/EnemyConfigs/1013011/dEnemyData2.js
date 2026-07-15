@@ -43,19 +43,19 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        305,
-        306,
-        307,
         308,
         309,
-        310
+        310,
+        311,
+        312,
+        313
       ],
       "abilityOrder": [
+        307,
+        302,
+        303,
         304,
-        299,
-        300,
-        301,
-        302
+        305
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2",
@@ -101,19 +101,19 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        305,
-        306,
-        307,
         308,
         309,
-        310
+        310,
+        311,
+        312,
+        313
       ],
       "abilityOrder": [
+        307,
+        302,
+        303,
         304,
-        299,
-        300,
-        301,
-        302
+        305
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2",

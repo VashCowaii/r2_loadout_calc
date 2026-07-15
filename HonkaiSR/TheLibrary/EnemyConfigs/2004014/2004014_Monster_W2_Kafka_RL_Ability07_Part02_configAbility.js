@@ -247,11 +247,11 @@ const configAbility = {
           },
           "variables": {
             "MDF_W2_Kafka_RL_BattleEvent_ActionDelay": {
-              "operator": "Variables[0] (UnusedUnderThisBase_11503) || RETURN",
-              "displayLines": "UnusedUnderThisBase_11503",
+              "operator": "Variables[0] (UnusedUnderThisBase_11505) || RETURN",
+              "displayLines": "UnusedUnderThisBase_11505",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_11503"
+                "UnusedUnderThisBase_11505"
               ]
             },
             "MDF_W2_Kafka_RL_BattleEvent_BaseSpeed": {

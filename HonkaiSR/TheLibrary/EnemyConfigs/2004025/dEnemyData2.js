@@ -55,19 +55,19 @@ let enemyData = {
         "STAT_Entangle": 0.75
       },
       "abilities": [
-        615,
-        616,
-        617,
         618,
         619,
         620,
         621,
         622,
         623,
-        624
+        624,
+        625,
+        626,
+        627
       ],
       "abilityOrder": [
-        571
+        574
       ],
       "enemyTag": [
         "SuperArmor_Behit_Small",

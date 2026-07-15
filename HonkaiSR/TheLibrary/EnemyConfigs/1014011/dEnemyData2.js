@@ -52,9 +52,6 @@ let enemyData = {
         "STAT_Entangle": 0.75
       },
       "abilities": [
-        381,
-        382,
-        383,
         384,
         385,
         386,
@@ -65,7 +62,10 @@ let enemyData = {
         391,
         392,
         393,
-        394
+        394,
+        395,
+        396,
+        397
       ],
       "enemyTag": [
         "RL"
@@ -130,9 +130,6 @@ let enemyData = {
         "STAT_Entangle": 0.75
       },
       "abilities": [
-        381,
-        382,
-        383,
         384,
         385,
         386,
@@ -143,7 +140,10 @@ let enemyData = {
         391,
         392,
         393,
-        394
+        394,
+        395,
+        396,
+        397
       ],
       "enemyTag": [
         "RL"

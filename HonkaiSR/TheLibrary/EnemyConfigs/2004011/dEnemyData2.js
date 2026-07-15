@@ -50,18 +50,18 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        517,
-        518,
-        519,
         520,
         521,
         522,
         523,
         524,
-        525
+        525,
+        526,
+        527,
+        528
       ],
       "abilityOrder": [
-        511
+        514
       ],
       "enemyTag": [
         "W2_Kafka",

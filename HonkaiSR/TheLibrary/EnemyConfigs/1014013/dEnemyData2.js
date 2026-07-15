@@ -47,9 +47,6 @@ let enemyData = {
         "STAT_Entangle": 0.75
       },
       "abilities": [
-        409,
-        410,
-        411,
         412,
         413,
         414,
@@ -60,7 +57,10 @@ let enemyData = {
         419,
         420,
         421,
-        422
+        422,
+        423,
+        424,
+        425
       ],
       "enemyTag": [
         "RL"
@@ -120,9 +120,6 @@ let enemyData = {
         "STAT_Entangle": 0.75
       },
       "abilities": [
-        409,
-        410,
-        411,
         412,
         413,
         414,
@@ -133,7 +130,10 @@ let enemyData = {
         419,
         420,
         421,
-        422
+        422,
+        423,
+        424,
+        425
       ],
       "enemyTag": [
         "RL"
@@ -193,9 +193,6 @@ let enemyData = {
         "STAT_Entangle": 0.75
       },
       "abilities": [
-        409,
-        410,
-        411,
         412,
         413,
         414,
@@ -206,7 +203,10 @@ let enemyData = {
         419,
         420,
         421,
-        422
+        422,
+        423,
+        424,
+        425
       ],
       "enemyTag": [
         "RL"
@@ -266,9 +266,6 @@ let enemyData = {
         "STAT_Entangle": 0.75
       },
       "abilities": [
-        409,
-        410,
-        411,
         412,
         413,
         414,
@@ -279,7 +276,10 @@ let enemyData = {
         419,
         420,
         421,
-        422
+        422,
+        423,
+        424,
+        425
       ],
       "enemyTag": [
         "RL"

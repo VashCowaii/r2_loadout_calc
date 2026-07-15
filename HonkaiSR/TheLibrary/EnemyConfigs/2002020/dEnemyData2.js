@@ -45,10 +45,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        506
+        509
       ],
       "abilityOrder": [
-        506
+        509
       ]
     },
     "200202001": {
@@ -78,10 +78,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        506
+        509
       ],
       "abilityOrder": [
-        506
+        509
       ]
     },
     "200202002": {
@@ -111,10 +111,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        506
+        509
       ],
       "abilityOrder": [
-        506
+        509
       ]
     },
     "200202003": {
@@ -144,10 +144,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        506
+        509
       ],
       "abilityOrder": [
-        506
+        509
       ],
       "enemyTag": [
         "IF_W2_Sword"
@@ -180,10 +180,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        506
+        509
       ],
       "abilityOrder": [
-        506
+        509
       ]
     },
     "200202005": {
@@ -207,10 +207,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        506
+        509
       ],
       "abilityOrder": [
-        506
+        509
       ]
     },
     "200202006": {
@@ -240,10 +240,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        506
+        509
       ],
       "abilityOrder": [
-        506
+        509
       ],
       "enemyTag": [
         "MGrid_4004"

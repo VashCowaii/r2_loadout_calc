@@ -216,11 +216,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1416805079\">Monster_W2_Knight01_Formation</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
                   "valuePerStack": {
                     "Modifier_DefenceAddedRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_8120) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_8120",
+                      "operator": "Variables[0] (UnusedUnderThisBase_8122) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_8122",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_8120"
+                        "UnusedUnderThisBase_8122"
                       ]
                     }
                   }

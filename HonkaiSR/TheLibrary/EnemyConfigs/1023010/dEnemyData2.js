@@ -46,15 +46,15 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        470,
-        471,
-        472,
         473,
-        474
+        474,
+        475,
+        476,
+        477
       ],
       "abilityOrder": [
-        470,
-        471
+        473,
+        474
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -87,15 +87,15 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        470,
-        471,
-        472,
         473,
-        474
+        474,
+        475,
+        476,
+        477
       ],
       "abilityOrder": [
-        470,
-        471
+        473,
+        474
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -128,15 +128,15 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        470,
-        471,
-        472,
         473,
-        474
+        474,
+        475,
+        476,
+        477
       ],
       "abilityOrder": [
-        470,
-        471
+        473,
+        474
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -169,15 +169,15 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        470,
-        471,
-        472,
         473,
-        474
+        474,
+        475,
+        476,
+        477
       ],
       "abilityOrder": [
-        470,
-        471
+        473,
+        474
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -210,15 +210,15 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        470,
-        471,
-        472,
         473,
-        474
+        474,
+        475,
+        476,
+        477
       ],
       "abilityOrder": [
-        470,
-        471
+        473,
+        474
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -251,15 +251,15 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        470,
-        471,
-        472,
         473,
-        474
+        474,
+        475,
+        476,
+        477
       ],
       "abilityOrder": [
-        470,
-        471
+        473,
+        474
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2",
@@ -293,15 +293,15 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        470,
-        471,
-        472,
         473,
-        474
+        474,
+        475,
+        476,
+        477
       ],
       "abilityOrder": [
-        470,
-        471
+        473,
+        474
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -334,15 +334,15 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        470,
-        471,
-        472,
         473,
-        474
+        474,
+        475,
+        476,
+        477
       ],
       "abilityOrder": [
-        470,
-        471
+        473,
+        474
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -375,15 +375,15 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        470,
-        471,
-        472,
         473,
-        474
+        474,
+        475,
+        476,
+        477
       ],
       "abilityOrder": [
-        470,
-        471
+        473,
+        474
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -416,15 +416,15 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        470,
-        471,
-        472,
         473,
-        474
+        474,
+        475,
+        476,
+        477
       ],
       "abilityOrder": [
-        470,
-        471
+        473,
+        474
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -457,15 +457,15 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        470,
-        471,
-        472,
         473,
-        474
+        474,
+        475,
+        476,
+        477
       ],
       "abilityOrder": [
-        470,
-        471
+        473,
+        474
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -498,15 +498,15 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        470,
-        471,
-        472,
         473,
-        474
+        474,
+        475,
+        476,
+        477
       ],
       "abilityOrder": [
-        470,
-        471
+        473,
+        474
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -539,15 +539,15 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        470,
-        471,
-        472,
         473,
-        474
+        474,
+        475,
+        476,
+        477
       ],
       "abilityOrder": [
-        470,
-        471
+        473,
+        474
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -580,15 +580,15 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        470,
-        471,
-        472,
         473,
-        474
+        474,
+        475,
+        476,
+        477
       ],
       "abilityOrder": [
-        470,
-        471
+        473,
+        474
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -621,15 +621,15 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        470,
-        471,
-        472,
         473,
-        474
+        474,
+        475,
+        476,
+        477
       ],
       "abilityOrder": [
-        470,
-        471
+        473,
+        474
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -662,15 +662,15 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        470,
-        471,
-        472,
         473,
-        474
+        474,
+        475,
+        476,
+        477
       ],
       "abilityOrder": [
-        470,
-        471
+        473,
+        474
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -703,15 +703,15 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        470,
-        471,
-        472,
         473,
-        474
+        474,
+        475,
+        476,
+        477
       ],
       "abilityOrder": [
-        470,
-        471
+        473,
+        474
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -744,15 +744,15 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        470,
-        471,
-        472,
         473,
-        474
+        474,
+        475,
+        476,
+        477
       ],
       "abilityOrder": [
-        470,
-        471
+        473,
+        474
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -785,15 +785,15 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        470,
-        471,
-        472,
         473,
-        474
+        474,
+        475,
+        476,
+        477
       ],
       "abilityOrder": [
-        470,
-        471
+        473,
+        474
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -826,15 +826,15 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        470,
-        471,
-        472,
         473,
-        474
+        474,
+        475,
+        476,
+        477
       ],
       "abilityOrder": [
-        470,
-        471
+        473,
+        474
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -867,15 +867,15 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        470,
-        471,
-        472,
         473,
-        474
+        474,
+        475,
+        476,
+        477
       ],
       "abilityOrder": [
-        470,
-        471
+        473,
+        474
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -908,15 +908,15 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        470,
-        471,
-        472,
         473,
-        474
+        474,
+        475,
+        476,
+        477
       ],
       "abilityOrder": [
-        470,
-        471
+        473,
+        474
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2",

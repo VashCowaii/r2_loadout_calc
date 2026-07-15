@@ -37,27 +37,27 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-557071994\">XP_Ice_Elite_Powerful_Modifier</a>[<span class=\"descriptionNumberColor\">Freezing Point</span>]",
       "valuePerStack": {
         "Modifier_AllDamageTypeResistance": {
-          "operator": "Variables[0] (UnusedUnderThisBase_12856) || RETURN",
-          "displayLines": "UnusedUnderThisBase_12856",
+          "operator": "Variables[0] (UnusedUnderThisBase_12858) || RETURN",
+          "displayLines": "UnusedUnderThisBase_12858",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_12856"
+            "UnusedUnderThisBase_12858"
           ]
         },
         "Modifier_StanceWeakAddedRatio": {
-          "operator": "Variables[0] (UnusedUnderThisBase_12862) || RETURN",
-          "displayLines": "UnusedUnderThisBase_12862",
+          "operator": "Variables[0] (UnusedUnderThisBase_12864) || RETURN",
+          "displayLines": "UnusedUnderThisBase_12864",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_12862"
+            "UnusedUnderThisBase_12864"
           ]
         },
         "Modifier_Stance": {
-          "operator": "Variables[0] (UnusedUnderThisBase_12863) || RETURN",
-          "displayLines": "UnusedUnderThisBase_12863",
+          "operator": "Variables[0] (UnusedUnderThisBase_12865) || RETURN",
+          "displayLines": "UnusedUnderThisBase_12865",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_12863"
+            "UnusedUnderThisBase_12865"
           ]
         }
       }

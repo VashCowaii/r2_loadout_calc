@@ -42,11 +42,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        265,
-        266
+        268,
+        269
       ],
       "abilityOrder": [
-        266
+        269
       ]
     },
     "101201101": {
@@ -73,11 +73,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        265,
-        266
+        268,
+        269
       ],
       "abilityOrder": [
-        266
+        269
       ],
       "enemyTag": [
         "MGrid_4003"

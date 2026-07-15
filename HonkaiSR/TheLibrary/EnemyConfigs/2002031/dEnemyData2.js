@@ -41,10 +41,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        509
+        512
       ],
       "abilityOrder": [
-        509
+        512
       ]
     },
     "200203103": {
@@ -71,10 +71,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        509
+        512
       ],
       "abilityOrder": [
-        509
+        512
       ]
     },
     "200203104": {
@@ -101,10 +101,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        509
+        512
       ],
       "abilityOrder": [
-        509
+        512
       ]
     },
     "200203105": {
@@ -131,10 +131,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        509
+        512
       ],
       "abilityOrder": [
-        509
+        512
       ]
     },
     "200203106": {
@@ -164,10 +164,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        509
+        512
       ],
       "abilityOrder": [
-        509
+        512
       ]
     }
   }
