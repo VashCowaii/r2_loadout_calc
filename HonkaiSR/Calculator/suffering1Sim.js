@@ -328,7 +328,7 @@ const sim = {
     battlePrep(characterObject,isLoggyLogger,querySettingsOverride,battleSettings) {
 
         const cycleSettings = sim.cycleModeSettings[battleSettings.cycleMode];
-        console.log(cycleSettings)
+        // console.log(cycleSettings)
         // battleData.cyclesMax = battleSettings.cyclesToRun + 1;
 
         let battleData = {
