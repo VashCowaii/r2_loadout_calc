@@ -6772,5 +6772,1038 @@ let mocSchedule = [
       }
     ],
     "patchName": "4.3"
+  },
+  {
+    "id": 8,
+    "image": "activityBG/ChallengePeakPanelBanner_4008.png",
+    "realName": "Enwreathed by the World",
+    "buffData": null,
+    "floorData": {
+      "1": {
+        "floorName": "Knight (I)",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30508011
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Argenti",
+                "enemyLevel": 95,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 368,
+                    "enemies": [
+                      {
+                        "name": "Abundance Sprite: Malefic Ape",
+                        "id": 2023020,
+                        "image": 2023020,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 2849127.6888,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 120,
+                        "weaknessList": [
+                          "Fire",
+                          "Ice",
+                          "Wind"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Thunder": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Senior Staff: Team Leader",
+                        "id": 803301014,
+                        "image": 8033010,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 3798836.9184,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 120,
+                        "weaknessList": [
+                          "Fire",
+                          "Ice",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      }
+                    ],
+                    "totalMax": 2,
+                    "fieldMax": 2,
+                    "abilityName": "",
+                    "abilityKey": null,
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 368,
+                    "enemies": [
+                      {
+                        "name": "Argenti",
+                        "id": 302401012,
+                        "image": 3024010,
+                        "rank": "LittleBoss",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 5342114.4165,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 2,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Ice"
+                        ],
+                        "resistances": {
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL": 0.5
+                        }
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "abilityKey": null,
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30508011",
+                  "_CreateBattleEvent": "30502"
+                },
+                "highSTSUM": 14483065.751400001,
+                "aoeSUM": 17332193.4402
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Taunting",
+            "desc": "Enemy target takes immediate action after being attacked #1[i] time(s). This tally resets at the start of the enemy target's turn.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0008",
+            "BEKey": 1912336050,
+            "params": [
+              6
+            ]
+          }
+        ]
+      },
+      "2": {
+        "floorName": "Knight (II)",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30508012
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Svarog",
+                "enemyLevel": 95,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 361,
+                    "enemies": [
+                      {
+                        "name": "Joy Ascendant",
+                        "id": 5023010,
+                        "image": 5023010,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 1256968.098,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 140,
+                        "weaknessList": [
+                          "Fire",
+                          "Thunder",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "God-Devourer Offspring",
+                        "id": 5023020,
+                        "image": 5023020,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 3351914.928,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Fire",
+                        "hpBars": 1,
+                        "toughnessBase": 180,
+                        "weaknessList": [
+                          "Fire",
+                          "Thunder",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      }
+                    ],
+                    "totalMax": 2,
+                    "fieldMax": 2,
+                    "abilityName": "",
+                    "abilityKey": null,
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 370,
+                    "enemies": [
+                      {
+                        "name": "Svarog",
+                        "id": 101401016,
+                        "image": 1014010,
+                        "rank": "LittleBoss",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 9909098.5059,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 140,
+                        "weaknessList": [
+                          "Fire",
+                          "Thunder",
+                          "Wind"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL": 0.5
+                        }
+                      },
+                      {
+                        "name": "God-Devourer Offspring",
+                        "id": 5023020,
+                        "image": 5023020,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 4804411.3968,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Fire",
+                        "hpBars": 1,
+                        "toughnessBase": 180,
+                        "weaknessList": [
+                          "Fire",
+                          "Thunder",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      }
+                    ],
+                    "totalMax": 2,
+                    "fieldMax": 2,
+                    "abilityName": "",
+                    "abilityKey": null,
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30508012",
+                  "_CreateBattleEvent": "30502"
+                },
+                "highSTSUM": 13261013.433899999,
+                "aoeSUM": 19322392.9287
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Flow Break",
+            "desc": "Each time after an enemy target is attacked by allies, DMG taken by them decreases by #1[i]% and CRIT DMG taken decreases by #2[i]%, stacking up to #3[i] time(s). This effect changes to decreasing by #4[i] stack(s) after the enemy target receives a Follow-Up ATK or when Aha Instant ends.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0019",
+            "BEKey": 1912336050,
+            "params": [
+              0.02,
+              0.04,
+              10,
+              5
+            ]
+          },
+          {
+            "name": "Depowered",
+            "desc": "When entering combat, reduces ally target's Energy by #1[i]% and decreases their Energy Regeneration Rate by #2[i]% outside of their turn for #3[i] turn(s).",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0013",
+            "BEKey": 1912336050,
+            "params": [
+              0.5,
+              0.5,
+              2
+            ]
+          }
+        ]
+      },
+      "3": {
+        "floorName": "Knight (III)",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30508013
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Paramount Bliss Inverted: Illwish Archlotus",
+                "enemyLevel": 95,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 345,
+                    "enemies": [
+                      {
+                        "name": "Daybreak Squadron: Azurewing",
+                        "id": 5013040,
+                        "image": 5013040,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 2618683.5375,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.8
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Noontide Gryphon",
+                        "id": 402301001,
+                        "image": 4023010,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 3142419.3721055,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 0.5,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Fire",
+                        "hpBars": 1,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Physical",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      }
+                    ],
+                    "totalMax": 2,
+                    "fieldMax": 2,
+                    "abilityName": "",
+                    "abilityKey": null,
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 354,
+                    "enemies": [
+                      {
+                        "name": "Paramount Bliss Inverted: Illwish Archlotus",
+                        "id": 5024010,
+                        "image": 5024010,
+                        "rank": "LittleBoss",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 6703829.856,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.36,
+                        "delay": 0.5,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Thunder",
+                        "hpBars": 2,
+                        "toughnessBase": 240,
+                        "weaknessList": [
+                          "Physical",
+                          "Thunder",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Fire": 0.4,
+                          "Ice": 0.4,
+                          "Wind": 0.4,
+                          "Quantum": 0.4
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL": 0.5
+                        }
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "abilityKey": null,
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30508013",
+                  "_CreateBattleEvent": "30502"
+                },
+                "highSTSUM": 16550079.0841055,
+                "aoeSUM": 19168762.6216055
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Hemovore",
+            "desc": "At the start of ally targets' turns, they lose #1[i] HP. This effect can be fatal.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0018",
+            "BEKey": 1912336050,
+            "params": [
+              500
+            ]
+          }
+        ]
+      },
+      "4": {
+        "floorName": "King in Check",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30508021
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Murata Graphia, Founding Artist",
+                "enemyLevel": 100,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30503,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 372,
+                    "enemies": [
+                      {
+                        "name": "Moonlit Pegasus",
+                        "id": 402302001,
+                        "image": 4023020,
+                        "rank": "Elite",
+                        "attackBase": 641.306646,
+                        "defBase": 1200.00006,
+                        "hpBase": 6058246.1041095,
+                        "speedBase": 132,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.4,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 1,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Fire",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Dark Sun Gryphon",
+                        "id": 4033030,
+                        "image": 4033030,
+                        "rank": "Elite",
+                        "attackBase": 641.306646,
+                        "defBase": 1200.00006,
+                        "hpBase": 5679607.49748,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.4,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Wind",
+                        "hpBars": 1,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      }
+                    ],
+                    "totalMax": 2,
+                    "fieldMax": 2,
+                    "abilityName": "",
+                    "abilityKey": null,
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 372,
+                    "enemies": [
+                      {
+                        "name": "Moonlit Pegasus",
+                        "id": 402302001,
+                        "image": 4023020,
+                        "rank": "Elite",
+                        "attackBase": 641.306646,
+                        "defBase": 1200.00006,
+                        "hpBase": 6058246.1041095,
+                        "speedBase": 132,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.4,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 1,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Fire",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Murata Graphia, Founding Artist",
+                        "id": 501403002,
+                        "image": 5014030,
+                        "rank": "LittleBoss",
+                        "attackBase": 641.306646,
+                        "defBase": 1200.00006,
+                        "hpBase": 16660180.0994055,
+                        "speedBase": 173.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.4,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Fire",
+                        "hpBars": 2,
+                        "toughnessBase": 360,
+                        "weaknessList": [
+                          "Fire",
+                          "Thunder",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Physical": 0.4,
+                          "Ice": 0.4,
+                          "Wind": 0.4,
+                          "Imaginary": 0.4
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL": 0.5
+                        }
+                      },
+                      0
+                    ],
+                    "totalMax": 3,
+                    "fieldMax": 3,
+                    "abilityName": "",
+                    "abilityKey": null,
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30508021",
+                  "_CreateBattleEvent": "30503"
+                },
+                "highSTSUM": 39378606.3029205,
+                "aoeSUM": 57174706.0086195
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Enrage",
+            "desc": "After each time an ally target uses their Ultimate, applies 1 stack of this effect to all enemy targets. Each stack increases the enemy target's SPD by #1[i]%, up to a max of #2[i] stack(s). All stacks of this effect are cleared at the start of the enemy target's turn.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0020",
+            "params": [
+              0.3,
+              4
+            ]
+          },
+          {
+            "name": "Equilibrium",
+            "desc": "At the start of battle, #1[i] ally character(s) with the highest SPD have their SPD reduced by #2[i]%, and #3[i] ally character(s) with the lowest SPD have their SPD increased by #4[i]%.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0016",
+            "BEKey": 1912336050,
+            "params": [
+              1,
+              0.2,
+              1,
+              0.15
+            ]
+          }
+        ]
+      },
+      "5": {
+        "floorName": "King in Check: Plight",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30508022
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Murata Graphia, Founding Artist",
+                "enemyLevel": 120,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30504,
+                    "actualParams": [
+                      0.5,
+                      3,
+                      0,
+                      0
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 373,
+                    "enemies": [
+                      {
+                        "name": "Moonlit Pegasus",
+                        "id": 402302001,
+                        "image": 4023020,
+                        "rank": "Elite",
+                        "attackBase": 942.7207734,
+                        "defBase": 1200.00006,
+                        "hpBase": 23079032.3014002,
+                        "speedBase": 150,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.5,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 1,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Fire",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Dark Sun Gryphon",
+                        "id": 4033030,
+                        "image": 4033030,
+                        "rank": "Elite",
+                        "attackBase": 942.7207734,
+                        "defBase": 1200.00006,
+                        "hpBase": 21636599.544,
+                        "speedBase": 216,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.5,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Wind",
+                        "hpBars": 1,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      }
+                    ],
+                    "totalMax": 2,
+                    "fieldMax": 2,
+                    "abilityName": "",
+                    "abilityKey": null,
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 373,
+                    "enemies": [
+                      {
+                        "name": "Moonlit Pegasus",
+                        "id": 402302001,
+                        "image": 4023020,
+                        "rank": "Elite",
+                        "attackBase": 942.7207734,
+                        "defBase": 1200.00006,
+                        "hpBase": 23079032.3014002,
+                        "speedBase": 150,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.5,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 1,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Fire",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {}
+                      },
+                      {
+                        "name": "Murata Graphia, Founding Artist",
+                        "id": 501403002,
+                        "image": 5014030,
+                        "rank": "LittleBoss",
+                        "attackBase": 942.7207734,
+                        "defBase": 1200.00006,
+                        "hpBase": 63467351.4502002,
+                        "speedBase": 195,
+                        "critDMG": 0.2,
+                        "effectRES": 0.5,
+                        "ehr": 0.5,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Fire",
+                        "hpBars": 2,
+                        "toughnessBase": 360,
+                        "weaknessList": [
+                          "Fire",
+                          "Thunder",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Physical": 0.4,
+                          "Ice": 0.4,
+                          "Wind": 0.4,
+                          "Imaginary": 0.4
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL": 0.5
+                        }
+                      },
+                      0
+                    ],
+                    "totalMax": 3,
+                    "fieldMax": 3,
+                    "abilityName": "",
+                    "abilityKey": null,
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30508022",
+                  "_CreateBattleEvent": "30504"
+                },
+                "highSTSUM": 150013735.20180058,
+                "aoeSUM": 217808399.34860098
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Enrage+",
+            "desc": "After each time an ally target uses their Ultimate, applies 1 stack of this effect to all enemy targets. Each stack increases the enemy target's SPD by #1[i]%, up to a max of #2[i] stack(s). All stacks of this effect are cleared at the start of the enemy target's turn.",
+            "realModifierNamne": "ChallengePeakBattle_EnhancedAbility_0020",
+            "params": [
+              0.5,
+              4
+            ]
+          },
+          {
+            "name": "Equilibrium+",
+            "desc": "At the start of battle, #1[i] ally character(s) with the highest SPD have their SPD reduced by #2[i]%, and #3[i] ally character(s) with the lowest SPD have their SPD increased by #4[i]%.",
+            "realModifierNamne": "ChallengePeakBattle_EnhancedAbility_0016",
+            "BEKey": 1912336050,
+            "params": [
+              2,
+              0.2,
+              1,
+              0.15
+            ]
+          }
+        ]
+      }
+    },
+    "kingBuffList": [
+      {
+        "modifierName": "ADV_StageAbility_3033066",
+        "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0022",
+        "name": "Navigator's Oath",
+        "desc": "Increases the All-Type RES PEN for the Skill DMG and Ultimate DMG dealt by the character in position 1 in the lineup by #1[i]%.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.5
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_3033068",
+        "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0014",
+        "BEKey": 1912336050,
+        "name": "Add Insult to Injury",
+        "desc": "After an enemy target is hit by an ally's Follow-Up ATK, DMG taken by them increases by #1[i]% for #2[i] turn(s). This effect can stack up to #3[i] time(s).",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.15,
+          2,
+          3
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_3033067",
+        "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0023",
+        "name": "Endless Euphoria",
+        "desc": "All ally targets' All-Type RES PEN increases by #1[i]%, and the All-Type RES PEN of Elation DMG dealt additionally increases by #2[i]%.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.2,
+          0.2
+        ]
+      }
+    ],
+    "patchName": "4.4"
   }
 ]
