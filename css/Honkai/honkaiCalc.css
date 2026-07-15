@@ -1,7 +1,7 @@
 .smallFont,.actionDetailBody,.actionDetailBodyCenterTags,.totalHealingValueBoss,.actionDetailBodyDetailExpandHeader,.buffShieldHealthValueDisplay,.actionDetailBodyBuffSource,.actionDetailBodyInner,
 .traceContentBodyBoxRotations,.buffToughnessHealthValueDisplay,.turnOrderDisplayPreviewActionExpandRow,.analyticsResultRowDMG,.queryBarGainText,.characterDisplayEnemyLineupBarHeader,.filtersQuarterDescription,.filtersTagName,.filterTagsContainer,
 .filtersQuarterDescriptionDarkRow,.importCharacterBoxHeader,.characterSearchButtonOptimize,.comboDebugWindow,.statsRowName,.traceContentBodyBoxRotationsWarning,.rowSummaryDMGNameAndPercentACTIONBAR,.rowSummaryDMGNameAndPercentACTIONBARGained,
-.rowSummaryDMGNameAndPercentACTIONBARSpent,.statFiltersRowContainerSubstatsTrashRow,.imageRowStatisticNameBoxDMGDetails {
+.rowSummaryDMGNameAndPercentACTIONBARSpent,.statFiltersRowContainerSubstatsTrashRow,.imageRowStatisticNameBoxDMGDetails,.conditionSummaryDescBox {
     font-family: "Montserrat-Light";
 }
 
@@ -404,7 +404,10 @@ summary::before {
     display: inline-block;
     font-size: 20px;
     margin-right: 0;
-    color: rgb(153, 153, 153);
+    /* color: rgb(153, 153, 153); */
+    color: var(--schmancyColorOverride, rgba(255, 255, 255, 0.527));
+    
+
     transform-origin: 50% 50%;
     transition: transform 0.15s ease;
 } 
@@ -426,12 +429,12 @@ details[open] > summary::before {
     padding-bottom: 3px;
     box-sizing: border-box;
 
-    border-left: 2px solid rgba(255, 255, 255, 0.527);
+    border-left: 2px solid var(--schmancyColorOverride, rgba(255, 255, 255, 0.527));
     /* border-top-left-radius: 10px; */
 
     background:
-        linear-gradient(rgba(255, 255, 255, 0.527) 0 0) top 0 left / 15px 2px no-repeat,
-        linear-gradient(rgba(255, 255, 255, 0.527) 0 0) bottom 0 left / 15px 2px no-repeat;
+        linear-gradient(var(--schmancyColorOverride, rgba(255, 255, 255, 0.527)) 0 0) top 0 left / 15px 2px no-repeat,
+        linear-gradient(var(--schmancyColorOverride, rgba(255, 255, 255, 0.527)) 0 0) bottom 0 left / 15px 2px no-repeat;
 
     /* outline: 2px solid rgba(255, 255, 255, 0.527);
     outline-offset: -10px; */
@@ -1516,6 +1519,34 @@ details[open] > summary::before {
     padding-right: 3px; */
 }
 
+
+.conditionSummaryDescBox {
+    width: 95%;
+    white-space: normal;
+    /* text-align: left; */
+
+
+    /* color: #18fcc8; */
+    /* color: #C586C0; */
+
+
+    /* color: #08c498; */
+    /* color: lightblue; */
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 2px;
+    /* margin-left: 2px; */
+    font-size: 14px;
+    /* padding: 2px; */
+    /* background-color: rgba(0, 0, 0, 0.63); */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.63),transparent, transparent);
+
+    /* display: flex;
+    justify-content: left;
+    align-items: stretch; */
+    /* border-bottom: 1px solid grey;
+    border-left: 1px solid grey; */
+}
 .rightDescriptionBox {
     width: 100%;
     white-space: normal;
@@ -1618,6 +1649,57 @@ details[open] > summary::before {
     margin-top: 2px;
     margin-bottom: 2px;
 }
+
+.rotationsConditionsControlsRowIconBox {
+    font-size: 12px;
+    width: auto;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: #121212;
+    border: 1px solid #cacacc80;
+    outline: 1px solid #e1e1e480;
+    padding-left: 5px;
+    padding-right: 5px;
+    /* color: #e1e1e4; */
+    color: white;
+    margin: 2px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+}
+.rotationsConditionsControlsRowIconBoxFILTERADJUST {
+    background-color: #cacacce5;
+    border: 1px solid #121212;
+    outline: 1px solid #e1e1e480;
+}
+.rotationsConditionsControlsRowIconBox:hover {
+    opacity: 0.5;
+}
+.conditionsDeleteButton {
+    /* color: rgb(173, 1, 1); */
+    color: rgb(214, 1, 1);
+}
+.rotationsConditionsControlsRow {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: stretch;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.rotationsConditionsControlsIcon {
+    height: 15px;
+    width: auto;
+    object-fit: contain;
+    filter: invert(100%);
+}
+.rotationsConditionsControlsIconFILTERADJUST {
+    filter: unset;
+}
+
 .exportButtonIcon {
     height: 20px;
     width: auto;
@@ -1991,6 +2073,18 @@ details[open] > summary::before {
     padding-left: 4px;
     text-align: left;
     color: #ffbf5a;
+    white-space: normal;
+}
+.traceAttackTargetTypeConditionDescHighlight {
+    /* width: 90%; */
+    /* display: flex;
+    justify-content: left;
+    align-items: center; */
+    /* padding-left: 4px; */
+    /* text-align: left; */
+
+    /* color: #ffbf5a; */
+    color: var(--schmancyColorOverride, rgba(255, 255, 255, 0.527));
     white-space: normal;
 }
 .relicSetNameEffect {
@@ -4253,7 +4347,7 @@ details[open] > summary::before {
     flex-direction: column;
 
     /* border: 1px solid red; */
-    border-left: 2px solid rgba(255, 255, 255, 0.527);
+    border-left: 2px solid var(--schmancyColorOverride, rgba(255, 255, 255, 0.527));
     border-bottom-left-radius: 10px;
 }
 
@@ -4321,6 +4415,40 @@ details[open] > summary::before {
     /* flex-shrink: 1; */
     
 }
+.rotationsConditionsRowHolderWithDesc {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: stretch;
+    box-sizing: border-box;
+    /* padding: 4px; */
+    /* white-space: normal; */
+    /* background: linear-gradient(to right, transparent, transparent, #ffffff1A); */
+    /* border-left: 3px solid #ffffff1A; */
+    height: auto;
+    margin: 5px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    /* padding: 5px; */
+    /* border-top-right-radius: 15px; */
+    /* border: 1px solid red; */
+    width: auto;
+    /* background: linear-gradient(to right, #ffffff1A,transparent, transparent, #ffffff1A); */
+    /* flex-shrink: 1; */
+    
+    /* background: linear-gradient(#888, #888) center bottom / 80% 1px no-repeat; */
+
+}
+.rotationsConditionsDividerLine {
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(#888888a4, #888888a4) center top / 90% 2px no-repeat;
+    margin-top: 2px;
+    margin-bottom: 2px;
+
+}
+
+
 .rotationsConditionsRowHeader {
     /* width: 100%; */
     justify-content: left;
@@ -4332,20 +4460,24 @@ details[open] > summary::before {
 .rotationsCharacterTargetPreviewBox {
     /* width: 20%;
     min-width: 20%; */
-    width: 120px;
+    width: 50px;
     overflow: hidden;
-    height: 100%;
-    min-height: 40px;
-    max-height: 40px;
-    border-top-right-radius: 10px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 5px;
+    border: 2px solid grey;
     box-sizing: border-box;
 }
 .rotationsCharacterTargetPreviewBoxIcon {
     width: 100%;
+    height: 100%;
+    scale: 1.5;
+    /* width: 40px;
+    height: 40px; */
     object-fit: contain;
     /* mask-image: linear-gradient(to right, black 70%, transparent 100%); */
-    transform:translate(0%,-20%);
-    mask-image: linear-gradient(to right, black 70%, transparent 100%);
+    /* transform:translate(0%,-20%); */
+    /* mask-image: linear-gradient(to right, black 70%, transparent 100%); */
     /* scale: 0.8; */
     /* border-radius: 50%;
     border: 2px solid #5f656b; */
@@ -4365,7 +4497,7 @@ details[open] > summary::before {
 }
 
 .rotationsConditionsRowHolderInner {
-    background: linear-gradient(to right, #ffffff1A,transparent, transparent, #ffffff1A);
+    /* background: linear-gradient(to right, #ffffff1A,transparent, transparent, #ffffff1A); */
     display: flex;
     align-items: center;
     border-top-right-radius: 15px;
@@ -4373,6 +4505,7 @@ details[open] > summary::before {
     overflow: hidden;
     padding-left: 4px;
     padding-right: 8px;
+    margin: 5px;
     max-width: 100%;
 }
 

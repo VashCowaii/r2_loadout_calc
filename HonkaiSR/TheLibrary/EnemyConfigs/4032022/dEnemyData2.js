@@ -45,10 +45,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2085,
-        2086,
-        2087,
-        2088
+        2143,
+        2144,
+        2145,
+        2146
       ],
       "itNeverEnds": {}
     },
@@ -79,10 +79,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2085,
-        2086,
-        2087,
-        2088
+        2143,
+        2144,
+        2145,
+        2146
       ],
       "itNeverEnds": {
         "SkillIndex": 1
@@ -115,10 +115,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2085,
-        2086,
-        2087,
-        2088
+        2143,
+        2144,
+        2145,
+        2146
       ],
       "itNeverEnds": {
         "SkillIndex": 2
@@ -151,10 +151,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2085,
-        2086,
-        2087,
-        2088
+        2143,
+        2144,
+        2145,
+        2146
       ],
       "itNeverEnds": {
         "SkillIndex": 3
@@ -187,10 +187,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2085,
-        2086,
-        2087,
-        2088
+        2143,
+        2144,
+        2145,
+        2146
       ],
       "itNeverEnds": {
         "SkillIndex": 1
@@ -223,10 +223,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2085,
-        2086,
-        2087,
-        2088
+        2143,
+        2144,
+        2145,
+        2146
       ],
       "itNeverEnds": {
         "SkillIndex": 2
@@ -259,10 +259,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2085,
-        2086,
-        2087,
-        2088
+        2143,
+        2144,
+        2145,
+        2146
       ],
       "itNeverEnds": {
         "SkillIndex": 3
@@ -295,10 +295,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2085,
-        2086,
-        2087,
-        2088
+        2143,
+        2144,
+        2145,
+        2146
       ],
       "itNeverEnds": {
         "SkillIndex": 3

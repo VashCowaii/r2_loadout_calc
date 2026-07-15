@@ -31,11 +31,11 @@ const configAbility = {
               "modifierName": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
               "variableName": "MDF_PropertyValue2",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_13079) || RETURN",
-                "displayLines": "UnusedUnderThisBase_13079",
+                "operator": "Variables[0] (UnusedUnderThisBase_13081) || RETURN",
+                "displayLines": "UnusedUnderThisBase_13081",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_13079"
+                  "UnusedUnderThisBase_13081"
                 ]
               }
             }
@@ -59,11 +59,11 @@ const configAbility = {
                   "modifierName": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
                   "variableName": "MDF_PropertyValue2",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13093) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_13093",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13095) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13095",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_13093"
+                      "UnusedUnderThisBase_13095"
                     ]
                   }
                 }
@@ -87,11 +87,11 @@ const configAbility = {
                       "modifierName": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
                       "variableName": "MDF_PropertyValue2",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_13077) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_13077",
+                        "operator": "Variables[0] (UnusedUnderThisBase_13079) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_13079",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_13077"
+                          "UnusedUnderThisBase_13079"
                         ]
                       }
                     }

@@ -47,13 +47,13 @@ let enemyData = {
         "STAT_Entangle": 0.75
       },
       "abilities": [
-        285,
-        286,
-        287,
         288,
         289,
         290,
-        291
+        291,
+        292,
+        293,
+        294
       ],
       "enemyTag": [
         "W1_SvarogPart",
@@ -89,13 +89,13 @@ let enemyData = {
         "STAT_Entangle": 0.75
       },
       "abilities": [
-        285,
-        286,
-        287,
         288,
         289,
         290,
-        291
+        291,
+        292,
+        293,
+        294
       ],
       "enemyTag": [
         "W1_SvarogPart",

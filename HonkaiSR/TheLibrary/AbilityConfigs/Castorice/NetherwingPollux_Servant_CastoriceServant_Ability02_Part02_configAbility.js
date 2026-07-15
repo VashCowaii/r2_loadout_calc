@@ -134,7 +134,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-799988230\">Castorice_PointB3_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Where The West Wind Dwells</span>]",
+          "modifier": "<a class=\"gModGreen\" id=\"-799988230\">Castorice_PointB3_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Where the West Wind Dwells</span>]",
           "stackLimit": {
             "operator": "Variables[0] (CastoriceServant_PointB3_MaxLayer) || RETURN",
             "displayLines": "CastoriceServant_PointB3_MaxLayer",

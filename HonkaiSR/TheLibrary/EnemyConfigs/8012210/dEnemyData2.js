@@ -45,11 +45,11 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.5
       },
       "abilities": [
-        2990,
-        2991,
-        2992,
-        2993,
-        2994
+        3103,
+        3104,
+        3105,
+        3106,
+        3107
       ],
       "itNeverEnds": {
         "SummonerID": 8015020,

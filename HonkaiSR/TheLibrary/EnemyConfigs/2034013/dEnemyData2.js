@@ -48,14 +48,14 @@ let enemyData = {
         "STAT_Entangle": 0.75
       },
       "abilities": [
-        897,
-        898,
-        899,
-        900,
-        901,
-        902,
-        903,
-        904
+        907,
+        908,
+        909,
+        910,
+        911,
+        912,
+        913,
+        914
       ],
       "enemyTag": [
         "MonsterType_W2_Lycan",

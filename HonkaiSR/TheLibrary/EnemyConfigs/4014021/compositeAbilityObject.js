@@ -39,11 +39,11 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_11327) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_11327",
+                    "operator": "Variables[0] (UnusedUnderThisBase_11329) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_11329",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_11327"
+                      "UnusedUnderThisBase_11329"
                     ]
                   }
                 }
@@ -3170,11 +3170,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_11630) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_11630",
+                              "operator": "Variables[0] (UnusedUnderThisBase_11632) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_11632",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_11630"
+                                "UnusedUnderThisBase_11632"
                               ]
                             }
                           },
@@ -3230,11 +3230,11 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                               "valuePerStack": {
                                 "MDF_DamageUpRatio_PerLayer": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_11630) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_11630",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_11632) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_11632",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_11630"
+                                    "UnusedUnderThisBase_11632"
                                   ]
                                 }
                               },
@@ -3289,11 +3289,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11630) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_11630",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11632) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11632",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_11630"
+                            "UnusedUnderThisBase_11632"
                           ]
                         }
                       },

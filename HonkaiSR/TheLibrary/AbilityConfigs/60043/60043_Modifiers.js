@@ -752,35 +752,35 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"766895631\">Standard_Monster_Floating_DamageReduceController</a>",
                   "valuePerStack": {
                     "MDF_LockHpActionDecreaseRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12646) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12646",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12648) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12648",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_12646"
+                        "UnusedUnderThisBase_12648"
                       ]
                     },
                     "MDF_LockHpUpLimitRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12614) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12614",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12616) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12616",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_12614"
+                        "UnusedUnderThisBase_12616"
                       ]
                     },
                     "MDF_DamageReduceRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12617) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12617",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12619) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12619",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_12617"
+                        "UnusedUnderThisBase_12619"
                       ]
                     },
                     "MDF_LastLockHpRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12613) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12613",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12615) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12615",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_12613"
+                        "UnusedUnderThisBase_12615"
                       ]
                     }
                   }
@@ -1703,11 +1703,11 @@ const configAbility = {
                               "name": "Define Custom Variable",
                               "variableName": "MDF_DelayRatio",
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_12622) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_12622",
+                                "operator": "Variables[0] (UnusedUnderThisBase_12624) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_12624",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_12622"
+                                  "UnusedUnderThisBase_12624"
                                 ]
                               }
                             }
@@ -1717,11 +1717,11 @@ const configAbility = {
                               "name": "Define Custom Variable",
                               "variableName": "MDF_DelayRatio",
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_12620) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_12620",
+                                "operator": "Variables[0] (UnusedUnderThisBase_12622) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_12622",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_12620"
+                                  "UnusedUnderThisBase_12622"
                                 ]
                               }
                             }
@@ -1765,11 +1765,11 @@ const configAbility = {
                           },
                           "variableName": "Buff_DamageUpRatio",
                           "value": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_12641) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_12641",
+                            "operator": "Variables[0] (UnusedUnderThisBase_12643) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_12643",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_12641"
+                              "UnusedUnderThisBase_12643"
                             ]
                           }
                         },
@@ -1781,11 +1781,11 @@ const configAbility = {
                           },
                           "variableName": "Buff_MaxLayer",
                           "value": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_12618) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_12618",
+                            "operator": "Variables[0] (UnusedUnderThisBase_12620) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_12620",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_12618"
+                              "UnusedUnderThisBase_12620"
                             ]
                           }
                         },
@@ -1937,11 +1937,11 @@ const configAbility = {
               "scope": "TargetEntity",
               "variableName": "FleshLifeTime",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12627) || RETURN",
-                "displayLines": "UnusedUnderThisBase_12627",
+                "operator": "Variables[0] (UnusedUnderThisBase_12629) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12629",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_12627"
+                  "UnusedUnderThisBase_12629"
                 ]
               }
             },
@@ -1953,142 +1953,6 @@ const configAbility = {
               },
               "scope": "TargetEntity",
               "variableName": "Buff_DamageUpRatio",
-              "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12641) || RETURN",
-                "displayLines": "UnusedUnderThisBase_12641",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_12641"
-                ]
-              }
-            },
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "Buff_MaxLayer",
-              "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12618) || RETURN",
-                "displayLines": "UnusedUnderThisBase_12618",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_12618"
-                ]
-              }
-            },
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "MDF_FleshElationPoint",
-              "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12616) || RETURN",
-                "displayLines": "UnusedUnderThisBase_12616",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_12616"
-                ]
-              }
-            },
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "MDF_FleshExtraChance",
-              "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12625) || RETURN",
-                "displayLines": "UnusedUnderThisBase_12625",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_12625"
-                ]
-              }
-            },
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "MDF_FleshExtraElationPoint",
-              "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12639) || RETURN",
-                "displayLines": "UnusedUnderThisBase_12639",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_12639"
-                ]
-              }
-            },
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "MDF_AttackEnemyChance",
-              "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12623) || RETURN",
-                "displayLines": "UnusedUnderThisBase_12623",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_12623"
-                ]
-              }
-            },
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "MDF_DamagePercentage",
-              "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12619) || RETURN",
-                "displayLines": "UnusedUnderThisBase_12619",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_12619"
-                ]
-              }
-            },
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "MDF_MaxDamageRatio",
-              "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12621) || RETURN",
-                "displayLines": "UnusedUnderThisBase_12621",
-                "constants": [],
-                "variables": [
-                  "UnusedUnderThisBase_12621"
-                ]
-              }
-            },
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "scope": "TargetEntity",
-              "variableName": "MDF_MinDamageRatio",
               "value": {
                 "operator": "Variables[0] (UnusedUnderThisBase_12643) || RETURN",
                 "displayLines": "UnusedUnderThisBase_12643",
@@ -2105,13 +1969,149 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "scope": "TargetEntity",
-              "variableName": "MDF_ExtraDamageMultiple",
+              "variableName": "Buff_MaxLayer",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12644) || RETURN",
-                "displayLines": "UnusedUnderThisBase_12644",
+                "operator": "Variables[0] (UnusedUnderThisBase_12620) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12620",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_12644"
+                  "UnusedUnderThisBase_12620"
+                ]
+              }
+            },
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "MDF_FleshElationPoint",
+              "value": {
+                "operator": "Variables[0] (UnusedUnderThisBase_12618) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12618",
+                "constants": [],
+                "variables": [
+                  "UnusedUnderThisBase_12618"
+                ]
+              }
+            },
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "MDF_FleshExtraChance",
+              "value": {
+                "operator": "Variables[0] (UnusedUnderThisBase_12627) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12627",
+                "constants": [],
+                "variables": [
+                  "UnusedUnderThisBase_12627"
+                ]
+              }
+            },
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "MDF_FleshExtraElationPoint",
+              "value": {
+                "operator": "Variables[0] (UnusedUnderThisBase_12641) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12641",
+                "constants": [],
+                "variables": [
+                  "UnusedUnderThisBase_12641"
+                ]
+              }
+            },
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "MDF_AttackEnemyChance",
+              "value": {
+                "operator": "Variables[0] (UnusedUnderThisBase_12625) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12625",
+                "constants": [],
+                "variables": [
+                  "UnusedUnderThisBase_12625"
+                ]
+              }
+            },
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "MDF_DamagePercentage",
+              "value": {
+                "operator": "Variables[0] (UnusedUnderThisBase_12621) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12621",
+                "constants": [],
+                "variables": [
+                  "UnusedUnderThisBase_12621"
+                ]
+              }
+            },
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "MDF_MaxDamageRatio",
+              "value": {
+                "operator": "Variables[0] (UnusedUnderThisBase_12623) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12623",
+                "constants": [],
+                "variables": [
+                  "UnusedUnderThisBase_12623"
+                ]
+              }
+            },
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "MDF_MinDamageRatio",
+              "value": {
+                "operator": "Variables[0] (UnusedUnderThisBase_12645) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12645",
+                "constants": [],
+                "variables": [
+                  "UnusedUnderThisBase_12645"
+                ]
+              }
+            },
+            {
+              "name": "Declare Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "scope": "TargetEntity",
+              "variableName": "MDF_ExtraDamageMultiple",
+              "value": {
+                "operator": "Variables[0] (UnusedUnderThisBase_12646) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12646",
+                "constants": [],
+                "variables": [
+                  "UnusedUnderThisBase_12646"
                 ]
               }
             },
@@ -2124,11 +2124,11 @@ const configAbility = {
               "scope": "TargetEntity",
               "variableName": "MDF_EnemyExtraDamageMultiple",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12645) || RETURN",
-                "displayLines": "UnusedUnderThisBase_12645",
+                "operator": "Variables[0] (UnusedUnderThisBase_12647) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12647",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_12645"
+                  "UnusedUnderThisBase_12647"
                 ]
               }
             }
@@ -2443,20 +2443,20 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-2109211182\">Monster_W5_Ripper_Bonus</a>[<span class=\"descriptionNumberColor\">Inverted Severance</span>]",
                   "duration": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12636) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12636",
+                    "operator": "Variables[0] (UnusedUnderThisBase_12638) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_12638",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_12636"
+                      "UnusedUnderThisBase_12638"
                     ]
                   },
                   "valuePerStack": {
                     "MDF_CriticalDamageUpRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12635) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12635",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12637) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12637",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_12635"
+                        "UnusedUnderThisBase_12637"
                       ]
                     }
                   }

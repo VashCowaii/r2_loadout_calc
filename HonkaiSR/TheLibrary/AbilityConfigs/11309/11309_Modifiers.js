@@ -36,11 +36,11 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_13172) || RETURN",
-                "displayLines": "UnusedUnderThisBase_13172",
+                "operator": "Variables[0] (UnusedUnderThisBase_13174) || RETURN",
+                "displayLines": "UnusedUnderThisBase_13174",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_13172"
+                  "UnusedUnderThisBase_13174"
                 ]
               }
             }
@@ -932,11 +932,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "_Rank06_BigDmgCount",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13343) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_13343",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13345) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13345",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_13343"
+                      "UnusedUnderThisBase_13345"
                     ]
                   }
                 }
@@ -1131,12 +1131,12 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_5943) || Variables[1] (UnusedUnderThisBase_13169) || ADD || RETURN",
-                    "displayLines": "(UnusedUnderThisBase_5943 + UnusedUnderThisBase_13169)",
+                    "operator": "Variables[0] (UnusedUnderThisBase_5943) || Variables[1] (UnusedUnderThisBase_13171) || ADD || RETURN",
+                    "displayLines": "(UnusedUnderThisBase_5943 + UnusedUnderThisBase_13171)",
                     "constants": [],
                     "variables": [
                       "UnusedUnderThisBase_5943",
-                      "UnusedUnderThisBase_13169"
+                      "UnusedUnderThisBase_13171"
                     ]
                   },
                   "isFixed": "* ERR"

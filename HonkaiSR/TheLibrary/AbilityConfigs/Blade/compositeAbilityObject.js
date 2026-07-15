@@ -395,11 +395,11 @@ const compositeAbilityObject = {
                         ]
                       },
                       "healFlat": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_13337) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_13337",
+                        "operator": "Variables[0] (UnusedUnderThisBase_13339) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_13339",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_13337"
+                          "UnusedUnderThisBase_13339"
                         ]
                       },
                       "formula": "Heal from Target MaxHP"

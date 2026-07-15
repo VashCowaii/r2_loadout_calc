@@ -45,11 +45,11 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        113,
-        114,
-        115,
         116,
-        117
+        117,
+        118,
+        119,
+        120
       ],
       "enemyTag": [
         "",

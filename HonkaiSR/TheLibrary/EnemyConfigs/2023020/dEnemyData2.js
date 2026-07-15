@@ -43,16 +43,16 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        715,
-        716,
-        717,
-        718,
-        719,
-        720
+        725,
+        726,
+        727,
+        728,
+        729,
+        730
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "itNeverEnds": {
         "SummonID01": 2022050,
@@ -83,16 +83,16 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        715,
-        716,
-        717,
-        718,
-        719,
-        720
+        725,
+        726,
+        727,
+        728,
+        729,
+        730
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "itNeverEnds": {
         "SummonID01": 2022050,
@@ -123,16 +123,16 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        715,
-        716,
-        717,
-        718,
-        719,
-        720
+        725,
+        726,
+        727,
+        728,
+        729,
+        730
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "itNeverEnds": {
         "SummonID01": 2022050,
@@ -163,16 +163,16 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        715,
-        716,
-        717,
-        718,
-        719,
-        720
+        725,
+        726,
+        727,
+        728,
+        729,
+        730
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "itNeverEnds": {
         "SummonID01": 2022050,
@@ -203,16 +203,16 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        715,
-        716,
-        717,
-        718,
-        719,
-        720
+        725,
+        726,
+        727,
+        728,
+        729,
+        730
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "itNeverEnds": {
         "SummonID01": 2022050,
@@ -243,16 +243,16 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        715,
-        716,
-        717,
-        718,
-        719,
-        720
+        725,
+        726,
+        727,
+        728,
+        729,
+        730
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "itNeverEnds": {
         "SummonID01": 2022050,
@@ -281,16 +281,16 @@ let enemyData = {
         "Imaginary"
       ],
       "abilities": [
-        715,
-        716,
-        717,
-        718,
-        719,
-        720
+        725,
+        726,
+        727,
+        728,
+        729,
+        730
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "itNeverEnds": {
         "SummonID01": 2022050,
@@ -321,16 +321,16 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        715,
-        716,
-        717,
-        718,
-        719,
-        720
+        725,
+        726,
+        727,
+        728,
+        729,
+        730
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "itNeverEnds": {
         "SummonID01": 2022050,
@@ -361,16 +361,16 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        715,
-        716,
-        717,
-        718,
-        719,
-        720
+        725,
+        726,
+        727,
+        728,
+        729,
+        730
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "itNeverEnds": {
         "SummonID01": 2022050,
@@ -401,16 +401,16 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        715,
-        716,
-        717,
-        718,
-        719,
-        720
+        725,
+        726,
+        727,
+        728,
+        729,
+        730
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "itNeverEnds": {
         "SummonID01": 2022050,
@@ -441,16 +441,16 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        715,
-        716,
-        717,
-        718,
-        719,
-        720
+        725,
+        726,
+        727,
+        728,
+        729,
+        730
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "itNeverEnds": {
         "SummonID01": 2022050,
@@ -481,16 +481,16 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        715,
-        716,
-        717,
-        718,
-        719,
-        720
+        725,
+        726,
+        727,
+        728,
+        729,
+        730
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "itNeverEnds": {
         "SummonID01": 2022050,
@@ -521,16 +521,16 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        715,
-        716,
-        717,
-        718,
-        719,
-        720
+        725,
+        726,
+        727,
+        728,
+        729,
+        730
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "itNeverEnds": {
         "SummonID01": 2022050,
@@ -561,16 +561,16 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        715,
-        716,
-        717,
-        718,
-        719,
-        720
+        725,
+        726,
+        727,
+        728,
+        729,
+        730
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "itNeverEnds": {
         "SummonID01": 2022050,
@@ -601,16 +601,16 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        715,
-        716,
-        717,
-        718,
-        719,
-        720
+        725,
+        726,
+        727,
+        728,
+        729,
+        730
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "itNeverEnds": {
         "SummonID01": 2022050,
@@ -641,16 +641,16 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        715,
-        716,
-        717,
-        718,
-        719,
-        720
+        725,
+        726,
+        727,
+        728,
+        729,
+        730
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "enemyTag": [
         "MGrid_4005"
@@ -684,16 +684,16 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        715,
-        716,
-        717,
-        718,
-        719,
-        720
+        725,
+        726,
+        727,
+        728,
+        729,
+        730
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "itNeverEnds": {
         "SummonID01": 2022050,

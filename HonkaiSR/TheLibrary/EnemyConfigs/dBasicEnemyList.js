@@ -344,6 +344,13 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "100203026": {
+        "weak": [
+          "Physical",
+          "Ice",
+          "Imaginary"
+        ]
+      },
       "hasReader": true
     },
     "groupName": "Silvermane Cannoneer"
@@ -735,6 +742,12 @@ let basicEnemyList = {
           "Ice"
         ]
       },
+      "100205029": {
+        "weak": [
+          "Physical",
+          "Ice"
+        ]
+      },
       "hasReader": true
     },
     "groupName": "Silvermane Gunner"
@@ -1086,6 +1099,17 @@ let basicEnemyList = {
       },
       "hasReader": true,
       "baseName": "Silvermane Lieutenant (Complete)"
+    },
+    "1003014": {
+      "1003014": {
+        "weak": [
+          "Physical",
+          "Ice",
+          "Quantum"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Dunn"
     },
     "groupName": "Silvermane Lieutenant"
   },
@@ -1445,6 +1469,13 @@ let basicEnemyList = {
         ]
       },
       "100402016": {
+        "weak": [
+          "Physical",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "100402017": {
         "weak": [
           "Physical",
           "Thunder",
@@ -2025,6 +2056,12 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
+      "101201024": {
+        "weak": [
+          "Physical",
+          "Thunder"
+        ]
+      },
       "hasReader": true
     },
     "1012011": {
@@ -2313,6 +2350,13 @@ let basicEnemyList = {
         ]
       },
       "101203019": {
+        "weak": [
+          "Thunder",
+          "Wind",
+          "Imaginary"
+        ]
+      },
+      "101203020": {
         "weak": [
           "Thunder",
           "Wind",
@@ -3037,6 +3081,13 @@ let basicEnemyList = {
         ]
       },
       "101401017": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Wind"
+        ]
+      },
+      "101401018": {
         "weak": [
           "Fire",
           "Thunder",
@@ -4806,6 +4857,17 @@ let basicEnemyList = {
       "hasReader": true,
       "baseName": "Aurumaton Gatekeeper"
     },
+    "2013013": {
+      "2013013": {
+        "weak": [
+          "Thunder",
+          "Wind",
+          "Quantum"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Aurumaton Gatekeeper"
+    },
     "groupName": "Aurumaton Gatekeeper"
   },
   "2013020": {
@@ -4934,6 +4996,17 @@ let basicEnemyList = {
       },
       "hasReader": true,
       "baseName": "Aurumaton Spectral Envoy (Bug)"
+    },
+    "2013022": {
+      "2013022": {
+        "weak": [
+          "Physical",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Champion of Justice (Mechanical)"
     },
     "groupName": "Aurumaton Spectral Envoy"
   },
@@ -7248,6 +7321,14 @@ let basicEnemyList = {
           "Wind"
         ]
       },
+      "300203017": {
+        "name": "Sparxie's Dog",
+        "weak": [
+          "Physical",
+          "Thunder",
+          "Wind"
+        ]
+      },
       "hasReader": true
     },
     "groupName": "Dreamjolt Troupe's Bubble Hound"
@@ -8058,6 +8139,24 @@ let basicEnemyList = {
       "hasReader": true,
       "baseName": "\"Past Confined and Caged\" (Complete)"
     },
+    "3003034": {
+      "3003034": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "300303401": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Knockoff King of Heroes"
+    },
     "groupName": "\"Past Confined and Caged\""
   },
   "3003040": {
@@ -8161,6 +8260,24 @@ let basicEnemyList = {
       },
       "hasReader": true,
       "baseName": "\"Tomorrow in Harmonious Chords\" (Complete)"
+    },
+    "3003044": {
+      "3003044": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "300304401": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Knockoff King of Heroes"
     },
     "groupName": "\"Tomorrow in Harmonious Chords\""
   },
@@ -8322,6 +8439,24 @@ let basicEnemyList = {
       },
       "hasReader": true,
       "baseName": "\"Present Inebriated in Revelry\" (Complete)"
+    },
+    "3003054": {
+      "3003054": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Imaginary"
+        ]
+      },
+      "300305401": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Knockoff King of Heroes"
     },
     "groupName": "\"Present Inebriated in Revelry\""
   },
@@ -8899,6 +9034,22 @@ let basicEnemyList = {
         ]
       },
       "302401012": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Ice"
+        ]
+      },
+      "302401013": {
+        "name": "Red Knight",
+        "weak": [
+          "Physical",
+          "Fire",
+          "Ice"
+        ]
+      },
+      "302401014": {
+        "name": "Red Knight",
         "weak": [
           "Physical",
           "Fire",
@@ -9549,6 +9700,17 @@ let basicEnemyList = {
       },
       "hasReader": true
     },
+    "4012024": {
+      "4012024": {
+        "weak": [
+          "Fire",
+          "Ice",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Hero's Follower"
+    },
     "groupName": "Furiae Philosopher"
   },
   "4012030": {
@@ -9886,6 +10048,42 @@ let basicEnemyList = {
       "hasReader": true,
       "baseName": "The Long Arms of Sorrow"
     },
+    "4012074": {
+      "4012074": {
+        "weak": [
+          "Thunder",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "401207401": {
+        "weak": [
+          "Thunder",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "The Long Arms of Sorrow"
+    },
+    "4012075": {
+      "4012075": {
+        "weak": [
+          "Thunder",
+          "Wind",
+          "Quantum"
+        ]
+      },
+      "401207501": {
+        "weak": [
+          "Thunder",
+          "Wind",
+          "Quantum"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "The Long Arms of Sorrow"
+    },
     "4012076": {
       "4012076": {
         "weak": [
@@ -10076,6 +10274,17 @@ let basicEnemyList = {
       },
       "hasReader": true,
       "baseName": "Furiae Praetor (Bug)"
+    },
+    "4013018": {
+      "4013018": {
+        "weak": [
+          "Ice",
+          "Thunder",
+          "Quantum"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Furiae Praetor"
     },
     "groupName": "Furiae Praetor"
   },
@@ -10383,6 +10592,24 @@ let basicEnemyList = {
       },
       "hasReader": true,
       "baseName": "Castorice, Hand of Shadow"
+    },
+    "4014034": {
+      "4014034": {
+        "weak": [
+          "Wind",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "401403401": {
+        "weak": [
+          "Wind",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Underleveled Castorice"
     },
     "4014035": {
       "4014035": {
@@ -11385,6 +11612,13 @@ let basicEnemyList = {
           "Fire"
         ]
       },
+      "406201011": {
+        "name": "Avenger Squad: Pheasant",
+        "weak": [
+          "Physical",
+          "Fire"
+        ]
+      },
       "hasReader": true
     },
     "groupName": "Ichor Memosprite: Pheasant"
@@ -11428,6 +11662,16 @@ let basicEnemyList = {
         ]
       },
       "hasReader": true
+    },
+    "4062021": {
+      "4062021": {
+        "weak": [
+          "Ice",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Avenger Squad: Canine"
     },
     "groupName": "Ichor Memosprite: Canine"
   },
@@ -11494,6 +11738,17 @@ let basicEnemyList = {
       },
       "hasReader": true,
       "baseName": "Ichor Memosprite: Winged Serpent (Bug)"
+    },
+    "4063012": {
+      "4063012": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Ice"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Avenger Squad: Winged Serpent"
     },
     "groupName": "Ichor Memosprite: Winged Serpent"
   },
@@ -11636,11 +11891,39 @@ let basicEnemyList = {
       },
       "hasReader": true
     },
+    "5012011": {
+      "5012011": {
+        "weak": [
+          "Physical",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Autonomous Wand"
+    },
     "groupName": "Autonomous Wand"
   },
   "5012020": {
     "5012020": {
       "5012020": {
+        "weak": [
+          "Ice",
+          "Imaginary"
+        ]
+      },
+      "501202001": {
+        "weak": [
+          "Ice",
+          "Imaginary"
+        ]
+      },
+      "501202002": {
+        "weak": [
+          "Ice",
+          "Imaginary"
+        ]
+      },
+      "501202003": {
         "weak": [
           "Ice",
           "Imaginary"
@@ -11809,6 +12092,17 @@ let basicEnemyList = {
       "hasReader": true,
       "baseName": "Aggressive Reading Material"
     },
+    "5012032": {
+      "5012032": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Aggressive Reading Material"
+    },
     "groupName": "Aggressive Reading Material"
   },
   "5012040": {
@@ -11842,6 +12136,16 @@ let basicEnemyList = {
         ]
       },
       "hasReader": true,
+      "baseName": "Assistant Graffiti: Slacker"
+    },
+    "5012042": {
+      "5012042": {
+        "weak": [
+          "Thunder",
+          "Wind"
+        ]
+      },
+      "hasReader": false,
       "baseName": "Assistant Graffiti: Slacker"
     },
     "groupName": "Assistant Graffiti: Slacker"
@@ -11879,6 +12183,16 @@ let basicEnemyList = {
       "hasReader": true,
       "baseName": "Assistant Graffiti: Rusher"
     },
+    "5012052": {
+      "5012052": {
+        "weak": [
+          "Ice",
+          "Thunder"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Assistant Graffiti: Rusher"
+    },
     "groupName": "Assistant Graffiti: Rusher"
   },
   "5012060": {
@@ -11907,6 +12221,16 @@ let basicEnemyList = {
       "hasReader": true,
       "baseName": "Assistant Graffiti: Demander"
     },
+    "5012062": {
+      "5012062": {
+        "weak": [
+          "Ice",
+          "Wind"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Assistant Graffiti: Demander"
+    },
     "groupName": "Assistant Graffiti: Demander"
   },
   "5012090": {
@@ -11927,6 +12251,24 @@ let basicEnemyList = {
       },
       "hasReader": true
     },
+    "5012092": {
+      "5012092": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "501209201": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Circe's Mechatron"
+    },
     "groupName": "SD Civilian Mechatron"
   },
   "5012100": {
@@ -11946,6 +12288,17 @@ let basicEnemyList = {
         ]
       },
       "hasReader": true
+    },
+    "5012101": {
+      "5012101": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Ice"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Magical Girl Troupe"
     },
     "groupName": "Magical Girl Troupe"
   },
@@ -11973,7 +12326,25 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "501211003": {
+        "weak": [
+          "Thunder",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
       "hasReader": true
+    },
+    "5012111": {
+      "5012111": {
+        "weak": [
+          "Thunder",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Master Thief Furbo"
     },
     "groupName": "Furbo Journalist"
   },
@@ -12008,6 +12379,13 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "501301004": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Wind"
+        ]
+      },
       "hasReader": true
     },
     "5013011": {
@@ -12032,6 +12410,17 @@ let basicEnemyList = {
       "hasReader": true,
       "baseName": "Rocking Rebel (Bug)"
     },
+    "5013013": {
+      "5013013": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Wind"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Melee Familiar"
+    },
     "groupName": "Rocking Rebel"
   },
   "5013030": {
@@ -12047,6 +12436,11 @@ let basicEnemyList = {
       "5013031": {},
       "hasReader": true,
       "baseName": "Canvas Peacock (Bug)"
+    },
+    "5013032": {
+      "5013032": {},
+      "hasReader": false,
+      "baseName": "Magic Familiar"
     },
     "groupName": "Canvas Peacock"
   },
@@ -12302,11 +12696,61 @@ let basicEnemyList = {
       "hasReader": true,
       "baseName": "Alloy Mechatron: King Pom-Pom"
     },
+    "5014022": {
+      "5014022": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "501402201": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Imagenae Apex Depredator"
+    },
+    "5014023": {
+      "5014023": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Alloy Mechatron: King Pom-Pom"
+    },
     "groupName": "Alloy Mechatron: King Pom-Pom"
   },
   "5014030": {
     "5014030": {
       "5014030": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Quantum"
+        ]
+      },
+      "501403001": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Quantum"
+        ]
+      },
+      "501403002": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Quantum"
+        ]
+      },
+      "501403003": {
         "weak": [
           "Fire",
           "Thunder",
@@ -12326,6 +12770,17 @@ let basicEnemyList = {
       },
       "phases": 2,
       "hasReader": true,
+      "baseName": "Murata Graphia, Founding Artist"
+    },
+    "5014032": {
+      "5014032": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Quantum"
+        ]
+      },
+      "hasReader": false,
       "baseName": "Murata Graphia, Founding Artist"
     },
     "groupName": "Murata Graphia, Founding Artist"
@@ -12366,7 +12821,46 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "502302002": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "502302003": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "502302004": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "502302005": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
       "hasReader": true
+    },
+    "5023021": {
+      "5023021": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "God-Devourer Offspring"
     },
     "groupName": "God-Devourer Offspring"
   },
@@ -14359,6 +14853,13 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "800304008": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Wind"
+        ]
+      },
       "800304009": {
         "weak": [
           "Fire",
@@ -15240,6 +15741,26 @@ let basicEnemyList = {
     },
     "groupName": "Voidranger: Eliminator"
   },
+  "8012040": {
+    "8012040": {
+      "8012040": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Imaginary"
+        ]
+      },
+      "801204001": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false
+    },
+    "groupName": "Comediologist"
+  },
   "8013010": {
     "8013010": {
       "8013010": {
@@ -15625,6 +16146,77 @@ let basicEnemyList = {
     },
     "groupName": "Phantylia the Undying"
   },
+  "8015030": {
+    "8015030": {
+      "8015030": {
+        "weak": [
+          "Fire",
+          "Wind",
+          "Imaginary"
+        ]
+      },
+      "801503001": {
+        "weak": [
+          "Fire",
+          "Wind",
+          "Imaginary"
+        ]
+      },
+      "801503002": {
+        "weak": [
+          "Fire",
+          "Wind",
+          "Imaginary"
+        ]
+      },
+      "801503003": {
+        "weak": [
+          "Fire",
+          "Wind",
+          "Imaginary"
+        ]
+      },
+      "801503004": {
+        "weak": [
+          "Fire",
+          "Wind",
+          "Imaginary"
+        ]
+      },
+      "801503005": {
+        "name": "Lord of Saṃvartasthāyi, Asat Pramad: \"Formation\"",
+        "weak": [
+          "Fire",
+          "Wind",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false
+    },
+    "8015040": {
+      "8015040": {
+        "weak": [
+          "Fire",
+          "Wind",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Lord of Saṃvartasthāyi, Asat Pramad: \"Existence\""
+    },
+    "8015050": {
+      "8015050": {
+        "weak": [
+          "Fire",
+          "Wind",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Lord of Saṃvartasthāyi, Asat Pramad: \"Decay\""
+    },
+    "groupName": "Lord of Saṃvartasthāyi, Asat Pramad"
+  },
   "8022010": {
     "8022010": {
       "8022010": {
@@ -15640,6 +16232,12 @@ let basicEnemyList = {
         ]
       },
       "802201002": {
+        "weak": [
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "802201003": {
         "weak": [
           "Quantum",
           "Imaginary"
@@ -17609,6 +18207,22 @@ let basicEnemyList = {
       "hasReader": true,
       "baseName": "The Honored"
     },
+    "3021023": {
+      "3021023": {
+        "weak": [
+          "Physical",
+          "Ice"
+        ]
+      },
+      "302102301": {
+        "weak": [
+          "Physical",
+          "Ice"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "\"The Honored\""
+    },
     "3021030": {
       "3021030": {
         "weak": [
@@ -17636,6 +18250,18 @@ let basicEnemyList = {
         ]
       },
       "302103004": {
+        "weak": [
+          "Physical",
+          "Fire"
+        ]
+      },
+      "302103005": {
+        "weak": [
+          "Physical",
+          "Fire"
+        ]
+      },
+      "302103006": {
         "weak": [
           "Physical",
           "Fire"
@@ -17749,6 +18375,22 @@ let basicEnemyList = {
       "3021042": {},
       "hasReader": true,
       "baseName": "The Shield"
+    },
+    "3021043": {
+      "3021043": {
+        "weak": [
+          "Physical",
+          "Thunder"
+        ]
+      },
+      "302104301": {
+        "weak": [
+          "Physical",
+          "Thunder"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "\"The Shield\""
     },
     "3022010": {
       "3022010": {
@@ -17888,8 +18530,26 @@ let basicEnemyList = {
       "hasReader": true,
       "baseName": "Daythunder Raven"
     },
+    "4012081": {
+      "4012081": {
+        "weak": [
+          "Physical",
+          "Wind",
+          "Quantum"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Daythunder Raven"
+    },
     "4012090": {
       "4012090": {
+        "weak": [
+          "Physical",
+          "Ice",
+          "Quantum"
+        ]
+      },
+      "401209001": {
         "weak": [
           "Physical",
           "Ice",
@@ -17901,6 +18561,13 @@ let basicEnemyList = {
     },
     "4012091": {
       "4012091": {
+        "weak": [
+          "Physical",
+          "Ice",
+          "Quantum"
+        ]
+      },
+      "401209101": {
         "weak": [
           "Physical",
           "Ice",
@@ -18010,6 +18677,17 @@ let basicEnemyList = {
       "phases": 2,
       "hasReader": true,
       "baseName": "Sublime, Radiant, Avatar of the Sky"
+    },
+    "4015012": {
+      "4015012": {
+        "weak": [
+          "Physical",
+          "Ice",
+          "Quantum"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "undefined"
     },
     "4022011": {
       "4022011": {
@@ -18901,6 +19579,20 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "501212002": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "501212003": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
       "hasReader": true,
       "baseName": "\"Alloy Pommy\""
     },
@@ -19191,6 +19883,17 @@ let basicEnemyList = {
       },
       "hasReader": true,
       "baseName": "Trotter of Preservation"
+    },
+    "8002083": {
+      "8002083": {
+        "weak": [
+          "Fire",
+          "Ice",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Demon Boar"
     },
     "8002089": {
       "8002089": {

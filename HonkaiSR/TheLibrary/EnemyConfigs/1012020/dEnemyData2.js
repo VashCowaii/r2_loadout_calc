@@ -42,16 +42,16 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        267,
-        268,
-        269,
         270,
-        271
+        271,
+        272,
+        273,
+        274
       ],
       "abilityOrder": [
-        267,
-        268,
-        269
+        270,
+        271,
+        272
       ],
       "enemyTag": [
         "W1_Mecha01"
@@ -81,16 +81,16 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        267,
-        268,
-        269,
         270,
-        271
+        271,
+        272,
+        273,
+        274
       ],
       "abilityOrder": [
-        267,
-        268,
-        269
+        270,
+        271,
+        272
       ],
       "enemyTag": [
         "W1_Mecha01"
@@ -120,16 +120,16 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        267,
-        268,
-        269,
         270,
-        271
+        271,
+        272,
+        273,
+        274
       ],
       "abilityOrder": [
-        267,
-        268,
-        269
+        270,
+        271,
+        272
       ],
       "enemyTag": [
         "W1_Mecha01"
@@ -159,14 +159,14 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        267,
-        268,
-        269,
         270,
-        271
+        271,
+        272,
+        273,
+        274
       ],
       "abilityOrder": [
-        271
+        274
       ],
       "enemyTag": [
         "W1_Mecha01"

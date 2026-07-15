@@ -45,15 +45,15 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.5
       },
       "abilities": [
-        511,
-        512,
-        513,
         514,
         515,
-        516
+        516,
+        517,
+        518,
+        519
       ],
       "abilityOrder": [
-        511
+        514
       ],
       "enemyTag": [
         "W2_Kafka"
@@ -86,15 +86,15 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.5
       },
       "abilities": [
-        511,
-        512,
-        513,
         514,
         515,
-        516
+        516,
+        517,
+        518,
+        519
       ],
       "abilityOrder": [
-        511
+        514
       ],
       "enemyTag": [
         "W2_Kafka",
@@ -128,15 +128,15 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.5
       },
       "abilities": [
-        511,
-        512,
-        513,
         514,
         515,
-        516
+        516,
+        517,
+        518,
+        519
       ],
       "abilityOrder": [
-        511
+        514
       ],
       "enemyTag": [
         "W2_Kafka"
@@ -169,15 +169,15 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.5
       },
       "abilities": [
-        511,
-        512,
-        513,
         514,
         515,
-        516
+        516,
+        517,
+        518,
+        519
       ],
       "abilityOrder": [
-        511
+        514
       ],
       "enemyTag": [
         "W2_Kafka"
@@ -210,15 +210,15 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.5
       },
       "abilities": [
-        511,
-        512,
-        513,
         514,
         515,
-        516
+        516,
+        517,
+        518,
+        519
       ],
       "abilityOrder": [
-        511
+        514
       ],
       "enemyTag": [
         "W2_Kafka"
@@ -251,15 +251,15 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.5
       },
       "abilities": [
-        511,
-        512,
-        513,
         514,
         515,
-        516
+        516,
+        517,
+        518,
+        519
       ],
       "abilityOrder": [
-        511
+        514
       ],
       "enemyTag": [
         "W2_Kafka"
@@ -292,15 +292,15 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.5
       },
       "abilities": [
-        511,
-        512,
-        513,
         514,
         515,
-        516
+        516,
+        517,
+        518,
+        519
       ],
       "abilityOrder": [
-        511
+        514
       ],
       "enemyTag": [
         "W2_Kafka",
@@ -334,15 +334,15 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.5
       },
       "abilities": [
-        511,
-        512,
-        513,
         514,
         515,
-        516
+        516,
+        517,
+        518,
+        519
       ],
       "abilityOrder": [
-        511
+        514
       ],
       "enemyTag": [
         "W2_Kafka"
@@ -375,15 +375,15 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        511,
-        512,
-        513,
         514,
         515,
-        516
+        516,
+        517,
+        518,
+        519
       ],
       "abilityOrder": [
-        511
+        514
       ],
       "enemyTag": [
         "W2_Kafka"
@@ -416,15 +416,15 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.5
       },
       "abilities": [
-        511,
-        512,
-        513,
         514,
         515,
-        516
+        516,
+        517,
+        518,
+        519
       ],
       "abilityOrder": [
-        511
+        514
       ],
       "enemyTag": [
         "W2_Kafka",
@@ -458,15 +458,15 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.5
       },
       "abilities": [
-        511,
-        512,
-        513,
         514,
         515,
-        516
+        516,
+        517,
+        518,
+        519
       ],
       "abilityOrder": [
-        511
+        514
       ],
       "enemyTag": [
         "W2_Kafka"

@@ -646,11 +646,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_Conv",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_7166) || Variables[1] (S02_ExtraRatio) || ADD || RETURN",
-                    "displayLines": "(UnusedUnderThisBase_7166 + S02_ExtraRatio)",
+                    "operator": "Variables[0] (UnusedUnderThisBase_7168) || Variables[1] (S02_ExtraRatio) || ADD || RETURN",
+                    "displayLines": "(UnusedUnderThisBase_7168 + S02_ExtraRatio)",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_7166",
+                      "UnusedUnderThisBase_7168",
                       "S02_ExtraRatio"
                     ]
                   }

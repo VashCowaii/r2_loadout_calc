@@ -42,12 +42,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        860,
-        861,
-        862,
-        863,
-        864,
-        865
+        870,
+        871,
+        872,
+        873,
+        874,
+        875
       ],
       "enemyTag": [
         "MonsterType_W2_Lycan",
@@ -78,12 +78,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        860,
-        861,
-        862,
-        863,
-        864,
-        865
+        870,
+        871,
+        872,
+        873,
+        874,
+        875
       ],
       "enemyTag": [
         "MonsterType_W2_Lycan",

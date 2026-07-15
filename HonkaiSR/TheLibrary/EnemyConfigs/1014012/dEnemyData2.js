@@ -52,9 +52,6 @@ let enemyData = {
         "STAT_Entangle": 0.75
       },
       "abilities": [
-        395,
-        396,
-        397,
         398,
         399,
         400,
@@ -65,7 +62,10 @@ let enemyData = {
         405,
         406,
         407,
-        408
+        408,
+        409,
+        410,
+        411
       ],
       "enemyTag": [
         "RL"
@@ -130,9 +130,6 @@ let enemyData = {
         "STAT_Entangle": 0.75
       },
       "abilities": [
-        395,
-        396,
-        397,
         398,
         399,
         400,
@@ -143,7 +140,10 @@ let enemyData = {
         405,
         406,
         407,
-        408
+        408,
+        409,
+        410,
+        411
       ],
       "enemyTag": [
         "RL",
@@ -172,7 +172,7 @@ let enemyData = {
         }
       ],
       "overrideParams": {
-        "403": [
+        "406": [
           [
             "-",
             "-",

@@ -2269,11 +2269,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1193792195\">MModifier_Monster_W3_Dinosaur_RLElite_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_9616) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_9616",
+                          "operator": "Variables[0] (UnusedUnderThisBase_9618) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_9618",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_9616"
+                            "UnusedUnderThisBase_9618"
                           ]
                         }
                       }
@@ -3114,11 +3114,11 @@ const compositeAbilityObject = {
             {
               "name": "Assign Advance/Delay to Current Ability Use",
               "adjustmentValue": {
-                "operator": "Variables[0] (UnusedUnderThisBase_9592) || RETURN",
-                "displayLines": "UnusedUnderThisBase_9592",
+                "operator": "Variables[0] (UnusedUnderThisBase_9594) || RETURN",
+                "displayLines": "UnusedUnderThisBase_9594",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_9592"
+                  "UnusedUnderThisBase_9594"
                 ]
               },
               "adjustmentType": "="

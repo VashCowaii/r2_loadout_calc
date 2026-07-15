@@ -79,11 +79,11 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_8998) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_8998",
+                        "operator": "Variables[0] (UnusedUnderThisBase_9000) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_9000",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_8998"
+                          "UnusedUnderThisBase_9000"
                         ]
                       },
                       "enemyList": [
@@ -106,11 +106,11 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_8998) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_8998",
+                        "operator": "Variables[0] (UnusedUnderThisBase_9000) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_9000",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_8998"
+                          "UnusedUnderThisBase_9000"
                         ]
                       },
                       "enemyList": [
@@ -145,11 +145,11 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_8998) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_8998",
+                        "operator": "Variables[0] (UnusedUnderThisBase_9000) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_9000",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_8998"
+                          "UnusedUnderThisBase_9000"
                         ]
                       },
                       "enemyList": [
@@ -172,11 +172,11 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_8998) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_8998",
+                        "operator": "Variables[0] (UnusedUnderThisBase_9000) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_9000",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_8998"
+                          "UnusedUnderThisBase_9000"
                         ]
                       },
                       "enemyList": [
@@ -221,11 +221,11 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_9020) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_9020",
+                        "operator": "Variables[0] (UnusedUnderThisBase_9022) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_9022",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_9020"
+                          "UnusedUnderThisBase_9022"
                         ]
                       },
                       "enemyList": [
@@ -248,11 +248,11 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_9020) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_9020",
+                        "operator": "Variables[0] (UnusedUnderThisBase_9022) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_9022",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_9020"
+                          "UnusedUnderThisBase_9022"
                         ]
                       },
                       "enemyList": [
@@ -287,11 +287,11 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_9020) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_9020",
+                        "operator": "Variables[0] (UnusedUnderThisBase_9022) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_9022",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_9020"
+                          "UnusedUnderThisBase_9022"
                         ]
                       },
                       "enemyList": [
@@ -314,11 +314,11 @@ const configAbility = {
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_9020) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_9020",
+                        "operator": "Variables[0] (UnusedUnderThisBase_9022) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_9022",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_9020"
+                          "UnusedUnderThisBase_9022"
                         ]
                       },
                       "enemyList": [
@@ -416,11 +416,11 @@ const configAbility = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_8998) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_8998",
+                            "operator": "Variables[0] (UnusedUnderThisBase_9000) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_9000",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_8998"
+                              "UnusedUnderThisBase_9000"
                             ]
                           },
                           "enemyList": [
@@ -443,11 +443,11 @@ const configAbility = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_8998) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_8998",
+                            "operator": "Variables[0] (UnusedUnderThisBase_9000) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_9000",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_8998"
+                              "UnusedUnderThisBase_9000"
                             ]
                           },
                           "enemyList": [
@@ -482,11 +482,11 @@ const configAbility = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_9020) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_9020",
+                            "operator": "Variables[0] (UnusedUnderThisBase_9022) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_9022",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_9020"
+                              "UnusedUnderThisBase_9022"
                             ]
                           },
                           "enemyList": [
@@ -509,11 +509,11 @@ const configAbility = {
                         {
                           "name": "Create Enemies",
                           "delayPercent": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_9020) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_9020",
+                            "operator": "Variables[0] (UnusedUnderThisBase_9022) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_9022",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_9020"
+                              "UnusedUnderThisBase_9022"
                             ]
                           },
                           "enemyList": [

@@ -44,10 +44,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        468
+        471
       ],
       "abilityOrder": [
-        468
+        471
       ]
     },
     "102201001": {
@@ -77,10 +77,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        468
+        471
       ],
       "abilityOrder": [
-        468
+        471
       ]
     },
     "102201002": {
@@ -110,10 +110,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        468
+        471
       ],
       "abilityOrder": [
-        468
+        471
       ]
     },
     "102201003": {
@@ -143,10 +143,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        468
+        471
       ],
       "abilityOrder": [
-        468
+        471
       ]
     },
     "102201004": {
@@ -176,10 +176,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        468
+        471
       ],
       "abilityOrder": [
-        468
+        471
       ]
     },
     "102201005": {
@@ -209,10 +209,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        468
+        471
       ],
       "abilityOrder": [
-        468
+        471
       ]
     },
     "102201006": {
@@ -242,10 +242,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        468
+        471
       ],
       "abilityOrder": [
-        468
+        471
       ]
     },
     "102201007": {
@@ -275,10 +275,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        468
+        471
       ],
       "abilityOrder": [
-        468
+        471
       ]
     },
     "102201008": {
@@ -308,10 +308,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        468
+        471
       ],
       "abilityOrder": [
-        468
+        471
       ]
     },
     "102201009": {
@@ -341,10 +341,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        468
+        471
       ],
       "abilityOrder": [
-        468
+        471
       ]
     },
     "102201010": {
@@ -374,10 +374,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        468
+        471
       ],
       "abilityOrder": [
-        468
+        471
       ]
     },
     "102201011": {
@@ -407,10 +407,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        468
+        471
       ],
       "abilityOrder": [
-        468
+        471
       ]
     },
     "102201012": {
@@ -440,10 +440,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        468
+        471
       ],
       "abilityOrder": [
-        468
+        471
       ]
     },
     "102201013": {
@@ -473,10 +473,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        468
+        471
       ],
       "abilityOrder": [
-        468
+        471
       ]
     },
     "102201014": {
@@ -506,10 +506,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        468
+        471
       ],
       "abilityOrder": [
-        468
+        471
       ]
     },
     "102201015": {
@@ -539,10 +539,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        468
+        471
       ],
       "abilityOrder": [
-        468
+        471
       ]
     },
     "102201016": {
@@ -572,10 +572,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        468
+        471
       ],
       "abilityOrder": [
-        468
+        471
       ]
     },
     "102201017": {
@@ -605,10 +605,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        468
+        471
       ],
       "abilityOrder": [
-        468
+        471
       ]
     },
     "102201018": {
@@ -638,10 +638,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        468
+        471
       ],
       "abilityOrder": [
-        468
+        471
       ]
     },
     "102201019": {
@@ -671,10 +671,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        468
+        471
       ],
       "abilityOrder": [
-        468
+        471
       ],
       "enemyTag": [
         "MGrid_4002"

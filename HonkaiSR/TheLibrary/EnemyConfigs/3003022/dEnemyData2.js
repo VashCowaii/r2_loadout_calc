@@ -43,14 +43,14 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1168,
-        1169,
-        1170,
-        1171
+        1178,
+        1179,
+        1180,
+        1181
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "summons": [
         {
@@ -87,14 +87,14 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1168,
-        1169,
-        1170,
-        1171
+        1178,
+        1179,
+        1180,
+        1181
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "summons": [
         {
@@ -131,14 +131,14 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1168,
-        1169,
-        1170,
-        1171
+        1178,
+        1179,
+        1180,
+        1181
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "summons": [
         {
@@ -175,14 +175,14 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1168,
-        1169,
-        1170,
-        1171
+        1178,
+        1179,
+        1180,
+        1181
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "enemyTag": [
         "MGrid_4006"

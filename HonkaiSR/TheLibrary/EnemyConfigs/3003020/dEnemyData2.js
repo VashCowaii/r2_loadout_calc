@@ -43,14 +43,14 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1160,
-        1161,
-        1162,
-        1163
+        1170,
+        1171,
+        1172,
+        1173
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "summons": [
         {
@@ -87,14 +87,14 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1160,
-        1161,
-        1162,
-        1163
+        1170,
+        1171,
+        1172,
+        1173
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "summons": [
         {
@@ -131,14 +131,14 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1160,
-        1161,
-        1162,
-        1163
+        1170,
+        1171,
+        1172,
+        1173
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "summons": [
         {
@@ -175,14 +175,14 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1160,
-        1161,
-        1162,
-        1163
+        1170,
+        1171,
+        1172,
+        1173
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "summons": [
         {
@@ -219,14 +219,14 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1160,
-        1161,
-        1162,
-        1163
+        1170,
+        1171,
+        1172,
+        1173
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "summons": [
         {
@@ -263,14 +263,14 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1160,
-        1161,
-        1162,
-        1163
+        1170,
+        1171,
+        1172,
+        1173
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "summons": [
         {
@@ -307,14 +307,14 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1160,
-        1161,
-        1162,
-        1163
+        1170,
+        1171,
+        1172,
+        1173
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "summons": [
         {
@@ -351,14 +351,14 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1160,
-        1161,
-        1162,
-        1163
+        1170,
+        1171,
+        1172,
+        1173
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "summons": [
         {
@@ -395,14 +395,14 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1160,
-        1161,
-        1162,
-        1163
+        1170,
+        1171,
+        1172,
+        1173
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "summons": [
         {
@@ -439,14 +439,14 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1160,
-        1161,
-        1162,
-        1163
+        1170,
+        1171,
+        1172,
+        1173
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "enemyTag": [
         "MGrid_4006"
@@ -486,14 +486,14 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1160,
-        1161,
-        1162,
-        1163
+        1170,
+        1171,
+        1172,
+        1173
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "summons": [
         {
@@ -530,14 +530,14 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1160,
-        1161,
-        1162,
-        1163
+        1170,
+        1171,
+        1172,
+        1173
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "summons": [
         {
@@ -574,14 +574,14 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1161,
-        1160,
-        1162,
-        1163
+        1171,
+        1170,
+        1172,
+        1173
       ],
       "abilityOrder": [
-        716,
-        715
+        726,
+        725
       ],
       "summons": [
         {
@@ -591,7 +591,7 @@ let enemyData = {
         }
       ],
       "overrideParams": {
-        "1163": [
+        "1173": [
           [],
           null,
           null,

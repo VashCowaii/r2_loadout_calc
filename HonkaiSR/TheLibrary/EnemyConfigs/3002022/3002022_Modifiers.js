@@ -3076,11 +3076,11 @@ const configAbility = {
                           "name": "Define Custom Variable",
                           "variableName": "MDF_Negative_Count_Max",
                           "value": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_10326) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_10326",
+                            "operator": "Variables[0] (UnusedUnderThisBase_10328) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_10328",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_10326"
+                              "UnusedUnderThisBase_10328"
                             ]
                           }
                         }
@@ -3103,11 +3103,11 @@ const configAbility = {
                               "name": "Define Custom Variable",
                               "variableName": "MDF_Negative_Count_Max",
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_10318) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_10318",
+                                "operator": "Variables[0] (UnusedUnderThisBase_10320) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_10320",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_10318"
+                                  "UnusedUnderThisBase_10320"
                                 ]
                               }
                             }

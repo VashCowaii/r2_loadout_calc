@@ -45,9 +45,6 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        370,
-        371,
-        372,
         373,
         374,
         375,
@@ -55,7 +52,10 @@ let enemyData = {
         377,
         378,
         379,
-        380
+        380,
+        381,
+        382,
+        383
       ],
       "summons": [
         {
@@ -92,9 +92,6 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        370,
-        371,
-        372,
         373,
         374,
         375,
@@ -102,7 +99,10 @@ let enemyData = {
         377,
         378,
         379,
-        380
+        380,
+        381,
+        382,
+        383
       ],
       "enemyTag": [
         "NoDieEffect"
@@ -142,9 +142,6 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        370,
-        371,
-        372,
         373,
         374,
         375,
@@ -152,7 +149,10 @@ let enemyData = {
         377,
         378,
         379,
-        380
+        380,
+        381,
+        382,
+        383
       ],
       "summons": [
         {
@@ -189,9 +189,6 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        370,
-        371,
-        372,
         373,
         374,
         375,
@@ -199,7 +196,10 @@ let enemyData = {
         377,
         378,
         379,
-        380
+        380,
+        381,
+        382,
+        383
       ],
       "summons": [
         {
@@ -236,9 +236,6 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        370,
-        371,
-        372,
         373,
         374,
         375,
@@ -246,7 +243,10 @@ let enemyData = {
         377,
         378,
         379,
-        380
+        380,
+        381,
+        382,
+        383
       ],
       "enemyTag": [
         "NoDieEffect"
@@ -286,9 +286,6 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        370,
-        371,
-        372,
         373,
         374,
         375,
@@ -296,7 +293,10 @@ let enemyData = {
         377,
         378,
         379,
-        380
+        380,
+        381,
+        382,
+        383
       ],
       "summons": [
         {
@@ -333,9 +333,6 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        370,
-        371,
-        372,
         373,
         374,
         375,
@@ -343,7 +340,10 @@ let enemyData = {
         377,
         378,
         379,
-        380
+        380,
+        381,
+        382,
+        383
       ],
       "summons": [
         {
@@ -380,9 +380,6 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        370,
-        371,
-        372,
         373,
         374,
         375,
@@ -390,7 +387,10 @@ let enemyData = {
         377,
         378,
         379,
-        380
+        380,
+        381,
+        382,
+        383
       ],
       "summons": [
         {
@@ -427,9 +427,6 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        370,
-        371,
-        372,
         373,
         374,
         375,
@@ -437,7 +434,10 @@ let enemyData = {
         377,
         378,
         379,
-        380
+        380,
+        381,
+        382,
+        383
       ],
       "summons": [
         {
@@ -474,9 +474,6 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        370,
-        371,
-        372,
         373,
         374,
         375,
@@ -484,7 +481,10 @@ let enemyData = {
         377,
         378,
         379,
-        380
+        380,
+        381,
+        382,
+        383
       ],
       "summons": [
         {
@@ -521,9 +521,6 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        370,
-        371,
-        372,
         373,
         374,
         375,
@@ -531,7 +528,10 @@ let enemyData = {
         377,
         378,
         379,
-        380
+        380,
+        381,
+        382,
+        383
       ],
       "summons": [
         {
@@ -568,9 +568,6 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        370,
-        371,
-        372,
         373,
         374,
         375,
@@ -578,7 +575,10 @@ let enemyData = {
         377,
         378,
         379,
-        380
+        380,
+        381,
+        382,
+        383
       ],
       "summons": [
         {
@@ -615,9 +615,6 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        370,
-        371,
-        372,
         373,
         374,
         375,
@@ -625,7 +622,10 @@ let enemyData = {
         377,
         378,
         379,
-        380
+        380,
+        381,
+        382,
+        383
       ],
       "summons": [
         {
@@ -662,9 +662,6 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        370,
-        371,
-        372,
         373,
         374,
         375,
@@ -672,7 +669,10 @@ let enemyData = {
         377,
         378,
         379,
-        380
+        380,
+        381,
+        382,
+        383
       ],
       "summons": [
         {
@@ -709,9 +709,6 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        370,
-        371,
-        372,
         373,
         374,
         375,
@@ -719,7 +716,10 @@ let enemyData = {
         377,
         378,
         379,
-        380
+        380,
+        381,
+        382,
+        383
       ],
       "summons": [
         {
@@ -756,9 +756,6 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        370,
-        371,
-        372,
         373,
         374,
         375,
@@ -766,7 +763,10 @@ let enemyData = {
         377,
         378,
         379,
-        380
+        380,
+        381,
+        382,
+        383
       ],
       "summons": [
         {
@@ -803,9 +803,6 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        370,
-        371,
-        372,
         373,
         374,
         375,
@@ -813,7 +810,10 @@ let enemyData = {
         377,
         378,
         379,
-        380
+        380,
+        381,
+        382,
+        383
       ],
       "summons": [
         {
@@ -850,9 +850,6 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        370,
-        371,
-        372,
         373,
         374,
         375,
@@ -860,7 +857,10 @@ let enemyData = {
         377,
         378,
         379,
-        380
+        380,
+        381,
+        382,
+        383
       ],
       "summons": [
         {
@@ -869,6 +869,110 @@ let enemyData = {
           "base": 1012040
         }
       ]
+    },
+    "101401018": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        2.222716,
+        1,
+        0.268844,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Fire",
+        "Thunder",
+        "Wind"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Ice": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "resMod": {
+        "STAT_CTRL": 0.5
+      },
+      "abilities": [
+        373,
+        374,
+        375,
+        376,
+        377,
+        378,
+        379,
+        380,
+        381,
+        382,
+        383
+      ],
+      "abilityOrder": [
+        373,
+        374,
+        373,
+        376
+      ],
+      "summons": [
+        {
+          "name": "Auxiliary Robot Arm Unit",
+          "over": 1012040,
+          "base": 1012040
+        }
+      ],
+      "overrideParams": {
+        "373": [
+          [
+            1
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          "-"
+        ],
+        "374": [
+          [
+            1.25,
+            0
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          10,
+          "-"
+        ],
+        "376": [
+          [
+            0.1,
+            0,
+            1
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          "-"
+        ],
+        "377": [
+          [],
+          null,
+          null,
+          null,
+          null,
+          null,
+          8,
+          "-"
+        ]
+      }
     }
   }
 }

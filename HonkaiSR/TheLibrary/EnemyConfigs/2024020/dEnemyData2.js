@@ -34,12 +34,12 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        812,
-        813,
-        814
+        822,
+        823,
+        824
       ],
       "abilityOrder": [
-        813
+        823
       ],
       "itNeverEnds": {
         "MonsterCount": 10
@@ -61,13 +61,13 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        812,
-        813,
-        814
+        822,
+        823,
+        824
       ],
       "abilityOrder": [
-        814,
-        813
+        824,
+        823
       ],
       "itNeverEnds": {
         "MonsterCount": 10
@@ -89,12 +89,12 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        812,
-        813,
-        814
+        822,
+        823,
+        824
       ],
       "abilityOrder": [
-        813
+        823
       ],
       "itNeverEnds": {
         "MonsterCount": 3
@@ -116,12 +116,12 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        812,
-        813,
-        814
+        822,
+        823,
+        824
       ],
       "abilityOrder": [
-        813
+        823
       ],
       "itNeverEnds": {
         "MonsterCount": 16
@@ -143,12 +143,12 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        812,
-        813,
-        814
+        822,
+        823,
+        824
       ],
       "abilityOrder": [
-        813
+        823
       ],
       "itNeverEnds": {
         "MonsterCount": 24
@@ -170,12 +170,12 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        812,
-        813,
-        814
+        822,
+        823,
+        824
       ],
       "abilityOrder": [
-        813
+        823
       ],
       "itNeverEnds": {
         "MonsterCount": 15
@@ -197,12 +197,12 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        812,
-        813,
-        814
+        822,
+        823,
+        824
       ],
       "abilityOrder": [
-        813
+        823
       ],
       "itNeverEnds": {
         "MonsterCount": 20
@@ -224,12 +224,12 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        812,
-        813,
-        814
+        822,
+        823,
+        824
       ],
       "abilityOrder": [
-        813
+        823
       ],
       "itNeverEnds": {
         "MonsterCount": 54

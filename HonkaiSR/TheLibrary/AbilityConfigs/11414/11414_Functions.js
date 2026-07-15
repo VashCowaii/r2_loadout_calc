@@ -30,11 +30,11 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "duration": {
-            "operator": "Variables[0] (UnusedUnderThisBase_13145) || RETURN",
-            "displayLines": "UnusedUnderThisBase_13145",
+            "operator": "Variables[0] (UnusedUnderThisBase_13147) || RETURN",
+            "displayLines": "UnusedUnderThisBase_13147",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_13145"
+              "UnusedUnderThisBase_13147"
             ]
           },
           "valuePerStack": {

@@ -42,13 +42,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2413,
-        2414,
-        2415,
-        2416
+        2471,
+        2472,
+        2473,
+        2474
       ],
       "abilityOrder": [
-        2413
+        2471
       ],
       "enemyTag": [
         "SW_Minion01_03"
@@ -78,13 +78,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2413,
-        2414,
-        2415,
-        2416
+        2471,
+        2472,
+        2473,
+        2474
       ],
       "abilityOrder": [
-        2413
+        2471
       ],
       "enemyTag": [
         "SW_Minion01_03"

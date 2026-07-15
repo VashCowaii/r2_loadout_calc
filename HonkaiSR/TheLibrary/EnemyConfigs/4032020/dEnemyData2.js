@@ -45,10 +45,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2075,
-        2076,
-        2077,
-        2078
+        2133,
+        2134,
+        2135,
+        2136
       ],
       "itNeverEnds": {}
     },
@@ -79,10 +79,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2075,
-        2076,
-        2077,
-        2078
+        2133,
+        2134,
+        2135,
+        2136
       ],
       "itNeverEnds": {
         "SkillIndex": 1
@@ -115,10 +115,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2075,
-        2076,
-        2077,
-        2078
+        2133,
+        2134,
+        2135,
+        2136
       ],
       "itNeverEnds": {
         "SkillIndex": 2
@@ -151,10 +151,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2075,
-        2076,
-        2077,
-        2078
+        2133,
+        2134,
+        2135,
+        2136
       ],
       "itNeverEnds": {
         "SkillIndex": 3
@@ -187,10 +187,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2075,
-        2076,
-        2077,
-        2078
+        2133,
+        2134,
+        2135,
+        2136
       ],
       "itNeverEnds": {}
     },
@@ -221,10 +221,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2075,
-        2076,
-        2077,
-        2078
+        2133,
+        2134,
+        2135,
+        2136
       ],
       "itNeverEnds": {
         "SkillIndex": 1
@@ -257,10 +257,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2075,
-        2076,
-        2077,
-        2078
+        2133,
+        2134,
+        2135,
+        2136
       ],
       "itNeverEnds": {
         "SkillIndex": 2
@@ -293,10 +293,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2075,
-        2076,
-        2077,
-        2078
+        2133,
+        2134,
+        2135,
+        2136
       ],
       "itNeverEnds": {
         "SkillIndex": 3
@@ -329,10 +329,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2075,
-        2076,
-        2077,
-        2078
+        2133,
+        2134,
+        2135,
+        2136
       ],
       "enemyTag": [
         "MGrid_4009"
@@ -368,10 +368,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2075,
-        2076,
-        2077,
-        2078
+        2133,
+        2134,
+        2135,
+        2136
       ],
       "enemyTag": [
         "MGrid_4009"
@@ -407,10 +407,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2075,
-        2076,
-        2077,
-        2078
+        2133,
+        2134,
+        2135,
+        2136
       ],
       "enemyTag": [
         "MGrid_4009"

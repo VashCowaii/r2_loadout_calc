@@ -42,13 +42,13 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1109,
-        1110,
-        1111,
-        1112,
-        1113,
-        1114,
-        1115
+        1119,
+        1120,
+        1121,
+        1122,
+        1123,
+        1124,
+        1125
       ],
       "enemyTag": [
         "MonsterType_W3_Dinosaur_00",
@@ -82,13 +82,13 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1109,
-        1110,
-        1111,
-        1112,
-        1113,
-        1114,
-        1115
+        1119,
+        1120,
+        1121,
+        1122,
+        1123,
+        1124,
+        1125
       ],
       "enemyTag": [
         "MonsterType_W3_Dinosaur_00",
@@ -120,13 +120,13 @@ let enemyData = {
         "Imaginary"
       ],
       "abilities": [
-        1109,
-        1110,
-        1111,
-        1112,
-        1113,
-        1114,
-        1115
+        1119,
+        1120,
+        1121,
+        1122,
+        1123,
+        1124,
+        1125
       ],
       "enemyTag": [
         "MonsterType_W3_Dinosaur_00",
@@ -160,13 +160,13 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1109,
-        1110,
-        1111,
-        1112,
-        1113,
-        1114,
-        1115
+        1119,
+        1120,
+        1121,
+        1122,
+        1123,
+        1124,
+        1125
       ],
       "enemyTag": [
         "MonsterType_W3_Dinosaur_00",

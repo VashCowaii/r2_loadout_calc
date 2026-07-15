@@ -1584,35 +1584,35 @@ const compositeAbilityObject = {
                   "eventID": 20008,
                   "variables": {
                     "P3_Lycan01Delay": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_8973) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_8973",
+                      "operator": "Variables[0] (UnusedUnderThisBase_8975) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_8975",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_8973"
+                        "UnusedUnderThisBase_8975"
                       ]
                     },
                     "P4_Lycan02Delay": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_8995) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_8995",
+                      "operator": "Variables[0] (UnusedUnderThisBase_8997) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_8997",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_8995"
+                        "UnusedUnderThisBase_8997"
                       ]
                     },
                     "P5_Lycan03Delay": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_8970) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_8970",
+                      "operator": "Variables[0] (UnusedUnderThisBase_8972) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_8972",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_8970"
+                        "UnusedUnderThisBase_8972"
                       ]
                     },
                     "P6_Lycan04Delay": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_8996) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_8996",
+                      "operator": "Variables[0] (UnusedUnderThisBase_8998) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_8998",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_8996"
+                        "UnusedUnderThisBase_8998"
                       ]
                     }
                   }
@@ -1640,11 +1640,11 @@ const compositeAbilityObject = {
                       "scope": "TargetEntity",
                       "variableName": "P3_Lycan01Delay",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_8973) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_8973",
+                        "operator": "Variables[0] (UnusedUnderThisBase_8975) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_8975",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_8973"
+                          "UnusedUnderThisBase_8975"
                         ]
                       }
                     }
@@ -1673,11 +1673,11 @@ const compositeAbilityObject = {
                       "scope": "TargetEntity",
                       "variableName": "P4_Lycan02Delay",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_8995) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_8995",
+                        "operator": "Variables[0] (UnusedUnderThisBase_8997) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_8997",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_8995"
+                          "UnusedUnderThisBase_8997"
                         ]
                       }
                     }
@@ -1706,11 +1706,11 @@ const compositeAbilityObject = {
                       "scope": "TargetEntity",
                       "variableName": "P5_Lycan03Delay",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_8970) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_8970",
+                        "operator": "Variables[0] (UnusedUnderThisBase_8972) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_8972",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_8970"
+                          "UnusedUnderThisBase_8972"
                         ]
                       }
                     }
@@ -1739,11 +1739,11 @@ const compositeAbilityObject = {
                       "scope": "TargetEntity",
                       "variableName": "P6_Lycan04Delay",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_8996) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_8996",
+                        "operator": "Variables[0] (UnusedUnderThisBase_8998) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_8998",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_8996"
+                          "UnusedUnderThisBase_8998"
                         ]
                       }
                     }

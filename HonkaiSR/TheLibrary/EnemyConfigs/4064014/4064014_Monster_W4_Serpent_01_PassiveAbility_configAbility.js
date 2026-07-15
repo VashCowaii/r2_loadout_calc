@@ -65,11 +65,11 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-227770037\">Monster_W4_Serpent_01_RLBoss_Passive</a>",
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12266) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12266",
+              "operator": "Variables[0] (UnusedUnderThisBase_12268) || RETURN",
+              "displayLines": "UnusedUnderThisBase_12268",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_12266"
+                "UnusedUnderThisBase_12268"
               ]
             }
           }

@@ -6,9 +6,72 @@
     </ul>
 </div> -->
 <div>
+    <h1>July 14th, 2026 - CONDITIONS QOL UPDATE</h1>
+    <ul>
+        <h3>Library</h3>
+        <h4>Additions</h4>
+        <li>WARNING: some data for both enemies and characters are gonna be incomplete for a couple days. Will get this resolved ASAP.</li>
+        <li>Updated endgame scheduling/data.</li>
+        <li>Updated enemy data where possible.</li>
+
+        <h3>Calculator</h3>
+        <h4>Conditions</h4>
+        <li>Calculator usage has been picking up lately and while that's a good thing, it's also bringing attention to the fact that user-defined conditions were something that I got functional and then kicked to the curb in terms of visual design because I had bigger problems to work on. Now however it's more annoying to leave it as is than it would be to update our visual handling and qol so today I'm doin just that.</li>
+        <li>Added the ability to copy/cut/paste conditions.
+            <ul>
+                <li>The ability to "paste" won't display anywhere until you actually cut/copied an existing condition.</li>
+                <li>Anywhere the paste icon shows up afterwards is somewhere you can actually paste to, meaning if you choose to paste between two conditions it will properly offset everything else and go between.</li>
+                <li>This also enabled cross-character pasting since if you cut/copy from one character, the option to paste will display on ANY character until you finish pasting.</li>
+                <li>For now, copies or cuts are one-time deals meaning that once you paste them anywhere they are removed from the site's "clipboard" but until you actually paste - it will be preserved through any amount of changes unless you refresh the page.</li>
+                <li>Please note though that with cross-character pasting, the "slot" context of the condition you copied will be preserved when pasting to the next character.
+                    <ul>
+                        <li>This means that if you had a condition that looked at slots of "Self" or "char1" for who to read, it will still read those same slots even when pasted into a character that is in new slot.</li>
+                        <li>Regarding character specific values, this means if you checked for Saber's "Basic is Enhanced" value it will reset to the first available character specific value if you pasted it into Huohuo's conditions since Huohuo doesn't have that value to check for.</li>
+                    </ul>
+                </li>
+                <li>Conditions associated with usage or requirements can't be pasted into Target Filter conditions, and vice-versa.</li>
+            </ul>
+        </li>
+        <li>Removed the "Delete" option from condition dropdowns to avoid confusion about where you should delete something since people were thinking you couldn't delete at all lol.
+            <ul>
+                <li>Instead, the delete option now displays as its own "X" icon next to the copy/cut icons.</li>
+            </ul>
+        </li>
+        <li>To break up visual monotony and better distinguish between where conditions end and meet, made the following changes:
+            <ul>
+                <li>Array-type conditions can now be permanently expanded or closed and this setting will save on each individual condition.
+                    <ul>
+                        <li>In particular this also got hella fucking annoying if you were crafting some huge nasty ass condition but the display needed to redraw everything every time, so now you can condense and permanently hide things you are done with.</li>
+                    </ul>
+                </li>
+                <li>Updated border coloring on array-type conditions to display varying colors of yellow -> purple -> blue based on which layer they are in, heading inwards.</li>
+            </ul>
+        </li>
+        <li>Regarding conditions QoL/UI there are likely more things I'll add as I go, this update just happens to represent what will be the largest single cluster of changes for them.</li>
+
+        <h4>Additions</h4>
+        <li>Added the ability to use other preset cycle handling besides MOC:
+            <ul>
+                <li>AA - initial AV of 300 with resets of 100</li>
+                <li>PF - initial AV of 150 with resets of 100 same as MOC</li>
+                <li>I admit I'm not really inclined to ever add one for apocalyptic shadow since even on MOC I never let you go beyond 750 AV, and apoc would require a bound of 2000 AV and holy fuck never are we going to do something THAT long.</li>
+            </ul>
+        </li>
+        <!-- <h4>Fixes</h4>
+        <li></li> -->
+
+        
+
+        <!-- <h4>Fixes</h4>
+        <li></li> -->
+    </ul>
+</div>
+
+<div>
     <h1>July 12th, 2026</h1>
     <ul>
         <h3>Calculator</h3>
+        <h4>Additions</h4>
         <!-- <li>Made updates to how turns are reset in the context of completing actions. This is with a larger change in mind that we'll be talking about later.</li> -->
         <!-- <h4>Additions</h4> -->
         <!-- <li>Added the following new characters:

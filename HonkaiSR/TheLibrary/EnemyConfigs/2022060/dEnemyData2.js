@@ -42,10 +42,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        686
+        696
       ],
       "abilityOrder": [
-        686
+        696
       ]
     },
     "202206001": {
@@ -72,10 +72,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        686
+        696
       ],
       "abilityOrder": [
-        686
+        696
       ]
     },
     "202206002": {
@@ -102,10 +102,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        686
+        696
       ],
       "abilityOrder": [
-        686
+        696
       ]
     },
     "202206003": {
@@ -132,10 +132,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        686
+        696
       ],
       "abilityOrder": [
-        686
+        696
       ]
     },
     "202206004": {
@@ -162,10 +162,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        686
+        696
       ],
       "abilityOrder": [
-        686
+        696
       ]
     },
     "202206005": {
@@ -192,10 +192,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        686
+        696
       ],
       "abilityOrder": [
-        686
+        696
       ]
     },
     "202206006": {
@@ -222,10 +222,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        686
+        696
       ],
       "abilityOrder": [
-        686
+        696
       ]
     },
     "202206007": {
@@ -252,10 +252,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        686
+        696
       ],
       "abilityOrder": [
-        686
+        696
       ]
     },
     "202206008": {
@@ -282,10 +282,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        686
+        696
       ],
       "abilityOrder": [
-        686
+        696
       ]
     },
     "202206009": {
@@ -312,10 +312,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        686
+        696
       ],
       "abilityOrder": [
-        686
+        696
       ]
     },
     "202206010": {
@@ -345,10 +345,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        686
+        696
       ],
       "abilityOrder": [
-        686
+        696
       ]
     },
     "202206011": {
@@ -375,10 +375,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        686
+        696
       ],
       "abilityOrder": [
-        686
+        696
       ]
     },
     "202206012": {
@@ -405,10 +405,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        686
+        696
       ],
       "abilityOrder": [
-        686
+        696
       ]
     },
     "202206013": {
@@ -435,10 +435,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        686
+        696
       ],
       "abilityOrder": [
-        686
+        696
       ]
     },
     "202206014": {
@@ -465,10 +465,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        686
+        696
       ],
       "abilityOrder": [
-        686
+        696
       ],
       "enemyTag": [
         "MGrid_4005"

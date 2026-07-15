@@ -1465,6 +1465,26 @@ let modifiersExtraEffects = [
   },
   {
     "name": "DEF",
-    "desc": "Aha's DEF. Even though Aha cannot be attacked, when wearing specific DEF-related equipment, Aha can trigger effects based on THEIR DEF."
+    "desc": "Aha's DEF. Even though Aha cannot be attacked, when equipped with specific DEF-related equipment, Aha can trigger effects based on THEIR DEF."
+  },
+  {
+    "name": "Trailblaze Companions",
+    "desc": "Trailblazer, Himeko, Himeko • Nova, March 7th, Evernight, Dan Heng, Dan Heng • Imbibitor Lunae, Dan Heng • Permansor Terrae, Welt, Sunday."
+  },
+  {
+    "name": "Assist Skill",
+    "desc": "An extra ability that can be granted to an ally target. Using an Assist Skill will also consume the current action turn."
+  },
+  {
+    "name": "Source Energy",
+    "desc": "Charge exclusive to the Starblazer, maximum 3 points."
+  },
+  {
+    "name": "Tragic Core",
+    "desc": "A Shield that offsets DMG taken by all allies. Before the Shield is depleted or its effect expires, enemy targets' attacks won't reduce the Shielded allies' HP."
+  },
+  {
+    "name": "Meme'd",
+    "desc": "When an ally character uses \"Meme'd,\" Asat Pramad deals massive DMG to all ally targets, has a high chance to inflict \"Strong Reverberation\" on ally targets, and removes 1 stack of \"Meme'd.\" If the ally target does not have a Shield or \"Barrier,\" additionally applies 1 stack of \"Prana-Siphon.\""
   }
 ]

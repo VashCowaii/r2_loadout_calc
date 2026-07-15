@@ -1728,6 +1728,14 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
           "valuePerStack": {
             "MDF_RallyTransferRatio": {
+              "operator": "Variables[0] (UnusedUnderThisBase_12308) || RETURN",
+              "displayLines": "UnusedUnderThisBase_12308",
+              "constants": [],
+              "variables": [
+                "UnusedUnderThisBase_12308"
+              ]
+            },
+            "MDF_Rally_HealPercentage": {
               "operator": "Variables[0] (UnusedUnderThisBase_12306) || RETURN",
               "displayLines": "UnusedUnderThisBase_12306",
               "constants": [],
@@ -1735,28 +1743,20 @@ const compositeAbilityObject = {
                 "UnusedUnderThisBase_12306"
               ]
             },
-            "MDF_Rally_HealPercentage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12304) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12304",
-              "constants": [],
-              "variables": [
-                "UnusedUnderThisBase_12304"
-              ]
-            },
             "MDF_Rally_HealUpRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12307) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12307",
+              "operator": "Variables[0] (UnusedUnderThisBase_12309) || RETURN",
+              "displayLines": "UnusedUnderThisBase_12309",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_12307"
+                "UnusedUnderThisBase_12309"
               ]
             },
             "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12308) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12308",
+              "operator": "Variables[0] (UnusedUnderThisBase_12310) || RETURN",
+              "displayLines": "UnusedUnderThisBase_12310",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_12308"
+                "UnusedUnderThisBase_12310"
               ]
             }
           }

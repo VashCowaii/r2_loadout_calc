@@ -583,7 +583,7 @@ const configAbility = {
                         },
                         "target": {
                           "name": "Target Name",
-                          "target": "{{Player Team All}}"
+                          "target": "{{Player Team All(with Unselectable)V2}}"
                         },
                         "mustBeAlive2": true
                       },

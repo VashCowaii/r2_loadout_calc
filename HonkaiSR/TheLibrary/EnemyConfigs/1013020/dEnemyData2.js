@@ -43,10 +43,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -76,10 +76,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -109,10 +109,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -142,10 +142,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -175,10 +175,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -208,10 +208,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -241,10 +241,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -274,10 +274,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -307,10 +307,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -347,10 +347,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -380,10 +380,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -413,10 +413,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -446,10 +446,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -479,10 +479,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -512,10 +512,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -545,10 +545,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -578,10 +578,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -611,10 +611,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2",
@@ -645,10 +645,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -678,10 +678,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -711,10 +711,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -744,10 +744,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -777,10 +777,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -810,10 +810,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -843,10 +843,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -876,10 +876,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -909,10 +909,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -942,10 +942,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -975,10 +975,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -1008,10 +1008,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -1041,10 +1041,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -1074,10 +1074,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -1107,10 +1107,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -1140,10 +1140,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -1173,10 +1173,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2"
@@ -1206,10 +1206,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        336,
-        337,
-        338,
-        339
+        339,
+        340,
+        341,
+        342
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2",

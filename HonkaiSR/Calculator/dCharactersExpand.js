@@ -46615,7 +46615,7 @@ let characters = {
             "name": "A Rain of Blades Seals Fate",
             "type": "AoE",
             "slot": "Skill",
-            "desc": "Consumes HP equal to #4[i]% of Mortenax Blade's Max HP and deals Fire DMG equal to #1[f1]% of Mortenax Blade's Max HP to all enemies, and additionally deals #2[i] instance(s) of DMG, with each instance dealing Fire DMG equal to #3[f1]% of Mortenax Blade's Max HP to one random enemy.\\nIf the current HP is insufficient, Mortenax Blade's current HP will be reduced to 1 when he uses Skill.\\nWhile not in the \"Infinite Fury\" state or when the current HP is 1 or lower, Mortenax Blade cannot use his Skill.\\nUsing Skill does not consume Skill Points.",
+            "desc": "Consumes HP equal to #4[f1]% of Mortenax Blade's Max HP and deals Fire DMG equal to #1[i]% of Mortenax Blade's Max HP to all enemies, and additionally deals #2[i] instance(s) of DMG, with each instance dealing Fire DMG equal to #3[f1]% of Mortenax Blade's Max HP to one random enemy.\\nIf the current HP is insufficient, Mortenax Blade's current HP will be reduced to 1 when he uses Skill.\\nWhile not in the \"Infinite Fury\" state or when the current HP is 1 or lower, Mortenax Blade cannot use his Skill.\\nUsing Skill does not consume Skill Points.",
             "energyCost": null,
             "energyRegen": 30,
             "energyRate": 0.5,

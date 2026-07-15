@@ -2414,6 +2414,83 @@ let scaleElite = {
     "speedScalar": 2,
     "toughnessScalar": 1
   },
+  "510": {
+    "attackScalar": 0.6,
+    "defScalar": 1,
+    "hpScalar": 1,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "511": {
+    "attackScalar": 1.25,
+    "defScalar": 1,
+    "hpScalar": 1.6,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "512": {
+    "attackScalar": 1.2,
+    "defScalar": 1,
+    "hpScalar": 2,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "513": {
+    "attackScalar": 2,
+    "defScalar": 1,
+    "hpScalar": 2,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "514": {
+    "attackScalar": 2.5,
+    "defScalar": 1,
+    "hpScalar": 3,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "515": {
+    "attackScalar": 1.8,
+    "defScalar": 1,
+    "hpScalar": 3,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "516": {
+    "attackScalar": 3,
+    "defScalar": 1,
+    "hpScalar": 3,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "517": {
+    "attackScalar": 4,
+    "defScalar": 1,
+    "hpScalar": 6,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "518": {
+    "attackScalar": 2.4,
+    "defScalar": 1,
+    "hpScalar": 4,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "519": {
+    "attackScalar": 4,
+    "defScalar": 1,
+    "hpScalar": 4,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "520": {
+    "attackScalar": 5,
+    "defScalar": 1,
+    "hpScalar": 6,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
   "601": {
     "attackScalar": 0.7,
     "defScalar": 1,
@@ -5404,6 +5481,104 @@ let scaleElite = {
     "toughnessScalar": 1
   },
   "4306": {
+    "attackScalar": 1,
+    "defScalar": 1,
+    "hpScalar": 1,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "4400": {
+    "attackScalar": 0.72,
+    "defScalar": 1,
+    "hpScalar": 0.2,
+    "speedScalar": 0.72,
+    "toughnessScalar": 0.8
+  },
+  "4401": {
+    "attackScalar": 0.72,
+    "defScalar": 1,
+    "hpScalar": 0.2,
+    "speedScalar": 0.72,
+    "toughnessScalar": 0.8
+  },
+  "4402": {
+    "attackScalar": 0.72,
+    "defScalar": 1,
+    "hpScalar": 0.2,
+    "speedScalar": 0.76,
+    "toughnessScalar": 0.8
+  },
+  "4403": {
+    "attackScalar": 0.76,
+    "defScalar": 1,
+    "hpScalar": 0.26,
+    "speedScalar": 0.8,
+    "toughnessScalar": 0.8
+  },
+  "4404": {
+    "attackScalar": 0.76,
+    "defScalar": 1,
+    "hpScalar": 0.32,
+    "speedScalar": 0.84,
+    "toughnessScalar": 0.8
+  },
+  "4405": {
+    "attackScalar": 0.8,
+    "defScalar": 1,
+    "hpScalar": 0.38,
+    "speedScalar": 0.88,
+    "toughnessScalar": 0.8
+  },
+  "4406": {
+    "attackScalar": 1,
+    "defScalar": 1,
+    "hpScalar": 0.9,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "4410": {
+    "attackScalar": 0.72,
+    "defScalar": 1,
+    "hpScalar": 0.3,
+    "speedScalar": 0.72,
+    "toughnessScalar": 0.8
+  },
+  "4411": {
+    "attackScalar": 0.72,
+    "defScalar": 1,
+    "hpScalar": 0.3,
+    "speedScalar": 0.72,
+    "toughnessScalar": 0.8
+  },
+  "4412": {
+    "attackScalar": 0.72,
+    "defScalar": 1,
+    "hpScalar": 0.3,
+    "speedScalar": 0.76,
+    "toughnessScalar": 0.8
+  },
+  "4413": {
+    "attackScalar": 0.76,
+    "defScalar": 1,
+    "hpScalar": 0.35,
+    "speedScalar": 0.8,
+    "toughnessScalar": 0.8
+  },
+  "4414": {
+    "attackScalar": 0.76,
+    "defScalar": 1,
+    "hpScalar": 0.4,
+    "speedScalar": 0.84,
+    "toughnessScalar": 0.8
+  },
+  "4415": {
+    "attackScalar": 0.8,
+    "defScalar": 1,
+    "hpScalar": 0.45,
+    "speedScalar": 0.88,
+    "toughnessScalar": 0.8
+  },
+  "4416": {
     "attackScalar": 1,
     "defScalar": 1,
     "hpScalar": 1,

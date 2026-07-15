@@ -45,12 +45,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1447,
-        1448,
-        1449,
-        1450,
-        1451,
-        1452
+        1468,
+        1469,
+        1470,
+        1471,
+        1472,
+        1473
       ],
       "enemyTag": [
         "Monster_Argenti"
@@ -105,12 +105,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1447,
-        1448,
-        1449,
-        1450,
-        1451,
-        1452
+        1468,
+        1469,
+        1470,
+        1471,
+        1472,
+        1473
       ],
       "enemyTag": [
         "Monster_Argenti"
@@ -165,12 +165,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1447,
-        1448,
-        1449,
-        1450,
-        1451,
-        1452
+        1468,
+        1469,
+        1470,
+        1471,
+        1472,
+        1473
       ],
       "enemyTag": [
         "Monster_Argenti"
@@ -225,12 +225,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1447,
-        1448,
-        1449,
-        1450,
-        1451,
-        1452
+        1468,
+        1469,
+        1470,
+        1471,
+        1472,
+        1473
       ],
       "enemyTag": [
         "Monster_Argenti"
@@ -285,12 +285,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1447,
-        1448,
-        1449,
-        1450,
-        1451,
-        1452
+        1468,
+        1469,
+        1470,
+        1471,
+        1472,
+        1473
       ],
       "enemyTag": [
         "Monster_Argenti"
@@ -345,12 +345,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1447,
-        1448,
-        1449,
-        1450,
-        1451,
-        1452
+        1468,
+        1469,
+        1470,
+        1471,
+        1472,
+        1473
       ],
       "enemyTag": [
         "Monster_Argenti"

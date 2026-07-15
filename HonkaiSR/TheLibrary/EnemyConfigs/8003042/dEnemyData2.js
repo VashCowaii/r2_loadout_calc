@@ -43,17 +43,17 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2907,
-        2908,
-        2909,
-        2910,
-        2911,
-        2912,
-        2913
+        3017,
+        3018,
+        3019,
+        3020,
+        3021,
+        3022,
+        3023
       ],
       "abilityOrder": [
-        2910,
-        2911
+        3020,
+        3021
       ],
       "itNeverEnds": {
         "Monster_XP_Elite02_01_AIFlag": 4

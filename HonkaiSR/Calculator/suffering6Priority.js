@@ -20,9 +20,10 @@ const priorityList = {
     "AhaInstant_EnemyBuffSelf_Elation": 75,
     "AhaInstant_EnemyBuffOthers_Elation": 76,
     "AhaInstant_EnemyDeathEffectLevel": 77,
-    "AhaInstant_EnemyDeathEffect": 78,
-    "AhaInstant_EnemyCreated": 79,
-    "AhaInstant_ElationSkill": 80,
+    "AhaInstant_EnemyDeathTogether": 78,
+    "AhaInstant_EnemyDeathEffect": 79,
+    "AhaInstant_EnemyCreated": 80,
+    "AhaInstant_ElationSkill": 81,
     "CharacterBuffSelf": 85,
     "CharacterAttackFromSelf": 95,
     "CharacterAttackFromSelfSort": 96,
@@ -42,7 +43,8 @@ const priorityList = {
     "EnemyBuffOthers_Elation": 226,
     "EnemyAttackFromOthers": 235,
     "EnemyAttackFromOthersSort": 236,
-    "EnemyDeathEffectLevel": 244,
+    "EnemyDeathEffectLevel": 243,
+    "EnemyDeathTogether": 244,
     "EnemyDeathEffect": 245,
     "EnemyCreated": 246,
     "DefaultEnemy": 247,
@@ -55,7 +57,8 @@ const priorityList = {
     "AhaInstantRestart": 51,
     "AhaInstant": 52,
     "SummonInstance": 100,
-    "CharacterChainedSkill": 101,
+    "CharacterAssistSkill": 101,
+    "CharacterChainedSkill": 102,
     "Windfury": 200
   }
 }

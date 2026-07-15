@@ -46,12 +46,12 @@ let enemyData = {
         "STAT_Entangle": 1
       },
       "abilities": [
-        1321,
-        1322,
-        1323
+        1338,
+        1339,
+        1340
       ],
       "abilityOrder": [
-        1322
+        1339
       ],
       "enemyTag": [
         "Monster_DeathPart"

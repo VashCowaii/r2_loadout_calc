@@ -375,19 +375,19 @@ const configAbility = {
               "eventID": 20008,
               "variables": {
                 "P3_Lycan01Delay": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8998) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8998",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9000) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9000",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_8998"
+                    "UnusedUnderThisBase_9000"
                   ]
                 },
                 "P4_Lycan02Delay": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9020) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9020",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9022) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9022",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_9020"
+                    "UnusedUnderThisBase_9022"
                   ]
                 }
               }
@@ -415,11 +415,11 @@ const configAbility = {
                   "scope": "TargetEntity",
                   "variableName": "P3_Lycan01Delay",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_8998) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_8998",
+                    "operator": "Variables[0] (UnusedUnderThisBase_9000) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_9000",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_8998"
+                      "UnusedUnderThisBase_9000"
                     ]
                   }
                 }
@@ -448,11 +448,11 @@ const configAbility = {
                   "scope": "TargetEntity",
                   "variableName": "P4_Lycan02Delay",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_9020) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_9020",
+                    "operator": "Variables[0] (UnusedUnderThisBase_9022) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_9022",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_9020"
+                      "UnusedUnderThisBase_9022"
                     ]
                   }
                 }

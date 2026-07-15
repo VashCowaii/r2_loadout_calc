@@ -41,11 +41,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        820,
-        821
+        830,
+        831
       ],
       "abilityOrder": [
-        820
+        830
       ],
       "enemyTag": [
         "MonsterType_W2_Lycan",
@@ -76,11 +76,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        820,
-        821
+        830,
+        831
       ],
       "abilityOrder": [
-        820
+        830
       ],
       "enemyTag": [
         "MonsterType_W2_Lycan",
@@ -111,11 +111,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        820,
-        821
+        830,
+        831
       ],
       "abilityOrder": [
-        820
+        830
       ],
       "enemyTag": [
         "MonsterType_W2_Lycan",
@@ -146,11 +146,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        820,
-        821
+        830,
+        831
       ],
       "abilityOrder": [
-        820
+        830
       ],
       "enemyTag": [
         "MonsterType_W2_Lycan",

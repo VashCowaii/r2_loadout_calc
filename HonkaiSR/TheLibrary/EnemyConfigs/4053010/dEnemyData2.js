@@ -42,13 +42,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2417,
-        2418,
-        2419,
-        2420,
-        2421,
-        2422,
-        2423
+        2475,
+        2476,
+        2477,
+        2478,
+        2479,
+        2480,
+        2481
       ],
       "enemyTag": [
         "BattleScore_Manta"
@@ -85,13 +85,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2417,
-        2418,
-        2419,
-        2420,
-        2421,
-        2422,
-        2423
+        2475,
+        2476,
+        2477,
+        2478,
+        2479,
+        2480,
+        2481
       ],
       "enemyTag": [
         "BattleScore_Manta"
@@ -128,13 +128,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2417,
-        2418,
-        2419,
-        2420,
-        2421,
-        2422,
-        2423
+        2475,
+        2476,
+        2477,
+        2478,
+        2479,
+        2480,
+        2481
       ],
       "enemyTag": [
         "BattleScore_Manta"
@@ -171,13 +171,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2417,
-        2418,
-        2419,
-        2420,
-        2421,
-        2422,
-        2423
+        2475,
+        2476,
+        2477,
+        2478,
+        2479,
+        2480,
+        2481
       ],
       "enemyTag": [
         "BattleScore_Manta"
@@ -214,13 +214,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2417,
-        2418,
-        2419,
-        2420,
-        2421,
-        2422,
-        2423
+        2475,
+        2476,
+        2477,
+        2478,
+        2479,
+        2480,
+        2481
       ],
       "enemyTag": [
         "BattleScore_Manta"

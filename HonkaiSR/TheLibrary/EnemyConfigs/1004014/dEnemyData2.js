@@ -44,9 +44,6 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        73,
-        74,
-        75,
         76,
         77,
         78,
@@ -56,7 +53,10 @@ let enemyData = {
         82,
         83,
         84,
-        85
+        85,
+        86,
+        87,
+        88
       ],
       "enemyTag": [
         "IF_Boss",
@@ -118,9 +118,6 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        73,
-        74,
-        75,
         76,
         77,
         78,
@@ -130,7 +127,10 @@ let enemyData = {
         82,
         83,
         84,
-        85
+        85,
+        86,
+        87,
+        88
       ],
       "enemyTag": [
         "IF_Boss",
@@ -192,9 +192,6 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        73,
-        74,
-        75,
         76,
         77,
         78,
@@ -204,7 +201,10 @@ let enemyData = {
         82,
         83,
         84,
-        85
+        85,
+        86,
+        87,
+        88
       ],
       "enemyTag": [
         "IF_Boss",
@@ -266,9 +266,6 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        73,
-        74,
-        75,
         76,
         77,
         78,
@@ -278,7 +275,10 @@ let enemyData = {
         82,
         83,
         84,
-        85
+        85,
+        86,
+        87,
+        88
       ],
       "enemyTag": [
         "IF_Boss",
@@ -340,9 +340,6 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        73,
-        74,
-        75,
         76,
         77,
         78,
@@ -352,7 +349,10 @@ let enemyData = {
         82,
         83,
         84,
-        85
+        85,
+        86,
+        87,
+        88
       ],
       "enemyTag": [
         "IF_Boss",
@@ -381,7 +381,7 @@ let enemyData = {
         }
       ],
       "overrideParams": {
-        "82": [
+        "85": [
           [
             "-",
             1.5

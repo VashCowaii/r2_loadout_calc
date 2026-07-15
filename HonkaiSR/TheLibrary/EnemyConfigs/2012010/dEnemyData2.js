@@ -42,11 +42,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        646,
-        647
+        649,
+        650
       ],
       "abilityOrder": [
-        646
+        649
       ],
       "enemyTag": [
         "W2_Mecha02"
@@ -76,11 +76,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        646,
-        647
+        649,
+        650
       ],
       "abilityOrder": [
-        646
+        649
       ],
       "enemyTag": [
         "W2_Mecha02"
@@ -110,11 +110,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        646,
-        647
+        649,
+        650
       ],
       "abilityOrder": [
-        646
+        649
       ],
       "enemyTag": [
         "W2_Mecha02"
@@ -144,11 +144,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        646,
-        647
+        649,
+        650
       ],
       "abilityOrder": [
-        646
+        649
       ],
       "enemyTag": [
         "W2_Mecha02"
@@ -178,11 +178,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        646,
-        647
+        649,
+        650
       ],
       "abilityOrder": [
-        646
+        649
       ],
       "enemyTag": [
         "W2_Mecha02"
@@ -212,11 +212,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        646,
-        647
+        649,
+        650
       ],
       "abilityOrder": [
-        646
+        649
       ],
       "enemyTag": [
         "W2_Mecha02"
@@ -246,11 +246,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        646,
-        647
+        649,
+        650
       ],
       "abilityOrder": [
-        646
+        649
       ],
       "enemyTag": [
         "W2_Mecha02"
@@ -280,11 +280,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        646,
-        647
+        649,
+        650
       ],
       "abilityOrder": [
-        646
+        649
       ],
       "enemyTag": [
         "W2_Mecha02"
@@ -314,11 +314,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        646,
-        647
+        649,
+        650
       ],
       "abilityOrder": [
-        646
+        649
       ],
       "enemyTag": [
         "W2_Mecha02"
@@ -348,11 +348,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        646,
-        647
+        649,
+        650
       ],
       "abilityOrder": [
-        646
+        649
       ],
       "enemyTag": [
         "W2_Mecha02"
@@ -385,11 +385,11 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        646,
-        647
+        649,
+        650
       ],
       "abilityOrder": [
-        646
+        649
       ],
       "enemyTag": [
         "W2_Mecha02"
@@ -419,11 +419,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        646,
-        647
+        649,
+        650
       ],
       "abilityOrder": [
-        646
+        649
       ],
       "enemyTag": [
         "W2_Mecha02"
@@ -453,11 +453,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        646,
-        647
+        649,
+        650
       ],
       "abilityOrder": [
-        646
+        649
       ],
       "enemyTag": [
         "W2_Mecha02",
@@ -488,11 +488,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        646,
-        647
+        649,
+        650
       ],
       "abilityOrder": [
-        646
+        649
       ],
       "enemyTag": [
         "W2_Mecha02"

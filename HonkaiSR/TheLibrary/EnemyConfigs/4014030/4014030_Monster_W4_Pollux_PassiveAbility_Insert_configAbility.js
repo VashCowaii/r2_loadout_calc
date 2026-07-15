@@ -192,11 +192,11 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (UnusedUnderThisBase_11988) || RETURN",
-              "displayLines": "UnusedUnderThisBase_11988",
+              "operator": "Variables[0] (UnusedUnderThisBase_11990) || RETURN",
+              "displayLines": "UnusedUnderThisBase_11990",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_11988"
+                "UnusedUnderThisBase_11990"
               ]
             }
           }

@@ -5963,11 +5963,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_Conv",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_7166) || Variables[1] (S02_ExtraRatio) || ADD || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_7166 + S02_ExtraRatio)",
+                        "operator": "Variables[0] (UnusedUnderThisBase_7168) || Variables[1] (S02_ExtraRatio) || ADD || RETURN",
+                        "displayLines": "(UnusedUnderThisBase_7168 + S02_ExtraRatio)",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_7166",
+                          "UnusedUnderThisBase_7168",
                           "S02_ExtraRatio"
                         ]
                       }
@@ -10707,11 +10707,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"1710373270\">Evernight_PointB1_Crit</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13243) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13243",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13245) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13245",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13243"
+                                "UnusedUnderThisBase_13245"
                               ]
                             }
                           }
@@ -10738,11 +10738,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1701896777\">Evernight_Eidolon2_Crit</a>[<span class=\"descriptionNumberColor\">Listen Up, the Slumber Speaks Soft</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13251) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13251",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13253) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13253",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13251"
+                                "UnusedUnderThisBase_13253"
                               ]
                             }
                           }

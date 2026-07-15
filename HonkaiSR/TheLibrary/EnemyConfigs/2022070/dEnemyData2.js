@@ -42,7 +42,7 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        687
+        697
       ]
     },
     "202207001": {
@@ -69,7 +69,7 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        687
+        697
       ]
     },
     "202207002": {
@@ -96,7 +96,7 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        687
+        697
       ]
     },
     "202207003": {
@@ -123,7 +123,7 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        687
+        697
       ]
     },
     "202207004": {
@@ -150,7 +150,7 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        687
+        697
       ]
     },
     "202207006": {
@@ -177,7 +177,7 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        687
+        697
       ]
     },
     "202207007": {
@@ -204,7 +204,7 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        687
+        697
       ],
       "enemyTag": [
         "MGrid_4005"

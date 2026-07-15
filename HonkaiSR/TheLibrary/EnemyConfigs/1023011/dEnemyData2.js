@@ -46,17 +46,17 @@ let enemyData = {
         "STAT_DOT_Burn": 1
       },
       "abilities": [
-        475,
-        476,
-        477,
         478,
         479,
         480,
-        481
+        481,
+        482,
+        483,
+        484
       ],
       "abilityOrder": [
-        475,
-        476
+        478,
+        479
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2",

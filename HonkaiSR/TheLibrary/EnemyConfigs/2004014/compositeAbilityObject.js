@@ -1295,11 +1295,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1077360781\">XP_Elite_Fire_Ability07_AttackUp_Modifier</a>[<span class=\"descriptionNumberColor\">Molten</span>]",
                   "valuePerStack": {
                     "Modifier_AttackAddedRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12792) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12792",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12794) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12794",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_12792"
+                        "UnusedUnderThisBase_12794"
                       ]
                     }
                   }
@@ -8918,11 +8918,11 @@ const compositeAbilityObject = {
               },
               "variables": {
                 "MDF_W2_Kafka_RL_BattleEvent_ActionDelay": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_11503) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_11503",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11505) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11505",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_11503"
+                    "UnusedUnderThisBase_11505"
                   ]
                 },
                 "MDF_W2_Kafka_RL_BattleEvent_BaseSpeed": {
@@ -10272,11 +10272,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_8793) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_8793",
+                      "operator": "Variables[0] (UnusedUnderThisBase_8795) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_8795",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_8793"
+                        "UnusedUnderThisBase_8795"
                       ]
                     },
                     "Shield_InitValue": 0
@@ -10401,11 +10401,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8799) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8799",
+                  "operator": "Variables[0] (UnusedUnderThisBase_8801) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8801",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_8799"
+                    "UnusedUnderThisBase_8801"
                   ]
                 }
               }
@@ -10802,11 +10802,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8799) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8799",
+                  "operator": "Variables[0] (UnusedUnderThisBase_8801) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8801",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_8799"
+                    "UnusedUnderThisBase_8801"
                   ]
                 }
               }
@@ -11146,19 +11146,19 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"1090456915\">XP_Fire_Elite_Burning_Modifier_2</a>[<span class=\"descriptionNumberColor\">Spontaneous Combustion</span>]",
           "valuePerStack": {
             "Modifier_StanceWeakAddedRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12795) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12795",
+              "operator": "Variables[0] (UnusedUnderThisBase_12797) || RETURN",
+              "displayLines": "UnusedUnderThisBase_12797",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_12795"
+                "UnusedUnderThisBase_12797"
               ]
             },
             "Modifier_Stance": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12794) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12794",
+              "operator": "Variables[0] (UnusedUnderThisBase_12796) || RETURN",
+              "displayLines": "UnusedUnderThisBase_12796",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_12794"
+                "UnusedUnderThisBase_12796"
               ]
             }
           }
@@ -11229,27 +11229,27 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-557071994\">XP_Ice_Elite_Powerful_Modifier</a>[<span class=\"descriptionNumberColor\">Freezing Point</span>]",
           "valuePerStack": {
             "Modifier_AllDamageTypeResistance": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12856) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12856",
+              "operator": "Variables[0] (UnusedUnderThisBase_12858) || RETURN",
+              "displayLines": "UnusedUnderThisBase_12858",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_12856"
+                "UnusedUnderThisBase_12858"
               ]
             },
             "Modifier_StanceWeakAddedRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12862) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12862",
+              "operator": "Variables[0] (UnusedUnderThisBase_12864) || RETURN",
+              "displayLines": "UnusedUnderThisBase_12864",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_12862"
+                "UnusedUnderThisBase_12864"
               ]
             },
             "Modifier_Stance": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12863) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12863",
+              "operator": "Variables[0] (UnusedUnderThisBase_12865) || RETURN",
+              "displayLines": "UnusedUnderThisBase_12865",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_12863"
+                "UnusedUnderThisBase_12865"
               ]
             }
           }
@@ -11341,19 +11341,19 @@ const compositeAbilityObject = {
               "variableName": "Vibrate_Count",
               "context": "TargetEntity",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_9623) || INVERT || RETURN",
-                "displayLines": "-UnusedUnderThisBase_9623",
+                "operator": "Variables[0] (UnusedUnderThisBase_9625) || INVERT || RETURN",
+                "displayLines": "-UnusedUnderThisBase_9625",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_9623"
+                  "UnusedUnderThisBase_9625"
                 ]
               },
               "max": {
-                "operator": "Variables[0] (UnusedUnderThisBase_9621) || RETURN",
-                "displayLines": "UnusedUnderThisBase_9621",
+                "operator": "Variables[0] (UnusedUnderThisBase_9623) || RETURN",
+                "displayLines": "UnusedUnderThisBase_9623",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_9621"
+                  "UnusedUnderThisBase_9623"
                 ]
               }
             },
@@ -11366,11 +11366,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
               "valuePerStack": {
                 "MDF_MaxCount": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9621) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9621",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9623) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9623",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_9621"
+                    "UnusedUnderThisBase_9623"
                   ]
                 },
                 "MDF_PartFlag": 1
@@ -11404,11 +11404,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
               "valuePerStack": {
                 "MDF_MaxCount": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9621) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9621",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9623) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9623",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_9621"
+                    "UnusedUnderThisBase_9623"
                   ]
                 },
                 "MDF_PartFlag": 1
@@ -11446,13 +11446,13 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "multiBase": {
-                "operator": "Variables[0] (UnusedUnderThisBase_9624) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(UnusedUnderThisBase_9624 - 1)",
+                "operator": "Variables[0] (UnusedUnderThisBase_9626) || Constants[0] (1) || SUB || RETURN",
+                "displayLines": "(UnusedUnderThisBase_9626 - 1)",
                 "constants": [
                   1
                 ],
                 "variables": [
-                  "UnusedUnderThisBase_9624"
+                  "UnusedUnderThisBase_9626"
                 ]
               }
             }
@@ -11504,11 +11504,11 @@ const compositeAbilityObject = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"-130810153\">Monster_W3_Dinosaur_01_MonsterAssistBonus</a>[<span class=\"descriptionNumberColor\">Terrathorn</span>]",
           "stackLimit": {
-            "operator": "Variables[0] (UnusedUnderThisBase_9636) || RETURN",
-            "displayLines": "UnusedUnderThisBase_9636",
+            "operator": "Variables[0] (UnusedUnderThisBase_9638) || RETURN",
+            "displayLines": "UnusedUnderThisBase_9638",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_9636"
+              "UnusedUnderThisBase_9638"
             ]
           }
         },

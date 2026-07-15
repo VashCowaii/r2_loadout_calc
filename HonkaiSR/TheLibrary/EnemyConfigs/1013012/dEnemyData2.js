@@ -53,21 +53,21 @@ let enemyData = {
         "STAT_Entangle": 0.5
       },
       "abilities": [
-        311,
-        312,
-        313,
         314,
         315,
         316,
         317,
-        318
+        318,
+        319,
+        320,
+        321
       ],
       "abilityOrder": [
+        307,
+        302,
+        303,
         304,
-        299,
-        300,
-        301,
-        302
+        305
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2",

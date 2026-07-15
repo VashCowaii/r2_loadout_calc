@@ -47,9 +47,6 @@ let enemyData = {
         "STAT_Entangle": 0.75
       },
       "abilities": [
-        455,
-        456,
-        457,
         458,
         459,
         460,
@@ -59,7 +56,10 @@ let enemyData = {
         464,
         465,
         466,
-        467
+        467,
+        468,
+        469,
+        470
       ],
       "enemyTag": [
         "RL",

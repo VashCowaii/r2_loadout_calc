@@ -1340,31 +1340,31 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_8274) || RETURN",
-                "displayLines": "UnusedUnderThisBase_8274",
+                "operator": "Variables[0] (UnusedUnderThisBase_8276) || RETURN",
+                "displayLines": "UnusedUnderThisBase_8276",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_8274"
+                  "UnusedUnderThisBase_8276"
                 ]
               },
               "valuePerStack": {
                 "MDF_ShowValue1": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8280) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8280",
+                  "operator": "Variables[0] (UnusedUnderThisBase_8282) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8282",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_8280"
+                    "UnusedUnderThisBase_8282"
                   ]
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (UnusedUnderThisBase_8275) || Constants[0] (1) || SUB || RETURN",
-                "displayLines": "(UnusedUnderThisBase_8275 - 1)",
+                "operator": "Variables[0] (UnusedUnderThisBase_8277) || Constants[0] (1) || SUB || RETURN",
+                "displayLines": "(UnusedUnderThisBase_8277 - 1)",
                 "constants": [
                   1
                 ],
                 "variables": [
-                  "UnusedUnderThisBase_8275"
+                  "UnusedUnderThisBase_8277"
                 ]
               }
             },
@@ -1376,20 +1376,20 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_8274) || RETURN",
-                "displayLines": "UnusedUnderThisBase_8274",
+                "operator": "Variables[0] (UnusedUnderThisBase_8276) || RETURN",
+                "displayLines": "UnusedUnderThisBase_8276",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_8274"
+                  "UnusedUnderThisBase_8276"
                 ]
               },
               "valuePerStack": {
                 "MDF_ShowValue1": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8280) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8280",
+                  "operator": "Variables[0] (UnusedUnderThisBase_8282) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8282",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_8280"
+                    "UnusedUnderThisBase_8282"
                   ]
                 }
               },
@@ -1405,29 +1405,29 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_8274) || RETURN",
-                "displayLines": "UnusedUnderThisBase_8274",
+                "operator": "Variables[0] (UnusedUnderThisBase_8276) || RETURN",
+                "displayLines": "UnusedUnderThisBase_8276",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_8274"
+                  "UnusedUnderThisBase_8276"
                 ]
               },
               "valuePerStack": {
                 "MDF_ShowValue1": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8280) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8280",
+                  "operator": "Variables[0] (UnusedUnderThisBase_8282) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8282",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_8280"
+                    "UnusedUnderThisBase_8282"
                   ]
                 }
               },
               "addStacksPerTrigger": {
-                "operator": "Variables[0] (UnusedUnderThisBase_8281) || RETURN",
-                "displayLines": "UnusedUnderThisBase_8281",
+                "operator": "Variables[0] (UnusedUnderThisBase_8283) || RETURN",
+                "displayLines": "UnusedUnderThisBase_8283",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_8281"
+                  "UnusedUnderThisBase_8283"
                 ]
               }
             }

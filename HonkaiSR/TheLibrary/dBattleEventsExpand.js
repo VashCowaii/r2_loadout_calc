@@ -2710,6 +2710,306 @@ let battleEvents = {
     "type": "Entity Selection",
     "isBattleEvent": true
   },
+  "20045": {
+    "internalID": 20045,
+    "name": 20045,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "BattleEvent_W5_AsatPramad_00_SummonMonster.png",
+    "team": "Enemy Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "20046": {
+    "internalID": 20046,
+    "name": 20046,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "BattleEvent_W5_AsatPramad_00_Ultra.png",
+    "team": "Enemy Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "20047": {
+    "internalID": 20047,
+    "name": 20047,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "BattleEvent_W5_Shell_00_Attack.png",
+    "team": "Enemy Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "20048": {
+    "internalID": 20048,
+    "name": 20048,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "BattleEvent_60012.png",
+    "team": "Player Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "20049": {
+    "internalID": 20049,
+    "name": 20049,
+    "energyMax": null,
+    "params": [
+      20
+    ],
+    "skills": {
+      "Basic ATK": {
+        "Housecleaning": {
+          "variant1": {
+            "skillID": 2004901,
+            "trigger": "Skill01",
+            "name": "Housecleaning",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Quantum DMG to one designated enemy and gains Punchline.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                4,
+                5,
+                30
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Dirt Water Slinging": {
+          "variant1": {
+            "skillID": 2004902,
+            "trigger": "Skill11",
+            "name": "Dirt Water Slinging",
+            "type": "Impair",
+            "slot": "Skill",
+            "desc": "Consumes #2[i] point(s) of Charge, dealing Quantum DMG to one designated enemy target and True DMG equal to a certain percentage of the target's Max HP, and removes 1 stack of the \"Lasting Antibac\" effect from the target.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.015,
+                20,
+                3,
+                60
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "BPSkill",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Extremeflash Charge": {
+          "variant1": {
+            "skillID": 2004903,
+            "trigger": "SkillP01",
+            "name": "Extremeflash Charge",
+            "type": "Talent",
+            "slot": "Talent",
+            "desc": "Each time ally targets gain 1 Punchline, this unit accumulates 1 Charge Value point. Upon reaching #1[i] Charge Value points, immediately gains an extra turn and gains access to Enhanced Basic ATK.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                20
+              ]
+            },
+            "element": "Quantum",
+            "skillEffect": "Passive",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill01": {
+        "skillID": 2004901,
+        "trigger": "Skill01",
+        "name": "Housecleaning",
+        "type": "Single Target",
+        "slot": "Basic ATK",
+        "desc": "Deals Quantum DMG to one designated enemy and gains Punchline.",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": 10,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            4,
+            5,
+            30
+          ]
+        },
+        "element": "Quantum",
+        "attackType": "Normal",
+        "skillEffect": "SingleAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          30,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "Skill11": {
+        "skillID": 2004902,
+        "trigger": "Skill11",
+        "name": "Dirt Water Slinging",
+        "type": "Impair",
+        "slot": "Skill",
+        "desc": "Consumes #2[i] point(s) of Charge, dealing Quantum DMG to one designated enemy target and True DMG equal to a certain percentage of the target's Max HP, and removes 1 stack of the \"Lasting Antibac\" effect from the target.",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": 20,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0.015,
+            20,
+            3,
+            60
+          ]
+        },
+        "element": "Quantum",
+        "attackType": "BPSkill",
+        "skillEffect": "Impair",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          60,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 2004903,
+        "trigger": "SkillP01",
+        "name": "Extremeflash Charge",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "Each time ally targets gain 1 Punchline, this unit accumulates 1 Charge Value point. Upon reaching #1[i] Charge Value points, immediately gains an extra turn and gains access to Enhanced Basic ATK.",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            20
+          ]
+        },
+        "element": "Quantum",
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
+    "icon": "Monster_5012120.png",
+    "team": "Neutral Team",
+    "type": "Summon",
+    "isBattleEvent": true
+  },
+  "20050": {
+    "internalID": 20050,
+    "name": 20050,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "Monster_8015030.png",
+    "team": "Enemy Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "20051": {
+    "internalID": 20051,
+    "name": 20051,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "Monster_8015040.png",
+    "team": "Enemy Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "20052": {
+    "internalID": 20052,
+    "name": 20052,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "Monster_8015050.png",
+    "team": "Enemy Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
   "30001": {
     "internalID": 30001,
     "name": 30001,
@@ -3901,6 +4201,21 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
+    "isBattleEvent": true
+  },
+  "30147": {
+    "internalID": 30147,
+    "name": 30147,
+    "energyMax": null,
+    "params": [
+      0.8,
+      1
+    ],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "999.png",
+    "team": "Neutral Team",
+    "type": "Challenge Event",
     "isBattleEvent": true
   },
   "30500": {
@@ -12716,6 +13031,142 @@ let battleEvents = {
     "type": "Assist",
     "isBattleEvent": true
   },
+  "60044": {
+    "internalID": 60044,
+    "name": 60044,
+    "energyMax": null,
+    "params": [
+      0.15,
+      0.3,
+      7,
+      8,
+      0.3
+    ],
+    "skills": {
+      "Ultimate": {
+        "Mechatron Swordomain: Void Slash": {
+          "variant1": {
+            "skillID": 6004401,
+            "trigger": "Skill03",
+            "name": "Mechatron Swordomain: Void Slash",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals massive DMG to all enemy targets, applies \"Knockdown\" to Asat Pramad, and causes all ally targets to immediately take action. A \"Knockdown\" countdown appears on the Action Order. At the start of the countdown's turn, Lord of Saṃvartasthāyi, Asat Pramad exits the \"Knockdown\" state and immediately takes action.",
+            "energyCost": 100,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": []
+            },
+            "element": "Imaginary",
+            "attackType": "Ultra",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              180,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "Mechatron Swordomain: Void Slash": {
+          "variant1": {
+            "skillID": 6004402,
+            "trigger": "SkillP01",
+            "name": "Mechatron Swordomain: Void Slash",
+            "type": "Talent",
+            "slot": "Talent",
+            "desc": "",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": []
+            },
+            "skillEffect": "Passive",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6004401,
+        "trigger": "Skill03",
+        "name": "Mechatron Swordomain: Void Slash",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Deals massive DMG to all enemy targets, applies \"Knockdown\" to Asat Pramad, and causes all ally targets to immediately take action. A \"Knockdown\" countdown appears on the Action Order. At the start of the countdown's turn, Lord of Saṃvartasthāyi, Asat Pramad exits the \"Knockdown\" state and immediately takes action.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "element": "Imaginary",
+        "attackType": "Ultra",
+        "skillEffect": "SingleAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          180,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6004402,
+        "trigger": "SkillP01",
+        "name": "Mechatron Swordomain: Void Slash",
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
+    "icon": "BattleEvent_60044.png",
+    "team": "Player Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
   "60045": {
     "internalID": 60045,
     "name": 60045,
@@ -12860,6 +13311,146 @@ let battleEvents = {
       }
     },
     "icon": "BattleEvent_1507Special.png",
+    "team": "Player Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "60047": {
+    "internalID": 60047,
+    "name": 60047,
+    "energyMax": null,
+    "params": [],
+    "skills": {
+      "Ultimate": {
+        "March 7th": {
+          "variant1": {
+            "skillID": 6004701,
+            "trigger": "Skill03",
+            "name": "March 7th",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Wind DMG to all enemy targets while inflicting 3 stacks of Arcana to all attacked enemies.",
+            "energyCost": 100,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.5,
+                0.5,
+                1,
+                0.6
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "null": {
+          "variant1": {
+            "skillID": 6004702,
+            "trigger": "SkillP01",
+            "name": null,
+            "type": "Talent",
+            "slot": "Talent",
+            "desc": "",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": []
+            },
+            "skillEffect": "Passive",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6004701,
+        "trigger": "Skill03",
+        "name": "March 7th",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Deals Wind DMG to all enemy targets while inflicting 3 stacks of Arcana to all attacked enemies.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            1.5,
+            0.5,
+            1,
+            0.6
+          ]
+        },
+        "element": "Ice",
+        "attackType": "Ultra",
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6004702,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
+    "icon": "BattleEvent_60047.png",
     "team": "Player Team",
     "type": "Assist",
     "isBattleEvent": true
@@ -19998,6 +20589,354 @@ let battleEvents = {
     "skills": {},
     "baseTriggersObject": {},
     "icon": "BattleEvent_1312_02_A.png",
+    "team": "Player Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "200000": {
+    "internalID": 200000,
+    "name": 200000,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "BattleEvent_1309_A.png",
+    "team": "Player Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "200001": {
+    "internalID": 200001,
+    "name": 200001,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "1509.png",
+    "team": "Player Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "200002": {
+    "internalID": 200002,
+    "name": 200002,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "1015.png",
+    "team": "Player Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "200003": {
+    "internalID": 200003,
+    "name": 200003,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "1014.png",
+    "team": "Player Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "200004": {
+    "internalID": 200004,
+    "name": 200004,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "1408.png",
+    "team": "Player Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "200005": {
+    "internalID": 200005,
+    "name": 200005,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "8001.png",
+    "team": "Player Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "200006": {
+    "internalID": 200006,
+    "name": 200006,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "8002.png",
+    "team": "Player Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "200007": {
+    "internalID": 200007,
+    "name": 200007,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "1014.png",
+    "team": "Player Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "210000": {
+    "internalID": 210000,
+    "name": 210000,
+    "energyMax": null,
+    "params": [],
+    "skills": {
+      "Gáe Bolg": {
+        "Gáe Bolg": {
+          "variant1": {
+            "skillID": 10000101,
+            "trigger": "Skill03",
+            "name": "Gáe Bolg",
+            "type": "Single Target",
+            "slot": "Gáe Bolg",
+            "desc": "Using \"Gáe Bolg\" can instantly defeat non-Elite Enemies, and can deal massive DMG to Elite Enemies.",
+            "energyCost": 100,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": []
+            },
+            "skillEffect": "AoEAttack",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Path Resonance": {
+        "null": {
+          "variant1": {
+            "skillID": 9615302,
+            "trigger": "SkillP01",
+            "name": null,
+            "type": "Talent",
+            "slot": "Path Resonance",
+            "desc": "",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": []
+            },
+            "skillEffect": "Passive",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 10000101,
+        "trigger": "Skill03",
+        "name": "Gáe Bolg",
+        "type": "Single Target",
+        "slot": "Gáe Bolg",
+        "desc": "Using \"Gáe Bolg\" can instantly defeat non-Elite Enemies, and can deal massive DMG to Elite Enemies.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9615302,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
+    "icon": "IconFateHojuRhoAias.png",
+    "team": "Player Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "210001": {
+    "internalID": 210001,
+    "name": 210001,
+    "energyMax": null,
+    "params": [],
+    "skills": {
+      "Gáe Bolg": {
+        "Gáe Bolg": {
+          "variant1": {
+            "skillID": 10000101,
+            "trigger": "Skill03",
+            "name": "Gáe Bolg",
+            "type": "Single Target",
+            "slot": "Gáe Bolg",
+            "desc": "Using \"Gáe Bolg\" can instantly defeat non-Elite Enemies, and can deal massive DMG to Elite Enemies.",
+            "energyCost": 100,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": []
+            },
+            "skillEffect": "AoEAttack",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Path Resonance": {
+        "null": {
+          "variant1": {
+            "skillID": 9615302,
+            "trigger": "SkillP01",
+            "name": null,
+            "type": "Talent",
+            "slot": "Path Resonance",
+            "desc": "",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": []
+            },
+            "skillEffect": "Passive",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 10000101,
+        "trigger": "Skill03",
+        "name": "Gáe Bolg",
+        "type": "Single Target",
+        "slot": "Gáe Bolg",
+        "desc": "Using \"Gáe Bolg\" can instantly defeat non-Elite Enemies, and can deal massive DMG to Elite Enemies.",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 9615302,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
+    "icon": "IconFateHojuRuleBreaker.png",
     "team": "Player Team",
     "type": "Assist",
     "isBattleEvent": true

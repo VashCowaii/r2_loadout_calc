@@ -45,12 +45,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        44,
-        45,
-        46,
         47,
         48,
-        49
+        49,
+        50,
+        51,
+        52
       ],
       "summons": [
         {
@@ -93,12 +93,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        44,
-        45,
-        46,
         47,
         48,
-        49
+        49,
+        50,
+        51,
+        52
       ],
       "summons": [
         {
@@ -141,12 +141,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        44,
-        45,
-        46,
         47,
         48,
-        49
+        49,
+        50,
+        51,
+        52
       ],
       "enemyTag": [
         "NoDieEffect"
@@ -192,12 +192,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        44,
-        45,
-        46,
         47,
         48,
-        49
+        49,
+        50,
+        51,
+        52
       ],
       "summons": [
         {
@@ -240,12 +240,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        44,
-        45,
-        46,
         47,
         48,
-        49
+        49,
+        50,
+        51,
+        52
       ],
       "summons": [
         {
@@ -288,12 +288,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        44,
-        45,
-        46,
         47,
         48,
-        49
+        49,
+        50,
+        51,
+        52
       ],
       "summons": [
         {
@@ -336,12 +336,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        44,
-        45,
-        46,
         47,
         48,
-        49
+        49,
+        50,
+        51,
+        52
       ],
       "summons": [
         {
@@ -388,12 +388,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        44,
-        45,
-        46,
         47,
         48,
-        49
+        49,
+        50,
+        51,
+        52
       ],
       "summons": [
         {
@@ -436,12 +436,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        44,
-        45,
-        46,
         47,
         48,
-        49
+        49,
+        50,
+        51,
+        52
       ],
       "summons": [
         {
@@ -484,12 +484,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        44,
-        45,
-        46,
         47,
         48,
-        49
+        49,
+        50,
+        51,
+        52
       ],
       "summons": [
         {
@@ -532,12 +532,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        44,
-        45,
-        46,
         47,
         48,
-        49
+        49,
+        50,
+        51,
+        52
       ],
       "summons": [
         {
@@ -580,12 +580,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        44,
-        45,
-        46,
         47,
         48,
-        49
+        49,
+        50,
+        51,
+        52
       ],
       "summons": [
         {
@@ -628,12 +628,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        44,
-        45,
-        46,
         47,
         48,
-        49
+        49,
+        50,
+        51,
+        52
       ],
       "summons": [
         {
@@ -676,12 +676,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        44,
-        45,
-        46,
         47,
         48,
-        49
+        49,
+        50,
+        51,
+        52
       ],
       "summons": [
         {

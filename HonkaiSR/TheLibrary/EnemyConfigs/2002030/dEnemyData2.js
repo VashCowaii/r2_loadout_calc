@@ -41,10 +41,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        508
+        511
       ],
       "abilityOrder": [
-        508
+        511
       ]
     },
     "200203001": {
@@ -71,10 +71,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        508
+        511
       ],
       "abilityOrder": [
-        508
+        511
       ]
     },
     "200203002": {
@@ -101,10 +101,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        508
+        511
       ],
       "abilityOrder": [
-        508
+        511
       ]
     },
     "200203003": {
@@ -131,10 +131,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        508
+        511
       ],
       "abilityOrder": [
-        508
+        511
       ]
     },
     "200203004": {
@@ -161,10 +161,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        508
+        511
       ],
       "abilityOrder": [
-        508
+        511
       ]
     },
     "200203005": {
@@ -191,10 +191,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        508
+        511
       ],
       "abilityOrder": [
-        508
+        511
       ]
     },
     "200203006": {
@@ -221,10 +221,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        508
+        511
       ],
       "abilityOrder": [
-        508
+        511
       ]
     },
     "200203007": {
@@ -251,10 +251,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        508
+        511
       ],
       "abilityOrder": [
-        508
+        511
       ]
     },
     "200203008": {
@@ -281,10 +281,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        508
+        511
       ],
       "abilityOrder": [
-        508
+        511
       ]
     },
     "200203009": {
@@ -311,10 +311,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        508
+        511
       ],
       "abilityOrder": [
-        508
+        511
       ],
       "enemyTag": [
         "MGrid_4004"

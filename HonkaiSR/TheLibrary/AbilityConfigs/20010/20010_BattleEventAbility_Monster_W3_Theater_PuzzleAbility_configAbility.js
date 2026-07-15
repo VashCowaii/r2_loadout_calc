@@ -29,11 +29,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Physical",
             "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_13319) || RETURN",
-              "displayLines": "UnusedUnderThisBase_13319",
+              "operator": "Variables[0] (UnusedUnderThisBase_13321) || RETURN",
+              "displayLines": "UnusedUnderThisBase_13321",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_13319"
+                "UnusedUnderThisBase_13321"
               ]
             },
             "notAHit": true,
@@ -51,28 +51,28 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"914391189\">Standard_DefenceRatioDown</a>[<span class=\"descriptionNumberColor\">DEF Reduction</span>]",
           "duration": {
-            "operator": "Variables[0] (UnusedUnderThisBase_10287) || RETURN",
-            "displayLines": "UnusedUnderThisBase_10287",
+            "operator": "Variables[0] (UnusedUnderThisBase_10289) || RETURN",
+            "displayLines": "UnusedUnderThisBase_10289",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_10287"
+              "UnusedUnderThisBase_10289"
             ]
           },
           "baseChance": {
-            "operator": "Variables[0] (UnusedUnderThisBase_10283) || RETURN",
-            "displayLines": "UnusedUnderThisBase_10283",
+            "operator": "Variables[0] (UnusedUnderThisBase_10285) || RETURN",
+            "displayLines": "UnusedUnderThisBase_10285",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_10283"
+              "UnusedUnderThisBase_10285"
             ]
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (UnusedUnderThisBase_10285) || RETURN",
-              "displayLines": "UnusedUnderThisBase_10285",
+              "operator": "Variables[0] (UnusedUnderThisBase_10287) || RETURN",
+              "displayLines": "UnusedUnderThisBase_10287",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_10285"
+                "UnusedUnderThisBase_10287"
               ]
             }
           }

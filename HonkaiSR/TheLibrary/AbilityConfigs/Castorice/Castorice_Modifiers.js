@@ -279,12 +279,12 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-799988230\">Castorice_PointB3_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Where The West Wind Dwells</span>]",
+      "for": "<a class=\"gModGreen\" id=\"mod__-799988230\">Castorice_PointB3_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Where the West Wind Dwells</span>]",
       "stackType": "ReplaceByCaster",
       "description": "Every stack increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>, lasting until the end of this turn.",
       "type": "Buff",
       "effectName": "DMG Boost",
-      "statusName": "Where The West Wind Dwells",
+      "statusName": "Where the West Wind Dwells",
       "execute": [
         {
           "eventTrigger": "Turn [Owner]: Action-End Phase",

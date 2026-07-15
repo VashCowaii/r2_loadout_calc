@@ -42,9 +42,9 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2555,
-        2556,
-        2557
+        2628,
+        2629,
+        2630
       ]
     },
     "501212001": {
@@ -71,10 +71,152 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2555,
-        2556,
-        2557
+        2628,
+        2629,
+        2630
       ]
+    },
+    "501212002": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        2.222716,
+        1,
+        0.286833,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Fire",
+        "Thunder",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Ice": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2
+      },
+      "abilities": [
+        2628,
+        2629,
+        2630
+      ],
+      "abilityOrder": [
+        2628,
+        2629
+      ],
+      "overrideParams": {
+        "2628": [
+          [
+            0.75
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ],
+        "2629": [
+          [
+            0.75,
+            0,
+            0
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ],
+        "2630": [
+          [
+            0
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      }
+    },
+    "501212003": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        2.222716,
+        1,
+        0.466,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Fire",
+        "Thunder",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Ice": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2
+      },
+      "abilities": [
+        2628,
+        2629,
+        2630
+      ],
+      "overrideParams": {
+        "2628": [
+          [
+            0.75
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ],
+        "2629": [
+          [
+            0.75,
+            0,
+            0
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ],
+        "2630": [
+          [
+            0
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      }
     }
   }
 }

@@ -45,12 +45,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1432,
-        1433,
-        1434,
-        1435,
-        1436,
-        1437
+        1453,
+        1454,
+        1455,
+        1456,
+        1457,
+        1458
       ],
       "enemyTag": [
         "Monster_Argenti"
@@ -105,12 +105,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1432,
-        1433,
-        1434,
-        1435,
-        1436,
-        1437
+        1453,
+        1454,
+        1455,
+        1456,
+        1457,
+        1458
       ],
       "enemyTag": [
         "Monster_Argenti"
@@ -165,12 +165,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1432,
-        1433,
-        1434,
-        1435,
-        1436,
-        1437
+        1453,
+        1454,
+        1455,
+        1456,
+        1457,
+        1458
       ],
       "enemyTag": [
         "Monster_Argenti"
@@ -225,12 +225,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1432,
-        1433,
-        1434,
-        1435,
-        1436,
-        1437
+        1453,
+        1454,
+        1455,
+        1456,
+        1457,
+        1458
       ],
       "enemyTag": [
         "Monster_Argenti"
@@ -285,12 +285,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1432,
-        1433,
-        1434,
-        1435,
-        1436,
-        1437
+        1453,
+        1454,
+        1455,
+        1456,
+        1457,
+        1458
       ],
       "enemyTag": [
         "Monster_Argenti"
@@ -345,12 +345,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1432,
-        1433,
-        1434,
-        1435,
-        1436,
-        1437
+        1453,
+        1454,
+        1455,
+        1456,
+        1457,
+        1458
       ],
       "enemyTag": [
         "Monster_Argenti"
@@ -405,12 +405,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1432,
-        1433,
-        1434,
-        1435,
-        1436,
-        1437
+        1453,
+        1454,
+        1455,
+        1456,
+        1457,
+        1458
       ],
       "enemyTag": [
         "Monster_Argenti"
@@ -465,12 +465,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1432,
-        1433,
-        1434,
-        1435,
-        1436,
-        1437
+        1453,
+        1454,
+        1455,
+        1456,
+        1457,
+        1458
       ],
       "enemyTag": [
         "Monster_Argenti"
@@ -525,12 +525,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1432,
-        1433,
-        1434,
-        1435,
-        1436,
-        1437
+        1453,
+        1454,
+        1455,
+        1456,
+        1457,
+        1458
       ],
       "enemyTag": [
         "Monster_Argenti"
@@ -582,12 +582,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1432,
-        1433,
-        1434,
-        1435,
-        1436,
-        1437
+        1453,
+        1454,
+        1455,
+        1456,
+        1457,
+        1458
       ],
       "enemyTag": [
         "Monster_Argenti"
@@ -642,12 +642,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1432,
-        1433,
-        1434,
-        1435,
-        1436,
-        1437
+        1453,
+        1454,
+        1455,
+        1456,
+        1457,
+        1458
       ],
       "enemyTag": [
         "Monster_Argenti"
@@ -702,12 +702,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1432,
-        1433,
-        1434,
-        1435,
-        1436,
-        1437
+        1453,
+        1454,
+        1455,
+        1456,
+        1457,
+        1458
       ],
       "enemyTag": [
         "Monster_Argenti",
@@ -763,12 +763,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1432,
-        1433,
-        1434,
-        1435,
-        1436,
-        1437
+        1453,
+        1454,
+        1455,
+        1456,
+        1457,
+        1458
       ],
       "enemyTag": [
         "Monster_Argenti"
@@ -794,6 +794,228 @@ let enemyData = {
         "SummonID01": 3021020,
         "SummonID02": 3021030,
         "SummonID03": 3021040
+      }
+    },
+    "302401013": {
+      "name": "Red Knight",
+      "scaleElite": 1,
+      "stArray": [
+        2.222716,
+        1,
+        0.537667,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Fire",
+        "Ice"
+      ],
+      "res": {
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "resMod": {
+        "STAT_CTRL": 0.5
+      },
+      "abilities": [
+        1453,
+        1454,
+        1455,
+        1456,
+        1457,
+        1458
+      ],
+      "enemyTag": [
+        "Monster_Argenti"
+      ],
+      "summons": [
+        {
+          "name": "\"The Honored\"",
+          "over": 3021023,
+          "base": 3021023
+        },
+        {
+          "name": "\"Speartip\"",
+          "over": 302103005,
+          "base": 3021030
+        },
+        {
+          "name": "\"The Shield\"",
+          "over": 3021043,
+          "base": 3021043
+        }
+      ],
+      "overrideParams": {
+        "1453": [
+          [
+            3
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          10,
+          "-"
+        ],
+        "1454": [
+          [
+            0.5,
+            0.5
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          "-"
+        ],
+        "1456": [
+          [
+            1
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ],
+        "1457": [
+          [
+            1.75
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      },
+      "itNeverEnds": {
+        "SummonID01": 3021023,
+        "SummonID02": 302103005,
+        "SummonID03": 3021043
+      }
+    },
+    "302401014": {
+      "name": "Red Knight",
+      "scaleElite": 1,
+      "stArray": [
+        2.222716,
+        1,
+        0.595,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Fire",
+        "Ice"
+      ],
+      "res": {
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "resMod": {
+        "STAT_CTRL": 0.5
+      },
+      "abilities": [
+        1453,
+        1454,
+        1455,
+        1456,
+        1457,
+        1458
+      ],
+      "enemyTag": [
+        "Monster_Argenti"
+      ],
+      "summons": [
+        {
+          "name": "\"The Honored\"",
+          "over": 302102301,
+          "base": 3021023
+        },
+        {
+          "name": "\"Speartip\"",
+          "over": 302103006,
+          "base": 3021030
+        },
+        {
+          "name": "\"The Shield\"",
+          "over": 302104301,
+          "base": 3021043
+        }
+      ],
+      "overrideParams": {
+        "1453": [
+          [
+            2.5
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          10,
+          "-"
+        ],
+        "1454": [
+          [
+            0.5,
+            0.5
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          "-"
+        ],
+        "1456": [
+          [
+            1
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ],
+        "1457": [
+          [
+            1.75
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      },
+      "itNeverEnds": {
+        "SummonID01": 302102301,
+        "SummonID02": 302103006,
+        "SummonID03": 302104301
       }
     }
   }

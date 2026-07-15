@@ -1321,20 +1321,20 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-340009422\">Enemy_W3_Dinosaur_01_Standard_Growth_Enhance</a>[<span class=\"descriptionNumberColor\">Scorchbone Inferno</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (UnusedUnderThisBase_9642) || RETURN",
-                "displayLines": "UnusedUnderThisBase_9642",
+                "operator": "Variables[0] (UnusedUnderThisBase_9644) || RETURN",
+                "displayLines": "UnusedUnderThisBase_9644",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_9642"
+                  "UnusedUnderThisBase_9644"
                 ]
               },
               "valuePerStack": {
                 "MDF_MaxLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9642) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9642",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9644) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9644",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_9642"
+                    "UnusedUnderThisBase_9644"
                   ]
                 }
               },
@@ -1351,11 +1351,11 @@ const compositeAbilityObject = {
                 "value1": "<a class=\"gModGreen\" id=\"-340009422\">Enemy_W3_Dinosaur_01_Standard_Growth_Enhance</a>[<span class=\"descriptionNumberColor\">Scorchbone Inferno</span>]",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9642) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9642",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9644) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9644",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_9642"
+                    "UnusedUnderThisBase_9644"
                   ]
                 },
                 "valueType": "Layer"
@@ -1450,11 +1450,11 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (UnusedUnderThisBase_9644) || RETURN",
-                "displayLines": "UnusedUnderThisBase_9644",
+                "operator": "Variables[0] (UnusedUnderThisBase_9646) || RETURN",
+                "displayLines": "UnusedUnderThisBase_9646",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_9644"
+                  "UnusedUnderThisBase_9646"
                 ]
               },
               "Event": [
@@ -1466,20 +1466,20 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-340009422\">Enemy_W3_Dinosaur_01_Standard_Growth_Enhance</a>[<span class=\"descriptionNumberColor\">Scorchbone Inferno</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_9642) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_9642",
+                    "operator": "Variables[0] (UnusedUnderThisBase_9644) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_9644",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_9642"
+                      "UnusedUnderThisBase_9644"
                     ]
                   },
                   "valuePerStack": {
                     "MDF_MaxLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_9642) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_9642",
+                      "operator": "Variables[0] (UnusedUnderThisBase_9644) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_9644",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_9642"
+                        "UnusedUnderThisBase_9644"
                       ]
                     }
                   },
@@ -1498,11 +1498,11 @@ const compositeAbilityObject = {
                 "value1": "<a class=\"gModGreen\" id=\"-340009422\">Enemy_W3_Dinosaur_01_Standard_Growth_Enhance</a>[<span class=\"descriptionNumberColor\">Scorchbone Inferno</span>]",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9642) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9642",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9644) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9644",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_9642"
+                    "UnusedUnderThisBase_9644"
                   ]
                 },
                 "valueType": "Layer"
@@ -1642,20 +1642,20 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-340009422\">Enemy_W3_Dinosaur_01_Standard_Growth_Enhance</a>[<span class=\"descriptionNumberColor\">Scorchbone Inferno</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (UnusedUnderThisBase_9642) || RETURN",
-                "displayLines": "UnusedUnderThisBase_9642",
+                "operator": "Variables[0] (UnusedUnderThisBase_9644) || RETURN",
+                "displayLines": "UnusedUnderThisBase_9644",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_9642"
+                  "UnusedUnderThisBase_9644"
                 ]
               },
               "valuePerStack": {
                 "MDF_MaxLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9642) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9642",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9644) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9644",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_9642"
+                    "UnusedUnderThisBase_9644"
                   ]
                 }
               },
@@ -1672,11 +1672,11 @@ const compositeAbilityObject = {
                 "value1": "<a class=\"gModGreen\" id=\"-340009422\">Enemy_W3_Dinosaur_01_Standard_Growth_Enhance</a>[<span class=\"descriptionNumberColor\">Scorchbone Inferno</span>]",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9642) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9642",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9644) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9644",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_9642"
+                    "UnusedUnderThisBase_9644"
                   ]
                 },
                 "valueType": "Layer"

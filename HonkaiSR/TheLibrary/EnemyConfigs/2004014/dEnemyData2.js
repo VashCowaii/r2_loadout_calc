@@ -46,9 +46,6 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        548,
-        549,
-        550,
         551,
         552,
         553,
@@ -59,10 +56,13 @@ let enemyData = {
         558,
         559,
         560,
-        561
+        561,
+        562,
+        563,
+        564
       ],
       "abilityOrder": [
-        511
+        514
       ],
       "enemyTag": [
         "IF_Boss",
@@ -122,9 +122,6 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        548,
-        549,
-        550,
         551,
         552,
         553,
@@ -135,10 +132,13 @@ let enemyData = {
         558,
         559,
         560,
-        561
+        561,
+        562,
+        563,
+        564
       ],
       "abilityOrder": [
-        511
+        514
       ],
       "enemyTag": [
         "IF_Boss",
@@ -198,9 +198,6 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        548,
-        549,
-        550,
         551,
         552,
         553,
@@ -211,10 +208,13 @@ let enemyData = {
         558,
         559,
         560,
-        561
+        561,
+        562,
+        563,
+        564
       ],
       "abilityOrder": [
-        511
+        514
       ],
       "enemyTag": [
         "IF_Boss",
@@ -274,9 +274,6 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        548,
-        549,
-        550,
         551,
         552,
         553,
@@ -287,10 +284,13 @@ let enemyData = {
         558,
         559,
         560,
-        561
+        561,
+        562,
+        563,
+        564
       ],
       "abilityOrder": [
-        511
+        514
       ],
       "enemyTag": [
         "IF_Boss",
@@ -350,9 +350,6 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        548,
-        549,
-        550,
         551,
         552,
         553,
@@ -363,10 +360,13 @@ let enemyData = {
         558,
         559,
         560,
-        561
+        561,
+        562,
+        563,
+        564
       ],
       "abilityOrder": [
-        511
+        514
       ],
       "enemyTag": [
         "IF_Boss",

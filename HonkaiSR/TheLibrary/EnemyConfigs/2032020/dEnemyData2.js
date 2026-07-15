@@ -41,11 +41,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        824,
-        825
+        834,
+        835
       ],
       "abilityOrder": [
-        824
+        834
       ],
       "enemyTag": [
         "MonsterType_W2_Lycan",
@@ -76,11 +76,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        824,
-        825
+        834,
+        835
       ],
       "abilityOrder": [
-        824
+        834
       ],
       "enemyTag": [
         "MonsterType_W2_Lycan",
@@ -110,11 +110,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        824,
-        825
+        834,
+        835
       ],
       "abilityOrder": [
-        824
+        834
       ],
       "enemyTag": [
         "MonsterType_W2_Lycan",
@@ -145,11 +145,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        824,
-        825
+        834,
+        835
       ],
       "abilityOrder": [
-        824
+        834
       ],
       "enemyTag": [
         "MonsterType_W2_Lycan",
@@ -180,11 +180,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        824,
-        825
+        834,
+        835
       ],
       "abilityOrder": [
-        824
+        834
       ],
       "enemyTag": [
         "MonsterType_W2_Lycan",

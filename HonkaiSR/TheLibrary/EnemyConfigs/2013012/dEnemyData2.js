@@ -43,10 +43,10 @@ let enemyData = {
         "Imaginary": 0.4
       },
       "abilities": [
-        656,
-        657,
-        658,
-        659
+        659,
+        660,
+        661,
+        662
       ],
       "summons": [
         {

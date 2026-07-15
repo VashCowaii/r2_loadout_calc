@@ -42,11 +42,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1416,
-        1417
+        1435,
+        1436
       ],
       "abilityOrder": [
-        1416
+        1435
       ],
       "enemyTag": [
         "Argenti_Totem"
@@ -76,11 +76,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1416,
-        1417
+        1435,
+        1436
       ],
       "abilityOrder": [
-        1416
+        1435
       ],
       "enemyTag": [
         "Argenti_Totem"
@@ -110,11 +110,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1416,
-        1417
+        1435,
+        1436
       ],
       "abilityOrder": [
-        1416
+        1435
       ],
       "enemyTag": [
         "Argenti_Totem"
@@ -144,11 +144,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1416,
-        1417
+        1435,
+        1436
       ],
       "abilityOrder": [
-        1416
+        1435
       ],
       "enemyTag": [
         "Argenti_Totem"
@@ -178,16 +178,142 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1416,
-        1417
+        1435,
+        1436
       ],
       "abilityOrder": [
-        1416
+        1435
       ],
       "enemyTag": [
         "Argenti_Totem",
         "MGrid_4007"
       ]
+    },
+    "302103005": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        2.222716,
+        1,
+        0.806562,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Fire"
+      ],
+      "res": {
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        1435,
+        1436
+      ],
+      "abilityOrder": [
+        1435
+      ],
+      "enemyTag": [
+        "Argenti_Totem"
+      ],
+      "overrideParams": {
+        "1435": [
+          [
+            0.5,
+            1
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          "-"
+        ],
+        "1436": [
+          [
+            0.25,
+            "-",
+            0.5
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      }
+    },
+    "302103006": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        2.222716,
+        1,
+        0.87375003,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Fire"
+      ],
+      "res": {
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        1435,
+        1436
+      ],
+      "abilityOrder": [
+        1435
+      ],
+      "enemyTag": [
+        "Argenti_Totem"
+      ],
+      "overrideParams": {
+        "1435": [
+          [
+            0.5,
+            1
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          "-"
+        ],
+        "1436": [
+          [
+            0.25,
+            "-",
+            0.5
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      }
     }
   }
 }

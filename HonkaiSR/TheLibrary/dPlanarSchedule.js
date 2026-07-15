@@ -1,6 +1,96 @@
 const stageTypers = "planar"
 let mocSchedule = [
   {
+    "id": 1014,
+    "realName": "Bugs Incoming",
+    "worldLevel": 6,
+    "testWorldLevel": null,
+    "testMapID": null,
+    "buffData": {
+      "modifierName": "",
+      "realModifierNamne": "",
+      "name": "",
+      "desc": "",
+      "battleDesc": null,
+      "buffType": "",
+      "params": []
+    },
+    "floorData": {
+      "1": {
+        "floorName": "Bugs Incoming",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              80300165
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Harbinger of Death: Swarm Nightmare (Complete)",
+                "enemyLevel": 90,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "RogueRelic",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Harbinger of Death: Swarm Nightmare (Complete)",
+                      "id": 3024033,
+                      "image": 3024033,
+                      "rank": "LittleBoss",
+                      "attackBase": 649.5292138,
+                      "defBase": 1099.99995,
+                      "hpBase": 1009783.7074891,
+                      "speedBase": 190.08,
+                      "critDMG": 0.2,
+                      "effectRES": 0.4,
+                      "ehr": 0.32,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Fire",
+                      "hpBars": 3,
+                      "toughnessBase": 200,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL": 0.75
+                      }
+                    }
+                  ]
+                ],
+                "scalarElite": 43005,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "1"
+                },
+                "highSTSUM": 3029351.1224673,
+                "aoeSUM": 3029351.1224673
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [],
+            "stageDataArray": []
+          }
+        }
+      }
+    },
+    "realDropList": [
+      "71059.png",
+      "71058.png",
+      "2.png"
+    ]
+  },
+  {
     "id": 1013,
     "realName": "Gilded Recollection",
     "worldLevel": 6,

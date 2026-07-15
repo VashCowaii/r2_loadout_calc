@@ -45,9 +45,6 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        247,
-        248,
-        249,
         250,
         251,
         252,
@@ -60,7 +57,10 @@ let enemyData = {
         259,
         260,
         261,
-        262
+        262,
+        263,
+        264,
+        265
       ],
       "enemyTag": [
         "IF_Boss",
@@ -121,9 +121,6 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        247,
-        248,
-        249,
         250,
         251,
         252,
@@ -136,7 +133,10 @@ let enemyData = {
         259,
         260,
         261,
-        262
+        262,
+        263,
+        264,
+        265
       ],
       "enemyTag": [
         "IF_Boss",
@@ -197,9 +197,6 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        247,
-        248,
-        249,
         250,
         251,
         252,
@@ -212,7 +209,10 @@ let enemyData = {
         259,
         260,
         261,
-        262
+        262,
+        263,
+        264,
+        265
       ],
       "enemyTag": [
         "IF_Boss",
@@ -273,9 +273,6 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        247,
-        248,
-        249,
         250,
         251,
         252,
@@ -288,7 +285,10 @@ let enemyData = {
         259,
         260,
         261,
-        262
+        262,
+        263,
+        264,
+        265
       ],
       "enemyTag": [
         "IF_Boss",
@@ -349,9 +349,6 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        247,
-        248,
-        249,
         250,
         251,
         252,
@@ -364,7 +361,10 @@ let enemyData = {
         259,
         260,
         261,
-        262
+        262,
+        263,
+        264,
+        265
       ],
       "enemyTag": [
         "IF_Boss",
@@ -393,7 +393,7 @@ let enemyData = {
         }
       ],
       "overrideParams": {
-        "259": [
+        "262": [
           [
             "-",
             2.5

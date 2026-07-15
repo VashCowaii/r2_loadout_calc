@@ -57,18 +57,18 @@ let enemyData = {
         "STAT_Entangle": 0.75
       },
       "abilities": [
-        587,
-        588,
-        589,
         590,
         591,
         592,
         593,
         594,
-        595
+        595,
+        596,
+        597,
+        598
       ],
       "abilityOrder": [
-        571
+        574
       ],
       "enemyTag": [
         "SuperArmor_Behit_Small",
@@ -131,18 +131,18 @@ let enemyData = {
         "STAT_Entangle": 0.75
       },
       "abilities": [
-        587,
-        588,
-        589,
         590,
         591,
         592,
         593,
         594,
-        595
+        595,
+        596,
+        597,
+        598
       ],
       "abilityOrder": [
-        571
+        574
       ],
       "enemyTag": [
         "SuperArmor_Behit_Small",
@@ -205,18 +205,18 @@ let enemyData = {
         "STAT_Entangle": 0.75
       },
       "abilities": [
-        587,
-        588,
-        589,
         590,
         591,
         592,
         593,
         594,
-        595
+        595,
+        596,
+        597,
+        598
       ],
       "abilityOrder": [
-        571
+        574
       ],
       "enemyTag": [
         "SuperArmor_Behit_Small",
@@ -237,7 +237,7 @@ let enemyData = {
         }
       ],
       "overrideParams": {
-        "595": [
+        "598": [
           [
             "-",
             "-",

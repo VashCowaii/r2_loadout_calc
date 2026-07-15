@@ -3174,11 +3174,11 @@ const compositeAbilityObject = {
                     ]
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_7795) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_7795",
+                    "operator": "Variables[0] (UnusedUnderThisBase_7797) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_7797",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_7795"
+                      "UnusedUnderThisBase_7797"
                     ]
                   },
                   "valuePerStack": {
@@ -3219,11 +3219,11 @@ const compositeAbilityObject = {
                     ]
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_7784) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_7784",
+                    "operator": "Variables[0] (UnusedUnderThisBase_7786) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_7786",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_7784"
+                      "UnusedUnderThisBase_7786"
                     ]
                   },
                   "valuePerStack": {
@@ -3264,11 +3264,11 @@ const compositeAbilityObject = {
                     ]
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_7796) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_7796",
+                    "operator": "Variables[0] (UnusedUnderThisBase_7798) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_7798",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_7796"
+                      "UnusedUnderThisBase_7798"
                     ]
                   },
                   "valuePerStack": {
@@ -3309,11 +3309,11 @@ const compositeAbilityObject = {
                     ]
                   },
                   "baseChance": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_7797) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_7797",
+                    "operator": "Variables[0] (UnusedUnderThisBase_7799) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_7799",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_7797"
+                      "UnusedUnderThisBase_7799"
                     ]
                   },
                   "valuePerStack": {

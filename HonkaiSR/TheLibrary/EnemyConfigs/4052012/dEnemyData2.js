@@ -42,13 +42,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2409,
-        2410,
-        2411,
-        2412
+        2467,
+        2468,
+        2469,
+        2470
       ],
       "abilityOrder": [
-        2409
+        2467
       ]
     }
   }

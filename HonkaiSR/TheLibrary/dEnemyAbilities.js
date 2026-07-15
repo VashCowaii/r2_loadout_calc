@@ -735,6 +735,56 @@ let enemyAbilityData = [
     "atkType": "Basic ATK"
   },
   {
+    "id": 100301401,
+    "name": "Assault",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Physical DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2
+    ],
+    "delay": 1,
+    "element": "Physical",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 100301402,
+    "name": "Charging",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Enters the Charging state. Uses \"Gáe Bolg\" for the next action.",
+    "tag": "Charging",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 100301403,
+    "name": "Gáe Bolg",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Deals massive Physical DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      12
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Physical",
+    "atkType": "Basic ATK",
+    "energyPerHit": 20
+  },
+  {
     "id": 100401001,
     "name": "Chill of Bone-Piercing Coagulation",
     "type": "Ability",
@@ -10930,6 +10980,77 @@ let enemyAbilityData = [
     "energyPerHit": 15
   },
   {
+    "id": 201301301,
+    "name": "Farewell Etiquette",
+    "type": "Talent",
+    "trigger": "SkillP01",
+    "desc": "When this unit is attacked, it accumulates \"Sanction Rate.\" When \"Sanction Rate\" reaches its maximum, it immediately enters \"Sanction Mode.\"",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.25
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 201301302,
+    "name": "Dread",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Increases \"Sanction Rate\" level and deals minor Imaginary DMG to all allies.",
+    "tag": "Impair",
+    "phases": [
+      1
+    ],
+    "params": [
+      1
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 201301303,
+    "name": "Restraint",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Imaginary DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 201301304,
+    "name": "Enchainment",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Deals massive Imaginary DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      3.25
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
     "id": 201302001,
     "name": "Adjudicate",
     "type": "Ability",
@@ -11167,6 +11288,53 @@ let enemyAbilityData = [
     "element": "Physical",
     "atkType": "Basic ATK",
     "energyPerHit": 10
+  },
+  {
+    "id": 201302201,
+    "name": "Triple Crane Wings",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Physical DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2
+    ],
+    "delay": 1,
+    "element": "Physical",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 201302203,
+    "name": "Kanshou and Bakuya",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Deals Physical DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.75
+    ],
+    "delay": 1,
+    "element": "Physical",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 201302205,
+    "name": "Soul Warrant",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Lock on to the target and learn their moves.",
+    "tag": "Charging",
+    "delay": 1,
+    "element": "Physical",
+    "atkType": "Basic ATK"
   },
   {
     "id": 202201001,
@@ -20259,6 +20427,57 @@ let enemyAbilityData = [
     "energyPerHit": 15
   },
   {
+    "id": 300303401,
+    "name": "Cleansing Flagellation",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Physical DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      1.5
+    ],
+    "delay": 1,
+    "element": "Physical",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 300303402,
+    "name": "Shackle-Bearing Messenger",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Enters the Charging state. Uses \"Desmios Evangelion\" for the next action.",
+    "tag": "Charging",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "element": "Physical",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 300303403,
+    "name": "Desmios Evangelion",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Deals massive Physical DMG to all targets",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      2.5
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Physical",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
     "id": 300304001,
     "name": "All Is Bright",
     "type": "Ability",
@@ -20795,6 +21014,38 @@ let enemyAbilityData = [
     "atkType": "Basic ATK"
   },
   {
+    "id": 300304401,
+    "name": "Holy Night",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Enters the Charging state. Uses \"Sleep In Heavenly Peace\" for the next action.",
+    "tag": "Charging",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 300304402,
+    "name": "Sleep In Heavenly Peace",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals massive Imaginary DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      2.5
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
     "id": 300305001,
     "name": "Precious Blood Shed For You",
     "type": "Ability",
@@ -21319,6 +21570,34 @@ let enemyAbilityData = [
     "alert": true,
     "atkType": "Basic ATK",
     "energyPerHit": 15
+  },
+  {
+    "id": 300305401,
+    "name": "Precious Blood Shed For You",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Add 1 \"The King's Resentment...?\" to the target's deck.",
+    "tag": "Impair",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "element": "Wind",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 300305402,
+    "name": "Feast That Is Set For You",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Add 2 \"The King's Resentment...?\" cards to the target's deck.",
+    "tag": "Impair",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "element": "Wind",
+    "atkType": "Basic ATK"
   },
   {
     "id": 300401001,
@@ -23984,6 +24263,44 @@ let enemyAbilityData = [
     "atkType": "Basic ATK"
   },
   {
+    "id": 302102301,
+    "name": "Honors of the Red Queen",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Applies 1 stack of stackable DMG Boost effect to enemy Argenti. When in the \"Soulfreed\" state, increases the applied DMG Boost stacks.",
+    "tag": "Enhance",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.1,
+      1,
+      2,
+      3
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 302102302,
+    "name": "Stone of Plummeting Foundation",
+    "type": "Talent",
+    "trigger": "SkillP01",
+    "desc": "When receiving a killing blow, applies 1 stack of stackable DMG Boost effect to all targets. When in the \"Soulfreed\" state, increases the applied DMG Boost stacks.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.1,
+      1,
+      2,
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
     "id": 302103001,
     "name": "So Cometh Beauty's Knight",
     "type": "Ability",
@@ -24182,6 +24499,32 @@ let enemyAbilityData = [
     ],
     "params": [
       0.1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 302104301,
+    "name": "Diadem of the Stale",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Applies a Barrier to enemy Argenti. Applies Barriers to all friendly units while in the \"Soulfreed\" state.",
+    "tag": "Defense",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 302104302,
+    "name": "Imitation of Alacritous Desire",
+    "type": "Talent",
+    "trigger": "SkillP01",
+    "desc": "When receiving a killing blow, applies a Barrier to all targets. Increases applied Barrier stacks while in the \"Soulfreed\" state.",
+    "tag": "Talent",
+    "phases": [
+      1
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -28437,6 +28780,37 @@ let enemyAbilityData = [
     "atkType": "Basic ATK"
   },
   {
+    "id": 401202401,
+    "name": "Stealth",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Enters the \"Stealth\" state. Uses Rule Breaker for the next action.",
+    "tag": "Enhance",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401202402,
+    "name": "Rule Breaker",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Physical DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      4
+    ],
+    "delay": 1,
+    "element": "Physical",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
     "id": 401203001,
     "name": "Weeping Arrow",
     "type": "Ability",
@@ -29278,6 +29652,112 @@ let enemyAbilityData = [
     "atkType": "Basic ATK"
   },
   {
+    "id": 401207401,
+    "name": "The Living Shan't Flee",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Quantum DMG to one target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      1
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 401207402,
+    "name": "The Dead Shan't Avoid",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals minor Quantum DMG to one target and units adjacent to the target.",
+    "tag": "Blast",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.75
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 401207403,
+    "name": "Between Life and Death",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "While in the \"Overdue Obituary\" state, \"The Living Shan't Flee\" is enhanced to \"The Dead Shan't Avoid.\" When defeated, restores HP for targets and draws a card, then revives",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.1,
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401207501,
+    "name": "The Living Shan't Flee",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Quantum DMG to one target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      1
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 401207502,
+    "name": "The Dead Shan't Avoid",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals minor Quantum DMG to one target and units adjacent to the target.",
+    "tag": "Blast",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.75
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 401207503,
+    "name": "Between Life and Death",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "While in the \"Overdue Obituary\" state, \"The Living Shan't Flee\" is enhanced to \"The Dead Shan't Avoid.\" When defeated, restores HP for targets and draws a card, then revives.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.1,
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
     "id": 401207601,
     "name": "The Living Shan't Flee",
     "type": "Ability",
@@ -29475,6 +29955,64 @@ let enemyAbilityData = [
   },
   {
     "id": 401208003,
+    "name": "Polarization",
+    "type": "Ability",
+    "trigger": "Skill02P2",
+    "desc": "Increases the number of \"Thunderclouds.\" When this unit is Weakness Broken, reduces number of \"Thunderclouds.\"",
+    "tag": "Support",
+    "phases": [
+      2
+    ],
+    "extraEffects": [
+      193
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401208101,
+    "name": "Discharge",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Lightning DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      2
+    ],
+    "params": [
+      0.5
+    ],
+    "delay": 1,
+    "element": "Thunder",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 401208102,
+    "name": "Heat It Up",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Increases current \"Temperature.\" When this unit is downed, reduces current \"Temperature.\"",
+    "tag": "Support",
+    "phases": [
+      1
+    ],
+    "params": [
+      10,
+      10,
+      0.1,
+      10,
+      10,
+      0.3
+    ],
+    "extraEffects": [
+      189
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401208103,
     "name": "Polarization",
     "type": "Ability",
     "trigger": "Skill02P2",
@@ -30592,6 +31130,90 @@ let enemyAbilityData = [
       2,
       0.2,
       0.5
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401301801,
+    "name": "From Skyveil to Dawn",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Starting from the leftmost target, uses a sweeping attack on 3 consecutive targets, dealing minor Imaginary DMG.",
+    "tag": "Sweep",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.5
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 401301802,
+    "name": "From Dawn to Skyveil",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Starting from the rightmost target, uses a sweeping attack on 3 consecutive targets, dealing minor Imaginary DMG.",
+    "tag": "Sweep",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.5
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 401301803,
+    "name": "Resembling Furious Lion",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Enters the Charging state. Uses \"Drowned in the Crimson Sea\" in the next turn.",
+    "tag": "Charging",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401301804,
+    "name": "Drowned in the Crimson Sea",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals massive Imaginary DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      2
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 20
+  },
+  {
+    "id": 401301805,
+    "name": "Rise from the Grave",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Permanently increases the DMG dealt by all friendly units.",
+    "tag": "Summon",
+    "phases": [
+      0
+    ],
+    "params": [
+      0.1
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -33770,6 +34392,127 @@ let enemyAbilityData = [
     "atkType": "Basic ATK"
   },
   {
+    "id": 401403402,
+    "name": "To Bury the Slumbered",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals massive Quantum DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      1.5
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 401403403,
+    "name": "To Mourn the Departing",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Deals Quantum DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0.1
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 401403404,
+    "name": "Bitterness Delivers Belated Evil News",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Enhances \"The Long Arms of Sorrow.\"",
+    "tag": "Support",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0.5,
+      3
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401403405,
+    "name": "To Die in Aromatic Pain",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Enters the \"Fragrance of Death\" state and deals massive Quantum DMG to all targets. This DMG is \"Non-fatal.\"",
+    "tag": "Enhance",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0.145
+    ],
+    "extraEffects": [
+      191,
+      195
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 401403406,
+    "name": "Death Wishes For More Death",
+    "type": "Ability",
+    "trigger": "Skill06",
+    "desc": "Deals Quantum DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0.25
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 401403407,
+    "name": "Inky Fog of a Near-Death Dream",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "Initially reduces DMG taken by this unit. While in the \"Fragrance of Death\" state, removes the DMG reduction state from this unit. After being attacked, restores HP for all targets.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0.5,
+      0.05
+    ],
+    "extraEffects": [
+      195
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
     "id": 401403501,
     "name": "To Stay the Fallen",
     "type": "Ability",
@@ -35126,6 +35869,335 @@ let enemyAbilityData = [
       0,
       0,
       40
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401501201,
+    "name": "Three Thousand Leagues Ablaze",
+    "type": "Ability",
+    "trigger": "Skill01P1",
+    "desc": "Raises \"Temperature.\" Launches several attacks from the left side of the target team, and delivers a 1-time priority attack to each target, with the remaining attack counts attacking one random target each. Each attack deals Fire DMG based on the current \"Temperature,\" as well as reinstates \"Shoot of Hundred Eyes.\"",
+    "tag": "Barrage",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.4,
+      0.0009999999,
+      2
+    ],
+    "extraEffects": [
+      189,
+      213
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 401501202,
+    "name": "Flame Beyond the Horizon",
+    "type": "Ability",
+    "trigger": "Skill02P1",
+    "desc": "Raises \"Temperature.\" Deals Fire DMG to all targets based on the current \"Temperature,\" and reinstates \"Twig of Hundred Eyes.\"",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.4,
+      0.0009999999,
+      2
+    ],
+    "extraEffects": [
+      189,
+      213
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 401501203,
+    "name": "Exhalation of the Month of Everday",
+    "type": "Ability",
+    "trigger": "Skill03P1",
+    "desc": "Raises \"Temperature.\" Deals Fire DMG to all targets based on the current \"Temperature.\" Delays all targets' actions based on the current \"Temperature,\" and reinstates \"Shoot of Hundred Eyes\" and \"Twig of Hundred Eyes.\"",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      1.5,
+      0.0009999999,
+      0.005,
+      2
+    ],
+    "extraEffects": [
+      189,
+      213
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 401501204,
+    "name": "Splendor, Like Clouds Cresting the Sky",
+    "type": "Ability",
+    "trigger": "Skill04P1",
+    "desc": "Enters a Charging state and uses \"Fury, Incineration of Dawn and Dusk\" with the next action. Applies \"Helium Flash\" to this unit and summons \"Daythunder Raven.\" When in this state, after a target uses an attack, reduces \"Helium Flash\" based on the number of friendly units hit in this attack.",
+    "tag": "Charging",
+    "phases": [
+      1
+    ],
+    "params": [
+      40,
+      1,
+      10,
+      12,
+      1.2
+    ],
+    "extraEffects": [
+      190
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401501205,
+    "name": "Fury, Incineration of Dawn and Dusk",
+    "type": "Ability",
+    "trigger": "Skill05P1",
+    "desc": "Deals massive Fire DMG to all targets based on this unit's current \"Helium Flash.\" The DMG is distributed evenly among targets while also raising the \"Temperature\" based on the current \"Helium Flash\" and reinstating \"Shoot of Hundred Eyes\" and \"Twig of Hundred Eyes.\"",
+    "tag": "Distribute",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.1
+    ],
+    "extraEffects": [
+      189,
+      190,
+      185,
+      213
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 401501206,
+    "name": "Thunder From the Distance",
+    "type": "Ability",
+    "trigger": "Skill01P2",
+    "desc": "Increases the \"Thundercloud\" stacks. Launches several attacks from the left side of the target team, and delivers a 1-time priority attack to each target, with the remaining attack counts attacking one random target each. Each attack deals Lightning DMG as well as reinstates \"Shoot of Hundred Eyes.\"",
+    "tag": "Barrage",
+    "phases": [
+      2
+    ],
+    "params": [
+      0.5,
+      5
+    ],
+    "extraEffects": [
+      193,
+      213
+    ],
+    "delay": 1,
+    "element": "Thunder",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 401501207,
+    "name": "Surge Across the Leagues",
+    "type": "Ability",
+    "trigger": "Skill02P2",
+    "desc": "Increases the \"Thundercloud\" stacks. Deals Lightning DMG to all targets and reinstates \"Twig of Hundred Eyes.\"",
+    "tag": "AoE ATK",
+    "phases": [
+      2
+    ],
+    "params": [
+      0.5,
+      5
+    ],
+    "extraEffects": [
+      193,
+      213
+    ],
+    "delay": 1,
+    "element": "Thunder",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 401501208,
+    "name": "Illumination of the Month of Fortune",
+    "type": "Ability",
+    "trigger": "Skill03P2",
+    "desc": "Increases the \"Thundercloud\" stacks. Deals Lightning DMG to all targets and reinstates \"Shoot of Hundred Eyes\" and \"Twig of Hundred Eyes.\"",
+    "tag": "AoE ATK",
+    "phases": [
+      2
+    ],
+    "params": [
+      1,
+      5
+    ],
+    "extraEffects": [
+      193,
+      213
+    ],
+    "delay": 1,
+    "element": "Thunder",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 401501209,
+    "name": "Thunderclap, Quake of Mount and Seas",
+    "type": "Ability",
+    "trigger": "Skill04P2",
+    "desc": "Increases \"Thundercloud\" stacks and enters Charging state. Uses \"Wrath, Rend of Eternal Sky\" in the next action. This unit gains \"Ionization\" and summons \"Daythunder Raven.\" In this state, after targets attack, seizes \"Thundercloud\" stacks based on the number of friendly units hit in the attack. When \"Daythunder Raven,\" \"Shoot of Hundred Eyes,\" or \"Twig of Hundred Eyes\" receives a killing blow, targets seize a set number of \"Thundercloud\" stacks.",
+    "tag": "Charging",
+    "phases": [
+      2
+    ],
+    "params": [
+      20
+    ],
+    "extraEffects": [
+      193,
+      211
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401501210,
+    "name": "Wrath, Rend of Eternal Sky",
+    "type": "Ability",
+    "trigger": "Skill05P2",
+    "desc": "Deals Lightning DMG to all targets and consumes a certain amount of \"Thundercloud(s).\" Deals a corresponding number of instances of minor Lightning DMG to random target and reinstates \"Shoot of Hundred Eyes\" and \"Twig of Hundred Eyes.\" Afterward, deals a corresponding number of instances of minor Lightning Additional DMG to this unit based on the contested Thunderclouds between the targets and this unit.",
+    "tag": "AoE ATK",
+    "phases": [
+      2
+    ],
+    "params": [
+      0.5,
+      8
+    ],
+    "extraEffects": [
+      213
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Thunder",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 401501211,
+    "name": "Hundred Eyes",
+    "type": "Ability",
+    "trigger": "SkillP01",
+    "desc": "During this battle, upon inflicting DMG to \"Daythunder Raven,\" \"Shoot of Hundred Eyes,\" or \"Twig of Hundred Eyes,\" \"Sublime, Radiant, Avatar of the Sky\" will also lose an equivalent amount of HP. When \"Daythunder Raven,\" \"Shoot of Hundred Eyes,\" or \"Twig of Hundred Eyes\" receives a killing blow, \"Sublime, Radiant, Avatar of the Sky\" will also receive Toughness DMG, and \"Shoot of Hundred Eyes\" or \"Twig of Hundred Eyes\" will heal themselves and cannot be selected.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      1,
+      1,
+      0.2,
+      5,
+      0.8,
+      120
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401501212,
+    "name": "Stormfall",
+    "type": "Ability",
+    "trigger": "SkillP02",
+    "desc": "When it storms, the environment will have \"Thunderclouds.\" When \"Daythunder Raven,\" \"Shoot of Hundred Eyes,\" or \"Twig of Hundred Eyes\" receives a killing blow while \"Sublime, Radiant, Avatar of the Sky\" is not in \"Ionization\" state, reduces a certain amount of \"Thundercloud\" stacks and deals minor Lightning DMG to \"Sublime, Radiant, Avatar of the Sky.\"",
+    "tag": "Talent",
+    "phases": [
+      2
+    ],
+    "params": [
+      0.0019999999,
+      0.005,
+      1,
+      3,
+      5
+    ],
+    "extraEffects": [
+      193,
+      211
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401501213,
+    "type": "Ability",
+    "trigger": "SkillP03",
+    "tag": "Charging",
+    "params": [
+      0.75,
+      1.25,
+      0.25,
+      0.75
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401501214,
+    "name": "The Sun Unyielding",
+    "type": "Ability",
+    "trigger": "SkillP04",
+    "desc": "When it is sunny, the environment will have \"Temperature.\" At the start of any target's turn, \"Temperature\" rises. DMG dealt by targets will increase based on \"Temperature.\" All targets enter the \"Solar Storm\" state. At the start of a target's turn, deals Fire DMG based on the \"Temperature.\" This DMG is \"Non-fatal.\" When \"Daythunder Raven,\" \"Shoot of Hundred Eyes,\" or \"Twig of Hundred Eyes\" receive a killing blow, \"Temperature\" is lowered.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.0019999999,
+      1,
+      0.01
+    ],
+    "extraEffects": [
+      189,
+      191
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 401501215,
+    "type": "Ability",
+    "trigger": "SkillP05",
+    "tag": "Charging",
+    "params": [
+      0,
+      40,
+      0.3,
+      1
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -43838,6 +44910,24 @@ let enemyAbilityData = [
     "atkType": "Basic ATK"
   },
   {
+    "id": 406202101,
+    "name": "Hemotort Gnaw",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Imaginary DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.75
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
     "id": 406301001,
     "name": "Hemotort Whip",
     "type": "Ability",
@@ -44057,6 +45147,61 @@ let enemyAbilityData = [
     ],
     "delay": 1,
     "atkType": "Basic ATK"
+  },
+  {
+    "id": 406301201,
+    "name": "Hemotort Spew",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Imaginary DMG to one designated target and adjacent targets.",
+    "tag": "Blast",
+    "phases": [
+      1
+    ],
+    "params": [
+      1.5,
+      1
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 406301202,
+    "name": "Menacing Warning",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Enters the Charging state and increases DMG dealt by this unit. Uses \"Hemotort Vortex\" in the next action. Being attacked while Charging increases the DMG dealt by the next attack.",
+    "tag": "Charging",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.25,
+      0.25
+    ],
+    "delay": 1.5,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 406301203,
+    "name": "Hemotort Vortex",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals Imaginary DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      1.75
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
   },
   {
     "id": 406401001,
@@ -45104,6 +46249,40 @@ let enemyAbilityData = [
     "atkType": "Basic ATK"
   },
   {
+    "id": 501201101,
+    "name": "Crackle Shot",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Quantum DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      1
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 501201102,
+    "name": "Happiness Charm",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Increases this unit's ATK.",
+    "tag": "Enhance",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.5
+    ],
+    "delay": 0.5,
+    "atkType": "Basic ATK"
+  },
+  {
     "id": 501202001,
     "name": "Arrest",
     "type": "Ability",
@@ -45219,6 +46398,24 @@ let enemyAbilityData = [
     "atkType": "Basic ATK"
   },
   {
+    "id": 501203201,
+    "name": "Read Or Die!",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Physical DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      1
+    ],
+    "delay": 1,
+    "element": "Physical",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
     "id": 501204001,
     "name": "Go On, Delay More!",
     "type": "Ability",
@@ -45267,6 +46464,27 @@ let enemyAbilityData = [
       1,
       0.3,
       2
+    ],
+    "delay": 1,
+    "element": "Ice",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501204201,
+    "name": "Go On, Delay More!",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Ice DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      1,
+      0,
+      0,
+      0
     ],
     "delay": 1,
     "element": "Ice",
@@ -45331,6 +46549,28 @@ let enemyAbilityData = [
     "energyPerHit": 10
   },
   {
+    "id": 501205201,
+    "name": "Quick, Double Time!",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Wind DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "delay": 1,
+    "element": "Wind",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
     "id": 501206001,
     "name": "Move It, Get to Work!",
     "type": "Ability",
@@ -45379,6 +46619,27 @@ let enemyAbilityData = [
       1,
       2,
       0.7
+    ],
+    "delay": 1,
+    "element": "Thunder",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501206201,
+    "name": "Move It, Get to Work!",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Lightning DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      1,
+      0,
+      0,
+      0
     ],
     "delay": 1,
     "element": "Thunder",
@@ -45508,6 +46769,54 @@ let enemyAbilityData = [
     "atkType": "Basic ATK"
   },
   {
+    "id": 501209201,
+    "name": "Boosting Strength",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Enters the \"Strength Boost!\" state. Uses \"Windmill Defacer\" in the next turn.",
+    "tag": "Charging",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501209202,
+    "name": "Windmill Defacer",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Physical DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2.5,
+      6
+    ],
+    "delay": 1,
+    "element": "Physical",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501209203,
+    "name": "IFF Systems Malfunction",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "Switches its attack target between friendly units and targets every time after it is attacked by a target.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
     "id": 501210001,
     "name": "Love ❤ Stormfall Day",
     "type": "Ability",
@@ -45585,6 +46894,24 @@ let enemyAbilityData = [
     "atkType": "Basic ATK"
   },
   {
+    "id": 501210101,
+    "name": "Love ❤ Stormfall Day",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Lightning DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      1
+    ],
+    "delay": 1,
+    "element": "Thunder",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
     "id": 501211001,
     "name": "Capture",
     "type": "Ability",
@@ -45627,6 +46954,20 @@ let enemyAbilityData = [
       258
     ],
     "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501211101,
+    "name": "Capture",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Imaginary DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "element": "Imaginary",
     "atkType": "Basic ATK"
   },
   {
@@ -46041,6 +47382,80 @@ let enemyAbilityData = [
     "atkType": "Basic ATK"
   },
   {
+    "id": 501301301,
+    "name": "Sweep the Left!",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Starting from the leftmost target, uses a sweeping attack on 3 consecutive targets, dealing minor Imaginary DMG.",
+    "tag": "Sweep",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.5
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 501301302,
+    "name": "Sweep the Right!",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Starting from the rightmost target, uses a sweeping attack on 3 consecutive targets, dealing minor Imaginary DMG.",
+    "tag": "Sweep",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.5
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 501301303,
+    "name": "Performance Rehearsal",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Enters Charging state. On its next action, uses \"Time to Rock!\" After taking several hits, immediately dispels the Charging state, grants the target team magical energy, and increases DMG taken by this unit.",
+    "tag": "Charging",
+    "phases": [
+      1
+    ],
+    "params": [
+      3,
+      1,
+      0.4,
+      2
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501301304,
+    "name": "Time to Rock!",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals massive Imaginary DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      2
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
     "id": 501303001,
     "name": "The Stroke",
     "type": "Ability",
@@ -46318,6 +47733,91 @@ let enemyAbilityData = [
       261,
       262,
       258
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501303201,
+    "name": "The Stroke",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals Physical DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 501303202,
+    "name": "Sweeping Hues",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Deals Physical DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 501303203,
+    "name": "Dancing Splendor",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals Physical DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 501303204,
+    "name": "Palette Meltdown",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Deals massive Physical DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      1
+    ],
+    "delay": 1,
+    "alert": true,
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 501303205,
+    "name": "Enhance",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Permanently increases the DMG dealt by this unit.",
+    "tag": "Enhance",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.5
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -48228,6 +49728,271 @@ let enemyAbilityData = [
     "atkType": "Basic ATK"
   },
   {
+    "id": 501402201,
+    "name": "Soulmend Shears",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Quantum DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      2
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501402202,
+    "name": "Zero-Blind-Spot Cleanse",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Quantum DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      1.5
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 501402203,
+    "name": "High-Temp Sterilization Mode",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Enters the \"Steam Wash\" state, increasing DMG dealt by this unit, and gains a set number of \"Lasting Antibac\" stacks, reducing the DMG this unit receives. When all stacks of \"Lasting Antibac\" are removed, exits the \"Steam Wash\" state and receives massive DMG.",
+    "tag": "Enhance",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0.5,
+      3,
+      0,
+      0.15,
+      3,
+      0
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501402204,
+    "name": "Potent Foam Soap",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals Quantum DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      2
+    ],
+    "params": [
+      1.5
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 501402205,
+    "name": "Duty Prep in Progress...",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Enters the \"Raring to Go\" state. Uses \"Saturation Cleaning!\" in the next action.",
+    "tag": "Charging",
+    "phases": [
+      1,
+      2
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501402206,
+    "name": "Saturation Cleaning!",
+    "type": "Ability",
+    "trigger": "Skill06",
+    "desc": "Deals massive Quantum DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      2
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 501402301,
+    "name": "Soulmend Shears",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Quantum DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      3,
+      0
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501402302,
+    "name": "Zero-Blind-Spot Cleanse",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Quantum DMG to all targets and grants the target team Punchline.",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      3,
+      3
+    ],
+    "extraEffects": [
+      258
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501402303,
+    "name": "High-Temp Sterilization Mode",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Enters the \"Steam Wash\" state, increasing DMG dealt by this unit, and gains a set number of \"Lasting Antibac\" stacks, reducing the DMG this unit receives. When all stacks of \"Lasting Antibac\" are removed, exits the \"Steam Wash\" state and receives massive DMG.",
+    "tag": "Enhance",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.3,
+      2,
+      0.3,
+      0.1,
+      2,
+      0.3
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501402304,
+    "name": "Potent Foam Soap",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals Quantum DMG to all targets and applies the \"Work Is Bliss!\" effect, while causing the target team to gain Punchline.",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      1.5,
+      1,
+      0.01,
+      5,
+      2,
+      1
+    ],
+    "extraEffects": [
+      285,
+      258
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501402305,
+    "name": "Duty Prep in Progress...",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Enters the \"Raring to Go\" state and gains the \"Weakness Protected\" effect. Uses \"Saturation Cleaning!\" in the next action.",
+    "tag": "Charging",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501402306,
+    "name": "Saturation Cleaning!",
+    "type": "Ability",
+    "trigger": "Skill06",
+    "desc": "Deals massive Quantum DMG to all targets and grants the target team Punchline.",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      5,
+      8
+    ],
+    "extraEffects": [
+      258
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 501402308,
+    "name": "Scrubber's Mutiny",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "When battle begins, summons an \"Alloy Pommy\" for the target team. Each time targets gain 1 Punchline, the target team's \"Alloy Pommy\" accumulates 1 Charge. Upon reaching #1[i] Charge, it can use an Enhanced Basic ATK to remove 1 stack of \"Lasting Antibac\" from \"Alloy Mechatron: King Pom-Pom.\" The target team's \"Alloy Pommy\" cannot be targeted by either side.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      20,
+      0.55,
+      0,
+      10,
+      0.6,
+      0.8
+    ],
+    "extraEffects": [
+      258
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK"
+  },
+  {
     "id": 501403001,
     "name": "Cinder Crimson Blockprint",
     "type": "Ability",
@@ -48507,6 +50272,158 @@ let enemyAbilityData = [
     "phases": [
       1,
       2
+    ],
+    "params": [
+      0.7,
+      0.3,
+      0.33,
+      2,
+      0.3
+    ],
+    "extraEffects": [
+      281,
+      283,
+      284
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501403201,
+    "name": "Cinder Crimson Blockprint",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Fire DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      3
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 501403202,
+    "name": "Infernal Gory Blockprint",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Fire DMG to one designated target character, with a high chance to inflict \"Grudge Ablaze.\"",
+    "tag": "Impair",
+    "phases": [
+      1
+    ],
+    "params": [
+      4,
+      2,
+      1
+    ],
+    "extraEffects": [
+      281,
+      283,
+      284
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 501403203,
+    "name": "Infernal Gory Blockprint: Finest Ink",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Deals Fire DMG to 2 designated target characters, with a high chance to inflict \"Grudge Ablaze.\"",
+    "tag": "Impair",
+    "phases": [
+      2,
+      3
+    ],
+    "params": [
+      4,
+      2,
+      1
+    ],
+    "extraEffects": [
+      281,
+      283,
+      284
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 501403205,
+    "name": "Phantasmal Fiend-Sketch",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Summons \"God-Devourer Offspring\" and applies \"Beyond-Human Realm\" to all summons, then causes summons with 2 or more stacks of \"Beyond-Human Realm\" to immediately take action.",
+    "tag": "Summon",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      0,
+      0.5,
+      0.01,
+      0.05,
+      1,
+      0.1
+    ],
+    "extraEffects": [
+      282
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 501403206,
+    "name": "Grand Vista: Devourer Murata",
+    "type": "Ability",
+    "trigger": "Skill06",
+    "desc": "Deals Fire DMG to all targets with a high chance to inflict \"Grudge Ablaze\" to the attacked characters.",
+    "tag": "AoE ATK",
+    "phases": [
+      3
+    ],
+    "params": [
+      4,
+      2,
+      1,
+      2,
+      0
+    ],
+    "extraEffects": [
+      281,
+      283,
+      284
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 15
+  },
+  {
+    "id": 501403207,
+    "name": "Everburning Grudge",
+    "type": "Talent",
+    "trigger": "SkillP01",
+    "desc": "Some of this unit's abilities inflict \"Grudge Ablaze\" on attacked characters.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2,
+      3
     ],
     "params": [
       0.7,
@@ -49035,9 +50952,9 @@ let enemyAbilityData = [
   {
     "id": 502302003,
     "name": "Rite of Expiation",
-    "type": "Ability",
+    "type": "Talent",
     "trigger": "Skill03",
-    "desc": "When the \"Devour\" state applied by this unit is dispelled, increases the ATK of the target unit whose \"Devour\" state was dispelled.",
+    "desc": "When the \"Devour\" state applied by this unit is dispelled, increases the ATK of the target unit who has dispelled the \"Devour\" state.",
     "tag": "Talent",
     "phases": [
       1
@@ -49073,6 +50990,91 @@ let enemyAbilityData = [
     "type": "Talent",
     "trigger": "PassiveSkill01",
     "desc": "Each time after this unit is attacked by a target unit, increases the Maximum Restorable HP of the target character inflicted with the \"Devour\" state by this unit, and returns a certain percentage of ATK. After receiving a certain number of attacks from target units, or when its Weakness is Broken, dispels the \"Devour\" state applied by this unit.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 502302101,
+    "name": "Rite of Gorging",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Fire DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      1.5
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 502302102,
+    "name": "Feast of the Living Offering",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Causes one designated target character to enter the \"Devour\" state, stealing a certain percentage of the character's ATK.",
+    "tag": "Impair",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.25,
+      501,
+      6,
+      0.5
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 502302103,
+    "name": "Rite of Expiation",
+    "type": "Talent",
+    "trigger": "Skill03",
+    "desc": "When the \"Devour\" state applied by this unit is dispelled, increases the ATK of the target unit whose \"Devour\" state was dispelled.",
+    "tag": "Support",
+    "phases": [
+      1
+    ],
+    "params": [
+      4,
+      3
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 502302104,
+    "name": "Banquet of Beasts",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals minor Fire DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1
+    ],
+    "params": [
+      2
+    ],
+    "delay": 1,
+    "element": "Fire",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 502302105,
+    "name": "Sacred Regurgitation",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "Each time after this unit is attacked by a target unit, increases the max restorable HP of the target character inflicted with the \"Devour\" state by this unit, and returns a certain percentage of ATK. After receiving a certain number of attacks from target units, or after its Weakness is Broken, dispels the \"Devour\" state applied by this unit.",
     "tag": "Talent",
     "phases": [
       1
@@ -50693,6 +52695,61 @@ let enemyAbilityData = [
     ],
     "params": [
       30
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 800208301,
+    "name": "S—S—S—Scared",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "The Trotter got spooked and will flee in 2 turns.",
+    "tag": "Others",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 800208302,
+    "name": "Run... Run!",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "The Treasure Trotter is panicking and will flee in 1 turn.",
+    "tag": "Others",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 800208303,
+    "name": "Phew... Escaped",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "The Trotter flees in an instant.",
+    "tag": "Others",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 800208304,
+    "name": "P—Protect You",
+    "type": "Talent",
+    "trigger": "SkillP01",
+    "desc": "When entering battle, applies \"P—Protect You\" to all friendly units. Each stack of \"P—Protect You\" can nullify DMG received from 1 incoming hit. \"P—Protect You\" stacks are shared across the team.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      25
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -52748,6 +54805,57 @@ let enemyAbilityData = [
     ],
     "delay": 0.5,
     "atkType": "Basic ATK"
+  },
+  {
+    "id": 801204001,
+    "name": "Punchline Analysis",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Quantum DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
+  },
+  {
+    "id": 801204002,
+    "name": "Curtain Call",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "Upon receiving fatal DMG, applies \"Tragic Core\" to targets.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      1.5
+    ],
+    "extraEffects": [
+      308
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 801204003,
+    "name": "Comedian Ensemble",
+    "type": "Ability",
+    "trigger": "Skill01Multi",
+    "desc": "Adds \"Comedian Ensemble\" to the Action Order. Every time \"Comedian Ensemble\" takes action, all \"Comediologists\" will launch an attack simultaneously.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 5
   },
   {
     "id": 801214001,
@@ -55684,6 +57792,839 @@ let enemyAbilityData = [
     ],
     "delay": 1,
     "atkType": "Basic ATK"
+  },
+  {
+    "id": 801503001,
+    "name": "Existential Farce",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      2.5
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 1
+  },
+  {
+    "id": 801503002,
+    "name": "Mocked Gaze",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      3.5
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 2
+  },
+  {
+    "id": 801503003,
+    "name": "Nihility's Joy",
+    "type": "Ability",
+    "trigger": "Skill01P3",
+    "desc": "Deals DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      3
+    ],
+    "params": [
+      2.5
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 3
+  },
+  {
+    "id": 801503004,
+    "name": "Triple Contempt",
+    "type": "Ability",
+    "trigger": "Skill02P3",
+    "desc": "Deals DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      3
+    ],
+    "params": [
+      3.5
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 4
+  },
+  {
+    "id": 801503005,
+    "name": "Meme Setup",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Enters Charging state. Applies a total of 4 stacks of \"Meme'd\" to target characters.",
+    "tag": "Impair",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      3,
+      0.15,
+      5,
+      0.6,
+      0,
+      0
+    ],
+    "extraEffects": [
+      309
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 5
+  },
+  {
+    "id": 801503006,
+    "name": "Meme Carnival",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Detonate all \"Meme'd.\"",
+    "tag": "AoE ATK",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      5.6
+    ],
+    "extraEffects": [
+      309
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 6
+  },
+  {
+    "id": 801503007,
+    "name": "Gambit of Converging Fates",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Roll several dice. Select one to take effect on targets, while the remaining effects take effect on friendly units.",
+    "tag": "Enhance",
+    "phases": [
+      2,
+      3
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "sort": 7
+  },
+  {
+    "id": 801503008,
+    "name": "Board-Clearing Ball Game",
+    "type": "Ability",
+    "trigger": "Skill06",
+    "desc": "Deals Imaginary DMG to all targets, and has a high chance to inflict \"Strong Reverberation\" on a random target.",
+    "tag": "AoE ATK",
+    "phases": [
+      3
+    ],
+    "params": [
+      3,
+      0.6
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 8
+  },
+  {
+    "id": 801503009,
+    "name": "May This Journey Lead You to Destruction",
+    "type": "Ability",
+    "trigger": "Skill07",
+    "desc": "Deals massive Quantum DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      2
+    ],
+    "params": [
+      5.6
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 20,
+    "sort": 9
+  },
+  {
+    "id": 801503010,
+    "name": "Let Elation Hang in Silence",
+    "type": "Ability",
+    "trigger": "Skill08",
+    "desc": "Deals massive Quantum DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      3
+    ],
+    "params": [
+      5.6,
+      0.35
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 20,
+    "sort": 10
+  },
+  {
+    "id": 801503011,
+    "name": "Three-Faced Incarnation",
+    "type": "Ability",
+    "trigger": "SkillP01",
+    "desc": "In this battle, \"Lord of Saṃvartasthāyi, Asat Pramad\" has three faces: \"Formation,\" \"Existence,\" and \"Decay.\" Each face has its own unique ability.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      1,
+      1.1,
+      1.9,
+      1.7,
+      0,
+      0.35
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 11
+  },
+  {
+    "id": 801503012,
+    "name": "Jokes From Hell",
+    "type": "Ability",
+    "trigger": "SkillP02",
+    "desc": "Adds \"The Game Is On\" to the Action Order. Every time \"The Game Is On\" takes action, dispels Lord of Saṃvartasthāyi, Asat Pramad's Crowd Control debuffs and Weakness Broken state, and uses \"May This Journey Lead You to Destruction.\"",
+    "tag": "Talent",
+    "phases": [
+      2
+    ],
+    "extraEffects": [
+      296
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 12
+  },
+  {
+    "id": 801503013,
+    "name": "Three Faces as One",
+    "type": "Ability",
+    "trigger": "SkillP03",
+    "desc": "During this phase, \"Formation,\" \"Existence,\" and \"Decay\" share HP, and the \"Formation\" and \"Existence\" faces cannot be targeted. Every time \"The Game Is On\" takes action, dispels Lord of Saṃvartasthāyi, Asat Pramad's Crowd Control debuffs and Weakness Broken state, and uses \"Let Elation Hang in Silence.\"",
+    "tag": "Talent",
+    "phases": [
+      3
+    ],
+    "extraEffects": [
+      296
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 13
+  },
+  {
+    "id": 801503014,
+    "name": "Warm-Up Act",
+    "type": "Ability",
+    "trigger": "SkillP04",
+    "desc": "Adds \"Take the Stage\" to the Action Order. Every time \"Take the Stage\" takes action, summons \"Comediologist.\"",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      0.35,
+      0.25,
+      0.15,
+      0.3
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "sort": 14
+  },
+  {
+    "id": 801504001,
+    "name": "Existential Farce",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      2.5
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 1
+  },
+  {
+    "id": 801504002,
+    "name": "Mocked Gaze",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      3.5
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 2
+  },
+  {
+    "id": 801504003,
+    "name": "Gambit of Converging Fates",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Roll several dice. Select one to take effect on targets, while the remaining effects take effect on friendly units.",
+    "tag": "Enhance",
+    "phases": [
+      2,
+      3
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 7
+  },
+  {
+    "id": 801504004,
+    "type": "Ability",
+    "trigger": "Skill05_End",
+    "tag": "Enhance",
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 801504005,
+    "name": "Three-Faced Incarnation",
+    "type": "Ability",
+    "trigger": "SkillP01",
+    "desc": "In this battle, \"Lord of Saṃvartasthāyi, Asat Pramad\" has three faces: \"Formation,\" \"Existence,\" and \"Decay.\" Each face has its own unique ability.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      1,
+      1,
+      2.5,
+      2,
+      0,
+      0.2
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 10
+  },
+  {
+    "id": 801504006,
+    "name": "Jokes From Hell",
+    "type": "Ability",
+    "trigger": "SkillP02",
+    "desc": "Adds \"The Game Is On\" to the Action Order. Every time \"The Game Is On\" takes action, dispels Lord of Saṃvartasthāyi, Asat Pramad's Crowd Control debuffs and Weakness Broken state, and uses \"May This Journey Lead You to Destruction.\"",
+    "tag": "Talent",
+    "phases": [
+      2
+    ],
+    "extraEffects": [
+      296
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 11
+  },
+  {
+    "id": 801504007,
+    "name": "Three Faces as One",
+    "type": "Ability",
+    "trigger": "SkillP03",
+    "desc": "During this phase, \"Formation,\" \"Existence,\" and \"Decay\" share HP, and the \"Formation\" and \"Existence\" faces cannot be targeted. Every time \"The Game Is On\" takes action, dispels Lord of Saṃvartasthāyi, Asat Pramad's Crowd Control debuffs and Weakness Broken state, and uses \"Let Elation Hang in Silence.\"",
+    "tag": "Talent",
+    "phases": [
+      3
+    ],
+    "extraEffects": [
+      296
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 12
+  },
+  {
+    "id": 801504008,
+    "name": "Warm-Up Act",
+    "type": "Ability",
+    "trigger": "SkillP04",
+    "desc": "Adds \"Take the Stage\" to the Action Order. Every time \"Take the Stage\" takes action, summons \"Comediologist.\"",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      0.35,
+      0.25,
+      0.15,
+      0.3
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "sort": 13
+  },
+  {
+    "id": 801504009,
+    "name": "Meme Setup",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Enters Charging state. Applies a total of 4 stacks of \"Meme'd\" to target characters.",
+    "tag": "Impair",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      3,
+      0.15,
+      5,
+      1,
+      0,
+      0
+    ],
+    "extraEffects": [
+      309
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 5
+  },
+  {
+    "id": 801504010,
+    "name": "Meme Carnival",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Detonate all \"Meme'd.\"",
+    "tag": "AoE ATK",
+    "phases": [
+      1,
+      2
+    ],
+    "extraEffects": [
+      309
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 6
+  },
+  {
+    "id": 801504011,
+    "name": "May This Journey Lead You to Destruction",
+    "type": "Ability",
+    "trigger": "Skill07",
+    "desc": "Deals massive DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      2
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 8
+  },
+  {
+    "id": 801504012,
+    "name": "Let Elation Hang in Silence",
+    "type": "Ability",
+    "trigger": "Skill08",
+    "desc": "Deals massive DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      3
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 9
+  },
+  {
+    "id": 801504013,
+    "name": "Nihility's Joy",
+    "type": "Ability",
+    "trigger": "Skill01P3",
+    "desc": "Deals DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      3
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 3
+  },
+  {
+    "id": 801504014,
+    "name": "Triple Contempt",
+    "type": "Ability",
+    "trigger": "Skill02P3",
+    "desc": "Deals DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      3
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 4
+  },
+  {
+    "id": 801505001,
+    "name": "Existential Farce",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      2.5
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 1
+  },
+  {
+    "id": 801505002,
+    "name": "Mocked Gaze",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals DMG to one designated target.",
+    "tag": "Single Target",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      3.5
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 2
+  },
+  {
+    "id": 801505003,
+    "name": "Board-Clearing Ball Game",
+    "type": "Ability",
+    "trigger": "Skill06",
+    "desc": "Deals Imaginary DMG to all targets, and has a high chance to inflict \"Strong Reverberation\" on a random target.",
+    "tag": "AoE ATK",
+    "phases": [
+      3
+    ],
+    "params": [
+      3,
+      0.6
+    ],
+    "delay": 1,
+    "element": "Imaginary",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 8
+  },
+  {
+    "id": 801505004,
+    "name": "Let Elation Hang in Silence",
+    "type": "Ability",
+    "trigger": "Skill08",
+    "desc": "Deals massive Quantum DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      3
+    ],
+    "params": [
+      5.6,
+      0.35
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 20,
+    "sort": 10
+  },
+  {
+    "id": 801505005,
+    "name": "Nihility's Joy",
+    "type": "Ability",
+    "trigger": "Skill01P3",
+    "desc": "Deals DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      3
+    ],
+    "params": [
+      2.5
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 3
+  },
+  {
+    "id": 801505006,
+    "name": "Triple Contempt",
+    "type": "Ability",
+    "trigger": "Skill02P3",
+    "desc": "Deals DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      3
+    ],
+    "params": [
+      3.5
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 4
+  },
+  {
+    "id": 801505007,
+    "name": "Three-Faced Incarnation",
+    "type": "Ability",
+    "trigger": "SkillP01",
+    "desc": "In this battle, \"Lord of Saṃvartasthāyi, Asat Pramad\" has three faces: \"Formation,\" \"Existence,\" and \"Decay.\" Each face has its own unique ability.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      1,
+      1.1,
+      1.9,
+      1.7,
+      0,
+      0.35
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 11
+  },
+  {
+    "id": 801505008,
+    "name": "Jokes From Hell",
+    "type": "Ability",
+    "trigger": "SkillP02",
+    "desc": "Adds \"The Game Is On\" to the Action Order. Every time \"The Game Is On\" takes action, dispels Lord of Saṃvartasthāyi, Asat Pramad's Crowd Control debuffs and Weakness Broken state, and uses \"May This Journey Lead You to Destruction.\"",
+    "tag": "Talent",
+    "phases": [
+      2
+    ],
+    "extraEffects": [
+      296
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 12
+  },
+  {
+    "id": 801505009,
+    "name": "Three Faces as One",
+    "type": "Ability",
+    "trigger": "SkillP03",
+    "desc": "During this phase, \"Formation,\" \"Existence,\" and \"Decay\" share HP, and the \"Formation\" and \"Existence\" faces cannot be targeted. Every time \"The Game Is On\" takes action, dispels Lord of Saṃvartasthāyi, Asat Pramad's Crowd Control debuffs and Weakness Broken state, and uses \"Let Elation Hang in Silence.\"",
+    "tag": "Talent",
+    "phases": [
+      3
+    ],
+    "extraEffects": [
+      296
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 13
+  },
+  {
+    "id": 801505010,
+    "name": "Warm-Up Act",
+    "type": "Ability",
+    "trigger": "SkillP04",
+    "desc": "Adds \"Take the Stage\" to the Action Order. Every time \"Take the Stage\" takes action, summons \"Comediologist.\"",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2,
+      3
+    ],
+    "params": [
+      0.35,
+      0.25,
+      0.15,
+      0.3
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "sort": 14
+  },
+  {
+    "id": 801505011,
+    "name": "Meme Setup",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Enters Charging state. Applies a total of 4 stacks of \"Meme'd\" to target characters.",
+    "tag": "Impair",
+    "phases": [
+      1,
+      2
+    ],
+    "extraEffects": [
+      309
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 5
+  },
+  {
+    "id": 801505012,
+    "name": "Meme Carnival",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Detonate all \"Meme'd.\"",
+    "tag": "AoE ATK",
+    "phases": [
+      1,
+      2
+    ],
+    "extraEffects": [
+      309
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 6
+  },
+  {
+    "id": 801505013,
+    "name": "Gambit of Converging Fates",
+    "type": "Ability",
+    "trigger": "Skill05",
+    "desc": "Roll several dice. Select one to take effect on targets, while the remaining effects take effect on friendly units.",
+    "tag": "Enhance",
+    "phases": [
+      2
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 7
+  },
+  {
+    "id": 801505014,
+    "name": "May This Journey Lead You to Destruction",
+    "type": "Ability",
+    "trigger": "Skill07",
+    "desc": "Deals massive Quantum DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      2
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10,
+    "sort": 9
   },
   {
     "id": 802201001,

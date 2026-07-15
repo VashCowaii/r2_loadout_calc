@@ -42,7 +42,7 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        696
+        706
       ]
     },
     "202209101": {
@@ -69,7 +69,7 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        696
+        706
       ]
     },
     "202209102": {
@@ -96,7 +96,7 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        696
+        706
       ],
       "enemyTag": [
         "MGrid_4005"

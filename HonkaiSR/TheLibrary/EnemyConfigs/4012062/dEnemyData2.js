@@ -45,11 +45,11 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        1702,
-        1703
+        1725,
+        1726
       ],
       "abilityOrder": [
-        1702
+        1725
       ]
     },
     "401206201": {
@@ -79,11 +79,11 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        1702,
-        1703
+        1725,
+        1726
       ],
       "abilityOrder": [
-        1702
+        1725
       ],
       "enemyTag": [
         "MGrid_4008"

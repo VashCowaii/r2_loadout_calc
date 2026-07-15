@@ -46,10 +46,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        1731
+        1763
       ],
       "abilityOrder": [
-        1731
+        1763
       ],
       "enemyTag": [
         "MonsterType_W4_BossPartP3",

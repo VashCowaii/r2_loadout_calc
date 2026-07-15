@@ -42,10 +42,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        645
+        648
       ],
       "abilityOrder": [
-        645
+        648
       ]
     },
     "201102001": {
@@ -72,10 +72,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        645
+        648
       ],
       "abilityOrder": [
-        645
+        648
       ]
     },
     "201102002": {
@@ -102,10 +102,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        645
+        648
       ],
       "abilityOrder": [
-        645
+        648
       ]
     },
     "201102003": {
@@ -132,10 +132,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        645
+        648
       ],
       "abilityOrder": [
-        645
+        648
       ]
     },
     "201102004": {
@@ -162,10 +162,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        645
+        648
       ],
       "abilityOrder": [
-        645
+        648
       ]
     },
     "201102005": {
@@ -192,10 +192,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        645
+        648
       ],
       "abilityOrder": [
-        645
+        648
       ],
       "enemyTag": [
         "MGrid_4004"
@@ -225,10 +225,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        645
+        648
       ],
       "abilityOrder": [
-        645
+        648
       ]
     }
   }

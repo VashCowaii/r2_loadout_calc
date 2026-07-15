@@ -46,13 +46,13 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        482,
-        483,
-        484,
         485,
         486,
         487,
-        488
+        488,
+        489,
+        490,
+        491
       ],
       "summons": [
         {
@@ -89,13 +89,13 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        482,
-        483,
-        484,
         485,
         486,
         487,
-        488
+        488,
+        489,
+        490,
+        491
       ],
       "summons": [
         {
@@ -132,13 +132,13 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        482,
-        483,
-        484,
         485,
         486,
         487,
-        488
+        488,
+        489,
+        490,
+        491
       ],
       "summons": [
         {
@@ -175,13 +175,13 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        482,
-        483,
-        484,
         485,
         486,
         487,
-        488
+        488,
+        489,
+        490,
+        491
       ],
       "summons": [
         {
@@ -218,13 +218,13 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        482,
-        483,
-        484,
         485,
         486,
         487,
-        488
+        488,
+        489,
+        490,
+        491
       ],
       "summons": [
         {
@@ -261,13 +261,13 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        482,
-        483,
-        484,
         485,
         486,
         487,
-        488
+        488,
+        489,
+        490,
+        491
       ],
       "summons": [
         {
@@ -304,13 +304,13 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        482,
-        483,
-        484,
         485,
         486,
         487,
-        488
+        488,
+        489,
+        490,
+        491
       ],
       "summons": [
         {
@@ -347,13 +347,13 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        482,
-        483,
-        484,
         485,
         486,
         487,
-        488
+        488,
+        489,
+        490,
+        491
       ],
       "summons": [
         {
@@ -390,13 +390,13 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        482,
-        483,
-        484,
         485,
         486,
         487,
-        488
+        488,
+        489,
+        490,
+        491
       ],
       "enemyTag": [
         "MGrid_4003"

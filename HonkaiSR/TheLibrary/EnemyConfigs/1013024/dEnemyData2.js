@@ -51,15 +51,15 @@ let enemyData = {
         "STAT_CTRL": 0.75
       },
       "abilities": [
-        361,
-        362,
-        363,
         364,
         365,
         366,
         367,
         368,
-        369
+        369,
+        370,
+        371,
+        372
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha2",

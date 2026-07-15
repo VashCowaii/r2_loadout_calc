@@ -42,11 +42,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1410,
-        1411
+        1427,
+        1428
       ],
       "abilityOrder": [
-        1410
+        1427
       ],
       "enemyTag": [
         "Argenti_Totem"
@@ -76,11 +76,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1410,
-        1411
+        1427,
+        1428
       ],
       "abilityOrder": [
-        1410
+        1427
       ],
       "enemyTag": [
         "Argenti_Totem"
@@ -110,11 +110,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1410,
-        1411
+        1427,
+        1428
       ],
       "abilityOrder": [
-        1410
+        1427
       ],
       "enemyTag": [
         "Argenti_Totem"
@@ -144,11 +144,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1410,
-        1411
+        1427,
+        1428
       ],
       "abilityOrder": [
-        1410
+        1427
       ],
       "enemyTag": [
         "Argenti_Totem"
@@ -178,11 +178,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1410,
-        1411
+        1427,
+        1428
       ],
       "abilityOrder": [
-        1410
+        1427
       ],
       "enemyTag": [
         "Argenti_Totem",

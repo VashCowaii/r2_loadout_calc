@@ -41,10 +41,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        685
+        695
       ],
       "abilityOrder": [
-        685
+        695
       ]
     },
     "202205101": {
@@ -71,10 +71,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        685
+        695
       ],
       "abilityOrder": [
-        685
+        695
       ]
     },
     "202205102": {
@@ -101,10 +101,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        685
+        695
       ],
       "abilityOrder": [
-        685
+        695
       ],
       "enemyTag": [
         "MGrid_4005"
