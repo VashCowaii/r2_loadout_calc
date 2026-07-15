@@ -819,28 +819,28 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"799207340\">Enemy_W4_Manta_LocalLegend_Virus_NightMare</a>[<span class=\"descriptionNumberColor\">Glacial Erosion</span>]",
                       "duration": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_11517) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_11517",
+                        "operator": "Variables[0] (UnusedUnderThisBase_11519) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_11519",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_11517"
+                          "UnusedUnderThisBase_11519"
                         ]
                       },
                       "valuePerStack": {
                         "MDF_DotHPRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11516) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_11516",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11518) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11518",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_11516"
+                            "UnusedUnderThisBase_11518"
                           ]
                         },
                         "MDF_DotDamageRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11504) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_11504",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11506) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11506",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_11504"
+                            "UnusedUnderThisBase_11506"
                           ]
                         }
                       }
@@ -855,28 +855,28 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1965379982\">Enemy_W4_Manta_LocalLegend_Virus_Avatar</a>[<span class=\"descriptionNumberColor\">Glacial Erosion</span>]",
                       "duration": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_11517) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_11517",
+                        "operator": "Variables[0] (UnusedUnderThisBase_11519) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_11519",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_11517"
+                          "UnusedUnderThisBase_11519"
                         ]
                       },
                       "valuePerStack": {
                         "MDF_DotHPRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11516) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_11516",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11518) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11518",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_11516"
+                            "UnusedUnderThisBase_11518"
                           ]
                         },
                         "MDF_DotDamageRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11504) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_11504",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11506) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11506",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_11504"
+                            "UnusedUnderThisBase_11506"
                           ]
                         }
                       }

@@ -1722,7 +1722,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1667717158\">Saber_Passive_ExceedSpStatus</a>[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
           "counter": 1,
           "stackType": "ReplaceByCaster",
-          "description": "<span class=\"descriptionNumberColor\">Saber_00_EntityStockSPForShow</span> overflow Energy accumulated.",
+          "description": "<span class=\"descriptionNumberColor\">Saber_00_EntityStockSPForShow_Fake</span> overflow Energy accumulated.",
           "type": "Other",
           "statusName": "Blessing of the Lake",
           "execute": [

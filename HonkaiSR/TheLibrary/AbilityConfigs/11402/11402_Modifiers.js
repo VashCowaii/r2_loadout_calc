@@ -1481,12 +1481,12 @@ const configAbility = {
               "name": "Define Custom Variable",
               "variableName": "SpeedAddTotal",
               "value": {
-                "operator": "Variables[0] (_Layer) || Variables[1] (UnusedUnderThisBase_12254) || MUL || RETURN",
-                "displayLines": "(_Layer * UnusedUnderThisBase_12254)",
+                "operator": "Variables[0] (_Layer) || Variables[1] (UnusedUnderThisBase_12256) || MUL || RETURN",
+                "displayLines": "(_Layer * UnusedUnderThisBase_12256)",
                 "constants": [],
                 "variables": [
                   "_Layer",
-                  "UnusedUnderThisBase_12254"
+                  "UnusedUnderThisBase_12256"
                 ]
               }
             },
@@ -1601,14 +1601,14 @@ const configAbility = {
               "name": "Define Custom Variable",
               "variableName": "_AttackConvert",
               "value": {
-                "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (UnusedUnderThisBase_13089) || MUL || Variables[2] (_ServantCurrentSpeed) || Variables[3] (UnusedUnderThisBase_13090) || MUL || ADD || RETURN",
-                "displayLines": "((_CurrentSpeed * UnusedUnderThisBase_13089) + (_ServantCurrentSpeed * UnusedUnderThisBase_13090))",
+                "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (UnusedUnderThisBase_13091) || MUL || Variables[2] (_ServantCurrentSpeed) || Variables[3] (UnusedUnderThisBase_13092) || MUL || ADD || RETURN",
+                "displayLines": "((_CurrentSpeed * UnusedUnderThisBase_13091) + (_ServantCurrentSpeed * UnusedUnderThisBase_13092))",
                 "constants": [],
                 "variables": [
                   "_CurrentSpeed",
-                  "UnusedUnderThisBase_13089",
+                  "UnusedUnderThisBase_13091",
                   "_ServantCurrentSpeed",
-                  "UnusedUnderThisBase_13090"
+                  "UnusedUnderThisBase_13092"
                 ]
               }
             },
