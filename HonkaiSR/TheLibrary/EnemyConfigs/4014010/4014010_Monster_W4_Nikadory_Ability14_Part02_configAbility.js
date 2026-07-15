@@ -60,11 +60,11 @@ const configAbility = {
           "name": "Define Custom Variable",
           "variableName": "Skill04Damage",
           "value": {
-            "operator": "Variables[0] (UnusedUnderThisBase_11608) || RETURN",
-            "displayLines": "UnusedUnderThisBase_11608",
+            "operator": "Variables[0] (UnusedUnderThisBase_11610) || RETURN",
+            "displayLines": "UnusedUnderThisBase_11610",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_11608"
+              "UnusedUnderThisBase_11610"
             ]
           }
         }

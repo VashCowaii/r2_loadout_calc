@@ -45,13 +45,13 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2093,
-        2094,
-        2095,
-        2096
+        2151,
+        2152,
+        2153,
+        2154
       ],
       "abilityOrder": [
-        2094
+        2152
       ],
       "itNeverEnds": {}
     },
@@ -82,13 +82,13 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2093,
-        2094,
-        2095,
-        2096
+        2151,
+        2152,
+        2153,
+        2154
       ],
       "abilityOrder": [
-        2094
+        2152
       ],
       "itNeverEnds": {}
     }

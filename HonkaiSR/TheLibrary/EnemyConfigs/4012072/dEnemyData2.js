@@ -45,9 +45,9 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1712,
-        1713,
-        1714
+        1735,
+        1736,
+        1737
       ]
     }
   }

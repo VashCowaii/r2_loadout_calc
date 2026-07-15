@@ -45,10 +45,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3133,
-        3134,
-        3135,
-        3136
+        3288,
+        3289,
+        3290,
+        3291
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -82,10 +82,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3133,
-        3134,
-        3135,
-        3136
+        3288,
+        3289,
+        3290,
+        3291
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -116,10 +116,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        3133,
-        3134,
-        3135,
-        3136
+        3288,
+        3289,
+        3290,
+        3291
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -153,10 +153,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3133,
-        3134,
-        3135,
-        3136
+        3288,
+        3289,
+        3290,
+        3291
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -190,10 +190,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3133,
-        3134,
-        3135,
-        3136
+        3288,
+        3289,
+        3290,
+        3291
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -227,10 +227,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3133,
-        3134,
-        3135,
-        3136
+        3288,
+        3289,
+        3290,
+        3291
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -264,17 +264,17 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3133,
-        3134,
-        3135,
-        3136
+        3288,
+        3289,
+        3290,
+        3291
       ],
       "enemyTag": [
         "SW_Minion01",
         "SW_Minion"
       ],
       "overrideParams": {
-        "3136": [
+        "3291": [
           [
             0.15,
             "-",

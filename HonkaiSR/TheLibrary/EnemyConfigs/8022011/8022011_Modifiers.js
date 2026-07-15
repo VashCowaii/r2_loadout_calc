@@ -127,11 +127,11 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-103304753\">Enemy_SW_Boss_01_IF_MinionsEnhancement</a>[<span class=\"descriptionNumberColor\">Growth Hormones</span>]",
                       "valuePerStack": {
                         "MDF_AttackAddedRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12792) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12792",
+                          "operator": "Variables[0] (UnusedUnderThisBase_12794) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_12794",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_12792"
+                            "UnusedUnderThisBase_12794"
                           ]
                         }
                       }

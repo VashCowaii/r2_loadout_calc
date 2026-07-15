@@ -41,11 +41,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2456,
-        2457
+        2514,
+        2515
       ],
       "abilityOrder": [
-        2403
+        2461
       ]
     },
     "406201001": {
@@ -72,14 +72,14 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2456,
-        2457
+        2514,
+        2515
       ],
       "abilityOrder": [
-        2403
+        2461
       ],
       "overrideParams": {
-        "2456": [
+        "2514": [
           [
             2,
             0.5
@@ -118,11 +118,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2456,
-        2457
+        2514,
+        2515
       ],
       "abilityOrder": [
-        2403
+        2461
       ]
     },
     "406201003": {
@@ -149,11 +149,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2456,
-        2457
+        2514,
+        2515
       ],
       "abilityOrder": [
-        2403
+        2461
       ]
     },
     "406201004": {
@@ -180,11 +180,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2456,
-        2457
+        2514,
+        2515
       ],
       "abilityOrder": [
-        2403
+        2461
       ]
     },
     "406201005": {
@@ -211,11 +211,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2456,
-        2457
+        2514,
+        2515
       ],
       "abilityOrder": [
-        2403
+        2461
       ]
     },
     "406201006": {
@@ -242,11 +242,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2456,
-        2457
+        2514,
+        2515
       ],
       "abilityOrder": [
-        2403
+        2461
       ]
     },
     "406201007": {
@@ -273,14 +273,14 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2456,
-        2457
+        2514,
+        2515
       ],
       "abilityOrder": [
-        2403
+        2461
       ],
       "overrideParams": {
-        "2456": [
+        "2514": [
           [
             1,
             0.8
@@ -319,14 +319,14 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2456,
-        2457
+        2514,
+        2515
       ],
       "abilityOrder": [
-        2403
+        2461
       ],
       "overrideParams": {
-        "2456": [
+        "2514": [
           [
             1,
             0.8
@@ -365,14 +365,14 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2456,
-        2457
+        2514,
+        2515
       ],
       "abilityOrder": [
-        2403
+        2461
       ],
       "overrideParams": {
-        "2456": [
+        "2514": [
           [
             1,
             0.8
@@ -411,14 +411,14 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2456,
-        2457
+        2514,
+        2515
       ],
       "abilityOrder": [
-        2403
+        2461
       ],
       "overrideParams": {
-        "2456": [
+        "2514": [
           [
             1,
             0.8
@@ -429,6 +429,52 @@ let enemyData = {
           null,
           null,
           "-",
+          "-"
+        ]
+      }
+    },
+    "406201011": {
+      "name": "Avenger Squad: Pheasant",
+      "scaleElite": 1,
+      "stArray": [
+        2.222716,
+        1,
+        0.7742,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Fire"
+      ],
+      "res": {
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        2514,
+        2515
+      ],
+      "abilityOrder": [
+        2461
+      ],
+      "overrideParams": {
+        "2514": [
+          [
+            0.75,
+            0.5
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
           "-"
         ]
       }

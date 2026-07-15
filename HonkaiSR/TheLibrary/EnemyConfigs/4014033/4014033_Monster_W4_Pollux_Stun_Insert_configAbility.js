@@ -36,11 +36,11 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "consumePercent": {
-            "operator": "Variables[0] (UnusedUnderThisBase_11950) || RETURN",
-            "displayLines": "UnusedUnderThisBase_11950",
+            "operator": "Variables[0] (UnusedUnderThisBase_11952) || RETURN",
+            "displayLines": "UnusedUnderThisBase_11952",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_11950"
+              "UnusedUnderThisBase_11952"
             ]
           }
         }
@@ -94,11 +94,11 @@ const configAbility = {
             "target": "{{Player Team All}}"
           },
           "healPercent": {
-            "operator": "Variables[0] (UnusedUnderThisBase_11960) || RETURN",
-            "displayLines": "UnusedUnderThisBase_11960",
+            "operator": "Variables[0] (UnusedUnderThisBase_11962) || RETURN",
+            "displayLines": "UnusedUnderThisBase_11962",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_11960"
+              "UnusedUnderThisBase_11962"
             ]
           },
           "formula": "Heal from Target MaxHP"

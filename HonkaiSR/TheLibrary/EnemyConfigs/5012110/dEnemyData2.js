@@ -41,11 +41,11 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        2553,
-        2554
+        2625,
+        2626
       ],
       "abilityOrder": [
-        2553
+        2625
       ]
     },
     "501211001": {
@@ -72,11 +72,11 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        2553,
-        2554
+        2625,
+        2626
       ],
       "abilityOrder": [
-        2553
+        2625
       ]
     },
     "501211002": {
@@ -103,14 +103,14 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        2553,
-        2554
+        2625,
+        2626
       ],
       "abilityOrder": [
-        2553
+        2625
       ],
       "overrideParams": {
-        "2554": [
+        "2626": [
           [
             "-",
             0.3,
@@ -127,6 +127,37 @@ let enemyData = {
           "-"
         ]
       }
+    },
+    "501211003": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        0.625,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Thunder",
+        "Quantum",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Fire": 0.2,
+        "Ice": 0.2,
+        "Wind": 0.2
+      },
+      "abilities": [
+        2625,
+        2626
+      ],
+      "abilityOrder": [
+        2625
+      ]
     }
   }
 }

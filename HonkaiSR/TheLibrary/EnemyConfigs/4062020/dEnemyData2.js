@@ -41,12 +41,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2460,
-        2461,
-        2462
+        2518,
+        2519,
+        2520
       ],
       "abilityOrder": [
-        2460
+        2518
       ]
     },
     "406202001": {
@@ -73,12 +73,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2460,
-        2461,
-        2462
+        2518,
+        2519,
+        2520
       ],
       "abilityOrder": [
-        2460
+        2518
       ]
     },
     "406202002": {
@@ -105,15 +105,15 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2460,
-        2461,
-        2462
+        2518,
+        2519,
+        2520
       ],
       "abilityOrder": [
-        2460
+        2518
       ],
       "overrideParams": {
-        "2460": [
+        "2518": [
           [
             2
           ],
@@ -151,15 +151,15 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2460,
-        2461,
-        2462
+        2518,
+        2519,
+        2520
       ],
       "abilityOrder": [
-        2460
+        2518
       ],
       "overrideParams": {
-        "2460": [
+        "2518": [
           [
             2
           ],
@@ -197,15 +197,15 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2460,
-        2461,
-        2462
+        2518,
+        2519,
+        2520
       ],
       "abilityOrder": [
-        2460
+        2518
       ],
       "overrideParams": {
-        "2460": [
+        "2518": [
           [
             2
           ],
@@ -243,15 +243,15 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2460,
-        2461,
-        2462
+        2518,
+        2519,
+        2520
       ],
       "abilityOrder": [
-        2460
+        2518
       ],
       "overrideParams": {
-        "2460": [
+        "2518": [
           [
             2
           ],

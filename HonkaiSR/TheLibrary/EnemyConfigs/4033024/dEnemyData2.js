@@ -42,11 +42,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2205,
-        2206,
-        2207,
-        2208,
-        2209
+        2263,
+        2264,
+        2265,
+        2266,
+        2267
       ],
       "enemyTag": [
         "RLElite"

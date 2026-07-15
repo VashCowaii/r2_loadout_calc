@@ -20,11 +20,11 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] (UnusedUnderThisBase_12256) || RETURN",
-            "displayLines": "UnusedUnderThisBase_12256",
+            "operator": "Variables[0] (UnusedUnderThisBase_12258) || RETURN",
+            "displayLines": "UnusedUnderThisBase_12258",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_12256"
+              "UnusedUnderThisBase_12258"
             ]
           },
           "enemyList": [
@@ -45,11 +45,11 @@ const configAbility = {
         {
           "name": "Create Enemies",
           "delayPercent": {
-            "operator": "Variables[0] (UnusedUnderThisBase_12257) || RETURN",
-            "displayLines": "UnusedUnderThisBase_12257",
+            "operator": "Variables[0] (UnusedUnderThisBase_12259) || RETURN",
+            "displayLines": "UnusedUnderThisBase_12259",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_12257"
+              "UnusedUnderThisBase_12259"
             ]
           },
           "enemyList": [
@@ -105,11 +105,11 @@ const configAbility = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12256) || RETURN",
-                "displayLines": "UnusedUnderThisBase_12256",
+                "operator": "Variables[0] (UnusedUnderThisBase_12258) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12258",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_12256"
+                  "UnusedUnderThisBase_12258"
                 ]
               },
               "enemyList": [
@@ -130,11 +130,11 @@ const configAbility = {
             {
               "name": "Create Enemies",
               "delayPercent": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12257) || RETURN",
-                "displayLines": "UnusedUnderThisBase_12257",
+                "operator": "Variables[0] (UnusedUnderThisBase_12259) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12259",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_12257"
+                  "UnusedUnderThisBase_12259"
                 ]
               },
               "enemyList": [

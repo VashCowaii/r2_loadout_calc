@@ -42,11 +42,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1675,
-        1676
+        1698,
+        1699
       ],
       "abilityOrder": [
-        1675
+        1698
       ],
       "enemyTag": [
         "MonsterType_W4_Shooter_00"

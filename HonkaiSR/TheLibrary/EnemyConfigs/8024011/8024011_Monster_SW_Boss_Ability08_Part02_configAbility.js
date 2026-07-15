@@ -50,11 +50,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Wind",
             "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12955) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12955",
+              "operator": "Variables[0] (UnusedUnderThisBase_12957) || RETURN",
+              "displayLines": "UnusedUnderThisBase_12957",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_12955"
+                "UnusedUnderThisBase_12957"
               ]
             },
             "Toughness": null,

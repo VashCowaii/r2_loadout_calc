@@ -43,16 +43,16 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        3037,
-        3038,
-        3039,
-        3040,
-        3041,
-        3042,
-        3043
+        3150,
+        3151,
+        3152,
+        3153,
+        3154,
+        3155,
+        3156
       ],
       "abilityOrder": [
-        3043,
+        3156,
         "ABILITY__DOES_NOT_EXIST"
       ],
       "enemyTag": [

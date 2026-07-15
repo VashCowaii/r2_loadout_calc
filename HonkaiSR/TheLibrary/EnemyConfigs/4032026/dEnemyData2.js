@@ -45,10 +45,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2103,
-        2104,
-        2105,
-        2106
+        2161,
+        2162,
+        2163,
+        2164
       ],
       "itNeverEnds": {}
     },
@@ -79,10 +79,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2103,
-        2104,
-        2105,
-        2106
+        2161,
+        2162,
+        2163,
+        2164
       ],
       "itNeverEnds": {
         "SkillIndex": 1
@@ -115,10 +115,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2103,
-        2104,
-        2105,
-        2106
+        2161,
+        2162,
+        2163,
+        2164
       ],
       "itNeverEnds": {
         "SkillIndex": 2
@@ -151,10 +151,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2103,
-        2104,
-        2105,
-        2106
+        2161,
+        2162,
+        2163,
+        2164
       ],
       "itNeverEnds": {
         "SkillIndex": 3

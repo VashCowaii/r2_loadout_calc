@@ -42,10 +42,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2204
+        2262
       ],
       "abilityOrder": [
-        2204
+        2262
       ]
     },
     "403302301": {
@@ -72,10 +72,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2204
+        2262
       ],
       "abilityOrder": [
-        2204
+        2262
       ]
     }
   }

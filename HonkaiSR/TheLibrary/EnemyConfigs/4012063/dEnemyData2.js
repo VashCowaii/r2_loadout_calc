@@ -45,11 +45,11 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        1704,
-        1705
+        1727,
+        1728
       ],
       "abilityOrder": [
-        1704
+        1727
       ]
     }
   }

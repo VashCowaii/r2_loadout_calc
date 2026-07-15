@@ -42,8 +42,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3143,
-        3144
+        3298,
+        3299
       ],
       "abilityOrder": [
         "ABILITY__DOES_NOT_EXIST"
@@ -76,8 +76,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3143,
-        3144
+        3298,
+        3299
       ],
       "abilityOrder": [
         "ABILITY__DOES_NOT_EXIST"
@@ -110,8 +110,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3143,
-        3144
+        3298,
+        3299
       ],
       "abilityOrder": [
         "ABILITY__DOES_NOT_EXIST"
@@ -144,8 +144,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3143,
-        3144
+        3298,
+        3299
       ],
       "abilityOrder": [
         "ABILITY__DOES_NOT_EXIST"
@@ -154,7 +154,7 @@ let enemyData = {
         "SW_Minion01"
       ],
       "overrideParams": {
-        "3144": [
+        "3299": [
           [
             0.15,
             "-",

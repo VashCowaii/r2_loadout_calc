@@ -611,19 +611,19 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-84648127\">Monster_W4_Pollux_BloodRange</a>[<span class=\"descriptionNumberColor\">Indulging Slumber</span>]",
           "valuePerStack": {
             "_HpLimitRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_11953) || RETURN",
-              "displayLines": "UnusedUnderThisBase_11953",
+              "operator": "Variables[0] (UnusedUnderThisBase_11955) || RETURN",
+              "displayLines": "UnusedUnderThisBase_11955",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_11953"
+                "UnusedUnderThisBase_11955"
               ]
             },
             "_FatigueRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_11986) || RETURN",
-              "displayLines": "UnusedUnderThisBase_11986",
+              "operator": "Variables[0] (UnusedUnderThisBase_11988) || RETURN",
+              "displayLines": "UnusedUnderThisBase_11988",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_11986"
+                "UnusedUnderThisBase_11988"
               ]
             }
           }
@@ -690,19 +690,19 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1709215218\">Monster_W4_Pollux_Strengthen</a>[<span class=\"descriptionNumberColor\">Fragrance of Death</span>]",
           "valuePerStack": {
             "MDF_ShowValue1": {
-              "operator": "Variables[0] (UnusedUnderThisBase_11952) || RETURN",
-              "displayLines": "UnusedUnderThisBase_11952",
+              "operator": "Variables[0] (UnusedUnderThisBase_11954) || RETURN",
+              "displayLines": "UnusedUnderThisBase_11954",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_11952"
+                "UnusedUnderThisBase_11954"
               ]
             },
             "MDF_SpeedUpRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_11952) || RETURN",
-              "displayLines": "UnusedUnderThisBase_11952",
+              "operator": "Variables[0] (UnusedUnderThisBase_11954) || RETURN",
+              "displayLines": "UnusedUnderThisBase_11954",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_11952"
+                "UnusedUnderThisBase_11954"
               ]
             }
           }

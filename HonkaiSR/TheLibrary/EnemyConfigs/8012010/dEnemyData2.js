@@ -43,13 +43,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02"
@@ -79,13 +79,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02"
@@ -115,13 +115,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02",
@@ -152,13 +152,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02",
@@ -189,13 +189,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02",
@@ -226,13 +226,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02",
@@ -263,13 +263,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02",
@@ -300,13 +300,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02",
@@ -337,13 +337,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02",
@@ -374,13 +374,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02"
@@ -410,13 +410,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02",
@@ -447,13 +447,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02"
@@ -483,13 +483,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02"
@@ -519,13 +519,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02"
@@ -555,13 +555,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02"
@@ -591,13 +591,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02"
@@ -627,13 +627,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02",
@@ -664,13 +664,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02",
@@ -701,13 +701,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02"
@@ -737,13 +737,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02"
@@ -773,13 +773,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02"
@@ -809,13 +809,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02"
@@ -845,13 +845,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02"
@@ -881,13 +881,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02"
@@ -917,13 +917,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02"
@@ -953,13 +953,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02"
@@ -989,13 +989,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02"
@@ -1025,13 +1025,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02"
@@ -1062,13 +1062,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02"
@@ -1098,13 +1098,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02"
@@ -1137,13 +1137,13 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02"
@@ -1173,13 +1173,13 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02"
@@ -1209,13 +1209,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2938,
-        2939,
-        2940
+        3048,
+        3049,
+        3050
       ],
       "abilityOrder": [
-        2938,
-        2939
+        3048,
+        3049
       ],
       "enemyTag": [
         "LockTarget02",

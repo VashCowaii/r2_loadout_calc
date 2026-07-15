@@ -43,9 +43,9 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1901,
-        1902,
-        1903
+        1938,
+        1939,
+        1940
       ],
       "summons": [
         {
@@ -84,9 +84,9 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1901,
-        1902,
-        1903
+        1938,
+        1939,
+        1940
       ],
       "summons": [
         {
@@ -125,9 +125,9 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1901,
-        1902,
-        1903
+        1938,
+        1939,
+        1940
       ],
       "summons": [
         {
@@ -166,9 +166,9 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1901,
-        1902,
-        1903
+        1938,
+        1939,
+        1940
       ],
       "summons": [
         {
@@ -207,9 +207,9 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1901,
-        1902,
-        1903
+        1938,
+        1939,
+        1940
       ],
       "summons": [
         {

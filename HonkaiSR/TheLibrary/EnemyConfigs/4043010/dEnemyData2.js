@@ -35,10 +35,10 @@ let enemyData = {
         "Imaginary"
       ],
       "abilities": [
-        2363
+        2421
       ],
       "abilityOrder": [
-        2363
+        2421
       ],
       "summons": [
         {
@@ -75,10 +75,10 @@ let enemyData = {
         "Imaginary"
       ],
       "abilities": [
-        2363
+        2421
       ],
       "abilityOrder": [
-        2363
+        2421
       ],
       "summons": [
         {

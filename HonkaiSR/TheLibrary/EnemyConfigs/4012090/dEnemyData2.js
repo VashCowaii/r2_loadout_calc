@@ -46,10 +46,47 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        1729
+        1761
       ],
       "abilityOrder": [
-        1729
+        1761
+      ],
+      "enemyTag": [
+        "MonsterType_W4_BossPart",
+        "MonsterType_W4_BossPartRight"
+      ]
+    },
+    "401209001": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        2.222716,
+        1,
+        0.089625,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Ice",
+        "Quantum"
+      ],
+      "res": {
+        "Fire": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Imaginary": 0.2
+      },
+      "resMod": {
+        "STAT_CTRL": 1
+      },
+      "abilities": [
+        1761
+      ],
+      "abilityOrder": [
+        1761
       ],
       "enemyTag": [
         "MonsterType_W4_BossPart",
