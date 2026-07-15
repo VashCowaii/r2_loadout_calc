@@ -6240,6 +6240,16 @@ const userTriggers = {
             startingCycle: 150,
             afterCycles: 100,
         },
+        "AA": {
+            hasCycles: true,
+            startingCycle: 300,
+            afterCycles: 100,
+        },
+        "PF": {
+            hasCycles: true,
+            startingCycle: 150,
+            afterCycles: 100,
+        },
         "AS": {
             hasCycles: false,
             startingCycle: 2000,

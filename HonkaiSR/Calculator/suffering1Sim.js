@@ -72,7 +72,7 @@ const sim = {
                 AVentry.AV = Math.max(0,AVentry.AV-battleData.cycleAV);//prevent negative action value
             }
             battleData.sumAV += battleData.cycleAV;
-            battleData.cycleAV = 100;
+            battleData.cycleAV = battleData.cycleAVReset;
             battleData.cycleAVPassed = 0;
             if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "EndCycle", cycle: battleData.currentCycle-1, AV: battleData.sumAV})}
             
@@ -97,22 +97,6 @@ const sim = {
             return min;
         });
 
-        // if (nextOrder.AV >= battleData.cycleAV && !isConditionCheck) {
-        //     //if the next action would take place AFTER the next cycle starts, then reach the cycle instead before proceeding to the next turn
-        //     // console.log(`CYCLE --${battleData.currentCycle}-- END`);
-        //     battleData.currentCycle += 1;
-        //     // console.log(`CYCLE --${battleData.currentCycle}-- START`);
-
-        //     for (let AVentry of nextTurnAV) {
-        //         AVentry.AV = Math.max(0,AVentry.AV-battleData.cycleAV);//prevent negative action value
-        //     }
-        //     battleData.sumAV += battleData.cycleAV;
-        //     battleData.cycleAV = 100;
-        //     if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "EndCycle", cycle: battleData.currentCycle-1, AV: battleData.sumAV})}
-            
-
-        //     return null;
-        // }
         return nextOrder;
     },
     getNextQueuedAllyTurnBuffableOnly(battleData,isConditionCheck) {
@@ -131,22 +115,6 @@ const sim = {
             return min;
         });
 
-        // if (nextOrder.AV >= battleData.cycleAV && !isConditionCheck) {
-        //     //if the next action would take place AFTER the next cycle starts, then reach the cycle instead before proceeding to the next turn
-        //     // console.log(`CYCLE --${battleData.currentCycle}-- END`);
-        //     battleData.currentCycle += 1;
-        //     // console.log(`CYCLE --${battleData.currentCycle}-- START`);
-
-        //     for (let AVentry of nextTurnAV) {
-        //         AVentry.AV = Math.max(0,AVentry.AV-battleData.cycleAV);//prevent negative action value
-        //     }
-        //     battleData.sumAV += battleData.cycleAV;
-        //     battleData.cycleAV = 100;
-        //     if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "EndCycle", cycle: battleData.currentCycle-1, AV: battleData.sumAV})}
-            
-
-        //     return null;
-        // }
         return nextOrder;
     },
     pullToCurrentAV(battleData,sourceTurn) {
@@ -340,15 +308,38 @@ const sim = {
         battleActions.assignAttackTargets(battleData);
         battleActions.assignAttackTargetsEnemy(battleData);
     },
+    cycleModeSettings: {
+        "MOC": {
+            initial: 150,
+            reset: 100,
+            max: 10,
+        },
+        "AA": {
+            initial: 300,
+            reset: 100,
+            max: 6,
+        },
+        "PF": {
+            initial: 150,
+            reset: 100,
+            max: 4,
+        },
+    },
     battlePrep(characterObject,isLoggyLogger,querySettingsOverride,battleSettings) {
+
+        const cycleSettings = sim.cycleModeSettings[battleSettings.cycleMode];
+        console.log(cycleSettings)
+        // battleData.cyclesMax = battleSettings.cyclesToRun + 1;
+
         let battleData = {
             "isLoggyLogger": isLoggyLogger ?? false,
             "inAction": false,
             "sumAV": 0,
-            "cycleAV": 150,
+            "cycleAV": cycleSettings.initial,
+            "cycleAVReset": cycleSettings.reset,
             "cycleAVPassed": 0,
             "currentCycle": 0,
-            "cyclesMax": 1,//+1 bc 0 counts as a cycle in this loop
+            "cyclesMax": 1 + Math.min(cycleSettings.max,battleSettings.cyclesToRun),//+1 bc 0 counts as a cycle in this loop
             "nextTurnAV": [],
             "menuStats": {},
             "skillPointCurrent": 3,//starting points
@@ -766,7 +757,7 @@ const sim = {
     battleStart(characterObject,isLoggyLogger,querySettingsOverride,battleSettings) {
         let battleData = sim.battlePrep(characterObject,isLoggyLogger,querySettingsOverride,battleSettings);
 
-        battleData.cyclesMax = battleSettings.cyclesToRun + 1;
+        // battleData.cyclesMax = battleSettings.cyclesToRun + 1;
         battleData.techniquesAllowed = battleSettings.useTechniques;
 
         battleData.wavesToRun = battleSettings.totalWaves;
