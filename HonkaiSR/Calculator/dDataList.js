@@ -63,6 +63,7 @@ const dataListerObject = {
         "The Unreachable Side": "Blade",
         "Thus Burns the Dawn": "Phainon",
         "Whereabouts Should Dreams Rest": "Firefly",
+        "I Am As You Behold": "Gilgamesh",
 
         //ERUDITION
         "Night on the Milky Way": "Himeko",
@@ -72,6 +73,8 @@ const dataListerObject = {
         "Ninjutsu Inscription: Dazzling Evilbreaker": "Rappa",
         "Into the Unreachable Veil": "The Herta",
         "Life Should Be Cast to Flames": "Anaxa",
+        "Flickering Stars": "Rin Tohsaka",
+        "A Star That Lights the Night": "Himeko • Nova",
 
         //HARMONY
         "A Grounded Ascent": "Sunday",
