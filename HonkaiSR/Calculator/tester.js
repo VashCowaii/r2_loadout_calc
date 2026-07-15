@@ -3409,7 +3409,7 @@ const userTriggers = {
     midDraggin(e) {
         e.preventDefault();
     },
-
+    
     openBattleSettings() {
         userTriggers.updateMainMenuDisplayed(2);
         userTriggers.updateBattleViewDisplayed('SettingsExpand');

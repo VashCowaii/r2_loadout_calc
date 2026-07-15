@@ -1148,6 +1148,10 @@ const conditionListChars = [
     "char3",
     "char4",
 ];
+for (let characterName in characters) {
+    conditionListChars.push(characterName)
+}
+
 const conditionListCharsType = [
     "Character",
     "Memosprite",
@@ -1304,7 +1308,7 @@ const rotationsUISuffering = {
         // console.log(charName)
         // Self
         let targetName = "";
-        if (targetSlot === "Self") {targetName = charName;}
+        if (targetSlot === "Self" || characters[charName]) {targetName = charName;}
         else {
             const charObject = globalRecords.character;
             targetName = charObject[targetSlot].name;
@@ -1332,14 +1336,13 @@ const rotationsUISuffering = {
             returnString += `<option value="${condition.refName}" ${condition.refName === selected ? "selected" : ""}>${condition.valueName}</option>`;
         }
 
-
         return onlyReturnFirstValid ? null : returnString;
     },
     getConditionListCharSpecialValues(selected,conditionArray,charName,targetSlot,onlyReturnFirstValid) {
         // console.log(charName)
         // Self
         let targetName = "";
-        if (targetSlot === "Self") {targetName = charName;}
+        if (targetSlot === "Self"|| characters[charName]) {targetName = charName;}
         else {
             const charObject = globalRecords.character;
             targetName = charObject[targetSlot].name;
@@ -2062,8 +2065,7 @@ const rotationsUISuffering = {
         return `<span class="traceAttackTargetTypeConditionDescHighlight" style="--schmancyColorOverride: ${shmancyColorFinal};">[${finalValue}]</span>`;
     },
     getSummaryCharPreviewIcon(value,slotRef) {
-        const targetName = rotationsUISuffering.getSlotNameFinal(value,slotRef);
-
+        const targetName = characters[value] ? value : rotationsUISuffering.getSlotNameFinal(value,slotRef);
         const characterIconPath = "/HonkaiSR/" + characters[targetName].icon;
 
         return `<div class="rotationsCharacterTargetPreviewBox">
@@ -2276,7 +2278,11 @@ const rotationsUISuffering = {
         // console.log(returnString)
         return returnString;
     },
-    Buff(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {
+    Buff(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {//TODO: read note
+        //right now we technically enforce all possible buffs that can be considered in a condition to be a buff from the context of the current battle
+        //but if we're allowing out of context conditions to be stored this may cause a problem down the road where someone might
+        //end up pasting a condition into a team and getting a new buff name assigned from the current context rather than prior
+        //lower priority for the moment though.
 
         // {type: "Buff", target: "Self", targetType: "Character", buffName: "Benison of Paper and Rites", state: true},
 
@@ -3148,10 +3154,10 @@ const rotationsUISuffering = {
 
         const characterObject = globalRecords.character;
         const target = destination.target;
-        const targetSlot = characterObject[target === "Self" ? `char${globalUI.currentCharacterDisplayed}` : target.toLowerCase()].name;
+        const targetSlot = characters[target] ? target : (characterObject[target === "Self" ? `char${globalUI.currentCharacterDisplayed}` : target.toLowerCase()].name);
 
-        const firstValidState = rotationsUISuffering.getConditionListCharStates(destination.stateName,null,characterName,destination.target ?? "Self",true);
-        // console.log(firstValidState)
+        const firstValidState = rotationsUISuffering.getConditionListCharStates(destination.stateName,null,targetSlot,destination.target ?? "Self",true);
+        
 
         const getConditionList = rotationsUISuffering.getConditionList;
 
@@ -3224,7 +3230,7 @@ const rotationsUISuffering = {
                     <div class="rotationsSectionConditionHolderBox">
                         
                         <select class="rotationActionSelectorSub" id="${baseIDString}ValueName" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,2,event)">
-                            ${rotationsUISuffering.getConditionListCharStates(default2,null,characterName,destination.target ?? "Self",false)}
+                            ${rotationsUISuffering.getConditionListCharStates(default2,null,targetSlot,destination.target ?? "Self",false)}
                         </select>
                         <select class="rotationActionSelectorSub" id="${baseIDString}State" onchange="rotationsUISuffering.updateRotationObject([${newArray}],'${skillSlot}','${characterName}',false,3,event)">
                             ${getConditionList(default3,conditionListBoolean)}
@@ -4104,7 +4110,7 @@ const rotationsUISuffering = {
 
         const characterObject = globalRecords.character;
         const target = destination.target;
-        const targetSlot = characterObject[target === "Self" ? `char${globalUI.currentCharacterDisplayed}` : target.toLowerCase()].name;
+        const targetSlot = characters[target] ? target : (characterObject[target === "Self" ? `char${globalUI.currentCharacterDisplayed}` : target.toLowerCase()].name);
 
         const firstValidValue = rotationsUISuffering.getConditionListCharSpecialValues(destination.specialValue,null,targetSlot,destination.target ?? "Self",true);
         // console.log(firstValidState)
