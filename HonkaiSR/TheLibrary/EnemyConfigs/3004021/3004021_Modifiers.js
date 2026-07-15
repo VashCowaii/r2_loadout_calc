@@ -4174,11 +4174,11 @@ const configAbility = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_Negative_Count_Max",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_10324) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_10324",
+                        "operator": "Variables[0] (UnusedUnderThisBase_10326) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_10326",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_10324"
+                          "UnusedUnderThisBase_10326"
                         ]
                       }
                     }
@@ -4201,11 +4201,11 @@ const configAbility = {
                           "name": "Define Custom Variable",
                           "variableName": "MDF_Negative_Count_Max",
                           "value": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_10326) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_10326",
+                            "operator": "Variables[0] (UnusedUnderThisBase_10328) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_10328",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_10326"
+                              "UnusedUnderThisBase_10328"
                             ]
                           }
                         }
@@ -4228,11 +4228,11 @@ const configAbility = {
                               "name": "Define Custom Variable",
                               "variableName": "MDF_Negative_Count_Max",
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_10318) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_10318",
+                                "operator": "Variables[0] (UnusedUnderThisBase_10320) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_10320",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_10318"
+                                  "UnusedUnderThisBase_10320"
                                 ]
                               }
                             }
@@ -4248,11 +4248,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_Negative_Count_Max",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_10324) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_10324",
+                    "operator": "Variables[0] (UnusedUnderThisBase_10326) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_10326",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_10324"
+                      "UnusedUnderThisBase_10326"
                     ]
                   }
                 }
@@ -4350,13 +4350,13 @@ const configAbility = {
                   "variableName": "MDF_Negative_Count",
                   "context": "ContextModifier",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_10325) || SUB || RETURN",
-                    "displayLines": "(0 - UnusedUnderThisBase_10325)",
+                    "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_10327) || SUB || RETURN",
+                    "displayLines": "(0 - UnusedUnderThisBase_10327)",
                     "constants": [
                       0
                     ],
                     "variables": [
-                      "UnusedUnderThisBase_10325"
+                      "UnusedUnderThisBase_10327"
                     ]
                   },
                   "max": 100

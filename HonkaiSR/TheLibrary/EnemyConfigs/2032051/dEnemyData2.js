@@ -45,12 +45,12 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        841,
-        842,
-        843
+        851,
+        852,
+        853
       ],
       "abilityOrder": [
-        2937
+        3047
       ],
       "enemyTag": [
         "SuperArmor_Behit_Big"

@@ -41,11 +41,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        680,
-        681
+        690,
+        691
       ],
       "abilityOrder": [
-        680
+        690
       ]
     },
     "202204001": {
@@ -72,11 +72,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        680,
-        681
+        690,
+        691
       ],
       "abilityOrder": [
-        680
+        690
       ]
     },
     "202204002": {
@@ -103,11 +103,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        680,
-        681
+        690,
+        691
       ],
       "abilityOrder": [
-        680
+        690
       ]
     },
     "202204003": {
@@ -134,11 +134,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        680,
-        681
+        690,
+        691
       ],
       "abilityOrder": [
-        680
+        690
       ]
     },
     "202204004": {
@@ -165,11 +165,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        680,
-        681
+        690,
+        691
       ],
       "abilityOrder": [
-        680
+        690
       ]
     },
     "202204005": {
@@ -196,11 +196,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        680,
-        681
+        690,
+        691
       ],
       "abilityOrder": [
-        680
+        690
       ]
     },
     "202204006": {
@@ -227,11 +227,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        680,
-        681
+        690,
+        691
       ],
       "abilityOrder": [
-        680
+        690
       ],
       "enemyTag": [
         "MGrid_4005"
@@ -261,11 +261,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        680,
-        681
+        690,
+        691
       ],
       "abilityOrder": [
-        680
+        690
       ]
     }
   }

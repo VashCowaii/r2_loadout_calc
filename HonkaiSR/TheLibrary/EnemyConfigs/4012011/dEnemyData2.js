@@ -41,7 +41,7 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        1655
+        1676
       ],
       "enemyTag": [
         "MonsterType_W4_Strongman_00"

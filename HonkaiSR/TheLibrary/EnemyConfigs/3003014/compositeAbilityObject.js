@@ -3296,11 +3296,11 @@ const compositeAbilityObject = {
             {
               "name": "Assign Advance/Delay to Current Ability Use",
               "adjustmentValue": {
-                "operator": "Variables[0] (UnusedUnderThisBase_9592) || RETURN",
-                "displayLines": "UnusedUnderThisBase_9592",
+                "operator": "Variables[0] (UnusedUnderThisBase_9594) || RETURN",
+                "displayLines": "UnusedUnderThisBase_9594",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_9592"
+                  "UnusedUnderThisBase_9594"
                 ]
               },
               "adjustmentType": "="

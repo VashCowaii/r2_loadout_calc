@@ -34,14 +34,14 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        815,
-        816,
-        817,
-        818,
-        819
+        825,
+        826,
+        827,
+        828,
+        829
       ],
       "abilityOrder": [
-        816
+        826
       ],
       "itNeverEnds": {
         "MonsterCount": 10

@@ -41,11 +41,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1066,
-        1067,
-        1068,
-        1069,
-        1070
+        1076,
+        1077,
+        1078,
+        1079,
+        1080
       ],
       "enemyTag": [
         "MonsterType_W3_Clock_00",

@@ -42,9 +42,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        692,
-        693,
-        694
+        702,
+        703,
+        704
       ]
     },
     "202208101": {
@@ -71,9 +71,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        692,
-        693,
-        694
+        702,
+        703,
+        704
       ]
     },
     "202208102": {
@@ -100,9 +100,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        692,
-        693,
-        694
+        702,
+        703,
+        704
       ],
       "enemyTag": [
         "MGrid_4005"

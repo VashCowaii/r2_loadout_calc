@@ -42,10 +42,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        971
+        981
       ],
       "abilityOrder": [
-        971
+        981
       ]
     },
     "300102001": {
@@ -72,10 +72,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        971
+        981
       ],
       "abilityOrder": [
-        971
+        981
       ]
     },
     "300102002": {
@@ -102,10 +102,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        971
+        981
       ],
       "abilityOrder": [
-        971
+        981
       ]
     },
     "300102003": {
@@ -132,10 +132,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        971
+        981
       ],
       "abilityOrder": [
-        971
+        981
       ]
     },
     "300102004": {
@@ -162,10 +162,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        971
+        981
       ],
       "abilityOrder": [
-        971
+        981
       ]
     },
     "300102005": {
@@ -192,10 +192,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        971
+        981
       ],
       "abilityOrder": [
-        971
+        981
       ]
     },
     "300102006": {
@@ -222,10 +222,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        971
+        981
       ],
       "abilityOrder": [
-        971
+        981
       ]
     },
     "300102007": {
@@ -252,10 +252,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        971
+        981
       ],
       "abilityOrder": [
-        971
+        981
       ],
       "enemyTag": [
         "MGrid_4006"
