@@ -1,0 +1,1 @@
+let enemyData = "It is generally advisable and in the interest of both both parties, if one is going to LIVE-scrape another site, that they at least notify the other site they'll be doing it. That I need to discover it personally is a little amusing, given the context I have about this."
