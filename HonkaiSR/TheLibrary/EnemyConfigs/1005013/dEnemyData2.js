@@ -46,9 +46,6 @@ let enemyData = {
         "STAT_Confine": 1
       },
       "abilities": [
-        235,
-        236,
-        237,
         238,
         239,
         240,
@@ -57,7 +54,10 @@ let enemyData = {
         243,
         244,
         245,
-        246
+        246,
+        247,
+        248,
+        249
       ],
       "enemyTag": [
         "IF_Boss",

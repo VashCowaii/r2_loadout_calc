@@ -44,11 +44,11 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        165,
-        166,
-        167,
         168,
-        169
+        169,
+        170,
+        171,
+        172
       ],
       "enemyTag": [
         "IF_Boss",
@@ -85,11 +85,11 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        165,
-        166,
-        167,
         168,
-        169
+        169,
+        170,
+        171,
+        172
       ],
       "enemyTag": [
         "IF_Boss",
@@ -126,11 +126,11 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        165,
-        166,
-        167,
         168,
-        169
+        169,
+        170,
+        171,
+        172
       ],
       "enemyTag": [
         "IF_Boss",
@@ -167,11 +167,11 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        165,
-        166,
-        167,
         168,
-        169
+        169,
+        170,
+        171,
+        172
       ],
       "enemyTag": [
         "IF_Boss",
@@ -208,11 +208,11 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        165,
-        166,
-        167,
         168,
-        169
+        169,
+        170,
+        171,
+        172
       ],
       "enemyTag": [
         "IF_Boss",
@@ -249,11 +249,11 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        165,
-        166,
-        167,
         168,
-        169
+        169,
+        170,
+        171,
+        172
       ],
       "enemyTag": [
         "IF_Boss",

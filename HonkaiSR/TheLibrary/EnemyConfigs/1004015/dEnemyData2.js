@@ -45,14 +45,14 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        86,
-        87,
-        88,
         89,
         90,
         91,
         92,
-        93
+        93,
+        94,
+        95,
+        96
       ],
       "summons": [
         {
@@ -111,14 +111,14 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        86,
-        87,
-        88,
         89,
         90,
         91,
         92,
-        93
+        93,
+        94,
+        95,
+        96
       ],
       "summons": [
         {

@@ -45,10 +45,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        193,
-        194,
-        195,
-        196
+        196,
+        197,
+        198,
+        199
       ],
       "enemyTag": [
         "W1_Bronya",
@@ -83,10 +83,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        193,
-        194,
-        195,
-        196
+        196,
+        197,
+        198,
+        199
       ],
       "enemyTag": [
         "W1_Bronya",
@@ -121,10 +121,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        193,
-        194,
-        195,
-        196
+        196,
+        197,
+        198,
+        199
       ],
       "enemyTag": [
         "W1_Bronya",
@@ -159,10 +159,10 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        193,
-        194,
-        195,
-        196
+        196,
+        197,
+        198,
+        199
       ],
       "enemyTag": [
         "W1_Bronya",

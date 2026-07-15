@@ -860,6 +860,54 @@ let enemyData = {
         "W1_Soldier",
         "MGrid_4002"
       ]
+    },
+    "100205029": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        2.222716,
+        1,
+        0.782273,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Ice"
+      ],
+      "res": {
+        "Fire": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        21
+      ],
+      "abilityOrder": [
+        21
+      ],
+      "enemyTag": [
+        "W1_Soldier"
+      ],
+      "overrideParams": {
+        "21": [
+          [
+            0.5,
+            0
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          "-"
+        ]
+      }
     }
   }
 }

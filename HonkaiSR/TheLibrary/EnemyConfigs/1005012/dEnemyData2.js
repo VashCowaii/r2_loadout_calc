@@ -54,16 +54,16 @@ let enemyData = {
         "STAT_Confine": 1
       },
       "abilities": [
-        225,
-        226,
-        227,
         228,
         229,
         230,
         231,
         232,
         233,
-        234
+        234,
+        235,
+        236,
+        237
       ],
       "enemyTag": [
         "Week"

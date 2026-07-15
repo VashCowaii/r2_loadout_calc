@@ -777,15 +777,15 @@ const compositeAbilityObject = {
                         "variables": []
                       },
                       "valuePercent": {
-                        "operator": "Variables[0] (MDF_ShieldPercentage) || Constants[0] (5) || DIV || Variables[1] (MDF_Count) || MUL || Variables[2] (UnusedUnderThisBase_7888) || MUL || RETURN",
-                        "displayLines": "(((MDF_ShieldPercentage / 5) * MDF_Count) * UnusedUnderThisBase_7888)",
+                        "operator": "Variables[0] (MDF_ShieldPercentage) || Constants[0] (5) || DIV || Variables[1] (MDF_Count) || MUL || Variables[2] (UnusedUnderThisBase_7890) || MUL || RETURN",
+                        "displayLines": "(((MDF_ShieldPercentage / 5) * MDF_Count) * UnusedUnderThisBase_7890)",
                         "constants": [
                           5
                         ],
                         "variables": [
                           "MDF_ShieldPercentage",
                           "MDF_Count",
-                          "UnusedUnderThisBase_7888"
+                          "UnusedUnderThisBase_7890"
                         ]
                       },
                       "formula": "HP Scaling (Shield)"

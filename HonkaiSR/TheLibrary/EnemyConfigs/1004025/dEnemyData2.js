@@ -46,9 +46,6 @@ let enemyData = {
         "STAT_Entangle": 0.75
       },
       "abilities": [
-        152,
-        153,
-        154,
         155,
         156,
         157,
@@ -58,7 +55,10 @@ let enemyData = {
         161,
         162,
         163,
-        164
+        164,
+        165,
+        166,
+        167
       ],
       "enemyTag": [
         "IF_Boss"

@@ -45,15 +45,15 @@ let enemyData = {
         "STAT_Confine": 1
       },
       "abilities": [
-        64,
-        65,
-        66,
         67,
         68,
         69,
         70,
         71,
-        72
+        72,
+        73,
+        74,
+        75
       ],
       "enemyTag": [
         "IF_Boss",

@@ -44,16 +44,16 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        170,
-        171,
-        172,
         173,
         174,
         175,
         176,
         177,
         178,
-        179
+        179,
+        180,
+        181,
+        182
       ],
       "enemyTag": [
         "W1_Gepard_2Phase"
@@ -102,16 +102,16 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        170,
-        171,
-        172,
         173,
         174,
         175,
         176,
         177,
         178,
-        179
+        179,
+        180,
+        181,
+        182
       ],
       "enemyTag": [
         "W1_Gepard_2Phase"
@@ -160,16 +160,16 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        170,
-        171,
-        172,
         173,
         174,
         175,
         176,
         177,
         178,
-        179
+        179,
+        180,
+        181,
+        182
       ],
       "enemyTag": [
         "W1_Gepard_2Phase"
@@ -218,16 +218,16 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        170,
-        171,
-        172,
         173,
         174,
         175,
         176,
         177,
         178,
-        179
+        179,
+        180,
+        181,
+        182
       ],
       "enemyTag": [
         "W1_Gepard_2Phase"

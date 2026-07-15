@@ -13,11 +13,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-2038076408\">Monster_Gepard_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Aggravate</span>]",
       "duration": {
-        "operator": "Variables[0] (UnusedUnderThisBase_7923) || RETURN",
-        "displayLines": "UnusedUnderThisBase_7923",
+        "operator": "Variables[0] (UnusedUnderThisBase_7925) || RETURN",
+        "displayLines": "UnusedUnderThisBase_7925",
         "constants": [],
         "variables": [
-          "UnusedUnderThisBase_7923"
+          "UnusedUnderThisBase_7925"
         ]
       }
     },

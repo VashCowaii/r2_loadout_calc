@@ -45,13 +45,13 @@ let enemyData = {
         "STAT_Confine": 1
       },
       "abilities": [
-        94,
-        95,
-        96,
         97,
         98,
         99,
-        100
+        100,
+        101,
+        102,
+        103
       ],
       "enemyTag": [
         "RL",

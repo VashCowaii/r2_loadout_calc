@@ -44,11 +44,11 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        108,
-        109,
-        110,
         111,
-        112
+        112,
+        113,
+        114,
+        115
       ],
       "summons": [
         {
@@ -94,11 +94,11 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        108,
-        109,
-        110,
         111,
-        112
+        112,
+        113,
+        114,
+        115
       ],
       "enemyTag": [
         "NoDieEffect"
@@ -147,11 +147,11 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        108,
-        109,
-        110,
         111,
-        112
+        112,
+        113,
+        114,
+        115
       ],
       "enemyTag": [
         "NoDieEffect"
@@ -207,11 +207,11 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        108,
-        109,
-        110,
         111,
-        112
+        112,
+        113,
+        114,
+        115
       ],
       "enemyTag": [
         "NoDieEffect"
@@ -260,17 +260,17 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        108,
-        109,
-        110,
         111,
-        112
+        112,
+        113,
+        114,
+        115
       ],
       "abilityOrder": [
-        108,
-        109,
-        110,
-        111
+        111,
+        112,
+        113,
+        114
       ],
       "summons": [
         {
@@ -316,11 +316,11 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        108,
-        109,
-        110,
         111,
-        112
+        112,
+        113,
+        114,
+        115
       ],
       "summons": [
         {
@@ -366,17 +366,17 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        108,
-        109,
-        110,
         111,
-        112
+        112,
+        113,
+        114,
+        115
       ],
       "abilityOrder": [
-        108,
-        109,
-        110,
-        111
+        111,
+        112,
+        113,
+        114
       ],
       "summons": [
         {
@@ -423,11 +423,11 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        108,
-        109,
-        110,
         111,
-        112
+        112,
+        113,
+        114,
+        115
       ],
       "summons": [
         {
@@ -473,11 +473,11 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        108,
-        109,
-        110,
         111,
-        112
+        112,
+        113,
+        114,
+        115
       ],
       "summons": [
         {
@@ -523,11 +523,11 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        108,
-        109,
-        110,
         111,
-        112
+        112,
+        113,
+        114,
+        115
       ],
       "summons": [
         {
@@ -573,11 +573,11 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        108,
-        109,
-        110,
         111,
-        112
+        112,
+        113,
+        114,
+        115
       ],
       "summons": [
         {
@@ -623,11 +623,11 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        108,
-        109,
-        110,
         111,
-        112
+        112,
+        113,
+        114,
+        115
       ],
       "summons": [
         {
@@ -673,11 +673,11 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        108,
-        109,
-        110,
         111,
-        112
+        112,
+        113,
+        114,
+        115
       ],
       "summons": [
         {
@@ -723,11 +723,11 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        108,
-        109,
-        110,
         111,
-        112
+        112,
+        113,
+        114,
+        115
       ],
       "summons": [
         {
@@ -773,17 +773,17 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        108,
-        109,
-        110,
         111,
-        112
+        112,
+        113,
+        114,
+        115
       ],
       "abilityOrder": [
-        108,
-        109,
-        110,
-        111
+        111,
+        112,
+        113,
+        114
       ],
       "summons": [
         {
@@ -829,11 +829,11 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        108,
-        109,
-        110,
         111,
-        112
+        112,
+        113,
+        114,
+        115
       ],
       "summons": [
         {
@@ -879,17 +879,17 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        108,
-        109,
-        110,
         111,
-        112
+        112,
+        113,
+        114,
+        115
       ],
       "abilityOrder": [
-        109,
-        110,
-        108,
-        111
+        112,
+        113,
+        111,
+        114
       ],
       "summons": [
         {
@@ -906,6 +906,101 @@ let enemyData = {
       "itNeverEnds": {
         "SummonID01": 1002050,
         "SummonID02": 1002030
+      }
+    },
+    "100402017": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        2.222716,
+        1,
+        0.782045,
+        1,
+        -30,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Thunder",
+        "Imaginary"
+      ],
+      "res": {
+        "Fire": 0.2,
+        "Ice": 0.4,
+        "Wind": 0.2,
+        "Quantum": 0.2
+      },
+      "resMod": {
+        "STAT_CTRL": 0.5
+      },
+      "abilities": [
+        111,
+        112,
+        113,
+        114,
+        115
+      ],
+      "abilityOrder": [
+        111,
+        115,
+        114,
+        113,
+        115
+      ],
+      "summons": [
+        {
+          "name": "Silvermane Gunner",
+          "over": 100205029,
+          "base": 1002050
+        },
+        {
+          "name": "Silvermane Gunner",
+          "over": 100205029,
+          "base": 1002050
+        }
+      ],
+      "overrideParams": {
+        "111": [
+          [
+            2
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          "-"
+        ],
+        "112": [
+          [
+            2
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          10,
+          "-"
+        ],
+        "114": [
+          [
+            2
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          10,
+          "-"
+        ]
+      },
+      "itNeverEnds": {
+        "SummonID01": 100205029,
+        "SummonID02": 100205029
       }
     }
   }
