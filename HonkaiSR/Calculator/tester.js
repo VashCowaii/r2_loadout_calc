@@ -3331,6 +3331,85 @@ const customMenu = {
 }
 
 const userTriggers = {
+    dragger: null,
+    startDraggin(e) {
+        const slot = e.currentTarget.dataset.slotID;
+        userTriggers.dragger = e.currentTarget.dataset.slotID;
+        console.log("drag from",userTriggers.dragger)
+
+        e.currentTarget.classList.add("draggerHand");
+
+        for (let i=1;i<=4;i++) {
+            const currentDragger = document.getElementById(`teamBarChar${i}IMG`);
+
+            if (i==slot) {
+                currentDragger.classList.add("isBeingDraggedDarken");
+                continue;
+            }
+            else {
+                currentDragger.classList.add("toBeDraggedDotted");
+            }
+        }
+    },
+    clearDraggin(e) {
+        if (!userTriggers.dragger) {return}
+        e.currentTarget.classList.remove("draggerHand");
+
+        for (let i=1;i<=4;i++) {
+            const currentDragger = document.getElementById(`teamBarChar${i}IMG`);
+
+            if (i==userTriggers.dragger) {
+                currentDragger.classList.remove("isBeingDraggedDarken");
+            }
+            else {
+                currentDragger.classList.remove("toBeDraggedDotted");
+            }
+        }
+        userTriggers.dragger = null;
+        e.preventDefault();
+    },
+    enterDraggin(e) {
+        if (!userTriggers.dragger) {return}
+
+        const slot = e.currentTarget.dataset.slotID;
+        if (slot == userTriggers.dragger) {return;}
+
+        e.currentTarget.classList.add("currentDragCharHoverBrighten");
+    },
+    leaveDraggin(e) {
+        if (!userTriggers.dragger) {return}
+
+        const slot = e.currentTarget.dataset.slotID;
+        if (slot == userTriggers.dragger) {return;}
+
+        e.currentTarget.classList.remove("currentDragCharHoverBrighten");
+    },
+    endDraggin(e) {
+        if (!userTriggers.dragger) {return}
+
+        const currentSlot = e.currentTarget.dataset.slotID;
+        e.currentTarget.classList.remove("currentDragCharHoverBrighten");
+        console.log("drop to",currentSlot,"from",userTriggers.dragger);
+
+        if (currentSlot != userTriggers.dragger) {
+            const characterObject = globalRecords.character;
+
+            const initialDrag = JSON.stringify(characterObject[`char${userTriggers.dragger}`]);
+            const newDrag = JSON.stringify(characterObject[`char${currentSlot}`]);
+
+            characterObject[`char${userTriggers.dragger}`] = JSON.parse(newDrag);
+            characterObject[`char${currentSlot}`] = JSON.parse(initialDrag);
+
+            const finalCharString = JSON.stringify(characterObject);
+            
+            userTriggers.importCharacterData("ALL",null,null,finalCharString);
+            userTriggers.updateCharacterSlotSelected(+currentSlot);
+        }
+    },
+    midDraggin(e) {
+        e.preventDefault();
+    },
+
     openBattleSettings() {
         userTriggers.updateMainMenuDisplayed(2);
         userTriggers.updateBattleViewDisplayed('SettingsExpand');
@@ -3965,8 +4044,9 @@ const userTriggers = {
             const globalRef = globalRecords.character[`char${i}`];
             let globalCharRef = characters[globalRef.name]
             readSelection(`teamBarChar${i}IMG`).src = "/HonkaiSR/" + globalCharRef.icon;
+            readSelection(`teamBarChar${i}IMG`).classList.add("isCharNotSelectedDarken");
             readSelection(`teamBarChar${i}IMG`).style.border = `2px solid ${customMenu.rarityColors[globalCharRef.rarity]}`;
-            readSelection(`teamBarChar${i}IMG`).style.filter = `brightness(0.5)`;
+            // readSelection(`teamBarChar${i}IMG`).style.filter = `brightness(0.5)`;
 
             readSelection(`characterFiltersSwitchIcon${i}`).src = "/HonkaiSR/" + globalCharRef.preview;
             readSelection(`characterFiltersSwitchIcon${i}`).style.filter = `brightness(0.3)`;
@@ -3974,7 +4054,9 @@ const userTriggers = {
             // readSelection(`teamBarChar${i}IMG`).style.opacity = globalRef.disabled ? "0.5" : "1";
             
         }
-        readSelection(`teamBarChar${currentSlot}IMG`).style.filter = "brightness(1)";
+        // readSelection(`teamBarChar${currentSlot}IMG`).style.filter = "brightness(1)";
+        readSelection(`teamBarChar${currentSlot}IMG`).classList.remove("isCharNotSelectedDarken");
+
         readSelection(`characterFiltersSwitchIcon${currentSlot}`).style.filter = "brightness(1)";
 
         readSelection("rotationsDisableCharacterToggle").checked = globalPathChar.disabled;
@@ -6672,13 +6754,13 @@ const userTriggers = {
         8008: 8007,//RMC
         8010: 8009,//EMC
     },
-    importCharacterData(charSlot,pathReadID,showcaseID) {
+    importCharacterData(charSlot,pathReadID,showcaseID,isSwapPlacementOverride) {
         // charALLImport
 
         const inputElem = readSelection("importTextInputTeam");
 
 
-        if (inputElem.value === "" && !showcaseID) {
+        if (!isSwapPlacementOverride && inputElem.value === "" && !showcaseID) {
             const fileInput = document.getElementById(pathReadID);
 
             fileInput.onchange = async (event) => {
@@ -6813,7 +6895,7 @@ const userTriggers = {
             customMenu.createCharacterExportScreen();
         }
         else {
-            const parsedData = JSON.parse(inputElem.value);
+            const parsedData = JSON.parse(inputElem?.value ?? isSwapPlacementOverride);
 
             if (charSlot === "ALL") {
                 globalRecords.character = parsedData;
@@ -6855,9 +6937,10 @@ const userTriggers = {
                 userTriggers.updateMainMenuDisplayed(1);
             }
 
-            inputElem.value = "";
-
-            customMenu.createCharacterExportScreen();
+            if (inputElem) {
+                inputElem.value = "";
+                customMenu.createCharacterExportScreen();
+            }
         }
 
         // userTriggers.updateSelectedCharacter(globalRecords.character.char1.name,false,showcaseID ? true : false);

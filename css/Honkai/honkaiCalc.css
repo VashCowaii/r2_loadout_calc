@@ -660,7 +660,28 @@ details[open] > summary::before {
     outline: 2px solid white;
     outline-offset: 2px;
 }
+/* .teamBarImgRounded: */
 
+
+.draggerHand {
+    cursor: grabbing;
+}
+.toBeDraggedDotted {
+    outline: 3px dotted white;
+    outline-offset: 2px;
+    border-radius: 50%;
+    opacity: 1;
+    filter: brightness(1);
+}
+.isBeingDraggedDarken {
+    opacity: 0.5;
+}
+.isCharNotSelectedDarken {
+    filter: brightness(0.5);
+}
+.currentDragCharHoverBrighten {
+    filter: brightness(1);
+}
 
 
 
