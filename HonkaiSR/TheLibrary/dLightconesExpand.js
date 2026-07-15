@@ -10105,95 +10105,6 @@ let lightcones = {
       1.05
     ]
   },
-  "Until the Flowers Bloom Again": {
-    "lightconeID": 23058,
-    "name": "Until the Flowers Bloom Again",
-    "path": "Elation",
-    "rarity": "5",
-    "baseStats": {
-      "ATKBase": 635.04,
-      "DEFBase": 463.04999999999995,
-      "HPBase": 952.56
-    },
-    "fixedStats": {
-      "1": {
-        "CritDamageBase": 0.6
-      },
-      "2": {
-        "CritDamageBase": 0.75
-      },
-      "3": {
-        "CritDamageBase": 0.9
-      },
-      "4": {
-        "CritDamageBase": 1.05
-      },
-      "5": {
-        "CritDamageBase": 1.2
-      }
-    },
-    "skillName": "Daydream",
-    "desc": "Increases the wearer's CRIT DMG by #1[i]% and Energy Regeneration Rate by #4[f1]%. When the wearer's Max Energy is greater than #5[i], for every 10 points of Max Energy that exceeds this amount, further increases Energy Regeneration Rate by #6[f1]%. Up to a maximum of #7[i] points of excess Max Energy can be taken into account. When the wearer uses Elation Skill, increases the DMG received by all enemies by #2[f1]% for #3[i] turn(s). Effects of the same type cannot stack.",
-    "params": [
-      [
-        0.6,
-        0.15,
-        2,
-        0.1,
-        120,
-        0.0029999998,
-        360
-      ],
-      [
-        0.75,
-        0.1875,
-        2,
-        0.115,
-        120,
-        0.0029999998,
-        360
-      ],
-      [
-        0.9,
-        0.225,
-        2,
-        0.13,
-        120,
-        0.0029999998,
-        360
-      ],
-      [
-        1.05,
-        0.2625,
-        2,
-        0.145,
-        120,
-        0.0029999998,
-        360
-      ],
-      [
-        1.2,
-        0.3,
-        2,
-        0.16,
-        120,
-        0.0029999998,
-        360
-      ]
-    ],
-    "statRef": [
-      "CriticalDamageBase"
-    ],
-    "extraProperties": [],
-    "icon": "icon/light_cone/23058.png",
-    "preview": "image/light_cone_preview/23058.png",
-    "portrait": "image/light_cone_portrait/23058.png",
-    "imageOffset": [
-      -4,
-      -28,
-      1.17
-    ]
-  },
   "Welcome to the Cosmic City": {
     "lightconeID": 23057,
     "name": "Welcome to the Cosmic City",
@@ -10414,6 +10325,95 @@ let lightcones = {
       4,
       -123,
       1.12
+    ]
+  },
+  "Until the Flowers Bloom Again": {
+    "lightconeID": 23058,
+    "name": "Until the Flowers Bloom Again",
+    "path": "Elation",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 635.04,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "CritDamageBase": 0.6
+      },
+      "2": {
+        "CritDamageBase": 0.75
+      },
+      "3": {
+        "CritDamageBase": 0.9
+      },
+      "4": {
+        "CritDamageBase": 1.05
+      },
+      "5": {
+        "CritDamageBase": 1.2
+      }
+    },
+    "skillName": "Daydream",
+    "desc": "Increases the wearer's CRIT DMG by #1[i]% and Energy Regeneration Rate by #4[f1]%. When the wearer's Max Energy is greater than #5[i], for every 10 points of Max Energy that exceeds this amount, further increases Energy Regeneration Rate by #6[f1]%. Up to a maximum of #7[i] points of excess Max Energy can be taken into account. When the wearer uses Elation Skill, increases the DMG received by all enemies by #2[f1]% for #3[i] turn(s). Effects of the same type cannot stack.",
+    "params": [
+      [
+        0.6,
+        0.15,
+        2,
+        0.1,
+        120,
+        0.0029999998,
+        360
+      ],
+      [
+        0.75,
+        0.1875,
+        2,
+        0.115,
+        120,
+        0.0029999998,
+        360
+      ],
+      [
+        0.9,
+        0.225,
+        2,
+        0.13,
+        120,
+        0.0029999998,
+        360
+      ],
+      [
+        1.05,
+        0.2625,
+        2,
+        0.145,
+        120,
+        0.0029999998,
+        360
+      ],
+      [
+        1.2,
+        0.3,
+        2,
+        0.16,
+        120,
+        0.0029999998,
+        360
+      ]
+    ],
+    "statRef": [
+      "CriticalDamageBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23058.png",
+    "preview": "image/light_cone_preview/23058.png",
+    "portrait": "image/light_cone_portrait/23058.png",
+    "imageOffset": [
+      -4,
+      -28,
+      1.17
     ]
   }
 }
