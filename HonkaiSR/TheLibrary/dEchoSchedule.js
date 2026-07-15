@@ -1,6 +1,100 @@
 const stageTypers = "echo"
 let mocSchedule = [
   {
+    "id": 1309,
+    "realName": "The Comedy of Doom",
+    "worldLevel": 6,
+    "testWorldLevel": 6,
+    "testMapID": 1309,
+    "buffData": {
+      "modifierName": "",
+      "realModifierNamne": "",
+      "name": "",
+      "desc": "",
+      "battleDesc": null,
+      "buffType": "",
+      "params": []
+    },
+    "floorData": {
+      "1": {
+        "floorName": "The Comedy of Doom",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              1052096
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "undefined",
+                "enemyLevel": 82,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Lord of Saṃvartasthāyi, Asat Pramad",
+                      "id": 8015030,
+                      "image": 8015030,
+                      "rank": "BigBoss",
+                      "attackBase": 574.413606,
+                      "defBase": 1020.00003,
+                      "hpBase": 2186116.24032,
+                      "speedBase": 168,
+                      "critDMG": 0.2,
+                      "effectRES": null,
+                      "ehr": 0.256,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 1,
+                      "toughnessBase": 400,
+                      "weaknessList": [
+                        "Fire",
+                        "Wind",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL": 1
+                      }
+                    }
+                  ]
+                ],
+                "scalarElite": 4406,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "1",
+                  "_BGM": "State_Planarcadia_Combat_AsatPramad_Phase01"
+                },
+                "highSTSUM": 2186116.24032,
+                "aoeSUM": 2186116.24032
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [],
+            "stageDataArray": []
+          }
+        }
+      }
+    },
+    "realDropList": [
+      "261.png",
+      "110509.png",
+      "71052.png",
+      "71049.png",
+      "2.png"
+    ],
+    "patchName": 9
+  },
+  {
     "id": 1308,
     "realName": "Rusted Crypt of the Iron Carcass",
     "worldLevel": 6,
