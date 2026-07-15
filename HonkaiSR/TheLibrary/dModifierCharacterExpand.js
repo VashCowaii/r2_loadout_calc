@@ -4559,7 +4559,7 @@ let modifiersCharacter = [
   },
   {
     "name": "<a class=\"gModGreen\" id=\"-799988230\">Castorice_PointB3_AllDamageTypeAddedRatio</a>",
-    "realName": "Where The West Wind Dwells",
+    "realName": "Where the West Wind Dwells",
     "aim": "Buff",
     "desc": "Every stack increases DMG dealt by #1[i]%, lasting until the end of this turn.",
     "type": "DMG Boost",
@@ -7739,6 +7739,129 @@ let modifiersCharacter = [
     "perma": true
   },
   {
+    "name": "HimekoNova_Ability02_OnListen",
+    "realName": "Navigator's Semaphore",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%. At the start of each turn, immediately recovers #2[i] Assist Skill uses.",
+    "type": "Navigator's Semaphore",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue",
+      "MDF_AssistAddCount"
+    ]
+  },
+  {
+    "name": "HimekoNova_Ability02_Bonus",
+    "realName": "Navigator's Semaphore",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": "DMG Boost",
+    "perma": true,
+    "params": [
+      "MDF_AllDamageTypeAddedRatio"
+    ]
+  },
+  {
+    "name": "HimekoNova_CoDrive_Base",
+    "realName": "Of Fire and Far Faring",
+    "aim": "Buff",
+    "desc": "All-Type RES PEN increases by #1[i]% and CRIT DMG increases by #2[i]%. When attacking, ignores Weakness Types to reduce Toughness.",
+    "type": "All-Type RES PEN Boost and CRIT DMG Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyRatio",
+      "MDF_CriticalDamageBase"
+    ]
+  },
+  {
+    "name": "HimekoNova_CoDrive_Base_Eidolon2",
+    "realName": "Of Fire and Far Faring",
+    "aim": "Buff",
+    "desc": "All-Type RES PEN increases by #1[i]%.",
+    "type": "All-Type RES PEN Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyRatio"
+    ]
+  },
+  {
+    "name": "HimekoNova_Halo_Model01",
+    "realName": "Companion Protocol: Verdict",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%. When Ultimate deals DMG, DMG dealt additionally increases by #4[i]%. After Himeko • Nova's teammates actively use Ultimate #2[i] time(s), immediately launches 1 Assist Skill against enemies. This can be launched up to #3[i] time(s) per battle, and using Ultimate resets this count.",
+    "type": "Companion Protocol: Verdict",
+    "perma": true,
+    "params": [
+      "MDF_Halo_AttackMode_AllDamageTypeAddedRatio",
+      "MDF_Halo_TriggerCount",
+      "MDF_Halo_AttackMode_TriggerCount",
+      "MDF_Halo_AllDamageTypeAddedRatio"
+    ]
+  },
+  {
+    "name": "HimekoNova_Halo_Model02",
+    "realName": "Companion Protocol: Decimation",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%, and CRIT DMG dealt by Skill additionally increases by #4[i]%. For every 1 enemy target hit by allies, gains 1 Charge. When Charge reaches #2[i], consumes all Charge and immediately launches 1 Assist Skill against enemies. This can be launched up to #3[i] time(s) per battle, and using Ultimate resets this count.",
+    "type": "Companion Protocol: Decimation",
+    "perma": true,
+    "params": [
+      "MDF_Halo_AttackMode_CriticalDamageBase",
+      "MDF_Halo_TriggerCount",
+      "MDF_Halo_Support_Model02_TriggerCount",
+      "MDF_BPCriticalDamageBase"
+    ]
+  },
+  {
+    "name": "HimekoNova_Halo_Model01_AllDamageTypeAddedRatio",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": "DMG Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyRatio"
+    ]
+  },
+  {
+    "name": "HimekoNova_Halo_Model02_CriticalDamageBase",
+    "realName": "CRIT DMG Boost",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%, and CRIT DMG dealt by Skill additionally increases by #2[i]%.",
+    "type": "CRIT DMG Boost",
+    "perma": true,
+    "params": [
+      "MDF_CriticalDamageBase",
+      "MDF_AttackMode_BPCriticalDamageBase"
+    ]
+  },
+  {
+    "name": "HimekoNova_Eidolon6",
+    "realName": "Ours Is the Oath to Sail Starward",
+    "aim": "Buff",
+    "desc": "Fire RES PEN increases by #1[i]%. The cap of \"Source Energy\" increases to #2[i]. When an ally uses or launches Assist Skill, increases DMG dealt by Assist Skill by #3[i]%, and gains 1 \"Source Energy.\" When launching \"Hyperluminal Particle Beam,\" additionally gains 1 \"Source Energy.\" When launching \"Orbital Annihilation Pulse,\" if current \"Source Energy\" is #4[i] or more, additionally deals 1 instance of Fire DMG equal to #5[i]% of Himeko • Nova's ATK to all enemies.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyRatio",
+      "MDF_PowerMaxCount",
+      "MDF_AllDamageTypeAddedRatio",
+      "MDF_CurrentCount",
+      "MDF_DamagePercentage"
+    ]
+  },
+  {
+    "name": "HimekoNova_Eidolon2",
+    "realName": "The Colors We Never Strike",
+    "aim": "Buff",
+    "desc": "DMG dealt by Assist Skill increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyRatio"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"-1514536546\">G_MortenaxBlade_Eidolon2_ToMember</a>",
     "realName": "Ash Was My Heart, Yet the Flame Stayed",
     "aim": "Buff",
@@ -7750,14 +7873,14 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "<a class=\"gModGreen\" id=\"-1667717158\">Saber_Passive_ExceedSpStatus</a>",
-    "realName": "Blessing of the Lake",
+    "name": "HimekoNova_PowerCount",
+    "realName": "Source Energy",
     "aim": "Other",
-    "desc": "#1[i] overflow Energy accumulated.",
+    "desc": "\"Source Energy\" points. \"Source Energy\" can be consumed to use \"Orbital Annihilation Pulse.\" The more points accumulated, the higher the DMG.",
     "type": null,
     "perma": true,
     "params": [
-      "Saber_00_EntityStockSPForShow"
+      "MDF_PowerCount"
     ]
   },
   {
@@ -7933,6 +8056,297 @@ let modifiersCharacter = [
     "realName": "The Long Fated Night",
     "aim": "Buff",
     "desc": "DMG dealt ignores #1[i]% of the target's DEF.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "TohsakaRin_Ability03_Debuff",
+    "realName": "An Gal Ta Ki Gal Šè",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": "Vulnerability",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "TohsakaRin_Passive_Bonus",
+    "realName": "Gem Magecraft",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": "CRIT DMG Boost",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "TohsakaRin_PointB2_Bonus",
+    "realName": "Ladylike Poise",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": "SPD Boost",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Gilgamesh_Transfer",
+    "realName": "Bored",
+    "aim": "Other",
+    "desc": "Current \"Interest\" count is #1[i]/#2[i]. Gilgamesh lacks interest and automatically uses Basic ATK when taking action.",
+    "type": "Bored",
+    "perma": true,
+    "params": [
+      "Avatar_Gilgamesh_00_KingCount",
+      "#SkillP01_P2_KingGate"
+    ]
+  },
+  {
+    "name": "Gilgamesh_DamageUp",
+    "realName": "Interest Piqued!",
+    "aim": "Other",
+    "desc": "Current \"Interest\" count is #1[i]. Gilgamesh is greatly amused and only uses Skill.",
+    "type": "Interest Piqued!",
+    "perma": true,
+    "params": [
+      "Avatar_Gilgamesh_00_KingCount"
+    ]
+  },
+  {
+    "name": "Gilgamesh_Overcharge",
+    "realName": "King's Burden",
+    "aim": "Buff",
+    "desc": "Ultimate DMG dealt increases by #1[i]%.",
+    "type": "Ultimate DMG Boost",
+    "perma": true,
+    "params": [
+      "#SkillP01_P3_DamageAddedRatio"
+    ]
+  },
+  {
+    "name": "Gilgamesh_DroneAnalysis",
+    "realName": "King's Acknowledgement",
+    "aim": "Buff",
+    "desc": "When dealing DMG, ignores #1[i]% of the target's DEF.",
+    "type": "King's Acknowledgement",
+    "perma": true,
+    "params": [
+      "#Skill02_P5_DefenceDown_Ratio"
+    ]
+  },
+  {
+    "name": "Gilgamesh_TreeBonus2",
+    "realName": "Hero's Hauteur",
+    "aim": "Buff",
+    "desc": "Each stack increases this unit's CRIT DMG by #1[i]%, stacking up to #2[i] times.",
+    "type": "CRIT DMG Boost",
+    "perma": true,
+    "params": [
+      "#SkillTree_PointB2_P1_DamageAddedRatio",
+      "#SkillTree_PointB2_P2_DamageAddedlayer"
+    ]
+  },
+  {
+    "name": "Gilgamesh_ChainBonus",
+    "realName": "Hegemon's Strife",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i]% and CRIT DMG increases by #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_AttackAddedFinal",
+      "MDF_CriticalDamageBaseFinal"
+    ]
+  },
+  {
+    "name": "TohsakaRin_PointB1_Bonus",
+    "realName": "Elegant Conduct",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i]% and Quantum RES PEN increases by #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_AttackAddedRatio",
+      "MDF_Penetrate"
+    ]
+  },
+  {
+    "name": "TohsakaRin_Eidolon4_SpeedUp",
+    "realName": "Red Devil: Triple Speed",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": "SPD Boost",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "TohsakaRin_Eidolon2_TeamAbilityBonus",
+    "realName": "Dimensional Traveler",
+    "aim": "Buff",
+    "desc": "Skill DMG dealt is #1[i]% of the original DMG.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "TohsakaRin_Eidolon6_Penetrate",
+    "realName": "Nailed It This Time!",
+    "aim": "Buff",
+    "desc": "All-Type RES PEN increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Gilgamesh_DroneAnalysis_Team",
+    "realName": "King's Acknowledgement",
+    "aim": "Buff",
+    "desc": "ATK increases by #2[i]%. When dealing DMG, ignores #1[i]% of the target's DEF.",
+    "type": "King's Acknowledgement",
+    "perma": true,
+    "params": [
+      "#Skill02_P5_DefenceDown_Ratio",
+      "#SkillRank_Rank01_P1_Ratio"
+    ]
+  },
+  {
+    "name": "Gilgamesh_NoChainBonus",
+    "realName": "Hegemon's Strife",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i]% and CRIT DMG increases by #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_AttackAddedFinal",
+      "MDF_CriticalDamageBaseFinal"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1667717158\">Saber_Passive_ExceedSpStatus</a>",
+    "realName": "Blessing of the Lake",
+    "aim": "Other",
+    "desc": "#1[i] overflow Energy accumulated.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "Saber_00_EntityStockSPForShow_Fake"
+    ]
+  },
+  {
+    "name": "Gilgamesh_DroneAnalysis_Halo",
+    "realName": "King's Acknowledgement",
+    "aim": "Buff",
+    "desc": "When dealing DMG, ignores #1[i]% of the target's DEF.",
+    "type": "King's Acknowledgement",
+    "perma": true,
+    "params": [
+      "SkillRank_Rank01_DefenceDownRatio"
+    ]
+  },
+  {
+    "name": "Gilgamesh_Eidolon6_TeamBonus",
+    "realName": "Soul That Bore Friendship",
+    "aim": "Buff",
+    "desc": "All-Type RES PEN increases by #1[i]%.",
+    "type": "All-Type RES PEN Boost",
+    "perma": true,
+    "params": [
+      "MDF_AllDamageTypePenetrate"
+    ]
+  },
+  {
+    "name": "Gilgamesh_Passive_ExceedSpStatus",
+    "realName": "Hero's Hauteur",
+    "aim": "Other",
+    "desc": "#1[i] overflow Energy accumulated.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "Gilgamesh_00_EntityStockSP"
+    ]
+  },
+  {
+    "name": "Gilgamesh_SaberinTeam",
+    "realName": "\"I Grant You Permission To Strike\"",
+    "aim": "Other",
+    "desc": "Gilgamesh and Saber have currently launched attacks a total of #1[i]/#2[i] time(s).",
+    "type": null,
+    "perma": true,
+    "params": [
+      "Saber_Chain",
+      "#SkillP02_P5_GilgameshChain"
+    ]
+  },
+  {
+    "name": "Gilgamesh_Passive_Eidolon6_GoldenRule",
+    "realName": "Golden Rule",
+    "aim": "Other",
+    "desc": "#1[i] points of \"Golden Rule\" accumulated. When using Ultimate, consumes all \"Golden Rule,\" with each point of \"Golden Rule\" consumed increasing the CRIT DMG for the Ultimate DMG dealt by #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "Gilgamesh_00_Rank06_GoldenRule",
+      "#SkillRank_Rank06_P4_CriticalDamageRatio"
+    ]
+  },
+  {
+    "name": "TohsakaRin_GemStone_Show",
+    "realName": "Gem Energy",
+    "aim": "Other",
+    "desc": "Currently holds #1[i] \"Gem Energy.\"",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_Count"
+    ]
+  },
+  {
+    "name": "Gilgamesh_SaberUltraBonus",
+    "realName": "\"I Grant You Permission To Strike\"",
+    "aim": "Buff",
+    "desc": "The next time Saber uses Ultimate, the DMG dealt becomes #1[i]% of the original DMG.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_DamagePercentage"
+    ]
+  },
+  {
+    "name": "TohsakaRin_Passive_Insert_CD",
+    "realName": "Freeform Tohsaka Style",
+    "aim": "Other",
+    "desc": "The \"Freeform Tohsaka Style\" Joint Follow-Up ATK cannot be triggered yet.",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "Gilgamesh_PassiveSpeed",
+    "realName": "\"Amuse Me to the Fullest\"",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "TohsakaRin_Eidolon2_SelfAbilityBonus",
+    "realName": "Dimensional Traveler",
+    "aim": "Buff",
+    "desc": "Skill DMG dealt increases by #1[i]%.",
     "type": null,
     "perma": true,
     "params": [

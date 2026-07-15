@@ -6211,6 +6211,95 @@ let modifiersEnemy = [
     ]
   },
   {
+    "name": "Enemy_W5_Shell_LightTeam_Shield_Display",
+    "realName": "Tragic Core",
+    "aim": "Buff",
+    "desc": "A Shield that offsets DMG taken by all allies. Before the Shield is depleted or its effect expires, enemy targets' attacks won't reduce the Shielded allies' HP. Currently, the Shield has #1[i] point(s) remaining.",
+    "type": "Tragic Core",
+    "perma": true,
+    "params": [
+      "MDF_CurShield_Display"
+    ]
+  },
+  {
+    "name": "Enemy_W5_AsatPramad_BombCharging",
+    "realName": "Memes Incoming",
+    "aim": "Other",
+    "desc": "The next action by \"Formation\" will detonate all \"Meme'd.\"",
+    "type": "Memes Incoming",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W5_AsatPramad_Bomb",
+    "realName": "Meme'd",
+    "aim": "Debuff",
+    "desc": "When an ally character uses \"Meme'd,\" Asat Pramad deals massive DMG to all ally targets, has a high chance to inflict \"Strong Reverberation\" on ally targets, and removes 1 stack of \"Meme'd.\" If the ally target does not have a Shield or \"Barrier,\" additionally applies 1 stack of \"Prana-Siphon.\"",
+    "type": "Meme'd",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W5_AsatPramad_Part03UnselectableMark",
+    "realName": "Elation Depleted",
+    "aim": "Other",
+    "desc": "Currently in an unselectable state.",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "Enemy_W5_AsatPramad_AllDamageTypeTakenRatio",
+    "realName": "Knockdown",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": "Knockdown",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Enemy_W5_AsatPramad_Debuff_04_Modifier",
+    "realName": "Barrier",
+    "aim": "Buff",
+    "desc": "Nullifies all DMG received except DoTs. This state is dispelled after being attacked.",
+    "type": "Barrier",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W5_AsatPramad_DirtyBlood",
+    "realName": "Prana-Siphon",
+    "aim": "Debuff",
+    "desc": "Maximum Restorable HP decreases by #1[i]%. This effect is stackable.",
+    "type": "Prana-Siphon",
+    "perma": false,
+    "params": [
+      "MDF_DirtyBloodRatioPerLayer"
+    ]
+  },
+  {
+    "name": "Enemy_W5_AsatPramad_Part03Mark",
+    "realName": "Three Faces as One",
+    "aim": "Other",
+    "desc": "During this phase, all Lord of Saṃvartasthāyi, Asat Pramad units share HP.",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "Enemy_W5_AsatPramad_Shake",
+    "realName": "Strong Reverberation",
+    "aim": "Debuff",
+    "desc": "Action delayed. Cannot take actions for a certain number of turns.",
+    "type": "Strong Reverberation",
+    "perma": false
+  },
+  {
+    "name": "Enemy_W5_AsatPramad_Debuff_12_Modifier_Sub",
+    "realName": "Bleed",
+    "aim": "Debuff",
+    "desc": "Takes Physical DMG at the start of each turn for a certain number of turns.",
+    "type": "Bleed",
+    "perma": false
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"393866359\">Enemy_W4_Serpent_01_IF_AbilityEX04_TGT</a>",
     "realName": "Economies of Scale",
     "aim": "Buff",
@@ -6289,6 +6378,14 @@ let modifiersEnemy = [
     "realName": "Degraded Vessel",
     "aim": "Other",
     "desc": "If an ally inflicts a debuff on an enemy unit with \"Degraded Vessel\" when using an attack, slightly reduces that enemy unit's Toughness and causes them to take True DMG.",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "Enemy_W5_Shell_Deathrattle",
+    "realName": "Ensemble Slapstick",
+    "aim": "Other",
+    "desc": "All Comediologists will attack together.",
     "type": null,
     "perma": true
   }
