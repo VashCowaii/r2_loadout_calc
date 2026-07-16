@@ -2278,6 +2278,18 @@ const rotationsUISuffering = {
         // console.log(returnString)
         return returnString;
     },
+
+    extractUIBuffNames(logicPath,newBuffRef,charName,currentBuffArrayHolder) {
+        if (logicPath?.buffNames) {
+
+            for (let buffName in logicPath.buffNames) {
+                const fullBuffName = logicPath.buffNames[buffName];
+
+                const finalBuffName = logicPath?.buffNamesPerCharacter?.[buffName] ? `${fullBuffName} (${charName})` : fullBuffName;
+                currentBuffArrayHolder.push(finalBuffName);
+            }
+        }
+    },
     Buff(characterName,destination,indexCounter,layerCounter,arrayToPass,skillSlot) {//TODO: read note
         //right now we technically enforce all possible buffs that can be considered in a condition to be a buff from the context of the current battle
         //but if we're allowing out of context conditions to be stored this may cause a problem down the road where someone might
@@ -2297,12 +2309,6 @@ const rotationsUISuffering = {
         // const reverseBuffNames = {};
 
         const characterObject = globalRecords.character;
-        const char1Name = characterObject.char1.name;
-        const char2Name = characterObject.char2.name;
-        const char3Name = characterObject.char3.name;
-        const char4Name = characterObject.char4.name;
-
-
         const baseIDString = `rotationConditionType${skillSlot}${arrayIDString}`;
 
         const targetTypeElem = readSelection(`${baseIDString}TargetType`);
@@ -2319,15 +2325,25 @@ const rotationsUISuffering = {
         }
 
 
+        const extractUIBuffNames = rotationsUISuffering.extractUIBuffNames;
+        // const charNameArray = [char1Name,char2Name,char3Name,char4Name];
+
+        let buffNamesObject = {}
+
         for (let charSlot in characterObject) {
             const currentSlot = characterObject[charSlot];
 
             const charName = currentSlot.name;
+
+            const currentBuffArrayHolder = buffNamesObject[charName] ??= [];
+
             const lcName = currentSlot.lcName;
             const pc2 = currentSlot["2pc"];
             const pc4 = currentSlot["4pc"];
+            const planar = currentSlot.planar;
 
             const charLogic = turnLogic[charName];
+            const planarLogic = turnLogicRelics[planar]["2pc"];
             const pc2Logic = turnLogicRelics[pc2]["2pc"];
             const pc4Logic = turnLogicRelics[pc4][pc4 === pc2 ? "4pc" : "2pc"];
             const lcLogic = turnLogicLightcones[lcName];
@@ -2335,150 +2351,59 @@ const rotationsUISuffering = {
             // const customName = `${buffNames.allyDMG} (${sourceTurn.properName})`;
             // if (!buffNames[customName]) {buffNames[customName] = customName;}
 
-            if (charLogic?.buffNames) {
-                for (let buffName in charLogic.buffNames) {
-                    const fullBuffName = charLogic.buffNames[buffName];
+            extractUIBuffNames(charLogic,newBuffRef,charName,currentBuffArrayHolder);
+            extractUIBuffNames(planarLogic,newBuffRef,charName,currentBuffArrayHolder);
 
-                    if (charLogic?.buffNamesPerCharacter?.[buffName]) {
-                        Object.assign(newBuffRef,{
-                            [fullBuffName + " " + char1Name]: fullBuffName + " " + char1Name,
-                            [fullBuffName + " " + char2Name]: fullBuffName + " " + char2Name,
-                            [fullBuffName + " " + char3Name]: fullBuffName + " " + char3Name,
-                            [fullBuffName + " " + char4Name]: fullBuffName + " " + char4Name
-                        });
-                        // Object.assign(reverseBuffNames,{
-                        //     [fullBuffName + char1Name]: fullBuffName + char1Name,
-                        //     [fullBuffName + char2Name]: fullBuffName + char2Name,
-                        //     [fullBuffName + char3Name]: fullBuffName + char3Name,
-                        //     [fullBuffName + char4Name]: fullBuffName + char4Name
-                        // });
-                    }
-                    else {
-                        Object.assign(newBuffRef,{
-                            [buffName]: fullBuffName,
-                        });
-                        // Object.assign(reverseBuffNames,{
-                        //     [fullBuffName]: buffName,
-                        // });
-                    }
-                }
-            }
+            extractUIBuffNames(pc2Logic,newBuffRef,charName,currentBuffArrayHolder);
+            extractUIBuffNames(pc4Logic,newBuffRef,charName,currentBuffArrayHolder);
 
-            if (pc2Logic?.buffNames) {
-                for (let buffName in pc2Logic.buffNames) {
-                    const fullBuffName = pc2Logic.buffNames[buffName];
-
-                    if (pc2Logic?.buffNamesPerCharacter?.[buffName]) {
-                        Object.assign(newBuffRef,{
-                            [fullBuffName + " " + char1Name]: fullBuffName + " " + char1Name,
-                            [fullBuffName + " " + char2Name]: fullBuffName + " " + char2Name,
-                            [fullBuffName + " " + char3Name]: fullBuffName + " " + char3Name,
-                            [fullBuffName + " " + char4Name]: fullBuffName + " " + char4Name
-                        });
-                        // Object.assign(reverseBuffNames,{
-                        //     [fullBuffName + char1Name]: fullBuffName + char1Name,
-                        //     [fullBuffName + char2Name]: fullBuffName + char2Name,
-                        //     [fullBuffName + char3Name]: fullBuffName + char3Name,
-                        //     [fullBuffName + char4Name]: fullBuffName + char4Name
-                        // });
-                    }
-                    else {
-                        Object.assign(newBuffRef,{
-                            [buffName]: fullBuffName,
-                        });
-                        // Object.assign(reverseBuffNames,{
-                        //     [fullBuffName]: buffName,
-                        // });
-                    }
-                }
-            }
-
-            if (pc4Logic?.buffNames) {
-                for (let buffName in pc4Logic.buffNames) {
-                    const fullBuffName = pc4Logic.buffNames[buffName];
-
-                    if (pc4Logic?.buffNamesPerCharacter?.[buffName]) {
-                        Object.assign(newBuffRef,{
-                            [fullBuffName + " " + char1Name]: fullBuffName + " " + char1Name,
-                            [fullBuffName + " " + char2Name]: fullBuffName + " " + char2Name,
-                            [fullBuffName + " " + char3Name]: fullBuffName + " " + char3Name,
-                            [fullBuffName + " " + char4Name]: fullBuffName + " " + char4Name
-                        });
-                        // Object.assign(reverseBuffNames,{
-                        //     [fullBuffName + char1Name]: fullBuffName + char1Name,
-                        //     [fullBuffName + char2Name]: fullBuffName + char2Name,
-                        //     [fullBuffName + char3Name]: fullBuffName + char3Name,
-                        //     [fullBuffName + char4Name]: fullBuffName + char4Name
-                        // });
-                    }
-                    else {
-                        Object.assign(newBuffRef,{
-                            [buffName]: fullBuffName,
-                        });
-                        // Object.assign(reverseBuffNames,{
-                        //     [fullBuffName]: buffName,
-                        // });
-                    }
-                }
-            }
-
-            if (lcLogic?.buffNames) {
-                for (let buffName in lcLogic.buffNames) {
-                    const fullBuffName = lcLogic.buffNames[buffName];
-
-                    if (lcLogic?.buffNamesPerCharacter?.[buffName]) {
-                        Object.assign(newBuffRef,{
-                            [fullBuffName + " " + char1Name]: fullBuffName + " " + char1Name,
-                            [fullBuffName + " " + char2Name]: fullBuffName + " " + char2Name,
-                            [fullBuffName + " " + char3Name]: fullBuffName + " " + char3Name,
-                            [fullBuffName + " " + char4Name]: fullBuffName + " " + char4Name
-                        });
-                        // Object.assign(reverseBuffNames,{
-                        //     [fullBuffName + char1Name]: fullBuffName + char1Name,
-                        //     [fullBuffName + char2Name]: fullBuffName + char2Name,
-                        //     [fullBuffName + char3Name]: fullBuffName + char3Name,
-                        //     [fullBuffName + char4Name]: fullBuffName + char4Name
-                        // });
-                    }
-                    else {
-                        Object.assign(newBuffRef,{
-                            [buffName]: fullBuffName,
-                        });
-                        // Object.assign(reverseBuffNames,{
-                        //     [fullBuffName]: buffName,
-                        // });
-                    }
-                }
-            }
-            
+            extractUIBuffNames(lcLogic,newBuffRef,charName,currentBuffArrayHolder);
         }
 
         if (destination.buffName) {
             let buffIsPossible = false;
+            
+            for (let charSlot in buffNamesObject) {
+                const currentBuffArray = buffNamesObject[charSlot];
 
-            for (let buffEntry in newBuffRef) {
-                const fullBuffName = newBuffRef[buffEntry];
-                if (destination.buffName === fullBuffName) {
+                const newSet = new Set(currentBuffArray);
+                if (newSet.has(destination.buffName)) {
                     buffIsPossible = true;
                     break;
-                    //we may have cases where people target specific buff names but remove the character that could have provided it
-                    //when this happens we need to default the buff to something else, otherwise continue as normal
                 }
             }
 
             // if (buffNameElem && !buffIsPossible) {destination.buffName = buffNameElem.value;}
             if (!buffIsPossible) {
-                destination.buffName = newBuffRef[Object.keys(newBuffRef)[0]];//default to first buff possible in the current selections
+                destination.buffName = buffNamesObject[characterObject.char1.name][0];//default to first buff possible in the current selections
             }
         }
-        else {destination.buffName = newBuffRef[Object.keys(newBuffRef)[0]];}
+        else {destination.buffName = buffNamesObject[characterObject.char1.name][0];}
 
         let buffNameOptions = "";
-        for (let buffEntry in newBuffRef) {
-            const fullBuffName = newBuffRef[buffEntry];
 
-            buffNameOptions += `<option value="${fullBuffName}" ${destination.buffName === fullBuffName ? "selected" : ""}>${fullBuffName}</option>`;
+        for (let charName in buffNamesObject) {
+            const currentBuffArray = buffNamesObject[charName];
+
+            let currentCharString = "";
+
+            for (let buffEntry of currentBuffArray) {
+                currentCharString += `<option value="${buffEntry}" ${destination.buffName === buffEntry ? "selected" : ""}>${buffEntry}</option>`;
+            }
+
+
+            currentCharString = `<option disabled>${charName}</option>
+            ${currentCharString}
+            <option disabled>---</option>`;
+
+            buffNameOptions += currentCharString;
         }
+
+
+
+
+
+        
 
         const getConditionList = rotationsUISuffering.getConditionList;
 
