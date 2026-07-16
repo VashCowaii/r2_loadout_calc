@@ -1135,91 +1135,102 @@
                                                             </label>
                                                             <span class="occlusionOption">Inclusion</span>
                                                         </div> -->
-                                                        <div class="statFiltersRowHeaderSubstatsLocksRollValue">Current Roll Values:&nbsp;<span class="clickable" id="substatsLocksRollValueDisplay" onclick="customHTML.updateSelectedFilterDisplay('searchSettingsHolder')">High</span></div>
-                                                        <div class="filtersQuarterDescriptionDarkRow">To change a desired substat, click/tap its icon.<br>The "Base" value is the amount of times a stat CAN show up on all 6 relics, but due to mainstat conflicts it may actually be less in some searches.</div>
+                                                        
+                                                        <div class="filtersQuarterDescriptionRollsDistributedSummary">Current Roll Values:&nbsp;<span class="clickable" id="substatsLocksRollValueDisplay" onclick="customHTML.updateSelectedFilterDisplay('searchSettingsHolder')">High</span></div>
+                                                        
+                                                        <div class="filtersQuarterDescriptionRollsDistributedSummary hasHoverTooltip" id="baseRollOnLocksExplainer">Base Roll Distribution:&nbsp;<span class="clickable" id="queriesUsableBaseRollsDisplayDistributed" onclick="customHTML.updateSelectedFilterDisplay('searchSettingsHolder')">20</span>[?]</div>
+                                                        
+                                                        
                                                         <div class="statFiltersRowContainerSubstatsLimitsRow">
                                                             <div class="statFiltersSubstatLimitVerticalBox">
-                                                                <img src="/HonkaiSR/misc/lightcone.png" class="queryFiltersRelicSlotIcon clickable" id="substatLocksStat1IMG" onclick="customMenu.createDesiredStatDetailMenu(1)"/>
+                                                                <img src="/HonkaiSR/misc/lightcone.png" class="queryFiltersRelicSlotIcon relicMainStatCanBeChangedDotted clickable" id="substatLocksStat1IMG" onclick="customMenu.createDesiredStatDetailMenu(1)"/>
                                                                 <div class="statFiltersSubstatLimitStatName clickable" id="substatLocksStat1Name" onclick="customMenu.createDesiredStatDetailMenu(1)">Stat 1</div>
                                                                 <!-- <div class="statFiltersSubstatLimitStatHeader">MAX</div>
                                                                 <div class="statFiltersSubstatLimitStatHeader">MIN</div> -->
                                                                 <div class="statFiltersSubstatLimitStatBase" id="substatLocksStat1BaseRolls">Base: asdf</div>
-
+                                                                <div class="statFiltersSubstatLimitStatHeader" id="substatLocksStat1MaxDisplay">EST: 0</div>
 
                                                                 <div class="statFiltersRowContainer">
-                                                                    <div class="presetsTitle">MAX:</div>
+                                                                    <div class="presetsTitle">MAX:&nbsp;</div>
                                                                     <div class="presetsSelectorBox">
                                                                         <input type="number" class="tagInput" id="substatLocksStat1Max" min="0" max="30" step="1" value="30" onchange="userTriggers.renewFiltersDisplayValues(true,1)" >
                                                                     </div>
+                                                                    <div class="presetsTitle" id="substatLocksStat1MaxBASE">+30</div>
                                                                 </div>
-                                                                <div class="statFiltersSubstatLimitStatHeader" id="substatLocksStat1MaxDisplay">EST: 0</div>
+                                                                
                                                                 <div class="statFiltersRowContainer">
-                                                                    <div class="presetsTitle">MIN:</div>
+                                                                    <div class="presetsTitle">MIN:&nbsp;</div>
                                                                     <div class="presetsSelectorBox">
                                                                         <input type="number" class="tagInput" id="substatLocksStat1Min" min="0" max="30" step="1" value="1" onchange="userTriggers.renewFiltersDisplayValues(true,1)" >
                                                                     </div>
+                                                                    <div class="presetsTitle" id="substatLocksStat1MinBASE">+1</div>
                                                                 </div>
-                                                                <div class="statFiltersSubstatLimitStatHeader" id="substatLocksStat1MinDisplay">EST: 0</div>
                                                             </div>
 
                                                             <div class="statFiltersSubstatLimitVerticalBox">
-                                                                <img src="/HonkaiSR/misc/lightcone.png" class="queryFiltersRelicSlotIcon clickable" id="substatLocksStat2IMG" onclick="customMenu.createDesiredStatDetailMenu(2)"/>
+                                                                <img src="/HonkaiSR/misc/lightcone.png" class="queryFiltersRelicSlotIcon relicMainStatCanBeChangedDotted clickable" id="substatLocksStat2IMG" onclick="customMenu.createDesiredStatDetailMenu(2)"/>
                                                                 <div class="statFiltersSubstatLimitStatName clickable" id="substatLocksStat2Name" onclick="customMenu.createDesiredStatDetailMenu(2)">Stat 2</div>
                                                                 <div class="statFiltersSubstatLimitStatBase" id="substatLocksStat2BaseRolls">Base: asdf</div>
+                                                                <div class="statFiltersSubstatLimitStatHeader" id="substatLocksStat2MaxDisplay">EST: 0</div>
                                                                 <div class="statFiltersRowContainer">
-                                                                    <div class="presetsTitle">MAX:</div>
+                                                                    <div class="presetsTitle">MAX:&nbsp;</div>
                                                                     <div class="presetsSelectorBox">
                                                                         <input type="number" class="tagInput" id="substatLocksStat2Max" min="0" max="30" step="1" value="30" onchange="userTriggers.renewFiltersDisplayValues(true,2)" >
                                                                     </div>
+                                                                    <div class="presetsTitle" id="substatLocksStat2MaxBASE">+30</div>
                                                                 </div>
-                                                                <div class="statFiltersSubstatLimitStatHeader" id="substatLocksStat2MaxDisplay">EST: 0</div>
+                                                                
                                                                 <div class="statFiltersRowContainer">
-                                                                    <div class="presetsTitle">MIN:</div>
+                                                                    <div class="presetsTitle">MIN:&nbsp;</div>
                                                                     <div class="presetsSelectorBox">
                                                                         <input type="number" class="tagInput" id="substatLocksStat2Min" min="0" max="30" step="1" value="1" onchange="userTriggers.renewFiltersDisplayValues(true,2)" >
                                                                     </div>
+                                                                    <div class="presetsTitle" id="substatLocksStat2MinBASE">+1</div>
                                                                 </div>
-                                                                <div class="statFiltersSubstatLimitStatHeader" id="substatLocksStat2MinDisplay">EST: 0</div>
                                                             </div>
 
                                                             <div class="statFiltersSubstatLimitVerticalBox">
-                                                                <img src="/HonkaiSR/misc/lightcone.png" class="queryFiltersRelicSlotIcon clickable" id="substatLocksStat3IMG" onclick="customMenu.createDesiredStatDetailMenu(3)"/>
+                                                                <img src="/HonkaiSR/misc/lightcone.png" class="queryFiltersRelicSlotIcon relicMainStatCanBeChangedDotted clickable" id="substatLocksStat3IMG" onclick="customMenu.createDesiredStatDetailMenu(3)"/>
                                                                 <div class="statFiltersSubstatLimitStatName clickable" id="substatLocksStat3Name" onclick="customMenu.createDesiredStatDetailMenu(3)">Stat 3</div>
                                                                 <div class="statFiltersSubstatLimitStatBase" id="substatLocksStat3BaseRolls">Base: asdf</div>
+                                                                <div class="statFiltersSubstatLimitStatHeader" id="substatLocksStat3MaxDisplay">EST: 0</div>
                                                                 <div class="statFiltersRowContainer">
-                                                                    <div class="presetsTitle">MAX:</div>
+                                                                    <div class="presetsTitle">MAX:&nbsp;</div>
                                                                     <div class="presetsSelectorBox">
                                                                         <input type="number" class="tagInput" id="substatLocksStat3Max" min="0" max="30" step="1" value="30" onchange="userTriggers.renewFiltersDisplayValues(true,3)" >
                                                                     </div>
+                                                                    <div class="presetsTitle" id="substatLocksStat3MaxBASE">+30</div>
                                                                 </div>
-                                                                <div class="statFiltersSubstatLimitStatHeader" id="substatLocksStat3MaxDisplay">EST: 0</div>
+                                                                
                                                                 <div class="statFiltersRowContainer">
-                                                                    <div class="presetsTitle">MIN:</div>
+                                                                    <div class="presetsTitle">MIN:&nbsp;</div>
                                                                     <div class="presetsSelectorBox">
                                                                         <input type="number" class="tagInput" id="substatLocksStat3Min" min="0" max="30" step="1" value="1" onchange="userTriggers.renewFiltersDisplayValues(true,3)" >
                                                                     </div>
+                                                                    <div class="presetsTitle" id="substatLocksStat3MinBASE">+1</div>
                                                                 </div>
-                                                                <div class="statFiltersSubstatLimitStatHeader" id="substatLocksStat3MinDisplay">EST: 0</div>
                                                             </div>
 
                                                             <div class="statFiltersSubstatLimitVerticalBox">
-                                                                <img src="/HonkaiSR/misc/lightcone.png" class="queryFiltersRelicSlotIcon clickable" id="substatLocksStat4IMG" onclick="customMenu.createDesiredStatDetailMenu(4)"/>
+                                                                <img src="/HonkaiSR/misc/lightcone.png" class="queryFiltersRelicSlotIcon relicMainStatCanBeChangedDotted clickable" id="substatLocksStat4IMG" onclick="customMenu.createDesiredStatDetailMenu(4)"/>
                                                                 <div class="statFiltersSubstatLimitStatName clickable" id="substatLocksStat4Name" onclick="customMenu.createDesiredStatDetailMenu(4)">Stat 4</div>
                                                                 <div class="statFiltersSubstatLimitStatBase" id="substatLocksStat4BaseRolls">Base: asdf</div>
+                                                                <div class="statFiltersSubstatLimitStatHeader" id="substatLocksStat4MaxDisplay">EST: 0</div>
                                                                 <div class="statFiltersRowContainer">
-                                                                    <div class="presetsTitle">MAX:</div>
+                                                                    <div class="presetsTitle">MAX:&nbsp;</div>
                                                                     <div class="presetsSelectorBox">
                                                                         <input type="number" class="tagInput" id="substatLocksStat4Max" min="0" max="30" step="1" value="30" onchange="userTriggers.renewFiltersDisplayValues(true,4)" >
                                                                     </div>
+                                                                    <div class="presetsTitle" id="substatLocksStat4MaxBASE">+30</div>
                                                                 </div>
-                                                                <div class="statFiltersSubstatLimitStatHeader" id="substatLocksStat4MaxDisplay">EST: 0</div>
+                                                                
                                                                 <div class="statFiltersRowContainer">
-                                                                    <div class="presetsTitle">MIN:</div>
+                                                                    <div class="presetsTitle">MIN:&nbsp;</div>
                                                                     <div class="presetsSelectorBox">
                                                                         <input type="number" class="tagInput" id="substatLocksStat4Min" min="0" max="30" step="1" value="1" onchange="userTriggers.renewFiltersDisplayValues(true,4)" >
                                                                     </div>
+                                                                    <div class="presetsTitle" id="substatLocksStat4MinBASE">+1</div>
                                                                 </div>
-                                                                <div class="statFiltersSubstatLimitStatHeader" id="substatLocksStat4MinDisplay">EST: 0</div>
                                                             </div>
 
                                                             <!-- <div class="presetsTitle">INPUT:</div>
