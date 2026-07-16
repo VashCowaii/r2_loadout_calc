@@ -5502,17 +5502,12 @@ details[open] > summary::before {
 }
 
 .relicMainStatCanBeChangedDotted {
-    /* TODO: need to look up more stuff here later bc I apparently do not remember how this works at all */
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.301) 0 0) top 0 left      / 7px 2px no-repeat,linear-gradient(rgba(255, 255, 255, 0.301) 0 0) top 0 right             / 7px 2px no-repeat,
+        linear-gradient(rgba(255, 255, 255, 0.301) 0 0) bottom 0 left   / 7px 2px no-repeat,linear-gradient(rgba(255, 255, 255, 0.301) 0 0) bottom 0 right          / 7px 2px no-repeat,
 
-    /* background: */
-        /* linear-gradient(rgba(255, 255, 255, 0.808) 0 0) 0 top left      / 7px 2px no-repeat; */
-
-    /* background:
-        linear-gradient(rgba(255, 255, 255, 0.301) 0 0) top left      / 7px 2px no-repeat,linear-gradient(rgba(255, 255, 255, 0.301) 0 0) top right             / 7px 2px no-repeat,
-        linear-gradient(rgba(255, 255, 255, 0.301) 0 0) bottom left   / 7px 2px no-repeat,linear-gradient(rgba(255, 255, 255, 0.301) 0 0) bottom right          / 7px 2px no-repeat,
-
-        linear-gradient(rgba(255, 255, 255, 0.301) 0 0) top left      / 7px 2px no-repeat,linear-gradient(rgba(255, 255, 255, 0.301) 0 0) bottom left           / 7px 2px no-repeat,
-        linear-gradient(rgba(255, 255, 255, 0.301) 0 0) top right     / 7px 2px no-repeat,linear-gradient(rgba(255, 255, 255, 0.301) 0 0) bottom right          / 7px 2px no-repeat; */
+        linear-gradient(rgba(255, 255, 255, 0.301) 0 0) top 0 left      / 2px 7px no-repeat,linear-gradient(rgba(255, 255, 255, 0.301) 0 0) bottom 0 left           / 2px 7px no-repeat,
+        linear-gradient(rgba(255, 255, 255, 0.301) 0 0) top 0 right     / 2px 7px no-repeat,linear-gradient(rgba(255, 255, 255, 0.301) 0 0) bottom 0 right          / 2px 7px no-repeat;
 
 
 
