@@ -21182,9 +21182,8 @@ const turnLogicRelics = {
 
                         if (astralCount >= 2) {
                             let relicNameRef = "Fallen Star Anchorage";
-                            const buffRef = turnLogicRelics[relicNameRef]["2pc"].buffNames;
-                            let buffName = buffRef.dmg1;
-                            let relicPathing = relicSets[relicNameRef].params[0];//0-2pc 1-4pc
+                            let buffName = this.buffName ??= turnLogicRelics[relicNameRef]["2pc"].buffNames.dmg1;
+                            let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[0];//0-2pc 1-4pc
 
                             const buffSheet = this.buffSheet ??= {
                                 "stats": [CritDamageBase],
@@ -21242,6 +21241,83 @@ const turnLogicRelics = {
             ],
             "buffNames": {
                 "dmg1": "Fallen Star Anchorage",
+            },
+        }
+    },
+    "Cosmic Life Sciences Institute": {//TODO: need to know if the enter combat blurb is really a -80 or if it's a passive construction or what, I have no idea YET
+        "2pc": {
+            logic(thisTurn,battleData) {},
+            "skillFunctions": {},
+            "listeners": [
+                {
+                    "trigger": "PassiveCalls",
+                    condition(battleData,generalInfo) {
+                        let ownerRef = this.owners;
+                        const namedTurns = battleData.nameBasedTurns;
+                        const subListeners = this.subListeners;
+
+                        let relicNameRef = "Cosmic Life Sciences Institute";
+                        let buffName = this.buffName ??= turnLogicRelics[relicNameRef]["2pc"].buffNames.dmg1;
+                        let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[0];//0-2pc 1-4pc
+
+                        const buffSheet = this.buffSheet ??= {
+                            "stats": [DamageAll],
+                            [DamageAll]: 0.002,//relicPathing[3], //TODO: come back later after we can hook in and just assign the right param
+                            "source": relicNameRef,
+                            "sourceOwner": null,
+                            "buffName": buffName,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 160,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+
+                        for (let owner of ownerRef) {
+                            let charSlot = owner.slot;
+                            let currentTurn = namedTurns[charSlot];
+
+                            const maxEnergy = currentTurn.maxEnergy;
+                            if (maxEnergy <= 200) {continue;}
+
+                            const convertedRemainder = Math.min(160, maxEnergy - 200);
+
+                            buffSheet.sourceOwner = currentTurn.properName;
+                            buffSheet.currentStacks = convertedRemainder;
+                            updateBuff(battleData,currentTurn,buffSheet);
+                        }
+
+                    },
+                    "target": "self",
+                    "listenerName": "Cosmic Life Sciences Institute listener setup",
+                    "owners": [],
+                    "subListeners": [
+                        // {
+                        //     "trigger": "UpdateStatElation",//Elation stat family
+                        //     condition(battleData,generalInfo) {
+                        //         let sourceTurn = generalInfo.sourceTurn;
+        
+                        //         if (sourceTurn.relicPunklordeUserCompleted) {
+                        //             removeListener(battleData,this,sourceTurn);
+                        //             return;
+                        //             //the buffs are permanent, other than the lower buff getting replaced with the higher buff
+                        //             //so once the higher buff has BEEN placed on an entity, that entity no longer needs to listen to elation changes
+                        //         }
+        
+                        //         const statCheck = this.statCheck ??= turnLogicRelics["Punklorde Stage Zero"]["2pc"].skillFunctions.statCheck;
+                        //         statCheck(battleData,sourceTurn);
+                        //     },
+                        //     "target": "self",
+                        //     "isPersonal": true,
+                        //     "listenerName": "Punklorde Stage Zero elation changes check",
+                        // },
+                    ]
+                },
+            ],
+            "buffNames": {
+                "dmg1": "Cosmic Life Sciences Institute",
             },
         }
     },
