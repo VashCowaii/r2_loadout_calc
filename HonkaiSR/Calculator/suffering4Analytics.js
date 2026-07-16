@@ -1836,6 +1836,8 @@ const compare = {
         //     addTeamWant: ["EHR"],
         // },
 
+        const uniqueLightconesListSet = dataListerObject.uniqueOnePerAccountList;
+
 
         let countedSkip = 0;
         let skipCountCounting = 0;
@@ -1853,6 +1855,7 @@ const compare = {
             let valid4pc1 = char14pcCheck.ValidSelf;
             let validLightcone1 = char1Lightcone.ValidSelf;
             const is4pc1 = char14pcCheck.is4pc;
+            const char1HasUniqueLightcone = uniqueLightconesListSet.has(char1Lightcone);
 
             const char1PlanarGivesTeam = char1PlanarCheck.GivesTeam;
             const char12pcGivesTeam = char12pcCheck.GivesTeam;
@@ -1869,6 +1872,8 @@ const compare = {
                 let valid4pc2 = char24pcCheck.ValidSelf;
                 let validLightcone2 = char2Lightcone.ValidSelf;
                 const is4pc2 = char24pcCheck.is4pc;
+                const char2HasUniqueLightcone = uniqueLightconesListSet.has(char2Lightcone);
+                if (char2HasUniqueLightcone && char2Lightcone === char1Lightcone) {validLightcone2 = false;}
 
                 const char2PlanarGivesTeam = char2PlanarCheck.GivesTeam;
                 const char22pcGivesTeam = char22pcCheck.GivesTeam;
@@ -1885,6 +1890,8 @@ const compare = {
                     let valid4pc3 = char34pcCheck.ValidSelf;
                     let validLightcone3 = char3Lightcone.ValidSelf;
                     const is4pc3 = char34pcCheck.is4pc;
+                    const char3HasUniqueLightcone = uniqueLightconesListSet.has(char3Lightcone);
+                    if (char3HasUniqueLightcone && (char2Lightcone === char3Lightcone || char3Lightcone === char1Lightcone)) {validLightcone3 = false;}
 
                     const char3PlanarGivesTeam = char3PlanarCheck.GivesTeam;
                     const char32pcGivesTeam = char32pcCheck.GivesTeam;
@@ -1901,6 +1908,8 @@ const compare = {
                         let valid4pc4 = char44pcCheck.ValidSelf;
                         let validLightcone4 = char4Lightcone.ValidSelf;
                         const is4pc4 = char44pcCheck.is4pc;
+                        const char4HasUniqueLightcone = uniqueLightconesListSet.has(char4Lightcone);
+                        if (char4HasUniqueLightcone && (char2Lightcone === char4Lightcone || char4Lightcone === char1Lightcone || char4Lightcone === char3Lightcone)) {validLightcone4 = false;}
 
                         const char4PlanarGivesTeam = char4PlanarCheck.GivesTeam;
                         const char42pcGivesTeam = char42pcCheck.GivesTeam;
@@ -2261,6 +2270,7 @@ const compare = {
             let valid4pc1 = char14pcCheck.ValidSelf;
             let validLightcone1 = char1Lightcone.ValidSelf;
             const is4pc1 = char14pcCheck.is4pc;
+            const char1HasUniqueLightcone = uniqueLightconesListSet.has(char1Lightcone);
 
             const char1PlanarGivesTeam = char1PlanarCheck.GivesTeam;
             const char12pcGivesTeam = char12pcCheck.GivesTeam;
@@ -2280,6 +2290,9 @@ const compare = {
                 let valid4pc2 = char24pcCheck.ValidSelf;
                 let validLightcone2 = char2Lightcone.ValidSelf;
                 const is4pc2 = char24pcCheck.is4pc;
+                const char2HasUniqueLightcone = uniqueLightconesListSet.has(char2Lightcone);
+                if (char2HasUniqueLightcone && char2Lightcone === char1Lightcone) {validLightcone2 = false;}
+                
 
                 const char2PlanarGivesTeam = char2PlanarCheck.GivesTeam;
                 const char22pcGivesTeam = char22pcCheck.GivesTeam;
@@ -2297,6 +2310,8 @@ const compare = {
                     let valid4pc3 = char34pcCheck.ValidSelf;
                     let validLightcone3 = char3Lightcone.ValidSelf;
                     const is4pc3 = char34pcCheck.is4pc;
+                    const char3HasUniqueLightcone = uniqueLightconesListSet.has(char3Lightcone);
+                    if (char3HasUniqueLightcone && (char2Lightcone === char3Lightcone || char3Lightcone === char1Lightcone)) {validLightcone3 = false;}
 
                     const char3PlanarGivesTeam = char3PlanarCheck.GivesTeam;
                     const char32pcGivesTeam = char32pcCheck.GivesTeam;
@@ -2314,6 +2329,12 @@ const compare = {
                         let valid4pc4 = char44pcCheck.ValidSelf;
                         let validLightcone4 = char4Lightcone.ValidSelf;
                         const is4pc4 = char44pcCheck.is4pc;
+                        const char4HasUniqueLightcone = uniqueLightconesListSet.has(char4Lightcone);
+                        if (char4HasUniqueLightcone && (char2Lightcone === char4Lightcone || char4Lightcone === char1Lightcone || char4Lightcone === char3Lightcone)) {validLightcone4 = false;}
+
+
+
+
 
                         const char4PlanarGivesTeam = char4PlanarCheck.GivesTeam;
                         const char42pcGivesTeam = char42pcCheck.GivesTeam;
