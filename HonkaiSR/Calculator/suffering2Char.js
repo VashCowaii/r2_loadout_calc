@@ -4687,6 +4687,15 @@ const weaknessIndexConversion = {
     "Physical": WeaknessPhysical,
 };
 
+const astralMemberSet = new Set([
+    "Trailblazer - Destruction","Trailblazer - Preservation","Trailblazer - Harmony","Trailblazer - Remembrance","Trailblazer - Elation",
+    "Himeko","Himeko • Nova",
+    "Dan Heng","Dan Heng • Imbibitor Lunae","Dan Heng • Permansor Terrae",
+    "March 7th - Preservation","March 7th - Hunt","Evernight",
+    "Welt",
+    "Sunday",
+])
+
 
 const turnLogic = {
 

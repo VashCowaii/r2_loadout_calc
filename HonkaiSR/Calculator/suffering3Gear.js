@@ -20913,7 +20913,7 @@ const turnLogicRelics = {
             },
         }
     },
-    "Punklorde Stage Zero": {//REDONE
+    "Punklorde Stage Zero": {
         "2pc": {
             logic(thisTurn,battleData) {},
             "skillFunctions": {
@@ -21158,6 +21158,90 @@ const turnLogicRelics = {
             "buffNames": {
                 "critBuff": "City of Converging Stars (CritDMG)",
                 "dmgBuff": "City of Converging Stars (ATK)",
+            },
+        }
+    },
+
+    "Fallen Star Anchorage": {//TODO: need to know if the enter combat blurb is really a -80 or if it's a passive construction or what, I have no idea YET
+        "2pc": {
+            logic(thisTurn,battleData) {},
+            "skillFunctions": {},
+            "listeners": [
+                {
+                    "trigger": "PassiveCalls",
+                    condition(battleData,generalInfo) {
+                        let ownerRef = this.owners;
+                        const namedTurns = battleData.nameBasedTurns;
+                        const subListeners = this.subListeners;
+
+                        const fullCharacterArray = battleData.fullCharacterArray;
+                        let astralCount = 0;
+                        for (let character of fullCharacterArray) {
+                            if (astralMemberSet.has(character.properName)) {astralCount++;}
+                        }
+
+                        if (astralCount >= 2) {
+                            let relicNameRef = "Fallen Star Anchorage";
+                            const buffRef = turnLogicRelics[relicNameRef]["2pc"].buffNames;
+                            let buffName = buffRef.dmg1;
+                            let relicPathing = relicSets[relicNameRef].params[0];//0-2pc 1-4pc
+
+                            const buffSheet = this.buffSheet ??= {
+                                "stats": [CritDamageBase],
+                                [CritDamageBase]: 0.32,//relicPathing[3], //TODO: come back later after we can hook in and just assign the right param
+                                "source": relicNameRef,
+                                "sourceOwner": null,
+                                "buffName": buffName,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null
+                            }
+
+                            for (let owner of ownerRef) {
+                                let charSlot = owner.slot;
+                                let currentTurn = namedTurns[charSlot];
+
+                                const ownerIsAstral = astralMemberSet.has(currentTurn.properName);
+                                if (!ownerIsAstral) {continue;}
+
+                                buffSheet.sourceOwner = currentTurn.properName;
+                                updateBuff(battleData,currentTurn,buffSheet);
+                            }
+                        }
+
+                    },
+                    "target": "self",
+                    "listenerName": "Fallen Star Anchorage listener setup",
+                    "owners": [],
+                    "subListeners": [
+                        // {
+                        //     "trigger": "UpdateStatElation",//Elation stat family
+                        //     condition(battleData,generalInfo) {
+                        //         let sourceTurn = generalInfo.sourceTurn;
+        
+                        //         if (sourceTurn.relicPunklordeUserCompleted) {
+                        //             removeListener(battleData,this,sourceTurn);
+                        //             return;
+                        //             //the buffs are permanent, other than the lower buff getting replaced with the higher buff
+                        //             //so once the higher buff has BEEN placed on an entity, that entity no longer needs to listen to elation changes
+                        //         }
+        
+                        //         const statCheck = this.statCheck ??= turnLogicRelics["Punklorde Stage Zero"]["2pc"].skillFunctions.statCheck;
+                        //         statCheck(battleData,sourceTurn);
+                        //     },
+                        //     "target": "self",
+                        //     "isPersonal": true,
+                        //     "listenerName": "Punklorde Stage Zero elation changes check",
+                        // },
+                    ]
+                },
+            ],
+            "buffNames": {
+                "dmg1": "Fallen Star Anchorage",
             },
         }
     },
