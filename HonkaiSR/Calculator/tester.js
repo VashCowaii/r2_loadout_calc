@@ -6212,7 +6212,7 @@ const userTriggers = {
             // const maslowSlot = maslowSubstats[i-1];
             const maslowSlot = newFilterPath[`desired${i}`];
 
-            console.log(maslowSlot)
+            // console.log(maslowSlot)
 
             const currentStatIndex = greatTableIndex[maslowSlot];
             const statFamilyName = mappedFamilies[currentStatIndex];
