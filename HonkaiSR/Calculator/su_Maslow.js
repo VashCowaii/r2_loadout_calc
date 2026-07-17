@@ -1466,6 +1466,13 @@ const maslowLightconesErudition = {
         wantsTeam: [],
         addTeamWant: [],
     },
+    "A Star That Lights the Night": {
+        gives: ["AssistSkill","Ultimate","Shred","EnergyRegen"],
+        givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
 
     //4star
     "A Dream Scented in Wheat": {
