@@ -340,6 +340,10 @@ let allowedCharacterList = [
     "trimName": "MortenaxBlade"
   },
   {
+    "fullName": "Himeko • Nova",
+    "trimName": "HimekoNova"
+  },
+  {
     "fullName": "Trailblazer - Destruction",
     "trimName": "TrailblazerDestruction"
   },
@@ -370,6 +374,14 @@ let allowedCharacterList = [
   {
     "fullName": "Archer",
     "trimName": "Archer"
+  },
+  {
+    "fullName": "Rin Tohsaka",
+    "trimName": "RinTohsaka"
+  },
+  {
+    "fullName": "Gilgamesh",
+    "trimName": "Gilgamesh"
   },
   {
     "fullName": "Welt_v0",

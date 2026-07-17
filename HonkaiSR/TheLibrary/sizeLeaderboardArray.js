@@ -5974,6 +5974,30 @@ let sizeLeaderboardArray = [
     "sizeCount": 1435
   },
   {
+    "entryType": "char",
+    "entryName": "Himeko • Nova",
+    "trimCharacterName": "HimekoNova",
+    "entryIcon": "icon/character/1510.png",
+    "lineCount": 7,
+    "sizeCount": 145
+  },
+  {
+    "entryType": "char",
+    "entryName": "Rin Tohsaka",
+    "trimCharacterName": "RinTohsaka",
+    "entryIcon": "icon/character/1508.png",
+    "lineCount": 7,
+    "sizeCount": 141
+  },
+  {
+    "entryType": "char",
+    "entryName": "Gilgamesh",
+    "trimCharacterName": "Gilgamesh",
+    "entryIcon": "icon/character/1509.png",
+    "lineCount": 7,
+    "sizeCount": 138
+  },
+  {
     "entryType": "enemy",
     "enemyID": 8033013,
     "lineCount": 6,
