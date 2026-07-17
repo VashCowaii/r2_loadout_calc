@@ -813,7 +813,13 @@ const maslowCategoryPlanars = {
         wantsTeam: [],
         addTeamWant: [],
     },
-    
+    "Fallen Star Anchorage": {
+        gives: ["CritDMG"],
+        givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
 }
 
 const maslowLightconesHunt = {
