@@ -21415,7 +21415,7 @@ const turnLogicRelics = {
 
                         const buffSheet = this.buffSheet ??= {
                             "stats": [DamageAll],
-                            [DamageAll]: 0.002,//relicPathing[3], //TODO: come back later after we can hook in and just assign the right param
+                            [DamageAll]: relicPathing[1],
                             "source": relicNameRef,
                             "sourceOwner": null,
                             "buffName": buffName,
