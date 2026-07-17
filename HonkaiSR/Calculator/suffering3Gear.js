@@ -21340,7 +21340,7 @@ const turnLogicRelics = {
 
                             const buffSheet = this.buffSheet ??= {
                                 "stats": [CritDamageBase],
-                                [CritDamageBase]: 0.32,//relicPathing[3], //TODO: come back later after we can hook in and just assign the right param
+                                [CritDamageBase]: relicPathing[1],
                                 "source": relicNameRef,
                                 "sourceOwner": null,
                                 "buffName": buffName,
