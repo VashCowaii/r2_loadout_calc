@@ -820,6 +820,13 @@ const maslowCategoryPlanars = {
         wantsTeam: [],
         addTeamWant: [],
     },
+    "Cosmic Life Sciences Institute": {
+        gives: ["All"],
+        givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
 }
 
 const maslowLightconesHunt = {
