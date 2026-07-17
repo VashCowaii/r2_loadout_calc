@@ -50128,19 +50128,15 @@ const turnLogic = {
                             if (buffCheck) {
                                 const currentStacks = buffCheck.currentStacks;
                                 if (currentStacks === weaknessCount) {return;}
-                                else if (currentStacks < weaknessCount) {
+                                else {
                                     const stackDiff = weaknessCount - currentStacks;
-                                    buffSheet.currentStacks = stackDiff;
-                                    updateBuff(battleData,ownerTurn,buffSheet);
-                                }
-                                else {//if stacks are higher than they should be
-                                    if (weaknessCount) {//if we have stacks then update
-                                        removeBuff(battleData,ownerTurn,buffSheet,true,null,true);
-                                        buffSheet.currentStacks = weaknessCount;
-                                        updateBuff(battleData,ownerTurn,buffSheet,false,null)
+
+                                    if (-stackDiff === currentStacks) {
+                                        removeBuff(battleData,ownerTurn,buffCheck);
                                     }
-                                    else {//otherwise remove
-                                        removeBuff(battleData,ownerTurn,buffSheet);
+                                    else {
+                                        buffSheet.currentStacks = stackDiff;
+                                        updateBuff(battleData,ownerTurn,buffSheet);
                                     }
                                 }
                             }
