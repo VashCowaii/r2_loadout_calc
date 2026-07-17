@@ -13313,6 +13313,154 @@ const turnLogicLightcones = {
             "buff2": "Eternal Calculus (LC) SPD",
         },
     },
+    "A Star That Lights the Night": {//TODO: rn the assumption is that "assist skill" isn't actually an ability type but rather an attack type like FUA, so verify that later
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {
+            expireFunction(battleData,expireParam) {
+                const ownerName = expireParam.sourceTurn;
+                const uniqueBuffName = expireParam.uniqueName;
+                const ownerTurn = battleData.nameBasedTurns[ownerName];
+
+                const buffsObject = ownerTurn.buffsObject;
+
+                const ultCheck = buffsObject[uniqueBuffName];
+                if (ultCheck) {removeBuff(battleData,ownerTurn,ultCheck);}
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+
+                    let lcNameRef = "A Star That Lights the Night";
+                    let lcPathing = lightcones[lcNameRef].params;
+
+                    let buffSheet = this.buffSheet ??= {
+                        "stats": [DEFShredAll],
+                        [DEFShredAll]: 0,
+                        "source": lcNameRef,
+                        "sourceOwner": "",
+                        "buffName": turnLogicLightcones[lcNameRef].buffNames.shred,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+
+
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];//lcPathing[0]
+
+                        let ownerRank = ownersSlots[currentTurn.name];
+                        let rankParams = lcPathing[ownerRank-1];
+
+                        buffSheet.sourceOwner = currentTurn.properName;
+                        buffSheet[DEFShredAll] = rankParams[0];//TODO: assign the correct param index later
+                        updateBuff(battleData,currentTurn,buffSheet);
+
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        // addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
+                        // addListenerWithPriority(battleData,subListeners[2],subListeners[2].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "A Star That Lights the Night - passive application",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AttackStart",
+                        condition(battleData,generalInfo) {
+                            let isFUA = false;
+                            const actionTags = generalInfo.ATKObject.actionTags;
+                            for (let tag of actionTags) {
+                                if (tag === "AssistSkill") {
+                                    isFUA = true;
+                                    break;
+                                }
+                            }
+                            if (!isFUA) {return;}
+
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (!sourceTurn.lcStarThatLightsAssistSHEET) {
+                                const ownersSlots = this.ownersSlots;
+                                const ownerRank = ownersSlots[sourceTurn.name];
+                                const lcNameRef = "A Star That Lights the Night";
+                                const lcPathing = lightcones[lcNameRef].params;
+                                const rankParams = lcPathing[ownerRank-1];
+
+                                const buffNames = turnLogicLightcones[lcNameRef].buffNames;
+    
+                                sourceTurn.lcStarThatLightsAssistSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[1],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffNames.buff1,
+                                    "durationInTurn": 3,
+                                    "duration": 2,
+                                    "AVApplied": 0,
+                                    "maxStacks": 3,
+                                    "currentStacks": 1,
+                                    "decay": false,
+                                    "expireType": "EndTurn",
+                                    "actionTags": ["AssistSkill"],
+
+                                    "expireFunction": turnLogicLightcones[lcNameRef].skillFunctions.expireFunction,
+                                    "expireParam": {sourceTurn:currentTurn.name,uniqueName:buffNames.buff2}//owner, in this case
+                                }
+
+                                sourceTurn.lcStarThatLightsAssistULTSHEET = {
+                                    "stats": [DamageAll],
+                                    [DamageAll]: rankParams[2],
+                                    "source": lcNameRef,
+                                    "sourceOwner": sourceTurn.properName,
+                                    "buffName": buffNames.buff2,
+                                    "durationInTurn": null,
+                                    "duration": 1,
+                                    "AVApplied": 0,
+                                    "maxStacks": 3,
+                                    "currentStacks": 3,
+                                    "decay": false,
+                                    "expireType": null,
+                                    "actionTags": ["Ultimate"],
+                                }
+                            }
+                            
+                            const buffSheet = sourceTurn.lcStarThatLightsAssistSHEET;
+                            const buffSheet2 = sourceTurn.lcStarThatLightsAssistULTSHEET;
+                            updateBuff(battleData,sourceTurn,buffSheet);
+
+                            const sourceBuffs = sourceTurn.buffsObject;
+
+                            if (sourceBuffs[buffSheet2.buffName]) {return;}
+
+                            const postCheck = sourceBuffs[buffSheet.buffName];
+                            if (postCheck?.currentStacks === 3) {
+                                updateBuff(battleData,sourceTurn,buffSheet2);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "A Star That Lights the Night - FUA listener",
+                    },
+                ],
+            },
+        ],
+        "buffNames": {
+            "shred": "A Star That Lights the Night (Shred)",
+            "buff1": "Sail (LC)",
+            "buff2": "Sail (LC) [Ult]",
+        },
+    },
         //4star
     "Today Is Another Peaceful Day": {//REDONE
         logic(thisTurn,battleData) {},
@@ -20913,7 +21061,7 @@ const turnLogicRelics = {
             },
         }
     },
-    "Punklorde Stage Zero": {//REDONE
+    "Punklorde Stage Zero": {
         "2pc": {
             logic(thisTurn,battleData) {},
             "skillFunctions": {
@@ -21158,6 +21306,166 @@ const turnLogicRelics = {
             "buffNames": {
                 "critBuff": "City of Converging Stars (CritDMG)",
                 "dmgBuff": "City of Converging Stars (ATK)",
+            },
+        }
+    },
+
+    "Fallen Star Anchorage": {//TODO: need to know if the enter combat blurb is really a -80 or if it's a passive construction or what, I have no idea YET
+        "2pc": {
+            logic(thisTurn,battleData) {},
+            "skillFunctions": {},
+            "listeners": [
+                {
+                    "trigger": "PassiveCalls",
+                    condition(battleData,generalInfo) {
+                        let ownerRef = this.owners;
+                        const namedTurns = battleData.nameBasedTurns;
+                        const subListeners = this.subListeners;
+
+                        const fullCharacterArray = battleData.fullCharacterArray;
+                        let astralCount = 0;
+                        for (let character of fullCharacterArray) {
+                            if (astralMemberSet.has(character.properName)) {astralCount++;}
+                        }
+
+                        if (astralCount >= 2) {
+                            let relicNameRef = "Fallen Star Anchorage";
+                            let buffName = this.buffName ??= turnLogicRelics[relicNameRef]["2pc"].buffNames.dmg1;
+                            let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[0];//0-2pc 1-4pc
+
+                            const buffSheet = this.buffSheet ??= {
+                                "stats": [CritDamageBase],
+                                [CritDamageBase]: 0.32,//relicPathing[3], //TODO: come back later after we can hook in and just assign the right param
+                                "source": relicNameRef,
+                                "sourceOwner": null,
+                                "buffName": buffName,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 1,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null
+                            }
+
+                            for (let owner of ownerRef) {
+                                let charSlot = owner.slot;
+                                let currentTurn = namedTurns[charSlot];
+
+                                const ownerIsAstral = astralMemberSet.has(currentTurn.properName);
+                                if (!ownerIsAstral) {continue;}
+
+                                buffSheet.sourceOwner = currentTurn.properName;
+                                updateBuff(battleData,currentTurn,buffSheet);
+                            }
+                        }
+
+                    },
+                    "target": "self",
+                    "listenerName": "Fallen Star Anchorage listener setup",
+                    "owners": [],
+                    "subListeners": [
+                        // {
+                        //     "trigger": "UpdateStatElation",//Elation stat family
+                        //     condition(battleData,generalInfo) {
+                        //         let sourceTurn = generalInfo.sourceTurn;
+        
+                        //         if (sourceTurn.relicPunklordeUserCompleted) {
+                        //             removeListener(battleData,this,sourceTurn);
+                        //             return;
+                        //             //the buffs are permanent, other than the lower buff getting replaced with the higher buff
+                        //             //so once the higher buff has BEEN placed on an entity, that entity no longer needs to listen to elation changes
+                        //         }
+        
+                        //         const statCheck = this.statCheck ??= turnLogicRelics["Punklorde Stage Zero"]["2pc"].skillFunctions.statCheck;
+                        //         statCheck(battleData,sourceTurn);
+                        //     },
+                        //     "target": "self",
+                        //     "isPersonal": true,
+                        //     "listenerName": "Punklorde Stage Zero elation changes check",
+                        // },
+                    ]
+                },
+            ],
+            "buffNames": {
+                "dmg1": "Fallen Star Anchorage",
+            },
+        }
+    },
+    "Cosmic Life Sciences Institute": {//TODO: need to know if the enter combat blurb is really a -80 or if it's a passive construction or what, I have no idea YET
+        "2pc": {
+            logic(thisTurn,battleData) {},
+            "skillFunctions": {},
+            "listeners": [
+                {
+                    "trigger": "PassiveCalls",
+                    condition(battleData,generalInfo) {
+                        let ownerRef = this.owners;
+                        const namedTurns = battleData.nameBasedTurns;
+                        const subListeners = this.subListeners;
+
+                        let relicNameRef = "Cosmic Life Sciences Institute";
+                        let buffName = this.buffName ??= turnLogicRelics[relicNameRef]["2pc"].buffNames.dmg1;
+                        let relicPathing = this.relicPathing ??= relicSets[relicNameRef].params[0];//0-2pc 1-4pc
+
+                        const buffSheet = this.buffSheet ??= {
+                            "stats": [DamageAll],
+                            [DamageAll]: 0.002,//relicPathing[3], //TODO: come back later after we can hook in and just assign the right param
+                            "source": relicNameRef,
+                            "sourceOwner": null,
+                            "buffName": buffName,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 160,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+
+                        for (let owner of ownerRef) {
+                            let charSlot = owner.slot;
+                            let currentTurn = namedTurns[charSlot];
+
+                            const maxEnergy = currentTurn.maxEnergy;
+                            if (maxEnergy <= 200) {continue;}
+
+                            const convertedRemainder = Math.min(160, maxEnergy - 200);
+
+                            buffSheet.sourceOwner = currentTurn.properName;
+                            buffSheet.currentStacks = convertedRemainder;
+                            updateBuff(battleData,currentTurn,buffSheet);
+                        }
+
+                    },
+                    "target": "self",
+                    "listenerName": "Cosmic Life Sciences Institute listener setup",
+                    "owners": [],
+                    "subListeners": [
+                        // {
+                        //     "trigger": "UpdateStatElation",//Elation stat family
+                        //     condition(battleData,generalInfo) {
+                        //         let sourceTurn = generalInfo.sourceTurn;
+        
+                        //         if (sourceTurn.relicPunklordeUserCompleted) {
+                        //             removeListener(battleData,this,sourceTurn);
+                        //             return;
+                        //             //the buffs are permanent, other than the lower buff getting replaced with the higher buff
+                        //             //so once the higher buff has BEEN placed on an entity, that entity no longer needs to listen to elation changes
+                        //         }
+        
+                        //         const statCheck = this.statCheck ??= turnLogicRelics["Punklorde Stage Zero"]["2pc"].skillFunctions.statCheck;
+                        //         statCheck(battleData,sourceTurn);
+                        //     },
+                        //     "target": "self",
+                        //     "isPersonal": true,
+                        //     "listenerName": "Punklorde Stage Zero elation changes check",
+                        // },
+                    ]
+                },
+            ],
+            "buffNames": {
+                "dmg1": "Cosmic Life Sciences Institute",
             },
         }
     },

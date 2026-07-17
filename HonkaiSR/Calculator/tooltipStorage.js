@@ -30,4 +30,11 @@ const tooltipStorage = {
 
 
     "cyclesStartingEnergyCustomExplainer": "This is the % Energy that each of your characters start with each battle.<br><br>PLEASE NOTE that this does NOT influence special energy bars on characters like Castorice that have predefined starting values separate from the mode.",
+
+
+    "baseRollOnLocksExplainer": `The "Base" value is the amount of times a desired stat CAN show up as a base roll between all 6 relics, using the total base pool value you set.<br><br>Note though that due to mainstat conflicts it may actually be less in some searches as say even if you choose to have ATK Flat show up on all 6 relics it's impossible for it to do so as a substat due to Hands always having ATK Flat as a main-stat, reducing the base amount of times it can be used by one.`,
+
+
+
+
 };  

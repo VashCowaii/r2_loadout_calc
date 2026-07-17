@@ -488,23 +488,25 @@ const battleActions = {
     buffRemovalEnd(battleData,sourceTurn,currentReference,silent,shieldSource,ignoreDebuffPokes,ignoreFamilyPokes) {
         const buffName = currentReference.buffName;
         // if (buffName === "Windfall Bonanza!") {console.log("Reached buff REMOVAL for Windfall Bonanza!",sourceTurn.properName)}
-        if (!sourceTurn.buffsObject[buffName]) {return;}
+        const buffsObject = sourceTurn.buffsObject;
+        if (!buffsObject[buffName]) {return;}
 
-        sourceTurn.buffsObject[buffName] = null;
-        currentReference.expireFunction?.(battleData,currentReference.expireParam);
+        const finalRef = buffsObject[buffName];
+        buffsObject[buffName] = null;
+        finalRef.expireFunction?.(battleData,finalRef.expireParam);
         //if I forget how this works later, go look at earthly escapade(sparkle lc) for a good example
         
         const log = battleData.isLoggyLogger;
         if (!silent && log) {
             const isEnemy = sourceTurn.isEnemy;
             // console.log(buffSheet.source,buffSheet.sourceOwner)
-            logToBattle(battleData,{logType: "BuffRemove", buffName, name:sourceTurn.properName,buffDisplayIcon: currentReference.buffDisplayIcon, isShield:currentReference.isShield, source: currentReference.source, sourceOwner: currentReference.sourceOwner, enemyRealName: isEnemy ? sourceTurn.enemyRealName : null, AV: battleData.sumAV, stacks: currentReference.currentStacks});
+            logToBattle(battleData,{logType: "BuffRemove", buffName, name:sourceTurn.properName,buffDisplayIcon: finalRef.buffDisplayIcon, isShield:finalRef.isShield, source: finalRef.source, sourceOwner: finalRef.sourceOwner, enemyRealName: isEnemy ? sourceTurn.enemyRealName : null, AV: battleData.sumAV, stacks: finalRef.currentStacks});
         }
 
-        const changeStats = currentReference.stats != undefined;
-        if (changeStats) {buffStatChange(battleData,sourceTurn,currentReference,currentReference,currentReference.currentStacks,-1,ignoreFamilyPokes);}
+        const changeStats = finalRef.stats != undefined;
+        if (changeStats) {buffStatChange(battleData,sourceTurn,finalRef,finalRef,finalRef.currentStacks,-1,ignoreFamilyPokes);}
 
-        const flags = currentReference.flags;
+        const flags = finalRef.flags;
         if (flags) {
             const targetFlags = sourceTurn.flags;
             for (let flag of flags) {//DEF_DOWN
@@ -512,22 +514,22 @@ const battleActions = {
             }
         }
 
-        if (currentReference.isDebuff) {
+        if (finalRef.isDebuff) {
             sourceTurn.debuffCounter -= 1;
-            if (!ignoreDebuffPokes) {poke("DebuffRemoved",battleData,{sourceTurn,currentReference},sourceTurn);}
+            if (!ignoreDebuffPokes) {poke("DebuffRemoved",battleData,{sourceTurn,currentReference:finalRef},sourceTurn);}
 
             //IT WILL NEVER BE A DOT OR ALLTYPE DOT IF IT IS NOT A DEBUFF TOO, so we bundle it in there
-            const isAllDOTTypes = currentReference.isAllDOTTypes;
-            if (currentReference.isDOT) {
+            const isAllDOTTypes = finalRef.isAllDOTTypes;
+            if (finalRef.isDOT) {
                 sourceTurn.DOTCounter -= 1;
                 if (!isAllDOTTypes) {
-                    const element = currentReference.element;
+                    const element = finalRef.element;
                     sourceTurn.dots[element] -= 1;
-                    poke("DOTWasModified",battleData,{sourceTurn,currentReference,dotWas: "Remove",element},sourceTurn);
+                    poke("DOTWasModified",battleData,{sourceTurn,currentReference:finalRef,dotWas: "Remove",element},sourceTurn);
                 }
 
                 const currentDots = battleData.battleListenersPersonal[sourceTurn.properName].PreActionPhase;
-                currentDots.splice(currentDots.indexOf(currentReference), 1);
+                currentDots.splice(currentDots.indexOf(finalRef), 1);
             }
             if (isAllDOTTypes) {
                 //in the case of something like black swan Epiphany debuff, it makes it so enemies are considered to be suffering from all types of dot, so we increment the elemental trackers on the target
@@ -536,10 +538,10 @@ const battleActions = {
                 enemyElementalRef.Fire -= 1;
                 enemyElementalRef.Lightning -= 1;
                 enemyElementalRef.Physical -= 1;
-                poke("DOTWasModified",battleData,{sourceTurn,currentReference,dotWas: "Remove",element:null},sourceTurn);
+                poke("DOTWasModified",battleData,{sourceTurn,currentReference:finalRef,dotWas: "Remove",element:null},sourceTurn);
             }
         }
-        if (currentReference.isShield) {
+        if (finalRef.isShield) {
             sourceTurn.shieldCounter -= 1;
             sourceTurn.activeShields[buffName] = null;
 
@@ -566,11 +568,11 @@ const battleActions = {
                 sourceTurn.shieldValueMax = currentHighestCap;
             }
 
-            poke("ShieldLost",battleData,{sourceTurn,currentReference},sourceTurn);
+            poke("ShieldLost",battleData,{sourceTurn,currentReference:finalRef},sourceTurn);
         }
-        if (currentReference.isFinalMulti) {
+        if (finalRef.isFinalMulti) {
             sourceTurn.finalMultiCounter -= 1;
-            const currentTags = currentReference.actionTags;
+            const currentTags = finalRef.actionTags;
             const characterActions = sourceTurn.activeFinalMultipliers;
 
             for (let i=0;i<currentTags.length;i++) {
@@ -591,15 +593,17 @@ const battleActions = {
         const isShield = currentReference.isShield;
         const isFinalMulti = currentReference.isFinalMulti;
         for (let sourceTurn of sourceTurnArray) {
-            if (!sourceTurn.buffsObject[buffName]) {return;}
+            const buffsObject = sourceTurn.buffsObject;
+            if (!buffsObject[buffName]) {return;}
 
-            sourceTurn.buffsObject[buffName] = null;
+            const finalRef = buffsObject[buffName];
+            buffsObject[buffName] = null;
             
             //if I forget how this works later, go look at earthly escapade(sparkle lc) for a good example
             
-            if (changeStats) {buffStatChange(battleData,sourceTurn,currentReference,currentReference,currentReference.currentStacks,-1,ignoreFamilyPokes);}
+            if (changeStats) {buffStatChange(battleData,sourceTurn,finalRef,finalRef,finalRef.currentStacks,-1,ignoreFamilyPokes);}
 
-            const flags = currentReference.flags;
+            const flags = finalRef.flags;
             if (flags) {
                 const targetFlags = sourceTurn.flags;
                 for (let flag of flags) {//DEF_DOWN
@@ -609,20 +613,20 @@ const battleActions = {
 
             if (isDebuff) {
                 sourceTurn.debuffCounter -= 1;
-                if (!ignoreDebuffPokes) {poke("DebuffRemoved",battleData,{sourceTurn,currentReference},sourceTurn);}
+                if (!ignoreDebuffPokes) {poke("DebuffRemoved",battleData,{sourceTurn,currentReference:finalRef},sourceTurn);}
 
                 //IT WILL NEVER BE A DOT OR ALLTYPE DOT IF IT IS NOT A DEBUFF TOO, so we bundle it in there
                 
-                if (currentReference.isDOT) {
+                if (finalRef.isDOT) {
                     sourceTurn.DOTCounter -= 1;
                     if (!isAllDOTTypes) {
-                        const element = currentReference.element;
+                        const element = finalRef.element;
                         sourceTurn.dots[element] -= 1;
-                        poke("DOTWasModified",battleData,{sourceTurn,currentReference,dotWas: "Remove",element},sourceTurn);
+                        poke("DOTWasModified",battleData,{sourceTurn,currentReference:finalRef,dotWas: "Remove",element},sourceTurn);
                     }
 
                     const currentDots = battleData.battleListenersPersonal[sourceTurn.properName].PreActionPhase;
-                    currentDots.splice(currentDots.indexOf(currentReference), 1);
+                    currentDots.splice(currentDots.indexOf(finalRef), 1);
                 }
                 if (isAllDOTTypes) {
                     //in the case of something like black swan Epiphany debuff, it makes it so enemies are considered to be suffering from all types of dot, so we increment the elemental trackers on the target
@@ -631,7 +635,7 @@ const battleActions = {
                     enemyElementalRef.Fire -= 1;
                     enemyElementalRef.Lightning -= 1;
                     enemyElementalRef.Physical -= 1;
-                    poke("DOTWasModified",battleData,{sourceTurn,currentReference,dotWas: "Remove",element:null},sourceTurn);
+                    poke("DOTWasModified",battleData,{sourceTurn,currentReference:finalRef,dotWas: "Remove",element:null},sourceTurn);
                 }
             }
             if (isShield) {
@@ -659,11 +663,11 @@ const battleActions = {
                     sourceTurn.shieldValueCurrent = currentHighest;
                     sourceTurn.shieldValueMax = currentHighestCap;
                 }
-                poke("ShieldLost",battleData,{sourceTurn,currentReference},sourceTurn);
+                poke("ShieldLost",battleData,{sourceTurn,currentReference:finalRef},sourceTurn);
             }
             if (isFinalMulti) {
                 sourceTurn.finalMultiCounter -= 1;
-                const currentTags = currentReference.actionTags;
+                const currentTags = finalRef.actionTags;
                 const characterActions = sourceTurn.activeFinalMultipliers;
 
                 for (let i=0;i<currentTags.length;i++) {
@@ -4686,6 +4690,15 @@ const weaknessIndexConversion = {
     "Imaginary": WeaknessImaginary,
     "Physical": WeaknessPhysical,
 };
+
+const astralMemberSet = new Set([
+    "Trailblazer - Destruction","Trailblazer - Preservation","Trailblazer - Harmony","Trailblazer - Remembrance","Trailblazer - Elation",
+    "Himeko","Himeko • Nova",
+    "Dan Heng","Dan Heng • Imbibitor Lunae","Dan Heng • Permansor Terrae",
+    "March 7th - Preservation","March 7th - Hunt","Evernight",
+    "Welt",
+    "Sunday",
+])
 
 
 const turnLogic = {
@@ -44271,10 +44284,10 @@ const turnLogic = {
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
-                    const actionTags = ["Skill","Attack","CasE1Ability"];
+                    const actionTags = ["All","Skill","Attack","CasE1Ability"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
-                    const actionTags2 = ["Skill","Attack","Summon","Memosprite","CasE1Ability"];
+                    const actionTags2 = ["All","Skill","Attack","Summon","Memosprite","CasE1Ability"];
                     const compositeCacheTag2 = tags + actionTags;
                     ATKObjects.castoriceSkillEnhancedATKOBJECT = {
                         multipliers: {
@@ -44341,7 +44354,7 @@ const turnLogic = {
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
-                    const actionTags = ["Attack","MemoSkill","Summon","Memosprite"];
+                    const actionTags = ["All","Attack","MemoSkill","Summon","Memosprite","CasE1Ability"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     ATKObjects.netherStandardATKOBJECT = {
@@ -44387,7 +44400,7 @@ const turnLogic = {
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
-                    const actionTags = ["Attack","MemoSkill","Summon","Memosprite","CasE1Ability"];
+                    const actionTags = ["All","Attack","MemoSkill","Summon","Memosprite","CasE1Ability"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     ATKObjects.netherStandardATKOBJECTEND = {
@@ -44447,7 +44460,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Attack","MemoSkill","Summon","Memosprite","CasE1Ability"];
+                    const actionTags = ["All","Attack","MemoSkill","Summon","Memosprite","CasE1Ability"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     ATKObjects.netherwingEnhancedAttackATKOBJECT = {
@@ -50119,19 +50132,15 @@ const turnLogic = {
                             if (buffCheck) {
                                 const currentStacks = buffCheck.currentStacks;
                                 if (currentStacks === weaknessCount) {return;}
-                                else if (currentStacks < weaknessCount) {
+                                else {
                                     const stackDiff = weaknessCount - currentStacks;
-                                    buffSheet.currentStacks = stackDiff;
-                                    updateBuff(battleData,ownerTurn,buffSheet);
-                                }
-                                else {//if stacks are higher than they should be
-                                    if (weaknessCount) {//if we have stacks then update
-                                        removeBuff(battleData,ownerTurn,buffSheet,true,null,true);
-                                        buffSheet.currentStacks = weaknessCount;
-                                        updateBuff(battleData,ownerTurn,buffSheet,false,null)
+
+                                    if (-stackDiff === currentStacks) {
+                                        removeBuff(battleData,ownerTurn,buffCheck);
                                     }
-                                    else {//otherwise remove
-                                        removeBuff(battleData,ownerTurn,buffSheet);
+                                    else {
+                                        buffSheet.currentStacks = stackDiff;
+                                        updateBuff(battleData,ownerTurn,buffSheet);
                                     }
                                 }
                             }

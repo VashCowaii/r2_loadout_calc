@@ -63,6 +63,7 @@ const dataListerObject = {
         "The Unreachable Side": "Blade",
         "Thus Burns the Dawn": "Phainon",
         "Whereabouts Should Dreams Rest": "Firefly",
+        "I Am As You Behold": "Gilgamesh",
 
         //ERUDITION
         "Night on the Milky Way": "Himeko",
@@ -72,6 +73,8 @@ const dataListerObject = {
         "Ninjutsu Inscription: Dazzling Evilbreaker": "Rappa",
         "Into the Unreachable Veil": "The Herta",
         "Life Should Be Cast to Flames": "Anaxa",
+        "Flickering Stars": "Rin Tohsaka",
+        "A Star That Lights the Night": "Himeko • Nova",
 
         //HARMONY
         "A Grounded Ascent": "Sunday",
@@ -159,5 +162,22 @@ const dataListerObject = {
         "Night of Fright",
         "Incessant Rain",
         "Flowing Nightglow",
+    ]),
+    uniqueOnePerAccountList: new Set([
+        "On the Fall of an Aeon",
+        "Cruising the Stellar Sea",
+        "Texture of Memories",
+        "Solitary Healing",
+        "Eternal Calculus",
+        "Memory's Curtain Never Falls",
+        "Elation Brimming with Blessings",
+        "Before the Tutorial Mission Starts",
+        "Hey, Over Here",
+        "For Tomorrow's Journey",
+        "Ninja Record: Sound Hunt",
+        "The Great Cosmic Enterprise",
+        "The Forever Victual",
+        "Tomorrow, Together",
+        "Fly Into a Pink Tomorrow",
     ]),
 }

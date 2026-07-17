@@ -1173,23 +1173,31 @@ const conditionLibrary = {
         //and then if anything remains by the end, that would be the valid target or targets returned
         //we're probably going to have to make some retasked versions of existing conditions though, purely for the sake of filter type operations
     },
-    // "Target Pool"(battleData,sourceTurn,condition) {
-    //     const targetType = globalPoolKey;
-    //     const targetPoolFunction = conditionLibrary[targetType](battleData,sourceTurn,condition);
-    //     return targetPoolFunction;
-    // },
-    "Filter Ally"(battleData,sourceTurn,condition) {
-        const allyTurns = battleData.nameBasedTurns;
+    getConditionLibraryAllyTarget(battleData,sourceTurn,condition) {
 
-        let targetStated = condition.target;
-        let target = targetStated === "Self" ? sourceTurn : allyTurns[targetStated];
-        const targetType = condition.targetType;
-        if (targetType != "Character" && targetType === "Memosprite") {
+
+        // const targetType = condition.targetType;
+        const entityType = condition.entityType ?? condition.targetType;
+        const allyTurns = battleData.nameBasedTurns;
+        const conditionTarget = condition.target;
+
+        // let target = conditionTarget === "Self" ? sourceTurn : allyTurns[conditionTarget];
+        let target = conditionTarget === "Self" ? sourceTurn : 
+            (characters[conditionTarget] ? allyTurns[battleData.nameIndex[conditionTarget]] : allyTurns[conditionTarget]);
+
+        if (entityType === "Memosprite" && target) {
             //summonEventRef memospriteEventRef
             const memoEventCheck = target.memospriteEventRef;
-            if (memoEventCheck) {target = target[memoEventCheck];}
+            const potentialMemoTurn = target[memoEventCheck];
+            if (memoEventCheck && !potentialMemoTurn.isDead) {target = target[memoEventCheck];}
+            //We can only return a valid memo target if it's alive, otherwise fail the check when selecting a memo
             else {return false;}//if the target has no memosprite, they can't pass these checks ever
         }
+
+        return target;
+    },
+    "Filter Ally"(battleData,sourceTurn,condition) {
+        let target = getConditionLibraryAllyTarget(battleData,sourceTurn,condition);
 
         return initialGlobalTargetPool.includes(target) ? [target] : [];
     },
@@ -1347,7 +1355,8 @@ const conditionLibrary = {
     },
     "Lowest HP Ally (On-Field)"(battleData,sourceTurn,condition) {
         const currentGlobalTargetPoolInner = currentGlobalTargetPool;
-        let lastValue = 0;
+
+        let lastValue = -Infinity;
         let lastTarget = currentGlobalTargetPoolInner[0];
         for (let entity of currentGlobalTargetPoolInner) {
             const hpRatio = 1 - (entity.currentHP / entity.maxHP);
@@ -1356,6 +1365,7 @@ const conditionLibrary = {
                 lastTarget = entity;
             }
         }
+        
         return lastTarget ? [lastTarget] : [];
     },
     "Maximize Blast Healing"(battleData,sourceTurn,condition) {
@@ -1411,26 +1421,6 @@ const conditionLibrary = {
         const finalTarget = initialGlobalTargetPoolInner[iCenter];
         return finalTarget ? [finalTarget] : [];
     },
-    "Ally"(battleData,sourceTurn,condition) {
-
-        // const targetType = condition.targetType;
-        const entityType = condition.entityType;
-        const allyTurns = battleData.nameBasedTurns;
-        const conditionTarget = condition.target;
-
-        let target = conditionTarget === "Self" ? sourceTurn : allyTurns[conditionTarget];
-        if (entityType === "Memosprite") {
-            //summonEventRef memospriteEventRef
-            const memoEventCheck = target.memospriteEventRef;
-            const potentialMemoTurn = target[memoEventCheck];
-            if (memoEventCheck && !potentialMemoTurn.isDead) {target = target[memoEventCheck];}
-            //We can only return a valid memo target if it's alive, otherwise fail the check when selecting a memo
-            else {return false;}//if the target has no memosprite, they can't pass these checks ever
-        }
-
-        return target;
-    },
-
 
     //POOL KEY REFERENCES
     "char1"(battleData,sourceTurn,condition) {
@@ -1587,20 +1577,10 @@ const conditionLibrary = {
     },
     Stat(battleData,sourceTurn,condition) {
         // {type: "Stat", target: "Self", targetType: "Character", statName: "ATK%"},
-        const allyTurns = battleData.nameBasedTurns;
-
-        let targetStated = condition.target;
-        let target = targetStated === "Self" ? sourceTurn : allyTurns[targetStated];
-        const targetType = condition.targetType;
-        if (targetType != "Character" && targetType === "Memosprite") {
-            //summonEventRef memospriteEventRef
-            const memoEventCheck = target.memospriteEventRef;
-            if (memoEventCheck) {target = target[memoEventCheck];}
-            else {return false;}//if the target has no memosprite, they can't pass these checks ever
-        }
+        let target = getConditionLibraryAllyTarget(battleData,sourceTurn,condition);
 
         const statName = condition.statName;
-        const statValue = target.statTable[greatTableIndex[statName]];
+        const statValue = target?.statTable[greatTableIndex[statName]] ?? 0;
 
         return statValue;
     },
@@ -1613,24 +1593,9 @@ const conditionLibrary = {
 
     //CHARACTER VALUES
     "Character: Value"(battleData,sourceTurn,condition) {
-        const allyTurns = battleData.nameBasedTurns;
+        let target = getConditionLibraryAllyTarget(battleData,sourceTurn,condition);
 
-        let targetStated = condition.target;
-        let target = targetStated === "Self" ? sourceTurn : allyTurns[targetStated];
-        const targetType = condition.targetType;
-        if (targetType != "Character" && targetType === "Memosprite") {
-            //summonEventRef memospriteEventRef
-            const memoEventCheck = target.memospriteEventRef;
-            if (memoEventCheck) {target = target[memoEventCheck];}
-            else {return false;}//if the target has no memosprite, they can't pass these checks ever
-        }
-
-        //If I circle back here in the future bc of a mysterious error, check if chars are disabled in the sim
-        //char value will try to extract a value from a given character slot even if they don't exist in the sim
-        //so if characters are disabled and you have slot specific conditions, this WILL break, but I also
-        //kinda don't care to fix that bc anyone doing any legit comparisons using valid conditions should
-        //also always have a full team so that's just kinda w/e
-        return target[condition.characterValue];
+        return target?.[condition.characterValue];
     },
 
     //SPECIAL CHARACTER VALUES
@@ -1642,16 +1607,9 @@ const conditionLibrary = {
         const valueName = condition.specialValue;
         // console.log(condition)
         if (valueName === null) {return 0;}//if a character special value condition is used on a character with no valid character special values to read, return 0 by default
-        const allyTurns = battleData.nameBasedTurns;
-        const conditionTarget = condition.target;
+        let target = getConditionLibraryAllyTarget(battleData,sourceTurn,condition);
 
-        let target = conditionTarget === "Self" ? sourceTurn : allyTurns[conditionTarget];
-
-        // console.log(valueName,target)
-        // const valueToReturn = condition.isBattleValue ? target.battleValues[valueName] : target[valueName];
-        // console.log(valueName,valueToReturn,condition.isBattleValue,target)
-
-        return condition.isBattleValue ? target.battleValues[valueName] : target[valueName];//"skillCounter"
+        return target ? (condition.isBattleValue ? target.battleValues[valueName] : target[valueName]) : 0;//"skillCounter"
     },
     
     //TEAM VALUES
@@ -1813,7 +1771,6 @@ const conditionLibrary = {
         return noFull;
     },
 
-
     // "Any Ally: Has no Shield",
     // "Any Ally: < 100% HP",
     // "Any Ally: <= 75% HP",
@@ -1826,93 +1783,44 @@ const conditionLibrary = {
     Turn(battleData,sourceTurn,condition) {
         // {type: "Turn", target: "Self", targetType: "Character", phase: "Any Part", state: true},
 
-        // turnState: 0,
-        // actionAssigned: false,
-        const allyTurns = battleData.nameBasedTurns;
-        let target = condition.target === "Self" ? sourceTurn : allyTurns[condition.target];
-        const targetType = condition.targetType;
-        if (targetType != "Character") {
-            if (targetType === "Summon") {
-                //summonEventRef memospriteEventRef
-                const summonEventCheck = target.summonEventRef;
-                if (summonEventCheck) {target = target[summonEventCheck];}
-                else {return false;}//if the target has no summon, they can't pass these checks ever
-            }
-            if (targetType === "Memosprite") {
-                //summonEventRef memospriteEventRef
-                const memoEventCheck = target.memospriteEventRef;
-                if (memoEventCheck) {target = target[memoEventCheck];}
-                else {return false;}//if the target has no memosprite, they can't pass these checks ever
-            }
-        }
+        let target = getConditionLibraryAllyTarget(battleData,sourceTurn,condition);
         const phase = condition.phase;
         const state = condition.state;
 
+        const currentTurnState = target ? target.turnState : false;
+
         switch (phase) {
             case "Pre-Action":
-                return (target.actionAssigned === false && target.turnState) === state;//if the turn is active, but the action isn't assigned yet
+                return (target.actionAssigned === false && currentTurnState) === state;//if the turn is active, but the action isn't assigned yet
             case "Post-Action":
                 return (target.actionAssigned === true) === state;//if the turn is active, and the action WAS assigned/carried out
             case "Any Part":
                 // console.log("reached any part comparison",target.turnState,state)
-                return target.turnState === state;//if the turn is either active or not active, at all
+                return currentTurnState === state;//if the turn is either active or not active, at all
             default: return true
         }
     },
     "Next Turn Is:"(battleData,sourceTurn,condition) {
         // {type: "Next Turn", target: "Self", targetType: "Character", state: true}
 
-        // turnState: 0,
-        // actionAssigned: false,
-        const allyTurns = battleData.nameBasedTurns;
-        let target = condition.target === "Self" ? sourceTurn : allyTurns[condition.target];
-        const targetType = condition.targetType;
-        if (targetType != "Character") {
-            if (targetType === "Summon") {
-                //summonEventRef memospriteEventRef
-                const summonEventCheck = target.summonEventRef;
-                if (summonEventCheck) {target = target[summonEventCheck];}
-                else {return false;}//if the target has no summon, they can't pass these checks ever
-            }
-            if (targetType === "Memosprite") {
-                //summonEventRef memospriteEventRef
-                const memoEventCheck = target.memospriteEventRef;
-                if (memoEventCheck) {target = target[memoEventCheck];}
-                else {return false;}//if the target has no memosprite, they can't pass these checks ever
-            }
-        }
+        let target = getConditionLibraryAllyTarget(battleData,sourceTurn,condition);
         const state = condition.state;
 
         const nextTurnIs = sim.getNextQueuedAllyTurn(battleData,true);
 
-        const nextTurnMatch = target.properName === nextTurnIs.properName;
+        const nextTurnMatch = target ? target.properName === nextTurnIs.properName : false;
 
         return nextTurnMatch === state;
     },
     Buff(battleData,sourceTurn,condition) {
         // {type: "Buff", target: "Self", targetType: "Character", buffName: "Benison of Paper and Rites", state: true},
 
-        // turnState: 0,
-        // actionAssigned: false,
-        const allyTurns = battleData.nameBasedTurns;
-        const conditionTarget = condition.target;
+        let target = getConditionLibraryAllyTarget(battleData,sourceTurn,condition);
 
-
-        let target = conditionTarget === "Self" ? sourceTurn : allyTurns[conditionTarget];
-        const targetType = condition.targetType;
-        if (targetType != "Character" && targetType === "Memosprite") {
-            //summonEventRef memospriteEventRef
-            const memoEventCheck = target.memospriteEventRef;
-            if (memoEventCheck) {target = target[memoEventCheck];}
-            else {return false;}//if the target has no memosprite, they can't pass these checks ever
-        }
         const buffName = condition.buffName;
         const state = condition.state;
 
-        const buffCheck = target.buffsObject[buffName] != null;
-
-        // console.log(buffName,buffCheck,state,buffCheck === state,target.buffsObject[buffName])
-        // console.log(buffCheck)
+        const buffCheck = target?.buffsObject[buffName] != null;
 
         return buffCheck == state;
     },
@@ -1923,17 +1831,16 @@ const conditionLibrary = {
         const valueName = condition.stateName;
         // console.log(condition)
         if (valueName === null) {return true;}//if a character state condition is used on a character with no valid character states to read, return true by default
-        const allyTurns = battleData.nameBasedTurns;
-        const conditionTarget = condition.target;
-        const state = condition.state;
+        let target = getConditionLibraryAllyTarget(battleData,sourceTurn,condition);
 
-        let target = conditionTarget === "Self" ? sourceTurn : allyTurns[conditionTarget];
+        const finalValue = target ? (condition.isBattleValue ? target?.battleValues[valueName] : target?.[valueName]) : false;
 
-        return condition.isBattleValue ? target.battleValues[valueName] === state : target[valueName] === state;
+        return finalValue === condition.state;
     },
 
     
 }
+const getConditionLibraryAllyTarget = conditionLibrary.getConditionLibraryAllyTarget;
 
 
 
@@ -1983,9 +1890,15 @@ const defaultConditions = {
         globalPoolKey = null;
         initialGlobalTargetPool = null;
 
-        // console.log(result,"AAAAAAAAAAAAAAAAAAA")
+        let finalTargetResult = null;
+        if (result?.length) {
+            finalTargetResult = result;
+        }
+        else {
+            currentGlobalTargetPool = conditionLibrary[poolKey](battleData,sourceTurn,conditionPath);
+            finalTargetResult = conditionLibrary[fallbackTarget](battleData,sourceTurn,conditionPath)
+        }
 
-        let finalTargetResult = result?.length ? result : conditionLibrary[fallbackTarget](battleData,sourceTurn,conditionPath);
         if (allowedTargetCount && finalTargetResult.length > allowedTargetCount) {finalTargetResult.length = allowedTargetCount;} 
 
         if (subTargetKey) {

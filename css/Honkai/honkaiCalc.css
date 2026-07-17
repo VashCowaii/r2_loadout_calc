@@ -660,7 +660,28 @@ details[open] > summary::before {
     outline: 2px solid white;
     outline-offset: 2px;
 }
+/* .teamBarImgRounded: */
 
+
+.draggerHand {
+    cursor: grabbing;
+}
+.toBeDraggedDotted {
+    outline: 3px dotted white;
+    outline-offset: 2px;
+    border-radius: 50%;
+    opacity: 1;
+    filter: brightness(1);
+}
+.isBeingDraggedDarken {
+    opacity: 0.5;
+}
+.isCharNotSelectedDarken {
+    filter: brightness(0.5);
+}
+.currentDragCharHoverBrighten {
+    filter: brightness(1);
+}
 
 
 
@@ -5107,6 +5128,10 @@ details[open] > summary::before {
 
 
 
+.draggablePCOnly {
+    
+}
+
 
 
 
@@ -5426,7 +5451,9 @@ details[open] > summary::before {
     align-items: center;
     text-align: center;
     font-size: 18px;
-    margin-top: 4px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /* margin: 5px; */
     /* border: 1px solid red; */
 }
 .statFiltersRowContainerSubstatsTrashRow {
@@ -5461,17 +5488,48 @@ details[open] > summary::before {
 .statFiltersSubstatLimitStatName:hover {
     background-color: rgba(255, 255, 255, 0.13);
 }
-.statFiltersSubstatLimitStatHeader {
+.statFiltersSubstatLimitStatHeader,.statFiltersSubstatLimitStatHeaderSPAN {
     font-size: 12px;
-    height: 20px;
+    /* height: 20px; */
+    min-height: 20px;
+    height: auto;
     width: 100%;
-    text-align: left;
+    text-align: center;
     display: flex;
-    justify-content: right;
+    justify-content: center;
     padding-right: 2px;
     align-items: center;
     box-sizing: border-box;
+    white-space: normal;
+    background-color: rgba(255, 255, 255, 0.13);
     /* border: 1px solid red; */
+}
+
+.relicMainStatCanBeChangedDotted {
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.301) 0 0) top 0 left      / 7px 2px no-repeat,linear-gradient(rgba(255, 255, 255, 0.301) 0 0) top 0 right             / 7px 2px no-repeat,
+        linear-gradient(rgba(255, 255, 255, 0.301) 0 0) bottom 0 left   / 7px 2px no-repeat,linear-gradient(rgba(255, 255, 255, 0.301) 0 0) bottom 0 right          / 7px 2px no-repeat,
+
+        linear-gradient(rgba(255, 255, 255, 0.301) 0 0) top 0 left      / 2px 7px no-repeat,linear-gradient(rgba(255, 255, 255, 0.301) 0 0) bottom 0 left           / 2px 7px no-repeat,
+        linear-gradient(rgba(255, 255, 255, 0.301) 0 0) top 0 right     / 2px 7px no-repeat,linear-gradient(rgba(255, 255, 255, 0.301) 0 0) bottom 0 right          / 2px 7px no-repeat;
+
+
+
+
+
+
+    /* outline: 2px dashed rgba(255, 255, 255, 0.301);
+    outline-offset: -1px; */
+    /* border-radius: 50%; */
+    /* opacity: 1; */
+    /* filter: brightness(1); */
+}
+
+
+
+.statFiltersSubstatLimitStatHeaderSPAN {
+    width: 50%;
+    justify-content: left;
 }
 .statFiltersSubstatLimitStatBase {
     font-size: 11px;
@@ -5499,6 +5557,8 @@ details[open] > summary::before {
     text-align: left;
     font-size: 25px;
     position: relative;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .statFiltersRowHeaderSubstatsLocksRollValue {
     /* height: 20px; */
@@ -6299,7 +6359,7 @@ details[open] > summary::before {
 
 
 
-.filtersQuarterDescriptionDarkRow,.filtersQuarterDescriptionSettingsDisclaimer,.filtersQuarterDescriptionDarkRowForceToggles {
+.filtersQuarterDescriptionDarkRow,.filtersQuarterDescriptionSettingsDisclaimer,.filtersQuarterDescriptionDarkRowForceToggles,.filtersQuarterDescriptionRollsDistributedSummary {
     /* background-color: #434343; */
     width: 100%;
     height: auto;
@@ -6320,6 +6380,14 @@ details[open] > summary::before {
     width: 100%;
     justify-content: space-evenly;
     align-items: stretch;
+    margin: 5px;
+}
+
+.filtersQuarterDescriptionRollsDistributedSummary {
+    font-size: 16px;
+    justify-content: center;
+    text-align: center;
+    padding: 0px;
     margin: 5px;
 }
 /* background: linear-gradient(to right, transparent, transparent, #ffffff1A); */

@@ -70,3 +70,17 @@ customHTML.establishMobileSideScrollerMenu();
 
 // const cachedLoadOrder = localStorage.getItem("loadTeam");
 pagePopulation.checkCachedTeamData();
+
+for (let i=1;i<=4;i++) {
+    const currentDragger = readSelection(`teamBarChar${i}IMG`);
+
+    currentDragger.dataset.slotID = i;
+
+    currentDragger.addEventListener("dragend", userTriggers.clearDraggin);
+    currentDragger.addEventListener("dragover", userTriggers.midDraggin);
+    currentDragger.addEventListener("drop", userTriggers.endDraggin);
+    currentDragger.addEventListener("dragstart", userTriggers.startDraggin);
+
+    currentDragger.addEventListener("dragenter", userTriggers.enterDraggin);
+    currentDragger.addEventListener("dragleave", userTriggers.leaveDraggin);
+}

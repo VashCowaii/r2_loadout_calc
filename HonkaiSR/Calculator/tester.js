@@ -3331,6 +3331,85 @@ const customMenu = {
 }
 
 const userTriggers = {
+    dragger: null,
+    startDraggin(e) {
+        const slot = e.currentTarget.dataset.slotID;
+        userTriggers.dragger = e.currentTarget.dataset.slotID;
+        console.log("drag from",userTriggers.dragger)
+
+        e.currentTarget.classList.add("draggerHand");
+
+        for (let i=1;i<=4;i++) {
+            const currentDragger = document.getElementById(`teamBarChar${i}IMG`);
+
+            if (i==slot) {
+                currentDragger.classList.add("isBeingDraggedDarken");
+                continue;
+            }
+            else {
+                currentDragger.classList.add("toBeDraggedDotted");
+            }
+        }
+    },
+    clearDraggin(e) {
+        if (!userTriggers.dragger) {return}
+        e.currentTarget.classList.remove("draggerHand");
+
+        for (let i=1;i<=4;i++) {
+            const currentDragger = document.getElementById(`teamBarChar${i}IMG`);
+
+            if (i==userTriggers.dragger) {
+                currentDragger.classList.remove("isBeingDraggedDarken");
+            }
+            else {
+                currentDragger.classList.remove("toBeDraggedDotted");
+            }
+        }
+        userTriggers.dragger = null;
+        e.preventDefault();
+    },
+    enterDraggin(e) {
+        if (!userTriggers.dragger) {return}
+
+        const slot = e.currentTarget.dataset.slotID;
+        if (slot == userTriggers.dragger) {return;}
+
+        e.currentTarget.classList.add("currentDragCharHoverBrighten");
+    },
+    leaveDraggin(e) {
+        if (!userTriggers.dragger) {return}
+
+        const slot = e.currentTarget.dataset.slotID;
+        if (slot == userTriggers.dragger) {return;}
+
+        e.currentTarget.classList.remove("currentDragCharHoverBrighten");
+    },
+    endDraggin(e) {
+        if (!userTriggers.dragger) {return}
+
+        const currentSlot = e.currentTarget.dataset.slotID;
+        e.currentTarget.classList.remove("currentDragCharHoverBrighten");
+        console.log("drop to",currentSlot,"from",userTriggers.dragger);
+
+        if (currentSlot != userTriggers.dragger) {
+            const characterObject = globalRecords.character;
+
+            const initialDrag = JSON.stringify(characterObject[`char${userTriggers.dragger}`]);
+            const newDrag = JSON.stringify(characterObject[`char${currentSlot}`]);
+
+            characterObject[`char${userTriggers.dragger}`] = JSON.parse(newDrag);
+            characterObject[`char${currentSlot}`] = JSON.parse(initialDrag);
+
+            const finalCharString = JSON.stringify(characterObject);
+            
+            userTriggers.importCharacterData("ALL",null,null,finalCharString);
+            userTriggers.updateCharacterSlotSelected(+currentSlot);
+        }
+    },
+    midDraggin(e) {
+        e.preventDefault();
+    },
+    
     openBattleSettings() {
         userTriggers.updateMainMenuDisplayed(2);
         userTriggers.updateBattleViewDisplayed('SettingsExpand');
@@ -3965,8 +4044,9 @@ const userTriggers = {
             const globalRef = globalRecords.character[`char${i}`];
             let globalCharRef = characters[globalRef.name]
             readSelection(`teamBarChar${i}IMG`).src = "/HonkaiSR/" + globalCharRef.icon;
+            readSelection(`teamBarChar${i}IMG`).classList.add("isCharNotSelectedDarken");
             readSelection(`teamBarChar${i}IMG`).style.border = `2px solid ${customMenu.rarityColors[globalCharRef.rarity]}`;
-            readSelection(`teamBarChar${i}IMG`).style.filter = `brightness(0.5)`;
+            // readSelection(`teamBarChar${i}IMG`).style.filter = `brightness(0.5)`;
 
             readSelection(`characterFiltersSwitchIcon${i}`).src = "/HonkaiSR/" + globalCharRef.preview;
             readSelection(`characterFiltersSwitchIcon${i}`).style.filter = `brightness(0.3)`;
@@ -3974,7 +4054,9 @@ const userTriggers = {
             // readSelection(`teamBarChar${i}IMG`).style.opacity = globalRef.disabled ? "0.5" : "1";
             
         }
-        readSelection(`teamBarChar${currentSlot}IMG`).style.filter = "brightness(1)";
+        // readSelection(`teamBarChar${currentSlot}IMG`).style.filter = "brightness(1)";
+        readSelection(`teamBarChar${currentSlot}IMG`).classList.remove("isCharNotSelectedDarken");
+
         readSelection(`characterFiltersSwitchIcon${currentSlot}`).style.filter = "brightness(1)";
 
         readSelection("rotationsDisableCharacterToggle").checked = globalPathChar.disabled;
@@ -6095,52 +6177,6 @@ const userTriggers = {
         const reverseKeyMappings = basicShorthand.reverseKeyMappings;
         const mappedFamilies = basicShorthand.mappedFamilies;
 
-        // mappedFamilies: {},
-        // mappedCacheTags: {},
-        // mappedUpdateStatKeys: {},
-        // reverseKeyMappings: {},
-        for (let i=1;i<=4;i++) {
-            
-            // console.log(maslowSlot,maslowSubstats)
-
-            const newFilterPath = globalUI.filters[charSlot];
-
-            // const maslowSlot = maslowSubstats[i-1];
-            const maslowSlot = newFilterPath[`desired${i}`];
-
-            const currentStatIndex = greatTableIndex[maslowSlot];
-            const statFamilyName = mappedFamilies[currentStatIndex];
-            const currentStatFamily = propertyImagePaths[statFamilyName];
-            // console.log(maslowSubstats,maslowSlot,currentStatFamily,statFamilyName,currentStatIndex)
-            const currentFamilySet = currentStatFamily.sets;
-
-            // defaultMainSubs: ["ATK%","CritRateBase","CritDamageBase","SPDFlat"],
-            
-            readSelection(`substatLocksStat${i}IMG`).src = currentStatFamily.icon;
-            readSelection(`substatLocksStat${i}Name`).innerHTML = currentFamilySet[currentStatIndex].specific;
-            // console.log("reached")
-
-            
-        }
-
-
-        // trashStatFilters: null,
-
-        // let trashSubString = "";
-
-        // for (let i=0;i<maslowTrashStats.length;i++) {
-        //     const currentStatInternal = maslowTrashStats[i];
-        //     const isLastStat = i === maslowTrashStats.length - 1;
-
-        //     const currentStatIndex = greatTableIndex[currentStatInternal];
-        //     const statFamilyName = mappedFamilies[currentStatIndex];
-        //     const currentStatFamily = propertyImagePaths[statFamilyName];
-        //     // console.log(maslowSubstats,maslowSlot,currentStatFamily,statFamilyName,currentStatIndex)
-        //     const currentFamilySet = currentStatFamily.sets;
-
-        //     trashSubString += currentFamilySet[currentStatIndex].specific + (isLastStat ? "" : " > ");
-        // }
-        // readSelection("statFiltersRowContainerSubstatsTrashRow").innerHTML = trashSubString;
 
 
         const filterPath = globalUI.filters;
@@ -6161,9 +6197,37 @@ const userTriggers = {
         const usableBaseRolls = querySettings.usableBaseRolls;
         const basePerRelic = usableBaseRolls/4;
         // "usableBaseRolls": 12,
-
         // substatLocksStat1BaseRolls
+
+        // mappedFamilies: {},
+        // mappedCacheTags: {},
+        // mappedUpdateStatKeys: {},
+        // reverseKeyMappings: {},
         for (let i=1;i<=4;i++) {
+            
+            // console.log(maslowSlot,maslowSubstats)
+
+            const newFilterPath = globalUI.filters[charSlot];
+
+            // const maslowSlot = maslowSubstats[i-1];
+            const maslowSlot = newFilterPath[`desired${i}`];
+
+            console.log(maslowSlot)
+
+            const currentStatIndex = greatTableIndex[maslowSlot];
+            const statFamilyName = mappedFamilies[currentStatIndex];
+            const currentStatFamily = propertyImagePaths[statFamilyName];
+            // console.log(maslowSubstats,maslowSlot,currentStatFamily,statFamilyName,currentStatIndex)
+            const currentFamilySet = currentStatFamily.sets;
+
+            // defaultMainSubs: ["ATK%","CritRateBase","CritDamageBase","SPDFlat"],
+
+            const innerSetObject = currentFamilySet[currentStatIndex];
+            
+            readSelection(`substatLocksStat${i}IMG`).src = currentStatFamily.icon;
+            readSelection(`substatLocksStat${i}Name`).innerHTML = innerSetObject.specific;
+
+
             const statElemMax = readSelection(`substatLocksStat${i}Max`);
             const statElemMin = readSelection(`substatLocksStat${i}Min`);
 
@@ -6176,10 +6240,9 @@ const userTriggers = {
             
             statElemMin.value = statArray[0];
 
-            const maslowSlot = maslowSubstats[i-1];
-            // console.log(maslowSlot)
+            const maslowSlotSub = maslowSlot;//maslowSubstats[i-1];
 
-            const subsPathInner = subsPath[maslowSlot];
+            const subsPathInner = subsPath[maslowSlotSub];
             const valuePerRoll = subsPathInner.base + (subsPathInner.step * rollValueStepMulti);
 
 
@@ -6217,11 +6280,24 @@ const userTriggers = {
 
 
             const statElemMaxDisplay = readSelection(`substatLocksStat${i}MaxDisplay`);
-            const statElemMinDisplay = readSelection(`substatLocksStat${i}MinDisplay`);
+            // const statElemMinDisplay = readSelection(`substatLocksStat${i}MinDisplay`);
 
-            statElemMaxDisplay.innerHTML = (totalBaseValue + valuePerRoll * statArray[1]).toLocaleString(undefined, { maximumFractionDigits: 5 });
-            statElemMinDisplay.innerHTML = (totalBaseValue + valuePerRoll * statArray[0]).toLocaleString(undefined, { maximumFractionDigits: 5 });
+            const isPercent = innerSetObject.unit === "%";
+
+            // <div class="presetsTitle">MIN:</div>
+
+            const upperValue = ((totalBaseValue + valuePerRoll * statArray[1]) * (isPercent ? 100 : 1)).toLocaleString(undefined, { maximumFractionDigits: 5 }) + (isPercent ? "%" : "");
+            const lowerValue = ((totalBaseValue + valuePerRoll * statArray[0]) * (isPercent ? 100 : 1)).toLocaleString(undefined, { maximumFractionDigits: 5 }) + (isPercent ? "%" : "");
+
+            statElemMaxDisplay.innerHTML = `${lowerValue} - ${upperValue}`;
+            // statElemMinDisplay.innerHTML = "";
+            
+            readSelection(`substatLocksStat${i}MaxBASE`).innerHTML = `+${basePerRelic}`;
+            readSelection(`substatLocksStat${i}MinBASE`).innerHTML = `+${basePerRelic}`;
         }
+
+
+        
 
         // substatLocksStat1IMG
         // substatLocksStat1Name
@@ -6383,8 +6459,13 @@ const userTriggers = {
         // queriesUsableBaseRolls queriesUsableBaseRollsDisplay usableBaseRolls
         const usableBaseRolls = +readSelection("queriesUsableBaseRolls").value;
         querySettings.usableBaseRolls = usableBaseRolls;
+        const usableBaseRollColoring = baseRollValueDisplayColors[(usableBaseRolls/4) - 3]
+
         readSelection("queriesUsableBaseRollsDisplay").innerHTML = usableBaseRolls;
-        readSelection("queriesUsableBaseRollsDisplay").style.color = baseRollValueDisplayColors[(usableBaseRolls/4) - 3];
+        readSelection("queriesUsableBaseRollsDisplay").style.color = usableBaseRollColoring;
+
+        readSelection("queriesUsableBaseRollsDisplayDistributed").innerHTML = usableBaseRolls;
+        readSelection("queriesUsableBaseRollsDisplayDistributed").style.color = usableBaseRollColoring;
 
 
 
@@ -6672,13 +6753,13 @@ const userTriggers = {
         8008: 8007,//RMC
         8010: 8009,//EMC
     },
-    importCharacterData(charSlot,pathReadID,showcaseID) {
+    importCharacterData(charSlot,pathReadID,showcaseID,isSwapPlacementOverride) {
         // charALLImport
 
         const inputElem = readSelection("importTextInputTeam");
 
 
-        if (inputElem.value === "" && !showcaseID) {
+        if (!isSwapPlacementOverride && inputElem.value === "" && !showcaseID) {
             const fileInput = document.getElementById(pathReadID);
 
             fileInput.onchange = async (event) => {
@@ -6813,7 +6894,7 @@ const userTriggers = {
             customMenu.createCharacterExportScreen();
         }
         else {
-            const parsedData = JSON.parse(inputElem.value);
+            const parsedData = JSON.parse(inputElem?.value ?? isSwapPlacementOverride);
 
             if (charSlot === "ALL") {
                 globalRecords.character = parsedData;
@@ -6855,9 +6936,10 @@ const userTriggers = {
                 userTriggers.updateMainMenuDisplayed(1);
             }
 
-            inputElem.value = "";
-
-            customMenu.createCharacterExportScreen();
+            if (inputElem) {
+                inputElem.value = "";
+                customMenu.createCharacterExportScreen();
+            }
         }
 
         // userTriggers.updateSelectedCharacter(globalRecords.character.char1.name,false,showcaseID ? true : false);
