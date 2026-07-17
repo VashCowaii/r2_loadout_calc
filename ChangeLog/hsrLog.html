@@ -25,7 +25,12 @@
 
         <h4>Fixes</h4>
         <li>Fixed an issue where target pooling was not properly reset if a user-defined target condition failed and went to the fallback targeting pool.</li>
-        <li>Fixed an issue where Anaxa's trace on-hit DEF shred wasn't properly removing all stacks when being cleared, resulting in a leftover amount of shred that could continue to stack.</li>
+        <li>Fixed an issue where Anaxa's trace on-hit DEF shred wasn't properly removing all stacks when being cleared, resulting in a leftover amount of shred that could continue to stack.
+            <ul>
+                <li>This issue was caused by a change made to allow for incremental stack removal, and actually could have caused problems in a few other places.</li>
+                <li>However since the issue was only due to an edgecase oversight in the process rather than the character, I fixed the overarching issue so this shouldn't happen again on anyone else.</li>
+            </ul>
+        </li>
         <li>Fixed an issue where after a recent change, Netherwing was missing a tag that would allow it to receive a final multiplier from external source like Evernight's E1.</li>
 
         <h4>Optimization</h4>
