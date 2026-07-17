@@ -1591,5 +1591,54 @@ let relicSets = {
       "2": [],
       "4": []
     }
+  },
+  "Fallen Star Anchorage": {
+    "name": "Fallen Star Anchorage",
+    "setID": 327,
+    "desc": [
+      "Increases the wearer's CRIT Rate by 8%. When entering combat, if the wearer and another teammate are both Trailblaze Companions characters, increases the wearer's CRIT DMG by 32%."
+    ],
+    "icon": "icon/relic/327.png",
+    "fixedStats": {
+      "2": {
+        "CritRateBase": 0.08
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.08,
+        0.32
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "Cosmic Life Sciences Institute": {
+    "name": "Cosmic Life Sciences Institute",
+    "setID": 328,
+    "desc": [
+      "When entering combat, if the wearer's Max Energy is greater than or equal to 200, for every 1 excess point, increases the wearer's DMG dealt by 0.2%, up to a max increase of 32%."
+    ],
+    "icon": "icon/relic/328.png",
+    "fixedStats": {
+      "2": {},
+      "4": {}
+    },
+    "params": [
+      [
+        200,
+        0.0019999999,
+        0.32
+      ],
+      []
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
   }
 }

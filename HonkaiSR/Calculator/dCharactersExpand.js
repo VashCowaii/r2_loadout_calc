@@ -33796,7 +33796,7 @@ let characters = {
         ]
       },
       "Point08": {
-        "name": "Where The West Wind Dwells",
+        "name": "Where the West Wind Dwells",
         "icon": "icon/skill/1407_skilltree3.png",
         "desc": "Each time Netherwing uses \"Breath Scorches the Shadow,\" the DMG dealt increases by #1[i]%. This effect stacks up to #2[i] time(s) and lasts until the end of this turn.",
         "params": [

@@ -10327,6 +10327,246 @@ let lightcones = {
       1.12
     ]
   },
+  "Flickering Stars": {
+    "lightconeID": 23061,
+    "name": "Flickering Stars",
+    "path": "Erudition",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 635.04,
+      "DEFBase": 529.2,
+      "HPBase": 846.72
+    },
+    "fixedStats": {
+      "1": {
+        "CritRateBase": 0.18
+      },
+      "2": {
+        "CritRateBase": 0.21
+      },
+      "3": {
+        "CritRateBase": 0.24
+      },
+      "4": {
+        "CritRateBase": 0.27
+      },
+      "5": {
+        "CritRateBase": 0.3
+      }
+    },
+    "skillName": "Sprout",
+    "desc": "Increases the wearer's CRIT Rate by #1[i]%. When any ally character consumes a total of #3[i] or more Skill Points in a single turn, the wearer gains \"Radiant Crown,\" lasting for #4[i] turn(s). While the wearer holds \"Radiant Crown,\" all allies' DMG dealt ignores #5[i]% of the target's DEF, and the Skill DMG dealt by the wearer increases by #2[i]%. Effects of the same type cannot stack.",
+    "params": [
+      [
+        0.18,
+        0.72,
+        4,
+        3,
+        0.2
+      ],
+      [
+        0.21,
+        0.84,
+        4,
+        3,
+        0.24
+      ],
+      [
+        0.24,
+        0.96,
+        4,
+        3,
+        0.28
+      ],
+      [
+        0.27,
+        1.08,
+        4,
+        3,
+        0.32
+      ],
+      [
+        0.3,
+        1.2,
+        4,
+        3,
+        0.36
+      ]
+    ],
+    "statRef": [
+      "CriticalChanceBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23061.png",
+    "preview": "image/light_cone_preview/23061.png",
+    "portrait": "image/light_cone_portrait/23061.png",
+    "imageOffset": [
+      0,
+      -78,
+      1.05
+    ]
+  },
+  "I Am As You Behold": {
+    "lightconeID": 23062,
+    "name": "I Am As You Behold",
+    "path": "Destruction",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 635.04,
+      "DEFBase": 463.04999999999995,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "ATK%": 0.18,
+        "EnergyRegenRate": 0.1
+      },
+      "2": {
+        "ATK%": 0.21,
+        "EnergyRegenRate": 0.125
+      },
+      "3": {
+        "ATK%": 0.24,
+        "EnergyRegenRate": 0.15
+      },
+      "4": {
+        "ATK%": 0.27,
+        "EnergyRegenRate": 0.175
+      },
+      "5": {
+        "ATK%": 0.3,
+        "EnergyRegenRate": 0.2
+      }
+    },
+    "skillName": "At Will",
+    "desc": "Increases the wearer's ATK by #1[i]% and Energy Regeneration Rate by #2[f1]%. When the wearer uses Ultimate, for every 1 Energy consumed, increases the Ultimate DMG dealt this time by #3[f2]%, up to a max increase of #6[i]%. When the wearer enters combat or uses Ultimate, the wearer gains \"King's Entertainment,\" lasting for #4[i] turn(s). While the wearer holds \"King's Entertainment,\" increases all allies' CRIT DMG by #5[i]%. Effects of the same type cannot stack.",
+    "params": [
+      [
+        0.18,
+        0.1,
+        0.0019999999,
+        3,
+        0.24,
+        0.72
+      ],
+      [
+        0.21,
+        0.125,
+        0.0025000002,
+        3,
+        0.3,
+        0.9
+      ],
+      [
+        0.24,
+        0.15,
+        0.0029999998,
+        3,
+        0.36,
+        1.08
+      ],
+      [
+        0.27,
+        0.175,
+        0.0035,
+        3,
+        0.42,
+        1.26
+      ],
+      [
+        0.3,
+        0.2,
+        0.0039999997,
+        3,
+        0.48,
+        1.44
+      ]
+    ],
+    "statRef": [
+      "AttackAddedRatio",
+      "SPRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23062.png",
+    "preview": "image/light_cone_preview/23062.png",
+    "portrait": "image/light_cone_portrait/23062.png",
+    "imageOffset": [
+      3,
+      74,
+      1.05
+    ]
+  },
+  "A Star That Lights the Night": {
+    "lightconeID": 23060,
+    "name": "A Star That Lights the Night",
+    "path": "Erudition",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 635.04,
+      "DEFBase": 529.2,
+      "HPBase": 846.72
+    },
+    "fixedStats": {},
+    "skillName": "First Wish",
+    "desc": "The wearer ignores #7[i]% of the target's DEF when dealing DMG. When the wearer uses Assist Skill, they regenerate #2[i] Energy and gain \"Sail,\" lasting for 2 turns and stacking up to #3[i] time(s). Each stack of \"Sail\" increases Assist Skill DMG by #4[i]%. When \"Sail\" reaches #5[i] stacks, each stack of \"Sail\" increases Ultimate DMG by #6[i]%.",
+    "params": [
+      [
+        0,
+        6,
+        3,
+        0.2,
+        3,
+        0.2,
+        0.32
+      ],
+      [
+        0,
+        6,
+        3,
+        0.25,
+        3,
+        0.25,
+        0.36
+      ],
+      [
+        0,
+        6,
+        3,
+        0.3,
+        3,
+        0.3,
+        0.4
+      ],
+      [
+        0,
+        6,
+        3,
+        0.35,
+        3,
+        0.35,
+        0.44
+      ],
+      [
+        0,
+        6,
+        3,
+        0.4,
+        3,
+        0.4,
+        0.48
+      ]
+    ],
+    "statRef": [],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23060.png",
+    "preview": "image/light_cone_preview/23060.png",
+    "portrait": "image/light_cone_portrait/23060.png",
+    "imageOffset": [
+      21,
+      -95,
+      1.15
+    ]
+  },
   "Until the Flowers Bloom Again": {
     "lightconeID": 23058,
     "name": "Until the Flowers Bloom Again",

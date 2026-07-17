@@ -13364,7 +13364,7 @@ const turnLogicLightcones = {
                         let rankParams = lcPathing[ownerRank-1];
 
                         buffSheet.sourceOwner = currentTurn.properName;
-                        buffSheet[DEFShredAll] = rankParams[0];//TODO: assign the correct param index later
+                        buffSheet[DEFShredAll] = rankParams[6];
                         updateBuff(battleData,currentTurn,buffSheet);
 
                         addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
@@ -13398,10 +13398,13 @@ const turnLogicLightcones = {
                                 const rankParams = lcPathing[ownerRank-1];
 
                                 const buffNames = turnLogicLightcones[lcNameRef].buffNames;
+
+
+                                sourceTurn.lcStarThatLightsRegenValue = rankParams[1];
     
                                 sourceTurn.lcStarThatLightsAssistSHEET = {
                                     "stats": [DamageAll],
-                                    [DamageAll]: rankParams[1],
+                                    [DamageAll]: rankParams[3],
                                     "source": lcNameRef,
                                     "sourceOwner": sourceTurn.properName,
                                     "buffName": buffNames.buff1,
@@ -13420,7 +13423,7 @@ const turnLogicLightcones = {
 
                                 sourceTurn.lcStarThatLightsAssistULTSHEET = {
                                     "stats": [DamageAll],
-                                    [DamageAll]: rankParams[2],
+                                    [DamageAll]: rankParams[5],
                                     "source": lcNameRef,
                                     "sourceOwner": sourceTurn.properName,
                                     "buffName": buffNames.buff2,
@@ -13434,6 +13437,8 @@ const turnLogicLightcones = {
                                     "actionTags": ["Ultimate"],
                                 }
                             }
+
+                            updateEnergy(battleData,sourceTurn.lcStarThatLightsRegenValue,sourceTurn,false,"A Star That Lights the Night")
                             
                             const buffSheet = sourceTurn.lcStarThatLightsAssistSHEET;
                             const buffSheet2 = sourceTurn.lcStarThatLightsAssistULTSHEET;
@@ -21335,7 +21340,7 @@ const turnLogicRelics = {
 
                             const buffSheet = this.buffSheet ??= {
                                 "stats": [CritDamageBase],
-                                [CritDamageBase]: 0.32,//relicPathing[3], //TODO: come back later after we can hook in and just assign the right param
+                                [CritDamageBase]: relicPathing[1],
                                 "source": relicNameRef,
                                 "sourceOwner": null,
                                 "buffName": buffName,
@@ -21410,7 +21415,7 @@ const turnLogicRelics = {
 
                         const buffSheet = this.buffSheet ??= {
                             "stats": [DamageAll],
-                            [DamageAll]: 0.002,//relicPathing[3], //TODO: come back later after we can hook in and just assign the right param
+                            [DamageAll]: relicPathing[1],
                             "source": relicNameRef,
                             "sourceOwner": null,
                             "buffName": buffName,
