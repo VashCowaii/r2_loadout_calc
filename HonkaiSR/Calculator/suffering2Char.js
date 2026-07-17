@@ -44280,10 +44280,10 @@ const turnLogic = {
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
-                    const actionTags = ["Skill","Attack","CasE1Ability"];
+                    const actionTags = ["All","Skill","Attack","CasE1Ability"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
-                    const actionTags2 = ["Skill","Attack","Summon","Memosprite","CasE1Ability"];
+                    const actionTags2 = ["All","Skill","Attack","Summon","Memosprite","CasE1Ability"];
                     const compositeCacheTag2 = tags + actionTags;
                     ATKObjects.castoriceSkillEnhancedATKOBJECT = {
                         multipliers: {
@@ -44350,7 +44350,7 @@ const turnLogic = {
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
-                    const actionTags = ["Attack","MemoSkill","Summon","Memosprite"];
+                    const actionTags = ["All","Attack","MemoSkill","Summon","Memosprite"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     ATKObjects.netherStandardATKOBJECT = {
@@ -44396,7 +44396,7 @@ const turnLogic = {
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
                     //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
                     // console.log(values[0])
-                    const actionTags = ["Attack","MemoSkill","Summon","Memosprite","CasE1Ability"];
+                    const actionTags = ["All","Attack","MemoSkill","Summon","Memosprite","CasE1Ability"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     ATKObjects.netherStandardATKOBJECTEND = {
@@ -44456,7 +44456,7 @@ const turnLogic = {
                     const realPENKeys = keyShortcut(resPENKeys,tags);
                     const realShredKeys = keyShortcut(defShredKeys,tags);
                     const realVulnKeys = keyShortcut(vulnKeys,tags);
-                    const actionTags = ["Attack","MemoSkill","Summon","Memosprite","CasE1Ability"];
+                    const actionTags = ["All","Attack","MemoSkill","Summon","Memosprite","CasE1Ability"];
                     const compositeCacheTag = tags + actionTags + sourceTurn.properName;
 
                     ATKObjects.netherwingEnhancedAttackATKOBJECT = {
