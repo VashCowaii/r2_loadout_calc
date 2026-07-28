@@ -1400,7 +1400,7 @@ let characters = {
         "name": "Legacy of Honor",
         "rank": 1,
         "desc": "After using a Skill or Ultimate to hit a target in the \"Weightless\" state, additionally deals 1 instance of Imaginary Additional DMG equal to 40% of the Ultimate's DMG multiplier. This effect can only be triggered once per target per attack.",
-        "icon": "icon/skill/1100_rank1.png",
+        "icon": "icon/skill/11004_rank1.png",
         "paramsEido": [
           0.4
         ],
@@ -1415,7 +1415,7 @@ let characters = {
         "name": "Conflux of Stars",
         "rank": 2,
         "desc": "When his Talent is triggered, Welt regenerates 3 Energy.",
-        "icon": "icon/skill/1100_rank2.png",
+        "icon": "icon/skill/11004_rank2.png",
         "paramsEido": [
           3
         ]
@@ -1425,14 +1425,14 @@ let characters = {
         "name": "Prayer of Peace",
         "rank": 3,
         "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
-        "icon": "icon/skill/1100_skill.png"
+        "icon": "icon/skill/11004_skill.png"
       },
       {
         "id": "1100404",
         "name": "Appellation of Justice",
         "rank": 4,
         "desc": "Enemy targets in the \"Weightless\" state have their All-Type RES reduced by 30%.",
-        "icon": "icon/skill/1100_rank4.png",
+        "icon": "icon/skill/11004_rank4.png",
         "paramsEido": [
           0.3
         ]
@@ -1442,14 +1442,14 @@ let characters = {
         "name": "Power of Kindness",
         "rank": 5,
         "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
-        "icon": "icon/skill/1100_ultimate.png"
+        "icon": "icon/skill/11004_ultimate.png"
       },
       {
         "id": "1100406",
         "name": "Prospect of Glory",
         "rank": 6,
         "desc": "When using Skill or Ultimate to hit an enemy target in the Slow state, increases CRIT Rate by 30% and CRIT DMG by 60% for the DMG dealt.",
-        "icon": "icon/skill/1100_rank6.png",
+        "icon": "icon/skill/11004_rank6.png",
         "paramsEido": [
           0.3,
           0.6
@@ -2004,35 +2004,35 @@ let characters = {
     },
     "traces": {
       "Point01": {
-        "icon": "icon/skill/1004_basic_atk.png",
+        "icon": "icon/skill/11004_basic_atk.png",
         "skillRef": {
           "skillName": "Gravity Suppression",
           "skillSlot": "Basic ATK"
         }
       },
       "Point02": {
-        "icon": "icon/skill/1004_skill.png",
+        "icon": "icon/skill/11004_skill.png",
         "skillRef": {
           "skillName": "Edge of the Void",
           "skillSlot": "Skill"
         }
       },
       "Point03": {
-        "icon": "icon/skill/1004_ultimate.png",
+        "icon": "icon/skill/11004_ultimate.png",
         "skillRef": {
           "skillName": "Synthetic Black Hole",
           "skillSlot": "Ultimate"
         }
       },
       "Point04": {
-        "icon": "icon/skill/1004_talent.png",
+        "icon": "icon/skill/11004_talent.png",
         "skillRef": {
           "skillName": "Time Distortion",
           "skillSlot": "Talent"
         }
       },
       "Point05": {
-        "icon": "icon/skill/1004_technique.png",
+        "icon": "icon/skill/11004_technique.png",
         "skillRef": {
           "skillName": "Gravitational Imprisonment",
           "skillSlot": "Technique"
@@ -2040,7 +2040,7 @@ let characters = {
       },
       "Point06": {
         "name": "Retribution",
-        "icon": "icon/skill/1004_skilltree1.png",
+        "icon": "icon/skill/11004_skilltree1.png",
         "desc": "When ally targets attack targets under the \"Weightless\" state, their DMG dealt increases by #1[i]%. This effect stacks up to #2[i] times and lasts for #3[i] turn(s). At the start of the battle, Welt regenerates #4[i] Energy.",
         "params": [
           0.1,
@@ -2052,7 +2052,7 @@ let characters = {
       },
       "Point07": {
         "name": "Judgment",
-        "icon": "icon/skill/1004_skilltree2.png",
+        "icon": "icon/skill/11004_skilltree2.png",
         "desc": "When Welt uses Basic ATK or Skill, additionally deals 1 extra instance of Additional DMG to the enemy target. The Additional DMG dealt when using Basic ATK is equal to #1[i]% of Basic ATK DMG multiplier. The Additional DMG dealt when using Skill is equal to #2[i]% of Skill DMG multiplier.",
         "params": [
           0.8,
@@ -2067,7 +2067,7 @@ let characters = {
       },
       "Point08": {
         "name": "Punishment",
-        "icon": "icon/skill/1004_skilltree3.png",
+        "icon": "icon/skill/11004_skilltree3.png",
         "desc": "When Welt's Effect Hit Rate is greater than #1[i]%, for every #2[i]% that exceeds this value, increases ATK by #3[i]%, up to a maximum increase of #4[i]%. When using Ultimate, additionally restores #5[i] Energy.",
         "params": [
           0.4,
@@ -2194,7 +2194,7 @@ let characters = {
         "name": "Da Capo",
         "rank": 1,
         "desc": "When using an attack, has a 100% base chance to increase the DoT taken by the target by 30% for 2 turn(s).",
-        "icon": "icon/skill/1100_rank1.png",
+        "icon": "icon/skill/11005_rank1.png",
         "paramsEido": [
           1,
           0.3,
@@ -2211,7 +2211,7 @@ let characters = {
         "name": "Fortississimo",
         "rank": 2,
         "desc": "While Kafka is on the field, DoT dealt by all allies increases by 33%.",
-        "icon": "icon/skill/1100_rank2.png",
+        "icon": "icon/skill/11005_rank2.png",
         "paramsEido": [
           0.33
         ],
@@ -2222,14 +2222,14 @@ let characters = {
         "name": "Capriccio",
         "rank": 3,
         "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
-        "icon": "icon/skill/1100_skill.png"
+        "icon": "icon/skill/11005_skill.png"
       },
       {
         "id": "1100504",
         "name": "Recitativo",
         "rank": 4,
         "desc": "When an enemy target takes DMG from the Shock status inflicted by Kafka, Kafka additionally regenerates 2 Energy.",
-        "icon": "icon/skill/1100_rank4.png",
+        "icon": "icon/skill/11005_rank4.png",
         "paramsEido": [
           2
         ]
@@ -2239,14 +2239,14 @@ let characters = {
         "name": "Doloroso",
         "rank": 5,
         "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
-        "icon": "icon/skill/1100_ultimate.png"
+        "icon": "icon/skill/11005_ultimate.png"
       },
       {
         "id": "1100506",
         "name": "Leggiero",
         "rank": 6,
         "desc": "The Shock state inflicted on the enemy target by the Ultimate, Technique, or the Talent-triggered Follow-Up ATK has a DMG multiplier increase of 156% and lasts 1 turn(s) longer.",
-        "icon": "icon/skill/1100_rank6.png",
+        "icon": "icon/skill/11005_rank6.png",
         "paramsEido": [
           1.56,
           1
@@ -2797,35 +2797,35 @@ let characters = {
     },
     "traces": {
       "Point01": {
-        "icon": "icon/skill/1005_basic_atk.png",
+        "icon": "icon/skill/11005_basic_atk.png",
         "skillRef": {
           "skillName": "Midnight Tumult",
           "skillSlot": "Basic ATK"
         }
       },
       "Point02": {
-        "icon": "icon/skill/1005_skill.png",
+        "icon": "icon/skill/11005_skill.png",
         "skillRef": {
           "skillName": "Caressing Moonlight",
           "skillSlot": "Skill"
         }
       },
       "Point03": {
-        "icon": "icon/skill/1005_ultimate.png",
+        "icon": "icon/skill/11005_ultimate.png",
         "skillRef": {
           "skillName": "Twilight Trill",
           "skillSlot": "Ultimate"
         }
       },
       "Point04": {
-        "icon": "icon/skill/1005_talent.png",
+        "icon": "icon/skill/11005_talent.png",
         "skillRef": {
           "skillName": "Gentle but Cruel",
           "skillSlot": "Talent"
         }
       },
       "Point05": {
-        "icon": "icon/skill/1005_technique.png",
+        "icon": "icon/skill/11005_technique.png",
         "skillRef": {
           "skillName": "Mercy Is Not Forgiveness",
           "skillSlot": "Technique"
@@ -2833,7 +2833,7 @@ let characters = {
       },
       "Point06": {
         "name": "Torture",
-        "icon": "icon/skill/1005_skilltree1.png",
+        "icon": "icon/skill/11005_skilltree1.png",
         "desc": "When an ally target's Effect Hit Rate is #1[i]% or higher, Kafka increases that target's ATK by #2[i]%.",
         "params": [
           0.75,
@@ -2843,7 +2843,7 @@ let characters = {
       },
       "Point07": {
         "name": "Plunder",
-        "icon": "icon/skill/1005_skilltree2.png",
+        "icon": "icon/skill/11005_skilltree2.png",
         "desc": "If an enemy target is defeated while Shocked, Kafka additionally regenerates #1[i] Energy.",
         "params": [
           5
@@ -2852,7 +2852,7 @@ let characters = {
       },
       "Point08": {
         "name": "Thorns",
-        "icon": "icon/skill/1005_skilltree3.png",
+        "icon": "icon/skill/11005_skilltree3.png",
         "desc": "After using Ultimate, restores the triggerable count of Talent's Follow-Up ATK by 1. And the Talent's Follow-Up ATK can cause all DoTs debuffs currently on the target to immediately produce DMG equal to #1[i]% of the original DMG.",
         "params": [
           0.8
@@ -2974,7 +2974,7 @@ let characters = {
         "name": "Social Engineering",
         "rank": 1,
         "desc": "After using Ultimate to attack an enemy target, Silver Wolf regenerates 7 Energy for every debuff on the target. This effect can trigger up to 5 time(s) in each use of Ultimate.",
-        "icon": "icon/skill/1100_rank1.png",
+        "icon": "icon/skill/11006_rank1.png",
         "paramsEido": [
           7,
           5
@@ -2990,7 +2990,7 @@ let characters = {
         "name": "Zombie Network",
         "rank": 2,
         "desc": "When an enemy target enters combat, increases their DMG taken by 20%. When an enemy target gets attacked by ally targets, Silver Wolf has a 100% base chance to implant 1 random \"Bug\" on the attacked enemy target.",
-        "icon": "icon/skill/1100_rank2.png",
+        "icon": "icon/skill/11006_rank2.png",
         "paramsEido": [
           0.2,
           1
@@ -3007,14 +3007,14 @@ let characters = {
         "name": "Payload",
         "rank": 3,
         "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
-        "icon": "icon/skill/1100_skill.png"
+        "icon": "icon/skill/11006_skill.png"
       },
       {
         "id": "1100604",
         "name": "Bounce Attack",
         "rank": 4,
         "desc": "After using Ultimate to attack an enemy target, deals Quantum Additional DMG equal to 20% of Silver Wolf's ATK for every debuff on the target. This effect can trigger up to 5 time(s) per target during each use of Ultimate.",
-        "icon": "icon/skill/1100_rank4.png",
+        "icon": "icon/skill/11006_rank4.png",
         "paramsEido": [
           0.2,
           5
@@ -3033,14 +3033,14 @@ let characters = {
         "name": "Brute Force Attack",
         "rank": 5,
         "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
-        "icon": "icon/skill/1100_ultimate.png"
+        "icon": "icon/skill/11006_ultimate.png"
       },
       {
         "id": "1100606",
         "name": "Overlay Network",
         "rank": 6,
         "desc": "For every debuff the enemy target has, the DMG dealt by Silver Wolf to it increases by 20%, up to a max increase of 100%.",
-        "icon": "icon/skill/1100_rank6.png",
+        "icon": "icon/skill/11006_rank6.png",
         "paramsEido": [
           0.2,
           1
@@ -3618,35 +3618,35 @@ let characters = {
     },
     "traces": {
       "Point01": {
-        "icon": "icon/skill/1006_basic_atk.png",
+        "icon": "icon/skill/11006_basic_atk.png",
         "skillRef": {
           "skillName": "System Warning",
           "skillSlot": "Basic ATK"
         }
       },
       "Point02": {
-        "icon": "icon/skill/1006_skill.png",
+        "icon": "icon/skill/11006_skill.png",
         "skillRef": {
           "skillName": "Allow Changes?",
           "skillSlot": "Skill"
         }
       },
       "Point03": {
-        "icon": "icon/skill/1006_ultimate.png",
+        "icon": "icon/skill/11006_ultimate.png",
         "skillRef": {
           "skillName": "User Banned",
           "skillSlot": "Ultimate"
         }
       },
       "Point04": {
-        "icon": "icon/skill/1006_talent.png",
+        "icon": "icon/skill/11006_talent.png",
         "skillRef": {
           "skillName": "Awaiting System Response...",
           "skillSlot": "Talent"
         }
       },
       "Point05": {
-        "icon": "icon/skill/1006_technique.png",
+        "icon": "icon/skill/11006_technique.png",
         "skillRef": {
           "skillName": "Force Quit Program",
           "skillSlot": "Technique"
@@ -3654,7 +3654,7 @@ let characters = {
       },
       "Point06": {
         "name": "Generate",
-        "icon": "icon/skill/1006_skilltree1.png",
+        "icon": "icon/skill/11006_skilltree1.png",
         "desc": "The duration of \"Bug\" is extended by #1[i] turn(s). Every time an enemy's Weakness gets broken, Silver Wolf has a #2[i]% base chance of implanting a random \"Bug\" on that target.",
         "params": [
           1,
@@ -3669,7 +3669,7 @@ let characters = {
       },
       "Point07": {
         "name": "Inject",
-        "icon": "icon/skill/1006_skilltree2.png",
+        "icon": "icon/skill/11006_skilltree2.png",
         "desc": "When the battle starts, immediately regenerates #1[i] Energy. When Silver Wolf's turn starts, she regenerates #2[i] Energy.",
         "params": [
           20,
@@ -3678,7 +3678,7 @@ let characters = {
       },
       "Point08": {
         "name": "Side Note",
-        "icon": "icon/skill/1006_skilltree3.png",
+        "icon": "icon/skill/11006_skilltree3.png",
         "desc": "For every #1[i]% Effect Hit Rate that Silver Wolf has, additionally increases her ATK by #2[i]%, up to a max of #3[i]%.",
         "params": [
           0.1,
@@ -5108,7 +5108,7 @@ let characters = {
         "name": "Extirpating Slash",
         "rank": 1,
         "desc": "When dealing DMG to an enemy whose HP percentage is 80% or lower, increases CRIT Rate by 15%, and ignores 20% of target's DEF.",
-        "icon": "icon/skill/1110_rank1.png",
+        "icon": "icon/skill/11102_rank1.png",
         "paramsEido": [
           0.8,
           0.15,
@@ -5121,7 +5121,7 @@ let characters = {
         "name": "Dancing Butterfly",
         "rank": 2,
         "desc": "The SPD Boost effect of Seele's Skill can stack up to 2 time(s).",
-        "icon": "icon/skill/1110_rank2.png",
+        "icon": "icon/skill/11102_rank2.png",
         "paramsEido": [
           2
         ]
@@ -5131,14 +5131,14 @@ let characters = {
         "name": "Dazzling Tumult",
         "rank": 3,
         "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
-        "icon": "icon/skill/1110_skill.png"
+        "icon": "icon/skill/11102_skill.png"
       },
       {
         "id": "1110204",
         "name": "Flitting Phantasm",
         "rank": 4,
         "desc": "Seele regenerates 15 Energy when she defeats an enemy.",
-        "icon": "icon/skill/1110_rank4.png",
+        "icon": "icon/skill/11102_rank4.png",
         "paramsEido": [
           15
         ],
@@ -5149,14 +5149,14 @@ let characters = {
         "name": "Piercing Shards",
         "rank": 5,
         "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
-        "icon": "icon/skill/1110_ultimate.png"
+        "icon": "icon/skill/11102_ultimate.png"
       },
       {
         "id": "1110206",
         "name": "Shattering Shambles",
         "rank": 6,
         "desc": "After attacking with Ultimate, Seele inflicts \"Butterfly Flurry\" on the target for 3 turn(s). Enemy targets in \"Butterfly Flurry\" will additionally take 1 instance of True DMG equal to 30% of Seele's Ultimate DMG after receiving an attack. When the target under the \"Butterfly Flurry\" state is defeated by any unit, Seele's Talent will also be triggered.\nWhen Seele is knocked down, the \"Butterfly Flurry\" inflicted on the enemies will be removed.",
-        "icon": "icon/skill/1110_rank6.png",
+        "icon": "icon/skill/11102_rank6.png",
         "paramsEido": [
           0.3,
           3
@@ -5592,35 +5592,35 @@ let characters = {
     },
     "traces": {
       "Point01": {
-        "icon": "icon/skill/1102_basic_atk.png",
+        "icon": "icon/skill/11102_basic_atk.png",
         "skillRef": {
           "skillName": "Thwack",
           "skillSlot": "Basic ATK"
         }
       },
       "Point02": {
-        "icon": "icon/skill/1102_skill.png",
+        "icon": "icon/skill/11102_skill.png",
         "skillRef": {
           "skillName": "Sheathed Blade",
           "skillSlot": "Skill"
         }
       },
       "Point03": {
-        "icon": "icon/skill/1102_ultimate.png",
+        "icon": "icon/skill/11102_ultimate.png",
         "skillRef": {
           "skillName": "Butterfly Flurry",
           "skillSlot": "Ultimate"
         }
       },
       "Point04": {
-        "icon": "icon/skill/1102_talent.png",
+        "icon": "icon/skill/11102_talent.png",
         "skillRef": {
           "skillName": "Resurgence",
           "skillSlot": "Talent"
         }
       },
       "Point05": {
-        "icon": "icon/skill/1102_technique.png",
+        "icon": "icon/skill/11102_technique.png",
         "skillRef": {
           "skillName": "Phantom Illusion",
           "skillSlot": "Technique"
@@ -5628,7 +5628,7 @@ let characters = {
       },
       "Point06": {
         "name": "Nightshade",
-        "icon": "icon/skill/1102_skilltree1.png",
+        "icon": "icon/skill/11102_skilltree1.png",
         "desc": "When defeating an enemy target, increases this unit's DMG dealt by #1[i]%. This effect can stack up to #2[i] time(s) and lasts for #3[i] turn(s).",
         "params": [
           0.5,
@@ -5639,7 +5639,7 @@ let characters = {
       },
       "Point07": {
         "name": "Lacerate",
-        "icon": "icon/skill/1102_skilltree2.png",
+        "icon": "icon/skill/11102_skilltree2.png",
         "desc": "While Seele is in the Amplification state, her Quantum RES PEN increases by #1[i]%.",
         "params": [
           0.25
@@ -5652,7 +5652,7 @@ let characters = {
       },
       "Point08": {
         "name": "Rippling Waves",
-        "icon": "icon/skill/1102_skilltree3.png",
+        "icon": "icon/skill/11102_skilltree3.png",
         "desc": "After using a Basic ATK, advances Seele's next action  by #1[i]%.",
         "params": [
           0.2
@@ -12191,7 +12191,7 @@ let characters = {
         "name": "Blade Cuts the Deepest in Hell",
         "rank": 1,
         "desc": "Enhanced Basic ATK and Ultimate deal additionally increased DMG to one designated enemy, with the increased amount equal to 150% of the tally of HP loss from Ultimate.",
-        "icon": "icon/skill/1120_rank1.png",
+        "icon": "icon/skill/11205_rank1.png",
         "paramsEido": [
           1.5,
           0.9
@@ -12202,7 +12202,7 @@ let characters = {
         "name": "Ten Thousand Sorrows From One Broken Dream",
         "rank": 2,
         "desc": "When Blade is in the \"Hellscape\" state, his CRIT Rate increases by 15%.",
-        "icon": "icon/skill/1120_rank2.png",
+        "icon": "icon/skill/11205_rank2.png",
         "paramsEido": [
           0.15
         ]
@@ -12212,14 +12212,14 @@ let characters = {
         "name": "Hardened Blade Bleeds Coldest Shade",
         "rank": 3,
         "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
-        "icon": "icon/skill/1120_ultimate.png"
+        "icon": "icon/skill/11205_ultimate.png"
       },
       {
         "id": "1120504",
         "name": "Rejected by Death, Infected With Life",
         "rank": 4,
         "desc": "When Blade's current HP percentage drops from above 50% to 50% of his Max HP or lower, increases his Max HP by 20%. Stacks up to 2 time(s).",
-        "icon": "icon/skill/1120_rank4.png",
+        "icon": "icon/skill/11205_rank4.png",
         "paramsEido": [
           0.2,
           2
@@ -12230,14 +12230,14 @@ let characters = {
         "name": "Death By Ten Lords' Gaze",
         "rank": 5,
         "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
-        "icon": "icon/skill/1120_skill.png"
+        "icon": "icon/skill/11205_skill.png"
       },
       {
         "id": "1120506",
         "name": "Reborn Into an Empty Husk",
         "rank": 6,
         "desc": "The maximum number of Charge stacks is reduced to 4. The Follow-Up ATK triggered by Talent deals additionally increased DMG, with the increased amount equal to 50% of Blade's Max HP.",
-        "icon": "icon/skill/1120_rank6.png",
+        "icon": "icon/skill/11205_rank6.png",
         "paramsEido": [
           0.5
         ],
@@ -12910,35 +12910,35 @@ let characters = {
     },
     "traces": {
       "Point01": {
-        "icon": "icon/skill/1205_basic_atk.png",
+        "icon": "icon/skill/11205_basic_atk.png",
         "skillRef": {
           "skillName": "Shard Sword",
           "skillSlot": "Basic ATK"
         }
       },
       "Point02": {
-        "icon": "icon/skill/1205_skill.png",
+        "icon": "icon/skill/11205_skill.png",
         "skillRef": {
           "skillName": "Hellscape",
           "skillSlot": "Skill"
         }
       },
       "Point03": {
-        "icon": "icon/skill/1205_ultimate.png",
+        "icon": "icon/skill/11205_ultimate.png",
         "skillRef": {
           "skillName": "Death Sentence",
           "skillSlot": "Ultimate"
         }
       },
       "Point04": {
-        "icon": "icon/skill/1205_talent.png",
+        "icon": "icon/skill/11205_talent.png",
         "skillRef": {
           "skillName": "Shuhu's Gift",
           "skillSlot": "Talent"
         }
       },
       "Point05": {
-        "icon": "icon/skill/1205_technique.png",
+        "icon": "icon/skill/11205_technique.png",
         "skillRef": {
           "skillName": "Karma Wind",
           "skillSlot": "Technique"
@@ -12946,7 +12946,7 @@ let characters = {
       },
       "Point06": {
         "name": "Vita Infinita",
-        "icon": "icon/skill/1205_skilltree1.png",
+        "icon": "icon/skill/11205_skilltree1.png",
         "desc": "When Blade uses Ultimate, the amount cleared from the tally of HP loss is changed to #1[i]%.",
         "params": [
           0.5
@@ -12954,7 +12954,7 @@ let characters = {
       },
       "Point07": {
         "name": "Neverending Deaths",
-        "icon": "icon/skill/1205_skilltree2.png",
+        "icon": "icon/skill/11205_skilltree2.png",
         "desc": "HP restored from healing increases by #2[i]%. After receiving healing, converts #1[i]% of the healed amount to Ultimate's tally of HP loss.",
         "params": [
           0.25,
@@ -12963,7 +12963,7 @@ let characters = {
       },
       "Point08": {
         "name": "Cyclone of Destruction",
-        "icon": "icon/skill/1205_skilltree3.png",
+        "icon": "icon/skill/11205_skilltree3.png",
         "desc": "Increases Follow-Up ATK DMG from Talent by #1[i]% and additionally regenerates #2[i] Energy.",
         "params": [
           0.2,
@@ -13806,7 +13806,7 @@ let characters = {
         "name": "Moon Crashes Tianguan Gate",
         "rank": 1,
         "desc": "When using Ultimate or Enhanced Skill, Jingliu's CRIT DMG increases by 36% for 1 turn(s). Moreover, additionally deals 1 instance of Ice DMG equal to 80% of Jingliu's Max HP to the primary target.",
-        "icon": "icon/skill/1121_rank1.png",
+        "icon": "icon/skill/11212_rank1.png",
         "paramsEido": [
           0.36,
           0.8,
@@ -13818,7 +13818,7 @@ let characters = {
         "name": "Crescent Shadows Qixing Dipper",
         "rank": 2,
         "desc": "After using Ultimate, increases the DMG of the next Enhanced Skill by 80%.",
-        "icon": "icon/skill/1121_rank2.png",
+        "icon": "icon/skill/11212_rank2.png",
         "paramsEido": [
           0.8
         ]
@@ -13828,14 +13828,14 @@ let characters = {
         "name": "Halfmoon Gapes Mercurial Haze",
         "rank": 3,
         "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
-        "icon": "icon/skill/1121_ultimate.png"
+        "icon": "icon/skill/11212_ultimate.png"
       },
       {
         "id": "1121204",
         "name": "Lunarlance Shines Skyward Dome",
         "rank": 4,
         "desc": "During the \"Spectral Transmigration\" state, each \"Moonlight\" stack additionally increases CRIT DMG by 20%.",
-        "icon": "icon/skill/1121_rank4.png",
+        "icon": "icon/skill/11212_rank4.png",
         "paramsEido": [
           0.2
         ]
@@ -13845,14 +13845,14 @@ let characters = {
         "name": "Night Shades Astral Radiance",
         "rank": 5,
         "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
-        "icon": "icon/skill/1121_skill.png"
+        "icon": "icon/skill/11212_skill.png"
       },
       {
         "id": "1121206",
         "name": "Eclipse Hollows Corporeal Husk",
         "rank": 6,
         "desc": "When Jingliu enters the \"Spectral Transmigration\" state, the \"Syzygy\" stack limit increases by 1, and Jingliu additionally gains 2 stack(s) of \"Syzygy.\" During the \"Spectral Transmigration\" state, her Ice RES PEN increases by 30%.",
-        "icon": "icon/skill/1121_rank6.png",
+        "icon": "icon/skill/11212_rank6.png",
         "paramsEido": [
           2,
           0.3
@@ -14504,35 +14504,35 @@ let characters = {
     },
     "traces": {
       "Point01": {
-        "icon": "icon/skill/1212_basic_atk.png",
+        "icon": "icon/skill/11212_basic_atk.png",
         "skillRef": {
           "skillName": "Lucent Moonglow",
           "skillSlot": "Basic ATK"
         }
       },
       "Point02": {
-        "icon": "icon/skill/1212_skill.png",
+        "icon": "icon/skill/11212_skill.png",
         "skillRef": {
           "skillName": "Transcendent Flash",
           "skillSlot": "Skill"
         }
       },
       "Point03": {
-        "icon": "icon/skill/1212_ultimate.png",
+        "icon": "icon/skill/11212_ultimate.png",
         "skillRef": {
           "skillName": "Florephemeral Dreamflux",
           "skillSlot": "Ultimate"
         }
       },
       "Point04": {
-        "icon": "icon/skill/1212_talent.png",
+        "icon": "icon/skill/11212_talent.png",
         "skillRef": {
           "skillName": "Crescent Transmigration",
           "skillSlot": "Talent"
         }
       },
       "Point05": {
-        "icon": "icon/skill/1212_technique.png",
+        "icon": "icon/skill/11212_technique.png",
         "skillRef": {
           "skillName": "Shine of Truth",
           "skillSlot": "Technique"
@@ -14540,7 +14540,7 @@ let characters = {
       },
       "Point06": {
         "name": "Deathrealm",
-        "icon": "icon/skill/1212_skilltree1.png",
+        "icon": "icon/skill/11212_skilltree1.png",
         "desc": "While in the \"Spectral Transmigration\" state, increases Effect RES by #1[i]%, and increases the Ultimate DMG dealt by #2[i]%.",
         "params": [
           0.35,
@@ -14549,7 +14549,7 @@ let characters = {
       },
       "Point07": {
         "name": "Sword Champion",
-        "icon": "icon/skill/1212_skilltree2.png",
+        "icon": "icon/skill/11212_skilltree2.png",
         "desc": "After using \"Transcendent Flash,\" additionally regenerates #1[i] Energy. And after using \"Moon On Glacial River,\" additionally regenerates #2[i] Energy.",
         "params": [
           15,
@@ -14558,7 +14558,7 @@ let characters = {
       },
       "Point08": {
         "name": "Frost Wraith",
-        "icon": "icon/skill/1212_skilltree3.png",
+        "icon": "icon/skill/11212_skilltree3.png",
         "desc": "Upon obtaining \"Syzygy,\" if its stack limit has been reached, Jingliu's next attack ignores #1[i]% of the target's DEF.",
         "params": [
           0.25
@@ -16891,7 +16891,7 @@ let characters = {
         "name": "Anchored to Vessel, Specters Nestled",
         "rank": 1,
         "desc": "The duration of \"Divine Provision\" produced by the Talent is extended by 1 turn(s). When Huohuo possesses \"Divine Provision,\" her Outgoing Healing increases by 20%, all allies' SPD increases by 12%.",
-        "icon": "icon/skill/1121_rank1.png",
+        "icon": "icon/skill/11217_rank1.png",
         "paramsEido": [
           1,
           0.2,
@@ -16903,7 +16903,7 @@ let characters = {
         "name": "Sealed in Tail, Wraith Subdued",
         "rank": 2,
         "desc": "If Huohuo possesses \"Divine Provision\" when an ally target is struck by a killing blow, the ally will not be knocked down and their HP will immediately be restored by an amount equal to 50% of their Max HP. This reduces the duration of \"Divine Provision\" by 1 turn. This effect can only be triggered 2 time(s) per battle.",
-        "icon": "icon/skill/1121_rank2.png",
+        "icon": "icon/skill/11217_rank2.png",
         "paramsEido": [
           0.5,
           2
@@ -16919,14 +16919,14 @@ let characters = {
         "name": "Cursed by Fate, Moths to Flame",
         "rank": 3,
         "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
-        "icon": "icon/skill/1121_ultimate.png"
+        "icon": "icon/skill/11217_ultimate.png"
       },
       {
         "id": "1121704",
         "name": "Tied in Life, Bound to Strife",
         "rank": 4,
         "desc": "When healing an ally target via Skill or Talent, the less HP the target ally currently has, the higher the amount of healing they will receive. The maximum increase in healing provided by Huohuo is 80%.",
-        "icon": "icon/skill/1121_rank4.png",
+        "icon": "icon/skill/11217_rank4.png",
         "paramsEido": [
           0.8
         ]
@@ -16936,14 +16936,14 @@ let characters = {
         "name": "Mandated by Edict, Evils Evicted",
         "rank": 5,
         "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
-        "icon": "icon/skill/1121_skill.png"
+        "icon": "icon/skill/11217_skill.png"
       },
       {
         "id": "1121706",
         "name": "Woven Together, Cohere Forever",
         "rank": 6,
         "desc": "When healing an ally target, increases the ally target's DMG dealt by 50% for 2 turn(s).",
-        "icon": "icon/skill/1121_rank6.png",
+        "icon": "icon/skill/11217_rank6.png",
         "paramsEido": [
           0.5,
           2
@@ -17502,35 +17502,35 @@ let characters = {
     },
     "traces": {
       "Point01": {
-        "icon": "icon/skill/1217_basic_atk.png",
+        "icon": "icon/skill/11217_basic_atk.png",
         "skillRef": {
           "skillName": "Banner: Stormcaller",
           "skillSlot": "Basic ATK"
         }
       },
       "Point02": {
-        "icon": "icon/skill/1217_skill.png",
+        "icon": "icon/skill/11217_skill.png",
         "skillRef": {
           "skillName": "Talisman: Protection",
           "skillSlot": "Skill"
         }
       },
       "Point03": {
-        "icon": "icon/skill/1217_ultimate.png",
+        "icon": "icon/skill/11217_ultimate.png",
         "skillRef": {
           "skillName": "Tail: Spiritual Domination",
           "skillSlot": "Ultimate"
         }
       },
       "Point04": {
-        "icon": "icon/skill/1217_talent.png",
+        "icon": "icon/skill/11217_talent.png",
         "skillRef": {
           "skillName": "Possession: Ethereal Metaflow",
           "skillSlot": "Talent"
         }
       },
       "Point05": {
-        "icon": "icon/skill/1217_technique.png",
+        "icon": "icon/skill/11217_technique.png",
         "skillRef": {
           "skillName": "Fiend: Impeachment of Evil",
           "skillSlot": "Technique"
@@ -17538,7 +17538,7 @@ let characters = {
       },
       "Point06": {
         "name": "Fearful to Act",
-        "icon": "icon/skill/1217_skilltree1.png",
+        "icon": "icon/skill/11217_skilltree1.png",
         "desc": "When battle starts, Huohuo gains #1[i] Energy and \"Divine Provision,\" lasting for #2[i] turn(s).",
         "params": [
           30,
@@ -17547,7 +17547,7 @@ let characters = {
       },
       "Point07": {
         "name": "The Cursed One",
-        "icon": "icon/skill/1217_skilltree2.png",
+        "icon": "icon/skill/11217_skilltree2.png",
         "desc": "Increases the chance to resist Crowd Control debuffs by #1[i]%. When using Ultimate, if an ally target's Max Energy is #2[i] or higher, additionally increases their ATK by #3[i]%.",
         "params": [
           0.35,
@@ -17563,7 +17563,7 @@ let characters = {
       },
       "Point08": {
         "name": "Stress Reaction to Horror",
-        "icon": "icon/skill/1217_skilltree3.png",
+        "icon": "icon/skill/11217_skilltree3.png",
         "desc": "When her Talent is triggered to heal ally targets, Huohuo regenerates #1[i] Energy.",
         "params": [
           1
@@ -23920,7 +23920,7 @@ let characters = {
         "name": "Suspension of Disbelief",
         "rank": 1,
         "desc": "Increases the ATK of ally targets with \"Cipher\" by 40%. When the battle starts or when using Skill, increases Sparkle's SPD by 15%, lasting for 2 turn(s).",
-        "icon": "icon/skill/1130_rank1.png",
+        "icon": "icon/skill/11306_rank1.png",
         "paramsEido": [
           0.4,
           0.15,
@@ -23932,7 +23932,7 @@ let characters = {
         "name": "Purely Fictitious",
         "rank": 2,
         "desc": "Each stack of the Talent's effect additionally reduces the enemy target's DEF by 10%.",
-        "icon": "icon/skill/1130_rank2.png",
+        "icon": "icon/skill/11306_rank2.png",
         "paramsEido": [
           0.1
         ]
@@ -23942,28 +23942,28 @@ let characters = {
         "name": "Pipedream",
         "rank": 3,
         "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
-        "icon": "icon/skill/1130_skill.png"
+        "icon": "icon/skill/11306_skill.png"
       },
       {
         "id": "1130604",
         "name": "Life Is a Gamble",
         "rank": 4,
         "desc": "The Ultimate recovers 1 more Skill Point. The Talent additionally increases the Max Skill Points by 1.",
-        "icon": "icon/skill/1130_rank4.png"
+        "icon": "icon/skill/11306_rank4.png"
       },
       {
         "id": "1130605",
         "name": "Parallax Truth",
         "rank": 5,
         "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
-        "icon": "icon/skill/1130_ultimate.png"
+        "icon": "icon/skill/11306_ultimate.png"
       },
       {
         "id": "1130606",
         "name": "Narrative Polysemy",
         "rank": 6,
         "desc": "The CRIT DMG Boost effect provided by the Skill additionally increases by an amount equal to 30% of Sparkle's CRIT DMG. When Sparkle uses Skill, her Skill's CRIT DMG Boost effect will apply to all teammates with \"Cipher.\" When Sparkle uses her Ultimate, any single ally who benefits from her Skill's CRIT DMG Boost will spread that effect to teammates with \"Cipher.\"",
-        "icon": "icon/skill/1130_rank6.png",
+        "icon": "icon/skill/11306_rank6.png",
         "paramsEido": [
           0.3
         ]
@@ -24476,35 +24476,35 @@ let characters = {
     },
     "traces": {
       "Point01": {
-        "icon": "icon/skill/1306_basic_atk.png",
+        "icon": "icon/skill/11306_basic_atk.png",
         "skillRef": {
           "skillName": "Monodrama",
           "skillSlot": "Basic ATK"
         }
       },
       "Point02": {
-        "icon": "icon/skill/1306_skill.png",
+        "icon": "icon/skill/11306_skill.png",
         "skillRef": {
           "skillName": "Dreamdiver",
           "skillSlot": "Skill"
         }
       },
       "Point03": {
-        "icon": "icon/skill/1306_ultimate.png",
+        "icon": "icon/skill/11306_ultimate.png",
         "skillRef": {
           "skillName": "The Hero with a Thousand Faces",
           "skillSlot": "Ultimate"
         }
       },
       "Point04": {
-        "icon": "icon/skill/1306_talent.png",
+        "icon": "icon/skill/11306_talent.png",
         "skillRef": {
           "skillName": "Red Herring",
           "skillSlot": "Talent"
         }
       },
       "Point05": {
-        "icon": "icon/skill/1306_technique.png",
+        "icon": "icon/skill/11306_technique.png",
         "skillRef": {
           "skillName": "Unreliable Narrator",
           "skillSlot": "Technique"
@@ -24512,7 +24512,7 @@ let characters = {
       },
       "Point06": {
         "name": "Almanac",
-        "icon": "icon/skill/1306_skilltree1.png",
+        "icon": "icon/skill/11306_skilltree1.png",
         "desc": "Using Basic ATK additionally regenerates #1[i] Energy. When an ally character who holds the CRIT DMG Boost effect provided by the Skill consumes Skill Points, Sparkle additionally regenerates #2[i] Energy.",
         "params": [
           10,
@@ -24521,7 +24521,7 @@ let characters = {
       },
       "Point07": {
         "name": "Artificial Flower",
-        "icon": "icon/skill/1306_skilltree2.png",
+        "icon": "icon/skill/11306_skilltree2.png",
         "desc": "If an ally character consumes #1[i] or more Skill Points in a single turn, Sparkle's next use of Skill will not consume Skill Points.",
         "params": [
           3
@@ -24529,7 +24529,7 @@ let characters = {
       },
       "Point08": {
         "name": "Nocturne",
-        "icon": "icon/skill/1306_skilltree3.png",
+        "icon": "icon/skill/11306_skilltree3.png",
         "desc": "Increases all allies's ATK by #1[i]%. When an ally character holds the CRIT DMG Boost effect provided by the Skill, All-Type RES PEN increases by #2[i]%.",
         "params": [
           0.45,
@@ -24652,7 +24652,7 @@ let characters = {
         "name": "Seven Pillars of Wisdom",
         "rank": 1,
         "desc": "While Black Swan is active in combat, enemies afflicted with Wind Shear, Bleed, Burn, or Shock will have their corresponding Wind, Physical, Fire, or Lightning RES respectively reduced by 25%.",
-        "icon": "icon/skill/1130_rank1.png",
+        "icon": "icon/skill/11307_rank1.png",
         "paramsEido": [
           0.25
         ],
@@ -24663,7 +24663,7 @@ let characters = {
         "name": "Weep Not For Me, My Lamb",
         "rank": 2,
         "desc": "When enemy targets enter combat, there is a 100% base chance to inflict 30 stack(s) of \"Arcana\" on them.",
-        "icon": "icon/skill/1130_rank2.png",
+        "icon": "icon/skill/11307_rank2.png",
         "paramsEido": [
           1,
           30
@@ -24683,14 +24683,14 @@ let characters = {
         "name": "As Above, So Below",
         "rank": 3,
         "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
-        "icon": "icon/skill/1130_skill.png"
+        "icon": "icon/skill/11307_skill.png"
       },
       {
         "id": "1130704",
         "name": "In Tears We Gift",
         "rank": 4,
         "desc": "While in the \"Epiphany\" state, enemy targets take 20% increased DMG. And at the start of every turn or when they get defeated, regenerates 8 Energy for Black Swan.",
-        "icon": "icon/skill/1130_rank4.png",
+        "icon": "icon/skill/11307_rank4.png",
         "paramsEido": [
           0.2,
           8
@@ -24701,14 +24701,14 @@ let characters = {
         "name": "Linnutee Flyway",
         "rank": 5,
         "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
-        "icon": "icon/skill/1130_ultimate.png"
+        "icon": "icon/skill/11307_ultimate.png"
       },
       {
         "id": "1130706",
         "name": "Pantheon Merciful, Masses Pitiful",
         "rank": 6,
         "desc": "The upper limit of stackable \"Arcana\" increases by 30.\nWhen an enemy target gets attacked by Black Swan's teammates, Black Swan has a 65% base chance of inflicting 1 stack of \"Arcana\" on the target.\nFor every 1 stack of \"Arcana\" Black Swan inflicts on an enemy target, additionally increases the number of \"Arcana\" stacked this time by 1.",
-        "icon": "icon/skill/1130_rank6.png",
+        "icon": "icon/skill/11307_rank6.png",
         "paramsEido": [
           1,
           0.65,
@@ -25308,35 +25308,35 @@ let characters = {
     },
     "traces": {
       "Point01": {
-        "icon": "icon/skill/1307_basic_atk.png",
+        "icon": "icon/skill/11307_basic_atk.png",
         "skillRef": {
           "skillName": "Percipience, Silent Dawn",
           "skillSlot": "Basic ATK"
         }
       },
       "Point02": {
-        "icon": "icon/skill/1307_skill.png",
+        "icon": "icon/skill/11307_skill.png",
         "skillRef": {
           "skillName": "Decadence, False Twilight",
           "skillSlot": "Skill"
         }
       },
       "Point03": {
-        "icon": "icon/skill/1307_ultimate.png",
+        "icon": "icon/skill/11307_ultimate.png",
         "skillRef": {
           "skillName": "Bliss of Otherworld's Embrace",
           "skillSlot": "Ultimate"
         }
       },
       "Point04": {
-        "icon": "icon/skill/1307_talent.png",
+        "icon": "icon/skill/11307_talent.png",
         "skillRef": {
           "skillName": "Loom of Fate's Caprice",
           "skillSlot": "Talent"
         }
       },
       "Point05": {
-        "icon": "icon/skill/1307_technique.png",
+        "icon": "icon/skill/11307_technique.png",
         "skillRef": {
           "skillName": "From Façade to Vérité",
           "skillSlot": "Technique"
@@ -25344,7 +25344,7 @@ let characters = {
       },
       "Point06": {
         "name": "Viscera's Disquiet",
-        "icon": "icon/skill/1307_skilltree1.png",
+        "icon": "icon/skill/11307_skilltree1.png",
         "desc": "When an enemy target gets attacked by Black Swan, there is a #1[i]% base chance of inflicting #2[i] stack(s) of \"Arcana\" on them.",
         "params": [
           0.65,
@@ -25362,7 +25362,7 @@ let characters = {
       },
       "Point07": {
         "name": "Goblet's Dredges",
-        "icon": "icon/skill/1307_skilltree2.png",
+        "icon": "icon/skill/11307_skilltree2.png",
         "desc": "When an enemy targets enters combat, there is a #1[i]% base chance for it to be inflicted with 1 stack of \"Arcana,\" and a #2[i]% base chance to be inflicted with the DEF reduction effect from the Skill, which lasts for #3[i] turn(s).\nAfter using Basic ATK or Ultimate, there is also a #2[i]% base chance to inflict the DEF reduction effect from the Skill on the hit enemy targets, which lasts for #3[i] turn(s).",
         "params": [
           0.65,
@@ -25381,7 +25381,7 @@ let characters = {
       },
       "Point08": {
         "name": "Candleflame's Portent",
-        "icon": "icon/skill/1307_skilltree3.png",
+        "icon": "icon/skill/11307_skilltree3.png",
         "desc": "Increases the DMG dealt by all allies by an amount equal to #1[i]% of Black Swan's Effect Hit Rate, up to a maximum DMG increase of #2[i]%.",
         "params": [
           0.6,
@@ -27332,7 +27332,7 @@ let characters = {
         "name": "In Reddened Chrysalis, I Once Rest",
         "rank": 1,
         "desc": "When using the Enhanced Skill, ignores 15% of the target's DEF. The Enhanced Skill does not consume Skill Points.",
-        "icon": "icon/skill/1131_rank1.png",
+        "icon": "icon/skill/11310_rank1.png",
         "paramsEido": [
           0.15
         ],
@@ -27343,7 +27343,7 @@ let characters = {
         "name": "From Shattered Sky, I Free Fall",
         "rank": 2,
         "desc": "While in Complete Combustion, using the Enhanced Basic ATK or the Enhanced Skill to defeat an enemy target or to Break their Weakness allows SAM to immediately gain 1 extra turn. This effect can only trigger 1 time per turn, and the trigger count resets at the start of SAM's turn.",
-        "icon": "icon/skill/1131_rank2.png",
+        "icon": "icon/skill/11310_rank2.png",
         "extraEffects": {
           "Weakness Break State": {
             "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
@@ -27359,14 +27359,14 @@ let characters = {
         "name": "Amidst Silenced Stars, I Deep Sleep",
         "rank": 3,
         "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
-        "icon": "icon/skill/1131_skill.png"
+        "icon": "icon/skill/11310_skill.png"
       },
       {
         "id": "1131004",
         "name": "Upon Lighted Fyrefly, I Soon Gaze",
         "rank": 4,
         "desc": "While in Complete Combustion, increases SAM's Effect RES by 50%.",
-        "icon": "icon/skill/1131_rank4.png",
+        "icon": "icon/skill/11310_rank4.png",
         "paramsEido": [
           0.5
         ]
@@ -27376,14 +27376,14 @@ let characters = {
         "name": "From Undreamt Night, I Thence Shine",
         "rank": 5,
         "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
-        "icon": "icon/skill/1131_ultimate.png"
+        "icon": "icon/skill/11310_ultimate.png"
       },
       {
         "id": "1131006",
         "name": "In Finalized Morrow, I Full Bloom",
         "rank": 6,
         "desc": "While in Complete Combustion, increases SAM's Fire RES PEN by 20%. When using the Enhanced Basic ATK or Enhanced Skill, increases Weakness Break Efficiency by 50%.",
-        "icon": "icon/skill/1131_rank6.png",
+        "icon": "icon/skill/11310_rank6.png",
         "paramsEido": [
           0.2,
           0.5
@@ -28152,35 +28152,35 @@ let characters = {
     },
     "traces": {
       "Point01": {
-        "icon": "icon/skill/1310_basic_atk.png",
+        "icon": "icon/skill/11310_basic_atk.png",
         "skillRef": {
           "skillName": "Order: Flare Propulsion",
           "skillSlot": "Basic ATK"
         }
       },
       "Point02": {
-        "icon": "icon/skill/1310_skill.png",
+        "icon": "icon/skill/11310_skill.png",
         "skillRef": {
           "skillName": "Order: Aerial Bombardment",
           "skillSlot": "Skill"
         }
       },
       "Point03": {
-        "icon": "icon/skill/1310_ultimate.png",
+        "icon": "icon/skill/11310_ultimate.png",
         "skillRef": {
           "skillName": "Fyrefly Type-IV: Complete Combustion",
           "skillSlot": "Ultimate"
         }
       },
       "Point04": {
-        "icon": "icon/skill/1310_talent.png",
+        "icon": "icon/skill/11310_talent.png",
         "skillRef": {
           "skillName": "Chrysalid Pyronexus",
           "skillSlot": "Talent"
         }
       },
       "Point05": {
-        "icon": "icon/skill/1310_technique.png",
+        "icon": "icon/skill/11310_technique.png",
         "skillRef": {
           "skillName": "Δ Order: Meteoric Incineration",
           "skillSlot": "Technique"
@@ -28188,7 +28188,7 @@ let characters = {
       },
       "Point06": {
         "name": "Module α: Antilag Outburst",
-        "icon": "icon/skill/1310_skilltree1.png",
+        "icon": "icon/skill/11310_skilltree1.png",
         "desc": "While in the Complete Combustion state, SAM's Break Effect increases by #1[i]%. When using Enhanced Basic ATK or Enhanced Skill to inflict Weakness Break on a target, the Complete Combustion countdown is delayed by #2[i]%. This effect can trigger a maximum of #3[i] time(s) during each Complete Combustion state.",
         "params": [
           0.25,
@@ -28206,7 +28206,7 @@ let characters = {
       },
       "Point07": {
         "name": "Module β: Autoreactive Armor",
-        "icon": "icon/skill/1310_skilltree2.png",
+        "icon": "icon/skill/11310_skilltree2.png",
         "desc": "When SAM is in Complete Combustion with a Break Effect that is equal to or greater than #1[i]%/#2[i]%, attacking a Weakness-Broken enemy target will convert the Toughness Reduction of this attack into 1 instance of #3[i]%/#4[i]% Super Break DMG.",
         "params": [
           1.5,
@@ -28225,7 +28225,7 @@ let characters = {
       },
       "Point08": {
         "name": "Module γ: Core Overload",
-        "icon": "icon/skill/1310_skilltree3.png",
+        "icon": "icon/skill/11310_skilltree3.png",
         "desc": "For every #2[i] point(s) of SAM's ATK that exceeds #1[i], increases this unit's Break Effect by #3[f1]%.",
         "params": [
           1800,
@@ -31034,7 +31034,7 @@ let characters = {
       },
       "Point19": {
         "name": "Thorned Snare",
-        "icon": "icon/skill/1402_memosprite_skill.png",
+        "icon": "icon/skill/1402_memosprite_skill1.png",
         "skillRef": {
           "skillName": "Thorned Snare",
           "skillSlot": "Memosprite Skill"
@@ -33876,7 +33876,7 @@ let characters = {
       },
       "Point19": {
         "name": "Claw Splits the Veil",
-        "icon": "icon/skill/1407_memosprite_skill.png",
+        "icon": "icon/skill/1407_memosprite_skill1.png",
         "skillRef": {
           "skillName": "Claw Splits the Veil",
           "skillSlot": "Memosprite Skill"
@@ -38533,7 +38533,7 @@ let characters = {
       },
       "Point19": {
         "name": "Remembrance, Whirling, Like Rain",
-        "icon": "icon/skill/1413_memosprite_skill.png",
+        "icon": "icon/skill/1413_memosprite_skill3.png",
         "skillRef": {
           "skillName": "Remembrance, Whirling, Like Rain",
           "skillSlot": "Memosprite Skill"
@@ -49186,7 +49186,7 @@ let characters = {
       },
       "Point19": {
         "name": "Baddies! Trouble!",
-        "icon": "icon/skill/8007_memosprite_skill.png",
+        "icon": "icon/skill/8007_memosprite_skill1.png",
         "skillRef": {
           "skillName": "Baddies! Trouble!",
           "skillSlot": "Memosprite Skill"
