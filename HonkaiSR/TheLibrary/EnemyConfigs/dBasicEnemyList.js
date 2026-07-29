@@ -18687,7 +18687,7 @@ let basicEnemyList = {
         ]
       },
       "hasReader": false,
-      "baseName": "undefined"
+      "baseName": "Ishtar Huwawa Aquila"
     },
     "4022011": {
       "4022011": {
