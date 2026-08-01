@@ -1219,8 +1219,8 @@ let legendaryPerks = {
     },
     "Speed Demon": {//TODO: Figure out exactly what bonus this is
         "name": "",
-        "desc": "Grants maximum Movement Speed bonuses.<br>Not currently factored by the calc until we know exactly what the movespeed caps are everywhere.",
-        "stats": {},
+        "desc": "Grants maximum Movement Speed bonus.",
+        "stats": {200},
         "tags": [],
         "usesConditional": {},
 		"placementID": "L36"
