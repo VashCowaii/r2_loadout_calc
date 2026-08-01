@@ -4046,7 +4046,10 @@ const userTriggers = {
 
 
                         let entryFileName = null;
+                        let skillMuted = null;
                         if (compositeAbilityObject?.abilityObject) {
+                            skillMuted = compositeAbilityObject.abilityObject[entryFileName]?.skillMuted;
+
                             for (let abilityNameKey in compositeAbilityObject.abilityObject) {
                                 const currentAbilityTriggerCheck = compositeAbilityObject.abilityObject[abilityNameKey];
 
@@ -4057,8 +4060,6 @@ const userTriggers = {
                                 }
                             }
                         }
-
-                        let skillMuted = compositeAbilityObject.abilityObject[entryFileName]?.skillMuted;
                         
                         entryString += `
                             <div class="rotationsSectionRowHolder3Overview">

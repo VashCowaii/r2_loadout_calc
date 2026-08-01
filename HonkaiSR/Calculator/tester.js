@@ -3720,6 +3720,24 @@ const userTriggers = {
             return;
         }
 
+        let trailblazeConflict = null;
+        if (updated.toLowerCase().includes("trailblazer")) {
+            for (let i=1;i<=4;i++) {
+                let newSlot = `char${i}`;
+    
+                const currentName = characterObject[newSlot].name;
+    
+                if (currentName.toLowerCase().includes("trailblazer") && currentSlot != i) {
+                    trailblazeConflict = true;
+                }
+            }
+        }
+        if (trailblazeConflict && !forceLoadOrder && !isShowcaseOverwrite) {
+            alert(`Multiple Trailblazer characters found in the party or with the new selection, multiple trailblazers cannot be in the same team.`);
+            return;
+        }
+        
+
 
         const defaultData = defaultConditions[updated];
 
