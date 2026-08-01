@@ -942,7 +942,7 @@ let legendaryPerks = {
     },
     "Critical Situation": {//done
         "name": "",
-        "desc": "Grants 35% to All Critical Chance.",
+        "desc": "Grants 35% to All Critical Chance, when Light Weight.",
         "stats": {},
         "tags": ["AllCritChance"],
         "usesConditional": {
