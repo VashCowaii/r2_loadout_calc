@@ -942,12 +942,15 @@ let legendaryPerks = {
     },
     "Critical Situation": {//done
         "name": "",
-        "desc": "Grants 35% to All Critical Chance, when light weight.",
-        "stats": {
-			"AllCritChance": 0.35
+        "desc": "Grants 25% to All Critical Chance.",
+        "stats": {},
+        "tags": ["AllCritChance"],
+        "usesConditional": {
+			  "customPostWeightClass": "criticalSituation",
+			  "keys": [
+				  "customPostWeightClass"
+			  ]
 		},
-        "tags": [],
-        "usesConditional": {},
 		"placementID": "L07"
     },
     "Dark Omen": {//not applicable to calcs
@@ -1219,8 +1222,10 @@ let legendaryPerks = {
     },
     "Speed Demon": {//TODO: Figure out exactly what bonus this is
         "name": "",
-        "desc": "Grants maximum Movement Speed bonuses.<br>Not currently factored by the calc until we know exactly what the movespeed caps are everywhere.",
-        "stats": {},
+        "desc": "Grants maximum Movement Speed bonus.",
+        "stats": {
+			"MovementSpeed": 2,
+		},
         "tags": [],
         "usesConditional": {},
 		"placementID": "L36"

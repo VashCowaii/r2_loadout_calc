@@ -1,5 +1,5 @@
 let enemyData = {
-  "name": "undefined",
+  "name": "Ishtar Huwawa Aquila",
   "image": 4015012,
   "bar": 1,
   "rank": "BigBoss",

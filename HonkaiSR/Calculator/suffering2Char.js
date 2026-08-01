@@ -42456,8 +42456,18 @@ const turnLogic = {
                     const isReadyForAdvance = ownerTurn.memoriaIsReadyForAdvance;
                     const eveyTurn = ownerTurn.everEveyTURNEVENT;
                     if (resoRef >= 16 && isReadyForAdvance && eveyTurn.isActive) {
-                        actionAdvance(1,eveyTurn,battleData,"Memoria >= 16");
+                        // actionAdvance(1,eveyTurn,battleData,"Memoria >= 16");
                         ownerTurn.memoriaIsReadyForAdvance = false;
+
+
+                        if (eveyTurn.turnState && eveyTurn.actionAssigned && eveyTurn.turnDelayMulti) {
+                            eveyTurn.turnDelayMulti = 0;
+                            eveyTurn.turnDelayAction = 1;
+
+                        }//battleData.inAction = true;
+                        else {
+                            actionAdvance(0,eveyTurn,battleData,"Memoria >= 16",null,true);
+                        }
                     }
                 },
                 "target": "self",
