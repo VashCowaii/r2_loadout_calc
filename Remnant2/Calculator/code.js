@@ -723,6 +723,11 @@ let customItemFunctions = {
       index.AllDamage -= 0.05 * currentClass;
       index.AllCritChance -= 0.025 * currentClass;
     },
+    criticalSituation(index,dodgeClass) {
+      if (dodgeClass === "Light") {
+        index.AllCritChance += 0.35;
+      }
+    },
     insipidTalon(index) {
       let perfectDodge = globalRecords.isPerfectDodge;
       const stackCount = 15;
@@ -1112,7 +1117,7 @@ function updateFormulas(ping,refFuncStorage,refStatsStorage) {
   const {lifestealEFF,lifestealALL,lifestealMelee,lifestealMeleeCharged,lifestealRange,peakLifesteal} = calcs.getLifesteal(tableReference,relicEffectiveness);
 
   //MISC STATS
-  let movementSpeed = tableReference.MovementSpeed;
+  let movementSpeed = Math.min(2, Math.max(0, 1 + tableReference.MovementSpeed));
 
   let returnStats = {
     totalHealth,totalHealthNoGlobal,totalBaseHealth,percentHealthMulti,healthCap,globalCap,
