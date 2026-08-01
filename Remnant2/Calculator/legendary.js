@@ -423,10 +423,10 @@ fragments = {
 	  "slot": "RelicFragYellow",
 	  "imageSuffix": "Projectile Speed.png",
 	  "desc": "VALUE1.1% Projectile Speed [MYTHIC]",
-	  "value": 0.10,
+	  "value": 0.15,
 	  "usesConditional": {},
 	  "stats": {
-		"ProjectileSpeed": 0.10
+		"ProjectileSpeed": 0.15
 	  },
 	  "tags": [],
 	  "units": "%",
@@ -560,9 +560,9 @@ fragments = {
 	  "slot": "RelicFragBlue",
 	  "imageSuffix": "Shield Duration.png",
 	  "desc": "VALUE1.1% Shield Duration [MYTHIC]",
-	  "value": 0.1,
+	  "value": 0.15,
 	  "stats": {
-		"ShieldDuration": 0.1
+		"ShieldDuration": 0.15
 	  },
 	  "tags": [],
 	  "units": "%",
@@ -946,10 +946,10 @@ let legendaryPerks = {
         "stats": {},
         "tags": ["AllCritChance"],
         "usesConditional": {
-			"customPostWeightClass": "criticalSituation",
-			"keys": [
-				"customPostWeightClass"
-			]
+			  "customPostWeightClass": "criticalSituation",
+			  "keys": [
+				  "customPostWeightClass"
+			  ]
 		},
 		"placementID": "L07"
     },
@@ -1046,9 +1046,9 @@ let legendaryPerks = {
     },
     "Impervious": {//done
         "name": "",
-        "desc": "Grants 20% Damage Reduction. [FlatDR]",
+        "desc": "Grants 30% Damage Reduction. [FlatDR]",
         "stats": {
-			"FlatDR": 0.20
+			"FlatDR": 0.30
 		},
         "tags": [],
         "usesConditional": {},
@@ -1069,9 +1069,9 @@ let legendaryPerks = {
     },
     "Jack of All Trades": {//done
         "name": "",
-        "desc": "Grants 45% All Damage",
+        "desc": "Grants 40% All Damage",
         "stats": {
-			"AllDamage": 0.45
+			"AllDamage": 0.40
 		},
         "tags": [],
         "usesConditional": {},
@@ -1079,7 +1079,7 @@ let legendaryPerks = {
     },
     "Luck of the Devil": {//bro idk wtf this is supposed to do other than boost chances on super obscure stuff, but idk if it can actually help you
         "name": "",
-        "desc": "Gain EXTREME luck.",
+        "desc": "Reduces the chance to generate the black hole that kills the Traveler when overcharging the Monorail long gun, and, prevents from receiving any negative effect from consuming the All-Seeing Eye.",
         "stats": {},
         "tags": [],
         "usesConditional": {},
@@ -1183,9 +1183,9 @@ let legendaryPerks = {
     },
     "Sharpshooter": {//done
         "name": "",
-        "desc": "Increases Ranged Damage by 75%.",
+        "desc": "Increases Ranged Damage by 60%.",
         "stats": {
-			"RangedDamage": 0.75
+			"RangedDamage": 0.60
 		},
         "tags": [],
         "usesConditional": {},
@@ -1232,9 +1232,9 @@ let legendaryPerks = {
     },
     "Steel Plating": {//done
         "name": "",
-        "desc": "Increases Base Armor by 100.",
+        "desc": "Increases Base Armor by 150.",
         "stats": {
-			"Armor": 100
+			"Armor": 150
 		},
         "tags": [],
         "usesConditional": {},
@@ -1258,7 +1258,7 @@ let legendaryPerks = {
     },
     "Unbridled": {//TODO: figure out exactly how this one functions
         "name": "",
-        "desc": "Reduces all Skill Cooldowns by Half.<br><br>I think this might be post CDR, which is nuts, but not sure",
+        "desc": "Reduces all Skill Cooldowns by Half post CDR.",
         "stats": {},
         "tags": [],
         "usesConditional": {},
