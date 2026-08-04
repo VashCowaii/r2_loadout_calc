@@ -13,6 +13,66 @@ const customMenu = {
         "4": "#9762d5",
         "5": "#d2ae73"
     },
+    createErrorDetailMenu(event) {
+        if (globalUI.queryIsActive) {return;}//do NOT allow modifications while a query is running, I am not confident that I've handled things properly enough yet for that
+        readSelection("blockoutBackgroundShutter").style.display = "flex";
+        readSelection("customMenuMainHolderBox").style.display = "flex";
+        readSelection("customMenuSearchTitle").innerHTML = "Error";
+
+        readSelection("customMenuSearchNote").innerHTML = ``;
+        readSelection("customMenuSearchBarBox").style.display = "none";
+    
+
+        // globalUI.currentSearchOpen = "lightcones";
+        // globalUI.currentSearchVolume = lightcones;
+        // readSelection("customMenuSearchBarInput").focus();
+
+        const eventFileArray = event.filename.split("/");
+
+        const orangeO = `<span class="descriptionNumberColor">`;
+        const close = `</span>`;
+
+        readSelection("customMenuSearchBody").innerHTML = `
+        <div class="cycleEndBar" style="color:lightcoral;">INFO<div class="weirdSideSemiCircleThinger"></div></div>
+        <div class="customMenuSearchNote" id="customMenuSearchNote"><span class="descriptionNumberColor">ERROR</span> ${event.message}
+        <br><span class="descriptionNumberColor">LINE</span> ${event.lineno}
+        <br><span class="descriptionNumberColor">FILE</span> ${eventFileArray[eventFileArray.length-1]}</div>
+
+
+        <div class="cycleEndBar" style="color:lightcoral;">EXPORT<div class="weirdSideSemiCircleThinger"></div></div>
+
+        <div class="teamwideImportBoxRow">
+            <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportCharacterData('ALL')">Team Data</div>
+            <div class="exportIconBoxHolder clickable" onclick="userTriggers.exportWaveData('ALL')">Enemy Data</div>
+        </div>
+
+        <div class="cycleEndBar" style="color:lightcoral;">DISCORD<div class="weirdSideSemiCircleThinger"></div></div>
+        <div class="customMenuSearchNote">
+            Click the icon below to join the discord, go to ${orangeO}#role-registration${close} and grab the ${orangeO}@general${close} role.
+            <br><br>
+            Then go to ${orangeO}#website-forum${close}, make a new post with the HSR and Bug tags, and include Team and Enemy export files gained from the buttons above.
+            <br>Be sure to also include a screenshot or copy paste of the error message included in this window.
+
+            <br><br>
+            <details class="rotationsPermaConditionsExpand">
+                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">Bonus Points</summary>
+                <div class="actionDetailBody">
+                    Include what was happening or what you did leading up to the point the error popped.
+                    <br><br>Some errors are easy enough to resolve with just the line number alone from the error message.
+                    <br>Other errors however, can be remarkably fucking complicated due to what usually ends up being a lack of foresight on my part, so even seemingly pointless details can still help.
+                </div>
+            </details>
+            
+        </div>
+
+        <a href="https://discord.gg/45BkqHZ" target="_blank" rel="noopener noreferrer"><img class="footerIcon" src="/images/discord.webp" alt="Discord Icon"></a>
+        
+        `
+
+        // event.message,
+        // event.filename,
+        // event.lineno
+    },
     closeMenu() {
         readSelection("blockoutBackgroundShutter").style.display = "none";//remove the bg shutter
         readSelection("customMenuSearchBarBox").style.display = "flex";//this is set to none during relic stat modifications, but otherwise needs to be visible everywhere else
@@ -4396,6 +4456,16 @@ const userTriggers = {
         // console.log(globalRecords.character.char4)
         // let battleData = sim.battleStart(globalRecords.character,true);
 
+
+        let scrollerBox = readSelection("actionLogScrollerVertical");
+        scrollerBox.innerHTML = `<div class="cycleEndBar" style="color:lightcoral;">Loading or Error<div class="weirdSideSemiCircleThinger"></div></div>`;
+
+        let battleStateIcon = readSelection("battleStateLoadIcon");
+
+        battleStateIcon.style.display = "flex";
+        battleStateIcon.src = "/HonkaiSR/misc/hourglass.png";
+        
+
         // console.log(globalRecords.character.char1)
         const characterObject = globalRecords.character;
         for (let characterSlot in characterObject) {
@@ -4451,6 +4521,8 @@ const userTriggers = {
 
         //tracks whatever graph was last selected, and renews it for the current battle, doesn't strictly have to be summary data
         userTriggers.updateGraphViewDisplayed(globalUI.currentGraphViewDisplayType)
+
+        battleStateIcon.style.display = "none";
     },
     actionHeadersSorta: new Set ([
         "StartTurn",
@@ -5179,7 +5251,7 @@ const userTriggers = {
                                         const displayRequiresType = entry.displayRequiresType;
                                         if (displayRequiresType === "boolean") {
                                             const displayRequiresBoolean = entry.displayRequiresBoolean;
-                                            if (valueAdjusted !== displayRequiresBoolean) {continue;}
+                                            if (!!valueAdjusted !== displayRequiresBoolean) {continue;}
                                         }
                                     }
                                     // else if (valueAdjusted !== true) {continue;}
