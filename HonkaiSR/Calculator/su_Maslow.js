@@ -3292,6 +3292,61 @@ const maslowCharactersDestruction = {
             addTeamWant: [],
         },
     },
+    "Gilgamesh": {
+        // ["CritRateBase","SPDFlat","CritDamageBase","ATK%"]
+        defaultMainSubs: ["CritRateBase","SPDFlat","CritDamageBase","ATK%"],
+        //["ATK%","CritRateBase","CritDamageBase","SPDFlat"]
+        defaultTrashSub: ["ATKFlat","DamageBreak","EffectRES","HP%"],
+        0: {
+            gives: ["FUASource"],
+            givesTeam: ["CritDMG","ATK"],
+            wants: ["ATK","Lightning","Ultimate","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Ultimate","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        1: {
+            gives: ["FUASource"],
+            givesTeam: ["CritDMG","ATK","Shred"],
+            wants: ["ATK","Lightning","Ultimate","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Ultimate","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        2: {
+            gives: ["FUASource"],
+            givesTeam: ["CritDMG","ATK","Shred"],
+            wants: ["ATK","Lightning","Ultimate","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Ultimate","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        3: {
+            gives: ["FUASource"],
+            givesTeam: ["CritDMG","ATK","Shred"],
+            wants: ["ATK","Lightning","Ultimate","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Ultimate","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        4: {
+            gives: ["FUASource"],
+            givesTeam: ["CritDMG","ATK","Shred"],
+            wants: ["ATK","Lightning","Ultimate","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Ultimate","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        5: {
+            gives: ["FUASource"],
+            givesTeam: ["CritDMG","ATK","Shred"],
+            wants: ["ATK","Lightning","Ultimate","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Ultimate","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+        6: {
+            gives: ["FUASource"],
+            givesTeam: ["CritDMG","ATK","Shred","PEN"],
+            wants: ["ATK","Lightning","Ultimate","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            wantsTeam: ["ATK","Lightning","Ultimate","Skill",...hasFUA,...characterHasEnergy,...isCritCharacter,...characterDealsDamage,...generalCharacterWants],
+            addTeamWant: [],
+        },
+    },
     "Blade": {
         defaultMainSubs: ["CritRateBase","CritDamageBase","HP%","HPFlat"],
         defaultTrashSub: ["DamageBreak","EffectRES","DEF%","SPDFlat"],

@@ -112,6 +112,9 @@
                     <img src="" class="teamBarImgRounded clickable draggablePCOnly" id="teamBarChar2IMG" draggable="true" onclick="userTriggers.updateCharacterSlotSelected(2)"/>
                     <img src="" class="teamBarImgRounded clickable draggablePCOnly" id="teamBarChar3IMG" draggable="true" onclick="userTriggers.updateCharacterSlotSelected(3)"/>
                     <img src="" class="teamBarImgRounded clickable draggablePCOnly" id="teamBarChar4IMG" draggable="true" onclick="userTriggers.updateCharacterSlotSelected(4)"/>
+
+
+                    <img src="" class="battleStateLoadIcon" id="battleStateLoadIcon"/>
                 </div>
             </div>
 
@@ -497,7 +500,7 @@
                 </div>
 
                 <div class="mainGraphOverviewHolderBox">
-                    <div class="graphUpperHeaderHolderBox">
+                    <div class="graphUpperHeaderHolderBox" id="graphUpperHeaderHolderBox">
                         <div class="actionDetailsButton clickable" id="expandButtonHeaderAction" onclick="userTriggers.updateBattleViewDisplayed('ActionExpand')">Action Details</div>
                         <div class="actionDetailsButton clickable" id="expandButtonHeaderGraph" onclick="userTriggers.updateBattleViewDisplayed('GraphExpand')">
                             <!-- Graphs & Charts -->
@@ -506,6 +509,7 @@
                         </div>
                         <div class="actionDetailsButton clickable" id="expandButtonHeaderSettings" onclick="userTriggers.updateBattleViewDisplayed('SettingsExpand')">Battle Settings</div>
                     </div>
+                    <div class="actionDetailMainHolderBoxLoadingError" id="actionDetailWarningBoxLoadingOrError"></div>
                     <div class="actionDetailMainHolderBox" id="actionDetailMainHolderBox"></div>
                     
                     <div class="graphsControllerRowBoxHolder" id="graphsControllerBoxHolder">
@@ -1763,6 +1767,10 @@
     <footer class="generalFooter" id="footerPlaceholder"></footer>
 </div>
 
+<!-- 
+    REMEMBER ANYTHING ADDED HERE ALSO NEEDS TO BE ADDED
+    TO BOTH THE CYCLE WORKER AND DIAGNOSTICS
+-->
 
 <script src="/htmlTemplates/injectMainHTML.js"></script> <!-- sidenav and footer -->
 <script src="/htmlTemplates/injectHSRHTML.js"></script> <!-- TFD Header -->
