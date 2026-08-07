@@ -1,6 +1,7 @@
 // const currentWave = generalInfo.currentWave;
 // if (currentWave != 1) {return;}
-const turnLogicLightcones = {
+
+const turnLogicLCHunt = {
     // const customName = `${buffName} (${sourceTurn.properName})`;
     // if (!buffNames[customName]) {buffNames[customName] = customName;}
 
@@ -2038,8 +2039,8 @@ const turnLogicLightcones = {
             "river": "Darting Arrow (LC)",
         },
     },
-
-    //ABUNDANCE
+}
+const turnLogicLCAbundance = {
         //5star
     "Time Waits for No One": {//REDONE
         logic(thisTurn,battleData) {},
@@ -3344,8 +3345,8 @@ const turnLogicLightcones = {
             "healBonus": "Cornucopia (LC)",
         },
     },
-
-    //NIHILITY
+}
+const turnLogicLCNihility = {
         //5star
     "Incessant Rain": {//REDONE
         logic(thisTurn,battleData) {},
@@ -5924,8 +5925,8 @@ const turnLogicLightcones = {
             // "dmgStack": "Boundless Choreo (LC)"
         },
     },
-
-    //DESTRUCTION
+}
+const turnLogicLCDestruction = {
         //5star
     "Whereabouts Should Dreams Rest": {//REDONE
         logic(thisTurn,battleData) {},
@@ -7877,8 +7878,8 @@ const turnLogicLightcones = {
             "buff1": "Shattered Home (LC)",
         },
     },
-
-    //HARMONY
+}
+const turnLogicLCHarmony = {
     //5star
     "Earthly Escapade": {//REDONE
         logic(thisTurn,battleData) {},
@@ -9706,9 +9707,8 @@ const turnLogicLightcones = {
             "buff2": "Mediation [LC]",
         },
     },
-
-
-    //REMEMBRANCE
+}
+const turnLogicLCRemembrance = {
         //5star
     "Time Woven Into Gold": {
         logic(thisTurn,battleData) {},
@@ -11223,7 +11223,8 @@ const turnLogicLightcones = {
             "buff1": "Reminiscence (LC)"
         },
     },
-
+}
+const turnLogicLCPreservation = {
     //PRESERVATIONN
     //5star
     "Inherently Unjust Destiny": {//REDONE
@@ -12647,9 +12648,8 @@ const turnLogicLightcones = {
             "buff1": "Amber (LC)",
         },
     },
-
-
-    //ERUDITON
+}
+const turnLogicLCErudition = {
     //5star
     "An Instant Before A Gaze": {//REDONE
         logic(thisTurn,battleData) {},
@@ -14340,7 +14340,8 @@ const turnLogicLightcones = {
             // "atk": "Sagacity [LC]",
         },
     },
-
+}
+const turnLogicLCElation = {
     //ELATION
     //5star
     "When She Decided to See": {//REDONE
@@ -15352,6 +15353,17 @@ const turnLogicLightcones = {
     },
 }
 
+const turnLogicLightcones = {
+    ...turnLogicLCHunt,
+    ...turnLogicLCAbundance,
+    ...turnLogicLCNihility,
+    ...turnLogicLCDestruction,
+    ...turnLogicLCHarmony,
+    ...turnLogicLCRemembrance,
+    ...turnLogicLCPreservation,
+    ...turnLogicLCErudition,
+    ...turnLogicLCElation
+}
 
 const turnLogicRelics = {
     //BODY SETS
