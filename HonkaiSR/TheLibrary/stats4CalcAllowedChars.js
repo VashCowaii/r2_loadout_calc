@@ -64,7 +64,7 @@ const vashCharProgressList = [
 
     //DESTRUCTION
     {name: "Gilgamesh",
-        completed: false, live: false, needs80OrTraces: false, owned: true},
+        completed: true, live: true, needs80OrTraces: false, owned: true},
     {name: "Blade",
         completed: true, live: true, needs80OrTraces: false, owned: true},
     {name: "Clara",
