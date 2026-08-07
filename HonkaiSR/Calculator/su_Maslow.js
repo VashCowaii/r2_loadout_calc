@@ -1001,6 +1001,13 @@ const maslowLightconesDestruction = {
         wantsTeam: [],
         addTeamWant: [],
     },
+    "I Am As You Behold": {
+        gives: ["Ultimate","EnergyRegen","ATK"],
+        givesTeam: ["CritDMG"],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
     "Brighter Than the Sun": {
         gives: ["CritRate","ATK","EnergyRegen"],
         givesTeam: [],
@@ -1482,6 +1489,13 @@ const maslowLightconesErudition = {
     "A Star That Lights the Night": {
         gives: ["AssistSkill","Ultimate","Shred","EnergyRegen"],
         givesTeam: [],
+        wants: [],
+        wantsTeam: [],
+        addTeamWant: [],
+    },
+    "Flickering Stars": {
+        gives: ["CritRate","Skill"],
+        givesTeam: ["Shred"],
         wants: [],
         wantsTeam: [],
         addTeamWant: [],
