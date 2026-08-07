@@ -49,6 +49,10 @@ const vashCharProgressList = [
         completed: false, live: false, needs80OrTraces: false, owned: false},
     {name: "The Herta",
         completed: false, live: false, needs80OrTraces: false, owned: false},
+    {name: "Himeko • Nova",
+        completed: false, live: false, needs80OrTraces: false, owned: true},
+    {name: "Rin Tohsaka",
+        completed: false, live: false, needs80OrTraces: false, owned: false},
     //4star
     {name: "Herta",
         completed: false, live: false, needs80OrTraces: true, owned: true},
@@ -59,6 +63,8 @@ const vashCharProgressList = [
 
 
     //DESTRUCTION
+    {name: "Gilgamesh",
+        completed: true, live: true, needs80OrTraces: false, owned: true},
     {name: "Blade",
         completed: true, live: true, needs80OrTraces: false, owned: true},
     {name: "Clara",

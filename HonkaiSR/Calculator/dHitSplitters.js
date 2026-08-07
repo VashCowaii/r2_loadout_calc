@@ -693,6 +693,164 @@ const hitSplitters = {
       }
     ]
   },
+  "Gilgamesh": {
+    "basic": [
+      {
+        "target": {
+          "hitRatio": 0.30,
+          "energyRatio": 0.30,
+          "toughness": 10,
+          "target": "primary"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.30,
+          "energyRatio": 0.30,
+          "toughness": 10,
+          "target": "primary"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.40,
+          "energyRatio": 0.40,
+          "toughness": 10,
+          "target": "primary"
+        },
+      }
+    ],
+    "skill": [
+      {
+        "target": {
+          "hitRatio": 0.1,
+          "energyRatio": 0.1,
+          "toughness": 20,
+          "target": "primary"
+        },
+        "subTarget": {
+          "hitRatio": 0.1,
+          "toughness": 10,
+          "target": "blast"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.1,
+          "energyRatio": 0.1,
+          "toughness": 20,
+          "target": "primary"
+        },
+        "subTarget": {
+          "hitRatio": 0.1,
+          "toughness": 10,
+          "target": "blast"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.2,
+          "energyRatio": 0.2,
+          "toughness": 20,
+          "target": "primary"
+        },
+        "subTarget": {
+          "hitRatio": 0.2,
+          "toughness": 10,
+          "target": "blast"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.2,
+          "energyRatio": 0.2,
+          "toughness": 20,
+          "target": "primary"
+        },
+        "subTarget": {
+          "hitRatio": 0.2,
+          "toughness": 10,
+          "target": "blast"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.4,
+          "energyRatio": 0.4,
+          "toughness": 20,
+          "target": "primary"
+        },
+        "subTarget": {
+          "hitRatio": 0.4,
+          "toughness": 10,
+          "target": "blast"
+        },
+      },
+    ],
+    "ult": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 40,
+          "target": "all"
+        },
+      }
+    ],
+    "passive": [
+      {
+        "target": {
+          "hitRatio": 0.20,
+          "energyRatio": 0.20,
+          "toughness": 20,
+          "target": "all"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.20,
+          "energyRatio": 0.20,
+          "toughness": 20,
+          "target": "all"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.20,
+          "energyRatio": 0.20,
+          "toughness": 20,
+          "target": "all"
+        },
+      },
+      {
+        "target": {
+          "hitRatio": 0.40,
+          "energyRatio": 0.40,
+          "toughness": 20,
+          "target": "all"
+        },
+      },
+    ],
+    "passiveSaber": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 0,
+          "target": "all"
+        },
+      }
+    ],
+    "tech": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "toughness": 20,
+          "target": "all"
+        },
+      }
+    ]
+  },
   "Blade": {
     "basic": [
       {

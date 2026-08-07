@@ -47372,6 +47372,1741 @@ let characters = {
     "isBuffed": false,
     "battleStartToughness": 20
   },
+  "Himeko • Nova": {
+    "internalID": 1510,
+    "name": "Himeko • Nova",
+    "path": "Erudition",
+    "element": "Fire",
+    "rarity": 5,
+    "energyMax": 150,
+    "baseStats": {
+      "ATKBase": 756.756,
+      "DEFBase": 485.1,
+      "HPBase": 1125.4319999999998,
+      "SPDBase": 98,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 75
+    },
+    "eidolons": [
+      {
+        "id": "151001",
+        "name": "That Which We Stride Is the Trailblaze",
+        "rank": 1,
+        "desc": "The number of extra Assist Skill uses from Talent additionally increases by 1. While in the \"Companion Protocol: Verdict\" state, reduces the number of Ultimate uses required to launch Assist Skill by 1. While in the \"Companion Protocol: Decimation\" state, reduces the Charge required to launch Assist Skill by 3. When Himeko • Nova launches Assist Skill, the number of extra DMG instances increases by 1.",
+        "icon": "icon/skill/1510_rank1.png",
+        "paramsEido": [
+          1,
+          3,
+          1,
+          1
+        ],
+        "extraEffects": {
+          "Assist Skill": {
+            "desc": "An extra ability that can be granted to an ally target. Using an Assist Skill will also consume the current action turn."
+          }
+        }
+      },
+      {
+        "id": "151002",
+        "name": "The Colors We Never Strike",
+        "rank": 2,
+        "desc": "The cap of Himeko • Nova's Assist Skill uses increases to 2, and the DMG dealt by Ultimate and Assist Skill becomes 130% of their original DMG. During the \"Navigator's Semaphore\" state, at the start of each turn , additionally recovers 1 use of Assist Skill immediately. When a non-Trailblaze Companions character uses Assist Skill, the Trace \"Hark! The Express's Pulse Roars\" now also grants them 1 extra turn.",
+        "icon": "icon/skill/1510_rank2.png",
+        "paramsEido": [
+          1.3
+        ],
+        "extraEffects": {
+          "Assist Skill": {
+            "desc": "An extra ability that can be granted to an ally target. Using an Assist Skill will also consume the current action turn."
+          },
+          "Trailblaze Companions": {
+            "desc": "Trailblazer, Himeko, Himeko • Nova, March 7th, Evernight, Dan Heng, Dan Heng • Imbibitor Lunae, Dan Heng • Permansor Terrae, Welt, Sunday."
+          }
+        }
+      },
+      {
+        "id": "151003",
+        "name": "We Who Are Starborn Muse Starward",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1510_ultimate.png"
+      },
+      {
+        "id": "151004",
+        "name": "Let No Skyward Hand Stay Unheld",
+        "rank": 4,
+        "desc": "When using Assist Skill via the Talent \"Of Fire and Far Faring,\" the All-Type RES PEN boost now applies to all allies. And when Himeko • Nova gains this effect, her All-Type RES PEN additionally increases by 10%.",
+        "icon": "icon/skill/1510_rank4.png",
+        "paramsEido": [
+          0.1
+        ],
+        "extraEffects": {
+          "Assist Skill": {
+            "desc": "An extra ability that can be granted to an ally target. Using an Assist Skill will also consume the current action turn."
+          }
+        }
+      },
+      {
+        "id": "151005",
+        "name": "To Cross the Cosmos and Beyond",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1510_skill.png"
+      },
+      {
+        "id": "151006",
+        "name": "Ours Is the Oath to Sail Starward",
+        "rank": 6,
+        "desc": "Himeko • Nova's Fire RES PEN increases by 20%. The cap of \"Source Energy\" increases to 6. When an ally uses or launches Assist Skill, DMG dealt by Assist Skill increases by 75%, and Himeko • Nova gains 1 \"Source Energy.\" When launching \"Hyperluminal Particle Beam\" during Ultimate, additionally gains 1 \"Source Energy\". When launching \"Orbital Annihilation Pulse,\" if the current \"Source Energy\" is 6 or more, additionally deals 1 instance of Fire DMG to all enemies, equal to 160% of Himeko • Nova's ATK.",
+        "icon": "icon/skill/1510_rank6.png",
+        "paramsEido": [
+          0.2,
+          6,
+          0.75,
+          6,
+          1.6
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          },
+          "Source Energy": {
+            "desc": "Charge exclusive to the Starblazer, maximum 3 points."
+          },
+          "Assist Skill": {
+            "desc": "An extra ability that can be granted to an ally target. Using an Assist Skill will also consume the current action turn."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2,
+        "Assist Skill": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Enkindle the First Lodestar": {
+          "variant1": {
+            "skillID": 151001,
+            "trigger": "Skill01",
+            "name": "Enkindle the First Lodestar",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Fire DMG equal to #1[i]% of Himeko • Nova's ATK to one enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": null,
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Upraise the Vanward Cresset": {
+          "variant1": {
+            "skillID": 151002,
+            "trigger": "Skill02",
+            "name": "Upraise the Vanward Cresset",
+            "type": "Support",
+            "slot": "Skill",
+            "desc": "After using Skill, immediately recovers all Assist Skill uses. Himeko • Nova gains \"Navigator's Semaphore,\" lasting for #2[i] turn(s). This duration decreases by 1 at the start of Himeko • Nova's every turn. When Himeko • Nova has \"Navigator's Semaphore,\" DMG dealt by all allies increases by #1[i]%. At the start of every turn, immediately recovers 1 Assist Skill use.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.1,
+                3
+              ],
+              "2": [
+                0.11,
+                3
+              ],
+              "3": [
+                0.12,
+                3
+              ],
+              "4": [
+                0.13,
+                3
+              ],
+              "5": [
+                0.14,
+                3
+              ],
+              "6": [
+                0.15,
+                3
+              ],
+              "7": [
+                0.1625,
+                3
+              ],
+              "8": [
+                0.175,
+                3
+              ],
+              "9": [
+                0.1875,
+                3
+              ],
+              "10": [
+                0.2,
+                3
+              ],
+              "11": [
+                0.21,
+                3
+              ],
+              "12": [
+                0.22,
+                3
+              ],
+              "13": [
+                0.23,
+                3
+              ],
+              "14": [
+                0.24,
+                3
+              ],
+              "15": [
+                0.25,
+                3
+              ]
+            },
+            "element": "Fire",
+            "attackType": "BPSkill",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Assist Skill": {
+                "desc": "An extra ability that can be granted to an ally target. Using an Assist Skill will also consume the current action turn."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "We, Too, Stride the Stars": {
+          "variant1": {
+            "skillID": 151003,
+            "trigger": "Skill03",
+            "name": "We, Too, Stride the Stars",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Immediately takes control of \"Starblazer.\" \"Starblazer\" can launch \"Hyperluminal Particle Beam\" against enemies 6 times, or consume \"Source Energy\" to launch \"Orbital Annihilation Pulse,\" dealing Fire DMG up to #9[i]% of Himeko • Nova's ATK to one designated enemy, and Fire DMG up to #10[i]% of Himeko • Nova's ATK to other targets.\\nWhen the uses of \"Hyperluminal Particle Beam\" are depleted, automatically launches \"Orbital Annihilation Pulse,\" followed by Final Hit, dealing #6[i] instance(s) of DMG, with each instance dealing Fire DMG equal to #7[i]% of Himeko • Nova's ATK to one random enemy.\\nWhen \"Hyperluminal Particle Beam\" or \"Orbital Annihilation Pulse\" deals fatal damage to all enemies on the field, or when enemy HP can no longer be reduced, immediately launches Final Hit.",
+            "energyCost": 150,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 48,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.16,
+                1,
+                0.1,
+                1,
+                0.15,
+                3,
+                0.4,
+                3,
+                3.81,
+                1.26
+              ],
+              "2": [
+                0.176,
+                1,
+                0.11,
+                1,
+                0.165,
+                3,
+                0.44,
+                3,
+                4.191,
+                1.386
+              ],
+              "3": [
+                0.192,
+                1,
+                0.12,
+                1,
+                0.18,
+                3,
+                0.48,
+                3,
+                4.572,
+                1.512
+              ],
+              "4": [
+                0.208,
+                1,
+                0.13,
+                1,
+                0.195,
+                3,
+                0.52,
+                3,
+                4.953,
+                1.638
+              ],
+              "5": [
+                0.224,
+                1,
+                0.14,
+                1,
+                0.21,
+                3,
+                0.56,
+                3,
+                5.334,
+                1.764
+              ],
+              "6": [
+                0.24,
+                1,
+                0.15,
+                1,
+                0.225,
+                3,
+                0.6,
+                3,
+                5.715,
+                1.89
+              ],
+              "7": [
+                0.26,
+                1,
+                0.1625,
+                1,
+                0.24375,
+                3,
+                0.65,
+                3,
+                6.19125,
+                2.0475
+              ],
+              "8": [
+                0.28,
+                1,
+                0.175,
+                1,
+                0.2625,
+                3,
+                0.7,
+                3,
+                6.6675,
+                2.205
+              ],
+              "9": [
+                0.3,
+                1,
+                0.1875,
+                1,
+                0.28125,
+                3,
+                0.75,
+                3,
+                7.14375,
+                2.3625
+              ],
+              "10": [
+                0.32,
+                1,
+                0.2,
+                1,
+                0.3,
+                3,
+                0.8,
+                3,
+                7.62,
+                2.52
+              ],
+              "11": [
+                0.336,
+                1,
+                0.21,
+                1,
+                0.315,
+                3,
+                0.84,
+                3,
+                8.001,
+                2.646
+              ],
+              "12": [
+                0.352,
+                1,
+                0.22,
+                1,
+                0.33,
+                3,
+                0.88,
+                3,
+                8.382,
+                2.772
+              ],
+              "13": [
+                0.368,
+                1,
+                0.23,
+                1,
+                0.345,
+                3,
+                0.92,
+                3,
+                8.763,
+                2.898
+              ],
+              "14": [
+                0.384,
+                1,
+                0.24,
+                1,
+                0.36,
+                3,
+                0.96,
+                3,
+                9.144,
+                3.024
+              ],
+              "15": [
+                0.4,
+                1,
+                0.25,
+                1,
+                0.375,
+                3,
+                1,
+                3,
+                9.525,
+                3.15
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              144,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Source Energy": {
+                "desc": "Charge exclusive to the Starblazer, maximum 3 points."
+              }
+            }
+          },
+          "variant2": {
+            "skillID": 151014,
+            "trigger": "Skill31",
+            "name": "We, Too, Stride the Stars",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals #2[i] instance(s) of DMG, each dealing Fire DMG to one random enemy.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 48,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                3,
+                0.4
+              ],
+              "2": [
+                3,
+                0.44
+              ],
+              "3": [
+                3,
+                0.48
+              ],
+              "4": [
+                3,
+                0.52
+              ],
+              "5": [
+                3,
+                0.56
+              ],
+              "6": [
+                3,
+                0.6
+              ],
+              "7": [
+                3,
+                0.65
+              ],
+              "8": [
+                3,
+                0.7
+              ],
+              "9": [
+                3,
+                0.75
+              ],
+              "10": [
+                3,
+                0.8
+              ],
+              "11": [
+                3,
+                0.84
+              ],
+              "12": [
+                3,
+                0.88
+              ],
+              "13": [
+                3,
+                0.92
+              ],
+              "14": [
+                3,
+                0.96
+              ],
+              "15": [
+                3,
+                1
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              12,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        },
+        "Hyperluminal Particle Beam": {
+          "variant1": {
+            "skillID": 151008,
+            "trigger": "Skill11",
+            "name": "Hyperluminal Particle Beam",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Fire DMG equal to #1[i]% of Himeko • Nova's ATK to all enemies and gains #2[i] point(s) of \"Source Energy.\" A maximum of #3[i] \"Source Energy\" can be held.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 2,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.16,
+                1,
+                3
+              ],
+              "2": [
+                0.176,
+                1,
+                3
+              ],
+              "3": [
+                0.192,
+                1,
+                3
+              ],
+              "4": [
+                0.208,
+                1,
+                3
+              ],
+              "5": [
+                0.224,
+                1,
+                3
+              ],
+              "6": [
+                0.24,
+                1,
+                3
+              ],
+              "7": [
+                0.26,
+                1,
+                3
+              ],
+              "8": [
+                0.28,
+                1,
+                3
+              ],
+              "9": [
+                0.3,
+                1,
+                3
+              ],
+              "10": [
+                0.32,
+                1,
+                3
+              ],
+              "11": [
+                0.336,
+                1,
+                3
+              ],
+              "12": [
+                0.352,
+                1,
+                3
+              ],
+              "13": [
+                0.368,
+                1,
+                3
+              ],
+              "14": [
+                0.384,
+                1,
+                3
+              ],
+              "15": [
+                0.4,
+                1,
+                3
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              6,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Source Energy": {
+                "desc": "Charge exclusive to the Starblazer, maximum 3 points."
+              }
+            }
+          }
+        },
+        "Orbital Annihilation Pulse": {
+          "variant1": {
+            "skillID": 151009,
+            "trigger": "Skill21",
+            "name": "Orbital Annihilation Pulse",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Consumes 1 point of \"Source Energy\" to deal Fire DMG equal to #1[i]% of Himeko • Nova's ATK to all enemies. When the current \"Source Energy\" is more than 1, for every #2[i] point(s) of \"Source Energy\" consumed, additionally deals 1 instance of Fire DMG equal to #3[i]% of Himeko • Nova's ATK to one random enemy.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 2,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.1,
+                1,
+                0.15
+              ],
+              "2": [
+                0.11,
+                1,
+                0.165
+              ],
+              "3": [
+                0.12,
+                1,
+                0.18
+              ],
+              "4": [
+                0.13,
+                1,
+                0.195
+              ],
+              "5": [
+                0.14,
+                1,
+                0.21
+              ],
+              "6": [
+                0.15,
+                1,
+                0.225
+              ],
+              "7": [
+                0.1625,
+                1,
+                0.24375
+              ],
+              "8": [
+                0.175,
+                1,
+                0.2625
+              ],
+              "9": [
+                0.1875,
+                1,
+                0.28125
+              ],
+              "10": [
+                0.2,
+                1,
+                0.3
+              ],
+              "11": [
+                0.21,
+                1,
+                0.315
+              ],
+              "12": [
+                0.22,
+                1,
+                0.33
+              ],
+              "13": [
+                0.23,
+                1,
+                0.345
+              ],
+              "14": [
+                0.24,
+                1,
+                0.36
+              ],
+              "15": [
+                0.25,
+                1,
+                0.375
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              6,
+              6,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Source Energy": {
+                "desc": "Charge exclusive to the Starblazer, maximum 3 points."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Of Fire and Far Faring": {
+          "variant1": {
+            "skillID": 151004,
+            "trigger": "SkillP01",
+            "name": "Of Fire and Far Faring",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "While Himeko • Nova is on the field, immediately deploys the Territory \"Starblazer Visioscape,\" summoning \"Starblazer\" to the field and granting all ally characters 1 Assist Skill use. Ally characters can use Assist Skill to call upon \"Starblazer\" to attack enemies.\\nUsing Assist Skill is considered as Himeko • Nova using her Skill. Himeko • Nova gains #2[i]% increased All-Type RES PEN and #1[i]% increased CRIT DMG. When attacking, can ignore Weakness Types to reduce enemy Toughness. When breaking Weakness, triggers the Fire Weakness Break effect.\\nWhen ally characters other than Himeko • Nova use their Assist Skill, regenerates #3[i] Energy for them.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.4,
+                0.1,
+                4
+              ],
+              "2": [
+                0.44,
+                0.11,
+                4
+              ],
+              "3": [
+                0.48,
+                0.12,
+                4
+              ],
+              "4": [
+                0.52,
+                0.13,
+                4
+              ],
+              "5": [
+                0.56,
+                0.14,
+                4
+              ],
+              "6": [
+                0.6,
+                0.15,
+                4
+              ],
+              "7": [
+                0.65,
+                0.1625,
+                4
+              ],
+              "8": [
+                0.7,
+                0.175,
+                4
+              ],
+              "9": [
+                0.75,
+                0.1875,
+                4
+              ],
+              "10": [
+                0.8,
+                0.2,
+                4
+              ],
+              "11": [
+                0.84,
+                0.21,
+                4
+              ],
+              "12": [
+                0.88,
+                0.22,
+                4
+              ],
+              "13": [
+                0.92,
+                0.23,
+                4
+              ],
+              "14": [
+                0.96,
+                0.24,
+                4
+              ],
+              "15": [
+                1,
+                0.25,
+                4
+              ]
+            },
+            "element": "Fire",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Territory": {
+                "desc": "Territory effects are unique in the battle. While it exists, other abilities with Territory effects cannot be used."
+              },
+              "Assist Skill": {
+                "desc": "An extra ability that can be granted to an ally target. Using an Assist Skill will also consume the current action turn."
+              },
+              "RES PEN": {
+                "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Starcharter Cruise": {
+          "variant1": {
+            "skillID": 151007,
+            "trigger": "SkillMaze",
+            "name": "Starcharter Cruise",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "When Himeko • Nova is in the team, increases the max Technique Points by 3.\\nAfter using Technique, enters the \"Cruise\" state for #1[i] seconds. Actively using the Technique consumes 2 Technique Points and immediately attacks all enemies within a certain range. After entering combat, immediately uses Skill 1 time at the start of each wave.\\nIf attacking a Normal Enemy, immediately defeats them without entering combat. No Technique Points are consumed if no enemies are hit.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                30
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Assist Skill": {
+        "Trailblaze, By Your Side": {
+          "variant1": {
+            "skillID": 151022,
+            "trigger": "Skill51",
+            "name": "Trailblaze, By Your Side",
+            "type": "AoE",
+            "slot": "Assist Skill",
+            "desc": "Deals Fire DMG equal to #1[i]% of Himeko • Nova's ATK to all enemies, and additionally deals #2[i] instances of DMG, with each instance dealing Fire DMG equal to #3[i]% of Himeko • Nova's ATK to one random enemy. When used by Himeko • Nova, deals Fire DMG equal to #4[i]% of Himeko • Nova's ATK to all enemies, and additionally deals #5[i] instances of DMG, with each instance dealing Fire DMG equal to #6[i]% of Himeko • Nova's ATK to one random enemy.\\nIf the user is a Trailblaze Companions character other than Himeko • Nova, then depending on the user, Himeko • Nova additionally gains 1 of the Special Effects.\\nThe extra Assist Skill via all Special Effects can be launched up to #8[i] time(s) per battle, and this count is reset after Himeko • Nova uses her Ultimate.",
+            "energyCost": null,
+            "energyRegen": 18,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.8,
+                3,
+                0.12,
+                1,
+                4,
+                0.18,
+                4,
+                2
+              ],
+              "2": [
+                0.88,
+                3,
+                0.132,
+                1.1,
+                4,
+                0.194,
+                4,
+                2
+              ],
+              "3": [
+                0.96,
+                3,
+                0.144,
+                1.2,
+                4,
+                0.208,
+                4,
+                2
+              ],
+              "4": [
+                1.04,
+                3,
+                0.156,
+                1.3,
+                4,
+                0.222,
+                4,
+                2
+              ],
+              "5": [
+                1.12,
+                3,
+                0.168,
+                1.4,
+                4,
+                0.236,
+                4,
+                2
+              ],
+              "6": [
+                1.2,
+                3,
+                0.18,
+                1.5,
+                4,
+                0.25,
+                4,
+                2
+              ],
+              "7": [
+                1.3,
+                3,
+                0.195,
+                1.625,
+                4,
+                0.2675,
+                4,
+                2
+              ],
+              "8": [
+                1.4,
+                3,
+                0.21,
+                1.75,
+                4,
+                0.285,
+                4,
+                2
+              ],
+              "9": [
+                1.5,
+                3,
+                0.225,
+                1.875,
+                4,
+                0.3025,
+                4,
+                2
+              ],
+              "10": [
+                1.6,
+                3,
+                0.24,
+                2,
+                4,
+                0.32,
+                4,
+                2
+              ],
+              "11": [
+                1.68,
+                3,
+                0.252,
+                2.1,
+                4,
+                0.334,
+                4,
+                2
+              ],
+              "12": [
+                1.76,
+                3,
+                0.264,
+                2.2,
+                4,
+                0.348,
+                4,
+                2
+              ],
+              "13": [
+                1.84,
+                3,
+                0.276,
+                2.3,
+                4,
+                0.362,
+                4,
+                2
+              ],
+              "14": [
+                1.92,
+                3,
+                0.288,
+                2.4,
+                4,
+                0.376,
+                4,
+                2
+              ],
+              "15": [
+                2,
+                3,
+                0.3,
+                2.5,
+                4,
+                0.39,
+                4,
+                2
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Assist",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              15,
+              30,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Trailblaze Companions": {
+                "desc": "Trailblazer, Himeko, Himeko • Nova, March 7th, Evernight, Dan Heng, Dan Heng • Imbibitor Lunae, Dan Heng • Permansor Terrae, Welt, Sunday."
+              },
+              "Assist Skill": {
+                "desc": "An extra ability that can be granted to an ally target. Using an Assist Skill will also consume the current action turn."
+              }
+            }
+          }
+        },
+        "Companion Protocol: Verdict": {
+          "variant1": {
+            "skillID": 151025,
+            "trigger": "Skill52",
+            "name": "Companion Protocol: Verdict",
+            "type": "AoE",
+            "slot": "Assist Skill",
+            "desc": "Enters the \"Companion Protocol: Verdict\" state. Increases DMG dealt by Himeko • Nova by #8[i]%, and additionally increases her Ultimate DMG dealt by #10[i]%. After Himeko • Nova's teammates actively use their Ultimate #9[i] time(s), Himeko • Nova immediately launches 1 Assist Skill against enemies at no cost.",
+            "energyCost": null,
+            "energyRegen": 18,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.8,
+                3,
+                0.12,
+                1,
+                4,
+                0.18,
+                4,
+                0.5,
+                2,
+                0.5
+              ],
+              "2": [
+                0.88,
+                3,
+                0.132,
+                1.1,
+                4,
+                0.194,
+                4,
+                0.55,
+                2,
+                0.55
+              ],
+              "3": [
+                0.96,
+                3,
+                0.144,
+                1.2,
+                4,
+                0.208,
+                4,
+                0.6,
+                2,
+                0.6
+              ],
+              "4": [
+                1.04,
+                3,
+                0.156,
+                1.3,
+                4,
+                0.222,
+                4,
+                0.65,
+                2,
+                0.65
+              ],
+              "5": [
+                1.12,
+                3,
+                0.168,
+                1.4,
+                4,
+                0.236,
+                4,
+                0.7,
+                2,
+                0.7
+              ],
+              "6": [
+                1.2,
+                3,
+                0.18,
+                1.5,
+                4,
+                0.25,
+                4,
+                0.75,
+                2,
+                0.75
+              ],
+              "7": [
+                1.3,
+                3,
+                0.195,
+                1.625,
+                4,
+                0.2675,
+                4,
+                0.8125,
+                2,
+                0.8125
+              ],
+              "8": [
+                1.4,
+                3,
+                0.21,
+                1.75,
+                4,
+                0.285,
+                4,
+                0.875,
+                2,
+                0.875
+              ],
+              "9": [
+                1.5,
+                3,
+                0.225,
+                1.875,
+                4,
+                0.3025,
+                4,
+                0.9375,
+                2,
+                0.9375
+              ],
+              "10": [
+                1.6,
+                3,
+                0.24,
+                2,
+                4,
+                0.32,
+                4,
+                1,
+                2,
+                1
+              ],
+              "11": [
+                1.68,
+                3,
+                0.252,
+                2.1,
+                4,
+                0.334,
+                4,
+                1.05,
+                2,
+                1.05
+              ],
+              "12": [
+                1.76,
+                3,
+                0.264,
+                2.2,
+                4,
+                0.348,
+                4,
+                1.1,
+                2,
+                1.1
+              ],
+              "13": [
+                1.84,
+                3,
+                0.276,
+                2.3,
+                4,
+                0.362,
+                4,
+                1.15,
+                2,
+                1.15
+              ],
+              "14": [
+                1.92,
+                3,
+                0.288,
+                2.4,
+                4,
+                0.376,
+                4,
+                1.2,
+                2,
+                1.2
+              ],
+              "15": [
+                2,
+                3,
+                0.3,
+                2.5,
+                4,
+                0.39,
+                4,
+                1.25,
+                2,
+                1.25
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Assist",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              15,
+              30,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Assist Skill": {
+                "desc": "An extra ability that can be granted to an ally target. Using an Assist Skill will also consume the current action turn."
+              }
+            }
+          }
+        },
+        "Companion Protocol: Decimation": {
+          "variant1": {
+            "skillID": 151026,
+            "trigger": "Skill53",
+            "name": "Companion Protocol: Decimation",
+            "type": "AoE",
+            "slot": "Assist Skill",
+            "desc": "Enters the \"Companion Protocol: Decimation\" state. Increases all allies' CRIT DMG by #8[i]%, and additionally increases the CRIT DMG dealt by Skill by #10[i]%. For every 1 enemy target hit by allies, gains 1 Charge. When Charge reaches #9[i], consumes all Charge, and Himeko • Nova immediately launches 1 Assist Skill against enemies at no cost. This instance of Assist Skill cannot grant Charge.",
+            "energyCost": null,
+            "energyRegen": 18,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.8,
+                3,
+                0.12,
+                1,
+                4,
+                0.18,
+                4,
+                0.5,
+                9,
+                0.5
+              ],
+              "2": [
+                0.88,
+                3,
+                0.132,
+                1.1,
+                4,
+                0.194,
+                4,
+                0.55,
+                9,
+                0.55
+              ],
+              "3": [
+                0.96,
+                3,
+                0.144,
+                1.2,
+                4,
+                0.208,
+                4,
+                0.6,
+                9,
+                0.6
+              ],
+              "4": [
+                1.04,
+                3,
+                0.156,
+                1.3,
+                4,
+                0.222,
+                4,
+                0.65,
+                9,
+                0.65
+              ],
+              "5": [
+                1.12,
+                3,
+                0.168,
+                1.4,
+                4,
+                0.236,
+                4,
+                0.7,
+                9,
+                0.7
+              ],
+              "6": [
+                1.2,
+                3,
+                0.18,
+                1.5,
+                4,
+                0.25,
+                4,
+                0.75,
+                9,
+                0.75
+              ],
+              "7": [
+                1.3,
+                3,
+                0.195,
+                1.625,
+                4,
+                0.2675,
+                4,
+                0.8125,
+                9,
+                0.8125
+              ],
+              "8": [
+                1.4,
+                3,
+                0.21,
+                1.75,
+                4,
+                0.285,
+                4,
+                0.875,
+                9,
+                0.875
+              ],
+              "9": [
+                1.5,
+                3,
+                0.225,
+                1.875,
+                4,
+                0.3025,
+                4,
+                0.9375,
+                9,
+                0.9375
+              ],
+              "10": [
+                1.6,
+                3,
+                0.24,
+                2,
+                4,
+                0.32,
+                4,
+                1,
+                9,
+                1
+              ],
+              "11": [
+                1.68,
+                3,
+                0.252,
+                2.1,
+                4,
+                0.334,
+                4,
+                1.05,
+                9,
+                1.05
+              ],
+              "12": [
+                1.76,
+                3,
+                0.264,
+                2.2,
+                4,
+                0.348,
+                4,
+                1.1,
+                9,
+                1.1
+              ],
+              "13": [
+                1.84,
+                3,
+                0.276,
+                2.3,
+                4,
+                0.362,
+                4,
+                1.15,
+                9,
+                1.15
+              ],
+              "14": [
+                1.92,
+                3,
+                0.288,
+                2.4,
+                4,
+                0.376,
+                4,
+                1.2,
+                9,
+                1.2
+              ],
+              "15": [
+                2,
+                3,
+                0.3,
+                2.5,
+                4,
+                0.39,
+                4,
+                1.25,
+                9,
+                1.25
+              ]
+            },
+            "element": "Fire",
+            "attackType": "Assist",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              15,
+              30,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Assist Skill": {
+                "desc": "An extra ability that can be granted to an ally target. Using an Assist Skill will also consume the current action turn."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1510_basic_atk.png",
+        "skillRef": {
+          "skillName": "Enkindle the First Lodestar",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1510_skill.png",
+        "skillRef": {
+          "skillName": "Upraise the Vanward Cresset",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1510_ultimate.png",
+        "skillRef": {
+          "skillName": "We, Too, Stride the Stars",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1510_talent.png",
+        "skillRef": {
+          "skillName": "Of Fire and Far Faring",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1510_technique.png",
+        "skillRef": {
+          "skillName": "Starcharter Cruise",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Whither, the Last and First Men?",
+        "icon": "icon/skill/1510_skilltree1.png",
+        "desc": "When Himeko • Nova launches Assist Skill, it does not consume Assist Skill uses. At the start of the turn, if the Assist Skill uses have reached the current cap, Himeko • Nova additionally regenerates #1[i] Energy.",
+        "params": [
+          5
+        ],
+        "extraEffects": {
+          "Assist Skill": {
+            "desc": "An extra ability that can be granted to an ally target. Using an Assist Skill will also consume the current action turn."
+          }
+        }
+      },
+      "Point07": {
+        "name": "Hark! The Express's Pulse Roars",
+        "icon": "icon/skill/1510_skilltree2.png",
+        "desc": "When a Trailblaze Companions character other than Himeko • Nova uses Assist Skill, that character immediately gains 1 extra turn in which they can insert the use of their Ultimate. The extra turn gained from Assist Skill will not repeatedly trigger this Trace effect.",
+        "extraEffects": {
+          "Trailblaze Companions": {
+            "desc": "Trailblazer, Himeko, Himeko • Nova, March 7th, Evernight, Dan Heng, Dan Heng • Imbibitor Lunae, Dan Heng • Permansor Terrae, Welt, Sunday."
+          },
+          "Assist Skill": {
+            "desc": "An extra ability that can be granted to an ally target. Using an Assist Skill will also consume the current action turn."
+          },
+          "Extra Turn": {
+            "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+          }
+        }
+      },
+      "Point08": {
+        "name": "The Silver Rail, Hushed in Antiquity",
+        "icon": "icon/skill/1510_skilltree3.png",
+        "desc": "When using Ultimate, immediately gains #1[i] \"Source Energy.\" If the current \"Source Energy\" is #2[i] or more, when using the \"Orbital Annihilation Pulse\" attack, the DMG multiplier of \"Orbital Annihilation Pulse\" against random single enemies increases by #3[i]%.",
+        "params": [
+          3,
+          3,
+          0.3
+        ],
+        "extraEffects": {
+          "Source Energy": {
+            "desc": "Charge exclusive to the Starblazer, maximum 3 points."
+          }
+        }
+      },
+      "Point09": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point10": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point11": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point12": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.032
+        }
+      },
+      "Point13": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point14": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point15": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point16": {
+        "name": "DMG Boost: Fire",
+        "icon": "icon/property/IconFireAddedRatio.png",
+        "stats": {
+          "DamageFire": 0.048
+        }
+      },
+      "Point17": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point18": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1510.png",
+    "preview": "image/character_preview/1510.png",
+    "portrait": "image/character_portrait/1510.png",
+    "bannerOffsets": [
+      80,
+      -19,
+      0.64,
+      80,
+      -19,
+      0.64,
+      80,
+      -19,
+      0.64
+    ],
+    "isBuffed": false,
+    "battleStartToughness": null
+  },
   "Trailblazer - Harmony": {
     "internalID": 8005,
     "name": "Trailblazer - Harmony",
@@ -51670,5 +53405,970 @@ let characters = {
     ],
     "isBuffed": false,
     "battleStartToughness": 20
+  },
+  "Gilgamesh": {
+    "internalID": 1509,
+    "name": "Gilgamesh",
+    "path": "Destruction",
+    "element": "Lightning",
+    "rarity": 5,
+    "energyMax": 360,
+    "baseStats": {
+      "ATKBase": 717.9480000000001,
+      "DEFBase": 509.355,
+      "HPBase": 1125.4319999999998,
+      "SPDBase": 97,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 125
+    },
+    "eidolons": [
+      {
+        "id": "150901",
+        "name": "He Who Saw the Deep",
+        "rank": 1,
+        "desc": "When Gilgamesh holds \"King's Acknowledgement,\" its DEF-ignoring effect also applies to other teammates, and \"King's Acknowledgement\" additionally increases Gilgamesh's ATK by 60%. When using Skill, additionally regenerates a fixed 40 Energy.",
+        "icon": "icon/skill/1509_rank1.png",
+        "paramsEido": [
+          0.6,
+          40
+        ]
+      },
+      {
+        "id": "150902",
+        "name": "Wisdom That Encompassed All",
+        "rank": 2,
+        "desc": "When entering combat, Gilgamesh gains 5 \"Interest.\" When using Ultimate, additionally gains 5 \"Interest.\" The DMG multiplier of the Skill \"Gate of Babylon\" against the primary target increases by 100%, and its DMG multiplier against adjacent targets increases by 50%.",
+        "icon": "icon/skill/1509_rank2.png",
+        "paramsEido": [
+          5,
+          5,
+          1,
+          0.5
+        ]
+      },
+      {
+        "id": "150903",
+        "name": "Journey That Spanned Far",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.",
+        "icon": "icon/skill/1509_skill.png"
+      },
+      {
+        "id": "150904",
+        "name": "King Who Bowed to None",
+        "rank": 4,
+        "desc": "Gilgamesh's Energy Regeneration Rate increases by 20%.",
+        "icon": "icon/skill/1509_rank4.png",
+        "paramsEido": [
+          0.2
+        ],
+        "extraEffects": {
+          "Energy Regeneration Rate": {
+            "desc": "Energy Regeneration Rate can boost the amount of Energy a character gains when performing actions such as using abilities, defeating enemies, or taking DMG.\\nA higher rate means faster Energy regeneration.\\nHowever, certain Energy-Regenerating effects won't be impacted by this rate."
+          }
+        },
+        "eidoAbility": "Gilgamesh_Gilgamesh_Eidolon4"
+      },
+      {
+        "id": "150905",
+        "name": "Sword That Parted Gods from Man",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1509_ultimate.png"
+      },
+      {
+        "id": "150906",
+        "name": "Soul That Bore Friendship",
+        "rank": 6,
+        "desc": "Increases the bounce DMG multiplier of the Ultimate \"Enuma Elish\" by 80%. While Gilgamesh is on the field, increases ally characters' All-Type RES PEN by 20%. When a teammate uses Ultimate, Gilgamesh gains 1 point of \"Golden Rule,\" up to a total of 3 points. When this unit uses Ultimate, consumes all \"Golden Rule\" points, and each point of \"Golden Rule\" consumed increases the CRIT DMG for the Ultimate DMG dealt by 100%.",
+        "icon": "icon/skill/1509_rank6.png",
+        "paramsEido": [
+          0.8,
+          0.2,
+          3,
+          1
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Skill": 2
+      },
+      "5": {
+        "Ultimate": 2,
+        "Talent": 2
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Halfhearted Blow": {
+          "variant1": {
+            "skillID": 150901,
+            "trigger": "Skill01",
+            "name": "Halfhearted Blow",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Lightning DMG equal to #1[i]% of Gilgamesh's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": null,
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Gate of Babylon": {
+          "variant1": {
+            "skillID": 150902,
+            "trigger": "Skill02",
+            "name": "Gate of Babylon",
+            "type": "Blast",
+            "slot": "Skill",
+            "desc": "Gains \"King's Acknowledgement,\" allowing this unit to ignore #5[i]% of the target's DEF when dealing DMG, lasting for #6[i] turn(s).\\nDeals Lightning DMG equal to #1[i]% of Gilgamesh's ATK to one designated enemy, and deals Lightning DMG equal to #2[i]% of Gilgamesh's ATK to adjacent targets.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.4,
+                0.7,
+                0.1,
+                10,
+                0.15,
+                3,
+                2
+              ],
+              "2": [
+                1.54,
+                0.77,
+                0.11,
+                10,
+                0.165,
+                3,
+                2
+              ],
+              "3": [
+                1.68,
+                0.84,
+                0.12,
+                10,
+                0.18,
+                3,
+                2
+              ],
+              "4": [
+                1.82,
+                0.91,
+                0.13,
+                10,
+                0.195,
+                3,
+                2
+              ],
+              "5": [
+                1.96,
+                0.98,
+                0.14,
+                10,
+                0.21,
+                3,
+                2
+              ],
+              "6": [
+                2.1,
+                1.05,
+                0.15,
+                10,
+                0.225,
+                3,
+                2
+              ],
+              "7": [
+                2.275,
+                1.1375,
+                0.1625,
+                10,
+                0.24375,
+                3,
+                2
+              ],
+              "8": [
+                2.45,
+                1.225,
+                0.175,
+                10,
+                0.2625,
+                3,
+                2
+              ],
+              "9": [
+                2.625,
+                1.3125,
+                0.1875,
+                10,
+                0.28125,
+                3,
+                2
+              ],
+              "10": [
+                2.8,
+                1.4,
+                0.2,
+                10,
+                0.3,
+                3,
+                2
+              ],
+              "11": [
+                2.94,
+                1.47,
+                0.21,
+                10,
+                0.315,
+                3,
+                2
+              ],
+              "12": [
+                3.08,
+                1.54,
+                0.22,
+                10,
+                0.33,
+                3,
+                2
+              ],
+              "13": [
+                3.22,
+                1.61,
+                0.23,
+                10,
+                0.345,
+                3,
+                2
+              ],
+              "14": [
+                3.36,
+                1.68,
+                0.24,
+                10,
+                0.36,
+                3,
+                2
+              ],
+              "15": [
+                3.5,
+                1.75,
+                0.25,
+                10,
+                0.375,
+                3,
+                2
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "BPSkill",
+            "skillEffect": "Blast",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              60,
+              0,
+              30
+            ],
+            "hitSplits": []
+          }
+        },
+        "Halfhearted Blow": {
+          "variant1": {
+            "skillID": 150909,
+            "trigger": "Skill21",
+            "name": "Halfhearted Blow",
+            "type": "Single Target",
+            "slot": "Skill",
+            "desc": "",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "BPSkill",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": null,
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Ultimate": {
+        "Enuma Elish": {
+          "variant1": {
+            "skillID": 150903,
+            "trigger": "Skill03",
+            "name": "Enuma Elish",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Lightning DMG equal to #1[i]% of Gilgamesh's ATK to all enemies, and additionally deals #3[i] instance(s) of DMG, with each instance dealing Lightning DMG equal to #2[i]% of Gilgamesh's ATK to one random enemy.",
+            "energyCost": 360,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 40,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                0.5,
+                10
+              ],
+              "2": [
+                2.2,
+                0.55,
+                10
+              ],
+              "3": [
+                2.4,
+                0.6,
+                10
+              ],
+              "4": [
+                2.6,
+                0.65,
+                10
+              ],
+              "5": [
+                2.8,
+                0.7,
+                10
+              ],
+              "6": [
+                3,
+                0.75,
+                10
+              ],
+              "7": [
+                3.25,
+                0.8125,
+                10
+              ],
+              "8": [
+                3.5,
+                0.875,
+                10
+              ],
+              "9": [
+                3.75,
+                0.9375,
+                10
+              ],
+              "10": [
+                4,
+                1,
+                10
+              ],
+              "11": [
+                4.2,
+                1.05,
+                10
+              ],
+              "12": [
+                4.4,
+                1.1,
+                10
+              ],
+              "13": [
+                4.6,
+                1.15,
+                10
+              ],
+              "14": [
+                4.8,
+                1.2,
+                10
+              ],
+              "15": [
+                5,
+                1.25,
+                10
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              6,
+              120,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "\"Amuse Me to the Fullest\"": {
+          "variant1": {
+            "skillID": 150904,
+            "trigger": "SkillP01",
+            "name": "\"Amuse Me to the Fullest\"",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "When a teammate uses their Ultimate, Gilgamesh gains \"King's Burden,\" which increases Ultimate DMG dealt by this unit by #3[i]%, lasting for #1[i] turn(s).\\nInitially, automatically uses Basic ATK at the start of this unit's turn. When another ally target takes action, Gilgamesh gains 1 point of \"Interest.\" For each point of \"Interest\" in possession, increases this unit's SPD by #4[i]%.\\nWhen \"Interest\" reaches #2[i] for the first time, enters the \"Interest Piqued!\" state. In that state, can only use Skill, lasting for the entire battle. After using Skill, clears this unit's \"Interest.\"",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                3,
+                10,
+                0.2,
+                0.1
+              ],
+              "2": [
+                3,
+                10,
+                0.22,
+                0.1
+              ],
+              "3": [
+                3,
+                10,
+                0.24,
+                0.1
+              ],
+              "4": [
+                3,
+                10,
+                0.26,
+                0.1
+              ],
+              "5": [
+                3,
+                10,
+                0.28,
+                0.1
+              ],
+              "6": [
+                3,
+                10,
+                0.3,
+                0.1
+              ],
+              "7": [
+                3,
+                10,
+                0.325,
+                0.1
+              ],
+              "8": [
+                3,
+                10,
+                0.35,
+                0.1
+              ],
+              "9": [
+                3,
+                10,
+                0.375,
+                0.1
+              ],
+              "10": [
+                3,
+                10,
+                0.4,
+                0.1
+              ],
+              "11": [
+                3,
+                10,
+                0.42,
+                0.1
+              ],
+              "12": [
+                3,
+                10,
+                0.44,
+                0.1
+              ],
+              "13": [
+                3,
+                10,
+                0.46,
+                0.1
+              ],
+              "14": [
+                3,
+                10,
+                0.48,
+                0.1
+              ],
+              "15": [
+                3,
+                10,
+                0.5,
+                0.1
+              ]
+            },
+            "element": "Lightning",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        },
+        "\"I Grant You Permission To Strike\"": {
+          "variant1": {
+            "skillID": 150905,
+            "trigger": "SkillP02",
+            "name": "\"I Grant You Permission To Strike\"",
+            "type": "AoE",
+            "slot": "Talent",
+            "desc": "When Gilgamesh or Saber attacks, the attack tally increases by 1. After any unit attacks, if the attack tally reaches #5[i], Gilgamesh and Saber launch Joint Follow-Up ATK, dealing Lightning DMG equal to #1[i]% of Gilgamesh's ATK and Wind DMG equal to #2[i]% of Saber's ATK to all enemies, respectively. Then, Gilgamesh gains #3[i] \"Interest.\" Saber regenerates a fixed #4[i] Energy, and the next time she uses Ultimate, the DMG dealt becomes #6[i]% of the original DMG.\\nAfter using Joint Follow-Up ATK, resets the attack tally.",
+            "energyCost": null,
+            "energyRegen": 10,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                3,
+                3,
+                120,
+                8,
+                1.2
+              ],
+              "2": [
+                2.2,
+                3.3,
+                3,
+                120,
+                8,
+                1.28
+              ],
+              "3": [
+                2.4,
+                3.6,
+                3,
+                120,
+                8,
+                1.36
+              ],
+              "4": [
+                2.6,
+                3.9,
+                3,
+                120,
+                8,
+                1.44
+              ],
+              "5": [
+                2.8,
+                4.2,
+                3,
+                120,
+                8,
+                1.52
+              ],
+              "6": [
+                3,
+                4.5,
+                3,
+                120,
+                8,
+                1.6
+              ],
+              "7": [
+                3.25,
+                4.875,
+                3,
+                120,
+                8,
+                1.7
+              ],
+              "8": [
+                3.5,
+                5.25,
+                3,
+                120,
+                8,
+                1.8
+              ],
+              "9": [
+                3.75,
+                5.625,
+                3,
+                120,
+                8,
+                1.9
+              ],
+              "10": [
+                4,
+                6,
+                3,
+                120,
+                8,
+                2
+              ],
+              "11": [
+                4.2,
+                6.3,
+                3,
+                120,
+                8,
+                2.08
+              ],
+              "12": [
+                4.4,
+                6.6,
+                3,
+                120,
+                8,
+                2.16
+              ],
+              "13": [
+                4.6,
+                6.9,
+                3,
+                120,
+                8,
+                2.24
+              ],
+              "14": [
+                4.8,
+                7.2,
+                3,
+                120,
+                8,
+                2.32
+              ],
+              "15": [
+                5,
+                7.5,
+                3,
+                120,
+                8,
+                2.4
+              ]
+            },
+            "element": "Lightning",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              60,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Joint Attack": {
+                "desc": "Multiple targets respectively use attacks on enemy targets in one action."
+              },
+              "Follow-Up ATK": {
+                "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Enkidu": {
+          "variant1": {
+            "skillID": 150907,
+            "trigger": "SkillMaze",
+            "name": "Enkidu",
+            "type": "Impair",
+            "slot": "Technique",
+            "desc": "After using Technique, creates 1 Special Dimension lasting for #1[i] second(s). Enemies in the Special Dimension enter the \"King's Permission\" state. Enemies in the \"King's Permission\" state will cease all actions.\\nWhen entering combat by actively attacking an enemy in the \"King's Permission\" state, causes all enemies in the \"King's Permission\" state to enter combat, and deals Lightning DMG equal to #2[i]% of Gilgamesh's ATK to all enemies after entering combat. Gilgamesh also immediately gains #3[i] \"Interest.\" Only 1 Dimension Effect created by allies can exist at the same time.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                10,
+                2,
+                3
+              ]
+            },
+            "element": "Lightning",
+            "attackType": "Maze",
+            "skillEffect": "Impair",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1509_basic_atk.png",
+        "skillRef": {
+          "skillName": "Halfhearted Blow",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1509_skill.png",
+        "skillRef": {
+          "skillName": "Gate of Babylon",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1509_ultimate.png",
+        "skillRef": {
+          "skillName": "Enuma Elish",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1509_talent.png",
+        "skillRef": {
+          "skillName": "\"Amuse Me to the Fullest\"",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1509_technique.png",
+        "skillRef": {
+          "skillName": "Enkidu",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Epic's Opening",
+        "icon": "icon/skill/1509_skilltree1.png",
+        "desc": "When Gilgamesh uses Ultimate, gains #3[i] \"Interest.\" When other ally characters use Ultimate, Gilgamesh additionally gains #1[i] \"Interest\" and regenerates a fixed amount of Energy equal to #2[i]% of the Energy consumed this time.",
+        "params": [
+          2,
+          0.3,
+          2
+        ],
+        "traceAbility": "Gilgamesh_Gilgamesh_Trace01"
+      },
+      "Point07": {
+        "name": "Hero's Hauteur",
+        "icon": "icon/skill/1509_skilltree2.png",
+        "desc": "During the current battle, for every 1 point of \"Interest\" gained by Gilgamesh, increases his CRIT DMG by #1[i]%. This effect can stack up to #2[i] time(s).",
+        "params": [
+          0.25,
+          6
+        ],
+        "traceAbility": "Gilgamesh_Gilgamesh_Trace02"
+      },
+      "Point08": {
+        "name": "Hegemon's Strife",
+        "icon": "icon/skill/1509_skilltree3.png",
+        "desc": "While Gilgamesh is on the field, increases all ally targets' ATK by #1[i]% and CRIT DMG by #2[i]%. If the target's Max Energy exceeds #3[i], for every 1 excess point of Max Energy, additionally increases ATK and CRIT DMG by #4[i]%, up to a maximum additional increase of #5[i]%.",
+        "params": [
+          0.2,
+          0.2,
+          140,
+          0.01,
+          1
+        ],
+        "traceAbility": "Gilgamesh_Gilgamesh_Trace03"
+      },
+      "Point09": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point10": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point12": {
+        "name": "DMG Boost: Lightning",
+        "icon": "icon/property/IconThunderAddedRatio.png",
+        "stats": {
+          "DamageLightning": 0.032
+        }
+      },
+      "Point13": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point14": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point16": {
+        "name": "DMG Boost: Lightning",
+        "icon": "icon/property/IconThunderAddedRatio.png",
+        "stats": {
+          "DamageLightning": 0.048
+        }
+      },
+      "Point17": {
+        "name": "ATK Boost",
+        "icon": "icon/property/IconAttack.png",
+        "stats": {
+          "ATK%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1509.png",
+    "preview": "image/character_preview/1509.png",
+    "portrait": "image/character_portrait/1509.png",
+    "bannerOffsets": [
+      -13,
+      11,
+      0.54,
+      -13,
+      11,
+      0.54,
+      -13,
+      11,
+      0.54
+    ],
+    "isBuffed": false,
+    "battleStartToughness": null
   }
 }

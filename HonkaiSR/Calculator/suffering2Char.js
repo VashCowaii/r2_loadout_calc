@@ -30316,6 +30316,1073 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    "Gilgamesh": {
+        logic(thisTurn,battleData) {
+            let statCalls = thisTurn.battleValues;
+            // let currentSP = battleData.skillPointCurrent;
+            // const minimum = currentSP>0;
+            const isEnhanced = statCalls.isEnhanced;
+
+            //gil is jank as hell and doesn't actually need any user input on whether he does a skill or not, it's all automatic bb, fuck yeah
+            if (isEnhanced) {
+                const skillCall = this.returnSkillCall;
+                skillCall.target = [battleData.primaryTarget];
+                skillCall.subTarget = battleData.blastTargets;
+                return skillCall;
+            }
+            else {
+                const basicCall = this.returnBasicCall;
+                basicCall.target = [battleData.primaryTarget];
+                return basicCall;
+            }
+        },
+        preLogic(thisTurn,battleData) {
+            this.returnSkillCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.gilSkill,
+                action: "Skill",
+                points: 0, 
+
+                isAttack: true,
+                isAbility: true,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "SkillStart",
+
+                poolKey: this.abilityTargetPools.Skill,
+            })
+            this.returnSkillCall.sourceTurn = thisTurn;
+
+            this.returnBasicCall ??= createQueueObject(thisTurn,{
+                actionCall: this.skillFunctions.gilBasic,
+                action: "BasicATK",
+                points: 1, 
+
+                isAttack: true,
+                isAbility: true,
+                useAnyTriggers: true,
+                eventTypeStartLOG: "BasicATKStart",
+
+                poolKey: this.abilityTargetPools.BasicATK,
+            })
+            this.returnBasicCall.sourceTurn = thisTurn;
+        },
+        "abilityTargetPools": {
+            "BasicATK": "Enemies (On-Field)",
+            "Skill": "Enemies (On-Field)",
+            "Ultimate": "Enemies (On-Field)",
+        },
+        "skillFunctions": {
+            gilBasic(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.gilBasicREF ??= ATKObjects["Basic ATK"]["Halfhearted Blow"].variant1;
+
+                if (!ATKObjects.gilBasicATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].basic;
+                    let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Lightning"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    const actionTags = ["All","Basic","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    ATKObjects.gilBasicATKOBJECT = {
+                        multipliers: {
+                            primary: values[0],
+                            blast: null,
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+                }
+                let ATKObject = ATKObjects.gilBasicATKOBJECT;
+
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+            },
+            gilSkill(battleData,actionObject,sourceTurn) {
+                const characterName = sourceTurn.properName;
+                const logicRef = turnLogic[characterName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.gilSkillREF ??= ATKObjects["Skill"]["Gate of Babylon"].variant1;
+                let values = ATKObjects.gilSkillREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+
+                const rank = sourceTurn.rank;
+                const isE1 = rank >= 1;
+
+                if (!ATKObjects.gilSkillATKOBJECT) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].skill;
+                    // let values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Lightning"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    const actionTags = ["All","Skill","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+
+
+                    ATKObjects.gilSkillATKOBJECT = {
+                        multipliers: {
+                            primary: values[0] + (rank >= 2 ? 1 : 0),
+                            blast: values[1] + (rank >= 2 ? 0.5 : 0),
+                            all: null,
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag
+                    }
+
+                    ATKObjects.gilSkillSHREDSHEET ??= {
+                        "stats": [DEFShredAll],
+                        [DEFShredAll]: values[4],
+                        "source": "Skill",
+                        "sourceOwner": characterName,
+                        "buffName": logicRef.buffNames.skillShred,
+                        "durationInTurn": isE1 ? null : 4,
+                        "duration": isE1 ? 1 : 3,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": isE1 ? null : "EndTurn",
+                    }
+
+                    ATKObjects.gilSkillSHREDSHEETE1 ??= {
+                        "stats": [DEFShredAll,ATKP],
+                        [DEFShredAll]: values[4],
+                        [ATKP]: 0.60,
+                        "source": "E1",
+                        "sourceOwner": characterName,
+                        "buffName": logicRef.buffNames.skillShredE1,
+                        "durationInTurn": 4,
+                        "duration": 3,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        "expireFunction": logicRef.skillFunctions.expireFunctionE1,
+                        "expireParam": {sourceTurn:sourceTurn.name,buffSheet: ATKObjects.gilSkillSHREDSHEET}
+                    }
+                }
+                const buffSheet = ATKObjects.gilSkillSHREDSHEET;
+
+                if (rank >= 1) {
+                    const buffSheetE1 = ATKObjects.gilSkillSHREDSHEETE1;
+                    updateBuff(battleData,sourceTurn,buffSheetE1);
+
+                    const allAlliesArray = battleData.allAlliesArray;
+                    updateBuffBatchTargets(battleData,allAlliesArray.filter_ExcludeTarget(sourceTurn),buffSheet);
+
+                    /**
+                     * E1 seems to act as a zone that reaches unselectables, or at least direct refs .getMemo()
+                     * reason being is demiurge summoned after the fact still gets the benefit
+                     * presumably the bonus is applied to gil first with the ATK version for E1,
+                     * then a submodifier to all allied targets with just the shred version
+                     */
+                }
+                else {
+                    updateBuff(battleData,sourceTurn,buffSheet);
+                }
+
+                let ATKObject = ATKObjects.gilSkillATKOBJECT;
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+
+                if (isE1) {
+                    updateEnergy(battleData,40,sourceTurn,true,"E1: He Who Saw the Deep");
+                }
+
+                poke("GilGainInterest",battleData,{pointsGained: -sourceTurn.battleValues.interest,sourceString:"Lost Interest"});//interest
+            },
+            expireFunctionE1(battleData,expireParam) {
+                const ownerName = expireParam.sourceTurn;
+                const buffSheet = expireParam.buffSheet;
+                const ownerTurn = battleData.nameBasedTurns[ownerName];
+
+                const allAlliesArray = battleData.allAlliesArray;
+                removeBuffFromBatch(battleData,allAlliesArray.filter_ExcludeTarget(ownerTurn),buffSheet);
+            },
+            gilUltimate(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+                const skillRef = ATKObjects.gilUltimateREF ??= ATKObjects.Ultimate["Enuma Elish"].variant1;
+
+                const rank = sourceTurn.rank;
+
+                if (!ATKObjects.gilUltimateATKOBJECT) {
+                    const rank = sourceTurn.rank;
+
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].ult;
+                    const values = battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Lightning"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const actionTags = ["All","Ultimate","Attack"];
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.gilUltimateATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        bounceData: superGlobal.createATKBounceObject({
+                            multi: values[1] + (rank >= 6 ? 0.80 : 0),
+                            bounceCount: 10,
+                            energy: null,
+                            target: {
+                                "hitRatio": 1,
+                                "energyRatio": 0,
+                                "toughness": 20/10
+                            },
+                        })
+                    }
+
+                    ATKObjects.gilUltCRITSHEETE6 ??= {
+                        "stats": [CritDamageBase],
+                        [CritDamageBase]: 1,
+                        "source": "E6",
+                        "sourceOwner": sourceTurn.properName,
+                        "buffName": logicRef.buffNames.e6Crit,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 3,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                        "actionTags": ["Ultimate"],
+                    }
+                }
+                let ATKObject = ATKObjects.gilUltimateATKOBJECT;
+
+                const isE6 = rank >= 6;
+                if (isE6) {
+                    const battleValues = sourceTurn.battleValues;
+                    const currentStacks = battleValues.goldenRule;
+                    poke("GilGainE6",battleData,{pointsGained: -currentStacks,sourceString:"Consumed Golden Rule"},null);
+
+                    const e6Sheet = ATKObjects.gilUltCRITSHEETE6;
+                    e6Sheet.currentStacks = currentStacks;
+                    updateBuff(battleData,sourceTurn,e6Sheet);
+                }
+
+
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+
+                if (isE6) {
+                    const e6Sheet = ATKObjects.gilUltCRITSHEETE6;
+                    removeBuff(battleData,sourceTurn,e6Sheet);
+                }
+
+                sourceTurn.ultyQueued = false;
+            },
+            gilTechnique(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let characterName = sourceTurn.properName;
+                // let charSlot = sourceTurn.name;
+                // let skillPathing = characters[characterName].skills;
+                let skillRef = ATKObjects.gilTechniqueREF ??= ATKObjects.Technique["Enkidu"].variant1;
+
+                if (!ATKObjects.gilTechniqueATKObject) {
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].tech;
+                    let values = ATKObjects.gilTechniqueREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Lightning"];
+                    const actionTags = ["All","Technique","Attack"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.gilTechniqueATKObject = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[1],
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                        skipToughness: true,
+                    }
+                }
+                let ATKObject = ATKObjects.gilTechniqueATKObject;
+
+                if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,battleData.enemyPositions,[]);
+
+                //Oddly enough the interest gain is AFTER the attack, unlike archer/seele/DHIL or literally anyone who gains points of anything in the tech
+                //confirmed on mox6 explody fish, dmg didn't line up until we killed the secondary tech and moved it here.
+
+                poke("GilGainInterest",battleData,{pointsGained: 3,sourceString:"Technique"});
+            },
+            gilJointFUA(battleData,actionObject,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                let skillRef = ATKObjects.gilJointFUAREF ??= ATKObjects.Talent[`"I Grant You Permission To Strike"`].variant1;
+                let skillRef2 = ATKObjects.gilJointFUAREF2 ??= {...ATKObjects.Talent[`"I Grant You Permission To Strike"`].variant1};
+
+                const battleValues = sourceTurn.battleValues;
+                const saberTurn = battleData.nameBasedTurns[battleValues.saberSlot];
+
+                if (!ATKObjects.gilJointFUAATKOBJECT) {
+                    skillRef2.element = "Wind";
+                    skillRef.hitSplits = hitSplitters[sourceTurn.properName].passive;
+                    skillRef2.hitSplits = hitSplitters[sourceTurn.properName].passiveSaber;
+
+
+                    const rank = sourceTurn.rank;
+                    let values = ATKObjects.gilJointFUAREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,sourceTurn);
+                    const scalar = "ATK";
+                    const tags = ["All","Lightning"];
+                    const tags2 = ["All","Wind"];
+
+                    const actionTags = ["All","FUA","Attack","Joint"];
+                    const keyShortcut = basicShorthand.makeKeysArray;
+                    const realDMGKeys = keyShortcut(dmgKeys,tags);
+                    const realPENKeys = keyShortcut(resPENKeys,tags);
+                    const realShredKeys = keyShortcut(defShredKeys,tags);
+                    const realVulnKeys = keyShortcut(vulnKeys,tags);
+
+                    const compositeCacheTag = tags + actionTags + sourceTurn.properName;
+                    const compositeCacheTag2 = tags2 + actionTags + saberTurn.properName;
+
+                    const realDMGKeys2 = keyShortcut(dmgKeys,tags2);
+                    const realPENKeys2 = keyShortcut(resPENKeys,tags2);
+                    const realShredKeys2 = keyShortcut(defShredKeys,tags2);
+                    const realVulnKeys2 = keyShortcut(vulnKeys,tags2);
+                    
+                    //realDMGKeys,realPENKeys,realShredKeys,realVulnKeys
+                    ATKObjects.gilJointFUAATKOBJECT = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[0],
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys,realPENKeys,realShredKeys,realVulnKeys,
+                        actionTags,
+                        compositeCacheTag,
+                    }
+                    
+                    ATKObjects.gilJointFUAATKOBJECTSaber = {
+                        multipliers: {
+                            primary: null,
+                            blast: null,
+                            all: values[1],
+                        },
+                        energy: skillRef.energyRegen,
+                        scalar,
+                        DMGTags: tags2,
+                        allToughness: false,
+                        slot: skillRef.slot,
+                        realDMGKeys: realDMGKeys2,
+                        realPENKeys: realPENKeys2,
+                        realShredKeys: realShredKeys2,
+                        realVulnKeys: realVulnKeys2,
+                        actionTags,
+                        compositeCacheTag: compositeCacheTag2,
+                    }
+
+                }
+                const ATKObject = ATKObjects.gilJointFUAATKOBJECT;
+                const ATKObjectSaber = ATKObjects.gilJointFUAATKOBJECTSaber;
+                
+                attackWrapper(battleData,skillRef2,saberTurn,ATKObjectSaber,actionObject.target,actionObject.subTarget);
+                attackWrapper(battleData,skillRef,sourceTurn,ATKObject,actionObject.target,actionObject.subTarget);
+
+                updateEnergy(battleData,120,saberTurn,true,"Joint Attack Finished");
+                poke("GilGainInterest",battleData,{pointsGained: 3,sourceString:`Joint Attack Finished`},null);
+                
+                //TODO: saber's 200% ult multi
+                battleValues.saberUltReadyForBonus = true;
+
+                poke("GilGainTally",battleData,{pointsGained: -battleValues.attackTally,sourceString:`Cleared attack tally`});
+
+                battleValues.jointIsQueued = false;
+            },
+            // gilTechnique2(battleData,actionObject,sourceTurn) {
+            //     const logicRef = turnLogic[sourceTurn.properName];
+            //     const ATKObjects = logicRef.ATKObjects;
+
+            //     let characterName = sourceTurn.properName;
+            //     // let charSlot = sourceTurn.name;
+            //     // let skillPathing = characters[characterName].skills;
+            //     let skillRef = ATKObjects.archerTechREF ??= ATKObjects.Technique["Enkidu"].variant1;
+
+
+            //     if (battleData.isLoggyLogger) {logToBattle(battleData,{logType: "TechniqueStart", name:characterName, target: null, isEnemy: false, isCharacter: true, AV: battleData.sumAV, actionSlot:skillRef.slot});}
+
+            //     // poke("GilGainInterest",battleData,{pointsGained: 3,sourceString:"Technique"});
+            // },
+        },
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+
+                    const rank = ownerTurn.rank;
+                    const logicRef = turnLogic[ownerTurn.properName];
+
+                    const passiveListeners = this.passiveListeners;
+
+                    const battleValues = ownerTurn.battleValues;
+
+
+                    if (rank >= 4) {
+                        let energySheet = this.e4RegenSheet ??= {
+                            "stats": [EnergyRegenRate],
+                            [EnergyRegenRate]: 0.20,
+                            "source": "E4",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": logicRef.buffNames.e4Regen,
+                            "durationInTurn": null,
+                            "duration": null,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                        updateBuff(battleData,ownerTurn,energySheet);
+                    }
+
+                    if (rank >= 6) {
+                        const fullCharacterArray = battleData.fullCharacterArray;
+                        let penSheet = this.e6PENSheet ??= {
+                            "stats": [ResistanceAllPEN],
+                            [ResistanceAllPEN]: 0.20,
+                            "source": "E6",
+                            "sourceOwner": ownerTurn.properName,
+                            "buffName": logicRef.buffNames.e6Pen,
+                            "durationInTurn": null,
+                            "duration": null,
+                            "AVApplied": 0,
+                            "maxStacks": 1,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null
+                        }
+                        updateBuffBatchTargets(battleData,fullCharacterArray,penSheet);
+                    }
+
+
+                    //------------ trace Hegemon's Strife ------------------
+                    //the energy trace isn't gonna factor special energy
+                    //does apply to memosprites created within passive construction
+                    //memosprites inherit the benefit applied to their owner, presumably it functions like a zone sourced from the owner yet applied secondary to the memo
+                    //can reach unselectable memosprites, though it likely isn't targeting unselectable directly and instead using the owner's .getMemo() reference to force it
+
+                    const fullCharacterArray = battleData.fullCharacterArray;
+                    let energySheet = this.gilEnergyTraceSHEET ??= {
+                        "stats": [ATKP,CritDamageBase],
+                        [ATKP]: 0,
+                        [CritDamageBase]: 0,
+                        "source": "Trace",
+                        "sourceOwner": ownerTurn.properName,
+                        "buffName": logicRef.buffNames.energyATK,
+                        "durationInTurn": null,
+                        "duration": null,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null
+                    }
+                    for (let character of fullCharacterArray) {
+                        const maxEnergy = character.maxEnergy;
+
+                        const validEnergy = Math.min(100, Math.max(0, Math.floor(maxEnergy - 140)));
+
+                        const finalBonus = 0.20 + (0.01 * validEnergy);
+                        energySheet[ATKP] = finalBonus;
+                        energySheet[CritDamageBase] = finalBonus;
+
+                        updateBuff(battleData,character,energySheet);
+
+                        const memoRef = character.memospriteEventRef;
+                        if (memoRef) {
+                            const memoTurn = character[memoRef];
+                            updateBuff(battleData,memoTurn,energySheet);
+                        }
+                    }
+
+                    
+                    // //talent inherents
+                    //ult use from self or ally
+                    const listener1 = passiveListeners[0];
+                    for (let character of fullCharacterArray) {
+                        addListenerWithPriority(battleData,listener1,listener1.trigger,character,null,ownerTurn);
+                    }
+
+
+                    const allAlliesArray = battleData.allAlliesArray;
+                    //allied action
+                    const listener2 = passiveListeners[1];
+                    for (let ally of allAlliesArray) {
+                        if (ally.properName === ownerTurn.properName) {continue;}
+                        addListenerWithPriority(battleData,listener2,listener2.trigger,ally,null,ownerTurn);
+                    }
+
+
+                    const saberSlot = battleData.nameIndex["Saber"];
+                    if (saberSlot) {
+                        battleValues.saberSlot = saberSlot;
+                        const saberTurn = battleData.nameBasedTurns[saberSlot];
+
+                        const listener3 = passiveListeners[2];
+
+                        addListenerWithPriority(battleData,listener3,listener3.trigger,ownerTurn,null,ownerTurn);
+                        addListenerWithPriority(battleData,listener3,listener3.trigger,saberTurn,null,ownerTurn);
+
+                        const listener4 = passiveListeners[3];
+                        addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+
+                        const listener5 = passiveListeners[4];
+                        addListenerWithPriority(battleData,listener5,listener5.trigger,saberTurn,null,ownerTurn);
+                        const listener6 = passiveListeners[5];
+                        addListenerWithPriority(battleData,listener6,listener6.trigger,saberTurn,null,ownerTurn);
+                    }
+
+                    if (rank >= 2) {
+                        const listener7 = passiveListeners[6];
+                        addListenerWithPriority(battleData,listener7,listener7.trigger,ownerTurn);
+                    }
+
+
+
+
+
+                    getTechnique(battleData,ownerTurn,logicRef,1,false,true);
+                },
+                "target": "self",
+                "listenerName": "Gilgamesh Passive",
+                "ownerTurn": {},
+                "passiveListeners": [
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}//AbilityStart
+                            
+                            // poke("SaberGainCoreResonance",battleData,{pointsGained: 1});
+                            const ownerTurn = this.providerTurn;
+
+                            const generalInfo2 = this.generalInfo2 ??= {pointsGained: 2,sourceString:"Epic's Opening: Ally Ultimate"};
+                            poke("GilGainInterest",battleData,generalInfo2,null);
+
+                            //only if it's a diff ally, from this point on
+                            const sourceTurn = generalInfo.sourceTurn;
+                            if (sourceTurn.properName != ownerTurn.properName) {
+
+                                const logicRef = turnLogic[ownerTurn.properName];
+                                const ATKObjects = logicRef.ATKObjects;
+            
+                                if (!ATKObjects.gilKingBurdenDMGSHEET) {
+                                    let skillRef = ATKObjects.saberTalentREF ??= ATKObjects["Talent"][`"Amuse Me to the Fullest"`].variant1;
+                                    let values = ATKObjects.saberTalentREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,ownerTurn);
+                                    const characterName = ownerTurn.properName;
+                                    const logicRef = turnLogic[characterName];
+                                    const buffNames = logicRef.buffNames;
+            
+                                    const buffName = buffNames.talentAllyUlt;
+                                    ATKObjects.gilKingBurdenDMGSHEET = {
+                                        "stats": [DamageAll],
+                                        [DamageAll]: values[2],
+                                        "source": "Dragon Reactor Core",
+                                        "sourceOwner": characterName,
+                                        "buffName": buffName,
+                                        "durationInTurn": 4,
+                                        "duration": 3,
+                                        "AVApplied": 0,
+                                        "maxStacks": 1,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": "EndTurn",
+                                        "actionTags": ["Ultimate"],
+                                    }
+                                }
+                                const buffSheet = ATKObjects.gilKingBurdenDMGSHEET;
+                                updateBuff(battleData,ownerTurn,buffSheet);
+
+
+                                const specialEnergyPoke = generalInfo.specialEnergyPoke;
+                                const ultyCost = generalInfo.energyCost;
+
+                                if (!specialEnergyPoke && ultyCost) {
+                                    const stealEnergy = 0.30 * ultyCost;
+                                    updateEnergy(battleData,stealEnergy,ownerTurn,true,"Ally used Ultimate")
+                                }
+
+
+                                if (ownerTurn.rank >= 6) {
+                                    const generalInfo3 = this.generalInfo3 ??= {pointsGained: 1,sourceString:"Ally Ultimate"};
+                                    poke("GilGainE6",battleData,generalInfo3,null);
+                                }
+                            }
+
+                            // poke("GilGainInterest",battleData,{pointsGained: -sourceTurn.battleValues.interest,sourceString:"Lost Interest"});//interest
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Gil ally ult listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            // const action = generalInfo.action;
+                            // if (action != "Ultimate") {return;}//AbilityStart
+                            const sourceTurn = generalInfo.sourceTurn;
+                            // const providerTurn = this.providerTurn;
+
+                            //NO NEED TO EXCLUDE GIL HERE
+                            //reason being is just that this listener is never given to gil himself, so he's never factored anyways.
+                            const generalInfo2 = this.generalInfo2 ??= {pointsGained: 1,sourceString:`"Amuse Me to the Fullest": Ally Action`};
+                            poke("GilGainInterest",battleData,generalInfo2,null);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Gil ally action listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            // const action = generalInfo.action;
+                            // if (action != "Ultimate") {return;}//AbilityStart
+                            // const sourceTurn = generalInfo.sourceTurn;
+                            // const providerTurn = this.providerTurn;
+                            // if (sourceTurn.isEnemy) {return;}
+
+                            
+                            // poke("SaberGainCoreResonance",battleData,{pointsGained: 1});
+                            // const ownerTurn = this.ownerTurn;
+
+                            const generalInfo2 = this.generalInfo2 ??= {pointsGained: 1,sourceString:`Gil/Saber Attacked`};
+                            // poke("GilGainInterest",battleData,generalInfo2,null);
+                            poke("GilGainTally",battleData,generalInfo2);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Gil self/saber attack tally increment",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AttackDMGEnd",
+                        condition(battleData,generalInfo) {
+                            // const action = generalInfo.action;
+                            // if (action != "Ultimate") {return;}//AbilityStart
+                            // const sourceTurn = generalInfo.sourceTurn;
+                            // const providerTurn = this.providerTurn;
+                            // if (sourceTurn.isEnemy) {return;}
+
+                            
+                            // poke("SaberGainCoreResonance",battleData,{pointsGained: 1});
+                            const ownerTurn = this.ownerTurn;
+                            const battleValues = ownerTurn.battleValues;
+                            if (battleValues.attackTally >= 8 && !battleValues.jointIsQueued) {
+                                //TODO: queue stuff
+
+                                battleValues.jointIsQueued = true;
+        
+                                const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                                    name: this.listenerName,
+                                    priority: priorityList.ability.CharacterAttackFromSelf,
+                                    queueTag: "QueuedInsert",
+                
+                                    actionCall: turnLogic[ownerTurn.properName].skillFunctions.gilJointFUA,
+                                    action: "Insert",
+                                    abortCheck: null,//(battleData,actionObject,ownerTurn),
+                
+                                    isInserted: true,
+                                    dontKeepNextWave: false,//ults always clear out
+                                    isAttack: true,
+                                    isAbility: true,
+                                    useAnyTriggers: true,
+                                    eventTypeStartLOG: "GenericAbilityStart",
+                
+                                    poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.FUA,
+                                })
+                                queueObject.sourceTurn = ownerTurn;
+                                queueObject.target = battleData.enemyPositions;
+                                queueInsertAbility(battleData,queueObject);
+                            }
+                        },
+                        "target": "self",
+                        // "isPersonal": true,
+                        "listenerName": "Gil self/saber attack queue",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}//AbilityStart
+                            const sourceTurn = generalInfo.sourceTurn;
+                            const providerTurn = this.providerTurn;
+                            // if (sourceTurn.isEnemy) {return;}
+
+                            const saberIsReady = providerTurn.battleValues.saberUltReadyForBonus;
+
+                            if (saberIsReady) {
+                                //apply unique multi buff
+
+                                const logicRef = turnLogic[providerTurn.properName];
+                                const ATKObjects = logicRef.ATKObjects;
+
+                                if (!ATKObjects.SaberFinalMultiSHEET) {
+                                    let skillRef = ATKObjects.gilJointFUAREF ??= ATKObjects.Talent[`"I Grant You Permission To Strike"`].variant1;
+                                    let values = ATKObjects.gilJointFUAREFVALUES ??= battleActions.getLevelBasedParam(battleData,skillRef,providerTurn);
+
+                                    const characterName = providerTurn.properName;
+                                    const logicRef = turnLogic[characterName];
+                                    const buffNames = logicRef.buffNames;
+                                    ATKObjects.SaberFinalMultiSHEET = {
+                                        "stats": null,
+                                        "multiplier": values[5],
+                                        "source": "Talent",
+                                        "sourceOwner": providerTurn.properName,
+                                        "buffName": buffNames.gilSaberBonus,
+                                        "durationInTurn": null,
+                                        "duration": 1,
+                                        "AVApplied": 0,
+                                        "maxStacks": 1,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null,
+                                        "isFinalMulti": true,
+                                        "actionTags": ["All"]
+                                    }
+                                }
+
+                                const buffSheet = ATKObjects.SaberFinalMultiSHEET;
+                                updateBuff(battleData,sourceTurn,buffSheet);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Saber enhanced ultimate listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}//AbilityStart
+                            const sourceTurn = generalInfo.sourceTurn;
+                            const providerTurn = this.providerTurn;
+                            // if (sourceTurn.isEnemy) {return;}
+
+                            const battleValues = providerTurn.battleValues;
+                            const saberIsReady = battleValues.saberUltReadyForBonus;
+
+                            if (saberIsReady) {
+                                battleValues.saberUltReadyForBonus = false;
+
+                                const buffName = this.buffName ??= turnLogic[providerTurn.properName].buffNames.gilSaberBonus;
+                                const buffCheck = sourceTurn.buffsObject[buffName];
+                                if (buffCheck) {removeBuff(battleData,sourceTurn,buffCheck);}
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Saber enhanced ultimate listener",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "WaveStart",
+                        condition(battleData,generalInfo) {
+                            const currentWave = generalInfo.currentWave;
+                            if (currentWave != 1) {return;}
+                            //confirmed calyx wave 1 only
+                            
+                            const generalInfo2 = this.generalInfo2 ??= {pointsGained: 5,sourceString:`E2: Entered combat`};
+                            poke("GilGainInterest",battleData,generalInfo2,null);
+                        },
+                        "target": "self",
+                        "priority": -80,
+                        "listenerName": "E2: Wisdom That Encompassed All - Entered combat interest gain",
+                        "ownerTurn": {},
+                    },
+                ],
+            },
+            {
+                "trigger": "GilGainInterest",
+                condition(battleData,generalInfo) {
+                    // poke("GilGainInterest",battleData,{pointsGained: 1,sourceString:"asdf"});//interest
+                    let ownerTurn = this.ownerTurn;
+                    const generalData = this.generalData ??= {summerName: "gilInterestGainedSum",baseName: "interest",maxName: "interestMax",maxNameDisplay: null,minName: null,isRealSubEnergy: false,
+                        baseString: "Interest",displayIcon:"/HonkaiSR/misc/saber/Icon1014Passive.png"};
+                    const battleValues = ownerTurn.battleValues;
+                    // const oldValue = battleValues.interest;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
+
+                    if (valueWasDiff) {
+                        const pointsGained = generalInfo.pointsGained;
+                        const characterName = ownerTurn.properName;
+                        const logicRef = this.logicRef ??= turnLogic[characterName];
+                        
+                        const buffsObject = ownerTurn.buffsObject;
+
+                        if (pointsGained>0 && !ownerTurn.traceInterestCRITDMGDone) {
+
+                            //only check this if we haven't finished stacking yet, and if the change in points is actually positive
+                            const buffSheet = this.traceInterestCRITDMGDone ??= {
+                                "stats": [CritDamageBase],
+                                [CritDamageBase]: 0.25,
+                                "source": "Trace",
+                                "sourceOwner": characterName,
+                                "buffName": logicRef.buffNames.crownStack,
+                                "durationInTurn": null,
+                                "duration": 1,
+                                "AVApplied": 0,
+                                "maxStacks": 6,
+                                "currentStacks": 1,
+                                "decay": false,
+                                "expireType": null,
+                            };
+                            buffSheet.currentStacks = pointsGained;
+                            updateBuff(battleData,ownerTurn,buffSheet);
+                            const buffCheck = buffsObject[buffSheet.buffName];
+                            if (buffCheck.currentStacks === 6) {ownerTurn.traceInterestCRITDMGDone = true;}//mark as completed so this buff is never called again
+                        }
+
+                        const newValue = battleValues.interest;
+
+                        if (!battleValues.isEnhanced && newValue >= 10) {
+                            battleValues.isEnhanced = true;
+                        }
+
+                        const SPDSheet = this.gilPassiveSPDSHEET ??= {
+                            "stats": [SPDP],
+                            [SPDP]: 0.10,
+                            "source": "Talent",
+                            "sourceOwner": characterName,
+                            "buffName": logicRef.buffNames.talentSPD,
+                            "durationInTurn": null,
+                            "duration": 1,
+                            "AVApplied": 0,
+                            "maxStacks": 999,
+                            "currentStacks": 1,
+                            "decay": false,
+                            "expireType": null,
+                        }
+
+                        if (newValue === 0) {
+                            //the only time we really care about the context of where the points fall is if it was negative to clear it, and only if it fully clears it
+                            //though I have no idea at present if there is a scenario where we would have a negative adjustment that IS NOT a clear.
+                            removeBuff(battleData,ownerTurn,SPDSheet);
+                        }
+                        else {
+                            SPDSheet.currentStacks = pointsGained;
+                            updateBuff(battleData,ownerTurn,SPDSheet);
+                        }
+                    }
+                },
+                "target": "self",
+                "listenerName": "Gilgamesh Interest Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "GilGainTally",
+                condition(battleData,generalInfo) {
+                    // poke("GilGainTally",battleData,{pointsGained: 1,sourceString:"asdf"});//interest
+                    let ownerTurn = this.ownerTurn;
+                    const generalData = this.generalData ??= {summerName: "gilTallyGainedSum",baseName: "attackTally",maxName: "attackTallyMax",maxNameDisplay: null,minName: null,isRealSubEnergy: false,
+                        baseString: "Attack Tally",displayIcon:"/HonkaiSR/misc/saber/Icon1014Passive.png"};
+                    // const battleValues = ownerTurn.battleValues;
+                    // const oldValue = battleValues.interest;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
+                },
+                "target": "self",
+                "listenerName": "Gilgamesh Attack Tally Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "GilGainE6",
+                condition(battleData,generalInfo) {
+                    // poke("GilGainTally",battleData,{pointsGained: 1,sourceString:"asdf"});//interest
+                    let ownerTurn = this.ownerTurn;
+                    const generalData = this.generalData ??= {summerName: "gilE6GainedSum",baseName: "goldenRule",maxName: "goldenRuleMax",maxNameDisplay: null,minName: null,isRealSubEnergy: true,
+                        baseString: "Golden Rule",displayIcon:"/HonkaiSR/misc/saber/Icon1014Passive.png"};
+                    // const battleValues = ownerTurn.battleValues;
+                    // const oldValue = battleValues.interest;
+                    const valueWasDiff = genericSubEnergy(battleData,ownerTurn,generalInfo,generalData);
+                },
+                "target": "self",
+                "listenerName": "Gilgamesh E6 Golden Rule Handler",
+                "ownerTurn": {},
+            },
+            {
+                "trigger": "UltimateReady",
+                condition(battleData,generalInfo) {
+                    let ownerTurn = this.ownerTurn;
+                    if (ownerTurn.ultyQueued) {return;}
+
+                    let energyCheck = ownerTurn.currentEnergy === ownerTurn.maxEnergy;
+                    let otherObscureCondition = energyCheck ? checkUlty(battleData,ownerTurn) : false;
+
+                    if (otherObscureCondition) {
+                        ownerTurn.ultyQueued = true;
+                        const queueObject = this.queueObject ??= createQueueObject(ownerTurn,{
+                            name: this.listenerName,
+                            priority: priorityList.turn.Default,
+                            queueTag: "QueuedUltimate",
+
+                            actionCall: turnLogic[ownerTurn.properName].skillFunctions.gilUltimate,
+                            action: "Ultimate",
+
+                            energyCost: ownerTurn.maxEnergy,
+
+                            dontKeepNextWave: true,//ults always clear out
+                            isAttack: true,
+                            isAbility: true,
+                            useAnyTriggers: true,
+                            eventTypeStartLOG: "UltimateStart",
+
+                            poolKey: turnLogic[ownerTurn.properName].abilityTargetPools.Ultimate,
+                        })
+                        queueObject.target = battleData.enemyPositions;
+                        queueObject.sourceTurn = ownerTurn;
+                        queueUltimate(battleData,queueObject);
+                    }
+                },
+                "target": "self",
+                "listenerName": "Gilgamesh - Ultimate queued",
+                "ownerTurn": {},
+            },
+        ],
+        "techniqueListener": {
+            "trigger": "WaveStart",
+            condition(battleData,generalInfo) {
+                // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+                const currentWave = generalInfo.currentWave;
+                if (currentWave != 1) {return;}
+
+                let ownerTurn = this.ownerTurn;
+
+                const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.gilTechnique;
+                callTech(battleData,null,ownerTurn);
+            },
+            "target": "self",
+            "priority": -60,
+            "listenerName": "Gilgamesh Technique",
+            "ownerTurn": {},
+        },
+        // "techniqueListener2": {
+        //     "trigger": "WaveStart",
+        //     condition(battleData,generalInfo) {
+        //         // poke("WaveStart",battleData,{currentWave: battleData.wavesCompleted + 1});
+        //         const currentWave = generalInfo.currentWave;
+        //         if (currentWave != 1) {return;}
+
+        //         let ownerTurn = this.ownerTurn;
+
+        //         const callTech = this.callTech ??= turnLogic[ownerTurn.properName].skillFunctions.gilTechnique2;
+        //         callTech(battleData,null,ownerTurn);
+        //     },
+        //     "target": "self",
+        //     "priority": -80,
+        //     "listenerName": "Gilgamesh Technique2",
+        //     "ownerTurn": {},
+        // },
+        "ATKObjects": {},
+        "listenersBattle": [],
+        "buffsBattle": {},
+        "buffsBattleTemp": {},
+        "characterValues": {
+            "isEnhanced": false,
+            "interest": 0,
+            "interestMax": 999,
+            "traceInterestCRITDMGDone": false,
+            "saberSlot": null,
+            "attackTally": 0,
+            "attackTallyMax": 8,
+            "jointIsQueued": false,
+            "saberUltReadyForBonus": false,
+            "goldenRule": 0,
+            "goldenRuleMax": 3,
+
+
+
+
+
+
+
+            // "coreResonance": 0,
+            // "coreResonanceMax": 999,
+            // "overflowEnergy": 0,
+            // "overflowEnergyMax": 0,
+            // "e6UltCounter": 2,
+            // "advanceReady": true,
+            // "waitingToAdvance": false,
+        },
+        "useTechnique": true,
+        "techniqueType": "Attack",
+        "buffNames": {
+            "energyATK": "Hegemon's Strife",
+            "skillShred": "King's Acknowledgement",
+            "skillShredE1": "E1: King's Acknowledgement",
+
+            "crownStack": "Hero's Hauteur",
+            "talentSPD": `"Amuse Me to the Fullest"`,
+            "talentAllyUlt": "King's Burden",
+            "gilSaberBonus": "I Grant You Permission To Strike",
+            "e4Regen": "E4: King Who Bowed to None",
+            "e6Pen": "E6: Soul That Bore Friendship",
+            "e6Crit": "E6: Golden Rule",
+        },
+        "characterValuesBattle": {},
+    },
     "Blade": {
         logic(thisTurn,battleData) {
             let currentSP = battleData.skillPointCurrent;

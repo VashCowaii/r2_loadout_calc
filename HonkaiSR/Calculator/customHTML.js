@@ -4275,3 +4275,13 @@ const rotationsUISuffering = {
 const getHighlightSummaryText = rotationsUISuffering.getHighlightSummary;
 const getHighlightCharPreviewIcon = rotationsUISuffering.getSummaryCharPreviewIcon;
 const getControlsStringCondition = rotationsUISuffering.getControlsStringCondition;
+
+
+
+window.addEventListener("error", (event) => {
+    let battleStateIcon = readSelection("battleStateLoadIcon");
+    battleStateIcon.style.display = "flex";
+    battleStateIcon.src = "/HonkaiSR/misc/error.png";
+
+    customMenu.createErrorDetailMenu(event);
+});

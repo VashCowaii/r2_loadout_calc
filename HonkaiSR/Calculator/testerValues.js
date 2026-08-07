@@ -139,6 +139,34 @@ const customDisplayValuesLog = {
         {valueName: "Countdown Delay Remaining", refName: "traceDelayRemaining", isBattleValue: true},
         {valueName: "E2 Cooldown", refName: "e2AdvanceCooldown", isBattleValue: true, isCharacterState: true, requiresEidolon: 2},
     ],
+    "Gilgamesh": [
+        {valueName: "Interest", refName: "interest", isBattleValue: true,logFunction: null,summaryValue: "gilInterestGainedSum",summaryType: "SUM",
+            customDisplay: "marks", customDisplayType: "number", markMax: null, innerMarkColor: "Lightning",
+            displayRequiresIndex: 1, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            showProgressIconAnyways: true,
+            progressIcon: "misc/saber/Icon1014Passive.png"
+        },
+        {valueName: "Interest Max", refName: "interestMax", isBattleValue: true,hide: true},
+
+        {valueName: "Joint Attack Tally", refName: "attackTally", isBattleValue: true,summaryValue: "gilTallyGainedSum",summaryType: "SUM",
+            customDisplay: "progress", customDisplayType: "circle", markMax: 8, innerMarkColor: "Lightning",
+            displayRequiresIndex: 3, displayRequiresType: "boolean",
+            displayRequiresBoolean: true,
+            progressIcon: "misc/saber/Icon1014Passive.png"
+        },
+        {valueName: "Saber is Active", refName: "saberSlot", isBattleValue: true, isCharacterState: true,hide:true},
+
+        {valueName: "Golden Rule", refName: "goldenRule", isBattleValue: true,logFunction: null,summaryValue: "gilE6GainedSum",summaryType: "SUM", requiresEidolon: 6,
+            customDisplay: "progress", customDisplayType: "circle", markMax: null, innerMarkColor: "Lightning",
+            displayRequiresIndex: 5, displayRequiresType: "number",
+            displayRequiresBoolean: false,
+            progressIcon: "misc/saber/Icon1014Passive.png"
+        },
+        {valueName: "Golden Rule Max", refName: "goldenRuleMax", isBattleValue: true,hide: true, requiresEidolon: 6,},
+
+        {valueName: "Interest Piqued", refName: "isEnhanced", isBattleValue: true, isCharacterState: true},
+    ], 
     "Saber": [
         {valueName: "Core Resonance", refName: "coreResonance", isBattleValue: true,logFunction: null,summaryValue: "saberSumResonance",summaryType: "SUM",
             customDisplay: "marks", customDisplayType: "number", markMax: null, innerMarkColor: "Wind",
@@ -818,6 +846,14 @@ const conditionsCharacterDisplayWarning = {
         "Ultimate": "",
 
         "SkillPermaConditions": [permaConditionsTextLibrary.atLeast1SP,],
+        "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
+    },
+    "Gilgamesh": {
+        hasEnhancedState: true,
+        "Skill": "When enhanced, only the Skill can be used, otherwise only the Basic ATK.",
+        "Ultimate": "",
+
+        "SkillPermaConditions": [],
         "UltimatePermaConditions": [permaConditionsTextLibrary.energyMaxed]
     },
     "Blade": {
@@ -1980,6 +2016,17 @@ const defaultConditions = {
                     "isBattleValue": true
                 }
             ]
+        }
+    },
+    "Gilgamesh": {
+        "hasEnhancedState": true,
+        // "Skill": {
+        //     "type": "AND",
+        //     "array": []
+        // },
+        "Ultimate": {
+            "type": "AND",
+            "array": []
         }
     },
     "Blade": {

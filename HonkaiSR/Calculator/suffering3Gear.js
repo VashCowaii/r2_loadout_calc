@@ -1,6 +1,7 @@
 // const currentWave = generalInfo.currentWave;
 // if (currentWave != 1) {return;}
-const turnLogicLightcones = {
+
+const turnLogicLCHunt = {
     // const customName = `${buffName} (${sourceTurn.properName})`;
     // if (!buffNames[customName]) {buffNames[customName] = customName;}
 
@@ -2038,8 +2039,8 @@ const turnLogicLightcones = {
             "river": "Darting Arrow (LC)",
         },
     },
-
-    //ABUNDANCE
+}
+const turnLogicLCAbundance = {
         //5star
     "Time Waits for No One": {//REDONE
         logic(thisTurn,battleData) {},
@@ -3344,8 +3345,8 @@ const turnLogicLightcones = {
             "healBonus": "Cornucopia (LC)",
         },
     },
-
-    //NIHILITY
+}
+const turnLogicLCNihility = {
         //5star
     "Incessant Rain": {//REDONE
         logic(thisTurn,battleData) {},
@@ -5924,8 +5925,8 @@ const turnLogicLightcones = {
             // "dmgStack": "Boundless Choreo (LC)"
         },
     },
-
-    //DESTRUCTION
+}
+const turnLogicLCDestruction = {
         //5star
     "Whereabouts Should Dreams Rest": {//REDONE
         logic(thisTurn,battleData) {},
@@ -6125,6 +6126,203 @@ const turnLogicLightcones = {
         ],
         "buffNames": {
             "buff1": "King of Knights",
+        },
+    },
+    "I Am As You Behold": {//REDONE
+        logic(thisTurn,battleData) {},
+        "skillFunctions": {
+            kingsEntertainment(battleData,currentTurn,ownerRank) {
+                let ownerName = currentTurn.name;
+                if (!currentTurn.updateKingsEntertainmentCRITSHEET) {
+                    let lcNameRef = "I Am As You Behold";
+                    let lcPathing = lightcones[lcNameRef].params;
+                    let rankParams = lcPathing[ownerRank-1];
+
+                    const logicRef = turnLogicLightcones[lcNameRef];
+                    const uniqueName = battleActions.getUniqueGearBuffName(battleData,currentTurn,logicRef,"buff2")
+
+                    currentTurn.updateKingsEntertainmentOwnerSHEET = {
+                        "stats": null,
+                        "source": lcNameRef,
+                        "sourceOwner": currentTurn.properName,
+                        "buffName": logicRef.buffNames.buff2Countdown,
+                        "durationInTurn": 4,
+                        "duration": 3,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": "EndTurn",
+                        "expireFunction": turnLogicLightcones[lcNameRef].skillFunctions.expireFunction,
+                        "expireParam": {sourceTurn:currentTurn.name,uniqueName}//owner, in this case
+                    }
+
+                    currentTurn.updateKingsEntertainmentCRITSHEET = {
+                        "stats": [CritDamageBase],
+                        [CritDamageBase]: rankParams[4],
+                        "source": lcNameRef,
+                        "sourceOwner": currentTurn.properName,
+                        "buffName": uniqueName,
+                        "durationInTurn": null,
+                        "duration": 1,
+                        "AVApplied": 0,
+                        "maxStacks": 1,
+                        "currentStacks": 1,
+                        "decay": false,
+                        "expireType": null,
+                    }
+                    
+                }
+            
+
+                const buffSheet2 = currentTurn.updateKingsEntertainmentOwnerSHEET;
+                const buffName2 = buffSheet2.buffName;
+                const buffCheck = currentTurn.buffsObject[buffName2];
+                updateBuff(battleData,currentTurn,buffSheet2);
+
+                if (buffCheck) {return;}
+                //if the buff already existed before we applied it to the owner, then we obv don't need to evaluate the allies since if the owner had it, the allies would have it too and theirs doesn't expire
+
+                let buffSheet3 = currentTurn.updateKingsEntertainmentCRITSHEET;
+
+                const allyArray = battleData.allAlliesArray;
+                updateBuffBatchTargets(battleData,allyArray,buffSheet3);
+            },
+            expireFunction(battleData,expireParam) {
+                const ownerName = expireParam.sourceTurn;
+                const uniqueBuffName = expireParam.uniqueName;
+                const ownerTurn = battleData.nameBasedTurns[ownerName];
+
+                const allyArray = battleData.allAlliesArray;
+                removeBuffFromBatch(battleData,allyArray,ownerTurn.buffsObject[uniqueBuffName]);
+            },
+        },
+        "listeners": [
+            {
+                "trigger": "PassiveCalls",
+                condition(battleData,generalInfo) {
+                    let ownerRef = this.owners;
+        
+                    const namedTurns = battleData.nameBasedTurns;
+                    const subListeners = this.subListeners;
+                    const ownersSlots = this.ownersSlots;
+        
+                    for (let owner of ownerRef) {
+                        let charSlot = owner.slot;
+                        let currentTurn = namedTurns[charSlot];
+        
+                        addListenerWithPriority(battleData,subListeners[0],subListeners[0].trigger,currentTurn,ownersSlots);
+                        addListenerWithPriority(battleData,subListeners[1],subListeners[1].trigger,currentTurn,ownersSlots);
+                    }
+                },
+                "target": "self",
+                "listenerName": "I Am As You Behold listener setup",
+                "owners": [],
+                "subListeners": [
+                    {
+                        "trigger": "AbilityStart",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+                            let sourceTurn = generalInfo.sourceTurn;
+
+                            const specialEnergyPoke = generalInfo.specialEnergyPoke;
+                            const ultyCost = generalInfo.energyCost;
+
+                            if (!specialEnergyPoke && ultyCost) {
+
+                                if (!sourceTurn.lcIAmAsYouBeholdDMGSHEET) {
+                                    let ownersSlots = this.ownersSlots;
+                                    let ownerRank = ownersSlots[sourceTurn.name];
+    
+                                    let lcNameRef = "I Am As You Behold";
+                                    let lcPathing = lightcones[lcNameRef].params;
+                                    let rankParams = lcPathing[ownerRank-1];
+                                    let buffName = turnLogicLightcones[lcNameRef].buffNames.buff1;
+            
+                                    sourceTurn.lcIAmAsYouBeholdDMGSHEET = {
+                                        "stats": [DamageAll],
+                                        [DamageAll]: rankParams[2],
+                                        "source": lcNameRef,
+                                        "sourceOwner": sourceTurn.properName,
+                                        "buffName": buffName,
+                                        "durationInTurn": null,
+                                        "duration": 1,
+                                        "AVApplied": 0,
+                                        "maxStacks": 360,
+                                        "currentStacks": 1,
+                                        "decay": false,
+                                        "expireType": null,
+                                        "actionTags": ["Ultimate"],
+                                    }
+                                }
+
+                                const buffSheet = sourceTurn.lcIAmAsYouBeholdDMGSHEET;
+                                buffSheet.currentStacks = Math.floor(ultyCost);
+                                updateBuff(battleData,sourceTurn,buffSheet);
+                            }
+
+
+
+                            let ownersSlots = this.ownersSlots;
+                            let ownerRank = ownersSlots[sourceTurn.name];
+                            const kingsEntertainment = this.kingsEntertainment ??= turnLogicLightcones["I Am As You Behold"].skillFunctions.kingsEntertainment;
+                            kingsEntertainment(battleData,sourceTurn,ownerRank);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "I Am As You Behold - ult buff trigger",
+                    },
+                    {
+                        "trigger": "AbilityEnd",
+                        condition(battleData,generalInfo) {
+                            const action = generalInfo.action;
+                            if (action != "Ultimate") {return;}
+        
+                            let sourceTurn = generalInfo.sourceTurn;
+
+                            const buffSheet = sourceTurn.lcIAmAsYouBeholdDMGSHEET;
+                            const buffCheck = sourceTurn.buffsObject[buffSheet.buffName];
+
+                            if (buffCheck) {
+                                removeBuff(battleData,sourceTurn,buffCheck);
+                            }
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "I Am As You Behold - ult end buff removal",
+                    },
+                ]
+            },
+            {
+                "trigger": "WaveStart",
+                condition(battleData,generalInfo) {
+                    const currentWave = generalInfo.currentWave;
+                    if (currentWave != 1) {return;}
+                    // let ownerRef = this.owners;
+                    let ownersSlots = this.ownersSlots;
+
+                    const kingsEntertainment = this.kingsEntertainment ??= turnLogicLightcones["I Am As You Behold"].skillFunctions.kingsEntertainment;
+                    const namedTurns = battleData.nameBasedTurns;
+
+                    for (let owner in ownersSlots) {
+                        let ownerRank = ownersSlots[owner];
+                        let currentTurn = namedTurns[owner];
+
+                        kingsEntertainment(battleData,currentTurn,ownerRank);
+                    }
+                },
+                "target": "self",
+                "priority": -80,
+                "listenerName": "I Am As You Behold - King's Entertainment Application Battlestart",
+                "owners": [],
+                "ownersSlots": {}
+            },
+        ],
+        "buffNames": {
+            "buff1": "I Am As You Behold",
+            "buff2": "King's Entertainment",
+            "buff2Countdown": "King's Entertainment (Countdown)",
         },
     },
     "On the Fall of an Aeon": {//REDONE
@@ -7877,8 +8075,8 @@ const turnLogicLightcones = {
             "buff1": "Shattered Home (LC)",
         },
     },
-
-    //HARMONY
+}
+const turnLogicLCHarmony = {
     //5star
     "Earthly Escapade": {//REDONE
         logic(thisTurn,battleData) {},
@@ -9706,9 +9904,8 @@ const turnLogicLightcones = {
             "buff2": "Mediation [LC]",
         },
     },
-
-
-    //REMEMBRANCE
+}
+const turnLogicLCRemembrance = {
         //5star
     "Time Woven Into Gold": {
         logic(thisTurn,battleData) {},
@@ -11223,7 +11420,8 @@ const turnLogicLightcones = {
             "buff1": "Reminiscence (LC)"
         },
     },
-
+}
+const turnLogicLCPreservation = {
     //PRESERVATIONN
     //5star
     "Inherently Unjust Destiny": {//REDONE
@@ -12647,9 +12845,8 @@ const turnLogicLightcones = {
             "buff1": "Amber (LC)",
         },
     },
-
-
-    //ERUDITON
+}
+const turnLogicLCErudition = {
     //5star
     "An Instant Before A Gaze": {//REDONE
         logic(thisTurn,battleData) {},
@@ -14340,7 +14537,8 @@ const turnLogicLightcones = {
             // "atk": "Sagacity [LC]",
         },
     },
-
+}
+const turnLogicLCElation = {
     //ELATION
     //5star
     "When She Decided to See": {//REDONE
@@ -15352,6 +15550,17 @@ const turnLogicLightcones = {
     },
 }
 
+const turnLogicLightcones = {
+    ...turnLogicLCHunt,
+    ...turnLogicLCAbundance,
+    ...turnLogicLCNihility,
+    ...turnLogicLCDestruction,
+    ...turnLogicLCHarmony,
+    ...turnLogicLCRemembrance,
+    ...turnLogicLCPreservation,
+    ...turnLogicLCErudition,
+    ...turnLogicLCElation
+}
 
 const turnLogicRelics = {
     //BODY SETS
