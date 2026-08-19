@@ -185,7 +185,9 @@ const configAbility = {
                     },
                     {
                       "name": "Inject Extra-Turn",
-                      "actionTag": "Advanced_Seele_Ability02InsertCheck",
+                      "actionTag": [
+                        "Advanced_Seele_Ability02InsertCheck"
+                      ],
                       "skillType": "ControlSkill02",
                       "forceAction": true,
                       "conditions": {
@@ -385,7 +387,9 @@ const configAbility = {
                 },
                 {
                   "name": "Inject Extra-Turn",
-                  "actionTag": "Seele_BonusInsertAction",
+                  "actionTag": [
+                    "Seele_BonusInsertAction"
+                  ],
                   "abilityName": "Advanced_Seele_Bonus",
                   "afterInjection": [
                     {
@@ -422,16 +426,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "condition": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"596149428\">Enemy_W5_Painter_Inferno</a>[<span class=\"descriptionNumberColor\">Grudge Ablaze</span>]",
-                    "invertCondition": true
-                  }
+                  ]
                 },
                 {
                   "name": "Update Displayed Energy Bar",
@@ -628,7 +623,9 @@ const configAbility = {
                 },
                 {
                   "name": "Inject Extra-Turn",
-                  "actionTag": "Seele_BonusInsertAction",
+                  "actionTag": [
+                    "Seele_BonusInsertAction"
+                  ],
                   "abilityName": "Advanced_Seele_Bonus",
                   "afterInjection": [
                     {
@@ -665,16 +662,7 @@ const configAbility = {
                         }
                       ]
                     }
-                  ],
-                  "condition": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"596149428\">Enemy_W5_Painter_Inferno</a>[<span class=\"descriptionNumberColor\">Grudge Ablaze</span>]",
-                    "invertCondition": true
-                  }
+                  ]
                 }
               ]
             }
