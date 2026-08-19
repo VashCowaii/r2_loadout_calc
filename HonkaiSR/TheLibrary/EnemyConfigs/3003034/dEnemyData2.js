@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Knockoff King of Heroes",
   "image": 3003034,
   "bar": 1,
+  "bodyType": "LargeMonster",
   "rank": "Elite",
   "stArray": [
     40.008892,

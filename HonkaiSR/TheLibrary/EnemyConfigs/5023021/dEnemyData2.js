@@ -2,6 +2,7 @@ let enemyData = {
   "name": "God-Devourer Offspring",
   "image": 5023021,
   "bar": 1,
+  "bodyType": "LargeMonster",
   "rank": "Elite",
   "stArray": [
     40.008892,

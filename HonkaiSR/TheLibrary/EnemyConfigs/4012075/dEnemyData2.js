@@ -2,6 +2,7 @@ let enemyData = {
   "name": "The Long Arms of Sorrow",
   "image": 4012075,
   "bar": 1,
+  "bodyType": "LargeMonster",
   "rank": "MinionLv2",
   "stArray": [
     40.008892,

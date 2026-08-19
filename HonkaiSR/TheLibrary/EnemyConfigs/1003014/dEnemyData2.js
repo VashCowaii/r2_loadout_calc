@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Dunn",
   "image": 1003014,
   "bar": 1,
+  "bodyType": "LittleMonster",
+  "hitClass": "A",
   "rank": "Elite",
   "stArray": [
     40.008892,

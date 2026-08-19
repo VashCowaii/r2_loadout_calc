@@ -1,7 +1,9 @@
 let enemyData = {
   "name": "Lord of Saṃvartasthāyi, Asat Pramad: \"Decay\"",
   "image": 8015050,
-  "bar": 1,
+  "bar": 3,
+  "bodyType": "LargeMonster",
+  "hitClass": "D",
   "rank": "BigBoss",
   "stArray": [
     18,
@@ -64,6 +66,16 @@ let enemyData = {
         null,
         1,
         null
+      ],
+      "phhp": [
+        1,
+        1,
+        1.9
+      ],
+      "phs": [
+        1,
+        1.1,
+        1.7
       ],
       "weak": [
         "Fire",

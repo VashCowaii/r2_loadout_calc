@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Champion of Justice (Mechanical)",
   "image": 2013022,
   "bar": 1,
+  "bodyType": "LargeMonster",
   "rank": "Elite",
   "stArray": [
     40.008892,

@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Melee Familiar",
   "image": 5013013,
   "bar": 1,
+  "bodyType": "LargeMonster",
   "rank": "Elite",
   "stArray": [
     40.008892,

@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Alloy Mechatron: King Pom-Pom",
   "image": 5014023,
   "bar": 1,
+  "bodyType": "LargeMonster",
   "rank": "LittleBoss",
   "stArray": [
     18,

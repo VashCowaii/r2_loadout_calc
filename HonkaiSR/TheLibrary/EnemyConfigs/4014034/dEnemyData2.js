@@ -1,7 +1,9 @@
 let enemyData = {
   "name": "Underleveled Castorice",
   "image": 4014034,
-  "bar": 1,
+  "bar": 2,
+  "bodyType": "LargeMonster",
+  "hitClass": "B",
   "rank": "LittleBoss",
   "stArray": [
     40.008892,

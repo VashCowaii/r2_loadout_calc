@@ -1,7 +1,8 @@
 let enemyData = {
   "name": "Murata Graphia, Founding Artist",
   "image": 5014032,
-  "bar": 1,
+  "bar": 3,
+  "bodyType": "LargeMonster",
   "rank": "LittleBoss",
   "stArray": [
     18,

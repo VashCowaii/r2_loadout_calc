@@ -1,7 +1,8 @@
 let enemyData = {
   "name": "Imagenae Apex Depredator",
   "image": 5014022,
-  "bar": 1,
+  "bar": 2,
+  "bodyType": "LargeMonster",
   "rank": "LittleBoss",
   "stArray": [
     40.008892,
