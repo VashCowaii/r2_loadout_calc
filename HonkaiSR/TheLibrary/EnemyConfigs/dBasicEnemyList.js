@@ -10608,6 +10608,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "phases": 2,
       "hasReader": false,
       "baseName": "Underleveled Castorice"
     },
@@ -12711,6 +12712,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "phases": 2,
       "hasReader": false,
       "baseName": "Imagenae Apex Depredator"
     },
@@ -12780,6 +12782,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
+      "phases": 3,
       "hasReader": false,
       "baseName": "Murata Graphia, Founding Artist"
     },
@@ -16191,6 +16194,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "phases": 3,
       "hasReader": false
     },
     "8015040": {
@@ -16201,6 +16205,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "phases": 3,
       "hasReader": false,
       "baseName": "Lord of Saṃvartasthāyi, Asat Pramad: \"Existence\""
     },
@@ -16212,6 +16217,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "phases": 3,
       "hasReader": false,
       "baseName": "Lord of Saṃvartasthāyi, Asat Pramad: \"Decay\""
     },
@@ -18538,6 +18544,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
+      "phases": 2,
       "hasReader": false,
       "baseName": "Daythunder Raven"
     },
@@ -18686,6 +18693,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
+      "phases": 2,
       "hasReader": false,
       "baseName": "Ishtar Huwawa Aquila"
     },
