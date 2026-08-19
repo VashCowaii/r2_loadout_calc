@@ -533,10 +533,6 @@ const hitSplitters = {
           "toughness": 10,
           "target": "primary"
         },
-        "isSourceFirstHit": true,
-        "isAttackFirstHit": true,
-        "isSourceLastHit": true,
-        "isAttackLastHit": true
       }
     ],
     "eba": [
@@ -547,8 +543,6 @@ const hitSplitters = {
           "toughness": 20,
           "target": "all"
         },
-        "isSourceFirstHit": true,
-        "isAttackFirstHit": true
       },
       {
         "target": {
@@ -557,8 +551,6 @@ const hitSplitters = {
           "toughness": 20,
           "target": "all"
         },
-        "isSourceLastHit": true,
-        "isAttackLastHit": true
       }
     ],
     "eba2": [
@@ -569,8 +561,6 @@ const hitSplitters = {
           "toughness": 20,
           "target": "all"
         },
-        "isSourceFirstHit": true,
-        "isAttackFirstHit": true
       },
       {
         "target": {
@@ -587,8 +577,6 @@ const hitSplitters = {
           "toughness": 20,
           "target": "all"
         },
-        "isSourceLastHit": true,
-        "isAttackLastHit": true
       }
     ],
     "eba3": [
@@ -599,8 +587,6 @@ const hitSplitters = {
           "toughness": 20,
           "target": "all"
         },
-        "isSourceFirstHit": true,
-        "isAttackFirstHit": true
       },
       {
         "target": {
@@ -618,8 +604,6 @@ const hitSplitters = {
           "toughness": 20,
           "target": "all"
         },
-        "isSourceLastHit": true,
-        "isAttackLastHit": true
       }
     ],
     "skill": [
@@ -635,8 +619,6 @@ const hitSplitters = {
           "toughness": 10,
           "target": "blast"
         },
-        "isSourceFirstHit": true,
-        "isAttackFirstHit": true
       },
       {
         "target": {
@@ -676,8 +658,6 @@ const hitSplitters = {
           "toughness": 10,
           "target": "blast"
         },
-        "isSourceLastHit": true,
-        "isAttackLastHit": true
       }
     ],
     "ult": [
@@ -688,8 +668,6 @@ const hitSplitters = {
           "toughness": 40,
           "target": "all"
         },
-        "isSourceFirstHit": true,
-        "isAttackFirstHit": true
       }
     ]
   },
