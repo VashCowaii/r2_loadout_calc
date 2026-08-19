@@ -763,35 +763,35 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"766895631\">Standard_Monster_Floating_DamageReduceController</a>",
                       "valuePerStack": {
                         "MDF_LockHpActionDecreaseRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12648) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12648",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13493) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13493",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_12648"
+                            "UnusedUnderThisBase_13493"
                           ]
                         },
                         "MDF_LockHpUpLimitRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12616) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12616",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13461) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13461",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_12616"
+                            "UnusedUnderThisBase_13461"
                           ]
                         },
                         "MDF_DamageReduceRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12619) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12619",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13464) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13464",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_12619"
+                            "UnusedUnderThisBase_13464"
                           ]
                         },
                         "MDF_LastLockHpRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12615) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12615",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13460) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13460",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_12615"
+                            "UnusedUnderThisBase_13460"
                           ]
                         }
                       }
@@ -1714,11 +1714,11 @@ const compositeAbilityObject = {
                                   "name": "Define Custom Variable",
                                   "variableName": "MDF_DelayRatio",
                                   "value": {
-                                    "operator": "Variables[0] (UnusedUnderThisBase_12624) || RETURN",
-                                    "displayLines": "UnusedUnderThisBase_12624",
+                                    "operator": "Variables[0] (UnusedUnderThisBase_13469) || RETURN",
+                                    "displayLines": "UnusedUnderThisBase_13469",
                                     "constants": [],
                                     "variables": [
-                                      "UnusedUnderThisBase_12624"
+                                      "UnusedUnderThisBase_13469"
                                     ]
                                   }
                                 }
@@ -1728,11 +1728,11 @@ const compositeAbilityObject = {
                                   "name": "Define Custom Variable",
                                   "variableName": "MDF_DelayRatio",
                                   "value": {
-                                    "operator": "Variables[0] (UnusedUnderThisBase_12622) || RETURN",
-                                    "displayLines": "UnusedUnderThisBase_12622",
+                                    "operator": "Variables[0] (UnusedUnderThisBase_13467) || RETURN",
+                                    "displayLines": "UnusedUnderThisBase_13467",
                                     "constants": [],
                                     "variables": [
-                                      "UnusedUnderThisBase_12622"
+                                      "UnusedUnderThisBase_13467"
                                     ]
                                   }
                                 }
@@ -1776,11 +1776,11 @@ const compositeAbilityObject = {
                               },
                               "variableName": "Buff_DamageUpRatio",
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_12643) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_12643",
+                                "operator": "Variables[0] (UnusedUnderThisBase_13488) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_13488",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_12643"
+                                  "UnusedUnderThisBase_13488"
                                 ]
                               }
                             },
@@ -1792,11 +1792,11 @@ const compositeAbilityObject = {
                               },
                               "variableName": "Buff_MaxLayer",
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_12620) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_12620",
+                                "operator": "Variables[0] (UnusedUnderThisBase_13465) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_13465",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_12620"
+                                  "UnusedUnderThisBase_13465"
                                 ]
                               }
                             },
@@ -1948,11 +1948,11 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "FleshLifeTime",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12629) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12629",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13474) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13474",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_12629"
+                      "UnusedUnderThisBase_13474"
                     ]
                   }
                 },
@@ -1965,11 +1965,11 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "Buff_DamageUpRatio",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12643) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12643",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13488) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13488",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_12643"
+                      "UnusedUnderThisBase_13488"
                     ]
                   }
                 },
@@ -1982,11 +1982,11 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "Buff_MaxLayer",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12620) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12620",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13465) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13465",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_12620"
+                      "UnusedUnderThisBase_13465"
                     ]
                   }
                 },
@@ -1999,11 +1999,11 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "MDF_FleshElationPoint",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12618) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12618",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13463) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13463",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_12618"
+                      "UnusedUnderThisBase_13463"
                     ]
                   }
                 },
@@ -2016,11 +2016,11 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "MDF_FleshExtraChance",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12627) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12627",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13472) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13472",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_12627"
+                      "UnusedUnderThisBase_13472"
                     ]
                   }
                 },
@@ -2033,11 +2033,11 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "MDF_FleshExtraElationPoint",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12641) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12641",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13486) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13486",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_12641"
+                      "UnusedUnderThisBase_13486"
                     ]
                   }
                 },
@@ -2050,11 +2050,11 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "MDF_AttackEnemyChance",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12625) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12625",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13470) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13470",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_12625"
+                      "UnusedUnderThisBase_13470"
                     ]
                   }
                 },
@@ -2067,11 +2067,11 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "MDF_DamagePercentage",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12621) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12621",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13466) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13466",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_12621"
+                      "UnusedUnderThisBase_13466"
                     ]
                   }
                 },
@@ -2084,11 +2084,11 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "MDF_MaxDamageRatio",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12623) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12623",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13468) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13468",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_12623"
+                      "UnusedUnderThisBase_13468"
                     ]
                   }
                 },
@@ -2101,11 +2101,11 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "MDF_MinDamageRatio",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12645) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12645",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13490) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13490",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_12645"
+                      "UnusedUnderThisBase_13490"
                     ]
                   }
                 },
@@ -2118,11 +2118,11 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "MDF_ExtraDamageMultiple",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12646) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12646",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13491) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13491",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_12646"
+                      "UnusedUnderThisBase_13491"
                     ]
                   }
                 },
@@ -2135,11 +2135,11 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "MDF_EnemyExtraDamageMultiple",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12647) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12647",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13492) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13492",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_12647"
+                      "UnusedUnderThisBase_13492"
                     ]
                   }
                 }
@@ -2454,20 +2454,20 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-2109211182\">Monster_W5_Ripper_Bonus</a>[<span class=\"descriptionNumberColor\">Inverted Severance</span>]",
                       "duration": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_12638) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_12638",
+                        "operator": "Variables[0] (UnusedUnderThisBase_13483) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_13483",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_12638"
+                          "UnusedUnderThisBase_13483"
                         ]
                       },
                       "valuePerStack": {
                         "MDF_CriticalDamageUpRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12637) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12637",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13482) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13482",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_12637"
+                            "UnusedUnderThisBase_13482"
                           ]
                         }
                       }

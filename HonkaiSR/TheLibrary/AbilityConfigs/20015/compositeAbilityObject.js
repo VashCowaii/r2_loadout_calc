@@ -753,11 +753,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1789818614\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokSub</a>[<span class=\"descriptionNumberColor\">Rot</span>]",
                       "valuePerStack": {
                         "MDF_DamageValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_10847) || Variables[1] (BaseAttack) || MUL || RETURN",
-                          "displayLines": "(UnusedUnderThisBase_10847 * BaseAttack)",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11555) || Variables[1] (BaseAttack) || MUL || RETURN",
+                          "displayLines": "(UnusedUnderThisBase_11555 * BaseAttack)",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_10847",
+                            "UnusedUnderThisBase_11555",
                             "BaseAttack"
                           ]
                         }
@@ -1398,11 +1398,11 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_DamagePercentage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_10910) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_10910",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11618) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11618",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_10910"
+                    "UnusedUnderThisBase_11618"
                   ]
                 }
               }
@@ -1662,7 +1662,7 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "advanceType": "Set",
-                          "multiAdd": "UnusedUnderThisBase_10871"
+                          "multiAdd": "UnusedUnderThisBase_11579"
                         }
                       ]
                     },
@@ -1683,7 +1683,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   },
                   "advanceType": "Set",
-                  "multiAdd": "UnusedUnderThisBase_10911"
+                  "multiAdd": "UnusedUnderThisBase_11619"
                 },
                 {
                   "name": "Declare Custom Variable",

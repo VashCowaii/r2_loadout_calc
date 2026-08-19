@@ -771,11 +771,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeResistance": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8599) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8599",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9185) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9185",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_8599"
+                    "UnusedUnderThisBase_9185"
                   ]
                 }
               }
@@ -806,11 +806,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"221422164\">Monster_W2_Feixiao_ModifyActionDelay</a>",
               "valuePerStack": {
                 "MDF_BreakActionDelay": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8590) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8590",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9176) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9176",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_8590"
+                    "UnusedUnderThisBase_9176"
                   ]
                 }
               }
@@ -824,11 +824,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1917647041\">Standard_SuperArmorBreak</a>[<span class=\"descriptionNumberColor\">Safeguard Broken</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeTakenRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8578) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8578",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9164) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9164",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_8578"
+                    "UnusedUnderThisBase_9164"
                   ]
                 }
               }
@@ -855,11 +855,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"73301376\">Standard_SuperArmor</a>[<span class=\"descriptionNumberColor\">Safeguard</span>]",
               "valuePerStack": {
                 "MDF_AllDamageTypeResistance": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8599) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8599",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9185) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9185",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_8599"
+                    "UnusedUnderThisBase_9185"
                   ]
                 }
               }
@@ -1247,7 +1247,7 @@ const configAbility = {
                     "target": "{{Player Team All}}"
                   },
                   "advanceType": "Set",
-                  "multiAdd": "(0 - UnusedUnderThisBase_8575)"
+                  "multiAdd": "(0 - UnusedUnderThisBase_9161)"
                 },
                 {
                   "name": "Remove Events/Bonuses",

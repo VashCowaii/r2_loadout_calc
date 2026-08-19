@@ -38,19 +38,19 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]",
                   "valuePerStack": {
                     "MDF_SpeedUpPerLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_7850) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_7850",
+                      "operator": "Variables[0] (UnusedUnderThisBase_8425) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_8425",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_7850"
+                        "UnusedUnderThisBase_8425"
                       ]
                     },
                     "MDF_AttackUpPerLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_7869) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_7869",
+                      "operator": "Variables[0] (UnusedUnderThisBase_8444) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_8444",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_7869"
+                        "UnusedUnderThisBase_8444"
                       ]
                     }
                   }
@@ -477,19 +477,19 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]",
                   "valuePerStack": {
                     "MDF_SpeedUpPerLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_7854) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_7854",
+                      "operator": "Variables[0] (UnusedUnderThisBase_8429) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_8429",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_7854"
+                        "UnusedUnderThisBase_8429"
                       ]
                     },
                     "MDF_AttackUpPerLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_7853) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_7853",
+                      "operator": "Variables[0] (UnusedUnderThisBase_8428) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_8428",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_7853"
+                        "UnusedUnderThisBase_8428"
                       ]
                     }
                   }
@@ -505,19 +505,19 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-59384693\">Enemy_W1_Gepard_IF_03_EnhancePerTurn</a>[<span class=\"descriptionNumberColor\">Will of Steel</span>]",
                   "valuePerStack": {
                     "MDF_SpeedUpPerLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_7850) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_7850",
+                      "operator": "Variables[0] (UnusedUnderThisBase_8425) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_8425",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_7850"
+                        "UnusedUnderThisBase_8425"
                       ]
                     },
                     "MDF_AttackUpPerLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_7869) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_7869",
+                      "operator": "Variables[0] (UnusedUnderThisBase_8444) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_8444",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_7869"
+                        "UnusedUnderThisBase_8444"
                       ]
                     }
                   }

@@ -387,11 +387,11 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_6342) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_6342",
+                    "operator": "Variables[0] (UnusedUnderThisBase_6736) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_6736",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_6342"
+                      "UnusedUnderThisBase_6736"
                     ]
                   }
                 },
@@ -410,11 +410,11 @@ const compositeAbilityObject = {
                       },
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFirePEN</span>&nbsp;",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_6337) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_6337",
+                        "operator": "Variables[0] (UnusedUnderThisBase_6731) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_6731",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_6337"
+                          "UnusedUnderThisBase_6731"
                         ]
                       }
                     }
