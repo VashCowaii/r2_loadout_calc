@@ -223,7 +223,7 @@ const configAbility = {
           "name": "Ability Has Tag",
           "target": {
             "name": "Target Name",
-            "target": "{{Player's Aim Target List}}"
+            "target": "{{Player's Aim Target List}}.[[index0]]"
           },
           "invertCondition": true,
           "tag": "ElationTime"
