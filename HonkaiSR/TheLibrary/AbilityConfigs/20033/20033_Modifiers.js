@@ -346,11 +346,11 @@ const configAbility = {
                       "sourceType": {}
                     },
                     "Damage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12501) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12501",
+                      "operator": "Variables[0] (UnusedUnderThisBase_13344) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_13344",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_12501"
+                        "UnusedUnderThisBase_13344"
                       ]
                     },
                     "dmgFormula": "Max HP Scaling",
@@ -1039,19 +1039,19 @@ const configAbility = {
                       "duration": 1,
                       "valuePerStack": {
                         "Ability04_P3_ToMonsterHpPercentage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12503) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12503",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13333) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13333",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_12503"
+                            "UnusedUnderThisBase_13333"
                           ]
                         },
                         "Ability04_P4_ElationPoint": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12484) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12484",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13314) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13314",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_12484"
+                            "UnusedUnderThisBase_13314"
                           ]
                         }
                       },
@@ -1081,11 +1081,11 @@ const configAbility = {
                           "duration": 1,
                           "valuePerStack": {
                             "Ability04_P6_BPPoint": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_12494) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_12494",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13324) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13324",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_12494"
+                                "UnusedUnderThisBase_13324"
                               ]
                             }
                           }
@@ -1645,11 +1645,11 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_12500) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_12500",
+                        "operator": "Variables[0] (UnusedUnderThisBase_13343) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_13343",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_12500"
+                          "UnusedUnderThisBase_13343"
                         ]
                       },
                       "assignState": "True",
@@ -1673,11 +1673,11 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_12490) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_12490",
+                        "operator": "Variables[0] (UnusedUnderThisBase_13339) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_13339",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_12490"
+                          "UnusedUnderThisBase_13339"
                         ]
                       },
                       "assignState": "True",
@@ -1716,11 +1716,11 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_12500) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_12500",
+                        "operator": "Variables[0] (UnusedUnderThisBase_13343) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_13343",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_12500"
+                          "UnusedUnderThisBase_13343"
                         ]
                       },
                       "assignState": "True",
@@ -1744,11 +1744,11 @@ const configAbility = {
                         "target": "{{Modifier Holder}}"
                       },
                       "maximum": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_12490) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_12490",
+                        "operator": "Variables[0] (UnusedUnderThisBase_13339) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_13339",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_12490"
+                          "UnusedUnderThisBase_13339"
                         ]
                       },
                       "assignState": "True",
@@ -1840,11 +1840,11 @@ const configAbility = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_12500) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_12500",
+                            "operator": "Variables[0] (UnusedUnderThisBase_13343) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_13343",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_12500"
+                              "UnusedUnderThisBase_13343"
                             ]
                           },
                           "assignState": "True",
@@ -1868,11 +1868,11 @@ const configAbility = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_12490) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_12490",
+                            "operator": "Variables[0] (UnusedUnderThisBase_13339) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_13339",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_12490"
+                              "UnusedUnderThisBase_13339"
                             ]
                           },
                           "assignState": "True",
@@ -1911,11 +1911,11 @@ const configAbility = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_12500) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_12500",
+                            "operator": "Variables[0] (UnusedUnderThisBase_13343) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_13343",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_12500"
+                              "UnusedUnderThisBase_13343"
                             ]
                           },
                           "assignState": "True",
@@ -1939,11 +1939,11 @@ const configAbility = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_12490) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_12490",
+                            "operator": "Variables[0] (UnusedUnderThisBase_13339) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_13339",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_12490"
+                              "UnusedUnderThisBase_13339"
                             ]
                           },
                           "assignState": "True",

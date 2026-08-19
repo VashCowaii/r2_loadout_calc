@@ -587,7 +587,9 @@ const configAbility = {
                 },
                 {
                   "name": "Inject Extra-Turn",
-                  "actionTag": "Anaxa_Passive",
+                  "actionTag": [
+                    "Anaxa_Passive"
+                  ],
                   "skillType": "ControlSkill02",
                   "forceAction": true,
                   "castTarget": {

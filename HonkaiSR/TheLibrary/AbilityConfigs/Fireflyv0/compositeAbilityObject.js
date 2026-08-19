@@ -1270,7 +1270,9 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Inject Extra-Turn",
-                      "actionTag": "Sam_Eidolon2_Bonus",
+                      "actionTag": [
+                        "Sam_Eidolon2_Bonus"
+                      ],
                       "afterInjection": [
                         {
                           "name": "Define Custom Variable",
@@ -1352,7 +1354,9 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Inject Extra-Turn",
-                      "actionTag": "Sam_Eidolon2_Bonus",
+                      "actionTag": [
+                        "Sam_Eidolon2_Bonus"
+                      ],
                       "afterInjection": [
                         {
                           "name": "Define Custom Variable",
@@ -1434,7 +1438,9 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Inject Extra-Turn",
-                      "actionTag": "Sam_Eidolon2_Bonus",
+                      "actionTag": [
+                        "Sam_Eidolon2_Bonus"
+                      ],
                       "afterInjection": [
                         {
                           "name": "Define Custom Variable",

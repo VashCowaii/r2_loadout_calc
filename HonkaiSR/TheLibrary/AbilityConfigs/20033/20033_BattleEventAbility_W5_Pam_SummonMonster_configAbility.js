@@ -154,11 +154,11 @@ const configAbility = {
               },
               "variables": {
                 "PassiveAbility01_P6_SpeedRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_12489) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_12489",
+                  "operator": "Variables[0] (UnusedUnderThisBase_13319) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_13319",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_12489"
+                    "UnusedUnderThisBase_13319"
                   ]
                 }
               },

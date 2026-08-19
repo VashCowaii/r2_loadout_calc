@@ -4736,7 +4736,9 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Inject Extra-Turn",
-              "actionTag": "Phainon_Free_Ability22",
+              "actionTag": [
+                "Phainon_Free_Ability22"
+              ],
               "canInjectUltimates": true,
               "afterInjection": []
             }
@@ -5108,7 +5110,9 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Inject Extra-Turn",
-              "actionTag": "Phainon_Free_Ability22",
+              "actionTag": [
+                "Phainon_Free_Ability22"
+              ],
               "canInjectUltimates": true,
               "afterInjection": []
             }
