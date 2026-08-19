@@ -801,8 +801,7 @@ const configAbility = {
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
         "STAT_DOT",
-        "KeepOnDeathrattle",
-        "RemoveWhenCasterDead"
+        "KeepOnDeathrattle"
       ],
       "useEntitySnapshot": true,
       "stackData": [
