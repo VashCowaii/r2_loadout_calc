@@ -1450,7 +1450,7 @@ const configAbility = {
               "name": "Define Custom Variable with Team Count",
               "target": {
                 "name": "Target Name",
-                "target": "{{Elation: Player Team with Unselectables}} + {{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: Currency Wars Gear2012}}"
+                "target": "{{Elation: All Entities}}"
               },
               "variableName": "MDF_Elation_Character_Num",
               "livingTargets": true
@@ -1711,6 +1711,10 @@ const configAbility = {
                 {
                   "name": "MonsterDeathRattleByLevel",
                   "value": "DuringElationTime_MonsterDeathRattleByLevel"
+                },
+                {
+                  "name": "MonsterDeathRattleTogether",
+                  "value": "DuringElationTime_MonsterDeathRattleTogether"
                 },
                 {
                   "name": "MonsterDeathRattle",
@@ -1988,7 +1992,7 @@ const configAbility = {
                   "name": "Define Custom Variable with Team Count",
                   "target": {
                     "name": "Target Name",
-                    "target": "{{Elation: Player Team with Unselectables}} + {{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: Currency Wars Gear2012}}"
+                    "target": "{{Elation: All Entities}}"
                   },
                   "variableName": "MDF_Elation_Character_Num",
                   "livingTargets": true
