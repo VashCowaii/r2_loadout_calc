@@ -352,7 +352,9 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Inject Extra-Turn",
-                  "actionTag": "SilverWolf999_Eidolon2",
+                  "actionTag": [
+                    "SilverWolf999_Eidolon2"
+                  ],
                   "conditions": {
                     "name": "Insert Ability Condition",
                     "type": "SameTagInsertUnusedCount",
@@ -870,7 +872,9 @@ const configAbility = {
               "ifTargetFound": [
                 {
                   "name": "Inject Extra-Turn",
-                  "actionTag": "SilverWolf999_Ability11Succession",
+                  "actionTag": [
+                    "SilverWolf999_Ability11Succession"
+                  ],
                   "conditions": {
                     "name": "Insert Ability Condition",
                     "type": "SameTagInsertUnusedCount",
@@ -2114,16 +2118,6 @@ const configAbility = {
               "conditions": {
                 "name": "Battle is Over"
               },
-              "passed": [
-                {
-                  "name": "WAIT FOR",
-                  "condition": {
-                    "name": "Death Animation Completed",
-                    "team": "Enemy Team",
-                    "type": "Team Characters"
-                  }
-                }
-              ],
               "failed": [
                 {
                   "name": "Use Custom Character Function",
@@ -2167,16 +2161,6 @@ const configAbility = {
               "conditions": {
                 "name": "Battle is Over"
               },
-              "passed": [
-                {
-                  "name": "WAIT FOR",
-                  "condition": {
-                    "name": "Death Animation Completed",
-                    "team": "Enemy Team",
-                    "type": "Team Characters"
-                  }
-                }
-              ],
               "failed": [
                 {
                   "name": "Use Custom Character Function",
