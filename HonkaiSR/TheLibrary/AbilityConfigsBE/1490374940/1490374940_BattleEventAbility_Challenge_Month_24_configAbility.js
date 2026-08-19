@@ -106,10 +106,6 @@ const configAbility = {
       }
     },
     {
-      "name": "Add Ability",
-      "abilityName": "BattleEventAbility_Camear_AllDarkTeam"
-    },
-    {
       "name": "Add Events/Bonuses",
       "to": {
         "name": "Target Name",
