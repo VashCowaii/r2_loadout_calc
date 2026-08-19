@@ -128,7 +128,7 @@ const customMenu = {
         readSelection("customMenuSearchTitle").innerHTML = "Appearances " + `<img src="/HonkaiSR/${activeComparison.replace("enemies","enemiesSmol")}" class="rotationsCharacterTargetPreviewBoxIcon">`;
 
         readSelection("customMenuMainHolderBox").style.maxWidth = "1000px";
-        readSelection("customMenuSearchBarInput").style.display = "none";
+        readSelection("customMenuSearchBarBox").style.display = "none";
 
         readSelection("customMenuSearchNote").innerHTML =  `Compare <span class="descriptionNumberColor">appearances</span> of this enemy across every instance of this specific endgame <span class="descriptionNumberColor">floor number</span>(MoC12 vs another MoC12 etc).
         <br>You can <span class="descriptionNumberColor">hover</span> a given appearance's column for more information about what may have changed in that appearance vs others.
