@@ -368,11 +368,11 @@ const configAbility = {
                     ]
                   },
                   "healFlat": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13339) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_13339",
+                    "operator": "Variables[0] (UnusedUnderThisBase_14193) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_14193",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_13339"
+                      "UnusedUnderThisBase_14193"
                     ]
                   },
                   "formula": "Heal from Target MaxHP"
