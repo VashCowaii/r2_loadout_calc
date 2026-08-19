@@ -8063,7 +8063,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "TohsakaRin_Ability03_Debuff",
+    "name": "<a class=\"gModGreen\" id=\"-1113422465\">TohsakaRin_Ability03_Debuff</a>",
     "realName": "An Gal Ta Ki Gal Šè",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%.",
@@ -8074,7 +8074,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "TohsakaRin_Passive_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"945078119\">TohsakaRin_Passive_Bonus</a>",
     "realName": "Gem Magecraft",
     "aim": "Buff",
     "desc": "CRIT DMG increases by #1[i]%.",
@@ -8085,7 +8085,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "TohsakaRin_PointB2_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"-1935988058\">TohsakaRin_PointB2_Bonus</a>",
     "realName": "Ladylike Poise",
     "aim": "Buff",
     "desc": "SPD increases by #1[i]%.",
@@ -8108,7 +8108,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Gilgamesh_DamageUp",
+    "name": "<a class=\"gModGreen\" id=\"-1937334192\">Gilgamesh_DamageUp</a>",
     "realName": "Interest Piqued!",
     "aim": "Other",
     "desc": "Current \"Interest\" count is #1[i]. Gilgamesh is greatly amused and only uses Skill.",
@@ -8119,7 +8119,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Gilgamesh_Overcharge",
+    "name": "<a class=\"gModGreen\" id=\"-791691611\">Gilgamesh_Overcharge</a>",
     "realName": "King's Burden",
     "aim": "Buff",
     "desc": "Ultimate DMG dealt increases by #1[i]%.",
@@ -8130,7 +8130,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Gilgamesh_DroneAnalysis",
+    "name": "<a class=\"gModGreen\" id=\"1220268105\">Gilgamesh_DroneAnalysis</a>",
     "realName": "King's Acknowledgement",
     "aim": "Buff",
     "desc": "When dealing DMG, ignores #1[i]% of the target's DEF.",
@@ -8141,7 +8141,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Gilgamesh_TreeBonus2",
+    "name": "<a class=\"gModGreen\" id=\"481485752\">Gilgamesh_TreeBonus2</a>",
     "realName": "Hero's Hauteur",
     "aim": "Buff",
     "desc": "Each stack increases this unit's CRIT DMG by #1[i]%, stacking up to #2[i] times.",
@@ -8153,7 +8153,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Gilgamesh_ChainBonus",
+    "name": "<a class=\"gModGreen\" id=\"1962859860\">Gilgamesh_ChainBonus</a>",
     "realName": "Hegemon's Strife",
     "aim": "Buff",
     "desc": "ATK increases by #1[i]% and CRIT DMG increases by #2[i]%.",
@@ -8165,7 +8165,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "TohsakaRin_PointB1_Bonus",
+    "name": "<a class=\"gModGreen\" id=\"-171150355\">TohsakaRin_PointB1_Bonus</a>",
     "realName": "Elegant Conduct",
     "aim": "Buff",
     "desc": "ATK increases by #1[i]% and Quantum RES PEN increases by #2[i]%.",
@@ -8188,7 +8188,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "TohsakaRin_Eidolon2_TeamAbilityBonus",
+    "name": "<a class=\"gModGreen\" id=\"-1630247172\">TohsakaRin_Eidolon2_TeamAbilityBonus</a>",
     "realName": "Dimensional Traveler",
     "aim": "Buff",
     "desc": "Skill DMG dealt is #1[i]% of the original DMG.",
@@ -8199,7 +8199,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "TohsakaRin_Eidolon6_Penetrate",
+    "name": "<a class=\"gModGreen\" id=\"-889730965\">TohsakaRin_Eidolon6_Penetrate</a>",
     "realName": "Nailed It This Time!",
     "aim": "Buff",
     "desc": "All-Type RES PEN increases by #1[i]%.",
@@ -8210,7 +8210,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Gilgamesh_DroneAnalysis_Team",
+    "name": "<a class=\"gModGreen\" id=\"1516158451\">Gilgamesh_DroneAnalysis_Team</a>",
     "realName": "King's Acknowledgement",
     "aim": "Buff",
     "desc": "ATK increases by #2[i]%. When dealing DMG, ignores #1[i]% of the target's DEF.",
@@ -8245,7 +8245,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Gilgamesh_DroneAnalysis_Halo",
+    "name": "<a class=\"gModGreen\" id=\"265489780\">Gilgamesh_DroneAnalysis_Halo</a>",
     "realName": "King's Acknowledgement",
     "aim": "Buff",
     "desc": "When dealing DMG, ignores #1[i]% of the target's DEF.",
@@ -8256,7 +8256,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Gilgamesh_Eidolon6_TeamBonus",
+    "name": "<a class=\"gModGreen\" id=\"-1870483126\">Gilgamesh_Eidolon6_TeamBonus</a>",
     "realName": "Soul That Bore Friendship",
     "aim": "Buff",
     "desc": "All-Type RES PEN increases by #1[i]%.",
@@ -8278,7 +8278,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Gilgamesh_SaberinTeam",
+    "name": "<a class=\"gModGreen\" id=\"1950581135\">Gilgamesh_SaberinTeam</a>",
     "realName": "\"I Grant You Permission To Strike\"",
     "aim": "Other",
     "desc": "Gilgamesh and Saber have currently launched attacks a total of #1[i]/#2[i] time(s).",
@@ -8290,7 +8290,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Gilgamesh_Passive_Eidolon6_GoldenRule",
+    "name": "<a class=\"gModGreen\" id=\"625310839\">Gilgamesh_Passive_Eidolon6_GoldenRule</a>",
     "realName": "Golden Rule",
     "aim": "Other",
     "desc": "#1[i] points of \"Golden Rule\" accumulated. When using Ultimate, consumes all \"Golden Rule,\" with each point of \"Golden Rule\" consumed increasing the CRIT DMG for the Ultimate DMG dealt by #2[i]%.",
@@ -8302,7 +8302,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "TohsakaRin_GemStone_Show",
+    "name": "<a class=\"gModGreen\" id=\"253442980\">TohsakaRin_GemStone_Show</a>",
     "realName": "Gem Energy",
     "aim": "Other",
     "desc": "Currently holds #1[i] \"Gem Energy.\"",
@@ -8313,7 +8313,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Gilgamesh_SaberUltraBonus",
+    "name": "<a class=\"gModGreen\" id=\"-1274159292\">Gilgamesh_SaberUltraBonus</a>",
     "realName": "\"I Grant You Permission To Strike\"",
     "aim": "Buff",
     "desc": "The next time Saber uses Ultimate, the DMG dealt becomes #1[i]% of the original DMG.",
@@ -8324,7 +8324,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "TohsakaRin_Passive_Insert_CD",
+    "name": "<a class=\"gModGreen\" id=\"-1070852341\">TohsakaRin_Passive_Insert_CD</a>",
     "realName": "Freeform Tohsaka Style",
     "aim": "Other",
     "desc": "The \"Freeform Tohsaka Style\" Joint Follow-Up ATK cannot be triggered yet.",
@@ -8332,7 +8332,7 @@ let modifiersCharacter = [
     "perma": true
   },
   {
-    "name": "Gilgamesh_PassiveSpeed",
+    "name": "<a class=\"gModGreen\" id=\"872801045\">Gilgamesh_PassiveSpeed</a>",
     "realName": "\"Amuse Me to the Fullest\"",
     "aim": "Buff",
     "desc": "SPD increases by #1[i]%.",
@@ -8343,7 +8343,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "TohsakaRin_Eidolon2_SelfAbilityBonus",
+    "name": "<a class=\"gModGreen\" id=\"-1863098959\">TohsakaRin_Eidolon2_SelfAbilityBonus</a>",
     "realName": "Dimensional Traveler",
     "aim": "Buff",
     "desc": "Skill DMG dealt increases by #1[i]%.",

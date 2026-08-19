@@ -24338,7 +24338,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23061_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-239068870\">LC_23061_Sub</a>",
     "realName": "Radiant Crown",
     "aim": "Buff",
     "desc": "Skill DMG dealt increases by #1[i]%.",
@@ -24349,7 +24349,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23061_Sub_Team",
+    "name": "<a class=\"gModGreen\" id=\"1872257470\">LC_23061_Sub_Team</a>",
     "realName": "Radiant Crown",
     "aim": "Buff",
     "desc": "DMG dealt ignores #1[i]% of the target's DEF.",
@@ -24555,7 +24555,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23060_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1153343279\">LC_23060_Sub</a>",
     "realName": "Sail",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by Assist Skill by #1[i]%.",
@@ -24578,7 +24578,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_328_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1431959058\">Relic_328_Sub</a>",
     "realName": "Cosmic Life Sciences Institute",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -24645,7 +24645,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2310_BaseAddOn_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"884439899\">Modifier_FantasticStory_BaseAbility_2310_BaseAddOn_ForShow</a>",
     "realName": "Grit Mechanics",
     "aim": "Buff",
     "desc": "After using a Follow-Up ATK to attack enemy targets, every enemy target hit additionally accumulates #1[i] Grit Value for allies.",
@@ -24656,7 +24656,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2310_BeforeFever_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"300898857\">Modifier_FantasticStory_BaseAbility_2310_BeforeFever_ForShow</a>",
     "realName": "Concordant Truce",
     "aim": "Buff",
     "desc": "After using a Follow-Up ATK or Ultimate to attack enemy targets, deals Additional DMG equal to #1[i]% of this unit's ATK plus #2[i]% of this unit's Max HP to each attacked enemy target.",
@@ -24668,7 +24668,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2310_EnterFever_sub",
+    "name": "<a class=\"gModGreen\" id=\"1377474696\">Modifier_FantasticStory_BaseAbility_2310_EnterFever_sub</a>",
     "realName": "Surging Grit",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%.",
@@ -24679,7 +24679,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2310_plus1_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"791057805\">Modifier_FantasticStory_BaseAbility_2310_plus1_ForShow</a>",
     "realName": "Smack Talk",
     "aim": "Buff",
     "desc": "Increases the All-Type RES PEN of Follow-Up ATK DMG dealt by #1[i]%. During Surging Grit, after using a Follow-Up ATK to attack enemy targets, deals Additional DMG equal to #2[i]% of this unit's ATK plus #3[i]% of this unit's Max HP to targets adjacent to each attacked enemy target. This DMG is considered as Follow-Up ATK DMG.",
@@ -24692,7 +24692,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2310_plus2_charge_sub",
+    "name": "<a class=\"gModGreen\" id=\"1166060207\">Modifier_FantasticStory_BaseAbility_2310_plus2_charge_sub</a>",
     "realName": "Grit Mechanics: Grand Rhetoric",
     "aim": "Buff",
     "desc": "After using Ultimate to attack enemy targets, every enemy target hit additionally accumulates #1[i] Grit Value for allies.",
@@ -24703,7 +24703,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2310_plus2_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"-1228650940\">Modifier_FantasticStory_BaseAbility_2310_plus2_ForShow</a>",
     "realName": "Grand Rhetoric",
     "aim": "Buff",
     "desc": "During Surging Grit, CRIT DMG dealt when using Ultimate increases by #1[i]%. When Surging Grit ends, all allies regenerate #2[i]% Energy.",
@@ -24715,7 +24715,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2310_plus3_charge_sub",
+    "name": "<a class=\"gModGreen\" id=\"-1449065566\">Modifier_FantasticStory_BaseAbility_2310_plus3_charge_sub</a>",
     "realName": "Grit Mechanics: Motormouth",
     "aim": "Buff",
     "desc": "After using Basic ATK or Skill to attack enemy targets, every enemy target hit additionally accumulates #1[i] Grit Value for allies.",
@@ -24726,7 +24726,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_FantasticStory_BaseAbility_2310_plus3_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"654757695\">Modifier_FantasticStory_BaseAbility_2310_plus3_ForShow</a>",
     "realName": "Motormouth",
     "aim": "Buff",
     "desc": "SPD increases by #1[i]%.",
@@ -24854,7 +24854,7 @@ let modifiersGlobal = [
     "perma": false
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0022_02",
+    "name": "<a class=\"gModGreen\" id=\"793283998\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0022_02</a>",
     "realName": "Navigator's Oath",
     "aim": "Other",
     "desc": "All-Type RES PEN for the Skill DMG and Ultimate DMG dealt increases by #1[i]%.",
@@ -24865,7 +24865,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_Plugins_0023_02",
+    "name": "<a class=\"gModGreen\" id=\"296379619\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0023_02</a>",
     "realName": "Endless Euphoria",
     "aim": "Other",
     "desc": "All-Type RES PEN increases by #1[i]%, and the All-Type RES PEN of Elation DMG dealt additionally increases by #2[i]%.",
@@ -24925,7 +24925,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Relic_327_Sub",
+    "name": "<a class=\"gModGreen\" id=\"510034663\">Relic_327_Sub</a>",
     "realName": "Fallen Star Anchorage",
     "aim": "Buff",
     "desc": "CRIT DMG increases by #1[i]%.",
@@ -25222,7 +25222,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23062_Sub",
+    "name": "<a class=\"gModGreen\" id=\"338159187\">LC_23062_Sub</a>",
     "realName": "King's Entertainment",
     "aim": "Buff",
     "desc": "All allies' CRIT DMG increases.",
@@ -25233,7 +25233,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23062_Sub_Team",
+    "name": "<a class=\"gModGreen\" id=\"-1000728603\">LC_23062_Sub_Team</a>",
     "realName": "King's Entertainment",
     "aim": "Buff",
     "desc": "CRIT DMG increases by #1[i]%.",
@@ -25378,7 +25378,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23060_Sub02",
+    "name": "<a class=\"gModGreen\" id=\"-339892333\">LC_23060_Sub02</a>",
     "realName": "Ignore Defense",
     "aim": "Buff",
     "desc": "DMG dealt ignores #1[i]% of the target's DEF.",
@@ -25389,7 +25389,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_BaseAbility_0020_02",
+    "name": "<a class=\"gModGreen\" id=\"255563439\">Modifier_ChallengePeakBattle_BaseAbility_0020_02</a>",
     "realName": "Enrage",
     "aim": "Other",
     "desc": "Each stack increases SPD by #1[i]%, stacking up to #2[i] time(s). At the start of each turn, all stacks are removed.",
@@ -25401,7 +25401,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_ChallengePeakBattle_EnhancedAbility_0020_02",
+    "name": "<a class=\"gModGreen\" id=\"365012510\">Modifier_ChallengePeakBattle_EnhancedAbility_0020_02</a>",
     "realName": "Enrage+",
     "aim": "Other",
     "desc": "Each stack increases SPD by #1[i]%, stacking up to #2[i] time(s). At the start of each turn, all stacks are removed.",
