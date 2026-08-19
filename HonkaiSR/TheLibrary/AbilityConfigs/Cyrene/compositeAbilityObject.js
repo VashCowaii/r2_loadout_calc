@@ -2398,8 +2398,7 @@ const compositeAbilityObject = {
                                 "target": {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
-                                },
-                                "typeFilter": "All"
+                                }
                               },
                               {
                                 "name": "Has Modifier",
@@ -3909,8 +3908,7 @@ const compositeAbilityObject = {
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "typeFilter": "All"
+                    }
                   },
                   {
                     "name": "Is Part Of Group",
@@ -5332,8 +5330,7 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      },
-                      "typeFilter": "All"
+                      }
                     }
                   }
                 ]
@@ -6436,7 +6433,9 @@ const compositeAbilityObject = {
                       "Event": [
                         {
                           "name": "Inject Extra-Turn",
-                          "actionTag": "CyreneGivenMydeimos",
+                          "actionTag": [
+                            "CyreneGivenMydeimos"
+                          ],
                           "skillIndex": 4,
                           "forceAction": true,
                           "target": {
@@ -6686,7 +6685,9 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Inject Extra-Turn",
-                      "actionTag": "CyreneGivenMydeimos",
+                      "actionTag": [
+                        "CyreneGivenMydeimos"
+                      ],
                       "skillIndex": 4,
                       "forceAction": true,
                       "target": {
@@ -7090,7 +7091,9 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Inject Extra-Turn",
-                              "actionTag": "CyreneServant_Ability01_PlayerExtra",
+                              "actionTag": [
+                                "CyreneServant_Ability01_PlayerExtra"
+                              ],
                               "forceAction": true,
                               "abilityName": "Servant_CyreneServant_FormationReset",
                               "castTarget": {
@@ -7692,7 +7695,9 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Inject Extra-Turn",
-                      "actionTag": "CyreneServant_Ability01_PlayerExtra",
+                      "actionTag": [
+                        "CyreneServant_Ability01_PlayerExtra"
+                      ],
                       "forceAction": true,
                       "abilityName": "Servant_CyreneServant_FormationReset",
                       "castTarget": {
@@ -9276,8 +9281,7 @@ const compositeAbilityObject = {
                                 "target": {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
-                                },
-                                "typeFilter": "All"
+                                }
                               }
                             }
                           ]
@@ -10553,11 +10557,11 @@ const compositeAbilityObject = {
                   ]
                 },
                 "MDF_EnergyRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13129) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13129",
+                  "operator": "Variables[0] (UnusedUnderThisBase_13983) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_13983",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_13129"
+                    "UnusedUnderThisBase_13983"
                   ]
                 },
                 "MDF_TargetCount": {
@@ -11894,7 +11898,9 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Inject Extra-Turn",
-                  "actionTag": "CyreneServant_Ability01_Eidolon1",
+                  "actionTag": [
+                    "CyreneServant_Ability01_Eidolon1"
+                  ],
                   "forceAction": true,
                   "abilityName": "Servant_CyreneServant_FormationReset",
                   "conditions": {
