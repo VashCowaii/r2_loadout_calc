@@ -1581,8 +1581,17 @@ const compositeAbilityObject = {
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Ultimate"
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Ultimate"
+                      },
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Skill"
+                      }
+                    ]
                   },
                   "passed": [
                     {

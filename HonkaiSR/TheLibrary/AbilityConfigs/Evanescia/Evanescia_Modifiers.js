@@ -480,18 +480,6 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1401105900\">Evanescia_Ultimate_PrepareInsertAction</a>",
-      "execute": [
-        {
-          "eventTrigger": "When Constructing Modifier"
-        },
-        {
-          "eventTrigger": "When Modifier Destroyed/Removed"
-        }
-      ]
-    },
-    {
-      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__443021726\">Evanescia_ElationMark</a>",
       "stackType": "ReplaceByCaster"
     },

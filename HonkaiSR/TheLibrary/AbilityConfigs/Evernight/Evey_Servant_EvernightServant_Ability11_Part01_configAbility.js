@@ -42,6 +42,21 @@ const configAbility = {
       },
       "passed": [
         {
+          "name": "IF",
+          "conditions": {
+            "name": "Is Part Of",
+            "of": {
+              "name": "Target Name",
+              "target": "{{Hostile Entities(AOE)}}"
+            },
+            "target": {
+              "name": "Target Name",
+              "target": "{{Asat Pramad: 0}} + {{Asat Pramad: 1}} + {{Asat Pramad: 2}}"
+            },
+            "mustBeAlive2": true
+          }
+        },
+        {
           "name": "Trigger Ability",
           "from": {
             "name": "Target Name",
@@ -104,7 +119,41 @@ const configAbility = {
               "compareType": ">=",
               "value2": 5
             }
-          }
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Is Part Of",
+                "of": {
+                  "name": "Target Name",
+                  "target": "{{Hostile Entities(AOE)}}"
+                },
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Asat Pramad: 0}} + {{Asat Pramad: 1}} + {{Asat Pramad: 2}}"
+                },
+                "mustBeAlive2": true
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Is Part Of",
+                "of": {
+                  "name": "Target Name",
+                  "target": "{{Hostile Entities(AOE)}}"
+                },
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Asat Pramad: 0}} + {{Asat Pramad: 1}} + {{Asat Pramad: 2}}"
+                },
+                "mustBeAlive2": true
+              }
+            }
+          ]
         },
         {
           "name": "Trigger Ability",

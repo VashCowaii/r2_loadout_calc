@@ -3814,6 +3814,21 @@ const compositeAbilityObject = {
           "value": 0
         },
         {
+          "name": "IF",
+          "conditions": {
+            "name": "Is Part Of",
+            "of": {
+              "name": "Target Name",
+              "target": "{{Hostile Entities(AOE)}}"
+            },
+            "target": {
+              "name": "Target Name",
+              "target": "{{Asat Pramad: 0}} + {{Asat Pramad: 1}} + {{Asat Pramad: 2}}"
+            },
+            "mustBeAlive2": true
+          }
+        },
+        {
           "name": "Trigger Ability",
           "from": {
             "name": "Target Name",
@@ -5963,11 +5978,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_Conv",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_7168) || Variables[1] (S02_ExtraRatio) || ADD || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_7168 + S02_ExtraRatio)",
+                        "operator": "Variables[0] (UnusedUnderThisBase_7743) || Variables[1] (S02_ExtraRatio) || ADD || RETURN",
+                        "displayLines": "(UnusedUnderThisBase_7743 + S02_ExtraRatio)",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_7168",
+                          "UnusedUnderThisBase_7743",
                           "S02_ExtraRatio"
                         ]
                       }
@@ -6223,11 +6238,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1497104623\">Evernight_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
                   "duration": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_4694) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_4694",
+                    "operator": "Variables[0] (UnusedUnderThisBase_5086) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_5086",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_4694"
+                      "UnusedUnderThisBase_5086"
                     ]
                   },
                   "valuePerStack": {
@@ -6249,11 +6264,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1497104623\">Evernight_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
                   "duration": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_4694) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_4694",
+                    "operator": "Variables[0] (UnusedUnderThisBase_5086) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_5086",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_4694"
+                      "UnusedUnderThisBase_5086"
                     ]
                   },
                   "valuePerStack": {
@@ -9698,6 +9713,21 @@ const compositeAbilityObject = {
           },
           "passed": [
             {
+              "name": "IF",
+              "conditions": {
+                "name": "Is Part Of",
+                "of": {
+                  "name": "Target Name",
+                  "target": "{{Hostile Entities(AOE)}}"
+                },
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Asat Pramad: 0}} + {{Asat Pramad: 1}} + {{Asat Pramad: 2}}"
+                },
+                "mustBeAlive2": true
+              }
+            },
+            {
               "name": "Trigger Ability",
               "from": {
                 "name": "Target Name",
@@ -9760,7 +9790,41 @@ const compositeAbilityObject = {
                   "compareType": ">=",
                   "value2": 5
                 }
-              }
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Hostile Entities(AOE)}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Asat Pramad: 0}} + {{Asat Pramad: 1}} + {{Asat Pramad: 2}}"
+                    },
+                    "mustBeAlive2": true
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Hostile Entities(AOE)}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Asat Pramad: 0}} + {{Asat Pramad: 1}} + {{Asat Pramad: 2}}"
+                    },
+                    "mustBeAlive2": true
+                  }
+                }
+              ]
             },
             {
               "name": "Trigger Ability",
@@ -10657,27 +10721,27 @@ const compositeAbilityObject = {
                       ]
                     },
                     "AbilityP01_P1_AddCount": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_4697) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_4697",
+                      "operator": "Variables[0] (UnusedUnderThisBase_5089) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_5089",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_4697"
+                        "UnusedUnderThisBase_5089"
                       ]
                     },
                     "_Evernight_Extra_Energy": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_4683) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_4683",
+                      "operator": "Variables[0] (UnusedUnderThisBase_5075) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_5075",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_4683"
+                        "UnusedUnderThisBase_5075"
                       ]
                     },
                     "AbilityRank_Eidolon6_P1_Ratio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_6830) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_6830",
+                      "operator": "Variables[0] (UnusedUnderThisBase_7527) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_7527",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_6830"
+                        "UnusedUnderThisBase_7527"
                       ]
                     }
                   },
@@ -10707,11 +10771,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"1710373270\">Evernight_PointB1_Crit</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13245) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13245",
+                              "operator": "Variables[0] (UnusedUnderThisBase_14099) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_14099",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13245"
+                                "UnusedUnderThisBase_14099"
                               ]
                             }
                           }
@@ -10738,11 +10802,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1701896777\">Evernight_Eidolon2_Crit</a>[<span class=\"descriptionNumberColor\">Listen Up, the Slumber Speaks Soft</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13253) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13253",
+                              "operator": "Variables[0] (UnusedUnderThisBase_14107) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_14107",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13253"
+                                "UnusedUnderThisBase_14107"
                               ]
                             }
                           }
@@ -10758,11 +10822,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"2043260870\">Evernight_HPChange</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_4697) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_4697",
+                          "operator": "Variables[0] (UnusedUnderThisBase_5089) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_5089",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_4697"
+                            "UnusedUnderThisBase_5089"
                           ]
                         }
                       }

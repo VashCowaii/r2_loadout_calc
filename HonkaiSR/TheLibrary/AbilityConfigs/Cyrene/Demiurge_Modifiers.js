@@ -1250,8 +1250,7 @@ const configAbility = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  },
-                  "typeFilter": "All"
+                  }
                 }
               }
             ]
@@ -2354,7 +2353,9 @@ const configAbility = {
                   "Event": [
                     {
                       "name": "Inject Extra-Turn",
-                      "actionTag": "CyreneGivenMydeimos",
+                      "actionTag": [
+                        "CyreneGivenMydeimos"
+                      ],
                       "skillIndex": 4,
                       "forceAction": true,
                       "target": {
@@ -2604,7 +2605,9 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Inject Extra-Turn",
-                  "actionTag": "CyreneGivenMydeimos",
+                  "actionTag": [
+                    "CyreneGivenMydeimos"
+                  ],
                   "skillIndex": 4,
                   "forceAction": true,
                   "target": {
@@ -3008,7 +3011,9 @@ const configAbility = {
                         },
                         {
                           "name": "Inject Extra-Turn",
-                          "actionTag": "CyreneServant_Ability01_PlayerExtra",
+                          "actionTag": [
+                            "CyreneServant_Ability01_PlayerExtra"
+                          ],
                           "forceAction": true,
                           "abilityName": "Servant_CyreneServant_FormationReset",
                           "castTarget": {
@@ -3610,7 +3615,9 @@ const configAbility = {
                 },
                 {
                   "name": "Inject Extra-Turn",
-                  "actionTag": "CyreneServant_Ability01_PlayerExtra",
+                  "actionTag": [
+                    "CyreneServant_Ability01_PlayerExtra"
+                  ],
                   "forceAction": true,
                   "abilityName": "Servant_CyreneServant_FormationReset",
                   "castTarget": {
