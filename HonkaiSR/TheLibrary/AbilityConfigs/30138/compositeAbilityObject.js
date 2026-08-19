@@ -2943,8 +2943,7 @@ const compositeAbilityObject = {
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
             "STAT_DOT",
-            "STAT_DOT_Burn",
-            "RemoveWhenCasterDead"
+            "STAT_DOT_Burn"
           ],
           "useEntitySnapshot": true,
           "description": "Takes Fire DMG at the beginning of each turn for a certain number of turns. After being attacked by a Skill, this unit and adjacent targets additionally take DMG.",

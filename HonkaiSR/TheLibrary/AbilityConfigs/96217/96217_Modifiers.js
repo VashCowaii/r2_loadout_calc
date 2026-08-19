@@ -51,11 +51,11 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_1898) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_1898",
+                    "operator": "Variables[0] (UnusedUnderThisBase_2059) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_2059",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_1898"
+                      "UnusedUnderThisBase_2059"
                     ]
                   },
                   "isFixed": "* ERR"
@@ -683,11 +683,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1744828077\">G_MortenaxBlade_BE_ModifyActionDelay</a>",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_1904) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_1904",
+                      "operator": "Variables[0] (UnusedUnderThisBase_2065) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_2065",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_1904"
+                        "UnusedUnderThisBase_2065"
                       ]
                     }
                   }
@@ -1016,28 +1016,28 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1247337710\">G_MortenaxBlade_Debuff_ToEnemy</a>[<span class=\"descriptionNumberColor\">Balefire Bind</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_1877) || RETURN",
-                "displayLines": "UnusedUnderThisBase_1877",
+                "operator": "Variables[0] (UnusedUnderThisBase_2038) || RETURN",
+                "displayLines": "UnusedUnderThisBase_2038",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_1877"
+                  "UnusedUnderThisBase_2038"
                 ]
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_1880) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_1880",
+                  "operator": "Variables[0] (UnusedUnderThisBase_2041) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_2041",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_1880"
+                    "UnusedUnderThisBase_2041"
                   ]
                 },
                 "MDF_PropertyValue2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_1881) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_1881",
+                  "operator": "Variables[0] (UnusedUnderThisBase_3995) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_3995",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_1881"
+                    "UnusedUnderThisBase_3995"
                   ]
                 }
               }
@@ -1262,27 +1262,27 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (UnusedUnderThisBase_6019) || RETURN",
-              "displayLines": "UnusedUnderThisBase_6019",
+              "operator": "Variables[0] (UnusedUnderThisBase_6413) || RETURN",
+              "displayLines": "UnusedUnderThisBase_6413",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_6019"
+                "UnusedUnderThisBase_6413"
               ]
             },
             "MDF_PropertyValue2": {
-              "operator": "Variables[0] (UnusedUnderThisBase_4444) || RETURN",
-              "displayLines": "UnusedUnderThisBase_4444",
+              "operator": "Variables[0] (UnusedUnderThisBase_4836) || RETURN",
+              "displayLines": "UnusedUnderThisBase_4836",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_4444"
+                "UnusedUnderThisBase_4836"
               ]
             },
             "MDF_PropertyValue3": {
-              "operator": "Variables[0] (UnusedUnderThisBase_1902) || RETURN",
-              "displayLines": "UnusedUnderThisBase_1902",
+              "operator": "Variables[0] (UnusedUnderThisBase_2063) || RETURN",
+              "displayLines": "UnusedUnderThisBase_2063",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_1902"
+                "UnusedUnderThisBase_2063"
               ]
             }
           }
@@ -1329,11 +1329,11 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (UnusedUnderThisBase_1884) || RETURN",
-              "displayLines": "UnusedUnderThisBase_1884",
+              "operator": "Variables[0] (UnusedUnderThisBase_2045) || RETURN",
+              "displayLines": "UnusedUnderThisBase_2045",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_1884"
+                "UnusedUnderThisBase_2045"
               ]
             }
           }
@@ -1380,12 +1380,12 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (UnusedUnderThisBase_1884) || Variables[1] (UnusedUnderThisBase_1885) || ADD || RETURN",
-              "displayLines": "(UnusedUnderThisBase_1884 + UnusedUnderThisBase_1885)",
+              "operator": "Variables[0] (UnusedUnderThisBase_2045) || Variables[1] (UnusedUnderThisBase_2046) || ADD || RETURN",
+              "displayLines": "(UnusedUnderThisBase_2045 + UnusedUnderThisBase_2046)",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_1884",
-                "UnusedUnderThisBase_1885"
+                "UnusedUnderThisBase_2045",
+                "UnusedUnderThisBase_2046"
               ]
             }
           }
@@ -1431,19 +1431,19 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (UnusedUnderThisBase_1884) || RETURN",
-              "displayLines": "UnusedUnderThisBase_1884",
+              "operator": "Variables[0] (UnusedUnderThisBase_2045) || RETURN",
+              "displayLines": "UnusedUnderThisBase_2045",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_1884"
+                "UnusedUnderThisBase_2045"
               ]
             },
             "MDF_PropertyValue2": {
-              "operator": "Variables[0] (UnusedUnderThisBase_1882) || RETURN",
-              "displayLines": "UnusedUnderThisBase_1882",
+              "operator": "Variables[0] (UnusedUnderThisBase_2043) || RETURN",
+              "displayLines": "UnusedUnderThisBase_2043",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_1882"
+                "UnusedUnderThisBase_2043"
               ]
             }
           }
@@ -1489,12 +1489,12 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (UnusedUnderThisBase_1884) || Variables[1] (UnusedUnderThisBase_6709) || ADD || RETURN",
-              "displayLines": "(UnusedUnderThisBase_1884 + UnusedUnderThisBase_6709)",
+              "operator": "Variables[0] (UnusedUnderThisBase_2045) || Variables[1] (UnusedUnderThisBase_7103) || ADD || RETURN",
+              "displayLines": "(UnusedUnderThisBase_2045 + UnusedUnderThisBase_7103)",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_1884",
-                "UnusedUnderThisBase_6709"
+                "UnusedUnderThisBase_2045",
+                "UnusedUnderThisBase_7103"
               ]
             }
           }
@@ -1540,13 +1540,13 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (UnusedUnderThisBase_1884) || Variables[1] (UnusedUnderThisBase_6709) || ADD || Variables[2] (UnusedUnderThisBase_1885) || ADD || RETURN",
-              "displayLines": "((UnusedUnderThisBase_1884 + UnusedUnderThisBase_6709) + UnusedUnderThisBase_1885)",
+              "operator": "Variables[0] (UnusedUnderThisBase_2045) || Variables[1] (UnusedUnderThisBase_7103) || ADD || Variables[2] (UnusedUnderThisBase_2046) || ADD || RETURN",
+              "displayLines": "((UnusedUnderThisBase_2045 + UnusedUnderThisBase_7103) + UnusedUnderThisBase_2046)",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_1884",
-                "UnusedUnderThisBase_6709",
-                "UnusedUnderThisBase_1885"
+                "UnusedUnderThisBase_2045",
+                "UnusedUnderThisBase_7103",
+                "UnusedUnderThisBase_2046"
               ]
             }
           }
@@ -1591,20 +1591,20 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (UnusedUnderThisBase_1884) || Variables[1] (UnusedUnderThisBase_6709) || ADD || RETURN",
-              "displayLines": "(UnusedUnderThisBase_1884 + UnusedUnderThisBase_6709)",
+              "operator": "Variables[0] (UnusedUnderThisBase_2045) || Variables[1] (UnusedUnderThisBase_7103) || ADD || RETURN",
+              "displayLines": "(UnusedUnderThisBase_2045 + UnusedUnderThisBase_7103)",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_1884",
-                "UnusedUnderThisBase_6709"
+                "UnusedUnderThisBase_2045",
+                "UnusedUnderThisBase_7103"
               ]
             },
             "MDF_PropertyValue2": {
-              "operator": "Variables[0] (UnusedUnderThisBase_1882) || RETURN",
-              "displayLines": "UnusedUnderThisBase_1882",
+              "operator": "Variables[0] (UnusedUnderThisBase_2043) || RETURN",
+              "displayLines": "UnusedUnderThisBase_2043",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_1882"
+                "UnusedUnderThisBase_2043"
               ]
             }
           }
@@ -1636,11 +1636,11 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (UnusedUnderThisBase_6705) || RETURN",
-              "displayLines": "UnusedUnderThisBase_6705",
+              "operator": "Variables[0] (UnusedUnderThisBase_7099) || RETURN",
+              "displayLines": "UnusedUnderThisBase_7099",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_6705"
+                "UnusedUnderThisBase_7099"
               ]
             }
           }
@@ -1727,11 +1727,11 @@ const configAbility = {
               "eventID": 96217,
               "variables": {
                 "BattleEvent_BaseSpeed": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_3389) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_3389",
+                  "operator": "Variables[0] (UnusedUnderThisBase_3600) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_3600",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_3389"
+                    "UnusedUnderThisBase_3600"
                   ]
                 }
               }
@@ -1745,19 +1745,19 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-19531616\">G_MortenaxBlade_Ability03_Bonus</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_1883) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_1883",
+                  "operator": "Variables[0] (UnusedUnderThisBase_3996) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_3996",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_1883"
+                    "UnusedUnderThisBase_3996"
                   ]
                 },
                 "MDF_PropertyValue2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_1895) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_1895",
+                  "operator": "Variables[0] (UnusedUnderThisBase_4003) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_4003",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_1895"
+                    "UnusedUnderThisBase_4003"
                   ]
                 }
               }
@@ -1843,28 +1843,28 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1247337710\">G_MortenaxBlade_Debuff_ToEnemy</a>[<span class=\"descriptionNumberColor\">Balefire Bind</span>]",
                   "duration": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_1877) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_1877",
+                    "operator": "Variables[0] (UnusedUnderThisBase_2038) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_2038",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_1877"
+                      "UnusedUnderThisBase_2038"
                     ]
                   },
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_1880) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_1880",
+                      "operator": "Variables[0] (UnusedUnderThisBase_2041) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_2041",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_1880"
+                        "UnusedUnderThisBase_2041"
                       ]
                     },
                     "MDF_PropertyValue2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_1881) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_1881",
+                      "operator": "Variables[0] (UnusedUnderThisBase_3995) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_3995",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_1881"
+                        "UnusedUnderThisBase_3995"
                       ]
                     }
                   }
@@ -1994,10 +1994,6 @@ const configAbility = {
               ],
               "whenValueChanges": [
                 {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"349219986\">MortenaxBlade_TrytoPlayAutoBP</a>"
-                },
-                {
                   "name": "Update Displayed Energy Bar",
                   "value": {
                     "operator": "Variables[0] (G_EnergyCount) || RETURN",
@@ -2008,6 +2004,10 @@ const configAbility = {
                     ]
                   },
                   "priorState": "Active"
+                },
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"349219986\">MortenaxBlade_TrytoPlayAutoBP</a>"
                 }
               ]
             }

@@ -344,6 +344,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__735008645\">Enemy_W4_Claymore_01_LocalLegend_BlackMonst</a>",
+          "modifierFlags": [
+            148
+          ],
           "execute": [
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
@@ -403,6 +406,9 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1813832219\">Enemy_W4_Claymore_01_LocalLegend_BlackSummon</a>",
+          "modifierFlags": [
+            148
+          ],
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -739,7 +745,8 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1331602258\">Enemy_W4_Claymore_01_LocalLegend_BlackCurse</a>",
           "modifierFlags": [
             "RemoveWhenCasterDead",
-            "RemoveWhenCasterUnstage"
+            "RemoveWhenCasterUnstage",
+            148
           ],
           "execute": [
             {
@@ -1035,11 +1042,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-883767978\">Monster_W4_Claymore_01_LocalLegend_DamageAdd</a>",
                       "valuePerStack": {
                         "MDF_DamageAdded": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_10628) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_10628",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11232) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11232",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_10628"
+                            "UnusedUnderThisBase_11232"
                           ]
                         }
                       }
