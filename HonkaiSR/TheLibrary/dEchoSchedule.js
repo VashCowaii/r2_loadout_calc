@@ -48,6 +48,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Quantum",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 146.916414,
                       "toughnessBase": 400,
                       "weaknessList": [
                         "Fire",
@@ -62,7 +64,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 2186116.24032
                     }
                   ]
                 ],
@@ -146,6 +149,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 3,
+                      "compEN": 1,
+                      "compACT": 163.24046,
                       "toughnessBase": 200,
                       "weaknessList": [
                         "Ice",
@@ -160,7 +165,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 3700457.1776249995
                     }
                   ]
                 ],
@@ -244,6 +250,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 3,
+                      "compEN": 1,
+                      "compACT": 155.078437,
                       "toughnessBase": [
                         320,
                         384,
@@ -262,7 +270,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 5552583.436785
                     }
                   ]
                 ],
@@ -346,6 +355,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Wind",
                       "hpBars": 3,
+                      "compEN": 1,
+                      "compACT": 163.24046,
                       "toughnessBase": 180,
                       "weaknessList": [
                         "Physical",
@@ -360,7 +371,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 3279174.3604800003
                     }
                   ]
                 ],
@@ -455,6 +467,8 @@ let mocSchedule = [
                       ],
                       "toughnessElement": "Physical",
                       "hpBars": 3,
+                      "compEN": 1,
+                      "compACT": 163.24046,
                       "toughnessBase": [
                         60,
                         60,
@@ -473,7 +487,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 2641557.12372
                     }
                   ]
                 ],
@@ -557,6 +572,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 163.24046,
                       "toughnessBase": 180,
                       "weaknessList": [
                         "Physical",
@@ -571,7 +588,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_Entangle": 1
-                      }
+                      },
+                      "compSUM": 874446.4961280001
                     }
                   ]
                 ],
@@ -667,6 +685,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 3,
+                      "compEN": 1,
+                      "compACT": 163.24046,
                       "toughnessBase": 160,
                       "weaknessList": [
                         "Thunder",
@@ -682,7 +702,8 @@ let mocSchedule = [
                       "resistancesDebuff": {
                         "STAT_CTRL_Frozen": 0.5,
                         "STAT_Entangle": 0.5
-                      }
+                      },
+                      "compSUM": 661148.349069
                     }
                   ]
                 ],
@@ -772,6 +793,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 163.24046,
                       "toughnessBase": [
                         180,
                         159.84
@@ -790,7 +813,8 @@ let mocSchedule = [
                       "resistancesDebuff": {
                         "STAT_CTRL_Frozen": 1,
                         "STAT_Confine": 1
-                      }
+                      },
+                      "compSUM": 504780.31243499997
                     }
                   ]
                 ],
@@ -870,6 +894,8 @@ let mocSchedule = [
                       "delay": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 163.24046,
                       "toughnessBase": null,
                       "weaknessList": [
                         "Physical",
@@ -880,7 +906,8 @@ let mocSchedule = [
                       "resistances": {},
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 455440.8834
                     }
                   ]
                 ],

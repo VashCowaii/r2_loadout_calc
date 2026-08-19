@@ -65,6 +65,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 21.0896592,
                       "toughnessBase": 140,
                       "weaknessList": [
                         "Physical",
@@ -79,7 +81,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 245167.2882
                     }
                   ]
                 ],
@@ -137,6 +140,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 10.5448296,
                       "toughnessBase": 480,
                       "weaknessList": [
                         "Fire",
@@ -151,7 +156,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
-                      }
+                      },
+                      "compSUM": 686468.40696
                     }
                   ]
                 ],
@@ -428,6 +434,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 75.98973600000001,
                       "toughnessBase": 180,
                       "weaknessList": [
                         "Physical",
@@ -442,7 +450,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 883380.681
                     }
                   ]
                 ],
@@ -500,6 +509,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 37.994868000000004,
                       "toughnessBase": 480,
                       "weaknessList": [
                         "Fire",
@@ -514,7 +525,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
-                      }
+                      },
+                      "compSUM": 2473465.9068
                     }
                   ]
                 ],
@@ -791,6 +803,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 207.215428,
                       "toughnessBase": 220,
                       "weaknessList": [
                         "Physical",
@@ -805,7 +819,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 2408879.3505
                     }
                   ]
                 ],
@@ -863,6 +878,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 81.40606100000001,
                       "toughnessBase": 480,
                       "weaknessList": [
                         "Fire",
@@ -877,7 +894,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
-                      }
+                      },
+                      "compSUM": 5299534.5711
                     }
                   ]
                 ],
@@ -1157,6 +1175,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 1608.4360279999999,
                       "toughnessBase": 300,
                       "weaknessList": [
                         "Physical",
@@ -1171,7 +1191,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 18698068.8255
                     }
                   ]
                 ],
@@ -1229,6 +1250,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 449.41594899999996,
                       "toughnessBase": 480,
                       "weaknessList": [
                         "Fire",
@@ -1243,7 +1266,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
-                      }
+                      },
+                      "compSUM": 29256978.2799
                     }
                   ]
                 ],
@@ -1610,6 +1634,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 1537.4756149999998,
                       "toughnessBase": [
                         190,
                         190
@@ -1618,7 +1644,8 @@ let mocSchedule = [
                       "resistances": {},
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 60053797.5219
                     }
                   ]
                 ],
@@ -1916,6 +1943,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 21.0896592,
                       "toughnessBase": 140,
                       "weaknessList": [
                         "Physical",
@@ -1930,7 +1959,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 245167.2882
                     }
                   ]
                 ],
@@ -1988,6 +2018,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 10.5448296,
                       "toughnessBase": 480,
                       "weaknessList": [
                         "Fire",
@@ -2002,7 +2034,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
-                      }
+                      },
+                      "compSUM": 686468.40696
                     }
                   ]
                 ],
@@ -2279,6 +2312,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 75.98973600000001,
                       "toughnessBase": 180,
                       "weaknessList": [
                         "Physical",
@@ -2293,7 +2328,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 883380.681
                     }
                   ]
                 ],
@@ -2351,6 +2387,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 37.994868000000004,
                       "toughnessBase": 480,
                       "weaknessList": [
                         "Fire",
@@ -2365,7 +2403,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
-                      }
+                      },
+                      "compSUM": 2473465.9068
                     }
                   ]
                 ],
@@ -2642,6 +2681,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 207.215428,
                       "toughnessBase": 220,
                       "weaknessList": [
                         "Physical",
@@ -2656,7 +2697,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 2408879.3505
                     }
                   ]
                 ],
@@ -2714,6 +2756,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 81.40606100000001,
                       "toughnessBase": 480,
                       "weaknessList": [
                         "Fire",
@@ -2728,7 +2772,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
-                      }
+                      },
+                      "compSUM": 5299534.5711
                     }
                   ]
                 ],
@@ -3008,6 +3053,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 1608.4360279999999,
                       "toughnessBase": 300,
                       "weaknessList": [
                         "Physical",
@@ -3022,7 +3069,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 18698068.8255
                     }
                   ]
                 ],
@@ -3080,6 +3128,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 449.41594899999996,
                       "toughnessBase": 480,
                       "weaknessList": [
                         "Fire",
@@ -3094,7 +3144,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
-                      }
+                      },
+                      "compSUM": 29256978.2799
                     }
                   ]
                 ],
@@ -3461,6 +3512,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 1537.4756149999998,
                       "toughnessBase": [
                         190,
                         190
@@ -3469,7 +3522,8 @@ let mocSchedule = [
                       "resistances": {},
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 60053797.5219
                     }
                   ]
                 ],
@@ -3768,6 +3822,8 @@ let mocSchedule = [
                       "toughnessBars": 8,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 10.5448296,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Physical",
@@ -3782,7 +3838,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.75
-                      }
+                      },
+                      "compSUM": 588401.49168
                     }
                   ]
                 ],
@@ -3841,6 +3898,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 21.0896592,
                       "toughnessBase": 60,
                       "weaknessList": [
                         "Fire",
@@ -3855,7 +3914,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 245167.2882
                     },
                     {
                       "name": "Gepard",
@@ -3873,6 +3933,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 21.0896592,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Thunder",
@@ -3887,7 +3949,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 58840.149168
                     }
                   ]
                 ],
@@ -4144,6 +4207,8 @@ let mocSchedule = [
                       "toughnessBars": 8,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 37.994868000000004,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Physical",
@@ -4158,7 +4223,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.75
-                      }
+                      },
+                      "compSUM": 2120113.6344
                     }
                   ]
                 ],
@@ -4217,6 +4283,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 75.98973600000001,
                       "toughnessBase": 70,
                       "weaknessList": [
                         "Fire",
@@ -4231,7 +4299,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 883380.681
                     },
                     {
                       "name": "Gepard",
@@ -4249,6 +4318,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 75.98973600000001,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Thunder",
@@ -4263,7 +4334,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 212011.36344
                     }
                   ]
                 ],
@@ -4520,6 +4592,8 @@ let mocSchedule = [
                       "toughnessBars": 8,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1.1,
+                      "compACT": 81.40606100000001,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Physical",
@@ -4534,7 +4608,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.75
-                      }
+                      },
+                      "compSUM": 4996704.02418
                     }
                   ]
                 ],
@@ -4593,6 +4668,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 207.215428,
                       "toughnessBase": 80,
                       "weaknessList": [
                         "Fire",
@@ -4607,7 +4684,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 2408879.3505
                     },
                     {
                       "name": "Gepard",
@@ -4625,6 +4703,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 207.215428,
                       "toughnessBase": 150,
                       "weaknessList": [
                         "Thunder",
@@ -4639,7 +4719,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 578131.04412
                     }
                   ]
                 ],
@@ -4899,6 +4980,8 @@ let mocSchedule = [
                       "toughnessBars": 8,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1.1,
+                      "compACT": 236.53471,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Physical",
@@ -4913,7 +4996,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.75
-                      }
+                      },
+                      "compSUM": 14518500.4998
                     }
                   ]
                 ],
@@ -4972,6 +5056,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 1182.67355,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Fire",
@@ -4986,7 +5072,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 13748580.01875
                     },
                     {
                       "name": "Gepard",
@@ -5004,6 +5091,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 1182.67355,
                       "toughnessBase": 200,
                       "weaknessList": [
                         "Thunder",
@@ -5018,7 +5107,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 3299659.2045
                     }
                   ]
                 ],
@@ -5355,6 +5445,8 @@ let mocSchedule = [
                       "toughnessBars": 2,
                       "toughnessElement": "Physical",
                       "hpBars": 2,
+                      "compEN": 1.1,
+                      "compACT": 662.2971879999999,
                       "toughnessBase": 300,
                       "weaknessList": [
                         "Physical",
@@ -5371,7 +5463,8 @@ let mocSchedule = [
                         "STAT_CTRL_Frozen": 0.75,
                         "STAT_Confine": 0.75,
                         "STAT_Entangle": 0.75
-                      }
+                      },
+                      "compSUM": 13550600.46648
                     }
                   ]
                 ],
@@ -5662,6 +5755,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 10.5448296,
                       "toughnessBase": 440,
                       "weaknessList": [
                         "Physical",
@@ -5676,7 +5771,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
-                      }
+                      },
+                      "compSUM": 431494.427232
                     }
                   ]
                 ],
@@ -5737,6 +5833,8 @@ let mocSchedule = [
                       "toughnessBars": 3,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 15.8172444,
                       "toughnessBase": 200,
                       "weaknessList": [
                         "Physical",
@@ -5751,7 +5849,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_Entangle": 1
-                      }
+                      },
+                      "compSUM": 470721.193344
                     }
                   ]
                 ],
@@ -6000,6 +6099,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 37.994868000000004,
                       "toughnessBase": 440,
                       "weaknessList": [
                         "Physical",
@@ -6014,7 +6115,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
-                      }
+                      },
+                      "compSUM": 1554749.99856
                     }
                   ]
                 ],
@@ -6075,6 +6177,8 @@ let mocSchedule = [
                       "toughnessBars": 3,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 75.98973600000001,
                       "toughnessBase": 200,
                       "weaknessList": [
                         "Physical",
@@ -6089,7 +6193,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_Entangle": 1
-                      }
+                      },
+                      "compSUM": 2261454.54336
                     }
                   ]
                 ],
@@ -6338,6 +6443,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 96.20716300000001,
                       "toughnessBase": 440,
                       "weaknessList": [
                         "Physical",
@@ -6352,7 +6459,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
-                      }
+                      },
+                      "compSUM": 3936797.10996
                     }
                   ]
                 ],
@@ -6413,6 +6521,8 @@ let mocSchedule = [
                       "toughnessBars": 3,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 236.817632,
                       "toughnessBase": 200,
                       "weaknessList": [
                         "Physical",
@@ -6427,7 +6537,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_Entangle": 1
-                      }
+                      },
+                      "compSUM": 7047692.72832
                     }
                   ]
                 ],
@@ -6676,6 +6787,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 709.6041299999999,
                       "toughnessBase": 440,
                       "weaknessList": [
                         "Physical",
@@ -6690,7 +6803,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
-                      }
+                      },
+                      "compSUM": 29037000.9996
                     }
                   ]
                 ],
@@ -6751,6 +6865,8 @@ let mocSchedule = [
                       "toughnessBars": 3,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 946.13884,
                       "toughnessBase": 240,
                       "weaknessList": [
                         "Physical",
@@ -6765,7 +6881,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_Entangle": 1
-                      }
+                      },
+                      "compSUM": 28157091.8784
                     }
                   ]
                 ],
@@ -7119,6 +7236,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 10.5448296,
                       "toughnessBase": 480,
                       "weaknessList": [
                         "Fire",
@@ -7133,7 +7252,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
-                      }
+                      },
+                      "compSUM": 686468.40696
                     }
                   ]
                 ],
@@ -7195,6 +7315,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Wind",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 13.181037,
                       "toughnessBase": 280,
                       "weaknessList": [
                         "Physical",
@@ -7209,7 +7331,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 943894.05957
                     }
                   ]
                 ],
@@ -7484,6 +7607,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 37.994868000000004,
                       "toughnessBase": 480,
                       "weaknessList": [
                         "Fire",
@@ -7498,7 +7623,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
-                      }
+                      },
+                      "compSUM": 2473465.9068
                     }
                   ]
                 ],
@@ -7560,6 +7686,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Wind",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 47.493585,
                       "toughnessBase": 280,
                       "weaknessList": [
                         "Physical",
@@ -7574,7 +7702,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 3401015.62185
                     }
                   ]
                 ],
@@ -7849,6 +7978,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 81.40606100000001,
                       "toughnessBase": 480,
                       "weaknessList": [
                         "Fire",
@@ -7863,7 +7994,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
-                      }
+                      },
+                      "compSUM": 5299534.5711
                     }
                   ]
                 ],
@@ -7925,6 +8057,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Wind",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 133.20991800000002,
                       "toughnessBase": 280,
                       "weaknessList": [
                         "Physical",
@@ -7939,7 +8073,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 9539162.22798
                     }
                   ]
                 ],
@@ -8214,6 +8349,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 248.3614455,
                       "toughnessBase": 480,
                       "weaknessList": [
                         "Fire",
@@ -8228,7 +8365,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
-                      }
+                      },
+                      "compSUM": 16168330.10205
                     }
                   ]
                 ],
@@ -8290,6 +8428,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Wind",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 331.14859399999995,
                       "toughnessBase": 280,
                       "weaknessList": [
                         "Physical",
@@ -8304,7 +8444,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 23713550.81634
                     }
                   ]
                 ],
@@ -8682,6 +8823,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Thunder",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 15.8172444,
                       "toughnessBase": 300,
                       "weaknessList": [
                         "Physical",
@@ -8696,7 +8839,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL_Frozen": 0.75
-                      }
+                      },
+                      "compSUM": 228005.578026
                     }
                   ]
                 ],
@@ -8754,6 +8898,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 10.5448296,
                       "toughnessBase": 800,
                       "weaknessList": [
                         "Ice",
@@ -8768,7 +8914,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
-                      }
+                      },
+                      "compSUM": 980669.1528
                     }
                   ]
                 ],
@@ -9043,6 +9190,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Thunder",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 56.992302,
                       "toughnessBase": 300,
                       "weaknessList": [
                         "Physical",
@@ -9057,7 +9206,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL_Frozen": 0.75
-                      }
+                      },
+                      "compSUM": 821544.03333
                     }
                   ]
                 ],
@@ -9115,6 +9265,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 37.994868000000004,
                       "toughnessBase": 800,
                       "weaknessList": [
                         "Ice",
@@ -9129,7 +9281,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
-                      }
+                      },
+                      "compSUM": 3533522.724
                     }
                   ]
                 ],
@@ -9404,6 +9557,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Thunder",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 159.85190160000002,
                       "toughnessBase": 300,
                       "weaknessList": [
                         "Physical",
@@ -9418,7 +9573,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL_Frozen": 0.75
-                      }
+                      },
+                      "compSUM": 2304265.161564
                     }
                   ]
                 ],
@@ -9476,6 +9632,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 96.20716300000001,
                       "toughnessBase": 800,
                       "weaknessList": [
                         "Ice",
@@ -9490,7 +9648,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
-                      }
+                      },
+                      "compSUM": 8947266.159
                     }
                   ]
                 ],
@@ -9765,6 +9924,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Thunder",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 591.336775,
                       "toughnessBase": 300,
                       "weaknessList": [
                         "Physical",
@@ -9779,7 +9940,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL_Frozen": 0.75
-                      }
+                      },
+                      "compSUM": 8524119.611625
                     }
                   ]
                 ],
@@ -9837,6 +9999,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 283.84165199999995,
                       "toughnessBase": 800,
                       "weaknessList": [
                         "Ice",
@@ -9851,7 +10015,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
-                      }
+                      },
+                      "compSUM": 26397273.636
                     }
                   ]
                 ],
@@ -10232,6 +10397,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 21.0896592,
                       "toughnessBase": 140,
                       "weaknessList": [
                         "Physical",
@@ -10246,7 +10413,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 245167.2882
                     }
                   ]
                 ],
@@ -10304,6 +10472,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 21.0896592,
                       "toughnessBase": [
                         130,
                         130
@@ -10312,7 +10482,8 @@ let mocSchedule = [
                       "resistances": {},
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 823762.088352
                     }
                   ]
                 ],
@@ -10563,6 +10734,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 75.98973600000001,
                       "toughnessBase": 180,
                       "weaknessList": [
                         "Physical",
@@ -10577,7 +10750,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 883380.681
                     }
                   ]
                 ],
@@ -10635,6 +10809,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 85.488453,
                       "toughnessBase": [
                         130,
                         130
@@ -10643,7 +10819,8 @@ let mocSchedule = [
                       "resistances": {},
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 3339178.97418
                     }
                   ]
                 ],
@@ -10894,6 +11071,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 207.215428,
                       "toughnessBase": 220,
                       "weaknessList": [
                         "Physical",
@@ -10908,7 +11087,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 2408879.3505
                     }
                   ]
                 ],
@@ -10966,6 +11146,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 296.02204,
                       "toughnessBase": [
                         130,
                         130
@@ -10974,7 +11156,8 @@ let mocSchedule = [
                       "resistances": {},
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 11562620.8824
                     }
                   ]
                 ],
@@ -11228,6 +11411,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 1040.752724,
                       "toughnessBase": 300,
                       "weaknessList": [
                         "Physical",
@@ -11242,7 +11427,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 12098750.4165
                     }
                   ]
                 ],
@@ -11300,6 +11486,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 756.911072,
                       "toughnessBase": [
                         190,
                         190
@@ -11308,7 +11496,8 @@ let mocSchedule = [
                       "resistances": {},
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 29564946.47232
                     }
                   ]
                 ],
@@ -11668,6 +11857,8 @@ let mocSchedule = [
                       "toughnessBars": 3,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 15.8172444,
                       "toughnessBase": 200,
                       "weaknessList": [
                         "Physical",
@@ -11682,7 +11873,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_Entangle": 1
-                      }
+                      },
+                      "compSUM": 470721.193344
                     }
                   ]
                 ],
@@ -11740,6 +11932,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 21.0896592,
                       "toughnessBase": 380,
                       "weaknessList": [
                         "Fire",
@@ -11754,7 +11948,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.75
-                      }
+                      },
+                      "compSUM": 313814.128896
                     }
                   ]
                 ],
@@ -12039,6 +12234,8 @@ let mocSchedule = [
                       "toughnessBars": 3,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 75.98973600000001,
                       "toughnessBase": 200,
                       "weaknessList": [
                         "Physical",
@@ -12053,7 +12250,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_Entangle": 1
-                      }
+                      },
+                      "compSUM": 2261454.54336
                     }
                   ]
                 ],
@@ -12111,6 +12309,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 85.488453,
                       "toughnessBase": 380,
                       "weaknessList": [
                         "Fire",
@@ -12125,7 +12325,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.75
-                      }
+                      },
+                      "compSUM": 1272068.18064
                     }
                   ]
                 ],
@@ -12410,6 +12611,8 @@ let mocSchedule = [
                       "toughnessBars": 3,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 236.817632,
                       "toughnessBase": 200,
                       "weaknessList": [
                         "Physical",
@@ -12424,7 +12627,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_Entangle": 1
-                      }
+                      },
+                      "compSUM": 7047692.72832
                     }
                   ]
                 ],
@@ -12482,6 +12686,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 296.02204,
                       "toughnessBase": 380,
                       "weaknessList": [
                         "Fire",
@@ -12496,7 +12702,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.75
-                      }
+                      },
+                      "compSUM": 4404807.9552
                     }
                   ]
                 ],
@@ -12781,6 +12988,8 @@ let mocSchedule = [
                       "toughnessBars": 3,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 567.6833039999999,
                       "toughnessBase": 240,
                       "weaknessList": [
                         "Physical",
@@ -12795,7 +13004,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_Entangle": 1
-                      }
+                      },
+                      "compSUM": 16894255.12704
                     }
                   ]
                 ],
@@ -12853,6 +13063,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 638.643717,
                       "toughnessBase": 380,
                       "weaknessList": [
                         "Fire",
@@ -12867,7 +13079,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.75
-                      }
+                      },
+                      "compSUM": 9503018.50896
                     }
                   ]
                 ],
@@ -13255,6 +13468,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 21.0896592,
                       "toughnessBase": 60,
                       "weaknessList": [
                         "Fire",
@@ -13269,7 +13484,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 245167.2882
                     },
                     {
                       "name": "Gepard",
@@ -13287,6 +13503,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 21.0896592,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Thunder",
@@ -13301,7 +13519,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 58840.149168
                     }
                   ]
                 ],
@@ -13359,6 +13578,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 10.5448296,
                       "toughnessBase": 800,
                       "weaknessList": [
                         "Ice",
@@ -13373,7 +13594,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
-                      }
+                      },
+                      "compSUM": 980669.1528
                     }
                   ]
                 ],
@@ -13634,6 +13856,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 75.98973600000001,
                       "toughnessBase": 70,
                       "weaknessList": [
                         "Fire",
@@ -13648,7 +13872,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 883380.681
                     },
                     {
                       "name": "Gepard",
@@ -13666,6 +13891,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 75.98973600000001,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Thunder",
@@ -13680,7 +13907,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 212011.36344
                     }
                   ]
                 ],
@@ -13738,6 +13966,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 37.994868000000004,
                       "toughnessBase": 800,
                       "weaknessList": [
                         "Ice",
@@ -13752,7 +13982,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
-                      }
+                      },
+                      "compSUM": 3533522.724
                     }
                   ]
                 ],
@@ -14013,6 +14244,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 207.215428,
                       "toughnessBase": 80,
                       "weaknessList": [
                         "Fire",
@@ -14027,7 +14260,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 2408879.3505
                     },
                     {
                       "name": "Gepard",
@@ -14045,6 +14279,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 207.215428,
                       "toughnessBase": 150,
                       "weaknessList": [
                         "Thunder",
@@ -14059,7 +14295,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 578131.04412
                     }
                   ]
                 ],
@@ -14117,6 +14354,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 96.20716300000001,
                       "toughnessBase": 800,
                       "weaknessList": [
                         "Ice",
@@ -14131,7 +14370,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
-                      }
+                      },
+                      "compSUM": 8947266.159
                     }
                   ]
                 ],
@@ -14395,6 +14635,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 638.643717,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Fire",
@@ -14409,7 +14651,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 7424233.210125
                     },
                     {
                       "name": "Gepard",
@@ -14427,6 +14670,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 638.643717,
                       "toughnessBase": 200,
                       "weaknessList": [
                         "Thunder",
@@ -14441,7 +14686,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 1781815.97043
                     }
                   ]
                 ],
@@ -14499,6 +14745,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 248.3614455,
                       "toughnessBase": 800,
                       "weaknessList": [
                         "Ice",
@@ -14513,7 +14761,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
-                      }
+                      },
+                      "compSUM": 23097614.4315
                     }
                   ]
                 ],
@@ -14882,6 +15131,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Thunder",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 13.181037,
                       "toughnessBase": 380,
                       "weaknessList": [
                         "Physical",
@@ -14898,7 +15149,8 @@ let mocSchedule = [
                         "STAT_CTRL_Frozen": 0.75,
                         "STAT_Confine": 0.75,
                         "STAT_Entangle": 0.75
-                      }
+                      },
+                      "compSUM": 269684.01702
                     }
                   ]
                 ],
@@ -14959,6 +15211,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Wind",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 13.181037,
                       "toughnessBase": 280,
                       "weaknessList": [
                         "Physical",
@@ -14973,7 +15227,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 943894.05957
                     }
                   ]
                 ],
@@ -15230,6 +15485,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Thunder",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 47.493585,
                       "toughnessBase": 380,
                       "weaknessList": [
                         "Physical",
@@ -15246,7 +15503,8 @@ let mocSchedule = [
                         "STAT_CTRL_Frozen": 0.75,
                         "STAT_Confine": 0.75,
                         "STAT_Entangle": 0.75
-                      }
+                      },
+                      "compSUM": 971718.7491
                     }
                   ]
                 ],
@@ -15307,6 +15565,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Wind",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 47.493585,
                       "toughnessBase": 280,
                       "weaknessList": [
                         "Physical",
@@ -15321,7 +15581,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 3401015.62185
                     }
                   ]
                 ],
@@ -15578,6 +15839,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Thunder",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 133.20991800000002,
                       "toughnessBase": 380,
                       "weaknessList": [
                         "Physical",
@@ -15594,7 +15857,8 @@ let mocSchedule = [
                         "STAT_CTRL_Frozen": 0.75,
                         "STAT_Confine": 0.75,
                         "STAT_Entangle": 0.75
-                      }
+                      },
+                      "compSUM": 2725474.92228
                     }
                   ]
                 ],
@@ -15655,6 +15919,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Wind",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 133.20991800000002,
                       "toughnessBase": 280,
                       "weaknessList": [
                         "Physical",
@@ -15669,7 +15935,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 9539162.22798
                     }
                   ]
                 ],
@@ -15926,6 +16193,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Thunder",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 331.14859399999995,
                       "toughnessBase": 380,
                       "weaknessList": [
                         "Physical",
@@ -15942,7 +16211,8 @@ let mocSchedule = [
                         "STAT_CTRL_Frozen": 0.75,
                         "STAT_Confine": 0.75,
                         "STAT_Entangle": 0.75
-                      }
+                      },
+                      "compSUM": 6775300.23324
                     }
                   ]
                 ],
@@ -16003,6 +16273,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Wind",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 236.53471,
                       "toughnessBase": 280,
                       "weaknessList": [
                         "Physical",
@@ -16017,7 +16289,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 16938250.5831
                     }
                   ]
                 ],
@@ -16377,6 +16650,8 @@ let mocSchedule = [
                       "toughnessBars": 2,
                       "toughnessElement": "Physical",
                       "hpBars": 2,
+                      "compEN": 1.1,
+                      "compACT": 13.181037,
                       "toughnessBase": 300,
                       "weaknessList": [
                         "Physical",
@@ -16393,7 +16668,8 @@ let mocSchedule = [
                         "STAT_CTRL_Frozen": 0.75,
                         "STAT_Confine": 0.75,
                         "STAT_Entangle": 0.75
-                      }
+                      },
+                      "compSUM": 269684.01702
                     }
                   ]
                 ],
@@ -16450,6 +16726,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 15.8172444,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Physical",
@@ -16464,7 +16742,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 242715.615318
                     }
                   ]
                 ],
@@ -16695,6 +16974,8 @@ let mocSchedule = [
                       "toughnessBars": 2,
                       "toughnessElement": "Physical",
                       "hpBars": 2,
+                      "compEN": 1.1,
+                      "compACT": 47.493585,
                       "toughnessBase": 300,
                       "weaknessList": [
                         "Physical",
@@ -16711,7 +16992,8 @@ let mocSchedule = [
                         "STAT_CTRL_Frozen": 0.75,
                         "STAT_Confine": 0.75,
                         "STAT_Entangle": 0.75
-                      }
+                      },
+                      "compSUM": 971718.7491
                     }
                   ]
                 ],
@@ -16768,6 +17050,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 56.992302,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Physical",
@@ -16782,7 +17066,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 874546.87419
                     }
                   ]
                 ],
@@ -17013,6 +17298,8 @@ let mocSchedule = [
                       "toughnessBars": 2,
                       "toughnessElement": "Physical",
                       "hpBars": 2,
+                      "compEN": 1.1,
+                      "compACT": 133.20991800000002,
                       "toughnessBase": 300,
                       "weaknessList": [
                         "Physical",
@@ -17029,7 +17316,8 @@ let mocSchedule = [
                         "STAT_CTRL_Frozen": 0.75,
                         "STAT_Confine": 0.75,
                         "STAT_Entangle": 0.75
-                      }
+                      },
+                      "compSUM": 2725474.92228
                     }
                   ]
                 ],
@@ -17086,6 +17374,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 159.85190160000002,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Physical",
@@ -17100,7 +17390,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 2452927.430052
                     }
                   ]
                 ],
@@ -17331,6 +17622,8 @@ let mocSchedule = [
                       "toughnessBars": 2,
                       "toughnessElement": "Physical",
                       "hpBars": 2,
+                      "compEN": 1.1,
+                      "compACT": 236.53471,
                       "toughnessBase": 300,
                       "weaknessList": [
                         "Physical",
@@ -17347,7 +17640,8 @@ let mocSchedule = [
                         "STAT_CTRL_Frozen": 0.75,
                         "STAT_Confine": 0.75,
                         "STAT_Entangle": 0.75
-                      }
+                      },
+                      "compSUM": 4839500.1666
                     }
                   ]
                 ],
@@ -17404,6 +17698,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 496.722891,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Physical",
@@ -17418,7 +17714,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 7622212.762395
                     }
                   ]
                 ],
@@ -17751,6 +18048,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 17.1353481,
                       "toughnessBase": 60,
                       "weaknessList": [
                         "Fire",
@@ -17765,7 +18064,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 199198.4216626
                     },
                     {
                       "name": "Gepard",
@@ -17783,6 +18083,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 17.1353481,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Thunder",
@@ -17797,7 +18099,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 47807.621199
                     }
                   ]
                 ],
@@ -17854,6 +18157,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Thunder",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 13.181037,
                       "toughnessBase": 300,
                       "weaknessList": [
                         "Physical",
@@ -17868,7 +18173,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL_Frozen": 0.75
-                      }
+                      },
+                      "compSUM": 190004.648355
                     }
                   ]
                 ],
@@ -18161,6 +18467,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 61.74166050000001,
                       "toughnessBase": 70,
                       "weaknessList": [
                         "Fire",
@@ -18175,7 +18483,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 717746.8033126
                     },
                     {
                       "name": "Gepard",
@@ -18193,6 +18502,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 61.74166050000001,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Thunder",
@@ -18207,7 +18518,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 172259.232795
                     }
                   ]
                 ],
@@ -18264,6 +18576,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Thunder",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 47.493585,
                       "toughnessBase": 300,
                       "weaknessList": [
                         "Physical",
@@ -18278,7 +18592,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL_Frozen": 0.75
-                      }
+                      },
+                      "compSUM": 684620.027775
                     }
                   ]
                 ],
@@ -18571,6 +18886,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 173.1728934,
                       "toughnessBase": 80,
                       "weaknessList": [
                         "Fire",
@@ -18585,7 +18902,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 2013134.885775
                     },
                     {
                       "name": "Gepard",
@@ -18603,6 +18921,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 173.1728934,
                       "toughnessBase": 150,
                       "weaknessList": [
                         "Thunder",
@@ -18617,7 +18937,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 483152.372586
                     }
                   ]
                 ],
@@ -18674,6 +18995,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Thunder",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 133.20991800000002,
                       "toughnessBase": 300,
                       "weaknessList": [
                         "Physical",
@@ -18688,7 +19011,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL_Frozen": 0.75
-                      }
+                      },
+                      "compSUM": 1920220.96797
                     }
                   ]
                 ],
@@ -18984,6 +19308,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 496.722891,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Fire",
@@ -18998,7 +19324,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 5774403.607875
                     },
                     {
                       "name": "Gepard",
@@ -19016,6 +19343,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 496.722891,
                       "toughnessBase": 200,
                       "weaknessList": [
                         "Thunder",
@@ -19030,7 +19359,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 1385856.86589
                     }
                   ]
                 ],
@@ -19087,6 +19417,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Thunder",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 425.762478,
                       "toughnessBase": 300,
                       "weaknessList": [
                         "Physical",
@@ -19101,7 +19433,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL_Frozen": 0.75
-                      }
+                      },
+                      "compSUM": 6137366.12037
                     }
                   ]
                 ],
@@ -19506,6 +19839,8 @@ let mocSchedule = [
                       "toughnessBars": 3,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 13.181037,
                       "toughnessBase": 200,
                       "weaknessList": [
                         "Physical",
@@ -19520,7 +19855,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_Entangle": 1
-                      }
+                      },
+                      "compSUM": 392267.66112
                     }
                   ]
                 ],
@@ -19578,6 +19914,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Thunder",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 13.181037,
                       "toughnessBase": 380,
                       "weaknessList": [
                         "Physical",
@@ -19594,7 +19932,8 @@ let mocSchedule = [
                         "STAT_CTRL_Frozen": 0.75,
                         "STAT_Confine": 0.75,
                         "STAT_Entangle": 0.75
-                      }
+                      },
+                      "compSUM": 269684.01702
                     }
                   ]
                 ],
@@ -19863,6 +20202,8 @@ let mocSchedule = [
                       "toughnessBars": 3,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 47.493585,
                       "toughnessBase": 200,
                       "weaknessList": [
                         "Physical",
@@ -19877,7 +20218,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_Entangle": 1
-                      }
+                      },
+                      "compSUM": 1413409.0896
                     }
                   ]
                 ],
@@ -19935,6 +20277,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Thunder",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 47.493585,
                       "toughnessBase": 380,
                       "weaknessList": [
                         "Physical",
@@ -19951,7 +20295,8 @@ let mocSchedule = [
                         "STAT_CTRL_Frozen": 0.75,
                         "STAT_Confine": 0.75,
                         "STAT_Entangle": 0.75
-                      }
+                      },
+                      "compSUM": 971718.7491
                     }
                   ]
                 ],
@@ -20220,6 +20565,8 @@ let mocSchedule = [
                       "toughnessBars": 3,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 133.20991800000002,
                       "toughnessBase": 200,
                       "weaknessList": [
                         "Physical",
@@ -20234,7 +20581,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_Entangle": 1
-                      }
+                      },
+                      "compSUM": 3964327.15968
                     }
                   ]
                 ],
@@ -20292,6 +20640,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Thunder",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 133.20991800000002,
                       "toughnessBase": 380,
                       "weaknessList": [
                         "Physical",
@@ -20308,7 +20658,8 @@ let mocSchedule = [
                         "STAT_CTRL_Frozen": 0.75,
                         "STAT_Confine": 0.75,
                         "STAT_Entangle": 0.75
-                      }
+                      },
+                      "compSUM": 2725474.92228
                     }
                   ]
                 ],
@@ -20577,6 +20928,8 @@ let mocSchedule = [
                       "toughnessBars": 3,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 283.84165199999995,
                       "toughnessBase": 240,
                       "weaknessList": [
                         "Physical",
@@ -20591,7 +20944,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_Entangle": 1
-                      }
+                      },
+                      "compSUM": 8447127.56352
                     }
                   ]
                 ],
@@ -20649,6 +21003,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Thunder",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 236.53471,
                       "toughnessBase": 380,
                       "weaknessList": [
                         "Physical",
@@ -20665,7 +21021,8 @@ let mocSchedule = [
                         "STAT_CTRL_Frozen": 0.75,
                         "STAT_Confine": 0.75,
                         "STAT_Entangle": 0.75
-                      }
+                      },
+                      "compSUM": 4839500.1666
                     }
                   ]
                 ],
@@ -21037,6 +21394,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 15.8172444,
                       "toughnessBase": 170,
                       "weaknessList": [
                         "Physical",
@@ -21051,7 +21410,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.75
-                      }
+                      },
+                      "compSUM": 257425.65261
                     }
                   ]
                 ],
@@ -21109,6 +21469,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 13.181037,
                       "toughnessBase": [
                         130,
                         130
@@ -21117,7 +21479,8 @@ let mocSchedule = [
                       "resistances": {},
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 514851.30522
                     }
                   ]
                 ],
@@ -21357,6 +21720,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 56.992302,
                       "toughnessBase": 170,
                       "weaknessList": [
                         "Physical",
@@ -21371,7 +21736,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.75
-                      }
+                      },
+                      "compSUM": 927549.71505
                     }
                   ]
                 ],
@@ -21429,6 +21795,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 47.493585,
                       "toughnessBase": [
                         130,
                         130
@@ -21437,7 +21805,8 @@ let mocSchedule = [
                       "resistances": {},
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 1855099.4301
                     }
                   ]
                 ],
@@ -21677,6 +22046,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 159.85190160000002,
                       "toughnessBase": 170,
                       "weaknessList": [
                         "Physical",
@@ -21691,7 +22062,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.75
-                      }
+                      },
+                      "compSUM": 2601589.69854
                     }
                   ]
                 ],
@@ -21749,6 +22121,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 133.20991800000002,
                       "toughnessBase": [
                         130,
                         130
@@ -21757,7 +22131,8 @@ let mocSchedule = [
                       "resistances": {},
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 5203179.39708
                     }
                   ]
                 ],
@@ -21997,6 +22372,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 307.495123,
                       "toughnessBase": 190,
                       "weaknessList": [
                         "Physical",
@@ -22011,7 +22388,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.75
-                      }
+                      },
+                      "compSUM": 5004483.126825
                     }
                   ]
                 ],
@@ -22069,6 +22447,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 283.84165199999995,
                       "toughnessBase": [
                         190,
                         190
@@ -22077,7 +22457,8 @@ let mocSchedule = [
                       "resistances": {},
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 11086854.92712
                     }
                   ]
                 ],
@@ -22422,6 +22803,8 @@ let mocSchedule = [
                       "toughnessBars": 3,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 13.181037,
                       "toughnessBase": 200,
                       "weaknessList": [
                         "Physical",
@@ -22436,7 +22819,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_Entangle": 1
-                      }
+                      },
+                      "compSUM": 392267.66112
                     }
                   ]
                 ],
@@ -22494,6 +22878,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 17.1353481,
                       "toughnessBase": 380,
                       "weaknessList": [
                         "Fire",
@@ -22508,7 +22894,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.75
-                      }
+                      },
+                      "compSUM": 254973.979728
                     }
                   ]
                 ],
@@ -22793,6 +23180,8 @@ let mocSchedule = [
                       "toughnessBars": 3,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 47.493585,
                       "toughnessBase": 200,
                       "weaknessList": [
                         "Physical",
@@ -22807,7 +23196,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_Entangle": 1
-                      }
+                      },
+                      "compSUM": 1413409.0896
                     }
                   ]
                 ],
@@ -22865,6 +23255,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 61.74166050000001,
                       "toughnessBase": 380,
                       "weaknessList": [
                         "Fire",
@@ -22879,7 +23271,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.75
-                      }
+                      },
+                      "compSUM": 918715.90824
                     }
                   ]
                 ],
@@ -23164,6 +23557,8 @@ let mocSchedule = [
                       "toughnessBars": 3,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 133.20991800000002,
                       "toughnessBase": 200,
                       "weaknessList": [
                         "Physical",
@@ -23178,7 +23573,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_Entangle": 1
-                      }
+                      },
+                      "compSUM": 3964327.15968
                     }
                   ]
                 ],
@@ -23236,6 +23632,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 173.1728934,
                       "toughnessBase": 380,
                       "weaknessList": [
                         "Fire",
@@ -23250,7 +23648,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.75
-                      }
+                      },
+                      "compSUM": 2576812.653792
                     }
                   ]
                 ],
@@ -23535,6 +23934,8 @@ let mocSchedule = [
                       "toughnessBars": 3,
                       "toughnessElement": "Quantum",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 236.53471,
                       "toughnessBase": 240,
                       "weaknessList": [
                         "Physical",
@@ -23549,7 +23950,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_Entangle": 1
-                      }
+                      },
+                      "compSUM": 7039272.9696
                     }
                   ]
                 ],
@@ -23607,6 +24009,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 359.5327592,
                       "toughnessBase": 380,
                       "weaknessList": [
                         "Fire",
@@ -23621,7 +24025,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.75
-                      }
+                      },
+                      "compSUM": 5349847.456896
                     }
                   ]
                 ],
@@ -24005,6 +24410,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 17.1353481,
                       "toughnessBase": 60,
                       "weaknessList": [
                         "Fire",
@@ -24019,7 +24426,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 199198.4216626
                     },
                     {
                       "name": "Gepard",
@@ -24037,6 +24445,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 17.1353481,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Thunder",
@@ -24051,7 +24461,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 47807.621199
                     }
                   ]
                 ],
@@ -24109,6 +24520,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 13.181037,
                       "toughnessBase": [
                         130,
                         130
@@ -24117,7 +24530,8 @@ let mocSchedule = [
                       "resistances": {},
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 514851.30522
                     }
                   ]
                 ],
@@ -24375,6 +24789,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 61.74166050000001,
                       "toughnessBase": 70,
                       "weaknessList": [
                         "Fire",
@@ -24389,7 +24805,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 717746.8033126
                     },
                     {
                       "name": "Gepard",
@@ -24407,6 +24824,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 61.74166050000001,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Thunder",
@@ -24421,7 +24840,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 172259.232795
                     }
                   ]
                 ],
@@ -24479,6 +24899,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 47.493585,
                       "toughnessBase": [
                         130,
                         130
@@ -24487,7 +24909,8 @@ let mocSchedule = [
                       "resistances": {},
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 1855099.4301
                     }
                   ]
                 ],
@@ -24745,6 +25168,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 173.1728934,
                       "toughnessBase": 80,
                       "weaknessList": [
                         "Fire",
@@ -24759,7 +25184,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 2013134.885775
                     },
                     {
                       "name": "Gepard",
@@ -24777,6 +25203,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 173.1728934,
                       "toughnessBase": 150,
                       "weaknessList": [
                         "Thunder",
@@ -24791,7 +25219,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 483152.372586
                     }
                   ]
                 ],
@@ -24849,6 +25278,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 133.20991800000002,
                       "toughnessBase": [
                         130,
                         130
@@ -24857,7 +25288,8 @@ let mocSchedule = [
                       "resistances": {},
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 5203179.39708
                     }
                   ]
                 ],
@@ -25118,6 +25550,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 307.495123,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Fire",
@@ -25132,7 +25566,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 3574630.804875
                     },
                     {
                       "name": "Gepard",
@@ -25150,6 +25585,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 307.495123,
                       "toughnessBase": 200,
                       "weaknessList": [
                         "Thunder",
@@ -25164,7 +25601,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 857911.39317
                     }
                   ]
                 ],
@@ -25222,6 +25660,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 236.53471,
                       "toughnessBase": [
                         190,
                         190
@@ -25230,7 +25670,8 @@ let mocSchedule = [
                       "resistances": {},
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 9239045.7726
                     }
                   ]
                 ],
@@ -25594,6 +26035,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Thunder",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 13.181037,
                       "toughnessBase": 300,
                       "weaknessList": [
                         "Physical",
@@ -25608,7 +26051,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL_Frozen": 0.75
-                      }
+                      },
+                      "compSUM": 190004.648355
                     }
                   ]
                 ],
@@ -25675,6 +26119,8 @@ let mocSchedule = [
                       ],
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 13.181037,
                       "toughnessBase": 80,
                       "weaknessList": [
                         "Fire",
@@ -25689,7 +26135,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 429042.75435
                     }
                   ]
                 ],
@@ -25984,6 +26431,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Thunder",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 47.493585,
                       "toughnessBase": 300,
                       "weaknessList": [
                         "Physical",
@@ -25998,7 +26447,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL_Frozen": 0.75
-                      }
+                      },
+                      "compSUM": 684620.027775
                     }
                   ]
                 ],
@@ -26065,6 +26515,8 @@ let mocSchedule = [
                       ],
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 47.493585,
                       "toughnessBase": 80,
                       "weaknessList": [
                         "Fire",
@@ -26079,7 +26531,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 1545916.19175
                     }
                   ]
                 ],
@@ -26374,6 +26827,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Thunder",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 133.20991800000002,
                       "toughnessBase": 300,
                       "weaknessList": [
                         "Physical",
@@ -26388,7 +26843,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL_Frozen": 0.75
-                      }
+                      },
+                      "compSUM": 1920220.96797
                     }
                   ]
                 ],
@@ -26455,6 +26911,8 @@ let mocSchedule = [
                       ],
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 133.20991800000002,
                       "toughnessBase": 80,
                       "weaknessList": [
                         "Fire",
@@ -26469,7 +26927,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 4335982.8309
                     }
                   ]
                 ],
@@ -26770,6 +27229,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Thunder",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 307.495123,
                       "toughnessBase": 300,
                       "weaknessList": [
                         "Physical",
@@ -26784,7 +27245,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL_Frozen": 0.75
-                      }
+                      },
+                      "compSUM": 4432542.198045
                     }
                   ]
                 ],
@@ -26851,6 +27313,8 @@ let mocSchedule = [
                       ],
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 236.53471,
                       "toughnessBase": 80,
                       "weaknessList": [
                         "Fire",
@@ -26865,7 +27329,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 7699204.8105
                     }
                   ]
                 ],
@@ -27270,6 +27735,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 13.181037,
                       "toughnessBase": 170,
                       "weaknessList": [
                         "Physical",
@@ -27284,7 +27751,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.75
-                      }
+                      },
+                      "compSUM": 214521.377175
                     }
                   ]
                 ],
@@ -27342,6 +27810,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 13.181037,
                       "toughnessBase": 380,
                       "weaknessList": [
                         "Fire",
@@ -27356,7 +27826,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.75
-                      }
+                      },
+                      "compSUM": 196133.83056
                     }
                   ]
                 ],
@@ -27621,6 +28092,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 47.493585,
                       "toughnessBase": 170,
                       "weaknessList": [
                         "Physical",
@@ -27635,7 +28108,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.75
-                      }
+                      },
+                      "compSUM": 772958.095875
                     }
                   ]
                 ],
@@ -27693,6 +28167,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 47.493585,
                       "toughnessBase": 380,
                       "weaknessList": [
                         "Fire",
@@ -27707,7 +28183,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.75
-                      }
+                      },
+                      "compSUM": 706704.5448
                     }
                   ]
                 ],
@@ -27972,6 +28449,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 133.20991800000002,
                       "toughnessBase": 170,
                       "weaknessList": [
                         "Physical",
@@ -27986,7 +28465,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.75
-                      }
+                      },
+                      "compSUM": 2167991.41545
                     }
                   ]
                 ],
@@ -28044,6 +28524,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 133.20991800000002,
                       "toughnessBase": 380,
                       "weaknessList": [
                         "Fire",
@@ -28058,7 +28540,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.75
-                      }
+                      },
+                      "compSUM": 1982163.57984
                     }
                   ]
                 ],
@@ -28323,6 +28806,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 236.53471,
                       "toughnessBase": 190,
                       "weaknessList": [
                         "Physical",
@@ -28337,7 +28822,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.75
-                      }
+                      },
+                      "compSUM": 3849602.40525
                     }
                   ]
                 ],
@@ -28395,6 +28881,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 236.53471,
                       "toughnessBase": 380,
                       "weaknessList": [
                         "Fire",
@@ -28409,7 +28897,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.75
-                      }
+                      },
+                      "compSUM": 3519636.4848
                     }
                   ]
                 ],
@@ -28775,6 +29264,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Thunder",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 13.181037,
                       "toughnessBase": 300,
                       "weaknessList": [
                         "Physical",
@@ -28789,7 +29280,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL_Frozen": 0.75
-                      }
+                      },
+                      "compSUM": 190004.648355
                     }
                   ]
                 ],
@@ -28848,6 +29340,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 13.181037,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Physical",
@@ -28862,7 +29356,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 202263.012765
                     }
                   ]
                 ],
@@ -29140,6 +29635,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Thunder",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 47.493585,
                       "toughnessBase": 300,
                       "weaknessList": [
                         "Physical",
@@ -29154,7 +29651,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL_Frozen": 0.75
-                      }
+                      },
+                      "compSUM": 684620.027775
                     }
                   ]
                 ],
@@ -29213,6 +29711,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 47.493585,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Physical",
@@ -29227,7 +29727,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 728789.061825
                     }
                   ]
                 ],
@@ -29505,6 +30006,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Thunder",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 133.20991800000002,
                       "toughnessBase": 300,
                       "weaknessList": [
                         "Physical",
@@ -29519,7 +30022,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL_Frozen": 0.75
-                      }
+                      },
+                      "compSUM": 1920220.96797
                     }
                   ]
                 ],
@@ -29578,6 +30082,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 133.20991800000002,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Physical",
@@ -29592,7 +30098,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 2044106.19171
                     }
                   ]
                 ],
@@ -29870,6 +30377,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Thunder",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 236.53471,
                       "toughnessBase": 300,
                       "weaknessList": [
                         "Physical",
@@ -29884,7 +30393,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL_Frozen": 0.75
-                      }
+                      },
+                      "compSUM": 3409647.84465
                     }
                   ]
                 ],
@@ -29943,6 +30453,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 236.53471,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Physical",
@@ -29957,7 +30469,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 3629625.12495
                     }
                   ]
                 ],
@@ -30336,6 +30849,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 13.181037,
                       "toughnessBase": 60,
                       "weaknessList": [
                         "Fire",
@@ -30350,7 +30865,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 153229.555125
                     },
                     {
                       "name": "Gepard",
@@ -30368,6 +30884,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 13.181037,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Thunder",
@@ -30382,7 +30900,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 36775.09323
                     }
                   ]
                 ],
@@ -30440,6 +30959,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 13.181037,
                       "toughnessBase": 140,
                       "weaknessList": [
                         "Physical",
@@ -30454,7 +30975,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 153229.555125
                     }
                   ]
                 ],
@@ -30727,6 +31249,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 47.493585,
                       "toughnessBase": 70,
                       "weaknessList": [
                         "Fire",
@@ -30741,7 +31265,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 552112.925625
                     },
                     {
                       "name": "Gepard",
@@ -30759,6 +31284,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 47.493585,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Thunder",
@@ -30773,7 +31300,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 132507.10215
                     }
                   ]
                 ],
@@ -30831,6 +31359,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 47.493585,
                       "toughnessBase": 180,
                       "weaknessList": [
                         "Physical",
@@ -30845,7 +31375,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 552112.925625
                     }
                   ]
                 ],
@@ -31118,6 +31649,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 170.212673,
                       "toughnessBase": 80,
                       "weaknessList": [
                         "Fire",
@@ -31132,7 +31665,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 1978722.323625
                     },
                     {
                       "name": "Gepard",
@@ -31150,6 +31684,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 170.212673,
                       "toughnessBase": 150,
                       "weaknessList": [
                         "Thunder",
@@ -31164,7 +31700,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 474893.35767
                     }
                   ]
                 ],
@@ -31222,6 +31759,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 170.212673,
                       "toughnessBase": 220,
                       "weaknessList": [
                         "Physical",
@@ -31236,7 +31775,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 1978722.323625
                     }
                   ]
                 ],
@@ -31515,6 +32055,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 236.53471,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Fire",
@@ -31529,7 +32071,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 2749716.00375
                     },
                     {
                       "name": "Gepard",
@@ -31547,6 +32090,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 236.53471,
                       "toughnessBase": 200,
                       "weaknessList": [
                         "Thunder",
@@ -31561,7 +32106,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 659931.8409
                     }
                   ]
                 ],
@@ -31619,6 +32165,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 236.53471,
                       "toughnessBase": 300,
                       "weaknessList": [
                         "Physical",
@@ -31633,7 +32181,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
-                      }
+                      },
+                      "compSUM": 2749716.00375
                     }
                   ]
                 ],

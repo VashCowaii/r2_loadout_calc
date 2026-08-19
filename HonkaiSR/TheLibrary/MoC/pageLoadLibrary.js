@@ -45,7 +45,8 @@ let currentCycleIndex = null;
 let farmingPagePopSelectionsDone = false;
 let firstBoxGenDCompleted = false;
 let isInActiveChange = false;
-
+let activeComparison = null;
+const globalUI = {};
 
 const endgameModeDisplay = {
     pageloadEntry() {
@@ -728,10 +729,12 @@ const endgameModeDisplay = {
                             };
                             const serialized = new URLSearchParams(seralize);
 
+                            // const baselineImage = enemyEntry.image;
 
 
+                            // href="/HonkaiSR/TheLibrary/EnemyConfigs/${enemyEntry.image}/?${serialized}"
                             // onclick="endgameModeDisplay.linkToEnemy()"
-                            wholeWaveString += `<a class="${isBigFucker ? "enemyWaveEnemyDisplayBoxWideEnemy" : "enemyWaveEnemyDisplayBox"}" href="/HonkaiSR/TheLibrary/EnemyConfigs/${enemyEntry.image}/?${serialized}" >
+                            wholeWaveString += `<div class="${isBigFucker ? "enemyWaveEnemyDisplayBoxWideEnemy" : "enemyWaveEnemyDisplayBox"}">
     
                                 <img src="/HonkaiSR/${enemyImage}" class="enemyWaveEnemyIcon">
                                 <div class="enemyWaveEnemyLevel">${enemyLevel}</div>
@@ -739,11 +742,15 @@ const endgameModeDisplay = {
                                 ${isPF && counterObjectPF[enemyEntry.id]>1 ? `<div class="enemyWaveEnemyPFCount">x${counterObjectPF[enemyEntry.id]}</div>` : ""}
                                 
     
-                                <div class="enemyWaveEnemyDisplayBoxIDLinker clickable" >
+                                <a class="enemyWaveEnemyDisplayBoxIDLinker clickable" href="/HonkaiSR/TheLibrary/EnemyConfigs/${enemyEntry.image}/?${serialized}" >
                                     
                                     <span class="enemyLinkerText">${enemyEntry.name}</span>
                                     
                                     <span>${enemyEntry.id}</span>
+                                </a>
+                                <div class="enemyWaveEnemyDisplayBoxIDLinker2 clickable" onclick="endgameModeDisplay.setActiveComparisonID('${enemyImage}')">
+                                    
+                                    <span>Compare</span>
                                 </div>
                                 
                                 <div class="characterDisplayElementWeaknessIconHolderBoxBattleSettings">
@@ -779,7 +786,7 @@ const endgameModeDisplay = {
 
                                     </div>` : ""}
                                 
-                            </a>`
+                            </div>`
                             // wholeWaveString += `<div class="enemyWaveEnemyDisplayBox">
     
                             //     <div class="enemyWaveEnemyIconAndLevelBox">
@@ -2164,7 +2171,7 @@ const endgameModeDisplay = {
             if (stageTypers === "anom" || stageTypers === "apoc" || stageTypers === "pf" || stageTypers === "moc") {
 
 
-                readSelection("hpChartBoxHolder").innerHTML = endgameModeDisplay.getActiveBulletGraph();
+                readSelection("hpChartBoxHolder").innerHTML = endgameModeDisplay.getActiveBulletGraph(null,null,null);
                 tooltips.loadTooltips();
             }
 
@@ -2194,7 +2201,16 @@ const endgameModeDisplay = {
         
         firstBoxGenDCompleted = true;
     },
-    getActiveBulletGraph(bulletsArray2,isSkill) {
+    setActiveComparisonID(newComparison) {
+        activeComparison = newComparison;
+        customMenu.createEndgameCompareMenu()
+
+        readSelection("customMenuSearchBody").innerHTML = endgameModeDisplay.getActiveBulletGraph(null,null,true);
+        tooltips.loadTooltips();
+
+        // endgameModeDisplay.setEndgameDisplay(0);
+    },
+    getActiveBulletGraph(bulletsArray2,isSkill,isCompare) {
         let correctEntry = null;
         // for (let i=0;i<mocSchedule.length;i++) {
         //     const currentEntry = mocSchedule[i];
@@ -2213,7 +2229,92 @@ const endgameModeDisplay = {
         // }
 
 
-        let pointsArray = []
+        
+        let pointsArrayCompare = [];
+        function getSideString(arraytoParse,pointsArrayCompare,activityIndex,stageName) {
+            let waveCounter = 0;
+
+
+
+
+
+
+            for (let sideEntry of arraytoParse) {
+                let enemyLevel = sideEntry.enemyLevel;
+
+
+                let newScaleElite = sideEntry.scalarElite;
+                let newScaleHard = sideEntry.scalarHard;
+                const waveArray = sideEntry.enemyList;
+
+                for (let waveEntry of waveArray) {
+                    waveCounter++;
+                    let wholeWaveString = "";
+
+                    const isObject = typeof waveEntry === "object" && !Array.isArray(waveEntry);
+                    const isPF = stageTypers === "pf" || stageTypers === "anom";
+
+                    
+                    
+
+                    const entryToIterate = isPF ? waveEntry.enemies : waveEntry;
+                    const counterObjectPF = {};
+
+
+                    if (isPF) {
+                        for (let m=entryToIterate.length-1;m>=0;m--) {
+                            // waveEntry.enemies
+                            const currentCountChecker = entryToIterate[m];
+
+                            if (typeof currentCountChecker === "number") {
+                                const realEntry = entryToIterate[currentCountChecker];
+                                counterObjectPF[realEntry.id] ??= 1;
+                                counterObjectPF[realEntry.id] += 1;
+                                // entryToIterate.splice(m,1)
+                            }
+                        }
+                    }
+                    // console.log(entryToIterate)
+
+                    for (let enemyEntry of entryToIterate) {
+
+                        const wasNumber = typeof enemyEntry === "number";
+                        if (wasNumber) {
+                            if (isPF) {continue;}
+                            enemyEntry = entryToIterate[enemyEntry];
+                        }
+
+                        // console.log(enemyEntry,wasNumber,entryToIterate)
+                        const enemyImage = enemyImages[enemyEntry.image];
+                        if (enemyImage != activeComparison) {continue};
+
+                        const fullHP = enemyEntry.compSUM;
+                        const enemyComposite = enemyEntry.compEN;
+                        const activityComposite = enemyEntry.compACT;
+                        const barCount = enemyEntry.hpBars || 1;
+
+
+
+                        pointsArrayCompare.push({
+                            stageName,
+                            fullHP,barCount,enemyComposite,activityComposite,
+                            index: activityIndex
+                        })
+                    }
+
+                    
+                }
+
+            }
+
+        }
+        
+
+
+
+
+
+        let pointsArray = [];
         for (let i=0;i<mocSchedule.length;i++) {
             const currentEntry = mocSchedule[i];
 
@@ -2226,6 +2327,22 @@ const endgameModeDisplay = {
             const stageDataObject = floorData.stageDataObject;
             const side1 = stageDataObject.stage1.stageDataArray;
             const side2 = stageDataObject.stage2.stageDataArray;
+
+
+            getSideString(side1,pointsArrayCompare,i,stageName);
+            getSideString(side2,pointsArrayCompare,i,stageName);
+
+
+
+
+
+
+
+
+
+
+
+
 
             let AOESUM = 0;
             let STSUM = 0;
@@ -2276,6 +2393,136 @@ const endgameModeDisplay = {
             //     break;
             // }
         }
+        console.log(pointsArrayCompare)
+
+        let maxTime = pointsArray.length-1;
+        let maxTimeCompareOffset = maxTime - (mocSchedule.length-1);
+        console.log("Max width: ",maxTime)
+        function getIndividualLineData(pointsArrayCompare,varName,maxTime,colorIndex,colorArray) {
+            const checkAOEHighest = [...pointsArrayCompare];
+            const color = colorArray[colorIndex];
+
+            const floorDMG1 = checkAOEHighest.length ? checkAOEHighest.reduce((min, obj) => (obj[varName] < min[varName] ? obj : min), checkAOEHighest[0])[varName] : 0;
+            const ceilDMG1 = checkAOEHighest.length ? checkAOEHighest.reduce((max, obj) => (obj[varName] > max[varName] ? obj : max), checkAOEHighest[0])[varName] : 0;
+
+            const trueFloor = floorDMG1;
+            const trueCeiling = ceilDMG1;
+
+
+
+            let minDMGBuffer = trueFloor * 0.1;
+            let minDMG = Math.max(0,trueFloor - minDMGBuffer);
+            let maxDMG = trueCeiling + minDMGBuffer;
+            let dmgSpread = maxDMG-minDMG;
+
+            let pointString = "";
+            let linesArray = [];
+            let lineString = "";
+
+            let bulletsArray = pointsArrayCompare;
+            let currentLine = "";
+            let svgString = "";
+
+            for (let i=0;i<bulletsArray.length;i++) {
+                // "reloadState": "start",middle,end
+                // "timePassed": baseReference,
+                let currentBullet = bulletsArray[i];
+                const index = currentBullet.index + maxTimeCompareOffset;
+                const nextIndex = bulletsArray[i+1]?.index + maxTimeCompareOffset;
+
+                    //BULLET TOOLTIP SECTIONS
+                    let xValue = (((index/maxTime) * 0.85 + 0.075)*100).toFixed(4);
+                    let yValue = ((1 - ((currentBullet[varName] - minDMG)/dmgSpread) * 0.80 - 0.10)*100).toFixed(4);
+                    pointString += `<circle cx="${xValue}%" cy="${yValue}%" r="2.5" fill="${currentBullet.wasFree ? "grey":color}" class="weaponBulletArrayPoint hasHoverTooltip" id="weaponBulletArrayPoint${isSkill ? "Skill" : ""}${index}_Compare"/>`;
+
+                    let yValue_12 = ((1 - ((trueFloor - minDMG)/dmgSpread) * 0.80 - 0.10)*100).toFixed(4);
+                    let yValue_122 = ((1 - ((trueCeiling - minDMG)/dmgSpread) * 0.80 - 0.10)*100).toFixed(4);
+                    // if (currentBullet.index === currentCycleIndex) {
+                        
+                    //     currentLine = `<line x1="${xValue}%" y1="${yValue_12}%" x2="${xValue}%" y2="${yValue_122}%" stroke="grey" stroke-dasharray="5,2"/>`
+                    // }
+
+                    // console.log(index,nextIndex)
+                    if (i < bulletsArray.length-1) {
+                        let xValue2 = ((((nextIndex)/maxTime) * 0.85 + 0.075)*100).toFixed(4);
+                        let yValue_2 = ((1 - ((bulletsArray[i+1][varName] - minDMG)/dmgSpread) * 0.80 - 0.10)*100).toFixed(4);
+                        lineString += `<line x1="${xValue}%" y1="${yValue}%" x2="${xValue2}%" y2="${yValue_2}%" stroke="${color}"/>`;
+
+
+                        
+                    }
+                    let fullWidthBound = ((((maxTime/maxTime) * 0.85 + 0.075)*100)/maxTime).toFixed(4);
+                        // const lBound = (prevX + currentX)/2;
+                        // const rBound = (currentX + nextX)/2;
+                        // const width = rBound - lBound;
+
+                        // let xValue2 = ((((i+1)/maxTime) * 0.85 + 0.075)*100).toFixed(4);
+                        // let yValue_2 = ((1 - ((bulletsArray[i+1].STSUM - minDMG)/dmgSpread) * 0.80 - 0.10)*100).toFixed(4);
+                        // let yValue_22 = ((1 - ((bulletsArray[i+1].AOESUM - minDMG)/dmgSpread) * 0.80 - 0.10)*100).toFixed(4);
+
+                        const actualWidth = (+fullWidthBound).toFixed(0);
+                        const halfWidth = actualWidth/2
+                        svgString += `
+                            <rect x="${xValue - halfWidth}%" 
+                                y="${yValue_122}%" 
+                                width="${actualWidth}%" 
+                                height="${yValue_12 - yValue_122}%" 
+                                fill="transparent"
+                                class="hasHoverTooltip mocQuadrantDisplay clickable"
+                                id="mocDisplayIndex${index}_Compare"
+                                onclick="endgameModeDisplay.setEndgameDisplay(${currentBullet.index - currentCycleIndex});"
+                            />
+                        `;
+
+                        // ${headerString}
+                        // stageName,AOESUM,STSUM,
+
+                        // ${bulletsArray[i].bonusesApplied.length ? `<div class="totalHealingHeader">Bonuses applied to/on shot</div>
+                        //     ${bulletsArray[i].bonusesApplied}` : ""}
+                        let headerString = `<div class="totalHealingBoxBreakdownRows">
+                            <div class="totalHealingBoxHalfBreakdownRows" style="color:${colorArray[0]};">
+                                <div class="totalHealingHeader">TARGET SUM HP</div>${currentBullet.fullHP.toLocaleString()}
+                            </div>
+                            <div class="totalHealingBoxHalfBreakdownRows" style="color:${colorArray[1]};">
+                                <div class="totalHealingHeader">Bars</div>${currentBullet.barCount.toLocaleString()}
+                            </div>
+                            <div class="totalHealingBoxHalfBreakdownRows" style="color:${colorArray[2]};">
+                                <div class="totalHealingHeader">Multi: Stats</div>${currentBullet.enemyComposite.toLocaleString()}
+                            </div>
+                            <div class="totalHealingBoxHalfBreakdownRows" style="color:${colorArray[3]};">
+                                <div class="totalHealingHeader">Multi: Activity</div>${currentBullet.activityComposite.toLocaleString()}
+                            </div>
+                        </div>`;
+                        
+                        const hasPatchTitle = stageTypers === "anom";
+                        let startStringer2 = stageTypers === "anom" || stageTypers === "echo" || stageTypers === "relic" ? (hasPatchTitle ? "Patch: " : "") + mocSchedule[currentBullet.index].patchName : mocSchedule[currentBullet.index].start?.split(" ")[0] + " - " + mocSchedule[currentBullet.index].end?.split(" ")[0];
+
+                        tooltipStorage[`mocDisplayIndex${index}_Compare`] = `<div class="bulletTooltip">
+                                <div class="eidolonRowNameTrigger">${currentBullet.stageName}</div>
+                                ${startStringer2}
+                                <br>
+                                <br>
+                                ${headerString}
+                            </div>`;
+                // }
+            }
+
+
+            return {lineString,pointString,svgString};
+        }
+
+        const colorArray = ["lightcoral","lightblue","green","coral"];
+        let hpString = getIndividualLineData(pointsArrayCompare,"fullHP",maxTime,0,colorArray); 
+        let barString = getIndividualLineData(pointsArrayCompare,"barCount",maxTime,1,colorArray);
+        let enemyString = getIndividualLineData(pointsArrayCompare,"enemyComposite",maxTime,2,colorArray);
+        let activityString = getIndividualLineData(pointsArrayCompare,"activityComposite",maxTime,3,colorArray);
+
+        let comparePoints = hpString.pointString + barString.pointString + enemyString.pointString + activityString.pointString;
+        let compareLine = hpString.lineString + barString.lineString + enemyString.lineString + activityString.lineString;
+        let compareSVG = hpString.svgString;// + barString.svgString + enemyString.svgString + activityString.svgString;
+
+
+
 
         const checkAOEHighest = [...pointsArray]
         const checkSTHighest = [...pointsArray]
@@ -2294,7 +2541,7 @@ const endgameModeDisplay = {
         let minTime = 0;
         //if an invalid array is passed, default the time to 1s
         // let maxTime = bulletsArray[bulletsArray.length-1] && bulletsArray[bulletsArray.length-1].timePassed ? bulletsArray[bulletsArray.length-1].timePassed : 1;
-        let maxTime = pointsArray.length-1;
+        
 
         // const floorDMG = bulletsArray.length ? bulletsArray.reduce((min, obj) => (obj.damageAVGTotal < min.damageAVGTotal ? obj : min), bulletsArray[0]) : {"damageAVGTotal":1};
         // const ceilDMG = bulletsArray.length ? bulletsArray.reduce((max, obj) => (obj.damageAVGTotal > max.damageAVGTotal ? obj : max), bulletsArray[0]) : {"damageAVGTotal":1};
@@ -2318,261 +2565,6 @@ const endgameModeDisplay = {
             // "reloadState": "start",middle,end
             // "timePassed": baseReference,
             let currentBullet = bulletsArray[i];
-            // if (currentBullet.reloadState) {
-            //     let reloadState = currentBullet.reloadState;
-
-            //     //TODO: switch case later
-            //     if (reloadState === "start") {
-            //         let xValue = (((bulletsArray[i].timePassed/maxTime) * 0.85 + 0.075)*100).toFixed(4);
-            //         let yValue = ((1 - ((bulletsArray[i-1].damageAVGTotal - minDMG)/dmgSpread) * 0.80 - 0.10)*100).toFixed(4);
-            //         pointString += `<circle cx="${xValue}%" cy="${yValue}%" r="2.5" fill="white" onclick="bullets.toggleExpandedBullet(${i+1},${bulletsArray.length},true,${isSkill ? "true" : "false"})" class="weaponBulletArrayPoint hasHoverTooltip" id="weaponBulletArrayPoint${isSkill ? "Skill" : ""}${i}"/>`;
-            //     }
-            //     else if (reloadState === "end") {
-            //         let xValue = (((bulletsArray[i].timePassed/maxTime) * 0.85 + 0.075)*100).toFixed(4);
-            //         let yValue = ((1 - ((bulletsArray[i-2].damageAVGTotal - minDMG)/dmgSpread) * 0.80 - 0.10)*100).toFixed(4);
-            //         pointString += `<circle cx="${xValue}%" cy="${yValue}%" r="2.5" fill="white" onclick="bullets.toggleExpandedBullet(${i+1},${bulletsArray.length},true,${isSkill ? "true" : "false"})" class="weaponBulletArrayPoint hasHoverTooltip" id="weaponBulletArrayPoint${isSkill ? "Skill" : ""}${i}"/>`;
-                
-            //         let xValue2 = (((bulletsArray[i-1].timePassed/maxTime) * 0.85 + 0.075)*100).toFixed(4);
-            //         let yValue2 = ((1 - ((bulletsArray[i-2].damageAVGTotal - minDMG)/dmgSpread) * 0.80 - 0.10)*100).toFixed(4);
-            //         lineString += `<line x1="${xValue}%" y1="${yValue}%" x2="${xValue2}%" y2="${yValue2}%" stroke="black" stroke-dasharray="5,2" id="weaponBulletArrayPointReloadLine${isSkill ? "Skill" : ""}${i}" class="hasHoverTooltip"/>`;
-
-            //         let headerString = `<div class="totalHealingBoxBreakdownRows">
-            //             <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-            //                 <div class="totalHealingHeader">Start Time:&nbsp;${bulletsArray[i-1].timePassed.toLocaleString()}s</div>
-            //                 <div class="totalHealingHeader">End Time:&nbsp;${bulletsArray[i].timePassed.toLocaleString()}s</div>
-            //                 <div class="totalHealingHeader">Duration:&nbsp;${(bulletsArray[i].timePassed - bulletsArray[i-1].timePassed).toLocaleString()}s</div>
-            //             </div>
-            //         </div>`;
-
-            //         let tooltipString = `<div class="bulletTooltip">
-            //             <div class="tooltipHeader">Reload&nbsp;${currentBullet.reloadNumber}&nbsp;</div>
-            //             ${headerString}
-            //         </div>`;
-
-            //         tooltipStorage[`weaponBulletArrayPoint${isSkill ? "Skill" : ""}${i}`] = tooltipString;
-            //         tooltipStorage[`weaponBulletArrayPoint${isSkill ? "Skill" : ""}${i-1}`] = tooltipString;
-            //         tooltipStorage[`weaponBulletArrayPointReloadLine${isSkill ? "Skill" : ""}${i}`] = tooltipString;
-
-            //         bulletArrayString += `<div class="bulletEntryRowContainer">
-            //             <div class="bulletEntryRowBody" id="expandedBulletBody${isSkill ? "Skill" : ""}${i}" style="display: ${bulletsArray[i].shots != 1 ? "none" : "block"}">
-            //                 <div class="tooltipHeader">Reload End</div>
-            //                 ${headerString}
-            //             </div>
-            //         </div>`;
-            //         bulletArrayString += `<div class="bulletEntryRowContainer">
-            //             <div class="bulletEntryRowBody" id="expandedBulletBody${isSkill ? "Skill" : ""}${i-1}" style="display: ${bulletsArray[i-1].shots != 1 ? "none" : "block"}">
-            //             <div class="tooltipHeader">Reload Start</div>
-            //                 ${headerString}
-            //             </div>
-            //         </div>`;
-            //     }
-            //     else if (reloadState === "buffer") {
-            //         let xValue = (((bulletsArray[i].timePassed/maxTime) * 0.85 + 0.075)*100).toFixed(4);
-            //         let yValue = ((1 - ((bulletsArray[i-3].damageAVGTotal - minDMG)/dmgSpread) * 0.80 - 0.10)*100).toFixed(4);
-            //         pointString += `<circle cx="${xValue}%" cy="${yValue}%" r="2.5" fill="white" onclick="bullets.toggleExpandedBullet(${i+1},${bulletsArray.length},true,${isSkill ? "true" : "false"})" class="weaponBulletArrayPoint hasHoverTooltip" id="weaponBulletArrayPoint${isSkill ? "Skill" : ""}${i}"/>`;
-
-            //         let headerString = `<div class="totalHealingBoxBreakdownRows">
-            //             <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-            //                 <div class="totalHealingHeader">Weapon Ready Time:&nbsp;${bulletsArray[i].timePassed.toLocaleString()}s</div>
-            //                 <div class="abilityBreakdownGeneralMessage">After a reload your weapon has a "ready state" that is not modified by any speed bonuses, and this stat is hidden internally in-game.<br><br>This point on the graph represents when the weapon would normally be shooting again, but since it is the end we leave it as a non-bullet entry simply to maintain a uniform time to measure with on DPS metrics.</div>
-            //             </div>
-            //         </div>`;
-
-            //         tooltipStorage[`weaponBulletArrayPoint${isSkill ? "Skill" : ""}${i}`] = `<div class="bulletTooltip">
-            //             <div class="tooltipHeader">Weapon Ready</div>
-            //             ${headerString}
-            //         </div>`;
-
-            //         bulletArrayString += `<div class="bulletEntryRowContainer">
-            //             <div class="bulletEntryRowBody" id="expandedBulletBody${isSkill ? "Skill" : ""}${i}" style="display: ${bulletsArray[i].shots != 1 ? "none" : "block"}">
-            //                 ${headerString}
-            //             </div>
-            //         </div>`;
-            //     }
-            // }
-            // else {
-
-
-                // let headerString = `<div class="totalHealingBoxBreakdownRows">
-                //         <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //             <div class="totalHealingHeader">Time Fired:&nbsp;${bulletsArray[i].timePassed.toLocaleString()}s</div>
-                //         </div>
-                //         <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //             <div class="totalHealingHeader">Next Delay:&nbsp;${bulletsArray[i].shotDelay.toLocaleString()}s</div>
-                //         </div>
-                //         <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //             <div class="totalHealingHeader">Fire Rate:&nbsp;${bulletsArray[i].rateValue.toLocaleString()}</div>
-                //         </div>
-                //         <div class="totalHealingBoxBreakdownRows">
-                //             <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //                 <div class="totalHealingHeader">SUM AVG of Shot</div>
-                //                 <div class="totalHealingValueBoss">${bulletsArray[i].damageAVGTotal.toLocaleString()}</div>
-                //             </div>
-                //         </div>
-                //     </div>`;
-
-
-
-                // let ATKString = bulletsArray[i].totalATK != 0 ? `<div class="weaponBreakdownSplitterHeader">PHYSICAL</div>
-                //     <div class="totalHealingBoxBreakdownRows">
-                //         <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //             <div class="totalHealingHeader">ATK</div>
-                //             <div class="totalHealingValueBoss">${currentBullet.totalATK.toFixed(2)}</div>
-                //         </div>
-                //         <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //             <div class="totalHealingHeader">DMG/Hit</div>
-                //             <div class="totalHealingValueBoss">${currentBullet.damage.toFixed(2)}</div>
-                //         </div>
-                //         <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //             <div class="totalHealingHeader">DMG/Crit</div>
-                //             <div class="totalHealingValueBoss">${currentBullet.damageCrit.toFixed(2)}</div>
-                //         </div>
-                //         <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //             <div class="totalHealingHeader">AVG/Hit</div>
-                //             <div class="totalHealingValueBoss">${currentBullet.damageAVG.toFixed(2)}</div>
-                //         </div>
-                //         ${currentBullet.shellCount > 1 ? `<div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //             <div class="totalHealingHeader">Shells</div>
-                //             <div class="totalHealingValueBoss">${currentBullet.shellCount.toFixed(0)}</div>
-                //         </div>` : ""}
-                //     </div>
-                //     ${currentBullet.weaponDamage.AVGMulti ? `<div class="bulletSimMultiShotRowHeader">Multi-Hit Damage</div>
-                //     <div class="totalHealingBoxBreakdownRows">
-                //         <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //             <div class="totalHealingHeader">DMG/Multi-Hit</div>
-                //             <div class="totalHealingValueBoss">${currentBullet.weaponDamage.perHitMulti.toFixed(2)}</div>
-                //         </div>
-                //         <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //             <div class="totalHealingHeader">DMG/Multi-Crit</div>
-                //             <div class="totalHealingValueBoss">${currentBullet.weaponDamage.perCritMulti.toFixed(2)}</div>
-                //         </div>
-                //         <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //             <div class="totalHealingHeader">AVG/Multi-Hit</div>
-                //             <div class="totalHealingValueBoss">${currentBullet.weaponDamage.AVGMulti.toFixed(2)}</div>
-                //         </div>
-                //     </div>` : ""}
-                //     ` : "";
-
-                    // specialGunUltimateFunction
-                // let specialATKUltimateString = bulletsArray[i].specialGunUltimateFunction ? `<div class="weaponBreakdownSplitterHeader">${bulletsArray[i].specialGunUltimateFunction.name}</div>
-                // <div class="breakdownRowInjectionHeaderBulletSim">${bulletsArray[i].specialGunUltimateFunction.desc}</div>
-                // <div class="totalHealingBoxBreakdownRows">
-                //     <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //         <div class="totalHealingHeader">DMG/Hit</div>
-                //         <div class="totalHealingValueBoss">${bulletsArray[i].specialGunUltimateFunction.perHit.toFixed(2)}</div>
-                //     </div>
-                //     <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //         <div class="totalHealingHeader">DMG/Crit</div>
-                //         <div class="totalHealingValueBoss">${bulletsArray[i].specialGunUltimateFunction.perCrit.toFixed(2)}</div>
-                //     </div>
-                //     <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //         <div class="totalHealingHeader">AVG/Hit</div>
-                //         <div class="totalHealingValueBoss">${bulletsArray[i].specialGunUltimateFunction.AVG.toFixed(2)}</div>
-                //     </div>
-                //     ${!bulletsArray[i].specialGunUltimateFunction.ticks ? "" : `
-                //         <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //             <div class="totalHealingHeader">Ticks</div>
-                //             <div class="totalHealingValueBoss">${bulletsArray[i].specialGunUltimateFunction.ticks.toFixed(2)}</div>
-                //         </div>
-                //         <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //             <div class="totalHealingHeader">SUM AVG</div>
-                //             <div class="totalHealingValueBoss">${bulletsArray[i].specialGunUltimateFunction.totalTickDamage.toFixed(2)}</div>
-                //         </div>
-                //             `}
-                //     </div>` : "";
-                // let specialATKString = bulletsArray[i].specialGunFunction ? `<div class="weaponBreakdownSplitterHeader">${bulletsArray[i].specialGunFunction.name}</div>
-                //     <div class="breakdownRowInjectionHeaderBulletSim">${bulletsArray[i].specialGunFunction.desc}</div>
-                //     <div class="totalHealingBoxBreakdownRows">
-                //         <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //             <div class="totalHealingHeader">DMG/Hit</div>
-                //             <div class="totalHealingValueBoss">${bulletsArray[i].specialGunFunction.perHit.toFixed(2)}</div>
-                //         </div>
-                //         <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //             <div class="totalHealingHeader">DMG/Crit</div>
-                //             <div class="totalHealingValueBoss">${bulletsArray[i].specialGunFunction.perCrit.toFixed(2)}</div>
-                //         </div>
-                //         <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //             <div class="totalHealingHeader">AVG/Hit</div>
-                //             <div class="totalHealingValueBoss">${bulletsArray[i].specialGunFunction.AVG.toFixed(2)}</div>
-                //         </div>
-                //         ${!bulletsArray[i].specialGunFunction.ticks ? "" : `
-                //             <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //                 <div class="totalHealingHeader">Ticks</div>
-                //                 <div class="totalHealingValueBoss">${bulletsArray[i].specialGunFunction.ticks.toFixed(2)}</div>
-                //             </div>
-                //             <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //                 <div class="totalHealingHeader">SUM AVG</div>
-                //                 <div class="totalHealingValueBoss">${bulletsArray[i].specialGunFunction.totalTickDamage.toFixed(2)}</div>
-                //             </div>
-                //                 `}
-                //     </div>` : "";
-                // let specialSkillString = bulletsArray[i].specialSkillFunction ? `<div class="weaponBreakdownSplitterHeader">${bulletsArray[i].specialSkillFunction.name}</div>
-                // <div class="breakdownRowInjectionHeaderBulletSim">${bulletsArray[i].specialSkillFunction.desc}</div>
-                // <div class="totalHealingBoxBreakdownRows">
-                //     <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //         <div class="totalHealingHeader">DMG/Hit</div>
-                //         <div class="totalHealingValueBoss">${bulletsArray[i].specialSkillFunction.perHit.toFixed(2)}</div>
-                //     </div>
-                //     <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //         <div class="totalHealingHeader">DMG/Crit</div>
-                //         <div class="totalHealingValueBoss">${bulletsArray[i].specialSkillFunction.perCrit.toFixed(2)}</div>
-                //     </div>
-                //     <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //         <div class="totalHealingHeader">AVG/Hit</div>
-                //         <div class="totalHealingValueBoss">${bulletsArray[i].specialSkillFunction.AVG.toFixed(2)}</div>
-                //     </div>
-                //     ${!bulletsArray[i].specialSkillFunction.ticks ? "" : `
-                //     <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //         <div class="totalHealingHeader">Ticks</div>
-                //         <div class="totalHealingValueBoss">${bulletsArray[i].specialSkillFunction.ticks.toFixed(2)}</div>
-                //     </div>
-                //     <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //         <div class="totalHealingHeader">SUM AVG</div>
-                //         <div class="totalHealingValueBoss">${bulletsArray[i].specialSkillFunction.totalTickDamage.toFixed(2)}</div>
-                //     </div>
-                //         `}
-                // </div>` : "";
-                // let SkillString = bulletsArray[i].SkillDamage && bulletsArray[i].SkillDamage.AVG != 0 ? `<div class="weaponBreakdownSplitterHeader">SKILL</div>
-                //     <div class="totalHealingBoxBreakdownRows">
-                //         <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //             <div class="totalHealingHeader">Mod</div>
-                //             <div class="totalHealingValueBoss">${(bulletsArray[i].SkillDamageMod*100).toFixed(2)}%</div>
-                //         </div>
-                //         <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //             <div class="totalHealingHeader">DMG/Hit</div>
-                //             <div class="totalHealingValueBoss">${bulletsArray[i].SkillDamage.perHit.toFixed(2)}</div>
-                //         </div>
-                //         <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //             <div class="totalHealingHeader">DMG/Crit</div>
-                //             <div class="totalHealingValueBoss">${bulletsArray[i].SkillDamage.perCrit.toFixed(2)}</div>
-                //         </div>
-                //         <div class="totalHealingBoxHalfBreakdownRows hasHoverTooltip">
-                //             <div class="totalHealingHeader">AVG/Hit</div>
-                //             <div class="totalHealingValueBoss">${bulletsArray[i].SkillDamage.AVG.toFixed(2)}</div>
-                //         </div>
-                //     </div>` : "";
-
-
-                // //BULLET DISPLAY SECTIONS
-                // bulletArrayString += `<div class="bulletEntryRowContainer">
-                //     <div class="bulletEntryRowBody" id="expandedBulletBody${isSkill ? "Skill" : ""}${i}" style="display: ${bulletsArray[i].shots != 1 ? "none" : "block"}">
-                //         ${headerString}
-                //         ${SkillString}
-                //         ${specialSkillString}
-                //         ${ATKString}
-                //         ${bullets.getAttributeRowStrings(bulletsArray[i].elementalDamage)}
-                //         ${specialATKString}
-                //         ${specialATKUltimateString}
-                //         ${bulletsArray[i].bonusesApplied.length ? `<div class='weaponBreakdownSplitterHeader'>BONUSES</div>
-                //             <div style="white-space: normal">${bulletsArray[i].bonusesApplied}</div>` : ""}
-                //     </div>
-                // </div>`;
-
-
-                // let xValue = (((bulletsArray[i].timePassed/maxTime) * 0.85 + 0.075)*100).toFixed(4);
-                // let yValue = ((1 - ((bulletsArray[i-1].damageAVGTotal - minDMG)/dmgSpread) * 0.80 - 0.10)*100).toFixed(4);
-                // pointString += `<circle cx="${xValue}%" cy="${yValue}%" r="2.5" fill="white" onclick="bullets.toggleExpandedBullet(${i+1},${bulletsArray.length},true,${isSkill ? "true" : "false"})" class="weaponBulletArrayPoint hasHoverTooltip" id="weaponBulletArrayPoint${isSkill ? "Skill" : ""}${i}"/>`;
-
 
                 //BULLET TOOLTIP SECTIONS
                 let xValue = (((i/maxTime) * 0.85 + 0.075)*100).toFixed(4);
@@ -2961,7 +2953,30 @@ const endgameModeDisplay = {
         </div>
         `;
 
-        return graphString
+        const graphString2 = `
+        <div id="bulletsDisplayGraphBox" class="graphContainerbox">
+            <svg class="weaponBulletArrayGraph" id="bulletsDisplayGraph">
+                <line x1="7.5%" y1="90%" x2="7.5%" y2="10%" stroke="black" /> <!-- Y-axis -->
+                <line x1="7.5%" y1="90%" x2="92.5%" y2="90%" stroke="black" /> <!-- X-axis -->
+
+                <text x="50%" y="7.5%" fill="white" font-size="15" text-anchor="middle">Target HP by Floor Selected: ${currentFloor}</text>
+                
+                <text x="50%" y="97.5%" fill="white" font-size="15" text-anchor="middle">Appearances (${pointsArrayCompare.length})</text>
+
+                ${currentLine}
+                <line x1="7.5%" y1="90%" x2="7.5%" y2="10%" stroke="black" />
+                ${compareLine}
+                
+                ${comparePoints}
+                ${compareSVG}
+            </svg>
+        </div>
+        `;
+
+        return isCompare ? graphString2 : graphString;
+        // return `<div style="display: flex;flex-direction:column;width:100%">
+        // ${graphString + graphString2}
+        // </div>`
     },
 }
 
