@@ -39,7 +39,11 @@ let mocSchedule = [
                       "rank": "BigBoss",
                       "attackBase": 574.413606,
                       "defBase": 1020.00003,
-                      "hpBase": 2186116.24032,
+                      "hpBase": [
+                        2186116.24032,
+                        2186116.24032,
+                        4153620.856608
+                      ],
                       "speedBase": 168,
                       "critDMG": 0.2,
                       "effectRES": null,
@@ -47,10 +51,14 @@ let mocSchedule = [
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Quantum",
-                      "hpBars": 1,
+                      "hpBars": 3,
                       "compEN": 1,
                       "compACT": 146.916414,
-                      "toughnessBase": 400,
+                      "toughnessBase": [
+                        400,
+                        440,
+                        680
+                      ],
                       "weaknessList": [
                         "Fire",
                         "Wind",
@@ -65,7 +73,7 @@ let mocSchedule = [
                       "resistancesDebuff": {
                         "STAT_CTRL": 1
                       },
-                      "compSUM": 2186116.24032
+                      "compSUM": 8525853.337248
                     }
                   ]
                 ],
@@ -76,8 +84,8 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_BGM": "State_Planarcadia_Combat_AsatPramad_Phase01"
                 },
-                "highSTSUM": 2186116.24032,
-                "aoeSUM": 2186116.24032
+                "highSTSUM": 8525853.337248,
+                "aoeSUM": 8525853.337248
               }
             ]
           },
