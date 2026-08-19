@@ -105,17 +105,36 @@ const customMenu = {
         const elementsToClear = ["customMenuSearchTitle","customMenuSearchBarInput","customMenuSearchBody"]
         for (let elemEntry of elementsToClear) {readSelection(elemEntry).innerHTML = "";}
         readSelection("customMenuSearchBarInput").value = "";
+        readSelection("customMenuSearchBarInput").style.display = "flex";
         //technically the order in which we remove the actual menu box isn't relevant, but I'm putting it at the end to remind myself in the future to
         //always clear the contents of the elements inside, first, to clear memory(or at least I hope it works this way TODO: make sure it fuckin works this way lmao)
         readSelection("customMenuMainHolderBox").style.display = "none";
 
         readSelection("customMenuSearchBodyStatsAttackData").innerHTML = "";
 
+        if (globalUI.currentSearchOpen = "endgame") {
+            readSelection("customMenuMainHolderBox").style.maxWidth = "450px";
+        }
         globalUI.currentSearchOpen = null;
         globalUI.currentSearchVolume = null;
 
         globalUI.volumeIsOcclusion = false;
         globalUI.volumeIsLock = false;
+    },
+    createEndgameCompareMenu(isOcclusion,isLock) {
+        // if (globalUI.queryIsActive) {return;}//do NOT allow modifications while a query is running, I am not confident that I've handled things properly enough yet for that
+        readSelection("blockoutBackgroundShutter").style.display = "flex";
+        readSelection("customMenuMainHolderBox").style.display = "flex";
+        readSelection("customMenuSearchTitle").innerHTML = "Appearances " + `<img src="/HonkaiSR/${activeComparison.replace("enemies","enemiesSmol")}" class="rotationsCharacterTargetPreviewBoxIcon">`;
+
+        readSelection("customMenuMainHolderBox").style.maxWidth = "1000px";
+        readSelection("customMenuSearchBarInput").style.display = "none";
+
+        readSelection("customMenuSearchNote").innerHTML =  `Compare <span class="descriptionNumberColor">appearances</span> of this enemy across every instance of this specific endgame <span class="descriptionNumberColor">floor number</span>(MoC12 vs another MoC12 etc).
+        <br>You can <span class="descriptionNumberColor">hover</span> a given appearance's column for more information about what may have changed in that appearance vs others.
+        <br>Entities with a single appearance can't be hovered because what the fuck is the point in that case.
+        <br><br>
+        Given that these are ONLY meant to be comparisons within the same mode on the same floor, if screenshots of this graph pop up later for agenda-posting, I hope you know you're a cuck.`;
     },
     
     createEndgameSearchMenu(isOcclusion,isLock) {

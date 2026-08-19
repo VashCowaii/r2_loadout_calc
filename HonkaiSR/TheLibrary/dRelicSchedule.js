@@ -59,6 +59,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Quantum",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 60,
                       "weaknessList": [
                         "Fire",
@@ -71,7 +73,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Quantum": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 59207.314842
                     },
                     {
                       "name": "SD Civilian Mechatron",
@@ -89,6 +92,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Physical",
@@ -101,7 +106,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 88810.972263
                     },
                     1,
                     0
@@ -123,6 +129,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Physical",
@@ -135,7 +143,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 88810.972263
                     },
                     {
                       "name": "Daybreak Squadron: Azurewing",
@@ -153,6 +162,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 160,
                       "weaknessList": [
                         "Physical",
@@ -165,7 +176,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Quantum": 0.8
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 296036.57421
                     },
                     0
                   ]
@@ -252,6 +264,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Thunder",
@@ -266,7 +280,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 49339.429035
                     },
                     {
                       "name": "Assistant Graffiti: Rusher",
@@ -284,6 +299,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Wind",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Ice",
@@ -298,7 +315,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 49339.429035
                     },
                     0,
                     1
@@ -320,6 +338,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Thunder",
@@ -334,7 +354,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 49339.429035
                     },
                     {
                       "name": "Canvas Peacock",
@@ -352,10 +373,13 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 120,
                       "weaknessList": [],
                       "resistances": {},
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 315772.345824
                     },
                     {
                       "name": "Assistant Graffiti: Rusher",
@@ -373,6 +397,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Wind",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Ice",
@@ -387,7 +413,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 49339.429035
                     }
                   ]
                 ],
@@ -473,6 +500,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Physical",
@@ -485,7 +514,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 49339.429035
                     },
                     {
                       "name": "Ichor Memosprite: Canine",
@@ -503,6 +533,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Ice",
@@ -515,7 +547,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Quantum": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 59207.314842
                     },
                     1,
                     0
@@ -537,6 +570,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Physical",
@@ -549,7 +584,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 49339.429035
                     },
                     {
                       "name": "Ichor Memosprite: Winged Serpent",
@@ -567,6 +603,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 160,
                       "weaknessList": [
                         "Physical",
@@ -579,7 +617,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 315772.345824
                     },
                     0
                   ]
@@ -668,6 +707,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Physical",
@@ -680,7 +721,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 59207.314842
                     },
                     {
                       "name": "Black Tide's Corroded Axe",
@@ -698,6 +740,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 40,
                       "weaknessList": [
                         "Physical",
@@ -710,7 +754,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 67101.6234876
                     },
                     0,
                     {
@@ -729,6 +774,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Fire",
@@ -741,7 +788,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 78943.086456
                     }
                   ],
                   [
@@ -761,6 +809,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 40,
                       "weaknessList": [
                         "Physical",
@@ -773,7 +823,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 67101.6234876
                     },
                     {
                       "name": "Dark Sun Gryphon",
@@ -791,6 +842,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Wind",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 160,
                       "weaknessList": [
                         "Physical",
@@ -803,7 +856,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 296036.57421
                     },
                     {
                       "name": "Black Tide Council",
@@ -821,6 +875,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Fire",
@@ -833,7 +889,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 78943.086456
                     }
                   ]
                 ],
@@ -920,6 +977,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Ice",
@@ -932,7 +991,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 51313.0061964
                     },
                     {
                       "name": "Furiae Troupe",
@@ -950,6 +1010,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Physical",
@@ -962,7 +1024,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Quantum": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 51313.0061964
                     },
                     0,
                     {
@@ -981,6 +1044,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Thunder",
@@ -993,7 +1058,8 @@ let mocSchedule = [
                         "Ice": 0.2,
                         "Wind": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 51313.0061964
                     }
                   ],
                   [
@@ -1013,6 +1079,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Ice",
@@ -1025,7 +1093,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 51313.0061964
                     },
                     {
                       "name": "Furiae Troupe",
@@ -1043,6 +1112,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Physical",
@@ -1055,7 +1126,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Quantum": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 51313.0061964
                     },
                     {
                       "name": "Furiae Praetor",
@@ -1073,6 +1145,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 160,
                       "weaknessList": [
                         "Ice",
@@ -1085,7 +1159,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 355243.889052
                     },
                     0,
                     {
@@ -1104,6 +1179,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Thunder",
@@ -1116,7 +1193,8 @@ let mocSchedule = [
                         "Ice": 0.2,
                         "Wind": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 51313.0061964
                     }
                   ]
                 ],
@@ -1202,6 +1280,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Fire",
@@ -1214,7 +1294,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Quantum": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 39471.543228
                     },
                     {
                       "name": "Eclipse Wolftrooper",
@@ -1232,6 +1313,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Physical",
@@ -1244,7 +1327,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 39471.543228
                     },
                     0,
                     0
@@ -1266,6 +1350,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Fire",
@@ -1278,7 +1364,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Quantum": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 39471.543228
                     },
                     {
                       "name": "Eclipse Wolftrooper",
@@ -1296,6 +1383,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Physical",
@@ -1308,7 +1397,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 39471.543228
                     },
                     {
                       "name": "Howling Casket",
@@ -1326,6 +1416,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Thunder",
@@ -1338,7 +1430,8 @@ let mocSchedule = [
                         "Ice": 0.2,
                         "Quantum": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 236829.259368
                     },
                     1,
                     0
@@ -1427,6 +1520,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Physical",
@@ -1439,7 +1534,8 @@ let mocSchedule = [
                         "Thunder": 0.2,
                         "Quantum": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 31577.2345824
                     },
                     {
                       "name": "Dreamjolt Troupe's Bubble Hound",
@@ -1457,6 +1553,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Physical",
@@ -1469,7 +1567,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 44405.4861315
                     },
                     0,
                     1
@@ -1491,6 +1590,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Physical",
@@ -1503,7 +1604,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 24669.7145175
                     },
                     {
                       "name": "\"Past Confined and Caged\"",
@@ -1521,6 +1623,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Fire",
@@ -1533,7 +1637,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Quantum": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 236829.259368
                     },
                     {
                       "name": "Dreamjolt Troupe's Bubble Hound",
@@ -1551,6 +1656,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Physical",
@@ -1563,7 +1670,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 44405.4861315
                     }
                   ]
                 ],
@@ -1650,6 +1758,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 10,
                       "weaknessList": [
                         "Physical",
@@ -1662,7 +1772,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 19735.771614
                     },
                     {
                       "name": "Dreamjolt Troupe's Mr. Domescreen",
@@ -1680,6 +1791,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Ice",
@@ -1692,7 +1805,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Quantum": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 54273.3719385
                     },
                     {
                       "name": "Dreamjolt Troupe's Bubble Hound",
@@ -1710,6 +1824,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Physical",
@@ -1722,7 +1838,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 44405.4861315
                     },
                     0
                   ],
@@ -1743,6 +1860,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 10,
                       "weaknessList": [
                         "Physical",
@@ -1755,7 +1874,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 19735.771614
                     },
                     {
                       "name": "Dreamjolt Troupe's Bubble Hound",
@@ -1773,6 +1893,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Physical",
@@ -1785,7 +1907,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 44405.4861315
                     },
                     {
                       "name": "Dreamjolt Troupe's Beyond Overcooked",
@@ -1803,6 +1926,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 160,
                       "weaknessList": [
                         "Fire",
@@ -1815,7 +1940,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 355243.889052
                     },
                     1,
                     0
@@ -1904,6 +2030,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 10,
                       "weaknessList": [
                         "Thunder",
@@ -1916,7 +2044,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 17762.1944526
                     },
                     {
                       "name": "Wraith Warden",
@@ -1934,6 +2063,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Physical",
@@ -1946,7 +2077,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 29603.657421
                     },
                     {
                       "name": "Entranced Ingenium: Illumination Dragonfish",
@@ -1964,6 +2096,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Fire",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Physical",
@@ -1976,7 +2110,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Quantum": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 29603.657421
                     },
                     1,
                     0
@@ -1998,6 +2133,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 10,
                       "weaknessList": [
                         "Thunder",
@@ -2010,7 +2147,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 17762.1944526
                     },
                     {
                       "name": "Wraith Warden",
@@ -2028,6 +2166,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Physical",
@@ -2040,7 +2180,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 29603.657421
                     },
                     {
                       "name": "Aurumaton Spectral Envoy",
@@ -2058,6 +2199,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Physical",
@@ -2070,7 +2213,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Quantum": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 236829.259368
                     },
                     1,
                     0
@@ -2158,6 +2302,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Physical",
@@ -2170,7 +2316,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 43418.6975508
                     },
                     {
                       "name": "Abundance Sprite: Golden Hound",
@@ -2188,6 +2335,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Ice",
@@ -2200,7 +2349,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 31577.2345824
                     },
                     {
                       "name": "Abundance Sprite: Wooden Lupus",
@@ -2218,6 +2368,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Fire",
@@ -2230,7 +2382,8 @@ let mocSchedule = [
                         "Thunder": 0.2,
                         "Quantum": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 39471.543228
                     },
                     0
                   ],
@@ -2251,6 +2404,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Ice",
@@ -2263,7 +2418,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 31577.2345824
                     },
                     {
                       "name": "Abundance Sprite: Malefic Ape",
@@ -2281,6 +2437,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Fire",
@@ -2293,7 +2451,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 236829.259368
                     },
                     {
                       "name": "Abundance Sprite: Wooden Lupus",
@@ -2311,6 +2470,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Fire",
@@ -2323,7 +2484,8 @@ let mocSchedule = [
                         "Thunder": 0.2,
                         "Quantum": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 39471.543228
                     }
                   ]
                 ],
@@ -2409,6 +2571,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Fire",
@@ -2421,7 +2585,8 @@ let mocSchedule = [
                         "Wind": 0.4,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 23682.9259368
                     },
                     {
                       "name": "Entranced Ingenium: Illumination Dragonfish",
@@ -2439,6 +2604,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Fire",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Physical",
@@ -2451,7 +2618,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Quantum": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 29603.657421
                     },
                     0,
                     1
@@ -2473,6 +2641,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 10,
                       "weaknessList": [
                         "Wind",
@@ -2485,7 +2655,8 @@ let mocSchedule = [
                         "Thunder": 0.2,
                         "Quantum": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 17762.1944526
                     },
                     {
                       "name": "Aurumaton Gatekeeper",
@@ -2503,6 +2674,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Thunder",
@@ -2515,7 +2688,8 @@ let mocSchedule = [
                         "Ice": 0.2,
                         "Imaginary": 0.4
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 197357.71614
                     },
                     {
                       "name": "Entranced Ingenium: Golden Cloud Toad",
@@ -2533,6 +2707,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 10,
                       "weaknessList": [
                         "Thunder",
@@ -2545,7 +2721,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 17762.1944526
                     }
                   ]
                 ],
@@ -2631,6 +2808,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Physical",
@@ -2643,7 +2822,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 37497.9660666
                     },
                     0,
                     {
@@ -2662,6 +2842,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 10,
                       "weaknessList": [
                         "Fire",
@@ -2674,7 +2856,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 19735.771614
                     },
                     0
                   ],
@@ -2695,6 +2878,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 10,
                       "weaknessList": [
                         "Physical",
@@ -2709,7 +2894,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_DOT_Electric": 1
-                      }
+                      },
+                      "compSUM": 11841.4629684
                     },
                     {
                       "name": "Imaginary Weaver",
@@ -2727,6 +2913,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Physical",
@@ -2739,7 +2927,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 37497.9660666
                     },
                     {
                       "name": "Blaze Out of Space",
@@ -2757,6 +2946,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Physical",
@@ -2771,7 +2962,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_DOT_Burn": 1
-                      }
+                      },
+                      "compSUM": 197357.71614
                     },
                     0
                   ]
@@ -2859,6 +3051,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Ice",
@@ -2873,7 +3067,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_DOT_Burn": 1
-                      }
+                      },
+                      "compSUM": 29603.657421
                     },
                     {
                       "name": "Imaginary Weaver",
@@ -2891,6 +3086,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Physical",
@@ -2903,7 +3100,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 37497.9660666
                     },
                     1,
                     {
@@ -2922,6 +3120,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 10,
                       "weaknessList": [
                         "Fire",
@@ -2936,7 +3136,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL_Frozen": 1
-                      }
+                      },
+                      "compSUM": 11841.4629684
                     }
                   ],
                   [
@@ -2956,6 +3157,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Physical",
@@ -2968,7 +3171,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 37497.9660666
                     },
                     {
                       "name": "Decaying Shadow",
@@ -2986,6 +3190,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Fire",
@@ -2998,7 +3204,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 197357.71614
                     },
                     0
                   ]
@@ -3086,6 +3293,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 10,
                       "weaknessList": [
                         "Fire",
@@ -3100,7 +3309,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL_Frozen": 1
-                      }
+                      },
+                      "compSUM": 11841.4629684
                     },
                     {
                       "name": "Imaginary Weaver",
@@ -3118,6 +3328,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Physical",
@@ -3130,7 +3342,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 37497.9660666
                     },
                     1,
                     {
@@ -3149,6 +3362,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Ice",
@@ -3163,7 +3378,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_DOT_Burn": 1
-                      }
+                      },
+                      "compSUM": 29603.657421
                     }
                   ],
                   [
@@ -3183,6 +3399,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Ice",
@@ -3197,7 +3415,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_DOT_Burn": 1
-                      }
+                      },
+                      "compSUM": 29603.657421
                     },
                     {
                       "name": "Searing Prowler",
@@ -3215,6 +3434,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Ice",
@@ -3229,7 +3450,8 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {
                         "STAT_DOT_Burn": 1
-                      }
+                      },
+                      "compSUM": 217093.487754
                     },
                     0
                   ]
@@ -3316,6 +3538,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Physical",
@@ -3328,7 +3552,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 27630.0802596
                     },
                     {
                       "name": "Automaton Beetle",
@@ -3346,6 +3571,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Thunder",
@@ -3358,7 +3585,8 @@ let mocSchedule = [
                         "Ice": 0.2,
                         "Quantum": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 27630.0802596
                     },
                     {
                       "name": "Automaton Spider",
@@ -3376,6 +3604,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Fire",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Thunder",
@@ -3388,7 +3618,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 14801.8287105
                     },
                     1
                   ],
@@ -3409,6 +3640,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Thunder",
@@ -3421,7 +3654,8 @@ let mocSchedule = [
                         "Ice": 0.2,
                         "Quantum": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 27630.0802596
                     },
                     {
                       "name": "Automaton Grizzly",
@@ -3439,6 +3673,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 140,
                       "weaknessList": [
                         "Fire",
@@ -3451,7 +3687,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 256565.030982
                     },
                     0
                   ]
@@ -3538,6 +3775,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Wind",
@@ -3550,7 +3789,8 @@ let mocSchedule = [
                         "Thunder": 0.2,
                         "Quantum": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 35524.3889052
                     },
                     {
                       "name": "Voidranger: Reaver",
@@ -3568,6 +3808,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Physical",
@@ -3580,7 +3822,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 29603.657421
                     },
                     {
                       "name": "Voidranger: Eliminator",
@@ -3598,6 +3841,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Fire",
@@ -3610,7 +3855,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 41445.1203894
                     },
                     1
                   ],
@@ -3631,6 +3877,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Fire",
@@ -3643,7 +3891,8 @@ let mocSchedule = [
                         "Wind": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 41445.1203894
                     },
                     {
                       "name": "Voidranger: Reaver",
@@ -3661,6 +3910,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Physical",
@@ -3673,7 +3924,8 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 29603.657421
                     },
                     {
                       "name": "Voidranger: Trampler",
@@ -3691,6 +3943,8 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Physical",
@@ -3703,7 +3957,8 @@ let mocSchedule = [
                         "Thunder": 0.2,
                         "Quantum": 0.2
                       },
-                      "resistancesDebuff": {}
+                      "resistancesDebuff": {},
+                      "compSUM": 217093.487754
                     },
                     1
                   ]
