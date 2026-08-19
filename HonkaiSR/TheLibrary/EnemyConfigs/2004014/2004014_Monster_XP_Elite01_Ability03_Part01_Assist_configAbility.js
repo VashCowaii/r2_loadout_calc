@@ -37,19 +37,19 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"1090456915\">XP_Fire_Elite_Burning_Modifier_2</a>[<span class=\"descriptionNumberColor\">Spontaneous Combustion</span>]",
       "valuePerStack": {
         "Modifier_StanceWeakAddedRatio": {
-          "operator": "Variables[0] (UnusedUnderThisBase_12797) || RETURN",
-          "displayLines": "UnusedUnderThisBase_12797",
+          "operator": "Variables[0] (UnusedUnderThisBase_13644) || RETURN",
+          "displayLines": "UnusedUnderThisBase_13644",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_12797"
+            "UnusedUnderThisBase_13644"
           ]
         },
         "Modifier_Stance": {
-          "operator": "Variables[0] (UnusedUnderThisBase_12796) || RETURN",
-          "displayLines": "UnusedUnderThisBase_12796",
+          "operator": "Variables[0] (UnusedUnderThisBase_13643) || RETURN",
+          "displayLines": "UnusedUnderThisBase_13643",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_12796"
+            "UnusedUnderThisBase_13643"
           ]
         }
       }

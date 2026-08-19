@@ -151,11 +151,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13323) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13323",
+                  "operator": "Variables[0] (UnusedUnderThisBase_14177) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_14177",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_13323"
+                    "UnusedUnderThisBase_14177"
                   ]
                 },
                 "Toughness": null,
@@ -173,11 +173,11 @@ const configAbility = {
               "AttackScaling": {
                 "DamageType": "Imaginary",
                 "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_11585) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_11585",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12293) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12293",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_11585"
+                    "UnusedUnderThisBase_12293"
                   ]
                 },
                 "Toughness": null,

@@ -3015,11 +3015,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "_Skill08_DamagePercentage",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_11432) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_11432",
+                        "operator": "Variables[0] (UnusedUnderThisBase_12140) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_12140",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_11432"
+                          "UnusedUnderThisBase_12140"
                         ]
                       }
                     }

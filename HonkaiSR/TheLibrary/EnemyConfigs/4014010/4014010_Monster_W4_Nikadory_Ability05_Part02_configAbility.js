@@ -188,11 +188,11 @@ const configAbility = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "Damage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_11586) || RETURN",
-              "displayLines": "UnusedUnderThisBase_11586",
+              "operator": "Variables[0] (UnusedUnderThisBase_12294) || RETURN",
+              "displayLines": "UnusedUnderThisBase_12294",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_11586"
+                "UnusedUnderThisBase_12294"
               ]
             },
             "Toughness": null,

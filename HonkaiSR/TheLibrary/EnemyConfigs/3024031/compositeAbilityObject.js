@@ -979,11 +979,11 @@ const compositeAbilityObject = {
                       "scope": "TargetEntity",
                       "variableName": "PassiveSkill03_MaxCharge",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_10007) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_10007",
+                        "operator": "Variables[0] (UnusedUnderThisBase_10605) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_10605",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_10007"
+                          "UnusedUnderThisBase_10605"
                         ]
                       }
                     }
@@ -1282,11 +1282,11 @@ const compositeAbilityObject = {
                           "scope": "TargetEntity",
                           "variableName": "PassiveSkill03_MaxCharge",
                           "value": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_10007) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_10007",
+                            "operator": "Variables[0] (UnusedUnderThisBase_10605) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_10605",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_10007"
+                              "UnusedUnderThisBase_10605"
                             ]
                           }
                         }
@@ -1331,11 +1331,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_10009) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_10009",
+                              "operator": "Variables[0] (UnusedUnderThisBase_10607) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_10607",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_10009"
+                                "UnusedUnderThisBase_10607"
                               ]
                             }
                           }
@@ -2513,11 +2513,11 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_10025) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_10025",
+                  "operator": "Variables[0] (UnusedUnderThisBase_10623) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_10623",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_10025"
+                    "UnusedUnderThisBase_10623"
                   ]
                 }
               }

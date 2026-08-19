@@ -178,11 +178,11 @@ const configAbility = {
                 ]
               },
               "baseChance": {
-                "operator": "Variables[0] (UnusedUnderThisBase_7797) || RETURN",
-                "displayLines": "UnusedUnderThisBase_7797",
+                "operator": "Variables[0] (UnusedUnderThisBase_8372) || RETURN",
+                "displayLines": "UnusedUnderThisBase_8372",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_7797"
+                  "UnusedUnderThisBase_8372"
                 ]
               },
               "valuePerStack": {
@@ -223,11 +223,11 @@ const configAbility = {
                 ]
               },
               "baseChance": {
-                "operator": "Variables[0] (UnusedUnderThisBase_7786) || RETURN",
-                "displayLines": "UnusedUnderThisBase_7786",
+                "operator": "Variables[0] (UnusedUnderThisBase_8361) || RETURN",
+                "displayLines": "UnusedUnderThisBase_8361",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_7786"
+                  "UnusedUnderThisBase_8361"
                 ]
               },
               "valuePerStack": {
@@ -268,11 +268,11 @@ const configAbility = {
                 ]
               },
               "baseChance": {
-                "operator": "Variables[0] (UnusedUnderThisBase_7798) || RETURN",
-                "displayLines": "UnusedUnderThisBase_7798",
+                "operator": "Variables[0] (UnusedUnderThisBase_8373) || RETURN",
+                "displayLines": "UnusedUnderThisBase_8373",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_7798"
+                  "UnusedUnderThisBase_8373"
                 ]
               },
               "valuePerStack": {
@@ -313,11 +313,11 @@ const configAbility = {
                 ]
               },
               "baseChance": {
-                "operator": "Variables[0] (UnusedUnderThisBase_7799) || RETURN",
-                "displayLines": "UnusedUnderThisBase_7799",
+                "operator": "Variables[0] (UnusedUnderThisBase_8374) || RETURN",
+                "displayLines": "UnusedUnderThisBase_8374",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_7799"
+                  "UnusedUnderThisBase_8374"
                 ]
               },
               "valuePerStack": {

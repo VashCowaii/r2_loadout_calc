@@ -2539,11 +2539,11 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_10161) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
-                    "displayLines": "(UnusedUnderThisBase_10161 * MDF_MaxHP)",
+                    "operator": "Variables[0] (UnusedUnderThisBase_10759) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
+                    "displayLines": "(UnusedUnderThisBase_10759 * MDF_MaxHP)",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_10161",
+                      "UnusedUnderThisBase_10759",
                       "MDF_MaxHP"
                     ]
                   },
@@ -2592,11 +2592,11 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_10161) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
-                    "displayLines": "(UnusedUnderThisBase_10161 * MDF_MaxHP)",
+                    "operator": "Variables[0] (UnusedUnderThisBase_10759) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
+                    "displayLines": "(UnusedUnderThisBase_10759 * MDF_MaxHP)",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_10161",
+                      "UnusedUnderThisBase_10759",
                       "MDF_MaxHP"
                     ]
                   }
@@ -2625,11 +2625,11 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_10162) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_10162",
+                    "operator": "Variables[0] (UnusedUnderThisBase_10760) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_10760",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_10162"
+                      "UnusedUnderThisBase_10760"
                     ]
                   }
                 },
@@ -2653,21 +2653,21 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_10161) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
-                    "displayLines": "(UnusedUnderThisBase_10161 * MDF_MaxHP)",
+                    "operator": "Variables[0] (UnusedUnderThisBase_10759) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
+                    "displayLines": "(UnusedUnderThisBase_10759 * MDF_MaxHP)",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_10161",
+                      "UnusedUnderThisBase_10759",
                       "MDF_MaxHP"
                     ]
                   },
                   "entityClass": "Enemy",
                   "maximum": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_10161) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
-                    "displayLines": "(UnusedUnderThisBase_10161 * MDF_MaxHP)",
+                    "operator": "Variables[0] (UnusedUnderThisBase_10759) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
+                    "displayLines": "(UnusedUnderThisBase_10759 * MDF_MaxHP)",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_10161",
+                      "UnusedUnderThisBase_10759",
                       "MDF_MaxHP"
                     ]
                   },
@@ -2699,11 +2699,11 @@ const compositeAbilityObject = {
                   },
                   "entityClass": "Enemy",
                   "maximum": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_10161) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
-                    "displayLines": "(UnusedUnderThisBase_10161 * MDF_MaxHP)",
+                    "operator": "Variables[0] (UnusedUnderThisBase_10759) || Variables[1] (MDF_MaxHP) || MUL || RETURN",
+                    "displayLines": "(UnusedUnderThisBase_10759 * MDF_MaxHP)",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_10161",
+                      "UnusedUnderThisBase_10759",
                       "MDF_MaxHP"
                     ]
                   },
@@ -3637,11 +3637,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1121563146\">Enemy_W3_SundayPart_AssistAbilityAttach</a>",
                   "valuePerStack": {
                     "MDF_Assist_DamagePercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_10160) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_10160",
+                      "operator": "Variables[0] (UnusedUnderThisBase_10758) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_10758",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_10160"
+                        "UnusedUnderThisBase_10758"
                       ]
                     }
                   }
@@ -3879,11 +3879,11 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_11152) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_11152",
+                    "operator": "Variables[0] (UnusedUnderThisBase_11860) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_11860",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_11152"
+                      "UnusedUnderThisBase_11860"
                     ]
                   }
                 },
@@ -5012,11 +5012,11 @@ const compositeAbilityObject = {
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
               "previewValue": {
-                "operator": "Variables[0] (UnusedUnderThisBase_10148) || RETURN",
-                "displayLines": "UnusedUnderThisBase_10148",
+                "operator": "Variables[0] (UnusedUnderThisBase_10746) || RETURN",
+                "displayLines": "UnusedUnderThisBase_10746",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_10148"
+                  "UnusedUnderThisBase_10746"
                 ]
               }
             }
@@ -5103,7 +5103,7 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "advanceType": "Set",
-                      "multiAdd": "UnusedUnderThisBase_10148"
+                      "multiAdd": "UnusedUnderThisBase_10746"
                     }
                   ],
                   "failed": [

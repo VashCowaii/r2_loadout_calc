@@ -17,11 +17,11 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"-130810153\">Monster_W3_Dinosaur_01_MonsterAssistBonus</a>[<span class=\"descriptionNumberColor\">Terrathorn</span>]",
       "stackLimit": {
-        "operator": "Variables[0] (UnusedUnderThisBase_9638) || RETURN",
-        "displayLines": "UnusedUnderThisBase_9638",
+        "operator": "Variables[0] (UnusedUnderThisBase_10233) || RETURN",
+        "displayLines": "UnusedUnderThisBase_10233",
         "constants": [],
         "variables": [
-          "UnusedUnderThisBase_9638"
+          "UnusedUnderThisBase_10233"
         ]
       }
     },

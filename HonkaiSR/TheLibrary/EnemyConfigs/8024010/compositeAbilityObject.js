@@ -1512,11 +1512,11 @@ const compositeAbilityObject = {
               "AttackScaling": {
                 "DamageType": "Wind",
                 "Damage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_12957) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_12957",
+                  "operator": "Variables[0] (UnusedUnderThisBase_13804) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_13804",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_12957"
+                    "UnusedUnderThisBase_13804"
                   ]
                 },
                 "Toughness": null,

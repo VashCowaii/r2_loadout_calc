@@ -23,35 +23,35 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-1028185089\">Enemy_AML_Minion02_01_RallyHP_Controller_V2</a>",
       "valuePerStack": {
         "MDF_RallyTransferRatio": {
-          "operator": "Variables[0] (UnusedUnderThisBase_12308) || RETURN",
-          "displayLines": "UnusedUnderThisBase_12308",
+          "operator": "Variables[0] (UnusedUnderThisBase_13038) || RETURN",
+          "displayLines": "UnusedUnderThisBase_13038",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_12308"
+            "UnusedUnderThisBase_13038"
           ]
         },
         "MDF_Rally_HealPercentage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_12306) || RETURN",
-          "displayLines": "UnusedUnderThisBase_12306",
+          "operator": "Variables[0] (UnusedUnderThisBase_13036) || RETURN",
+          "displayLines": "UnusedUnderThisBase_13036",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_12306"
+            "UnusedUnderThisBase_13036"
           ]
         },
         "MDF_Rally_HealUpRatio": {
-          "operator": "Variables[0] (UnusedUnderThisBase_12309) || RETURN",
-          "displayLines": "UnusedUnderThisBase_12309",
+          "operator": "Variables[0] (UnusedUnderThisBase_13039) || RETURN",
+          "displayLines": "UnusedUnderThisBase_13039",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_12309"
+            "UnusedUnderThisBase_13039"
           ]
         },
         "MDF_Rally_Strongth_AllDamageTypeAddedRatio": {
-          "operator": "Variables[0] (UnusedUnderThisBase_12310) || RETURN",
-          "displayLines": "UnusedUnderThisBase_12310",
+          "operator": "Variables[0] (UnusedUnderThisBase_13040) || RETURN",
+          "displayLines": "UnusedUnderThisBase_13040",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_12310"
+            "UnusedUnderThisBase_13040"
           ]
         }
       }

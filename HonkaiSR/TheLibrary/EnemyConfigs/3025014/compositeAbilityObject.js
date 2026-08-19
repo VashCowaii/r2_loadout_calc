@@ -3885,11 +3885,11 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_11152) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_11152",
+                    "operator": "Variables[0] (UnusedUnderThisBase_11860) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_11860",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_11152"
+                      "UnusedUnderThisBase_11860"
                     ]
                   }
                 },

@@ -777,35 +777,35 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"766895631\">Standard_Monster_Floating_DamageReduceController</a>",
                       "valuePerStack": {
                         "MDF_LockHpActionDecreaseRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12648) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12648",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13493) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13493",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_12648"
+                            "UnusedUnderThisBase_13493"
                           ]
                         },
                         "MDF_LockHpUpLimitRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12616) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12616",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13461) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13461",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_12616"
+                            "UnusedUnderThisBase_13461"
                           ]
                         },
                         "MDF_DamageReduceRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12619) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12619",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13464) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13464",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_12619"
+                            "UnusedUnderThisBase_13464"
                           ]
                         },
                         "MDF_LastLockHpRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12615) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12615",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13460) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13460",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_12615"
+                            "UnusedUnderThisBase_13460"
                           ]
                         }
                       }
@@ -4124,35 +4124,35 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"766895631\">Standard_Monster_Floating_DamageReduceController</a>",
                   "valuePerStack": {
                     "MDF_LockHpActionDecreaseRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12648) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12648",
+                      "operator": "Variables[0] (UnusedUnderThisBase_13493) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_13493",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_12648"
+                        "UnusedUnderThisBase_13493"
                       ]
                     },
                     "MDF_LockHpUpLimitRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12616) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12616",
+                      "operator": "Variables[0] (UnusedUnderThisBase_13461) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_13461",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_12616"
+                        "UnusedUnderThisBase_13461"
                       ]
                     },
                     "MDF_DamageReduceRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12619) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12619",
+                      "operator": "Variables[0] (UnusedUnderThisBase_13464) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_13464",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_12619"
+                        "UnusedUnderThisBase_13464"
                       ]
                     },
                     "MDF_LastLockHpRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12615) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12615",
+                      "operator": "Variables[0] (UnusedUnderThisBase_13460) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_13460",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_12615"
+                        "UnusedUnderThisBase_13460"
                       ]
                     }
                   }

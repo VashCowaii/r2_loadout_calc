@@ -3154,11 +3154,11 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11632) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_11632",
+                          "operator": "Variables[0] (UnusedUnderThisBase_12340) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_12340",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_11632"
+                            "UnusedUnderThisBase_12340"
                           ]
                         }
                       },
@@ -3214,11 +3214,11 @@ const configAbility = {
                           "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_11632) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_11632",
+                              "operator": "Variables[0] (UnusedUnderThisBase_12340) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_12340",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_11632"
+                                "UnusedUnderThisBase_12340"
                               ]
                             }
                           },
@@ -3273,11 +3273,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                   "valuePerStack": {
                     "MDF_DamageUpRatio_PerLayer": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_11632) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_11632",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12340) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12340",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_11632"
+                        "UnusedUnderThisBase_12340"
                       ]
                     }
                   },

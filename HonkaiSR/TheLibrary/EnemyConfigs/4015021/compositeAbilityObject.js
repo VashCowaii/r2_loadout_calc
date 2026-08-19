@@ -246,11 +246,11 @@ const compositeAbilityObject = {
                                   "variableName": "Thunder_CountLight",
                                   "context": "TargetEntity",
                                   "value": {
-                                    "operator": "Variables[0] (UnusedUnderThisBase_10892) || RETURN",
-                                    "displayLines": "UnusedUnderThisBase_10892",
+                                    "operator": "Variables[0] (UnusedUnderThisBase_11600) || RETURN",
+                                    "displayLines": "UnusedUnderThisBase_11600",
                                     "constants": [],
                                     "variables": [
-                                      "UnusedUnderThisBase_10892"
+                                      "UnusedUnderThisBase_11600"
                                     ]
                                   },
                                   "max": {
@@ -271,13 +271,13 @@ const compositeAbilityObject = {
                                   "variableName": "Thunder_CountDark",
                                   "context": "TargetEntity",
                                   "value": {
-                                    "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_10892) || SUB || RETURN",
-                                    "displayLines": "(0 - UnusedUnderThisBase_10892)",
+                                    "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_11600) || SUB || RETURN",
+                                    "displayLines": "(0 - UnusedUnderThisBase_11600)",
                                     "constants": [
                                       0
                                     ],
                                     "variables": [
-                                      "UnusedUnderThisBase_10892"
+                                      "UnusedUnderThisBase_11600"
                                     ]
                                   },
                                   "max": {
@@ -690,11 +690,11 @@ const compositeAbilityObject = {
                               "variableName": "Thunder_CountLight",
                               "context": "TargetEntity",
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_10892) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_10892",
+                                "operator": "Variables[0] (UnusedUnderThisBase_11600) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_11600",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_10892"
+                                  "UnusedUnderThisBase_11600"
                                 ]
                               },
                               "max": {
@@ -715,13 +715,13 @@ const compositeAbilityObject = {
                               "variableName": "Thunder_CountDark",
                               "context": "TargetEntity",
                               "value": {
-                                "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_10892) || SUB || RETURN",
-                                "displayLines": "(0 - UnusedUnderThisBase_10892)",
+                                "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_11600) || SUB || RETURN",
+                                "displayLines": "(0 - UnusedUnderThisBase_11600)",
                                 "constants": [
                                   0
                                 ],
                                 "variables": [
-                                  "UnusedUnderThisBase_10892"
+                                  "UnusedUnderThisBase_11600"
                                 ]
                               },
                               "max": {

@@ -2713,11 +2713,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "SkillUltra_DamagePercentage",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_12374) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_12374",
+                        "operator": "Variables[0] (UnusedUnderThisBase_13104) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_13104",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_12374"
+                          "UnusedUnderThisBase_13104"
                         ]
                       }
                     }
@@ -2740,11 +2740,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "SkillUltra_DamagePercentage",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_8727) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_8727",
+                        "operator": "Variables[0] (UnusedUnderThisBase_9313) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_9313",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_8727"
+                          "UnusedUnderThisBase_9313"
                         ]
                       }
                     }
@@ -2767,11 +2767,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "SkillUltra_DamagePercentage",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_8705) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_8705",
+                        "operator": "Variables[0] (UnusedUnderThisBase_9291) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_9291",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_8705"
+                          "UnusedUnderThisBase_9291"
                         ]
                       }
                     }
@@ -2794,11 +2794,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "SkillUltra_DamagePercentage",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_8706) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_8706",
+                        "operator": "Variables[0] (UnusedUnderThisBase_9292) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_9292",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_8706"
+                          "UnusedUnderThisBase_9292"
                         ]
                       }
                     }
