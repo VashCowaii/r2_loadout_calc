@@ -49,33 +49,44 @@ const configAbility = {
           "eventTrigger": "Enter Battle",
           "execute": [
             {
-              "name": "Define Custom Variable with Matching Path",
-              "target": {
-                "name": "Target Name",
-                "target": "{{All Team Members(Exclude Self)}}.[[removeMemosprite]]"
-              },
-              "matchToPathFrom": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "variableName": "_SameTypeCount"
-            },
-            {
               "name": "IF",
               "conditions": {
                 "name": "Compare: Variable",
-                "value1": "_SameTypeCount",
-                "compareType": ">",
-                "value2": 0
+                "value1": "Wave Count",
+                "compareType": "=",
+                "value2": 1
               },
               "passed": [
                 {
-                  "name": "Add Events/Bonuses",
-                  "to": {
+                  "name": "Define Custom Variable with Matching Path",
+                  "target": {
                     "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
+                    "target": "{{All Team Members(Exclude Self)}}.[[removeMemosprite]]"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1618303955\">Relic_314_Sub</a>"
+                  "matchToPathFrom": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "variableName": "_SameTypeCount"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "_SameTypeCount",
+                    "compareType": ">",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1618303955\">Relic_314_Sub</a>"
+                    }
+                  ]
                 }
               ]
             }
