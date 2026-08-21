@@ -69,7 +69,7 @@ const compositeAbilityObject = {
                         "name": "Has Flag",
                         "target": {
                           "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
+                          "target": "{{Parameter Target}}"
                         },
                         "flagName": [
                           "Break",

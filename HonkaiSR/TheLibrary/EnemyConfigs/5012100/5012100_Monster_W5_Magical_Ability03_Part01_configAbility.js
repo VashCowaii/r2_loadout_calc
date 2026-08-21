@@ -10,14 +10,6 @@ const configAbility = {
   "toughnessList": null,
   "parse": [
     {
-      "name": "Abort Ability Use",
-      "abilityName": "Monster_W5_Magical_ChangeToSun",
-      "abilitySource": {
-        "name": "Target Name",
-        "target": "{{Caster}}"
-      }
-    },
-    {
       "name": "UI Display Event",
       "popUpText": "First Kiss ❤ Sunny Skies"
     },
