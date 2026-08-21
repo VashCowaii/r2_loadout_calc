@@ -48,11 +48,11 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (BuffRatio) || Variables[1] (_Layer) || MUL || RETURN",
-                "displayLines": "(BuffRatio * _Layer)",
+                "operator": "Variables[0] (BonusRatio) || Variables[1] (_Layer) || MUL || RETURN",
+                "displayLines": "(BonusRatio * _Layer)",
                 "constants": [],
                 "variables": [
-                  "BuffRatio",
+                  "BonusRatio",
                   "_Layer"
                 ]
               }
