@@ -114,7 +114,8 @@ const compositeAbilityObject = {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1141771649\">Enemy_W5_Vtuber_InField</a>[<span class=\"descriptionNumberColor\">Epic showdown in progress!</span>]",
           "modifierFlags": [
-            "ListenBattleEventSkill"
+            "ListenBattleEventSkill",
+            148
           ],
           "description": "Located on the sub-field.",
           "type": "Other",
@@ -5081,11 +5082,11 @@ const compositeAbilityObject = {
           "functionName": "<a class=\"gTempYellow\" id=\"101547145\">Elation_StartElationTime</a>",
           "variables": {
             "TryStartElationTime_OverrideElationPoint": {
-              "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
-              "displayLines": "{[Skill06[4]]}",
+              "operator": "Variables[0] (TryStartElationTime_OverrideElationPoint) || RETURN",
+              "displayLines": "TryStartElationTime_OverrideElationPoint",
               "constants": [],
               "variables": [
-                "{[Skill06[4]]}"
+                "TryStartElationTime_OverrideElationPoint"
               ]
             },
             "TryStartElationTime_ElationTimeIsNoConsume": 1
@@ -5281,6 +5282,20 @@ const compositeAbilityObject = {
                   "adjustmentType": "+"
                 },
                 {
+                  "name": "Add Stage Ability",
+                  "abilityName": "Monster_W5_Vtuber_Ability06_Win_ExtraElationTime",
+                  "parameters": {
+                    "TryStartElationTime_OverrideElationPoint": {
+                      "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
+                      "displayLines": "{[Skill06[4]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill06[4]]}"
+                      ]
+                    }
+                  }
+                },
+                {
                   "name": "IF",
                   "conditions": {
                     "name": "In Aha-Instant"
@@ -5296,7 +5311,7 @@ const compositeAbilityObject = {
                       "abilityName": "Monster_W5_Vtuber_Ability06_Win_ExtraElationTime",
                       "abilitySource": {
                         "name": "Target Name",
-                        "target": "{{Caster}}"
+                        "target": "{{Level Entity}}"
                       },
                       "priorityTag": "EnemyBuffOthers",
                       "allowAbilityTriggers": false
@@ -5313,7 +5328,7 @@ const compositeAbilityObject = {
                       "abilityName": "Monster_W5_Vtuber_Ability06_Win_ExtraElationTime",
                       "abilitySource": {
                         "name": "Target Name",
-                        "target": "{{Caster}}"
+                        "target": "{{Level Entity}}"
                       },
                       "priorityTag": "EnemyForceKill",
                       "allowAbilityTriggers": false
