@@ -815,11 +815,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"428140510\">Enemy_W4_DawnsEye_01_BESpeed</a>",
               "valuePerStack": {
                 "MDF_Speed": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_10845) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_10845",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11553) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11553",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_10845"
+                    "UnusedUnderThisBase_11553"
                   ]
                 }
               }
@@ -832,11 +832,11 @@ const configAbility = {
                 "target": "{{Parameter Target}}"
               },
               "multiBase": {
-                "operator": "Variables[0] (UnusedUnderThisBase_10907) || RETURN",
-                "displayLines": "UnusedUnderThisBase_10907",
+                "operator": "Variables[0] (UnusedUnderThisBase_11615) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11615",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_10907"
+                  "UnusedUnderThisBase_11615"
                 ]
               }
             },
@@ -857,11 +857,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-355315499\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamageActionListener</a>",
               "valuePerStack": {
                 "MDF_TotalDamageRatioAdd": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_10868) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_10868",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11576) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11576",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_10868"
+                    "UnusedUnderThisBase_11576"
                   ]
                 },
                 "MDF_TotalDamageRatioCut": 0
@@ -879,27 +879,27 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-2100215981\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamage</a>[<span class=\"descriptionNumberColor\">Black Tide Sync Rate</span>]",
           "valuePerStack": {
             "MDF_TotalDamageRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_10854) || RETURN",
-              "displayLines": "UnusedUnderThisBase_10854",
+              "operator": "Variables[0] (UnusedUnderThisBase_11562) || RETURN",
+              "displayLines": "UnusedUnderThisBase_11562",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_10854"
+                "UnusedUnderThisBase_11562"
               ]
             },
             "MDF_TotalDamageRatioMin": {
-              "operator": "Variables[0] (UnusedUnderThisBase_10854) || RETURN",
-              "displayLines": "UnusedUnderThisBase_10854",
+              "operator": "Variables[0] (UnusedUnderThisBase_11562) || RETURN",
+              "displayLines": "UnusedUnderThisBase_11562",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_10854"
+                "UnusedUnderThisBase_11562"
               ]
             },
             "MDF_TotalDamageRatioMax": {
-              "operator": "Variables[0] (UnusedUnderThisBase_10909) || RETURN",
-              "displayLines": "UnusedUnderThisBase_10909",
+              "operator": "Variables[0] (UnusedUnderThisBase_11617) || RETURN",
+              "displayLines": "UnusedUnderThisBase_11617",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_10909"
+                "UnusedUnderThisBase_11617"
               ]
             },
             "MDF_BaseAttack": {
@@ -921,11 +921,11 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-355315499\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamageActionListener</a>",
           "valuePerStack": {
             "MDF_TotalDamageRatioAdd": {
-              "operator": "Variables[0] (UnusedUnderThisBase_10868) || RETURN",
-              "displayLines": "UnusedUnderThisBase_10868",
+              "operator": "Variables[0] (UnusedUnderThisBase_11576) || RETURN",
+              "displayLines": "UnusedUnderThisBase_11576",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_10868"
+                "UnusedUnderThisBase_11576"
               ]
             },
             "MDF_TotalDamageRatioCut": 0
@@ -998,11 +998,11 @@ const configAbility = {
               "valuePerStack": {
                 "MDF_TotalDamageRatioAdd": 0,
                 "MDF_TotalDamageRatioCut": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_10870) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_10870",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11578) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11578",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_10870"
+                    "UnusedUnderThisBase_11578"
                   ]
                 }
               },
@@ -1069,11 +1069,11 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_10859) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_10859",
+                    "operator": "Variables[0] (UnusedUnderThisBase_11567) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_11567",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_10859"
+                      "UnusedUnderThisBase_11567"
                     ]
                   },
                   "isFixed": "* ERR"
@@ -1135,11 +1135,11 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1313380500\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarok</a>",
           "valuePerStack": {
             "MDF_DirtyHPBase": {
-              "operator": "Variables[0] (UnusedUnderThisBase_10852) || RETURN",
-              "displayLines": "UnusedUnderThisBase_10852",
+              "operator": "Variables[0] (UnusedUnderThisBase_11560) || RETURN",
+              "displayLines": "UnusedUnderThisBase_11560",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_10852"
+                "UnusedUnderThisBase_11560"
               ]
             },
             "MDF_BaseAttack": {
@@ -1151,11 +1151,11 @@ const configAbility = {
               ]
             },
             "MDF_DeathSPAdd": {
-              "operator": "Variables[0] (UnusedUnderThisBase_10863) || RETURN",
-              "displayLines": "UnusedUnderThisBase_10863",
+              "operator": "Variables[0] (UnusedUnderThisBase_11571) || RETURN",
+              "displayLines": "UnusedUnderThisBase_11571",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_10863"
+                "UnusedUnderThisBase_11571"
               ]
             }
           }
@@ -1185,11 +1185,11 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1259657295\">Enemy_W4_DawnsEye_01_BreakController</a>",
           "valuePerStack": {
             "StanceDamage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_10866) || RETURN",
-              "displayLines": "UnusedUnderThisBase_10866",
+              "operator": "Variables[0] (UnusedUnderThisBase_11574) || RETURN",
+              "displayLines": "UnusedUnderThisBase_11574",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_10866"
+                "UnusedUnderThisBase_11574"
               ]
             }
           }
