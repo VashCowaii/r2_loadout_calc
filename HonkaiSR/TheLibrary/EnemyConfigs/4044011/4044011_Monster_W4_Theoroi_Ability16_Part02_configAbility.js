@@ -268,6 +268,22 @@ const configAbility = {
       ]
     },
     {
+      "name": "IF",
+      "conditions": {
+        "name": "Compare: Variable",
+        "value1": "Skill16Count",
+        "compareType": "=",
+        "value2": 0
+      },
+      "passed": [
+        {
+          "name": "Define Custom Variable",
+          "variableName": "Skill16Count",
+          "value": 1
+        }
+      ]
+    },
+    {
       "name": "Define Custom Variable",
       "variableName": "Skill16Damage",
       "value": {
