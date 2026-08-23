@@ -21,7 +21,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "value": "UNKNOWN_OBJECT_BOOLEAN_112751675"
+        "value": "W5_Shell"
       },
       "ifTargetFound": [
         {
@@ -151,7 +151,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "value": "UNKNOWN_OBJECT_BOOLEAN_112751675"
+        "value": "W5_Shell"
       },
       "noTargetFound": [
         {
