@@ -1932,7 +1932,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Asat Pramad: 0}}"
                     },
-                    "value": "UNKNOWN_OBJECT_BOOLEAN_-1584719618"
+                    "value": "W5_AsatPramad_MainStory440P3"
                   },
                   "passed": [
                     {
@@ -1967,7 +1967,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Asat Pramad: 0}}"
                     },
-                    "value": "UNKNOWN_OBJECT_BOOLEAN_-1584719618"
+                    "value": "W5_AsatPramad_MainStory440P3"
                   },
                   "passed": [
                     {

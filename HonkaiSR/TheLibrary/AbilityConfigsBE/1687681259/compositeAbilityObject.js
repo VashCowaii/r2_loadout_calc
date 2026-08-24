@@ -89,12 +89,12 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "DV_FantasticStory_BaseAbility_CountSum",
                       "value": {
-                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] ([object Object]) || Variables[2] (DV_TargetCount) || MUL || ADD || RETURN",
-                        "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + ([object Object] * DV_TargetCount))",
+                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2313_ADF_3) || Variables[2] (DV_TargetCount) || MUL || ADD || RETURN",
+                        "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2313_ADF_3 * DV_TargetCount))",
                         "constants": [],
                         "variables": [
                           "DV_FantasticStory_BaseAbility_CountSum",
-                          {},
+                          "DV_FantasticStory_PlusAbility_2313_ADF_3",
                           "DV_TargetCount"
                         ]
                       }
@@ -120,11 +120,11 @@ const compositeAbilityObject = {
                           "current": 100,
                           "max": 100,
                           "delta": {
-                            "operator": "Variables[0] ([object Object]) || Variables[1] (DV_TargetCount) || MUL || RETURN",
-                            "displayLines": "([object Object] * DV_TargetCount)",
+                            "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2313_ADF_3) || Variables[1] (DV_TargetCount) || MUL || RETURN",
+                            "displayLines": "(DV_FantasticStory_PlusAbility_2313_ADF_3 * DV_TargetCount)",
                             "constants": [],
                             "variables": [
-                              {},
+                              "DV_FantasticStory_PlusAbility_2313_ADF_3",
                               "DV_TargetCount"
                             ]
                           },
@@ -152,11 +152,11 @@ const compositeAbilityObject = {
                             ]
                           },
                           "delta": {
-                            "operator": "Variables[0] ([object Object]) || Variables[1] (DV_TargetCount) || MUL || RETURN",
-                            "displayLines": "([object Object] * DV_TargetCount)",
+                            "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2313_ADF_3) || Variables[1] (DV_TargetCount) || MUL || RETURN",
+                            "displayLines": "(DV_FantasticStory_PlusAbility_2313_ADF_3 * DV_TargetCount)",
                             "constants": [],
                             "variables": [
-                              {},
+                              "DV_FantasticStory_PlusAbility_2313_ADF_3",
                               "DV_TargetCount"
                             ]
                           },
