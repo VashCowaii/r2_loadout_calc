@@ -18,6 +18,62 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Target Configuration",
+          "nameTarget": "Rin: Archer",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team All(with Unselectable)V2}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Character ID",
+                    "ID": 1015,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": "Archer"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Gilgamesh: Saber",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Character ID",
+                    "ID": 1014,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": "Saber"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
           "nameTarget": "Elation Trailblazer: Ult Target",
           "isTargetOperator": false,
           "execute": [
@@ -81,6 +137,111 @@ const compositeAbilityObject = {
                       "target": "{{Parameter Target}}"
                     }
                   }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Himeko Nova: Ult Target",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{All Team Members}}.[[removeMemosprite]]"
+                },
+                {
+                  "name": "Filter by Life-State",
+                  "state": "Mask_AliveOnly"
+                },
+                {
+                  "name": "Sort by Lineup Name Index",
+                  "lineupName": "1510_Skill03_TeamPos"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Himeko Nova: Battle Event",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Battle Event List}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1170214118\">HimekoNova_BE_Passive</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Himeko Nova",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{All Team Members with Unselectables}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-1811687830\">HimekoNova_Passive</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Himeko Nova: Mech",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Add Target by Pseudo-Character Partner",
+              "identifier": "MechMK"
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Himeko Nova: Assist Target",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Himeko Nova}}"
                 }
               ]
             }
@@ -1922,6 +2083,303 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
+          "nameTarget": "Asat Pramad: Skill05 Target6",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Join Targets",
+                  "TargetList": [
+                    {
+                      "name": "Target Name",
+                      "target": "{{Player Team All(with Unselectable)V2}}"
+                    },
+                    {
+                      "name": "Target Name",
+                      "target": "{{Enemy Team All(with Unselectable)}}"
+                    }
+                  ]
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1179751240\">Enemy_W5_AsatPramad_BonusTarget06</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Asat Pramad: Skill05 Target5",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Join Targets",
+                  "TargetList": [
+                    {
+                      "name": "Target Name",
+                      "target": "{{Player Team All(with Unselectable)V2}}"
+                    },
+                    {
+                      "name": "Target Name",
+                      "target": "{{Enemy Team All(with Unselectable)}}"
+                    }
+                  ]
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1230084097\">Enemy_W5_AsatPramad_BonusTarget05</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Asat Pramad: Skill05 Target4",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Join Targets",
+                  "TargetList": [
+                    {
+                      "name": "Target Name",
+                      "target": "{{Player Team All(with Unselectable)V2}}"
+                    },
+                    {
+                      "name": "Target Name",
+                      "target": "{{Enemy Team All(with Unselectable)}}"
+                    }
+                  ]
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1213306478\">Enemy_W5_AsatPramad_BonusTarget04</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Asat Pramad: Skill05 Target3",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Join Targets",
+                  "TargetList": [
+                    {
+                      "name": "Target Name",
+                      "target": "{{Player Team All(with Unselectable)V2}}"
+                    },
+                    {
+                      "name": "Target Name",
+                      "target": "{{Enemy Team All(with Unselectable)}}"
+                    }
+                  ]
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1263639335\">Enemy_W5_AsatPramad_BonusTarget03</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Asat Pramad: Skill05 Target2",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Join Targets",
+                  "TargetList": [
+                    {
+                      "name": "Target Name",
+                      "target": "{{Player Team All(with Unselectable)V2}}"
+                    },
+                    {
+                      "name": "Target Name",
+                      "target": "{{Enemy Team All(with Unselectable)}}"
+                    }
+                  ]
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1246861716\">Enemy_W5_AsatPramad_BonusTarget02</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Asat Pramad: Skill05 Target1",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Join Targets",
+                  "TargetList": [
+                    {
+                      "name": "Target Name",
+                      "target": "{{Player Team All(with Unselectable)V2}}"
+                    },
+                    {
+                      "name": "Target Name",
+                      "target": "{{Enemy Team All(with Unselectable)}}"
+                    }
+                  ]
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1297194573\">Enemy_W5_AsatPramad_BonusTarget01</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Asat Pramad: 2",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Enemy Team All(with Unselectable)}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W5_AsatPramad_02"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Asat Pramad: 1",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Enemy Team All(with Unselectable)}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W5_AsatPramad_01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Asat Pramad: 0",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Enemy Team All(with Unselectable)}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W5_AsatPramad_00"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
           "nameTarget": "Self and Main Target",
           "isTargetOperator": false,
           "execute": [
@@ -2066,6 +2524,195 @@ const compositeAbilityObject = {
                       "target": "{{Parameter Target}}"
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"1152795297\">Monster_W2_Huanlong_Ability07Mark</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Shell: Skill01 Target 5",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team All}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"741925782\">Enemy_W5_Shell_Ability01Target5</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Shell: Skill01 Target 4",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team All}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"758703401\">Enemy_W5_Shell_Ability01Target4</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Shell: Skill01 Target 3",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team All}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"775481020\">Enemy_W5_Shell_Ability01Target3</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Shell: Skill01 Target 2",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team All}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"792258639\">Enemy_W5_Shell_Ability01Target2</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Shell: Skill01 Target 1",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team All}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"809036258\">Enemy_W5_Shell_Ability01Target1</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Shell: All Shells",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Enemy Team All}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "value": "W5_Shell"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Shell: Skill01 Main",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Enemy Team All}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"603597471\">Enemy_W5_Shell_Ability01Main</a>"
                   }
                 }
               ]
@@ -5790,6 +6437,47 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
+          "nameTarget": "Elation: Currency Wars Himeko Origin",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team All(with Unselectable)V2}} + {{Currency Wars Full Activated Role OffFieldList}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-63000204\">MGridFight_Origin_3007_Type03_Himeko_ExtraElationAbility</a>"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-231268038\">MBattleEvent_GridFight_Standard_FrontInBackEnd</a>",
+                        "invertCondition": true
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
           "nameTarget": "Elation: Currency Wars Gear2012",
           "isTargetOperator": false,
           "execute": [
@@ -6100,7 +6788,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Target Name",
-                      "target": "{{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: All Battle Events}} + {{Elation: Currency Wars Gear2012}}"
+                      "target": "{{Elation: Extra Aha-Instant Participants}}"
                     }
                   ]
                 },
@@ -6137,6 +6825,72 @@ const compositeAbilityObject = {
                       }
                     ]
                   }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Elation: Extra Aha-Instant Participants",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Join Targets",
+                  "TargetList": [
+                    {
+                      "name": "Target Name",
+                      "target": "{{Elation: Currency Wars Full Activated OffFieldList}}"
+                    },
+                    {
+                      "name": "Target Name",
+                      "target": "{{Elation: All Battle Events}}"
+                    },
+                    {
+                      "name": "Target Name",
+                      "target": "{{Elation: Currency Wars Gear2012}}"
+                    },
+                    {
+                      "name": "Target Name",
+                      "target": "{{Elation: Currency Wars Himeko Origin}}"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Elation: All Entities",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Join Targets",
+                  "TargetList": [
+                    {
+                      "name": "Target Name",
+                      "target": "{{Elation: Player Team with Unselectables}}"
+                    },
+                    {
+                      "name": "Target Name",
+                      "target": "{{Elation: Currency Wars Full Activated OffFieldList}}"
+                    },
+                    {
+                      "name": "Target Name",
+                      "target": "{{Elation: Currency Wars Gear2012}}"
+                    },
+                    {
+                      "name": "Target Name",
+                      "target": "{{Elation: Currency Wars Himeko Origin}}"
+                    }
+                  ]
                 }
               ]
             }
@@ -8064,6 +8818,38 @@ const compositeAbilityObject = {
                 "Adjust Target by Part Number"
               ]
             }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Fate: Rin Card Targets",
+          "isTargetOperator": false,
+          "execute": [
+            "Add Target by Fate Rin Card Targets"
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Fate: Rin Card Sub-Targets",
+          "isTargetOperator": false,
+          "execute": [
+            "Add Target by Fate Rin Card Sub-Targets"
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Fate: Rin Card Main-Targets",
+          "isTargetOperator": false,
+          "execute": [
+            "Add Target by Fate Rin Card Main-Targets"
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Fate: Rin Card Source",
+          "isTargetOperator": false,
+          "execute": [
+            "Add Target by Fate Rin Card User"
           ]
         },
         {
