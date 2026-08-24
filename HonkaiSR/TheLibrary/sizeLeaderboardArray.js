@@ -275,7 +275,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "TheHerta",
     "entryIcon": "icon/character/1401.png",
     "lineCount": 8612,
-    "sizeCount": 343643
+    "sizeCount": 343644
   },
   {
     "entryType": "enemy",
@@ -501,7 +501,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Acheron",
     "entryIcon": "icon/character/1308.png",
     "lineCount": 7920,
-    "sizeCount": 286773
+    "sizeCount": 286774
   },
   {
     "entryType": "char",
@@ -1545,7 +1545,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Anaxa",
     "entryIcon": "icon/character/1405.png",
     "lineCount": 4235,
-    "sizeCount": 153085
+    "sizeCount": 153086
   },
   {
     "entryType": "char",
@@ -1697,7 +1697,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Sparxie",
     "entryIcon": "icon/character/1501.png",
     "lineCount": 4089,
-    "sizeCount": 141182
+    "sizeCount": 141183
   },
   {
     "entryType": "char",
@@ -3709,7 +3709,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "DazzledbyaFloweryWorld",
     "entryIcon": "icon/light_cone/23053.png",
     "lineCount": 567,
-    "sizeCount": 21664
+    "sizeCount": 21665
   },
   {
     "entryType": "enemy",

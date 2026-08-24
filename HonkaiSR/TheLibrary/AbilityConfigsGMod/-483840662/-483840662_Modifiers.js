@@ -14,6 +14,34 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "execute": [
         {
+          "eventTrigger": "When Modifier Destroyed/Removed",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value1": "_AssistEnergyNeedOnce",
+                "compareType": "=",
+                "value2": 1
+              },
+              "passed": [
+                {
+                  "name": "TEST DATA: Assist Skill Energy",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "add": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
           "eventTrigger": "Ability Cost Deduction [Owner]: Start[?]",
           "execute": [
             {
@@ -137,6 +165,108 @@ const configAbility = {
                       "propertyAction": "Remove"
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Character ID",
+                    "ID": 1510,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "characterName": "Himeko • Nova"
+                  },
+                  {
+                    "name": "Is Part Of",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Ability Targets of Modifier Holder}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder's Hostile Entities(AOE)}}"
+                    },
+                    "mustBeAlive2": true
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "_ReplaySkill",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  {
+                    "name": "Skill Type",
+                    "skillType": "Skill"
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Himeko Nova: Assist Target}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Set Target Parameter",
+                      "readTarget": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "paramTarget": {
+                        "name": "Target Name",
+                        "target": "{{Himeko Nova: Assist Target}}"
+                      },
+                      "variableName": "HimekoNova_00_AssistTarget_Copy"
+                    },
+                    {
+                      "name": "Define Modifier-Specific Variable",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>",
+                      "variableName": "_AssistEnergyNeedOnce",
+                      "value": 0
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Set Target Parameter",
+                      "readTarget": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "paramTarget": {
+                        "name": "Target Name",
+                        "target": "{{Himeko Nova: Assist Target}}"
+                      },
+                      "variableName": "HimekoNova_00_AssistTarget_Copy"
+                    },
+                    {
+                      "name": "Define Modifier-Specific Variable",
+                      "modifierName": "<a class=\"gModGreen\" id=\"1031496924\">Standard_Windfury</a>",
+                      "variableName": "_AssistEnergyNeedOnce",
+                      "value": 1
+                    }
+                  ]
+                },
+                {
+                  "name": "TEST DATA: Assist Skill Energy",
+                  "on": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  }
                 }
               ]
             }
@@ -340,70 +470,6 @@ const configAbility = {
                     "mustBeAlive2": true
                   },
                   {
-                    "name": "Compare: Variable",
-                    "value1": "_ReplayNormal",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "_IsWindfurySkill",
-                    "compareType": "=",
-                    "value2": 0
-                  }
-                ]
-              }
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Is Part Of",
-                    "of": {
-                      "name": "Target Name",
-                      "target": "{{Ability Targets of Modifier Holder}}"
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder's Hostile Entities(AOE)}}"
-                    },
-                    "mustBeAlive2": true
-                  },
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "_ReplaySkill",
-                    "compareType": "=",
-                    "value2": 1
-                  },
-                  {
-                    "name": "Compare: Variable",
-                    "value1": "_IsWindfurySkill",
-                    "compareType": "=",
-                    "value2": 0
-                  }
-                ]
-              }
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Is Part Of",
-                    "of": {
-                      "name": "Target Name",
-                      "target": "{{Ability Targets of Modifier Holder}}"
-                    },
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder's Hostile Entities(AOE)}}"
-                    },
-                    "mustBeAlive2": true
-                  },
-                  {
                     "name": "OR",
                     "conditionList": [
                       {
@@ -439,14 +505,182 @@ const configAbility = {
                 "name": "AND",
                 "conditionList": [
                   {
+                    "name": "Compare: Variable",
+                    "value1": "_IsAimEnemySkill",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "_ReplayNormal",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "_IsWindfurySkill",
+                    "compareType": "=",
+                    "value2": 0
+                  }
+                ]
+              }
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "_IsAimEnemySkill",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "_ReplaySkill",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "_IsWindfurySkill",
+                    "compareType": "=",
+                    "value2": 0
+                  }
+                ]
+              }
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Character ID",
+                    "ID": 1510,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "characterName": "Himeko • Nova"
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "_IsAimEnemySkill",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "_ReplaySkill",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "_IsWindfurySkill",
+                    "compareType": "=",
+                    "value2": 0
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable with Copy",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variable": "HimekoNova_PassiveMode_Flag01",
+                  "target2": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variable2": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot",
+                  "scope": "ContextModifier"
+                },
+                {
+                  "name": "Define Custom Variable with Copy",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variable": "HimekoNova_PassiveMode_Flag02",
+                  "target2": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variable2": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot",
+                  "scope": "ContextModifier"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Skill Name",
+                    "skillName": "Skill51"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "_HimekoNova_SkillTag",
+                      "value": 1
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Skill Name",
+                        "skillName": "Skill52"
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "_HimekoNova_SkillTag",
+                          "value": 2
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Skill Name",
+                            "skillName": "Skill53"
+                          },
+                          "passed": [
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "_HimekoNova_SkillTag",
+                              "value": 3
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
                     "name": "OR",
                     "conditionList": [
                       {
                         "name": "AND",
                         "conditionList": [
                           {
-                            "name": "Skill Type",
-                            "skillType": "Skill"
+                            "name": "OR",
+                            "conditionList": [
+                              {
+                                "name": "Skill Type",
+                                "skillType": "Skill"
+                              }
+                            ]
                           },
                           {
                             "name": "Compare: Variable",
@@ -712,6 +946,15 @@ const configAbility = {
                           "target": "{{Modifier Holder}}"
                         },
                         "characterName": "Mortenax Blade"
+                      },
+                      {
+                        "name": "Character ID",
+                        "ID": 1510,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "characterName": "Himeko • Nova"
                       }
                     ]
                   },
@@ -720,19 +963,286 @@ const configAbility = {
                       "name": "IF",
                       "conditions": {
                         "name": "Character ID",
-                        "ID": 1213,
+                        "ID": 1510,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "characterName": "Dan Heng • Imbibitor Lunae"
+                        "characterName": "Himeko • Nova"
                       },
                       "passed": [
                         {
-                          "name": "Define Custom Variable with Varying Data",
-                          "target": null,
-                          "variableName": "_CurrnetSkillIndex",
-                          "value": "CurrentActionSkillIndex"
+                          "name": "IF",
+                          "conditions": {
+                            "name": "AND",
+                            "conditionList": [
+                              {
+                                "name": "Compare: Variable",
+                                "value1": "_HimekoNova_SkillTag",
+                                "compareType": "=",
+                                "value2": 3
+                              }
+                            ]
+                          },
+                          "passed": [
+                            {
+                              "name": "Inject Extra-Turn",
+                              "actionTag": [
+                                "ActionTag_Windfury",
+                                "AssistAbility3"
+                              ],
+                              "skillTag": "AssistSkill3",
+                              "forceAction": true,
+                              "castTarget": {
+                                "name": "Target Name",
+                                "target": "{{Hostile Entities(AOE)}}"
+                              },
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "afterInjection": [
+                                {
+                                  "name": "IF",
+                                  "conditions": {
+                                    "name": "Living/Death State",
+                                    "state": "Mask_AliveOrLimbo"
+                                  },
+                                  "passed": [
+                                    {
+                                      "name": "IF",
+                                      "conditions": {
+                                        "name": "Enemies Still Alive",
+                                        "target": {
+                                          "name": "Target Name",
+                                          "target": "{{Modifier Holder}}"
+                                        },
+                                        "invertCondition": true
+                                      },
+                                      "passed": [
+                                        {
+                                          "name": "Define Custom Variable",
+                                          "variableName": "_OnWaveMonster_SkillType",
+                                          "value": 1
+                                        }
+                                      ],
+                                      "failed": [
+                                        {
+                                          "name": "Define Custom Variable",
+                                          "variableName": "Windfury_Flag",
+                                          "value": 0
+                                        },
+                                        {
+                                          "name": "Define Custom Variable",
+                                          "scope": "ContextModifier",
+                                          "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot",
+                                          "value": 0
+                                        },
+                                        {
+                                          "name": "Define Custom Variable",
+                                          "scope": "ContextModifier",
+                                          "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot",
+                                          "value": 0
+                                        },
+                                        {
+                                          "name": "IF",
+                                          "conditions": {
+                                            "name": "Compare: Variable",
+                                            "value1": "MDF_WindfuryCount",
+                                            "compareType": "<",
+                                            "value2": 1
+                                          },
+                                          "passed": [
+                                            "Modifier Deletes Itself"
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "runsAfterBattleEnd": true,
+                              "priorityTag": "Windfury"
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "AND",
+                                "conditionList": [
+                                  {
+                                    "name": "Compare: Variable",
+                                    "value1": "_HimekoNova_SkillTag",
+                                    "compareType": "=",
+                                    "value2": 2
+                                  }
+                                ]
+                              },
+                              "passed": [
+                                {
+                                  "name": "Inject Extra-Turn",
+                                  "actionTag": [
+                                    "ActionTag_Windfury",
+                                    "AssistAbility2"
+                                  ],
+                                  "skillTag": "AssistSkill2",
+                                  "forceAction": true,
+                                  "castTarget": {
+                                    "name": "Target Name",
+                                    "target": "{{Hostile Entities(AOE)}}"
+                                  },
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Modifier Holder}}"
+                                  },
+                                  "afterInjection": [
+                                    {
+                                      "name": "IF",
+                                      "conditions": {
+                                        "name": "Living/Death State",
+                                        "state": "Mask_AliveOrLimbo"
+                                      },
+                                      "passed": [
+                                        {
+                                          "name": "IF",
+                                          "conditions": {
+                                            "name": "Enemies Still Alive",
+                                            "target": {
+                                              "name": "Target Name",
+                                              "target": "{{Modifier Holder}}"
+                                            },
+                                            "invertCondition": true
+                                          },
+                                          "passed": [
+                                            {
+                                              "name": "Define Custom Variable",
+                                              "variableName": "_OnWaveMonster_SkillType",
+                                              "value": 1
+                                            }
+                                          ],
+                                          "failed": [
+                                            {
+                                              "name": "Define Custom Variable",
+                                              "variableName": "Windfury_Flag",
+                                              "value": 0
+                                            },
+                                            {
+                                              "name": "Define Custom Variable",
+                                              "scope": "ContextModifier",
+                                              "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot",
+                                              "value": 0
+                                            },
+                                            {
+                                              "name": "Define Custom Variable",
+                                              "scope": "ContextModifier",
+                                              "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot",
+                                              "value": 0
+                                            },
+                                            {
+                                              "name": "IF",
+                                              "conditions": {
+                                                "name": "Compare: Variable",
+                                                "value1": "MDF_WindfuryCount",
+                                                "compareType": "<",
+                                                "value2": 1
+                                              },
+                                              "passed": [
+                                                "Modifier Deletes Itself"
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "runsAfterBattleEnd": true,
+                                  "priorityTag": "Windfury"
+                                }
+                              ],
+                              "failed": [
+                                {
+                                  "name": "Inject Extra-Turn",
+                                  "actionTag": [
+                                    "ActionTag_Windfury",
+                                    "FakeAssistAbility1"
+                                  ],
+                                  "skillTag": "AssistSkill1",
+                                  "forceAction": true,
+                                  "castTarget": {
+                                    "name": "Target Name",
+                                    "target": "{{Hostile Entities(AOE)}}"
+                                  },
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Modifier Holder}}"
+                                  },
+                                  "afterInjection": [
+                                    {
+                                      "name": "IF",
+                                      "conditions": {
+                                        "name": "Living/Death State",
+                                        "state": "Mask_AliveOrLimbo"
+                                      },
+                                      "passed": [
+                                        {
+                                          "name": "IF",
+                                          "conditions": {
+                                            "name": "Enemies Still Alive",
+                                            "target": {
+                                              "name": "Target Name",
+                                              "target": "{{Modifier Holder}}"
+                                            },
+                                            "invertCondition": true
+                                          },
+                                          "passed": [
+                                            {
+                                              "name": "Define Custom Variable",
+                                              "variableName": "_OnWaveMonster_SkillType",
+                                              "value": 1
+                                            }
+                                          ],
+                                          "failed": [
+                                            {
+                                              "name": "Define Custom Variable",
+                                              "variableName": "Windfury_Flag",
+                                              "value": 0
+                                            },
+                                            {
+                                              "name": "Define Custom Variable",
+                                              "scope": "ContextModifier",
+                                              "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot",
+                                              "value": 0
+                                            },
+                                            {
+                                              "name": "Define Custom Variable",
+                                              "scope": "ContextModifier",
+                                              "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot",
+                                              "value": 0
+                                            },
+                                            {
+                                              "name": "IF",
+                                              "conditions": {
+                                                "name": "Compare: Variable",
+                                                "value1": "MDF_WindfuryCount",
+                                                "compareType": "<",
+                                                "value2": 1
+                                              },
+                                              "passed": [
+                                                "Modifier Deletes Itself"
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "runsAfterBattleEnd": true,
+                                  "priorityTag": "Windfury"
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ],
                       "failed": [
@@ -740,166 +1250,261 @@ const configAbility = {
                           "name": "IF",
                           "conditions": {
                             "name": "Character ID",
-                            "ID": 1501,
+                            "ID": 1213,
                             "target": {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"
                             },
-                            "characterName": "Sparxie"
+                            "characterName": "Dan Heng • Imbibitor Lunae"
                           },
                           "passed": [
                             {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Skill Name",
-                                "skillName": "Skill11"
-                              },
-                              "passed": [
-                                {
-                                  "name": "Define Custom Variable",
-                                  "variableName": "_CurrnetSkillIndex",
-                                  "value": 9
-                                }
-                              ],
-                              "failed": [
-                                {
-                                  "name": "Define Custom Variable with Varying Data",
-                                  "target": null,
-                                  "variableName": "_CurrnetSkillIndex",
-                                  "value": "CurrentActionSkillIndex"
-                                }
-                              ]
+                              "name": "Define Custom Variable with Varying Data",
+                              "target": null,
+                              "variableName": "_CurrnetSkillIndex",
+                              "value": "CurrentActionSkillIndex"
                             }
                           ],
                           "failed": [
                             {
                               "name": "IF",
                               "conditions": {
-                                "name": "Skill Name",
-                                "skillName": "Skill21"
-                              },
-                              "passed": [
-                                {
-                                  "name": "Define Custom Variable",
-                                  "variableName": "_CurrnetSkillIndex",
-                                  "value": 3
-                                }
-                              ],
-                              "failed": [
-                                {
-                                  "name": "Define Custom Variable with Varying Data",
-                                  "target": null,
-                                  "variableName": "_CurrnetSkillIndex",
-                                  "value": "CurrentActionSkillIndex"
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>",
-                      "valuePerStack": {
-                        "_ChangeValue": {
-                          "operator": "Variables[0] (_ChangeValue) || RETURN",
-                          "displayLines": "_ChangeValue",
-                          "constants": [],
-                          "variables": [
-                            "_ChangeValue"
-                          ]
-                        }
-                      }
-                    },
-                    {
-                      "name": "Inject Extra-Turn",
-                      "actionTag": "ActionTag_Windfury",
-                      "skillIndex": {
-                        "operator": "Variables[0] (_CurrnetSkillIndex) || RETURN",
-                        "displayLines": "_CurrnetSkillIndex",
-                        "constants": [],
-                        "variables": [
-                          "_CurrnetSkillIndex"
-                        ]
-                      },
-                      "forceAction": true,
-                      "castTarget": {
-                        "name": "Target Name",
-                        "target": "{{Ability Targets of Modifier Holder}}"
-                      },
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "afterInjection": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Living/Death State",
-                            "state": "Mask_AliveOrLimbo"
-                          },
-                          "passed": [
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Enemies Still Alive",
+                                "name": "Character ID",
+                                "ID": 1501,
                                 "target": {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
                                 },
-                                "invertCondition": true
+                                "characterName": "Sparxie"
                               },
                               "passed": [
                                 {
-                                  "name": "Define Custom Variable",
-                                  "variableName": "_OnWaveMonster_SkillType",
-                                  "value": {
-                                    "operator": "Variables[0] (_CurrnetSkillIndex) || RETURN",
-                                    "displayLines": "_CurrnetSkillIndex",
-                                    "constants": [],
-                                    "variables": [
-                                      "_CurrnetSkillIndex"
-                                    ]
-                                  }
+                                  "name": "IF",
+                                  "conditions": {
+                                    "name": "Skill Name",
+                                    "skillName": "Skill11"
+                                  },
+                                  "passed": [
+                                    {
+                                      "name": "Define Custom Variable",
+                                      "variableName": "_CurrnetSkillIndex",
+                                      "value": 9
+                                    }
+                                  ],
+                                  "failed": [
+                                    {
+                                      "name": "Define Custom Variable with Varying Data",
+                                      "target": null,
+                                      "variableName": "_CurrnetSkillIndex",
+                                      "value": "CurrentActionSkillIndex"
+                                    }
+                                  ]
                                 }
                               ],
                               "failed": [
                                 {
-                                  "name": "Remove Events/Bonuses",
-                                  "to": {
-                                    "name": "Target Name",
-                                    "target": "{{Modifier Holder}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>"
-                                },
-                                {
-                                  "name": "Define Custom Variable",
-                                  "variableName": "Windfury_Flag",
-                                  "value": 0
-                                },
-                                {
                                   "name": "IF",
                                   "conditions": {
-                                    "name": "Compare: Variable",
-                                    "value1": "MDF_WindfuryCount",
-                                    "compareType": "<",
-                                    "value2": 1
+                                    "name": "Character ID",
+                                    "ID": 1507,
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Modifier Holder}}"
+                                    },
+                                    "characterName": "Mortenax Blade"
                                   },
                                   "passed": [
-                                    "Modifier Deletes Itself"
+                                    {
+                                      "name": "IF",
+                                      "conditions": {
+                                        "name": "Skill Name",
+                                        "skillName": "Skill21"
+                                      },
+                                      "passed": [
+                                        {
+                                          "name": "Define Custom Variable",
+                                          "variableName": "_CurrnetSkillIndex",
+                                          "value": 3
+                                        }
+                                      ],
+                                      "failed": [
+                                        {
+                                          "name": "Define Custom Variable with Varying Data",
+                                          "target": null,
+                                          "variableName": "_CurrnetSkillIndex",
+                                          "value": "CurrentActionSkillIndex"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "failed": [
+                                    {
+                                      "name": "Define Custom Variable with Varying Data",
+                                      "target": null,
+                                      "variableName": "_CurrnetSkillIndex",
+                                      "value": "CurrentActionSkillIndex"
+                                    }
                                   ]
                                 }
                               ]
                             }
                           ]
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Skill Type",
+                            "skillType": "Basic ATK"
+                          },
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>",
+                              "valuePerStack": {
+                                "_ChangeValue": {
+                                  "operator": "Variables[0] (_ChangeValue) || RETURN",
+                                  "displayLines": "_ChangeValue",
+                                  "constants": [],
+                                  "variables": [
+                                    "_ChangeValue"
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "OR",
+                            "conditionList": [
+                              {
+                                "name": "Skill Type",
+                                "skillType": "Skill"
+                              }
+                            ]
+                          },
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-361819910\">Standard_Windfury_ModifyAbilityPropertyByType_Skill</a>",
+                              "valuePerStack": {
+                                "_ChangeValue": {
+                                  "operator": "Variables[0] (_ChangeValue) || RETURN",
+                                  "displayLines": "_ChangeValue",
+                                  "constants": [],
+                                  "variables": [
+                                    "_ChangeValue"
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Inject Extra-Turn",
+                          "actionTag": [
+                            "ActionTag_Windfury"
+                          ],
+                          "skillIndex": {
+                            "operator": "Variables[0] (_CurrnetSkillIndex) || RETURN",
+                            "displayLines": "_CurrnetSkillIndex",
+                            "constants": [],
+                            "variables": [
+                              "_CurrnetSkillIndex"
+                            ]
+                          },
+                          "forceAction": true,
+                          "castTarget": {
+                            "name": "Target Name",
+                            "target": "{{Ability Targets of Modifier Holder}}"
+                          },
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "afterInjection": [
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "Living/Death State",
+                                "state": "Mask_AliveOrLimbo"
+                              },
+                              "passed": [
+                                {
+                                  "name": "IF",
+                                  "conditions": {
+                                    "name": "Enemies Still Alive",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Modifier Holder}}"
+                                    },
+                                    "invertCondition": true
+                                  },
+                                  "passed": [
+                                    {
+                                      "name": "Define Custom Variable",
+                                      "variableName": "_OnWaveMonster_SkillType",
+                                      "value": {
+                                        "operator": "Variables[0] (_CurrnetSkillIndex) || RETURN",
+                                        "displayLines": "_CurrnetSkillIndex",
+                                        "constants": [],
+                                        "variables": [
+                                          "_CurrnetSkillIndex"
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  "failed": [
+                                    {
+                                      "name": "Remove Events/Bonuses",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Modifier Holder}}"
+                                      },
+                                      "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>"
+                                    },
+                                    {
+                                      "name": "Remove Events/Bonuses",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Modifier Holder}}"
+                                      },
+                                      "modifier": "<a class=\"gModGreen\" id=\"-361819910\">Standard_Windfury_ModifyAbilityPropertyByType_Skill</a>"
+                                    },
+                                    {
+                                      "name": "Define Custom Variable",
+                                      "variableName": "Windfury_Flag",
+                                      "value": 0
+                                    },
+                                    {
+                                      "name": "IF",
+                                      "conditions": {
+                                        "name": "Compare: Variable",
+                                        "value1": "MDF_WindfuryCount",
+                                        "compareType": "<",
+                                        "value2": 1
+                                      },
+                                      "passed": [
+                                        "Modifier Deletes Itself"
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "priorityTag": "Windfury"
                         }
-                      ],
-                      "priorityTag": "Windfury"
+                      ]
                     }
                   ],
                   "failed": [
@@ -930,7 +1535,9 @@ const configAbility = {
                         },
                         {
                           "name": "Inject Extra-Turn",
-                          "actionTag": "ActionTag_Windfury",
+                          "actionTag": [
+                            "ActionTag_Windfury"
+                          ],
                           "forceAction": true,
                           "castTarget": {
                             "name": "Target Name",
@@ -1003,8 +1610,13 @@ const configAbility = {
                     {
                       "name": "IF",
                       "conditions": {
-                        "name": "Skill Type",
-                        "skillType": "Skill"
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Skill Type",
+                            "skillType": "Skill"
+                          }
+                        ]
                       },
                       "passed": [
                         {
@@ -1027,7 +1639,9 @@ const configAbility = {
                         },
                         {
                           "name": "Inject Extra-Turn",
-                          "actionTag": "ActionTag_Windfury",
+                          "actionTag": [
+                            "ActionTag_Windfury"
+                          ],
                           "skillType": "ControlSkill02",
                           "forceAction": true,
                           "castTarget": {
@@ -1137,8 +1751,114 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable",
+                  "scope": "ContextModifier",
                   "variableName": "_IsWindfurySkill",
                   "value": 1
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Character ID",
+                    "ID": 1510,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "characterName": "Himeko • Nova"
+                  },
+                  "passed": [
+                    {
+                      "name": "Set Target Parameter",
+                      "readTarget": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "paramTarget": {
+                        "name": "Target Sequence",
+                        "Sequence": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          }
+                        ]
+                      },
+                      "variableName": "HimekoNova_00_Assist"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "_AssistEnergyNeedOnce",
+                        "compareType": "=",
+                        "value2": 1
+                      },
+                      "passed": [
+                        {
+                          "name": "TEST DATA: Assist Skill Energy",
+                          "on": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "add": 1
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Compare: Variable",
+                            "value1": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot",
+                            "compareType": ">=",
+                            "value2": 1,
+                            "contextScope": "ContextModifier"
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "scope": "ContextOwner",
+                          "variableName": "HimekoNova_PassiveMode_Flag02",
+                          "value": 1
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot",
+                            "compareType": ">=",
+                            "value2": 1,
+                            "contextScope": "ContextModifier"
+                          },
+                          "passed": [
+                            {
+                              "name": "Define Custom Variable",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "scope": "ContextOwner",
+                              "variableName": "HimekoNova_PassiveMode_Flag01",
+                              "value": 1
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }
@@ -1175,6 +1895,40 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "Windfury_Flag",
                   "value": 0
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Character ID",
+                    "ID": 1510,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "characterName": "Himeko • Nova"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "scope": "ContextModifier",
+                      "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot",
+                      "value": 0
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "scope": "ContextModifier",
+                      "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot",
+                      "value": 0
+                    },
+                    {
+                      "name": "TEST DATA: Assist Skill Energy",
+                      "on": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "add": 1
+                    }
+                  ]
                 },
                 {
                   "name": "IF",
@@ -1292,7 +2046,9 @@ const configAbility = {
                     },
                     {
                       "name": "Inject Extra-Turn",
-                      "actionTag": "ActionTag_Windfury",
+                      "actionTag": [
+                        "ActionTag_Windfury"
+                      ],
                       "skillIndex": {
                         "operator": "Variables[0] (_OnWaveMonster_SkillType) || RETURN",
                         "displayLines": "_OnWaveMonster_SkillType",
@@ -1410,7 +2166,9 @@ const configAbility = {
                         },
                         {
                           "name": "Inject Extra-Turn",
-                          "actionTag": "ActionTag_Windfury",
+                          "actionTag": [
+                            "ActionTag_Windfury"
+                          ],
                           "skillIndex": {
                             "operator": "Variables[0] (_OnWaveMonster_SkillType) || RETURN",
                             "displayLines": "_OnWaveMonster_SkillType",
@@ -1497,42 +2255,43 @@ const configAbility = {
                       ],
                       "failed": [
                         {
-                          "name": "SWITCH",
-                          "switchValue": {
-                            "operator": "Variables[0] (_OnWaveMonster_SkillType) || RETURN",
-                            "displayLines": "_OnWaveMonster_SkillType",
-                            "constants": [],
-                            "variables": [
-                              "_OnWaveMonster_SkillType"
-                            ]
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Character ID",
+                            "ID": 1510,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "characterName": "Himeko • Nova"
                           },
-                          "caseEvents": [
+                          "passed": [
                             {
-                              "name": "SWITCH CONDITON",
-                              "caseValueIs": 1,
-                              "execute": [
-                                {
-                                  "name": "Add Events/Bonuses",
-                                  "to": {
-                                    "name": "Target Name",
-                                    "target": "{{Modifier Holder}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>",
-                                  "valuePerStack": {
-                                    "_ChangeValue": {
-                                      "operator": "Variables[0] (_ChangeValue) || RETURN",
-                                      "displayLines": "_ChangeValue",
-                                      "constants": [],
-                                      "variables": [
-                                        "_ChangeValue"
-                                      ]
-                                    }
+                              "name": "IF",
+                              "conditions": {
+                                "name": "AND",
+                                "conditionList": [
+                                  {
+                                    "name": "Compare: Variable",
+                                    "value1": "_HimekoNova_SkillTag",
+                                    "compareType": "=",
+                                    "value2": 3
                                   }
-                                },
+                                ]
+                              },
+                              "passed": [
                                 {
                                   "name": "Inject Extra-Turn",
-                                  "actionTag": "ActionTag_Windfury",
+                                  "actionTag": [
+                                    "ActionTag_Windfury",
+                                    "AssistAbility3"
+                                  ],
+                                  "skillTag": "AssistSkill3",
                                   "forceAction": true,
+                                  "castTarget": {
+                                    "name": "Target Name",
+                                    "target": "{{Hostile Entities(AOE)}}"
+                                  },
                                   "target": {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
@@ -1559,21 +2318,32 @@ const configAbility = {
                                             {
                                               "name": "Define Custom Variable",
                                               "variableName": "_OnWaveMonster_SkillType",
-                                              "value": 1
+                                              "value": {
+                                                "operator": "Variables[0] (_OnWaveMonster_SkillType) || RETURN",
+                                                "displayLines": "_OnWaveMonster_SkillType",
+                                                "constants": [],
+                                                "variables": [
+                                                  "_OnWaveMonster_SkillType"
+                                                ]
+                                              }
                                             }
                                           ],
                                           "failed": [
                                             {
-                                              "name": "Remove Events/Bonuses",
-                                              "to": {
-                                                "name": "Target Name",
-                                                "target": "{{Modifier Holder}}"
-                                              },
-                                              "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>"
+                                              "name": "Define Custom Variable",
+                                              "variableName": "Windfury_Flag",
+                                              "value": 0
                                             },
                                             {
                                               "name": "Define Custom Variable",
-                                              "variableName": "Windfury_Flag",
+                                              "scope": "ContextModifier",
+                                              "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot",
+                                              "value": 0
+                                            },
+                                            {
+                                              "name": "Define Custom Variable",
+                                              "scope": "ContextModifier",
+                                              "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot",
                                               "value": 0
                                             },
                                             {
@@ -1598,108 +2368,425 @@ const configAbility = {
                                       ]
                                     }
                                   ],
+                                  "runsAfterBattleEnd": true,
                                   "priorityTag": "Windfury"
                                 }
-                              ]
-                            },
-                            {
-                              "name": "SWITCH CONDITON",
-                              "caseValueIs": 2,
-                              "execute": [
+                              ],
+                              "failed": [
                                 {
-                                  "name": "Add Events/Bonuses",
-                                  "to": {
-                                    "name": "Target Name",
-                                    "target": "{{Modifier Holder}}"
+                                  "name": "IF",
+                                  "conditions": {
+                                    "name": "AND",
+                                    "conditionList": [
+                                      {
+                                        "name": "Compare: Variable",
+                                        "value1": "_HimekoNova_SkillTag",
+                                        "compareType": "=",
+                                        "value2": 2
+                                      }
+                                    ]
                                   },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-361819910\">Standard_Windfury_ModifyAbilityPropertyByType_Skill</a>",
-                                  "valuePerStack": {
-                                    "_ChangeValue": {
-                                      "operator": "Variables[0] (_ChangeValue) || RETURN",
-                                      "displayLines": "_ChangeValue",
-                                      "constants": [],
-                                      "variables": [
-                                        "_ChangeValue"
-                                      ]
-                                    }
-                                  }
-                                },
-                                {
-                                  "name": "Inject Extra-Turn",
-                                  "actionTag": "ActionTag_Windfury",
-                                  "skillType": "ControlSkill02",
-                                  "forceAction": true,
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Modifier Holder}}"
-                                  },
-                                  "afterInjection": [
+                                  "passed": [
                                     {
-                                      "name": "IF",
-                                      "conditions": {
-                                        "name": "Living/Death State",
-                                        "state": "Mask_AliveOrLimbo"
+                                      "name": "Inject Extra-Turn",
+                                      "actionTag": [
+                                        "ActionTag_Windfury",
+                                        "AssistAbility2"
+                                      ],
+                                      "skillTag": "AssistSkill2",
+                                      "forceAction": true,
+                                      "castTarget": {
+                                        "name": "Target Name",
+                                        "target": "{{Hostile Entities(AOE)}}"
                                       },
-                                      "passed": [
+                                      "target": {
+                                        "name": "Target Name",
+                                        "target": "{{Modifier Holder}}"
+                                      },
+                                      "afterInjection": [
                                         {
                                           "name": "IF",
                                           "conditions": {
-                                            "name": "Enemies Still Alive",
-                                            "target": {
-                                              "name": "Target Name",
-                                              "target": "{{Modifier Holder}}"
-                                            },
-                                            "invertCondition": true
+                                            "name": "Living/Death State",
+                                            "state": "Mask_AliveOrLimbo"
                                           },
                                           "passed": [
                                             {
-                                              "name": "Define Custom Variable",
-                                              "variableName": "_OnWaveMonster_SkillType",
-                                              "value": 2
-                                            }
-                                          ],
-                                          "failed": [
-                                            {
-                                              "name": "Remove Events/Bonuses",
-                                              "to": {
-                                                "name": "Target Name",
-                                                "target": "{{Modifier Holder}}"
-                                              },
-                                              "modifier": "<a class=\"gModGreen\" id=\"-361819910\">Standard_Windfury_ModifyAbilityPropertyByType_Skill</a>"
-                                            },
-                                            {
-                                              "name": "Define Custom Variable",
-                                              "variableName": "Windfury_Flag",
-                                              "value": 0
-                                            },
-                                            {
                                               "name": "IF",
                                               "conditions": {
-                                                "name": "Compare: Variable",
-                                                "value1": "MDF_WindfuryCount",
-                                                "compareType": "<",
-                                                "value2": 1
+                                                "name": "Enemies Still Alive",
+                                                "target": {
+                                                  "name": "Target Name",
+                                                  "target": "{{Modifier Holder}}"
+                                                },
+                                                "invertCondition": true
                                               },
                                               "passed": [
-                                                "Modifier Deletes Itself"
+                                                {
+                                                  "name": "Define Custom Variable",
+                                                  "variableName": "_OnWaveMonster_SkillType",
+                                                  "value": {
+                                                    "operator": "Variables[0] (_OnWaveMonster_SkillType) || RETURN",
+                                                    "displayLines": "_OnWaveMonster_SkillType",
+                                                    "constants": [],
+                                                    "variables": [
+                                                      "_OnWaveMonster_SkillType"
+                                                    ]
+                                                  }
+                                                }
+                                              ],
+                                              "failed": [
+                                                {
+                                                  "name": "Define Custom Variable",
+                                                  "variableName": "Windfury_Flag",
+                                                  "value": 0
+                                                },
+                                                {
+                                                  "name": "Define Custom Variable",
+                                                  "scope": "ContextModifier",
+                                                  "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot",
+                                                  "value": 0
+                                                },
+                                                {
+                                                  "name": "Define Custom Variable",
+                                                  "scope": "ContextModifier",
+                                                  "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot",
+                                                  "value": 0
+                                                },
+                                                {
+                                                  "name": "IF",
+                                                  "conditions": {
+                                                    "name": "Compare: Variable",
+                                                    "value1": "MDF_WindfuryCount",
+                                                    "compareType": "<",
+                                                    "value2": 1
+                                                  },
+                                                  "passed": [
+                                                    "Modifier Deletes Itself"
+                                                  ]
+                                                },
+                                                {
+                                                  "name": "Define Custom Variable",
+                                                  "variableName": "_OnWaveMonster_SkillType",
+                                                  "value": -1
+                                                }
                                               ]
-                                            },
-                                            {
-                                              "name": "Define Custom Variable",
-                                              "variableName": "_OnWaveMonster_SkillType",
-                                              "value": -1
                                             }
                                           ]
                                         }
-                                      ]
+                                      ],
+                                      "runsAfterBattleEnd": true,
+                                      "priorityTag": "Windfury"
                                     }
                                   ],
-                                  "priorityTag": "Windfury"
+                                  "failed": [
+                                    {
+                                      "name": "Inject Extra-Turn",
+                                      "actionTag": [
+                                        "ActionTag_Windfury",
+                                        "FakeAssistAbility1"
+                                      ],
+                                      "skillTag": "AssistSkill1",
+                                      "forceAction": true,
+                                      "castTarget": {
+                                        "name": "Target Name",
+                                        "target": "{{Hostile Entities(AOE)}}"
+                                      },
+                                      "target": {
+                                        "name": "Target Name",
+                                        "target": "{{Modifier Holder}}"
+                                      },
+                                      "afterInjection": [
+                                        {
+                                          "name": "IF",
+                                          "conditions": {
+                                            "name": "Living/Death State",
+                                            "state": "Mask_AliveOrLimbo"
+                                          },
+                                          "passed": [
+                                            {
+                                              "name": "IF",
+                                              "conditions": {
+                                                "name": "Enemies Still Alive",
+                                                "target": {
+                                                  "name": "Target Name",
+                                                  "target": "{{Modifier Holder}}"
+                                                },
+                                                "invertCondition": true
+                                              },
+                                              "passed": [
+                                                {
+                                                  "name": "Define Custom Variable",
+                                                  "variableName": "_OnWaveMonster_SkillType",
+                                                  "value": {
+                                                    "operator": "Variables[0] (_OnWaveMonster_SkillType) || RETURN",
+                                                    "displayLines": "_OnWaveMonster_SkillType",
+                                                    "constants": [],
+                                                    "variables": [
+                                                      "_OnWaveMonster_SkillType"
+                                                    ]
+                                                  }
+                                                }
+                                              ],
+                                              "failed": [
+                                                {
+                                                  "name": "Define Custom Variable",
+                                                  "variableName": "Windfury_Flag",
+                                                  "value": 0
+                                                },
+                                                {
+                                                  "name": "Define Custom Variable",
+                                                  "scope": "ContextModifier",
+                                                  "variableName": "_HimekoNova_PassiveMode_Flag01_WindfurySnapshot",
+                                                  "value": 0
+                                                },
+                                                {
+                                                  "name": "Define Custom Variable",
+                                                  "scope": "ContextModifier",
+                                                  "variableName": "_HimekoNova_PassiveMode_Flag02_WindfurySnapshot",
+                                                  "value": 0
+                                                },
+                                                {
+                                                  "name": "IF",
+                                                  "conditions": {
+                                                    "name": "Compare: Variable",
+                                                    "value1": "MDF_WindfuryCount",
+                                                    "compareType": "<",
+                                                    "value2": 1
+                                                  },
+                                                  "passed": [
+                                                    "Modifier Deletes Itself"
+                                                  ]
+                                                },
+                                                {
+                                                  "name": "Define Custom Variable",
+                                                  "variableName": "_OnWaveMonster_SkillType",
+                                                  "value": -1
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "runsAfterBattleEnd": true,
+                                      "priorityTag": "Windfury"
+                                    }
+                                  ]
                                 }
                               ]
                             }
                           ],
-                          "defaultEvents": []
+                          "failed": [
+                            {
+                              "name": "SWITCH",
+                              "switchValue": {
+                                "operator": "Variables[0] (_OnWaveMonster_SkillType) || RETURN",
+                                "displayLines": "_OnWaveMonster_SkillType",
+                                "constants": [],
+                                "variables": [
+                                  "_OnWaveMonster_SkillType"
+                                ]
+                              },
+                              "caseEvents": [
+                                {
+                                  "name": "SWITCH CONDITON",
+                                  "caseValueIs": 1,
+                                  "execute": [
+                                    {
+                                      "name": "Add Events/Bonuses",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Modifier Holder}}"
+                                      },
+                                      "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>",
+                                      "valuePerStack": {
+                                        "_ChangeValue": {
+                                          "operator": "Variables[0] (_ChangeValue) || RETURN",
+                                          "displayLines": "_ChangeValue",
+                                          "constants": [],
+                                          "variables": [
+                                            "_ChangeValue"
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "name": "Inject Extra-Turn",
+                                      "actionTag": [
+                                        "ActionTag_Windfury"
+                                      ],
+                                      "forceAction": true,
+                                      "target": {
+                                        "name": "Target Name",
+                                        "target": "{{Modifier Holder}}"
+                                      },
+                                      "afterInjection": [
+                                        {
+                                          "name": "IF",
+                                          "conditions": {
+                                            "name": "Living/Death State",
+                                            "state": "Mask_AliveOrLimbo"
+                                          },
+                                          "passed": [
+                                            {
+                                              "name": "IF",
+                                              "conditions": {
+                                                "name": "Enemies Still Alive",
+                                                "target": {
+                                                  "name": "Target Name",
+                                                  "target": "{{Modifier Holder}}"
+                                                },
+                                                "invertCondition": true
+                                              },
+                                              "passed": [
+                                                {
+                                                  "name": "Define Custom Variable",
+                                                  "variableName": "_OnWaveMonster_SkillType",
+                                                  "value": 1
+                                                }
+                                              ],
+                                              "failed": [
+                                                {
+                                                  "name": "Remove Events/Bonuses",
+                                                  "to": {
+                                                    "name": "Target Name",
+                                                    "target": "{{Modifier Holder}}"
+                                                  },
+                                                  "modifier": "<a class=\"gModGreen\" id=\"-86253490\">Standard_Windfury_ModifyAbilityPropertyByType_Normal</a>"
+                                                },
+                                                {
+                                                  "name": "Define Custom Variable",
+                                                  "variableName": "Windfury_Flag",
+                                                  "value": 0
+                                                },
+                                                {
+                                                  "name": "IF",
+                                                  "conditions": {
+                                                    "name": "Compare: Variable",
+                                                    "value1": "MDF_WindfuryCount",
+                                                    "compareType": "<",
+                                                    "value2": 1
+                                                  },
+                                                  "passed": [
+                                                    "Modifier Deletes Itself"
+                                                  ]
+                                                },
+                                                {
+                                                  "name": "Define Custom Variable",
+                                                  "variableName": "_OnWaveMonster_SkillType",
+                                                  "value": -1
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "priorityTag": "Windfury"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "SWITCH CONDITON",
+                                  "caseValueIs": 2,
+                                  "execute": [
+                                    {
+                                      "name": "Add Events/Bonuses",
+                                      "to": {
+                                        "name": "Target Name",
+                                        "target": "{{Modifier Holder}}"
+                                      },
+                                      "modifier": "<a class=\"gModGreen\" id=\"-361819910\">Standard_Windfury_ModifyAbilityPropertyByType_Skill</a>",
+                                      "valuePerStack": {
+                                        "_ChangeValue": {
+                                          "operator": "Variables[0] (_ChangeValue) || RETURN",
+                                          "displayLines": "_ChangeValue",
+                                          "constants": [],
+                                          "variables": [
+                                            "_ChangeValue"
+                                          ]
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "name": "Inject Extra-Turn",
+                                      "actionTag": [
+                                        "ActionTag_Windfury"
+                                      ],
+                                      "skillType": "ControlSkill02",
+                                      "forceAction": true,
+                                      "target": {
+                                        "name": "Target Name",
+                                        "target": "{{Modifier Holder}}"
+                                      },
+                                      "afterInjection": [
+                                        {
+                                          "name": "IF",
+                                          "conditions": {
+                                            "name": "Living/Death State",
+                                            "state": "Mask_AliveOrLimbo"
+                                          },
+                                          "passed": [
+                                            {
+                                              "name": "IF",
+                                              "conditions": {
+                                                "name": "Enemies Still Alive",
+                                                "target": {
+                                                  "name": "Target Name",
+                                                  "target": "{{Modifier Holder}}"
+                                                },
+                                                "invertCondition": true
+                                              },
+                                              "passed": [
+                                                {
+                                                  "name": "Define Custom Variable",
+                                                  "variableName": "_OnWaveMonster_SkillType",
+                                                  "value": 2
+                                                }
+                                              ],
+                                              "failed": [
+                                                {
+                                                  "name": "Remove Events/Bonuses",
+                                                  "to": {
+                                                    "name": "Target Name",
+                                                    "target": "{{Modifier Holder}}"
+                                                  },
+                                                  "modifier": "<a class=\"gModGreen\" id=\"-361819910\">Standard_Windfury_ModifyAbilityPropertyByType_Skill</a>"
+                                                },
+                                                {
+                                                  "name": "Define Custom Variable",
+                                                  "variableName": "Windfury_Flag",
+                                                  "value": 0
+                                                },
+                                                {
+                                                  "name": "IF",
+                                                  "conditions": {
+                                                    "name": "Compare: Variable",
+                                                    "value1": "MDF_WindfuryCount",
+                                                    "compareType": "<",
+                                                    "value2": 1
+                                                  },
+                                                  "passed": [
+                                                    "Modifier Deletes Itself"
+                                                  ]
+                                                },
+                                                {
+                                                  "name": "Define Custom Variable",
+                                                  "variableName": "_OnWaveMonster_SkillType",
+                                                  "value": -1
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ],
+                                      "priorityTag": "Windfury"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "defaultEvents": []
+                            }
+                          ]
                         }
                       ]
                     }
@@ -1731,8 +2818,13 @@ const configAbility = {
                         "name": "AND",
                         "conditionList": [
                           {
-                            "name": "Skill Type",
-                            "skillType": "Skill"
+                            "name": "OR",
+                            "conditionList": [
+                              {
+                                "name": "Skill Type",
+                                "skillType": "Skill"
+                              }
+                            ]
                           },
                           {
                             "name": "Compare: Variable",
@@ -7086,7 +8178,22 @@ const configAbility = {
               "advanceType": "Delay",
               "multiAdd": 0.25
             },
-            "Modifier Deletes Itself"
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value1": "ExoToughness Value",
+                "compareType": "<=",
+                "value2": 0
+              },
+              "passed": [
+                "Modifier Deletes Itself"
+              ]
+            }
           ]
         }
       ]

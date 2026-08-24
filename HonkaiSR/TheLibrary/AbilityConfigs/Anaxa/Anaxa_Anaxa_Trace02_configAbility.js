@@ -123,7 +123,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__-1468806740\">Anaxa_Trace02</a>",
       "execute": [
         {
-          "eventTrigger": "Character Path Change [Anyone]",
+          "eventTrigger": "Character Path [Anyone]: Change",
           "execute": [
             {
               "name": "IF",
