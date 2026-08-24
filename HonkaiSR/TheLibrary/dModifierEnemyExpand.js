@@ -6382,7 +6382,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W5_Shell_Deathrattle",
+    "name": "<a class=\"gModGreen\" id=\"597793268\">Enemy_W5_Shell_Deathrattle</a>",
     "realName": "Ensemble Slapstick",
     "aim": "Other",
     "desc": "All Comediologists will attack together.",
