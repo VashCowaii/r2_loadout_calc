@@ -1224,12 +1224,137 @@ const compositeAbilityObject = {
                           "mode": "Inc"
                         },
                         {
-                          "name": "Inject Ability Use",
-                          "abilityName": "Monster_W5_Painter_AbilityP01_PartChange01to02",
-                          "priorityTag": "EnemyPhaseChange",
-                          "ownerState": "Mask_AliveOrLimbo",
-                          "targetState": "Mask_AliveOrLimbo",
-                          "allowAbilityTriggers": false
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "GridFightBoss"
+                          },
+                          "passed": [
+                            {
+                              "name": "Inject Ability Use",
+                              "abilityName": "Monster_W5_Painter_AbilityP01_GridFight_PartChange01to02",
+                              "priorityTag": "EnemyPhaseChange",
+                              "ownerState": "Mask_AliveOrLimbo",
+                              "targetState": "Mask_AliveOrLimbo",
+                              "allowAbilityTriggers": false
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Inject Ability Use",
+                              "abilityName": "Monster_W5_Painter_AbilityP01_PartChange01to02",
+                              "priorityTag": "EnemyPhaseChange",
+                              "ownerState": "Mask_AliveOrLimbo",
+                              "targetState": "Mask_AliveOrLimbo",
+                              "allowAbilityTriggers": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "PhaseInsertCheck",
+                        "compareType": "=",
+                        "value2": 1,
+                        "contextScope": "TargetEntity"
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster's Minions}}"
+                            },
+                            "value1": "TeamCharacterCount",
+                            "compareType": ">=",
+                            "value2": 1
+                          },
+                          "passed": [
+                            {
+                              "name": "Remove Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Caster's Minions}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"600664801\">Enemy_W5_Painter_SummonerEnhance</a>[<span class=\"descriptionNumberColor\">Beyond-Human Realm</span>]"
+                            },
+                            {
+                              "name": "Force Entity Death",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Caster's Minions}}"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Dispel Debuffs",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "silent": true
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"2059688406\">Enemy_W5_Painter_Endurance</a>"
+                        },
+                        {
+                          "name": "Declare Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "scope": "TargetEntity",
+                          "variableName": "PhaseInsertCheck"
+                        },
+                        {
+                          "name": "Set Enemy Phase",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "mode": "Inc"
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Check Boolean Value",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Modifier Holder}}"
+                            },
+                            "value": "GridFightBoss"
+                          },
+                          "passed": [
+                            {
+                              "name": "Inject Ability Use",
+                              "abilityName": "Monster_W5_Painter_AbilityP01_PartChange01to02",
+                              "priorityTag": "EnemyPhaseChange",
+                              "ownerState": "Mask_AliveOrLimbo",
+                              "targetState": "Mask_AliveOrLimbo",
+                              "allowAbilityTriggers": false
+                            }
+                          ]
                         }
                       ]
                     }
@@ -1650,6 +1775,42 @@ const compositeAbilityObject = {
                     "Ultimate"
                   ],
                   "text": "Ability cannot be used"
+                },
+                {
+                  "name": "TEST DATA: PARAM STRING PAINTER",
+                  "paramArray": [
+                    "InsertAction_Inferno",
+                    "AssistAbility1",
+                    "AssistAbility2",
+                    "AssistAbility3",
+                    "FakeAssistAbility1",
+                    "FakeAssistAbility2",
+                    "FakeAssistAbility3",
+                    "HimekoNova_PointB2"
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Death [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of",
+                    "of": {
+                      "name": "Target Name",
+                      "target": "{{Painter: Self}}"
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "mustBeAlive2": true
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
                 }
               ]
             },
@@ -1715,6 +1876,39 @@ const compositeAbilityObject = {
                       "variable2": "MDF_SuccessChance",
                       "scope": "ContextModifier"
                     }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Extra Turn Action Injection: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Parameter String",
+                        "compareType": "=",
+                        "value2": "HimekoNova_PointB2"
+                      },
+                      {
+                        "name": "Is Part Of",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Current Turn Owner}}"
+                        },
+                        "mustBeAlive2": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
                   ]
                 }
               ]
@@ -1999,6 +2193,17 @@ const compositeAbilityObject = {
           "name": "Define Custom Variable",
           "variableName": "PhaseInsertCheck",
           "value": 0
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value": "GridFightBoss"
+          }
         },
         {
           "name": "Action Advance/Delay",
@@ -2487,11 +2692,35 @@ const compositeAbilityObject = {
         {
           "name": "IF",
           "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 1
-          }
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value": "GridFightBoss"
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "HP_Bars_Remaining",
+                "compareType": "<=",
+                "value2": 2
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "HP_Bars_Remaining",
+                "compareType": "=",
+                "value2": 1
+              }
+            }
+          ]
         },
         {
           "name": "Add Events/Bonuses",
@@ -2646,25 +2875,36 @@ const compositeAbilityObject = {
             {
               "name": "IF",
               "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{All Team Members}}"
-                },
-                "value1": "TeamCharacterCount",
-                "compareType": "<=",
-                "value2": 2
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "value": "GridFightBoss"
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "HP_Bars_Remaining",
+                    "compareType": "=",
+                    "value2": 3
+                  }
+                ]
               },
               "passed": [
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Is Part Of Team Location",
+                    "name": "Compare: Variable",
                     "target": {
                       "name": "Target Name",
-                      "target": "{{Caster}}"
+                      "target": "{{All Team Members}}"
                     },
-                    "team": "Enemy Team"
+                    "value1": "TeamCharacterCount",
+                    "compareType": "<=",
+                    "value2": 4
                   },
                   "passed": [
                     {
@@ -2688,24 +2928,10 @@ const compositeAbilityObject = {
                               "SummonList_ADF_1"
                             ]
                           },
-                          "locationType": "BeforeCaster"
+                          "locationType": "AroundCasterOnEdge"
                         }
                       ]
-                    }
-                  ]
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Is Part Of Team Location",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
                     },
-                    "team": "Enemy Team",
-                    "location": "Max"
-                  },
-                  "passed": [
                     {
                       "name": "Create Enemies",
                       "delayPercent": {
@@ -2727,7 +2953,208 @@ const compositeAbilityObject = {
                               "SummonList_ADF_1"
                             ]
                           },
-                          "locationType": "AfterCaster"
+                          "locationType": "AroundCasterOnEdge"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "value": "Peakbattle"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Enemy ID",
+                        "ID": {
+                          "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
+                          "displayLines": "SummonList_ADF_1",
+                          "constants": [],
+                          "variables": [
+                            "SummonList_ADF_1"
+                          ]
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Target Left of Caster}}"
+                        },
+                        "characterName": null
+                      },
+                      "failed": [
+                        {
+                          "name": "Create Enemies",
+                          "delayPercent": {
+                            "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+                            "displayLines": "{[Skill05[0]]}",
+                            "constants": [],
+                            "variables": [
+                              "{[Skill05[0]]}"
+                            ]
+                          },
+                          "enemyList": [
+                            {
+                              "name": "Enemy Entry",
+                              "enemyID": {
+                                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
+                                "displayLines": "SummonList_ADF_1",
+                                "constants": [],
+                                "variables": [
+                                  "SummonList_ADF_1"
+                                ]
+                              },
+                              "locationType": "BeforeCaster"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Enemy ID",
+                        "ID": {
+                          "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
+                          "displayLines": "SummonList_ADF_1",
+                          "constants": [],
+                          "variables": [
+                            "SummonList_ADF_1"
+                          ]
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Target Right of Caster}}"
+                        },
+                        "characterName": null
+                      },
+                      "failed": [
+                        {
+                          "name": "Create Enemies",
+                          "delayPercent": {
+                            "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+                            "displayLines": "{[Skill05[0]]}",
+                            "constants": [],
+                            "variables": [
+                              "{[Skill05[0]]}"
+                            ]
+                          },
+                          "enemyList": [
+                            {
+                              "name": "Enemy Entry",
+                              "enemyID": {
+                                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
+                                "displayLines": "SummonList_ADF_1",
+                                "constants": [],
+                                "variables": [
+                                  "SummonList_ADF_1"
+                                ]
+                              },
+                              "locationType": "AfterCaster"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members}}"
+                        },
+                        "value1": "TeamCharacterCount",
+                        "compareType": "<=",
+                        "value2": 2
+                      },
+                      "passed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Is Part Of Team Location",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "team": "Enemy Team"
+                          },
+                          "passed": [
+                            {
+                              "name": "Create Enemies",
+                              "delayPercent": {
+                                "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+                                "displayLines": "{[Skill05[0]]}",
+                                "constants": [],
+                                "variables": [
+                                  "{[Skill05[0]]}"
+                                ]
+                              },
+                              "enemyList": [
+                                {
+                                  "name": "Enemy Entry",
+                                  "enemyID": {
+                                    "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
+                                    "displayLines": "SummonList_ADF_1",
+                                    "constants": [],
+                                    "variables": [
+                                      "SummonList_ADF_1"
+                                    ]
+                                  },
+                                  "locationType": "BeforeCaster"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Is Part Of Team Location",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "team": "Enemy Team",
+                            "location": "Max"
+                          },
+                          "passed": [
+                            {
+                              "name": "Create Enemies",
+                              "delayPercent": {
+                                "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
+                                "displayLines": "{[Skill05[1]]}",
+                                "constants": [],
+                                "variables": [
+                                  "{[Skill05[1]]}"
+                                ]
+                              },
+                              "enemyList": [
+                                {
+                                  "name": "Enemy Entry",
+                                  "enemyID": {
+                                    "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
+                                    "displayLines": "SummonList_ADF_1",
+                                    "constants": [],
+                                    "variables": [
+                                      "SummonList_ADF_1"
+                                    ]
+                                  },
+                                  "locationType": "AfterCaster"
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ]
                     }
@@ -3215,11 +3642,35 @@ const compositeAbilityObject = {
         {
           "name": "IF",
           "conditions": {
-            "name": "Compare: Variable",
-            "value1": "HP_Bars_Remaining",
-            "compareType": "=",
-            "value2": 1
-          }
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value": "GridFightBoss"
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "HP_Bars_Remaining",
+                "compareType": "<=",
+                "value2": 2
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "HP_Bars_Remaining",
+                "compareType": "=",
+                "value2": 1
+              }
+            }
+          ]
         },
         {
           "name": "Remove Events/Bonuses",

@@ -37,6 +37,17 @@ const configAbility = {
       "value": 0
     },
     {
+      "name": "IF",
+      "conditions": {
+        "name": "Check Boolean Value",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
+        "value": "GridFightBoss"
+      }
+    },
+    {
       "name": "Action Advance/Delay",
       "advanceType": "Set",
       "target": {
