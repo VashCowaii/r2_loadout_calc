@@ -75,7 +75,9 @@ const configAbility = {
             },
             {
               "name": "Inject Extra-Turn",
-              "actionTag": "CyreneServant_Ability01_Eidolon1",
+              "actionTag": [
+                "CyreneServant_Ability01_Eidolon1"
+              ],
               "forceAction": true,
               "abilityName": "Servant_CyreneServant_FormationReset",
               "conditions": {

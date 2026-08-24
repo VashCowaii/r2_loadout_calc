@@ -236,7 +236,8 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"-662226107\">Enemy_W5_Eater_Ability02_Ate</a>[<span class=\"descriptionNumberColor\">Devour</span>]"
+                  "modifier": "<a class=\"gModGreen\" id=\"-662226107\">Enemy_W5_Eater_Ability02_Ate</a>[<span class=\"descriptionNumberColor\">Devour</span>]",
+                  "onlyRemoveOwnersInstance": true
                 },
                 {
                   "name": "Heal",
@@ -792,7 +793,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"201524254\">Enemy_W5_Eater_Ability02_BlackBlood</a>"
+              "modifier": "<a class=\"gModGreen\" id=\"201524254\">Enemy_W5_Eater_Ability02_BlackBlood</a>",
+              "onlyRemoveOwnersInstance": true
             },
             {
               "name": "Remove Events/Bonuses",
@@ -800,7 +802,8 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"1501806678\">Enemy_W5_Eater_Ability02_LoseAttack</a>"
+              "modifier": "<a class=\"gModGreen\" id=\"1501806678\">Enemy_W5_Eater_Ability02_LoseAttack</a>",
+              "onlyRemoveOwnersInstance": true
             }
           ]
         },

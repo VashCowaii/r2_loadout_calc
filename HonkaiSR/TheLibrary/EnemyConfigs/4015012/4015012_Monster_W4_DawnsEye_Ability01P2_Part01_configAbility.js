@@ -1,0 +1,32 @@
+const configAbility = {
+  "fileName": "4015012_Monster_W4_DawnsEye_Ability01P2_Part01",
+  "childAbilityList": [
+    "4015012_Monster_W4_DawnsEye_Ability01P2_Camera",
+    "4015012_Monster_W4_DawnsEye_Ability01P2_Part01",
+    "4015012_Monster_W4_DawnsEye_Ability01P2_Part02"
+  ],
+  "skillTrigger": "Skill01P2",
+  "abilityType": "Basic ATK",
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    {
+      "name": "Trigger Ability",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "ability": "Monster_W4_DawnsEye_Ability01P2_Part02",
+      "isTrigger": true
+    },
+    "Deleted bullshit"
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  },
+  "realTargetData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}",
+    "targetIsVariable": true
+  },
+  "references": []
+}

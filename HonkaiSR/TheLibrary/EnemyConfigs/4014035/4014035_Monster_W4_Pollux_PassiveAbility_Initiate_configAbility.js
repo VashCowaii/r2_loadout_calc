@@ -150,11 +150,11 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"471853411\">Standard_Monster_AllDamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (UnusedUnderThisBase_11990) || RETURN",
-              "displayLines": "UnusedUnderThisBase_11990",
+              "operator": "Variables[0] (UnusedUnderThisBase_12714) || RETURN",
+              "displayLines": "UnusedUnderThisBase_12714",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_11990"
+                "UnusedUnderThisBase_12714"
               ]
             }
           }
@@ -273,11 +273,11 @@ const configAbility = {
           "name": "Define Custom Variable",
           "variableName": "_Skill05_LoseHpRatio",
           "value": {
-            "operator": "Variables[0] (UnusedUnderThisBase_11987) || RETURN",
-            "displayLines": "UnusedUnderThisBase_11987",
+            "operator": "Variables[0] (UnusedUnderThisBase_12711) || RETURN",
+            "displayLines": "UnusedUnderThisBase_12711",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_11987"
+              "UnusedUnderThisBase_12711"
             ]
           }
         },
@@ -285,11 +285,11 @@ const configAbility = {
           "name": "Define Custom Variable",
           "variableName": "_Skill05_ActionDelay",
           "value": {
-            "operator": "Variables[0] (UnusedUnderThisBase_11949) || RETURN",
-            "displayLines": "UnusedUnderThisBase_11949",
+            "operator": "Variables[0] (UnusedUnderThisBase_12673) || RETURN",
+            "displayLines": "UnusedUnderThisBase_12673",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_11949"
+              "UnusedUnderThisBase_12673"
             ]
           }
         },
@@ -297,11 +297,11 @@ const configAbility = {
           "name": "Define Custom Variable",
           "variableName": "_Skill05_Part_ActionDelay",
           "value": {
-            "operator": "Variables[0] (UnusedUnderThisBase_11947) || RETURN",
-            "displayLines": "UnusedUnderThisBase_11947",
+            "operator": "Variables[0] (UnusedUnderThisBase_12671) || RETURN",
+            "displayLines": "UnusedUnderThisBase_12671",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_11947"
+              "UnusedUnderThisBase_12671"
             ]
           }
         }

@@ -1088,11 +1088,11 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"117676328\">Monster_W2_Huanlong_JingYuan_DamageUp</a>",
                               "valuePerStack": {
                                 "MDF_DamageUpRatio": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_8694) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_8694",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_9280) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_9280",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_8694"
+                                    "UnusedUnderThisBase_9280"
                                   ]
                                 }
                               }
@@ -2576,11 +2576,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"117676328\">Monster_W2_Huanlong_JingYuan_DamageUp</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8694) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8694",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9280) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9280",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_8694"
+                    "UnusedUnderThisBase_9280"
                   ]
                 }
               }
@@ -5337,12 +5337,12 @@ const compositeAbilityObject = {
           "AttackScaling": {
             "DamageType": "Imaginary",
             "DamageFlat": {
-              "operator": "Variables[0] (MaxHPValue) || Variables[1] (UnusedUnderThisBase_8744) || MUL || RETURN",
-              "displayLines": "(MaxHPValue * UnusedUnderThisBase_8744)",
+              "operator": "Variables[0] (MaxHPValue) || Variables[1] (UnusedUnderThisBase_9330) || MUL || RETURN",
+              "displayLines": "(MaxHPValue * UnusedUnderThisBase_9330)",
               "constants": [],
               "variables": [
                 "MaxHPValue",
-                "UnusedUnderThisBase_8744"
+                "UnusedUnderThisBase_9330"
               ]
             },
             "Toughness": null,

@@ -2834,45 +2834,69 @@ const configAbility = {
       "functionName": "<a class=\"gTempYellow\" id=\"fun__818871295\">AddElationEchoPoint</a>",
       "parse": [
         {
-          "name": "Find New Target",
-          "from": {
-            "name": "Target Name",
-            "target": "{{Function's Target List}}"
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "AddValue",
+            "compareType": ">",
+            "value2": 0,
+            "contextScope": "ContextTaskTemplate"
           },
-          "ifTargetFound": [
+          "passed": [
             {
-              "name": "Define Custom Variable",
-              "target": {
+              "name": "Find New Target",
+              "from": {
                 "name": "Target Name",
-                "target": "{{Parameter Target}}"
+                "target": "{{Function's Target List}}"
               },
-              "variableName": "_FinalAddValue",
-              "value": {
-                "operator": "Variables[0] (AddValue) || RETURN",
-                "displayLines": "AddValue",
-                "constants": [],
-                "variables": [
-                  "AddValue"
-                ]
-              }
-            },
-            {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-1491295670\">MBattleEvent_Elation_ElationEchoPointBonus</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
-              "valuePerStack": {
-                "ElationEchoPoint": {
-                  "operator": "Variables[0] (_FinalAddValue) || RETURN",
-                  "displayLines": "_FinalAddValue",
-                  "constants": [],
-                  "variables": [
-                    "_FinalAddValue"
+              "ifTargetFound": [
+                {
+                  "name": "Define Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "variableName": "_FinalAddValue",
+                  "value": {
+                    "operator": "Variables[0] (AddValue) || RETURN",
+                    "displayLines": "AddValue",
+                    "constants": [],
+                    "variables": [
+                      "AddValue"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "_FinalAddValue",
+                    "compareType": ">",
+                    "value2": 0,
+                    "contextScope": "ContextTaskTemplate"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1491295670\">MBattleEvent_Elation_ElationEchoPointBonus</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
+                      "valuePerStack": {
+                        "ElationEchoPoint": {
+                          "operator": "Variables[0] (_FinalAddValue) || RETURN",
+                          "displayLines": "_FinalAddValue",
+                          "constants": [],
+                          "variables": [
+                            "_FinalAddValue"
+                          ]
+                        }
+                      }
+                    }
                   ]
                 }
-              }
+              ]
             }
           ]
         }

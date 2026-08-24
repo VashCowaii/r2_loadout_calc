@@ -423,7 +423,7 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "execute": [
         {
-          "eventTrigger": "Character Path Change [Anyone]",
+          "eventTrigger": "Character Path [Anyone]: Change",
           "execute": [
             {
               "name": "IF",
@@ -600,7 +600,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Character Path Change [Anyone]",
+          "eventTrigger": "Character Path [Anyone]: Change",
           "execute": [
             {
               "name": "IF",
@@ -1140,7 +1140,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Character Path Change [Anyone]",
+          "eventTrigger": "Character Path [Anyone]: Change",
           "execute": [
             {
               "name": "IF",
@@ -1194,11 +1194,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "BattleEvent_Elation_00_BaseSpeed",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_3094) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_3094",
+                    "operator": "Variables[0] (UnusedUnderThisBase_3302) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_3302",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_3094"
+                      "UnusedUnderThisBase_3302"
                     ]
                   }
                 },
@@ -1277,11 +1277,11 @@ const configAbility = {
                               "name": "Define Custom Variable",
                               "variableName": "MDF_SpeedCalTemp2",
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_3092) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_3092",
+                                "operator": "Variables[0] (UnusedUnderThisBase_3300) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_3300",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_3092"
+                                  "UnusedUnderThisBase_3300"
                                 ]
                               }
                             }
@@ -1295,11 +1295,11 @@ const configAbility = {
                               "name": "Define Custom Variable",
                               "variableName": "MDF_SpeedCalTemp2",
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_3095) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_3095",
+                                "operator": "Variables[0] (UnusedUnderThisBase_3303) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_3303",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_3095"
+                                  "UnusedUnderThisBase_3303"
                                 ]
                               }
                             }
@@ -1313,11 +1313,11 @@ const configAbility = {
                               "name": "Define Custom Variable",
                               "variableName": "MDF_SpeedCalTemp2",
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_3090) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_3090",
+                                "operator": "Variables[0] (UnusedUnderThisBase_3298) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_3298",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_3090"
+                                  "UnusedUnderThisBase_3298"
                                 ]
                               }
                             }
@@ -1331,11 +1331,11 @@ const configAbility = {
                               "name": "Define Custom Variable",
                               "variableName": "MDF_SpeedCalTemp2",
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_3086) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_3086",
+                                "operator": "Variables[0] (UnusedUnderThisBase_3294) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_3294",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_3086"
+                                  "UnusedUnderThisBase_3294"
                                 ]
                               }
                             }
@@ -1349,11 +1349,11 @@ const configAbility = {
                               "name": "Define Custom Variable",
                               "variableName": "MDF_SpeedCalTemp2",
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_3087) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_3087",
+                                "operator": "Variables[0] (UnusedUnderThisBase_3295) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_3295",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_3087"
+                                  "UnusedUnderThisBase_3295"
                                 ]
                               }
                             }
@@ -1450,7 +1450,7 @@ const configAbility = {
               "name": "Define Custom Variable with Team Count",
               "target": {
                 "name": "Target Name",
-                "target": "{{Elation: Player Team with Unselectables}} + {{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: Currency Wars Gear2012}}"
+                "target": "{{Elation: All Entities}}"
               },
               "variableName": "MDF_Elation_Character_Num",
               "livingTargets": true
@@ -1711,6 +1711,10 @@ const configAbility = {
                 {
                   "name": "MonsterDeathRattleByLevel",
                   "value": "DuringElationTime_MonsterDeathRattleByLevel"
+                },
+                {
+                  "name": "MonsterDeathRattleTogether",
+                  "value": "DuringElationTime_MonsterDeathRattleTogether"
                 },
                 {
                   "name": "MonsterDeathRattle",
@@ -1988,7 +1992,7 @@ const configAbility = {
                   "name": "Define Custom Variable with Team Count",
                   "target": {
                     "name": "Target Name",
-                    "target": "{{Elation: Player Team with Unselectables}} + {{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: Currency Wars Gear2012}}"
+                    "target": "{{Elation: All Entities}}"
                   },
                   "variableName": "MDF_Elation_Character_Num",
                   "livingTargets": true

@@ -283,11 +283,35 @@ const configAbility = {
     {
       "name": "IF",
       "conditions": {
-        "name": "Compare: Variable",
-        "value1": "HP_Bars_Remaining",
-        "compareType": "=",
-        "value2": 1
-      }
+        "name": "Check Boolean Value",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
+        "value": "GridFightBoss"
+      },
+      "passed": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": "<=",
+            "value2": 2
+          }
+        }
+      ],
+      "failed": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "HP_Bars_Remaining",
+            "compareType": "=",
+            "value2": 1
+          }
+        }
+      ]
     },
     {
       "name": "Remove Events/Bonuses",

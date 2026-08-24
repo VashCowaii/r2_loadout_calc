@@ -675,7 +675,9 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Inject Extra-Turn",
-                  "actionTag": "FireProwler_IF",
+                  "actionTag": [
+                    "FireProwler_IF"
+                  ],
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"

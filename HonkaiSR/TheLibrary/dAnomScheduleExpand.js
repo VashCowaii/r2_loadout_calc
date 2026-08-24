@@ -800,6 +800,7 @@ let mocSchedule = [
             "name": "Enrage",
             "desc": "After each time an ally target uses their Ultimate, applies 1 stack of this effect to all enemy targets. Each stack increases the enemy target's SPD by #1[i]%, up to a max of #2[i] stack(s). All stacks of this effect are cleared at the start of the enemy target's turn.",
             "realModifierNamne": "ChallengePeakBattle_BaseAbility_0020",
+            "BEKey": 1912336050,
             "params": [
               0.3,
               4
@@ -1026,6 +1027,7 @@ let mocSchedule = [
             "name": "Enrage+",
             "desc": "After each time an ally target uses their Ultimate, applies 1 stack of this effect to all enemy targets. Each stack increases the enemy target's SPD by #1[i]%, up to a max of #2[i] stack(s). All stacks of this effect are cleared at the start of the enemy target's turn.",
             "realModifierNamne": "ChallengePeakBattle_EnhancedAbility_0020",
+            "BEKey": 1912336050,
             "params": [
               0.5,
               4
@@ -1050,6 +1052,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3033066",
         "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0022",
+        "BEKey": 1912336050,
         "name": "Navigator's Oath",
         "desc": "Increases the All-Type RES PEN for the Skill DMG and Ultimate DMG dealt by the character in position 1 in the lineup by #1[i]%.",
         "battleDesc": null,
@@ -1075,6 +1078,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3033067",
         "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0023",
+        "BEKey": 1912336050,
         "name": "Endless Euphoria",
         "desc": "All ally targets' All-Type RES PEN increases by #1[i]%, and the All-Type RES PEN of Elation DMG dealt additionally increases by #2[i]%.",
         "battleDesc": null,

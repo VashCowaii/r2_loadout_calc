@@ -64,11 +64,11 @@ const compositeAbilityObject = {
                     "value1": "DV_CurrentDelay",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_11803) || Variables[1] (DV_InitDelay) || ADD || RETURN",
-                      "displayLines": "(UnusedUnderThisBase_11803 + DV_InitDelay)",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12511) || Variables[1] (DV_InitDelay) || ADD || RETURN",
+                      "displayLines": "(UnusedUnderThisBase_12511 + DV_InitDelay)",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_11803",
+                        "UnusedUnderThisBase_12511",
                         "DV_InitDelay"
                       ]
                     }
@@ -133,11 +133,11 @@ const compositeAbilityObject = {
                     "value1": "DV_CurrentDelay",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_11803) || Variables[1] (DV_InitDelay) || ADD || RETURN",
-                      "displayLines": "(UnusedUnderThisBase_11803 + DV_InitDelay)",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12511) || Variables[1] (DV_InitDelay) || ADD || RETURN",
+                      "displayLines": "(UnusedUnderThisBase_12511 + DV_InitDelay)",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_11803",
+                        "UnusedUnderThisBase_12511",
                         "DV_InitDelay"
                       ]
                     }
@@ -181,11 +181,11 @@ const compositeAbilityObject = {
                     "value1": "DV_CurrentDelay",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_11803) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_11803",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12511) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12511",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_11803"
+                        "UnusedUnderThisBase_12511"
                       ]
                     }
                   },

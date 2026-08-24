@@ -71,6 +71,10 @@ const configAbility = {
             {
               "name": "SWITCH CONDITON",
               "caseValueIs": 11413
+            },
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 1507
             }
           ]
         }
@@ -337,6 +341,24 @@ const configAbility = {
       "valuePercent": 1,
       "ofAbilitySplit": true,
       "isFixed": "* ERR"
+    },
+    {
+      "name": "SWITCH",
+      "switchValue": {
+        "operator": "Variables[0] (_SelectCharacterID) || RETURN",
+        "displayLines": "_SelectCharacterID",
+        "constants": [],
+        "variables": [
+          "_SelectCharacterID"
+        ]
+      },
+      "caseEvents": [
+        {
+          "name": "SWITCH CONDITON",
+          "caseValueIs": 1507
+        }
+      ],
+      "defaultEvents": []
     },
     "Trigger: Ability End"
   ],

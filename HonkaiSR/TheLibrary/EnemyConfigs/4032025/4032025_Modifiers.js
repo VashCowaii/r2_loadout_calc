@@ -1120,7 +1120,9 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Inject Extra-Turn",
-                      "actionTag": "FireProwler_IF",
+                      "actionTag": [
+                        "FireProwler_IF"
+                      ],
                       "target": {
                         "name": "Target Name",
                         "target": "{{Summoner of Modifier Holder}}"
@@ -1142,7 +1144,9 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Inject Extra-Turn",
-                      "actionTag": "FireProwler_IF",
+                      "actionTag": [
+                        "FireProwler_IF"
+                      ],
                       "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
@@ -1181,13 +1185,13 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "value": {
-                "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_11182) || SUB || RETURN",
-                "displayLines": "(0 - UnusedUnderThisBase_11182)",
+                "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_11890) || SUB || RETURN",
+                "displayLines": "(0 - UnusedUnderThisBase_11890)",
                 "constants": [
                   0
                 ],
                 "variables": [
-                  "UnusedUnderThisBase_11182"
+                  "UnusedUnderThisBase_11890"
                 ]
               }
             },
@@ -1199,11 +1203,11 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "multiBase": {
-                "operator": "Variables[0] (UnusedUnderThisBase_11181) || RETURN",
-                "displayLines": "UnusedUnderThisBase_11181",
+                "operator": "Variables[0] (UnusedUnderThisBase_11889) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11889",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_11181"
+                  "UnusedUnderThisBase_11889"
                 ]
               }
             }
@@ -1270,11 +1274,11 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_11185) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_11185",
+                    "operator": "Variables[0] (UnusedUnderThisBase_11893) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_11893",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_11185"
+                      "UnusedUnderThisBase_11893"
                     ]
                   },
                   "consumeFloor": 1,
@@ -1314,11 +1318,11 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "consumePercent": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_11185) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_11185",
+                    "operator": "Variables[0] (UnusedUnderThisBase_11893) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_11893",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_11185"
+                      "UnusedUnderThisBase_11893"
                     ]
                   },
                   "consumeFloor": 1,
@@ -2881,11 +2885,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-2118081652\">Enemy_W4_FireProwler_10_Main03_TimePowerListener</a>",
               "valuePerStack": {
                 "MDF_MaxCount": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_11154) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_11154",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11862) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11862",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_11154"
+                    "UnusedUnderThisBase_11862"
                   ]
                 }
               }

@@ -149,11 +149,11 @@ const configAbility = {
         {
           "name": "Assign Advance/Delay to Current Ability Use",
           "adjustmentValue": {
-            "operator": "Variables[0] (UnusedUnderThisBase_9594) || RETURN",
-            "displayLines": "UnusedUnderThisBase_9594",
+            "operator": "Variables[0] (UnusedUnderThisBase_10189) || RETURN",
+            "displayLines": "UnusedUnderThisBase_10189",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_9594"
+              "UnusedUnderThisBase_10189"
             ]
           },
           "adjustmentType": "="

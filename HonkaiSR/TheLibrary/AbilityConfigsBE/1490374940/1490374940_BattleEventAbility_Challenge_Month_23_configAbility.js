@@ -24,10 +24,6 @@ const configAbility = {
     },
     {
       "name": "Add Ability",
-      "abilityName": "BattleEventAbility_Camear_AllDarkTeam"
-    },
-    {
-      "name": "Add Ability",
       "abilityName": "BattleEventAbility_Challenge_Month_23_RandomDebuff"
     },
     {

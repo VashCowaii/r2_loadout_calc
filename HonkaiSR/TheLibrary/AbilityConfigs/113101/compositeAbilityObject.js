@@ -326,11 +326,11 @@ const compositeAbilityObject = {
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_6071) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_6071",
+                      "operator": "Variables[0] (UnusedUnderThisBase_6465) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_6465",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_6071"
+                        "UnusedUnderThisBase_6465"
                       ]
                     }
                   },
@@ -344,11 +344,11 @@ const compositeAbilityObject = {
                       },
                       "variables": {
                         "DamagePercentage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_6102) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_6102",
+                          "operator": "Variables[0] (UnusedUnderThisBase_6496) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_6496",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_6102"
+                            "UnusedUnderThisBase_6496"
                           ]
                         }
                       }
@@ -366,11 +366,11 @@ const compositeAbilityObject = {
                         "value1": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_6100) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_6100",
+                          "operator": "Variables[0] (UnusedUnderThisBase_6494) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_6494",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_6100"
+                            "UnusedUnderThisBase_6494"
                           ]
                         }
                       },
@@ -384,11 +384,11 @@ const compositeAbilityObject = {
                           },
                           "variables": {
                             "DamagePercentage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_6101) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_6101",
+                              "operator": "Variables[0] (UnusedUnderThisBase_6495) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_6495",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_6101"
+                                "UnusedUnderThisBase_6495"
                               ]
                             }
                           }
@@ -542,11 +542,11 @@ const compositeAbilityObject = {
                     "value1": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_6100) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_6100",
+                      "operator": "Variables[0] (UnusedUnderThisBase_6494) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_6494",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_6100"
+                        "UnusedUnderThisBase_6494"
                       ]
                     }
                   }
@@ -688,14 +688,14 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "_PassiveResRatio",
                       "value": {
-                        "operator": "Constants[0] (1) || Variables[0] (_HPRatioCurrent) || SUB || Constants[0] (1) || Variables[1] (UnusedUnderThisBase_6097) || SUB || DIV || Variables[2] (_RedModeResRatio) || ADD || RETURN",
-                        "displayLines": "(((1 - _HPRatioCurrent) / (1 - UnusedUnderThisBase_6097)) + _RedModeResRatio)",
+                        "operator": "Constants[0] (1) || Variables[0] (_HPRatioCurrent) || SUB || Constants[0] (1) || Variables[1] (UnusedUnderThisBase_6491) || SUB || DIV || Variables[2] (_RedModeResRatio) || ADD || RETURN",
+                        "displayLines": "(((1 - _HPRatioCurrent) / (1 - UnusedUnderThisBase_6491)) + _RedModeResRatio)",
                         "constants": [
                           1
                         ],
                         "variables": [
                           "_HPRatioCurrent",
-                          "UnusedUnderThisBase_6097",
+                          "UnusedUnderThisBase_6491",
                           "_RedModeResRatio"
                         ]
                       }
@@ -709,11 +709,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"468515060\">Advanced_Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_6077) || Variables[1] (_PassiveResRatio) || MUL || RETURN",
-                          "displayLines": "(UnusedUnderThisBase_6077 * _PassiveResRatio)",
+                          "operator": "Variables[0] (UnusedUnderThisBase_6471) || Variables[1] (_PassiveResRatio) || MUL || RETURN",
+                          "displayLines": "(UnusedUnderThisBase_6471 * _PassiveResRatio)",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_6077",
+                            "UnusedUnderThisBase_6471",
                             "_PassiveResRatio"
                           ]
                         }
@@ -812,7 +812,7 @@ const compositeAbilityObject = {
                         {
                           "on": "Attacker",
                           "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakEfficiency</span>&nbsp;",
-                          "value": "(UnusedUnderThisBase_6067 + Rank06_StanceBreakAddedRatio)"
+                          "value": "(UnusedUnderThisBase_6461 + Rank06_StanceBreakAddedRatio)"
                         }
                       ]
                     }
@@ -901,14 +901,14 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "variableName": "_PassiveResRatio",
                   "value": {
-                    "operator": "Constants[0] (1) || Variables[0] (_HPRatioCurrent) || SUB || Constants[0] (1) || Variables[1] (UnusedUnderThisBase_6097) || SUB || DIV || Variables[2] (_RedModeResRatio) || ADD || RETURN",
-                    "displayLines": "(((1 - _HPRatioCurrent) / (1 - UnusedUnderThisBase_6097)) + _RedModeResRatio)",
+                    "operator": "Constants[0] (1) || Variables[0] (_HPRatioCurrent) || SUB || Constants[0] (1) || Variables[1] (UnusedUnderThisBase_6491) || SUB || DIV || Variables[2] (_RedModeResRatio) || ADD || RETURN",
+                    "displayLines": "(((1 - _HPRatioCurrent) / (1 - UnusedUnderThisBase_6491)) + _RedModeResRatio)",
                     "constants": [
                       1
                     ],
                     "variables": [
                       "_HPRatioCurrent",
-                      "UnusedUnderThisBase_6097",
+                      "UnusedUnderThisBase_6491",
                       "_RedModeResRatio"
                     ]
                   }
@@ -922,11 +922,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"468515060\">Advanced_Sam_PassiveAbility_AllDamageTypeResistance</a>[<span class=\"descriptionNumberColor\">Chrysalid Pyronexus</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_6077) || Variables[1] (_PassiveResRatio) || MUL || RETURN",
-                      "displayLines": "(UnusedUnderThisBase_6077 * _PassiveResRatio)",
+                      "operator": "Variables[0] (UnusedUnderThisBase_6471) || Variables[1] (_PassiveResRatio) || MUL || RETURN",
+                      "displayLines": "(UnusedUnderThisBase_6471 * _PassiveResRatio)",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_6077",
+                        "UnusedUnderThisBase_6471",
                         "_PassiveResRatio"
                       ]
                     }
@@ -952,12 +952,12 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_FinalDamageUP",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_6067) || Variables[1] (UnusedUnderThisBase_6065) || ADD || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_6067 + UnusedUnderThisBase_6065)",
+                        "operator": "Variables[0] (UnusedUnderThisBase_6461) || Variables[1] (UnusedUnderThisBase_6459) || ADD || RETURN",
+                        "displayLines": "(UnusedUnderThisBase_6461 + UnusedUnderThisBase_6459)",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_6067",
-                          "UnusedUnderThisBase_6065"
+                          "UnusedUnderThisBase_6461",
+                          "UnusedUnderThisBase_6459"
                         ]
                       }
                     }
@@ -967,11 +967,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_FinalDamageUP",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_6067) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_6067",
+                        "operator": "Variables[0] (UnusedUnderThisBase_6461) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_6461",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_6067"
+                          "UnusedUnderThisBase_6461"
                         ]
                       }
                     }
@@ -1004,12 +1004,12 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_StatusResistance",
                       "value": {
-                        "operator": "Variables[0] (MDF_StatusResistance) || Variables[1] (UnusedUnderThisBase_6081) || ADD || RETURN",
-                        "displayLines": "(MDF_StatusResistance + UnusedUnderThisBase_6081)",
+                        "operator": "Variables[0] (MDF_StatusResistance) || Variables[1] (UnusedUnderThisBase_6475) || ADD || RETURN",
+                        "displayLines": "(MDF_StatusResistance + UnusedUnderThisBase_6475)",
                         "constants": [],
                         "variables": [
                           "MDF_StatusResistance",
-                          "UnusedUnderThisBase_6081"
+                          "UnusedUnderThisBase_6475"
                         ]
                       }
                     },
@@ -1065,11 +1065,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-688726584\">Advanced_Sam_PointB1_BreakDamageAddedRatioBase</a>[<span class=\"descriptionNumberColor\">Module α: Antilag Outburst</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_6098) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_6098",
+                          "operator": "Variables[0] (UnusedUnderThisBase_6492) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_6492",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_6098"
+                            "UnusedUnderThisBase_6492"
                           ]
                         }
                       }
@@ -1078,11 +1078,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "_PointB1_Times",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_6075) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_6075",
+                        "operator": "Variables[0] (UnusedUnderThisBase_6469) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_6469",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_6075"
+                          "UnusedUnderThisBase_6469"
                         ]
                       }
                     },
@@ -1120,11 +1120,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"770661145\">Advanced_Sam_Eidolon6_FirePenetrate</a>[<span class=\"descriptionNumberColor\">In Finalized Morrow, I Full Bloom</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_6085) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_6085",
+                          "operator": "Variables[0] (UnusedUnderThisBase_6479) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_6479",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_6085"
+                            "UnusedUnderThisBase_6479"
                           ]
                         }
                       }
@@ -1186,7 +1186,9 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Inject Extra-Turn",
-                      "actionTag": "Sam_Eidolon2_Bonus",
+                      "actionTag": [
+                        "Sam_Eidolon2_Bonus"
+                      ],
                       "afterInjection": [
                         {
                           "name": "Define Custom Variable",
@@ -1266,7 +1268,9 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Inject Extra-Turn",
-                      "actionTag": "Sam_Eidolon2_Bonus",
+                      "actionTag": [
+                        "Sam_Eidolon2_Bonus"
+                      ],
                       "afterInjection": [
                         {
                           "name": "Define Custom Variable",
@@ -1374,7 +1378,7 @@ const compositeAbilityObject = {
                         ]
                       },
                       "advanceType": "Set",
-                      "multiAdd": "UnusedUnderThisBase_6099"
+                      "multiAdd": "UnusedUnderThisBase_6493"
                     }
                   ]
                 },
@@ -1428,7 +1432,9 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Inject Extra-Turn",
-                      "actionTag": "Sam_Eidolon2_Bonus",
+                      "actionTag": [
+                        "Sam_Eidolon2_Bonus"
+                      ],
                       "afterInjection": [
                         {
                           "name": "Define Custom Variable",
@@ -1532,11 +1538,11 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_6100) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_6100",
+                    "operator": "Variables[0] (UnusedUnderThisBase_6494) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_6494",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_6100"
+                      "UnusedUnderThisBase_6494"
                     ]
                   },
                   "whenEnteringRange": [

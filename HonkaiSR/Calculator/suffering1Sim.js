@@ -430,8 +430,7 @@ const sim = {
         const allAllyTargetsArray = battleData.allAllyTargetsArray;
 
         
-
-        const techSlotArray = ["useTechniquesChar1","useTechniquesChar2","useTechniquesChar3","useTechniquesChar4"]
+        const techSlotArray = ["useTechniquesChar1","useTechniquesChar2","useTechniquesChar3","useTechniquesChar4"];
 
         for (let i=charKeys.length-1;i>=0;i--) {
             const characterEntry = charKeys[i];
@@ -655,6 +654,11 @@ const sim = {
                     // currentListenerArray.push(eachListener);
                 }
             }
+        }
+
+        const testPassive = battleSettings.injectedPassive;
+        if (testPassive) {
+            addListenerWithPriority(battleData,testPassive,testPassive.trigger,null);
         }
 
 

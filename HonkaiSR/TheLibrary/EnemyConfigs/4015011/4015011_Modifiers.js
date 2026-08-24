@@ -2314,7 +2314,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "stayInTeam": false
+              "stayInTeam": true
             }
           ]
         }

@@ -230,7 +230,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Character Path Change [Anyone]",
+              "eventTrigger": "Character Path [Anyone]: Change",
               "execute": [
                 {
                   "name": "Define Custom Variable with Matching Path",

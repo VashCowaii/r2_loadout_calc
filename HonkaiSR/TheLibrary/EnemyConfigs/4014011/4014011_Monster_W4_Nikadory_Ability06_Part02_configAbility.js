@@ -71,11 +71,11 @@ const configAbility = {
           "name": "Define Custom Variable",
           "variableName": "Skill06Damage",
           "value": {
-            "operator": "Variables[0] (UnusedUnderThisBase_12857) || Variables[1] (Skill06Count) || DIV || RETURN",
-            "displayLines": "(UnusedUnderThisBase_12857 / Skill06Count)",
+            "operator": "Variables[0] (UnusedUnderThisBase_13704) || Variables[1] (Skill06Count) || DIV || RETURN",
+            "displayLines": "(UnusedUnderThisBase_13704 / Skill06Count)",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_12857",
+              "UnusedUnderThisBase_13704",
               "Skill06Count"
             ]
           }

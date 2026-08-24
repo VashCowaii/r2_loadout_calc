@@ -2000,10 +2000,6 @@ const configAbility = {
               ],
               "whenValueChanges": [
                 {
-                  "name": "Use Custom Character Function",
-                  "functionName": "<a class=\"gTempYellow\" id=\"349219986\">MortenaxBlade_TrytoPlayAutoBP</a>"
-                },
-                {
                   "name": "Update Displayed Energy Bar",
                   "value": {
                     "operator": "Variables[0] (G_EnergyCount) || RETURN",
@@ -2014,6 +2010,10 @@ const configAbility = {
                     ]
                   },
                   "priorState": "Active"
+                },
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"349219986\">MortenaxBlade_TrytoPlayAutoBP</a>"
                 }
               ]
             }

@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Avenger Squad: Winged Serpent",
   "image": 4063012,
   "bar": 1,
+  "bodyType": "LargeMonster",
   "rank": "Elite",
   "stArray": [
     40.008892,

@@ -12,19 +12,19 @@ const configAbility = {
           "name": "Random Event",
           "odds": [
             {
-              "operator": "Variables[0] (UnusedUnderThisBase_3093) || RETURN",
-              "displayLines": "UnusedUnderThisBase_3093",
+              "operator": "Variables[0] (UnusedUnderThisBase_3301) || RETURN",
+              "displayLines": "UnusedUnderThisBase_3301",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_3093"
+                "UnusedUnderThisBase_3301"
               ]
             },
             {
-              "operator": "Variables[0] (UnusedUnderThisBase_3088) || RETURN",
-              "displayLines": "UnusedUnderThisBase_3088",
+              "operator": "Variables[0] (UnusedUnderThisBase_3296) || RETURN",
+              "displayLines": "UnusedUnderThisBase_3296",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_3088"
+                "UnusedUnderThisBase_3296"
               ]
             }
           ],
@@ -60,11 +60,11 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_3089) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_3089",
+                    "operator": "Variables[0] (UnusedUnderThisBase_3297) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_3297",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_3089"
+                      "UnusedUnderThisBase_3297"
                     ]
                   },
                   "isFixed": "* ERR"
@@ -88,11 +88,11 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "DamageElation": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_3091) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_3091",
+                      "operator": "Variables[0] (UnusedUnderThisBase_3299) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_3299",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_3091"
+                        "UnusedUnderThisBase_3299"
                       ]
                     },
                     "dmgFormula": "Elation Scaling",
@@ -151,7 +151,7 @@ const configAbility = {
       "name": "Define Custom Variable with Team Count",
       "target": {
         "name": "Target Name",
-        "target": "{{Elation: Player Team with Unselectables}} + {{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: Currency Wars Gear2012}}"
+        "target": "{{Elation: All Entities}}"
       },
       "variableName": "Elation_Character_Num",
       "livingTargets": true

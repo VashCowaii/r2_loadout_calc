@@ -46,11 +46,11 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13174) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_13174",
+                    "operator": "Variables[0] (UnusedUnderThisBase_14028) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_14028",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_13174"
+                      "UnusedUnderThisBase_14028"
                     ]
                   }
                 }
@@ -156,11 +156,11 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_5956) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_5956",
+                    "operator": "Variables[0] (UnusedUnderThisBase_6350) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_6350",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_5956"
+                      "UnusedUnderThisBase_6350"
                     ]
                   }
                 },
@@ -168,11 +168,11 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "variableName": "Skill02_P1_DmgUpForShow",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_5956) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_5956",
+                    "operator": "Variables[0] (UnusedUnderThisBase_6350) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_6350",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_5956"
+                      "UnusedUnderThisBase_6350"
                     ]
                   }
                 }
@@ -376,11 +376,11 @@ const compositeAbilityObject = {
                   "eventID": 11309,
                   "variables": {
                     "BattleEvent_Geji_BaseSpeed": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_5952) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_5952",
+                      "operator": "Variables[0] (UnusedUnderThisBase_6346) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_6346",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_5952"
+                        "UnusedUnderThisBase_6346"
                       ]
                     }
                   }
@@ -463,11 +463,11 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_6918) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_6918",
+                    "operator": "Variables[0] (UnusedUnderThisBase_7416) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_7416",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_6918"
+                      "UnusedUnderThisBase_7416"
                     ]
                   }
                 }
@@ -559,11 +559,11 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_5944) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_5944",
+                    "operator": "Variables[0] (UnusedUnderThisBase_6338) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_6338",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_5944"
+                      "UnusedUnderThisBase_6338"
                     ]
                   }
                 }
@@ -592,11 +592,11 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_6916) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_6916",
+                    "operator": "Variables[0] (UnusedUnderThisBase_7411) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_7411",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_6916"
+                      "UnusedUnderThisBase_7411"
                     ]
                   }
                 }
@@ -657,11 +657,11 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "Ability03_DmgRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_6283) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_6283",
+                  "operator": "Variables[0] (UnusedUnderThisBase_6677) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_6677",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_6283"
+                    "UnusedUnderThisBase_6677"
                   ]
                 }
               }
@@ -680,11 +680,11 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "Trace_PointB2_P1_Ratio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_6836) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_6836",
+                  "operator": "Variables[0] (UnusedUnderThisBase_7230) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_7230",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_6836"
+                    "UnusedUnderThisBase_7230"
                   ]
                 }
               }
@@ -742,11 +742,11 @@ const compositeAbilityObject = {
               },
               "valuePerStack": {
                 "AbilityRank_Eidolon6_P2_ExtraRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_5953) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_5953",
+                  "operator": "Variables[0] (UnusedUnderThisBase_6347) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_6347",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_5953"
+                    "UnusedUnderThisBase_6347"
                   ]
                 }
               }
@@ -826,12 +826,12 @@ const compositeAbilityObject = {
                             {
                               "on": "Attacker",
                               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateFIXED</span>&nbsp;",
-                              "value": "UnusedUnderThisBase_6891"
+                              "value": "UnusedUnderThisBase_7499"
                             },
                             {
                               "on": "Attacker",
                               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageFIXED</span>&nbsp;",
-                              "value": "(UnusedUnderThisBase_5950 + UnusedUnderThisBase_5953)"
+                              "value": "(UnusedUnderThisBase_6344 + UnusedUnderThisBase_6347)"
                             }
                           ]
                         }
@@ -843,12 +843,12 @@ const compositeAbilityObject = {
                             {
                               "on": "Attacker",
                               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateFIXED</span>&nbsp;",
-                              "value": "UnusedUnderThisBase_6891"
+                              "value": "UnusedUnderThisBase_7499"
                             },
                             {
                               "on": "Attacker",
                               "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageFIXED</span>&nbsp;",
-                              "value": "UnusedUnderThisBase_5950"
+                              "value": "UnusedUnderThisBase_6344"
                             }
                           ]
                         }
@@ -942,11 +942,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "_Rank06_BigDmgCount",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_13345) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_13345",
+                        "operator": "Variables[0] (UnusedUnderThisBase_14199) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_14199",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_13345"
+                          "UnusedUnderThisBase_14199"
                         ]
                       }
                     }
@@ -987,11 +987,11 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "variableName": "Skill03_BaseAttack_Total_Ratio",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_5958) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_5958",
+                    "operator": "Variables[0] (UnusedUnderThisBase_6352) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_6352",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_5958"
+                      "UnusedUnderThisBase_6352"
                     ]
                   }
                 },
@@ -1021,11 +1021,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "Skill03_BaseAttack_Total",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_5946) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_5946",
+                        "operator": "Variables[0] (UnusedUnderThisBase_6340) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_6340",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_5946"
+                          "UnusedUnderThisBase_6340"
                         ]
                       }
                     }
@@ -1035,12 +1035,12 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "Skill03_BaseAttack_Total",
                       "value": {
-                        "operator": "Variables[0] (Skill03_BaseAttack_Total) || Variables[1] (UnusedUnderThisBase_5946) || ADD || RETURN",
-                        "displayLines": "(Skill03_BaseAttack_Total + UnusedUnderThisBase_5946)",
+                        "operator": "Variables[0] (Skill03_BaseAttack_Total) || Variables[1] (UnusedUnderThisBase_6340) || ADD || RETURN",
+                        "displayLines": "(Skill03_BaseAttack_Total + UnusedUnderThisBase_6340)",
                         "constants": [],
                         "variables": [
                           "Skill03_BaseAttack_Total",
-                          "UnusedUnderThisBase_5946"
+                          "UnusedUnderThisBase_6340"
                         ]
                       }
                     }
@@ -1141,12 +1141,12 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_5943) || Variables[1] (UnusedUnderThisBase_13171) || ADD || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_5943 + UnusedUnderThisBase_13171)",
+                        "operator": "Variables[0] (UnusedUnderThisBase_6337) || Variables[1] (UnusedUnderThisBase_14025) || ADD || RETURN",
+                        "displayLines": "(UnusedUnderThisBase_6337 + UnusedUnderThisBase_14025)",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_5943",
-                          "UnusedUnderThisBase_13171"
+                          "UnusedUnderThisBase_6337",
+                          "UnusedUnderThisBase_14025"
                         ]
                       },
                       "isFixed": "* ERR"
@@ -1160,11 +1160,11 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_5943) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_5943",
+                        "operator": "Variables[0] (UnusedUnderThisBase_6337) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_6337",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_5943"
+                          "UnusedUnderThisBase_6337"
                         ]
                       },
                       "isFixed": "* ERR"
@@ -1380,11 +1380,11 @@ const compositeAbilityObject = {
                           "name": "Define Custom Variable",
                           "variableName": "Skill03_BaseAttack_Total_Ratio",
                           "value": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_5958) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_5958",
+                            "operator": "Variables[0] (UnusedUnderThisBase_6352) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_6352",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_5958"
+                              "UnusedUnderThisBase_6352"
                             ]
                           }
                         },
@@ -1414,11 +1414,11 @@ const compositeAbilityObject = {
                               "name": "Define Custom Variable",
                               "variableName": "Skill03_BaseAttack_Total",
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_5946) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_5946",
+                                "operator": "Variables[0] (UnusedUnderThisBase_6340) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_6340",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_5946"
+                                  "UnusedUnderThisBase_6340"
                                 ]
                               }
                             }
@@ -1428,12 +1428,12 @@ const compositeAbilityObject = {
                               "name": "Define Custom Variable",
                               "variableName": "Skill03_BaseAttack_Total",
                               "value": {
-                                "operator": "Variables[0] (Skill03_BaseAttack_Total) || Variables[1] (UnusedUnderThisBase_5946) || ADD || RETURN",
-                                "displayLines": "(Skill03_BaseAttack_Total + UnusedUnderThisBase_5946)",
+                                "operator": "Variables[0] (Skill03_BaseAttack_Total) || Variables[1] (UnusedUnderThisBase_6340) || ADD || RETURN",
+                                "displayLines": "(Skill03_BaseAttack_Total + UnusedUnderThisBase_6340)",
                                 "constants": [],
                                 "variables": [
                                   "Skill03_BaseAttack_Total",
-                                  "UnusedUnderThisBase_5946"
+                                  "UnusedUnderThisBase_6340"
                                 ]
                               }
                             }
@@ -1492,11 +1492,11 @@ const compositeAbilityObject = {
                               ]
                             },
                             "Ability03_DmgRatio": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_6283) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_6283",
+                              "operator": "Variables[0] (UnusedUnderThisBase_6677) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_6677",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_6283"
+                                "UnusedUnderThisBase_6677"
                               ]
                             }
                           }
@@ -1560,11 +1560,11 @@ const compositeAbilityObject = {
                           "name": "Define Custom Variable",
                           "variableName": "Skill03_BaseAttack_Total_Ratio",
                           "value": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_5958) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_5958",
+                            "operator": "Variables[0] (UnusedUnderThisBase_6352) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_6352",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_5958"
+                              "UnusedUnderThisBase_6352"
                             ]
                           }
                         },
@@ -1594,11 +1594,11 @@ const compositeAbilityObject = {
                               "name": "Define Custom Variable",
                               "variableName": "Skill03_BaseAttack_Total",
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_5946) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_5946",
+                                "operator": "Variables[0] (UnusedUnderThisBase_6340) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_6340",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_5946"
+                                  "UnusedUnderThisBase_6340"
                                 ]
                               }
                             }
@@ -1608,12 +1608,12 @@ const compositeAbilityObject = {
                               "name": "Define Custom Variable",
                               "variableName": "Skill03_BaseAttack_Total",
                               "value": {
-                                "operator": "Variables[0] (Skill03_BaseAttack_Total) || Variables[1] (UnusedUnderThisBase_5946) || ADD || RETURN",
-                                "displayLines": "(Skill03_BaseAttack_Total + UnusedUnderThisBase_5946)",
+                                "operator": "Variables[0] (Skill03_BaseAttack_Total) || Variables[1] (UnusedUnderThisBase_6340) || ADD || RETURN",
+                                "displayLines": "(Skill03_BaseAttack_Total + UnusedUnderThisBase_6340)",
                                 "constants": [],
                                 "variables": [
                                   "Skill03_BaseAttack_Total",
-                                  "UnusedUnderThisBase_5946"
+                                  "UnusedUnderThisBase_6340"
                                 ]
                               }
                             }
@@ -1672,11 +1672,11 @@ const compositeAbilityObject = {
                               ]
                             },
                             "Ability03_DmgRatio": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_6283) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_6283",
+                              "operator": "Variables[0] (UnusedUnderThisBase_6677) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_6677",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_6283"
+                                "UnusedUnderThisBase_6677"
                               ]
                             }
                           }
@@ -1927,7 +1927,7 @@ const compositeAbilityObject = {
                         "target": "{{Caster}}"
                       },
                       "advanceType": "Set",
-                      "multiAdd": "(0 - UnusedUnderThisBase_5959)"
+                      "multiAdd": "(0 - UnusedUnderThisBase_6353)"
                     }
                   ]
                 },

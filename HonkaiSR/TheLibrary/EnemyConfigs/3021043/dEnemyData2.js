@@ -2,6 +2,7 @@ let enemyData = {
   "name": "\"The Shield\"",
   "image": 3021043,
   "bar": 1,
+  "hitClass": "A",
   "rank": "Minion",
   "stArray": [
     40.008892,

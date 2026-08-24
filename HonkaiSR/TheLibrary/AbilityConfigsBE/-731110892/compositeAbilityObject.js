@@ -441,7 +441,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "execute": [
             {
-              "eventTrigger": "Character Path Change [Anyone]",
+              "eventTrigger": "Character Path [Anyone]: Change",
               "execute": [
                 {
                   "name": "IF",
@@ -618,7 +618,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Character Path Change [Anyone]",
+              "eventTrigger": "Character Path [Anyone]: Change",
               "execute": [
                 {
                   "name": "IF",
@@ -1158,7 +1158,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Character Path Change [Anyone]",
+              "eventTrigger": "Character Path [Anyone]: Change",
               "execute": [
                 {
                   "name": "IF",
@@ -1212,11 +1212,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "BattleEvent_Elation_00_BaseSpeed",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_3094) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_3094",
+                        "operator": "Variables[0] (UnusedUnderThisBase_3302) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_3302",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_3094"
+                          "UnusedUnderThisBase_3302"
                         ]
                       }
                     },
@@ -1295,11 +1295,11 @@ const compositeAbilityObject = {
                                   "name": "Define Custom Variable",
                                   "variableName": "MDF_SpeedCalTemp2",
                                   "value": {
-                                    "operator": "Variables[0] (UnusedUnderThisBase_3092) || RETURN",
-                                    "displayLines": "UnusedUnderThisBase_3092",
+                                    "operator": "Variables[0] (UnusedUnderThisBase_3300) || RETURN",
+                                    "displayLines": "UnusedUnderThisBase_3300",
                                     "constants": [],
                                     "variables": [
-                                      "UnusedUnderThisBase_3092"
+                                      "UnusedUnderThisBase_3300"
                                     ]
                                   }
                                 }
@@ -1313,11 +1313,11 @@ const compositeAbilityObject = {
                                   "name": "Define Custom Variable",
                                   "variableName": "MDF_SpeedCalTemp2",
                                   "value": {
-                                    "operator": "Variables[0] (UnusedUnderThisBase_3095) || RETURN",
-                                    "displayLines": "UnusedUnderThisBase_3095",
+                                    "operator": "Variables[0] (UnusedUnderThisBase_3303) || RETURN",
+                                    "displayLines": "UnusedUnderThisBase_3303",
                                     "constants": [],
                                     "variables": [
-                                      "UnusedUnderThisBase_3095"
+                                      "UnusedUnderThisBase_3303"
                                     ]
                                   }
                                 }
@@ -1331,11 +1331,11 @@ const compositeAbilityObject = {
                                   "name": "Define Custom Variable",
                                   "variableName": "MDF_SpeedCalTemp2",
                                   "value": {
-                                    "operator": "Variables[0] (UnusedUnderThisBase_3090) || RETURN",
-                                    "displayLines": "UnusedUnderThisBase_3090",
+                                    "operator": "Variables[0] (UnusedUnderThisBase_3298) || RETURN",
+                                    "displayLines": "UnusedUnderThisBase_3298",
                                     "constants": [],
                                     "variables": [
-                                      "UnusedUnderThisBase_3090"
+                                      "UnusedUnderThisBase_3298"
                                     ]
                                   }
                                 }
@@ -1349,11 +1349,11 @@ const compositeAbilityObject = {
                                   "name": "Define Custom Variable",
                                   "variableName": "MDF_SpeedCalTemp2",
                                   "value": {
-                                    "operator": "Variables[0] (UnusedUnderThisBase_3086) || RETURN",
-                                    "displayLines": "UnusedUnderThisBase_3086",
+                                    "operator": "Variables[0] (UnusedUnderThisBase_3294) || RETURN",
+                                    "displayLines": "UnusedUnderThisBase_3294",
                                     "constants": [],
                                     "variables": [
-                                      "UnusedUnderThisBase_3086"
+                                      "UnusedUnderThisBase_3294"
                                     ]
                                   }
                                 }
@@ -1367,11 +1367,11 @@ const compositeAbilityObject = {
                                   "name": "Define Custom Variable",
                                   "variableName": "MDF_SpeedCalTemp2",
                                   "value": {
-                                    "operator": "Variables[0] (UnusedUnderThisBase_3087) || RETURN",
-                                    "displayLines": "UnusedUnderThisBase_3087",
+                                    "operator": "Variables[0] (UnusedUnderThisBase_3295) || RETURN",
+                                    "displayLines": "UnusedUnderThisBase_3295",
                                     "constants": [],
                                     "variables": [
-                                      "UnusedUnderThisBase_3087"
+                                      "UnusedUnderThisBase_3295"
                                     ]
                                   }
                                 }
@@ -1468,7 +1468,7 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable with Team Count",
                   "target": {
                     "name": "Target Name",
-                    "target": "{{Elation: Player Team with Unselectables}} + {{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: Currency Wars Gear2012}}"
+                    "target": "{{Elation: All Entities}}"
                   },
                   "variableName": "MDF_Elation_Character_Num",
                   "livingTargets": true
@@ -1729,6 +1729,10 @@ const compositeAbilityObject = {
                     {
                       "name": "MonsterDeathRattleByLevel",
                       "value": "DuringElationTime_MonsterDeathRattleByLevel"
+                    },
+                    {
+                      "name": "MonsterDeathRattleTogether",
+                      "value": "DuringElationTime_MonsterDeathRattleTogether"
                     },
                     {
                       "name": "MonsterDeathRattle",
@@ -2006,7 +2010,7 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable with Team Count",
                       "target": {
                         "name": "Target Name",
-                        "target": "{{Elation: Player Team with Unselectables}} + {{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: Currency Wars Gear2012}}"
+                        "target": "{{Elation: All Entities}}"
                       },
                       "variableName": "MDF_Elation_Character_Num",
                       "livingTargets": true
@@ -2189,19 +2193,19 @@ const compositeAbilityObject = {
               "name": "Random Event",
               "odds": [
                 {
-                  "operator": "Variables[0] (UnusedUnderThisBase_3093) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_3093",
+                  "operator": "Variables[0] (UnusedUnderThisBase_3301) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_3301",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_3093"
+                    "UnusedUnderThisBase_3301"
                   ]
                 },
                 {
-                  "operator": "Variables[0] (UnusedUnderThisBase_3088) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_3088",
+                  "operator": "Variables[0] (UnusedUnderThisBase_3296) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_3296",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_3088"
+                    "UnusedUnderThisBase_3296"
                   ]
                 }
               ],
@@ -2237,11 +2241,11 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_3089) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_3089",
+                        "operator": "Variables[0] (UnusedUnderThisBase_3297) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_3297",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_3089"
+                          "UnusedUnderThisBase_3297"
                         ]
                       },
                       "isFixed": "* ERR"
@@ -2265,11 +2269,11 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Quantum",
                         "DamageElation": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_3091) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_3091",
+                          "operator": "Variables[0] (UnusedUnderThisBase_3299) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_3299",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_3091"
+                            "UnusedUnderThisBase_3299"
                           ]
                         },
                         "dmgFormula": "Elation Scaling",
@@ -2328,7 +2332,7 @@ const compositeAbilityObject = {
           "name": "Define Custom Variable with Team Count",
           "target": {
             "name": "Target Name",
-            "target": "{{Elation: Player Team with Unselectables}} + {{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: Currency Wars Gear2012}}"
+            "target": "{{Elation: All Entities}}"
           },
           "variableName": "Elation_Character_Num",
           "livingTargets": true
@@ -2448,7 +2452,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Inject Extra-Turn",
-          "actionTag": "ElationTime_CustomTag",
+          "actionTag": [
+            "ElationTime_CustomTag"
+          ],
           "forcedPunchline": {
             "operator": "Variables[0] (ElationTime_OverrideElationPoint) || RETURN",
             "displayLines": "ElationTime_OverrideElationPoint",
@@ -2605,7 +2611,7 @@ const compositeAbilityObject = {
           "name": "Find New Target",
           "from": {
             "name": "Target Name",
-            "target": "{{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: All Battle Events}} + {{Elation: Currency Wars Gear2012}}"
+            "target": "{{Elation: Extra Aha-Instant Participants}}"
           },
           "maxTargets": 1,
           "conditions": {
@@ -2829,7 +2835,9 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Inject Extra-Turn",
-              "actionTag": "ElationTime_CustomTagTemp",
+              "actionTag": [
+                "ElationTime_CustomTagTemp"
+              ],
               "forcedPunchline": {
                 "operator": "Variables[0] (ElationTime_OverrideElationPointTemp) || RETURN",
                 "displayLines": "ElationTime_OverrideElationPointTemp",

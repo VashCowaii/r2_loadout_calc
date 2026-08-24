@@ -389,7 +389,9 @@ const compositeAbilityObject = {
                         },
                         {
                           "name": "Inject Extra-Turn",
-                          "actionTag": "Anaxa_Passive",
+                          "actionTag": [
+                            "Anaxa_Passive"
+                          ],
                           "skillType": "ControlSkill02",
                           "forceAction": true,
                           "castTarget": {
@@ -881,7 +883,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__-1468806740\">Anaxa_Trace02</a>",
           "execute": [
             {
-              "eventTrigger": "Character Path Change [Anyone]",
+              "eventTrigger": "Character Path [Anyone]: Change",
               "execute": [
                 {
                   "name": "IF",
@@ -2720,7 +2722,9 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Inject Extra-Turn",
-                      "actionTag": "Anaxa_Passive",
+                      "actionTag": [
+                        "Anaxa_Passive"
+                      ],
                       "skillType": "ControlSkill02",
                       "forceAction": true,
                       "castTarget": {

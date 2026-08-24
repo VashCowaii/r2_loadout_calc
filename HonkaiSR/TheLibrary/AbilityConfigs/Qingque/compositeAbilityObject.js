@@ -3645,7 +3645,9 @@ const compositeAbilityObject = {
             },
             {
               "name": "Inject Extra-Turn",
-              "actionTag": "Qingque_BpInsert",
+              "actionTag": [
+                "Qingque_BpInsert"
+              ],
               "canInjectUltimates": true,
               "followSameTagAsAction": true,
               "abilityName": "Qingque_BpInsertAction_Tiao",
@@ -3754,7 +3756,9 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Inject Extra-Turn",
-                  "actionTag": "Qingque_BpInsert",
+                  "actionTag": [
+                    "Qingque_BpInsert"
+                  ],
                   "canInjectUltimates": true,
                   "followSameTagAsAction": true,
                   "abilityName": "Qingque_BpInsertAction_Wan",
@@ -3863,7 +3867,9 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Inject Extra-Turn",
-                      "actionTag": "Qingque_BpInsert",
+                      "actionTag": [
+                        "Qingque_BpInsert"
+                      ],
                       "canInjectUltimates": true,
                       "followSameTagAsAction": true,
                       "abilityName": "Qingque_BpInsertAction_Tong",
@@ -3981,7 +3987,9 @@ const compositeAbilityObject = {
                           "failed": [
                             {
                               "name": "Inject Extra-Turn",
-                              "actionTag": "Qingque_BpInsert",
+                              "actionTag": [
+                                "Qingque_BpInsert"
+                              ],
                               "skillType": "ControlSkill02",
                               "skillTypeDelayed": "ControlSkill01",
                               "canInjectUltimates": true,

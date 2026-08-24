@@ -87,7 +87,9 @@ const configAbility = {
           "passed": [
             {
               "name": "Inject Extra-Turn",
-              "actionTag": "MortenaxBlade_Passive",
+              "actionTag": [
+                "MortenaxBlade_Passive"
+              ],
               "skillIndex": 3,
               "forceAction": true,
               "conditions": {

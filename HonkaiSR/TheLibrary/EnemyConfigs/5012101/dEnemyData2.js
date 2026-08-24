@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Magical Girl Troupe",
   "image": 5012101,
   "bar": 1,
+  "bodyType": "LittleMonster",
   "rank": "MinionLv2",
   "stArray": [
     40.008892,

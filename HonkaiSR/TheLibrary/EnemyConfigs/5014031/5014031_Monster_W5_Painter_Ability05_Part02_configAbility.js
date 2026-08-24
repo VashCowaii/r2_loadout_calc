@@ -89,25 +89,36 @@ const configAbility = {
         {
           "name": "IF",
           "conditions": {
-            "name": "Compare: Variable",
-            "target": {
-              "name": "Target Name",
-              "target": "{{All Team Members}}"
-            },
-            "value1": "TeamCharacterCount",
-            "compareType": "<=",
-            "value2": 2
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "value": "GridFightBoss"
+              },
+              {
+                "name": "Compare: Variable",
+                "value1": "HP_Bars_Remaining",
+                "compareType": "=",
+                "value2": 3
+              }
+            ]
           },
           "passed": [
             {
               "name": "IF",
               "conditions": {
-                "name": "Is Part Of Team Location",
+                "name": "Compare: Variable",
                 "target": {
                   "name": "Target Name",
-                  "target": "{{Caster}}"
+                  "target": "{{All Team Members}}"
                 },
-                "team": "Enemy Team"
+                "value1": "TeamCharacterCount",
+                "compareType": "<=",
+                "value2": 4
               },
               "passed": [
                 {
@@ -131,24 +142,10 @@ const configAbility = {
                           "SummonList_ADF_1"
                         ]
                       },
-                      "locationType": "BeforeCaster"
+                      "locationType": "AroundCasterOnEdge"
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Is Part Of Team Location",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
                 },
-                "team": "Enemy Team",
-                "location": "Max"
-              },
-              "passed": [
                 {
                   "name": "Create Enemies",
                   "delayPercent": {
@@ -170,7 +167,208 @@ const configAbility = {
                           "SummonList_ADF_1"
                         ]
                       },
-                      "locationType": "AfterCaster"
+                      "locationType": "AroundCasterOnEdge"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "failed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "value": "Peakbattle"
+              },
+              "passed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Enemy ID",
+                    "ID": {
+                      "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
+                      "displayLines": "SummonList_ADF_1",
+                      "constants": [],
+                      "variables": [
+                        "SummonList_ADF_1"
+                      ]
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Target Left of Caster}}"
+                    },
+                    "characterName": null
+                  },
+                  "failed": [
+                    {
+                      "name": "Create Enemies",
+                      "delayPercent": {
+                        "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+                        "displayLines": "{[Skill05[0]]}",
+                        "constants": [],
+                        "variables": [
+                          "{[Skill05[0]]}"
+                        ]
+                      },
+                      "enemyList": [
+                        {
+                          "name": "Enemy Entry",
+                          "enemyID": {
+                            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
+                            "displayLines": "SummonList_ADF_1",
+                            "constants": [],
+                            "variables": [
+                              "SummonList_ADF_1"
+                            ]
+                          },
+                          "locationType": "BeforeCaster"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Enemy ID",
+                    "ID": {
+                      "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
+                      "displayLines": "SummonList_ADF_1",
+                      "constants": [],
+                      "variables": [
+                        "SummonList_ADF_1"
+                      ]
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Target Right of Caster}}"
+                    },
+                    "characterName": null
+                  },
+                  "failed": [
+                    {
+                      "name": "Create Enemies",
+                      "delayPercent": {
+                        "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+                        "displayLines": "{[Skill05[0]]}",
+                        "constants": [],
+                        "variables": [
+                          "{[Skill05[0]]}"
+                        ]
+                      },
+                      "enemyList": [
+                        {
+                          "name": "Enemy Entry",
+                          "enemyID": {
+                            "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
+                            "displayLines": "SummonList_ADF_1",
+                            "constants": [],
+                            "variables": [
+                              "SummonList_ADF_1"
+                            ]
+                          },
+                          "locationType": "AfterCaster"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{All Team Members}}"
+                    },
+                    "value1": "TeamCharacterCount",
+                    "compareType": "<=",
+                    "value2": 2
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Is Part Of Team Location",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "team": "Enemy Team"
+                      },
+                      "passed": [
+                        {
+                          "name": "Create Enemies",
+                          "delayPercent": {
+                            "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+                            "displayLines": "{[Skill05[0]]}",
+                            "constants": [],
+                            "variables": [
+                              "{[Skill05[0]]}"
+                            ]
+                          },
+                          "enemyList": [
+                            {
+                              "name": "Enemy Entry",
+                              "enemyID": {
+                                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
+                                "displayLines": "SummonList_ADF_1",
+                                "constants": [],
+                                "variables": [
+                                  "SummonList_ADF_1"
+                                ]
+                              },
+                              "locationType": "BeforeCaster"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Is Part Of Team Location",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "team": "Enemy Team",
+                        "location": "Max"
+                      },
+                      "passed": [
+                        {
+                          "name": "Create Enemies",
+                          "delayPercent": {
+                            "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
+                            "displayLines": "{[Skill05[1]]}",
+                            "constants": [],
+                            "variables": [
+                              "{[Skill05[1]]}"
+                            ]
+                          },
+                          "enemyList": [
+                            {
+                              "name": "Enemy Entry",
+                              "enemyID": {
+                                "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
+                                "displayLines": "SummonList_ADF_1",
+                                "constants": [],
+                                "variables": [
+                                  "SummonList_ADF_1"
+                                ]
+                              },
+                              "locationType": "AfterCaster"
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }

@@ -65,11 +65,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (UnusedUnderThisBase_5198) || RETURN",
-                "displayLines": "UnusedUnderThisBase_5198",
+                "operator": "Variables[0] (UnusedUnderThisBase_5592) || RETURN",
+                "displayLines": "UnusedUnderThisBase_5592",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_5198"
+                  "UnusedUnderThisBase_5592"
                 ]
               },
               "addStacksPerTrigger": 7
@@ -93,11 +93,11 @@ const configAbility = {
                 "variables": []
               },
               "maximum": {
-                "operator": "Variables[0] (UnusedUnderThisBase_5198) || RETURN",
-                "displayLines": "UnusedUnderThisBase_5198",
+                "operator": "Variables[0] (UnusedUnderThisBase_5592) || RETURN",
+                "displayLines": "UnusedUnderThisBase_5592",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_5198"
+                  "UnusedUnderThisBase_5592"
                 ]
               },
               "assignState": "True",

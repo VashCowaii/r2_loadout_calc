@@ -4028,28 +4028,28 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"263350627\">Enemy_XP_Elite01_Burn</a>[<span class=\"descriptionNumberColor\">Enkindle</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12799) || RETURN",
-                "displayLines": "UnusedUnderThisBase_12799",
+                "operator": "Variables[0] (UnusedUnderThisBase_13646) || RETURN",
+                "displayLines": "UnusedUnderThisBase_13646",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_12799"
+                  "UnusedUnderThisBase_13646"
                 ]
               },
               "baseChance": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12792) || RETURN",
-                "displayLines": "UnusedUnderThisBase_12792",
+                "operator": "Variables[0] (UnusedUnderThisBase_13639) || RETURN",
+                "displayLines": "UnusedUnderThisBase_13639",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_12792"
+                  "UnusedUnderThisBase_13639"
                 ]
               },
               "valuePerStack": {
                 "MDF_DamagePercentage_Layer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_12800) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_12800",
+                  "operator": "Variables[0] (UnusedUnderThisBase_13647) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_13647",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_12800"
+                    "UnusedUnderThisBase_13647"
                   ]
                 }
               }

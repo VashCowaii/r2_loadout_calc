@@ -251,12 +251,23 @@ const configAbility = {
           "eventTrigger": "Enter Battle",
           "execute": [
             {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "Wave Count",
+                "compareType": "=",
+                "value2": 1
               },
-              "modifier": "<a class=\"gModGreen\" id=\"-2046487200\">Modifier_ChallengePeakBattle_BaseAbility_0016_02</a>"
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-2046487200\">Modifier_ChallengePeakBattle_BaseAbility_0016_02</a>"
+                }
+              ]
             }
           ],
           "priorityLevel": -90

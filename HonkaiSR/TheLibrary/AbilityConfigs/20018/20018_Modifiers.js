@@ -3192,11 +3192,11 @@ const configAbility = {
               "name": "Define Custom Variable",
               "variableName": "MDF_AllDamageTypeAddedRatio",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_8918) || RETURN",
-                "displayLines": "UnusedUnderThisBase_8918",
+                "operator": "Variables[0] (UnusedUnderThisBase_9504) || RETURN",
+                "displayLines": "UnusedUnderThisBase_9504",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_8918"
+                  "UnusedUnderThisBase_9504"
                 ]
               }
             },
@@ -3231,12 +3231,12 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_DamageReduce",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_8913) || Variables[1] (UnusedUnderThisBase_8938) || ADD || RETURN",
-                    "displayLines": "(UnusedUnderThisBase_8913 + UnusedUnderThisBase_8938)",
+                    "operator": "Variables[0] (UnusedUnderThisBase_9499) || Variables[1] (UnusedUnderThisBase_9524) || ADD || RETURN",
+                    "displayLines": "(UnusedUnderThisBase_9499 + UnusedUnderThisBase_9524)",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_8913",
-                      "UnusedUnderThisBase_8938"
+                      "UnusedUnderThisBase_9499",
+                      "UnusedUnderThisBase_9524"
                     ]
                   }
                 },
@@ -3262,11 +3262,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_DamageReduce",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_8938) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_8938",
+                    "operator": "Variables[0] (UnusedUnderThisBase_9524) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_9524",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_8938"
+                      "UnusedUnderThisBase_9524"
                     ]
                   }
                 },

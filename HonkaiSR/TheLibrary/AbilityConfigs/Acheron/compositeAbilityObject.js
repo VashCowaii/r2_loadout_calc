@@ -3184,7 +3184,7 @@ const compositeAbilityObject = {
               "eventTrigger": "When Stacking/Receiving Modifier"
             },
             {
-              "eventTrigger": "Character Path Change [Anyone]",
+              "eventTrigger": "Character Path [Anyone]: Change",
               "execute": [
                 {
                   "name": "IF",

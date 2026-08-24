@@ -344,7 +344,7 @@ const compositeAbilityObject = {
                         "target": "{{Player Team All}}"
                       },
                       "advanceType": "Set",
-                      "multiAdd": "(0 - UnusedUnderThisBase_8575)"
+                      "multiAdd": "(0 - UnusedUnderThisBase_9161)"
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -1135,13 +1135,13 @@ const compositeAbilityObject = {
                     {
                       "name": "Deal Toughness DMG",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_8536) || Constants[0] (3) || MUL || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_8536 * 3)",
+                        "operator": "Variables[0] (UnusedUnderThisBase_9122) || Constants[0] (3) || MUL || RETURN",
+                        "displayLines": "(UnusedUnderThisBase_9122 * 3)",
                         "constants": [
                           3
                         ],
                         "variables": [
-                          "UnusedUnderThisBase_8536"
+                          "UnusedUnderThisBase_9122"
                         ]
                       },
                       "attacker": {
@@ -1230,13 +1230,13 @@ const compositeAbilityObject = {
                         "target": "{{Level Entity}}"
                       },
                       "baseToughnessDMG": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_8536) || Constants[0] (3) || MUL || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_8536 * 3)",
+                        "operator": "Variables[0] (UnusedUnderThisBase_9122) || Constants[0] (3) || MUL || RETURN",
+                        "displayLines": "(UnusedUnderThisBase_9122 * 3)",
                         "constants": [
                           3
                         ],
                         "variables": [
-                          "UnusedUnderThisBase_8536"
+                          "UnusedUnderThisBase_9122"
                         ]
                       },
                       "toughnessForcedReductionPreview": 1,

@@ -98,6 +98,25 @@ const compositeAbilityObject = {
                           "target": "{{Enemy Team All}}"
                         },
                         "value1": "TeamCharacterCount",
+                        "compareType": ">=",
+                        "value2": 1,
+                        "conditions": {
+                          "name": "Compare: Monster Rank",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "compareType": "=",
+                          "value2": 2
+                        }
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Enemy Team All}}"
+                        },
+                        "value1": "TeamCharacterCount",
                         "compareType": "=",
                         "value2": 0,
                         "conditions": {

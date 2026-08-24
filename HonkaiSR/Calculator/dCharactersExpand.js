@@ -47543,7 +47543,11 @@ let characters = {
             "attackType": "Normal",
             "skillEffect": "SingleAttack",
             "maxLevel": 10,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_HimekoNova_00_Skill01_Camera",
+              "Avatar_HimekoNova_00_Skill01_Phase01",
+              "Avatar_HimekoNova_00_Skill01_Phase02"
+            ],
             "toughnessList": [
               30,
               0,
@@ -47634,7 +47638,11 @@ let characters = {
             "attackType": "BPSkill",
             "skillEffect": "Support",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_HimekoNova_00_Skill02_Camera",
+              "Avatar_HimekoNova_00_Skill02_Phase01",
+              "Avatar_HimekoNova_00_Skill02_Phase02"
+            ],
             "toughnessList": [
               0,
               0,
@@ -47850,7 +47858,13 @@ let characters = {
             "attackType": "Ultra",
             "skillEffect": "AoEAttack",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_HimekoNova_00_Skill03_Camera",
+              "Avatar_HimekoNova_00_Skill03_EnterReady",
+              "Avatar_HimekoNova_00_Skill03_Phase01",
+              "Avatar_HimekoNova_00_Skill03_Phase02",
+              "Avatar_HimekoNova_00_Skill03_Ready_Camera"
+            ],
             "toughnessList": [
               0,
               144,
@@ -47942,7 +47956,11 @@ let characters = {
             "attackType": "Ultra",
             "skillEffect": "AoEAttack",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_HimekoNova_00_Skill31_Phase01",
+              "Avatar_HimekoNova_00_Skill31_Phase02",
+              "Avatar_HimekoNova_00_Skill31_Camera"
+            ],
             "toughnessList": [
               12,
               0,
@@ -48046,7 +48064,19 @@ let characters = {
             "attackType": "Ultra",
             "skillEffect": "AoEAttack",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_HimekoNova_00_Skill11_Entry",
+              "Avatar_HimekoNova_00_Skill11_Camera01",
+              "Avatar_HimekoNova_00_Skill11_Camera02",
+              "Avatar_HimekoNova_00_Skill11_Camera03",
+              "Avatar_HimekoNova_00_Skill11_Camera04",
+              "Avatar_HimekoNova_00_Skill11_A1_Phase01",
+              "Avatar_HimekoNova_00_Skill11_A1_Phase02",
+              "Avatar_HimekoNova_00_Skill11_A2_Phase01",
+              "Avatar_HimekoNova_00_Skill11_A2_Phase02",
+              "Avatar_HimekoNova_00_Skill11_A3_Phase01",
+              "Avatar_HimekoNova_00_Skill11_A3_Phase02"
+            ],
             "toughnessList": [
               0,
               6,
@@ -48155,7 +48185,32 @@ let characters = {
             "attackType": "Ultra",
             "skillEffect": "AoEAttack",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_HimekoNova_00_Skill21_Entry",
+              "Avatar_HimekoNova_00_Skill21_01_Phase01_Level1",
+              "Avatar_HimekoNova_00_Skill21_01_Phase01_Level2",
+              "Avatar_HimekoNova_00_Skill21_01_Phase01_Level3",
+              "Avatar_HimekoNova_00_Skill21_02_Phase01_Level1",
+              "Avatar_HimekoNova_00_Skill21_02_Phase01_Level2",
+              "Avatar_HimekoNova_00_Skill21_02_Phase01_Level3",
+              "Avatar_HimekoNova_00_Skill21_03_Phase01_Level1",
+              "Avatar_HimekoNova_00_Skill21_03_Phase01_Level2",
+              "Avatar_HimekoNova_00_Skill21_03_Phase01_Level3",
+              "Avatar_HimekoNova_00_Skill21_01_Camera_Level1",
+              "Avatar_HimekoNova_00_Skill21_01_Camera_Level2",
+              "Avatar_HimekoNova_00_Skill21_01_Camera_Level3",
+              "Avatar_HimekoNova_00_Skill21_02_Camera_Level1",
+              "Avatar_HimekoNova_00_Skill21_02_Camera_Level2",
+              "Avatar_HimekoNova_00_Skill21_02_Camera_Level3",
+              "Avatar_HimekoNova_00_Skill21_03_Camera_Level1",
+              "Avatar_HimekoNova_00_Skill21_03_Camera_Level2",
+              "Avatar_HimekoNova_00_Skill21_03_Camera_Level3",
+              "Avatar_HimekoNova_00_Skill21_Phase02_Level1",
+              "Avatar_HimekoNova_00_Skill21_Phase02_Level2",
+              "Avatar_HimekoNova_00_Skill21_Phase02_Level3",
+              "Avatar_HimekoNova_00_Skill21_End_Camera",
+              "Avatar_HimekoNova_00_Skill21_End_Enter_Camera"
+            ],
             "toughnessList": [
               6,
               6,
@@ -48265,7 +48320,14 @@ let characters = {
             "element": "Fire",
             "skillEffect": "Enhance",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_HimekoNova_00_PassiveSkill01",
+              "Avatar_HimekoNova_00_Field_Insert_Phase01",
+              "Avatar_HimekoNova_00_Field_Insert_Phase02",
+              "Avatar_HimekoNova_00_Field_Insert_Camera",
+              "Avatar_HimekoNova_00_FieldExit_Insert_Phase01",
+              "Avatar_HimekoNova_00_FieldExit_Insert_Camera"
+            ],
             "toughnessList": [
               0,
               0,
@@ -48310,7 +48372,9 @@ let characters = {
             "attackType": "Maze",
             "skillEffect": "Enhance",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_HimekoNova_00_SkillMazeInLevel"
+            ],
             "toughnessList": [
               0,
               0,
@@ -48491,7 +48555,12 @@ let characters = {
             "attackType": "Assist",
             "skillEffect": "AoEAttack",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_HimekoNova_00_SupportSkill_Phase01",
+              "Avatar_HimekoNova_00_SupportSkill_Phase02",
+              "Avatar_HimekoNova_00_SupportSkill_Camera",
+              "Avatar_HimekoNova_00_SupportSkill_Camera02"
+            ],
             "toughnessList": [
               15,
               30,
@@ -48708,7 +48777,12 @@ let characters = {
             "attackType": "Assist",
             "skillEffect": "AoEAttack",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_HimekoNova_00_SupportSkill02_Phase01",
+              "Avatar_HimekoNova_00_SupportSkill02_Phase02",
+              "Avatar_HimekoNova_00_SupportSkill02_Camera",
+              "Avatar_HimekoNova_00_SupportSkill02_Camera02"
+            ],
             "toughnessList": [
               15,
               30,
@@ -48922,7 +48996,12 @@ let characters = {
             "attackType": "Assist",
             "skillEffect": "AoEAttack",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_HimekoNova_00_SupportSkill03_Phase01",
+              "Avatar_HimekoNova_00_SupportSkill03_Phase02",
+              "Avatar_HimekoNova_00_SupportSkill03_Camera",
+              "Avatar_HimekoNova_00_SupportSkill03_Camera02"
+            ],
             "toughnessList": [
               15,
               30,
@@ -52487,7 +52566,8 @@ let characters = {
               "Activity_FateStory_Saber_Insert_Camera",
               "Activity_FateStory_Saber_Insert_Phase01",
               "Activity_FateStory_Saber_Insert_Phase02",
-              "Avatar_Saber_00_PassiveSkill01"
+              "Avatar_Saber_00_PassiveSkill01",
+              "Avatar_Gilgamesh_00_Insert_Phase02_Saber"
             ],
             "toughnessList": [
               0,
@@ -53199,7 +53279,8 @@ let characters = {
               "Avatar_Archer_00_Insert_Phase02",
               "Avatar_Archer_00_Insert_Camera",
               "Avatar_Archer_00_Bonus",
-              "Avatar_Archer_00_Bonus_Camera"
+              "Avatar_Archer_00_Bonus_Camera",
+              "Avatar_TohsakaRin_00_Insert_Phase02_Archer"
             ],
             "toughnessList": [
               30,
@@ -53558,7 +53639,12 @@ let characters = {
             "attackType": "Normal",
             "skillEffect": "SingleAttack",
             "maxLevel": 10,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Gilgamesh_00_Skill01_Camera",
+              "Avatar_Gilgamesh_00_Skill01_Camera_1",
+              "Avatar_Gilgamesh_00_Skill01_Phase01",
+              "Avatar_Gilgamesh_00_Skill01_Phase02"
+            ],
             "toughnessList": [
               30,
               0,
@@ -53724,7 +53810,12 @@ let characters = {
             "attackType": "BPSkill",
             "skillEffect": "Blast",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Gilgamesh_00_Skill02_Camera",
+              "Avatar_Gilgamesh_00_Skill02_Camera_1",
+              "Avatar_Gilgamesh_00_Skill02_Phase01",
+              "Avatar_Gilgamesh_00_Skill02_Phase02"
+            ],
             "toughnessList": [
               60,
               0,
@@ -53783,7 +53874,10 @@ let characters = {
             "attackType": "BPSkill",
             "skillEffect": "SingleAttack",
             "maxLevel": 10,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Gilgamesh_00_Skill21_Phase01",
+              "Avatar_Gilgamesh_00_Skill21_Phase02"
+            ],
             "toughnessList": [
               30,
               0,
@@ -53889,7 +53983,12 @@ let characters = {
             "attackType": "Ultra",
             "skillEffect": "AoEAttack",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Gilgamesh_00_Skill03_Camera",
+              "Avatar_Gilgamesh_00_Skill03_EnterReady",
+              "Avatar_Gilgamesh_00_Skill03_Phase01",
+              "Avatar_Gilgamesh_00_Skill03_Phase02"
+            ],
             "toughnessList": [
               6,
               120,
@@ -54009,7 +54108,12 @@ let characters = {
             "element": "Lightning",
             "skillEffect": "Enhance",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Gilgamesh_00_PassiveSkill01",
+              "Avatar_Gilgamesh_00_Skill04_Camera",
+              "Avatar_Gilgamesh_00_Skill11_Camera",
+              "Avatar_Gilgamesh_00_Skill05_Camera"
+            ],
             "toughnessList": [
               0,
               0,
@@ -54157,7 +54261,13 @@ let characters = {
             "element": "Lightning",
             "skillEffect": "AoEAttack",
             "maxLevel": 15,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Gilgamesh_00_PassiveSkill02",
+              "Avatar_Gilgamesh_00_Insert_SelectTargetSelf",
+              "Avatar_Gilgamesh_00_Insert_Phase01",
+              "Avatar_Gilgamesh_00_Insert_Phase02",
+              "Avatar_Gilgamesh_00_Insert_Camera"
+            ],
             "toughnessList": [
               0,
               60,
@@ -54201,7 +54311,9 @@ let characters = {
             "attackType": "Maze",
             "skillEffect": "Impair",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_Gilgamesh_00_SkillMazeInLevel"
+            ],
             "toughnessList": [
               0,
               0,

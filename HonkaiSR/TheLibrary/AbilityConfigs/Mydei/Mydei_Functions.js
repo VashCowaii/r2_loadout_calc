@@ -71,7 +71,9 @@ const configAbility = {
                     },
                     {
                       "name": "Inject Extra-Turn",
-                      "actionTag": "Mydeimos_InsertAction",
+                      "actionTag": [
+                        "Mydeimos_InsertAction"
+                      ],
                       "afterInjection": [
                         {
                           "name": "Define Custom Variable",

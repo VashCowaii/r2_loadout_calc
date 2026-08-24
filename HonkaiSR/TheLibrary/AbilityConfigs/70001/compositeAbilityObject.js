@@ -440,7 +440,7 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "execute": [
             {
-              "eventTrigger": "Character Path Change [Anyone]",
+              "eventTrigger": "Character Path [Anyone]: Change",
               "execute": [
                 {
                   "name": "IF",
@@ -617,7 +617,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Character Path Change [Anyone]",
+              "eventTrigger": "Character Path [Anyone]: Change",
               "execute": [
                 {
                   "name": "IF",
@@ -1157,7 +1157,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Character Path Change [Anyone]",
+              "eventTrigger": "Character Path [Anyone]: Change",
               "execute": [
                 {
                   "name": "IF",
@@ -1467,7 +1467,7 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable with Team Count",
                   "target": {
                     "name": "Target Name",
-                    "target": "{{Elation: Player Team with Unselectables}} + {{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: Currency Wars Gear2012}}"
+                    "target": "{{Elation: All Entities}}"
                   },
                   "variableName": "MDF_Elation_Character_Num",
                   "livingTargets": true
@@ -1728,6 +1728,10 @@ const compositeAbilityObject = {
                     {
                       "name": "MonsterDeathRattleByLevel",
                       "value": "DuringElationTime_MonsterDeathRattleByLevel"
+                    },
+                    {
+                      "name": "MonsterDeathRattleTogether",
+                      "value": "DuringElationTime_MonsterDeathRattleTogether"
                     },
                     {
                       "name": "MonsterDeathRattle",
@@ -2005,7 +2009,7 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable with Team Count",
                       "target": {
                         "name": "Target Name",
-                        "target": "{{Elation: Player Team with Unselectables}} + {{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: Currency Wars Gear2012}}"
+                        "target": "{{Elation: All Entities}}"
                       },
                       "variableName": "MDF_Elation_Character_Num",
                       "livingTargets": true
@@ -2353,7 +2357,7 @@ const compositeAbilityObject = {
           "name": "Define Custom Variable with Team Count",
           "target": {
             "name": "Target Name",
-            "target": "{{Elation: Player Team with Unselectables}} + {{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: Currency Wars Gear2012}}"
+            "target": "{{Elation: All Entities}}"
           },
           "variableName": "Elation_Character_Num",
           "livingTargets": true
@@ -2497,7 +2501,9 @@ const compositeAbilityObject = {
         },
         {
           "name": "Inject Extra-Turn",
-          "actionTag": "ElationTime_CustomTag",
+          "actionTag": [
+            "ElationTime_CustomTag"
+          ],
           "forcedPunchline": {
             "operator": "Variables[0] (ElationTime_OverrideElationPoint) || RETURN",
             "displayLines": "ElationTime_OverrideElationPoint",
@@ -2661,7 +2667,7 @@ const compositeAbilityObject = {
           "name": "Find New Target",
           "from": {
             "name": "Target Name",
-            "target": "{{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: All Battle Events}} + {{Elation: Currency Wars Gear2012}}"
+            "target": "{{Elation: Extra Aha-Instant Participants}}"
           },
           "maxTargets": 1,
           "conditions": {
@@ -2885,7 +2891,9 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Inject Extra-Turn",
-              "actionTag": "ElationTime_CustomTagTemp",
+              "actionTag": [
+                "ElationTime_CustomTagTemp"
+              ],
               "forcedPunchline": {
                 "operator": "Variables[0] (ElationTime_OverrideElationPointTemp) || RETURN",
                 "displayLines": "ElationTime_OverrideElationPointTemp",

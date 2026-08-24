@@ -29,7 +29,11 @@ const compositeAbilityObject = {
       "attackType": "Normal",
       "skillEffect": "SingleAttack",
       "maxLevel": 1,
-      "configAbilityList": null,
+      "configAbilityList": [
+        "Avatar_W5_PamPart_Skill01_Camera",
+        "Avatar_W5_PamPart_Skill01_Phase01",
+        "Avatar_W5_PamPart_Skill01_Phase02"
+      ],
       "toughnessList": [
         30,
         0,
@@ -62,7 +66,11 @@ const compositeAbilityObject = {
       "attackType": "BPSkill",
       "skillEffect": "Impair",
       "maxLevel": 1,
-      "configAbilityList": null,
+      "configAbilityList": [
+        "Avatar_W5_PamPart_Skill02_Camera",
+        "Avatar_W5_PamPart_Skill02_Phase01",
+        "Avatar_W5_PamPart_Skill02_Phase02"
+      ],
       "toughnessList": [
         60,
         0,
@@ -91,7 +99,11 @@ const compositeAbilityObject = {
       "element": "Quantum",
       "skillEffect": "Passive",
       "maxLevel": 1,
-      "configAbilityList": null,
+      "configAbilityList": [
+        "Avatar_W5_PamPart_PassiveSkill",
+        "Avatar_W5_PamPart_PassiveSkill_InsertAbility",
+        "Avatar_W5_PamPart_PassiveSkill_InsertAbility_Camera"
+      ],
       "toughnessList": [
         0,
         0,

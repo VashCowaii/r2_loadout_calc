@@ -262,11 +262,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1555516473\">Monster_Company_Coin_Elite</a>[<span class=\"descriptionNumberColor\">Performance Points</span>]",
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8795) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8795",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9381) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9381",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_8795"
+                    "UnusedUnderThisBase_9381"
                   ]
                 },
                 "Shield_InitValue": 0
@@ -391,11 +391,11 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"228795985\">Monster_W2_Kafka_RL_MeleeAttack</a>",
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
-              "operator": "Variables[0] (UnusedUnderThisBase_8801) || RETURN",
-              "displayLines": "UnusedUnderThisBase_8801",
+              "operator": "Variables[0] (UnusedUnderThisBase_9387) || RETURN",
+              "displayLines": "UnusedUnderThisBase_9387",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_8801"
+                "UnusedUnderThisBase_9387"
               ]
             }
           }

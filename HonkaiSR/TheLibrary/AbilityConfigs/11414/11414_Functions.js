@@ -30,30 +30,30 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "duration": {
-            "operator": "Variables[0] (UnusedUnderThisBase_13147) || RETURN",
-            "displayLines": "UnusedUnderThisBase_13147",
+            "operator": "Variables[0] (UnusedUnderThisBase_14001) || RETURN",
+            "displayLines": "UnusedUnderThisBase_14001",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_13147"
+              "UnusedUnderThisBase_14001"
             ]
           },
           "valuePerStack": {
             "MDF_DanHengPT_InitShieldValue": {
-              "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (UnusedUnderThisBase_4602) || MUL || Variables[2] (UnusedUnderThisBase_4592) || ADD || RETURN",
-              "displayLines": "((DanHengPT_Attack * UnusedUnderThisBase_4602) + UnusedUnderThisBase_4592)",
+              "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (UnusedUnderThisBase_4994) || MUL || Variables[2] (UnusedUnderThisBase_4984) || ADD || RETURN",
+              "displayLines": "((DanHengPT_Attack * UnusedUnderThisBase_4994) + UnusedUnderThisBase_4984)",
               "constants": [],
               "variables": [
                 "DanHengPT_Attack",
-                "UnusedUnderThisBase_4602",
-                "UnusedUnderThisBase_4592"
+                "UnusedUnderThisBase_4994",
+                "UnusedUnderThisBase_4984"
               ]
             },
             "MDF_MaxShieldRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_4604) || RETURN",
-              "displayLines": "UnusedUnderThisBase_4604",
+              "operator": "Variables[0] (UnusedUnderThisBase_4996) || RETURN",
+              "displayLines": "UnusedUnderThisBase_4996",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_4604"
+                "UnusedUnderThisBase_4996"
               ]
             },
             "MDF_MainTarget": 1
@@ -82,30 +82,30 @@ const configAbility = {
           },
           "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "duration": {
-            "operator": "Variables[0] (UnusedUnderThisBase_5541) || RETURN",
-            "displayLines": "UnusedUnderThisBase_5541",
+            "operator": "Variables[0] (UnusedUnderThisBase_5935) || RETURN",
+            "displayLines": "UnusedUnderThisBase_5935",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_5541"
+              "UnusedUnderThisBase_5935"
             ]
           },
           "valuePerStack": {
             "MDF_DanHengPT_InitShieldValue": {
-              "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (UnusedUnderThisBase_4607) || MUL || Variables[2] (UnusedUnderThisBase_4608) || ADD || RETURN",
-              "displayLines": "((DanHengPT_Attack * UnusedUnderThisBase_4607) + UnusedUnderThisBase_4608)",
+              "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (UnusedUnderThisBase_4999) || MUL || Variables[2] (UnusedUnderThisBase_5000) || ADD || RETURN",
+              "displayLines": "((DanHengPT_Attack * UnusedUnderThisBase_4999) + UnusedUnderThisBase_5000)",
               "constants": [],
               "variables": [
                 "DanHengPT_Attack",
-                "UnusedUnderThisBase_4607",
-                "UnusedUnderThisBase_4608"
+                "UnusedUnderThisBase_4999",
+                "UnusedUnderThisBase_5000"
               ]
             },
             "MDF_MaxShieldRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_4604) || RETURN",
-              "displayLines": "UnusedUnderThisBase_4604",
+              "operator": "Variables[0] (UnusedUnderThisBase_4996) || RETURN",
+              "displayLines": "UnusedUnderThisBase_4996",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_4604"
+                "UnusedUnderThisBase_4996"
               ]
             },
             "MDF_MainTarget": 1
@@ -195,32 +195,32 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_6051) || RETURN",
-                "displayLines": "UnusedUnderThisBase_6051",
+                "operator": "Variables[0] (UnusedUnderThisBase_6445) || RETURN",
+                "displayLines": "UnusedUnderThisBase_6445",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_6051"
+                  "UnusedUnderThisBase_6445"
                 ]
               },
               "valuePerStack": {
                 "MDF_DanHengPT_InitShieldValue": {
-                  "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (UnusedUnderThisBase_4588) || MUL || Variables[2] (UnusedUnderThisBase_4584) || ADD || Variables[3] (DanHengPT_ExtraShieldUPRatio) || MUL || Variables[4] (UnusedUnderThisBase_5365) || MUL || RETURN",
-                  "displayLines": "((((DanHengPT_Attack * UnusedUnderThisBase_4588) + UnusedUnderThisBase_4584) * DanHengPT_ExtraShieldUPRatio) * UnusedUnderThisBase_5365)",
+                  "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (UnusedUnderThisBase_4980) || MUL || Variables[2] (UnusedUnderThisBase_4976) || ADD || Variables[3] (DanHengPT_ExtraShieldUPRatio) || MUL || Variables[4] (UnusedUnderThisBase_5759) || MUL || RETURN",
+                  "displayLines": "((((DanHengPT_Attack * UnusedUnderThisBase_4980) + UnusedUnderThisBase_4976) * DanHengPT_ExtraShieldUPRatio) * UnusedUnderThisBase_5759)",
                   "constants": [],
                   "variables": [
                     "DanHengPT_Attack",
-                    "UnusedUnderThisBase_4588",
-                    "UnusedUnderThisBase_4584",
+                    "UnusedUnderThisBase_4980",
+                    "UnusedUnderThisBase_4976",
                     "DanHengPT_ExtraShieldUPRatio",
-                    "UnusedUnderThisBase_5365"
+                    "UnusedUnderThisBase_5759"
                   ]
                 },
                 "MDF_MaxShieldRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_4604) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_4604",
+                  "operator": "Variables[0] (UnusedUnderThisBase_4996) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_4996",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_4604"
+                    "UnusedUnderThisBase_4996"
                   ]
                 },
                 "MDF_MainTarget": 1
@@ -263,32 +263,32 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                       "duration": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_6051) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_6051",
+                        "operator": "Variables[0] (UnusedUnderThisBase_6445) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_6445",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_6051"
+                          "UnusedUnderThisBase_6445"
                         ]
                       },
                       "valuePerStack": {
                         "MDF_DanHengPT_InitShieldValue": {
-                          "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (UnusedUnderThisBase_4586) || MUL || Variables[2] (UnusedUnderThisBase_4614) || ADD || Variables[3] (DanHengPT_ExtraShieldUPRatio) || MUL || Variables[4] (UnusedUnderThisBase_5365) || MUL || RETURN",
-                          "displayLines": "((((DanHengPT_Attack * UnusedUnderThisBase_4586) + UnusedUnderThisBase_4614) * DanHengPT_ExtraShieldUPRatio) * UnusedUnderThisBase_5365)",
+                          "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (UnusedUnderThisBase_4978) || MUL || Variables[2] (UnusedUnderThisBase_5006) || ADD || Variables[3] (DanHengPT_ExtraShieldUPRatio) || MUL || Variables[4] (UnusedUnderThisBase_5759) || MUL || RETURN",
+                          "displayLines": "((((DanHengPT_Attack * UnusedUnderThisBase_4978) + UnusedUnderThisBase_5006) * DanHengPT_ExtraShieldUPRatio) * UnusedUnderThisBase_5759)",
                           "constants": [],
                           "variables": [
                             "DanHengPT_Attack",
-                            "UnusedUnderThisBase_4586",
-                            "UnusedUnderThisBase_4614",
+                            "UnusedUnderThisBase_4978",
+                            "UnusedUnderThisBase_5006",
                             "DanHengPT_ExtraShieldUPRatio",
-                            "UnusedUnderThisBase_5365"
+                            "UnusedUnderThisBase_5759"
                           ]
                         },
                         "MDF_MaxShieldRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_4604) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_4604",
+                          "operator": "Variables[0] (UnusedUnderThisBase_4996) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_4996",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_4604"
+                            "UnusedUnderThisBase_4996"
                           ]
                         },
                         "MDF_MainTarget": 1
@@ -308,31 +308,31 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_6051) || RETURN",
-                "displayLines": "UnusedUnderThisBase_6051",
+                "operator": "Variables[0] (UnusedUnderThisBase_6445) || RETURN",
+                "displayLines": "UnusedUnderThisBase_6445",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_6051"
+                  "UnusedUnderThisBase_6445"
                 ]
               },
               "valuePerStack": {
                 "MDF_DanHengPT_InitShieldValue": {
-                  "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (UnusedUnderThisBase_4588) || MUL || Variables[2] (UnusedUnderThisBase_4584) || ADD || Variables[3] (DanHengPT_ExtraShieldUPRatio) || MUL || RETURN",
-                  "displayLines": "(((DanHengPT_Attack * UnusedUnderThisBase_4588) + UnusedUnderThisBase_4584) * DanHengPT_ExtraShieldUPRatio)",
+                  "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (UnusedUnderThisBase_4980) || MUL || Variables[2] (UnusedUnderThisBase_4976) || ADD || Variables[3] (DanHengPT_ExtraShieldUPRatio) || MUL || RETURN",
+                  "displayLines": "(((DanHengPT_Attack * UnusedUnderThisBase_4980) + UnusedUnderThisBase_4976) * DanHengPT_ExtraShieldUPRatio)",
                   "constants": [],
                   "variables": [
                     "DanHengPT_Attack",
-                    "UnusedUnderThisBase_4588",
-                    "UnusedUnderThisBase_4584",
+                    "UnusedUnderThisBase_4980",
+                    "UnusedUnderThisBase_4976",
                     "DanHengPT_ExtraShieldUPRatio"
                   ]
                 },
                 "MDF_MaxShieldRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_4604) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_4604",
+                  "operator": "Variables[0] (UnusedUnderThisBase_4996) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_4996",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_4604"
+                    "UnusedUnderThisBase_4996"
                   ]
                 },
                 "MDF_MainTarget": 1
@@ -375,31 +375,31 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1755552334\">DanHengPT_Shield</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
                       "duration": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_6051) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_6051",
+                        "operator": "Variables[0] (UnusedUnderThisBase_6445) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_6445",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_6051"
+                          "UnusedUnderThisBase_6445"
                         ]
                       },
                       "valuePerStack": {
                         "MDF_DanHengPT_InitShieldValue": {
-                          "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (UnusedUnderThisBase_4586) || MUL || Variables[2] (UnusedUnderThisBase_4614) || ADD || Variables[3] (DanHengPT_ExtraShieldUPRatio) || MUL || RETURN",
-                          "displayLines": "(((DanHengPT_Attack * UnusedUnderThisBase_4586) + UnusedUnderThisBase_4614) * DanHengPT_ExtraShieldUPRatio)",
+                          "operator": "Variables[0] (DanHengPT_Attack) || Variables[1] (UnusedUnderThisBase_4978) || MUL || Variables[2] (UnusedUnderThisBase_5006) || ADD || Variables[3] (DanHengPT_ExtraShieldUPRatio) || MUL || RETURN",
+                          "displayLines": "(((DanHengPT_Attack * UnusedUnderThisBase_4978) + UnusedUnderThisBase_5006) * DanHengPT_ExtraShieldUPRatio)",
                           "constants": [],
                           "variables": [
                             "DanHengPT_Attack",
-                            "UnusedUnderThisBase_4586",
-                            "UnusedUnderThisBase_4614",
+                            "UnusedUnderThisBase_4978",
+                            "UnusedUnderThisBase_5006",
                             "DanHengPT_ExtraShieldUPRatio"
                           ]
                         },
                         "MDF_MaxShieldRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_4604) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_4604",
+                          "operator": "Variables[0] (UnusedUnderThisBase_4996) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_4996",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_4604"
+                            "UnusedUnderThisBase_4996"
                           ]
                         },
                         "MDF_MainTarget": 1

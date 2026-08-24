@@ -1188,7 +1188,7 @@ const compositeAbilityObject = {
               "name": "Ability Has Tag",
               "target": {
                 "name": "Target Name",
-                "target": "{{Player's Aim Target List}}"
+                "target": "{{Player's Aim Target List}}.[[index0]]"
               },
               "invertCondition": true,
               "tag": "ElationTime"
@@ -1972,6 +1972,10 @@ const compositeAbilityObject = {
                 {
                   "name": "SWITCH CONDITON",
                   "caseValueIs": 11413
+                },
+                {
+                  "name": "SWITCH CONDITON",
+                  "caseValueIs": 1507
                 }
               ]
             }
@@ -2238,6 +2242,24 @@ const compositeAbilityObject = {
           "valuePercent": 1,
           "ofAbilitySplit": true,
           "isFixed": "* ERR"
+        },
+        {
+          "name": "SWITCH",
+          "switchValue": {
+            "operator": "Variables[0] (_SelectCharacterID) || RETURN",
+            "displayLines": "_SelectCharacterID",
+            "constants": [],
+            "variables": [
+              "_SelectCharacterID"
+            ]
+          },
+          "caseEvents": [
+            {
+              "name": "SWITCH CONDITON",
+              "caseValueIs": 1507
+            }
+          ],
+          "defaultEvents": []
         },
         "Trigger: Ability End"
       ],

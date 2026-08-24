@@ -1,7 +1,9 @@
 let enemyData = {
   "name": "Ishtar Huwawa Aquila",
   "image": 4015012,
-  "bar": 1,
+  "bar": 2,
+  "bodyType": "LargeMonster",
+  "hitClass": "D",
   "rank": "BigBoss",
   "stArray": [
     40.008892,
@@ -28,6 +30,14 @@ let enemyData = {
         null,
         1,
         null
+      ],
+      "phhp": [
+        1,
+        1
+      ],
+      "phs": [
+        1,
+        1
       ],
       "weak": [
         "Physical",

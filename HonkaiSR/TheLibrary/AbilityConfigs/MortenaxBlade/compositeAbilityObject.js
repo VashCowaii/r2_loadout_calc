@@ -2032,10 +2032,6 @@ const compositeAbilityObject = {
                   ],
                   "whenValueChanges": [
                     {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"349219986\">MortenaxBlade_TrytoPlayAutoBP</a>"
-                    },
-                    {
                       "name": "Update Displayed Energy Bar",
                       "value": {
                         "operator": "Variables[0] (G_EnergyCount) || RETURN",
@@ -2046,6 +2042,10 @@ const compositeAbilityObject = {
                         ]
                       },
                       "priorState": "Active"
+                    },
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"349219986\">MortenaxBlade_TrytoPlayAutoBP</a>"
                     }
                   ]
                 }
@@ -4726,7 +4726,9 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Inject Extra-Turn",
-                  "actionTag": "MortenaxBlade_Passive",
+                  "actionTag": [
+                    "MortenaxBlade_Passive"
+                  ],
                   "skillIndex": 3,
                   "forceAction": true,
                   "conditions": {

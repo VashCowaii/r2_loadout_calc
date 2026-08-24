@@ -1108,7 +1108,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Dunn"
     },
     "groupName": "Silvermane Lieutenant"
@@ -4865,7 +4865,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Aurumaton Gatekeeper"
     },
     "groupName": "Aurumaton Gatekeeper"
@@ -5005,7 +5005,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Champion of Justice (Mechanical)"
     },
     "groupName": "Aurumaton Spectral Envoy"
@@ -8154,7 +8154,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Knockoff King of Heroes"
     },
     "groupName": "\"Past Confined and Caged\""
@@ -8276,7 +8276,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Knockoff King of Heroes"
     },
     "groupName": "\"Tomorrow in Harmonious Chords\""
@@ -8455,7 +8455,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Knockoff King of Heroes"
     },
     "groupName": "\"Present Inebriated in Revelry\""
@@ -9708,7 +9708,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Hero's Follower"
     },
     "groupName": "Furiae Philosopher"
@@ -10063,7 +10063,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "The Long Arms of Sorrow"
     },
     "4012075": {
@@ -10081,7 +10081,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "The Long Arms of Sorrow"
     },
     "4012076": {
@@ -10283,7 +10283,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Furiae Praetor"
     },
     "groupName": "Furiae Praetor"
@@ -10608,7 +10608,8 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "phases": 2,
+      "hasReader": true,
       "baseName": "Underleveled Castorice"
     },
     "4014035": {
@@ -11670,7 +11671,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Avenger Squad: Canine"
     },
     "groupName": "Ichor Memosprite: Canine"
@@ -11747,7 +11748,7 @@ let basicEnemyList = {
           "Ice"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Avenger Squad: Winged Serpent"
     },
     "groupName": "Ichor Memosprite: Winged Serpent"
@@ -11898,7 +11899,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Autonomous Wand"
     },
     "groupName": "Autonomous Wand"
@@ -12100,7 +12101,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Aggressive Reading Material"
     },
     "groupName": "Aggressive Reading Material"
@@ -12145,7 +12146,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Assistant Graffiti: Slacker"
     },
     "groupName": "Assistant Graffiti: Slacker"
@@ -12190,7 +12191,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Assistant Graffiti: Rusher"
     },
     "groupName": "Assistant Graffiti: Rusher"
@@ -12228,7 +12229,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Assistant Graffiti: Demander"
     },
     "groupName": "Assistant Graffiti: Demander"
@@ -12266,7 +12267,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Circe's Mechatron"
     },
     "groupName": "SD Civilian Mechatron"
@@ -12297,7 +12298,7 @@ let basicEnemyList = {
           "Ice"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Magical Girl Troupe"
     },
     "groupName": "Magical Girl Troupe"
@@ -12343,7 +12344,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Master Thief Furbo"
     },
     "groupName": "Furbo Journalist"
@@ -12418,7 +12419,7 @@ let basicEnemyList = {
           "Wind"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Melee Familiar"
     },
     "groupName": "Rocking Rebel"
@@ -12439,7 +12440,7 @@ let basicEnemyList = {
     },
     "5013032": {
       "5013032": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Magic Familiar"
     },
     "groupName": "Canvas Peacock"
@@ -12711,7 +12712,8 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "phases": 2,
+      "hasReader": true,
       "baseName": "Imagenae Apex Depredator"
     },
     "5014023": {
@@ -12722,7 +12724,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Alloy Mechatron: King Pom-Pom"
     },
     "groupName": "Alloy Mechatron: King Pom-Pom"
@@ -12780,7 +12782,8 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "phases": 3,
+      "hasReader": true,
       "baseName": "Murata Graphia, Founding Artist"
     },
     "groupName": "Murata Graphia, Founding Artist"
@@ -12859,7 +12862,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "God-Devourer Offspring"
     },
     "groupName": "God-Devourer Offspring"
@@ -15757,7 +15760,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Comediologist"
   },
@@ -16191,7 +16194,8 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "phases": 3,
+      "hasReader": true
     },
     "8015040": {
       "8015040": {
@@ -16201,7 +16205,8 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "phases": 3,
+      "hasReader": true,
       "baseName": "Lord of Saṃvartasthāyi, Asat Pramad: \"Existence\""
     },
     "8015050": {
@@ -16212,7 +16217,8 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "phases": 3,
+      "hasReader": true,
       "baseName": "Lord of Saṃvartasthāyi, Asat Pramad: \"Decay\""
     },
     "groupName": "Lord of Saṃvartasthāyi, Asat Pramad"
@@ -18220,7 +18226,7 @@ let basicEnemyList = {
           "Ice"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"The Honored\""
     },
     "3021030": {
@@ -18389,7 +18395,7 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "\"The Shield\""
     },
     "3022010": {
@@ -18538,7 +18544,8 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "phases": 2,
+      "hasReader": true,
       "baseName": "Daythunder Raven"
     },
     "4012090": {
@@ -18686,7 +18693,8 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "phases": 2,
+      "hasReader": true,
       "baseName": "Ishtar Huwawa Aquila"
     },
     "4022011": {
@@ -19892,7 +19900,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Demon Boar"
     },
     "8002089": {

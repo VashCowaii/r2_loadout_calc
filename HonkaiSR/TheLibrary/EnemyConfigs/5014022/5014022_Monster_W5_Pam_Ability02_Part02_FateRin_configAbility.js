@@ -1,0 +1,152 @@
+const configAbility = {
+  "fileName": "5014022_Monster_W5_Pam_Ability02_Part02_FateRin",
+  "abilityType": null,
+  "energy": null,
+  "toughnessList": null,
+  "parse": [
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Has Modifier",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
+        "modifier": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>"
+      }
+    },
+    "Ability Start",
+    {
+      "name": "ATK Scaling DMG",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
+      "AttackScaling": {
+        "DamageType": "Quantum",
+        "Damage": {
+          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+          "displayLines": "{[Skill02[0]]}",
+          "constants": [],
+          "variables": [
+            "{[Skill02[0]]}"
+          ]
+        },
+        "HitSplit": 0.18,
+        "Toughness": null,
+        "Tags": null,
+        "attackType": "Basic ATK",
+        "EnergyGainPercent": "100%"
+      }
+    },
+    {
+      "name": "ATK Scaling DMG",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
+      "AttackScaling": {
+        "DamageType": "Quantum",
+        "Damage": {
+          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+          "displayLines": "{[Skill02[0]]}",
+          "constants": [],
+          "variables": [
+            "{[Skill02[0]]}"
+          ]
+        },
+        "HitSplit": 0.18,
+        "Toughness": null,
+        "Tags": null,
+        "attackType": "Basic ATK",
+        "EnergyGainPercent": "100%"
+      }
+    },
+    {
+      "name": "ATK Scaling DMG",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
+      "AttackScaling": {
+        "DamageType": "Quantum",
+        "Damage": {
+          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+          "displayLines": "{[Skill02[0]]}",
+          "constants": [],
+          "variables": [
+            "{[Skill02[0]]}"
+          ]
+        },
+        "HitSplit": 0.18,
+        "Toughness": null,
+        "Tags": null,
+        "attackType": "Basic ATK",
+        "EnergyGainPercent": "100%"
+      }
+    },
+    {
+      "name": "ATK Scaling DMG",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
+      "AttackScaling": {
+        "DamageType": "Quantum",
+        "Damage": {
+          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+          "displayLines": "{[Skill02[0]]}",
+          "constants": [],
+          "variables": [
+            "{[Skill02[0]]}"
+          ]
+        },
+        "HitSplit": 0.18,
+        "Toughness": null,
+        "Tags": null,
+        "attackType": "Basic ATK",
+        "EnergyGainPercent": "100%"
+      }
+    },
+    {
+      "name": "ATK Scaling DMG",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Hostile Entities(AOE)}}"
+      },
+      "AttackScaling": {
+        "DamageType": "Quantum",
+        "Damage": {
+          "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+          "displayLines": "{[Skill02[0]]}",
+          "constants": [],
+          "variables": [
+            "{[Skill02[0]]}"
+          ]
+        },
+        "HitSplit": 0.28,
+        "Toughness": null,
+        "Tags": null,
+        "attackType": "Basic ATK",
+        "EnergyGainPercent": "100%"
+      }
+    },
+    "Trigger: Attack End",
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Has Modifier",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
+        "modifier": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>"
+      }
+    },
+    "Trigger: Ability End"
+  ],
+  "targetObjectData": {
+    "primaryTarget": "{{Hostile Entities(AOE)}}"
+  },
+  "references": []
+}

@@ -6211,7 +6211,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Shell_LightTeam_Shield_Display",
+    "name": "<a class=\"gModGreen\" id=\"1600419310\">Enemy_W5_Shell_LightTeam_Shield_Display</a>",
     "realName": "Tragic Core",
     "aim": "Buff",
     "desc": "A Shield that offsets DMG taken by all allies. Before the Shield is depleted or its effect expires, enemy targets' attacks won't reduce the Shielded allies' HP. Currently, the Shield has #1[i] point(s) remaining.",
@@ -6222,7 +6222,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_AsatPramad_BombCharging",
+    "name": "<a class=\"gModGreen\" id=\"1505992097\">Enemy_W5_AsatPramad_BombCharging</a>",
     "realName": "Memes Incoming",
     "aim": "Other",
     "desc": "The next action by \"Formation\" will detonate all \"Meme'd.\"",
@@ -6230,7 +6230,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W5_AsatPramad_Bomb",
+    "name": "<a class=\"gModGreen\" id=\"724771238\">Enemy_W5_AsatPramad_Bomb</a>",
     "realName": "Meme'd",
     "aim": "Debuff",
     "desc": "When an ally character uses \"Meme'd,\" Asat Pramad deals massive DMG to all ally targets, has a high chance to inflict \"Strong Reverberation\" on ally targets, and removes 1 stack of \"Meme'd.\" If the ally target does not have a Shield or \"Barrier,\" additionally applies 1 stack of \"Prana-Siphon.\"",
@@ -6238,7 +6238,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W5_AsatPramad_Part03UnselectableMark",
+    "name": "<a class=\"gModGreen\" id=\"2037385218\">Enemy_W5_AsatPramad_Part03UnselectableMark</a>",
     "realName": "Elation Depleted",
     "aim": "Other",
     "desc": "Currently in an unselectable state.",
@@ -6246,7 +6246,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W5_AsatPramad_AllDamageTypeTakenRatio",
+    "name": "<a class=\"gModGreen\" id=\"-1161208794\">Enemy_W5_AsatPramad_AllDamageTypeTakenRatio</a>",
     "realName": "Knockdown",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%.",
@@ -6257,7 +6257,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_AsatPramad_Debuff_04_Modifier",
+    "name": "<a class=\"gModGreen\" id=\"-961356533\">Enemy_W5_AsatPramad_Debuff_04_Modifier</a>",
     "realName": "Barrier",
     "aim": "Buff",
     "desc": "Nullifies all DMG received except DoTs. This state is dispelled after being attacked.",
@@ -6265,7 +6265,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W5_AsatPramad_DirtyBlood",
+    "name": "<a class=\"gModGreen\" id=\"-78128030\">Enemy_W5_AsatPramad_DirtyBlood</a>",
     "realName": "Prana-Siphon",
     "aim": "Debuff",
     "desc": "Maximum Restorable HP decreases by #1[i]%. This effect is stackable.",
@@ -6276,7 +6276,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_AsatPramad_Part03Mark",
+    "name": "<a class=\"gModGreen\" id=\"-660230935\">Enemy_W5_AsatPramad_Part03Mark</a>",
     "realName": "Three Faces as One",
     "aim": "Other",
     "desc": "During this phase, all Lord of Saṃvartasthāyi, Asat Pramad units share HP.",
@@ -6284,7 +6284,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W5_AsatPramad_Shake",
+    "name": "<a class=\"gModGreen\" id=\"295693692\">Enemy_W5_AsatPramad_Shake</a>",
     "realName": "Strong Reverberation",
     "aim": "Debuff",
     "desc": "Action delayed. Cannot take actions for a certain number of turns.",
@@ -6292,7 +6292,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W5_AsatPramad_Debuff_12_Modifier_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-657254997\">Enemy_W5_AsatPramad_Debuff_12_Modifier_Sub</a>",
     "realName": "Bleed",
     "aim": "Debuff",
     "desc": "Takes Physical DMG at the start of each turn for a certain number of turns.",
@@ -6382,7 +6382,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W5_Shell_Deathrattle",
+    "name": "<a class=\"gModGreen\" id=\"597793268\">Enemy_W5_Shell_Deathrattle</a>",
     "realName": "Ensemble Slapstick",
     "aim": "Other",
     "desc": "All Comediologists will attack together.",

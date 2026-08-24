@@ -467,6 +467,31 @@ const configAbility = {
     },
     {
       "name": "Target Configuration",
+      "nameTarget": "withPartner",
+      "isTargetOperator": true,
+      "execute": [
+        {
+          "name": "Target Name",
+          "target": "{{Parameter Target List}} | {{Parameter Target List}}.[[getPartner]]"
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "getPartner",
+      "isTargetOperator": true,
+      "execute": [
+        {
+          "name": "Add Target by Pseudo-Character Partner",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target List}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
       "nameTarget": "addBattleEventMemosprite",
       "isTargetOperator": true,
       "execute": [

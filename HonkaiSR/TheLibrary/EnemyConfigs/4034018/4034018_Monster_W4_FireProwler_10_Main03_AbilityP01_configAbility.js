@@ -98,27 +98,27 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1587187705\">Enemy_W2_Cocolia_IF_SuperArmorController</a>",
           "valuePerStack": {
             "MDF_IF_BOSS_BreakDelay": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12683) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12683",
+              "operator": "Variables[0] (UnusedUnderThisBase_13530) || RETURN",
+              "displayLines": "UnusedUnderThisBase_13530",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_12683"
+                "UnusedUnderThisBase_13530"
               ]
             },
             "MDF_IF_BOSS_WeaknessDMGUpRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12688) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12688",
+              "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+              "displayLines": "UnusedUnderThisBase_13535",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_12688"
+                "UnusedUnderThisBase_13535"
               ]
             },
             "MDF_IF_BOSS_Standard_Defence": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12722) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12722",
+              "operator": "Variables[0] (UnusedUnderThisBase_13569) || RETURN",
+              "displayLines": "UnusedUnderThisBase_13569",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_12722"
+                "UnusedUnderThisBase_13569"
               ]
             }
           }
@@ -132,35 +132,35 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"-1246789467\">Enemy_W2_Cocolia_IF_SoftFrenzyController</a>",
           "valuePerStack": {
             "MDF_FrenzyStartDelay": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12725) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12725",
+              "operator": "Variables[0] (UnusedUnderThisBase_13572) || RETURN",
+              "displayLines": "UnusedUnderThisBase_13572",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_12725"
+                "UnusedUnderThisBase_13572"
               ]
             },
             "MDF_FrenzyIntervalDelay": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12726) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12726",
+              "operator": "Variables[0] (UnusedUnderThisBase_13573) || RETURN",
+              "displayLines": "UnusedUnderThisBase_13573",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_12726"
+                "UnusedUnderThisBase_13573"
               ]
             },
             "MDF_MaxFrenzyLayer": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12727) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12727",
+              "operator": "Variables[0] (UnusedUnderThisBase_13574) || RETURN",
+              "displayLines": "UnusedUnderThisBase_13574",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_12727"
+                "UnusedUnderThisBase_13574"
               ]
             },
             "MDF_TokenDMGAddRatioPerLayer": {
-              "operator": "Variables[0] (UnusedUnderThisBase_12728) || RETURN",
-              "displayLines": "UnusedUnderThisBase_12728",
+              "operator": "Variables[0] (UnusedUnderThisBase_13575) || RETURN",
+              "displayLines": "UnusedUnderThisBase_13575",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_12728"
+                "UnusedUnderThisBase_13575"
               ]
             }
           }

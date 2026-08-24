@@ -2,6 +2,7 @@ let enemyData = {
   "name": "Demon Boar",
   "image": 8002083,
   "bar": 1,
+  "bodyType": "LittleMonster",
   "rank": "MinionLv2",
   "stArray": [
     40.008892,

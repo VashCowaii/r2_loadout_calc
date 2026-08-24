@@ -29,11 +29,11 @@ const configAbility = {
                     "value1": "TotalDamageRatio",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_10909) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_10909",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11617) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_11617",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_10909"
+                        "UnusedUnderThisBase_11617"
                       ]
                     }
                   }
@@ -434,7 +434,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "stayInTeam": false
+              "stayInTeam": true
             }
           ]
         }

@@ -8,6 +8,7 @@ const compositeAbilityObject = {
     "1490374940_BossInfiniteWave_Boss_Insert",
     "1490374940_BossInfiniteWave_Ability_2",
     "1490374940_BossInfiniteWave_Ability",
+    "1490374940_BattleEventAbility_Challenge_Month_47",
     "1490374940_BattleEventAbility_Challenge_Month_46",
     "1490374940_BattleEventAbility_Challenge_Month_45",
     "1490374940_BattleEventAbility_Challenge_Month_44",
@@ -55,7 +56,6 @@ const compositeAbilityObject = {
     "1490374940_BattleEventAbility_Challenge_Month_17",
     "1490374940_BattleEventAbility_Challenge_Month_16",
     "1490374940_BattleEventAbility_SummonMonsterInfinite_Camera",
-    "1490374940_BattleEventAbility_Camear_AllDarkTeam",
     "1490374940_Functions",
     "1490374940_BE_BattleEvents"
   ],
@@ -2961,6 +2961,140 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "1490374940_BattleEventAbility_Challenge_Month_47": {
+      "fileName": "1490374940_BattleEventAbility_Challenge_Month_47",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"901572290\">Modifier_BattleEventAbility_Challenge_Month_47</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__901572290\">Modifier_BattleEventAbility_Challenge_Month_47</a>",
+          "execute": [
+            {
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Target Count",
+                    "target": {
+                      "name": "Target Sequence",
+                      "Sequence": [
+                        {
+                          "name": "Target Name",
+                          "target": "{{Player Team All}}"
+                        },
+                        {
+                          "name": "Target Filter",
+                          "conditions": {
+                            "name": "Target is Pathstrider",
+                            "path": [
+                              "The Hunt",
+                              "Erudition"
+                            ],
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "compareType": ">=",
+                    "value2": 1,
+                    "livingTargets": true
+                  },
+                  "passed": [
+                    {
+                      "name": "Trigger Ability",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "inherentTarget": {
+                        "name": "Target Name",
+                        "target": "{{Player Team Entity}}"
+                      },
+                      "ability": "BattleEventAbility_Camear_AllLightTeam",
+                      "isTrigger": true
+                    },
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All}}"
+                      },
+                      "searchRandom": true,
+                      "maxTargets": 1,
+                      "conditions": {
+                        "name": "Target is Pathstrider",
+                        "path": [
+                          "The Hunt",
+                          "Erudition"
+                        ],
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      },
+                      "ifTargetFound": [
+                        {
+                          "name": "Action Advance/Delay",
+                          "advanceType": "Set",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "set": 0
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1777684731\">Standard_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                          "duration": {
+                            "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
+                            "displayLines": "#BattleEvent_P2_ADF",
+                            "constants": [],
+                            "variables": [
+                              "#BattleEvent_P2_ADF"
+                            ]
+                          },
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
+                              "displayLines": "#BattleEvent_P1_ADF",
+                              "constants": [],
+                              "variables": [
+                                "#BattleEvent_P1_ADF"
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     "1490374940_BattleEventAbility_Challenge_Month_46": {
       "fileName": "1490374940_BattleEventAbility_Challenge_Month_46",
@@ -7278,8 +7412,7 @@ const compositeAbilityObject = {
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
             "STAT_DOT",
-            "STAT_DOT_Burn",
-            "RemoveWhenCasterDead"
+            "STAT_DOT_Burn"
           ],
           "useEntitySnapshot": true,
           "description": "Takes Fire DMG at the beginning of each turn for a certain number of turns. After being attacked by a Skill, this unit and adjacent targets additionally take DMG.",
@@ -16972,10 +17105,6 @@ const compositeAbilityObject = {
           }
         },
         {
-          "name": "Add Ability",
-          "abilityName": "BattleEventAbility_Camear_AllDarkTeam"
-        },
-        {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
@@ -17576,10 +17705,6 @@ const compositeAbilityObject = {
               "#BattleEvent_P1_ADF"
             ]
           }
-        },
-        {
-          "name": "Add Ability",
-          "abilityName": "BattleEventAbility_Camear_AllDarkTeam"
         },
         {
           "name": "Add Ability",
@@ -18765,10 +18890,6 @@ const compositeAbilityObject = {
               "#BattleEvent_P5_ADF"
             ]
           }
-        },
-        {
-          "name": "Add Ability",
-          "abilityName": "BattleEventAbility_Camear_AllDarkTeam"
         },
         {
           "name": "Add Events/Bonuses",
@@ -20899,22 +21020,6 @@ const compositeAbilityObject = {
       "references": [],
       "targetObjectData": {
         "primaryTarget": "{{All Team Members}}"
-      }
-    },
-    "1490374940_BattleEventAbility_Camear_AllDarkTeam": {
-      "fileName": "1490374940_BattleEventAbility_Camear_AllDarkTeam",
-      "abilityType": null,
-      "energy": null,
-      "toughnessList": null,
-      "parse": [
-        {
-          "name": "UI Display Event",
-          "popUpText": "Memory Turbulence"
-        }
-      ],
-      "references": [],
-      "targetObjectData": {
-        "primaryTarget": "Inherent Target"
       }
     },
     "1490374940_Functions": {

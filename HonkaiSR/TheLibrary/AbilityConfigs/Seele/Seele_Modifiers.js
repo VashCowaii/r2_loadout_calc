@@ -411,7 +411,9 @@ const configAbility = {
                     },
                     {
                       "name": "Inject Extra-Turn",
-                      "actionTag": "Advanced_Seele_Ability02InsertCheck",
+                      "actionTag": [
+                        "Advanced_Seele_Ability02InsertCheck"
+                      ],
                       "skillType": "ControlSkill02",
                       "forceAction": true,
                       "conditions": {

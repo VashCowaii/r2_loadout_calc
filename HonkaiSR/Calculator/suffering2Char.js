@@ -2232,6 +2232,11 @@ const battleActions = {
                 AV:battleData.sumAV
             };
             logToBattle(battleData,{logType: isEnemy ? "HitAlly" : "HitEnemy", hitType: hitDisplay[hitType], target: targetTurn.properName, source:sourceTurn.properName, hitData,enemyIsDead,enemyIsBroken: toughnessComposite?.enemyIsBroken,position:targetTurn.isEnemy ? battleData.enemyPositions.indexOf(targetTurn) : null,positionCount:targetTurn.isEnemy ? battleData.enemyPositions.length : null});
+        
+        
+            if (globalRecords.battleSettings.testName) {
+                turnMerge.hitData = hitData;
+            }
         }
 
         turnMerge.DMGTotalEnd = DMGTotalEnd;
@@ -45844,6 +45849,7 @@ const turnLogic = {
                                 all: null,
                             },
                             scalar: "HP",
+                            scalarSourceOverride: ownerTurn.name,
                             DMGTags: [],
                             actionTags: actionTags2,
                             compositeCacheTag: actionTags2 + deathTurn.properName,

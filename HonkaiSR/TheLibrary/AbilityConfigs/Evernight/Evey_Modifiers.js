@@ -646,11 +646,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_Conv",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_7168) || Variables[1] (S02_ExtraRatio) || ADD || RETURN",
-                    "displayLines": "(UnusedUnderThisBase_7168 + S02_ExtraRatio)",
+                    "operator": "Variables[0] (UnusedUnderThisBase_7743) || Variables[1] (S02_ExtraRatio) || ADD || RETURN",
+                    "displayLines": "(UnusedUnderThisBase_7743 + S02_ExtraRatio)",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_7168",
+                      "UnusedUnderThisBase_7743",
                       "S02_ExtraRatio"
                     ]
                   }
@@ -906,11 +906,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1497104623\">Evernight_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_4694) || RETURN",
-                "displayLines": "UnusedUnderThisBase_4694",
+                "operator": "Variables[0] (UnusedUnderThisBase_5086) || RETURN",
+                "displayLines": "UnusedUnderThisBase_5086",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_4694"
+                  "UnusedUnderThisBase_5086"
                 ]
               },
               "valuePerStack": {
@@ -932,11 +932,11 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1497104623\">Evernight_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_4694) || RETURN",
-                "displayLines": "UnusedUnderThisBase_4694",
+                "operator": "Variables[0] (UnusedUnderThisBase_5086) || RETURN",
+                "displayLines": "UnusedUnderThisBase_5086",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_4694"
+                  "UnusedUnderThisBase_5086"
                 ]
               },
               "valuePerStack": {

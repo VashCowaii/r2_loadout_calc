@@ -1,2 +1,898 @@
 const entityPageType = "enemy"
-let compositeAbilityObject = []
+const compositeAbilityObject = {
+  "fullCharacterName": 3021023,
+  "trimCharacterName": 3021023,
+  "abilityList": [
+    "3021023_Modifiers",
+    "3021023_Monster_W2_ArgentiTotem_01_PassiveAbilityInitiate_FateRin",
+    "3021023_Monster_W2_ArgentiTotem_01_AbilityP01_Part01_FateRin",
+    "3021023_Monster_W2_ArgentiTotem_01_AbilityP01_Insert_FateRin",
+    "3021023_Monster_W2_ArgentiTotem_01_Ability01_Part02",
+    "3021023_Monster_W2_ArgentiTotem_01_Ability01_Part01",
+    "3021023_Handling"
+  ],
+  "abilityObject": {
+    "3021023_Modifiers": {
+      "fileName": "3021023_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1086329449\">Enemy_Argenti_DamageUP_FateRin_Sub</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_ShowValue1) || RETURN",
+                    "displayLines": "MDF_ShowValue1",
+                    "constants": [],
+                    "variables": [
+                      "MDF_ShowValue1"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1125306110\">Enemy_Argenti_DamageUP_FateRin</a>",
+          "stackType": "Replace",
+          "addStacksPerTrigger": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Override Modifier Name",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifierName": "<a class=\"gModGreen\" id=\"1125306110\">Enemy_Argenti_DamageUP_FateRin</a>",
+                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Add Target by Unique Identifier",
+                    "identifier": "Activity_FateRin_BigTurn_LightTeamAgent"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1086329449\">Enemy_Argenti_DamageUP_FateRin_Sub</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1086329449\">Enemy_Argenti_DamageUP_FateRin_Sub</a>"
+                },
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueType": "Layer",
+                  "variableName": "MDF_ShowValue2",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Add Target by Unique Identifier",
+                    "identifier": "Activity_FateRin_BigTurn_LightTeamAgent"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1086329449\">Enemy_Argenti_DamageUP_FateRin_Sub</a>",
+                  "valuePerStack": {
+                    "MDF_ShowValue1": {
+                      "operator": "Variables[0] (MDF_ShowValue1) || Variables[1] (MDF_ShowValue2) || MUL || RETURN",
+                      "displayLines": "(MDF_ShowValue1 * MDF_ShowValue2)",
+                      "constants": [],
+                      "variables": [
+                        "MDF_ShowValue1",
+                        "MDF_ShowValue2"
+                      ]
+                    }
+                  },
+                  "asSubModifier": true
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1086329449\">Enemy_Argenti_DamageUP_FateRin_Sub</a>",
+                  "valuePerStack": {
+                    "MDF_ShowValue1": {
+                      "operator": "Variables[0] (MDF_ShowValue1) || Variables[1] (MDF_ShowValue2) || MUL || RETURN",
+                      "displayLines": "(MDF_ShowValue1 * MDF_ShowValue2)",
+                      "constants": [],
+                      "variables": [
+                        "MDF_ShowValue1",
+                        "MDF_ShowValue2"
+                      ]
+                    }
+                  },
+                  "asSubModifier": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+          "stackType": "Replace",
+          "description": "DMG dealt increases by <span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
+          "addStacksPerTrigger": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "valueType": "Layer",
+                  "variableName": "MDF_ShowValue2",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_ShowValue2) || Variables[1] (MDF_ShowValue1) || MUL || RETURN",
+                    "displayLines": "(MDF_ShowValue2 * MDF_ShowValue1)",
+                    "constants": [],
+                    "variables": [
+                      "MDF_ShowValue2",
+                      "MDF_ShowValue1"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "3021023_Monster_W2_ArgentiTotem_01_PassiveAbilityInitiate_FateRin": {
+      "fileName": "3021023_Monster_W2_ArgentiTotem_01_PassiveAbilityInitiate_FateRin",
+      "skillTrigger": "SkillP01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-899723889\">Monster_ArgentiTotem_ListenToSummer</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"509384902\">Enemy_W2_ArgentiTotem_01_Initiate_FateRin</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__509384902\">Enemy_W2_ArgentiTotem_01_Initiate_FateRin</a>",
+          "modifierFlags": [
+            "Deathrattle",
+            "KeepOnDeathrattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed"
+            },
+            {
+              "eventTrigger": "Turn [Anyone]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]"
+                      }
+                    ],
+                    "invertCondition": true
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Being Limbo [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "PowerFlag",
+                      "value": 1
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Player Team",
+                    "invertCondition": true
+                  },
+                  "passed": [
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            },
+            {
+              "eventTrigger": "Was Killed (Queued) [Owner]",
+              "execute": [
+                {
+                  "name": "Dispel Debuffs",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "silent": true
+                },
+                {
+                  "name": "Mark Entity For Immediate Death"
+                },
+                {
+                  "name": "Inject Ability Use",
+                  "checkOverride": {
+                    "name": "Condition Priority",
+                    "overridePriority": "MonsterForceKill",
+                    "condition": {
+                      "name": "Compare: Ability Value",
+                      "target": {
+                        "name": "Target Sequence",
+                        "Sequence": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{All Team Members}}"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "Check Boolean Value",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "value": "PowerFlag"
+                            }
+                          }
+                        ]
+                      },
+                      "value1": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                      "compareType": "<=",
+                      "value2": 0
+                    }
+                  },
+                  "abilityName": "Monster_W2_ArgentiTotem_01_AbilityP01_Insert_FateRin",
+                  "abilitySource": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "abilityTarget": {
+                    "name": "Add Target by Unique Identifier",
+                    "identifier": "Activity_FateRin_MasterAvatar"
+                  },
+                  "priorityTag": "EnemyDeathEffect",
+                  "ownerState": "Mask_AliveOrLimbo",
+                  "targetState": "Mask_AliveOrLimbo",
+                  "canHitNonTargets": true,
+                  "showInActionOrder": true,
+                  "abortFlags": [
+                    "STAT_MonsterChangePhase"
+                  ],
+                  "allowAbilityTriggers": false
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier is Added [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Modifier Was",
+                        "modifier": "<a class=\"gModGreen\" id=\"-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                      },
+                      {
+                        "name": "Modifier Was",
+                        "modifier": "<a class=\"gModGreen\" id=\"-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Modifier Cleansed [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Target",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "target2": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        }
+                      },
+                      {
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Modifier Was",
+                            "modifier": "<a class=\"gModGreen\" id=\"-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+                          },
+                          {
+                            "name": "Modifier Was",
+                            "modifier": "<a class=\"gModGreen\" id=\"-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "3021023_Monster_W2_ArgentiTotem_01_AbilityP01_Part01_FateRin": {
+      "fileName": "3021023_Monster_W2_ArgentiTotem_01_AbilityP01_Part01_FateRin",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Exit Broken-State",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "PowerFlag",
+            "compareType": "=",
+            "value2": 1,
+            "contextScope": "TargetEntity"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1125306110\">Enemy_Argenti_DamageUP_FateRin</a>",
+              "duration": {
+                "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
+                "displayLines": "{[SkillP01[3]]}",
+                "constants": [],
+                "variables": [
+                  "{[SkillP01[3]]}"
+                ]
+              },
+              "valuePerStack": {
+                "MDF_ShowValue1": {
+                  "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+                  "displayLines": "{[SkillP01[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP01[0]]}"
+                  ]
+                }
+              },
+              "addStacksPerTrigger": {
+                "operator": "Variables[0] ({[SkillP01[2]]}) || RETURN",
+                "displayLines": "{[SkillP01[2]]}",
+                "constants": [],
+                "variables": [
+                  "{[SkillP01[2]]}"
+                ]
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1125306110\">Enemy_Argenti_DamageUP_FateRin</a>",
+              "duration": {
+                "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
+                "displayLines": "{[SkillP01[3]]}",
+                "constants": [],
+                "variables": [
+                  "{[SkillP01[3]]}"
+                ]
+              },
+              "valuePerStack": {
+                "MDF_ShowValue1": {
+                  "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+                  "displayLines": "{[SkillP01[0]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[SkillP01[0]]}"
+                  ]
+                }
+              },
+              "addStacksPerTrigger": {
+                "operator": "Variables[0] ({[SkillP01[1]]}) || RETURN",
+                "displayLines": "{[SkillP01[1]]}",
+                "constants": [],
+                "variables": [
+                  "{[SkillP01[1]]}"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "3021023_Monster_W2_ArgentiTotem_01_AbilityP01_Insert_FateRin": {
+      "fileName": "3021023_Monster_W2_ArgentiTotem_01_AbilityP01_Insert_FateRin",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "UI Display Event",
+          "popUpText": "Stone of Plummeting Foundation"
+        },
+        {
+          "name": "Exit Broken-State",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "inherentTarget": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "ability": "Monster_W2_ArgentiTotem_01_AbilityP01_Part01_FateRin",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "Inherent Target"
+      },
+      "references": []
+    },
+    "3021023_Monster_W2_ArgentiTotem_01_Ability01_Part02": {
+      "fileName": "3021023_Monster_W2_ArgentiTotem_01_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-431168288\">Enemy_W2_Argenti_Power</a>[<span class=\"descriptionNumberColor\">Soulfreed</span>]"
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-488812813\">Enemy_W2_Argenti_Power_RL</a>[<span class=\"descriptionNumberColor\">Soul Ascension</span>]"
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              "searchRandom": true,
+              "maxTargets": 1,
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "value": "PowerFlag"
+              }
+            },
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              "searchRandom": true,
+              "maxTargets": 1,
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "value": "PowerFlag"
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                  "duration": {
+                    "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
+                    "displayLines": "{[Skill01[3]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill01[3]]}"
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_ShowValue1": {
+                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                      "displayLines": "{[Skill01[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[0]]}"
+                      ]
+                    }
+                  },
+                  "addStacksPerTrigger": {
+                    "operator": "Variables[0] ({[Skill01[2]]}) || Constants[0] (1) || SUB || RETURN",
+                    "displayLines": "({[Skill01[2]]} - 1)",
+                    "constants": [
+                      1
+                    ],
+                    "variables": [
+                      "{[Skill01[2]]}"
+                    ]
+                  }
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                  "duration": {
+                    "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
+                    "displayLines": "{[Skill01[3]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill01[3]]}"
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_ShowValue1": {
+                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                      "displayLines": "{[Skill01[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[0]]}"
+                      ]
+                    }
+                  },
+                  "addStacksPerTrigger": 1
+                }
+              ]
+            }
+          ],
+          "failed": [
+            {
+              "name": "Find New Target",
+              "from": {
+                "name": "Target Name",
+                "target": "{{All Team Members(Exclude Self)}}"
+              },
+              "searchRandom": true,
+              "maxTargets": 1,
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "value": "PowerFlag"
+              },
+              "ifTargetFound": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                  "duration": {
+                    "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
+                    "displayLines": "{[Skill01[3]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill01[3]]}"
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_ShowValue1": {
+                      "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+                      "displayLines": "{[Skill01[0]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill01[0]]}"
+                      ]
+                    }
+                  },
+                  "addStacksPerTrigger": {
+                    "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
+                    "displayLines": "{[Skill01[1]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill01[1]]}"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "All Enemy Team Members"
+      },
+      "references": []
+    },
+    "3021023_Monster_W2_ArgentiTotem_01_Ability01_Part01": {
+      "fileName": "3021023_Monster_W2_ArgentiTotem_01_Ability01_Part01",
+      "childAbilityList": [
+        "3021023_Monster_W2_ArgentiTotem_01_Ability01_Part01",
+        "3021023_Monster_W2_ArgentiTotem_01_Ability01_Part02",
+        "3021023_Monster_W2_ArgentiTotem_01_Ability01_Camera",
+        "3021023_Monster_W2_ArgentiTotem_01_AbilityP01_Insert_FateRin",
+        "3021023_Monster_W2_ArgentiTotem_01_AbilityP01_Part01_FateRin",
+        "3021023_Monster_W2_ArgentiTotem_01_AbilityP01_Camera"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Exit Broken-State",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          }
+        },
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_ArgentiTotem_01_Ability01_Part02",
+          "isTrigger": true
+        },
+        {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{All Team Members(Exclude Self)}}"
+          },
+          "searchRandom": true,
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "value": "PowerFlag"
+          },
+          "ifTargetFound": [
+            "Deleted bullshit"
+          ]
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "All Enemy Team Members"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "3021023_Handling": {
+      "fileName": "3021023_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "Common_SequenceThree_Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSequenceSkill",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Sequence Ability Option"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Sequence Ability Use Value",
+                  "valueCheck": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    }
+  }
+}

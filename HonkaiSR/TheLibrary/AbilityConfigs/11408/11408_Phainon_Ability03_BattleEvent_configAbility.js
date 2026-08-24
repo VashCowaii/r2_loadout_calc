@@ -366,7 +366,9 @@ const configAbility = {
                 },
                 {
                   "name": "Inject Extra-Turn",
-                  "actionTag": "Phainon_BEInsertAction",
+                  "actionTag": [
+                    "Phainon_BEInsertAction"
+                  ],
                   "canInjectUltimates": true,
                   "target": {
                     "name": "Target Name",

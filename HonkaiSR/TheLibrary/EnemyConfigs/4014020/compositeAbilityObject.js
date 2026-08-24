@@ -4556,13 +4556,13 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "variableName": "CurrentBlackBloodValue",
                   "value": {
-                    "operator": "Variables[0] (CurrentBlackBloodValue) || Variables[1] (CurrentRemainBlackBloodValue) || SUB || Variables[2] (UnusedUnderThisBase_11369) || MUL || Variables[1] (CurrentRemainBlackBloodValue) || ADD || Variables[3] (CurrentEnhanceBlackBloodValue) || SUB || RETURN",
-                    "displayLines": "((((CurrentBlackBloodValue - CurrentRemainBlackBloodValue) * UnusedUnderThisBase_11369) + CurrentRemainBlackBloodValue) - CurrentEnhanceBlackBloodValue)",
+                    "operator": "Variables[0] (CurrentBlackBloodValue) || Variables[1] (CurrentRemainBlackBloodValue) || SUB || Variables[2] (UnusedUnderThisBase_12077) || MUL || Variables[1] (CurrentRemainBlackBloodValue) || ADD || Variables[3] (CurrentEnhanceBlackBloodValue) || SUB || RETURN",
+                    "displayLines": "((((CurrentBlackBloodValue - CurrentRemainBlackBloodValue) * UnusedUnderThisBase_12077) + CurrentRemainBlackBloodValue) - CurrentEnhanceBlackBloodValue)",
                     "constants": [],
                     "variables": [
                       "CurrentBlackBloodValue",
                       "CurrentRemainBlackBloodValue",
-                      "UnusedUnderThisBase_11369",
+                      "UnusedUnderThisBase_12077",
                       "CurrentEnhanceBlackBloodValue"
                     ]
                   }
@@ -4574,11 +4574,11 @@ const compositeAbilityObject = {
                     "value1": "CurrentBlackBloodValue",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_11368) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_11368",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12076) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12076",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_11368"
+                        "UnusedUnderThisBase_12076"
                       ]
                     }
                   },
@@ -4587,11 +4587,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "CurrentBlackBloodValue",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_11368) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_11368",
+                        "operator": "Variables[0] (UnusedUnderThisBase_12076) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_12076",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_11368"
+                          "UnusedUnderThisBase_12076"
                         ]
                       }
                     }
@@ -4765,11 +4765,11 @@ const compositeAbilityObject = {
                   ]
                 },
                 "MDF_ConfineChance": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_11366) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_11366",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12074) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12074",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_11366"
+                    "UnusedUnderThisBase_12074"
                   ]
                 }
               }
@@ -5009,13 +5009,13 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "variableName": "CurrentBlackBloodValue",
                   "value": {
-                    "operator": "Variables[0] (CurrentBlackBloodValue) || Variables[1] (CurrentRemainBlackBloodValue) || SUB || Variables[2] (UnusedUnderThisBase_11369) || MUL || Variables[1] (CurrentRemainBlackBloodValue) || ADD || Variables[3] (CurrentEnhanceBlackBloodValue) || SUB || RETURN",
-                    "displayLines": "((((CurrentBlackBloodValue - CurrentRemainBlackBloodValue) * UnusedUnderThisBase_11369) + CurrentRemainBlackBloodValue) - CurrentEnhanceBlackBloodValue)",
+                    "operator": "Variables[0] (CurrentBlackBloodValue) || Variables[1] (CurrentRemainBlackBloodValue) || SUB || Variables[2] (UnusedUnderThisBase_12077) || MUL || Variables[1] (CurrentRemainBlackBloodValue) || ADD || Variables[3] (CurrentEnhanceBlackBloodValue) || SUB || RETURN",
+                    "displayLines": "((((CurrentBlackBloodValue - CurrentRemainBlackBloodValue) * UnusedUnderThisBase_12077) + CurrentRemainBlackBloodValue) - CurrentEnhanceBlackBloodValue)",
                     "constants": [],
                     "variables": [
                       "CurrentBlackBloodValue",
                       "CurrentRemainBlackBloodValue",
-                      "UnusedUnderThisBase_11369",
+                      "UnusedUnderThisBase_12077",
                       "CurrentEnhanceBlackBloodValue"
                     ]
                   }
@@ -5027,11 +5027,11 @@ const compositeAbilityObject = {
                     "value1": "CurrentBlackBloodValue",
                     "compareType": ">",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_11368) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_11368",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12076) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12076",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_11368"
+                        "UnusedUnderThisBase_12076"
                       ]
                     }
                   },
@@ -5040,11 +5040,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "CurrentBlackBloodValue",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_11368) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_11368",
+                        "operator": "Variables[0] (UnusedUnderThisBase_12076) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_12076",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_11368"
+                          "UnusedUnderThisBase_12076"
                         ]
                       }
                     }

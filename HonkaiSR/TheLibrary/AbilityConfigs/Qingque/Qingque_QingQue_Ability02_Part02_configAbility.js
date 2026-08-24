@@ -221,7 +221,9 @@ const configAbility = {
         },
         {
           "name": "Inject Extra-Turn",
-          "actionTag": "Qingque_BpInsert",
+          "actionTag": [
+            "Qingque_BpInsert"
+          ],
           "canInjectUltimates": true,
           "followSameTagAsAction": true,
           "abilityName": "Qingque_BpInsertAction_Tiao",
@@ -330,7 +332,9 @@ const configAbility = {
             },
             {
               "name": "Inject Extra-Turn",
-              "actionTag": "Qingque_BpInsert",
+              "actionTag": [
+                "Qingque_BpInsert"
+              ],
               "canInjectUltimates": true,
               "followSameTagAsAction": true,
               "abilityName": "Qingque_BpInsertAction_Wan",
@@ -439,7 +443,9 @@ const configAbility = {
                 },
                 {
                   "name": "Inject Extra-Turn",
-                  "actionTag": "Qingque_BpInsert",
+                  "actionTag": [
+                    "Qingque_BpInsert"
+                  ],
                   "canInjectUltimates": true,
                   "followSameTagAsAction": true,
                   "abilityName": "Qingque_BpInsertAction_Tong",
@@ -557,7 +563,9 @@ const configAbility = {
                       "failed": [
                         {
                           "name": "Inject Extra-Turn",
-                          "actionTag": "Qingque_BpInsert",
+                          "actionTag": [
+                            "Qingque_BpInsert"
+                          ],
                           "skillType": "ControlSkill02",
                           "skillTypeDelayed": "ControlSkill01",
                           "canInjectUltimates": true,

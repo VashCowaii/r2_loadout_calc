@@ -230,11 +230,11 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-994497740\">Monster_W4_Nikadory_RLBoss_Passive</a>",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12761) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12761",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13608) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13608",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_12761"
+                            "UnusedUnderThisBase_13608"
                           ]
                         }
                       }

@@ -151,7 +151,7 @@ const configAbility = {
       "name": "Define Custom Variable with Team Count",
       "target": {
         "name": "Target Name",
-        "target": "{{Elation: Player Team with Unselectables}} + {{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: Currency Wars Gear2012}}"
+        "target": "{{Elation: All Entities}}"
       },
       "variableName": "Elation_Character_Num",
       "livingTargets": true

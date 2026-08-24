@@ -66,12 +66,12 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "DamageFlat": {
-          "operator": "Variables[0] (MaxHPValue) || Variables[1] (UnusedUnderThisBase_8744) || MUL || RETURN",
-          "displayLines": "(MaxHPValue * UnusedUnderThisBase_8744)",
+          "operator": "Variables[0] (MaxHPValue) || Variables[1] (UnusedUnderThisBase_9330) || MUL || RETURN",
+          "displayLines": "(MaxHPValue * UnusedUnderThisBase_9330)",
           "constants": [],
           "variables": [
             "MaxHPValue",
-            "UnusedUnderThisBase_8744"
+            "UnusedUnderThisBase_9330"
           ]
         },
         "Toughness": null,

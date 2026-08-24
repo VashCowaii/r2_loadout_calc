@@ -4,7 +4,8 @@ const configAbility = {
     "Saber_Activity_FateStory_Saber_Insert_Camera",
     "Saber_Activity_FateStory_Saber_Insert_Part01",
     "Saber_Activity_FateStory_Saber_Insert_Part02",
-    "Saber_Saber_PassiveAbility01"
+    "Saber_Saber_PassiveAbility01",
+    "Saber_Gilgamesh_Insert_Part02_Saber"
   ],
   "skillTrigger": "SkillP01",
   "abilityType": "Talent",
@@ -921,6 +922,19 @@ const configAbility = {
                       "Saber_00_EntityStockSPForShow"
                     ]
                   }
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "Saber_00_EntityStockSPForShow_Fake",
+                  "value": {
+                    "operator": "Variables[0] (WHOLE) || Variables[1] (Saber_00_EntityStockSPForShow) || PARAM_1 || FUNCTION || RETURN",
+                    "displayLines": "&nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(Saber_00_EntityStockSPForShow)",
+                    "constants": [],
+                    "variables": [
+                      "WHOLE",
+                      "Saber_00_EntityStockSPForShow"
+                    ]
+                  }
                 }
               ],
               "failed": [
@@ -931,6 +945,11 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "modifierName": "<a class=\"gModGreen\" id=\"-1667717158\">Saber_Passive_ExceedSpStatus</a>[<span class=\"descriptionNumberColor\">Blessing of the Lake</span>]",
+                  "value": 1
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "Saber_00_EntityStockSPForShow_Fake",
                   "value": 1
                 }
               ]

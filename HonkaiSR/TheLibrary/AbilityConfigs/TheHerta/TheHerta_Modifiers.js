@@ -2713,8 +2713,7 @@ const configAbility = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      },
-                      "typeFilter": "All"
+                      }
                     }
                   }
                 ]
@@ -2757,8 +2756,7 @@ const configAbility = {
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "typeFilter": "All"
+                    }
                   },
                   "passed": [
                     {
@@ -2786,7 +2784,7 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Character Path Change [Anyone]",
+          "eventTrigger": "Character Path [Anyone]: Change",
           "execute": [
             {
               "name": "IF",
@@ -2809,8 +2807,7 @@ const configAbility = {
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    },
-                    "typeFilter": "All"
+                    }
                   },
                   "passed": [
                     {

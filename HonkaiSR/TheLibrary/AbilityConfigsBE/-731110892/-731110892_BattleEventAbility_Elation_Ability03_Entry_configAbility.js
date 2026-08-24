@@ -13,7 +13,7 @@ const configAbility = {
       "name": "Find New Target",
       "from": {
         "name": "Target Name",
-        "target": "{{Elation: Currency Wars Full Activated OffFieldList}} + {{Elation: All Battle Events}} + {{Elation: Currency Wars Gear2012}}"
+        "target": "{{Elation: Extra Aha-Instant Participants}}"
       },
       "maxTargets": 1,
       "conditions": {
@@ -237,7 +237,9 @@ const configAbility = {
       "failed": [
         {
           "name": "Inject Extra-Turn",
-          "actionTag": "ElationTime_CustomTagTemp",
+          "actionTag": [
+            "ElationTime_CustomTagTemp"
+          ],
           "forcedPunchline": {
             "operator": "Variables[0] (ElationTime_OverrideElationPointTemp) || RETURN",
             "displayLines": "ElationTime_OverrideElationPointTemp",

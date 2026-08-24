@@ -27,7 +27,9 @@ const configAbility = {
     },
     {
       "name": "Inject Extra-Turn",
-      "actionTag": "ElationTime_CustomTag",
+      "actionTag": [
+        "ElationTime_CustomTag"
+      ],
       "forcedPunchline": {
         "operator": "Variables[0] (ElationTime_OverrideElationPoint) || RETURN",
         "displayLines": "ElationTime_OverrideElationPoint",

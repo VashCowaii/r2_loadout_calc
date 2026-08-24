@@ -18,6 +18,8 @@ const compositeAbilityObject = {
     "1912336050_BattleEventAbility_ChallengePeakBattle_Camera_AllLightTeam",
     "1912336050_BattleEventAbility_ChallengePeakBattle_CountDown",
     "1912336050_ChallengePeakBattle_BaseAbility_Environment_0001",
+    "1912336050_ChallengePeakBattle_BaseAbility_Plugins_0023",
+    "1912336050_ChallengePeakBattle_BaseAbility_Plugins_0022",
     "1912336050_ChallengePeakBattle_BaseAbility_Plugins_0021",
     "1912336050_ChallengePeakBattle_BaseAbility_Plugins_0020",
     "1912336050_ChallengePeakBattle_BaseAbility_Plugins_0019",
@@ -39,6 +41,8 @@ const compositeAbilityObject = {
     "1912336050_ChallengePeakBattle_BaseAbility_Plugins_0003",
     "1912336050_ChallengePeakBattle_BaseAbility_Plugins_0002",
     "1912336050_ChallengePeakBattle_BaseAbility_Plugins_0001",
+    "1912336050_ChallengePeakBattle_EnhancedAbility_0020",
+    "1912336050_ChallengePeakBattle_BaseAbility_0020",
     "1912336050_ChallengePeakBattle_EnhancedAbility_0019",
     "1912336050_ChallengePeakBattle_BaseAbility_0019",
     "1912336050_ChallengePeakBattle_EnhancedAbility_0018",
@@ -1235,6 +1239,218 @@ const compositeAbilityObject = {
                   ]
                 }
               ]
+            }
+          ]
+        }
+      ]
+    },
+    "1912336050_ChallengePeakBattle_BaseAbility_Plugins_0023": {
+      "fileName": "1912336050_ChallengePeakBattle_BaseAbility_Plugins_0023",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"399252004\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0023</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__296379619\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0023_02</a>[<span class=\"descriptionNumberColor\">Endless Euphoria</span>]",
+          "description": "All-Type RES PEN increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0023_ADF_1</span>, and the All-Type RES PEN of Elation DMG dealt additionally increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0023_ADF_2</span>.",
+          "type": "Other",
+          "statusName": "Endless Euphoria",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Attack Type",
+                    "attackTypes": [
+                      "Elation DMG"
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
+                          "value": "(ChallengePeakBattle_Plugins_0023_ADF_1 + ChallengePeakBattle_Plugins_0023_ADF_2)"
+                        }
+                      ]
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
+                          "value": "ChallengePeakBattle_Plugins_0023_ADF_1"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__399252004\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0023</a>",
+          "execute": [
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Player Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"296379619\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0023_02</a>[<span class=\"descriptionNumberColor\">Endless Euphoria</span>]",
+                      "valuePerStack": {
+                        "ChallengePeakBattle_Plugins_0023_ADF_1": {
+                          "operator": "Variables[0] (#ADF_1) || RETURN",
+                          "displayLines": "#ADF_1",
+                          "constants": [],
+                          "variables": [
+                            "#ADF_1"
+                          ]
+                        },
+                        "ChallengePeakBattle_Plugins_0023_ADF_2": {
+                          "operator": "Variables[0] (#ADF_2) || RETURN",
+                          "displayLines": "#ADF_2",
+                          "constants": [],
+                          "variables": [
+                            "#ADF_2"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "1912336050_ChallengePeakBattle_BaseAbility_Plugins_0022": {
+      "fileName": "1912336050_ChallengePeakBattle_BaseAbility_Plugins_0022",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"416029623\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0022</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__793283998\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0022_02</a>[<span class=\"descriptionNumberColor\">Navigator's Oath</span>]",
+          "description": "All-Type RES PEN for the Skill DMG and Ultimate DMG dealt increases by <span class=\"descriptionNumberColor\">ChallengePeakBattle_Plugins_0022_ADF_1</span>.",
+          "type": "Other",
+          "statusName": "Navigator's Oath",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Attack Type",
+                    "attackTypes": [
+                      "Skill",
+                      "Ultimate"
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
+                          "value": "ChallengePeakBattle_Plugins_0022_ADF_1"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__416029623\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0022</a>",
+          "execute": [
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Wave Count",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Far Left Player Entity(no Memosprite)}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"793283998\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0022_02</a>[<span class=\"descriptionNumberColor\">Navigator's Oath</span>]",
+                      "valuePerStack": {
+                        "ChallengePeakBattle_Plugins_0022_ADF_1": {
+                          "operator": "Variables[0] (#ADF_1) || RETURN",
+                          "displayLines": "#ADF_1",
+                          "constants": [],
+                          "variables": [
+                            "#ADF_1"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -90
             }
           ]
         }
@@ -6223,6 +6439,654 @@ const compositeAbilityObject = {
         }
       ]
     },
+    "1912336050_ChallengePeakBattle_EnhancedAbility_0020": {
+      "fileName": "1912336050_ChallengePeakBattle_EnhancedAbility_0020",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1951372599\">Modifier_ChallengePeakBattle_EnhancedAbility_0020</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__487252821\">Modifier_ChallengePeakBattle_EnhancedAbility_0020_02_PreShow</a>",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Enemy Team All(with Unselectable)}}"
+            },
+            "skillType": [
+              "Ultimate"
+            ],
+            "conditions": {
+              "name": "Compare: Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "value1": "<a class=\"gModGreen\" id=\"365012510\">Modifier_ChallengePeakBattle_EnhancedAbility_0020_02</a>[<span class=\"descriptionNumberColor\">Enrage+</span>]",
+              "compareType": "<",
+              "value2": {
+                "operator": "Variables[0] (ChallengePeakBattle_0020_ADF_2) || RETURN",
+                "displayLines": "ChallengePeakBattle_0020_ADF_2",
+                "constants": [],
+                "variables": [
+                  "ChallengePeakBattle_0020_ADF_2"
+                ]
+              },
+              "valueType": "Layer"
+            },
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": "ChallengePeakBattle_0020_ADF_1(SPD Change)"
+            }
+          }
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__365012510\">Modifier_ChallengePeakBattle_EnhancedAbility_0020_02</a>[<span class=\"descriptionNumberColor\">Enrage+</span>]",
+          "stackType": "Replace",
+          "modifierFlags": [
+            "STAT_SpeedUp"
+          ],
+          "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0020_ADF_1</span>, stacking up to <span class=\"descriptionNumberColor\">ChallengePeakBattle_0020_ADF_2</span> time(s). At the start of each turn, all stacks are removed.",
+          "type": "Other",
+          "statusName": "Enrage+",
+          "addStacksPerTrigger": 1,
+          "execute": [
+            {
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "valueType": "Layer",
+                  "variableName": "MDF_Layer",
+                  "multiplier": 1
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "MDF_Layer",
+                    "compareType": ">",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"365012510\">Modifier_ChallengePeakBattle_EnhancedAbility_0020_02</a>[<span class=\"descriptionNumberColor\">Enrage+</span>]",
+                      "valuePerStack": {
+                        "ChallengePeakBattle_0020_ADF_1": {
+                          "operator": "Variables[0] (ChallengePeakBattle_0020_ADF_1) || RETURN",
+                          "displayLines": "ChallengePeakBattle_0020_ADF_1",
+                          "constants": [],
+                          "variables": [
+                            "ChallengePeakBattle_0020_ADF_1"
+                          ]
+                        },
+                        "ChallengePeakBattle_0020_ADF_2": {
+                          "operator": "Variables[0] (ChallengePeakBattle_0020_ADF_2) || RETURN",
+                          "displayLines": "ChallengePeakBattle_0020_ADF_2",
+                          "constants": [],
+                          "variables": [
+                            "ChallengePeakBattle_0020_ADF_2"
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": {
+                        "operator": "Variables[0] (MDF_Layer) || INVERT || RETURN",
+                        "displayLines": "-MDF_Layer",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Layer"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "valueType": "Layer",
+                  "variableName": "MDF_Layer",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (ChallengePeakBattle_0020_ADF_1) || Variables[1] (MDF_Layer) || MUL || RETURN",
+                    "displayLines": "(ChallengePeakBattle_0020_ADF_1 * MDF_Layer)",
+                    "constants": [],
+                    "variables": [
+                      "ChallengePeakBattle_0020_ADF_1",
+                      "MDF_Layer"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Player Team"
+                      },
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Ultimate"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "<a class=\"gModGreen\" id=\"365012510\">Modifier_ChallengePeakBattle_EnhancedAbility_0020_02</a>[<span class=\"descriptionNumberColor\">Enrage+</span>]",
+                        "compareType": "<",
+                        "value2": {
+                          "operator": "Variables[0] (ChallengePeakBattle_0020_ADF_2) || RETURN",
+                          "displayLines": "ChallengePeakBattle_0020_ADF_2",
+                          "constants": [],
+                          "variables": [
+                            "ChallengePeakBattle_0020_ADF_2"
+                          ]
+                        },
+                        "valueType": "Layer"
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"365012510\">Modifier_ChallengePeakBattle_EnhancedAbility_0020_02</a>[<span class=\"descriptionNumberColor\">Enrage+</span>]",
+                          "valuePerStack": {
+                            "ChallengePeakBattle_0020_ADF_1": {
+                              "operator": "Variables[0] (ChallengePeakBattle_0020_ADF_1) || RETURN",
+                              "displayLines": "ChallengePeakBattle_0020_ADF_1",
+                              "constants": [],
+                              "variables": [
+                                "ChallengePeakBattle_0020_ADF_1"
+                              ]
+                            },
+                            "ChallengePeakBattle_0020_ADF_2": {
+                              "operator": "Variables[0] (ChallengePeakBattle_0020_ADF_2) || RETURN",
+                              "displayLines": "ChallengePeakBattle_0020_ADF_2",
+                              "constants": [],
+                              "variables": [
+                                "ChallengePeakBattle_0020_ADF_2"
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1951372599\">Modifier_ChallengePeakBattle_EnhancedAbility_0020</a>",
+          "execute": [
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Enemy Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"365012510\">Modifier_ChallengePeakBattle_EnhancedAbility_0020_02</a>[<span class=\"descriptionNumberColor\">Enrage+</span>]",
+                      "valuePerStack": {
+                        "ChallengePeakBattle_0020_ADF_1": {
+                          "operator": "Variables[0] (#ADF_1) || RETURN",
+                          "displayLines": "#ADF_1",
+                          "constants": [],
+                          "variables": [
+                            "#ADF_1"
+                          ]
+                        },
+                        "ChallengePeakBattle_0020_ADF_2": {
+                          "operator": "Variables[0] (#ADF_2) || RETURN",
+                          "displayLines": "#ADF_2",
+                          "constants": [],
+                          "variables": [
+                            "#ADF_2"
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": 0
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Player Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"487252821\">Modifier_ChallengePeakBattle_EnhancedAbility_0020_02_PreShow</a>",
+                      "valuePerStack": {
+                        "ChallengePeakBattle_0020_ADF_1": {
+                          "operator": "Variables[0] (#ADF_1) || RETURN",
+                          "displayLines": "#ADF_1",
+                          "constants": [],
+                          "variables": [
+                            "#ADF_1"
+                          ]
+                        },
+                        "ChallengePeakBattle_0020_ADF_2": {
+                          "operator": "Variables[0] (#ADF_2) || RETURN",
+                          "displayLines": "#ADF_2",
+                          "constants": [],
+                          "variables": [
+                            "#ADF_2"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "1912336050_ChallengePeakBattle_BaseAbility_0020": {
+      "fileName": "1912336050_ChallengePeakBattle_BaseAbility_0020",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1624415680\">Modifier_ChallengePeakBattle_BaseAbility_0020</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-466803248\">Modifier_ChallengePeakBattle_BaseAbility_0020_02_PreShow</a>",
+          "previewValue": {
+            "name": "Modifier: UI Preview",
+            "show": "Hide",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Enemy Team All(with Unselectable)}}"
+            },
+            "skillType": [
+              "Ultimate"
+            ],
+            "conditions": {
+              "name": "Compare: Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "value1": "<a class=\"gModGreen\" id=\"255563439\">Modifier_ChallengePeakBattle_BaseAbility_0020_02</a>[<span class=\"descriptionNumberColor\">Enrage</span>]",
+              "compareType": "<",
+              "value2": {
+                "operator": "Variables[0] (ChallengePeakBattle_0020_ADF_2) || RETURN",
+                "displayLines": "ChallengePeakBattle_0020_ADF_2",
+                "constants": [],
+                "variables": [
+                  "ChallengePeakBattle_0020_ADF_2"
+                ]
+              },
+              "valueType": "Layer"
+            },
+            "delayAdvancePreview": {
+              "name": "Delay/Advance Preview",
+              "previewValue": "ChallengePeakBattle_0020_ADF_1(SPD Change)"
+            }
+          }
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__255563439\">Modifier_ChallengePeakBattle_BaseAbility_0020_02</a>[<span class=\"descriptionNumberColor\">Enrage</span>]",
+          "stackType": "Replace",
+          "modifierFlags": [
+            "STAT_SpeedUp"
+          ],
+          "description": "Each stack increases SPD by <span class=\"descriptionNumberColor\">ChallengePeakBattle_0020_ADF_1</span>, stacking up to <span class=\"descriptionNumberColor\">ChallengePeakBattle_0020_ADF_2</span> time(s). At the start of each turn, all stacks are removed.",
+          "type": "Other",
+          "statusName": "Enrage",
+          "addStacksPerTrigger": 1,
+          "execute": [
+            {
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "valueType": "Layer",
+                  "variableName": "MDF_Layer",
+                  "multiplier": 1
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "MDF_Layer",
+                    "compareType": ">",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"255563439\">Modifier_ChallengePeakBattle_BaseAbility_0020_02</a>[<span class=\"descriptionNumberColor\">Enrage</span>]",
+                      "valuePerStack": {
+                        "ChallengePeakBattle_0020_ADF_1": {
+                          "operator": "Variables[0] (ChallengePeakBattle_0020_ADF_1) || RETURN",
+                          "displayLines": "ChallengePeakBattle_0020_ADF_1",
+                          "constants": [],
+                          "variables": [
+                            "ChallengePeakBattle_0020_ADF_1"
+                          ]
+                        },
+                        "ChallengePeakBattle_0020_ADF_2": {
+                          "operator": "Variables[0] (ChallengePeakBattle_0020_ADF_2) || RETURN",
+                          "displayLines": "ChallengePeakBattle_0020_ADF_2",
+                          "constants": [],
+                          "variables": [
+                            "ChallengePeakBattle_0020_ADF_2"
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": {
+                        "operator": "Variables[0] (MDF_Layer) || INVERT || RETURN",
+                        "displayLines": "-MDF_Layer",
+                        "constants": [],
+                        "variables": [
+                          "MDF_Layer"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "valueType": "Layer",
+                  "variableName": "MDF_Layer",
+                  "multiplier": 1
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (ChallengePeakBattle_0020_ADF_1) || Variables[1] (MDF_Layer) || MUL || RETURN",
+                    "displayLines": "(ChallengePeakBattle_0020_ADF_1 * MDF_Layer)",
+                    "constants": [],
+                    "variables": [
+                      "ChallengePeakBattle_0020_ADF_1",
+                      "MDF_Layer"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Player Team"
+                      },
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Ultimate"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "<a class=\"gModGreen\" id=\"255563439\">Modifier_ChallengePeakBattle_BaseAbility_0020_02</a>[<span class=\"descriptionNumberColor\">Enrage</span>]",
+                        "compareType": "<",
+                        "value2": {
+                          "operator": "Variables[0] (ChallengePeakBattle_0020_ADF_2) || RETURN",
+                          "displayLines": "ChallengePeakBattle_0020_ADF_2",
+                          "constants": [],
+                          "variables": [
+                            "ChallengePeakBattle_0020_ADF_2"
+                          ]
+                        },
+                        "valueType": "Layer"
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"255563439\">Modifier_ChallengePeakBattle_BaseAbility_0020_02</a>[<span class=\"descriptionNumberColor\">Enrage</span>]",
+                          "valuePerStack": {
+                            "ChallengePeakBattle_0020_ADF_1": {
+                              "operator": "Variables[0] (ChallengePeakBattle_0020_ADF_1) || RETURN",
+                              "displayLines": "ChallengePeakBattle_0020_ADF_1",
+                              "constants": [],
+                              "variables": [
+                                "ChallengePeakBattle_0020_ADF_1"
+                              ]
+                            },
+                            "ChallengePeakBattle_0020_ADF_2": {
+                              "operator": "Variables[0] (ChallengePeakBattle_0020_ADF_2) || RETURN",
+                              "displayLines": "ChallengePeakBattle_0020_ADF_2",
+                              "constants": [],
+                              "variables": [
+                                "ChallengePeakBattle_0020_ADF_2"
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1624415680\">Modifier_ChallengePeakBattle_BaseAbility_0020</a>",
+          "execute": [
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Enemy Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"255563439\">Modifier_ChallengePeakBattle_BaseAbility_0020_02</a>[<span class=\"descriptionNumberColor\">Enrage</span>]",
+                      "valuePerStack": {
+                        "ChallengePeakBattle_0020_ADF_1": {
+                          "operator": "Variables[0] (#ADF_1) || RETURN",
+                          "displayLines": "#ADF_1",
+                          "constants": [],
+                          "variables": [
+                            "#ADF_1"
+                          ]
+                        },
+                        "ChallengePeakBattle_0020_ADF_2": {
+                          "operator": "Variables[0] (#ADF_2) || RETURN",
+                          "displayLines": "#ADF_2",
+                          "constants": [],
+                          "variables": [
+                            "#ADF_2"
+                          ]
+                        }
+                      },
+                      "addStacksPerTrigger": 0
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Player Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-466803248\">Modifier_ChallengePeakBattle_BaseAbility_0020_02_PreShow</a>",
+                      "valuePerStack": {
+                        "ChallengePeakBattle_0020_ADF_1": {
+                          "operator": "Variables[0] (#ADF_1) || RETURN",
+                          "displayLines": "#ADF_1",
+                          "constants": [],
+                          "variables": [
+                            "#ADF_1"
+                          ]
+                        },
+                        "ChallengePeakBattle_0020_ADF_2": {
+                          "operator": "Variables[0] (#ADF_2) || RETURN",
+                          "displayLines": "#ADF_2",
+                          "constants": [],
+                          "variables": [
+                            "#ADF_2"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     "1912336050_ChallengePeakBattle_EnhancedAbility_0019": {
       "fileName": "1912336050_ChallengePeakBattle_EnhancedAbility_0019",
       "abilityType": null,
@@ -8072,12 +8936,23 @@ const compositeAbilityObject = {
               "eventTrigger": "Enter Battle",
               "execute": [
                 {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Wave Count",
+                    "compareType": "=",
+                    "value2": 1
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"-580096727\">Modifier_ChallengePeakBattle_EnhancedAbility_0016_02</a>"
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-580096727\">Modifier_ChallengePeakBattle_EnhancedAbility_0016_02</a>"
+                    }
+                  ]
                 }
               ],
               "priorityLevel": -90
@@ -8339,12 +9214,23 @@ const compositeAbilityObject = {
               "eventTrigger": "Enter Battle",
               "execute": [
                 {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Wave Count",
+                    "compareType": "=",
+                    "value2": 1
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"-2046487200\">Modifier_ChallengePeakBattle_BaseAbility_0016_02</a>"
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-2046487200\">Modifier_ChallengePeakBattle_BaseAbility_0016_02</a>"
+                    }
+                  ]
                 }
               ],
               "priorityLevel": -90

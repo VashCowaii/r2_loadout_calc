@@ -2858,7 +2858,8 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__1141771649\">Enemy_W5_Vtuber_InField</a>[<span class=\"descriptionNumberColor\">Epic showdown in progress!</span>]",
       "modifierFlags": [
-        "ListenBattleEventSkill"
+        "ListenBattleEventSkill",
+        148
       ],
       "description": "Located on the sub-field.",
       "type": "Other",

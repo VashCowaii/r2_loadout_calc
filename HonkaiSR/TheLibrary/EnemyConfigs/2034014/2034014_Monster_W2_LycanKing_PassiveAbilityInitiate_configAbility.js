@@ -54,11 +54,11 @@ const configAbility = {
       "name": "Define Custom Variable",
       "variableName": "WolfBoss_BloodRageMaxCount",
       "value": {
-        "operator": "Variables[0] (UnusedUnderThisBase_9017) || RETURN",
-        "displayLines": "UnusedUnderThisBase_9017",
+        "operator": "Variables[0] (UnusedUnderThisBase_9603) || RETURN",
+        "displayLines": "UnusedUnderThisBase_9603",
         "constants": [],
         "variables": [
-          "UnusedUnderThisBase_9017"
+          "UnusedUnderThisBase_9603"
         ]
       }
     },
@@ -197,35 +197,35 @@ const configAbility = {
               "eventID": 20008,
               "variables": {
                 "P3_Lycan01Delay": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8975) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8975",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9561) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9561",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_8975"
+                    "UnusedUnderThisBase_9561"
                   ]
                 },
                 "P4_Lycan02Delay": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8997) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8997",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9583) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9583",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_8997"
+                    "UnusedUnderThisBase_9583"
                   ]
                 },
                 "P5_Lycan03Delay": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8972) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8972",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9558) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9558",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_8972"
+                    "UnusedUnderThisBase_9558"
                   ]
                 },
                 "P6_Lycan04Delay": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_8998) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_8998",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9584) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9584",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_8998"
+                    "UnusedUnderThisBase_9584"
                   ]
                 }
               }
@@ -253,11 +253,11 @@ const configAbility = {
                   "scope": "TargetEntity",
                   "variableName": "P3_Lycan01Delay",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_8975) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_8975",
+                    "operator": "Variables[0] (UnusedUnderThisBase_9561) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_9561",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_8975"
+                      "UnusedUnderThisBase_9561"
                     ]
                   }
                 }
@@ -286,11 +286,11 @@ const configAbility = {
                   "scope": "TargetEntity",
                   "variableName": "P4_Lycan02Delay",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_8997) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_8997",
+                    "operator": "Variables[0] (UnusedUnderThisBase_9583) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_9583",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_8997"
+                      "UnusedUnderThisBase_9583"
                     ]
                   }
                 }
@@ -319,11 +319,11 @@ const configAbility = {
                   "scope": "TargetEntity",
                   "variableName": "P5_Lycan03Delay",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_8972) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_8972",
+                    "operator": "Variables[0] (UnusedUnderThisBase_9558) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_9558",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_8972"
+                      "UnusedUnderThisBase_9558"
                     ]
                   }
                 }
@@ -352,11 +352,11 @@ const configAbility = {
                   "scope": "TargetEntity",
                   "variableName": "P6_Lycan04Delay",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_8998) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_8998",
+                    "operator": "Variables[0] (UnusedUnderThisBase_9584) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_9584",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_8998"
+                      "UnusedUnderThisBase_9584"
                     ]
                   }
                 }
@@ -521,11 +521,11 @@ const configAbility = {
               "name": "Define Custom Variable",
               "variableName": "WolfBoss_BloodRageCount",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_9018) || RETURN",
-                "displayLines": "UnusedUnderThisBase_9018",
+                "operator": "Variables[0] (UnusedUnderThisBase_9604) || RETURN",
+                "displayLines": "UnusedUnderThisBase_9604",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_9018"
+                  "UnusedUnderThisBase_9604"
                 ]
               }
             },
@@ -1035,27 +1035,27 @@ const configAbility = {
                               "canHitNonTargets": true,
                               "valuePerStack": {
                                 "ResetBloodRageCount": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_9002) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_9002",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_9588) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_9588",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_9002"
+                                    "UnusedUnderThisBase_9588"
                                   ]
                                 },
                                 "DelayRatio": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_9020) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_9020",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_9606) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_9606",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_9020"
+                                    "UnusedUnderThisBase_9606"
                                   ]
                                 },
                                 "StanceDamage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_9019) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_9019",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_9605) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_9605",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_9019"
+                                    "UnusedUnderThisBase_9605"
                                   ]
                                 }
                               },

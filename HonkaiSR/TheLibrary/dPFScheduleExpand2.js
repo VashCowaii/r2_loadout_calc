@@ -98129,6 +98129,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031363",
         "realModifierNamne": "FantasticStory_PlusAbility_2311",
+        "BEKey": 1687681259,
         "name": "Smack Talk",
         "desc": "Increases the All-Type RES PEN of Follow-Up ATK DMG dealt by #1[i]%. During Surging Grit, after an ally target uses a Follow-Up ATK to attack enemy targets, deals Additional DMG equal to #2[i]% of the attacker's ATK plus #3[i]% of the attacker's Max HP to targets adjacent to each attacked enemy target. This DMG is considered as Follow-Up ATK DMG.",
         "battleDesc": null,
@@ -98142,6 +98143,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031364",
         "realModifierNamne": "FantasticStory_PlusAbility_2312",
+        "BEKey": 1687681259,
         "name": "Grand Rhetoric",
         "desc": "During Surging Grit, CRIT DMG dealt by ally targets when using their Ultimate increases by #1[i]%. When Surging Grit ends, all allies regenerate #2[i]% Energy.",
         "battleDesc": null,
@@ -98155,6 +98157,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031365",
         "realModifierNamne": "FantasticStory_PlusAbility_2313",
+        "BEKey": 1687681259,
         "name": "Motormouth",
         "desc": "Increases the SPD of all allies by #1[i]%. During Surging Grit, DMG received by enemy targets additionally increases by #2[i]%.",
         "battleDesc": null,
@@ -98170,6 +98173,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031232",
         "realModifierNamne": "FantasticStory_BaseAbility_2310_BaseAddOn",
+        "BEKey": 1687681259,
         "name": "Follow-Up ATK",
         "desc": "After ally targets use a Follow-Up ATK to attack enemy targets, every enemy target hit additionally accumulates #1[i] Grit Value for allies.",
         "battleDesc": null,
@@ -98181,6 +98185,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031233",
         "realModifierNamne": "FantasticStory_BaseAbility_2310_BeforeFever",
+        "BEKey": 1687681259,
         "name": "Concordant Truce",
         "desc": "After an ally target uses a Follow-Up ATK or Ultimate, deals Additional DMG equal to #1[i]% of the attacking character's ATK plus #2[i]% of their Max HP to each attacked enemy target.",
         "battleDesc": null,
@@ -98193,6 +98198,7 @@ let mocSchedule = [
       {
         "modifierName": "ADV_StageAbility_3031234",
         "realModifierNamne": "FantasticStory_BaseAbility_2310_EnterFever",
+        "BEKey": 1687681259,
         "name": "Surging Grit",
         "desc": "Upon entering Surging Grit, all allies regenerate #1[i]% Energy. During Surging Grit, enemy targets take #2[i]% more DMG, the Additional DMG dealt by \"Concordant Truce\" increases by #3[i]%, and this DMG is considered as Follow-Up ATK DMG.",
         "battleDesc": null,

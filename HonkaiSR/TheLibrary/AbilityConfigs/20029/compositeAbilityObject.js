@@ -959,11 +959,11 @@ const compositeAbilityObject = {
                       "scope": "TargetEntity",
                       "variableName": "PassiveSkill03_MaxCharge",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_10007) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_10007",
+                        "operator": "Variables[0] (UnusedUnderThisBase_10605) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_10605",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_10007"
+                          "UnusedUnderThisBase_10605"
                         ]
                       }
                     }
@@ -978,11 +978,11 @@ const compositeAbilityObject = {
                       "scope": "TargetEntity",
                       "variableName": "PassiveSkill03_MaxCharge",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_10015) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_10015",
+                        "operator": "Variables[0] (UnusedUnderThisBase_10613) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_10613",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_10015"
+                          "UnusedUnderThisBase_10613"
                         ]
                       }
                     }
@@ -1159,11 +1159,11 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "variableName": "ChargeCount",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_10028) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_10028",
+                    "operator": "Variables[0] (UnusedUnderThisBase_10626) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_10626",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_10028"
+                      "UnusedUnderThisBase_10626"
                     ]
                   }
                 },
@@ -1175,11 +1175,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"792733911\">Enemy_W3_Sam_01_EnhanceChargeCount</a>[<span class=\"descriptionNumberColor\">Mortal Instinct</span>]",
                   "addStacksPerTrigger": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_10028) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_10028",
+                    "operator": "Variables[0] (UnusedUnderThisBase_10626) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_10626",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_10028"
+                      "UnusedUnderThisBase_10626"
                     ]
                   }
                 },
@@ -1262,11 +1262,11 @@ const compositeAbilityObject = {
                           "scope": "TargetEntity",
                           "variableName": "PassiveSkill03_MaxCharge",
                           "value": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_10007) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_10007",
+                            "operator": "Variables[0] (UnusedUnderThisBase_10605) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_10605",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_10007"
+                              "UnusedUnderThisBase_10605"
                             ]
                           }
                         }
@@ -1281,11 +1281,11 @@ const compositeAbilityObject = {
                           "scope": "TargetEntity",
                           "variableName": "PassiveSkill03_MaxCharge",
                           "value": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_10015) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_10015",
+                            "operator": "Variables[0] (UnusedUnderThisBase_10613) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_10613",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_10015"
+                              "UnusedUnderThisBase_10613"
                             ]
                           }
                         }
@@ -1311,11 +1311,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_10009) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_10009",
+                              "operator": "Variables[0] (UnusedUnderThisBase_10607) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_10607",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_10009"
+                                "UnusedUnderThisBase_10607"
                               ]
                             }
                           }

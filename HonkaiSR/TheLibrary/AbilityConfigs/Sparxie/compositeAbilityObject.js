@@ -526,16 +526,7 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"9288377\">Sparxie_Eidolon2_InsertActionSave</a>"
                         }
-                      ],
-                      "condition": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Modifier Holder}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"596149428\">Enemy_W5_Painter_Inferno</a>[<span class=\"descriptionNumberColor\">Grudge Ablaze</span>]",
-                        "invertCondition": true
-                      }
+                      ]
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -780,7 +771,7 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Character Path Change [Anyone]",
+              "eventTrigger": "Character Path [Anyone]: Change",
               "execute": [
                 {
                   "name": "Use Custom Character Function",
@@ -1282,16 +1273,7 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"9288377\">Sparxie_Eidolon2_InsertActionSave</a>"
                             }
-                          ],
-                          "condition": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Modifier Holder}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"596149428\">Enemy_W5_Painter_Inferno</a>[<span class=\"descriptionNumberColor\">Grudge Ablaze</span>]",
-                            "invertCondition": true
-                          }
+                          ]
                         }
                       ],
                       "failed": [

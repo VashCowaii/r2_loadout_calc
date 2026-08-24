@@ -2,6 +2,8 @@ let enemyData = {
   "name": "Aurumaton Gatekeeper",
   "image": 2013013,
   "bar": 1,
+  "bodyType": "LargeMonster",
+  "hitClass": "B",
   "rank": "Elite",
   "stArray": [
     40.008892,
