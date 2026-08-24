@@ -48,7 +48,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Asat Pramad: 0}}"
                 },
-                "value": "W5_AsatPramad_MainStory440P3"
+                "value": "W5_AsatPramad_MainStory"
               },
               "passed": [
                 {
@@ -83,7 +83,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Asat Pramad: 0}}"
                 },
-                "value": "W5_AsatPramad_MainStory440P3"
+                "value": "W5_AsatPramad_MainStory"
               },
               "passed": [
                 {

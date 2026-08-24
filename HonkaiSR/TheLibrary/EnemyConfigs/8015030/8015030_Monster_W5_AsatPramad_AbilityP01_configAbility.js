@@ -467,7 +467,7 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "value": "UNKNOWN_OBJECT_BOOLEAN_90659577",
+                    "value": "W5_AsatPramad_MainStory440P3",
                     "invertCondition": true
                   }
                 },

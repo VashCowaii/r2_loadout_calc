@@ -4082,7 +4082,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "value": "UNKNOWN_OBJECT_BOOLEAN_90659577",
+                        "value": "W5_AsatPramad_MainStory440P3",
                         "invertCondition": true
                       }
                     },
@@ -6147,7 +6147,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Asat Pramad: 0}}"
                     },
-                    "value": "W5_AsatPramad_MainStory440P3"
+                    "value": "W5_AsatPramad_MainStory"
                   },
                   "passed": [
                     {
@@ -6182,7 +6182,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Asat Pramad: 0}}"
                     },
-                    "value": "W5_AsatPramad_MainStory440P3"
+                    "value": "W5_AsatPramad_MainStory"
                   },
                   "passed": [
                     {
