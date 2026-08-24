@@ -110,40 +110,101 @@ const configAbility = {
                           "value": 1
                         },
                         {
-                          "name": "Find New Target",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{Player Team All}}.[[removeMemosprite]]"
-                          },
+                          "name": "IF",
                           "conditions": {
-                            "name": "Has Modifier",
+                            "name": "Has Flag",
                             "target": {
                               "name": "Target Name",
-                              "target": "{{Parameter Target}}"
+                              "target": "{{Caster}}"
                             },
-                            "modifier": "<a class=\"gModGreen\" id=\"-662226107\">Enemy_W5_Eater_Ability02_Ate</a>[<span class=\"descriptionNumberColor\">Devour</span>]",
-                            "invertCondition": true
+                            "flagName": [
+                              "Taunt"
+                            ]
                           },
-                          "ifTargetFound": [
+                          "passed": [
                             {
-                              "name": "Choose Ability Target",
-                              "skillName": "Skill02",
-                              "target": {
-                                "name": "Select by Modifier Name",
-                                "modifier": "<a class=\"gModGreen\" id=\"-662226107\">Enemy_W5_Eater_Ability02_Ate</a>[<span class=\"descriptionNumberColor\">Devour</span>]",
-                                "target": null,
-                                "invertCondition": true
-                              }
-                            },
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill02"
+                              "name": "IF",
+                              "conditions": {
+                                "name": "Compare: Target List Entities",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Enemies by Taunt OR Aggro}}.[[removeMemosprite]]"
+                                },
+                                "conditions": {
+                                  "name": "Has Modifier",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
+                                  "modifier": "<a class=\"gModGreen\" id=\"-662226107\">Enemy_W5_Eater_Ability02_Ate</a>[<span class=\"descriptionNumberColor\">Devour</span>]",
+                                  "invertCondition": true
+                                }
+                              },
+                              "passed": [
+                                {
+                                  "name": "Choose Ability Target",
+                                  "skillName": "Skill02",
+                                  "target": {
+                                    "name": "Select by Modifier Name",
+                                    "modifier": "<a class=\"gModGreen\" id=\"-662226107\">Enemy_W5_Eater_Ability02_Ate</a>[<span class=\"descriptionNumberColor\">Devour</span>]",
+                                    "target": null,
+                                    "invertCondition": true
+                                  }
+                                },
+                                {
+                                  "name": "Use Ability Option",
+                                  "skillName": "Skill02"
+                                }
+                              ],
+                              "failed": [
+                                {
+                                  "name": "Use Ability Option",
+                                  "skillName": "Skill04"
+                                }
+                              ]
                             }
                           ],
-                          "noTargetFound": [
+                          "failed": [
                             {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill04"
+                              "name": "IF",
+                              "conditions": {
+                                "name": "Compare: Target List Entities",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Player Team All}}.[[removeMemosprite]]"
+                                },
+                                "conditions": {
+                                  "name": "Has Modifier",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
+                                  "modifier": "<a class=\"gModGreen\" id=\"-662226107\">Enemy_W5_Eater_Ability02_Ate</a>[<span class=\"descriptionNumberColor\">Devour</span>]",
+                                  "invertCondition": true
+                                }
+                              },
+                              "passed": [
+                                {
+                                  "name": "Choose Ability Target",
+                                  "skillName": "Skill02",
+                                  "target": {
+                                    "name": "Select by Modifier Name",
+                                    "modifier": "<a class=\"gModGreen\" id=\"-662226107\">Enemy_W5_Eater_Ability02_Ate</a>[<span class=\"descriptionNumberColor\">Devour</span>]",
+                                    "target": null,
+                                    "invertCondition": true
+                                  }
+                                },
+                                {
+                                  "name": "Use Ability Option",
+                                  "skillName": "Skill02"
+                                }
+                              ],
+                              "failed": [
+                                {
+                                  "name": "Use Ability Option",
+                                  "skillName": "Skill04"
+                                }
+                              ]
                             }
                           ]
                         }
