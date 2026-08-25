@@ -911,6 +911,14 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "char",
+    "entryName": "Rin Tohsaka",
+    "trimCharacterName": "RinTohsaka",
+    "entryIcon": "icon/character/1508.png",
+    "lineCount": 5446,
+    "sizeCount": 202768
+  },
+  {
+    "entryType": "char",
     "entryName": "Cipher",
     "trimCharacterName": "Cipher",
     "entryIcon": "icon/character/1406.png",
@@ -6244,14 +6252,6 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1510.png",
     "lineCount": 7,
     "sizeCount": 145
-  },
-  {
-    "entryType": "char",
-    "entryName": "Rin Tohsaka",
-    "trimCharacterName": "RinTohsaka",
-    "entryIcon": "icon/character/1508.png",
-    "lineCount": 7,
-    "sizeCount": 141
   },
   {
     "entryType": "enemy",
