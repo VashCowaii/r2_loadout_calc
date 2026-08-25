@@ -948,7 +948,6 @@ let customItemFunctions = {
       }
     },
     legendaryVaccinated(index) {
-      console.log("hi")
       index.incomingStatus = 0;
       index.inSLOW = 0;
       index.inBLEED = 0;
