@@ -69,7 +69,22 @@ const compositeAbilityObject = {
                 "compareType": ">=",
                 "value2": 5,
                 "contextScope": "ContextCaster"
-              }
+              },
+              "passed": [
+                {
+                  "name": "Achievement",
+                  "relatedAchievements": [
+                    {
+                      "title": "Sufficient Noble Phantasm Reserves",
+                      "desc": "Use Gilgamesh's Technique to hit #1 enemies or more",
+                      "rarity": "Low",
+                      "params": [
+                        5
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },

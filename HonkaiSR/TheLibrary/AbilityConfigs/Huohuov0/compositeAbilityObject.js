@@ -1466,7 +1466,22 @@ const compositeAbilityObject = {
             "value1": "Feared_Target_Count",
             "compareType": ">=",
             "value2": 6
-          }
+          },
+          "passed": [
+            {
+              "name": "Achievement",
+              "relatedAchievements": [
+                {
+                  "title": "Come Here! Now Go Away!",
+                  "desc": "Use Huohuo's Technique \"Fiend: Impeachment of Evil\" and let #1[i] or more targets flee in one instance",
+                  "rarity": "Low",
+                  "params": [
+                    6
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "onAbortReg": [],

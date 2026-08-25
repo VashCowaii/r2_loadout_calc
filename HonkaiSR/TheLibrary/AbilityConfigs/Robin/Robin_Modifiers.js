@@ -49,7 +49,23 @@ const configAbility = {
             },
             "compareType": ">=",
             "value2": 6
-          }
+          },
+          "passed": [
+            {
+              "name": "Achievement",
+              "relatedAchievements": [
+                {
+                  "title": "Pied Piper of Hamelin",
+                  "desc": "After using Robin's Technique \"Overture of Inebriation\" in exploration, attract #1 or more enemies to follow",
+                  "rarity": "Low",
+                  "type": "Hidden until Completion",
+                  "params": [
+                    6
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     },

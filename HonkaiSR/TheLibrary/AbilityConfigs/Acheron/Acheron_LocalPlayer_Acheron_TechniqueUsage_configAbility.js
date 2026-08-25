@@ -86,6 +86,20 @@ const configAbility = {
               },
               "passed": [
                 {
+                  "name": "Achievement",
+                  "relatedAchievements": [
+                    {
+                      "title": "Divine Judgment Does Not Discriminate",
+                      "desc": "During exploration, use Acheron's Technique \"Quadrivalent Ascendance\" to defeat #1 enemies consecutively",
+                      "rarity": "Low",
+                      "type": "Hidden until Completion",
+                      "params": [
+                        5
+                      ]
+                    }
+                  ]
+                },
+                {
                   "name": "Define Custom Variable",
                   "variableName": "Scoring_KillCount_4083009",
                   "value": 0
@@ -196,6 +210,20 @@ const configAbility = {
                 "value2": 5
               },
               "passed": [
+                {
+                  "name": "Achievement",
+                  "relatedAchievements": [
+                    {
+                      "title": "Divine Judgment Does Not Discriminate",
+                      "desc": "During exploration, use Acheron's Technique \"Quadrivalent Ascendance\" to defeat #1 enemies consecutively",
+                      "rarity": "Low",
+                      "type": "Hidden until Completion",
+                      "params": [
+                        5
+                      ]
+                    }
+                  ]
+                },
                 {
                   "name": "Define Custom Variable",
                   "variableName": "Scoring_KillCount_4083009",
