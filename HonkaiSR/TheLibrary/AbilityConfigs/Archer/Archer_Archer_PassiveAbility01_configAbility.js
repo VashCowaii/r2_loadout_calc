@@ -6,7 +6,8 @@ const configAbility = {
     "Archer_Archer_Insert_Part02",
     "Archer_Archer_Insert_Camera",
     "Archer_Archer_Bonus",
-    "Archer_Archer_Bonus_Camera"
+    "Archer_Archer_Bonus_Camera",
+    "Archer_TohsakaRin_Insert_Part02_Archer"
   ],
   "skillTrigger": "SkillP01",
   "abilityType": "Talent",
