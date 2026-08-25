@@ -1959,7 +1959,20 @@ const compositeAbilityObject = {
                 "invertCondition": true
               }
             ]
-          }
+          },
+          "passed": [
+            {
+              "name": "Achievement",
+              "relatedAchievements": [
+                {
+                  "title": "A Step Like a Malicious Spirit in Pursuit",
+                  "desc": "While using Rappa's technique \"Ninja Dash: By Leaps and Bounds,\" avoid hitting any obstacles while sliding in the \"Graffiti\" mode.",
+                  "rarity": "Low",
+                  "type": "Hidden until Completion"
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "Remove Events/Bonuses",

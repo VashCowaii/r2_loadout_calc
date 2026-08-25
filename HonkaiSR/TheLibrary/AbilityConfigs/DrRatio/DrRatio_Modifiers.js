@@ -52,7 +52,23 @@ const configAbility = {
             },
             "compareType": ">=",
             "value2": 6
-          }
+          },
+          "passed": [
+            {
+              "name": "Achievement",
+              "relatedAchievements": [
+                {
+                  "title": "Trigger Warning",
+                  "desc": "Use Dr. Ratio's Technique, Mold of Idolatry, to Taunt #1[i] or more enemy targets at once",
+                  "rarity": "Low",
+                  "type": "Hidden until Completion",
+                  "params": [
+                    6
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     },

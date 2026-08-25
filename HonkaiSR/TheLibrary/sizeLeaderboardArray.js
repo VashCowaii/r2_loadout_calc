@@ -484,6 +484,14 @@ let sizeLeaderboardArray = [
     "sizeCount": 290820
   },
   {
+    "entryType": "char",
+    "entryName": "Acheron",
+    "trimCharacterName": "Acheron",
+    "entryIcon": "icon/character/1308.png",
+    "lineCount": 8004,
+    "sizeCount": 290572
+  },
+  {
     "entryType": "enemy",
     "enemyID": 2004026,
     "lineCount": 8066,
@@ -494,14 +502,6 @@ let sizeLeaderboardArray = [
     "enemyID": 1005014,
     "lineCount": 7990,
     "sizeCount": 287035
-  },
-  {
-    "entryType": "char",
-    "entryName": "Acheron",
-    "trimCharacterName": "Acheron",
-    "entryIcon": "icon/character/1308.png",
-    "lineCount": 7920,
-    "sizeCount": 286774
   },
   {
     "entryType": "char",
@@ -654,8 +654,8 @@ let sizeLeaderboardArray = [
     "entryName": "Feixiao",
     "trimCharacterName": "Feixiao",
     "entryIcon": "icon/character/1220.png",
-    "lineCount": 7154,
-    "sizeCount": 241642
+    "lineCount": 7171,
+    "sizeCount": 242193
   },
   {
     "entryType": "enemy",
@@ -904,18 +904,18 @@ let sizeLeaderboardArray = [
     "sizeCount": 204010
   },
   {
-    "entryType": "enemy",
-    "enemyID": 5014022,
-    "lineCount": 5452,
-    "sizeCount": 203109
-  },
-  {
     "entryType": "char",
     "entryName": "Rin Tohsaka",
     "trimCharacterName": "RinTohsaka",
     "entryIcon": "icon/character/1508.png",
-    "lineCount": 5446,
-    "sizeCount": 202768
+    "lineCount": 5461,
+    "sizeCount": 203342
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5014022,
+    "lineCount": 5452,
+    "sizeCount": 203109
   },
   {
     "entryType": "char",
@@ -1346,8 +1346,8 @@ let sizeLeaderboardArray = [
     "entryName": "Gilgamesh",
     "trimCharacterName": "Gilgamesh",
     "entryIcon": "icon/character/1509.png",
-    "lineCount": 4875,
-    "sizeCount": 173077
+    "lineCount": 4890,
+    "sizeCount": 173581
   },
   {
     "entryType": "enemy",
@@ -1481,19 +1481,19 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "char",
+    "entryName": "Rappa",
+    "trimCharacterName": "Rappa",
+    "entryIcon": "icon/character/1317.png",
+    "lineCount": 4707,
+    "sizeCount": 162052
+  },
+  {
+    "entryType": "char",
     "entryName": "Dan Heng • Permansor Terrae",
     "trimCharacterName": "DanHengPT",
     "entryIcon": "icon/character/1414.png",
     "lineCount": 4449,
     "sizeCount": 161863
-  },
-  {
-    "entryType": "char",
-    "entryName": "Rappa",
-    "trimCharacterName": "Rappa",
-    "entryIcon": "icon/character/1317.png",
-    "lineCount": 4694,
-    "sizeCount": 161538
   },
   {
     "entryType": "enemy",
@@ -1774,8 +1774,8 @@ let sizeLeaderboardArray = [
     "entryName": "Dr. Ratio",
     "trimCharacterName": "DrRatio",
     "entryIcon": "icon/character/1305.png",
-    "lineCount": 3874,
-    "sizeCount": 134884
+    "lineCount": 3890,
+    "sizeCount": 135464
   },
   {
     "entryType": "enemy",
@@ -1913,6 +1913,14 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "char",
+    "entryName": "Huohuo",
+    "trimCharacterName": "Huohuo",
+    "entryIcon": "icon/character/1217.png",
+    "lineCount": 3153,
+    "sizeCount": 116621
+  },
+  {
+    "entryType": "char",
     "entryName": "Kafka",
     "trimCharacterName": "Kafka",
     "entryIcon": "icon/character/1005.png",
@@ -1934,14 +1942,6 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1222.png",
     "lineCount": 3260,
     "sizeCount": 116229
-  },
-  {
-    "entryType": "char",
-    "entryName": "Huohuo",
-    "trimCharacterName": "Huohuo",
-    "entryIcon": "icon/character/1217.png",
-    "lineCount": 3138,
-    "sizeCount": 116135
   },
   {
     "entryType": "enemy",
@@ -2104,18 +2104,18 @@ let sizeLeaderboardArray = [
     "sizeCount": 106153
   },
   {
-    "entryType": "enemy",
-    "enemyID": 4012052,
-    "lineCount": 2786,
-    "sizeCount": 104879
-  },
-  {
     "entryType": "char",
     "entryName": "Robin",
     "trimCharacterName": "Robin",
     "entryIcon": "icon/character/1309.png",
-    "lineCount": 2857,
-    "sizeCount": 104486
+    "lineCount": 2873,
+    "sizeCount": 105093
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 4012052,
+    "lineCount": 2786,
+    "sizeCount": 104879
   },
   {
     "entryType": "enemy",
@@ -2188,8 +2188,8 @@ let sizeLeaderboardArray = [
     "entryName": "Huohuo_v0",
     "trimCharacterName": "Huohuov0",
     "entryIcon": "icon/character/1217.png",
-    "lineCount": 2715,
-    "sizeCount": 98173
+    "lineCount": 2730,
+    "sizeCount": 98659
   },
   {
     "entryType": "enemy",
@@ -2942,6 +2942,14 @@ let sizeLeaderboardArray = [
     "sizeCount": 55385
   },
   {
+    "entryType": "char",
+    "entryName": "Natasha",
+    "trimCharacterName": "Natasha",
+    "entryIcon": "icon/character/1105.png",
+    "lineCount": 1721,
+    "sizeCount": 55329
+  },
+  {
     "entryType": "enemy",
     "enemyID": 4012060,
     "lineCount": 1426,
@@ -2970,14 +2978,6 @@ let sizeLeaderboardArray = [
     "enemyID": 8013011,
     "lineCount": 1587,
     "sizeCount": 54789
-  },
-  {
-    "entryType": "char",
-    "entryName": "Natasha",
-    "trimCharacterName": "Natasha",
-    "entryIcon": "icon/character/1105.png",
-    "lineCount": 1682,
-    "sizeCount": 53323
   },
   {
     "entryType": "char",

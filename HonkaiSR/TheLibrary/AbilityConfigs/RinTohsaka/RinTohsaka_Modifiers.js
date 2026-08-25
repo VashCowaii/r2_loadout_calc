@@ -54,7 +54,22 @@ const configAbility = {
                 "value1": "TohsakaRin_00_AchievementPassive_Money",
                 "compareType": ">=",
                 "value2": 8
-              }
+              },
+              "passed": [
+                {
+                  "name": "Achievement",
+                  "relatedAchievements": [
+                    {
+                      "title": "Golden Rule (Fake)",
+                      "desc": "Pick up #1 Gold Coin(s) in a single instance using ally character Rin Tohsaka",
+                      "rarity": "Low",
+                      "params": [
+                        8
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }

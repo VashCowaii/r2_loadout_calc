@@ -670,7 +670,20 @@ const compositeAbilityObject = {
                                 }
                               }
                             ]
-                          }
+                          },
+                          "passed": [
+                            {
+                              "name": "Achievement",
+                              "relatedAchievements": [
+                                {
+                                  "title": "Full Metal Racket",
+                                  "desc": "Enter a battle by attacking a distant enemy or destroy a destructible object at a distance with Natasha during exploration",
+                                  "rarity": "Low",
+                                  "type": "Hidden until Completion"
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ]
                     }
@@ -703,7 +716,20 @@ const compositeAbilityObject = {
                                 }
                               }
                             ]
-                          }
+                          },
+                          "passed": [
+                            {
+                              "name": "Achievement",
+                              "relatedAchievements": [
+                                {
+                                  "title": "Full Metal Racket",
+                                  "desc": "Enter a battle by attacking a distant enemy or destroy a destructible object at a distance with Natasha during exploration",
+                                  "rarity": "Low",
+                                  "type": "Hidden until Completion"
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ]
                     }
@@ -739,7 +765,20 @@ const compositeAbilityObject = {
                             }
                           }
                         ]
-                      }
+                      },
+                      "passed": [
+                        {
+                          "name": "Achievement",
+                          "relatedAchievements": [
+                            {
+                              "title": "Full Metal Racket",
+                              "desc": "Enter a battle by attacking a distant enemy or destroy a destructible object at a distance with Natasha during exploration",
+                              "rarity": "Low",
+                              "type": "Hidden until Completion"
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }

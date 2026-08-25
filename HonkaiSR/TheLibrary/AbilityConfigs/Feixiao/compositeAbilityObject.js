@@ -62,7 +62,24 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__450225831\">ADV_StageAbility_Maze_Feixiao_Achievement</a>"
+          "for": "<a class=\"gModGreen\" id=\"mod__450225831\">ADV_StageAbility_Maze_Feixiao_Achievement</a>",
+          "modifierTasks": [
+            {
+              "name": "Achievement",
+              "relatedAchievements": [
+                {
+                  "title": "I Am the Storm",
+                  "desc": "Use Feixiao's Technique and continuously pull in #1 or more enemies for longer than #2 seconds",
+                  "rarity": "Low",
+                  "type": "Hidden until Completion",
+                  "params": [
+                    5,
+                    30
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "Modifier Construction",
