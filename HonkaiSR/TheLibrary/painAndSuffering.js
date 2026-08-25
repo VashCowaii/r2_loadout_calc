@@ -363,6 +363,7 @@ const megaParsingFuckeryPain = {
 
             "displaySubType",
             "displayShowIcon",
+            "enhancedColor",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Update Displayed Energy Bar");
         // initialCounter++;
@@ -387,6 +388,8 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.displaySubType,"Display Type")}
             ${getStandardNameDisplay(initialCounter,parseRef.displayShowIcon,"Show Icon")}
             ${getStandardNameDisplay(initialCounter,parseRef.enableState,"Enable State")}
+            ${getStandardNameDisplay(initialCounter,parseRef.enhancedColor,"Use Enhanced Color")}
+            
             
         </div>
         
@@ -10788,7 +10791,8 @@ const megaParsingFuckeryPain = {
             ["onBuffUpdateComplete","On Buff Update Full"],
             ["onAbilityReset","On Ability Reset"],
             ["onMPChange","On MP Change"],
-            // ["onTick","On Tick"],
+
+            ["Money Taken","Money Taken"],
             // ["onTick","On Tick"],
             // ["onTick","On Tick"],
             // ["onTick","On Tick"],
