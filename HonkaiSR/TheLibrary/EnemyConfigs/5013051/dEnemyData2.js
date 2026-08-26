@@ -42,9 +42,9 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        2685,
-        2686,
-        2687
+        2728,
+        2729,
+        2730
       ],
       "enemyTag": [
         "W5_Ranger"

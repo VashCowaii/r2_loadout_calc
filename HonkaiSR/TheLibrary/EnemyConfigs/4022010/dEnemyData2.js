@@ -42,8 +42,8 @@ let enemyData = {
         "Thunder": 0.2
       },
       "abilities": [
-        2087,
-        2088
+        2130,
+        2131
       ]
     },
     "402201001": {
@@ -70,8 +70,8 @@ let enemyData = {
         "Thunder": 0.2
       },
       "abilities": [
-        2087,
-        2088
+        2130,
+        2131
       ]
     },
     "402201002": {
@@ -98,8 +98,8 @@ let enemyData = {
         "Thunder": 0.2
       },
       "abilities": [
-        2087,
-        2088
+        2130,
+        2131
       ],
       "enemyTag": [
         "MGrid_4008"

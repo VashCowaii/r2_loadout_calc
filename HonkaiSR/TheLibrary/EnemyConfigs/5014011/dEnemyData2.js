@@ -45,12 +45,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2712,
-        2713
+        2755,
+        2756
       ],
       "abilityOrder": [
-        2713,
-        2712
+        2756,
+        2755
       ]
     },
     "501401101": {
@@ -80,15 +80,15 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2712,
-        2713
+        2755,
+        2756
       ],
       "abilityOrder": [
-        2713,
-        2712
+        2756,
+        2755
       ],
       "overrideParams": {
-        "2712": [
+        "2755": [
           [
             2.5
           ],
@@ -129,12 +129,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2712,
-        2713
+        2755,
+        2756
       ],
       "abilityOrder": [
-        2713,
-        2712
+        2756,
+        2755
       ]
     },
     "501401103": {
@@ -164,15 +164,15 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2712,
-        2713
+        2755,
+        2756
       ],
       "abilityOrder": [
-        2713,
-        2712
+        2756,
+        2755
       ],
       "overrideParams": {
-        "2713": [
+        "2756": [
           [
             3
           ],
@@ -213,15 +213,15 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2712,
-        2713
+        2755,
+        2756
       ],
       "abilityOrder": [
-        2713,
-        2712
+        2756,
+        2755
       ],
       "overrideParams": {
-        "2713": [
+        "2756": [
           [
             3
           ],
@@ -262,15 +262,15 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2712,
-        2713
+        2755,
+        2756
       ],
       "abilityOrder": [
-        2713,
-        2712
+        2756,
+        2755
       ],
       "overrideParams": {
-        "2713": [
+        "2756": [
           [
             3
           ],
@@ -311,15 +311,15 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2712,
-        2713
+        2755,
+        2756
       ],
       "abilityOrder": [
-        2713,
-        2712
+        2756,
+        2755
       ],
       "overrideParams": {
-        "2713": [
+        "2756": [
           [
             3
           ],
@@ -360,12 +360,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2712,
-        2713
+        2755,
+        2756
       ],
       "abilityOrder": [
-        2713,
-        2712
+        2756,
+        2755
       ]
     },
     "501401108": {
@@ -395,12 +395,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2712,
-        2713
+        2755,
+        2756
       ],
       "abilityOrder": [
-        2713,
-        2712
+        2756,
+        2755
       ]
     }
   }

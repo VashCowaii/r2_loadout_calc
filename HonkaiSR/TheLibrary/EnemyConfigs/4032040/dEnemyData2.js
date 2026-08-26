@@ -41,13 +41,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2177,
-        2178,
-        2179,
-        2180
+        2220,
+        2221,
+        2222,
+        2223
       ],
       "abilityOrder": [
-        2129
+        2172
       ]
     },
     "403204001": {
@@ -74,13 +74,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2177,
-        2178,
-        2179,
-        2180
+        2220,
+        2221,
+        2222,
+        2223
       ],
       "abilityOrder": [
-        2129
+        2172
       ],
       "enemyTag": [
         "MGrid_4009"
