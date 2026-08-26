@@ -44,6 +44,18 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Player Team All}}.[[removeMemosprite]]"
         },
+        "compareType": "=",
+        "value2": 1
+      }
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Compare: Target Count",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Player Team All}}.[[removeMemosprite]]"
+        },
         "compareType": "<=",
         "value2": 2
       }
@@ -244,11 +256,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13806) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13806",
+          "operator": "Variables[0] (UnusedUnderThisBase_14030) || RETURN",
+          "displayLines": "UnusedUnderThisBase_14030",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_13806"
+            "UnusedUnderThisBase_14030"
           ]
         },
         "Toughness": null,

@@ -82,11 +82,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Change Battle Arena",
-          "status": "Inactive",
-          "arenaID": 2054102
-        },
-        {
-          "name": "Change Battle Arena",
           "arenaID": 2054103
         }
       ]
