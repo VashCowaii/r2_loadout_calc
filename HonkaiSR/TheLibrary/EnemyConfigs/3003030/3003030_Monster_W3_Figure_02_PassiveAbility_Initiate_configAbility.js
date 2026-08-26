@@ -28,6 +28,14 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
+      "modifier": "<a class=\"gModGreen\" id=\"561371368\">Monster_W3_Figure_02_BreakController</a>"
+    },
+    {
+      "name": "Add Events/Bonuses",
+      "to": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
       "modifier": "<a class=\"gModGreen\" id=\"308616063\">Enemy_W3_Figure_02_AudioControllerForChosenOne</a>"
     },
     {

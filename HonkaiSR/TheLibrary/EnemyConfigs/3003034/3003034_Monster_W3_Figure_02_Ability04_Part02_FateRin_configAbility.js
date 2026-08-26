@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "<a class=\"gModGreen\" id=\"1849920114\">Monster_W3_Figure_02_IsAiming_FateRin</a>"
+      "modifier": "<a class=\"gModGreen\" id=\"1849920114\">Monster_W3_Figure_02_IsAiming_FateRin</a>[<span class=\"descriptionNumberColor\">Shackle-Bearing Messenger</span>]"
     },
     "Trigger: Ability End"
   ],
@@ -20,7 +20,11 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1849920114\">Monster_W3_Figure_02_IsAiming_FateRin</a>"
+      "for": "<a class=\"gModGreen\" id=\"mod__1849920114\">Monster_W3_Figure_02_IsAiming_FateRin</a>[<span class=\"descriptionNumberColor\">Shackle-Bearing Messenger</span>]",
+      "description": "About to use \"Desmios Evangelion.\"",
+      "type": "Other",
+      "effectName": "Shackle-Bearing Messenger",
+      "statusName": "Shackle-Bearing Messenger"
     }
   ]
 }

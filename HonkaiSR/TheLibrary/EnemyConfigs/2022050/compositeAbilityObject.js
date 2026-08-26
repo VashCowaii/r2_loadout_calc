@@ -116,7 +116,14 @@ const compositeAbilityObject = {
                         "invertCondition": true
                       }
                     ]
-                  }
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_EffectCheck",
+                      "value": 1
+                    }
+                  ]
                 }
               ]
             },
@@ -147,7 +154,14 @@ const compositeAbilityObject = {
                         "invertCondition": true
                       }
                     ]
-                  }
+                  },
+                  "failed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_EffectCheck",
+                      "value": 0
+                    }
+                  ]
                 }
               ]
             },
@@ -184,9 +198,22 @@ const compositeAbilityObject = {
                         },
                         "flagName": "Break",
                         "invertCondition": true
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_EffectCheck",
+                        "compareType": "=",
+                        "value2": 0
                       }
                     ]
-                  }
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "variableName": "MDF_EffectCheck",
+                      "value": 1
+                    }
+                  ]
                 }
               ]
             }
