@@ -1091,6 +1091,83 @@ let scaleElite = {
     "speedScalar": 1,
     "toughnessScalar": 1
   },
+  "181": {
+    "attackScalar": 1,
+    "defScalar": 1,
+    "hpScalar": 11,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "182": {
+    "attackScalar": 1,
+    "defScalar": 1,
+    "hpScalar": 12,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "183": {
+    "attackScalar": 1,
+    "defScalar": 1,
+    "hpScalar": 13,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "184": {
+    "attackScalar": 1,
+    "defScalar": 1,
+    "hpScalar": 14,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "185": {
+    "attackScalar": 1,
+    "defScalar": 1,
+    "hpScalar": 15,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "186": {
+    "attackScalar": 1,
+    "defScalar": 1,
+    "hpScalar": 16,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "187": {
+    "attackScalar": 1,
+    "defScalar": 1,
+    "hpScalar": 18,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "188": {
+    "attackScalar": 1,
+    "defScalar": 1,
+    "hpScalar": 20,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "189": {
+    "attackScalar": 1,
+    "defScalar": 1,
+    "hpScalar": 22,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "190": {
+    "attackScalar": 1,
+    "defScalar": 1,
+    "hpScalar": 24,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
+  "191": {
+    "attackScalar": 1,
+    "defScalar": 1,
+    "hpScalar": 26,
+    "speedScalar": 1,
+    "toughnessScalar": 1
+  },
   "195": {
     "attackScalar": 0.6,
     "defScalar": 1,
@@ -3925,6 +4002,13 @@ let scaleElite = {
     "hpScalar": 2.7,
     "speedScalar": 1,
     "toughnessScalar": 1
+  },
+  "908": {
+    "attackScalar": 1,
+    "defScalar": 1,
+    "hpScalar": 2.3,
+    "speedScalar": 1,
+    "toughnessScalar": 1.25
   },
   "910": {
     "attackScalar": 0.7,
