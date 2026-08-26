@@ -13,6 +13,7 @@ const compositeAbilityObject = {
     "-838314705_StrongChallengeEX_Test_StageAbility_001_EX_Camera",
     "-838314705_StrongChallengeEX_Test_StageAbility_001_EX_BeingBreak",
     "-838314705_StrongChallengeEX_Test_StageAbility_001",
+    "-838314705_StrongChallengeEX_Environment_StageAbility_018",
     "-838314705_StrongChallengeEX_Environment_StageAbility_017",
     "-838314705_StrongChallengeEX_Environment_StageAbility_016",
     "-838314705_StrongChallengeEX_Environment_StageAbility_015",
@@ -2646,7 +2647,7 @@ const compositeAbilityObject = {
               "name": "Dispel Debuffs",
               "target": {
                 "name": "Target Name",
-                "target": "{{Player Team All}}"
+                "target": "{{Player Team All(with Unselectable)V2}}"
               },
               "toRemove": [
                 "STAT_CTRL"
@@ -3409,7 +3410,7 @@ const compositeAbilityObject = {
               "name": "Dispel Debuffs",
               "target": {
                 "name": "Target Name",
-                "target": "{{Player Team All}}"
+                "target": "{{Player Team All(with Unselectable)V2}}"
               },
               "toRemove": [
                 "STAT_CTRL"
@@ -4185,7 +4186,7 @@ const compositeAbilityObject = {
               "name": "Dispel Debuffs",
               "target": {
                 "name": "Target Name",
-                "target": "{{Player Team All}}"
+                "target": "{{Player Team All(with Unselectable)V2}}"
               },
               "toRemove": [
                 "STAT_CTRL"
@@ -4603,6 +4604,24 @@ const compositeAbilityObject = {
       "parse": [
         "Deleted bullshit",
         {
+          "name": "Find New Target",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Enemy Team All}}"
+          },
+          "maxTargets": 1,
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 2024016,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "characterName": "Unwaning Ageless Immortal",
+            "isBaseCompare": true
+          }
+        },
+        {
           "name": "IF",
           "conditions": {
             "name": "Has Modifier",
@@ -4820,7 +4839,7 @@ const compositeAbilityObject = {
               "name": "Dispel Debuffs",
               "target": {
                 "name": "Target Name",
-                "target": "{{Player Team All}}"
+                "target": "{{Player Team All(with Unselectable)V2}}"
               },
               "toRemove": [
                 "STAT_CTRL"
@@ -5212,6 +5231,163 @@ const compositeAbilityObject = {
                   "priorityTag": "EnemyBattleCry",
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "-838314705_StrongChallengeEX_Environment_StageAbility_018": {
+      "fileName": "-838314705_StrongChallengeEX_Environment_StageAbility_018",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"770402204\">MStrongChallengeEX_Environment_StageAbility_LE_018</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-764375062\">MStrongChallengeEX_Environment_StageAbility_BOSS_018</a>",
+          "stackType": "ReplaceByCaster",
+          "execute": [
+            {
+              "eventTrigger": "Take Damage Start [Owner]: Any",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Attack Type",
+                    "attackTypes": [
+                      "Skill"
+                    ],
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                          "value": "MDF_PropertyValue"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Attack Type",
+                    "attackTypes": [
+                      "Elation DMG"
+                    ],
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Defender",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                          "value": "MDF_PropertyValue2"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__770402204\">MStrongChallengeEX_Environment_StageAbility_LE_018</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Level Entity}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"709278328\">MStrongChallengeEX_BEMark_SP</a>"
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Level Entity}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"114894167\">MStrongChallengeEX_BEMark_DispelCTRL</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Enemy Team"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-764375062\">MStrongChallengeEX_Environment_StageAbility_BOSS_018</a>",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (#ADF_1) || RETURN",
+                          "displayLines": "#ADF_1",
+                          "constants": [],
+                          "variables": [
+                            "#ADF_1"
+                          ]
+                        },
+                        "MDF_PropertyValue2": {
+                          "operator": "Variables[0] (#ADF_2) || RETURN",
+                          "displayLines": "#ADF_2",
+                          "constants": [],
+                          "variables": [
+                            "#ADF_2"
+                          ]
+                        }
+                      }
+                    }
+                  ]
                 }
               ]
             }

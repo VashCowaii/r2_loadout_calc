@@ -4,6 +4,8 @@ const compositeAbilityObject = {
   "trimCharacterName": -243519640,
   "abilityList": [
     "-243519640_Modifiers",
+    "-243519640_StrongChallengeEX_Talent_StageAbility_093",
+    "-243519640_StrongChallengeEX_Talent_StageAbility_092",
     "-243519640_StrongChallengeEX_Talent_StageAbility_091",
     "-243519640_StrongChallengeEX_Talent_StageAbility_090",
     "-243519640_StrongChallengeEX_Talent_StageAbility_089",
@@ -236,6 +238,282 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "-243519640_StrongChallengeEX_Talent_StageAbility_093": {
+      "fileName": "-243519640_StrongChallengeEX_Talent_StageAbility_093",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1643759630\">MStrongChallengeEX_Talent_StageAbility_LE_093</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__863687676\">MStrongChallengeEX_Talent_StageAbility_EMY_093</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceWindBonus</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_WindResistanceDelta) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_WindResistanceDelta)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_WindResistanceDelta"
+                    ]
+                  }
+                },
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceLightningBonus</span>&nbsp;",
+                  "value": {
+                    "operator": "Constants[0] (0) || Variables[0] (MDF_ThunderResistanceDelta) || SUB || RETURN",
+                    "displayLines": "(0 - MDF_ThunderResistanceDelta)",
+                    "constants": [
+                      0
+                    ],
+                    "variables": [
+                      "MDF_ThunderResistanceDelta"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1643759630\">MStrongChallengeEX_Talent_StageAbility_LE_093</a>",
+          "execute": [
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Enemy Team"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"863687676\">MStrongChallengeEX_Talent_StageAbility_EMY_093</a>",
+                      "valuePerStack": {
+                        "MDF_WindResistanceDelta": {
+                          "operator": "Variables[0] (#ADF_1) || RETURN",
+                          "displayLines": "#ADF_1",
+                          "constants": [],
+                          "variables": [
+                            "#ADF_1"
+                          ]
+                        },
+                        "MDF_ThunderResistanceDelta": {
+                          "operator": "Variables[0] (#ADF_1) || RETURN",
+                          "displayLines": "#ADF_1",
+                          "constants": [],
+                          "variables": [
+                            "#ADF_1"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "-243519640_StrongChallengeEX_Talent_StageAbility_092": {
+      "fileName": "-243519640_StrongChallengeEX_Talent_StageAbility_092",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1660537249\">MStrongChallengeEX_Talent_StageAbility_LE_092</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1783089808\">MStrongChallengeEX_Talent_StageAbility_NO1_092</a>",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Hit",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Attack Type",
+                    "attackTypes": [
+                      "Skill",
+                      "Ultimate"
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "MDF_BP_Ultra_DamageAddedRatio_Extra"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__973592377\">MStrongChallengeEX_Talent_StageAbility_PLY_092</a>",
+          "execute": [
+            {
+              "eventTrigger": "Deal Damage Start [Owner]: Hit",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Attack Type",
+                    "attackTypes": [
+                      "Skill",
+                      "Ultimate"
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Target Stats",
+                      "modifiedValuesArray": [
+                        {
+                          "on": "Attacker",
+                          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+                          "value": "MDF_BP_Ultra_DamageAddedRatio"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__1660537249\">MStrongChallengeEX_Talent_StageAbility_LE_092</a>",
+          "execute": [
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Player Team"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"973592377\">MStrongChallengeEX_Talent_StageAbility_PLY_092</a>",
+                      "valuePerStack": {
+                        "MDF_BP_Ultimate_DamageAddedRatio": {
+                          "operator": "Variables[0] (#ADF_1) || RETURN",
+                          "displayLines": "#ADF_1",
+                          "constants": [],
+                          "variables": [
+                            "#ADF_1"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Far Left Player Entity(no Memosprite)}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1783089808\">MStrongChallengeEX_Talent_StageAbility_NO1_092</a>",
+                  "valuePerStack": {
+                    "MDF_BP_Ultimate_DamageAddedRatio_Extra": {
+                      "operator": "Variables[0] (#ADF_2) || RETURN",
+                      "displayLines": "#ADF_2",
+                      "constants": [],
+                      "variables": [
+                        "#ADF_2"
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     "-243519640_StrongChallengeEX_Talent_StageAbility_091": {
       "fileName": "-243519640_StrongChallengeEX_Talent_StageAbility_091",

@@ -6,6 +6,24 @@ const configAbility = {
   "parse": [
     "Deleted bullshit",
     {
+      "name": "Find New Target",
+      "from": {
+        "name": "Target Name",
+        "target": "{{Enemy Team All}}"
+      },
+      "maxTargets": 1,
+      "conditions": {
+        "name": "Enemy ID",
+        "ID": 2024016,
+        "target": {
+          "name": "Target Name",
+          "target": "{{Parameter Target}}"
+        },
+        "characterName": "Unwaning Ageless Immortal",
+        "isBaseCompare": true
+      }
+    },
+    {
       "name": "IF",
       "conditions": {
         "name": "Has Modifier",
@@ -223,7 +241,7 @@ const configAbility = {
           "name": "Dispel Debuffs",
           "target": {
             "name": "Target Name",
-            "target": "{{Player Team All}}"
+            "target": "{{Player Team All(with Unselectable)V2}}"
           },
           "toRemove": [
             "STAT_CTRL"
