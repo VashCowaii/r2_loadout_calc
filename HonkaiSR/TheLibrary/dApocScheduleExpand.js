@@ -2,10 +2,10 @@ const stageTypers = "apoc";
 let mocSchedule = [
   {
     "id": 3020,
-    "image": "activityBG/ChallengeBossBanner_3018.png",
-    "realName": "Vanguard Knight",
+    "image": "activityBG/ChallengeBossBanner_3019.png",
+    "realName": "Celestial Lupine",
     "start": "2026-08-31 04:00:00",
-    "end": "2099-12-31 04:00:00",
+    "end": "2026-10-05 04:00:00",
     "buffData": {
       "modifierName": "ADV_StageAbility_3031001",
       "realModifierNamne": "FantasticStory_BaseAbility_0010",
@@ -21,24 +21,24 @@ let mocSchedule = [
     },
     "floorData": {
       "1": {
-        "floorName": null,
+        "floorName": "Celestial Lupine: Difficulty 1",
         "sides": 2,
         "stageDataObject": {
           "stage1": {
             "ids": [
-              420471
+              420501
             ],
             "stageDataArray": [
               {
-                "stageName": "Silver Knight of Virtuous Gallantry",
+                "stageName": "Unwaning Ageless Immortal",
                 "enemyLevel": 60,
                 "modifiersToAdd": [],
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
-                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_006",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_018",
                   "BEKey": -838314705,
                   "name": "Ruinous Embers",
-                  "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies, recovers their Skill Points, and activates their Ultimates.\\nIncreases the Skill DMG taken by all enemies by #1[i]% and increases Ultimate DMG taken by #2[i]%.",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is Weakness Broken, dispels control debuffs for all ally targets and activates their Ultimates.\\nIncreases Skill DMG taken by all enemy targets by #1[i]% and increases Elation DMG taken by #2[i]%.",
                   "battleDesc": null,
                   "buffType": "",
                   "params": [
@@ -50,39 +50,40 @@ let mocSchedule = [
                 "enemyList": [
                   [
                     {
-                      "name": "Silver Knight of Virtuous Gallantry",
-                      "id": 302401301,
-                      "image": 3024013,
+                      "name": "Unwaning Ageless Immortal",
+                      "id": 202401601,
+                      "image": 2024016,
                       "rank": "LittleBoss",
                       "attackBase": 253.7271675,
                       "defBase": 800.00004,
-                      "hpBase": 122583.6441,
-                      "speedBase": 105,
+                      "hpBase": 549174.725568,
+                      "speedBase": 120,
                       "critDMG": 0.2,
                       "effectRES": 0.34,
                       "ehr": 0.08,
                       "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
+                      "toughnessBars": 3,
+                      "toughnessElement": "Wind",
                       "hpBars": 2,
                       "compEN": 1,
                       "compACT": 21.0896592,
-                      "toughnessBase": 140,
+                      "toughnessBase": 240,
                       "weaknessList": [
                         "Physical",
                         "Fire",
                         "Ice",
-                        "Imaginary"
+                        "Quantum"
                       ],
                       "resistances": {
-                        "Thunder": 0.6,
+                        "Thunder": 0.4,
                         "Wind": 0.4,
-                        "Quantum": 0.4
+                        "Imaginary": 0.4
                       },
                       "resistancesDebuff": {
-                        "STAT_CTRL": 1
+                        "STAT_CTRL_Frozen": 0.5,
+                        "STAT_Confine": 0.5
                       },
-                      "compSUM": 245167.2882
+                      "compSUM": 1098349.451136
                     }
                   ]
                 ],
@@ -91,29 +92,29 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
-                  "_BGM": "State_Spacetrain_Combat_Argenti",
-                  "_BindingMazeBuff": "3110006"
+                  "_BGM": "State_Xianzhou_Exalting_Sanctum_Combat_Abundant_Ebon_Deer",
+                  "_BindingMazeBuff": "3110018"
                 },
-                "highSTSUM": 245167.2882,
-                "aoeSUM": 245167.2882
+                "highSTSUM": 1098349.451136,
+                "aoeSUM": 1098349.451136
               }
             ]
           },
           "stage2": {
             "ids": [
-              420481
+              420511
             ],
             "stageDataArray": [
               {
-                "stageName": "The Ravaged Unconquerable",
+                "stageName": "Hellcharred Shadow General",
                 "enemyLevel": 60,
                 "modifiersToAdd": [],
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
-                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_006",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_018",
                   "BEKey": -838314705,
                   "name": "Ruinous Embers",
-                  "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies, recovers their Skill Points, and activates their Ultimates.\\nIncreases the Skill DMG taken by all enemies by #1[i]% and increases Ultimate DMG taken by #2[i]%.",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is Weakness Broken, dispels control debuffs for all ally targets and activates their Ultimates.\\nIncreases Skill DMG taken by all enemy targets by #1[i]% and increases Elation DMG taken by #2[i]%.",
                   "battleDesc": null,
                   "buffType": "",
                   "params": [
@@ -125,52 +126,55 @@ let mocSchedule = [
                 "enemyList": [
                   [
                     {
-                      "name": "The Ravaged Unconquerable",
-                      "id": 401401301,
-                      "image": 4014013,
-                      "rank": "LittleBoss",
-                      "attackBase": 270.642312,
+                      "name": "Hellcharred Shadow General",
+                      "id": 203501201,
+                      "image": 2035012,
+                      "rank": "BigBoss",
+                      "attackBase": 304.472601,
                       "defBase": 800.00004,
-                      "hpBase": 343234.20348,
-                      "speedBase": 120,
+                      "hpBase": [
+                        471947.029785,
+                        471947.029785
+                      ],
+                      "speedBase": 144,
                       "critDMG": 0.2,
                       "effectRES": 0.34,
                       "ehr": 0.08,
                       "delay": 1,
                       "toughnessBars": 1,
-                      "toughnessElement": "Imaginary",
+                      "toughnessElement": "Wind",
                       "hpBars": 2,
                       "compEN": 1,
-                      "compACT": 10.5448296,
-                      "toughnessBase": 480,
+                      "compACT": 13.181037,
+                      "toughnessBase": 280,
                       "weaknessList": [
+                        "Physical",
                         "Fire",
-                        "Ice",
                         "Thunder",
                         "Quantum"
                       ],
                       "resistances": {
-                        "Physical": 0.4,
+                        "Ice": 0.4,
                         "Wind": 0.4,
                         "Imaginary": 0.4
                       },
                       "resistancesDebuff": {
-                        "STAT_CTRL": 0.5
+                        "STAT_CTRL": 1
                       },
-                      "compSUM": 686468.40696
+                      "compSUM": 943894.05957
                     }
                   ]
                 ],
-                "scalarElite": 896,
+                "scalarElite": 701,
                 "scalarHard": 1,
                 "configData": {
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
-                  "_BGM": "State_Amphoreus_Combat_Boss_Hearse",
-                  "_BindingMazeBuff": "3110006"
+                  "_BGM": "State_Xianzhou_Combat_Feixiao_P1",
+                  "_BindingMazeBuff": "3110018"
                 },
-                "highSTSUM": 686468.40696,
-                "aoeSUM": 686468.40696
+                "highSTSUM": 943894.05957,
+                "aoeSUM": 943894.05957
               }
             ]
           }
@@ -179,7 +183,7 @@ let mocSchedule = [
           "tagList": [
             {
               "name": "Steadfast Safeguard",
-              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is Broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
                 0.5,
                 1,
@@ -187,75 +191,66 @@ let mocSchedule = [
               ]
             },
             {
-              "name": "Reversal of Fortune",
-              "desc": "Boss Mirage can switch its own Combat Stance in battle and summon different statues to fight. When characters defeat statues in the \"Soulfreed\" state, DMG dealt by the team in this battle will be increased.",
+              "name": "Bountiful Prosperity",
+              "desc": "When the Boss Mirage's summons are defeated, it deals minor True DMG to this unit and slightly reduces its Toughness. If the defeated target is an Elite Enemy, it instead deals massive True DMG to this unit and massively reduces its Toughness. Then, it immediately summons new summons."
+            },
+            {
+              "name": "Like a Deer With Wings",
+              "desc": "The initial action value of the summons summoned via \"Heavenbound One And All\" and \"Heavenbound One And All: Enhanced\" is greatly advanced."
+            },
+            {
+              "name": "Dazzling Halo",
+              "desc": "While any type of \"Halo\" effect is active, all enemy targets that are not Weakness Broken take reduced DMG and deal increased DMG.",
               "extraEffects": [
-                122
-              ]
-            },
-            {
-              "name": "Turn Back the Tide",
-              "desc": "When Boss Mirage uses \"Soulfreed\" in Phase II, it will target all statues."
-            },
-            {
-              "name": "Stellar Aegis",
-              "desc": "For every unit on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG and deal more DMG.",
-              "params": [
-                0.05,
-                0.03
+                45
               ]
             }
           ],
           "textList": [
             {
-              "desc": "After Breaking Boss Mirage, the DMG it receives is greatly increased, Skill Points are recovered for the team, and the team's action is Advanced Forward."
+              "desc": "Proactively defeating the Boss Mirage's summons can effectively reduce the Boss Mirage's Toughness."
             },
             {
-              "desc": "Defeat or break summons first to effectively weaken Boss Mirage."
+              "desc": "Prioritize defeating the \"Ambrosial Arbor branch\" on the field to gain \"Power of Sustenance\" and increase the DMG dealt by damage-dealing ally characters."
+            },
+            {
+              "desc": "Defeat the \"Twig of Lavish Fruits\" as quickly as possible before it takes action to prevent it from continuously charging the Boss Mirage's \"Flamboyant Gore.\""
             }
           ],
           "phaseList": [
             {
-              "name": "Phase I — Power of Offense and Defense",
-              "desc": "Boss Mirage will summon 2 types of units: Speartip and Shield.",
-              "answer": "Strategy: Defeat the enhanced summons first to weaken Boss Mirage.",
+              "name": "Phase I: Army of Abundance",
+              "desc": "When combat begins, the Boss Mirage summons \"Abominations of Abundance\" and \"Ambrosial Arbor branch.\" When the summons are defeated, the Boss Mirage takes minor True DMG and has its Toughness reduced by a minor amount, then immediately summons new summons.",
+              "answer": "Strategy: Actively defeat summons to reduce the Boss Mirage's Toughness, and prioritize defeating the \"Ambrosial Arbor branch\" to stack \"Power of Sustenance.\"",
               "skillList": [
                 {
-                  "name": "Counters Speartip summons' DMG",
+                  "name": "How to efficiently reduce Boss Mirage's Toughness",
                   "descData": [
                     {
-                      "desc": "Defeat enhanced Speartip summons to enhance allies and weaken Boss Mirage."
+                      "desc": "Defeating \"Abominations of Abundance\" or \"Ambrosial Arbor branches\" deals True DMG to the Boss Mirage and reduces its Toughness."
                     }
                   ]
                 },
                 {
-                  "name": "Counters Boss Mirage's AoE DMG dealt when Shield summons are present",
+                  "name": "How to counter the \"Ambrosial Arbor branches'\" \"Halo\" effect",
                   "descData": [
                     {
-                      "desc": "Defeat Shield summons to gain a Shield and effectively increase survivability."
+                      "desc": "Prioritize defeating the \"Ambrosial Arbor branch\" to dispel the \"Halo\" effect and grant allies the \"Power of Sustenance,\" increasing DMG dealt."
                     }
                   ]
                 }
               ]
             },
             {
-              "name": "Phase II — Battle for Glory",
-              "desc": "Boss Mirage will additionally summon The Honored units.",
-              "answer": "Strategy: Defeat the enhanced summons first to weaken Boss Mirage.",
+              "name": "Phase II: Left and Right Lieutenants",
+              "desc": "When changing phases, the Boss Mirage summons \"Celestial Cherub\" and \"Celestial Maiden,\" and applies \"Right-Hand Man\" to them. While \"Right-Hand Man\" is on the field, DMG taken by the Boss Mirage is greatly reduced.",
+              "answer": "Strategy: Prioritize defeating the \"Right-Hand Man\" to weaken the Boss Mirage's DMG reduction effect, while also greatly reducing the Boss Mirage's Toughness.",
               "skillList": [
                 {
-                  "name": "Counters Boss Mirage being unselectable when The Honored summons are present",
+                  "name": "How to counter Boss Mirage's \"Flamboyant Gore\"",
                   "descData": [
                     {
-                      "desc": "When The Honored summons are present, Boss Mirage cannot be selected. It can only be targeted in the next action or after all The Honored summons are defeated."
-                    }
-                  ]
-                },
-                {
-                  "name": "Counters the massive DMG dealt by Boss Mirage using Undeniable Fate",
-                  "descData": [
-                    {
-                      "desc": "Defeat or break The Honored summons to reduce the DMG dealt by Boss Mirage's Undeniable Fate."
+                      "desc": "Every time \"Twig of Lavish Fruits\" uses an ability, it charges the Boss Mirage's \"Flamboyant Gore.\" Defeat \"Twig of Lavish Fruits\" as soon as possible to stop it from continuously charging \"Flamboyant Gore.\""
                     }
                   ]
                 }
@@ -264,15 +259,18 @@ let mocSchedule = [
           ],
           "difficultyList": [
             {
-              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is Broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
-              "desc": "\"Soulfreed\" summons will be greatly enhanced."
+              "desc": "When the Boss Mirage's summons are defeated, it deals minor True DMG to this unit and slightly reduces its Toughness. If the defeated target is an Elite Enemy, it instead deals massive True DMG to this unit and massively reduces its Toughness. Then, it immediately summons new summons."
+            },
+            {
+              "desc": "While \"Twig of Wintry Wind,\" \"Twig of Marple Leaf,\" and \"Twig of Glorious Blooms\" are on the field, they apply different Halo effects respectively to other units. After an ally unit defeats an \"Ambrosial Arbor branch,\" they gain 1 stack of \"Power of Sustenance,\" increasing DMG dealt."
             }
           ]
         },
@@ -280,91 +278,77 @@ let mocSchedule = [
           "tagList": [
             {
               "name": "Steadfast Safeguard",
-              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and increases its DMG taken by #2[i]%.",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
                 0.5,
-                1,
-                1.5
+                1
               ]
             },
             {
-              "name": "Ironclad Renitence",
-              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection.",
-              "extraEffects": [
-                250,
-                251
+              "name": "Steelbone Summit",
+              "desc": "Parts take #1[i]% less DMG. After Boss Mirage's Weakness is broken, the DMG they receive increases by #2[i]%.",
+              "params": [
+                0.5,
+                1
               ]
             },
             {
-              "name": "Taint of the Sublime",
-              "desc": "In Phase 2, the max stack of Boss Mirage's \"Centirefined War Armor\" will increase."
+              "name": "Sickleclawed Sawteeth",
+              "desc": "Boss Mirage's Toughness increases by #1[i].",
+              "params": [
+                40
+              ]
             },
             {
-              "name": "Protective Formation",
-              "desc": "For every unit on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG and deal more DMG."
+              "name": "Beastly Rage",
+              "desc": "The duration of \"Malediction\" state increases by #1[i] turn(s).",
+              "params": [
+                1
+              ]
             }
           ],
           "textList": [
             {
-              "desc": "Prioritize consuming Skill Points to gain \"Glory,\" increasing CRIT DMG dealt and reducing enemy \"War Armor\" stacks. Ally Skill Points can exceed the maximum limit."
+              "desc": "Weakness Break Boss Mirage's parts multiple times to effectively reduce Boss Mirage's Toughness. Break Boss Mirage to greatly increase the DMG taken by itself and all its parts, while recovering Skill Points and activating Ultimates for all allies."
             },
             {
-              "desc": "When enemy targets have \"War Armor\", their DEF is greatly increased. Reducing their \"War Armor\" will increase the DMG they take and recover Skill Points."
-            },
-            {
-              "desc": "In Phase 2, when summons have \"Centirefined War Armor\", the Boss Mirage's abilities will be enhanced. Prioritizing reducing the summons' \"Centirefined War Armor\" can effectively weaken the Boss Mirage's abilities."
+              "desc": "When \"Bloodstained Lupine\" replaces an ally character in battle, it will additionally reduce Toughness irrespective of Weakness Types based on the number of DoT debuffs inflicted on the enemy target attacked. \"Bloodstained Lupine's\" Basic ATK can restore HP for all ally targets, and its Skill can hit multiple enemy targets while greatly reducing their Toughness. This does not consume Skill Points."
             }
           ],
           "phaseList": [
             {
-              "name": "Phase 1: Iron Steeds and Golden Spears",
-              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them.",
-              "answer": "Strategy: Prioritize consuming Skill Points to gain \"Glory,\" which increases your CRIT DMG and reduces more stacks of \"War Armor\".",
+              "name": "Phase 1: Unyielding Winds",
+              "desc": "The Boss Mirage will use \"Soul-Shattering Malediction\" to inflict the \"Malediction\" effect on allies.",
+              "answer": "Strategy: When \"Soul-Shattering Malediction\" is used, prioritize selecting non-DMG dealing ally characters as the target of the ability.",
               "skillList": [
                 {
-                  "name": "How to obtain \"Glory\"",
+                  "name": "How to control \"Bloodstained Lupine\" in battle",
                   "descData": [
                     {
-                      "desc": "Ally units gain 1 stack of \"Glory\" for each Skill Point consumed (memomasters and their memosprites will share \"Glory\" stacks). Actively consuming Skill Points will quickly increase the number of \"Glory\" stacks."
+                      "desc": "Prioritize using \"Bloodstained Lupine's\" Skill to reduce the enemy target's Toughness. When all allies' HP are low, prioritize using \"Bloodstained Lupine's\" Basic ATK to quickly restore HP for allies."
                     }
                   ]
                 },
                 {
-                  "name": "How to reduce \"War Armor\"",
+                  "name": "Dispelling the \"Malediction\" state",
                   "descData": [
                     {
-                      "desc": "When an ally unit attacks an enemy target, it reduces their \"War Armor\" by an amount equal to the attacker's \"Glory\" stacks."
-                    }
-                  ]
-                },
-                {
-                  "name": "How to Efficiently Reduce Boss Mirage's Toughness",
-                  "descData": [
-                    {
-                      "desc": "Destroying the \"War Armor\" of the Boss Mirage will massively reduce its Toughness. Defeating the summons of the Boss Mirage will reduce its Toughness by a small amount."
+                      "desc": "When \"Bloodstained Lupine\" uses Basic ATK or Skill, gains 1 stack of \"Bloodthirst.\" When \"Bloodthirst\" stacks are maxed, dispels the \"Malediction\" effect. Causing Boss Mirage to enter the Weakness Broken state also dispels the \"Malediction\" effect."
                     }
                   ]
                 }
               ]
             },
             {
-              "name": "Phase 2: Face-off with the Enemy",
-              "desc": "The \"War Armor\" of Boss Mirage and its summons are enhanced into \"Centirefined War Armor.\" Summons with \"Centirefined War Armor\" enhance Boss Mirage's abilities.",
-              "answer": "Strategy: Reducing the \"Centirefined War Armor\" of the summons before each Boss Mirage's action can effectively weaken the Boss Mirage's abilities.",
+              "name": "Phase 2: Sweep the Heavens",
+              "desc": "The Boss Mirage will use \"Sweep the Heavens, Swallow the Earth\" to deal high DMG and debuffs.",
+              "answer": "Strategy: Do what you can to break all parts before \"Sweep the Heavens, Swallow the Earth\" is used.",
               "skillList": [
                 {
-                  "name": "Counter the Toughness Protection state of the Boss Mirage",
+                  "name": "How to face the DMG and debuffs dealt by \"Sweep the Heavens, Swallow the Earth\"",
                   "descData": [
                     {
-                      "desc": "When Boss Mirage's \"Centirefined War Armor\" stack count is greater than 0, it will be in a Toughness Protection state. Depleting its \"Centirefined War Armor\" will dispel the Toughness Protection state."
-                    }
-                  ]
-                },
-                {
-                  "name": "Counter the Boss Mirage's \"Centirefined Attack Ability\" and \"Fury Falls, and All Bows to Strife\"",
-                  "descData": [
-                    {
-                      "desc": "Reducing the \"Centirefined War Armor\" of the summons before each Boss Mirage's action can effectively weaken the Boss Mirage's abilities."
+                      "desc": "Use \"Bloodstained Lupine's\" Skill to hit multiple Boss Mirage parts to greatly reduce the Toughness of those parts. Alternatively, Break the Weakness of all parts to prevent the Boss from using \"Sweep the Heavens, Swallow the Earth.\""
                     }
                   ]
                 }
@@ -373,7 +357,7 @@ let mocSchedule = [
           ],
           "difficultyList": [
             {
-              "desc": "Boss Mirage and its summons take #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "desc": "Boss Mirage and all other parts take #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
                 0.5,
                 1,
@@ -381,33 +365,33 @@ let mocSchedule = [
               ]
             },
             {
-              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection."
+              "desc": "When the Boss Mirage's parts get Weakness Broken, the Toughness of the Boss Mirage will be reduced."
             },
             {
-              "desc": "At the start of combat, all allies gain 1 stack of \"Glory\". Ally units gain 1 stack of \"Glory\" for each Skill Point consumed (memomasters and their memosprites will share \"Glory\" stacks). Each stack of \"Glory\" increases CRIT DMG, and when enemy targets with \"War Armor\" are attacked, reduces their stacks of \"War Armor\" by an amount equal to the attacker's \"Glory\" stacks. Targets' Skill Points can exceed the maximum limit."
+              "desc": "When the Boss Mirage uses \"Soul-Shattering Malediction,\" causes ally characters to enter the \"Malediction\" state. Ally characters and summons in the \"Malediction\" state will Depart the field. At the same time, summons Bloodstained Lupine to replace the Departed character and continue the battle, and the \"Bloodstained Lupine\"'s attacks can cause heavy Toughness Reduction."
             }
           ]
         }
       },
       "2": {
-        "floorName": null,
+        "floorName": "Celestial Lupine: Difficulty 2",
         "sides": 2,
         "stageDataObject": {
           "stage1": {
             "ids": [
-              420472
+              420502
             ],
             "stageDataArray": [
               {
-                "stageName": "Silver Knight of Virtuous Gallantry",
+                "stageName": "Unwaning Ageless Immortal",
                 "enemyLevel": 70,
                 "modifiersToAdd": [],
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
-                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_006",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_018",
                   "BEKey": -838314705,
                   "name": "Ruinous Embers",
-                  "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies, recovers their Skill Points, and activates their Ultimates.\\nIncreases the Skill DMG taken by all enemies by #1[i]% and increases Ultimate DMG taken by #2[i]%.",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is Weakness Broken, dispels control debuffs for all ally targets and activates their Ultimates.\\nIncreases Skill DMG taken by all enemy targets by #1[i]% and increases Elation DMG taken by #2[i]%.",
                   "battleDesc": null,
                   "buffType": "",
                   "params": [
@@ -419,39 +403,40 @@ let mocSchedule = [
                 "enemyList": [
                   [
                     {
-                      "name": "Silver Knight of Virtuous Gallantry",
-                      "id": 302401302,
-                      "image": 3024013,
+                      "name": "Unwaning Ageless Immortal",
+                      "id": 202401602,
+                      "image": 2024016,
                       "rank": "LittleBoss",
                       "attackBase": 370.4342364,
                       "defBase": 899.99994,
-                      "hpBase": 441690.3405,
-                      "speedBase": 115.5,
+                      "hpBase": 1978772.72544,
+                      "speedBase": 132,
                       "critDMG": 0.2,
                       "effectRES": 0.38,
                       "ehr": 0.16,
                       "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
+                      "toughnessBars": 3,
+                      "toughnessElement": "Wind",
                       "hpBars": 2,
                       "compEN": 1,
                       "compACT": 75.98973600000001,
-                      "toughnessBase": 180,
+                      "toughnessBase": 240,
                       "weaknessList": [
                         "Physical",
                         "Fire",
                         "Ice",
-                        "Imaginary"
+                        "Quantum"
                       ],
                       "resistances": {
-                        "Thunder": 0.6,
+                        "Thunder": 0.4,
                         "Wind": 0.4,
-                        "Quantum": 0.4
+                        "Imaginary": 0.4
                       },
                       "resistancesDebuff": {
-                        "STAT_CTRL": 1
+                        "STAT_CTRL_Frozen": 0.5,
+                        "STAT_Confine": 0.5
                       },
-                      "compSUM": 883380.681
+                      "compSUM": 3957545.45088
                     }
                   ]
                 ],
@@ -460,29 +445,29 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
-                  "_BGM": "State_Spacetrain_Combat_Argenti",
-                  "_BindingMazeBuff": "3110006"
+                  "_BGM": "State_Xianzhou_Exalting_Sanctum_Combat_Abundant_Ebon_Deer",
+                  "_BindingMazeBuff": "3110018"
                 },
-                "highSTSUM": 883380.681,
-                "aoeSUM": 883380.681
+                "highSTSUM": 3957545.45088,
+                "aoeSUM": 3957545.45088
               }
             ]
           },
           "stage2": {
             "ids": [
-              420482
+              420512
             ],
             "stageDataArray": [
               {
-                "stageName": "The Ravaged Unconquerable",
+                "stageName": "Hellcharred Shadow General",
                 "enemyLevel": 70,
                 "modifiersToAdd": [],
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
-                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_006",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_018",
                   "BEKey": -838314705,
                   "name": "Ruinous Embers",
-                  "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies, recovers their Skill Points, and activates their Ultimates.\\nIncreases the Skill DMG taken by all enemies by #1[i]% and increases Ultimate DMG taken by #2[i]%.",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is Weakness Broken, dispels control debuffs for all ally targets and activates their Ultimates.\\nIncreases Skill DMG taken by all enemy targets by #1[i]% and increases Elation DMG taken by #2[i]%.",
                   "battleDesc": null,
                   "buffType": "",
                   "params": [
@@ -494,52 +479,55 @@ let mocSchedule = [
                 "enemyList": [
                   [
                     {
-                      "name": "The Ravaged Unconquerable",
-                      "id": 401401302,
-                      "image": 4014013,
-                      "rank": "LittleBoss",
-                      "attackBase": 392.2244856,
+                      "name": "Hellcharred Shadow General",
+                      "id": 203501202,
+                      "image": 2035012,
+                      "rank": "BigBoss",
+                      "attackBase": 435.804984,
                       "defBase": 899.99994,
-                      "hpBase": 1236732.9534,
-                      "speedBase": 132,
+                      "hpBase": [
+                        1700507.810925,
+                        1700507.810925
+                      ],
+                      "speedBase": 158.4,
                       "critDMG": 0.2,
                       "effectRES": 0.38,
                       "ehr": 0.16,
                       "delay": 1,
                       "toughnessBars": 1,
-                      "toughnessElement": "Imaginary",
+                      "toughnessElement": "Wind",
                       "hpBars": 2,
                       "compEN": 1,
-                      "compACT": 37.994868000000004,
-                      "toughnessBase": 480,
+                      "compACT": 47.493585,
+                      "toughnessBase": 280,
                       "weaknessList": [
+                        "Physical",
                         "Fire",
-                        "Ice",
                         "Thunder",
                         "Quantum"
                       ],
                       "resistances": {
-                        "Physical": 0.4,
+                        "Ice": 0.4,
                         "Wind": 0.4,
                         "Imaginary": 0.4
                       },
                       "resistancesDebuff": {
-                        "STAT_CTRL": 0.5
+                        "STAT_CTRL": 1
                       },
-                      "compSUM": 2473465.9068
+                      "compSUM": 3401015.62185
                     }
                   ]
                 ],
-                "scalarElite": 897,
+                "scalarElite": 702,
                 "scalarHard": 1,
                 "configData": {
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
-                  "_BGM": "State_Amphoreus_Combat_Boss_Hearse",
-                  "_BindingMazeBuff": "3110006"
+                  "_BGM": "State_Xianzhou_Combat_Feixiao_P1",
+                  "_BindingMazeBuff": "3110018"
                 },
-                "highSTSUM": 2473465.9068,
-                "aoeSUM": 2473465.9068
+                "highSTSUM": 3401015.62185,
+                "aoeSUM": 3401015.62185
               }
             ]
           }
@@ -548,7 +536,7 @@ let mocSchedule = [
           "tagList": [
             {
               "name": "Steadfast Safeguard",
-              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is Broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
                 0.5,
                 1,
@@ -556,75 +544,66 @@ let mocSchedule = [
               ]
             },
             {
-              "name": "Reversal of Fortune",
-              "desc": "Boss Mirage can switch its own Combat Stance in battle and summon different statues to fight. When characters defeat statues in the \"Soulfreed\" state, DMG dealt by the team in this battle will be increased.",
+              "name": "Bountiful Prosperity",
+              "desc": "When the Boss Mirage's summons are defeated, it deals minor True DMG to this unit and slightly reduces its Toughness. If the defeated target is an Elite Enemy, it instead deals massive True DMG to this unit and massively reduces its Toughness. Then, it immediately summons new summons."
+            },
+            {
+              "name": "Like a Deer With Wings",
+              "desc": "The initial action value of the summons summoned via \"Heavenbound One And All\" and \"Heavenbound One And All: Enhanced\" is greatly advanced."
+            },
+            {
+              "name": "Dazzling Halo",
+              "desc": "While any type of \"Halo\" effect is active, all enemy targets that are not Weakness Broken take reduced DMG and deal increased DMG.",
               "extraEffects": [
-                122
-              ]
-            },
-            {
-              "name": "Turn Back the Tide",
-              "desc": "When Boss Mirage uses \"Soulfreed\" in Phase II, it will target all statues."
-            },
-            {
-              "name": "Stellar Aegis",
-              "desc": "For every unit on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG and deal more DMG.",
-              "params": [
-                0.05,
-                0.03
+                45
               ]
             }
           ],
           "textList": [
             {
-              "desc": "After Breaking Boss Mirage, the DMG it receives is greatly increased, Skill Points are recovered for the team, and the team's action is Advanced Forward."
+              "desc": "Proactively defeating the Boss Mirage's summons can effectively reduce the Boss Mirage's Toughness."
             },
             {
-              "desc": "Defeat or break summons first to effectively weaken Boss Mirage."
+              "desc": "Prioritize defeating the \"Ambrosial Arbor branch\" on the field to gain \"Power of Sustenance\" and increase the DMG dealt by damage-dealing ally characters."
+            },
+            {
+              "desc": "Defeat the \"Twig of Lavish Fruits\" as quickly as possible before it takes action to prevent it from continuously charging the Boss Mirage's \"Flamboyant Gore.\""
             }
           ],
           "phaseList": [
             {
-              "name": "Phase I — Power of Offense and Defense",
-              "desc": "Boss Mirage will summon 2 types of units: Speartip and Shield.",
-              "answer": "Strategy: Defeat the enhanced summons first to weaken Boss Mirage.",
+              "name": "Phase I: Army of Abundance",
+              "desc": "When combat begins, the Boss Mirage summons \"Abominations of Abundance\" and \"Ambrosial Arbor branch.\" When the summons are defeated, the Boss Mirage takes minor True DMG and has its Toughness reduced by a minor amount, then immediately summons new summons.",
+              "answer": "Strategy: Actively defeat summons to reduce the Boss Mirage's Toughness, and prioritize defeating the \"Ambrosial Arbor branch\" to stack \"Power of Sustenance.\"",
               "skillList": [
                 {
-                  "name": "Counters Speartip summons' DMG",
+                  "name": "How to efficiently reduce Boss Mirage's Toughness",
                   "descData": [
                     {
-                      "desc": "Defeat enhanced Speartip summons to enhance allies and weaken Boss Mirage."
+                      "desc": "Defeating \"Abominations of Abundance\" or \"Ambrosial Arbor branches\" deals True DMG to the Boss Mirage and reduces its Toughness."
                     }
                   ]
                 },
                 {
-                  "name": "Counters Boss Mirage's AoE DMG dealt when Shield summons are present",
+                  "name": "How to counter the \"Ambrosial Arbor branches'\" \"Halo\" effect",
                   "descData": [
                     {
-                      "desc": "Defeat Shield summons to gain a Shield and effectively increase survivability."
+                      "desc": "Prioritize defeating the \"Ambrosial Arbor branch\" to dispel the \"Halo\" effect and grant allies the \"Power of Sustenance,\" increasing DMG dealt."
                     }
                   ]
                 }
               ]
             },
             {
-              "name": "Phase II — Battle for Glory",
-              "desc": "Boss Mirage will additionally summon The Honored units.",
-              "answer": "Strategy: Defeat the enhanced summons first to weaken Boss Mirage.",
+              "name": "Phase II: Left and Right Lieutenants",
+              "desc": "When changing phases, the Boss Mirage summons \"Celestial Cherub\" and \"Celestial Maiden,\" and applies \"Right-Hand Man\" to them. While \"Right-Hand Man\" is on the field, DMG taken by the Boss Mirage is greatly reduced.",
+              "answer": "Strategy: Prioritize defeating the \"Right-Hand Man\" to weaken the Boss Mirage's DMG reduction effect, while also greatly reducing the Boss Mirage's Toughness.",
               "skillList": [
                 {
-                  "name": "Counters Boss Mirage being unselectable when The Honored summons are present",
+                  "name": "How to counter Boss Mirage's \"Flamboyant Gore\"",
                   "descData": [
                     {
-                      "desc": "When The Honored summons are present, Boss Mirage cannot be selected. It can only be targeted in the next action or after all The Honored summons are defeated."
-                    }
-                  ]
-                },
-                {
-                  "name": "Counters the massive DMG dealt by Boss Mirage using Undeniable Fate",
-                  "descData": [
-                    {
-                      "desc": "Defeat or break The Honored summons to reduce the DMG dealt by Boss Mirage's Undeniable Fate."
+                      "desc": "Every time \"Twig of Lavish Fruits\" uses an ability, it charges the Boss Mirage's \"Flamboyant Gore.\" Defeat \"Twig of Lavish Fruits\" as soon as possible to stop it from continuously charging \"Flamboyant Gore.\""
                     }
                   ]
                 }
@@ -633,15 +612,18 @@ let mocSchedule = [
           ],
           "difficultyList": [
             {
-              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is Broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
-              "desc": "\"Soulfreed\" summons will be greatly enhanced."
+              "desc": "When the Boss Mirage's summons are defeated, it deals minor True DMG to this unit and slightly reduces its Toughness. If the defeated target is an Elite Enemy, it instead deals massive True DMG to this unit and massively reduces its Toughness. Then, it immediately summons new summons."
+            },
+            {
+              "desc": "While \"Twig of Wintry Wind,\" \"Twig of Marple Leaf,\" and \"Twig of Glorious Blooms\" are on the field, they apply different Halo effects respectively to other units. After an ally unit defeats an \"Ambrosial Arbor branch,\" they gain 1 stack of \"Power of Sustenance,\" increasing DMG dealt."
             }
           ]
         },
@@ -649,91 +631,77 @@ let mocSchedule = [
           "tagList": [
             {
               "name": "Steadfast Safeguard",
-              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and increases its DMG taken by #2[i]%.",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
                 0.5,
-                1,
-                1.5
+                1
               ]
             },
             {
-              "name": "Ironclad Renitence",
-              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection.",
-              "extraEffects": [
-                250,
-                251
+              "name": "Steelbone Summit",
+              "desc": "Parts take #1[i]% less DMG. After Boss Mirage's Weakness is broken, the DMG they receive increases by #2[i]%.",
+              "params": [
+                0.5,
+                1
               ]
             },
             {
-              "name": "Taint of the Sublime",
-              "desc": "In Phase 2, the max stack of Boss Mirage's \"Centirefined War Armor\" will increase."
+              "name": "Sickleclawed Sawteeth",
+              "desc": "Boss Mirage's Toughness increases by #1[i].",
+              "params": [
+                40
+              ]
             },
             {
-              "name": "Protective Formation",
-              "desc": "For every unit on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG and deal more DMG."
+              "name": "Beastly Rage",
+              "desc": "The duration of \"Malediction\" state increases by #1[i] turn(s).",
+              "params": [
+                1
+              ]
             }
           ],
           "textList": [
             {
-              "desc": "Prioritize consuming Skill Points to gain \"Glory,\" increasing CRIT DMG dealt and reducing enemy \"War Armor\" stacks. Ally Skill Points can exceed the maximum limit."
+              "desc": "Weakness Break Boss Mirage's parts multiple times to effectively reduce Boss Mirage's Toughness. Break Boss Mirage to greatly increase the DMG taken by itself and all its parts, while recovering Skill Points and activating Ultimates for all allies."
             },
             {
-              "desc": "When enemy targets have \"War Armor\", their DEF is greatly increased. Reducing their \"War Armor\" will increase the DMG they take and recover Skill Points."
-            },
-            {
-              "desc": "In Phase 2, when summons have \"Centirefined War Armor\", the Boss Mirage's abilities will be enhanced. Prioritizing reducing the summons' \"Centirefined War Armor\" can effectively weaken the Boss Mirage's abilities."
+              "desc": "When \"Bloodstained Lupine\" replaces an ally character in battle, it will additionally reduce Toughness irrespective of Weakness Types based on the number of DoT debuffs inflicted on the enemy target attacked. \"Bloodstained Lupine's\" Basic ATK can restore HP for all ally targets, and its Skill can hit multiple enemy targets while greatly reducing their Toughness. This does not consume Skill Points."
             }
           ],
           "phaseList": [
             {
-              "name": "Phase 1: Iron Steeds and Golden Spears",
-              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them.",
-              "answer": "Strategy: Prioritize consuming Skill Points to gain \"Glory,\" which increases your CRIT DMG and reduces more stacks of \"War Armor\".",
+              "name": "Phase 1: Unyielding Winds",
+              "desc": "The Boss Mirage will use \"Soul-Shattering Malediction\" to inflict the \"Malediction\" effect on allies.",
+              "answer": "Strategy: When \"Soul-Shattering Malediction\" is used, prioritize selecting non-DMG dealing ally characters as the target of the ability.",
               "skillList": [
                 {
-                  "name": "How to obtain \"Glory\"",
+                  "name": "How to control \"Bloodstained Lupine\" in battle",
                   "descData": [
                     {
-                      "desc": "Ally units gain 1 stack of \"Glory\" for each Skill Point consumed (memomasters and their memosprites will share \"Glory\" stacks). Actively consuming Skill Points will quickly increase the number of \"Glory\" stacks."
+                      "desc": "Prioritize using \"Bloodstained Lupine's\" Skill to reduce the enemy target's Toughness. When all allies' HP are low, prioritize using \"Bloodstained Lupine's\" Basic ATK to quickly restore HP for allies."
                     }
                   ]
                 },
                 {
-                  "name": "How to reduce \"War Armor\"",
+                  "name": "Dispelling the \"Malediction\" state",
                   "descData": [
                     {
-                      "desc": "When an ally unit attacks an enemy target, it reduces their \"War Armor\" by an amount equal to the attacker's \"Glory\" stacks."
-                    }
-                  ]
-                },
-                {
-                  "name": "How to Efficiently Reduce Boss Mirage's Toughness",
-                  "descData": [
-                    {
-                      "desc": "Destroying the \"War Armor\" of the Boss Mirage will massively reduce its Toughness. Defeating the summons of the Boss Mirage will reduce its Toughness by a small amount."
+                      "desc": "When \"Bloodstained Lupine\" uses Basic ATK or Skill, gains 1 stack of \"Bloodthirst.\" When \"Bloodthirst\" stacks are maxed, dispels the \"Malediction\" effect. Causing Boss Mirage to enter the Weakness Broken state also dispels the \"Malediction\" effect."
                     }
                   ]
                 }
               ]
             },
             {
-              "name": "Phase 2: Face-off with the Enemy",
-              "desc": "The \"War Armor\" of Boss Mirage and its summons are enhanced into \"Centirefined War Armor.\" Summons with \"Centirefined War Armor\" enhance Boss Mirage's abilities.",
-              "answer": "Strategy: Reducing the \"Centirefined War Armor\" of the summons before each Boss Mirage's action can effectively weaken the Boss Mirage's abilities.",
+              "name": "Phase 2: Sweep the Heavens",
+              "desc": "The Boss Mirage will use \"Sweep the Heavens, Swallow the Earth\" to deal high DMG and debuffs.",
+              "answer": "Strategy: Do what you can to break all parts before \"Sweep the Heavens, Swallow the Earth\" is used.",
               "skillList": [
                 {
-                  "name": "Counter the Toughness Protection state of the Boss Mirage",
+                  "name": "How to face the DMG and debuffs dealt by \"Sweep the Heavens, Swallow the Earth\"",
                   "descData": [
                     {
-                      "desc": "When Boss Mirage's \"Centirefined War Armor\" stack count is greater than 0, it will be in a Toughness Protection state. Depleting its \"Centirefined War Armor\" will dispel the Toughness Protection state."
-                    }
-                  ]
-                },
-                {
-                  "name": "Counter the Boss Mirage's \"Centirefined Attack Ability\" and \"Fury Falls, and All Bows to Strife\"",
-                  "descData": [
-                    {
-                      "desc": "Reducing the \"Centirefined War Armor\" of the summons before each Boss Mirage's action can effectively weaken the Boss Mirage's abilities."
+                      "desc": "Use \"Bloodstained Lupine's\" Skill to hit multiple Boss Mirage parts to greatly reduce the Toughness of those parts. Alternatively, Break the Weakness of all parts to prevent the Boss from using \"Sweep the Heavens, Swallow the Earth.\""
                     }
                   ]
                 }
@@ -742,7 +710,7 @@ let mocSchedule = [
           ],
           "difficultyList": [
             {
-              "desc": "Boss Mirage and its summons take #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "desc": "Boss Mirage and all other parts take #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
                 0.5,
                 1,
@@ -750,33 +718,33 @@ let mocSchedule = [
               ]
             },
             {
-              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection."
+              "desc": "When the Boss Mirage's parts get Weakness Broken, the Toughness of the Boss Mirage will be reduced."
             },
             {
-              "desc": "At the start of combat, all allies gain 1 stack of \"Glory\". Ally units gain 1 stack of \"Glory\" for each Skill Point consumed (memomasters and their memosprites will share \"Glory\" stacks). Each stack of \"Glory\" increases CRIT DMG, and when enemy targets with \"War Armor\" are attacked, reduces their stacks of \"War Armor\" by an amount equal to the attacker's \"Glory\" stacks. Targets' Skill Points can exceed the maximum limit."
+              "desc": "When the Boss Mirage uses \"Soul-Shattering Malediction,\" causes ally characters to enter the \"Malediction\" state. Ally characters and summons in the \"Malediction\" state will Depart the field. At the same time, summons Bloodstained Lupine to replace the Departed character and continue the battle, and the \"Bloodstained Lupine\"'s attacks can cause heavy Toughness Reduction."
             }
           ]
         }
       },
       "3": {
-        "floorName": null,
+        "floorName": "Celestial Lupine: Difficulty 3",
         "sides": 2,
         "stageDataObject": {
           "stage1": {
             "ids": [
-              420473
+              420503
             ],
             "stageDataArray": [
               {
-                "stageName": "Silver Knight of Virtuous Gallantry",
+                "stageName": "Unwaning Ageless Immortal",
                 "enemyLevel": 80,
                 "modifiersToAdd": [],
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
-                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_006",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_018",
                   "BEKey": -838314705,
                   "name": "Ruinous Embers",
-                  "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies, recovers their Skill Points, and activates their Ultimates.\\nIncreases the Skill DMG taken by all enemies by #1[i]% and increases Ultimate DMG taken by #2[i]%.",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is Weakness Broken, dispels control debuffs for all ally targets and activates their Ultimates.\\nIncreases Skill DMG taken by all enemy targets by #1[i]% and increases Elation DMG taken by #2[i]%.",
                   "battleDesc": null,
                   "buffType": "",
                   "params": [
@@ -788,39 +756,40 @@ let mocSchedule = [
                 "enemyList": [
                   [
                     {
-                      "name": "Silver Knight of Virtuous Gallantry",
-                      "id": 302401303,
-                      "image": 3024013,
+                      "name": "Unwaning Ageless Immortal",
+                      "id": 202401603,
+                      "image": 2024016,
                       "rank": "LittleBoss",
                       "attackBase": 469.4726664,
                       "defBase": 1000.00005,
-                      "hpBase": 1204439.67525,
-                      "speedBase": 126,
+                      "hpBase": 5395889.74512,
+                      "speedBase": 144,
                       "critDMG": 0.2,
                       "effectRES": 0.4,
                       "ehr": 0.24,
                       "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
+                      "toughnessBars": 3,
+                      "toughnessElement": "Wind",
                       "hpBars": 2,
                       "compEN": 1,
                       "compACT": 207.215428,
-                      "toughnessBase": 220,
+                      "toughnessBase": 240,
                       "weaknessList": [
                         "Physical",
                         "Fire",
                         "Ice",
-                        "Imaginary"
+                        "Quantum"
                       ],
                       "resistances": {
-                        "Thunder": 0.6,
+                        "Thunder": 0.4,
                         "Wind": 0.4,
-                        "Quantum": 0.4
+                        "Imaginary": 0.4
                       },
                       "resistancesDebuff": {
-                        "STAT_CTRL": 1
+                        "STAT_CTRL_Frozen": 0.5,
+                        "STAT_Confine": 0.5
                       },
-                      "compSUM": 2408879.3505
+                      "compSUM": 10791779.49024
                     }
                   ]
                 ],
@@ -829,29 +798,29 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
-                  "_BGM": "State_Spacetrain_Combat_Argenti",
-                  "_BindingMazeBuff": "3110006"
+                  "_BGM": "State_Xianzhou_Exalting_Sanctum_Combat_Abundant_Ebon_Deer",
+                  "_BindingMazeBuff": "3110018"
                 },
-                "highSTSUM": 2408879.3505,
-                "aoeSUM": 2408879.3505
+                "highSTSUM": 10791779.49024,
+                "aoeSUM": 10791779.49024
               }
             ]
           },
           "stage2": {
             "ids": [
-              420483
+              420513
             ],
             "stageDataArray": [
               {
-                "stageName": "The Ravaged Unconquerable",
+                "stageName": "Hellcharred Shadow General",
                 "enemyLevel": 80,
                 "modifiersToAdd": [],
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
-                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_006",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_018",
                   "BEKey": -838314705,
                   "name": "Ruinous Embers",
-                  "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies, recovers their Skill Points, and activates their Ultimates.\\nIncreases the Skill DMG taken by all enemies by #1[i]% and increases Ultimate DMG taken by #2[i]%.",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is Weakness Broken, dispels control debuffs for all ally targets and activates their Ultimates.\\nIncreases Skill DMG taken by all enemy targets by #1[i]% and increases Elation DMG taken by #2[i]%.",
                   "battleDesc": null,
                   "buffType": "",
                   "params": [
@@ -863,52 +832,55 @@ let mocSchedule = [
                 "enemyList": [
                   [
                     {
-                      "name": "The Ravaged Unconquerable",
-                      "id": 401401303,
-                      "image": 4014013,
-                      "rank": "LittleBoss",
-                      "attackBase": 497.0887056,
+                      "name": "Hellcharred Shadow General",
+                      "id": 203501203,
+                      "image": 2035012,
+                      "rank": "BigBoss",
+                      "attackBase": 552.320784,
                       "defBase": 1000.00005,
-                      "hpBase": 2649767.28555,
-                      "speedBase": 144,
+                      "hpBase": [
+                        4769581.11399,
+                        4769581.11399
+                      ],
+                      "speedBase": 172.8,
                       "critDMG": 0.2,
                       "effectRES": 0.4,
                       "ehr": 0.24,
                       "delay": 1,
                       "toughnessBars": 1,
-                      "toughnessElement": "Imaginary",
+                      "toughnessElement": "Wind",
                       "hpBars": 2,
                       "compEN": 1,
-                      "compACT": 81.40606100000001,
-                      "toughnessBase": 480,
+                      "compACT": 133.20991800000002,
+                      "toughnessBase": 280,
                       "weaknessList": [
+                        "Physical",
                         "Fire",
-                        "Ice",
                         "Thunder",
                         "Quantum"
                       ],
                       "resistances": {
-                        "Physical": 0.4,
+                        "Ice": 0.4,
                         "Wind": 0.4,
                         "Imaginary": 0.4
                       },
                       "resistancesDebuff": {
-                        "STAT_CTRL": 0.5
+                        "STAT_CTRL": 1
                       },
-                      "compSUM": 5299534.5711
+                      "compSUM": 9539162.22798
                     }
                   ]
                 ],
-                "scalarElite": 943,
+                "scalarElite": 703,
                 "scalarHard": 1,
                 "configData": {
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
-                  "_BGM": "State_Amphoreus_Combat_Boss_Hearse",
-                  "_BindingMazeBuff": "3110006"
+                  "_BGM": "State_Xianzhou_Combat_Feixiao_P1",
+                  "_BindingMazeBuff": "3110018"
                 },
-                "highSTSUM": 5299534.5711,
-                "aoeSUM": 5299534.5711
+                "highSTSUM": 9539162.22798,
+                "aoeSUM": 9539162.22798
               }
             ]
           }
@@ -917,7 +889,7 @@ let mocSchedule = [
           "tagList": [
             {
               "name": "Steadfast Safeguard",
-              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is Broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
                 0.5,
                 1,
@@ -925,75 +897,66 @@ let mocSchedule = [
               ]
             },
             {
-              "name": "Reversal of Fortune",
-              "desc": "Boss Mirage can switch its own Combat Stance in battle and summon different statues to fight. When characters defeat statues in the \"Soulfreed\" state, DMG dealt by the team in this battle will be increased.",
+              "name": "Bountiful Prosperity",
+              "desc": "When the Boss Mirage's summons are defeated, it deals minor True DMG to this unit and slightly reduces its Toughness. If the defeated target is an Elite Enemy, it instead deals massive True DMG to this unit and massively reduces its Toughness. Then, it immediately summons new summons."
+            },
+            {
+              "name": "Like a Deer With Wings",
+              "desc": "The initial action value of the summons summoned via \"Heavenbound One And All\" and \"Heavenbound One And All: Enhanced\" is greatly advanced."
+            },
+            {
+              "name": "Dazzling Halo",
+              "desc": "While any type of \"Halo\" effect is active, all enemy targets that are not Weakness Broken take reduced DMG and deal increased DMG.",
               "extraEffects": [
-                122
-              ]
-            },
-            {
-              "name": "Turn Back the Tide",
-              "desc": "When Boss Mirage uses \"Soulfreed\" in Phase II, it will target all statues."
-            },
-            {
-              "name": "Stellar Aegis",
-              "desc": "For every unit on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG and deal more DMG.",
-              "params": [
-                0.05,
-                0.03
+                45
               ]
             }
           ],
           "textList": [
             {
-              "desc": "After Breaking Boss Mirage, the DMG it receives is greatly increased, Skill Points are recovered for the team, and the team's action is Advanced Forward."
+              "desc": "Proactively defeating the Boss Mirage's summons can effectively reduce the Boss Mirage's Toughness."
             },
             {
-              "desc": "Defeat or break summons first to effectively weaken Boss Mirage."
+              "desc": "Prioritize defeating the \"Ambrosial Arbor branch\" on the field to gain \"Power of Sustenance\" and increase the DMG dealt by damage-dealing ally characters."
+            },
+            {
+              "desc": "Defeat the \"Twig of Lavish Fruits\" as quickly as possible before it takes action to prevent it from continuously charging the Boss Mirage's \"Flamboyant Gore.\""
             }
           ],
           "phaseList": [
             {
-              "name": "Phase I — Power of Offense and Defense",
-              "desc": "Boss Mirage will summon 2 types of units: Speartip and Shield.",
-              "answer": "Strategy: Defeat the enhanced summons first to weaken Boss Mirage.",
+              "name": "Phase I: Army of Abundance",
+              "desc": "When combat begins, the Boss Mirage summons \"Abominations of Abundance\" and \"Ambrosial Arbor branch.\" When the summons are defeated, the Boss Mirage takes minor True DMG and has its Toughness reduced by a minor amount, then immediately summons new summons.",
+              "answer": "Strategy: Actively defeat summons to reduce the Boss Mirage's Toughness, and prioritize defeating the \"Ambrosial Arbor branch\" to stack \"Power of Sustenance.\"",
               "skillList": [
                 {
-                  "name": "Counters Speartip summons' DMG",
+                  "name": "How to efficiently reduce Boss Mirage's Toughness",
                   "descData": [
                     {
-                      "desc": "Defeat enhanced Speartip summons to enhance allies and weaken Boss Mirage."
+                      "desc": "Defeating \"Abominations of Abundance\" or \"Ambrosial Arbor branches\" deals True DMG to the Boss Mirage and reduces its Toughness."
                     }
                   ]
                 },
                 {
-                  "name": "Counters Boss Mirage's AoE DMG dealt when Shield summons are present",
+                  "name": "How to counter the \"Ambrosial Arbor branches'\" \"Halo\" effect",
                   "descData": [
                     {
-                      "desc": "Defeat Shield summons to gain a Shield and effectively increase survivability."
+                      "desc": "Prioritize defeating the \"Ambrosial Arbor branch\" to dispel the \"Halo\" effect and grant allies the \"Power of Sustenance,\" increasing DMG dealt."
                     }
                   ]
                 }
               ]
             },
             {
-              "name": "Phase II — Battle for Glory",
-              "desc": "Boss Mirage will additionally summon The Honored units.",
-              "answer": "Strategy: Defeat the enhanced summons first to weaken Boss Mirage.",
+              "name": "Phase II: Left and Right Lieutenants",
+              "desc": "When changing phases, the Boss Mirage summons \"Celestial Cherub\" and \"Celestial Maiden,\" and applies \"Right-Hand Man\" to them. While \"Right-Hand Man\" is on the field, DMG taken by the Boss Mirage is greatly reduced.",
+              "answer": "Strategy: Prioritize defeating the \"Right-Hand Man\" to weaken the Boss Mirage's DMG reduction effect, while also greatly reducing the Boss Mirage's Toughness.",
               "skillList": [
                 {
-                  "name": "Counters Boss Mirage being unselectable when The Honored summons are present",
+                  "name": "How to counter Boss Mirage's \"Flamboyant Gore\"",
                   "descData": [
                     {
-                      "desc": "When The Honored summons are present, Boss Mirage cannot be selected. It can only be targeted in the next action or after all The Honored summons are defeated."
-                    }
-                  ]
-                },
-                {
-                  "name": "Counters the massive DMG dealt by Boss Mirage using Undeniable Fate",
-                  "descData": [
-                    {
-                      "desc": "Defeat or break The Honored summons to reduce the DMG dealt by Boss Mirage's Undeniable Fate."
+                      "desc": "Every time \"Twig of Lavish Fruits\" uses an ability, it charges the Boss Mirage's \"Flamboyant Gore.\" Defeat \"Twig of Lavish Fruits\" as soon as possible to stop it from continuously charging \"Flamboyant Gore.\""
                     }
                   ]
                 }
@@ -1002,18 +965,18 @@ let mocSchedule = [
           ],
           "difficultyList": [
             {
-              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is Broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
-              "desc": "\"Soulfreed\" summons will be greatly enhanced."
+              "desc": "When the Boss Mirage's summons are defeated, it deals minor True DMG to this unit and slightly reduces its Toughness. If the defeated target is an Elite Enemy, it instead deals massive True DMG to this unit and massively reduces its Toughness. Then, it immediately summons new summons."
             },
             {
-              "desc": "In Phase II, all summons will be enhanced to \"Soulfreed\" state."
+              "desc": "While \"Twig of Wintry Wind,\" \"Twig of Marple Leaf,\" and \"Twig of Glorious Blooms\" are on the field, they apply different Halo effects respectively to other units. After an ally unit defeats an \"Ambrosial Arbor branch,\" they gain 1 stack of \"Power of Sustenance,\" increasing DMG dealt."
             }
           ]
         },
@@ -1021,91 +984,77 @@ let mocSchedule = [
           "tagList": [
             {
               "name": "Steadfast Safeguard",
-              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and increases its DMG taken by #2[i]%.",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
                 0.5,
-                1,
-                1.5
+                1
               ]
             },
             {
-              "name": "Ironclad Renitence",
-              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection.",
-              "extraEffects": [
-                250,
-                251
+              "name": "Steelbone Summit",
+              "desc": "Parts take #1[i]% less DMG. After Boss Mirage's Weakness is broken, the DMG they receive increases by #2[i]%.",
+              "params": [
+                0.5,
+                1
               ]
             },
             {
-              "name": "Taint of the Sublime",
-              "desc": "In Phase 2, the max stack of Boss Mirage's \"Centirefined War Armor\" will increase."
+              "name": "Sickleclawed Sawteeth",
+              "desc": "Boss Mirage's Toughness increases by #1[i].",
+              "params": [
+                40
+              ]
             },
             {
-              "name": "Protective Formation",
-              "desc": "For every unit on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG and deal more DMG."
+              "name": "Beastly Rage",
+              "desc": "The duration of \"Malediction\" state increases by #1[i] turn(s).",
+              "params": [
+                1
+              ]
             }
           ],
           "textList": [
             {
-              "desc": "Prioritize consuming Skill Points to gain \"Glory,\" increasing CRIT DMG dealt and reducing enemy \"War Armor\" stacks. Ally Skill Points can exceed the maximum limit."
+              "desc": "Weakness Break Boss Mirage's parts multiple times to effectively reduce Boss Mirage's Toughness. Break Boss Mirage to greatly increase the DMG taken by itself and all its parts, while recovering Skill Points and activating Ultimates for all allies."
             },
             {
-              "desc": "When enemy targets have \"War Armor\", their DEF is greatly increased. Reducing their \"War Armor\" will increase the DMG they take and recover Skill Points."
-            },
-            {
-              "desc": "In Phase 2, when summons have \"Centirefined War Armor\", the Boss Mirage's abilities will be enhanced. Prioritizing reducing the summons' \"Centirefined War Armor\" can effectively weaken the Boss Mirage's abilities."
+              "desc": "When \"Bloodstained Lupine\" replaces an ally character in battle, it will additionally reduce Toughness irrespective of Weakness Types based on the number of DoT debuffs inflicted on the enemy target attacked. \"Bloodstained Lupine's\" Basic ATK can restore HP for all ally targets, and its Skill can hit multiple enemy targets while greatly reducing their Toughness. This does not consume Skill Points."
             }
           ],
           "phaseList": [
             {
-              "name": "Phase 1: Iron Steeds and Golden Spears",
-              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them.",
-              "answer": "Strategy: Prioritize consuming Skill Points to gain \"Glory,\" which increases your CRIT DMG and reduces more stacks of \"War Armor\".",
+              "name": "Phase 1: Unyielding Winds",
+              "desc": "The Boss Mirage will use \"Soul-Shattering Malediction\" to inflict the \"Malediction\" effect on allies.",
+              "answer": "Strategy: When \"Soul-Shattering Malediction\" is used, prioritize selecting non-DMG dealing ally characters as the target of the ability.",
               "skillList": [
                 {
-                  "name": "How to obtain \"Glory\"",
+                  "name": "How to control \"Bloodstained Lupine\" in battle",
                   "descData": [
                     {
-                      "desc": "Ally units gain 1 stack of \"Glory\" for each Skill Point consumed (memomasters and their memosprites will share \"Glory\" stacks). Actively consuming Skill Points will quickly increase the number of \"Glory\" stacks."
+                      "desc": "Prioritize using \"Bloodstained Lupine's\" Skill to reduce the enemy target's Toughness. When all allies' HP are low, prioritize using \"Bloodstained Lupine's\" Basic ATK to quickly restore HP for allies."
                     }
                   ]
                 },
                 {
-                  "name": "How to reduce \"War Armor\"",
+                  "name": "Dispelling the \"Malediction\" state",
                   "descData": [
                     {
-                      "desc": "When an ally unit attacks an enemy target, it reduces their \"War Armor\" by an amount equal to the attacker's \"Glory\" stacks."
-                    }
-                  ]
-                },
-                {
-                  "name": "How to Efficiently Reduce Boss Mirage's Toughness",
-                  "descData": [
-                    {
-                      "desc": "Destroying the \"War Armor\" of the Boss Mirage will massively reduce its Toughness. Defeating the summons of the Boss Mirage will reduce its Toughness by a small amount."
+                      "desc": "When \"Bloodstained Lupine\" uses Basic ATK or Skill, gains 1 stack of \"Bloodthirst.\" When \"Bloodthirst\" stacks are maxed, dispels the \"Malediction\" effect. Causing Boss Mirage to enter the Weakness Broken state also dispels the \"Malediction\" effect."
                     }
                   ]
                 }
               ]
             },
             {
-              "name": "Phase 2: Face-off with the Enemy",
-              "desc": "The \"War Armor\" of Boss Mirage and its summons are enhanced into \"Centirefined War Armor.\" Summons with \"Centirefined War Armor\" enhance Boss Mirage's abilities.",
-              "answer": "Strategy: Reducing the \"Centirefined War Armor\" of the summons before each Boss Mirage's action can effectively weaken the Boss Mirage's abilities.",
+              "name": "Phase 2: Sweep the Heavens",
+              "desc": "The Boss Mirage will use \"Sweep the Heavens, Swallow the Earth\" to deal high DMG and debuffs.",
+              "answer": "Strategy: Do what you can to break all parts before \"Sweep the Heavens, Swallow the Earth\" is used.",
               "skillList": [
                 {
-                  "name": "Counter the Toughness Protection state of the Boss Mirage",
+                  "name": "How to face the DMG and debuffs dealt by \"Sweep the Heavens, Swallow the Earth\"",
                   "descData": [
                     {
-                      "desc": "When Boss Mirage's \"Centirefined War Armor\" stack count is greater than 0, it will be in a Toughness Protection state. Depleting its \"Centirefined War Armor\" will dispel the Toughness Protection state."
-                    }
-                  ]
-                },
-                {
-                  "name": "Counter the Boss Mirage's \"Centirefined Attack Ability\" and \"Fury Falls, and All Bows to Strife\"",
-                  "descData": [
-                    {
-                      "desc": "Reducing the \"Centirefined War Armor\" of the summons before each Boss Mirage's action can effectively weaken the Boss Mirage's abilities."
+                      "desc": "Use \"Bloodstained Lupine's\" Skill to hit multiple Boss Mirage parts to greatly reduce the Toughness of those parts. Alternatively, Break the Weakness of all parts to prevent the Boss from using \"Sweep the Heavens, Swallow the Earth.\""
                     }
                   ]
                 }
@@ -1114,7 +1063,7 @@ let mocSchedule = [
           ],
           "difficultyList": [
             {
-              "desc": "Boss Mirage and its summons take #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "desc": "Boss Mirage and all other parts take #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
                 0.5,
                 1,
@@ -1122,33 +1071,33 @@ let mocSchedule = [
               ]
             },
             {
-              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection."
+              "desc": "When the Boss Mirage's parts get Weakness Broken, the Toughness of the Boss Mirage will be reduced."
             },
             {
-              "desc": "At the start of combat, all allies gain 1 stack of \"Glory\". Ally units gain 1 stack of \"Glory\" for each Skill Point consumed (memomasters and their memosprites will share \"Glory\" stacks). Each stack of \"Glory\" increases CRIT DMG, and when enemy targets with \"War Armor\" are attacked, reduces their stacks of \"War Armor\" by an amount equal to the attacker's \"Glory\" stacks. Targets' Skill Points can exceed the maximum limit."
+              "desc": "When the Boss Mirage uses \"Soul-Shattering Malediction,\" causes ally characters to enter the \"Malediction\" state. Ally characters and summons in the \"Malediction\" state will Depart the field. At the same time, summons Bloodstained Lupine to replace the Departed character and continue the battle, and the \"Bloodstained Lupine\"'s attacks can cause heavy Toughness Reduction."
             }
           ]
         }
       },
       "4": {
-        "floorName": null,
+        "floorName": "Celestial Lupine: Difficulty 4",
         "sides": 2,
         "stageDataObject": {
           "stage1": {
             "ids": [
-              420474
+              420504
             ],
             "stageDataArray": [
               {
-                "stageName": "Silver Knight of Virtuous Gallantry",
+                "stageName": "Unwaning Ageless Immortal",
                 "enemyLevel": 90,
                 "modifiersToAdd": [],
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
-                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_006",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_018",
                   "BEKey": -838314705,
                   "name": "Ruinous Embers",
-                  "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies, recovers their Skill Points, and activates their Ultimates.\\nIncreases the Skill DMG taken by all enemies by #1[i]% and increases Ultimate DMG taken by #2[i]%.",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is Weakness Broken, dispels control debuffs for all ally targets and activates their Ultimates.\\nIncreases Skill DMG taken by all enemy targets by #1[i]% and increases Elation DMG taken by #2[i]%.",
                   "battleDesc": null,
                   "buffType": "",
                   "params": [
@@ -1160,127 +1109,131 @@ let mocSchedule = [
                 "enemyList": [
                   [
                     {
-                      "name": "Silver Knight of Virtuous Gallantry",
-                      "id": 302401304,
-                      "image": 3024013,
+                      "name": "Unwaning Ageless Immortal",
+                      "id": 202401604,
+                      "image": 2024016,
                       "rank": "LittleBoss",
                       "attackBase": 662.784912,
                       "defBase": 1099.99995,
-                      "hpBase": 9349034.41275,
-                      "speedBase": 138.6,
-                      "critDMG": 0.2,
-                      "effectRES": 0.4,
-                      "ehr": 0.32,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 2,
-                      "compEN": 1,
-                      "compACT": 1608.4360279999999,
-                      "toughnessBase": 300,
-                      "weaknessList": [
-                        "Physical",
-                        "Fire",
-                        "Ice",
-                        "Imaginary"
-                      ],
-                      "resistances": {
-                        "Thunder": 0.6,
-                        "Wind": 0.4,
-                        "Quantum": 0.4
-                      },
-                      "resistancesDebuff": {
-                        "STAT_CTRL": 1
-                      },
-                      "compSUM": 18698068.8255
-                    }
-                  ]
-                ],
-                "scalarElite": 165,
-                "scalarHard": 1,
-                "configData": {
-                  "_Wave": "1",
-                  "_IsEliteBattle": "1",
-                  "_BGM": "State_Spacetrain_Combat_Argenti",
-                  "_BindingMazeBuff": "3110006"
-                },
-                "highSTSUM": 18698068.8255,
-                "aoeSUM": 18698068.8255
-              }
-            ]
-          },
-          "stage2": {
-            "ids": [
-              420484
-            ],
-            "stageDataArray": [
-              {
-                "stageName": "The Ravaged Unconquerable",
-                "enemyLevel": 90,
-                "modifiersToAdd": [],
-                "buffOverride": {
-                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
-                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_006",
-                  "BEKey": -838314705,
-                  "name": "Ruinous Embers",
-                  "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies, recovers their Skill Points, and activates their Ultimates.\\nIncreases the Skill DMG taken by all enemies by #1[i]% and increases Ultimate DMG taken by #2[i]%.",
-                  "battleDesc": null,
-                  "buffType": "",
-                  "params": [
-                    0.25,
-                    0.15
-                  ]
-                },
-                "stageType": "Challenge",
-                "enemyList": [
-                  [
-                    {
-                      "name": "The Ravaged Unconquerable",
-                      "id": 401401304,
-                      "image": 4014013,
-                      "rank": "LittleBoss",
-                      "attackBase": 662.784912,
-                      "defBase": 1099.99995,
-                      "hpBase": 14628489.13995,
+                      "hpBase": 13550600.46648,
                       "speedBase": 158.4,
                       "critDMG": 0.2,
                       "effectRES": 0.4,
                       "ehr": 0.32,
                       "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Imaginary",
+                      "toughnessBars": 3,
+                      "toughnessElement": "Wind",
                       "hpBars": 2,
                       "compEN": 1,
-                      "compACT": 449.41594899999996,
-                      "toughnessBase": 480,
+                      "compACT": 520.376362,
+                      "toughnessBase": 240,
                       "weaknessList": [
+                        "Physical",
                         "Fire",
                         "Ice",
-                        "Thunder",
                         "Quantum"
                       ],
                       "resistances": {
-                        "Physical": 0.4,
+                        "Thunder": 0.4,
                         "Wind": 0.4,
                         "Imaginary": 0.4
                       },
                       "resistancesDebuff": {
-                        "STAT_CTRL": 0.5
+                        "STAT_CTRL_Frozen": 0.5,
+                        "STAT_Confine": 0.5
                       },
-                      "compSUM": 29256978.2799
+                      "compSUM": 27101200.93296
                     }
                   ]
                 ],
-                "scalarElite": 89,
+                "scalarElite": 92,
                 "scalarHard": 1,
                 "configData": {
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
-                  "_BGM": "State_Amphoreus_Combat_Boss_Hearse",
-                  "_BindingMazeBuff": "3110006"
+                  "_BGM": "State_Xianzhou_Exalting_Sanctum_Combat_Abundant_Ebon_Deer",
+                  "_BindingMazeBuff": "3110018"
                 },
-                "highSTSUM": 29256978.2799,
-                "aoeSUM": 29256978.2799
+                "highSTSUM": 27101200.93296,
+                "aoeSUM": 27101200.93296
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              420514
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Hellcharred Shadow General",
+                "enemyLevel": 90,
+                "modifiersToAdd": [],
+                "buffOverride": {
+                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_018",
+                  "BEKey": -838314705,
+                  "name": "Ruinous Embers",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is Weakness Broken, dispels control debuffs for all ally targets and activates their Ultimates.\\nIncreases Skill DMG taken by all enemy targets by #1[i]% and increases Elation DMG taken by #2[i]%.",
+                  "battleDesc": null,
+                  "buffType": "",
+                  "params": [
+                    0.25,
+                    0.15
+                  ]
+                },
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Hellcharred Shadow General",
+                      "id": 203501204,
+                      "image": 2035012,
+                      "rank": "BigBoss",
+                      "attackBase": 662.784912,
+                      "defBase": 1099.99995,
+                      "hpBase": [
+                        19478988.170565,
+                        19478988.170565
+                      ],
+                      "speedBase": 190.08,
+                      "critDMG": 0.2,
+                      "effectRES": 0.4,
+                      "ehr": 0.32,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Wind",
+                      "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 544.0298329999999,
+                      "toughnessBase": 350,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Thunder",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Ice": 0.4,
+                        "Wind": 0.4,
+                        "Imaginary": 0.4
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL": 1
+                      },
+                      "compSUM": 38957976.34113
+                    }
+                  ]
+                ],
+                "scalarElite": 908,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "1",
+                  "_IsEliteBattle": "1",
+                  "_BGM": "State_Xianzhou_Combat_Feixiao_P1",
+                  "_BindingMazeBuff": "3110018"
+                },
+                "highSTSUM": 38957976.34113,
+                "aoeSUM": 38957976.34113
               }
             ]
           }
@@ -1289,7 +1242,7 @@ let mocSchedule = [
           "tagList": [
             {
               "name": "Steadfast Safeguard",
-              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is Broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
                 0.5,
                 1,
@@ -1297,75 +1250,66 @@ let mocSchedule = [
               ]
             },
             {
-              "name": "Reversal of Fortune",
-              "desc": "Boss Mirage can switch its own Combat Stance in battle and summon different statues to fight. When characters defeat statues in the \"Soulfreed\" state, DMG dealt by the team in this battle will be increased.",
+              "name": "Bountiful Prosperity",
+              "desc": "When the Boss Mirage's summons are defeated, it deals minor True DMG to this unit and slightly reduces its Toughness. If the defeated target is an Elite Enemy, it instead deals massive True DMG to this unit and massively reduces its Toughness. Then, it immediately summons new summons."
+            },
+            {
+              "name": "Like a Deer With Wings",
+              "desc": "The initial action value of the summons summoned via \"Heavenbound One And All\" and \"Heavenbound One And All: Enhanced\" is greatly advanced."
+            },
+            {
+              "name": "Dazzling Halo",
+              "desc": "While any type of \"Halo\" effect is active, all enemy targets that are not Weakness Broken take reduced DMG and deal increased DMG.",
               "extraEffects": [
-                122
-              ]
-            },
-            {
-              "name": "Turn Back the Tide",
-              "desc": "When Boss Mirage uses \"Soulfreed\" in Phase II, it will target all statues."
-            },
-            {
-              "name": "Stellar Aegis",
-              "desc": "For every unit on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG and deal more DMG.",
-              "params": [
-                0.05,
-                0.03
+                45
               ]
             }
           ],
           "textList": [
             {
-              "desc": "After Breaking Boss Mirage, the DMG it receives is greatly increased, Skill Points are recovered for the team, and the team's action is Advanced Forward."
+              "desc": "Proactively defeating the Boss Mirage's summons can effectively reduce the Boss Mirage's Toughness."
             },
             {
-              "desc": "Defeat or break summons first to effectively weaken Boss Mirage."
+              "desc": "Prioritize defeating the \"Ambrosial Arbor branch\" on the field to gain \"Power of Sustenance\" and increase the DMG dealt by damage-dealing ally characters."
+            },
+            {
+              "desc": "Defeat the \"Twig of Lavish Fruits\" as quickly as possible before it takes action to prevent it from continuously charging the Boss Mirage's \"Flamboyant Gore.\""
             }
           ],
           "phaseList": [
             {
-              "name": "Phase I — Power of Offense and Defense",
-              "desc": "Boss Mirage will summon 2 types of units: Speartip and Shield.",
-              "answer": "Strategy: Defeat the enhanced summons first to weaken Boss Mirage.",
+              "name": "Phase I: Army of Abundance",
+              "desc": "When combat begins, the Boss Mirage summons \"Abominations of Abundance\" and \"Ambrosial Arbor branch.\" When the summons are defeated, the Boss Mirage takes minor True DMG and has its Toughness reduced by a minor amount, then immediately summons new summons.",
+              "answer": "Strategy: Actively defeat summons to reduce the Boss Mirage's Toughness, and prioritize defeating the \"Ambrosial Arbor branch\" to stack \"Power of Sustenance.\"",
               "skillList": [
                 {
-                  "name": "Counters Speartip summons' DMG",
+                  "name": "How to efficiently reduce Boss Mirage's Toughness",
                   "descData": [
                     {
-                      "desc": "Defeat enhanced Speartip summons to enhance allies and weaken Boss Mirage."
+                      "desc": "Defeating \"Abominations of Abundance\" or \"Ambrosial Arbor branches\" deals True DMG to the Boss Mirage and reduces its Toughness."
                     }
                   ]
                 },
                 {
-                  "name": "Counters Boss Mirage's AoE DMG dealt when Shield summons are present",
+                  "name": "How to counter the \"Ambrosial Arbor branches'\" \"Halo\" effect",
                   "descData": [
                     {
-                      "desc": "Defeat Shield summons to gain a Shield and effectively increase survivability."
+                      "desc": "Prioritize defeating the \"Ambrosial Arbor branch\" to dispel the \"Halo\" effect and grant allies the \"Power of Sustenance,\" increasing DMG dealt."
                     }
                   ]
                 }
               ]
             },
             {
-              "name": "Phase II — Battle for Glory",
-              "desc": "Boss Mirage will additionally summon The Honored units.",
-              "answer": "Strategy: Defeat the enhanced summons first to weaken Boss Mirage.",
+              "name": "Phase II: Left and Right Lieutenants",
+              "desc": "When changing phases, the Boss Mirage summons \"Celestial Cherub\" and \"Celestial Maiden,\" and applies \"Right-Hand Man\" to them. While \"Right-Hand Man\" is on the field, DMG taken by the Boss Mirage is greatly reduced.",
+              "answer": "Strategy: Prioritize defeating the \"Right-Hand Man\" to weaken the Boss Mirage's DMG reduction effect, while also greatly reducing the Boss Mirage's Toughness.",
               "skillList": [
                 {
-                  "name": "Counters Boss Mirage being unselectable when The Honored summons are present",
+                  "name": "How to counter Boss Mirage's \"Flamboyant Gore\"",
                   "descData": [
                     {
-                      "desc": "When The Honored summons are present, Boss Mirage cannot be selected. It can only be targeted in the next action or after all The Honored summons are defeated."
-                    }
-                  ]
-                },
-                {
-                  "name": "Counters the massive DMG dealt by Boss Mirage using Undeniable Fate",
-                  "descData": [
-                    {
-                      "desc": "Defeat or break The Honored summons to reduce the DMG dealt by Boss Mirage's Undeniable Fate."
+                      "desc": "Every time \"Twig of Lavish Fruits\" uses an ability, it charges the Boss Mirage's \"Flamboyant Gore.\" Defeat \"Twig of Lavish Fruits\" as soon as possible to stop it from continuously charging \"Flamboyant Gore.\""
                     }
                   ]
                 }
@@ -1374,18 +1318,18 @@ let mocSchedule = [
           ],
           "difficultyList": [
             {
-              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is Broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
-                0.6,
-                1.25,
-                1
+                0.5,
+                1,
+                1.5
               ]
             },
             {
-              "desc": "\"Soulfreed\" summons will be greatly enhanced."
+              "desc": "When the Boss Mirage's summons are defeated, it deals minor True DMG to this unit and slightly reduces its Toughness. If the defeated target is an Elite Enemy, it instead deals massive True DMG to this unit and massively reduces its Toughness. Then, it immediately summons new summons."
             },
             {
-              "desc": "In Phase II, all summons will be enhanced to \"Soulfreed\" state."
+              "desc": "While \"Twig of Wintry Wind,\" \"Twig of Marple Leaf,\" and \"Twig of Glorious Blooms\" are on the field, they apply different Halo effects respectively to other units. After an ally unit defeats an \"Ambrosial Arbor branch,\" they gain 1 stack of \"Power of Sustenance,\" increasing DMG dealt."
             }
           ]
         },
@@ -1393,91 +1337,77 @@ let mocSchedule = [
           "tagList": [
             {
               "name": "Steadfast Safeguard",
-              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and increases its DMG taken by #2[i]%.",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
                 0.5,
-                1,
-                1.5
+                1
               ]
             },
             {
-              "name": "Ironclad Renitence",
-              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection.",
-              "extraEffects": [
-                250,
-                251
+              "name": "Steelbone Summit",
+              "desc": "Parts take #1[i]% less DMG. After Boss Mirage's Weakness is broken, the DMG they receive increases by #2[i]%.",
+              "params": [
+                0.5,
+                1
               ]
             },
             {
-              "name": "Taint of the Sublime",
-              "desc": "In Phase 2, the max stack of Boss Mirage's \"Centirefined War Armor\" will increase."
+              "name": "Sickleclawed Sawteeth",
+              "desc": "Boss Mirage's Toughness increases by #1[i].",
+              "params": [
+                40
+              ]
             },
             {
-              "name": "Protective Formation",
-              "desc": "For every unit on the enemy's side of the field aside from Boss Mirage, all enemies receive less DMG and deal more DMG."
+              "name": "Beastly Rage",
+              "desc": "The duration of \"Malediction\" state increases by #1[i] turn(s).",
+              "params": [
+                1
+              ]
             }
           ],
           "textList": [
             {
-              "desc": "Prioritize consuming Skill Points to gain \"Glory,\" increasing CRIT DMG dealt and reducing enemy \"War Armor\" stacks. Ally Skill Points can exceed the maximum limit."
+              "desc": "Weakness Break Boss Mirage's parts multiple times to effectively reduce Boss Mirage's Toughness. Break Boss Mirage to greatly increase the DMG taken by itself and all its parts, while recovering Skill Points and activating Ultimates for all allies."
             },
             {
-              "desc": "When enemy targets have \"War Armor\", their DEF is greatly increased. Reducing their \"War Armor\" will increase the DMG they take and recover Skill Points."
-            },
-            {
-              "desc": "In Phase 2, when summons have \"Centirefined War Armor\", the Boss Mirage's abilities will be enhanced. Prioritizing reducing the summons' \"Centirefined War Armor\" can effectively weaken the Boss Mirage's abilities."
+              "desc": "When \"Bloodstained Lupine\" replaces an ally character in battle, it will additionally reduce Toughness irrespective of Weakness Types based on the number of DoT debuffs inflicted on the enemy target attacked. \"Bloodstained Lupine's\" Basic ATK can restore HP for all ally targets, and its Skill can hit multiple enemy targets while greatly reducing their Toughness. This does not consume Skill Points."
             }
           ],
           "phaseList": [
             {
-              "name": "Phase 1: Iron Steeds and Golden Spears",
-              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them.",
-              "answer": "Strategy: Prioritize consuming Skill Points to gain \"Glory,\" which increases your CRIT DMG and reduces more stacks of \"War Armor\".",
+              "name": "Phase 1: Unyielding Winds",
+              "desc": "The Boss Mirage will use \"Soul-Shattering Malediction\" to inflict the \"Malediction\" effect on allies.",
+              "answer": "Strategy: When \"Soul-Shattering Malediction\" is used, prioritize selecting non-DMG dealing ally characters as the target of the ability.",
               "skillList": [
                 {
-                  "name": "How to obtain \"Glory\"",
+                  "name": "How to control \"Bloodstained Lupine\" in battle",
                   "descData": [
                     {
-                      "desc": "Ally units gain 1 stack of \"Glory\" for each Skill Point consumed (memomasters and their memosprites will share \"Glory\" stacks). Actively consuming Skill Points will quickly increase the number of \"Glory\" stacks."
+                      "desc": "Prioritize using \"Bloodstained Lupine's\" Skill to reduce the enemy target's Toughness. When all allies' HP are low, prioritize using \"Bloodstained Lupine's\" Basic ATK to quickly restore HP for allies."
                     }
                   ]
                 },
                 {
-                  "name": "How to reduce \"War Armor\"",
+                  "name": "Dispelling the \"Malediction\" state",
                   "descData": [
                     {
-                      "desc": "When an ally unit attacks an enemy target, it reduces their \"War Armor\" by an amount equal to the attacker's \"Glory\" stacks."
-                    }
-                  ]
-                },
-                {
-                  "name": "How to Efficiently Reduce Boss Mirage's Toughness",
-                  "descData": [
-                    {
-                      "desc": "Destroying the \"War Armor\" of the Boss Mirage will massively reduce its Toughness. Defeating the summons of the Boss Mirage will reduce its Toughness by a small amount."
+                      "desc": "When \"Bloodstained Lupine\" uses Basic ATK or Skill, gains 1 stack of \"Bloodthirst.\" When \"Bloodthirst\" stacks are maxed, dispels the \"Malediction\" effect. Causing Boss Mirage to enter the Weakness Broken state also dispels the \"Malediction\" effect."
                     }
                   ]
                 }
               ]
             },
             {
-              "name": "Phase 2: Face-off with the Enemy",
-              "desc": "The \"War Armor\" of Boss Mirage and its summons are enhanced into \"Centirefined War Armor.\" Summons with \"Centirefined War Armor\" enhance Boss Mirage's abilities.",
-              "answer": "Strategy: Reducing the \"Centirefined War Armor\" of the summons before each Boss Mirage's action can effectively weaken the Boss Mirage's abilities.",
+              "name": "Phase 2: Sweep the Heavens",
+              "desc": "The Boss Mirage will use \"Sweep the Heavens, Swallow the Earth\" to deal high DMG and debuffs.",
+              "answer": "Strategy: Do what you can to break all parts before \"Sweep the Heavens, Swallow the Earth\" is used.",
               "skillList": [
                 {
-                  "name": "Counter the Toughness Protection state of the Boss Mirage",
+                  "name": "How to face the DMG and debuffs dealt by \"Sweep the Heavens, Swallow the Earth\"",
                   "descData": [
                     {
-                      "desc": "When Boss Mirage's \"Centirefined War Armor\" stack count is greater than 0, it will be in a Toughness Protection state. Depleting its \"Centirefined War Armor\" will dispel the Toughness Protection state."
-                    }
-                  ]
-                },
-                {
-                  "name": "Counter the Boss Mirage's \"Centirefined Attack Ability\" and \"Fury Falls, and All Bows to Strife\"",
-                  "descData": [
-                    {
-                      "desc": "Reducing the \"Centirefined War Armor\" of the summons before each Boss Mirage's action can effectively weaken the Boss Mirage's abilities."
+                      "desc": "Use \"Bloodstained Lupine's\" Skill to hit multiple Boss Mirage parts to greatly reduce the Toughness of those parts. Alternatively, Break the Weakness of all parts to prevent the Boss from using \"Sweep the Heavens, Swallow the Earth.\""
                     }
                   ]
                 }
@@ -1486,7 +1416,7 @@ let mocSchedule = [
           ],
           "difficultyList": [
             {
-              "desc": "Boss Mirage and its summons take #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "desc": "Boss Mirage and all other parts take #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
                 0.5,
                 1,
@@ -1494,10 +1424,10 @@ let mocSchedule = [
               ]
             },
             {
-              "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection."
+              "desc": "When the Boss Mirage's parts get Weakness Broken, the Toughness of the Boss Mirage will be reduced."
             },
             {
-              "desc": "At the start of combat, all allies gain 1 stack of \"Glory\". Ally units gain 1 stack of \"Glory\" for each Skill Point consumed (memomasters and their memosprites will share \"Glory\" stacks). Each stack of \"Glory\" increases CRIT DMG, and when enemy targets with \"War Armor\" are attacked, reduces their stacks of \"War Armor\" by an amount equal to the attacker's \"Glory\" stacks. Targets' Skill Points can exceed the maximum limit."
+              "desc": "When the Boss Mirage uses \"Soul-Shattering Malediction,\" causes ally characters to enter the \"Malediction\" state. Ally characters and summons in the \"Malediction\" state will Depart the field. At the same time, summons Bloodstained Lupine to replace the Departed character and continue the battle, and the \"Bloodstained Lupine\"'s attacks can cause heavy Toughness Reduction."
             }
           ]
         },
@@ -1505,66 +1435,57 @@ let mocSchedule = [
           "tagList": [
             {
               "name": "Steadfast Safeguard",
-              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
                 0.5,
                 1,
-                1.5,
-                1
+                1.5
               ]
             },
             {
-              "name": "United Front",
-              "desc": "All enemy units take #1[i]% less DMG and possesses Switch Tally while in \"Classroom Channel.\" After Boss Mirage's Weakness is Broken, the DMG it receives increases by #2[i]%.",
-              "params": [
-                0.5,
-                1,
-                1.5,
-                1
-              ],
+              "name": "Biphasic Battlefield",
+              "desc": "The Boss Mirage will initiate a Live Showdown during combat, selecting one ally character to battle on the sub-field while the remaining characters stay on the prime-field to provide Support. Once the Live Showdown begins, enemy targets on the prime-field take reduced DMG and become immune to Crowd Control debuffs, and the Boss Mirage enters the \"Toughness Lock\" state. When the Boss Mirage's turn starts, both \"Ally Popularity\" and \"Enemy Popularity\" reset to their initial states.",
               "extraEffects": [
-                162
+                127,
+                292
               ]
             },
             {
-              "name": "Tally Loss",
-              "desc": "At the beginning of every turn, enemy units in \"Classroom Channel\" will lose a certain number in the Switch Tally.",
-              "extraEffects": [
-                162
-              ]
+              "name": "Popularity Burst",
+              "desc": "Increases the max \"Ally Popularity\" and \"Enemy Popularity.\""
             },
             {
-              "name": "SPD Boost",
-              "desc": "Increases SPD for \"End-of-Semester Dinner.\""
+              "name": "Basking in Popularity",
+              "desc": "For each \"Ally Popularity\" or \"Enemy Popularity\" that hasn't hit the Limit, DMG taken by all enemies is reduced."
             }
           ],
           "textList": [
             {
-              "desc": "Using abilities that do AoE ATKs can simultaneously accumulate the Switch Tallies for multiple enemy targets."
+              "desc": "Prioritize defeating all enemy targets in the sub-field to make the Boss Mirage disconnect from the Live Showdown and Weaken the Boss Mirage."
             },
             {
-              "desc": "Using abilities with high Toughness Reduction can rapidly Break the Weakness of units in the \"Classroom Channel\" state and cause them to switch channels."
+              "desc": "Actively attacking \"Output Port 1\" and \"Output Port 2\" on the prime-field will grant buffs to the ally character in the sub-field and reduce the HP of enemy targets on the sub-field."
             }
           ],
           "phaseList": [
             {
-              "name": "Blaznana Monkey Trick",
-              "desc": "Attacking units in the \"Classroom Channel\" state multiple times can switch it to the \"Off-Class Channel\" state and immediately obtain that unit's \"Off-Class Channel\" reward 1 time.",
-              "answer": "Strategy: Use abilities that do AoE ATKs to simultaneously accumulate the Switch Tallies for multiple enemy targets.",
+              "name": "Super Idol: Center of Attention",
+              "desc": "At the start of combat, when entering the second phase, and when Live Showdown begins, the Boss Mirage enters \"Toughness Lock\" state. When Live Showdown ends, the Boss Mirage's \"Toughness Lock\" state is dispelled.",
+              "answer": "Strategy: When the Boss Mirage initiates a Live Showdown, prioritize sending characters with higher DMG output to the sub-field. The remaining characters should focus on attacking \"Output Port 1\" and \"Output Port 2\" to provide support.",
               "skillList": [
                 {
-                  "name": "How to switch enemy units from \"Classroom Channel\" to \"Off-Class Channel\"",
+                  "name": "How to Efficiently Reduce Boss Mirage Toughness",
                   "descData": [
                     {
-                      "desc": "Attack enemy units in \"Classroom Channel\" multiple times to accumulate the Switch Tally. Once the tally is full, enemy units will change to \"Off-Class Channel.\" Breaking enemy units in \"Classroom Channel\" can also switch it to \"Off-Class Channel.\""
+                      "desc": "Defeat all enemy targets in the sub-field to end the Live Showdown, massively reduce the Boss Mirage's Toughness, and dispel the Boss Mirage's \"Toughness Lock\" state."
                     }
                   ]
                 },
                 {
-                  "name": "How to reduce Boss Mirage's Toughness",
+                  "name": "How to Support Sub-Field Characters",
                   "descData": [
                     {
-                      "desc": "Breaking enemy weakness can significantly reduce Boss Mirage's Toughness. When all enemies are Weakness Broken, attacking any enemy will also reduce Boss Mirage's Toughness. Can break enemy target's weakness via either Switch Tally or Toughness Reduction."
+                      "desc": "Characters remaining on the prime-field can attack \"Output Port 1\" and \"Output Port 2\" to provide buffs for the ally character on the sub-field and reduce the HP of enemy targets on the sub-field."
                     }
                   ]
                 }
@@ -1573,7 +1494,7 @@ let mocSchedule = [
           ],
           "difficultyList": [
             {
-              "desc": "All enemy units take #1[i]% less DMG. At the moment Boss Mirage's Weakness is Broken, Weakness Breaks all enemy units and causes its action to be additionally delayed and the DMG it receives increases by #2[i]%.",
+              "desc": "Boss Mirage and its summons take #1[i]% less DMG. After its Weakness is Broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
                 0.5,
                 1,
@@ -1581,10 +1502,10 @@ let mocSchedule = [
               ]
             },
             {
-              "desc": "Breaking enemy weakness can significantly reduce Boss Mirage's Toughness. When all enemies are Weakness Broken, attacking any enemy will also reduce Boss Mirage's Toughness."
+              "desc": "At the start of combat, when entering the second phase, and when Live Showdown begins, the Boss Mirage enters the \"Toughness Lock\" state. When Live Showdown ends, the Boss Mirage's \"Toughness Lock\" state is removed."
             },
             {
-              "desc": "After the enemy gets attacked a certain number of times or has their Toughness reduced, they will be inflicted with Weakness Break, granting a chance for \"Off-Class Channel.\""
+              "desc": "At the start of Boss Mirage's turn, both \"Ally Popularity\" and \"Enemy Popularity\" are reset to their initial states. When attacks cause \"Ally Popularity\" to reach its maximum or \"Enemy Popularity\" to reach its minimum, reduce the HP of all enemy targets on the sub-field and gain a certain amount of Punchline. When all enemy targets on the sub-field are eliminated, massively reduce Boss Mirage's Toughness and HP."
             }
           ]
         }
@@ -1595,19 +1516,19 @@ let mocSchedule = [
         "stageDataObject": {
           "stage1": {
             "ids": [
-              420494
+              420524
             ],
             "stageDataArray": [
               {
-                "stageName": "Blaznana Monkey Trick",
+                "stageName": "Super Idol: Center of Attention",
                 "enemyLevel": 90,
                 "modifiersToAdd": [],
                 "buffOverride": {
                   "modifierName": "ADV_StageAbility_MazeCommon_Empty",
-                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_006",
+                  "realModifierNamne": "StrongChallengeEX_Environment_StageAbility_018",
                   "BEKey": -838314705,
                   "name": "Ruinous Embers",
-                  "desc": "When an enemy with \"Steadfast Safeguard\" is Weakness Broken, dispels control states for all allies, recovers their Skill Points, and activates their Ultimates.\\nIncreases the Skill DMG taken by all enemies by #1[i]% and increases Ultimate DMG taken by #2[i]%.",
+                  "desc": "When an enemy target with \"Steadfast Safeguard\" is Weakness Broken, dispels control debuffs for all ally targets and activates their Ultimates.\\nIncreases Skill DMG taken by all enemy targets by #1[i]% and increases Elation DMG taken by #2[i]%.",
                   "battleDesc": null,
                   "buffType": "",
                   "params": [
@@ -1619,45 +1540,52 @@ let mocSchedule = [
                 "enemyList": [
                   [
                     {
-                      "name": "Blaznana Monkey Trick",
-                      "id": 300402104,
-                      "image": 3004021,
+                      "name": "Super Idol: Center of Attention",
+                      "id": 501401404,
+                      "image": 5014014,
                       "rank": "LittleBoss",
                       "attackBase": 662.784912,
                       "defBase": 1099.99995,
-                      "hpBase": 30026898.76095,
-                      "speedBase": 76,
+                      "hpBase": 30004901.03292,
+                      "speedBase": 158.4,
                       "critDMG": 0.2,
-                      "effectRES": 0.3,
+                      "effectRES": 0.4,
                       "ehr": 0.32,
-                      "delay": 1,
+                      "delay": 0.5,
                       "toughnessBars": 1,
-                      "toughnessElement": "Imaginary",
+                      "toughnessElement": "Quantum",
                       "hpBars": 2,
                       "compEN": 1,
-                      "compACT": 1537.4756149999998,
-                      "toughnessBase": [
-                        190,
-                        190
+                      "compACT": 1466.515202,
+                      "toughnessBase": 440,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Quantum",
+                        "Imaginary"
                       ],
-                      "weaknessList": [],
-                      "resistances": {},
-                      "resistancesDebuff": {
-                        "STAT_CTRL": 1
+                      "resistances": {
+                        "Ice": 0.4,
+                        "Thunder": 0.4,
+                        "Wind": 0.4
                       },
-                      "compSUM": 60053797.5219
+                      "resistancesDebuff": {
+                        "STAT_CTRL": 0.5
+                      },
+                      "compSUM": 60009802.06584
                     }
                   ]
                 ],
-                "scalarElite": 164,
+                "scalarElite": 163,
                 "scalarHard": 1,
                 "configData": {
                   "_Wave": "1",
                   "_IsEliteBattle": "1",
-                  "_BindingMazeBuff": "3110006"
+                  "_BGM": "State_Planarcadia_Combat_Vtuber_01",
+                  "_BindingMazeBuff": "3110018"
                 },
-                "highSTSUM": 60053797.5219,
-                "aoeSUM": 60053797.5219
+                "highSTSUM": 60009802.06584,
+                "aoeSUM": 60009802.06584
               }
             ]
           },
@@ -1670,66 +1598,57 @@ let mocSchedule = [
           "tagList": [
             {
               "name": "Steadfast Safeguard",
-              "desc": "Boss Mirage takes #1[i]% less DMG. After its Weakness is broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
+              "desc": "Boss Mirage takes #1[i]% less DMG. After Weakness is broken, action gets additionally delayed and DMG taken increases by #2[i]%.",
               "params": [
                 0.5,
                 1,
-                1.5,
-                1
+                1.5
               ]
             },
             {
-              "name": "United Front",
-              "desc": "All enemy units take #1[i]% less DMG and possesses Switch Tally while in \"Classroom Channel.\" After Boss Mirage's Weakness is Broken, the DMG it receives increases by #2[i]%.",
-              "params": [
-                0.5,
-                1,
-                1.5,
-                1
-              ],
+              "name": "Biphasic Battlefield",
+              "desc": "The Boss Mirage will initiate a Live Showdown during combat, selecting one ally character to battle on the sub-field while the remaining characters stay on the prime-field to provide Support. Once the Live Showdown begins, enemy targets on the prime-field take reduced DMG and become immune to Crowd Control debuffs, and the Boss Mirage enters the \"Toughness Lock\" state. When the Boss Mirage's turn starts, both \"Ally Popularity\" and \"Enemy Popularity\" reset to their initial states.",
               "extraEffects": [
-                162
+                127,
+                292
               ]
             },
             {
-              "name": "Tally Loss",
-              "desc": "At the beginning of every turn, enemy units in \"Classroom Channel\" will lose a certain number in the Switch Tally.",
-              "extraEffects": [
-                162
-              ]
+              "name": "Popularity Burst",
+              "desc": "Increases the max \"Ally Popularity\" and \"Enemy Popularity.\""
             },
             {
-              "name": "SPD Boost",
-              "desc": "Increases SPD for \"End-of-Semester Dinner.\""
+              "name": "Basking in Popularity",
+              "desc": "For each \"Ally Popularity\" or \"Enemy Popularity\" that hasn't hit the Limit, DMG taken by all enemies is reduced."
             }
           ],
           "textList": [
             {
-              "desc": "Using abilities that do AoE ATKs can simultaneously accumulate the Switch Tallies for multiple enemy targets."
+              "desc": "Prioritize defeating all enemy targets in the sub-field to make the Boss Mirage disconnect from the Live Showdown and Weaken the Boss Mirage."
             },
             {
-              "desc": "Using abilities with high Toughness Reduction can rapidly Break the Weakness of units in the \"Classroom Channel\" state and cause them to switch channels."
+              "desc": "Actively attacking \"Output Port 1\" and \"Output Port 2\" on the prime-field will grant buffs to the ally character in the sub-field and reduce the HP of enemy targets on the sub-field."
             }
           ],
           "phaseList": [
             {
-              "name": "Blaznana Monkey Trick",
-              "desc": "Attacking units in the \"Classroom Channel\" state multiple times can switch it to the \"Off-Class Channel\" state and immediately obtain that unit's \"Off-Class Channel\" reward 1 time.",
-              "answer": "Strategy: Use abilities that do AoE ATKs to simultaneously accumulate the Switch Tallies for multiple enemy targets.",
+              "name": "Super Idol: Center of Attention",
+              "desc": "At the start of combat, when entering the second phase, and when Live Showdown begins, the Boss Mirage enters \"Toughness Lock\" state. When Live Showdown ends, the Boss Mirage's \"Toughness Lock\" state is dispelled.",
+              "answer": "Strategy: When the Boss Mirage initiates a Live Showdown, prioritize sending characters with higher DMG output to the sub-field. The remaining characters should focus on attacking \"Output Port 1\" and \"Output Port 2\" to provide support.",
               "skillList": [
                 {
-                  "name": "How to switch enemy units from \"Classroom Channel\" to \"Off-Class Channel\"",
+                  "name": "How to Efficiently Reduce Boss Mirage Toughness",
                   "descData": [
                     {
-                      "desc": "Attack enemy units in \"Classroom Channel\" multiple times to accumulate the Switch Tally. Once the tally is full, enemy units will change to \"Off-Class Channel.\" Breaking enemy units in \"Classroom Channel\" can also switch it to \"Off-Class Channel.\""
+                      "desc": "Defeat all enemy targets in the sub-field to end the Live Showdown, massively reduce the Boss Mirage's Toughness, and dispel the Boss Mirage's \"Toughness Lock\" state."
                     }
                   ]
                 },
                 {
-                  "name": "How to reduce Boss Mirage's Toughness",
+                  "name": "How to Support Sub-Field Characters",
                   "descData": [
                     {
-                      "desc": "Breaking enemy weakness can significantly reduce Boss Mirage's Toughness. When all enemies are Weakness Broken, attacking any enemy will also reduce Boss Mirage's Toughness. Can break enemy target's weakness via either Switch Tally or Toughness Reduction."
+                      "desc": "Characters remaining on the prime-field can attack \"Output Port 1\" and \"Output Port 2\" to provide buffs for the ally character on the sub-field and reduce the HP of enemy targets on the sub-field."
                     }
                   ]
                 }
@@ -1738,7 +1657,7 @@ let mocSchedule = [
           ],
           "difficultyList": [
             {
-              "desc": "All enemy units take #1[i]% less DMG. At the moment Boss Mirage's Weakness is Broken, Weakness Breaks all enemy units and causes its action to be additionally delayed and the DMG it receives increases by #2[i]%.",
+              "desc": "Boss Mirage and its summons take #1[i]% less DMG. After its Weakness is Broken, its action is additionally delayed and the DMG it receives increases by #2[i]%.",
               "params": [
                 0.5,
                 1,
@@ -1746,10 +1665,10 @@ let mocSchedule = [
               ]
             },
             {
-              "desc": "Breaking enemy weakness can significantly reduce Boss Mirage's Toughness. When all enemies are Weakness Broken, attacking any enemy will also reduce Boss Mirage's Toughness."
+              "desc": "At the start of combat, when entering the second phase, and when Live Showdown begins, the Boss Mirage enters the \"Toughness Lock\" state. When Live Showdown ends, the Boss Mirage's \"Toughness Lock\" state is removed."
             },
             {
-              "desc": "After the enemy gets attacked a certain number of times or has their Toughness reduced, they will be inflicted with Weakness Break, granting a chance for \"Off-Class Channel.\""
+              "desc": "At the start of Boss Mirage's turn, both \"Ally Popularity\" and \"Enemy Popularity\" are reset to their initial states. When attacks cause \"Ally Popularity\" to reach its maximum or \"Enemy Popularity\" to reach its minimum, reduce the HP of all enemy targets on the sub-field and gain a certain amount of Punchline. When all enemy targets on the sub-field are eliminated, massively reduce Boss Mirage's Toughness and HP."
             }
           ]
         }
@@ -1758,56 +1677,15 @@ let mocSchedule = [
     "buffList1": [
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
-        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_077",
+        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_092",
         "BEKey": -243519640,
-        "name": "Shatterstrike",
-        "desc": "Increases Break DMG dealt by all allies by #1[i]%. When an enemy target enters the Weakness Break state, further increases Break DMG by #2[i]%. This effect can stack up to #3[i] time(s).",
+        "name": "Land of Fertility",
+        "desc": "Increases Skill and Ultimate DMG dealt by all allies by #1[i]%, and additionally increases Skill and Ultimate DMG dealt by the 1st character in the lineup by #2[i]%.",
         "battleDesc": null,
         "buffType": "",
         "params": [
-          0.1,
-          0.05,
-          4
-        ]
-      },
-      {
-        "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
-        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_078",
-        "BEKey": -243519640,
-        "name": "Linebreaker",
-        "desc": "The 1st character in the lineup ignores #1[i]% of the enemy target's DEF when dealing DMG.",
-        "battleDesc": null,
-        "buffType": "",
-        "params": [
-          0.15
-        ]
-      },
-      {
-        "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
-        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_058",
-        "BEKey": -243519640,
-        "name": "Blighted to the Bone",
-        "desc": "After an ally target deals DoT to an enemy, #1[i] Energy is regenerated. DoT dealt by all allies ignores #2[i]% of enemy targets' All-Type RES.",
-        "battleDesc": null,
-        "buffType": "",
-        "params": [
-          1,
-          0.4
-        ]
-      }
-    ],
-    "buffList2": [
-      {
-        "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
-        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_083",
-        "BEKey": -243519640,
-        "name": "Oppose With Tenderness",
-        "desc": "All allies' Elation DMG ignores #1[i]% of enemy target's All-Type RES. When an enemy target's \"War Armor\" or \"Centirefined War Armor\" are broken, gains #2[i] Punchline points.",
-        "battleDesc": null,
-        "buffType": "",
-        "params": [
-          0.15,
-          3
+          0.3,
+          0.3
         ]
       },
       {
@@ -1824,6 +1702,73 @@ let mocSchedule = [
       },
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
+        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_089",
+        "BEKey": -243519640,
+        "name": "Beaming Bliss",
+        "desc": "Increases Elation DMG taken by all enemies by #1[i]%. When there is a character following the Path of Elation on the team, increases the Weakness Break Efficiency of all allies by #2[i]%.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.3,
+          0.5
+        ]
+      }
+    ],
+    "buffList2": [
+      {
+        "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
+        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_093",
+        "BEKey": -243519640,
+        "name": "Literary Brilliance",
+        "desc": "Decreases the Wind RES and Lightning RES of all enemies by #1[i]%.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.4
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
+        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_080",
+        "BEKey": -243519640,
+        "name": "Past Life: Shadowed Reverie",
+        "desc": "When there are 3 ally memosprites or more currently on the field, increases all allies' DMG dealt by #1[i]%.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.6
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
+        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_058",
+        "BEKey": -243519640,
+        "name": "Blighted to the Bone",
+        "desc": "After an ally target deals DoT to an enemy, #1[i] Energy is regenerated. DoT dealt by all allies ignores #2[i]% of enemy targets' All-Type RES.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          1,
+          0.4
+        ]
+      }
+    ],
+    "buffListStarward": [
+      {
+        "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
+        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_089",
+        "BEKey": -243519640,
+        "name": "Beaming Bliss",
+        "desc": "Increases Elation DMG taken by all enemies by #1[i]%. When there is a character following the Path of Elation on the team, increases the Weakness Break Efficiency of all allies by #2[i]%.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.3,
+          0.5
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
         "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_079",
         "BEKey": -243519640,
         "name": "Unto Apotheosis",
@@ -1834,46 +1779,18 @@ let mocSchedule = [
           0.06,
           10
         ]
-      }
-    ],
-    "buffListStarward": [
-      {
-        "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
-        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_082",
-        "BEKey": -243519640,
-        "name": "Knowledge and Decorum",
-        "desc": "While any character following the Path of Erudition is in the team, increases all allies' All-Type RES PEN by #1[i]%.",
-        "battleDesc": null,
-        "buffType": "",
-        "params": [
-          0.25
-        ]
       },
       {
         "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
-        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_081",
+        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_068",
         "BEKey": -243519640,
-        "name": "Whirlwind Turn",
-        "desc": "After ally targets attack an enemy target with #1[i] or more DoT states, increases their SPD by #2[i]% for #3[i] turn(s).",
-        "battleDesc": null,
-        "buffType": "",
-        "params": [
-          1,
-          0.25,
-          3
-        ]
-      },
-      {
-        "modifierName": "ADV_StageAbility_MazeCommon_ChallengeBoss_Empty",
-        "realModifierNamne": "StrongChallengeEX_Talent_StageAbility_085",
-        "BEKey": -243519640,
-        "name": "Moment of Opportunity",
-        "desc": "Increases Follow-Up ATK and Ultimate DMG dealt by all allies by #1[i]%, and additionally increases by #2[i]% against enemy targets in Weakness Broken state.",
+        "name": "Armed Up",
+        "desc": "Increases Physical DMG dealt by all allies by #1[i]%, and decreases all enemies' Physical RES by #2[i]%.",
         "battleDesc": null,
         "buffType": "",
         "params": [
           0.5,
-          0.5
+          0.2
         ]
       }
     ]
@@ -2068,7 +1985,7 @@ let mocSchedule = [
               "name": "Reversal of Fortune",
               "desc": "Boss Mirage can switch its own Combat Stance in battle and summon different statues to fight. When characters defeat statues in the \"Soulfreed\" state, DMG dealt by the team in this battle will be increased.",
               "extraEffects": [
-                122
+                277
               ]
             },
             {
@@ -2169,8 +2086,8 @@ let mocSchedule = [
               "name": "Ironclad Renitence",
               "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection.",
               "extraEffects": [
-                250,
-                251
+                74,
+                75
               ]
             },
             {
@@ -2437,7 +2354,7 @@ let mocSchedule = [
               "name": "Reversal of Fortune",
               "desc": "Boss Mirage can switch its own Combat Stance in battle and summon different statues to fight. When characters defeat statues in the \"Soulfreed\" state, DMG dealt by the team in this battle will be increased.",
               "extraEffects": [
-                122
+                277
               ]
             },
             {
@@ -2538,8 +2455,8 @@ let mocSchedule = [
               "name": "Ironclad Renitence",
               "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection.",
               "extraEffects": [
-                250,
-                251
+                74,
+                75
               ]
             },
             {
@@ -2806,7 +2723,7 @@ let mocSchedule = [
               "name": "Reversal of Fortune",
               "desc": "Boss Mirage can switch its own Combat Stance in battle and summon different statues to fight. When characters defeat statues in the \"Soulfreed\" state, DMG dealt by the team in this battle will be increased.",
               "extraEffects": [
-                122
+                277
               ]
             },
             {
@@ -2910,8 +2827,8 @@ let mocSchedule = [
               "name": "Ironclad Renitence",
               "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection.",
               "extraEffects": [
-                250,
-                251
+                74,
+                75
               ]
             },
             {
@@ -3178,7 +3095,7 @@ let mocSchedule = [
               "name": "Reversal of Fortune",
               "desc": "Boss Mirage can switch its own Combat Stance in battle and summon different statues to fight. When characters defeat statues in the \"Soulfreed\" state, DMG dealt by the team in this battle will be increased.",
               "extraEffects": [
-                122
+                277
               ]
             },
             {
@@ -3282,8 +3199,8 @@ let mocSchedule = [
               "name": "Ironclad Renitence",
               "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection.",
               "extraEffects": [
-                250,
-                251
+                74,
+                75
               ]
             },
             {
@@ -3401,14 +3318,14 @@ let mocSchedule = [
                 1
               ],
               "extraEffects": [
-                162
+                288
               ]
             },
             {
               "name": "Tally Loss",
               "desc": "At the beginning of every turn, enemy units in \"Classroom Channel\" will lose a certain number in the Switch Tally.",
               "extraEffects": [
-                162
+                288
               ]
             },
             {
@@ -3566,14 +3483,14 @@ let mocSchedule = [
                 1
               ],
               "extraEffects": [
-                162
+                288
               ]
             },
             {
               "name": "Tally Loss",
               "desc": "At the beginning of every turn, enemy units in \"Classroom Channel\" will lose a certain number in the Switch Tally.",
               "extraEffects": [
-                162
+                288
               ]
             },
             {
@@ -3983,8 +3900,8 @@ let mocSchedule = [
               "name": "Singularity Split",
               "desc": "At the start of combat and during phase transitions, the Boss Mirage splits into 5 \"ichor memosprites\" and applies \"Monoform Merger\" to these summons. When all \"ichor memosprites\" with \"Monoform Merger\" enter the \"Feigned Death\" state, they merge back into the Boss Mirage.",
               "extraEffects": [
-                293,
-                294
+                98,
+                99
               ]
             },
             {
@@ -3995,7 +3912,7 @@ let mocSchedule = [
               "name": "Economies of Scale",
               "desc": "For every unit on the enemy's side of the field that is not in the \"Feigned Death\" state aside from Boss Mirage, all enemies receive less DMG and deal more DMG.",
               "extraEffects": [
-                294
+                99
               ]
             }
           ],
@@ -4067,14 +3984,14 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Gepard will join the battle and provide protection for Boss Mirage. Boss Mirage will Transfer its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
               "name": "Nowhere to Escape",
               "desc": "Boss Mirage's summon will mark 1 target. After Boss Mirage uses a single-target ability, it will deliver a Follow-Up Usage on the marked target.",
               "extraEffects": [
-                121
+                276
               ]
             },
             {
@@ -4368,8 +4285,8 @@ let mocSchedule = [
               "name": "Singularity Split",
               "desc": "At the start of combat and during phase transitions, the Boss Mirage splits into 5 \"ichor memosprites\" and applies \"Monoform Merger\" to these summons. When all \"ichor memosprites\" with \"Monoform Merger\" enter the \"Feigned Death\" state, they merge back into the Boss Mirage.",
               "extraEffects": [
-                293,
-                294
+                98,
+                99
               ]
             },
             {
@@ -4380,7 +4297,7 @@ let mocSchedule = [
               "name": "Economies of Scale",
               "desc": "For every unit on the enemy's side of the field that is not in the \"Feigned Death\" state aside from Boss Mirage, all enemies receive less DMG and deal more DMG.",
               "extraEffects": [
-                294
+                99
               ]
             }
           ],
@@ -4452,14 +4369,14 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Gepard will join the battle and provide protection for Boss Mirage. Boss Mirage will Transfer its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
               "name": "Nowhere to Escape",
               "desc": "Boss Mirage's summon will mark 1 target. After Boss Mirage uses a single-target ability, it will deliver a Follow-Up Usage on the marked target.",
               "extraEffects": [
-                121
+                276
               ]
             },
             {
@@ -4753,8 +4670,8 @@ let mocSchedule = [
               "name": "Singularity Split",
               "desc": "At the start of combat and during phase transitions, the Boss Mirage splits into 5 \"ichor memosprites\" and applies \"Monoform Merger\" to these summons. When all \"ichor memosprites\" with \"Monoform Merger\" enter the \"Feigned Death\" state, they merge back into the Boss Mirage.",
               "extraEffects": [
-                293,
-                294
+                98,
+                99
               ]
             },
             {
@@ -4765,7 +4682,7 @@ let mocSchedule = [
               "name": "Economies of Scale",
               "desc": "For every unit on the enemy's side of the field that is not in the \"Feigned Death\" state aside from Boss Mirage, all enemies receive less DMG and deal more DMG.",
               "extraEffects": [
-                294
+                99
               ]
             }
           ],
@@ -4837,14 +4754,14 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Gepard will join the battle and provide protection for Boss Mirage. Boss Mirage will Transfer its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
               "name": "Nowhere to Escape",
               "desc": "Boss Mirage's summon will mark 1 target. After Boss Mirage uses a single-target ability, it will deliver a Follow-Up Usage on the marked target.",
               "extraEffects": [
-                121
+                276
               ]
             },
             {
@@ -5141,8 +5058,8 @@ let mocSchedule = [
               "name": "Singularity Split",
               "desc": "At the start of combat and during phase transitions, the Boss Mirage splits into 5 \"ichor memosprites\" and applies \"Monoform Merger\" to these summons. When all \"ichor memosprites\" with \"Monoform Merger\" enter the \"Feigned Death\" state, they merge back into the Boss Mirage.",
               "extraEffects": [
-                293,
-                294
+                98,
+                99
               ]
             },
             {
@@ -5153,7 +5070,7 @@ let mocSchedule = [
               "name": "Economies of Scale",
               "desc": "For every unit on the enemy's side of the field that is not in the \"Feigned Death\" state aside from Boss Mirage, all enemies receive less DMG and deal more DMG.",
               "extraEffects": [
-                294
+                99
               ]
             }
           ],
@@ -5225,14 +5142,14 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Gepard will join the battle and provide protection for Boss Mirage. Boss Mirage will Transfer its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
               "name": "Nowhere to Escape",
               "desc": "Boss Mirage's summon will mark 1 target. After Boss Mirage uses a single-target ability, it will deliver a Follow-Up Usage on the marked target.",
               "extraEffects": [
-                121
+                276
               ]
             },
             {
@@ -5336,7 +5253,7 @@ let mocSchedule = [
               "name": "Shackle Shatter",
               "desc": "After losing the first layer of Toughness or after taking a certain number of actions, Boss Mirage enters the \"Shackle Shatter\" state, changes their attack patterns.",
               "extraEffects": [
-                214
+                88
               ]
             },
             {
@@ -5501,7 +5418,7 @@ let mocSchedule = [
               "name": "Shackle Shatter",
               "desc": "After losing the first layer of Toughness or after taking a certain number of actions, Boss Mirage enters the \"Shackle Shatter\" state, changes their attack patterns.",
               "extraEffects": [
-                214
+                88
               ]
             },
             {
@@ -5883,8 +5800,8 @@ let mocSchedule = [
               "name": "Biphasic Battlefield",
               "desc": "The Boss Mirage will initiate a Live Showdown during combat, selecting one ally character to battle on the sub-field while the remaining characters stay on the prime-field to provide Support. Once the Live Showdown begins, enemy targets on the prime-field take reduced DMG and become immune to Crowd Control debuffs, and the Boss Mirage enters the \"Toughness Lock\" state. When the Boss Mirage's turn starts, both \"Ally Popularity\" and \"Enemy Popularity\" reset to their initial states.",
               "extraEffects": [
-                265,
-                286
+                127,
+                292
               ]
             },
             {
@@ -5962,14 +5879,14 @@ let mocSchedule = [
               "name": "Insect Egg Fission",
               "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                176
+                289
               ]
             },
             {
               "name": "Hormone Secretion",
               "desc": "Every time Boss Mirage summons a certain number of Swarm summons, the next summon it summons will come automatically with 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                177
+                290
               ]
             },
             {
@@ -6227,8 +6144,8 @@ let mocSchedule = [
               "name": "Biphasic Battlefield",
               "desc": "The Boss Mirage will initiate a Live Showdown during combat, selecting one ally character to battle on the sub-field while the remaining characters stay on the prime-field to provide Support. Once the Live Showdown begins, enemy targets on the prime-field take reduced DMG and become immune to Crowd Control debuffs, and the Boss Mirage enters the \"Toughness Lock\" state. When the Boss Mirage's turn starts, both \"Ally Popularity\" and \"Enemy Popularity\" reset to their initial states.",
               "extraEffects": [
-                265,
-                286
+                127,
+                292
               ]
             },
             {
@@ -6306,14 +6223,14 @@ let mocSchedule = [
               "name": "Insect Egg Fission",
               "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                176
+                289
               ]
             },
             {
               "name": "Hormone Secretion",
               "desc": "Every time Boss Mirage summons a certain number of Swarm summons, the next summon it summons will come automatically with 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                177
+                290
               ]
             },
             {
@@ -6571,8 +6488,8 @@ let mocSchedule = [
               "name": "Biphasic Battlefield",
               "desc": "The Boss Mirage will initiate a Live Showdown during combat, selecting one ally character to battle on the sub-field while the remaining characters stay on the prime-field to provide Support. Once the Live Showdown begins, enemy targets on the prime-field take reduced DMG and become immune to Crowd Control debuffs, and the Boss Mirage enters the \"Toughness Lock\" state. When the Boss Mirage's turn starts, both \"Ally Popularity\" and \"Enemy Popularity\" reset to their initial states.",
               "extraEffects": [
-                265,
-                286
+                127,
+                292
               ]
             },
             {
@@ -6650,14 +6567,14 @@ let mocSchedule = [
               "name": "Insect Egg Fission",
               "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                176
+                289
               ]
             },
             {
               "name": "Hormone Secretion",
               "desc": "Every time Boss Mirage summons a certain number of Swarm summons, the next summon it summons will come automatically with 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                177
+                290
               ]
             },
             {
@@ -6915,8 +6832,8 @@ let mocSchedule = [
               "name": "Biphasic Battlefield",
               "desc": "The Boss Mirage will initiate a Live Showdown during combat, selecting one ally character to battle on the sub-field while the remaining characters stay on the prime-field to provide Support. Once the Live Showdown begins, enemy targets on the prime-field take reduced DMG and become immune to Crowd Control debuffs, and the Boss Mirage enters the \"Toughness Lock\" state. When the Boss Mirage's turn starts, both \"Ally Popularity\" and \"Enemy Popularity\" reset to their initial states.",
               "extraEffects": [
-                265,
-                286
+                127,
+                292
               ]
             },
             {
@@ -6994,14 +6911,14 @@ let mocSchedule = [
               "name": "Insect Egg Fission",
               "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                176
+                289
               ]
             },
             {
               "name": "Hormone Secretion",
               "desc": "Every time Boss Mirage summons a certain number of Swarm summons, the next summon it summons will come automatically with 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                177
+                290
               ]
             },
             {
@@ -7365,8 +7282,8 @@ let mocSchedule = [
               "name": "Ironclad Renitence",
               "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection.",
               "extraEffects": [
-                250,
-                251
+                74,
+                75
               ]
             },
             {
@@ -7736,8 +7653,8 @@ let mocSchedule = [
               "name": "Ironclad Renitence",
               "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection.",
               "extraEffects": [
-                250,
-                251
+                74,
+                75
               ]
             },
             {
@@ -8107,8 +8024,8 @@ let mocSchedule = [
               "name": "Ironclad Renitence",
               "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection.",
               "extraEffects": [
-                250,
-                251
+                74,
+                75
               ]
             },
             {
@@ -8478,8 +8395,8 @@ let mocSchedule = [
               "name": "Ironclad Renitence",
               "desc": "Boss Mirage and its summons have \"War Armor\", reducing DMG taken by them. In phase two, \"War Armor\" will be enhanced to \"Centirefined War Armor\", greatly increasing the maximum stack limit, and Boss Mirage will gain additional Toughness Protection.",
               "extraEffects": [
-                250,
-                251
+                74,
+                75
               ]
             },
             {
@@ -8951,7 +8868,7 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Boss Mirage summons 2 Elite Enemies to assist in battle. Boss Mirage will transmit its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                132
+                281
               ]
             },
             {
@@ -9318,7 +9235,7 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Boss Mirage summons 2 Elite Enemies to assist in battle. Boss Mirage will transmit its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                132
+                281
               ]
             },
             {
@@ -9685,7 +9602,7 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Boss Mirage summons 2 Elite Enemies to assist in battle. Boss Mirage will transmit its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                132
+                281
               ]
             },
             {
@@ -10052,7 +9969,7 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Boss Mirage summons 2 Elite Enemies to assist in battle. Boss Mirage will transmit its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                132
+                281
               ]
             },
             {
@@ -10515,7 +10432,7 @@ let mocSchedule = [
               "name": "Reversal of Fortune",
               "desc": "Boss Mirage can switch its own Combat Stance in battle and summon different statues to fight. When characters defeat statues in the \"Soulfreed\" state, DMG dealt by the team in this battle will be increased.",
               "extraEffects": [
-                122
+                277
               ]
             },
             {
@@ -10623,14 +10540,14 @@ let mocSchedule = [
                 1
               ],
               "extraEffects": [
-                162
+                288
               ]
             },
             {
               "name": "Tally Loss",
               "desc": "At the beginning of every turn, enemy units in \"Classroom Channel\" will lose a certain number in the Switch Tally.",
               "extraEffects": [
-                162
+                288
               ]
             },
             {
@@ -10852,7 +10769,7 @@ let mocSchedule = [
               "name": "Reversal of Fortune",
               "desc": "Boss Mirage can switch its own Combat Stance in battle and summon different statues to fight. When characters defeat statues in the \"Soulfreed\" state, DMG dealt by the team in this battle will be increased.",
               "extraEffects": [
-                122
+                277
               ]
             },
             {
@@ -10960,14 +10877,14 @@ let mocSchedule = [
                 1
               ],
               "extraEffects": [
-                162
+                288
               ]
             },
             {
               "name": "Tally Loss",
               "desc": "At the beginning of every turn, enemy units in \"Classroom Channel\" will lose a certain number in the Switch Tally.",
               "extraEffects": [
-                162
+                288
               ]
             },
             {
@@ -11189,7 +11106,7 @@ let mocSchedule = [
               "name": "Reversal of Fortune",
               "desc": "Boss Mirage can switch its own Combat Stance in battle and summon different statues to fight. When characters defeat statues in the \"Soulfreed\" state, DMG dealt by the team in this battle will be increased.",
               "extraEffects": [
-                122
+                277
               ]
             },
             {
@@ -11300,14 +11217,14 @@ let mocSchedule = [
                 1
               ],
               "extraEffects": [
-                162
+                288
               ]
             },
             {
               "name": "Tally Loss",
               "desc": "At the beginning of every turn, enemy units in \"Classroom Channel\" will lose a certain number in the Switch Tally.",
               "extraEffects": [
-                162
+                288
               ]
             },
             {
@@ -11529,7 +11446,7 @@ let mocSchedule = [
               "name": "Reversal of Fortune",
               "desc": "Boss Mirage can switch its own Combat Stance in battle and summon different statues to fight. When characters defeat statues in the \"Soulfreed\" state, DMG dealt by the team in this battle will be increased.",
               "extraEffects": [
-                122
+                277
               ]
             },
             {
@@ -11640,14 +11557,14 @@ let mocSchedule = [
                 1
               ],
               "extraEffects": [
-                162
+                288
               ]
             },
             {
               "name": "Tally Loss",
               "desc": "At the beginning of every turn, enemy units in \"Classroom Channel\" will lose a certain number in the Switch Tally.",
               "extraEffects": [
-                162
+                288
               ]
             },
             {
@@ -11983,14 +11900,14 @@ let mocSchedule = [
               "name": "Insect Egg Fission",
               "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                176
+                289
               ]
             },
             {
               "name": "Hormone Secretion",
               "desc": "Every time Boss Mirage summons a certain number of Swarm summons, the next summon it summons will come automatically with 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                177
+                290
               ]
             },
             {
@@ -12089,7 +12006,7 @@ let mocSchedule = [
               "name": "Flower By Another Name",
               "desc": "When a new Lotus is summoned, Boss Mirage will enter the \fToughness Protection state. Defeating any summon will dispel the Boss Mirage's Toughness Protection and deal additional Toughness Reduction to the Boss Mirage.",
               "extraEffects": [
-                124
+                279
               ]
             },
             {
@@ -12135,7 +12052,7 @@ let mocSchedule = [
                   ]
                 },
                 {
-                  "name": "Counter the Toughness Protection state of the Boss Mirage",
+                  "name": "Counters the Toughness Protection state of the Boss Mirage",
                   "descData": [
                     {
                       "desc": "Defeating any summon will dispel the Boss Mirage's Toughness Protection and deal additional Toughness Reduction to the Boss Mirage."
@@ -12158,7 +12075,7 @@ let mocSchedule = [
               "answer": "Strategy: Try to defeat the summoned entities before they use Eternal Condemnation to gain buffs and Weaken the power of Eternal Condemnation.",
               "skillList": [
                 {
-                  "name": "Counter the massive DMG from the Eternal Condemnation ability unleashed by the summons",
+                  "name": "Counters the massive DMG from the \"Eternal Condemnation\" ability unleashed by the summons",
                   "descData": [
                     {
                       "desc": "Defeat as many Lotus as possible before Eternal Condemnation is released to reduce its damage."
@@ -12360,14 +12277,14 @@ let mocSchedule = [
               "name": "Insect Egg Fission",
               "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                176
+                289
               ]
             },
             {
               "name": "Hormone Secretion",
               "desc": "Every time Boss Mirage summons a certain number of Swarm summons, the next summon it summons will come automatically with 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                177
+                290
               ]
             },
             {
@@ -12466,7 +12383,7 @@ let mocSchedule = [
               "name": "Flower By Another Name",
               "desc": "When a new Lotus is summoned, Boss Mirage will enter the \fToughness Protection state. Defeating any summon will dispel the Boss Mirage's Toughness Protection and deal additional Toughness Reduction to the Boss Mirage.",
               "extraEffects": [
-                124
+                279
               ]
             },
             {
@@ -12512,7 +12429,7 @@ let mocSchedule = [
                   ]
                 },
                 {
-                  "name": "Counter the Toughness Protection state of the Boss Mirage",
+                  "name": "Counters the Toughness Protection state of the Boss Mirage",
                   "descData": [
                     {
                       "desc": "Defeating any summon will dispel the Boss Mirage's Toughness Protection and deal additional Toughness Reduction to the Boss Mirage."
@@ -12535,7 +12452,7 @@ let mocSchedule = [
               "answer": "Strategy: Try to defeat the summoned entities before they use Eternal Condemnation to gain buffs and Weaken the power of Eternal Condemnation.",
               "skillList": [
                 {
-                  "name": "Counter the massive DMG from the Eternal Condemnation ability unleashed by the summons",
+                  "name": "Counters the massive DMG from the \"Eternal Condemnation\" ability unleashed by the summons",
                   "descData": [
                     {
                       "desc": "Defeat as many Lotus as possible before Eternal Condemnation is released to reduce its damage."
@@ -12737,14 +12654,14 @@ let mocSchedule = [
               "name": "Insect Egg Fission",
               "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                176
+                289
               ]
             },
             {
               "name": "Hormone Secretion",
               "desc": "Every time Boss Mirage summons a certain number of Swarm summons, the next summon it summons will come automatically with 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                177
+                290
               ]
             },
             {
@@ -12843,7 +12760,7 @@ let mocSchedule = [
               "name": "Flower By Another Name",
               "desc": "When a new Lotus is summoned, Boss Mirage will enter the \fToughness Protection state. Defeating any summon will dispel the Boss Mirage's Toughness Protection and deal additional Toughness Reduction to the Boss Mirage.",
               "extraEffects": [
-                124
+                279
               ]
             },
             {
@@ -12889,7 +12806,7 @@ let mocSchedule = [
                   ]
                 },
                 {
-                  "name": "Counter the Toughness Protection state of the Boss Mirage",
+                  "name": "Counters the Toughness Protection state of the Boss Mirage",
                   "descData": [
                     {
                       "desc": "Defeating any summon will dispel the Boss Mirage's Toughness Protection and deal additional Toughness Reduction to the Boss Mirage."
@@ -12912,7 +12829,7 @@ let mocSchedule = [
               "answer": "Strategy: Try to defeat the summoned entities before they use Eternal Condemnation to gain buffs and Weaken the power of Eternal Condemnation.",
               "skillList": [
                 {
-                  "name": "Counter the massive DMG from the Eternal Condemnation ability unleashed by the summons",
+                  "name": "Counters the massive DMG from the \"Eternal Condemnation\" ability unleashed by the summons",
                   "descData": [
                     {
                       "desc": "Defeat as many Lotus as possible before Eternal Condemnation is released to reduce its damage."
@@ -13114,14 +13031,14 @@ let mocSchedule = [
               "name": "Insect Egg Fission",
               "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                176
+                289
               ]
             },
             {
               "name": "Hormone Secretion",
               "desc": "Every time Boss Mirage summons a certain number of Swarm summons, the next summon it summons will come automatically with 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                177
+                290
               ]
             },
             {
@@ -13220,7 +13137,7 @@ let mocSchedule = [
               "name": "Flower By Another Name",
               "desc": "When a new Lotus is summoned, Boss Mirage will enter the \fToughness Protection state. Defeating any summon will dispel the Boss Mirage's Toughness Protection and deal additional Toughness Reduction to the Boss Mirage.",
               "extraEffects": [
-                124
+                279
               ]
             },
             {
@@ -13266,7 +13183,7 @@ let mocSchedule = [
                   ]
                 },
                 {
-                  "name": "Counter the Toughness Protection state of the Boss Mirage",
+                  "name": "Counters the Toughness Protection state of the Boss Mirage",
                   "descData": [
                     {
                       "desc": "Defeating any summon will dispel the Boss Mirage's Toughness Protection and deal additional Toughness Reduction to the Boss Mirage."
@@ -13289,7 +13206,7 @@ let mocSchedule = [
               "answer": "Strategy: Try to defeat the summoned entities before they use Eternal Condemnation to gain buffs and Weaken the power of Eternal Condemnation.",
               "skillList": [
                 {
-                  "name": "Counter the massive DMG from the Eternal Condemnation ability unleashed by the summons",
+                  "name": "Counters the massive DMG from the \"Eternal Condemnation\" ability unleashed by the summons",
                   "descData": [
                     {
                       "desc": "Defeat as many Lotus as possible before Eternal Condemnation is released to reduce its damage."
@@ -13628,14 +13545,14 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Gepard will join the battle and provide protection for Boss Mirage. Boss Mirage will Transfer its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
               "name": "Nowhere to Escape",
               "desc": "Boss Mirage's summon will mark 1 target. After Boss Mirage uses a single-target ability, it will deliver a Follow-Up Usage on the marked target.",
               "extraEffects": [
-                121
+                276
               ]
             },
             {
@@ -14016,14 +13933,14 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Gepard will join the battle and provide protection for Boss Mirage. Boss Mirage will Transfer its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
               "name": "Nowhere to Escape",
               "desc": "Boss Mirage's summon will mark 1 target. After Boss Mirage uses a single-target ability, it will deliver a Follow-Up Usage on the marked target.",
               "extraEffects": [
-                121
+                276
               ]
             },
             {
@@ -14404,14 +14321,14 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Gepard will join the battle and provide protection for Boss Mirage. Boss Mirage will Transfer its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
               "name": "Nowhere to Escape",
               "desc": "Boss Mirage's summon will mark 1 target. After Boss Mirage uses a single-target ability, it will deliver a Follow-Up Usage on the marked target.",
               "extraEffects": [
-                121
+                276
               ]
             },
             {
@@ -14795,14 +14712,14 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Gepard will join the battle and provide protection for Boss Mirage. Boss Mirage will Transfer its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
               "name": "Nowhere to Escape",
               "desc": "Boss Mirage's summon will mark 1 target. After Boss Mirage uses a single-target ability, it will deliver a Follow-Up Usage on the marked target.",
               "extraEffects": [
-                121
+                276
               ]
             },
             {
@@ -16776,7 +16693,7 @@ let mocSchedule = [
               "name": "Shackle Shatter",
               "desc": "After losing the first layer of Toughness or after taking a certain number of actions, Boss Mirage enters the \"Shackle Shatter\" state, changes their attack patterns.",
               "extraEffects": [
-                214
+                88
               ]
             },
             {
@@ -16852,14 +16769,14 @@ let mocSchedule = [
                 15
               ],
               "extraEffects": [
-                131
+                280
               ]
             },
             {
               "name": "Battlefield Transfer",
               "desc": "The Antimatter Engine transfers its own weakness type to Disaster's Right Hand and Dawn's Left Hand. However, when Disaster's Right Hand or Dawn's Left Hand is defeated, the Antimatter Engine's Toughness is additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
@@ -17100,7 +17017,7 @@ let mocSchedule = [
               "name": "Shackle Shatter",
               "desc": "After losing the first layer of Toughness or after taking a certain number of actions, Boss Mirage enters the \"Shackle Shatter\" state, changes their attack patterns.",
               "extraEffects": [
-                214
+                88
               ]
             },
             {
@@ -17176,14 +17093,14 @@ let mocSchedule = [
                 15
               ],
               "extraEffects": [
-                131
+                280
               ]
             },
             {
               "name": "Battlefield Transfer",
               "desc": "The Antimatter Engine transfers its own weakness type to Disaster's Right Hand and Dawn's Left Hand. However, when Disaster's Right Hand or Dawn's Left Hand is defeated, the Antimatter Engine's Toughness is additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
@@ -17424,7 +17341,7 @@ let mocSchedule = [
               "name": "Shackle Shatter",
               "desc": "After losing the first layer of Toughness or after taking a certain number of actions, Boss Mirage enters the \"Shackle Shatter\" state, changes their attack patterns.",
               "extraEffects": [
-                214
+                88
               ]
             },
             {
@@ -17500,14 +17417,14 @@ let mocSchedule = [
                 15
               ],
               "extraEffects": [
-                131
+                280
               ]
             },
             {
               "name": "Battlefield Transfer",
               "desc": "The Antimatter Engine transfers its own weakness type to Disaster's Right Hand and Dawn's Left Hand. However, when Disaster's Right Hand or Dawn's Left Hand is defeated, the Antimatter Engine's Toughness is additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
@@ -17748,7 +17665,7 @@ let mocSchedule = [
               "name": "Shackle Shatter",
               "desc": "After losing the first layer of Toughness or after taking a certain number of actions, Boss Mirage enters the \"Shackle Shatter\" state, changes their attack patterns.",
               "extraEffects": [
-                214
+                88
               ]
             },
             {
@@ -17824,14 +17741,14 @@ let mocSchedule = [
                 15
               ],
               "extraEffects": [
-                131
+                280
               ]
             },
             {
               "name": "Battlefield Transfer",
               "desc": "The Antimatter Engine transfers its own weakness type to Disaster's Right Hand and Dawn's Left Hand. However, when Disaster's Right Hand or Dawn's Left Hand is defeated, the Antimatter Engine's Toughness is additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
@@ -18207,14 +18124,14 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Gepard will join the battle and provide protection for Boss Mirage. Boss Mirage will Transfer its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
               "name": "Nowhere to Escape",
               "desc": "Boss Mirage's summon will mark 1 target. After Boss Mirage uses a single-target ability, it will deliver a Follow-Up Usage on the marked target.",
               "extraEffects": [
-                121
+                276
               ]
             },
             {
@@ -18318,7 +18235,7 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Boss Mirage summons 2 Elite Enemies to assist in battle. Boss Mirage will transmit its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                132
+                281
               ]
             },
             {
@@ -18626,14 +18543,14 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Gepard will join the battle and provide protection for Boss Mirage. Boss Mirage will Transfer its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
               "name": "Nowhere to Escape",
               "desc": "Boss Mirage's summon will mark 1 target. After Boss Mirage uses a single-target ability, it will deliver a Follow-Up Usage on the marked target.",
               "extraEffects": [
-                121
+                276
               ]
             },
             {
@@ -18737,7 +18654,7 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Boss Mirage summons 2 Elite Enemies to assist in battle. Boss Mirage will transmit its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                132
+                281
               ]
             },
             {
@@ -19045,14 +18962,14 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Gepard will join the battle and provide protection for Boss Mirage. Boss Mirage will Transfer its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
               "name": "Nowhere to Escape",
               "desc": "Boss Mirage's summon will mark 1 target. After Boss Mirage uses a single-target ability, it will deliver a Follow-Up Usage on the marked target.",
               "extraEffects": [
-                121
+                276
               ]
             },
             {
@@ -19159,7 +19076,7 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Boss Mirage summons 2 Elite Enemies to assist in battle. Boss Mirage will transmit its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                132
+                281
               ]
             },
             {
@@ -19467,14 +19384,14 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Gepard will join the battle and provide protection for Boss Mirage. Boss Mirage will Transfer its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
               "name": "Nowhere to Escape",
               "desc": "Boss Mirage's summon will mark 1 target. After Boss Mirage uses a single-target ability, it will deliver a Follow-Up Usage on the marked target.",
               "extraEffects": [
-                121
+                276
               ]
             },
             {
@@ -19581,7 +19498,7 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Boss Mirage summons 2 Elite Enemies to assist in battle. Boss Mirage will transmit its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                132
+                281
               ]
             },
             {
@@ -19967,14 +19884,14 @@ let mocSchedule = [
               "name": "Insect Egg Fission",
               "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                176
+                289
               ]
             },
             {
               "name": "Hormone Secretion",
               "desc": "Every time Boss Mirage summons a certain number of Swarm summons, the next summon it summons will come automatically with 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                177
+                290
               ]
             },
             {
@@ -20330,14 +20247,14 @@ let mocSchedule = [
               "name": "Insect Egg Fission",
               "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                176
+                289
               ]
             },
             {
               "name": "Hormone Secretion",
               "desc": "Every time Boss Mirage summons a certain number of Swarm summons, the next summon it summons will come automatically with 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                177
+                290
               ]
             },
             {
@@ -20693,14 +20610,14 @@ let mocSchedule = [
               "name": "Insect Egg Fission",
               "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                176
+                289
               ]
             },
             {
               "name": "Hormone Secretion",
               "desc": "Every time Boss Mirage summons a certain number of Swarm summons, the next summon it summons will come automatically with 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                177
+                290
               ]
             },
             {
@@ -21056,14 +20973,14 @@ let mocSchedule = [
               "name": "Insect Egg Fission",
               "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                176
+                289
               ]
             },
             {
               "name": "Hormone Secretion",
               "desc": "Every time Boss Mirage summons a certain number of Swarm summons, the next summon it summons will come automatically with 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                177
+                290
               ]
             },
             {
@@ -21515,7 +21432,7 @@ let mocSchedule = [
               "name": "Points Competition",
               "desc": "Boss Mirage's ability will grant all allies and enemies \fPoints",
               "extraEffects": [
-                152
+                285
               ]
             },
             {
@@ -21606,14 +21523,14 @@ let mocSchedule = [
                 1
               ],
               "extraEffects": [
-                162
+                288
               ]
             },
             {
               "name": "Tally Loss",
               "desc": "At the beginning of every turn, enemy units in \"Classroom Channel\" will lose a certain number in the Switch Tally.",
               "extraEffects": [
-                162
+                288
               ]
             },
             {
@@ -21841,7 +21758,7 @@ let mocSchedule = [
               "name": "Points Competition",
               "desc": "Boss Mirage's ability will grant all allies and enemies \fPoints",
               "extraEffects": [
-                152
+                285
               ]
             },
             {
@@ -21932,14 +21849,14 @@ let mocSchedule = [
                 1
               ],
               "extraEffects": [
-                162
+                288
               ]
             },
             {
               "name": "Tally Loss",
               "desc": "At the beginning of every turn, enemy units in \"Classroom Channel\" will lose a certain number in the Switch Tally.",
               "extraEffects": [
-                162
+                288
               ]
             },
             {
@@ -22167,7 +22084,7 @@ let mocSchedule = [
               "name": "Points Competition",
               "desc": "Boss Mirage's ability will grant all allies and enemies \fPoints",
               "extraEffects": [
-                152
+                285
               ]
             },
             {
@@ -22258,14 +22175,14 @@ let mocSchedule = [
                 1
               ],
               "extraEffects": [
-                162
+                288
               ]
             },
             {
               "name": "Tally Loss",
               "desc": "At the beginning of every turn, enemy units in \"Classroom Channel\" will lose a certain number in the Switch Tally.",
               "extraEffects": [
-                162
+                288
               ]
             },
             {
@@ -22493,7 +22410,7 @@ let mocSchedule = [
               "name": "Points Competition",
               "desc": "Boss Mirage's ability will grant all allies and enemies \fPoints",
               "extraEffects": [
-                152
+                285
               ]
             },
             {
@@ -22584,14 +22501,14 @@ let mocSchedule = [
                 1
               ],
               "extraEffects": [
-                162
+                288
               ]
             },
             {
               "name": "Tally Loss",
               "desc": "At the beginning of every turn, enemy units in \"Classroom Channel\" will lose a certain number in the Switch Tally.",
               "extraEffects": [
-                162
+                288
               ]
             },
             {
@@ -22929,14 +22846,14 @@ let mocSchedule = [
               "name": "Insect Egg Fission",
               "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                176
+                289
               ]
             },
             {
               "name": "Hormone Secretion",
               "desc": "Every time Boss Mirage summons a certain number of Swarm summons, the next summon it summons will come automatically with 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                177
+                290
               ]
             },
             {
@@ -23035,7 +22952,7 @@ let mocSchedule = [
               "name": "Flower By Another Name",
               "desc": "When a new Lotus is summoned, Boss Mirage will enter the \fToughness Protection state. Defeating any summon will dispel the Boss Mirage's Toughness Protection and deal additional Toughness Reduction to the Boss Mirage.",
               "extraEffects": [
-                124
+                279
               ]
             },
             {
@@ -23081,7 +22998,7 @@ let mocSchedule = [
                   ]
                 },
                 {
-                  "name": "Counter the Toughness Protection state of the Boss Mirage",
+                  "name": "Counters the Toughness Protection state of the Boss Mirage",
                   "descData": [
                     {
                       "desc": "Defeating any summon will dispel the Boss Mirage's Toughness Protection and deal additional Toughness Reduction to the Boss Mirage."
@@ -23104,7 +23021,7 @@ let mocSchedule = [
               "answer": "Strategy: Try to defeat the summoned entities before they use Eternal Condemnation to gain buffs and Weaken the power of Eternal Condemnation.",
               "skillList": [
                 {
-                  "name": "Counter the massive DMG from the Eternal Condemnation ability unleashed by the summons",
+                  "name": "Counters the massive DMG from the \"Eternal Condemnation\" ability unleashed by the summons",
                   "descData": [
                     {
                       "desc": "Defeat as many Lotus as possible before Eternal Condemnation is released to reduce its damage."
@@ -23306,14 +23223,14 @@ let mocSchedule = [
               "name": "Insect Egg Fission",
               "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                176
+                289
               ]
             },
             {
               "name": "Hormone Secretion",
               "desc": "Every time Boss Mirage summons a certain number of Swarm summons, the next summon it summons will come automatically with 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                177
+                290
               ]
             },
             {
@@ -23412,7 +23329,7 @@ let mocSchedule = [
               "name": "Flower By Another Name",
               "desc": "When a new Lotus is summoned, Boss Mirage will enter the \fToughness Protection state. Defeating any summon will dispel the Boss Mirage's Toughness Protection and deal additional Toughness Reduction to the Boss Mirage.",
               "extraEffects": [
-                124
+                279
               ]
             },
             {
@@ -23458,7 +23375,7 @@ let mocSchedule = [
                   ]
                 },
                 {
-                  "name": "Counter the Toughness Protection state of the Boss Mirage",
+                  "name": "Counters the Toughness Protection state of the Boss Mirage",
                   "descData": [
                     {
                       "desc": "Defeating any summon will dispel the Boss Mirage's Toughness Protection and deal additional Toughness Reduction to the Boss Mirage."
@@ -23481,7 +23398,7 @@ let mocSchedule = [
               "answer": "Strategy: Try to defeat the summoned entities before they use Eternal Condemnation to gain buffs and Weaken the power of Eternal Condemnation.",
               "skillList": [
                 {
-                  "name": "Counter the massive DMG from the Eternal Condemnation ability unleashed by the summons",
+                  "name": "Counters the massive DMG from the \"Eternal Condemnation\" ability unleashed by the summons",
                   "descData": [
                     {
                       "desc": "Defeat as many Lotus as possible before Eternal Condemnation is released to reduce its damage."
@@ -23683,14 +23600,14 @@ let mocSchedule = [
               "name": "Insect Egg Fission",
               "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                176
+                289
               ]
             },
             {
               "name": "Hormone Secretion",
               "desc": "Every time Boss Mirage summons a certain number of Swarm summons, the next summon it summons will come automatically with 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                177
+                290
               ]
             },
             {
@@ -23789,7 +23706,7 @@ let mocSchedule = [
               "name": "Flower By Another Name",
               "desc": "When a new Lotus is summoned, Boss Mirage will enter the \fToughness Protection state. Defeating any summon will dispel the Boss Mirage's Toughness Protection and deal additional Toughness Reduction to the Boss Mirage.",
               "extraEffects": [
-                124
+                279
               ]
             },
             {
@@ -23835,7 +23752,7 @@ let mocSchedule = [
                   ]
                 },
                 {
-                  "name": "Counter the Toughness Protection state of the Boss Mirage",
+                  "name": "Counters the Toughness Protection state of the Boss Mirage",
                   "descData": [
                     {
                       "desc": "Defeating any summon will dispel the Boss Mirage's Toughness Protection and deal additional Toughness Reduction to the Boss Mirage."
@@ -23858,7 +23775,7 @@ let mocSchedule = [
               "answer": "Strategy: Try to defeat the summoned entities before they use Eternal Condemnation to gain buffs and Weaken the power of Eternal Condemnation.",
               "skillList": [
                 {
-                  "name": "Counter the massive DMG from the Eternal Condemnation ability unleashed by the summons",
+                  "name": "Counters the massive DMG from the \"Eternal Condemnation\" ability unleashed by the summons",
                   "descData": [
                     {
                       "desc": "Defeat as many Lotus as possible before Eternal Condemnation is released to reduce its damage."
@@ -24060,14 +23977,14 @@ let mocSchedule = [
               "name": "Insect Egg Fission",
               "desc": "At the end of Boss Mirage's turn, Boss Mirage will gain a certain number of Insect Eggs. Boss Mirage can consume Insect Egg to enhance its Swarm summons and grant them 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                176
+                289
               ]
             },
             {
               "name": "Hormone Secretion",
               "desc": "Every time Boss Mirage summons a certain number of Swarm summons, the next summon it summons will come automatically with 1 stack of \"Growth Hormone.\"",
               "extraEffects": [
-                177
+                290
               ]
             },
             {
@@ -24166,7 +24083,7 @@ let mocSchedule = [
               "name": "Flower By Another Name",
               "desc": "When a new Lotus is summoned, Boss Mirage will enter the \fToughness Protection state. Defeating any summon will dispel the Boss Mirage's Toughness Protection and deal additional Toughness Reduction to the Boss Mirage.",
               "extraEffects": [
-                124
+                279
               ]
             },
             {
@@ -24212,7 +24129,7 @@ let mocSchedule = [
                   ]
                 },
                 {
-                  "name": "Counter the Toughness Protection state of the Boss Mirage",
+                  "name": "Counters the Toughness Protection state of the Boss Mirage",
                   "descData": [
                     {
                       "desc": "Defeating any summon will dispel the Boss Mirage's Toughness Protection and deal additional Toughness Reduction to the Boss Mirage."
@@ -24235,7 +24152,7 @@ let mocSchedule = [
               "answer": "Strategy: Try to defeat the summoned entities before they use Eternal Condemnation to gain buffs and Weaken the power of Eternal Condemnation.",
               "skillList": [
                 {
-                  "name": "Counter the massive DMG from the Eternal Condemnation ability unleashed by the summons",
+                  "name": "Counters the massive DMG from the \"Eternal Condemnation\" ability unleashed by the summons",
                   "descData": [
                     {
                       "desc": "Defeat as many Lotus as possible before Eternal Condemnation is released to reduce its damage."
@@ -24563,14 +24480,14 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Gepard will join the battle and provide protection for Boss Mirage. Boss Mirage will Transfer its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
               "name": "Nowhere to Escape",
               "desc": "Boss Mirage's summon will mark 1 target. After Boss Mirage uses a single-target ability, it will deliver a Follow-Up Usage on the marked target.",
               "extraEffects": [
-                121
+                276
               ]
             },
             {
@@ -24678,14 +24595,14 @@ let mocSchedule = [
                 1
               ],
               "extraEffects": [
-                162
+                288
               ]
             },
             {
               "name": "Tally Loss",
               "desc": "At the beginning of every turn, enemy units in \"Classroom Channel\" will lose a certain number in the Switch Tally.",
               "extraEffects": [
-                162
+                288
               ]
             },
             {
@@ -24942,14 +24859,14 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Gepard will join the battle and provide protection for Boss Mirage. Boss Mirage will Transfer its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
               "name": "Nowhere to Escape",
               "desc": "Boss Mirage's summon will mark 1 target. After Boss Mirage uses a single-target ability, it will deliver a Follow-Up Usage on the marked target.",
               "extraEffects": [
-                121
+                276
               ]
             },
             {
@@ -25057,14 +24974,14 @@ let mocSchedule = [
                 1
               ],
               "extraEffects": [
-                162
+                288
               ]
             },
             {
               "name": "Tally Loss",
               "desc": "At the beginning of every turn, enemy units in \"Classroom Channel\" will lose a certain number in the Switch Tally.",
               "extraEffects": [
-                162
+                288
               ]
             },
             {
@@ -25321,14 +25238,14 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Gepard will join the battle and provide protection for Boss Mirage. Boss Mirage will Transfer its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
               "name": "Nowhere to Escape",
               "desc": "Boss Mirage's summon will mark 1 target. After Boss Mirage uses a single-target ability, it will deliver a Follow-Up Usage on the marked target.",
               "extraEffects": [
-                121
+                276
               ]
             },
             {
@@ -25439,14 +25356,14 @@ let mocSchedule = [
                 1
               ],
               "extraEffects": [
-                162
+                288
               ]
             },
             {
               "name": "Tally Loss",
               "desc": "At the beginning of every turn, enemy units in \"Classroom Channel\" will lose a certain number in the Switch Tally.",
               "extraEffects": [
-                162
+                288
               ]
             },
             {
@@ -25703,14 +25620,14 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Gepard will join the battle and provide protection for Boss Mirage. Boss Mirage will Transfer its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
               "name": "Nowhere to Escape",
               "desc": "Boss Mirage's summon will mark 1 target. After Boss Mirage uses a single-target ability, it will deliver a Follow-Up Usage on the marked target.",
               "extraEffects": [
-                121
+                276
               ]
             },
             {
@@ -25821,14 +25738,14 @@ let mocSchedule = [
                 1
               ],
               "extraEffects": [
-                162
+                288
               ]
             },
             {
               "name": "Tally Loss",
               "desc": "At the beginning of every turn, enemy units in \"Classroom Channel\" will lose a certain number in the Switch Tally.",
               "extraEffects": [
-                162
+                288
               ]
             },
             {
@@ -26173,7 +26090,7 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Boss Mirage summons 2 Elite Enemies to assist in battle. Boss Mirage will transmit its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                132
+                281
               ]
             },
             {
@@ -26304,7 +26221,7 @@ let mocSchedule = [
                 0.4
               ],
               "extraEffects": [
-                161
+                287
               ]
             },
             {
@@ -26338,7 +26255,7 @@ let mocSchedule = [
                   ]
                 },
                 {
-                  "name": "Counter the DMG dealt by Boss Mirage's \"Dancing in Dreams\" and \"Singing in Rain\"",
+                  "name": "Counters the DMG dealt by Boss Mirage's \"Dancing in Dreams\" and \"Singing in Rain\"",
                   "descData": [
                     {
                       "desc": "Inflict Weakness Break on as many summons as possible to weaken the DMG of \"Dancing in Dreams\" and \"Singing in Rain.\" The more summons not Weakness Broken, the higher the DMG from Boss Mirage's \"Dancing in Dreams\" and \"Singing in Rain.\" When all summons are under the Weakness Broken state, Boss Mirage will have its Toughness reduced when it uses \"Dancing in Dreams\" and \"Singing in Rain.\""
@@ -26346,7 +26263,7 @@ let mocSchedule = [
                   ]
                 },
                 {
-                  "name": "Counter the control effect of \"Alien Dream\"",
+                  "name": "Counters the control effect of \"Alien Dream\"",
                   "descData": [
                     {
                       "desc": "Increases Effect RES or use abilities to dispel the \"Alien Dream\" state."
@@ -26361,7 +26278,7 @@ let mocSchedule = [
               "answer": "Strategy: Break enemy Weakness to Charge the \"Horizon's Echo From Afar\" and grant Shields to the team.",
               "skillList": [
                 {
-                  "name": "Counter the DMG dealt by Boss Mirage's \"Im Anfang war die Tat\"",
+                  "name": "Counters the DMG dealt by Boss Mirage's \"Im Anfang war die Tat\"",
                   "descData": [
                     {
                       "desc": "Break summons or reduce Boss Mirage's Toughness to gain Shield and withstand \"Im Anfang war die Tat.\""
@@ -26569,7 +26486,7 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Boss Mirage summons 2 Elite Enemies to assist in battle. Boss Mirage will transmit its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                132
+                281
               ]
             },
             {
@@ -26700,7 +26617,7 @@ let mocSchedule = [
                 0.4
               ],
               "extraEffects": [
-                161
+                287
               ]
             },
             {
@@ -26734,7 +26651,7 @@ let mocSchedule = [
                   ]
                 },
                 {
-                  "name": "Counter the DMG dealt by Boss Mirage's \"Dancing in Dreams\" and \"Singing in Rain\"",
+                  "name": "Counters the DMG dealt by Boss Mirage's \"Dancing in Dreams\" and \"Singing in Rain\"",
                   "descData": [
                     {
                       "desc": "Inflict Weakness Break on as many summons as possible to weaken the DMG of \"Dancing in Dreams\" and \"Singing in Rain.\" The more summons not Weakness Broken, the higher the DMG from Boss Mirage's \"Dancing in Dreams\" and \"Singing in Rain.\" When all summons are under the Weakness Broken state, Boss Mirage will have its Toughness reduced when it uses \"Dancing in Dreams\" and \"Singing in Rain.\""
@@ -26742,7 +26659,7 @@ let mocSchedule = [
                   ]
                 },
                 {
-                  "name": "Counter the control effect of \"Alien Dream\"",
+                  "name": "Counters the control effect of \"Alien Dream\"",
                   "descData": [
                     {
                       "desc": "Increases Effect RES or use abilities to dispel the \"Alien Dream\" state."
@@ -26757,7 +26674,7 @@ let mocSchedule = [
               "answer": "Strategy: Break enemy Weakness to Charge the \"Horizon's Echo From Afar\" and grant Shields to the team.",
               "skillList": [
                 {
-                  "name": "Counter the DMG dealt by Boss Mirage's \"Im Anfang war die Tat\"",
+                  "name": "Counters the DMG dealt by Boss Mirage's \"Im Anfang war die Tat\"",
                   "descData": [
                     {
                       "desc": "Break summons or reduce Boss Mirage's Toughness to gain Shield and withstand \"Im Anfang war die Tat.\""
@@ -26965,7 +26882,7 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Boss Mirage summons 2 Elite Enemies to assist in battle. Boss Mirage will transmit its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                132
+                281
               ]
             },
             {
@@ -27096,7 +27013,7 @@ let mocSchedule = [
                 0.4
               ],
               "extraEffects": [
-                161
+                287
               ]
             },
             {
@@ -27133,7 +27050,7 @@ let mocSchedule = [
                   ]
                 },
                 {
-                  "name": "Counter the DMG dealt by Boss Mirage's \"Dancing in Dreams\" and \"Singing in Rain\"",
+                  "name": "Counters the DMG dealt by Boss Mirage's \"Dancing in Dreams\" and \"Singing in Rain\"",
                   "descData": [
                     {
                       "desc": "Inflict Weakness Break on as many summons as possible to weaken the DMG of \"Dancing in Dreams\" and \"Singing in Rain.\" The more summons not Weakness Broken, the higher the DMG from Boss Mirage's \"Dancing in Dreams\" and \"Singing in Rain.\" When all summons are under the Weakness Broken state, Boss Mirage will have its Toughness reduced when it uses \"Dancing in Dreams\" and \"Singing in Rain.\""
@@ -27141,7 +27058,7 @@ let mocSchedule = [
                   ]
                 },
                 {
-                  "name": "Counter the control effect of \"Alien Dream\"",
+                  "name": "Counters the control effect of \"Alien Dream\"",
                   "descData": [
                     {
                       "desc": "Increases Effect RES or use abilities to dispel the \"Alien Dream\" state."
@@ -27156,7 +27073,7 @@ let mocSchedule = [
               "answer": "Strategy: Break enemy Weakness to Charge the \"Horizon's Echo From Afar\" and grant Shields to the team.",
               "skillList": [
                 {
-                  "name": "Counter the DMG dealt by Boss Mirage's \"Im Anfang war die Tat\"",
+                  "name": "Counters the DMG dealt by Boss Mirage's \"Im Anfang war die Tat\"",
                   "descData": [
                     {
                       "desc": "Break summons or reduce Boss Mirage's Toughness to gain Shield and withstand \"Im Anfang war die Tat.\""
@@ -27367,7 +27284,7 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Boss Mirage summons 2 Elite Enemies to assist in battle. Boss Mirage will transmit its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                132
+                281
               ]
             },
             {
@@ -27498,7 +27415,7 @@ let mocSchedule = [
                 0.4
               ],
               "extraEffects": [
-                161
+                287
               ]
             },
             {
@@ -27535,7 +27452,7 @@ let mocSchedule = [
                   ]
                 },
                 {
-                  "name": "Counter the DMG dealt by Boss Mirage's \"Dancing in Dreams\" and \"Singing in Rain\"",
+                  "name": "Counters the DMG dealt by Boss Mirage's \"Dancing in Dreams\" and \"Singing in Rain\"",
                   "descData": [
                     {
                       "desc": "Inflict Weakness Break on as many summons as possible to weaken the DMG of \"Dancing in Dreams\" and \"Singing in Rain.\" The more summons not Weakness Broken, the higher the DMG from Boss Mirage's \"Dancing in Dreams\" and \"Singing in Rain.\" When all summons are under the Weakness Broken state, Boss Mirage will have its Toughness reduced when it uses \"Dancing in Dreams\" and \"Singing in Rain.\""
@@ -27543,7 +27460,7 @@ let mocSchedule = [
                   ]
                 },
                 {
-                  "name": "Counter the control effect of \"Alien Dream\"",
+                  "name": "Counters the control effect of \"Alien Dream\"",
                   "descData": [
                     {
                       "desc": "Increases Effect RES or use abilities to dispel the \"Alien Dream\" state."
@@ -27558,7 +27475,7 @@ let mocSchedule = [
               "answer": "Strategy: Break enemy Weakness to Charge the \"Horizon's Echo From Afar\" and grant Shields to the team.",
               "skillList": [
                 {
-                  "name": "Counter the DMG dealt by Boss Mirage's \"Im Anfang war die Tat\"",
+                  "name": "Counters the DMG dealt by Boss Mirage's \"Im Anfang war die Tat\"",
                   "descData": [
                     {
                       "desc": "Break summons or reduce Boss Mirage's Toughness to gain Shield and withstand \"Im Anfang war die Tat.\""
@@ -27863,7 +27780,7 @@ let mocSchedule = [
               "name": "Points Competition",
               "desc": "Boss Mirage's ability will grant all allies and enemies \fPoints",
               "extraEffects": [
-                152
+                285
               ]
             },
             {
@@ -27947,7 +27864,7 @@ let mocSchedule = [
               "name": "Flower By Another Name",
               "desc": "When a new Lotus is summoned, Boss Mirage will enter the \fToughness Protection state. Defeating any summon will dispel the Boss Mirage's Toughness Protection and deal additional Toughness Reduction to the Boss Mirage.",
               "extraEffects": [
-                124
+                279
               ]
             },
             {
@@ -27993,7 +27910,7 @@ let mocSchedule = [
                   ]
                 },
                 {
-                  "name": "Counter the Toughness Protection state of the Boss Mirage",
+                  "name": "Counters the Toughness Protection state of the Boss Mirage",
                   "descData": [
                     {
                       "desc": "Defeating any summon will dispel the Boss Mirage's Toughness Protection and deal additional Toughness Reduction to the Boss Mirage."
@@ -28016,7 +27933,7 @@ let mocSchedule = [
               "answer": "Strategy: Try to defeat the summoned entities before they use Eternal Condemnation to gain buffs and Weaken the power of Eternal Condemnation.",
               "skillList": [
                 {
-                  "name": "Counter the massive DMG from the Eternal Condemnation ability unleashed by the summons",
+                  "name": "Counters the massive DMG from the \"Eternal Condemnation\" ability unleashed by the summons",
                   "descData": [
                     {
                       "desc": "Defeat as many Lotus as possible before Eternal Condemnation is released to reduce its damage."
@@ -28220,7 +28137,7 @@ let mocSchedule = [
               "name": "Points Competition",
               "desc": "Boss Mirage's ability will grant all allies and enemies \fPoints",
               "extraEffects": [
-                152
+                285
               ]
             },
             {
@@ -28304,7 +28221,7 @@ let mocSchedule = [
               "name": "Flower By Another Name",
               "desc": "When a new Lotus is summoned, Boss Mirage will enter the \fToughness Protection state. Defeating any summon will dispel the Boss Mirage's Toughness Protection and deal additional Toughness Reduction to the Boss Mirage.",
               "extraEffects": [
-                124
+                279
               ]
             },
             {
@@ -28350,7 +28267,7 @@ let mocSchedule = [
                   ]
                 },
                 {
-                  "name": "Counter the Toughness Protection state of the Boss Mirage",
+                  "name": "Counters the Toughness Protection state of the Boss Mirage",
                   "descData": [
                     {
                       "desc": "Defeating any summon will dispel the Boss Mirage's Toughness Protection and deal additional Toughness Reduction to the Boss Mirage."
@@ -28373,7 +28290,7 @@ let mocSchedule = [
               "answer": "Strategy: Try to defeat the summoned entities before they use Eternal Condemnation to gain buffs and Weaken the power of Eternal Condemnation.",
               "skillList": [
                 {
-                  "name": "Counter the massive DMG from the Eternal Condemnation ability unleashed by the summons",
+                  "name": "Counters the massive DMG from the \"Eternal Condemnation\" ability unleashed by the summons",
                   "descData": [
                     {
                       "desc": "Defeat as many Lotus as possible before Eternal Condemnation is released to reduce its damage."
@@ -28577,7 +28494,7 @@ let mocSchedule = [
               "name": "Points Competition",
               "desc": "Boss Mirage's ability will grant all allies and enemies \fPoints",
               "extraEffects": [
-                152
+                285
               ]
             },
             {
@@ -28661,7 +28578,7 @@ let mocSchedule = [
               "name": "Flower By Another Name",
               "desc": "When a new Lotus is summoned, Boss Mirage will enter the \fToughness Protection state. Defeating any summon will dispel the Boss Mirage's Toughness Protection and deal additional Toughness Reduction to the Boss Mirage.",
               "extraEffects": [
-                124
+                279
               ]
             },
             {
@@ -28707,7 +28624,7 @@ let mocSchedule = [
                   ]
                 },
                 {
-                  "name": "Counter the Toughness Protection state of the Boss Mirage",
+                  "name": "Counters the Toughness Protection state of the Boss Mirage",
                   "descData": [
                     {
                       "desc": "Defeating any summon will dispel the Boss Mirage's Toughness Protection and deal additional Toughness Reduction to the Boss Mirage."
@@ -28730,7 +28647,7 @@ let mocSchedule = [
               "answer": "Strategy: Try to defeat the summoned entities before they use Eternal Condemnation to gain buffs and Weaken the power of Eternal Condemnation.",
               "skillList": [
                 {
-                  "name": "Counter the massive DMG from the Eternal Condemnation ability unleashed by the summons",
+                  "name": "Counters the massive DMG from the \"Eternal Condemnation\" ability unleashed by the summons",
                   "descData": [
                     {
                       "desc": "Defeat as many Lotus as possible before Eternal Condemnation is released to reduce its damage."
@@ -28934,7 +28851,7 @@ let mocSchedule = [
               "name": "Points Competition",
               "desc": "Boss Mirage's ability will grant all allies and enemies \fPoints",
               "extraEffects": [
-                152
+                285
               ]
             },
             {
@@ -29018,7 +28935,7 @@ let mocSchedule = [
               "name": "Flower By Another Name",
               "desc": "When a new Lotus is summoned, Boss Mirage will enter the \fToughness Protection state. Defeating any summon will dispel the Boss Mirage's Toughness Protection and deal additional Toughness Reduction to the Boss Mirage.",
               "extraEffects": [
-                124
+                279
               ]
             },
             {
@@ -29064,7 +28981,7 @@ let mocSchedule = [
                   ]
                 },
                 {
-                  "name": "Counter the Toughness Protection state of the Boss Mirage",
+                  "name": "Counters the Toughness Protection state of the Boss Mirage",
                   "descData": [
                     {
                       "desc": "Defeating any summon will dispel the Boss Mirage's Toughness Protection and deal additional Toughness Reduction to the Boss Mirage."
@@ -29087,7 +29004,7 @@ let mocSchedule = [
               "answer": "Strategy: Try to defeat the summoned entities before they use Eternal Condemnation to gain buffs and Weaken the power of Eternal Condemnation.",
               "skillList": [
                 {
-                  "name": "Counter the massive DMG from the Eternal Condemnation ability unleashed by the summons",
+                  "name": "Counters the massive DMG from the \"Eternal Condemnation\" ability unleashed by the summons",
                   "descData": [
                     {
                       "desc": "Defeat as many Lotus as possible before Eternal Condemnation is released to reduce its damage."
@@ -29393,7 +29310,7 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Boss Mirage summons 2 Elite Enemies to assist in battle. Boss Mirage will transmit its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                132
+                281
               ]
             },
             {
@@ -29511,14 +29428,14 @@ let mocSchedule = [
                 15
               ],
               "extraEffects": [
-                131
+                280
               ]
             },
             {
               "name": "Battlefield Transfer",
               "desc": "The Antimatter Engine transfers its own weakness type to Disaster's Right Hand and Dawn's Left Hand. However, when Disaster's Right Hand or Dawn's Left Hand is defeated, the Antimatter Engine's Toughness is additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
@@ -29764,7 +29681,7 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Boss Mirage summons 2 Elite Enemies to assist in battle. Boss Mirage will transmit its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                132
+                281
               ]
             },
             {
@@ -29882,14 +29799,14 @@ let mocSchedule = [
                 15
               ],
               "extraEffects": [
-                131
+                280
               ]
             },
             {
               "name": "Battlefield Transfer",
               "desc": "The Antimatter Engine transfers its own weakness type to Disaster's Right Hand and Dawn's Left Hand. However, when Disaster's Right Hand or Dawn's Left Hand is defeated, the Antimatter Engine's Toughness is additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
@@ -30135,7 +30052,7 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Boss Mirage summons 2 Elite Enemies to assist in battle. Boss Mirage will transmit its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                132
+                281
               ]
             },
             {
@@ -30253,14 +30170,14 @@ let mocSchedule = [
                 15
               ],
               "extraEffects": [
-                131
+                280
               ]
             },
             {
               "name": "Battlefield Transfer",
               "desc": "The Antimatter Engine transfers its own weakness type to Disaster's Right Hand and Dawn's Left Hand. However, when Disaster's Right Hand or Dawn's Left Hand is defeated, the Antimatter Engine's Toughness is additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
@@ -30506,7 +30423,7 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Boss Mirage summons 2 Elite Enemies to assist in battle. Boss Mirage will transmit its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                132
+                281
               ]
             },
             {
@@ -30624,14 +30541,14 @@ let mocSchedule = [
                 15
               ],
               "extraEffects": [
-                131
+                280
               ]
             },
             {
               "name": "Battlefield Transfer",
               "desc": "The Antimatter Engine transfers its own weakness type to Disaster's Right Hand and Dawn's Left Hand. However, when Disaster's Right Hand or Dawn's Left Hand is defeated, the Antimatter Engine's Toughness is additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
@@ -31009,14 +30926,14 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Gepard will join the battle and provide protection for Boss Mirage. Boss Mirage will Transfer its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
               "name": "Nowhere to Escape",
               "desc": "Boss Mirage's summon will mark 1 target. After Boss Mirage uses a single-target ability, it will deliver a Follow-Up Usage on the marked target.",
               "extraEffects": [
-                121
+                276
               ]
             },
             {
@@ -31117,7 +31034,7 @@ let mocSchedule = [
               "name": "Reversal of Fortune",
               "desc": "Boss Mirage can switch its own Combat Stance in battle and summon different statues to fight. When characters defeat statues in the \"Soulfreed\" state, DMG dealt by the team in this battle will be increased.",
               "extraEffects": [
-                122
+                277
               ]
             },
             {
@@ -31409,14 +31326,14 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Gepard will join the battle and provide protection for Boss Mirage. Boss Mirage will Transfer its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
               "name": "Nowhere to Escape",
               "desc": "Boss Mirage's summon will mark 1 target. After Boss Mirage uses a single-target ability, it will deliver a Follow-Up Usage on the marked target.",
               "extraEffects": [
-                121
+                276
               ]
             },
             {
@@ -31517,7 +31434,7 @@ let mocSchedule = [
               "name": "Reversal of Fortune",
               "desc": "Boss Mirage can switch its own Combat Stance in battle and summon different statues to fight. When characters defeat statues in the \"Soulfreed\" state, DMG dealt by the team in this battle will be increased.",
               "extraEffects": [
-                122
+                277
               ]
             },
             {
@@ -31809,14 +31726,14 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Gepard will join the battle and provide protection for Boss Mirage. Boss Mirage will Transfer its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
               "name": "Nowhere to Escape",
               "desc": "Boss Mirage's summon will mark 1 target. After Boss Mirage uses a single-target ability, it will deliver a Follow-Up Usage on the marked target.",
               "extraEffects": [
-                121
+                276
               ]
             },
             {
@@ -31920,7 +31837,7 @@ let mocSchedule = [
               "name": "Reversal of Fortune",
               "desc": "Boss Mirage can switch its own Combat Stance in battle and summon different statues to fight. When characters defeat statues in the \"Soulfreed\" state, DMG dealt by the team in this battle will be increased.",
               "extraEffects": [
-                122
+                277
               ]
             },
             {
@@ -32215,14 +32132,14 @@ let mocSchedule = [
               "name": "Battlefield Transfer",
               "desc": "Gepard will join the battle and provide protection for Boss Mirage. Boss Mirage will Transfer its own Weakness Type to summons, but when those summons are defeated, Boss Mirage's Toughness will be additionally reduced.",
               "extraEffects": [
-                123
+                278
               ]
             },
             {
               "name": "Nowhere to Escape",
               "desc": "Boss Mirage's summon will mark 1 target. After Boss Mirage uses a single-target ability, it will deliver a Follow-Up Usage on the marked target.",
               "extraEffects": [
-                121
+                276
               ]
             },
             {
@@ -32326,7 +32243,7 @@ let mocSchedule = [
               "name": "Reversal of Fortune",
               "desc": "Boss Mirage can switch its own Combat Stance in battle and summon different statues to fight. When characters defeat statues in the \"Soulfreed\" state, DMG dealt by the team in this battle will be increased.",
               "extraEffects": [
-                122
+                277
               ]
             },
             {
