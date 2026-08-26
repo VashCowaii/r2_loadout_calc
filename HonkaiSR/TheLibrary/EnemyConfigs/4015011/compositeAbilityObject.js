@@ -281,8 +281,18 @@ const compositeAbilityObject = {
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"1769824945\">Enemy_Monster_W4_DawnsEye_01_AimTarget</a>"
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Modifier Was",
+                        "modifier": "<a class=\"gModGreen\" id=\"1769824945\">Enemy_Monster_W4_DawnsEye_01_AimTarget</a>"
+                      },
+                      {
+                        "name": "Check Modifier Death Source",
+                        "source": "CasterDead",
+                        "invertCondition": true
+                      }
+                    ]
                   },
                   "passed": [
                     {
@@ -500,7 +510,6 @@ const compositeAbilityObject = {
           "stackType": "ReplaceByCaster",
           "lifeCyclePhaseAllowed": "ModifierPhase1End",
           "modifierFlags": [
-            "RemoveWhenCasterDead",
             "CanBeAddedToServant",
             "CanListenServantCallback"
           ],
@@ -855,8 +864,7 @@ const compositeAbilityObject = {
           "for": "<a class=\"gModGreen\" id=\"mod__1789818614\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokSub</a>[<span class=\"descriptionNumberColor\">Rot</span>]",
           "stackType": "Replace",
           "modifierFlags": [
-            "CanBeAddedToServant",
-            "RemoveWhenCasterDead"
+            "CanBeAddedToServant"
           ],
           "useEntitySnapshot": true,
           "stackData": [
@@ -2671,7 +2679,8 @@ const compositeAbilityObject = {
                                           "target": {
                                             "name": "Target Name",
                                             "target": "{{Caster}}"
-                                          }
+                                          },
+                                          "bypassBreakMute": true
                                         },
                                         {
                                           "name": "Add Events/Bonuses",
@@ -2688,7 +2697,8 @@ const compositeAbilityObject = {
                                           "target": {
                                             "name": "Target Name",
                                             "target": "{{Caster}}"
-                                          }
+                                          },
+                                          "bypassBreakMute": true
                                         }
                                       ]
                                     },
@@ -3195,7 +3205,8 @@ const compositeAbilityObject = {
                                       "target": {
                                         "name": "Target Name",
                                         "target": "{{Caster}}"
-                                      }
+                                      },
+                                      "bypassBreakMute": true
                                     },
                                     {
                                       "name": "Add Events/Bonuses",
@@ -3212,7 +3223,8 @@ const compositeAbilityObject = {
                                       "target": {
                                         "name": "Target Name",
                                         "target": "{{Caster}}"
-                                      }
+                                      },
+                                      "bypassBreakMute": true
                                     }
                                   ]
                                 },
@@ -3675,7 +3687,8 @@ const compositeAbilityObject = {
                               "target": {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
-                              }
+                              },
+                              "bypassBreakMute": true
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -3692,7 +3705,8 @@ const compositeAbilityObject = {
                               "target": {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
-                              }
+                              },
+                              "bypassBreakMute": true
                             }
                           ]
                         },
@@ -3759,7 +3773,8 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
-                      }
+                      },
+                      "bypassBreakMute": true
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -3776,7 +3791,8 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
-                      }
+                      },
+                      "bypassBreakMute": true
                     }
                   ]
                 },
@@ -10560,11 +10576,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Change Character Model"
-            },
-            {
-              "name": "Change Battle Arena",
-              "status": "Inactive",
-              "arenaID": 2043101
             },
             {
               "name": "Change Battle Arena",
