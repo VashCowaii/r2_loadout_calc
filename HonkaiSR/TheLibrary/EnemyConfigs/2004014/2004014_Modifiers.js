@@ -1244,11 +1244,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1077360781\">XP_Elite_Fire_Ability07_AttackUp_Modifier</a>[<span class=\"descriptionNumberColor\">Molten</span>]",
               "valuePerStack": {
                 "Modifier_AttackAddedRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13641) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13641",
+                  "operator": "Variables[0] (UnusedUnderThisBase_13865) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_13865",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_13641"
+                    "UnusedUnderThisBase_13865"
                   ]
                 }
               }
@@ -3301,11 +3301,13 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
+                      "forceReduction": true,
                       "canDelay": true,
                       "ToughnessDMGType": {
                         "name": "Damage Type Source",
                         "sourceType": {}
-                      }
+                      },
+                      "bypassBreakMute": true
                     }
                   ]
                 },
