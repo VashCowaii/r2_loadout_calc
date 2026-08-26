@@ -1537,13 +1537,13 @@ const compositeAbilityObject = {
             "delayAdvancePreview": {
               "name": "Delay/Advance Preview",
               "previewValue": {
-                "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_4755) || SUB || RETURN",
-                "displayLines": "(0 - UnusedUnderThisBase_4755)",
+                "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_4842) || SUB || RETURN",
+                "displayLines": "(0 - UnusedUnderThisBase_4842)",
                 "constants": [
                   0
                 ],
                 "variables": [
-                  "UnusedUnderThisBase_4755"
+                  "UnusedUnderThisBase_4842"
                 ]
               }
             }
@@ -2863,28 +2863,50 @@ const compositeAbilityObject = {
           },
           "passed": [
             {
-              "name": "Advance/Delay up to Target",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}.[[getMemoAndSummon]] - {{Ability Target(ST)}}.[[getMemoAndSummon]].[[removeBattleEventsFromOthers]]"
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"1875337065\">RobinS_Ability03_SpecialGuest</a>[<span class=\"descriptionNumberColor\">Special Guest</span>]",
+                "invertCondition": true
               },
-              "targetRef": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "refPoint": "After"
-            },
-            {
-              "name": "Advance/Delay up to Target",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}.[[getMemoAndSummon]].[[removeBattleEventsFromOthers]]"
-              },
-              "targetRef": {
-                "name": "Target Name",
-                "target": "{{Ability Target(ST)}}"
-              },
-              "refPoint": "After"
+              "passed": [
+                {
+                  "name": "Advance/Delay up to Target",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}.[[getMemoAndSummon]] - {{Ability Target(ST)}}.[[getMemoAndSummon]].[[removeBattleEventsFromOthers]]"
+                  },
+                  "targetRef": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "source": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "refPoint": "After"
+                },
+                {
+                  "name": "Advance/Delay up to Target",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}.[[getMemoAndSummon]].[[removeBattleEventsFromOthers]]"
+                  },
+                  "targetRef": {
+                    "name": "Target Name",
+                    "target": "{{Ability Target(ST)}}"
+                  },
+                  "source": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "refPoint": "After"
+                }
+              ]
             }
           ]
         },
