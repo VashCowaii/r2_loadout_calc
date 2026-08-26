@@ -1848,11 +1848,11 @@ const configAbility = {
                     "value1": "<a class=\"gModGreen\" id=\"1006247126\">Enemy_W5_VtuberPart01_Charge</a>[<span class=\"descriptionNumberColor\">Ally Popularity</span>]",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_13576) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_13576",
+                      "operator": "Variables[0] (UnusedUnderThisBase_13800) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_13800",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_13576"
+                        "UnusedUnderThisBase_13800"
                       ]
                     },
                     "valueType": "Layer"
@@ -1871,11 +1871,11 @@ const configAbility = {
                 "value1": "<a class=\"gModGreen\" id=\"-869771857\">Enemy_W5_VtuberPart02_Charge</a>[<span class=\"descriptionNumberColor\">Enemy Popularity</span>]",
                 "compareType": "=",
                 "value2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13576) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13576",
+                  "operator": "Variables[0] (UnusedUnderThisBase_13800) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_13800",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_13576"
+                    "UnusedUnderThisBase_13800"
                   ]
                 },
                 "valueType": "Layer"
@@ -2466,11 +2466,11 @@ const configAbility = {
                     "value1": "<a class=\"gModGreen\" id=\"-869771857\">Enemy_W5_VtuberPart02_Charge</a>[<span class=\"descriptionNumberColor\">Enemy Popularity</span>]",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_13576) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_13576",
+                      "operator": "Variables[0] (UnusedUnderThisBase_13800) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_13800",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_13576"
+                        "UnusedUnderThisBase_13800"
                       ]
                     },
                     "valueType": "Layer"
@@ -2538,11 +2538,11 @@ const configAbility = {
                         "value1": "<a class=\"gModGreen\" id=\"-869771857\">Enemy_W5_VtuberPart02_Charge</a>[<span class=\"descriptionNumberColor\">Enemy Popularity</span>]",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13576) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13576",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13800) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13800",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_13576"
+                            "UnusedUnderThisBase_13800"
                           ]
                         },
                         "valueType": "Layer"
@@ -2667,11 +2667,11 @@ const configAbility = {
                         "value1": "<a class=\"gModGreen\" id=\"1006247126\">Enemy_W5_VtuberPart01_Charge</a>[<span class=\"descriptionNumberColor\">Ally Popularity</span>]",
                         "compareType": "<",
                         "value2": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13576) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13576",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13800) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13800",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_13576"
+                            "UnusedUnderThisBase_13800"
                           ]
                         },
                         "valueType": "Layer"
@@ -3483,11 +3483,11 @@ const configAbility = {
                 "value1": "CurrentHP%",
                 "compareType": "<=",
                 "value2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13607) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13607",
+                  "operator": "Variables[0] (UnusedUnderThisBase_13831) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_13831",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_13607"
+                    "UnusedUnderThisBase_13831"
                   ]
                 }
               },

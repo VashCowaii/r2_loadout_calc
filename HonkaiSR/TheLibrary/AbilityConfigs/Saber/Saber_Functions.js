@@ -300,11 +300,11 @@ const configAbility = {
                 "value1": "Avatar_Gilgamesh_00_KingCount",
                 "compareType": ">=",
                 "value2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_7402) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_7402",
+                  "operator": "Variables[0] (UnusedUnderThisBase_7489) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_7489",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_7402"
+                    "UnusedUnderThisBase_7489"
                   ]
                 }
               }

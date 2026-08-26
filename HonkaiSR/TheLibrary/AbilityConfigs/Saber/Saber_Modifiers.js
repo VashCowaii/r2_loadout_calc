@@ -212,11 +212,11 @@ const configAbility = {
                     "value1": "Saber_Chain",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_7385) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_7385",
+                      "operator": "Variables[0] (UnusedUnderThisBase_7472) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_7472",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_7385"
+                        "UnusedUnderThisBase_7472"
                       ]
                     }
                   }
@@ -433,7 +433,7 @@ const configAbility = {
                     {
                       "on": "Attacker",
                       "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
-                      "value": "(MDF_GoldenRule * UnusedUnderThisBase_7388)"
+                      "value": "(MDF_GoldenRule * UnusedUnderThisBase_7475)"
                     }
                   ]
                 }
@@ -459,12 +459,12 @@ const configAbility = {
               "name": "Define Custom Variable",
               "variableName": "MDF_Propertyvalue",
               "value": {
-                "operator": "Variables[0] (Gilgamesh_00_Rank06_GoldenRule) || Variables[1] (UnusedUnderThisBase_7388) || MUL || RETURN",
-                "displayLines": "(Gilgamesh_00_Rank06_GoldenRule * UnusedUnderThisBase_7388)",
+                "operator": "Variables[0] (Gilgamesh_00_Rank06_GoldenRule) || Variables[1] (UnusedUnderThisBase_7475) || MUL || RETURN",
+                "displayLines": "(Gilgamesh_00_Rank06_GoldenRule * UnusedUnderThisBase_7475)",
                 "constants": [],
                 "variables": [
                   "Gilgamesh_00_Rank06_GoldenRule",
-                  "UnusedUnderThisBase_7388"
+                  "UnusedUnderThisBase_7475"
                 ]
               }
             }
@@ -715,43 +715,43 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_BaseAttackAdded": {
-              "operator": "Variables[0] (UnusedUnderThisBase_7389) || RETURN",
-              "displayLines": "UnusedUnderThisBase_7389",
+              "operator": "Variables[0] (UnusedUnderThisBase_7476) || RETURN",
+              "displayLines": "UnusedUnderThisBase_7476",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_7389"
+                "UnusedUnderThisBase_7476"
               ]
             },
             "MDF_BaseCriticalDamageBaseAdd": {
-              "operator": "Variables[0] (UnusedUnderThisBase_7410) || RETURN",
-              "displayLines": "UnusedUnderThisBase_7410",
+              "operator": "Variables[0] (UnusedUnderThisBase_7497) || RETURN",
+              "displayLines": "UnusedUnderThisBase_7497",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_7410"
+                "UnusedUnderThisBase_7497"
               ]
             },
             "MDF_MaxSPThreshold": {
-              "operator": "Variables[0] (UnusedUnderThisBase_7395) || RETURN",
-              "displayLines": "UnusedUnderThisBase_7395",
+              "operator": "Variables[0] (UnusedUnderThisBase_7482) || RETURN",
+              "displayLines": "UnusedUnderThisBase_7482",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_7395"
+                "UnusedUnderThisBase_7482"
               ]
             },
             "MDF_ExtraRatioPerMaxSP": {
-              "operator": "Variables[0] (UnusedUnderThisBase_7375) || RETURN",
-              "displayLines": "UnusedUnderThisBase_7375",
+              "operator": "Variables[0] (UnusedUnderThisBase_7462) || RETURN",
+              "displayLines": "UnusedUnderThisBase_7462",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_7375"
+                "UnusedUnderThisBase_7462"
               ]
             },
             "MDF_MaxExtraRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_7386) || RETURN",
-              "displayLines": "UnusedUnderThisBase_7386",
+              "operator": "Variables[0] (UnusedUnderThisBase_7473) || RETURN",
+              "displayLines": "UnusedUnderThisBase_7473",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_7386"
+                "UnusedUnderThisBase_7473"
               ]
             }
           }
@@ -840,20 +840,20 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"481485752\">Gilgamesh_TreeBonus2</a>[<span class=\"descriptionNumberColor\">Hero's Hauteur</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_7387) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_7387",
+                        "operator": "Variables[0] (UnusedUnderThisBase_7474) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_7474",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_7387"
+                          "UnusedUnderThisBase_7474"
                         ]
                       },
                       "valuePerStack": {
                         "MDF_DamageBaseAdd": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_7409) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_7409",
+                          "operator": "Variables[0] (UnusedUnderThisBase_7496) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_7496",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_7409"
+                            "UnusedUnderThisBase_7496"
                           ]
                         }
                       },
@@ -1070,11 +1070,11 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Thunder",
                     "Damage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_7406) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_7406",
+                      "operator": "Variables[0] (UnusedUnderThisBase_7493) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_7493",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_7406"
+                        "UnusedUnderThisBase_7493"
                       ]
                     },
                     "Toughness": null,
@@ -1088,11 +1088,11 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"-1526947844\">function_Gilgamesh_KingCount</a>",
                   "variables": {
                     "KingCountAdd": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_7394) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_7394",
+                      "operator": "Variables[0] (UnusedUnderThisBase_7481) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_7481",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_7394"
+                        "UnusedUnderThisBase_7481"
                       ]
                     }
                   }
@@ -1125,11 +1125,11 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": {
-                "operator": "Variables[0] (UnusedUnderThisBase_7385) || RETURN",
-                "displayLines": "UnusedUnderThisBase_7385",
+                "operator": "Variables[0] (UnusedUnderThisBase_7472) || RETURN",
+                "displayLines": "UnusedUnderThisBase_7472",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_7385"
+                  "UnusedUnderThisBase_7472"
                 ]
               },
               "includeMaxValueInRange": true,
@@ -1141,11 +1141,11 @@ const configAbility = {
                     "value1": "Saber_Chain",
                     "compareType": ">=",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_7385) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_7385",
+                      "operator": "Variables[0] (UnusedUnderThisBase_7472) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_7472",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_7385"
+                        "UnusedUnderThisBase_7472"
                       ]
                     }
                   }
@@ -1309,11 +1309,11 @@ const configAbility = {
                 ]
               },
               "maximum": {
-                "operator": "Variables[0] (UnusedUnderThisBase_7402) || RETURN",
-                "displayLines": "UnusedUnderThisBase_7402",
+                "operator": "Variables[0] (UnusedUnderThisBase_7489) || RETURN",
+                "displayLines": "UnusedUnderThisBase_7489",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_7402"
+                  "UnusedUnderThisBase_7489"
                 ]
               },
               "assignState": "True",
@@ -1416,11 +1416,11 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"-1526947844\">function_Gilgamesh_KingCount</a>",
                   "variables": {
                     "KingCountAdd": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_7413) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_7413",
+                      "operator": "Variables[0] (UnusedUnderThisBase_7500) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_7500",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_7413"
+                        "UnusedUnderThisBase_7500"
                       ]
                     }
                   }
@@ -1587,11 +1587,11 @@ const configAbility = {
                     "value1": "Saber_Chain",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_7385) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_7385",
+                      "operator": "Variables[0] (UnusedUnderThisBase_7472) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_7472",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_7385"
+                        "UnusedUnderThisBase_7472"
                       ]
                     }
                   },
@@ -1674,11 +1674,11 @@ const configAbility = {
                     "value1": "Gilgamesh_00_Rank06_GoldenRule",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_7419) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_7419",
+                      "operator": "Variables[0] (UnusedUnderThisBase_7506) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_7506",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_7419"
+                        "UnusedUnderThisBase_7506"
                       ]
                     }
                   }
@@ -1758,20 +1758,20 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-791691611\">Gilgamesh_Overcharge</a>[<span class=\"descriptionNumberColor\">King's Burden</span>]",
                   "duration": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_7378) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_7378",
+                    "operator": "Variables[0] (UnusedUnderThisBase_7465) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_7465",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_7378"
+                      "UnusedUnderThisBase_7465"
                     ]
                   },
                   "valuePerStack": {
                     "MDF_DamageAddedRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_7381) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_7381",
+                      "operator": "Variables[0] (UnusedUnderThisBase_7468) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_7468",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_7381"
+                        "UnusedUnderThisBase_7468"
                       ]
                     }
                   }
@@ -1824,12 +1824,12 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "value": {
-                    "operator": "Variables[0] (Avatar_Gilgamesh_00_TeamSPChangeAmount) || Variables[1] (UnusedUnderThisBase_7393) || MUL || RETURN",
-                    "displayLines": "(Avatar_Gilgamesh_00_TeamSPChangeAmount * UnusedUnderThisBase_7393)",
+                    "operator": "Variables[0] (Avatar_Gilgamesh_00_TeamSPChangeAmount) || Variables[1] (UnusedUnderThisBase_7480) || MUL || RETURN",
+                    "displayLines": "(Avatar_Gilgamesh_00_TeamSPChangeAmount * UnusedUnderThisBase_7480)",
                     "constants": [],
                     "variables": [
                       "Avatar_Gilgamesh_00_TeamSPChangeAmount",
-                      "UnusedUnderThisBase_7393"
+                      "UnusedUnderThisBase_7480"
                     ]
                   },
                   "isFixed": "(Fixed)",
@@ -1840,11 +1840,11 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"-1526947844\">function_Gilgamesh_KingCount</a>",
                   "variables": {
                     "KingCountAdd": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_7407) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_7407",
+                      "operator": "Variables[0] (UnusedUnderThisBase_7494) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_7494",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_7407"
+                        "UnusedUnderThisBase_7494"
                       ]
                     }
                   }
@@ -1883,11 +1883,11 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"-1526947844\">function_Gilgamesh_KingCount</a>",
                   "variables": {
                     "KingCountAdd": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_7408) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_7408",
+                      "operator": "Variables[0] (UnusedUnderThisBase_7495) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_7495",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_7408"
+                        "UnusedUnderThisBase_7495"
                       ]
                     }
                   }
@@ -2250,12 +2250,12 @@ const configAbility = {
               },
               "variableName": "MDF_PropertyValue",
               "value": {
-                "operator": "Variables[0] (Avatar_Gilgamesh_00_KingCount) || Variables[1] (UnusedUnderThisBase_7390) || MUL || RETURN",
-                "displayLines": "(Avatar_Gilgamesh_00_KingCount * UnusedUnderThisBase_7390)",
+                "operator": "Variables[0] (Avatar_Gilgamesh_00_KingCount) || Variables[1] (UnusedUnderThisBase_7477) || MUL || RETURN",
+                "displayLines": "(Avatar_Gilgamesh_00_KingCount * UnusedUnderThisBase_7477)",
                 "constants": [],
                 "variables": [
                   "Avatar_Gilgamesh_00_KingCount",
-                  "UnusedUnderThisBase_7390"
+                  "UnusedUnderThisBase_7477"
                 ]
               }
             },
