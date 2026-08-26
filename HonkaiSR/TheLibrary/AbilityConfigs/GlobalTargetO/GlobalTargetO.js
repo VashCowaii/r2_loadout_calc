@@ -894,7 +894,7 @@ const configAbility = {
                 },
                 "source": {
                   "name": "Target Name",
-                  "target": "{{Caster}}"
+                  "target": "{{Enemy Team Entity}}"
                 }
               },
               {
