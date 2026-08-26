@@ -389,7 +389,8 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"2115356635\">Monster_W1_SvarogPart_CD</a>",
-                  "duration": 99
+                  "duration": 99,
+                  "casterAssign": "TargetSelf"
                 }
               ]
             },

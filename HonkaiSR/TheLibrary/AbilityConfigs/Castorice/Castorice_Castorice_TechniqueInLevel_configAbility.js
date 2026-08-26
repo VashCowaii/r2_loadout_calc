@@ -256,6 +256,10 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
+          "source": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
           "refPoint": "After"
         }
       ]
