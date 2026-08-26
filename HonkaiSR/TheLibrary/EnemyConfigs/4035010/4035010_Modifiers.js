@@ -917,12 +917,25 @@ const configAbility = {
             {
               "name": "IF",
               "conditions": {
-                "name": "Battle Event ID",
-                "ID": 60032,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Parameter Target}}"
-                }
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Battle Event ID",
+                    "ID": 60032,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  },
+                  {
+                    "name": "Battle Event ID",
+                    "ID": 60050,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  }
+                ]
               },
               "passed": [
                 {
@@ -1311,8 +1324,7 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
-              "maxValue": 0,
-              "includeMaxValueInRange": true,
+              "maxValue": 0.1,
               "whenEnteringRange": [
                 {
                   "name": "IF",
@@ -2980,11 +2992,11 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "_Skill08_DamagePercentage",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_12140) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_12140",
+                    "operator": "Variables[0] (UnusedUnderThisBase_12299) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_12299",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_12140"
+                      "UnusedUnderThisBase_12299"
                     ]
                   }
                 }
@@ -3040,6 +3052,52 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{BattleEvent60032}}"
               }
+            },
+            {
+              "name": "Mark Entity For Immediate Death",
+              "target": {
+                "name": "Target Name",
+                "target": "{{BattleEvent60048}}"
+              }
+            },
+            {
+              "name": "Force Entity Death",
+              "target": {
+                "name": "Target Name",
+                "target": "{{BattleEvent60048}}"
+              }
+            },
+            {
+              "name": "Mark Entity For Immediate Death",
+              "target": {
+                "name": "Target Name",
+                "target": "{{BattleEvent60049}}"
+              }
+            },
+            {
+              "name": "Force Entity Death",
+              "target": {
+                "name": "Target Name",
+                "target": "{{BattleEvent60049}}"
+              },
+              "ignoreHPLossTriggers": true,
+              "ignoreDeathTriggers": true
+            },
+            {
+              "name": "Mark Entity For Immediate Death",
+              "target": {
+                "name": "Target Name",
+                "target": "{{BattleEvent60050}}"
+              }
+            },
+            {
+              "name": "Force Entity Death",
+              "target": {
+                "name": "Target Name",
+                "target": "{{BattleEvent60050}}"
+              },
+              "ignoreHPLossTriggers": true,
+              "ignoreDeathTriggers": true
             },
             {
               "name": "Force Entity Death",

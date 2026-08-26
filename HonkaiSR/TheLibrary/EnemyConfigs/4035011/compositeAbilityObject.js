@@ -3241,12 +3241,25 @@ const compositeAbilityObject = {
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Battle Event ID",
-                    "ID": 60032,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    }
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Battle Event ID",
+                        "ID": 60032,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      },
+                      {
+                        "name": "Battle Event ID",
+                        "ID": 60050,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      }
+                    ]
                   },
                   "passed": [
                     {
@@ -3645,8 +3658,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
-                  "maxValue": 0,
-                  "includeMaxValueInRange": true,
+                  "maxValue": 0.1,
                   "whenEnteringRange": [
                     {
                       "name": "IF",
@@ -5393,6 +5405,52 @@ const compositeAbilityObject = {
                   }
                 },
                 {
+                  "name": "Mark Entity For Immediate Death",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{BattleEvent60048}}"
+                  }
+                },
+                {
+                  "name": "Force Entity Death",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{BattleEvent60048}}"
+                  }
+                },
+                {
+                  "name": "Mark Entity For Immediate Death",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{BattleEvent60049}}"
+                  }
+                },
+                {
+                  "name": "Force Entity Death",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{BattleEvent60049}}"
+                  },
+                  "ignoreHPLossTriggers": true,
+                  "ignoreDeathTriggers": true
+                },
+                {
+                  "name": "Mark Entity For Immediate Death",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{BattleEvent60050}}"
+                  }
+                },
+                {
+                  "name": "Force Entity Death",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{BattleEvent60050}}"
+                  },
+                  "ignoreHPLossTriggers": true,
+                  "ignoreDeathTriggers": true
+                },
+                {
                   "name": "Force Entity Death",
                   "target": {
                     "name": "Target Name",
@@ -7041,22 +7099,55 @@ const compositeAbilityObject = {
           },
           "passed": [
             {
-              "name": "Add Battle Event",
-              "eventID": 60030,
-              "assignOwner": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
+              "name": "IF",
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "value": "PeakBattle"
               },
-              "variables": null
-            },
-            {
-              "name": "Add Battle Event",
-              "eventID": 60032,
-              "assignOwner": {
-                "name": "Target Name",
-                "target": "{{Level Entity}}"
-              },
-              "variables": null
+              "passed": [
+                {
+                  "name": "Add Battle Event",
+                  "eventID": 60048,
+                  "assignOwner": {
+                    "name": "Target Name",
+                    "target": "{{Level Entity}}"
+                  },
+                  "variables": null
+                },
+                {
+                  "name": "Add Battle Event",
+                  "eventID": 60050,
+                  "assignOwner": {
+                    "name": "Target Name",
+                    "target": "{{Level Entity}}"
+                  },
+                  "variables": null
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Add Battle Event",
+                  "eventID": 60030,
+                  "assignOwner": {
+                    "name": "Target Name",
+                    "target": "{{Level Entity}}"
+                  },
+                  "variables": null
+                },
+                {
+                  "name": "Add Battle Event",
+                  "eventID": 60032,
+                  "assignOwner": {
+                    "name": "Target Name",
+                    "target": "{{Level Entity}}"
+                  },
+                  "variables": null
+                }
+              ]
             }
           ]
         }
@@ -7935,11 +8026,11 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_12098) || INVERT || Variables[1] (_TargetMaxSP) || MUL || RETURN",
-                            "displayLines": "(-UnusedUnderThisBase_12098 * _TargetMaxSP)",
+                            "operator": "Variables[0] (UnusedUnderThisBase_12257) || INVERT || Variables[1] (_TargetMaxSP) || MUL || RETURN",
+                            "displayLines": "(-UnusedUnderThisBase_12257 * _TargetMaxSP)",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_12098",
+                              "UnusedUnderThisBase_12257",
                               "_TargetMaxSP"
                             ]
                           },
@@ -8059,7 +8150,8 @@ const compositeAbilityObject = {
               "ToughnessDMGType": {
                 "name": "Damage Type Source",
                 "sourceType": {}
-              }
+              },
+              "bypassBreakMute": true
             },
             {
               "name": "Use Custom Character Function",
@@ -11075,6 +11167,43 @@ const compositeAbilityObject = {
           ],
           "hardLevelEvent": true,
           "actionDescription": "Deal massive Ice DMG to one enemy and greatly reduce \"Amphorean Hatred\"!"
+        },
+        {
+          "name": "Battle Event Construction",
+          "ID": 60048,
+          "team": "Player Team",
+          "eventType": "Assist",
+          "abilityList": null,
+          "overridesArray": [
+            {
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+              "value": 1
+            },
+            {
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+              "value": 8
+            }
+          ],
+          "actionDescription": "Deals massive Ice DMG to one enemy and greatly reduces \"Amphorean Hatred\"!"
+        },
+        {
+          "name": "Battle Event Construction",
+          "ID": 60050,
+          "team": "Neutral Team",
+          "eventType": "Entity Selection",
+          "abilityList": null,
+          "overridesArray": [
+            {
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+              "value": 100
+            },
+            {
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+              "value": 1
+            }
+          ],
+          "eventSpeed": 70,
+          "actionDescription": "When \"Cyrene's Support ♪\" takes action, select an ally character to activate their Ultimate and dispel the \"Action Lock\" state."
         }
       ],
       "references": []
