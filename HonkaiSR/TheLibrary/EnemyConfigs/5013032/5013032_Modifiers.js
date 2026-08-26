@@ -1803,11 +1803,11 @@ const configAbility = {
             {
               "name": "Adjust Team Punchline Value",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_13366) || Variables[1] (WHOLE) || Variables[2] (CurrentMaxColorScore) || PARAM_1 || FUNCTION || MUL || RETURN",
-                "displayLines": "(UnusedUnderThisBase_13366 * &nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(CurrentMaxColorScore))",
+                "operator": "Variables[0] (UnusedUnderThisBase_13527) || Variables[1] (WHOLE) || Variables[2] (CurrentMaxColorScore) || PARAM_1 || FUNCTION || MUL || RETURN",
+                "displayLines": "(UnusedUnderThisBase_13527 * &nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(CurrentMaxColorScore))",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_13366",
+                  "UnusedUnderThisBase_13527",
                   "WHOLE",
                   "CurrentMaxColorScore"
                 ]
@@ -3872,11 +3872,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1506777447\">Enemy_W5_Peacock_AbilityP01_Colorless</a>[<span class=\"descriptionNumberColor\">Colorless</span>]",
               "valuePerStack": {
                 "MDF_ElationDamageExtraColorCount": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13368) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13368",
+                  "operator": "Variables[0] (UnusedUnderThisBase_13529) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_13529",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_13368"
+                    "UnusedUnderThisBase_13529"
                   ]
                 }
               }
@@ -3890,11 +3890,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1921694254\">Enemy_W5_Peacock_AbilityP01_ElementResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Boost</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13373) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13373",
+                  "operator": "Variables[0] (UnusedUnderThisBase_13534) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_13534",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_13373"
+                    "UnusedUnderThisBase_13534"
                   ]
                 }
               }
@@ -4114,11 +4114,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1921694254\">Enemy_W5_Peacock_AbilityP01_ElementResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Boost</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13373) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13373",
+                  "operator": "Variables[0] (UnusedUnderThisBase_13534) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_13534",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_13373"
+                    "UnusedUnderThisBase_13534"
                   ]
                 }
               }
@@ -4151,11 +4151,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1506777447\">Enemy_W5_Peacock_AbilityP01_Colorless</a>[<span class=\"descriptionNumberColor\">Colorless</span>]",
                   "valuePerStack": {
                     "MDF_ElationDamageExtraColorCount": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_13368) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_13368",
+                      "operator": "Variables[0] (UnusedUnderThisBase_13529) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_13529",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_13368"
+                        "UnusedUnderThisBase_13529"
                       ]
                     }
                   }

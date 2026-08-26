@@ -51,7 +51,8 @@ const configAbility = {
           },
           "forceReduction": true,
           "canDelay": true,
-          "ToughnessDMGType": "Imaginary"
+          "ToughnessDMGType": "Imaginary",
+          "bypassBreakMute": true
         },
         {
           "name": "Add Events/Bonuses",
@@ -83,7 +84,8 @@ const configAbility = {
           },
           "forceReduction": true,
           "canDelay": true,
-          "ToughnessDMGType": "Imaginary"
+          "ToughnessDMGType": "Imaginary",
+          "bypassBreakMute": true
         }
       ]
     },

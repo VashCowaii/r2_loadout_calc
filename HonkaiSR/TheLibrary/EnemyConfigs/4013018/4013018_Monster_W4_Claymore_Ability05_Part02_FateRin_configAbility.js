@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Enemy Team All}}"
       },
-      "modifier": "<a class=\"gModGreen\" id=\"-1011760406\">MModifier_Monster_W4_Claymore_Ability05_PowerUp</a>",
+      "modifier": "<a class=\"gModGreen\" id=\"-1011760406\">MModifier_Monster_W4_Claymore_Ability05_PowerUp</a>[<span class=\"descriptionNumberColor\">Permanent Enhancement</span>]",
       "valuePerStack": {
         "BonusRatio": {
           "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
@@ -30,11 +30,15 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1011760406\">MModifier_Monster_W4_Claymore_Ability05_PowerUp</a>",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1011760406\">MModifier_Monster_W4_Claymore_Ability05_PowerUp</a>[<span class=\"descriptionNumberColor\">Permanent Enhancement</span>]",
       "stackType": "ReplaceByCaster",
       "stackData": [
         "BuffRatio"
       ],
+      "description": "Each stack increases the DMG dealt by <span class=\"descriptionNumberColor\">BuffRatio</span>.",
+      "type": "Buff",
+      "effectName": "Permanent Enhancement",
+      "statusName": "Permanent Enhancement",
       "addStacksPerTrigger": 1,
       "execute": [
         {

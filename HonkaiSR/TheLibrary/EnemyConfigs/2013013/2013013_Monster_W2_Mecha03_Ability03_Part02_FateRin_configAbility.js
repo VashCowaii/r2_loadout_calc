@@ -56,7 +56,7 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Compare: Variable",
-        "value1": "<a class=\"gModGreen\" id=\"304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>",
+        "value1": "<a class=\"gModGreen\" id=\"304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
         "compareType": "=",
         "value2": 1,
         "valueType": "LifeTime"
@@ -68,7 +68,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]"
         }
       ]
     },

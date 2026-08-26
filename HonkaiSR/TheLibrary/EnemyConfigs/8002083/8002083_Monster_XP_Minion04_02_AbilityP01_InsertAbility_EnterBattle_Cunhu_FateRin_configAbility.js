@@ -60,7 +60,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>",
+          "modifier": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
           "counter": {
             "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
             "displayLines": "{[SkillP01[0]]}",
@@ -100,7 +100,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>",
+                  "modifier": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
                   "counter": {
                     "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
                     "displayLines": "{[SkillP01[0]]}",

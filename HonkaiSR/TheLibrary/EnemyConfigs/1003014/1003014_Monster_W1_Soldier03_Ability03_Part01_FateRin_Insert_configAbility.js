@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "<a class=\"gModGreen\" id=\"623050592\">Enemy_W1_Soldier03_Passive_FateRin_DamageReduce</a>"
+      "modifier": "<a class=\"gModGreen\" id=\"623050592\">Enemy_W1_Soldier03_Passive_FateRin_DamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]"
     },
     {
       "name": "Consume",

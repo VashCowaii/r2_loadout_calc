@@ -155,7 +155,7 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "Deathrattle"
           ],
-          "description": "Steals <span class=\"descriptionNumberColor\">MDF_Attack</span> ATK. Each time after it is attacked by an target unit, increases the Maximum Restorable HP of targets inflicted with the \"Devour\" state by this unit, and returns a certain percentage of ATK. After being attacked by target units a certain number of times or when having its Weakness Broken, dispels the \"Devour\" state inflicted by this unit.",
+          "description": "Steals <span class=\"descriptionNumberColor\">MDF_Attack</span> ATK. Each time after being attacked by a target unit, increases the Maximum Restorable HP of targets inflicted with the \"Devour\" state by this unit, and returns a certain percentage of ATK. After being attacked by targets a certain number of times or when having its Weakness Broken, dispels the \"Devour\" state inflicted by this unit.",
           "type": "Other",
           "effectName": "Satiated",
           "statusName": "Satiated",

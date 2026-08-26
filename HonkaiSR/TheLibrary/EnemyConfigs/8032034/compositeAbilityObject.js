@@ -3471,7 +3471,8 @@ const compositeAbilityObject = {
               },
               "forceReduction": true,
               "canDelay": true,
-              "ToughnessDMGType": "Imaginary"
+              "ToughnessDMGType": "Imaginary",
+              "bypassBreakMute": true
             },
             {
               "name": "Add Events/Bonuses",
@@ -3503,7 +3504,8 @@ const compositeAbilityObject = {
               },
               "forceReduction": true,
               "canDelay": true,
-              "ToughnessDMGType": "Imaginary"
+              "ToughnessDMGType": "Imaginary",
+              "bypassBreakMute": true
             }
           ]
         },
@@ -3763,7 +3765,8 @@ const compositeAbilityObject = {
               },
               "forceReduction": true,
               "canDelay": true,
-              "ToughnessDMGType": "Imaginary"
+              "ToughnessDMGType": "Imaginary",
+              "bypassBreakMute": true
             },
             {
               "name": "Add Events/Bonuses",
@@ -3795,7 +3798,8 @@ const compositeAbilityObject = {
               },
               "forceReduction": true,
               "canDelay": true,
-              "ToughnessDMGType": "Imaginary"
+              "ToughnessDMGType": "Imaginary",
+              "bypassBreakMute": true
             }
           ]
         },

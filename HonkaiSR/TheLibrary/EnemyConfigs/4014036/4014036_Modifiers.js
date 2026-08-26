@@ -872,7 +872,7 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "advanceType": "Set",
-              "multiAdd": "-UnusedUnderThisBase_12773"
+              "multiAdd": "-UnusedUnderThisBase_12932"
             },
             {
               "name": "Exit Broken-State",
@@ -2239,19 +2239,19 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>",
                   "valuePerStack": {
                     "MDF_ShieldPercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12685) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12685",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12844) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12844",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_12685"
+                        "UnusedUnderThisBase_12844"
                       ]
                     },
                     "MDF_ShieldAttack_HealRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12713) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12713",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12872) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12872",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_12713"
+                        "UnusedUnderThisBase_12872"
                       ]
                     }
                   }
@@ -2274,19 +2274,19 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>",
                       "valuePerStack": {
                         "MDF_ShieldPercentage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12762) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12762",
+                          "operator": "Variables[0] (UnusedUnderThisBase_12921) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_12921",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_12762"
+                            "UnusedUnderThisBase_12921"
                           ]
                         },
                         "MDF_ShieldAttack_HealRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12764) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12764",
+                          "operator": "Variables[0] (UnusedUnderThisBase_12923) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_12923",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_12764"
+                            "UnusedUnderThisBase_12923"
                           ]
                         }
                       }
@@ -2302,19 +2302,19 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>",
                       "valuePerStack": {
                         "MDF_ShieldPercentage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12762) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12762",
+                          "operator": "Variables[0] (UnusedUnderThisBase_12921) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_12921",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_12762"
+                            "UnusedUnderThisBase_12921"
                           ]
                         },
                         "MDF_ShieldAttack_HealRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12764) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12764",
+                          "operator": "Variables[0] (UnusedUnderThisBase_12923) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_12923",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_12764"
+                            "UnusedUnderThisBase_12923"
                           ]
                         }
                       }
@@ -3513,7 +3513,8 @@ const configAbility = {
                       },
                       "forceReduction": true,
                       "canDelay": true,
-                      "ToughnessDMGType": "Quantum"
+                      "ToughnessDMGType": "Quantum",
+                      "bypassBreakMute": true
                     }
                   ]
                 }
@@ -3565,7 +3566,8 @@ const configAbility = {
                   },
                   "forceReduction": true,
                   "canDelay": true,
-                  "ToughnessDMGType": "Quantum"
+                  "ToughnessDMGType": "Quantum",
+                  "bypassBreakMute": true
                 }
               ]
             }
@@ -4724,7 +4726,8 @@ const configAbility = {
                   },
                   "forceReduction": true,
                   "canDelay": true,
-                  "ToughnessDMGType": "Quantum"
+                  "ToughnessDMGType": "Quantum",
+                  "bypassBreakMute": true
                 }
               ]
             },

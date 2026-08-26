@@ -1076,20 +1076,20 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_11315) || RETURN",
-                "displayLines": "UnusedUnderThisBase_11315",
+                "operator": "Variables[0] (UnusedUnderThisBase_11446) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11446",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_11315"
+                  "UnusedUnderThisBase_11446"
                 ]
               },
               "valuePerStack": {
                 "MDF_DamageUpRatio_PerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_11323) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_11323",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11454) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11454",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_11323"
+                    "UnusedUnderThisBase_11454"
                   ]
                 }
               }

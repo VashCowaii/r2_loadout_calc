@@ -18,7 +18,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "<a class=\"gModGreen\" id=\"-951308134\">Enemy_W4_Serpent_Charge_FateRin</a>"
+      "modifier": "<a class=\"gModGreen\" id=\"-951308134\">Enemy_W4_Serpent_Charge_FateRin</a>[<span class=\"descriptionNumberColor\">Whirl</span>]"
     },
     {
       "name": "Add Events/Bonuses",
@@ -26,7 +26,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "modifier": "<a class=\"gModGreen\" id=\"-142229785\">Enemy_W4_Serpent_FateRin_PowerUp</a>"
+      "modifier": "<a class=\"gModGreen\" id=\"-142229785\">Enemy_W4_Serpent_FateRin_PowerUp</a>[<span class=\"descriptionNumberColor\">Permanent Enhancement</span>]"
     },
     "Trigger: Ability End"
   ],
@@ -36,8 +36,12 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-142229785\">Enemy_W4_Serpent_FateRin_PowerUp</a>",
+      "for": "<a class=\"gModGreen\" id=\"mod__-142229785\">Enemy_W4_Serpent_FateRin_PowerUp</a>[<span class=\"descriptionNumberColor\">Permanent Enhancement</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack increases the DMG dealt by <span class=\"descriptionNumberColor\">#Skill03_P2_BuffRatio</span>.",
+      "type": "Buff",
+      "effectName": "Permanent Enhancement",
+      "statusName": "Permanent Enhancement",
       "addStacksPerTrigger": 1,
       "execute": [
         {

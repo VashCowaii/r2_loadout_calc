@@ -165,7 +165,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "<a class=\"gModGreen\" id=\"-951308134\">Enemy_W4_Serpent_Charge_FateRin</a>"
+      "modifier": "<a class=\"gModGreen\" id=\"-951308134\">Enemy_W4_Serpent_Charge_FateRin</a>[<span class=\"descriptionNumberColor\">Whirl</span>]"
     },
     "Trigger: Ability End"
   ],

@@ -26,8 +26,12 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1015906126\">Enemy_W4_Serpent_Charge_AttackUp_FateRin</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1015906126\">Enemy_W4_Serpent_Charge_AttackUp_FateRin</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "Replace",
+          "description": "Each stack increases the DMG dealt by <span class=\"descriptionNumberColor\">#Skill03_P1_BuffRatio</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
           "addStacksPerTrigger": 1,
           "execute": [
             {
@@ -62,12 +66,16 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-951308134\">Enemy_W4_Serpent_Charge_FateRin</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__-951308134\">Enemy_W4_Serpent_Charge_FateRin</a>[<span class=\"descriptionNumberColor\">Whirl</span>]",
           "stackType": "Replace",
           "modifierFlags": [
             "MuteHitH",
             "ListenBattleEventSkill"
           ],
+          "description": "Uses \"Hemotort Vortex\" in the next action. Increases DMG dealt by this unit after it is attacked while Charging.",
+          "type": "Buff",
+          "effectName": "Whirl",
+          "statusName": "Whirl",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -128,7 +136,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"-1015906126\">Enemy_W4_Serpent_Charge_AttackUp_FateRin</a>"
+                  "modifier": "<a class=\"gModGreen\" id=\"-1015906126\">Enemy_W4_Serpent_Charge_AttackUp_FateRin</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                 }
               ]
             }
@@ -777,7 +785,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "modifierName": "<a class=\"gModGreen\" id=\"-1846949450\">Enemy_W4_Turkey_Ability02_Power</a>[<span class=\"descriptionNumberColor\">Hemotort Resonance</span>]",
-                      "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-1654412146\">Enemy_W4_Turkey_Ability02_Power_FateRin</a>"
+                      "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-1654412146\">Enemy_W4_Turkey_Ability02_Power_FateRin</a>[<span class=\"descriptionNumberColor\">Hemotort Resonance</span>]"
                     }
                   ]
                 }
@@ -954,7 +962,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-951308134\">Enemy_W4_Serpent_Charge_FateRin</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"-951308134\">Enemy_W4_Serpent_Charge_FateRin</a>[<span class=\"descriptionNumberColor\">Whirl</span>]"
         },
         "Trigger: Ability End"
       ],
@@ -1023,7 +1031,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-951308134\">Enemy_W4_Serpent_Charge_FateRin</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"-951308134\">Enemy_W4_Serpent_Charge_FateRin</a>[<span class=\"descriptionNumberColor\">Whirl</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1031,7 +1039,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-142229785\">Enemy_W4_Serpent_FateRin_PowerUp</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"-142229785\">Enemy_W4_Serpent_FateRin_PowerUp</a>[<span class=\"descriptionNumberColor\">Permanent Enhancement</span>]"
         },
         "Trigger: Ability End"
       ],
@@ -1041,8 +1049,12 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-142229785\">Enemy_W4_Serpent_FateRin_PowerUp</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__-142229785\">Enemy_W4_Serpent_FateRin_PowerUp</a>[<span class=\"descriptionNumberColor\">Permanent Enhancement</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack increases the DMG dealt by <span class=\"descriptionNumberColor\">#Skill03_P2_BuffRatio</span>.",
+          "type": "Buff",
+          "effectName": "Permanent Enhancement",
+          "statusName": "Permanent Enhancement",
           "addStacksPerTrigger": 1,
           "execute": [
             {

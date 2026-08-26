@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
       },
-      "modifier": "<a class=\"gModGreen\" id=\"34068683\">Modifier_Monster_W5_Peacock_Ability02_FateRin_PowerUp</a>"
+      "modifier": "<a class=\"gModGreen\" id=\"34068683\">Modifier_Monster_W5_Peacock_Ability02_FateRin_PowerUp</a>[<span class=\"descriptionNumberColor\">Permanent Enhancement</span>]"
     }
   ],
   "targetObjectData": {
@@ -19,8 +19,12 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__34068683\">Modifier_Monster_W5_Peacock_Ability02_FateRin_PowerUp</a>",
+      "for": "<a class=\"gModGreen\" id=\"mod__34068683\">Modifier_Monster_W5_Peacock_Ability02_FateRin_PowerUp</a>[<span class=\"descriptionNumberColor\">Permanent Enhancement</span>]",
       "stackType": "ReplaceByCaster",
+      "description": "Each stack increases the DMG dealt by <span class=\"descriptionNumberColor\">#Skill02_P1_BuffRatio</span>.",
+      "type": "Buff",
+      "effectName": "Permanent Enhancement",
+      "statusName": "Permanent Enhancement",
       "addStacksPerTrigger": 1,
       "execute": [
         {

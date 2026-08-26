@@ -1704,7 +1704,8 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              }
+              },
+              "bypassBreakMute": true
             },
             "Modifier Deletes Itself"
           ]

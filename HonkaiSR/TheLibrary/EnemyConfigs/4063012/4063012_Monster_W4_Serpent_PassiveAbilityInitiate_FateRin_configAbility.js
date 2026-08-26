@@ -47,7 +47,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "modifierName": "<a class=\"gModGreen\" id=\"-1846949450\">Enemy_W4_Turkey_Ability02_Power</a>[<span class=\"descriptionNumberColor\">Hemotort Resonance</span>]",
-                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-1654412146\">Enemy_W4_Turkey_Ability02_Power_FateRin</a>"
+                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-1654412146\">Enemy_W4_Turkey_Ability02_Power_FateRin</a>[<span class=\"descriptionNumberColor\">Hemotort Resonance</span>]"
                 }
               ]
             }

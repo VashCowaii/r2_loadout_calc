@@ -29,11 +29,11 @@ const configAbility = {
                     "value1": "TotalDamageRatio",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_11617) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_11617",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11764) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_11764",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_11617"
+                        "UnusedUnderThisBase_11764"
                       ]
                     }
                   }
@@ -732,7 +732,8 @@ const configAbility = {
                                       "target": {
                                         "name": "Target Name",
                                         "target": "{{Caster}}"
-                                      }
+                                      },
+                                      "bypassBreakMute": true
                                     },
                                     {
                                       "name": "Add Events/Bonuses",
@@ -749,7 +750,8 @@ const configAbility = {
                                       "target": {
                                         "name": "Target Name",
                                         "target": "{{Caster}}"
-                                      }
+                                      },
+                                      "bypassBreakMute": true
                                     }
                                   ]
                                 },
@@ -1256,7 +1258,8 @@ const configAbility = {
                                   "target": {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
-                                  }
+                                  },
+                                  "bypassBreakMute": true
                                 },
                                 {
                                   "name": "Add Events/Bonuses",
@@ -1273,7 +1276,8 @@ const configAbility = {
                                   "target": {
                                     "name": "Target Name",
                                     "target": "{{Caster}}"
-                                  }
+                                  },
+                                  "bypassBreakMute": true
                                 }
                               ]
                             },
@@ -1736,7 +1740,8 @@ const configAbility = {
                           "target": {
                             "name": "Target Name",
                             "target": "{{Caster}}"
-                          }
+                          },
+                          "bypassBreakMute": true
                         },
                         {
                           "name": "Add Events/Bonuses",
@@ -1753,7 +1758,8 @@ const configAbility = {
                           "target": {
                             "name": "Target Name",
                             "target": "{{Caster}}"
-                          }
+                          },
+                          "bypassBreakMute": true
                         }
                       ]
                     },
@@ -1820,7 +1826,8 @@ const configAbility = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  }
+                  },
+                  "bypassBreakMute": true
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1837,7 +1844,8 @@ const configAbility = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  }
+                  },
+                  "bypassBreakMute": true
                 }
               ]
             },

@@ -32,10 +32,14 @@ const configAbility = {
   "references": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-602390745\">Monster_W4_PolluxPart_Disable_FateRin</a>",
+      "for": "<a class=\"gModGreen\" id=\"mod__-602390745\">Monster_W4_PolluxPart_Disable_FateRin</a>[<span class=\"descriptionNumberColor\">Unable to Act</span>]",
       "modifierFlags": [
         "DisableAction"
       ],
+      "description": "Unable to take action on the next turn.",
+      "type": "Debuff",
+      "effectName": "Unable to Act",
+      "statusName": "Unable to Act",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -82,7 +86,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
-                "modifier": "<a class=\"gModGreen\" id=\"-1045360944\">Monster_W4_PolluxPart_Shield_FateRin</a>"
+                "modifier": "<a class=\"gModGreen\" id=\"-1045360944\">Monster_W4_PolluxPart_Shield_FateRin</a>[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]"
               }
             }
           ]
@@ -96,7 +100,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"-602390745\">Monster_W4_PolluxPart_Disable_FateRin</a>",
+              "modifier": "<a class=\"gModGreen\" id=\"-602390745\">Monster_W4_PolluxPart_Disable_FateRin</a>[<span class=\"descriptionNumberColor\">Unable to Act</span>]",
               "duration": 1
             },
             {

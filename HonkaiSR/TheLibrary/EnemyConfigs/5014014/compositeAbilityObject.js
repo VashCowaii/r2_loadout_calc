@@ -324,7 +324,8 @@ const compositeAbilityObject = {
                       },
                       "forceReduction": true,
                       "canDelay": true,
-                      "ToughnessDMGType": "Quantum"
+                      "ToughnessDMGType": "Quantum",
+                      "bypassBreakMute": true
                     }
                   ]
                 },
@@ -6701,7 +6702,8 @@ const compositeAbilityObject = {
           },
           "forceReduction": true,
           "canDelay": true,
-          "ToughnessDMGType": "Quantum"
+          "ToughnessDMGType": "Quantum",
+          "bypassBreakMute": true
         },
         {
           "name": "Consume",
@@ -6854,7 +6856,8 @@ const compositeAbilityObject = {
           },
           "forceReduction": true,
           "canDelay": true,
-          "ToughnessDMGType": "Quantum"
+          "ToughnessDMGType": "Quantum",
+          "bypassBreakMute": true
         },
         {
           "name": "Adjust Team Punchline Value",

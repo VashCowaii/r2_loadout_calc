@@ -586,7 +586,8 @@ const configAbility = {
                   },
                   "forceReduction": true,
                   "canDelay": true,
-                  "ToughnessDMGType": "Imaginary"
+                  "ToughnessDMGType": "Imaginary",
+                  "bypassBreakMute": true
                 }
               ]
             },
@@ -1118,7 +1119,8 @@ const configAbility = {
                   "ToughnessDMGType": {
                     "name": "Damage Type Source",
                     "sourceType": {}
-                  }
+                  },
+                  "bypassBreakMute": true
                 },
                 {
                   "name": "ATK Scaling DMG",
@@ -1742,7 +1744,8 @@ const configAbility = {
                   "ToughnessDMGType": {
                     "name": "Damage Type Source",
                     "sourceType": {}
-                  }
+                  },
+                  "bypassBreakMute": true
                 },
                 {
                   "name": "Remove Events/Bonuses",

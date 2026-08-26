@@ -152,7 +152,7 @@ const compositeAbilityObject = {
           "modifierFlags": [
             "Deathrattle"
           ],
-          "description": "Steals <span class=\"descriptionNumberColor\">MDF_Attack</span> ATK. Each time after it is attacked by an target unit, increases the Maximum Restorable HP of targets inflicted with the \"Devour\" state by this unit, and returns a certain percentage of ATK. After being attacked by target units a certain number of times or when having its Weakness Broken, dispels the \"Devour\" state inflicted by this unit.",
+          "description": "Steals <span class=\"descriptionNumberColor\">MDF_Attack</span> ATK. Each time after being attacked by a target unit, increases the Maximum Restorable HP of targets inflicted with the \"Devour\" state by this unit, and returns a certain percentage of ATK. After being attacked by targets a certain number of times or when having its Weakness Broken, dispels the \"Devour\" state inflicted by this unit.",
           "type": "Other",
           "effectName": "Satiated",
           "statusName": "Satiated",
@@ -169,11 +169,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1281011999\">Enemy_W5_Eater_Ability02_Attack</a>",
                   "valuePerStack": {
                     "MDF_Attack": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_13217) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_13217",
+                      "operator": "Variables[0] (UnusedUnderThisBase_13376) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_13376",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_13217"
+                        "UnusedUnderThisBase_13376"
                       ]
                     }
                   }
@@ -182,11 +182,11 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_CurrentCount",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13216) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_13216",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13375",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_13216"
+                      "UnusedUnderThisBase_13375"
                     ]
                   }
                 },
@@ -194,13 +194,13 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_ShowCount",
                   "value": {
-                    "operator": "Variables[0] (MDF_CurrentCount) || Variables[1] (UnusedUnderThisBase_13216) || DIV || Variables[2] (UnusedUnderThisBase_13214) || MUL || RETURN",
-                    "displayLines": "((MDF_CurrentCount / UnusedUnderThisBase_13216) * UnusedUnderThisBase_13214)",
+                    "operator": "Variables[0] (MDF_CurrentCount) || Variables[1] (UnusedUnderThisBase_13375) || DIV || Variables[2] (UnusedUnderThisBase_13373) || MUL || RETURN",
+                    "displayLines": "((MDF_CurrentCount / UnusedUnderThisBase_13375) * UnusedUnderThisBase_13373)",
                     "constants": [],
                     "variables": [
                       "MDF_CurrentCount",
-                      "UnusedUnderThisBase_13216",
-                      "UnusedUnderThisBase_13214"
+                      "UnusedUnderThisBase_13375",
+                      "UnusedUnderThisBase_13373"
                     ]
                   }
                 }
@@ -411,13 +411,13 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_ShowCount",
                       "value": {
-                        "operator": "Variables[0] (MDF_CurrentCount) || Variables[1] (UnusedUnderThisBase_13216) || DIV || Variables[2] (UnusedUnderThisBase_13214) || MUL || RETURN",
-                        "displayLines": "((MDF_CurrentCount / UnusedUnderThisBase_13216) * UnusedUnderThisBase_13214)",
+                        "operator": "Variables[0] (MDF_CurrentCount) || Variables[1] (UnusedUnderThisBase_13375) || DIV || Variables[2] (UnusedUnderThisBase_13373) || MUL || RETURN",
+                        "displayLines": "((MDF_CurrentCount / UnusedUnderThisBase_13375) * UnusedUnderThisBase_13373)",
                         "constants": [],
                         "variables": [
                           "MDF_CurrentCount",
-                          "UnusedUnderThisBase_13216",
-                          "UnusedUnderThisBase_13214"
+                          "UnusedUnderThisBase_13375",
+                          "UnusedUnderThisBase_13373"
                         ]
                       }
                     },
@@ -425,12 +425,12 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_Attack",
                       "value": {
-                        "operator": "Variables[0] (MDF_CurrentCount) || Variables[1] (UnusedUnderThisBase_13216) || DIV || Variables[2] (MDF_LoseAttack) || MUL || RETURN",
-                        "displayLines": "((MDF_CurrentCount / UnusedUnderThisBase_13216) * MDF_LoseAttack)",
+                        "operator": "Variables[0] (MDF_CurrentCount) || Variables[1] (UnusedUnderThisBase_13375) || DIV || Variables[2] (MDF_LoseAttack) || MUL || RETURN",
+                        "displayLines": "((MDF_CurrentCount / UnusedUnderThisBase_13375) * MDF_LoseAttack)",
                         "constants": [],
                         "variables": [
                           "MDF_CurrentCount",
-                          "UnusedUnderThisBase_13216",
+                          "UnusedUnderThisBase_13375",
                           "MDF_LoseAttack"
                         ]
                       }
@@ -531,12 +531,12 @@ const compositeAbilityObject = {
                             "target": "{{Parameter Target}}"
                           },
                           "healPercent": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_13214) || Variables[1] (UnusedUnderThisBase_13216) || DIV || RETURN",
-                            "displayLines": "(UnusedUnderThisBase_13214 / UnusedUnderThisBase_13216)",
+                            "operator": "Variables[0] (UnusedUnderThisBase_13373) || Variables[1] (UnusedUnderThisBase_13375) || DIV || RETURN",
+                            "displayLines": "(UnusedUnderThisBase_13373 / UnusedUnderThisBase_13375)",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_13214",
-                              "UnusedUnderThisBase_13216"
+                              "UnusedUnderThisBase_13373",
+                              "UnusedUnderThisBase_13375"
                             ]
                           },
                           "formula": "Heal from Target MaxHP"
@@ -568,13 +568,13 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"1281011999\">Enemy_W5_Eater_Ability02_Attack</a>",
                           "valuePerStack": {
                             "MDF_Attack": {
-                              "operator": "Variables[0] (MDF_CurrentCount) || Variables[1] (UnusedUnderThisBase_13216) || DIV || Variables[2] (UnusedUnderThisBase_13217) || MUL || RETURN",
-                              "displayLines": "((MDF_CurrentCount / UnusedUnderThisBase_13216) * UnusedUnderThisBase_13217)",
+                              "operator": "Variables[0] (MDF_CurrentCount) || Variables[1] (UnusedUnderThisBase_13375) || DIV || Variables[2] (UnusedUnderThisBase_13376) || MUL || RETURN",
+                              "displayLines": "((MDF_CurrentCount / UnusedUnderThisBase_13375) * UnusedUnderThisBase_13376)",
                               "constants": [],
                               "variables": [
                                 "MDF_CurrentCount",
-                                "UnusedUnderThisBase_13216",
-                                "UnusedUnderThisBase_13217"
+                                "UnusedUnderThisBase_13375",
+                                "UnusedUnderThisBase_13376"
                               ]
                             }
                           }
@@ -900,11 +900,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"201524254\">Enemy_W5_Eater_Ability02_BlackBlood</a>",
                   "valuePerStack": {
                     "MDF_DirtyHPRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_13214) || Variables[1] (MDF_MaxLayer) || DIV || Variables[2] (MDF_Layer) || MUL || RETURN",
-                      "displayLines": "((UnusedUnderThisBase_13214 / MDF_MaxLayer) * MDF_Layer)",
+                      "operator": "Variables[0] (UnusedUnderThisBase_13373) || Variables[1] (MDF_MaxLayer) || DIV || Variables[2] (MDF_Layer) || MUL || RETURN",
+                      "displayLines": "((UnusedUnderThisBase_13373 / MDF_MaxLayer) * MDF_Layer)",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_13214",
+                        "UnusedUnderThisBase_13373",
                         "MDF_MaxLayer",
                         "MDF_Layer"
                       ]
@@ -939,10 +939,14 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-367653256\">Enemy_W5_Eater_Ability02_Eater_FateRin</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__-367653256\">Enemy_W5_Eater_Ability02_Eater_FateRin</a>[<span class=\"descriptionNumberColor\">Satiated</span>]",
           "modifierFlags": [
             "Deathrattle"
           ],
+          "description": "Steals <span class=\"descriptionNumberColor\">MDF_Attack</span> ATK. After each time this unit is attacked by a target unit, it returns a certain percentage of ATK to the target inflicted with the \"Devour\" state. After receiving a certain number of attacks from target units, dispels the \"Devour\" state applied by this unit.",
+          "type": "Buff",
+          "effectName": "Satiated",
+          "statusName": "Satiated",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -1016,7 +1020,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "<a class=\"gModGreen\" id=\"55624689\">Enemy_W5_Eater_Ability02_Ate_FateRin</a>",
+                    "modifier": "<a class=\"gModGreen\" id=\"55624689\">Enemy_W5_Eater_Ability02_Ate_FateRin</a>[<span class=\"descriptionNumberColor\">Devour</span>]",
                     "casterFilter": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
@@ -1029,7 +1033,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"55624689\">Enemy_W5_Eater_Ability02_Ate_FateRin</a>",
+                      "modifier": "<a class=\"gModGreen\" id=\"55624689\">Enemy_W5_Eater_Ability02_Ate_FateRin</a>[<span class=\"descriptionNumberColor\">Devour</span>]",
                       "onlyRemoveOwnersInstance": true
                     }
                   ]
@@ -1047,7 +1051,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "<a class=\"gModGreen\" id=\"55624689\">Enemy_W5_Eater_Ability02_Ate_FateRin</a>",
+                    "modifier": "<a class=\"gModGreen\" id=\"55624689\">Enemy_W5_Eater_Ability02_Ate_FateRin</a>[<span class=\"descriptionNumberColor\">Devour</span>]",
                     "casterFilter": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
@@ -1260,7 +1264,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "modifier": "<a class=\"gModGreen\" id=\"55624689\">Enemy_W5_Eater_Ability02_Ate_FateRin</a>",
+                        "modifier": "<a class=\"gModGreen\" id=\"55624689\">Enemy_W5_Eater_Ability02_Ate_FateRin</a>[<span class=\"descriptionNumberColor\">Devour</span>]",
                         "casterFilter": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
@@ -1273,7 +1277,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifierName": "<a class=\"gModGreen\" id=\"55624689\">Enemy_W5_Eater_Ability02_Ate_FateRin</a>",
+                          "modifierName": "<a class=\"gModGreen\" id=\"55624689\">Enemy_W5_Eater_Ability02_Ate_FateRin</a>[<span class=\"descriptionNumberColor\">Devour</span>]",
                           "variableName": "MDF_DirtyHPRatio",
                           "value": {
                             "operator": "Variables[0] (MDF_ShowCount) || RETURN",
@@ -1290,7 +1294,7 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifierName": "<a class=\"gModGreen\" id=\"55624689\">Enemy_W5_Eater_Ability02_Ate_FateRin</a>",
+                          "modifierName": "<a class=\"gModGreen\" id=\"55624689\">Enemy_W5_Eater_Ability02_Ate_FateRin</a>[<span class=\"descriptionNumberColor\">Devour</span>]",
                           "variableName": "MDF_LoseAttack",
                           "value": {
                             "operator": "Variables[0] (MDF_Attack) || RETURN",
@@ -1452,8 +1456,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__55624689\">Enemy_W5_Eater_Ability02_Ate_FateRin</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__55624689\">Enemy_W5_Eater_Ability02_Ate_FateRin</a>[<span class=\"descriptionNumberColor\">Devour</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "<span class=\"descriptionNumberColor\">MDF_LoseAttack</span> ATK from %DynamicTargetName has been stolen by \"%CasterName\"",
+          "type": "Debuff",
+          "effectName": "Devour",
+          "statusName": "Devour",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -1480,7 +1488,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "modifier": "<a class=\"gModGreen\" id=\"55624689\">Enemy_W5_Eater_Ability02_Ate_FateRin</a>"
+                    "modifier": "<a class=\"gModGreen\" id=\"55624689\">Enemy_W5_Eater_Ability02_Ate_FateRin</a>[<span class=\"descriptionNumberColor\">Devour</span>]"
                   },
                   "noTargetFound": [
                     {
@@ -1595,8 +1603,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-2066845206\">Enemy_W5_Eater_Ability03_Attack_FateRin</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__-2066845206\">Enemy_W5_Eater_Ability03_Attack_FateRin</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "Multiple",
+          "description": "%DynamicTargetName's ATK increases by <span class=\"descriptionNumberColor\">MDF_Attack</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "ATK Boost",
           "execute": [
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1648,7 +1660,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-367653256\">Enemy_W5_Eater_Ability02_Eater_FateRin</a>",
+          "modifier": "<a class=\"gModGreen\" id=\"-367653256\">Enemy_W5_Eater_Ability02_Eater_FateRin</a>[<span class=\"descriptionNumberColor\">Satiated</span>]",
           "variable": "MDF_LoseAttack",
           "target2": null,
           "variable2": "Skill03_Attack"
@@ -1672,7 +1684,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-367653256\">Enemy_W5_Eater_Ability02_Eater_FateRin</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"-367653256\">Enemy_W5_Eater_Ability02_Eater_FateRin</a>[<span class=\"descriptionNumberColor\">Satiated</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -1680,7 +1692,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-2066845206\">Enemy_W5_Eater_Ability03_Attack_FateRin</a>",
+          "modifier": "<a class=\"gModGreen\" id=\"-2066845206\">Enemy_W5_Eater_Ability03_Attack_FateRin</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
             "displayLines": "{[Skill03[1]]}",
@@ -2024,7 +2036,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-367653256\">Enemy_W5_Eater_Ability02_Eater_FateRin</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"-367653256\">Enemy_W5_Eater_Ability02_Eater_FateRin</a>[<span class=\"descriptionNumberColor\">Satiated</span>]"
         },
         {
           "name": "Add Events/Bonuses",
@@ -2032,7 +2044,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"55624689\">Enemy_W5_Eater_Ability02_Ate_FateRin</a>",
+          "modifier": "<a class=\"gModGreen\" id=\"55624689\">Enemy_W5_Eater_Ability02_Ate_FateRin</a>[<span class=\"descriptionNumberColor\">Devour</span>]",
           "valuePerStack": {
             "MDF_AttackRatio": {
               "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
@@ -2132,7 +2144,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"55624689\">Enemy_W5_Eater_Ability02_Ate_FateRin</a>",
+          "modifier": "<a class=\"gModGreen\" id=\"55624689\">Enemy_W5_Eater_Ability02_Ate_FateRin</a>[<span class=\"descriptionNumberColor\">Devour</span>]",
           "variable": "MDF_LoseAttack",
           "target2": null,
           "variable2": "Skill02_Attack"
@@ -2143,7 +2155,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-367653256\">Enemy_W5_Eater_Ability02_Eater_FateRin</a>",
+          "modifier": "<a class=\"gModGreen\" id=\"-367653256\">Enemy_W5_Eater_Ability02_Eater_FateRin</a>[<span class=\"descriptionNumberColor\">Satiated</span>]",
           "valuePerStack": {
             "MDF_LoseAttack": {
               "operator": "Variables[0] (Skill02_Attack) || RETURN",
@@ -2353,7 +2365,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-2066845206\">Enemy_W5_Eater_Ability03_Attack_FateRin</a>",
+          "modifier": "<a class=\"gModGreen\" id=\"-2066845206\">Enemy_W5_Eater_Ability03_Attack_FateRin</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "duration": {
             "operator": "Variables[0] (Skill03_LifeTime) || RETURN",
             "displayLines": "Skill03_LifeTime",

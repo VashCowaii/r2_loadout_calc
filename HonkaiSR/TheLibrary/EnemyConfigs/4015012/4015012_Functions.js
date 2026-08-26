@@ -107,7 +107,7 @@ const configAbility = {
             "name": "Stage ID",
             "ID": 429301,
             "compareType": "=",
-            "characterName": null
+            "characterName": "The Ascended"
           },
           "passed": [
             {

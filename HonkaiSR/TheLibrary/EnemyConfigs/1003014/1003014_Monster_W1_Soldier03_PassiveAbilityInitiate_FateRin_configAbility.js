@@ -103,7 +103,11 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__623050592\">Enemy_W1_Soldier03_Passive_FateRin_DamageReduce</a>",
+      "for": "<a class=\"gModGreen\" id=\"mod__623050592\">Enemy_W1_Soldier03_Passive_FateRin_DamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
+      "description": "DMG taken decreases <span class=\"descriptionNumberColor\">ReduceRatio</span>.",
+      "type": "Other",
+      "effectName": "DMG Mitigation",
+      "statusName": "DMG Mitigation",
       "execute": [
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -145,7 +149,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"623050592\">Enemy_W1_Soldier03_Passive_FateRin_DamageReduce</a>",
+              "modifier": "<a class=\"gModGreen\" id=\"623050592\">Enemy_W1_Soldier03_Passive_FateRin_DamageReduce</a>[<span class=\"descriptionNumberColor\">DMG Mitigation</span>]",
               "valuePerStack": {
                 "ReduceRatio": 0.9
               }

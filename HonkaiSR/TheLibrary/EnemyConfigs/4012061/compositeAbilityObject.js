@@ -242,7 +242,8 @@ const compositeAbilityObject = {
                           },
                           "forceReduction": true,
                           "canDelay": true,
-                          "ToughnessDMGType": "Imaginary"
+                          "ToughnessDMGType": "Imaginary",
+                          "bypassBreakMute": true
                         }
                       ],
                       "failed": [
@@ -309,7 +310,8 @@ const compositeAbilityObject = {
                               },
                               "forceReduction": true,
                               "canDelay": true,
-                              "ToughnessDMGType": "Quantum"
+                              "ToughnessDMGType": "Quantum",
+                              "bypassBreakMute": true
                             }
                           ],
                           "failed": [
@@ -333,7 +335,8 @@ const compositeAbilityObject = {
                               },
                               "forceReduction": true,
                               "canDelay": true,
-                              "ToughnessDMGType": "Quantum"
+                              "ToughnessDMGType": "Quantum",
+                              "bypassBreakMute": true
                             }
                           ]
                         }
@@ -3165,11 +3168,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                           "valuePerStack": {
                             "MDF_DamageUpRatio_PerLayer": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_12340) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_12340",
+                              "operator": "Variables[0] (UnusedUnderThisBase_12499) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_12499",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_12340"
+                                "UnusedUnderThisBase_12499"
                               ]
                             }
                           },
@@ -3225,11 +3228,11 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                               "valuePerStack": {
                                 "MDF_DamageUpRatio_PerLayer": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_12340) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_12340",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_12499) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_12499",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_12340"
+                                    "UnusedUnderThisBase_12499"
                                   ]
                                 }
                               },
@@ -3284,11 +3287,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"615854836\">Enemy_W4_Nikadory_IF_Brave</a>[<span class=\"descriptionNumberColor\">Glory</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12340) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12340",
+                          "operator": "Variables[0] (UnusedUnderThisBase_12499) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_12499",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_12340"
+                            "UnusedUnderThisBase_12499"
                           ]
                         }
                       },
@@ -4631,7 +4634,8 @@ const compositeAbilityObject = {
                               },
                               "forceReduction": true,
                               "canDelay": true,
-                              "ToughnessDMGType": "Imaginary"
+                              "ToughnessDMGType": "Imaginary",
+                              "bypassBreakMute": true
                             }
                           ],
                           "failed": [
@@ -4680,7 +4684,8 @@ const compositeAbilityObject = {
                               },
                               "forceReduction": true,
                               "canDelay": true,
-                              "ToughnessDMGType": "Imaginary"
+                              "ToughnessDMGType": "Imaginary",
+                              "bypassBreakMute": true
                             }
                           ]
                         }
@@ -4904,7 +4909,8 @@ const compositeAbilityObject = {
                               },
                               "forceReduction": true,
                               "canDelay": true,
-                              "ToughnessDMGType": "Imaginary"
+                              "ToughnessDMGType": "Imaginary",
+                              "bypassBreakMute": true
                             }
                           ]
                         }
@@ -5161,7 +5167,8 @@ const compositeAbilityObject = {
                               },
                               "forceReduction": true,
                               "canDelay": true,
-                              "ToughnessDMGType": "Imaginary"
+                              "ToughnessDMGType": "Imaginary",
+                              "bypassBreakMute": true
                             }
                           ],
                           "failed": [
@@ -5210,7 +5217,8 @@ const compositeAbilityObject = {
                               },
                               "forceReduction": true,
                               "canDelay": true,
-                              "ToughnessDMGType": "Imaginary"
+                              "ToughnessDMGType": "Imaginary",
+                              "bypassBreakMute": true
                             }
                           ]
                         }

@@ -1472,7 +1472,8 @@ const compositeAbilityObject = {
                       },
                       "forceReduction": true,
                       "canDelay": true,
-                      "ToughnessDMGType": "Physical"
+                      "ToughnessDMGType": "Physical",
+                      "bypassBreakMute": true
                     }
                   ]
                 }
@@ -2307,7 +2308,7 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-557758203\">Enemy_W4_FireProwler_IF_Limit</a>[<span class=\"descriptionNumberColor\">Shackle Shatter</span>]",
-          "description": "Alternates between using \"Dying Sobs\" and \"But Suffering is Essential.\" \"Dying Sobs\" summons \"Long-Shattered Vessel\" and enters Charging state, and \"But Suffering is Essential\" deals Powerful Attacks. \"Calamity Power\" stacks increases the Hits Per Action of Powerful Attacks. After destroying \"Long-Shattered Vessel,\" Toughness and \"Calamity Power\" stacks can be reduced. In the second phase, \"Silent Sorrow\" and \"Cry Not for the Discarded\" will be used, and \"Calamity Power\" stacks increases.",
+          "description": "Alternates between using \"Dying Sobs\" and \"But Suffering is Essential.\" \"Dying Sobs\" summons \"Long-Shattered Vessel\" and enters Charging state, and \"But Suffering is Essential\" deals Powerful Attacks. \"Calamity Power\" stacks increases the Hits Per Action of Powerful Attacks. After destroying \"Long-Shattered Vessel,\" Toughness and \"Calamity Power\" stacks can be reduced. In the second phase, \"Silent Sorrow\" and \"Cry Not for the Discarded\" will be used, and \"Calamity Power\" stack increases.",
           "type": "Other",
           "effectName": "Shackle Shatter",
           "statusName": "Shackle Shatter",
@@ -2594,7 +2595,8 @@ const compositeAbilityObject = {
                           },
                           "forceReduction": true,
                           "canDelay": true,
-                          "ToughnessDMGType": "Physical"
+                          "ToughnessDMGType": "Physical",
+                          "bypassBreakMute": true
                         }
                       ]
                     }
@@ -4711,27 +4713,27 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1587187705\">Enemy_W2_Cocolia_IF_SuperArmorController</a>",
               "valuePerStack": {
                 "MDF_IF_BOSS_BreakDelay": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13530) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13530",
+                  "operator": "Variables[0] (UnusedUnderThisBase_13754) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_13754",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_13530"
+                    "UnusedUnderThisBase_13754"
                   ]
                 },
                 "MDF_IF_BOSS_WeaknessDMGUpRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13535",
+                  "operator": "Variables[0] (UnusedUnderThisBase_13759) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_13759",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_13535"
+                    "UnusedUnderThisBase_13759"
                   ]
                 },
                 "MDF_IF_BOSS_Standard_Defence": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13569) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13569",
+                  "operator": "Variables[0] (UnusedUnderThisBase_13793) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_13793",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_13569"
+                    "UnusedUnderThisBase_13793"
                   ]
                 }
               }
@@ -4745,35 +4747,35 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1246789467\">Enemy_W2_Cocolia_IF_SoftFrenzyController</a>",
               "valuePerStack": {
                 "MDF_FrenzyStartDelay": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13572) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13572",
+                  "operator": "Variables[0] (UnusedUnderThisBase_13796) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_13796",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_13572"
+                    "UnusedUnderThisBase_13796"
                   ]
                 },
                 "MDF_FrenzyIntervalDelay": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13573) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13573",
+                  "operator": "Variables[0] (UnusedUnderThisBase_13797) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_13797",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_13573"
+                    "UnusedUnderThisBase_13797"
                   ]
                 },
                 "MDF_MaxFrenzyLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13574) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13574",
+                  "operator": "Variables[0] (UnusedUnderThisBase_13798) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_13798",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_13574"
+                    "UnusedUnderThisBase_13798"
                   ]
                 },
                 "MDF_TokenDMGAddRatioPerLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13575) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13575",
+                  "operator": "Variables[0] (UnusedUnderThisBase_13799) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_13799",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_13575"
+                    "UnusedUnderThisBase_13799"
                   ]
                 }
               }

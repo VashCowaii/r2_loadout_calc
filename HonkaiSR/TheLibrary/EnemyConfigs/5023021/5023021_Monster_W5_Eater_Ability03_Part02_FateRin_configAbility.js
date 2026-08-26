@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "<a class=\"gModGreen\" id=\"-367653256\">Enemy_W5_Eater_Ability02_Eater_FateRin</a>",
+      "modifier": "<a class=\"gModGreen\" id=\"-367653256\">Enemy_W5_Eater_Ability02_Eater_FateRin</a>[<span class=\"descriptionNumberColor\">Satiated</span>]",
       "variable": "MDF_LoseAttack",
       "target2": null,
       "variable2": "Skill03_Attack"
@@ -34,7 +34,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "<a class=\"gModGreen\" id=\"-367653256\">Enemy_W5_Eater_Ability02_Eater_FateRin</a>"
+      "modifier": "<a class=\"gModGreen\" id=\"-367653256\">Enemy_W5_Eater_Ability02_Eater_FateRin</a>[<span class=\"descriptionNumberColor\">Satiated</span>]"
     },
     {
       "name": "Add Events/Bonuses",
@@ -42,7 +42,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "<a class=\"gModGreen\" id=\"-2066845206\">Enemy_W5_Eater_Ability03_Attack_FateRin</a>",
+      "modifier": "<a class=\"gModGreen\" id=\"-2066845206\">Enemy_W5_Eater_Ability03_Attack_FateRin</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
       "duration": {
         "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
         "displayLines": "{[Skill03[1]]}",

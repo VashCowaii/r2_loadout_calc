@@ -3098,11 +3098,11 @@ const compositeAbilityObject = {
                               "name": "Define Custom Variable",
                               "variableName": "MDF_Negative_Count_Max",
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_10926) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_10926",
+                                "operator": "Variables[0] (UnusedUnderThisBase_11057) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_11057",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_10926"
+                                  "UnusedUnderThisBase_11057"
                                 ]
                               }
                             }
@@ -3125,11 +3125,11 @@ const compositeAbilityObject = {
                                   "name": "Define Custom Variable",
                                   "variableName": "MDF_Negative_Count_Max",
                                   "value": {
-                                    "operator": "Variables[0] (UnusedUnderThisBase_10918) || RETURN",
-                                    "displayLines": "UnusedUnderThisBase_10918",
+                                    "operator": "Variables[0] (UnusedUnderThisBase_11049) || RETURN",
+                                    "displayLines": "UnusedUnderThisBase_11049",
                                     "constants": [],
                                     "variables": [
-                                      "UnusedUnderThisBase_10918"
+                                      "UnusedUnderThisBase_11049"
                                     ]
                                   }
                                 }

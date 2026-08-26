@@ -2422,7 +2422,8 @@ const compositeAbilityObject = {
                       "ToughnessDMGType": {
                         "name": "Damage Type Source",
                         "sourceType": {}
-                      }
+                      },
+                      "bypassBreakMute": true
                     },
                     {
                       "name": "Remove Events/Bonuses",

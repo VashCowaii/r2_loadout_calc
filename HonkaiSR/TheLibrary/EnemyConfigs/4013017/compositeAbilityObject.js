@@ -1048,11 +1048,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-883767978\">Monster_W4_Claymore_01_LocalLegend_DamageAdd</a>",
                       "valuePerStack": {
                         "MDF_DamageAdded": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11232) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_11232",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11363) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11363",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_11232"
+                            "UnusedUnderThisBase_11363"
                           ]
                         }
                       }

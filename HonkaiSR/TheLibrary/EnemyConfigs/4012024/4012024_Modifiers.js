@@ -10,10 +10,14 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-528839631\">Enemy_W4_Scholar_01_Stealth_FateRin</a>",
+      "for": "<a class=\"gModGreen\" id=\"mod__-528839631\">Enemy_W4_Scholar_01_Stealth_FateRin</a>[<span class=\"descriptionNumberColor\">Lurking</span>]",
       "modifierFlags": [
         "Stealth"
       ],
+      "description": "Cannot become the primary target for abilities that require active selection. When there are no other enemy units on the battlefield, this unit dispels the \"Lurking\" state.",
+      "type": "Other",
+      "effectName": "Lurking",
+      "statusName": "Lurking",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -181,7 +185,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"-528839631\">Enemy_W4_Scholar_01_Stealth_FateRin</a>"
+                  "modifier": "<a class=\"gModGreen\" id=\"-528839631\">Enemy_W4_Scholar_01_Stealth_FateRin</a>[<span class=\"descriptionNumberColor\">Lurking</span>]"
                 }
               ]
             }

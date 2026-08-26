@@ -1824,11 +1824,11 @@ const compositeAbilityObject = {
                 {
                   "name": "Adjust Team Punchline Value",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13366) || Variables[1] (WHOLE) || Variables[2] (CurrentMaxColorScore) || PARAM_1 || FUNCTION || MUL || RETURN",
-                    "displayLines": "(UnusedUnderThisBase_13366 * &nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(CurrentMaxColorScore))",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13527) || Variables[1] (WHOLE) || Variables[2] (CurrentMaxColorScore) || PARAM_1 || FUNCTION || MUL || RETURN",
+                    "displayLines": "(UnusedUnderThisBase_13527 * &nbsp;<span class=\"descriptionFunctionColor\">WHOLE</span>(CurrentMaxColorScore))",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_13366",
+                      "UnusedUnderThisBase_13527",
                       "WHOLE",
                       "CurrentMaxColorScore"
                     ]
@@ -3893,11 +3893,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1506777447\">Enemy_W5_Peacock_AbilityP01_Colorless</a>[<span class=\"descriptionNumberColor\">Colorless</span>]",
                   "valuePerStack": {
                     "MDF_ElationDamageExtraColorCount": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_13368) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_13368",
+                      "operator": "Variables[0] (UnusedUnderThisBase_13529) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_13529",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_13368"
+                        "UnusedUnderThisBase_13529"
                       ]
                     }
                   }
@@ -3911,11 +3911,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1921694254\">Enemy_W5_Peacock_AbilityP01_ElementResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Boost</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_13373) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_13373",
+                      "operator": "Variables[0] (UnusedUnderThisBase_13534) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_13534",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_13373"
+                        "UnusedUnderThisBase_13534"
                       ]
                     }
                   }
@@ -4135,11 +4135,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1921694254\">Enemy_W5_Peacock_AbilityP01_ElementResistance</a>[<span class=\"descriptionNumberColor\">All-Type RES Boost</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_13373) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_13373",
+                      "operator": "Variables[0] (UnusedUnderThisBase_13534) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_13534",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_13373"
+                        "UnusedUnderThisBase_13534"
                       ]
                     }
                   }
@@ -4172,11 +4172,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1506777447\">Enemy_W5_Peacock_AbilityP01_Colorless</a>[<span class=\"descriptionNumberColor\">Colorless</span>]",
                       "valuePerStack": {
                         "MDF_ElationDamageExtraColorCount": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13368) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13368",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13529) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13529",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_13368"
+                            "UnusedUnderThisBase_13529"
                           ]
                         }
                       }
@@ -4442,7 +4442,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"34068683\">Modifier_Monster_W5_Peacock_Ability02_FateRin_PowerUp</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"34068683\">Modifier_Monster_W5_Peacock_Ability02_FateRin_PowerUp</a>[<span class=\"descriptionNumberColor\">Permanent Enhancement</span>]"
         }
       ],
       "targetObjectData": {
@@ -4451,8 +4451,12 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__34068683\">Modifier_Monster_W5_Peacock_Ability02_FateRin_PowerUp</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__34068683\">Modifier_Monster_W5_Peacock_Ability02_FateRin_PowerUp</a>[<span class=\"descriptionNumberColor\">Permanent Enhancement</span>]",
           "stackType": "ReplaceByCaster",
+          "description": "Each stack increases the DMG dealt by <span class=\"descriptionNumberColor\">#Skill02_P1_BuffRatio</span>.",
+          "type": "Buff",
+          "effectName": "Permanent Enhancement",
+          "statusName": "Permanent Enhancement",
           "addStacksPerTrigger": 1,
           "execute": [
             {
@@ -5160,11 +5164,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5188,11 +5192,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5216,11 +5220,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5244,11 +5248,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5272,11 +5276,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5300,11 +5304,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5328,11 +5332,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5381,11 +5385,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5409,11 +5413,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5437,11 +5441,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5465,11 +5469,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5493,11 +5497,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5521,11 +5525,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5549,11 +5553,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5602,11 +5606,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5630,11 +5634,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5658,11 +5662,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5686,11 +5690,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5714,11 +5718,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5742,11 +5746,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5770,11 +5774,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5823,11 +5827,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5851,11 +5855,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5879,11 +5883,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5907,11 +5911,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5935,11 +5939,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5963,11 +5967,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -5991,11 +5995,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6044,11 +6048,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6072,11 +6076,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6100,11 +6104,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6128,11 +6132,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6156,11 +6160,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6184,11 +6188,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6212,11 +6216,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6265,11 +6269,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6293,11 +6297,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6321,11 +6325,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6349,11 +6353,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6377,11 +6381,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6405,11 +6409,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6433,11 +6437,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6516,11 +6520,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6544,11 +6548,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6572,11 +6576,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6600,11 +6604,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6628,11 +6632,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6656,11 +6660,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6684,11 +6688,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6737,11 +6741,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6765,11 +6769,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6793,11 +6797,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6821,11 +6825,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6849,11 +6853,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6877,11 +6881,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6905,11 +6909,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6958,11 +6962,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -6986,11 +6990,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7014,11 +7018,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7042,11 +7046,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7070,11 +7074,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7098,11 +7102,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7126,11 +7130,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7179,11 +7183,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7207,11 +7211,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7235,11 +7239,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7263,11 +7267,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7291,11 +7295,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7319,11 +7323,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7347,11 +7351,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7400,11 +7404,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7428,11 +7432,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7456,11 +7460,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7484,11 +7488,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7512,11 +7516,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7540,11 +7544,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7568,11 +7572,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7621,11 +7625,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7649,11 +7653,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7677,11 +7681,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7705,11 +7709,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7733,11 +7737,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7761,11 +7765,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7789,11 +7793,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13364) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13364",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13525) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13525",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13364"
+                                    "UnusedUnderThisBase_13525"
                                   ]
                                 },
                                 "Toughness": null,
@@ -7988,11 +7992,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8009,11 +8013,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8048,11 +8052,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8069,11 +8073,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8108,11 +8112,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8129,11 +8133,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8168,11 +8172,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8189,11 +8193,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8228,11 +8232,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8249,11 +8253,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8288,11 +8292,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8309,11 +8313,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8348,11 +8352,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8369,11 +8373,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8428,11 +8432,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8449,11 +8453,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8488,11 +8492,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8509,11 +8513,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8548,11 +8552,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8569,11 +8573,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8608,11 +8612,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8629,11 +8633,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8668,11 +8672,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8689,11 +8693,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8728,11 +8732,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8749,11 +8753,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8788,11 +8792,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8809,11 +8813,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8868,11 +8872,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8889,11 +8893,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8928,11 +8932,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8949,11 +8953,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -8988,11 +8992,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9009,11 +9013,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9048,11 +9052,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9069,11 +9073,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9108,11 +9112,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9129,11 +9133,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9168,11 +9172,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9189,11 +9193,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9228,11 +9232,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9249,11 +9253,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9308,11 +9312,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9329,11 +9333,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9368,11 +9372,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9389,11 +9393,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9428,11 +9432,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9449,11 +9453,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9488,11 +9492,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9509,11 +9513,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9548,11 +9552,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9569,11 +9573,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9608,11 +9612,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9629,11 +9633,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9668,11 +9672,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9689,11 +9693,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9748,11 +9752,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9769,11 +9773,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9808,11 +9812,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9829,11 +9833,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9868,11 +9872,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9889,11 +9893,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9928,11 +9932,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9949,11 +9953,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -9988,11 +9992,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -10009,11 +10013,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -10048,11 +10052,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -10069,11 +10073,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -10108,11 +10112,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -10129,11 +10133,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -10188,11 +10192,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -10209,11 +10213,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -10248,11 +10252,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -10269,11 +10273,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -10308,11 +10312,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -10329,11 +10333,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -10368,11 +10372,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -10389,11 +10393,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -10428,11 +10432,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -10449,11 +10453,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -10488,11 +10492,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -10509,11 +10513,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -10548,11 +10552,11 @@ const compositeAbilityObject = {
                                   "stackLimit": 10,
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -10569,11 +10573,11 @@ const compositeAbilityObject = {
                                   "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                                   "valuePerStack": {
                                     "MDF_PropertyValue": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_13374",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_13535",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_13374"
+                                        "UnusedUnderThisBase_13535"
                                       ]
                                     }
                                   },
@@ -10633,11 +10637,11 @@ const compositeAbilityObject = {
                           "stackLimit": 10,
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13374",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13535",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13374"
+                                "UnusedUnderThisBase_13535"
                               ]
                             }
                           },
@@ -10654,11 +10658,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1436335976\">Enemy_W5_Peacock_AbilityP01_FireResistanceDown</a>[<span class=\"descriptionNumberColor\">Fire Weakness</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13374",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13535",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13374"
+                                "UnusedUnderThisBase_13535"
                               ]
                             }
                           },
@@ -10693,11 +10697,11 @@ const compositeAbilityObject = {
                           "stackLimit": 10,
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13374",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13535",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13374"
+                                "UnusedUnderThisBase_13535"
                               ]
                             }
                           },
@@ -10714,11 +10718,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-773592435\">Enemy_W5_Peacock_AbilityP01_IceResistanceDown</a>[<span class=\"descriptionNumberColor\">Ice Weakness</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13374",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13535",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13374"
+                                "UnusedUnderThisBase_13535"
                               ]
                             }
                           },
@@ -10753,11 +10757,11 @@ const compositeAbilityObject = {
                           "stackLimit": 10,
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13374",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13535",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13374"
+                                "UnusedUnderThisBase_13535"
                               ]
                             }
                           },
@@ -10774,11 +10778,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-178254661\">Enemy_W5_Peacock_AbilityP01_ImaginaryResistanceDown</a>[<span class=\"descriptionNumberColor\">Imaginary Weakness</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13374",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13535",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13374"
+                                "UnusedUnderThisBase_13535"
                               ]
                             }
                           },
@@ -10813,11 +10817,11 @@ const compositeAbilityObject = {
                           "stackLimit": 10,
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13374",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13535",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13374"
+                                "UnusedUnderThisBase_13535"
                               ]
                             }
                           },
@@ -10834,11 +10838,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-2088030707\">Enemy_W5_Peacock_AbilityP01_PhysicalResistanceDown</a>[<span class=\"descriptionNumberColor\">Physical Weakness</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13374",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13535",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13374"
+                                "UnusedUnderThisBase_13535"
                               ]
                             }
                           },
@@ -10873,11 +10877,11 @@ const compositeAbilityObject = {
                           "stackLimit": 10,
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13374",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13535",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13374"
+                                "UnusedUnderThisBase_13535"
                               ]
                             }
                           },
@@ -10894,11 +10898,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-557658473\">Enemy_W5_Peacock_AbilityP01_QuantumResistanceDown</a>[<span class=\"descriptionNumberColor\">Quantum Weakness</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13374",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13535",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13374"
+                                "UnusedUnderThisBase_13535"
                               ]
                             }
                           },
@@ -10933,11 +10937,11 @@ const compositeAbilityObject = {
                           "stackLimit": 10,
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13374",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13535",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13374"
+                                "UnusedUnderThisBase_13535"
                               ]
                             }
                           },
@@ -10954,11 +10958,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"1987684272\">Enemy_W5_Peacock_AbilityP01_ThunderResistanceDown</a>[<span class=\"descriptionNumberColor\">Lightning Weakness</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13374",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13535",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13374"
+                                "UnusedUnderThisBase_13535"
                               ]
                             }
                           },
@@ -10993,11 +10997,11 @@ const compositeAbilityObject = {
                           "stackLimit": 10,
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13374",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13535",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13374"
+                                "UnusedUnderThisBase_13535"
                               ]
                             }
                           },
@@ -11014,11 +11018,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"245030982\">Enemy_W5_Peacock_AbilityP01_WindResistanceDown</a>[<span class=\"descriptionNumberColor\">Wind Weakness</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13374) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13374",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13535) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13535",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13374"
+                                "UnusedUnderThisBase_13535"
                               ]
                             }
                           },
@@ -11080,11 +11084,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11109,11 +11113,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11138,11 +11142,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11167,11 +11171,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11196,11 +11200,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11225,11 +11229,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11254,11 +11258,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11307,11 +11311,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11336,11 +11340,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11365,11 +11369,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11394,11 +11398,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11423,11 +11427,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11452,11 +11456,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11481,11 +11485,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11534,11 +11538,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11563,11 +11567,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11592,11 +11596,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11621,11 +11625,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11650,11 +11654,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11679,11 +11683,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11708,11 +11712,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11761,11 +11765,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11790,11 +11794,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11819,11 +11823,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11848,11 +11852,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11877,11 +11881,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11906,11 +11910,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11935,11 +11939,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -11988,11 +11992,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -12017,11 +12021,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -12046,11 +12050,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -12075,11 +12079,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -12104,11 +12108,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -12133,11 +12137,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -12162,11 +12166,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -12215,11 +12219,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -12244,11 +12248,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Ice",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -12273,11 +12277,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Imaginary",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -12302,11 +12306,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Physical",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -12331,11 +12335,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Quantum",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -12360,11 +12364,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Thunder",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",
@@ -12389,11 +12393,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Wind",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13375) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13375",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13536) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13536",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13375"
+                                    "UnusedUnderThisBase_13536"
                                   ]
                                 },
                                 "dmgFormula": "Max HP Scaling",

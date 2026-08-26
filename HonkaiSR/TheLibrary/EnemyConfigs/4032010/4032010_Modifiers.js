@@ -27,11 +27,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1287044096\">AML_Minion02_01_Rage</a>",
               "valuePerStack": {
                 "PassiveAbilityInitiate_P1_AttackAddedRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_7937) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_7937",
+                  "operator": "Variables[0] (UnusedUnderThisBase_8024) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_8024",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_7937"
+                    "UnusedUnderThisBase_8024"
                   ]
                 },
                 "PassiveAbilityInitiate_P2_DefenceAddedRatio": {

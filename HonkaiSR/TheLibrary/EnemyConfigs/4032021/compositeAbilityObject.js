@@ -1185,11 +1185,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1209794480\">Enemy_W4_FireProwler_01_IF_Bonus_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11883) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_11883",
+                          "operator": "Variables[0] (UnusedUnderThisBase_12030) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_12030",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_11883"
+                            "UnusedUnderThisBase_12030"
                           ]
                         }
                       },
@@ -1235,13 +1235,13 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_11890) || SUB || RETURN",
-                    "displayLines": "(0 - UnusedUnderThisBase_11890)",
+                    "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_12037) || SUB || RETURN",
+                    "displayLines": "(0 - UnusedUnderThisBase_12037)",
                     "constants": [
                       0
                     ],
                     "variables": [
-                      "UnusedUnderThisBase_11890"
+                      "UnusedUnderThisBase_12037"
                     ]
                   }
                 },
@@ -1253,11 +1253,11 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "multiBase": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_11889) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_11889",
+                    "operator": "Variables[0] (UnusedUnderThisBase_12036) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_12036",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_11889"
+                      "UnusedUnderThisBase_12036"
                     ]
                   }
                 }
@@ -1315,11 +1315,11 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "consumePercent": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_11893) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_11893",
+                        "operator": "Variables[0] (UnusedUnderThisBase_12040) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_12040",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_11893"
+                          "UnusedUnderThisBase_12040"
                         ]
                       },
                       "consumeFloor": 1,
@@ -1932,7 +1932,8 @@ const compositeAbilityObject = {
                       },
                       "forceReduction": true,
                       "canDelay": true,
-                      "ToughnessDMGType": "Physical"
+                      "ToughnessDMGType": "Physical",
+                      "bypassBreakMute": true
                     }
                   ]
                 }
@@ -2767,7 +2768,7 @@ const compositeAbilityObject = {
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-557758203\">Enemy_W4_FireProwler_IF_Limit</a>[<span class=\"descriptionNumberColor\">Shackle Shatter</span>]",
-          "description": "Alternates between using \"Dying Sobs\" and \"But Suffering is Essential.\" \"Dying Sobs\" summons \"Long-Shattered Vessel\" and enters Charging state, and \"But Suffering is Essential\" deals Powerful Attacks. \"Calamity Power\" stacks increases the Hits Per Action of Powerful Attacks. After destroying \"Long-Shattered Vessel,\" Toughness and \"Calamity Power\" stacks can be reduced. In the second phase, \"Silent Sorrow\" and \"Cry Not for the Discarded\" will be used, and \"Calamity Power\" stacks increases.",
+          "description": "Alternates between using \"Dying Sobs\" and \"But Suffering is Essential.\" \"Dying Sobs\" summons \"Long-Shattered Vessel\" and enters Charging state, and \"But Suffering is Essential\" deals Powerful Attacks. \"Calamity Power\" stacks increases the Hits Per Action of Powerful Attacks. After destroying \"Long-Shattered Vessel,\" Toughness and \"Calamity Power\" stacks can be reduced. In the second phase, \"Silent Sorrow\" and \"Cry Not for the Discarded\" will be used, and \"Calamity Power\" stack increases.",
           "type": "Other",
           "effectName": "Shackle Shatter",
           "statusName": "Shackle Shatter",
@@ -2877,11 +2878,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1049811080\">Enemy_W4_FireProwler_IF_TimePowerListener</a>",
                   "valuePerStack": {
                     "MDF_MaxCount": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_11862) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_11862",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12009) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12009",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_11862"
+                        "UnusedUnderThisBase_12009"
                       ]
                     }
                   }
@@ -3054,7 +3055,8 @@ const compositeAbilityObject = {
                           },
                           "forceReduction": true,
                           "canDelay": true,
-                          "ToughnessDMGType": "Physical"
+                          "ToughnessDMGType": "Physical",
+                          "bypassBreakMute": true
                         }
                       ]
                     }
@@ -4265,11 +4267,11 @@ const compositeAbilityObject = {
                 "value1": "CurrentBounsIndex",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_11891) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_11891",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12038) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12038",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_11891"
+                    "UnusedUnderThisBase_12038"
                   ]
                 }
               },

@@ -26,7 +26,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "<a class=\"gModGreen\" id=\"1553959515\">MModifier_Monster_W4_Claymore_02_Ability03_Aim_FateRin</a>"
+      "modifier": "<a class=\"gModGreen\" id=\"1553959515\">MModifier_Monster_W4_Claymore_02_Ability03_Aim_FateRin</a>[<span class=\"descriptionNumberColor\">Charging</span>]"
     },
     {
       "name": "Add Events/Bonuses",

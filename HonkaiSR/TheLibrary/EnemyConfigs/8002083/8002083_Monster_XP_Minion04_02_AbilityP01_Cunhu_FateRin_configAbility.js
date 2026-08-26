@@ -92,13 +92,13 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>"
+                    "modifier": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]"
                   },
                   "passed": [
                     {
                       "name": "Define Custom Variable with Modifier Values",
                       "variableName": "Cunhu_CurrentCount",
-                      "modifierName": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>",
+                      "modifierName": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
                       "multiplier": 1
                     },
                     {
@@ -107,7 +107,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>",
+                      "modifier": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
                       "counter": {
                         "operator": "Variables[0] (Cunhu_CurrentCount) || RETURN",
                         "displayLines": "Cunhu_CurrentCount",

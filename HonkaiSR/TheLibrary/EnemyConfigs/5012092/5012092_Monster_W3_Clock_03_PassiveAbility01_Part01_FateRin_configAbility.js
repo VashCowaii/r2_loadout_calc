@@ -18,13 +18,13 @@ const configAbility = {
             "name": "Stage ID",
             "ID": 429205,
             "compareType": "=",
-            "characterName": null
+            "characterName": "The Ascended"
           },
           {
             "name": "Stage ID",
             "ID": 429215,
             "compareType": "=",
-            "characterName": null
+            "characterName": "The Ascended"
           }
         ]
       },
@@ -50,7 +50,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"756663200\">Enemy_W3_Clock_03_TargetSelect_ToFriend</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"756663200\">Enemy_W3_Clock_03_TargetSelect_ToFriend</a>[<span class=\"descriptionNumberColor\">Verification Error</span>]"
         }
       ],
       "failed": [
@@ -74,7 +74,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"756663200\">Enemy_W3_Clock_03_TargetSelect_ToFriend</a>"
+              "modifier": "<a class=\"gModGreen\" id=\"756663200\">Enemy_W3_Clock_03_TargetSelect_ToFriend</a>[<span class=\"descriptionNumberColor\">Verification Error</span>]"
             },
             {
               "name": "Add Events/Bonuses",

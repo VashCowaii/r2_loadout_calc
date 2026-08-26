@@ -258,7 +258,8 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{All Team Members}}"
-              }
+              },
+              "bypassBreakMute": true
             },
             {
               "name": "Define Custom Variable",

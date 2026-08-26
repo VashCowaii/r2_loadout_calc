@@ -168,11 +168,11 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"1129261000\">MModifier_Monster_W3_Theater_RLBoss_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Oil to the Banabana</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (UnusedUnderThisBase_10344) || RETURN",
-              "displayLines": "UnusedUnderThisBase_10344",
+              "operator": "Variables[0] (UnusedUnderThisBase_10475) || RETURN",
+              "displayLines": "UnusedUnderThisBase_10475",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_10344"
+                "UnusedUnderThisBase_10475"
               ]
             }
           }

@@ -1359,10 +1359,14 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
           "modifierFlags": [
             "MuteBreak"
           ],
+          "description": "Aurumaton Gatekeeper's DMG dealt increases by <span class=\"descriptionNumberColor\">#SkillP01_P1_DamageUpRatio</span> and it activates the ability: Enchainment.",
+          "type": "Buff",
+          "effectName": "Sanction Mode",
+          "statusName": "Sanction Mode",
           "duration": 2,
           "execute": [
             {
@@ -1446,7 +1450,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
-                    "modifier": "<a class=\"gModGreen\" id=\"304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>",
+                    "modifier": "<a class=\"gModGreen\" id=\"304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
                     "invertCondition": true
                   },
                   "passed": [
@@ -1916,7 +1920,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]"
         },
         {
           "name": "Declare Custom Variable",
@@ -2021,7 +2025,7 @@ const compositeAbilityObject = {
           "name": "IF",
           "conditions": {
             "name": "Compare: Variable",
-            "value1": "<a class=\"gModGreen\" id=\"304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>",
+            "value1": "<a class=\"gModGreen\" id=\"304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
             "compareType": "=",
             "value2": 1,
             "valueType": "LifeTime"
@@ -2033,7 +2037,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>"
+              "modifier": "<a class=\"gModGreen\" id=\"304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]"
             }
           ]
         },
@@ -2303,7 +2307,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "<a class=\"gModGreen\" id=\"304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>",
+                        "modifier": "<a class=\"gModGreen\" id=\"304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
                         "invertCondition": true
                       }
                     ]
@@ -2356,7 +2360,7 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "<a class=\"gModGreen\" id=\"304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>",
+                        "modifier": "<a class=\"gModGreen\" id=\"304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
                         "invertCondition": true
                       }
                     ]
@@ -2409,7 +2413,7 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "<a class=\"gModGreen\" id=\"304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>"
+                    "modifier": "<a class=\"gModGreen\" id=\"304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]"
                   }
                 }
               ]

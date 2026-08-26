@@ -77,7 +77,7 @@ const configAbility = {
         "name": "Stage ID",
         "ID": 429302,
         "compareType": "NOT=",
-        "characterName": null
+        "characterName": "The Ascended"
       },
       "passed": [
         {
@@ -795,7 +795,7 @@ const configAbility = {
                     "target": "{{Parameter Target}}"
                   },
                   "modifierName": "<a class=\"gModGreen\" id=\"-1785279589\">Enemy_W4_DawnsEye_WeatherEnhanced</a>[<span class=\"descriptionNumberColor\">Wingbeats</span>]",
-                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-1708281129\">Enemy_W4_DawnsEye_WeatherEnhanced_FateRin</a>"
+                  "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-1708281129\">Enemy_W4_DawnsEye_WeatherEnhanced_FateRin</a>[<span class=\"descriptionNumberColor\">Wingbeats</span>]"
                 }
               ]
             }

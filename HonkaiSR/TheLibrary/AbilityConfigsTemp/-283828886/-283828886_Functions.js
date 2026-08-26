@@ -16,6 +16,20 @@ const configAbility = {
         {
           "name": "IF",
           "conditions": {
+            "name": "Compare: Variable",
+            "value1": "UNKNOWN_COMPARE_1",
+            "compareType": ">",
+            "value2": 0
+          },
+          "passed": [
+            {
+              "$type": "NGCOKAIKPHC"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
             "name": "AND",
             "conditionList": [
               {

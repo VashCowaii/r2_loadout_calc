@@ -1097,7 +1097,8 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
-              }
+              },
+              "bypassBreakMute": true
             }
           ]
         }
@@ -3060,7 +3061,8 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
-              }
+              },
+              "bypassBreakMute": true
             }
           ]
         }

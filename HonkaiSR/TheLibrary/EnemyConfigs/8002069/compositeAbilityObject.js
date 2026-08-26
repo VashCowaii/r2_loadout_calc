@@ -1123,11 +1123,11 @@ const compositeAbilityObject = {
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13932) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_13932",
+                    "operator": "Variables[0] (UnusedUnderThisBase_14172) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_14172",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_13932"
+                      "UnusedUnderThisBase_14172"
                     ]
                   },
                   "entityClass": "Enemy",

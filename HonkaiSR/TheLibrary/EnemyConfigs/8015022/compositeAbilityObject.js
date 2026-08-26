@@ -2435,11 +2435,11 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"117676328\">Monster_W2_Huanlong_JingYuan_DamageUp</a>",
                               "valuePerStack": {
                                 "MDF_DamageUpRatio": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_9280) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_9280",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_9375) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_9375",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_9280"
+                                    "UnusedUnderThisBase_9375"
                                   ]
                                 }
                               }
@@ -4191,11 +4191,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"117676328\">Monster_W2_Huanlong_JingYuan_DamageUp</a>",
               "valuePerStack": {
                 "MDF_DamageUpRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9280) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9280",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9375) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9375",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_9280"
+                    "UnusedUnderThisBase_9375"
                   ]
                 }
               }
@@ -5103,11 +5103,13 @@ const compositeAbilityObject = {
                           "_MaxStance"
                         ]
                       },
+                      "forceReduction": true,
                       "canDelay": true,
                       "ToughnessDMGType": {
                         "name": "Damage Type Source",
                         "sourceType": {}
-                      }
+                      },
+                      "bypassBreakMute": true
                     }
                   ]
                 },
