@@ -50,11 +50,11 @@ const configAbility = {
           },
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (UnusedUnderThisBase_10623) || RETURN",
-              "displayLines": "UnusedUnderThisBase_10623",
+              "operator": "Variables[0] (UnusedUnderThisBase_10754) || RETURN",
+              "displayLines": "UnusedUnderThisBase_10754",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_10623"
+                "UnusedUnderThisBase_10754"
               ]
             }
           }

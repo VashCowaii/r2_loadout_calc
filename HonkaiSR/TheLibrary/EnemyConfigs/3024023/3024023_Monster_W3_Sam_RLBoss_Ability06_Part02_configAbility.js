@@ -127,7 +127,8 @@ const configAbility = {
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          }
+          },
+          "bypassBreakMute": true
         }
       ]
     },

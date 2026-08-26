@@ -49,8 +49,18 @@ const compositeAbilityObject = {
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Modifier Was",
-                    "modifier": "<a class=\"gModGreen\" id=\"-1788586863\">Enemy_W3_Sam_RLBoss_Ability07AimTarget</a>"
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Modifier Was",
+                        "modifier": "<a class=\"gModGreen\" id=\"-1788586863\">Enemy_W3_Sam_RLBoss_Ability07AimTarget</a>"
+                      },
+                      {
+                        "name": "Check Modifier Death Source",
+                        "source": "CasterDead",
+                        "invertCondition": true
+                      }
+                    ]
                   },
                   "passed": [
                     {
@@ -2725,7 +2735,8 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  }
+                  },
+                  "bypassBreakMute": true
                 },
                 "Modifier Deletes Itself"
               ]
@@ -4580,7 +4591,8 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
-              }
+              },
+              "bypassBreakMute": true
             }
           ]
         },

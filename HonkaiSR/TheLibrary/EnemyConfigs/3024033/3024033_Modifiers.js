@@ -928,57 +928,6 @@ const configAbility = {
           "eventTrigger": "When Stacking/Receiving Modifier",
           "execute": [
             {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Modifier Holder}}"
-                },
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 3
-              },
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "PassiveSkill03_MaxCharge",
-                  "value": {
-                    "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill03[4]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill03[4]]}"
-                    ]
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "PassiveSkill03_MaxCharge",
-                  "value": {
-                    "operator": "Variables[0] ({[PassiveSkill03[1]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill03[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill03[1]]}"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
               "name": "Update Displayed Energy Bar",
               "value": {
                 "operator": "Variables[0] (ChargeCount) || RETURN",
@@ -1174,13 +1123,55 @@ const configAbility = {
               }
             },
             {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value1": "HP_Bars_Remaining",
+                "compareType": "=",
+                "value2": 3
               },
-              "scope": "TargetEntity",
-              "variableName": "PassiveSkill03_MaxCharge"
+              "passed": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "PassiveSkill03_MaxCharge",
+                  "value": {
+                    "operator": "Variables[0] ({[PassiveSkill03[4]]}) || RETURN",
+                    "displayLines": "{[PassiveSkill03[4]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[PassiveSkill03[4]]}"
+                    ]
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "PassiveSkill03_MaxCharge",
+                  "value": {
+                    "operator": "Variables[0] ({[PassiveSkill03[1]]}) || RETURN",
+                    "displayLines": "{[PassiveSkill03[1]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[PassiveSkill03[1]]}"
+                    ]
+                  }
+                }
+              ]
             },
             {
               "name": "Add Events/Bonuses",

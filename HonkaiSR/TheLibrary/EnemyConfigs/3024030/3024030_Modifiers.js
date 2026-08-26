@@ -928,57 +928,6 @@ const configAbility = {
           "eventTrigger": "When Stacking/Receiving Modifier",
           "execute": [
             {
-              "name": "IF",
-              "conditions": {
-                "name": "Compare: Variable",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Modifier Holder}}"
-                },
-                "value1": "HP_Bars_Remaining",
-                "compareType": "=",
-                "value2": 3
-              },
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "PassiveSkill03_MaxCharge",
-                  "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_10605) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_10605",
-                    "constants": [],
-                    "variables": [
-                      "UnusedUnderThisBase_10605"
-                    ]
-                  }
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "PassiveSkill03_MaxCharge",
-                  "value": {
-                    "operator": "Variables[0] ({[PassiveSkill03[1]]}) || RETURN",
-                    "displayLines": "{[PassiveSkill03[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[PassiveSkill03[1]]}"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
               "name": "Update Displayed Energy Bar",
               "value": {
                 "operator": "Variables[0] (ChargeCount) || RETURN",
@@ -1174,13 +1123,55 @@ const configAbility = {
               }
             },
             {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "value1": "HP_Bars_Remaining",
+                "compareType": "=",
+                "value2": 3
               },
-              "scope": "TargetEntity",
-              "variableName": "PassiveSkill03_MaxCharge"
+              "passed": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "PassiveSkill03_MaxCharge",
+                  "value": {
+                    "operator": "Variables[0] (UnusedUnderThisBase_10736) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_10736",
+                    "constants": [],
+                    "variables": [
+                      "UnusedUnderThisBase_10736"
+                    ]
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "PassiveSkill03_MaxCharge",
+                  "value": {
+                    "operator": "Variables[0] ({[PassiveSkill03[1]]}) || RETURN",
+                    "displayLines": "{[PassiveSkill03[1]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[PassiveSkill03[1]]}"
+                    ]
+                  }
+                }
+              ]
             },
             {
               "name": "Add Events/Bonuses",
@@ -1252,11 +1243,11 @@ const configAbility = {
                       "scope": "TargetEntity",
                       "variableName": "PassiveSkill03_MaxCharge",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_10605) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_10605",
+                        "operator": "Variables[0] (UnusedUnderThisBase_10736) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_10736",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_10605"
+                          "UnusedUnderThisBase_10736"
                         ]
                       }
                     }
@@ -1301,11 +1292,11 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                       "valuePerStack": {
                         "MDF_DamageUpRatio_PerLayer": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_10607) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_10607",
+                          "operator": "Variables[0] (UnusedUnderThisBase_10738) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_10738",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_10607"
+                            "UnusedUnderThisBase_10738"
                           ]
                         }
                       }
