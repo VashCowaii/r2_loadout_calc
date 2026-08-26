@@ -439,7 +439,7 @@ const configAbility = {
               "name": "Force Entity Death",
               "target": {
                 "name": "Target Name",
-                "target": "{{Caster's Self-Made Battle-Events}}"
+                "target": "{{Fuyuan}}"
               },
               "ignoreHPLossTriggers": true,
               "ignoreDeathTriggers": true

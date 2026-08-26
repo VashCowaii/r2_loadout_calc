@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Compare: Variable",
         "target": {
           "name": "Target Name",
-          "target": "{{Caster's Self-Made Battle-Events}}"
+          "target": "{{Fuyuan}}"
         },
         "value1": "BattleEvent_Lingsha_00_PointB3",
         "compareType": ">=",
@@ -21,7 +21,7 @@ const configAbility = {
           "name": "Define Custom Variable",
           "target": {
             "name": "Target Name",
-            "target": "{{Caster's Self-Made Battle-Events}}"
+            "target": "{{Fuyuan}}"
           },
           "variableName": "BattleEvent_Lingsha_00_PointB3",
           "value": 0
@@ -174,7 +174,7 @@ const configAbility = {
         "name": "Has Modifier",
         "target": {
           "name": "Target Name",
-          "target": "{{Caster's Self-Made Battle-Events}}"
+          "target": "{{Fuyuan}}"
         },
         "modifier": "<a class=\"gModGreen\" id=\"1876847773\">Lingsha_BPAbility_BattleEvent_LifeTime</a>",
         "invertCondition": true
@@ -191,14 +191,14 @@ const configAbility = {
           "name": "Mark Entity For Immediate Death",
           "target": {
             "name": "Target Name",
-            "target": "{{Caster's Self-Made Battle-Events}}"
+            "target": "{{Fuyuan}}"
           }
         },
         {
           "name": "Force Entity Death",
           "target": {
             "name": "Target Name",
-            "target": "{{Caster's Self-Made Battle-Events}}"
+            "target": "{{Fuyuan}}"
           },
           "ignoreHPLossTriggers": true,
           "ignoreDeathTriggers": true

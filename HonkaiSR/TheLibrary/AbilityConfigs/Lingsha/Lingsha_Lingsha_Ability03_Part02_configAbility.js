@@ -131,7 +131,7 @@ const configAbility = {
           "name": "Action Advance/Delay",
           "target": {
             "name": "Target Name",
-            "target": "{{Caster's Self-Made Battle-Events}}"
+            "target": "{{Fuyuan}}"
           },
           "advanceType": "Advance",
           "multiAdd": "-1"

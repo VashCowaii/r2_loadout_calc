@@ -60,7 +60,7 @@ const configAbility = {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
-            "target": "{{Caster's Self-Made Battle-Events}}"
+            "target": "{{Fuyuan}}"
           },
           "modifier": "<a class=\"gModGreen\" id=\"1876847773\">Lingsha_BPAbility_BattleEvent_LifeTime</a>",
           "counter": {
@@ -180,7 +180,7 @@ const configAbility = {
               "name": "Add Events/Bonuses",
               "to": {
                 "name": "Target Name",
-                "target": "{{Caster's Self-Made Battle-Events}}"
+                "target": "{{Fuyuan}}"
               },
               "modifier": "<a class=\"gModGreen\" id=\"210278197\">Lingsha_PointB3_OnListen</a>",
               "valuePerStack": {
@@ -257,7 +257,7 @@ const configAbility = {
           "name": "Action Advance/Delay",
           "target": {
             "name": "Target Name",
-            "target": "{{Caster's Self-Made Battle-Events}}"
+            "target": "{{Fuyuan}}"
           },
           "advanceType": "Advance",
           "multiAdd": "-0.2"
