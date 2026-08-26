@@ -1444,6 +1444,43 @@ const configAbility = {
                           "value": 1
                         }
                       ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Character ID",
+                            "ID": 1510,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "characterName": "Himeko • Nova"
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Level Entity}}"
+                          },
+                          "variableName": "_Seconds",
+                          "value": 0.3
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Level Entity}}"
+                          },
+                          "variableName": "_SpecialPhoto",
+                          "value": 1
+                        }
+                      ]
                     }
                   ]
                 }

@@ -1039,19 +1039,19 @@ const configAbility = {
                       "duration": 1,
                       "valuePerStack": {
                         "Ability04_P3_ToMonsterHpPercentage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13333) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13333",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13494) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13494",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_13333"
+                            "UnusedUnderThisBase_13494"
                           ]
                         },
                         "Ability04_P4_ElationPoint": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13314) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13314",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13475) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13475",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_13314"
+                            "UnusedUnderThisBase_13475"
                           ]
                         }
                       },
@@ -1081,11 +1081,11 @@ const configAbility = {
                           "duration": 1,
                           "valuePerStack": {
                             "Ability04_P6_BPPoint": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13324) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13324",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13485) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13485",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13324"
+                                "UnusedUnderThisBase_13485"
                               ]
                             }
                           }
