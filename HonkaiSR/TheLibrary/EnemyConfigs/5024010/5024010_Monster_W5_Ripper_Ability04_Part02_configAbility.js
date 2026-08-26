@@ -101,6 +101,15 @@ const configAbility = {
             },
             "modifier": "<a class=\"gModGreen\" id=\"2042265236\">Monster_W5_Ripper_Main2</a>",
             "invertCondition": true
+          },
+          {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ripper: Self}}"
+            },
+            "value": "InSkill05",
+            "invertCondition": true
           }
         ]
       },
@@ -191,14 +200,27 @@ const configAbility = {
                 "value2": 2
               },
               {
-                "name": "Enemy ID",
-                "ID": 5024012,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Paramount Bliss Inverted: Illwish Archlotus",
-                "isBaseCompare": true
+                "name": "OR",
+                "conditionList": [
+                  {
+                    "name": "Enemy ID",
+                    "ID": 5024012,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "characterName": "Paramount Bliss Inverted: Illwish Archlotus",
+                    "isBaseCompare": true
+                  },
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "value": "RLBoss"
+                  }
+                ]
               }
             ]
           },
@@ -639,63 +661,170 @@ const configAbility = {
           "multiplier": 1
         },
         {
-          "name": "Add Events/Bonuses",
-          "to": {
-            "name": "Target Name",
-            "target": "{{Parameter Target}}"
-          },
-          "modifier": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
-          "duration": {
-            "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-            "displayLines": "{[Skill04[2]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill04[2]]}"
-            ]
-          },
-          "stackLimit": {
-            "operator": "Variables[0] ({[Skill04[1]]}) || Variables[1] ({[Skill04[3]]}) || ADD || RETURN",
-            "displayLines": "({[Skill04[1]]} + {[Skill04[3]]})",
-            "constants": [],
-            "variables": [
-              "{[Skill04[1]]}",
-              "{[Skill04[3]]}"
-            ]
-          },
-          "valuePerStack": {
-            "MDF_MaxLayer": {
-              "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-              "displayLines": "{[Skill04[1]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[1]]}"
-              ]
+          "name": "IF",
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Ripper: Self}}"
             },
-            "MDF_AddLayer": {
-              "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-              "displayLines": "{[Skill04[3]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[3]]}"
-              ]
-            },
-            "MDF_SummonCount": {
-              "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
-              "displayLines": "{[Skill04[4]]}",
-              "constants": [],
-              "variables": [
-                "{[Skill04[4]]}"
+            "value": "InSkill05"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+              "duration": {
+                "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
+                "displayLines": "{[Skill04[2]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill04[2]]}"
+                ]
+              },
+              "stackLimit": {
+                "operator": "Variables[0] ({[Skill04[1]]}) || Variables[1] ({[Skill04[3]]}) || ADD || RETURN",
+                "displayLines": "({[Skill04[1]]} + {[Skill04[3]]})",
+                "constants": [],
+                "variables": [
+                  "{[Skill04[1]]}",
+                  "{[Skill04[3]]}"
+                ]
+              },
+              "valuePerStack": {
+                "MDF_MaxLayer": {
+                  "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
+                  "displayLines": "{[Skill04[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill04[1]]}"
+                  ]
+                },
+                "MDF_AddLayer": {
+                  "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
+                  "displayLines": "{[Skill04[3]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill04[3]]}"
+                  ]
+                },
+                "MDF_SummonCount": {
+                  "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
+                  "displayLines": "{[Skill04[4]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill04[4]]}"
+                  ]
+                }
+              },
+              "addStacksPerTrigger": {
+                "operator": "Variables[0] ({[Skill04[9]]}) || RETURN",
+                "displayLines": "{[Skill04[9]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill04[9]]}"
+                ]
+              }
+            }
+          ],
+          "failed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+              "duration": {
+                "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
+                "displayLines": "{[Skill04[2]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill04[2]]}"
+                ]
+              },
+              "stackLimit": {
+                "operator": "Variables[0] ({[Skill04[1]]}) || Variables[1] ({[Skill04[3]]}) || ADD || RETURN",
+                "displayLines": "({[Skill04[1]]} + {[Skill04[3]]})",
+                "constants": [],
+                "variables": [
+                  "{[Skill04[1]]}",
+                  "{[Skill04[3]]}"
+                ]
+              },
+              "valuePerStack": {
+                "MDF_MaxLayer": {
+                  "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
+                  "displayLines": "{[Skill04[1]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill04[1]]}"
+                  ]
+                },
+                "MDF_AddLayer": {
+                  "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
+                  "displayLines": "{[Skill04[3]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill04[3]]}"
+                  ]
+                },
+                "MDF_SummonCount": {
+                  "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
+                  "displayLines": "{[Skill04[4]]}",
+                  "constants": [],
+                  "variables": [
+                    "{[Skill04[4]]}"
+                  ]
+                }
+              },
+              "addStacksPerTrigger": {
+                "operator": "Variables[0] ({[Skill04[9]]}) || RETURN",
+                "displayLines": "{[Skill04[9]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill04[9]]}"
+                ]
+              },
+              "success": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "value": "RLBoss"
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                      "valuePerStack": {
+                        "MDF_DamageUpRatio_PerLayer": {
+                          "operator": "Variables[0] (UnusedUnderThisBase_13688) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13688",
+                          "constants": [],
+                          "variables": [
+                            "UnusedUnderThisBase_13688"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
               ]
             }
-          },
-          "addStacksPerTrigger": {
-            "operator": "Variables[0] ({[Skill04[9]]}) || RETURN",
-            "displayLines": "{[Skill04[9]]}",
-            "constants": [],
-            "variables": [
-              "{[Skill04[9]]}"
-            ]
-          }
+          ]
         }
       ]
     },

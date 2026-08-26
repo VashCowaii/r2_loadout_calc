@@ -1233,10 +1233,31 @@ const compositeAbilityObject = {
               "eventTrigger": "When Modifier Destroyed/Removed",
               "execute": [
                 {
-                  "name": "Define Modifier-Specific Variable",
-                  "modifierName": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
-                  "variableName": "MDF_SummonFlag",
-                  "value": 1
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ripper: Self}}"
+                    },
+                    "value": "InSkill05"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Modifier-Specific Variable",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                      "variableName": "MDF_SummonFlag",
+                      "value": 1
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Modifier-Specific Variable",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                      "variableName": "MDF_SummonFlag",
+                      "value": 1
+                    }
+                  ]
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1477,22 +1498,55 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1275502108\">Monster_W5_Ripper_BattleScore2Count</a>"
                     },
                     {
-                      "name": "Define Modifier-Specific Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Ripper: Self}}"
+                        },
+                        "value": "InSkill05"
                       },
-                      "modifierName": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
-                      "variableName": "MDF_SummonFlag",
-                      "value": 1
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
+                      "passed": [
+                        {
+                          "name": "Define Modifier-Specific Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifierName": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                          "variableName": "MDF_SummonFlag",
+                          "value": 1
+                        },
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Define Modifier-Specific Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifierName": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                          "variableName": "MDF_SummonFlag",
+                          "value": 1
+                        },
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
+                        }
+                      ]
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1580,22 +1634,55 @@ const compositeAbilityObject = {
                   ],
                   "failed": [
                     {
-                      "name": "Define Modifier-Specific Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Ripper: Self}}"
+                        },
+                        "value": "InSkill05"
                       },
-                      "modifierName": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
-                      "variableName": "MDF_SummonFlag",
-                      "value": 1
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
+                      "passed": [
+                        {
+                          "name": "Define Modifier-Specific Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifierName": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                          "variableName": "MDF_SummonFlag",
+                          "value": 1
+                        },
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Define Modifier-Specific Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifierName": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                          "variableName": "MDF_SummonFlag",
+                          "value": 1
+                        },
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
+                        }
+                      ]
                     }
                   ]
                 },
@@ -1931,6 +2018,642 @@ const compositeAbilityObject = {
                       "MDF_CriticalDamageUpRatio"
                     ]
                   }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+          "stackType": "ReplaceButKeepLifeTime",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "description": "At the start of each turn, gains <span class=\"descriptionNumberColor\">MDF_AddLayer</span> stack(s). Loses 1 stack after attacking an enemy target, and loses an additional stack after eliminating an enemy target. At the end of the turn, if stacks are greater than or equal to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span>, the character will be converted into a \"Happiness Puppet.\" When stacks reach <span class=\"descriptionNumberColor\">MDF_RemoveLayer</span>, this state is dispelled and the \"Inverted Severance\" effect is inflicted.",
+          "type": "Other",
+          "effectName": "Happiness",
+          "statusName": "Happiness",
+          "addStacksPerTrigger": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Add Ability",
+                  "abilityName": "Monster_W5_Ripper_FleshChange"
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "FleshLifeTime",
+                  "value": {
+                    "operator": "Variables[0] ({[Skill06[2]]}) || RETURN",
+                    "displayLines": "{[Skill06[2]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill06[2]]}"
+                    ]
+                  }
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "Buff_DamageUpRatio",
+                  "value": {
+                    "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
+                    "displayLines": "{[PassiveSkill01[3]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[PassiveSkill01[3]]}"
+                    ]
+                  }
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "Buff_MaxLayer",
+                  "value": {
+                    "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
+                    "displayLines": "{[PassiveSkill01[4]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[PassiveSkill01[4]]}"
+                    ]
+                  }
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "MDF_FleshElationPoint",
+                  "value": {
+                    "operator": "Variables[0] ({[Skill06[3]]}) || RETURN",
+                    "displayLines": "{[Skill06[3]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill06[3]]}"
+                    ]
+                  }
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "MDF_FleshExtraChance",
+                  "value": {
+                    "operator": "Variables[0] ({[Skill06[4]]}) || RETURN",
+                    "displayLines": "{[Skill06[4]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill06[4]]}"
+                    ]
+                  }
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "MDF_FleshExtraElationPoint",
+                  "value": {
+                    "operator": "Variables[0] ({[Skill06[5]]}) || RETURN",
+                    "displayLines": "{[Skill06[5]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill06[5]]}"
+                    ]
+                  }
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "MDF_AttackEnemyChance",
+                  "value": {
+                    "operator": "Variables[0] ({[PassiveSkill02[0]]}) || RETURN",
+                    "displayLines": "{[PassiveSkill02[0]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[PassiveSkill02[0]]}"
+                    ]
+                  }
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "MDF_DamagePercentage",
+                  "value": {
+                    "operator": "Variables[0] ({[PassiveSkill02[1]]}) || RETURN",
+                    "displayLines": "{[PassiveSkill02[1]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[PassiveSkill02[1]]}"
+                    ]
+                  }
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "MDF_MaxDamageRatio",
+                  "value": {
+                    "operator": "Variables[0] ({[PassiveSkill02[2]]}) || RETURN",
+                    "displayLines": "{[PassiveSkill02[2]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[PassiveSkill02[2]]}"
+                    ]
+                  }
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "MDF_MinDamageRatio",
+                  "value": {
+                    "operator": "Variables[0] ({[PassiveSkill02[3]]}) || RETURN",
+                    "displayLines": "{[PassiveSkill02[3]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[PassiveSkill02[3]]}"
+                    ]
+                  }
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "MDF_ExtraDamageMultiple",
+                  "value": {
+                    "operator": "Variables[0] ({[PassiveSkill02[4]]}) || RETURN",
+                    "displayLines": "{[PassiveSkill02[4]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[PassiveSkill02[4]]}"
+                    ]
+                  }
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "MDF_EnemyExtraDamageMultiple",
+                  "value": {
+                    "operator": "Variables[0] ({[PassiveSkill02[5]]}) || RETURN",
+                    "displayLines": "{[PassiveSkill02[5]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[PassiveSkill02[5]]}"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]",
+                    "invertCondition": true
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Enemy Team All}}"
+                        },
+                        "value1": "TeamCharacterCount",
+                        "compareType": ">=",
+                        "value2": 5
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_AttackFlag",
+                        "compareType": "=",
+                        "value2": 1
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                          "addStacksPerTrigger": {
+                            "operator": "Variables[0] (MDF_AddLayer) || Constants[0] (1) || SUB || RETURN",
+                            "displayLines": "(MDF_AddLayer - 1)",
+                            "constants": [
+                              1
+                            ],
+                            "variables": [
+                              "MDF_AddLayer"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_AttackFlag",
+                          "value": 0
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                          "addStacksPerTrigger": {
+                            "operator": "Variables[0] (MDF_AddLayer) || RETURN",
+                            "displayLines": "MDF_AddLayer",
+                            "constants": [],
+                            "variables": [
+                              "MDF_AddLayer"
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_DieFlag",
+                        "compareType": "=",
+                        "value2": 1
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                          "addStacksPerTrigger": -1
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_DieFlag",
+                          "value": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": 100
+            },
+            {
+              "eventTrigger": "Turn [Owner]: Action-End Phase",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "ModifierLayers",
+                    "compareType": ">=",
+                    "value2": {
+                      "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
+                      "displayLines": "MDF_MaxLayer",
+                      "constants": [],
+                      "variables": [
+                        "MDF_MaxLayer"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_ConversionFlag",
+                        "compareType": "=",
+                        "value2": 0
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_ConversionFlag",
+                          "value": 1
+                        },
+                        {
+                          "name": "Inject Ability Use",
+                          "abilityName": "Monster_W5_Ripper_FleshChange",
+                          "priorityTag": "EnemyBuffOthers",
+                          "allowAbilityTriggers": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "LastModifierLayers",
+                  "value": {
+                    "operator": "Variables[0] (ModifierLayers) || RETURN",
+                    "displayLines": "ModifierLayers",
+                    "constants": [],
+                    "variables": [
+                      "ModifierLayers"
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "valueType": "Layer",
+                  "variableName": "ModifierLayers",
+                  "multiplier": 1
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "ModifierLayers",
+                        "compareType": ">=",
+                        "value2": {
+                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
+                          "displayLines": "MDF_MaxLayer",
+                          "constants": [],
+                          "variables": [
+                            "MDF_MaxLayer"
+                          ]
+                        }
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "LastModifierLayers",
+                        "compareType": "<",
+                        "value2": {
+                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
+                          "displayLines": "MDF_MaxLayer",
+                          "constants": [],
+                          "variables": [
+                            "MDF_MaxLayer"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "ModifierLayers",
+                        "compareType": "<",
+                        "value2": {
+                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
+                          "displayLines": "MDF_MaxLayer",
+                          "constants": [],
+                          "variables": [
+                            "MDF_MaxLayer"
+                          ]
+                        }
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "LastModifierLayers",
+                        "compareType": ">=",
+                        "value2": {
+                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
+                          "displayLines": "MDF_MaxLayer",
+                          "constants": [],
+                          "variables": [
+                            "MDF_MaxLayer"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "ModifierLayers",
+                    "compareType": "=",
+                    "value2": 2
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_Init",
+                        "compareType": "=",
+                        "value2": 0
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_Init",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "ModifierLayers",
+                    "compareType": "=",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-2109211182\">Monster_W5_Ripper_Bonus</a>[<span class=\"descriptionNumberColor\">Inverted Severance</span>]",
+                      "duration": {
+                        "operator": "Variables[0] ({[Skill04[8]]}) || RETURN",
+                        "displayLines": "{[Skill04[8]]}",
+                        "constants": [],
+                        "variables": [
+                          "{[Skill04[8]]}"
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_CriticalDamageUpRatio": {
+                          "operator": "Variables[0] ({[Skill04[7]]}) || RETURN",
+                          "displayLines": "{[Skill04[7]]}",
+                          "constants": [],
+                          "variables": [
+                            "{[Skill04[7]]}"
+                          ]
+                        }
+                      }
+                    },
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Death [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Target Exists",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target 2}}"
+                        }
+                      },
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Enemy Team"
+                      },
+                      {
+                        "name": "Is Part Of",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target 2}}"
+                        },
+                        "mustBeAlive2": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                        "compareType": "=",
+                        "value2": 0,
+                        "valueType": "Layer"
+                      },
+                      "failed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                          "addStacksPerTrigger": -1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                    "compareType": "=",
+                    "value2": 0,
+                    "valueType": "Layer"
+                  },
+                  "failed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                      "addStacksPerTrigger": -1
+                    }
+                  ]
                 }
               ]
             }
@@ -3716,6 +4439,14 @@ const compositeAbilityObject = {
                           "target": "{{Modifier Holder}}"
                         },
                         "value": "ENEMIES_OBJECT_UNUSED__246"
+                      },
+                      {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value": "InSkill05"
                       }
                     ]
                   },
@@ -3747,6 +4478,145 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "End Broken State [Owner]"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-328561201\">Monster_W5_Ripper_Passive_FantasticStory</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "conditions": {
+                    "name": "Enemy ID",
+                    "ID": {
+                      "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
+                      "displayLines": "SummonList_ADF_1",
+                      "constants": [],
+                      "variables": [
+                        "SummonList_ADF_1"
+                      ]
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": null
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "variableName": "Buff_DamageUpRatio",
+                      "value": {
+                        "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
+                        "displayLines": "{[PassiveSkill01[3]]}",
+                        "constants": [],
+                        "variables": [
+                          "{[PassiveSkill01[3]]}"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "variableName": "Buff_MaxLayer",
+                      "value": {
+                        "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
+                        "displayLines": "{[PassiveSkill01[4]]}",
+                        "constants": [],
+                        "variables": [
+                          "{[PassiveSkill01[4]]}"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Enemy Team"
+                      },
+                      {
+                        "name": "Enemy ID",
+                        "ID": {
+                          "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
+                          "displayLines": "SummonList_ADF_1",
+                          "constants": [],
+                          "variables": [
+                            "SummonList_ADF_1"
+                          ]
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "characterName": null
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "variableName": "Buff_DamageUpRatio",
+                      "value": {
+                        "operator": "Variables[0] ({[PassiveSkill01[3]]}) || RETURN",
+                        "displayLines": "{[PassiveSkill01[3]]}",
+                        "constants": [],
+                        "variables": [
+                          "{[PassiveSkill01[3]]}"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "variableName": "Buff_MaxLayer",
+                      "value": {
+                        "operator": "Variables[0] ({[PassiveSkill01[4]]}) || RETURN",
+                        "displayLines": "{[PassiveSkill01[4]]}",
+                        "constants": [],
+                        "variables": [
+                          "{[PassiveSkill01[4]]}"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -3804,6 +4674,14 @@ const compositeAbilityObject = {
             "target": "{{Player Team All}}"
           },
           "modifier": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
+        },
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -3888,15 +4766,29 @@ const compositeAbilityObject = {
             "name": "OR",
             "conditionList": [
               {
-                "name": "Enemy ID",
-                "ID": 5024012,
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                },
-                "characterName": "Paramount Bliss Inverted: Illwish Archlotus",
-                "isBaseCompare": true,
-                "invertCondition": true
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Enemy ID",
+                    "ID": 5024012,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "characterName": "Paramount Bliss Inverted: Illwish Archlotus",
+                    "isBaseCompare": true,
+                    "invertCondition": true
+                  },
+                  {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "value": "RLBoss",
+                    "invertCondition": true
+                  }
+                ]
               },
               {
                 "name": "Compare: Variable",
@@ -5266,6 +6158,15 @@ const compositeAbilityObject = {
                 },
                 "modifier": "<a class=\"gModGreen\" id=\"2042265236\">Monster_W5_Ripper_Main2</a>",
                 "invertCondition": true
+              },
+              {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ripper: Self}}"
+                },
+                "value": "InSkill05",
+                "invertCondition": true
               }
             ]
           },
@@ -5356,14 +6257,27 @@ const compositeAbilityObject = {
                     "value2": 2
                   },
                   {
-                    "name": "Enemy ID",
-                    "ID": 5024012,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "characterName": "Paramount Bliss Inverted: Illwish Archlotus",
-                    "isBaseCompare": true
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Enemy ID",
+                        "ID": 5024012,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "characterName": "Paramount Bliss Inverted: Illwish Archlotus",
+                        "isBaseCompare": true
+                      },
+                      {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "value": "RLBoss"
+                      }
+                    ]
                   }
                 ]
               },
@@ -5804,63 +6718,170 @@ const compositeAbilityObject = {
               "multiplier": 1
             },
             {
-              "name": "Add Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Parameter Target}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
-              "duration": {
-                "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
-                "displayLines": "{[Skill04[2]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[2]]}"
-                ]
-              },
-              "stackLimit": {
-                "operator": "Variables[0] ({[Skill04[1]]}) || Variables[1] ({[Skill04[3]]}) || ADD || RETURN",
-                "displayLines": "({[Skill04[1]]} + {[Skill04[3]]})",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[1]]}",
-                  "{[Skill04[3]]}"
-                ]
-              },
-              "valuePerStack": {
-                "MDF_MaxLayer": {
-                  "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
-                  "displayLines": "{[Skill04[1]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[1]]}"
-                  ]
+              "name": "IF",
+              "conditions": {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Ripper: Self}}"
                 },
-                "MDF_AddLayer": {
-                  "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
-                  "displayLines": "{[Skill04[3]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[3]]}"
-                  ]
-                },
-                "MDF_SummonCount": {
-                  "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
-                  "displayLines": "{[Skill04[4]]}",
-                  "constants": [],
-                  "variables": [
-                    "{[Skill04[4]]}"
+                "value": "InSkill05"
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                  "duration": {
+                    "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
+                    "displayLines": "{[Skill04[2]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill04[2]]}"
+                    ]
+                  },
+                  "stackLimit": {
+                    "operator": "Variables[0] ({[Skill04[1]]}) || Variables[1] ({[Skill04[3]]}) || ADD || RETURN",
+                    "displayLines": "({[Skill04[1]]} + {[Skill04[3]]})",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill04[1]]}",
+                      "{[Skill04[3]]}"
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_MaxLayer": {
+                      "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
+                      "displayLines": "{[Skill04[1]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill04[1]]}"
+                      ]
+                    },
+                    "MDF_AddLayer": {
+                      "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
+                      "displayLines": "{[Skill04[3]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill04[3]]}"
+                      ]
+                    },
+                    "MDF_SummonCount": {
+                      "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
+                      "displayLines": "{[Skill04[4]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill04[4]]}"
+                      ]
+                    }
+                  },
+                  "addStacksPerTrigger": {
+                    "operator": "Variables[0] ({[Skill04[9]]}) || RETURN",
+                    "displayLines": "{[Skill04[9]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill04[9]]}"
+                    ]
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                  "duration": {
+                    "operator": "Variables[0] ({[Skill04[2]]}) || RETURN",
+                    "displayLines": "{[Skill04[2]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill04[2]]}"
+                    ]
+                  },
+                  "stackLimit": {
+                    "operator": "Variables[0] ({[Skill04[1]]}) || Variables[1] ({[Skill04[3]]}) || ADD || RETURN",
+                    "displayLines": "({[Skill04[1]]} + {[Skill04[3]]})",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill04[1]]}",
+                      "{[Skill04[3]]}"
+                    ]
+                  },
+                  "valuePerStack": {
+                    "MDF_MaxLayer": {
+                      "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
+                      "displayLines": "{[Skill04[1]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill04[1]]}"
+                      ]
+                    },
+                    "MDF_AddLayer": {
+                      "operator": "Variables[0] ({[Skill04[3]]}) || RETURN",
+                      "displayLines": "{[Skill04[3]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill04[3]]}"
+                      ]
+                    },
+                    "MDF_SummonCount": {
+                      "operator": "Variables[0] ({[Skill04[4]]}) || RETURN",
+                      "displayLines": "{[Skill04[4]]}",
+                      "constants": [],
+                      "variables": [
+                        "{[Skill04[4]]}"
+                      ]
+                    }
+                  },
+                  "addStacksPerTrigger": {
+                    "operator": "Variables[0] ({[Skill04[9]]}) || RETURN",
+                    "displayLines": "{[Skill04[9]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[Skill04[9]]}"
+                    ]
+                  },
+                  "success": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "value": "RLBoss"
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"437668983\">Monster_W4_Nikadory_RLBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
+                          "valuePerStack": {
+                            "MDF_DamageUpRatio_PerLayer": {
+                              "operator": "Variables[0] (UnusedUnderThisBase_13688) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13688",
+                              "constants": [],
+                              "variables": [
+                                "UnusedUnderThisBase_13688"
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
                   ]
                 }
-              },
-              "addStacksPerTrigger": {
-                "operator": "Variables[0] ({[Skill04[9]]}) || RETURN",
-                "displayLines": "{[Skill04[9]]}",
-                "constants": [],
-                "variables": [
-                  "{[Skill04[9]]}"
-                ]
-              }
+              ]
             }
           ]
         },
@@ -6051,6 +7072,14 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]"
+              },
+              {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
               }
             ]
           },
@@ -6108,6 +7137,14 @@ const compositeAbilityObject = {
                           "target": "{{Parameter Target}}"
                         },
                         "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
                       }
                     ]
                   },
@@ -6170,6 +7207,14 @@ const compositeAbilityObject = {
                               "target": "{{Parameter Target}}"
                             },
                             "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]"
+                          },
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
                           }
                         ]
                       },
@@ -6234,6 +7279,14 @@ const compositeAbilityObject = {
                               "target": "{{Parameter Target}}"
                             },
                             "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]"
+                          },
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
                           }
                         ]
                       },
@@ -6298,6 +7351,14 @@ const compositeAbilityObject = {
                               "target": "{{Parameter Target}}"
                             },
                             "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]"
+                          },
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
                           }
                         ]
                       },
@@ -6364,6 +7425,14 @@ const compositeAbilityObject = {
                               "target": "{{Parameter Target}}"
                             },
                             "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]"
+                          },
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
                           }
                         ]
                       },
@@ -6419,6 +7488,14 @@ const compositeAbilityObject = {
                               "target": "{{Parameter Target}}"
                             },
                             "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]"
+                          },
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
                           }
                         ]
                       },
@@ -6472,6 +7549,14 @@ const compositeAbilityObject = {
                               "target": "{{Parameter Target}}"
                             },
                             "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]"
+                          },
+                          {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
                           }
                         ]
                       },
