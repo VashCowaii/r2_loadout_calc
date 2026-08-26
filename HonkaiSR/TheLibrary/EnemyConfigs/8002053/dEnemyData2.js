@@ -42,14 +42,14 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2870,
-        2871,
-        2872
+        2947,
+        2948,
+        2949
       ],
       "abilityOrder": [
-        2861,
-        2862,
-        2863
+        2938,
+        2939,
+        2940
       ],
       "enemyTag": [
         "Monster_Minion04"
@@ -79,14 +79,14 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2870,
-        2871,
-        2872
+        2947,
+        2948,
+        2949
       ],
       "abilityOrder": [
-        2861,
-        2862,
-        2863
+        2938,
+        2939,
+        2940
       ],
       "enemyTag": [
         "Monster_Minion04"
@@ -116,14 +116,14 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2870,
-        2871,
-        2872
+        2947,
+        2948,
+        2949
       ],
       "abilityOrder": [
-        2861,
-        2862,
-        2863
+        2938,
+        2939,
+        2940
       ],
       "enemyTag": [
         "Monster_Minion04"
@@ -153,14 +153,14 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2870,
-        2871,
-        2872
+        2947,
+        2948,
+        2949
       ],
       "abilityOrder": [
-        2861,
-        2862,
-        2863
+        2938,
+        2939,
+        2940
       ],
       "enemyTag": [
         "Monster_Minion04"
@@ -190,14 +190,14 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2870,
-        2871,
-        2872
+        2947,
+        2948,
+        2949
       ],
       "abilityOrder": [
-        2861,
-        2862,
-        2863
+        2938,
+        2939,
+        2940
       ],
       "enemyTag": [
         "Monster_Minion04"

@@ -42,9 +42,9 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        2935,
-        2936,
-        2937
+        3012,
+        3013,
+        3014
       ],
       "abilityOrder": [
         "ABILITY__DOES_NOT_EXIST",

@@ -39,10 +39,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3045
+        3122
       ],
       "abilityOrder": [
-        3045
+        3122
       ],
       "enemyTag": [
         "LockTarget"

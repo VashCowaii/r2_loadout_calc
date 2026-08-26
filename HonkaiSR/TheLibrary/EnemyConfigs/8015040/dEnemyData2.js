@@ -20,7 +20,7 @@ let enemyData = {
   ],
   "newEnemyChanger": {
     "1": {
-      "newName": "Lord of Saṃvartasthāyi, Asat Pramad: \"Existence\"",
+      "newName": "Lord of Saṃvartasthāyi, Asat Pramad",
       "newWeak": [
         "Fire",
         "Wind",
@@ -37,7 +37,7 @@ let enemyData = {
       }
     },
     "2": {
-      "newName": "Lord of Saṃvartasthāyi, Asat Pramad: \"Decay\"",
+      "newName": "Lord of Saṃvartasthāyi, Asat Pramad",
       "newWeak": [
         "Fire",
         "Wind",
@@ -92,25 +92,25 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        3247,
-        3248,
-        3249,
-        3250,
-        3251,
-        3252,
-        3253,
-        3254,
-        3255,
-        3256,
-        3257,
-        3258,
-        3259,
-        3260
+        3324,
+        3325,
+        3326,
+        3327,
+        3328,
+        3329,
+        3330,
+        3331,
+        3332,
+        3333,
+        3334,
+        3335,
+        3336,
+        3337
       ],
       "abilityOrder": [
-        3247,
-        3248,
-        3249
+        3324,
+        3325,
+        3326
       ],
       "enemyTag": [
         "W5_AsatPramad",
