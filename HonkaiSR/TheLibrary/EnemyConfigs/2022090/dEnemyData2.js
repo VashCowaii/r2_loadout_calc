@@ -42,7 +42,7 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        705
+        713
       ]
     },
     "202209002": {
@@ -69,7 +69,7 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        705
+        713
       ]
     },
     "202209003": {
@@ -96,7 +96,7 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        705
+        713
       ]
     },
     "202209004": {
@@ -123,7 +123,7 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        705
+        713
       ],
       "enemyTag": [
         "MGrid_4005"

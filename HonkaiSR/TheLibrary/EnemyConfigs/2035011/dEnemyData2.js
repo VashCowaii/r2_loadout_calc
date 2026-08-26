@@ -50,15 +50,15 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        955,
-        956,
-        957,
-        958,
-        959,
-        960,
-        961,
-        962,
-        963
+        998,
+        999,
+        1000,
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006
       ],
       "abilityOrder": [
         "ABILITY__DOES_NOT_EXIST"

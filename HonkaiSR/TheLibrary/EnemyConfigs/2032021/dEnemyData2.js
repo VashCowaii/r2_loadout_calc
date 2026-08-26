@@ -41,11 +41,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        836,
-        837
+        879,
+        880
       ],
       "abilityOrder": [
-        836
+        879
       ],
       "enemyTag": [
         "MonsterType_W2_Lycan",

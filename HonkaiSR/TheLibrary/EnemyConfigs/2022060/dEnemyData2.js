@@ -473,6 +473,126 @@ let enemyData = {
       "enemyTag": [
         "MGrid_4005"
       ]
+    },
+    "202206015": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        2.727273,
+        1,
+        null,
+        1,
+        30
+      ],
+      "weak": [
+        "Physical",
+        "Ice",
+        "Wind"
+      ],
+      "res": {
+        "Fire": 0.2,
+        "Thunder": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        696
+      ],
+      "abilityOrder": [
+        696
+      ]
+    },
+    "202206016": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        2.727273,
+        1,
+        null,
+        1,
+        30
+      ],
+      "weak": [
+        "Physical",
+        "Ice",
+        "Wind"
+      ],
+      "res": {
+        "Fire": 0.2,
+        "Thunder": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        696
+      ],
+      "abilityOrder": [
+        696
+      ]
+    },
+    "202206017": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        2.727273,
+        1,
+        null,
+        1,
+        30
+      ],
+      "weak": [
+        "Physical",
+        "Ice",
+        "Wind"
+      ],
+      "res": {
+        "Fire": 0.2,
+        "Thunder": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        696
+      ],
+      "abilityOrder": [
+        696
+      ]
+    },
+    "202206018": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        4.545455,
+        1,
+        null,
+        1,
+        30
+      ],
+      "weak": [
+        "Physical",
+        "Ice",
+        "Wind"
+      ],
+      "res": {
+        "Fire": 0.2,
+        "Thunder": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        696
+      ],
+      "abilityOrder": [
+        696
+      ]
     }
   }
 }

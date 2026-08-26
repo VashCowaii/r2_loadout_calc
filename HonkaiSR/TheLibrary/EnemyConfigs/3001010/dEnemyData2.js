@@ -42,10 +42,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        980
+        1023
       ],
       "abilityOrder": [
-        980
+        1023
       ]
     },
     "300101001": {
@@ -72,10 +72,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        980
+        1023
       ],
       "abilityOrder": [
-        980
+        1023
       ]
     },
     "300101002": {
@@ -102,10 +102,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        980
+        1023
       ],
       "abilityOrder": [
-        980
+        1023
       ]
     },
     "300101003": {
@@ -132,10 +132,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        980
+        1023
       ],
       "abilityOrder": [
-        980
+        1023
       ]
     },
     "300101004": {
@@ -162,10 +162,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        980
+        1023
       ],
       "abilityOrder": [
-        980
+        1023
       ]
     },
     "300101005": {
@@ -192,10 +192,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        980
+        1023
       ],
       "abilityOrder": [
-        980
+        1023
       ]
     },
     "300101006": {
@@ -222,10 +222,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        980
+        1023
       ],
       "abilityOrder": [
-        980
+        1023
       ]
     },
     "300101007": {
@@ -252,10 +252,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        980
+        1023
       ],
       "abilityOrder": [
-        980
+        1023
       ],
       "enemyTag": [
         "MGrid_4006"

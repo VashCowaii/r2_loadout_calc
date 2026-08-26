@@ -41,10 +41,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1681,
-        1682,
-        1683,
-        1684
+        1724,
+        1725,
+        1726,
+        1727
       ],
       "enemyTag": [
         "MonsterType_W4_Scholar_00"
@@ -74,10 +74,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1681,
-        1682,
-        1683,
-        1684
+        1724,
+        1725,
+        1726,
+        1727
       ],
       "enemyTag": [
         "MonsterType_W4_Scholar_00"
@@ -107,10 +107,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1681,
-        1682,
-        1683,
-        1684
+        1724,
+        1725,
+        1726,
+        1727
       ],
       "enemyTag": [
         "MonsterType_W4_Scholar_00"
@@ -140,10 +140,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1681,
-        1682,
-        1683,
-        1684
+        1724,
+        1725,
+        1726,
+        1727
       ],
       "enemyTag": [
         "MonsterType_W4_Scholar_00"
@@ -173,10 +173,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1681,
-        1682,
-        1683,
-        1684
+        1724,
+        1725,
+        1726,
+        1727
       ],
       "enemyTag": [
         "MonsterType_W4_Scholar_00"

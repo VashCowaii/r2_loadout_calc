@@ -42,12 +42,12 @@ let enemyData = {
         "Quantum": 0.4
       },
       "abilities": [
-        991,
-        992,
-        993,
-        994,
-        995,
-        996
+        1034,
+        1035,
+        1036,
+        1037,
+        1038,
+        1039
       ],
       "enemyTag": [
         "MonsterType_W3_TV_00",
@@ -82,12 +82,12 @@ let enemyData = {
         "Quantum": 0.4
       },
       "abilities": [
-        991,
-        992,
-        993,
-        994,
-        995,
-        996
+        1034,
+        1035,
+        1036,
+        1037,
+        1038,
+        1039
       ],
       "enemyTag": [
         "MonsterType_W3_TV_00",
@@ -122,12 +122,12 @@ let enemyData = {
         "Quantum": 0.4
       },
       "abilities": [
-        991,
-        992,
-        993,
-        994,
-        995,
-        996
+        1034,
+        1035,
+        1036,
+        1037,
+        1038,
+        1039
       ],
       "enemyTag": [
         "MonsterType_W3_TV_00",
@@ -162,12 +162,12 @@ let enemyData = {
         "Quantum": 0.4
       },
       "abilities": [
-        991,
-        992,
-        993,
-        994,
-        995,
-        996
+        1034,
+        1035,
+        1036,
+        1037,
+        1038,
+        1039
       ],
       "enemyTag": [
         "MonsterType_W3_TV_00",
@@ -202,12 +202,12 @@ let enemyData = {
         "Quantum": 0.4
       },
       "abilities": [
-        991,
-        992,
-        993,
-        994,
-        995,
-        996
+        1034,
+        1035,
+        1036,
+        1037,
+        1038,
+        1039
       ],
       "enemyTag": [
         "MonsterType_W3_TV_00",
@@ -242,12 +242,12 @@ let enemyData = {
         "Quantum": 0.4
       },
       "abilities": [
-        991,
-        992,
-        993,
-        994,
-        995,
-        996
+        1034,
+        1035,
+        1036,
+        1037,
+        1038,
+        1039
       ],
       "enemyTag": [
         "MonsterType_W3_TV_00",

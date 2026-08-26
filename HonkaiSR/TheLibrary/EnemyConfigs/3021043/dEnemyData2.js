@@ -42,11 +42,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1447,
-        1448
+        1490,
+        1491
       ],
       "abilityOrder": [
-        1447
+        1490
       ],
       "enemyTag": [
         "Argenti_Totem"
@@ -76,11 +76,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1447,
-        1448
+        1490,
+        1491
       ],
       "abilityOrder": [
-        1447
+        1490
       ],
       "enemyTag": [
         "Argenti_Totem"

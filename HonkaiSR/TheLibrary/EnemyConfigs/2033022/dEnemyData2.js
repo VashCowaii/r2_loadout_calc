@@ -40,8 +40,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        878,
-        879
+        921,
+        922
       ],
       "enemyTag": [
         "SuperArmor_Behit_Big"
@@ -91,8 +91,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        878,
-        879
+        921,
+        922
       ],
       "enemyTag": [
         "SuperArmor_Behit_Big"
@@ -142,8 +142,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        878,
-        879
+        921,
+        922
       ],
       "enemyTag": [
         "SuperArmor_Behit_Big"
@@ -193,8 +193,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        878,
-        879
+        921,
+        922
       ],
       "enemyTag": [
         "SuperArmor_Behit_Big"
@@ -244,8 +244,8 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        878,
-        879
+        921,
+        922
       ],
       "enemyTag": [
         "SuperArmor_Behit_Big"
