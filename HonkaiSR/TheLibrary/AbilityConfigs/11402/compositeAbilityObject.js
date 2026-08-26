@@ -254,20 +254,20 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1027471092\">Aglaea_Eidolon2_Effect</a>[<span class=\"descriptionNumberColor\">Sail on the Raft of Eyelids</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_4469) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_4469",
+                        "operator": "Variables[0] (UnusedUnderThisBase_4556) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_4556",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_4469"
+                          "UnusedUnderThisBase_4556"
                         ]
                       },
                       "valuePerStack": {
                         "_IgnoreDefenceRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_4446) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_4446",
+                          "operator": "Variables[0] (UnusedUnderThisBase_4533) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_4533",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_4446"
+                            "UnusedUnderThisBase_4533"
                           ]
                         }
                       },
@@ -320,20 +320,20 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1027471092\">Aglaea_Eidolon2_Effect</a>[<span class=\"descriptionNumberColor\">Sail on the Raft of Eyelids</span>]",
                       "stackLimit": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_4469) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_4469",
+                        "operator": "Variables[0] (UnusedUnderThisBase_4556) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_4556",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_4469"
+                          "UnusedUnderThisBase_4556"
                         ]
                       },
                       "valuePerStack": {
                         "_IgnoreDefenceRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_4446) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_4446",
+                          "operator": "Variables[0] (UnusedUnderThisBase_4533) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_4533",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_4446"
+                            "UnusedUnderThisBase_4533"
                           ]
                         }
                       },
@@ -1239,7 +1239,7 @@ const compositeAbilityObject = {
                         {
                           "on": "Defender",
                           "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
-                          "value": "UnusedUnderThisBase_6890"
+                          "value": "UnusedUnderThisBase_6977"
                         }
                       ]
                     }
@@ -1316,11 +1316,11 @@ const compositeAbilityObject = {
                             "target": "{{Caster}}"
                           },
                           "value": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_4445) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_4445",
+                            "operator": "Variables[0] (UnusedUnderThisBase_4532) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_4532",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_4445"
+                              "UnusedUnderThisBase_4532"
                             ]
                           },
                           "isFixed": "* ERR"
@@ -1397,11 +1397,11 @@ const compositeAbilityObject = {
                                 "target": "{{Caster}}"
                               },
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_4445) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_4445",
+                                "operator": "Variables[0] (UnusedUnderThisBase_4532) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_4532",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_4445"
+                                  "UnusedUnderThisBase_4532"
                                 ]
                               },
                               "isFixed": "* ERR"
@@ -1491,12 +1491,12 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "variableName": "SpeedAddTotal",
                   "value": {
-                    "operator": "Variables[0] (_Layer) || Variables[1] (UnusedUnderThisBase_12986) || MUL || RETURN",
-                    "displayLines": "(_Layer * UnusedUnderThisBase_12986)",
+                    "operator": "Variables[0] (_Layer) || Variables[1] (UnusedUnderThisBase_13145) || MUL || RETURN",
+                    "displayLines": "(_Layer * UnusedUnderThisBase_13145)",
                     "constants": [],
                     "variables": [
                       "_Layer",
-                      "UnusedUnderThisBase_12986"
+                      "UnusedUnderThisBase_13145"
                     ]
                   }
                 },
@@ -1611,14 +1611,14 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "variableName": "_AttackConvert",
                   "value": {
-                    "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (UnusedUnderThisBase_13945) || MUL || Variables[2] (_ServantCurrentSpeed) || Variables[3] (UnusedUnderThisBase_13946) || MUL || ADD || RETURN",
-                    "displayLines": "((_CurrentSpeed * UnusedUnderThisBase_13945) + (_ServantCurrentSpeed * UnusedUnderThisBase_13946))",
+                    "operator": "Variables[0] (_CurrentSpeed) || Variables[1] (UnusedUnderThisBase_14185) || MUL || Variables[2] (_ServantCurrentSpeed) || Variables[3] (UnusedUnderThisBase_14186) || MUL || ADD || RETURN",
+                    "displayLines": "((_CurrentSpeed * UnusedUnderThisBase_14185) + (_ServantCurrentSpeed * UnusedUnderThisBase_14186))",
                     "constants": [],
                     "variables": [
                       "_CurrentSpeed",
-                      "UnusedUnderThisBase_13945",
+                      "UnusedUnderThisBase_14185",
                       "_ServantCurrentSpeed",
-                      "UnusedUnderThisBase_13946"
+                      "UnusedUnderThisBase_14186"
                     ]
                   }
                 },
@@ -1969,11 +1969,11 @@ const compositeAbilityObject = {
                   "modifierName": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
                   "variableName": "MDF_PropertyValue2",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13935) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_13935",
+                    "operator": "Variables[0] (UnusedUnderThisBase_14175) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_14175",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_13935"
+                      "UnusedUnderThisBase_14175"
                     ]
                   }
                 }
@@ -1997,11 +1997,11 @@ const compositeAbilityObject = {
                       "modifierName": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
                       "variableName": "MDF_PropertyValue2",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_13949) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_13949",
+                        "operator": "Variables[0] (UnusedUnderThisBase_14189) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_14189",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_13949"
+                          "UnusedUnderThisBase_14189"
                         ]
                       }
                     }
@@ -2025,11 +2025,11 @@ const compositeAbilityObject = {
                           "modifierName": "<a class=\"gModGreen\" id=\"1330366864\">Aglaea_Eidolon6_Effect</a>[<span class=\"descriptionNumberColor\">Fluctuate in the Tapestry of Fates</span>]",
                           "variableName": "MDF_PropertyValue2",
                           "value": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_13933) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_13933",
+                            "operator": "Variables[0] (UnusedUnderThisBase_14173) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_14173",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_13933"
+                              "UnusedUnderThisBase_14173"
                             ]
                           }
                         }

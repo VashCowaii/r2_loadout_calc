@@ -43,21 +43,21 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1491786902\">Phainon_Passive_Property</a>[<span class=\"descriptionNumberColor\">Pyric Corpus</span>]",
               "duration": {
-                "operator": "Variables[0] (UnusedUnderThisBase_6020) || RETURN",
-                "displayLines": "UnusedUnderThisBase_6020",
+                "operator": "Variables[0] (UnusedUnderThisBase_6107) || RETURN",
+                "displayLines": "UnusedUnderThisBase_6107",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_6020"
+                  "UnusedUnderThisBase_6107"
                 ]
               },
               "referenceModifier": "<a class=\"gModGreen\" id=\"1042665863\">MReference_CriticalDamageUp</a>",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_5987) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_5987",
+                  "operator": "Variables[0] (UnusedUnderThisBase_6074) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_6074",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_5987"
+                    "UnusedUnderThisBase_6074"
                   ]
                 }
               }

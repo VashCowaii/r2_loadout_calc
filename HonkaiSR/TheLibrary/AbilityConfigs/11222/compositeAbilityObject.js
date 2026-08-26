@@ -67,11 +67,11 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_5681) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_5681",
+                  "operator": "Variables[0] (UnusedUnderThisBase_5768) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_5768",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_5681"
+                    "UnusedUnderThisBase_5768"
                   ]
                 }
               }
@@ -1010,11 +1010,11 @@ const compositeAbilityObject = {
                   "AttackScaling": {
                     "DamageType": "Fire",
                     "Damage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_5671) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_5671",
+                      "operator": "Variables[0] (UnusedUnderThisBase_5758) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_5758",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_5671"
+                        "UnusedUnderThisBase_5758"
                       ]
                     },
                     "Toughness": {
@@ -1075,11 +1075,11 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Fire",
                         "Damage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_5671) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_5671",
+                          "operator": "Variables[0] (UnusedUnderThisBase_5758) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_5758",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_5671"
+                            "UnusedUnderThisBase_5758"
                           ]
                         },
                         "Toughness": {
@@ -1127,11 +1127,11 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_5671) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_5671",
+                              "operator": "Variables[0] (UnusedUnderThisBase_5758) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_5758",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_5671"
+                                "UnusedUnderThisBase_5758"
                               ]
                             },
                             "Toughness": {
@@ -1169,11 +1169,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_5671) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_5671",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_5758) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_5758",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_5671"
+                                    "UnusedUnderThisBase_5758"
                                   ]
                                 },
                                 "Toughness": {
@@ -1207,11 +1207,11 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": {
-                "operator": "Variables[0] (UnusedUnderThisBase_5674) || RETURN",
-                "displayLines": "UnusedUnderThisBase_5674",
+                "operator": "Variables[0] (UnusedUnderThisBase_5761) || RETURN",
+                "displayLines": "UnusedUnderThisBase_5761",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_5674"
+                  "UnusedUnderThisBase_5761"
                 ]
               },
               "Event": [
@@ -1267,11 +1267,11 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Fire",
                         "Damage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_5686) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_5686",
+                          "operator": "Variables[0] (UnusedUnderThisBase_5773) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_5773",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_5686"
+                            "UnusedUnderThisBase_5773"
                           ]
                         },
                         "Toughness": {
@@ -1332,11 +1332,11 @@ const compositeAbilityObject = {
                           "AttackScaling": {
                             "DamageType": "Fire",
                             "Damage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_5686) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_5686",
+                              "operator": "Variables[0] (UnusedUnderThisBase_5773) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_5773",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_5686"
+                                "UnusedUnderThisBase_5773"
                               ]
                             },
                             "Toughness": {
@@ -1384,11 +1384,11 @@ const compositeAbilityObject = {
                               "AttackScaling": {
                                 "DamageType": "Fire",
                                 "Damage": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_5686) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_5686",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_5773) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_5773",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_5686"
+                                    "UnusedUnderThisBase_5773"
                                   ]
                                 },
                                 "Toughness": {
@@ -1426,11 +1426,11 @@ const compositeAbilityObject = {
                                   "AttackScaling": {
                                     "DamageType": "Fire",
                                     "Damage": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_5686) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_5686",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_5773) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_5773",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_5686"
+                                        "UnusedUnderThisBase_5773"
                                       ]
                                     },
                                     "Toughness": {
