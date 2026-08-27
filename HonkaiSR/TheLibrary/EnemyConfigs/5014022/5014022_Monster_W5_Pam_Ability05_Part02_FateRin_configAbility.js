@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifierName": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>",
+      "modifierName": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>[<span class=\"descriptionNumberColor\">Lasting Antibac</span>]",
       "variableName": "UltraSkillTimelineStart",
       "value": 1
     },

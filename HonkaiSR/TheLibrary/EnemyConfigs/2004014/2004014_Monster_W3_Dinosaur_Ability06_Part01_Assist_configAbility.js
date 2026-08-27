@@ -58,19 +58,19 @@ const configAbility = {
           "variableName": "Vibrate_Count",
           "context": "TargetEntity",
           "value": {
-            "operator": "Variables[0] (UnusedUnderThisBase_10220) || INVERT || RETURN",
-            "displayLines": "-UnusedUnderThisBase_10220",
+            "operator": "Variables[0] (UnusedUnderThisBase_10351) || INVERT || RETURN",
+            "displayLines": "-UnusedUnderThisBase_10351",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_10220"
+              "UnusedUnderThisBase_10351"
             ]
           },
           "max": {
-            "operator": "Variables[0] (UnusedUnderThisBase_10218) || RETURN",
-            "displayLines": "UnusedUnderThisBase_10218",
+            "operator": "Variables[0] (UnusedUnderThisBase_10349) || RETURN",
+            "displayLines": "UnusedUnderThisBase_10349",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_10218"
+              "UnusedUnderThisBase_10349"
             ]
           }
         },
@@ -83,11 +83,11 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
           "valuePerStack": {
             "MDF_MaxCount": {
-              "operator": "Variables[0] (UnusedUnderThisBase_10218) || RETURN",
-              "displayLines": "UnusedUnderThisBase_10218",
+              "operator": "Variables[0] (UnusedUnderThisBase_10349) || RETURN",
+              "displayLines": "UnusedUnderThisBase_10349",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_10218"
+                "UnusedUnderThisBase_10349"
               ]
             },
             "MDF_PartFlag": 1
@@ -121,11 +121,11 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
           "valuePerStack": {
             "MDF_MaxCount": {
-              "operator": "Variables[0] (UnusedUnderThisBase_10218) || RETURN",
-              "displayLines": "UnusedUnderThisBase_10218",
+              "operator": "Variables[0] (UnusedUnderThisBase_10349) || RETURN",
+              "displayLines": "UnusedUnderThisBase_10349",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_10218"
+                "UnusedUnderThisBase_10349"
               ]
             },
             "MDF_PartFlag": 1
@@ -163,13 +163,13 @@ const configAbility = {
             "target": "{{Caster}}"
           },
           "multiBase": {
-            "operator": "Variables[0] (UnusedUnderThisBase_10221) || Constants[0] (1) || SUB || RETURN",
-            "displayLines": "(UnusedUnderThisBase_10221 - 1)",
+            "operator": "Variables[0] (UnusedUnderThisBase_10352) || Constants[0] (1) || SUB || RETURN",
+            "displayLines": "(UnusedUnderThisBase_10352 - 1)",
             "constants": [
               1
             ],
             "variables": [
-              "UnusedUnderThisBase_10221"
+              "UnusedUnderThisBase_10352"
             ]
           }
         }

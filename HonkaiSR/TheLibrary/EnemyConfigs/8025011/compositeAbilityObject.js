@@ -1482,7 +1482,8 @@ const compositeAbilityObject = {
                       },
                       "forceReduction": true,
                       "canDelay": true,
-                      "ToughnessDMGType": "Quantum"
+                      "ToughnessDMGType": "Quantum",
+                      "bypassBreakMute": true
                     }
                   ]
                 }

@@ -1164,6 +1164,48 @@ const configAbility = {
           "execute": [
             "Modifier Deletes Itself"
           ]
+        },
+        {
+          "eventTrigger": "Injected Ability Use [Anyone]: Aborted",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "CurrentSkillPoints",
+                    "compareType": "<",
+                    "value2": {
+                      "operator": "Variables[0] (MDF_BPNeed) || RETURN",
+                      "displayLines": "MDF_BPNeed",
+                      "constants": [],
+                      "variables": [
+                        "MDF_BPNeed"
+                      ]
+                    }
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "QueuedUltimates",
+                    "compareType": "=",
+                    "value2": 0,
+                    "includeInjectedActions": true
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "QueuedActions",
+                    "compareType": "=",
+                    "value2": 0
+                  }
+                ]
+              },
+              "passed": [
+                "Modifier Deletes Itself"
+              ]
+            }
+          ]
         }
       ]
     },

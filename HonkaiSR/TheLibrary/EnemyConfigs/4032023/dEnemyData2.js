@@ -45,13 +45,13 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2147,
-        2148,
-        2149,
-        2150
+        2190,
+        2191,
+        2192,
+        2193
       ],
       "abilityOrder": [
-        2148
+        2191
       ],
       "itNeverEnds": {}
     },
@@ -82,13 +82,13 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2147,
-        2148,
-        2149,
-        2150
+        2190,
+        2191,
+        2192,
+        2193
       ],
       "abilityOrder": [
-        2148
+        2191
       ],
       "itNeverEnds": {}
     },
@@ -119,13 +119,13 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2147,
-        2148,
-        2149,
-        2150
+        2190,
+        2191,
+        2192,
+        2193
       ],
       "abilityOrder": [
-        2148
+        2191
       ],
       "itNeverEnds": {}
     },
@@ -156,13 +156,13 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2147,
-        2148,
-        2149,
-        2150
+        2190,
+        2191,
+        2192,
+        2193
       ],
       "abilityOrder": [
-        2148
+        2191
       ],
       "itNeverEnds": {}
     },
@@ -193,13 +193,13 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2147,
-        2148,
-        2149,
-        2150
+        2190,
+        2191,
+        2192,
+        2193
       ],
       "abilityOrder": [
-        2148
+        2191
       ],
       "itNeverEnds": {}
     },
@@ -230,13 +230,13 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2147,
-        2148,
-        2149,
-        2150
+        2190,
+        2191,
+        2192,
+        2193
       ],
       "abilityOrder": [
-        2148
+        2191
       ],
       "itNeverEnds": {}
     },
@@ -267,13 +267,13 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2147,
-        2148,
-        2149,
-        2150
+        2190,
+        2191,
+        2192,
+        2193
       ],
       "abilityOrder": [
-        2148
+        2191
       ],
       "itNeverEnds": {}
     },
@@ -304,13 +304,13 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2147,
-        2148,
-        2149,
-        2150
+        2190,
+        2191,
+        2192,
+        2193
       ],
       "abilityOrder": [
-        2148
+        2191
       ],
       "itNeverEnds": {}
     },
@@ -341,13 +341,13 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2147,
-        2148,
-        2149,
-        2150
+        2190,
+        2191,
+        2192,
+        2193
       ],
       "abilityOrder": [
-        2148
+        2191
       ],
       "itNeverEnds": {}
     },
@@ -378,13 +378,13 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        2147,
-        2148,
-        2149,
-        2150
+        2190,
+        2191,
+        2192,
+        2193
       ],
       "abilityOrder": [
-        2148
+        2191
       ],
       "itNeverEnds": {}
     }

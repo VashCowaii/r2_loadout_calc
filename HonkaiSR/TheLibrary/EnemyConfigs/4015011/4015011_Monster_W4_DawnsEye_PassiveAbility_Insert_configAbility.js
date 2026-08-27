@@ -31,11 +31,6 @@ const configAbility = {
         },
         {
           "name": "Change Battle Arena",
-          "status": "Inactive",
-          "arenaID": 2043101
-        },
-        {
-          "name": "Change Battle Arena",
           "arenaID": 2043102
         }
       ],

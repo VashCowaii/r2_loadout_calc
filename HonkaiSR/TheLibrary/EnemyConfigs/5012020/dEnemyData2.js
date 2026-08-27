@@ -41,8 +41,8 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2591,
-        2592
+        2634,
+        2635
       ],
       "enemyTag": [
         "W2_Beast01_05"
@@ -72,14 +72,14 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2591,
-        2592
+        2634,
+        2635
       ],
       "enemyTag": [
         "W2_Beast01_05"
       ],
       "overrideParams": {
-        "2591": [
+        "2634": [
           [
             1
           ],
@@ -91,7 +91,7 @@ let enemyData = {
           5,
           "-"
         ],
-        "2592": [
+        "2635": [
           [
             0
           ],
@@ -129,17 +129,17 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2591,
-        2592
+        2634,
+        2635
       ],
       "abilityOrder": [
-        2591
+        2634
       ],
       "enemyTag": [
         "W2_Beast01_05"
       ],
       "overrideParams": {
-        "2591": [
+        "2634": [
           [
             3
           ],
@@ -177,8 +177,8 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2591,
-        2592
+        2634,
+        2635
       ],
       "enemyTag": [
         "W2_Beast01_05"

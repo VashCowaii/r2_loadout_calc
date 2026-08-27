@@ -557,11 +557,13 @@ const configAbility = {
                       "_MaxStance"
                     ]
                   },
+                  "forceReduction": true,
                   "canDelay": true,
                   "ToughnessDMGType": {
                     "name": "Damage Type Source",
                     "sourceType": {}
-                  }
+                  },
+                  "bypassBreakMute": true
                 }
               ]
             },

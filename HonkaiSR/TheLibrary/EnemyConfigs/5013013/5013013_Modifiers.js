@@ -10,10 +10,14 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1553959515\">MModifier_Monster_W4_Claymore_02_Ability03_Aim_FateRin</a>",
+      "for": "<a class=\"gModGreen\" id=\"mod__1553959515\">MModifier_Monster_W4_Claymore_02_Ability03_Aim_FateRin</a>[<span class=\"descriptionNumberColor\">Charging</span>]",
       "modifierFlags": [
         "KeepOnDeathrattle"
       ],
+      "description": "Uses \"Time to Rock!\" when taking the next action. Taking <span class=\"descriptionNumberColor\">AttackCount</span> more hit(s) will dispel the Charging state.",
+      "type": "Other",
+      "effectName": "Charging",
+      "statusName": "Charging",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
@@ -631,11 +635,11 @@ const configAbility = {
                 {
                   "name": "Adjust Team Punchline Value",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_11330) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_11330",
+                    "operator": "Variables[0] (UnusedUnderThisBase_11461) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_11461",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_11330"
+                      "UnusedUnderThisBase_11461"
                     ]
                   },
                   "adjustment": "Add"

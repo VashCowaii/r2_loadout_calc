@@ -10,7 +10,11 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__756663200\">Enemy_W3_Clock_03_TargetSelect_ToFriend</a>"
+      "for": "<a class=\"gModGreen\" id=\"mod__756663200\">Enemy_W3_Clock_03_TargetSelect_ToFriend</a>[<span class=\"descriptionNumberColor\">Verification Error</span>]",
+      "description": "The next attack will hit an enemy target.",
+      "type": "Other",
+      "effectName": "Verification Error",
+      "statusName": "Verification Error"
     },
     {
       "name": "Modifier Construction",
@@ -63,7 +67,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"756663200\">Enemy_W3_Clock_03_TargetSelect_ToFriend</a>"
+                      "modifier": "<a class=\"gModGreen\" id=\"756663200\">Enemy_W3_Clock_03_TargetSelect_ToFriend</a>[<span class=\"descriptionNumberColor\">Verification Error</span>]"
                     }
                   ],
                   "failed": [
@@ -86,7 +90,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"756663200\">Enemy_W3_Clock_03_TargetSelect_ToFriend</a>"
+                      "modifier": "<a class=\"gModGreen\" id=\"756663200\">Enemy_W3_Clock_03_TargetSelect_ToFriend</a>[<span class=\"descriptionNumberColor\">Verification Error</span>]"
                     }
                   ]
                 }

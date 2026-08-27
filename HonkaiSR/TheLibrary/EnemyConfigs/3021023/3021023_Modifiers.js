@@ -37,8 +37,12 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__1125306110\">Enemy_Argenti_DamageUP_FateRin</a>",
+      "for": "<a class=\"gModGreen\" id=\"mod__1125306110\">Enemy_Argenti_DamageUP_FateRin</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
       "stackType": "Replace",
+      "description": "Each stack increases the DMG dealt by %DynamicTargetName by<span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
+      "type": "Buff",
+      "effectName": "DMG Boost",
+      "statusName": "DMG Boost",
       "addStacksPerTrigger": 1,
       "execute": [
         {
@@ -50,7 +54,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "modifierName": "<a class=\"gModGreen\" id=\"1125306110\">Enemy_Argenti_DamageUP_FateRin</a>",
+              "modifierName": "<a class=\"gModGreen\" id=\"1125306110\">Enemy_Argenti_DamageUP_FateRin</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
             },
             {

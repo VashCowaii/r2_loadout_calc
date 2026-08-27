@@ -43,9 +43,9 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1703,
-        1704,
-        1705
+        1746,
+        1747,
+        1748
       ]
     }
   }

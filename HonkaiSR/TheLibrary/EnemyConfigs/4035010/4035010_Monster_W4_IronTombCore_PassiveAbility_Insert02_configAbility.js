@@ -5,67 +5,149 @@ const configAbility = {
   "toughnessList": null,
   "parse": [
     {
-      "name": "Define Custom Variable with Stat",
-      "target": {
-        "name": "Target Name",
-        "target": "{{BattleEvent60030}}"
+      "name": "IF",
+      "conditions": {
+        "name": "Check Boolean Value",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
+        "value": "PeakBattle"
       },
-      "variableName": "_CurrentBPSP",
-      "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
-    },
-    {
-      "name": "Mark Entity For Immediate Death",
-      "target": {
-        "name": "Target Name",
-        "target": "{{BattleEvent60030}}"
-      }
-    },
-    {
-      "name": "Force Entity Death",
-      "target": {
-        "name": "Target Name",
-        "target": "{{BattleEvent60030}}"
-      }
-    },
-    {
-      "name": "Define Custom Variable",
-      "variableName": "_WorldErosionIndex",
-      "value": 2
-    },
-    {
-      "name": "Add Battle Event",
-      "eventID": 60031,
-      "assignOwner": {
-        "name": "Target Name",
-        "target": "{{Level Entity}}"
-      },
-      "variables": null,
-      "whenCreated": [
+      "passed": [
         {
-          "name": "Update Energy",
-          "on": {
+          "name": "Define Custom Variable with Stat",
+          "target": {
             "name": "Target Name",
-            "target": "{{Parameter Target}}"
+            "target": "{{BattleEvent60048}}"
           },
-          "value": {
-            "operator": "Variables[0] (_CurrentBPSP) || RETURN",
-            "displayLines": "_CurrentBPSP",
-            "constants": [],
-            "variables": [
-              "_CurrentBPSP"
-            ]
+          "variableName": "_CurrentBPSP",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
+        },
+        {
+          "name": "Mark Entity For Immediate Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{BattleEvent60048}}"
+          }
+        },
+        {
+          "name": "Force Entity Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{BattleEvent60048}}"
           },
-          "isFixed": "* ERR",
-          "isSetToValue": true
+          "ignoreHPLossTriggers": true,
+          "ignoreDeathTriggers": true
         },
         {
           "name": "Define Custom Variable",
+          "variableName": "_WorldErosionIndex",
+          "value": 2
+        },
+        {
+          "name": "Add Battle Event",
+          "eventID": 60049,
+          "assignOwner": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "variables": null,
+          "whenCreated": [
+            {
+              "name": "Update Energy",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "value": {
+                "operator": "Variables[0] (_CurrentBPSP) || RETURN",
+                "displayLines": "_CurrentBPSP",
+                "constants": [],
+                "variables": [
+                  "_CurrentBPSP"
+                ]
+              },
+              "isFixed": "* ERR",
+              "isSetToValue": true
+            },
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "variableName": "_IsWeek",
+              "value": 1
+            }
+          ]
+        }
+      ],
+      "failed": [
+        {
+          "name": "Define Custom Variable with Stat",
           "target": {
             "name": "Target Name",
-            "target": "{{Parameter Target}}"
+            "target": "{{BattleEvent60030}}"
           },
-          "variableName": "_IsWeek",
-          "value": 1
+          "variableName": "_CurrentBPSP",
+          "value": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;"
+        },
+        {
+          "name": "Mark Entity For Immediate Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{BattleEvent60030}}"
+          }
+        },
+        {
+          "name": "Force Entity Death",
+          "target": {
+            "name": "Target Name",
+            "target": "{{BattleEvent60030}}"
+          }
+        },
+        {
+          "name": "Define Custom Variable",
+          "variableName": "_WorldErosionIndex",
+          "value": 2
+        },
+        {
+          "name": "Add Battle Event",
+          "eventID": 60031,
+          "assignOwner": {
+            "name": "Target Name",
+            "target": "{{Level Entity}}"
+          },
+          "variables": null,
+          "whenCreated": [
+            {
+              "name": "Update Energy",
+              "on": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "value": {
+                "operator": "Variables[0] (_CurrentBPSP) || RETURN",
+                "displayLines": "_CurrentBPSP",
+                "constants": [],
+                "variables": [
+                  "_CurrentBPSP"
+                ]
+              },
+              "isFixed": "* ERR",
+              "isSetToValue": true
+            },
+            {
+              "name": "Define Custom Variable",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "variableName": "_IsWeek",
+              "value": 1
+            }
+          ]
         }
       ]
     },
@@ -90,11 +172,6 @@ const configAbility = {
         "invertCondition": true
       },
       "passed": [
-        {
-          "name": "Change Battle Arena",
-          "status": "Inactive",
-          "arenaID": 2048104
-        },
         {
           "name": "Change Battle Arena",
           "arenaID": 2048105
@@ -161,12 +238,26 @@ const configAbility = {
       ]
     },
     {
-      "name": "Set HP Value",
-      "target": {
-        "name": "Target Name",
-        "target": "{{Caster}}"
+      "name": "IF",
+      "conditions": {
+        "name": "Check Boolean Value",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
+        "value": "PeakBattle",
+        "invertCondition": true
       },
-      "setValue": 1
+      "passed": [
+        {
+          "name": "Set HP Value",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "setValue": 1
+        }
+      ]
     },
     {
       "name": "Divide BossHP into Bars",
@@ -189,7 +280,8 @@ const configAbility = {
       "ToughnessDMGType": {
         "name": "Damage Type Source",
         "sourceType": {}
-      }
+      },
+      "bypassBreakMute": true
     },
     {
       "name": "Use Custom Character Function",
@@ -379,7 +471,19 @@ const configAbility = {
     },
     {
       "name": "IF",
-      "conditions": "Turn Owner is in Action",
+      "conditions": {
+        "name": "AND",
+        "conditionList": [
+          "Turn Owner is in Action",
+          {
+            "name": "Current Turn Is",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            }
+          }
+        ]
+      },
       "passed": [
         {
           "name": "Add Events/Bonuses",

@@ -22,7 +22,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "<a class=\"gModGreen\" id=\"-367653256\">Enemy_W5_Eater_Ability02_Eater_FateRin</a>"
+      "modifier": "<a class=\"gModGreen\" id=\"-367653256\">Enemy_W5_Eater_Ability02_Eater_FateRin</a>[<span class=\"descriptionNumberColor\">Satiated</span>]"
     },
     {
       "name": "Add Events/Bonuses",
@@ -30,7 +30,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "<a class=\"gModGreen\" id=\"55624689\">Enemy_W5_Eater_Ability02_Ate_FateRin</a>",
+      "modifier": "<a class=\"gModGreen\" id=\"55624689\">Enemy_W5_Eater_Ability02_Ate_FateRin</a>[<span class=\"descriptionNumberColor\">Devour</span>]",
       "valuePerStack": {
         "MDF_AttackRatio": {
           "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
@@ -130,7 +130,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
       },
-      "modifier": "<a class=\"gModGreen\" id=\"55624689\">Enemy_W5_Eater_Ability02_Ate_FateRin</a>",
+      "modifier": "<a class=\"gModGreen\" id=\"55624689\">Enemy_W5_Eater_Ability02_Ate_FateRin</a>[<span class=\"descriptionNumberColor\">Devour</span>]",
       "variable": "MDF_LoseAttack",
       "target2": null,
       "variable2": "Skill02_Attack"
@@ -141,7 +141,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "<a class=\"gModGreen\" id=\"-367653256\">Enemy_W5_Eater_Ability02_Eater_FateRin</a>",
+      "modifier": "<a class=\"gModGreen\" id=\"-367653256\">Enemy_W5_Eater_Ability02_Eater_FateRin</a>[<span class=\"descriptionNumberColor\">Satiated</span>]",
       "valuePerStack": {
         "MDF_LoseAttack": {
           "operator": "Variables[0] (Skill02_Attack) || RETURN",

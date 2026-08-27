@@ -1242,7 +1242,8 @@ const configAbility = {
                   "ToughnessDMGType": {
                     "name": "Damage Type Source",
                     "sourceType": {}
-                  }
+                  },
+                  "bypassBreakMute": true
                 }
               ]
             }
@@ -4809,11 +4810,11 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageReduction</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_10760) || RETURN",
-                "displayLines": "UnusedUnderThisBase_10760",
+                "operator": "Variables[0] (UnusedUnderThisBase_10891) || RETURN",
+                "displayLines": "UnusedUnderThisBase_10891",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_10760"
+                  "UnusedUnderThisBase_10891"
                 ]
               }
             },
@@ -6063,11 +6064,11 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_11860) || RETURN",
-                "displayLines": "UnusedUnderThisBase_11860",
+                "operator": "Variables[0] (UnusedUnderThisBase_12007) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12007",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_11860"
+                  "UnusedUnderThisBase_12007"
                 ]
               }
             },

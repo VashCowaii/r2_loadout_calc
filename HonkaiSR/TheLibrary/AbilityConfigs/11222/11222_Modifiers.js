@@ -56,11 +56,11 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_PropertyValue": {
-              "operator": "Variables[0] (UnusedUnderThisBase_5681) || RETURN",
-              "displayLines": "UnusedUnderThisBase_5681",
+              "operator": "Variables[0] (UnusedUnderThisBase_5768) || RETURN",
+              "displayLines": "UnusedUnderThisBase_5768",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_5681"
+                "UnusedUnderThisBase_5768"
               ]
             }
           }

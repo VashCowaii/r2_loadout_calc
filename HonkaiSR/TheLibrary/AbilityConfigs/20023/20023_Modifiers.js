@@ -334,7 +334,7 @@ const configAbility = {
                     "target": "{{Player Team All}}"
                   },
                   "advanceType": "Set",
-                  "multiAdd": "(0 - UnusedUnderThisBase_9161)"
+                  "multiAdd": "(0 - UnusedUnderThisBase_9256)"
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1125,13 +1125,13 @@ const configAbility = {
                 {
                   "name": "Deal Toughness DMG",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_9122) || Constants[0] (3) || MUL || RETURN",
-                    "displayLines": "(UnusedUnderThisBase_9122 * 3)",
+                    "operator": "Variables[0] (UnusedUnderThisBase_9217) || Constants[0] (3) || MUL || RETURN",
+                    "displayLines": "(UnusedUnderThisBase_9217 * 3)",
                     "constants": [
                       3
                     ],
                     "variables": [
-                      "UnusedUnderThisBase_9122"
+                      "UnusedUnderThisBase_9217"
                     ]
                   },
                   "attacker": {
@@ -1151,7 +1151,8 @@ const configAbility = {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     }
-                  }
+                  },
+                  "bypassBreakMute": true
                 }
               ]
             }
@@ -1220,13 +1221,13 @@ const configAbility = {
                     "target": "{{Level Entity}}"
                   },
                   "baseToughnessDMG": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_9122) || Constants[0] (3) || MUL || RETURN",
-                    "displayLines": "(UnusedUnderThisBase_9122 * 3)",
+                    "operator": "Variables[0] (UnusedUnderThisBase_9217) || Constants[0] (3) || MUL || RETURN",
+                    "displayLines": "(UnusedUnderThisBase_9217 * 3)",
                     "constants": [
                       3
                     ],
                     "variables": [
-                      "UnusedUnderThisBase_9122"
+                      "UnusedUnderThisBase_9217"
                     ]
                   },
                   "toughnessForcedReductionPreview": 1,

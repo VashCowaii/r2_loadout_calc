@@ -10,12 +10,16 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>",
+      "for": "<a class=\"gModGreen\" id=\"mod__132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
       "counter": 20,
       "modifierFlags": [
         "BlockDamage",
         "MuteBreak"
       ],
+      "description": "Each stack of \"P—Protect You\" can negate 1 instance of DMG. All enemies share \"P—Protect You\" stacks.",
+      "type": "Buff",
+      "effectName": "P—Protect You",
+      "statusName": "P—Protect You",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
@@ -55,7 +59,7 @@ const configAbility = {
             {
               "name": "Define Custom Variable with Modifier Values",
               "variableName": "MDF_Count",
-              "modifierName": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>",
+              "modifierName": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
               "multiplier": 1
             },
             {
@@ -78,7 +82,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}} - {{Modifier Holder}}"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>"
+                  "modifier": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]"
                 }
               ],
               "failed": [
@@ -88,7 +92,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifierName": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>",
+                  "modifierName": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
                   "function": "Add"
                 }
               ]
@@ -111,7 +115,7 @@ const configAbility = {
                 {
                   "name": "Define Custom Variable with Modifier Values",
                   "variableName": "MDF_Count",
-                  "modifierName": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>",
+                  "modifierName": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
                   "multiplier": 1
                 },
                 {
@@ -136,7 +140,7 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifierName": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>",
+                      "modifierName": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
                       "function": "Add"
                     },
                     {
@@ -153,14 +157,14 @@ const configAbility = {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>"
+                      "modifier": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]"
                     }
                   ],
                   "failed": [
                     {
                       "name": "Define Custom Variable with Modifier Values",
                       "variableName": "MDF_Count",
-                      "modifierName": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>",
+                      "modifierName": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]",
                       "multiplier": 1
                     },
                     {
@@ -251,7 +255,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>"
+                  "modifier": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>[<span class=\"descriptionNumberColor\">P—Protect You</span>]"
                 },
                 {
                   "name": "Add Events/Bonuses",

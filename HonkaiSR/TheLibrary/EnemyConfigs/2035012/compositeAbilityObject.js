@@ -1191,7 +1191,8 @@ const compositeAbilityObject = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         }
-                      }
+                      },
+                      "bypassBreakMute": true
                     }
                   ]
                 }

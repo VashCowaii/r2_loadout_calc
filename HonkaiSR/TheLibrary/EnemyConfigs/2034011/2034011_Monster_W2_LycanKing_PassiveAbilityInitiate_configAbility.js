@@ -202,35 +202,35 @@ const configAbility = {
               "eventID": 20008,
               "variables": {
                 "P3_Lycan01Delay": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9561) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9561",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9656) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9656",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_9561"
+                    "UnusedUnderThisBase_9656"
                   ]
                 },
                 "P4_Lycan02Delay": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9583) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9583",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9678) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9678",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_9583"
+                    "UnusedUnderThisBase_9678"
                   ]
                 },
                 "P5_Lycan03Delay": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9558) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9558",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9653) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9653",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_9558"
+                    "UnusedUnderThisBase_9653"
                   ]
                 },
                 "P6_Lycan04Delay": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9584) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9584",
+                  "operator": "Variables[0] (UnusedUnderThisBase_9679) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_9679",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_9584"
+                    "UnusedUnderThisBase_9679"
                   ]
                 }
               }
@@ -258,11 +258,11 @@ const configAbility = {
                   "scope": "TargetEntity",
                   "variableName": "P3_Lycan01Delay",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_9561) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_9561",
+                    "operator": "Variables[0] (UnusedUnderThisBase_9656) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_9656",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_9561"
+                      "UnusedUnderThisBase_9656"
                     ]
                   }
                 }
@@ -291,11 +291,11 @@ const configAbility = {
                   "scope": "TargetEntity",
                   "variableName": "P4_Lycan02Delay",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_9583) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_9583",
+                    "operator": "Variables[0] (UnusedUnderThisBase_9678) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_9678",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_9583"
+                      "UnusedUnderThisBase_9678"
                     ]
                   }
                 }
@@ -324,11 +324,11 @@ const configAbility = {
                   "scope": "TargetEntity",
                   "variableName": "P5_Lycan03Delay",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_9558) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_9558",
+                    "operator": "Variables[0] (UnusedUnderThisBase_9653) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_9653",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_9558"
+                      "UnusedUnderThisBase_9653"
                     ]
                   }
                 }
@@ -357,11 +357,11 @@ const configAbility = {
                   "scope": "TargetEntity",
                   "variableName": "P6_Lycan04Delay",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_9584) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_9584",
+                    "operator": "Variables[0] (UnusedUnderThisBase_9679) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_9679",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_9584"
+                      "UnusedUnderThisBase_9679"
                     ]
                   }
                 }

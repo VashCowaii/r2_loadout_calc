@@ -42,11 +42,11 @@ let enemyData = {
         "Imaginary": 0.8
       },
       "abilities": [
-        2688,
-        2689,
-        2690,
-        2691,
-        2692
+        2731,
+        2732,
+        2733,
+        2734,
+        2735
       ],
       "enemyTag": [
         "W5_Ranger"

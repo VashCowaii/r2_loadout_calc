@@ -42,13 +42,13 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        3275,
-        3276,
-        3277,
-        3278
+        3352,
+        3353,
+        3354,
+        3355
       ],
       "abilityOrder": [
-        3275
+        3352
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -86,13 +86,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3275,
-        3276,
-        3277,
-        3278
+        3352,
+        3353,
+        3354,
+        3355
       ],
       "abilityOrder": [
-        3275
+        3352
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -130,13 +130,13 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        3275,
-        3276,
-        3277,
-        3278
+        3352,
+        3353,
+        3354,
+        3355
       ],
       "abilityOrder": [
-        3275
+        3352
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -174,13 +174,13 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        3275,
-        3276,
-        3277,
-        3278
+        3352,
+        3353,
+        3354,
+        3355
       ],
       "abilityOrder": [
-        3275
+        3352
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -194,7 +194,7 @@ let enemyData = {
         }
       ],
       "overrideParams": {
-        "3275": [
+        "3352": [
           [
             1,
             0,
@@ -210,7 +210,7 @@ let enemyData = {
           5,
           "-"
         ],
-        "3277": [
+        "3354": [
           [
             1,
             0,
@@ -224,7 +224,7 @@ let enemyData = {
           5,
           "-"
         ],
-        "3278": [
+        "3355": [
           [
             0.125,
             "-",
@@ -267,13 +267,13 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        3275,
-        3276,
-        3277,
-        3278
+        3352,
+        3353,
+        3354,
+        3355
       ],
       "abilityOrder": [
-        3275
+        3352
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -288,7 +288,7 @@ let enemyData = {
         }
       ],
       "overrideParams": {
-        "3278": [
+        "3355": [
           [
             0.15
           ],

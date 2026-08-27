@@ -264,7 +264,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>"
+                  "modifier": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>[<span class=\"descriptionNumberColor\">Lasting Antibac</span>]"
                 },
                 {
                   "name": "Define Custom Variable",

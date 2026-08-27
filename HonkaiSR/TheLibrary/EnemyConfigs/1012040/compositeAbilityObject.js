@@ -273,7 +273,8 @@ const compositeAbilityObject = {
                     "target": "{{Summoner of Modifier Holder}}"
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"2115356635\">Monster_W1_SvarogPart_CD</a>",
-                  "duration": 1
+                  "duration": 1,
+                  "casterAssign": "TargetSelf"
                 }
               ]
             }

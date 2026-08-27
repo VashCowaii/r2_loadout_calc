@@ -357,11 +357,11 @@ const compositeAbilityObject = {
                           "sourceType": {}
                         },
                         "Damage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13344) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13344",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13505) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13505",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_13344"
+                            "UnusedUnderThisBase_13505"
                           ]
                         },
                         "dmgFormula": "Max HP Scaling",
@@ -1050,19 +1050,19 @@ const compositeAbilityObject = {
                           "duration": 1,
                           "valuePerStack": {
                             "Ability04_P3_ToMonsterHpPercentage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13333) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13333",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13494) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13494",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13333"
+                                "UnusedUnderThisBase_13494"
                               ]
                             },
                             "Ability04_P4_ElationPoint": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13314) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13314",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13475) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13475",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13314"
+                                "UnusedUnderThisBase_13475"
                               ]
                             }
                           },
@@ -1092,11 +1092,11 @@ const compositeAbilityObject = {
                               "duration": 1,
                               "valuePerStack": {
                                 "Ability04_P6_BPPoint": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13324) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13324",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13485) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13485",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13324"
+                                    "UnusedUnderThisBase_13485"
                                   ]
                                 }
                               }
@@ -1656,11 +1656,11 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_13343) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_13343",
+                            "operator": "Variables[0] (UnusedUnderThisBase_13504) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_13504",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_13343"
+                              "UnusedUnderThisBase_13504"
                             ]
                           },
                           "assignState": "True",
@@ -1684,11 +1684,11 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_13339) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_13339",
+                            "operator": "Variables[0] (UnusedUnderThisBase_13500) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_13500",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_13339"
+                              "UnusedUnderThisBase_13500"
                             ]
                           },
                           "assignState": "True",
@@ -1727,11 +1727,11 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_13343) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_13343",
+                            "operator": "Variables[0] (UnusedUnderThisBase_13504) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_13504",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_13343"
+                              "UnusedUnderThisBase_13504"
                             ]
                           },
                           "assignState": "True",
@@ -1755,11 +1755,11 @@ const compositeAbilityObject = {
                             "target": "{{Modifier Holder}}"
                           },
                           "maximum": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_13339) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_13339",
+                            "operator": "Variables[0] (UnusedUnderThisBase_13500) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_13500",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_13339"
+                              "UnusedUnderThisBase_13500"
                             ]
                           },
                           "assignState": "True",
@@ -1851,11 +1851,11 @@ const compositeAbilityObject = {
                                 "target": "{{Modifier Holder}}"
                               },
                               "maximum": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_13343) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_13343",
+                                "operator": "Variables[0] (UnusedUnderThisBase_13504) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_13504",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_13343"
+                                  "UnusedUnderThisBase_13504"
                                 ]
                               },
                               "assignState": "True",
@@ -1879,11 +1879,11 @@ const compositeAbilityObject = {
                                 "target": "{{Modifier Holder}}"
                               },
                               "maximum": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_13339) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_13339",
+                                "operator": "Variables[0] (UnusedUnderThisBase_13500) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_13500",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_13339"
+                                  "UnusedUnderThisBase_13500"
                                 ]
                               },
                               "assignState": "True",
@@ -1922,11 +1922,11 @@ const compositeAbilityObject = {
                                 "target": "{{Modifier Holder}}"
                               },
                               "maximum": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_13343) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_13343",
+                                "operator": "Variables[0] (UnusedUnderThisBase_13504) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_13504",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_13343"
+                                  "UnusedUnderThisBase_13504"
                                 ]
                               },
                               "assignState": "True",
@@ -1950,11 +1950,11 @@ const compositeAbilityObject = {
                                 "target": "{{Modifier Holder}}"
                               },
                               "maximum": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_13339) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_13339",
+                                "operator": "Variables[0] (UnusedUnderThisBase_13500) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_13500",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_13339"
+                                  "UnusedUnderThisBase_13500"
                                 ]
                               },
                               "assignState": "True",
@@ -2977,11 +2977,11 @@ const compositeAbilityObject = {
                   },
                   "variables": {
                     "PassiveAbility01_P6_SpeedRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_13319) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_13319",
+                      "operator": "Variables[0] (UnusedUnderThisBase_13480) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_13480",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_13319"
+                        "UnusedUnderThisBase_13480"
                       ]
                     }
                   },

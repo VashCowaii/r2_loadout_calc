@@ -1,5 +1,5 @@
 let enemyData = {
-  "name": "Avenger Squad: Canine",
+  "name": "Avenger Squadron: Canine",
   "image": 4062021,
   "bar": 1,
   "rank": "MinionLv2",
@@ -41,10 +41,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2521
+        2564
       ],
       "abilityOrder": [
-        2521
+        2564
       ]
     }
   }

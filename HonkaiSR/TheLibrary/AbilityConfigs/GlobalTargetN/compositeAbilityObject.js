@@ -1475,6 +1475,73 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
+          "nameTarget": "Robin S: Delay Whitelist",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Join Targets",
+              "TargetList": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}.[[getAttachedSummon]]"
+                },
+                {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}.[[getSummoner]]"
+                },
+                {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}.[[getMemosprite]]"
+                },
+                {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}.[[getSummoner]].[[getMemosprite]]"
+                },
+                {
+                  "name": "Target Name",
+                  "target": "{{Enemy Team All(with Unselectable)}}"
+                },
+                {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}.[[getSummoner]].[[getAttachedSummon]]"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Robin S: Battle Event Target",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Battle Event List}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1013617145\">RobinS_PassiveAbility01_BattleEvent</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
           "nameTarget": "BattleEvent96217",
           "isTargetOperator": false,
           "execute": [
@@ -1917,6 +1984,33 @@ const compositeAbilityObject = {
                       "target": "{{Parameter Target}}"
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"1529971415\">Topaz_BETag</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Jing Yuan: Lightning Lord",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Battle Event List}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Battle Event ID",
+                    "ID": 11203,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
                   }
                 }
               ]
@@ -3632,6 +3726,87 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Sort by Physical Positioning"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "BattleEvent60050",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Battle Event List}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Battle Event ID",
+                    "ID": 60050,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "BattleEvent60049",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Battle Event List}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Battle Event ID",
+                    "ID": 60049,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "BattleEvent60048",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Battle Event List}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Battle Event ID",
+                    "ID": 60048,
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  }
                 }
               ]
             }

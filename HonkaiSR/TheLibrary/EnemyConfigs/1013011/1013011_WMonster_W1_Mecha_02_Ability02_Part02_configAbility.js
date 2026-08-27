@@ -28,11 +28,11 @@ const configAbility = {
           "modifier": "<a class=\"gModGreen\" id=\"118150896\">Monster_W1_Mecha03_RL_Ability03_DamageUp</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "valuePerStack": {
             "MDF_DamageUpRatio_PerLayer": {
-              "operator": "Variables[0] (UnusedUnderThisBase_8566) || RETURN",
-              "displayLines": "UnusedUnderThisBase_8566",
+              "operator": "Variables[0] (UnusedUnderThisBase_8653) || RETURN",
+              "displayLines": "UnusedUnderThisBase_8653",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_8566"
+                "UnusedUnderThisBase_8653"
               ]
             }
           }

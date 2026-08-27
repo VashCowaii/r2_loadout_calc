@@ -42,14 +42,14 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1022,
-        1023,
-        1024,
-        1025,
-        1026
+        1065,
+        1066,
+        1067,
+        1068,
+        1069
       ],
       "abilityOrder": [
-        1017
+        1060
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha01_02",
@@ -83,14 +83,14 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1022,
-        1023,
-        1024,
-        1025,
-        1026
+        1065,
+        1066,
+        1067,
+        1068,
+        1069
       ],
       "abilityOrder": [
-        1017
+        1060
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha01_02",
@@ -124,14 +124,14 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1022,
-        1023,
-        1024,
-        1025,
-        1026
+        1065,
+        1066,
+        1067,
+        1068,
+        1069
       ],
       "abilityOrder": [
-        1017
+        1060
       ],
       "enemyTag": [
         "MonsterType_W1_Mecha01_02",

@@ -902,7 +902,7 @@ const compositeAbilityObject = {
                     },
                     "source": {
                       "name": "Target Name",
-                      "target": "{{Caster}}"
+                      "target": "{{Enemy Team Entity}}"
                     }
                   },
                   {

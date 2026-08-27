@@ -1039,7 +1039,8 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"2115356635\">Monster_W1_SvarogPart_CD</a>",
-                      "duration": 99
+                      "duration": 99,
+                      "casterAssign": "TargetSelf"
                     }
                   ]
                 },
@@ -1143,11 +1144,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"2081826421\">JingYuan_BattleEvent_ATKCount</a>[<span class=\"descriptionNumberColor\">Prana Extirpated</span>]",
                   "stackLimit": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_5592) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_5592",
+                    "operator": "Variables[0] (UnusedUnderThisBase_5679) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_5679",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_5592"
+                      "UnusedUnderThisBase_5679"
                     ]
                   },
                   "addStacksPerTrigger": 7
@@ -1171,11 +1172,11 @@ const compositeAbilityObject = {
                     "variables": []
                   },
                   "maximum": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_5592) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_5592",
+                    "operator": "Variables[0] (UnusedUnderThisBase_5679) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_5679",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_5592"
+                      "UnusedUnderThisBase_5679"
                     ]
                   },
                   "assignState": "True",

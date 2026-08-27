@@ -152,7 +152,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-1742127084\">Enemy_W3_TV_03_Ability02_AttackUp</a>",
+          "modifier": "<a class=\"gModGreen\" id=\"-1742127084\">Enemy_W3_TV_03_Ability02_AttackUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "valuePerStack": {
             "MDF_PropertyValue": {
               "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
@@ -172,11 +172,15 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__-1742127084\">Enemy_W3_TV_03_Ability02_AttackUp</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1742127084\">Enemy_W3_TV_03_Ability02_AttackUp</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
           "stackType": "ReplaceByCaster",
           "stackData": [
             "MDF_PropertyValue"
           ],
+          "description": "Each stack increases ATK by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+          "type": "Buff",
+          "effectName": "ATK Boost",
+          "statusName": "ATK Boost",
           "addStacksPerTrigger": 1,
           "execute": [
             {

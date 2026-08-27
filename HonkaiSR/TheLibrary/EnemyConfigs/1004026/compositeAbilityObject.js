@@ -209,7 +209,8 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
-                      }
+                      },
+                      "bypassBreakMute": true
                     },
                     {
                       "name": "Action Advance/Delay",
@@ -716,11 +717,43 @@ const compositeAbilityObject = {
                       }
                     },
                     {
-                      "name": "Trigger 0-Toughness",
-                      "target": {
+                      "name": "Find New Target",
+                      "from": {
                         "name": "Target Name",
                         "target": "{{All Team Members}}"
-                      }
+                      },
+                      "ifTargetFound": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"1970380612\">Monster_W1_Gepard_RL_Initiate</a>"
+                          },
+                          "passed": [
+                            {
+                              "name": "Trigger 0-Toughness",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "bypassBreakMute": true
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Trigger 0-Toughness",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              }
+                            }
+                          ]
+                        }
+                      ]
                     },
                     {
                       "name": "Action Advance/Delay",
@@ -773,15 +806,15 @@ const compositeAbilityObject = {
                         "variables": []
                       },
                       "valuePercent": {
-                        "operator": "Variables[0] (MDF_ShieldPercentage) || Constants[0] (5) || DIV || Variables[1] (MDF_Count) || MUL || Variables[2] (UnusedUnderThisBase_8465) || MUL || RETURN",
-                        "displayLines": "(((MDF_ShieldPercentage / 5) * MDF_Count) * UnusedUnderThisBase_8465)",
+                        "operator": "Variables[0] (MDF_ShieldPercentage) || Constants[0] (5) || DIV || Variables[1] (MDF_Count) || MUL || Variables[2] (UnusedUnderThisBase_8552) || MUL || RETURN",
+                        "displayLines": "(((MDF_ShieldPercentage / 5) * MDF_Count) * UnusedUnderThisBase_8552)",
                         "constants": [
                           5
                         ],
                         "variables": [
                           "MDF_ShieldPercentage",
                           "MDF_Count",
-                          "UnusedUnderThisBase_8465"
+                          "UnusedUnderThisBase_8552"
                         ]
                       },
                       "formula": "HP Scaling (Shield)"
@@ -1138,11 +1171,43 @@ const compositeAbilityObject = {
                       }
                     },
                     {
-                      "name": "Trigger 0-Toughness",
-                      "target": {
+                      "name": "Find New Target",
+                      "from": {
                         "name": "Target Name",
                         "target": "{{All Team Members}}"
-                      }
+                      },
+                      "ifTargetFound": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Has Modifier",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            },
+                            "modifier": "<a class=\"gModGreen\" id=\"1970380612\">Monster_W1_Gepard_RL_Initiate</a>"
+                          },
+                          "passed": [
+                            {
+                              "name": "Trigger 0-Toughness",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "bypassBreakMute": true
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "Trigger 0-Toughness",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              }
+                            }
+                          ]
+                        }
+                      ]
                     },
                     {
                       "name": "Action Advance/Delay",
@@ -2559,7 +2624,8 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          }
+          },
+          "bypassBreakMute": true
         },
         {
           "name": "Action Advance/Delay",

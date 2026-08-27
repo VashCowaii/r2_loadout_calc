@@ -24,13 +24,17 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__777357174\">Enemy_W2_Beast02_BlockDamage_FateRin</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__777357174\">Enemy_W2_Beast02_BlockDamage_FateRin</a>[<span class=\"descriptionNumberColor\">Barrier</span>]",
           "stackType": "Replace",
           "modifierFlags": [
             "BlockDamageExcludeDot",
             "MuteBreak"
           ],
           "useEntitySnapshot": true,
+          "description": "%DynamicTargetName nullifies all DMG received except DoTs. This state is dispelled after being attacked.",
+          "type": "Buff",
+          "effectName": "Barrier",
+          "statusName": "Barrier",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -449,7 +453,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"777357174\">Enemy_W2_Beast02_BlockDamage_FateRin</a>",
+              "modifier": "<a class=\"gModGreen\" id=\"777357174\">Enemy_W2_Beast02_BlockDamage_FateRin</a>[<span class=\"descriptionNumberColor\">Barrier</span>]",
               "duration": -1
             }
           ],
@@ -460,7 +464,7 @@ const compositeAbilityObject = {
                 "name": "Add Target by Unique Identifier",
                 "identifier": "Activity_FateRin_MasterAvatar"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"777357174\">Enemy_W2_Beast02_BlockDamage_FateRin</a>",
+              "modifier": "<a class=\"gModGreen\" id=\"777357174\">Enemy_W2_Beast02_BlockDamage_FateRin</a>[<span class=\"descriptionNumberColor\">Barrier</span>]",
               "duration": -1
             }
           ]

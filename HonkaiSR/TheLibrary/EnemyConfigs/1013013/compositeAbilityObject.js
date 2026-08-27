@@ -843,11 +843,11 @@ const compositeAbilityObject = {
                                           },
                                           "variableName": "Mecha03_00_DamageUpBasePercentage",
                                           "value": {
-                                            "operator": "Variables[0] (UnusedUnderThisBase_8550) || RETURN",
-                                            "displayLines": "UnusedUnderThisBase_8550",
+                                            "operator": "Variables[0] (UnusedUnderThisBase_8637) || RETURN",
+                                            "displayLines": "UnusedUnderThisBase_8637",
                                             "constants": [],
                                             "variables": [
-                                              "UnusedUnderThisBase_8550"
+                                              "UnusedUnderThisBase_8637"
                                             ]
                                           }
                                         }
@@ -965,7 +965,7 @@ const compositeAbilityObject = {
                                                 "target": "{{Modifier Holder}}"
                                               },
                                               "advanceType": "Set",
-                                              "multiAdd": "UnusedUnderThisBase_8564"
+                                              "multiAdd": "UnusedUnderThisBase_8651"
                                             },
                                             {
                                               "name": "Add Events/Bonuses",
@@ -975,11 +975,11 @@ const compositeAbilityObject = {
                                               },
                                               "modifier": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
                                               "duration": {
-                                                "operator": "Variables[0] (UnusedUnderThisBase_8561) || RETURN",
-                                                "displayLines": "UnusedUnderThisBase_8561",
+                                                "operator": "Variables[0] (UnusedUnderThisBase_8648) || RETURN",
+                                                "displayLines": "UnusedUnderThisBase_8648",
                                                 "constants": [],
                                                 "variables": [
-                                                  "UnusedUnderThisBase_8561"
+                                                  "UnusedUnderThisBase_8648"
                                                 ]
                                               }
                                             }
@@ -992,7 +992,7 @@ const compositeAbilityObject = {
                                                 "target": "{{Modifier Holder}}"
                                               },
                                               "advanceType": "Set",
-                                              "multiAdd": "UnusedUnderThisBase_8549"
+                                              "multiAdd": "UnusedUnderThisBase_8636"
                                             },
                                             {
                                               "name": "Add Events/Bonuses",
@@ -1002,11 +1002,11 @@ const compositeAbilityObject = {
                                               },
                                               "modifier": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
                                               "duration": {
-                                                "operator": "Variables[0] (UnusedUnderThisBase_8562) || RETURN",
-                                                "displayLines": "UnusedUnderThisBase_8562",
+                                                "operator": "Variables[0] (UnusedUnderThisBase_8649) || RETURN",
+                                                "displayLines": "UnusedUnderThisBase_8649",
                                                 "constants": [],
                                                 "variables": [
-                                                  "UnusedUnderThisBase_8562"
+                                                  "UnusedUnderThisBase_8649"
                                                 ]
                                               }
                                             }
@@ -1074,11 +1074,11 @@ const compositeAbilityObject = {
                                           },
                                           "variableName": "Mecha03_00_DamageUpBasePercentage",
                                           "value": {
-                                            "operator": "Variables[0] (UnusedUnderThisBase_8550) || RETURN",
-                                            "displayLines": "UnusedUnderThisBase_8550",
+                                            "operator": "Variables[0] (UnusedUnderThisBase_8637) || RETURN",
+                                            "displayLines": "UnusedUnderThisBase_8637",
                                             "constants": [],
                                             "variables": [
-                                              "UnusedUnderThisBase_8550"
+                                              "UnusedUnderThisBase_8637"
                                             ]
                                           }
                                         }
@@ -1510,11 +1510,11 @@ const compositeAbilityObject = {
                                                           },
                                                           "variableName": "Mecha03_00_DamageUpBasePercentage",
                                                           "value": {
-                                                            "operator": "Variables[0] (UnusedUnderThisBase_8550) || RETURN",
-                                                            "displayLines": "UnusedUnderThisBase_8550",
+                                                            "operator": "Variables[0] (UnusedUnderThisBase_8637) || RETURN",
+                                                            "displayLines": "UnusedUnderThisBase_8637",
                                                             "constants": [],
                                                             "variables": [
-                                                              "UnusedUnderThisBase_8550"
+                                                              "UnusedUnderThisBase_8637"
                                                             ]
                                                           }
                                                         }
@@ -1634,7 +1634,7 @@ const compositeAbilityObject = {
                                                             "target": "{{Modifier Holder}}"
                                                           },
                                                           "advanceType": "Set",
-                                                          "multiAdd": "UnusedUnderThisBase_8564"
+                                                          "multiAdd": "UnusedUnderThisBase_8651"
                                                         },
                                                         {
                                                           "name": "Add Events/Bonuses",
@@ -1644,11 +1644,11 @@ const compositeAbilityObject = {
                                                           },
                                                           "modifier": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
                                                           "duration": {
-                                                            "operator": "Variables[0] (UnusedUnderThisBase_8561) || RETURN",
-                                                            "displayLines": "UnusedUnderThisBase_8561",
+                                                            "operator": "Variables[0] (UnusedUnderThisBase_8648) || RETURN",
+                                                            "displayLines": "UnusedUnderThisBase_8648",
                                                             "constants": [],
                                                             "variables": [
-                                                              "UnusedUnderThisBase_8561"
+                                                              "UnusedUnderThisBase_8648"
                                                             ]
                                                           }
                                                         }
@@ -1661,7 +1661,7 @@ const compositeAbilityObject = {
                                                             "target": "{{Modifier Holder}}"
                                                           },
                                                           "advanceType": "Set",
-                                                          "multiAdd": "UnusedUnderThisBase_8549"
+                                                          "multiAdd": "UnusedUnderThisBase_8636"
                                                         },
                                                         {
                                                           "name": "Add Events/Bonuses",
@@ -1671,11 +1671,11 @@ const compositeAbilityObject = {
                                                           },
                                                           "modifier": "<a class=\"gModGreen\" id=\"-785895523\">Monster_W1_Mecha03_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Firepower Recovery</span>]",
                                                           "duration": {
-                                                            "operator": "Variables[0] (UnusedUnderThisBase_8562) || RETURN",
-                                                            "displayLines": "UnusedUnderThisBase_8562",
+                                                            "operator": "Variables[0] (UnusedUnderThisBase_8649) || RETURN",
+                                                            "displayLines": "UnusedUnderThisBase_8649",
                                                             "constants": [],
                                                             "variables": [
-                                                              "UnusedUnderThisBase_8562"
+                                                              "UnusedUnderThisBase_8649"
                                                             ]
                                                           }
                                                         }
@@ -1759,11 +1759,11 @@ const compositeAbilityObject = {
                                                       },
                                                       "variableName": "Mecha03_00_DamageUpBasePercentage",
                                                       "value": {
-                                                        "operator": "Variables[0] (UnusedUnderThisBase_8550) || RETURN",
-                                                        "displayLines": "UnusedUnderThisBase_8550",
+                                                        "operator": "Variables[0] (UnusedUnderThisBase_8637) || RETURN",
+                                                        "displayLines": "UnusedUnderThisBase_8637",
                                                         "constants": [],
                                                         "variables": [
-                                                          "UnusedUnderThisBase_8550"
+                                                          "UnusedUnderThisBase_8637"
                                                         ]
                                                       }
                                                     }
@@ -1999,11 +1999,11 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-735432971\">Monster_W1_Mecha03_RL_Revenge</a>[<span class=\"descriptionNumberColor\">Obliteration Order</span>]",
           "valuePerStack": {
             "MDF_DamageUpRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_8550) || RETURN",
-              "displayLines": "UnusedUnderThisBase_8550",
+              "operator": "Variables[0] (UnusedUnderThisBase_8637) || RETURN",
+              "displayLines": "UnusedUnderThisBase_8637",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_8550"
+                "UnusedUnderThisBase_8637"
               ]
             }
           }

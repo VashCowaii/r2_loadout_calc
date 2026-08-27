@@ -7698,6 +7698,50 @@ let modifiersCharacter = [
     ]
   },
   {
+    "name": "AventurineW_CritDamage_PointB3",
+    "realName": "CRIT DMG Boost",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": "CRIT DMG Boost",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "AventurineW_Ability03_SpeedRatioUp",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": "SPD Boost",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "AventurineW_PassiveHasNoElationTeammate",
+    "realName": "Revel in Raging Tides",
+    "aim": "Other",
+    "desc": "After a teammate uses an attack, Aventurine • Waveflair additionally gains Punchline and \"Certified Banger,\" and Aha's SPD increases.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_Count"
+    ]
+  },
+  {
+    "name": "AventurineW_CritDamage_Eidolon2",
+    "realName": "Idle as the Turning Tide",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": "CRIT DMG Boost",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"1123291765\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToOtherMember</a>",
     "realName": "Heart, Refined ad Infinitum",
     "aim": "Buff",
@@ -7862,6 +7906,61 @@ let modifiersCharacter = [
     ]
   },
   {
+    "name": "RobinS_Fever_DmgUp",
+    "realName": "Fever",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "Fever_DmgUpValue"
+    ]
+  },
+  {
+    "name": "Memosprite_RobinSServant_DamageTakenAura",
+    "realName": "Vulnerability",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_DamageTakenRatio"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-2095912593\">RobinS_Fever_DefIgnore</a>",
+    "realName": "Wings Heed No Borders",
+    "aim": "Buff",
+    "desc": "When dealing DMG, ignores #1[f1]% of the target's DEF.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "Fever_DefIgnoreValue"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-877277589\">RobinS_Trace_Point01_CritDmg</a>",
+    "realName": "Deviated Chords",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": "CRIT DMG Boost",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-784450291\">RobinS_Trace_Point01_Atk</a>",
+    "realName": "Deviated Chords",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i].",
+    "type": "ATK Boost",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"-1514536546\">G_MortenaxBlade_Eidolon2_ToMember</a>",
     "realName": "Ash Was My Heart, Yet the Flame Stayed",
     "aim": "Buff",
@@ -7881,6 +7980,217 @@ let modifiersCharacter = [
     "perma": true,
     "params": [
       "MDF_PowerCount"
+    ]
+  },
+  {
+    "name": "AventurineW_Eidolon6_Mark",
+    "realName": "The Past in Fast Lane",
+    "aim": "Other",
+    "desc": "Has currently used Elation Skill #1[i] time(s).",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_CastNum"
+    ]
+  },
+  {
+    "name": "AventurineW_Eidolon6_MarkFull",
+    "realName": "The Past in Fast Lane",
+    "aim": "Other",
+    "desc": "All Elation Skills used become \"All In! To Summer's Blaze,\" and using the Elation Skill \"All In! To Summer's Blaze\" outside of Aha Instant to additionally deal DMG no longer consumes \"Fervor.\"",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "AventurineW_PointB2_PropertyRatio",
+    "realName": "Revel in Raging Tides",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[i]%.",
+    "type": "Elation Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"1321572002\">RobinS_Trace_Point03</a>",
+    "realName": "Rebuilt Harmony",
+    "aim": "Buff",
+    "desc": "CRIT Rate increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_CritChance"
+    ]
+  },
+  {
+    "name": "AventurineW_Eidolon6_ElationDamageExtra",
+    "realName": "The Past in Fast Lane",
+    "aim": "Buff",
+    "desc": "Elation DMG merrymakes by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "AventurineW_ExtraCritDamageRatio",
+    "realName": "CRIT DMG Boost",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "AventurineW_Tree03_TriggerNum",
+    "realName": "Sift Through Gilded Dreams",
+    "aim": "Other",
+    "desc": "The \"Sift Through Gilded Dreams\" effect can be triggered #1[i] more time(s).",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_Count"
+    ]
+  },
+  {
+    "name": "AventurineW_CritDamage_PointB3_AfterTeamMateCastAbility",
+    "realName": "CRIT DMG Boost",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": "CRIT DMG Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "AventurineW_Eidolon1",
+    "realName": "A Holiday on the Line",
+    "aim": "Buff",
+    "desc": "All-Type RES PEN increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"284375689\">RobinS_Eidolon4_ServantSpeedUp</a>",
+    "realName": "Her Variation on the Theme",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "Rank04_ServantSpeedUpValue"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1058262544\">RobinS_Eidolon2_AllDamageTypePenetrate</a>",
+    "realName": "A Heart of Still Water",
+    "aim": "Buff",
+    "desc": "All-Type RES PEN increases by #1[i]%.",
+    "type": "All-Type RES PEN Boost",
+    "perma": true,
+    "params": [
+      "MDF_AllDamageTypePenetrate"
+    ]
+  },
+  {
+    "name": "RobinS_Eidolon6_PursuedDmg",
+    "realName": "A Song Yet Unnamed",
+    "aim": "Buff",
+    "desc": "After an attack, Robin • Summeretto deals Additional DMG.",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "AventurineW_ElationConvert_Sub",
+    "realName": "Party in Perfect Paradise",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[i]%.",
+    "type": "Elation Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyRatio"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"2132468356\">RobinS_Maze_DmgUp</a>",
+    "realName": "We Are the Melody",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": false,
+    "params": [
+      "Maze_DmgUpValue"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"1875337065\">RobinS_Ability03_SpecialGuest</a>",
+    "realName": "Special Guest",
+    "aim": "Other",
+    "desc": "When this unit or their summon attacks, Robin • Summeretto additionally gains Vibes. Cannot grant action advances to other friendly targets.",
+    "type": "Special Guest",
+    "perma": true
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"1338349621\">RobinS_Trace_Point02</a>",
+    "realName": "Groove",
+    "aim": "Other",
+    "desc": "The first time Robin • Summeretto gains Vibes each turn, additionally regenerates #1[i] Energy.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Memosprite_RobinSServant_Fever_DmgUp",
+    "realName": "Fever",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": "Fever",
+    "perma": true,
+    "params": [
+      "Fever_DmgUpValue"
+    ]
+  },
+  {
+    "name": "Memosprite_RobinSServant_Eidolon1_DamageRecord",
+    "realName": "Stray Bird of Summer",
+    "aim": "Other",
+    "desc": "Current DMG Tally: #1[i]",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_TMP_RecordDamage"
+    ]
+  },
+  {
+    "name": "AventurineW_Eidolon4",
+    "realName": "Sunlight Runs No Tab",
+    "aim": "Buff",
+    "desc": "When dealing DMG, ignores #1[i]% of the target's DEF.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyRatio"
+    ]
+  },
+  {
+    "name": "AventurineW_PointB2_TeammatePropertyRatio",
+    "realName": "Revel in Raging Tides",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[i]%.",
+    "type": "Elation Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
     ]
   },
   {

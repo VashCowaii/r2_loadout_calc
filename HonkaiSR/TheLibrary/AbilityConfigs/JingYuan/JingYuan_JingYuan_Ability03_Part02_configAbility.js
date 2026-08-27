@@ -134,7 +134,7 @@ const configAbility = {
       "name": "Add Events/Bonuses",
       "to": {
         "name": "Target Name",
-        "target": "{{Caster's Self-Made Battle-Events}}"
+        "target": "{{Jing Yuan: Lightning Lord}}"
       },
       "modifier": "<a class=\"gModGreen\" id=\"1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
       "valuePerStack": {
@@ -152,7 +152,7 @@ const configAbility = {
       "name": "Add Events/Bonuses",
       "to": {
         "name": "Target Name",
-        "target": "{{Caster's Self-Made Battle-Events}}"
+        "target": "{{Jing Yuan: Lightning Lord}}"
       },
       "modifier": "<a class=\"gModGreen\" id=\"-1762822846\">JingYuan_BattleEvent_SpeedUp</a>",
       "stackLimit": {

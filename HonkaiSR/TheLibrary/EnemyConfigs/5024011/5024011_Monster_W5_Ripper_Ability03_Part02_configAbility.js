@@ -36,6 +36,14 @@ const configAbility = {
               "target": "{{Parameter Target}}"
             },
             "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]"
+          },
+          {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Parameter Target}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
           }
         ]
       },
@@ -93,6 +101,14 @@ const configAbility = {
                       "target": "{{Parameter Target}}"
                     },
                     "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]"
+                  },
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
                   }
                 ]
               },
@@ -155,6 +171,14 @@ const configAbility = {
                           "target": "{{Parameter Target}}"
                         },
                         "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
                       }
                     ]
                   },
@@ -219,6 +243,14 @@ const configAbility = {
                           "target": "{{Parameter Target}}"
                         },
                         "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
                       }
                     ]
                   },
@@ -283,6 +315,14 @@ const configAbility = {
                           "target": "{{Parameter Target}}"
                         },
                         "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
                       }
                     ]
                   },
@@ -349,6 +389,14 @@ const configAbility = {
                           "target": "{{Parameter Target}}"
                         },
                         "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
                       }
                     ]
                   },
@@ -404,6 +452,14 @@ const configAbility = {
                           "target": "{{Parameter Target}}"
                         },
                         "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
                       }
                     ]
                   },
@@ -457,6 +513,14 @@ const configAbility = {
                           "target": "{{Parameter Target}}"
                         },
                         "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
                       }
                     ]
                   },

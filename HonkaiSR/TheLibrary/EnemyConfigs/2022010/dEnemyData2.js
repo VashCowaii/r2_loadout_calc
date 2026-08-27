@@ -562,6 +562,134 @@ let enemyData = {
       "enemyTag": [
         "MGrid_4005"
       ]
+    },
+    "202201017": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        4.166667,
+        1,
+        17,
+        1,
+        120
+      ],
+      "weak": [
+        "Fire",
+        "Ice",
+        "Quantum"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.4,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        684,
+        685,
+        686
+      ],
+      "abilityOrder": [
+        684
+      ]
+    },
+    "202201018": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        4.166667,
+        1,
+        17,
+        1,
+        120
+      ],
+      "weak": [
+        "Fire",
+        "Ice",
+        "Quantum"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.4,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        684,
+        685,
+        686
+      ],
+      "abilityOrder": [
+        684
+      ]
+    },
+    "202201019": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        4.166667,
+        1,
+        17,
+        1,
+        120
+      ],
+      "weak": [
+        "Fire",
+        "Ice",
+        "Quantum"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.4,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        684,
+        685,
+        686
+      ],
+      "abilityOrder": [
+        684
+      ]
+    },
+    "202201020": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        6.25,
+        1,
+        17,
+        1,
+        120
+      ],
+      "weak": [
+        "Fire",
+        "Ice",
+        "Quantum"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.4,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        684,
+        685,
+        686
+      ],
+      "abilityOrder": [
+        684
+      ]
     }
   }
 }

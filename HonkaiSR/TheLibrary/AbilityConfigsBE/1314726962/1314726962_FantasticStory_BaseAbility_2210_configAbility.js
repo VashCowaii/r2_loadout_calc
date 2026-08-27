@@ -169,6 +169,15 @@ const configAbility = {
         "target": "{{Caster}}"
       },
       "scope": "ContextCaster",
+      "variableName": "DV_FantasticStory_PlusAbility_2215"
+    },
+    {
+      "name": "Declare Custom Variable",
+      "target": {
+        "name": "Target Name",
+        "target": "{{Caster}}"
+      },
+      "scope": "ContextCaster",
       "variableName": "BattleEvent_BaseHP"
     },
     {
@@ -294,6 +303,25 @@ const configAbility = {
                     "target": "{{Caster}}"
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1954932294\">Modifier_FantasticStory_BaseAbility_2210_Plus4AddOn</a>"
+                }
+              ]
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "DV_FantasticStory_PlusAbility_2215",
+                "compareType": "=",
+                "value2": 1
+              },
+              "passed": [
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"2006717051\">Modifier_FantasticStory_BaseAbility_2210_Plus5AddOn</a>"
                 }
               ]
             }
@@ -562,6 +590,7 @@ const configAbility = {
         "DV_FantasticStory_PlusAbility_2212",
         "DV_FantasticStory_PlusAbility_2213",
         "DV_FantasticStory_PlusAbility_2214",
+        "DV_FantasticStory_PlusAbility_2215",
         "DV_FantasticStory_BaseAbility_TriggerFlag"
       ],
       "execute": [
@@ -1115,6 +1144,7 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "latentQueue": [
         "DV_FantasticStory_BaseAbility_TriggerFlag",
+        "DV_FantasticStory_PlusAbility_2215",
         "DV_FantasticStory_PlusAbility_2214",
         "DV_FantasticStory_PlusAbility_2213",
         "DV_FantasticStory_PlusAbility_2212",

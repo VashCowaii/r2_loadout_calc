@@ -344,6 +344,14 @@ let allowedCharacterList = [
     "trimName": "HimekoNova"
   },
   {
+    "fullName": "Robin • Summeretto",
+    "trimName": "RobinSummeretto"
+  },
+  {
+    "fullName": "Aventurine • Waveflair",
+    "trimName": "AventurineWaveflair"
+  },
+  {
     "fullName": "Trailblazer - Destruction",
     "trimName": "TrailblazerDestruction"
   },

@@ -208,6 +208,16 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__2095436895\">ADV_Modifier_MazeRogue_V45_PumanRoomDead</a>",
+          "modifierFlags": [
+            "Stealth"
+          ],
+          "onAttack": [
+            "Overworld Mark Target for Death(which we don't care about)"
+          ]
+        },
+        {
+          "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__1165550133\">ADV_Modifier_MazeRogue_Dead</a>",
           "onAttack": [
             "Overworld Mark Target for Death(which we don't care about)"

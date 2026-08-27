@@ -42,11 +42,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1695,
-        1696
+        1738,
+        1739
       ],
       "abilityOrder": [
-        1695
+        1738
       ]
     },
     "401203101": {
@@ -73,11 +73,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1695,
-        1696
+        1738,
+        1739
       ],
       "abilityOrder": [
-        1695
+        1738
       ]
     },
     "401203102": {
@@ -104,11 +104,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1695,
-        1696
+        1738,
+        1739
       ],
       "abilityOrder": [
-        1695
+        1738
       ]
     },
     "401203103": {
@@ -135,11 +135,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1695,
-        1696
+        1738,
+        1739
       ],
       "abilityOrder": [
-        1695
+        1738
       ]
     },
     "401203104": {
@@ -166,11 +166,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1695,
-        1696
+        1738,
+        1739
       ],
       "abilityOrder": [
-        1695
+        1738
       ]
     },
     "401203105": {
@@ -197,11 +197,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1695,
-        1696
+        1738,
+        1739
       ],
       "abilityOrder": [
-        1695
+        1738
       ]
     }
   }

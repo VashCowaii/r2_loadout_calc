@@ -75,11 +75,11 @@ const compositeAbilityObject = {
                         "value1": "TotalDamageRatio",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11617) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_11617",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11764) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11764",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_11617"
+                            "UnusedUnderThisBase_11764"
                           ]
                         }
                       }
@@ -778,7 +778,8 @@ const compositeAbilityObject = {
                                           "target": {
                                             "name": "Target Name",
                                             "target": "{{Caster}}"
-                                          }
+                                          },
+                                          "bypassBreakMute": true
                                         },
                                         {
                                           "name": "Add Events/Bonuses",
@@ -795,7 +796,8 @@ const compositeAbilityObject = {
                                           "target": {
                                             "name": "Target Name",
                                             "target": "{{Caster}}"
-                                          }
+                                          },
+                                          "bypassBreakMute": true
                                         }
                                       ]
                                     },
@@ -1302,7 +1304,8 @@ const compositeAbilityObject = {
                                       "target": {
                                         "name": "Target Name",
                                         "target": "{{Caster}}"
-                                      }
+                                      },
+                                      "bypassBreakMute": true
                                     },
                                     {
                                       "name": "Add Events/Bonuses",
@@ -1319,7 +1322,8 @@ const compositeAbilityObject = {
                                       "target": {
                                         "name": "Target Name",
                                         "target": "{{Caster}}"
-                                      }
+                                      },
+                                      "bypassBreakMute": true
                                     }
                                   ]
                                 },
@@ -1782,7 +1786,8 @@ const compositeAbilityObject = {
                               "target": {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
-                              }
+                              },
+                              "bypassBreakMute": true
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -1799,7 +1804,8 @@ const compositeAbilityObject = {
                               "target": {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
-                              }
+                              },
+                              "bypassBreakMute": true
                             }
                           ]
                         },
@@ -1866,7 +1872,8 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
-                      }
+                      },
+                      "bypassBreakMute": true
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1883,7 +1890,8 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
-                      }
+                      },
+                      "bypassBreakMute": true
                     }
                   ]
                 },
@@ -5482,7 +5490,7 @@ const compositeAbilityObject = {
             "name": "Stage ID",
             "ID": 429302,
             "compareType": "NOT=",
-            "characterName": null
+            "characterName": "The Ascended"
           },
           "passed": [
             {
@@ -6200,7 +6208,7 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "modifierName": "<a class=\"gModGreen\" id=\"-1785279589\">Enemy_W4_DawnsEye_WeatherEnhanced</a>[<span class=\"descriptionNumberColor\">Wingbeats</span>]",
-                      "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-1708281129\">Enemy_W4_DawnsEye_WeatherEnhanced_FateRin</a>"
+                      "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-1708281129\">Enemy_W4_DawnsEye_WeatherEnhanced_FateRin</a>[<span class=\"descriptionNumberColor\">Wingbeats</span>]"
                     }
                   ]
                 }
@@ -10920,7 +10928,7 @@ const compositeAbilityObject = {
                 "name": "Stage ID",
                 "ID": 429301,
                 "compareType": "=",
-                "characterName": null
+                "characterName": "The Ascended"
               },
               "passed": [
                 {

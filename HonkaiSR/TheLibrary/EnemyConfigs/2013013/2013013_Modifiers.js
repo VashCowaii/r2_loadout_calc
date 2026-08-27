@@ -1341,10 +1341,14 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>",
+      "for": "<a class=\"gModGreen\" id=\"mod__304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
       "modifierFlags": [
         "MuteBreak"
       ],
+      "description": "Aurumaton Gatekeeper's DMG dealt increases by <span class=\"descriptionNumberColor\">#SkillP01_P1_DamageUpRatio</span> and it activates the ability: Enchainment.",
+      "type": "Buff",
+      "effectName": "Sanction Mode",
+      "statusName": "Sanction Mode",
       "duration": 2,
       "execute": [
         {
@@ -1428,7 +1432,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "modifier": "<a class=\"gModGreen\" id=\"304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>",
+                "modifier": "<a class=\"gModGreen\" id=\"304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>[<span class=\"descriptionNumberColor\">Sanction Mode</span>]",
                 "invertCondition": true
               },
               "passed": [

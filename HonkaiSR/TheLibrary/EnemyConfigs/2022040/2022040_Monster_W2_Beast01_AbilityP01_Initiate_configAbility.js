@@ -114,7 +114,14 @@ const configAbility = {
                     "invertCondition": true
                   }
                 ]
-              }
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_EffectCheck",
+                  "value": 1
+                }
+              ]
             }
           ]
         },
@@ -145,7 +152,14 @@ const configAbility = {
                     "invertCondition": true
                   }
                 ]
-              }
+              },
+              "failed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_EffectCheck",
+                  "value": 0
+                }
+              ]
             }
           ]
         },
@@ -182,9 +196,22 @@ const configAbility = {
                     },
                     "flagName": "Break",
                     "invertCondition": true
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "MDF_EffectCheck",
+                    "compareType": "=",
+                    "value2": 0
                   }
                 ]
-              }
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "MDF_EffectCheck",
+                  "value": 1
+                }
+              ]
             }
           ]
         }

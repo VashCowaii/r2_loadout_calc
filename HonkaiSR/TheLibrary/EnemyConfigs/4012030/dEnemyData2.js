@@ -42,11 +42,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1693,
-        1694
+        1736,
+        1737
       ],
       "abilityOrder": [
-        1693
+        1736
       ]
     },
     "401203001": {
@@ -73,11 +73,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1693,
-        1694
+        1736,
+        1737
       ],
       "abilityOrder": [
-        1693
+        1736
       ]
     },
     "401203002": {
@@ -104,11 +104,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1693,
-        1694
+        1736,
+        1737
       ],
       "abilityOrder": [
-        1693
+        1736
       ]
     },
     "401203003": {
@@ -135,11 +135,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1693,
-        1694
+        1736,
+        1737
       ],
       "abilityOrder": [
-        1693
+        1736
       ]
     },
     "401203004": {
@@ -166,11 +166,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1693,
-        1694
+        1736,
+        1737
       ],
       "abilityOrder": [
-        1693
+        1736
       ]
     },
     "401203005": {
@@ -197,11 +197,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1693,
-        1694
+        1736,
+        1737
       ],
       "abilityOrder": [
-        1693
+        1736
       ]
     },
     "401203006": {
@@ -228,11 +228,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1693,
-        1694
+        1736,
+        1737
       ],
       "abilityOrder": [
-        1693
+        1736
       ]
     },
     "401203007": {
@@ -259,11 +259,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        1693,
-        1694
+        1736,
+        1737
       ],
       "abilityOrder": [
-        1693
+        1736
       ],
       "enemyTag": [
         "MGrid_4008"

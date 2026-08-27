@@ -1245,7 +1245,7 @@ const compositeAbilityObject = {
                           "name": "Add Events/Bonuses",
                           "to": {
                             "name": "Target Name",
-                            "target": "{{Caster's Self-Made Battle-Events}}"
+                            "target": "{{Fuyuan}}"
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"210278197\">Lingsha_PointB3_OnListen</a>",
                           "valuePerStack": {
@@ -1311,7 +1311,7 @@ const compositeAbilityObject = {
             "name": "Compare: Variable",
             "target": {
               "name": "Target Name",
-              "target": "{{Caster's Self-Made Battle-Events}}"
+              "target": "{{Fuyuan}}"
             },
             "value1": "BattleEvent_Lingsha_00_PointB3",
             "compareType": ">=",
@@ -1322,7 +1322,7 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "target": {
                 "name": "Target Name",
-                "target": "{{Caster's Self-Made Battle-Events}}"
+                "target": "{{Fuyuan}}"
               },
               "variableName": "BattleEvent_Lingsha_00_PointB3",
               "value": 0
@@ -1475,7 +1475,7 @@ const compositeAbilityObject = {
             "name": "Has Modifier",
             "target": {
               "name": "Target Name",
-              "target": "{{Caster's Self-Made Battle-Events}}"
+              "target": "{{Fuyuan}}"
             },
             "modifier": "<a class=\"gModGreen\" id=\"1876847773\">Lingsha_BPAbility_BattleEvent_LifeTime</a>",
             "invertCondition": true
@@ -1492,14 +1492,14 @@ const compositeAbilityObject = {
               "name": "Mark Entity For Immediate Death",
               "target": {
                 "name": "Target Name",
-                "target": "{{Caster's Self-Made Battle-Events}}"
+                "target": "{{Fuyuan}}"
               }
             },
             {
               "name": "Force Entity Death",
               "target": {
                 "name": "Target Name",
-                "target": "{{Caster's Self-Made Battle-Events}}"
+                "target": "{{Fuyuan}}"
               },
               "ignoreHPLossTriggers": true,
               "ignoreDeathTriggers": true
@@ -1970,7 +1970,7 @@ const compositeAbilityObject = {
                   "name": "Force Entity Death",
                   "target": {
                     "name": "Target Name",
-                    "target": "{{Caster's Self-Made Battle-Events}}"
+                    "target": "{{Fuyuan}}"
                   },
                   "ignoreHPLossTriggers": true,
                   "ignoreDeathTriggers": true
@@ -2214,7 +2214,7 @@ const compositeAbilityObject = {
               "name": "Action Advance/Delay",
               "target": {
                 "name": "Target Name",
-                "target": "{{Caster's Self-Made Battle-Events}}"
+                "target": "{{Fuyuan}}"
               },
               "advanceType": "Advance",
               "multiAdd": "-1"
@@ -2338,7 +2338,7 @@ const compositeAbilityObject = {
               "name": "Add Events/Bonuses",
               "to": {
                 "name": "Target Name",
-                "target": "{{Caster's Self-Made Battle-Events}}"
+                "target": "{{Fuyuan}}"
               },
               "modifier": "<a class=\"gModGreen\" id=\"1876847773\">Lingsha_BPAbility_BattleEvent_LifeTime</a>",
               "counter": {
@@ -2458,7 +2458,7 @@ const compositeAbilityObject = {
                   "name": "Add Events/Bonuses",
                   "to": {
                     "name": "Target Name",
-                    "target": "{{Caster's Self-Made Battle-Events}}"
+                    "target": "{{Fuyuan}}"
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"210278197\">Lingsha_PointB3_OnListen</a>",
                   "valuePerStack": {
@@ -2535,7 +2535,7 @@ const compositeAbilityObject = {
               "name": "Action Advance/Delay",
               "target": {
                 "name": "Target Name",
-                "target": "{{Caster's Self-Made Battle-Events}}"
+                "target": "{{Fuyuan}}"
               },
               "advanceType": "Advance",
               "multiAdd": "-0.2"

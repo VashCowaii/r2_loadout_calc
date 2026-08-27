@@ -28,7 +28,8 @@ const configAbility = {
       },
       "forceReduction": true,
       "canDelay": true,
-      "ToughnessDMGType": "Quantum"
+      "ToughnessDMGType": "Quantum",
+      "bypassBreakMute": true
     },
     {
       "name": "Consume",

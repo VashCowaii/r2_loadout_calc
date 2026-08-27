@@ -41,7 +41,8 @@ const configAbility = {
       },
       "forceReduction": true,
       "canDelay": true,
-      "ToughnessDMGType": "Imaginary"
+      "ToughnessDMGType": "Imaginary",
+      "bypassBreakMute": true
     },
     "Trigger: Attack End",
     {

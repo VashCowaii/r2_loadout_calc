@@ -41,11 +41,11 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"-735432971\">Monster_W1_Mecha03_RL_Revenge</a>[<span class=\"descriptionNumberColor\">Obliteration Order</span>]",
       "valuePerStack": {
         "MDF_DamageUpRatio": {
-          "operator": "Variables[0] (UnusedUnderThisBase_8550) || RETURN",
-          "displayLines": "UnusedUnderThisBase_8550",
+          "operator": "Variables[0] (UnusedUnderThisBase_8637) || RETURN",
+          "displayLines": "UnusedUnderThisBase_8637",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_8550"
+            "UnusedUnderThisBase_8637"
           ]
         }
       }

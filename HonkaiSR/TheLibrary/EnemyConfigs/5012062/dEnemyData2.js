@@ -35,10 +35,10 @@ let enemyData = {
         "Wind"
       ],
       "abilities": [
-        2609
+        2652
       ],
       "abilityOrder": [
-        2609
+        2652
       ]
     }
   }

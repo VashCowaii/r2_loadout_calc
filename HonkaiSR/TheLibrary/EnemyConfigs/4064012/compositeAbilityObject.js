@@ -631,7 +631,8 @@ const compositeAbilityObject = {
                       },
                       "forceReduction": true,
                       "canDelay": true,
-                      "ToughnessDMGType": "Imaginary"
+                      "ToughnessDMGType": "Imaginary",
+                      "bypassBreakMute": true
                     }
                   ]
                 },
@@ -1163,7 +1164,8 @@ const compositeAbilityObject = {
                       "ToughnessDMGType": {
                         "name": "Damage Type Source",
                         "sourceType": {}
-                      }
+                      },
+                      "bypassBreakMute": true
                     },
                     {
                       "name": "ATK Scaling DMG",
@@ -1787,7 +1789,8 @@ const compositeAbilityObject = {
                       "ToughnessDMGType": {
                         "name": "Damage Type Source",
                         "sourceType": {}
-                      }
+                      },
+                      "bypassBreakMute": true
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -3375,7 +3378,8 @@ const compositeAbilityObject = {
           "ToughnessDMGType": {
             "name": "Damage Type Source",
             "sourceType": {}
-          }
+          },
+          "bypassBreakMute": true
         },
         {
           "name": "Find New Target",

@@ -5978,11 +5978,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_Conv",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_7743) || Variables[1] (S02_ExtraRatio) || ADD || RETURN",
-                        "displayLines": "(UnusedUnderThisBase_7743 + S02_ExtraRatio)",
+                        "operator": "Variables[0] (UnusedUnderThisBase_7830) || Variables[1] (S02_ExtraRatio) || ADD || RETURN",
+                        "displayLines": "(UnusedUnderThisBase_7830 + S02_ExtraRatio)",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_7743",
+                          "UnusedUnderThisBase_7830",
                           "S02_ExtraRatio"
                         ]
                       }
@@ -6238,11 +6238,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1497104623\">Evernight_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
                   "duration": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_5086) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_5086",
+                    "operator": "Variables[0] (UnusedUnderThisBase_5173) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_5173",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_5086"
+                      "UnusedUnderThisBase_5173"
                     ]
                   },
                   "valuePerStack": {
@@ -6264,11 +6264,11 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1497104623\">Evernight_Passive_Bonus</a>[<span class=\"descriptionNumberColor\">With Me, This Night</span>]",
                   "duration": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_5086) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_5086",
+                    "operator": "Variables[0] (UnusedUnderThisBase_5173) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_5173",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_5086"
+                      "UnusedUnderThisBase_5173"
                     ]
                   },
                   "valuePerStack": {
@@ -10721,27 +10721,27 @@ const compositeAbilityObject = {
                       ]
                     },
                     "AbilityP01_P1_AddCount": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_5089) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_5089",
+                      "operator": "Variables[0] (UnusedUnderThisBase_5176) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_5176",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_5089"
+                        "UnusedUnderThisBase_5176"
                       ]
                     },
                     "_Evernight_Extra_Energy": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_5075) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_5075",
+                      "operator": "Variables[0] (UnusedUnderThisBase_5162) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_5162",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_5075"
+                        "UnusedUnderThisBase_5162"
                       ]
                     },
                     "AbilityRank_Eidolon6_P1_Ratio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_7527) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_7527",
+                      "operator": "Variables[0] (UnusedUnderThisBase_7614) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_7614",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_7527"
+                        "UnusedUnderThisBase_7614"
                       ]
                     }
                   },
@@ -10771,11 +10771,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"1710373270\">Evernight_PointB1_Crit</a>[<span class=\"descriptionNumberColor\">Dark the Night, Still the Moon</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_14099) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_14099",
+                              "operator": "Variables[0] (UnusedUnderThisBase_14362) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_14362",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_14099"
+                                "UnusedUnderThisBase_14362"
                               ]
                             }
                           }
@@ -10802,11 +10802,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"-1701896777\">Evernight_Eidolon2_Crit</a>[<span class=\"descriptionNumberColor\">Listen Up, the Slumber Speaks Soft</span>]",
                           "valuePerStack": {
                             "MDF_PropertyValue": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_14107) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_14107",
+                              "operator": "Variables[0] (UnusedUnderThisBase_14370) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_14370",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_14107"
+                                "UnusedUnderThisBase_14370"
                               ]
                             }
                           }
@@ -10822,11 +10822,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"2043260870\">Evernight_HPChange</a>",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_5089) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_5089",
+                          "operator": "Variables[0] (UnusedUnderThisBase_5176) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_5176",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_5089"
+                            "UnusedUnderThisBase_5176"
                           ]
                         }
                       }

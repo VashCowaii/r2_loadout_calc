@@ -159,7 +159,7 @@ const configAbility = {
                       "name": "Add Events/Bonuses",
                       "to": {
                         "name": "Target Name",
-                        "target": "{{Caster's Self-Made Battle-Events}}"
+                        "target": "{{Fuyuan}}"
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"210278197\">Lingsha_PointB3_OnListen</a>",
                       "valuePerStack": {

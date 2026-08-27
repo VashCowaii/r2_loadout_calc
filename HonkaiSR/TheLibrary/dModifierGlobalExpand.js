@@ -12572,7 +12572,7 @@ let modifiersGlobal = [
     "name": "RogueBonusModifier_Curse_S4",
     "realName": "Murmur",
     "aim": "Debuff",
-    "desc": "Takes Wind DoT equal to Charge at the start of the turn. Current Charge is at #1[i], currently at #2[i]% of clear threshold.",
+    "desc": "Takes Wind DoT equal to Charge value at the start of the turn. Current Charge is #1[i], reaching #2[i]% of clearance threshold.",
     "type": null,
     "perma": true,
     "params": [
@@ -20912,7 +20912,7 @@ let modifiersGlobal = [
     "name": "RogueBonusModifier_Curse_S7",
     "realName": "Murmur",
     "aim": "Debuff",
-    "desc": "Takes Wind DoT equal to Charge value at the start of the turn. Current Charge is #1[i], currently at #2[i]% of the clear threshold.",
+    "desc": "Takes Wind DoT equal to Charge value at the start of the turn. Current Charge is #1[i], reaching #2[i]% of clearance threshold.",
     "type": null,
     "perma": true,
     "params": [
@@ -24811,8 +24811,8 @@ let modifiersGlobal = [
     "type": null,
     "perma": true,
     "params": [
-      "MDF_PropertyValue",
-      "MDF_PropertyValue02"
+      "MDF_PropertyValue02",
+      "MDF_PropertyValue"
     ]
   },
   {
@@ -24901,6 +24901,44 @@ let modifiersGlobal = [
     ]
   },
   {
+    "name": "StageAbility_676260_Modifier_Stack",
+    "realName": "Deck Cut",
+    "aim": "Buff",
+    "desc": "The next attack can trigger \"Murmur\" DMG.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ADF_3_Copy",
+      "ADF_4_Copy"
+    ]
+  },
+  {
+    "name": "StageAbility_676710_Modifier_Stack",
+    "realName": "Imaginator",
+    "aim": "Other",
+    "desc": "The team has cumulatively obtained #1[i] Skill Point(s). For every #2[i] Skill Point(s) cumulatively obtained, deals DMG to all enemies.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_Layer",
+      "_ADF_2",
+      "_ADF_3"
+    ]
+  },
+  {
+    "name": "StageAbility_676850_Modifier_PendingBonus",
+    "realName": "Popularity",
+    "aim": "Buff",
+    "desc": "After being attacked, consumes #1[i] stack(s) to deal #2[i] instance(s) of Additional DMG of a random Type equal to #3[i]% of ATK to an enemy target.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_ADF_2_Copy",
+      "_ADF_3_Copy",
+      "_ADF_4_Copy"
+    ]
+  },
+  {
     "name": "MBattleEvent_GridFight_MortenaxBlade_Super",
     "realName": "Infinite Fury",
     "aim": "Buff",
@@ -24955,6 +24993,28 @@ let modifiersGlobal = [
     "perma": true,
     "params": [
       "#ADF_4"
+    ]
+  },
+  {
+    "name": "LC_23063_SpeedBonus",
+    "realName": "New Melody",
+    "aim": "Other",
+    "desc": "All allies' SPD increases while held.",
+    "type": "New Melody",
+    "perma": true,
+    "params": [
+      "MDF_SpeedAddedRatio"
+    ]
+  },
+  {
+    "name": "LC_23063_SpeedBonus_Sub",
+    "realName": "New Melody",
+    "aim": "Buff",
+    "desc": "Increases SPD by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_SpeedAddedRatio"
     ]
   },
   {
@@ -25050,6 +25110,28 @@ let modifiersGlobal = [
     ]
   },
   {
+    "name": "LC_23064_Bonus_1",
+    "realName": "Updraft",
+    "aim": "Buff",
+    "desc": "Increases SPD by #1[i]%.",
+    "type": "SPD Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyRatio"
+    ]
+  },
+  {
+    "name": "LC_23064_Bonus_2",
+    "realName": "Uptrend",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[i]%.",
+    "type": "Elation Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyRatio"
+    ]
+  },
+  {
     "name": "MGridFight_MonsterTag_4.4_1001_Low",
     "realName": "Expensive Taste",
     "aim": "Debuff",
@@ -25103,6 +25185,30 @@ let modifiersGlobal = [
     "perma": true,
     "params": [
       "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "StageAbility_678481_Modifier_Bonus",
+    "realName": "Piercing Shards",
+    "aim": "Buff",
+    "desc": "Every stack makes the DMG dealt by the next Ultimate ignore #1[i]% of enemy targets' All-Type RES.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ADF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_678780_Modifier_Bonus",
+    "realName": "Organic Emperor",
+    "aim": "Buff",
+    "desc": "Each stack increases CRIT DMG by #1[i]% and Skill and Ultimate DMG dealt by #2[i]%, stacking up to #3[i] time(s).",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ADF_1",
+      "ADF_2",
+      "ADF_3"
     ]
   },
   {
@@ -25211,17 +25317,6 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "MBattleEvent_GridFight_Jingliu_Ability02_TeamCriticalDamage",
-    "realName": "CRIT DMG Boost",
-    "aim": "Buff",
-    "desc": "CRIT DMG increases by #1[i]%.",
-    "type": "CRIT DMG Boost",
-    "perma": false,
-    "params": [
-      "MDF_PropertyValue"
-    ]
-  },
-  {
     "name": "<a class=\"gModGreen\" id=\"338159187\">LC_23062_Sub</a>",
     "realName": "King's Entertainment",
     "aim": "Buff",
@@ -25230,6 +25325,17 @@ let modifiersGlobal = [
     "perma": true,
     "params": [
       "MDF_TeamCriticalDamageBaseAdd"
+    ]
+  },
+  {
+    "name": "MBattleEvent_GridFight_Jingliu_Ability02_TeamCriticalDamage",
+    "realName": "CRIT DMG Boost",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": "CRIT DMG Boost",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
     ]
   },
   {
@@ -25247,7 +25353,7 @@ let modifiersGlobal = [
     "name": "MGridFight_Origin_1014_PLY_PowerBonus_JingYuan",
     "realName": "On/Off-Field Strength Boost",
     "aim": "Buff",
-    "desc": "On/Off-Field Strength increases by #1[i].",
+    "desc": "On/Off-Field Strength increases by #1[i]%.",
     "type": null,
     "perma": true,
     "params": [
@@ -25359,7 +25465,7 @@ let modifiersGlobal = [
     "name": "MGridFight_Origin_1014_PLY_PowerBonus_Yanqing",
     "realName": "On/Off-Field Strength Boost",
     "aim": "Buff",
-    "desc": "On/Off-Field Strength increases by #1[i].",
+    "desc": "On/Off-Field Strength increases by #1[i]%.",
     "type": null,
     "perma": true,
     "params": [
@@ -25370,22 +25476,11 @@ let modifiersGlobal = [
     "name": "MGridFight_Origin_1014_PLY_PowerBonus_Jingliu",
     "realName": "On/Off-Field Strength Boost",
     "aim": "Buff",
-    "desc": "On/Off-Field Strength increases by #1[i].",
+    "desc": "On/Off-Field Strength increases by #1[i]%.",
     "type": null,
     "perma": true,
     "params": [
       "MDF_PowerBonus"
-    ]
-  },
-  {
-    "name": "<a class=\"gModGreen\" id=\"-339892333\">LC_23060_Sub02</a>",
-    "realName": "Ignore Defense",
-    "aim": "Buff",
-    "desc": "DMG dealt ignores #1[i]% of the target's DEF.",
-    "type": null,
-    "perma": true,
-    "params": [
-      "MDF_DefenceIgnoreRatio"
     ]
   },
   {
@@ -25413,6 +25508,25 @@ let modifiersGlobal = [
     ]
   },
   {
+    "name": "<a class=\"gModGreen\" id=\"-339892333\">LC_23060_Sub02</a>",
+    "realName": "Ignore Defense",
+    "aim": "Buff",
+    "desc": "DMG dealt ignores #1[i]% of the target's DEF.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_DefenceIgnoreRatio"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_633422_Mark",
+    "realName": "Chord",
+    "aim": "Buff",
+    "desc": "Deals Additional DMG to the attack target after the next time Basic ATK is used. Each stack will increase the Additional DMG.",
+    "type": "Chord",
+    "perma": true
+  },
+  {
     "name": "GridFight_Gilgamesh_SaberUltraBonus",
     "realName": "\"I Grant You Permission To Strike\"",
     "aim": "Buff",
@@ -25421,6 +25535,30 @@ let modifiersGlobal = [
     "perma": true,
     "params": [
       "MDF_DamagePercentage"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"747244938\">Modifier_ChallengePeakBattle_BaseAbility_0021_02</a>",
+    "realName": "Scales",
+    "aim": "Other",
+    "desc": "Each stack reduces DMG taken by #2[i]%. This effect decreases by 1 stack after each attack received.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_0021_ADF_1",
+      "ChallengePeakBattle_0021_ADF_2"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-131891869\">Modifier_ChallengePeakBattle_EnhancedAbility_0021_02</a>",
+    "realName": "Scales+",
+    "aim": "Other",
+    "desc": "Each stack reduces DMG taken by #2[i]%. This effect decreases by 1 stack after each attack received.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_0021_ADF_1",
+      "ChallengePeakBattle_0021_ADF_2"
     ]
   },
   {
@@ -25447,6 +25585,653 @@ let modifiersGlobal = [
     ]
   },
   {
+    "name": "<a class=\"gModGreen\" id=\"-558986636\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0024_02</a>",
+    "realName": "Marvelous Laughter",
+    "aim": "Other",
+    "desc": "Increases Elation by #1[i]% and All-Type RES PEN of Elation DMG dealt by #2[i]%. This effect is doubled when using an Elation Skill.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_Plugins_0024_ADF_1",
+      "ChallengePeakBattle_Plugins_0024_ADF_2"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"449574929\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0025_02</a>",
+    "realName": "Finale's Kiss",
+    "aim": "Other",
+    "desc": "Increases Skill DMG and Ultimate DMG dealt by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_Plugins_0025_ADF_2"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"25003906\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0026_02</a>",
+    "realName": "Midnight Song",
+    "aim": "Other",
+    "desc": "SPD increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_Plugins_0026_ADF_1"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"41781525\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0026_03</a>",
+    "realName": "Midnight Song",
+    "aim": "Other",
+    "desc": "SPD increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_Plugins_0026_ADF_2"
+    ]
+  },
+  {
+    "name": "Modifier_Activity_FateRin_Card_Ability_6014",
+    "realName": "Vulnerability",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": "Vulnerability",
+    "perma": false,
+    "params": [
+      "DamageUpRatio"
+    ]
+  },
+  {
+    "name": "Modifier_Activity_FateRin_Card_Ability_5001_AddMana",
+    "realName": "Seamless Teamwork",
+    "aim": "Buff",
+    "desc": "Gains #1[i] magical energy next turn.",
+    "type": "Seamless Teamwork",
+    "perma": true,
+    "params": [
+      "_AddMana"
+    ]
+  },
+  {
+    "name": "Modifier_Activity_FateRin_Card_Ability_5006_MinusCost",
+    "realName": "Ruby Pendant",
+    "aim": "Buff",
+    "desc": "The magical energy of the next #1[i] Victorious Slash becomes 0.",
+    "type": "Ruby Pendant",
+    "perma": true,
+    "params": [
+      "Limit"
+    ]
+  },
+  {
+    "name": "Modifier_Activity_FateRin_Card_Ability_5007",
+    "realName": "Ruby Pendant",
+    "aim": "Buff",
+    "desc": "For every #1[i] \"Aha Smash!\" used this turn, generates 1 \"Aha Smash!\".",
+    "type": "Ruby Pendant",
+    "perma": true,
+    "params": [
+      "CreateCount"
+    ]
+  },
+  {
+    "name": "Modifier_Activity_FateRin_Card_Ability_2004",
+    "realName": "Golden Rule!",
+    "aim": "Buff",
+    "desc": "After using any card, generates #1[i] \"Gate of Babylon!\".",
+    "type": "Golden Rule!",
+    "perma": true,
+    "params": [
+      "CreateCount"
+    ]
+  },
+  {
+    "name": "Modifier_Activity_FateRin_Card_Ability_1004",
+    "realName": "Full Support!",
+    "aim": "Buff",
+    "desc": "After attacking, Trailblazer gains #1[i] additional tally count.",
+    "type": "Full Support!",
+    "perma": true,
+    "params": [
+      "ExtraLayer"
+    ]
+  },
+  {
+    "name": "Modifier_Activity_FateRin_Card_Ability_6006",
+    "realName": "Gem: Water",
+    "aim": "Debuff",
+    "desc": "After every attack received, additionally takes #1[i]% DMG.",
+    "type": "Gem: Water",
+    "perma": false,
+    "params": [
+      "ExtraDamage"
+    ]
+  },
+  {
+    "name": "Modifier_Activity_FateRin_061_Boomer",
+    "realName": "Pass The Spark",
+    "aim": "Other",
+    "desc": "After being attacked 3 times, deals DMG to this unit and adjacent units. Has been attacked #1[i] time(s).",
+    "type": "Pass The Spark",
+    "perma": true,
+    "params": [
+      "Attack_Count"
+    ]
+  },
+  {
+    "name": "Modifier_Activity_FateRin_Card_Ability_5003_Debuff",
+    "realName": "Suppression Tactics",
+    "aim": "Debuff",
+    "desc": "DMG dealt decreases by #1[i]%.",
+    "type": "Suppression Tactics",
+    "perma": false,
+    "params": [
+      "BuffRatio"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"34068683\">Modifier_Monster_W5_Peacock_Ability02_FateRin_PowerUp</a>",
+    "realName": "Permanent Enhancement",
+    "aim": "Buff",
+    "desc": "Each stack increases the DMG dealt by #1[i]%.",
+    "type": "Permanent Enhancement",
+    "perma": true,
+    "params": [
+      "#Skill02_P1_BuffRatio"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"1849920114\">Monster_W3_Figure_02_IsAiming_FateRin</a>",
+    "realName": "Shackle-Bearing Messenger",
+    "aim": "Other",
+    "desc": "About to use \"Desmios Evangelion.\"",
+    "type": "Shackle-Bearing Messenger",
+    "perma": true
+  },
+  {
+    "name": "Modifier_Activity_FateRin_Side01_PowerUp",
+    "realName": "Permanent Enhancement",
+    "aim": "Buff",
+    "desc": "Each stack increases the DMG dealt by 25%.",
+    "type": "Permanent Enhancement",
+    "perma": true
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-528839631\">Enemy_W4_Scholar_01_Stealth_FateRin</a>",
+    "realName": "Lurking",
+    "aim": "Other",
+    "desc": "Cannot become the primary target for abilities that require active selection. When there are no other enemy units on the battlefield, this unit dispels the \"Lurking\" state.",
+    "type": "Lurking",
+    "perma": true
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1011760406\">MModifier_Monster_W4_Claymore_Ability05_PowerUp</a>",
+    "realName": "Permanent Enhancement",
+    "aim": "Buff",
+    "desc": "Each stack increases the DMG dealt by #1[i]%.",
+    "type": "Permanent Enhancement",
+    "perma": true,
+    "params": [
+      "BuffRatio"
+    ]
+  },
+  {
+    "name": "Modifier_Activity_FateRin_Side04_Boomer",
+    "realName": "Pass The Spark",
+    "aim": "Other",
+    "desc": "After being attacked 3 times, deals DMG to this unit and adjacent units. Has been attacked #1[i] time(s).",
+    "type": "Pass The Spark",
+    "perma": true,
+    "params": [
+      "Attack_Count"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"1553959515\">MModifier_Monster_W4_Claymore_02_Ability03_Aim_FateRin</a>",
+    "realName": "Charging",
+    "aim": "Other",
+    "desc": "Uses \"Time to Rock!\" when taking the next action. Taking #1[i] more hit(s) will dispel the Charging state.",
+    "type": "Charging",
+    "perma": true,
+    "params": [
+      "AttackCount"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1742127084\">Enemy_W3_TV_03_Ability02_AttackUp</a>",
+    "realName": "ATK Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases ATK by #1[i]%.",
+    "type": "ATK Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-951308134\">Enemy_W4_Serpent_Charge_FateRin</a>",
+    "realName": "Whirl",
+    "aim": "Buff",
+    "desc": "Uses \"Hemotort Vortex\" in the next action. Increases DMG dealt by this unit after it is attacked while Charging.",
+    "type": "Whirl",
+    "perma": true
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1015906126\">Enemy_W4_Serpent_Charge_AttackUp_FateRin</a>",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases the DMG dealt by #1[i]%.",
+    "type": "DMG Boost",
+    "perma": true,
+    "params": [
+      "#Skill03_P1_BuffRatio"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"304092876\">Enemy_W2_Mecha03_Overdrive_On_FateRin</a>",
+    "realName": "Sanction Mode",
+    "aim": "Buff",
+    "desc": "Aurumaton Gatekeeper's DMG dealt increases by #1[i]% and it activates the ability: Enchainment.",
+    "type": "Sanction Mode",
+    "perma": true,
+    "params": [
+      "#SkillP01_P1_DamageUpRatio"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"756663200\">Enemy_W3_Clock_03_TargetSelect_ToFriend</a>",
+    "realName": "Verification Error",
+    "aim": "Other",
+    "desc": "The next attack will hit an enemy target.",
+    "type": "Verification Error",
+    "perma": true
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-142229785\">Enemy_W4_Serpent_FateRin_PowerUp</a>",
+    "realName": "Permanent Enhancement",
+    "aim": "Buff",
+    "desc": "Each stack increases the DMG dealt by #1[i]%.",
+    "type": "Permanent Enhancement",
+    "perma": true,
+    "params": [
+      "#Skill03_P2_BuffRatio"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"55624689\">Enemy_W5_Eater_Ability02_Ate_FateRin</a>",
+    "realName": "Devour",
+    "aim": "Debuff",
+    "desc": "#1[i] ATK from %DynamicTargetName has been stolen by \"%CasterName\"",
+    "type": "Devour",
+    "perma": true,
+    "params": [
+      "MDF_LoseAttack"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-367653256\">Enemy_W5_Eater_Ability02_Eater_FateRin</a>",
+    "realName": "Satiated",
+    "aim": "Buff",
+    "desc": "Steals #1[i] ATK. After each time this unit is attacked by a target unit, it returns a certain percentage of ATK to the target inflicted with the \"Devour\" state. After receiving a certain number of attacks from target units, dispels the \"Devour\" state applied by this unit.",
+    "type": "Satiated",
+    "perma": true,
+    "params": [
+      "MDF_Attack"
+    ]
+  },
+  {
+    "name": "Modifier_Activity_FateRin_Side03_Control",
+    "realName": "Utopia",
+    "aim": "Buff",
+    "desc": "Heals all enemy targets at the start of the turn.",
+    "type": "Utopia",
+    "perma": true
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"132567949\">Enemy_XP_Minion04_02_Cunhu_Bonus_FateRin</a>",
+    "realName": "P—Protect You",
+    "aim": "Buff",
+    "desc": "Each stack of \"P—Protect You\" can negate 1 instance of DMG. All enemies share \"P—Protect You\" stacks.",
+    "type": "P—Protect You",
+    "perma": true
+  },
+  {
+    "name": "Modifier_Activity_FateRin_Card_Ability_6013",
+    "realName": "Utopia",
+    "aim": "Buff",
+    "desc": "Heals #1[i]% when using a card. This effect cannot stack.",
+    "type": "Utopia",
+    "perma": true,
+    "params": [
+      "HOTPercent"
+    ]
+  },
+  {
+    "name": "Modifier_Ability_6022_Create",
+    "realName": "Chimera",
+    "aim": "Buff",
+    "desc": "The chimera's current level is #1[i], and it will obtain treasure at the start of the turn. Upon repeated use, it immediately levels up and obtains treasure.",
+    "type": "Chimera",
+    "perma": true,
+    "params": [
+      "_CatLevel"
+    ]
+  },
+  {
+    "name": "Activity_FateRin_Card_Ability_6018_Controller",
+    "realName": "Praise of High Morals",
+    "aim": "Buff",
+    "desc": "Has obtained #2[i] Moral(s). DMG dealt by all allies increases by #1[i]%.",
+    "type": "Praise of High Morals",
+    "perma": true,
+    "params": [
+      "TotalDamageUpRatio",
+      "Count"
+    ]
+  },
+  {
+    "name": "Modifier_Activity_FateRin_Card_Ability_6019",
+    "realName": "Shock",
+    "aim": "Debuff",
+    "desc": "Takes #1[i]% extra DMG after every attack received.",
+    "type": "Shock",
+    "perma": false,
+    "params": [
+      "ExtraDamage"
+    ]
+  },
+  {
+    "name": "Modifier_Activity_FateRin_Card_Ability_6012_Status",
+    "realName": "Rho Aias",
+    "aim": "Buff",
+    "desc": "When attacked, deals DMG to the attacker equal to #1[i]% of the Shield value.",
+    "type": "Rho Aias",
+    "perma": true,
+    "params": [
+      "ReflectRatio"
+    ]
+  },
+  {
+    "name": "Modifier_Activity_FateRin_Ability_HardMode_Status",
+    "realName": "Enhance",
+    "aim": "Other",
+    "desc": "Enemy stats are greatly enhanced.",
+    "type": "Enhance",
+    "perma": true
+  },
+  {
+    "name": "Modifier_Activity_FateRin_Ability_EasyMode_Status",
+    "realName": "Weakened",
+    "aim": "Other",
+    "desc": "Enemy stats are greatly weakened.",
+    "type": "Weakened",
+    "perma": true
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"623050592\">Enemy_W1_Soldier03_Passive_FateRin_DamageReduce</a>",
+    "realName": "DMG Mitigation",
+    "aim": "Other",
+    "desc": "DMG taken decreases #1[i]%.",
+    "type": "DMG Mitigation",
+    "perma": true,
+    "params": [
+      "ReduceRatio"
+    ]
+  },
+  {
+    "name": "Modifier_Activity_FateRin_Ability_Challenge_1_2_Sub2",
+    "realName": "ATK Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases ATK by #1[i]%.",
+    "type": "ATK Boost",
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
+    "name": "Modifier_Activity_FateRin_Ability_Challenge_2_2_Sub2",
+    "realName": "ATK Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases ATK by #1[i]%.",
+    "type": "ATK Boost",
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
+    "name": "Modifier_Activity_FateRin_Ability_Challenge_3_2_Sub2_Status",
+    "realName": "Outgoing Healing Reduction",
+    "aim": "Debuff",
+    "desc": "Each stack decreases allies' Incoming Healing and Shield Effect gained by #1[i]%.",
+    "type": "HP Restored Decreased",
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
+    "name": "Modifier_Activity_FateRin_Ability_Challenge_4_2_Sub2",
+    "realName": "ATK Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases ATK by #1[i]%.",
+    "type": "ATK Boost",
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
+    "name": "Modifier_Activity_FateRin_Card_Ability_7001_Debuff_Status",
+    "realName": "Vulnerability",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": "Vulnerability",
+    "perma": true,
+    "params": [
+      "DebuffRatio"
+    ]
+  },
+  {
+    "name": "Modifier_Activity_FateRin_Ability_Challenge_3_3_Sub2",
+    "realName": "ATK Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases ATK by #1[i]%.",
+    "type": "ATK Boost",
+    "perma": true,
+    "params": [
+      "#ADF_1"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-2066845206\">Enemy_W5_Eater_Ability03_Attack_FateRin</a>",
+    "realName": "ATK Boost",
+    "aim": "Buff",
+    "desc": "%DynamicTargetName's ATK increases by #1[i].",
+    "type": "ATK Boost",
+    "perma": true,
+    "params": [
+      "MDF_Attack"
+    ]
+  },
+  {
+    "name": "Enemy_W4_DawnsEye_WeatherEnhanced_FateRin",
+    "realName": "Wingbeats",
+    "aim": "Other",
+    "desc": "\"Daythunder Raven\" enters the enhanced state.",
+    "type": "Enhance",
+    "perma": true
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1045360944\">Monster_W4_PolluxPart_Shield_FateRin</a>",
+    "realName": "Overdue Obituary",
+    "aim": "Buff",
+    "desc": "\"The Living Shan't Flee\" enhances to \"The Dead Shan't Avoid.\"",
+    "type": "Enhance",
+    "perma": true
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-602390745\">Monster_W4_PolluxPart_Disable_FateRin</a>",
+    "realName": "Unable to Act",
+    "aim": "Debuff",
+    "desc": "Unable to take action on the next turn.",
+    "type": "Unable to Act",
+    "perma": true
+  },
+  {
+    "name": "Modifier_Activity_FateRin_Card_Ability_6020",
+    "realName": "King's Goblet",
+    "aim": "Buff",
+    "desc": "Gains #1[i] magical energy and draws #2[i] card(s) next turn.",
+    "type": "King's Goblet",
+    "perma": true,
+    "params": [
+      "CostCount",
+      "DrawCount"
+    ]
+  },
+  {
+    "name": "Modifier_Activity_FateRin_Card_Ability_6024",
+    "realName": "Youth Special",
+    "aim": "Buff",
+    "desc": "Gains #1[i] magical energy next turn.",
+    "type": "Youth Special",
+    "perma": true,
+    "params": [
+      "Mana"
+    ]
+  },
+  {
+    "name": "Enemy_W4_Turkey_Ability02_Power_FateRin",
+    "realName": "Hemotort Resonance",
+    "aim": "Other",
+    "desc": "After other \"Avenger Squadron: Pheasant\" in the \"Hemotort Resonance\" state attacks, this unit will also launch an attack.",
+    "type": "Hemotort Resonance",
+    "perma": true
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>",
+    "realName": "Lasting Antibac",
+    "aim": "Buff",
+    "desc": "Loses 1 stack after being attacked. When all stacks are removed, exits the \"Steam Wash\" state and takes massive DMG.",
+    "type": "Lasting Antibac",
+    "perma": true
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"1125306110\">Enemy_Argenti_DamageUP_FateRin</a>",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases the DMG dealt by %DynamicTargetName by#1[i]%.",
+    "type": "DMG Boost",
+    "perma": true,
+    "params": [
+      "MDF_ShowValue1"
+    ]
+  },
+  {
+    "name": "LC_22008_Sub",
+    "realName": "CRIT DMG Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases CRIT DMG by #1[i]%. This effect can stack up to #2[i] time(s).",
+    "type": "CRIT DMG Boost",
+    "perma": false,
+    "params": [
+      "#SkillEquip_P2_CriticalDamage",
+      "#SkillEquip_P4_MaxLayer"
+    ]
+  },
+  {
+    "name": "MItem_402038",
+    "realName": "Mung Bean Soda Sukiyaki",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "MItem_403017",
+    "realName": "Amber Lord Jumps Over the Wall",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i]% and CRIT DMG increases by #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1",
+      "MDF_2"
+    ]
+  },
+  {
+    "name": "MItem_408450",
+    "realName": "Invincible Steak",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "MItem_408451",
+    "realName": "\"Oceanic\" Tri-Flavored Ice Cream",
+    "aim": "Buff",
+    "desc": "DEF increases by #1[i]%, Max HP increases by #2[i]%, and HP restored increases by #3[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1",
+      "MDF_2",
+      "MDF_3"
+    ]
+  },
+  {
+    "name": "MItem_408452",
+    "realName": "\"Lighthouse\" Movable Action Model",
+    "aim": "Buff",
+    "desc": "DEF increases by #1[i]%",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "MItem_408454",
+    "realName": "\"Diggertron\" 1:1 Replica Model",
+    "aim": "Buff",
+    "desc": "Fire DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "MItem_408644",
+    "realName": "The Swimsuit",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
+    "name": "MItem_408645",
+    "realName": "Speeding Jet Surfboard",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_1"
+    ]
+  },
+  {
     "name": "GridFight_BE_Gilgamesh_PassiveSpeed",
     "realName": "\"Amuse Me to the Fullest\"",
     "aim": "Buff",
@@ -25458,6 +26243,14 @@ let modifiersGlobal = [
     ]
   },
   {
+    "name": "<a class=\"gModGreen\" id=\"777357174\">Enemy_W2_Beast02_BlockDamage_FateRin</a>",
+    "realName": "Barrier",
+    "aim": "Buff",
+    "desc": "%DynamicTargetName nullifies all DMG received except DoTs. This state is dispelled after being attacked.",
+    "type": "Barrier",
+    "perma": true
+  },
+  {
     "name": "G_MBattleEvent_MortenaxBlade_Eidolon2_ToMember",
     "realName": "Ash Was My Heart, Yet the Flame Stayed",
     "aim": "Buff",
@@ -25466,6 +26259,235 @@ let modifiersGlobal = [
     "perma": true,
     "params": [
       "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1848929834\">Modifier_FantasticStory_BaseAbility_2210_Plus5AddOn_ForShow</a>",
+    "realName": "Grit Mechanics: Riddle Fanatic",
+    "aim": "Buff",
+    "desc": "For each enemy target hit after using an attack, additionally accumulates #1[i] Grit Value for allies.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "DV_FantasticStory_PlusAbility_2215_ADF_3"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"461666561\">Modifier_FantasticStory_BaseAbility_2210_Plus5AddOn_Servant</a>",
+    "realName": "Riddle Fanatic",
+    "aim": "Buff",
+    "desc": "After using an attack, gains #2[i] Punchline. During Surging Grit, DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "DV_FantasticStory_PlusAbility_2215_ADF_1",
+      "DV_FantasticStory_PlusAbility_2215_ADF_2"
+    ]
+  },
+  {
+    "name": "StageAbility_678251_Modifier_Debuff",
+    "realName": "I'm Tired, Boss",
+    "aim": "Debuff",
+    "desc": "DMG dealt decreases by #1[i]% and DMG taken increases by #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_ADF_1",
+      "_ADF_2"
+    ]
+  },
+  {
+    "name": "StageAbility_678861_Modifier_Sub2",
+    "realName": "CRIT DMG Boost",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_ADF_2"
+    ]
+  },
+  {
+    "name": "StageAbility_678610_Modifier_Enemy",
+    "realName": "Vulnerability",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ADF_1"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_633419_Attack",
+    "realName": "ATK Boost",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "AttackAddedRatio_633419"
+    ]
+  },
+  {
+    "name": "StageAbility_676710_Modifier_CritDmg",
+    "realName": "CRIT DMG Boost",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_CritBoost"
+    ]
+  },
+  {
+    "name": "StageAbility_676670_Modifier_CritDmg",
+    "realName": "CRIT DMG Boost",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_CritBoost"
+    ]
+  },
+  {
+    "name": "StageAbility_677180_Modifier_CritDmg",
+    "realName": "Lucidity",
+    "aim": "Buff",
+    "desc": "Each stack increases CRIT DMG by #1[i]%, stacking up to #2[i] time(s).",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ADF_1",
+      "ADF_3"
+    ]
+  },
+  {
+    "name": "StageAbility_677180_Modifier_CritDmg_Servant",
+    "realName": "Lucidity",
+    "aim": "Buff",
+    "desc": "Each stack increases CRIT DMG by #1[i]%, stacking up to #2[i] time(s).",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ADF_2",
+      "ADF_3"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1970687453\">Modifier_ChallengePeakBattle_BaseAbility_0025_02_ForShow</a>",
+    "realName": "Joint Forces",
+    "aim": "Other",
+    "desc": "DMG taken decreases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_0025_ADF_3"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-785489005\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0030_02</a>",
+    "realName": "Memoria Swarm",
+    "aim": "Other",
+    "desc": "DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_Plugins_0030_ADF_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633601_Modifier_Sub",
+    "realName": "Humanity's Nemesis",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1898064779\">Modifier_ChallengePeakBattle_BaseAbility_0026_02</a>",
+    "realName": "Unwavering",
+    "aim": "Other",
+    "desc": "Toughness cannot be reduced, and Break DMG taken is reduced by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_0026_ADF_1"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_633424_CritDmg",
+    "realName": "Bud in the Wind",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%, up to a max increase of #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_ADF_1",
+      "ADF_2"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_633425_Stack",
+    "realName": "Guidance",
+    "aim": "Buff",
+    "desc": "After using an attack, additionally deals Additional DMG equal to #1[i]% of ATK to attack targets. This can be stacked up to #2[i] times.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ADF_3",
+      "ADF_2"
+    ]
+  },
+  {
+    "name": "Modifier_StageAbility_633426_Character",
+    "realName": "Chance Jailbreak",
+    "aim": "Buff",
+    "desc": "DMG taken by increases by #1[i]%. When receiving a killing blow, they will not be knocked down, and their current HP is immediately restored to #2[i]% of their Max HP. This effect can trigger #3[i] time(s). After using an attack, they additionally deal True DMG equal to #4[i]% of the original DMG.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ADF_1",
+      "ADF_2",
+      "_ADF_3",
+      "ADF_4"
+    ]
+  },
+  {
+    "name": "StageAbility_633602_Modifier_Sub",
+    "realName": "Trader Mask: Supreme",
+    "aim": "Buff",
+    "desc": "After using an attack, additionally deals Additional DMG equal to #1[i]% of ATK to attack targets.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "StageAbility_633603_Modifier_Sub",
+    "realName": "Trader Mask: Activate",
+    "aim": "Buff",
+    "desc": "Final DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MazeBuffParam_1"
+    ]
+  },
+  {
+    "name": "Standard_Gluttony_DirtyHp",
+    "realName": "Inglutition",
+    "aim": "Debuff",
+    "desc": "Maximum Restorable HP decreases by #1[f1]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_AccumDirtyHPRatio"
     ]
   }
 ]

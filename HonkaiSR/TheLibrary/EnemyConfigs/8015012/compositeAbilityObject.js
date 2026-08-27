@@ -4041,7 +4041,8 @@ const compositeAbilityObject = {
           },
           "forceReduction": true,
           "canDelay": true,
-          "ToughnessDMGType": "Imaginary"
+          "ToughnessDMGType": "Imaginary",
+          "bypassBreakMute": true
         },
         {
           "name": "Set Mapping Point",

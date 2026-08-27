@@ -4366,7 +4366,7 @@ let modifiersEnemy = [
     "name": "<a class=\"gModGreen\" id=\"-557758203\">Enemy_W4_FireProwler_IF_Limit</a>",
     "realName": "Shackle Shatter",
     "aim": "Other",
-    "desc": "Alternates between using \"Dying Sobs\" and \"But Suffering is Essential.\" \"Dying Sobs\" summons \"Long-Shattered Vessel\" and enters Charging state, and \"But Suffering is Essential\" deals Powerful Attacks. \"Calamity Power\" stacks increases the Hits Per Action of Powerful Attacks. After destroying \"Long-Shattered Vessel,\" Toughness and \"Calamity Power\" stacks can be reduced. In the second phase, \"Silent Sorrow\" and \"Cry Not for the Discarded\" will be used, and \"Calamity Power\" stacks increases.",
+    "desc": "Alternates between using \"Dying Sobs\" and \"But Suffering is Essential.\" \"Dying Sobs\" summons \"Long-Shattered Vessel\" and enters Charging state, and \"But Suffering is Essential\" deals Powerful Attacks. \"Calamity Power\" stacks increases the Hits Per Action of Powerful Attacks. After destroying \"Long-Shattered Vessel,\" Toughness and \"Calamity Power\" stacks can be reduced. In the second phase, \"Silent Sorrow\" and \"Cry Not for the Discarded\" will be used, and \"Calamity Power\" stack increases.",
     "type": "Shackle Shatter",
     "perma": true
   },
@@ -6151,7 +6151,7 @@ let modifiersEnemy = [
     "name": "<a class=\"gModGreen\" id=\"-1972425744\">Enemy_W5_Eater_Ability02_Eater</a>",
     "realName": "Satiated",
     "aim": "Other",
-    "desc": "Steals #1[i] ATK. Each time after it is attacked by an target unit, increases the Maximum Restorable HP of targets inflicted with the \"Devour\" state by this unit, and returns a certain percentage of ATK. After being attacked by target units a certain number of times or when having its Weakness Broken, dispels the \"Devour\" state inflicted by this unit.",
+    "desc": "Steals #1[i] ATK. Each time after being attacked by a target unit, increases the Maximum Restorable HP of targets inflicted with the \"Devour\" state by this unit, and returns a certain percentage of ATK. After being attacked by targets a certain number of times or when having its Weakness Broken, dispels the \"Devour\" state inflicted by this unit.",
     "type": "Satiated",
     "perma": true,
     "params": [
@@ -6388,5 +6388,220 @@ let modifiersEnemy = [
     "desc": "All Comediologists will attack together.",
     "type": null,
     "perma": true
+  },
+  {
+    "name": "Modifier_Monster_W4_Claymore_04_Ability03_Charge_ForShow",
+    "realName": "Smite Evil",
+    "aim": "Other",
+    "desc": "Uses \"Smite All Evil\" in the next action.",
+    "type": "Charging",
+    "perma": true
+  },
+  {
+    "name": "Modifier_Monster_W4_Claymore_04_Honor",
+    "realName": "All Wishes",
+    "aim": "Buff",
+    "desc": "While in the \"Smite Evil\" state, all enemy targets gain the \"Inspire\" effect equal to Lighthouse's \"All Wishes\" stacks.",
+    "type": "All Wishes",
+    "perma": true
+  },
+  {
+    "name": "Modifier_Monster_W4_Claymore_04_Enhanced",
+    "realName": "Inspire",
+    "aim": "Buff",
+    "desc": "Each stack reduces DMG taken by #1[i]%.",
+    "type": "DMG Taken Reduction",
+    "perma": true,
+    "params": [
+      "MDF_DamageResistanceRatio",
+      "MDF_SpeedAddedRatio"
+    ]
+  },
+  {
+    "name": "Modifier_Monster_W4_Claymore_04_Ability03_Protect_Weakness",
+    "realName": "Weakness Protected",
+    "aim": "Other",
+    "desc": "This unit's Toughness cannot be reduced. This effect is dispelled when \"Lighthouse\" dispels the \"Smite Evil\" state.",
+    "type": "Weakness Protected",
+    "perma": true
+  },
+  {
+    "name": "Modifier_Monster_W4_Claymore_04_Defeated",
+    "realName": "Ruined",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": "Vulnerability",
+    "perma": false,
+    "params": [
+      "MDF_DamageTakenUpRatio"
+    ]
+  },
+  {
+    "name": "Modifier_Monster_W4_Claymore_04_Confine",
+    "realName": "Debt Crisis",
+    "aim": "Debuff",
+    "desc": "Under the influence of the Cornerstone \"Sugilite of Levies,\" the actions of indebted targets are greatly restricted.",
+    "type": "Debt Crisis",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W2_Xuanlu_IF_Bonus_AllDamageTypeAddedRatio",
+    "realName": "Power of Sustenance",
+    "aim": "Buff",
+    "desc": "Each stack increases DMG dealt by #1[i]%.",
+    "type": "DMG Boost",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_01",
+    "realName": "Tranquility Ascension",
+    "aim": "Other",
+    "desc": "When this unit is on the field, DMG dealt by target units inflicted with the \"Outrage\" state to all friendly units other than \"Twig of Wintry Wind\" is greatly reduced.",
+    "type": "Tranquility Ascension",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_01_Sub",
+    "realName": "Tranquility Halo",
+    "aim": "Other",
+    "desc": "Ally target units inflicted with the \"Outrage\" state deal greatly reduced DMG to this unit.",
+    "type": "Tranquility Halo",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_02",
+    "realName": "Agility Ascension",
+    "aim": "Other",
+    "desc": "When this unit is on the field, actions of all friendly units except \"Twig of Marple Leaf\" slightly advance after being attacked.",
+    "type": "Agility Ascension",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_02_Sub",
+    "realName": "Agility Halo",
+    "aim": "Other",
+    "desc": "After being attacked, slightly advances action.",
+    "type": "Agility Halo",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_03",
+    "realName": "Resurrection Ascension",
+    "aim": "Other",
+    "desc": "When this unit is on the field, all friendly units other than \"Twig of Glorious Blooms\" and \"Unwaning Ageless Immortal\" restore a small amount of HP at the start of their turn.",
+    "type": "Resurrection Ascension",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_03_Sub",
+    "realName": "Resurrection Halo",
+    "aim": "Other",
+    "desc": "At the start of the turn, slightly restores HP.",
+    "type": "Resurrection Halo",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W4_Xuanlu_IF_ServantLV3_01",
+    "realName": "Right-Hand Man",
+    "aim": "Other",
+    "desc": "When this target is defeated, deals massive True DMG to \"Unwaning Ageless Immortal\" and massively reduces its Toughness.",
+    "type": "Right-Hand Man",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W4_Xuanlu_IF_ServantLV3_02",
+    "realName": "Right-Hand Man",
+    "aim": "Other",
+    "desc": "When this target is defeated, deals massive True DMG to \"Unwaning Ageless Immortal\" and massively reduces its Toughness.",
+    "type": "Right-Hand Man",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W2_Xuanlu_IF_DamageReduceP2_TGT",
+    "realName": "Boss DMG Reduction",
+    "aim": "Buff",
+    "desc": "For every \"Right-Hand Man\" on the field, DMG taken by \"Unwaning Ageless Immortal\" reduces by #1[i]%.",
+    "type": "Boss DMG Reduction",
+    "perma": true,
+    "params": [
+      "MDF_AllDamageReduce_PerLayer"
+    ]
+  },
+  {
+    "name": "Enemy_W2_Xuanlu_IF_Ability07_WeaknessControl",
+    "realName": "Hardy Leaf Sheath",
+    "aim": "Buff",
+    "desc": "DEF increases. Toughness cannot be reduced.",
+    "type": "DEF Boost",
+    "perma": false,
+    "params": [
+      "MDF_DefenceAddedRatio"
+    ]
+  },
+  {
+    "name": "Enemy_W5_Guardian_DoubleStrike",
+    "realName": "Execute Justice",
+    "aim": "Other",
+    "desc": "After using \"What Descends From On High?\", uses \"Justice! Justice! Justice!\" on the same target. Dispelled when Weakness is Broken.",
+    "type": "Execute Justice",
+    "perma": true
+  },
+  {
+    "name": "Enemy_W2_Xuanlu_IF_MinionsSuperArmor",
+    "realName": "Synchronized DMG Reduction",
+    "aim": "Buff",
+    "desc": "\"Unwaning Ageless Immortal\" is currently in the \"Steadfast Safeguard\" state. DMG taken by this unit reduces by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_AllDamageReduce"
+    ]
+  },
+  {
+    "name": "Enemy_W2_Xuanlu_IF_MinionsSuperArmorBreak",
+    "realName": "Synchronized Vulnerability",
+    "aim": "Debuff",
+    "desc": "\"Unwaning Ageless Immortal\" is currently in the \"Safeguard Breach\" state. DMG taken by this unit increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_AllDamageTypeTakenRatio"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>",
+    "realName": "Happiness",
+    "aim": "Other",
+    "desc": "At the start of each turn, gains #2[i] stack(s). Loses 1 stack after attacking an enemy target, and loses an additional stack after eliminating an enemy target. At the end of the turn, if stacks are greater than or equal to #1[i], the character will be converted into a \"Happiness Puppet.\" When stacks reach #3[i], this state is dispelled and the \"Inverted Severance\" effect is inflicted.",
+    "type": "Happiness",
+    "perma": true,
+    "params": [
+      "MDF_MaxLayer",
+      "MDF_AddLayer",
+      "MDF_RemoveLayer"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"594195286\">Enemy_W5_AsatPramad_Debuff_05_Modifier</a>",
+    "realName": "Shield",
+    "aim": "Buff",
+    "desc": "Gains a Shield that can offset DMG.",
+    "type": "Shield",
+    "perma": false
+  },
+  {
+    "name": "Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_EX04_Sub_Sub",
+    "realName": "Dazzling Halo",
+    "aim": "Buff",
+    "desc": "DMG taken decreases by #1[i]% and DMG dealt increases by #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_AllDamageReduce_Sub",
+      "MDF_AllDamageTypeAddedRatio_Sub"
+    ]
   }
 ]

@@ -5599,11 +5599,11 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "variableName": "_Strongman_LifeCount",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_11032) || RETURN",
-                "displayLines": "UnusedUnderThisBase_11032",
+                "operator": "Variables[0] (UnusedUnderThisBase_11163) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11163",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_11032"
+                  "UnusedUnderThisBase_11163"
                 ]
               }
             },
@@ -5611,11 +5611,11 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "variableName": "_Scholar_LifeCount",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_11033) || RETURN",
-                "displayLines": "UnusedUnderThisBase_11033",
+                "operator": "Variables[0] (UnusedUnderThisBase_11164) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11164",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_11033"
+                  "UnusedUnderThisBase_11164"
                 ]
               }
             },
@@ -5623,11 +5623,11 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "variableName": "_Minion03_LifeCount",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_10989) || RETURN",
-                "displayLines": "UnusedUnderThisBase_10989",
+                "operator": "Variables[0] (UnusedUnderThisBase_11120) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11120",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_10989"
+                  "UnusedUnderThisBase_11120"
                 ]
               }
             },
@@ -5635,11 +5635,11 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "variableName": "_SelfP1_LifeCount",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_11034) || RETURN",
-                "displayLines": "UnusedUnderThisBase_11034",
+                "operator": "Variables[0] (UnusedUnderThisBase_11165) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11165",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_11034"
+                  "UnusedUnderThisBase_11165"
                 ]
               }
             },
@@ -5647,11 +5647,11 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "variableName": "_SelfP2_LifeCount",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_10999) || RETURN",
-                "displayLines": "UnusedUnderThisBase_10999",
+                "operator": "Variables[0] (UnusedUnderThisBase_11130) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11130",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_10999"
+                  "UnusedUnderThisBase_11130"
                 ]
               }
             },
@@ -5659,11 +5659,11 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "variableName": "_Shooter_LifeCount",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_11035) || RETURN",
-                "displayLines": "UnusedUnderThisBase_11035",
+                "operator": "Variables[0] (UnusedUnderThisBase_11166) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11166",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_11035"
+                  "UnusedUnderThisBase_11166"
                 ]
               }
             },
@@ -5671,11 +5671,11 @@ const compositeAbilityObject = {
               "name": "Define Custom Variable",
               "variableName": "_Avatar_LifeCount",
               "value": {
-                "operator": "Variables[0] (UnusedUnderThisBase_10994) || RETURN",
-                "displayLines": "UnusedUnderThisBase_10994",
+                "operator": "Variables[0] (UnusedUnderThisBase_11125) || RETURN",
+                "displayLines": "UnusedUnderThisBase_11125",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_10994"
+                  "UnusedUnderThisBase_11125"
                 ]
               }
             }

@@ -1110,6 +1110,36 @@ const megaParsingFuckeryPain = {
         </div>
         `;
     },
+    "Define Custom Variable with Array Value"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "index",
+            // "variable",
+
+            // "context",
+            "variableName",
+            // "roundBy",
+            // "ignoreBelow",
+
+            // "target2",
+            // "modifier2",
+            // "variable2",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with Array Value");
+        // initialCounter++;
+
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Define with Array Value:</div>&nbsp;
+            ${parseRef.variableName}
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
+            ${getStandardNameDisplay(initialCounter,parseRef.index,"Array Index")}
+            
+        </div>
+        `;
+    },
     "Define Custom Variable with Clamp Configuration"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -1198,6 +1228,22 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.weaknessFilter,"Weakness Filter")}
         </div>
         `;
+    },
+    "Define Custom Variable with Changes to Certified Banger"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "variableName",
+            "type",
+            // "context",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with Changes to Certified Banger");
+        // initialCounter++;
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Define with Changes to Certified Banger:</div>&nbsp;
+            ${parseRef.variableName}${parseRef.type ? ` (${parseRef.type})` : ""}
+        </div>
+        <div class="modifierDetailsBox">
+        </div>`;
     },
     "Define Custom Variable with Changes to Stats"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
@@ -1907,6 +1953,8 @@ const megaParsingFuckeryPain = {
             "variableName",
             "adjustmentType",
             "on",
+
+            "isReset",//?
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Read Variable Value");
 
@@ -1922,6 +1970,9 @@ const megaParsingFuckeryPain = {
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Read Variable:</div>&nbsp;
             ${parseRef.variableName}${parseRef.on ? ` on ${megaParsingFuckery.makeConditionTargetBox(parseRef.on,initialCounter)}` : ""} ${parseRef.value?.displayLines ?? parseRef.value ? "Value found, error, let vash know" : ""}
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.isReset,"Reset[?]")}
         </div>`;
     },
     "Define Custom Variable with Damage Data"(parseRef,initialCounter) {
@@ -4096,6 +4147,7 @@ const megaParsingFuckeryPain = {
             "target",
             "targetRef",
             "refPoint",
+            "source",
             "isStartingAV",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Advance/Delay up to Target");
@@ -4106,6 +4158,7 @@ const megaParsingFuckeryPain = {
             <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
         </div>
         <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.source,"Source",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.target,"Target to Move",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.targetRef,"Target to Reference",true)}
 
@@ -5619,6 +5672,24 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
         </div>`;
     },
+    "Check Modifier Death Source"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "source",
+            // "target",
+            "invertCondition"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Check Modifier Death Source");
+
+        // initialCounter++;
+        return `<div class="actionDetailBody">
+            <div class="rotationConditionOperatorHeaderInline">Check Modifier Death Source:</div>&nbsp;
+            ${parseRef.invertCondition ? "(Inverted) " : ""}
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.source,"Source")}
+        </div>`;
+    },
     "Entity is Flying"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -6094,6 +6165,7 @@ const megaParsingFuckeryPain = {
             "canDelay",
             "livingState",
             "ToughnessDMGType",
+            "bypassBreakMute",
 
 
 
@@ -6126,6 +6198,7 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.ignoreAttackerBonuses,"Ignore Attacker Bonuses")}
             ${getStandardNameDisplay(initialCounter,parseRef.canDelay,"Can Delay")}
             ${getStandardNameDisplay(initialCounter,parseRef.livingState,"Living State")}
+            ${getStandardNameDisplay(initialCounter,parseRef.bypassBreakMute,"Bypass Break Mute")}
             
             ${parseRef.ToughnessDMGType != undefined && (typeof parseRef?.ToughnessDMGType === "object" ? parseRef.ToughnessDMGType.name === "Target Name" : true) ? `<div class="actionDetailBody2">
                 <div class="rotationConditionOperatorHeaderInline">Toughness DMG Type:</div>&nbsp;
@@ -6657,6 +6730,30 @@ const megaParsingFuckeryPain = {
         </div>
         `;
     },
+    "TARGET IS: UNKNOWN CHECK 1"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "invertCondition",
+            
+            // "healPercent",
+            // "formula",
+            // "value1",
+            // "compareType",
+            // "value2"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"TARGET IS: UNKNOWN CHECK 1");
+
+
+        
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">TARGET IS: UNKNOWN CHECK 1:</div>&nbsp;
+            ${parseRef.invertCondition ? "NOT " : ""} ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}${parseRef.living ? "(Living)" : ""}
+        </div>
+        <div class="modifierDetailsBox">
+        </div>
+        `;
+    },
     "Has Body-Types"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -6957,7 +7054,7 @@ const megaParsingFuckeryPain = {
             "name",
             "target",
             
-            // "healPercent",
+            "bypassBreakMute",
             // "formula",
             // "value1",
             // "compareType",
@@ -6968,6 +7065,9 @@ const megaParsingFuckeryPain = {
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Trigger: Break:</div>&nbsp;
             ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.bypassBreakMute,"Bypass Break Mute")}
         </div>
         `;
     },
@@ -7205,7 +7305,7 @@ const megaParsingFuckeryPain = {
         const knownKeySet = new Set ([
             "name",
             "target",
-            // "preventWhen0",
+            "bypassBreakMute",
             // "skipTeamLock",
 
             // "addFlat",
@@ -7224,6 +7324,7 @@ const megaParsingFuckeryPain = {
             ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
         </div>
         <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.bypassBreakMute,"Bypass Break Mute")}
         </div>
         `;
     },

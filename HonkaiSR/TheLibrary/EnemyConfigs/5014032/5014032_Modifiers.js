@@ -1671,6 +1671,18 @@ const configAbility = {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
           "execute": [
             {
+              "name": "IF",
+              "conditions": {
+                "name": "Has Unique Effect Name",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "uniqueName": "EffectGhostEye",
+                "allowUnReady": true
+              }
+            },
+            {
               "name": "ATK Scaling DMG",
               "target": {
                 "name": "Target Name",

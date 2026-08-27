@@ -1640,6 +1640,7 @@ const compositeAbilityObject = {
         }
       ],
       "onAbortReg": [
+        "Deleted bullshit",
         {
           "name": "Remove Events/Bonuses",
           "to": {
@@ -2850,8 +2851,18 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
-                      "name": "Define Custom Variable with Changes to Stats",
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "CallbackTemporary",
                       "variableName": "_ElationPoint"
+                    },
+                    {
+                      "name": "Define Custom Variable with Changes to Certified Banger",
+                      "variableName": "_ElationPoint",
+                      "type": "OriginalCurrentValue"
                     },
                     {
                       "name": "IF",
@@ -2890,10 +2901,6 @@ const compositeAbilityObject = {
                           }
                         },
                         {
-                          "name": "Define Custom Variable with Changes to Stats",
-                          "variableName": "_ElationPoint"
-                        },
-                        {
                           "name": "Use Custom Character Function",
                           "functionName": "<a class=\"gTempYellow\" id=\"818871295\">AddElationEchoPoint</a>",
                           "target": {
@@ -2911,10 +2918,6 @@ const compositeAbilityObject = {
                               ]
                             }
                           }
-                        },
-                        {
-                          "name": "Define Custom Variable with Changes to Stats",
-                          "variableName": "_ElationPoint"
                         },
                         {
                           "name": "Define Custom Variable with Added Value",

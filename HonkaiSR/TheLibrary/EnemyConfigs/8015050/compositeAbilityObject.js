@@ -312,11 +312,15 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__594195286\">Enemy_W5_AsatPramad_Debuff_05_Modifier</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__594195286\">Enemy_W5_AsatPramad_Debuff_05_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "stackType": "Replace",
           "modifierFlags": [
             "Shield"
           ],
+          "description": "Gains a Shield that can offset DMG.",
+          "type": "Buff",
+          "effectName": "Shield",
+          "statusName": "Shield",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2314,7 +2318,7 @@ const compositeAbilityObject = {
           "name": "Find New Target",
           "from": {
             "name": "Target Name",
-            "target": "{{Player Team All}}"
+            "target": "{{Player Team All}}.[[Remove Backup Memosprite]]"
           },
           "conditions": {
             "name": "AND",
@@ -2357,20 +2361,20 @@ const compositeAbilityObject = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-78128030\">Enemy_W5_AsatPramad_DirtyBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphon</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (AsatPramad_Skill3_isInsert) || RETURN",
-                "displayLines": "AsatPramad_Skill3_isInsert",
+                "operator": "Variables[0] (AsatPramad_Skill3_DirtyBloodMaxLayer) || RETURN",
+                "displayLines": "AsatPramad_Skill3_DirtyBloodMaxLayer",
                 "constants": [],
                 "variables": [
-                  "AsatPramad_Skill3_isInsert"
+                  "AsatPramad_Skill3_DirtyBloodMaxLayer"
                 ]
               },
               "valuePerStack": {
                 "MDF_DirtyBloodRatioPerLayer": {
-                  "operator": "Variables[0] ([object Object]) || RETURN",
-                  "displayLines": "[object Object]",
+                  "operator": "Variables[0] (AsatPramad_Skill3_DirtyBloodRatioPerLayer) || RETURN",
+                  "displayLines": "AsatPramad_Skill3_DirtyBloodRatioPerLayer",
                   "constants": [],
                   "variables": [
-                    {}
+                    "AsatPramad_Skill3_DirtyBloodRatioPerLayer"
                   ]
                 }
               }
@@ -2381,17 +2385,17 @@ const compositeAbilityObject = {
           "name": "ATK Scaling DMG",
           "target": {
             "name": "Target Name",
-            "target": "{{Player Team All}}"
+            "target": "{{Player Team All}}.[[Remove Backup Memosprite]]"
           },
           "AttackScaling": {
             "DamageType": "Quantum",
             "DamageFlat": {
-              "operator": "Variables[0] ([object Object]) || Variables[1] ([object Object]) || MUL || RETURN",
-              "displayLines": "([object Object] * [object Object])",
+              "operator": "Variables[0] (AsatPramad_Skill3_DamagePercentageLight) || Variables[1] (AsatPramad_Skill3_BaseAttack) || MUL || RETURN",
+              "displayLines": "(AsatPramad_Skill3_DamagePercentageLight * AsatPramad_Skill3_BaseAttack)",
               "constants": [],
               "variables": [
-                {},
-                {}
+                "AsatPramad_Skill3_DamagePercentageLight",
+                "AsatPramad_Skill3_BaseAttack"
               ]
             },
             "Toughness": null,
@@ -2414,11 +2418,11 @@ const compositeAbilityObject = {
           "modifier": "<a class=\"gModGreen\" id=\"-659133671\">Enemy_W5_AsatPramad_AddShake</a>",
           "valuePerStack": {
             "MDF_Chance": {
-              "operator": "Variables[0] ([object Object]) || RETURN",
-              "displayLines": "[object Object]",
+              "operator": "Variables[0] (AsatPramad_Skill3_Chance) || RETURN",
+              "displayLines": "AsatPramad_Skill3_Chance",
               "constants": [],
               "variables": [
-                {}
+                "AsatPramad_Skill3_Chance"
               ]
             }
           }
@@ -2744,11 +2748,6 @@ const compositeAbilityObject = {
             "invertCondition": true
           },
           "passed": [
-            {
-              "name": "Change Battle Arena",
-              "status": "Inactive",
-              "arenaID": 2054102
-            },
             {
               "name": "Change Battle Arena",
               "arenaID": 2054103
@@ -4684,6 +4683,18 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Player Team All}}.[[removeMemosprite]]"
             },
+            "compareType": "=",
+            "value2": 1
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target Count",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Player Team All}}.[[removeMemosprite]]"
+            },
             "compareType": "<=",
             "value2": 2
           }
@@ -6258,11 +6269,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"724771238\">Enemy_W5_AsatPramad_Bomb</a>[<span class=\"descriptionNumberColor\">Meme'd</span>]",
                       "valuePerStack": {
                         "MDF_DamagePercentageLightTeam": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13177) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13177",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13336) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13336",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_13177"
+                            "UnusedUnderThisBase_13336"
                           ]
                         },
                         "MDF_BaseAttack": {
@@ -6282,43 +6293,43 @@ const compositeAbilityObject = {
                           ]
                         },
                         "MDF_DirtyBloodRatioPerLayer": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13181) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13181",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13340) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13340",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_13181"
+                            "UnusedUnderThisBase_13340"
                           ]
                         },
                         "MDF_DirtyBloodMaxLayer": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13182) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13182",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13341) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13341",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_13182"
+                            "UnusedUnderThisBase_13341"
                           ]
                         },
                         "MDF_Chance": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13183) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13183",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13342) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13342",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_13183"
+                            "UnusedUnderThisBase_13342"
                           ]
                         },
                         "MDF_DamageTakenUpRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13175) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13175",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13334) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13334",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_13175"
+                            "UnusedUnderThisBase_13334"
                           ]
                         },
                         "MDF_DamageTakenMaxLayer": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13173) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13173",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13332) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13332",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_13173"
+                            "UnusedUnderThisBase_13332"
                           ]
                         }
                       },
@@ -6352,11 +6363,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"724771238\">Enemy_W5_AsatPramad_Bomb</a>[<span class=\"descriptionNumberColor\">Meme'd</span>]",
                           "valuePerStack": {
                             "MDF_DamagePercentageLightTeam": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13177) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13177",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13336) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13336",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13177"
+                                "UnusedUnderThisBase_13336"
                               ]
                             },
                             "MDF_BaseAttack": {
@@ -6376,43 +6387,43 @@ const compositeAbilityObject = {
                               ]
                             },
                             "MDF_DirtyBloodRatioPerLayer": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13181) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13181",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13340) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13340",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13181"
+                                "UnusedUnderThisBase_13340"
                               ]
                             },
                             "MDF_DirtyBloodMaxLayer": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13182) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13182",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13341) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13341",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13182"
+                                "UnusedUnderThisBase_13341"
                               ]
                             },
                             "MDF_Chance": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13183) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13183",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13342) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13342",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13183"
+                                "UnusedUnderThisBase_13342"
                               ]
                             },
                             "MDF_DamageTakenUpRatio": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13175) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13175",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13334) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13334",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13175"
+                                "UnusedUnderThisBase_13334"
                               ]
                             },
                             "MDF_DamageTakenMaxLayer": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13173) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13173",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13332) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13332",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13173"
+                                "UnusedUnderThisBase_13332"
                               ]
                             }
                           },
@@ -7023,20 +7034,20 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"-78128030\">Enemy_W5_AsatPramad_DirtyBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphon</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_13182) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_13182",
+                            "operator": "Variables[0] (UnusedUnderThisBase_13341) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_13341",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_13182"
+                              "UnusedUnderThisBase_13341"
                             ]
                           },
                           "valuePerStack": {
                             "MDF_DirtyBloodRatioPerLayer": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13181) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13181",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13340) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13340",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13181"
+                                "UnusedUnderThisBase_13340"
                               ]
                             }
                           }
@@ -7093,11 +7104,11 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Quantum",
                         "Damage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13896) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13896",
+                          "operator": "Variables[0] (UnusedUnderThisBase_14136) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_14136",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_13896"
+                            "UnusedUnderThisBase_14136"
                           ]
                         },
                         "Toughness": null,

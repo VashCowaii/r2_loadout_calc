@@ -45,12 +45,12 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        2788,
-        2789,
-        2790,
-        2791,
-        2792,
-        2793
+        2831,
+        2832,
+        2833,
+        2834,
+        2835,
+        2836
       ],
       "enemyTag": [
         "GridFightBoss"

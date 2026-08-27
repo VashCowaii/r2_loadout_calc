@@ -1120,7 +1120,8 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
-                  }
+                  },
+                  "bypassBreakMute": true
                 }
               ]
             }
@@ -3083,7 +3084,8 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
-                  }
+                  },
+                  "bypassBreakMute": true
                 }
               ]
             }

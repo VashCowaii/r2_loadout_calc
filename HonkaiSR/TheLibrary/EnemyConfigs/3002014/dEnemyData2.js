@@ -42,10 +42,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1003,
-        1004,
-        1005,
-        1006
+        1046,
+        1047,
+        1048,
+        1049
       ],
       "enemyTag": [
         "MonsterType_W3_TV_00",
@@ -79,10 +79,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1003,
-        1004,
-        1005,
-        1006
+        1046,
+        1047,
+        1048,
+        1049
       ],
       "enemyTag": [
         "MonsterType_W3_TV_00",

@@ -858,6 +858,24 @@ const compositeAbilityObject = {
               ]
             },
             {
+              "eventTrigger": "When Losing Modifier [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"637823618\">Standard_LockHPThresholdReached_Mark</a>"
+                  },
+                  "passed": [
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"-180588390\">SilverWolf999_InsertRetarget</a>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "eventTrigger": "Batch: Enemy Arrival",
               "execute": [
                 {
@@ -920,12 +938,26 @@ const compositeAbilityObject = {
                   "searchRandom": true,
                   "maxTargets": 1,
                   "conditions": {
-                    "name": "Target Exists",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "living": true
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Target Exists",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "living": true
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"637823618\">Standard_LockHPThresholdReached_Mark</a>",
+                        "invertCondition": true
+                      }
+                    ]
                   },
                   "ifTargetFound": [
                     {
@@ -5376,10 +5408,22 @@ const compositeAbilityObject = {
         {
           "name": "IF",
           "conditions": {
-            "name": "Enemies Still Alive",
+            "name": "Compare: Variable",
             "target": {
               "name": "Target Name",
-              "target": "{{Caster}}"
+              "target": "{{Hostile Entities(AOE)}}"
+            },
+            "value1": "TeamCharacterCount",
+            "compareType": ">",
+            "value2": 0,
+            "conditions": {
+              "name": "Has Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"637823618\">Standard_LockHPThresholdReached_Mark</a>",
+              "invertCondition": true
             }
           },
           "passed": [
@@ -5785,10 +5829,22 @@ const compositeAbilityObject = {
         {
           "name": "IF",
           "conditions": {
-            "name": "Enemies Still Alive",
+            "name": "Compare: Variable",
             "target": {
               "name": "Target Name",
-              "target": "{{Caster}}"
+              "target": "{{Hostile Entities(AOE)}}"
+            },
+            "value1": "TeamCharacterCount",
+            "compareType": ">",
+            "value2": 0,
+            "conditions": {
+              "name": "Has Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"637823618\">Standard_LockHPThresholdReached_Mark</a>",
+              "invertCondition": true
             }
           },
           "passed": [
@@ -6379,10 +6435,22 @@ const compositeAbilityObject = {
         {
           "name": "IF",
           "conditions": {
-            "name": "Enemies Still Alive",
+            "name": "Compare: Variable",
             "target": {
               "name": "Target Name",
-              "target": "{{Caster}}"
+              "target": "{{Hostile Entities(AOE)}}"
+            },
+            "value1": "TeamCharacterCount",
+            "compareType": ">",
+            "value2": 0,
+            "conditions": {
+              "name": "Has Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"637823618\">Standard_LockHPThresholdReached_Mark</a>",
+              "invertCondition": true
             }
           },
           "passed": [
@@ -8842,10 +8910,22 @@ const compositeAbilityObject = {
             {
               "name": "IF",
               "conditions": {
-                "name": "Enemies Still Alive",
+                "name": "Compare: Variable",
                 "target": {
                   "name": "Target Name",
-                  "target": "{{Caster}}"
+                  "target": "{{Hostile Entities(AOE)}}"
+                },
+                "value1": "TeamCharacterCount",
+                "compareType": ">",
+                "value2": 0,
+                "conditions": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"637823618\">Standard_LockHPThresholdReached_Mark</a>",
+                  "invertCondition": true
                 }
               },
               "failed": [
@@ -8894,10 +8974,22 @@ const compositeAbilityObject = {
             {
               "name": "IF",
               "conditions": {
-                "name": "Enemies Still Alive",
+                "name": "Compare: Variable",
                 "target": {
                   "name": "Target Name",
-                  "target": "{{Caster}}"
+                  "target": "{{Hostile Entities(AOE)}}"
+                },
+                "value1": "TeamCharacterCount",
+                "compareType": ">",
+                "value2": 0,
+                "conditions": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"637823618\">Standard_LockHPThresholdReached_Mark</a>",
+                  "invertCondition": true
                 }
               },
               "passed": [
@@ -9163,10 +9255,22 @@ const compositeAbilityObject = {
             {
               "name": "IF",
               "conditions": {
-                "name": "Enemies Still Alive",
+                "name": "Compare: Variable",
                 "target": {
                   "name": "Target Name",
-                  "target": "{{Caster}}"
+                  "target": "{{Hostile Entities(AOE)}}"
+                },
+                "value1": "TeamCharacterCount",
+                "compareType": ">",
+                "value2": 0,
+                "conditions": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"637823618\">Standard_LockHPThresholdReached_Mark</a>",
+                  "invertCondition": true
                 }
               },
               "failed": [

@@ -584,12 +584,22 @@ const compositeAbilityObject = {
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-2034637668\">Monster_W3_Figure_02_RLElite_IsAiming</a>[<span class=\"descriptionNumberColor\">Shackle-Bearing Messenger</span>]"
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-2034637668\">Monster_W3_Figure_02_RLElite_IsAiming</a>[<span class=\"descriptionNumberColor\">Shackle-Bearing Messenger</span>]"
+                      },
+                      {
+                        "name": "Check Modifier Death Source",
+                        "source": "CasterDead",
+                        "invertCondition": true
+                      }
+                    ]
                   },
                   "passed": [
                     {
@@ -815,6 +825,14 @@ const compositeAbilityObject = {
             "target": "{{Caster}}"
           },
           "modifier": "<a class=\"gModGreen\" id=\"-918700562\">Monster_W3_Figure_02_RLElite_FireInHead</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"561371368\">Monster_W3_Figure_02_BreakController</a>"
         },
         {
           "name": "Add Events/Bonuses",

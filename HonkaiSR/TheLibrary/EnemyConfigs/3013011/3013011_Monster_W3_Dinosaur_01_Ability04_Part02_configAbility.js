@@ -21,11 +21,11 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": {
-            "operator": "Variables[0] (UnusedUnderThisBase_10241) || RETURN",
-            "displayLines": "UnusedUnderThisBase_10241",
+            "operator": "Variables[0] (UnusedUnderThisBase_10372) || RETURN",
+            "displayLines": "UnusedUnderThisBase_10372",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_10241"
+              "UnusedUnderThisBase_10372"
             ]
           },
           "Event": [
@@ -37,20 +37,20 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-340009422\">Enemy_W3_Dinosaur_01_Standard_Growth_Enhance</a>[<span class=\"descriptionNumberColor\">Scorchbone Inferno</span>]",
               "stackLimit": {
-                "operator": "Variables[0] (UnusedUnderThisBase_10239) || RETURN",
-                "displayLines": "UnusedUnderThisBase_10239",
+                "operator": "Variables[0] (UnusedUnderThisBase_10370) || RETURN",
+                "displayLines": "UnusedUnderThisBase_10370",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_10239"
+                  "UnusedUnderThisBase_10370"
                 ]
               },
               "valuePerStack": {
                 "MDF_MaxLayer": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_10239) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_10239",
+                  "operator": "Variables[0] (UnusedUnderThisBase_10370) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_10370",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_10239"
+                    "UnusedUnderThisBase_10370"
                   ]
                 }
               },
@@ -69,11 +69,11 @@ const configAbility = {
             "value1": "<a class=\"gModGreen\" id=\"-340009422\">Enemy_W3_Dinosaur_01_Standard_Growth_Enhance</a>[<span class=\"descriptionNumberColor\">Scorchbone Inferno</span>]",
             "compareType": "<",
             "value2": {
-              "operator": "Variables[0] (UnusedUnderThisBase_10239) || RETURN",
-              "displayLines": "UnusedUnderThisBase_10239",
+              "operator": "Variables[0] (UnusedUnderThisBase_10370) || RETURN",
+              "displayLines": "UnusedUnderThisBase_10370",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_10239"
+                "UnusedUnderThisBase_10370"
               ]
             },
             "valueType": "Layer"

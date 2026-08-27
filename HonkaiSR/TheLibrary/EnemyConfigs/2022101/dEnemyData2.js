@@ -42,8 +42,8 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        709,
-        710
+        720,
+        721
       ]
     },
     "202210101": {
@@ -70,8 +70,8 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        709,
-        710
+        720,
+        721
       ]
     },
     "202210102": {
@@ -98,8 +98,8 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        709,
-        710
+        720,
+        721
       ],
       "enemyTag": [
         "MGrid_4005"

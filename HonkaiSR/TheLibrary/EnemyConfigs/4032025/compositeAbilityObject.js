@@ -1203,13 +1203,13 @@ const compositeAbilityObject = {
                   },
                   "statName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
                   "value": {
-                    "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_11890) || SUB || RETURN",
-                    "displayLines": "(0 - UnusedUnderThisBase_11890)",
+                    "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_12037) || SUB || RETURN",
+                    "displayLines": "(0 - UnusedUnderThisBase_12037)",
                     "constants": [
                       0
                     ],
                     "variables": [
-                      "UnusedUnderThisBase_11890"
+                      "UnusedUnderThisBase_12037"
                     ]
                   }
                 },
@@ -1221,11 +1221,11 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "multiBase": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_11889) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_11889",
+                    "operator": "Variables[0] (UnusedUnderThisBase_12036) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_12036",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_11889"
+                      "UnusedUnderThisBase_12036"
                     ]
                   }
                 }
@@ -1292,11 +1292,11 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "consumePercent": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_11893) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_11893",
+                        "operator": "Variables[0] (UnusedUnderThisBase_12040) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_12040",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_11893"
+                          "UnusedUnderThisBase_12040"
                         ]
                       },
                       "consumeFloor": 1,
@@ -1336,11 +1336,11 @@ const compositeAbilityObject = {
                         "target": "{{Modifier Holder}}"
                       },
                       "consumePercent": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_11893) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_11893",
+                        "operator": "Variables[0] (UnusedUnderThisBase_12040) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_12040",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_11893"
+                          "UnusedUnderThisBase_12040"
                         ]
                       },
                       "consumeFloor": 1,
@@ -2903,11 +2903,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-2118081652\">Enemy_W4_FireProwler_10_Main03_TimePowerListener</a>",
                   "valuePerStack": {
                     "MDF_MaxCount": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_11862) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_11862",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12009) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12009",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_11862"
+                        "UnusedUnderThisBase_12009"
                       ]
                     }
                   }
@@ -4231,11 +4231,11 @@ const compositeAbilityObject = {
                 "value1": "CurrentBounsIndex",
                 "compareType": "<",
                 "value2": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_11891) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_11891",
+                  "operator": "Variables[0] (UnusedUnderThisBase_12038) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_12038",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_11891"
+                    "UnusedUnderThisBase_12038"
                   ]
                 }
               },

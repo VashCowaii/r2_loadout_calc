@@ -587,8 +587,18 @@ const configAbility = {
               },
               "passed": [
                 {
-                  "name": "Define Custom Variable with Changes to Stats",
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "scope": "CallbackTemporary",
                   "variableName": "_ElationPoint"
+                },
+                {
+                  "name": "Define Custom Variable with Changes to Certified Banger",
+                  "variableName": "_ElationPoint",
+                  "type": "OriginalCurrentValue"
                 },
                 {
                   "name": "IF",
@@ -627,10 +637,6 @@ const configAbility = {
                       }
                     },
                     {
-                      "name": "Define Custom Variable with Changes to Stats",
-                      "variableName": "_ElationPoint"
-                    },
-                    {
                       "name": "Use Custom Character Function",
                       "functionName": "<a class=\"gTempYellow\" id=\"818871295\">AddElationEchoPoint</a>",
                       "target": {
@@ -648,10 +654,6 @@ const configAbility = {
                           ]
                         }
                       }
-                    },
-                    {
-                      "name": "Define Custom Variable with Changes to Stats",
-                      "variableName": "_ElationPoint"
                     },
                     {
                       "name": "Define Custom Variable with Added Value",

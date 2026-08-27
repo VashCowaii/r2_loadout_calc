@@ -1821,6 +1821,10 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
+              "source": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
               "refPoint": "After"
             }
           ]
@@ -3389,6 +3393,10 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}.[[getMemosprite]]"
               },
               "targetRef": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "source": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },

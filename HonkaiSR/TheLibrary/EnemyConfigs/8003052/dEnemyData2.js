@@ -43,17 +43,17 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3039,
-        3040,
-        3041,
-        3042,
-        3043,
-        3044
+        3116,
+        3117,
+        3118,
+        3119,
+        3120,
+        3121
       ],
       "abilityOrder": [
-        3039,
-        3041,
-        3042
+        3116,
+        3118,
+        3119
       ],
       "enemyTag": [
         "BattleScore_Horse",

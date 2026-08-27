@@ -618,7 +618,7 @@ let characters = {
         "desc": "When using Skill, dispels 1 debuff from one designated ally.",
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+            "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
           }
         }
       },
@@ -1834,7 +1834,7 @@ let characters = {
               "Base Chance": {
                 "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
               },
-              "Action Delayed": {
+              "Delay Action": {
                 "desc": "Increases the target's waiting interval before the next action."
               }
             }
@@ -1994,7 +1994,7 @@ let characters = {
               "Base Chance": {
                 "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
               },
-              "Action Delayed": {
+              "Delay Action": {
                 "desc": "Increases the target's waiting interval before the next action."
               }
             }
@@ -2981,7 +2981,7 @@ let characters = {
         ],
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+            "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
           }
         }
       },
@@ -3021,7 +3021,7 @@ let characters = {
         ],
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+            "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
           },
           "Additional DMG": {
             "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
@@ -3047,7 +3047,7 @@ let characters = {
         ],
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+            "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
           }
         },
         "eidoAbility": "SilverWolf_Advanced_Silwolf_Eidolon6"
@@ -4683,7 +4683,7 @@ let characters = {
             "hitSplits": [],
             "extraEffects": {
               "Debuff": {
-                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+                "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
               }
             }
           }
@@ -5163,7 +5163,7 @@ let characters = {
         ],
         "extraEffects": {
           "True DMG": {
-            "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
+            "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as launching 1 attack."
           },
           "Downed State": {
             "desc": "An ally will be incapacitated once their HP is reduced to 0."
@@ -6325,7 +6325,7 @@ let characters = {
         ],
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+            "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
           }
         }
       },
@@ -6475,7 +6475,7 @@ let characters = {
         ],
         "extraEffects": {
           "Buff": {
-            "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+            "desc": "All status effects that provide beneficial combat buffs, can be dispelled unless stated otherwise."
           }
         }
       },
@@ -6521,7 +6521,7 @@ let characters = {
         ],
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+            "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
           },
           "Additional DMG": {
             "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
@@ -6699,7 +6699,7 @@ let characters = {
             "hitSplits": [],
             "extraEffects": {
               "Buff": {
-                "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+                "desc": "All status effects that provide beneficial combat buffs, can be dispelled unless stated otherwise."
               }
             }
           }
@@ -6912,7 +6912,7 @@ let characters = {
             "hitSplits": [],
             "extraEffects": {
               "Debuff": {
-                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+                "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
               }
             }
           }
@@ -7008,7 +7008,7 @@ let characters = {
         "traceAbility": "Pela_Pela_Trace01",
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+            "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
           }
         }
       },
@@ -7030,7 +7030,7 @@ let characters = {
         ],
         "extraEffects": {
           "Buff": {
-            "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+            "desc": "All status effects that provide beneficial combat buffs, can be dispelled unless stated otherwise."
           }
         }
       },
@@ -7721,7 +7721,7 @@ let characters = {
             "desc": "Fixed chance will not be affected by any factor."
           },
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+            "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
           }
         }
       },
@@ -8690,7 +8690,7 @@ let characters = {
         ],
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+            "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
           }
         }
       },
@@ -9073,7 +9073,7 @@ let characters = {
             "hitSplits": [],
             "extraEffects": {
               "Debuff": {
-                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+                "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
               }
             }
           }
@@ -11142,7 +11142,7 @@ let characters = {
             "hitSplits": [],
             "extraEffects": {
               "Buff": {
-                "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+                "desc": "All status effects that provide beneficial combat buffs, can be dispelled unless stated otherwise."
               }
             }
           }
@@ -11358,7 +11358,7 @@ let characters = {
         ],
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+            "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
           }
         }
       },
@@ -14707,7 +14707,7 @@ let characters = {
         "icon": "icon/skill/1213_rank4.png",
         "extraEffects": {
           "Buff": {
-            "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+            "desc": "All status effects that provide beneficial combat buffs, can be dispelled unless stated otherwise."
           }
         }
       },
@@ -17165,7 +17165,7 @@ let characters = {
             "hitSplits": [],
             "extraEffects": {
               "Debuff": {
-                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+                "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
               }
             }
           }
@@ -17449,7 +17449,7 @@ let characters = {
             "hitSplits": [],
             "extraEffects": {
               "Debuff": {
-                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+                "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
               }
             }
           }
@@ -20176,7 +20176,7 @@ let characters = {
           0.15
         ],
         "extraEffects": {
-          "Action Delayed": {
+          "Delay Action": {
             "desc": "Increases the target's waiting interval before the next action."
           }
         }
@@ -20332,7 +20332,7 @@ let characters = {
         ],
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+            "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
           }
         }
       },
@@ -22153,7 +22153,7 @@ let characters = {
               "Weakness Break State": {
                 "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
               },
-              "Action Delayed": {
+              "Delay Action": {
                 "desc": "Increases the target's waiting interval before the next action."
               },
               "Break DMG": {
@@ -23257,7 +23257,7 @@ let characters = {
             "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
           },
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+            "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
           },
           "Additional DMG": {
             "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
@@ -23775,7 +23775,7 @@ let characters = {
         ],
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+            "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
           }
         }
       },
@@ -23805,7 +23805,7 @@ let characters = {
         ],
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+            "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
           }
         }
       },
@@ -24673,7 +24673,7 @@ let characters = {
             "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
           },
           "Arcana": {
-            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+            "desc": "\"Arcana\" is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the \"Arcana\" state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of \"Arcana\" ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
           }
         },
         "eidoAbility": "BlackSwan_Advanced_BlackSwan_Eidolon2"
@@ -24720,7 +24720,7 @@ let characters = {
             "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
           },
           "Arcana": {
-            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+            "desc": "\"Arcana\" is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the \"Arcana\" state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of \"Arcana\" ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
           },
           "Fixed Chance": {
             "desc": "Fixed chance will not be affected by any factor."
@@ -25060,7 +25060,7 @@ let characters = {
             "hitSplits": [],
             "extraEffects": {
               "Arcana": {
-                "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+                "desc": "\"Arcana\" is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the \"Arcana\" state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of \"Arcana\" ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
               },
               "Fixed Chance": {
                 "desc": "Fixed chance will not be affected by any factor."
@@ -25253,7 +25253,7 @@ let characters = {
                 "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
               },
               "Arcana": {
-                "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+                "desc": "\"Arcana\" is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the \"Arcana\" state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of \"Arcana\" ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
               }
             }
           }
@@ -25299,7 +25299,7 @@ let characters = {
                 "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
               },
               "Arcana": {
-                "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+                "desc": "\"Arcana\" is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the \"Arcana\" state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of \"Arcana\" ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
               }
             }
           }
@@ -25356,7 +25356,7 @@ let characters = {
             "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
           },
           "Arcana": {
-            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+            "desc": "\"Arcana\" is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the \"Arcana\" state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of \"Arcana\" ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
           }
         }
       },
@@ -25375,7 +25375,7 @@ let characters = {
             "desc": "The base chance of applying debuffs to targets hit. \\nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES."
           },
           "Arcana": {
-            "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
+            "desc": "\"Arcana\" is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the \"Arcana\" state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of \"Arcana\" ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
           }
         }
       },
@@ -25506,7 +25506,7 @@ let characters = {
         ],
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+            "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
           }
         }
       },
@@ -28106,7 +28106,7 @@ let characters = {
             "hitSplits": [],
             "extraEffects": {
               "Debuff": {
-                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+                "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
               }
             }
           }
@@ -28199,7 +28199,7 @@ let characters = {
           "Weakness Break State": {
             "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions."
           },
-          "Action Delayed": {
+          "Delay Action": {
             "desc": "Increases the target's waiting interval before the next action."
           }
         }
@@ -28918,7 +28918,7 @@ let characters = {
         ],
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+            "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
           }
         }
       },
@@ -31104,7 +31104,7 @@ let characters = {
             "desc": "Causes the target being hit to take extra DMG, which is not considered an attack."
           },
           "True DMG": {
-            "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
+            "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as launching 1 attack."
           }
         }
       },
@@ -34011,7 +34011,7 @@ let characters = {
         ],
         "extraEffects": {
           "True DMG": {
-            "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
+            "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as launching 1 attack."
           }
         },
         "eidoAbility": "Phainon_Phainon_Eidolon6"
@@ -34585,7 +34585,7 @@ let characters = {
             "hitSplits": [],
             "extraEffects": {
               "Debuff": {
-                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+                "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
               },
               "Scourge": {
                 "desc": "Khaslana's exclusive charge with an upper limit of 7. Will be retained even before transforming."
@@ -35025,7 +35025,7 @@ let characters = {
                 "desc": "Khaslana's exclusive charge with an upper limit of 7. Will be retained even before transforming."
               },
               "Buff": {
-                "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+                "desc": "All status effects that provide beneficial combat buffs, can be dispelled unless stated otherwise."
               },
               "Crowd Control debuff": {
                 "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet, Grudge Ablaze."
@@ -36061,7 +36061,7 @@ let characters = {
                 "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
               },
               "Debuff": {
-                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+                "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
               },
               "Continuous Effect": {
                 "desc": "Includes buffs, debuffs, and other effects."
@@ -36262,7 +36262,7 @@ let characters = {
         ],
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+            "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
           }
         }
       },
@@ -39217,7 +39217,7 @@ let characters = {
             "hitSplits": [],
             "extraEffects": {
               "Debuff": {
-                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+                "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
               },
               "Downed State": {
                 "desc": "An ally will be incapacitated once their HP is reduced to 0."
@@ -39469,10 +39469,10 @@ let characters = {
         ],
         "extraEffects": {
           "Buff": {
-            "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+            "desc": "All status effects that provide beneficial combat buffs, can be dispelled unless stated otherwise."
           },
           "True DMG": {
-            "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
+            "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as launching 1 attack."
           }
         }
       },
@@ -39800,7 +39800,7 @@ let characters = {
             "hitSplits": [],
             "extraEffects": {
               "True DMG": {
-                "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
+                "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as launching 1 attack."
               },
               "Downed State": {
                 "desc": "An ally will be incapacitated once their HP is reduced to 0."
@@ -40167,7 +40167,7 @@ let characters = {
             "hitSplits": [],
             "extraEffects": {
               "Debuff": {
-                "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+                "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
               }
             }
           }
@@ -40373,7 +40373,7 @@ let characters = {
             "hitSplits": [],
             "extraEffects": {
               "Buff": {
-                "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+                "desc": "All status effects that provide beneficial combat buffs, can be dispelled unless stated otherwise."
               },
               "Chrysos Heir": {
                 "desc": "Cyrene, Tribbie, Cerydra, Evernight, Dan Heng • Permansor Terrae, Hysilens, Hyacine, Phainon, Anaxa, Aglaea, Mydei, Castorice, Cipher, Trailblazer (Remembrance)."
@@ -45079,7 +45079,7 @@ let characters = {
         ],
         "extraEffects": {
           "Buff": {
-            "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+            "desc": "All status effects that provide beneficial combat buffs, can be dispelled unless stated otherwise."
           },
           "Extra Turn": {
             "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
@@ -45365,7 +45365,7 @@ let characters = {
                 "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
               },
               "Buff": {
-                "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified."
+                "desc": "All status effects that provide beneficial combat buffs, can be dispelled unless stated otherwise."
               }
             }
           }
@@ -45801,7 +45801,7 @@ let characters = {
                 "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
               },
               "True DMG": {
-                "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
+                "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as launching 1 attack."
               },
               "Punchline": {
                 "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
@@ -46411,7 +46411,7 @@ let characters = {
           0.15
         ],
         "extraEffects": {
-          "Action Delayed": {
+          "Delay Action": {
             "desc": "Increases the target's waiting interval before the next action."
           }
         }
@@ -47259,7 +47259,7 @@ let characters = {
         ],
         "extraEffects": {
           "Debuff": {
-            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled."
+            "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
           }
         }
       },
@@ -47411,7 +47411,7 @@ let characters = {
         "id": "151002",
         "name": "The Colors We Never Strike",
         "rank": 2,
-        "desc": "The cap of Himeko • Nova's Assist Skill uses increases to 2, and the DMG dealt by Ultimate and Assist Skill becomes 130% of their original DMG. During the \"Navigator's Semaphore\" state, at the start of each turn , additionally recovers 1 use of Assist Skill immediately. When a non-Trailblaze Companions character uses Assist Skill, the Trace \"Hark! The Express's Pulse Roars\" now also grants them 1 extra turn.",
+        "desc": "The cap of Himeko • Nova's Assist Skill uses increases to 2, and the DMG dealt by Ultimate and Assist Skill becomes 130% of their original DMG. During the \"Navigator's Semaphore\" state, at the start of each turn, additionally recovers 1 use of Assist Skill immediately. When a non-Trailblaze Companions character uses Assist Skill, the Trace \"Hark! The Express's Pulse Roars\" now also grants them 1 extra turn.",
         "icon": "icon/skill/1510_rank2.png",
         "paramsEido": [
           1.3
@@ -47472,7 +47472,7 @@ let characters = {
             "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
           },
           "Source Energy": {
-            "desc": "Charge exclusive to the Starblazer, maximum 3 points."
+            "desc": "Charge exclusive to the Starblazer."
           },
           "Assist Skill": {
             "desc": "An extra ability that can be granted to an ally target. Using an Assist Skill will also consume the current action turn."
@@ -47873,7 +47873,7 @@ let characters = {
             "hitSplits": [],
             "extraEffects": {
               "Source Energy": {
-                "desc": "Charge exclusive to the Starblazer, maximum 3 points."
+                "desc": "Charge exclusive to the Starblazer."
               }
             }
           },
@@ -48085,7 +48085,7 @@ let characters = {
             "hitSplits": [],
             "extraEffects": {
               "Source Energy": {
-                "desc": "Charge exclusive to the Starblazer, maximum 3 points."
+                "desc": "Charge exclusive to the Starblazer."
               }
             }
           }
@@ -48219,7 +48219,7 @@ let characters = {
             "hitSplits": [],
             "extraEffects": {
               "Source Energy": {
-                "desc": "Charge exclusive to the Starblazer, maximum 3 points."
+                "desc": "Charge exclusive to the Starblazer."
               }
             }
           }
@@ -49093,7 +49093,7 @@ let characters = {
         ],
         "extraEffects": {
           "Source Energy": {
-            "desc": "Charge exclusive to the Starblazer, maximum 3 points."
+            "desc": "Charge exclusive to the Starblazer."
           }
         }
       },
@@ -49733,7 +49733,7 @@ let characters = {
           0.3
         ],
         "extraEffects": {
-          "Action Delayed": {
+          "Delay Action": {
             "desc": "Increases the target's waiting interval before the next action."
           }
         }
@@ -50467,7 +50467,7 @@ let characters = {
             ],
             "hitSplits": [],
             "extraEffects": {
-              "Action Delayed": {
+              "Delay Action": {
                 "desc": "Increases the target's waiting interval before the next action."
               }
             }
@@ -50647,7 +50647,7 @@ let characters = {
                 "desc": "Reduces the target's waiting interval before the next action."
               },
               "True DMG": {
-                "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
+                "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as launching 1 attack."
               }
             }
           }
@@ -50924,7 +50924,7 @@ let characters = {
         ],
         "extraEffects": {
           "True DMG": {
-            "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack."
+            "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as launching 1 attack."
           }
         }
       },

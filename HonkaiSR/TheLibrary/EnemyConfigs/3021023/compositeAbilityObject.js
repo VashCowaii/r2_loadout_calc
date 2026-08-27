@@ -51,8 +51,12 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__1125306110\">Enemy_Argenti_DamageUP_FateRin</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__1125306110\">Enemy_Argenti_DamageUP_FateRin</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "stackType": "Replace",
+          "description": "Each stack increases the DMG dealt by %DynamicTargetName by<span class=\"descriptionNumberColor\">MDF_ShowValue1</span>.",
+          "type": "Buff",
+          "effectName": "DMG Boost",
+          "statusName": "DMG Boost",
           "addStacksPerTrigger": 1,
           "execute": [
             {
@@ -64,7 +68,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifierName": "<a class=\"gModGreen\" id=\"1125306110\">Enemy_Argenti_DamageUP_FateRin</a>",
+                  "modifierName": "<a class=\"gModGreen\" id=\"1125306110\">Enemy_Argenti_DamageUP_FateRin</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
                   "modifierNameUpdate": "<a class=\"gModGreen\" id=\"-957742074\">Enemy_Argenti_DamageUP</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                 },
                 {
@@ -481,7 +485,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"1125306110\">Enemy_Argenti_DamageUP_FateRin</a>",
+              "modifier": "<a class=\"gModGreen\" id=\"1125306110\">Enemy_Argenti_DamageUP_FateRin</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
                 "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
                 "displayLines": "{[SkillP01[3]]}",
@@ -517,7 +521,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"1125306110\">Enemy_Argenti_DamageUP_FateRin</a>",
+              "modifier": "<a class=\"gModGreen\" id=\"1125306110\">Enemy_Argenti_DamageUP_FateRin</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
               "duration": {
                 "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
                 "displayLines": "{[SkillP01[3]]}",

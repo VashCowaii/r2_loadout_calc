@@ -1085,7 +1085,7 @@ const compositeAbilityObject = {
                                                 "target": "{{Modifier Holder}}"
                                               },
                                               "advanceType": "Set",
-                                              "multiAdd": "UnusedUnderThisBase_8637"
+                                              "multiAdd": "UnusedUnderThisBase_8732"
                                             },
                                             {
                                               "name": "Add Events/Bonuses",
@@ -1095,11 +1095,11 @@ const compositeAbilityObject = {
                                               },
                                               "modifier": "<a class=\"gModGreen\" id=\"-849878014\">Monster_W1_Mecha04_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Speedy Recovery</span>]",
                                               "duration": {
-                                                "operator": "Variables[0] (UnusedUnderThisBase_8635) || RETURN",
-                                                "displayLines": "UnusedUnderThisBase_8635",
+                                                "operator": "Variables[0] (UnusedUnderThisBase_8730) || RETURN",
+                                                "displayLines": "UnusedUnderThisBase_8730",
                                                 "constants": [],
                                                 "variables": [
-                                                  "UnusedUnderThisBase_8635"
+                                                  "UnusedUnderThisBase_8730"
                                                 ]
                                               }
                                             }
@@ -1112,7 +1112,7 @@ const compositeAbilityObject = {
                                                 "target": "{{Modifier Holder}}"
                                               },
                                               "advanceType": "Set",
-                                              "multiAdd": "UnusedUnderThisBase_8649"
+                                              "multiAdd": "UnusedUnderThisBase_8744"
                                             },
                                             {
                                               "name": "Add Events/Bonuses",
@@ -1122,11 +1122,11 @@ const compositeAbilityObject = {
                                               },
                                               "modifier": "<a class=\"gModGreen\" id=\"-849878014\">Monster_W1_Mecha04_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Speedy Recovery</span>]",
                                               "duration": {
-                                                "operator": "Variables[0] (UnusedUnderThisBase_8648) || RETURN",
-                                                "displayLines": "UnusedUnderThisBase_8648",
+                                                "operator": "Variables[0] (UnusedUnderThisBase_8743) || RETURN",
+                                                "displayLines": "UnusedUnderThisBase_8743",
                                                 "constants": [],
                                                 "variables": [
-                                                  "UnusedUnderThisBase_8648"
+                                                  "UnusedUnderThisBase_8743"
                                                 ]
                                               }
                                             }
@@ -1631,7 +1631,7 @@ const compositeAbilityObject = {
                                                             "target": "{{Modifier Holder}}"
                                                           },
                                                           "advanceType": "Set",
-                                                          "multiAdd": "UnusedUnderThisBase_8637"
+                                                          "multiAdd": "UnusedUnderThisBase_8732"
                                                         },
                                                         {
                                                           "name": "Add Events/Bonuses",
@@ -1641,11 +1641,11 @@ const compositeAbilityObject = {
                                                           },
                                                           "modifier": "<a class=\"gModGreen\" id=\"-849878014\">Monster_W1_Mecha04_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Speedy Recovery</span>]",
                                                           "duration": {
-                                                            "operator": "Variables[0] (UnusedUnderThisBase_8635) || RETURN",
-                                                            "displayLines": "UnusedUnderThisBase_8635",
+                                                            "operator": "Variables[0] (UnusedUnderThisBase_8730) || RETURN",
+                                                            "displayLines": "UnusedUnderThisBase_8730",
                                                             "constants": [],
                                                             "variables": [
-                                                              "UnusedUnderThisBase_8635"
+                                                              "UnusedUnderThisBase_8730"
                                                             ]
                                                           }
                                                         }
@@ -1658,7 +1658,7 @@ const compositeAbilityObject = {
                                                             "target": "{{Modifier Holder}}"
                                                           },
                                                           "advanceType": "Set",
-                                                          "multiAdd": "UnusedUnderThisBase_8649"
+                                                          "multiAdd": "UnusedUnderThisBase_8744"
                                                         },
                                                         {
                                                           "name": "Add Events/Bonuses",
@@ -1668,11 +1668,11 @@ const compositeAbilityObject = {
                                                           },
                                                           "modifier": "<a class=\"gModGreen\" id=\"-849878014\">Monster_W1_Mecha04_RL_Enhance_Dormancy</a>[<span class=\"descriptionNumberColor\">Speedy Recovery</span>]",
                                                           "duration": {
-                                                            "operator": "Variables[0] (UnusedUnderThisBase_8648) || RETURN",
-                                                            "displayLines": "UnusedUnderThisBase_8648",
+                                                            "operator": "Variables[0] (UnusedUnderThisBase_8743) || RETURN",
+                                                            "displayLines": "UnusedUnderThisBase_8743",
                                                             "constants": [],
                                                             "variables": [
-                                                              "UnusedUnderThisBase_8648"
+                                                              "UnusedUnderThisBase_8743"
                                                             ]
                                                           }
                                                         }

@@ -310,6 +310,208 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1848929834\">Modifier_FantasticStory_BaseAbility_2210_Plus5AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Riddle Fanatic</span>]",
+      "stackType": "ReplaceByCaster",
+      "description": "For each enemy target hit after using an attack, additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2215_ADF_3</span> Grit Value for allies.",
+      "type": "Buff",
+      "statusName": "Grit Mechanics: Riddle Fanatic"
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-604973302\">Modifier_FantasticStory_BaseAbility_2210_plus5_sub</a>",
+      "stackType": "ReplaceByCaster",
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Stack Target Stat Value",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Modifier Holder}}"
+              },
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;",
+              "value": {
+                "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2215_ADF_1) || RETURN",
+                "displayLines": "DV_FantasticStory_PlusAbility_2215_ADF_1",
+                "constants": [],
+                "variables": [
+                  "DV_FantasticStory_PlusAbility_2215_ADF_1"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__461666561\">Modifier_FantasticStory_BaseAbility_2210_Plus5AddOn_Servant</a>[<span class=\"descriptionNumberColor\">Riddle Fanatic</span>]",
+      "stackType": "ReplaceByCaster",
+      "modifierFlags": [
+        "KeepOnDeathrattle"
+      ],
+      "description": "After using an attack, gains <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2215_ADF_2</span> Punchline. During Surging Grit, DMG dealt increases by <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2215_ADF_1</span>.",
+      "type": "Buff",
+      "statusName": "Riddle Fanatic",
+      "execute": [
+        {
+          "eventTrigger": "Attack DMG End [Owner]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-812002117\">Modifier_FantasticStory_BaseAbility_2210_aura</a>",
+                    "invertCondition": true
+                  }
+                ]
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable with Attack Targets",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "variableName": "DV_TargetCount"
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "DV_FantasticStory_BaseAbility_CountSum",
+                  "value": {
+                    "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || Variables[1] (DV_FantasticStory_PlusAbility_2215_ADF_3) || Variables[2] (DV_TargetCount) || MUL || ADD || RETURN",
+                    "displayLines": "(DV_FantasticStory_BaseAbility_CountSum + (DV_FantasticStory_PlusAbility_2215_ADF_3 * DV_TargetCount))",
+                    "constants": [],
+                    "variables": [
+                      "DV_FantasticStory_BaseAbility_CountSum",
+                      "DV_FantasticStory_PlusAbility_2215_ADF_3",
+                      "DV_TargetCount"
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "DV_FantasticStory_BaseAbility_CountSum",
+                    "compareType": ">=",
+                    "value2": {
+                      "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
+                      "displayLines": "DV_EnterFeverValue",
+                      "constants": [],
+                      "variables": [
+                        "DV_EnterFeverValue"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Update Surging Grit[PF]",
+                      "current": 100,
+                      "max": 100,
+                      "delta": {
+                        "operator": "Variables[0] (DV_TargetCount) || Variables[1] (DV_FantasticStory_PlusAbility_2215_ADF_3) || MUL || RETURN",
+                        "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2215_ADF_3)",
+                        "constants": [],
+                        "variables": [
+                          "DV_TargetCount",
+                          "DV_FantasticStory_PlusAbility_2215_ADF_3"
+                        ]
+                      },
+                      "type": "Special",
+                      "phaseType": "P1"
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Update Surging Grit[PF]",
+                      "current": {
+                        "operator": "Variables[0] (DV_FantasticStory_BaseAbility_CountSum) || RETURN",
+                        "displayLines": "DV_FantasticStory_BaseAbility_CountSum",
+                        "constants": [],
+                        "variables": [
+                          "DV_FantasticStory_BaseAbility_CountSum"
+                        ]
+                      },
+                      "max": {
+                        "operator": "Variables[0] (DV_EnterFeverValue) || RETURN",
+                        "displayLines": "DV_EnterFeverValue",
+                        "constants": [],
+                        "variables": [
+                          "DV_EnterFeverValue"
+                        ]
+                      },
+                      "delta": {
+                        "operator": "Variables[0] (DV_TargetCount) || Variables[1] (DV_FantasticStory_PlusAbility_2215_ADF_3) || MUL || RETURN",
+                        "displayLines": "(DV_TargetCount * DV_FantasticStory_PlusAbility_2215_ADF_3)",
+                        "constants": [],
+                        "variables": [
+                          "DV_TargetCount",
+                          "DV_FantasticStory_PlusAbility_2215_ADF_3"
+                        ]
+                      },
+                      "type": "Special"
+                    }
+                  ]
+                },
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "DV_TargetCount",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "name": "Adjust Team Punchline Value",
+              "value": {
+                "operator": "Variables[0] (DV_FantasticStory_PlusAbility_2215_ADF_2) || RETURN",
+                "displayLines": "DV_FantasticStory_PlusAbility_2215_ADF_2",
+                "constants": [],
+                "variables": [
+                  "DV_FantasticStory_PlusAbility_2215_ADF_2"
+                ]
+              },
+              "adjustment": "Add"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__2006717051\">Modifier_FantasticStory_BaseAbility_2210_Plus5AddOn</a>",
+      "stackType": "ReplaceByCaster",
+      "subModList": [
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[getMemosprite]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"461666561\">Modifier_FantasticStory_BaseAbility_2210_Plus5AddOn_Servant</a>[<span class=\"descriptionNumberColor\">Riddle Fanatic</span>]",
+          "haloStatus": true
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[getMemosprite]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1848929834\">Modifier_FantasticStory_BaseAbility_2210_Plus5AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Riddle Fanatic</span>]",
+          "haloStatus": true
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__202641087\">Modifier_FantasticStory_BaseAbility_2210_Plus4AddOn_ForShow</a>[<span class=\"descriptionNumberColor\">Grit Mechanics: Improvisation</span>]",
       "stackType": "ReplaceByCaster",
       "description": "Every time a DoT is received, additionally accumulates <span class=\"descriptionNumberColor\">DV_FantasticStory_PlusAbility_2214_ADF_2</span> Grit Value for allies.",
@@ -1493,6 +1695,21 @@ const configAbility = {
           "conditions": {
             "name": "Compare: Variable",
             "value1": "DV_FantasticStory_PlusAbility_2214",
+            "compareType": "=",
+            "value2": 1
+          }
+        },
+        {
+          "name": "Add Sub-Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Player Team All(with Unselectable)V2}}.[[getMemosprite]]"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-604973302\">Modifier_FantasticStory_BaseAbility_2210_plus5_sub</a>",
+          "haloStatus": true,
+          "conditions": {
+            "name": "Compare: Variable",
+            "value1": "DV_FantasticStory_PlusAbility_2215",
             "compareType": "=",
             "value2": 1
           }

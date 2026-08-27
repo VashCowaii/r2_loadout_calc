@@ -41,11 +41,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2514,
-        2515
+        2557,
+        2558
       ],
       "abilityOrder": [
-        2461
+        2504
       ]
     },
     "406201001": {
@@ -72,14 +72,14 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2514,
-        2515
+        2557,
+        2558
       ],
       "abilityOrder": [
-        2461
+        2504
       ],
       "overrideParams": {
-        "2514": [
+        "2557": [
           [
             2,
             0.5
@@ -118,11 +118,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2514,
-        2515
+        2557,
+        2558
       ],
       "abilityOrder": [
-        2461
+        2504
       ]
     },
     "406201003": {
@@ -149,11 +149,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2514,
-        2515
+        2557,
+        2558
       ],
       "abilityOrder": [
-        2461
+        2504
       ]
     },
     "406201004": {
@@ -180,11 +180,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2514,
-        2515
+        2557,
+        2558
       ],
       "abilityOrder": [
-        2461
+        2504
       ]
     },
     "406201005": {
@@ -211,11 +211,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2514,
-        2515
+        2557,
+        2558
       ],
       "abilityOrder": [
-        2461
+        2504
       ]
     },
     "406201006": {
@@ -242,11 +242,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2514,
-        2515
+        2557,
+        2558
       ],
       "abilityOrder": [
-        2461
+        2504
       ]
     },
     "406201007": {
@@ -273,14 +273,14 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2514,
-        2515
+        2557,
+        2558
       ],
       "abilityOrder": [
-        2461
+        2504
       ],
       "overrideParams": {
-        "2514": [
+        "2557": [
           [
             1,
             0.8
@@ -319,14 +319,14 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2514,
-        2515
+        2557,
+        2558
       ],
       "abilityOrder": [
-        2461
+        2504
       ],
       "overrideParams": {
-        "2514": [
+        "2557": [
           [
             1,
             0.8
@@ -365,14 +365,14 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2514,
-        2515
+        2557,
+        2558
       ],
       "abilityOrder": [
-        2461
+        2504
       ],
       "overrideParams": {
-        "2514": [
+        "2557": [
           [
             1,
             0.8
@@ -411,14 +411,14 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2514,
-        2515
+        2557,
+        2558
       ],
       "abilityOrder": [
-        2461
+        2504
       ],
       "overrideParams": {
-        "2514": [
+        "2557": [
           [
             1,
             0.8
@@ -434,7 +434,7 @@ let enemyData = {
       }
     },
     "406201011": {
-      "name": "Avenger Squad: Pheasant",
+      "name": "Avenger Squadron: Pheasant",
       "scaleElite": 1,
       "stArray": [
         2.222716,
@@ -457,14 +457,14 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2514,
-        2515
+        2557,
+        2558
       ],
       "abilityOrder": [
-        2461
+        2504
       ],
       "overrideParams": {
-        "2514": [
+        "2557": [
           [
             0.75,
             0.5

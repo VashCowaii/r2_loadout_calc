@@ -27,7 +27,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"1125306110\">Enemy_Argenti_DamageUP_FateRin</a>",
+          "modifier": "<a class=\"gModGreen\" id=\"1125306110\">Enemy_Argenti_DamageUP_FateRin</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "duration": {
             "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
             "displayLines": "{[SkillP01[3]]}",
@@ -63,7 +63,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"1125306110\">Enemy_Argenti_DamageUP_FateRin</a>",
+          "modifier": "<a class=\"gModGreen\" id=\"1125306110\">Enemy_Argenti_DamageUP_FateRin</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]",
           "duration": {
             "operator": "Variables[0] ({[SkillP01[3]]}) || RETURN",
             "displayLines": "{[SkillP01[3]]}",

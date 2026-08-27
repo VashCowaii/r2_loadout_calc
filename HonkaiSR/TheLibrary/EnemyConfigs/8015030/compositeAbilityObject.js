@@ -329,11 +329,15 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__594195286\">Enemy_W5_AsatPramad_Debuff_05_Modifier</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__594195286\">Enemy_W5_AsatPramad_Debuff_05_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
           "stackType": "Replace",
           "modifierFlags": [
             "Shield"
           ],
+          "description": "Gains a Shield that can offset DMG.",
+          "type": "Buff",
+          "effectName": "Shield",
+          "statusName": "Shield",
           "execute": [
             {
               "eventTrigger": "When Modifier Destroyed/Removed",
@@ -2592,11 +2596,6 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Change Battle Arena",
-              "status": "Inactive",
-              "arenaID": 2054102
-            },
-            {
-              "name": "Change Battle Arena",
               "arenaID": 2054103
             }
           ]
@@ -4540,6 +4539,18 @@ const compositeAbilityObject = {
           "from": {
             "name": "Target Name",
             "target": "{{Player Team All}}.[[getMemosprite]]"
+          }
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target Count",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Player Team All}}.[[removeMemosprite]]"
+            },
+            "compareType": "=",
+            "value2": 1
           }
         },
         {

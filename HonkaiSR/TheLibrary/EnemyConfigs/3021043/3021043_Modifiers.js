@@ -10,13 +10,17 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__777357174\">Enemy_W2_Beast02_BlockDamage_FateRin</a>",
+      "for": "<a class=\"gModGreen\" id=\"mod__777357174\">Enemy_W2_Beast02_BlockDamage_FateRin</a>[<span class=\"descriptionNumberColor\">Barrier</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "BlockDamageExcludeDot",
         "MuteBreak"
       ],
       "useEntitySnapshot": true,
+      "description": "%DynamicTargetName nullifies all DMG received except DoTs. This state is dispelled after being attacked.",
+      "type": "Buff",
+      "effectName": "Barrier",
+      "statusName": "Barrier",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",

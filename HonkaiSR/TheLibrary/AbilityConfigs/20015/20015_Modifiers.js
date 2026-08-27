@@ -222,8 +222,18 @@ const configAbility = {
             {
               "name": "IF",
               "conditions": {
-                "name": "Modifier Was",
-                "modifier": "<a class=\"gModGreen\" id=\"1769824945\">Enemy_Monster_W4_DawnsEye_01_AimTarget</a>"
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Modifier Was",
+                    "modifier": "<a class=\"gModGreen\" id=\"1769824945\">Enemy_Monster_W4_DawnsEye_01_AimTarget</a>"
+                  },
+                  {
+                    "name": "Check Modifier Death Source",
+                    "source": "CasterDead",
+                    "invertCondition": true
+                  }
+                ]
               },
               "passed": [
                 {
@@ -441,7 +451,6 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "lifeCyclePhaseAllowed": "ModifierPhase1End",
       "modifierFlags": [
-        "RemoveWhenCasterDead",
         "CanBeAddedToServant",
         "CanListenServantCallback"
       ],
@@ -743,11 +752,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1789818614\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokSub</a>[<span class=\"descriptionNumberColor\">Rot</span>]",
                   "valuePerStack": {
                     "MDF_DamageValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_11555) || Variables[1] (BaseAttack) || MUL || RETURN",
-                      "displayLines": "(UnusedUnderThisBase_11555 * BaseAttack)",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11702) || Variables[1] (BaseAttack) || MUL || RETURN",
+                      "displayLines": "(UnusedUnderThisBase_11702 * BaseAttack)",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_11555",
+                        "UnusedUnderThisBase_11702",
                         "BaseAttack"
                       ]
                     }
@@ -796,8 +805,7 @@ const configAbility = {
       "for": "<a class=\"gModGreen\" id=\"mod__1789818614\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokSub</a>[<span class=\"descriptionNumberColor\">Rot</span>]",
       "stackType": "Replace",
       "modifierFlags": [
-        "CanBeAddedToServant",
-        "RemoveWhenCasterDead"
+        "CanBeAddedToServant"
       ],
       "useEntitySnapshot": true,
       "stackData": [
@@ -1388,11 +1396,11 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_DamagePercentage": {
-              "operator": "Variables[0] (UnusedUnderThisBase_11618) || RETURN",
-              "displayLines": "UnusedUnderThisBase_11618",
+              "operator": "Variables[0] (UnusedUnderThisBase_11765) || RETURN",
+              "displayLines": "UnusedUnderThisBase_11765",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_11618"
+                "UnusedUnderThisBase_11765"
               ]
             }
           }
@@ -1652,7 +1660,7 @@ const configAbility = {
                         "target": "{{Parameter Target}}"
                       },
                       "advanceType": "Set",
-                      "multiAdd": "UnusedUnderThisBase_11579"
+                      "multiAdd": "UnusedUnderThisBase_11726"
                     }
                   ]
                 },
@@ -1673,7 +1681,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               },
               "advanceType": "Set",
-              "multiAdd": "UnusedUnderThisBase_11619"
+              "multiAdd": "UnusedUnderThisBase_11766"
             },
             {
               "name": "Declare Custom Variable",

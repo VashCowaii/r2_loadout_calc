@@ -465,7 +465,8 @@ const configAbility = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      }
+                      },
+                      "bypassBreakMute": true
                     }
                   ]
                 }

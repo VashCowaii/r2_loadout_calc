@@ -1729,7 +1729,8 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  }
+                  },
+                  "bypassBreakMute": true
                 },
                 "Modifier Deletes Itself"
               ]
@@ -2804,7 +2805,8 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
-              }
+              },
+              "bypassBreakMute": true
             }
           ]
         },
@@ -2929,11 +2931,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-498176717\">Enemy_W3_Sam_RLBoss_AttackAddRatio</a>[<span class=\"descriptionNumberColor\">Thermocumulative Upgrade</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_10579) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_10579",
+                      "operator": "Variables[0] (UnusedUnderThisBase_10710) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_10710",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_10579"
+                        "UnusedUnderThisBase_10710"
                       ]
                     }
                   },
@@ -3429,11 +3431,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-498176717\">Enemy_W3_Sam_RLBoss_AttackAddRatio</a>[<span class=\"descriptionNumberColor\">Thermocumulative Upgrade</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_10579) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_10579",
+                      "operator": "Variables[0] (UnusedUnderThisBase_10710) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_10710",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_10579"
+                        "UnusedUnderThisBase_10710"
                       ]
                     }
                   },
@@ -3613,11 +3615,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-498176717\">Enemy_W3_Sam_RLBoss_AttackAddRatio</a>[<span class=\"descriptionNumberColor\">Thermocumulative Upgrade</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_10579) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_10579",
+                      "operator": "Variables[0] (UnusedUnderThisBase_10710) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_10710",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_10579"
+                        "UnusedUnderThisBase_10710"
                       ]
                     }
                   },
@@ -4008,11 +4010,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-498176717\">Enemy_W3_Sam_RLBoss_AttackAddRatio</a>[<span class=\"descriptionNumberColor\">Thermocumulative Upgrade</span>]",
                   "valuePerStack": {
                     "MDF_PropertyValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_10579) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_10579",
+                      "operator": "Variables[0] (UnusedUnderThisBase_10710) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_10710",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_10579"
+                        "UnusedUnderThisBase_10710"
                       ]
                     }
                   },

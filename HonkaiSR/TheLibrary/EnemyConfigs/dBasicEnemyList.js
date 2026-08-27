@@ -5137,6 +5137,34 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
+      "202201017": {
+        "weak": [
+          "Fire",
+          "Ice",
+          "Quantum"
+        ]
+      },
+      "202201018": {
+        "weak": [
+          "Fire",
+          "Ice",
+          "Quantum"
+        ]
+      },
+      "202201019": {
+        "weak": [
+          "Fire",
+          "Ice",
+          "Quantum"
+        ]
+      },
+      "202201020": {
+        "weak": [
+          "Fire",
+          "Ice",
+          "Quantum"
+        ]
+      },
       "hasReader": true
     },
     "groupName": "Mara-Struck Soldier"
@@ -5460,6 +5488,34 @@ let basicEnemyList = {
           "Wind"
         ]
       },
+      "202206015": {
+        "weak": [
+          "Physical",
+          "Ice",
+          "Wind"
+        ]
+      },
+      "202206016": {
+        "weak": [
+          "Physical",
+          "Ice",
+          "Wind"
+        ]
+      },
+      "202206017": {
+        "weak": [
+          "Physical",
+          "Ice",
+          "Wind"
+        ]
+      },
+      "202206018": {
+        "weak": [
+          "Physical",
+          "Ice",
+          "Wind"
+        ]
+      },
       "hasReader": true
     },
     "groupName": "Disciples of Sanctus Medicus: Ballistarius"
@@ -5705,6 +5761,40 @@ let basicEnemyList = {
       },
       "hasReader": true,
       "baseName": "Disciples of Sanctus Medicus: Shape Shifter (Bug)"
+    },
+    "2023012": {
+      "2023012": {
+        "weak": [
+          "Physical",
+          "Fire"
+        ]
+      },
+      "202301201": {
+        "weak": [
+          "Physical",
+          "Fire"
+        ]
+      },
+      "202301202": {
+        "weak": [
+          "Physical",
+          "Fire"
+        ]
+      },
+      "202301203": {
+        "weak": [
+          "Physical",
+          "Fire"
+        ]
+      },
+      "202301204": {
+        "weak": [
+          "Physical",
+          "Fire"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Celestial Cherub"
     },
     "groupName": "Disciples of Sanctus Medicus: Shape Shifter"
   },
@@ -6023,6 +6113,40 @@ let basicEnemyList = {
       "hasReader": true,
       "baseName": "The Ascended (Bug)"
     },
+    "2023032": {
+      "2023032": {
+        "weak": [
+          "Ice",
+          "Quantum"
+        ]
+      },
+      "202303201": {
+        "weak": [
+          "Ice",
+          "Quantum"
+        ]
+      },
+      "202303202": {
+        "weak": [
+          "Ice",
+          "Quantum"
+        ]
+      },
+      "202303203": {
+        "weak": [
+          "Ice",
+          "Quantum"
+        ]
+      },
+      "202303204": {
+        "weak": [
+          "Ice",
+          "Quantum"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Celestial Maiden"
+    },
     "groupName": "The Ascended"
   },
   "2024010": {
@@ -6230,6 +6354,51 @@ let basicEnemyList = {
       "phases": 3,
       "hasReader": true,
       "baseName": "Abundant Ebon Deer (Complete)"
+    },
+    "2024016": {
+      "2024016": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Ice",
+          "Quantum"
+        ]
+      },
+      "202401601": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Ice",
+          "Quantum"
+        ]
+      },
+      "202401602": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Ice",
+          "Quantum"
+        ]
+      },
+      "202401603": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Ice",
+          "Quantum"
+        ]
+      },
+      "202401604": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Ice",
+          "Quantum"
+        ]
+      },
+      "phases": 2,
+      "hasReader": false,
+      "baseName": "Unwaning Ageless Immortal"
     },
     "groupName": "Abundant Ebon Deer"
   },
@@ -10954,6 +11123,7 @@ let basicEnemyList = {
   "4032060": {
     "4032060": {
       "4032060": {},
+      "403206001": {},
       "hasReader": true
     },
     "4032061": {
@@ -10966,6 +11136,7 @@ let basicEnemyList = {
   "4032070": {
     "4032070": {
       "4032070": {},
+      "403207001": {},
       "hasReader": true
     },
     "4032071": {
@@ -11295,6 +11466,13 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
+      "403501001": {
+        "weak": [
+          "Ice",
+          "Thunder",
+          "Quantum"
+        ]
+      },
       "phases": 3,
       "hasReader": true
     },
@@ -11315,6 +11493,13 @@ let basicEnemyList = {
   "4035020": {
     "4035020": {
       "4035020": {
+        "weak": [
+          "Ice",
+          "Thunder",
+          "Quantum"
+        ]
+      },
+      "403502001": {
         "weak": [
           "Ice",
           "Thunder",
@@ -11614,7 +11799,7 @@ let basicEnemyList = {
         ]
       },
       "406201011": {
-        "name": "Avenger Squad: Pheasant",
+        "name": "Avenger Squadron: Pheasant",
         "weak": [
           "Physical",
           "Fire"
@@ -11672,7 +11857,7 @@ let basicEnemyList = {
         ]
       },
       "hasReader": true,
-      "baseName": "Avenger Squad: Canine"
+      "baseName": "Avenger Squadron: Canine"
     },
     "groupName": "Ichor Memosprite: Canine"
   },
@@ -11749,7 +11934,7 @@ let basicEnemyList = {
         ]
       },
       "hasReader": true,
-      "baseName": "Avenger Squad: Winged Serpent"
+      "baseName": "Avenger Squadron: Winged Serpent"
     },
     "groupName": "Ichor Memosprite: Winged Serpent"
   },
@@ -12806,6 +12991,17 @@ let basicEnemyList = {
       },
       "hasReader": true
     },
+    "5023013": {
+      "5023013": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Joy Ascendant (Bug)"
+    },
     "groupName": "Joy Ascendant"
   },
   "5023020": {
@@ -12865,6 +13061,17 @@ let basicEnemyList = {
       "hasReader": true,
       "baseName": "God-Devourer Offspring"
     },
+    "5023022": {
+      "5023022": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "God-Devourer Offspring (Bug)"
+    },
     "groupName": "God-Devourer Offspring"
   },
   "5024010": {
@@ -12914,6 +13121,29 @@ let basicEnemyList = {
       },
       "phases": 3,
       "hasReader": true,
+      "baseName": "Paramount Bliss Inverted: Illwish Archlotus"
+    },
+    "5024013": {
+      "5024013": {
+        "weak": [
+          "Physical",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "phases": 3,
+      "hasReader": false,
+      "baseName": "Paramount Bliss Inverted: Illwish Archlotus (Complete)"
+    },
+    "5024014": {
+      "5024014": {
+        "weak": [
+          "Physical",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
       "baseName": "Paramount Bliss Inverted: Illwish Archlotus"
     },
     "groupName": "Paramount Bliss Inverted: Illwish Archlotus"
@@ -16867,6 +17097,24 @@ let basicEnemyList = {
     },
     "groupName": "Grunt: Security Personnel"
   },
+  "8032040": {
+    "8032040": {
+      "8032040": {
+        "weak": [
+          "Wind",
+          "Quantum"
+        ]
+      },
+      "803204001": {
+        "weak": [
+          "Wind",
+          "Quantum"
+        ]
+      },
+      "hasReader": false
+    },
+    "groupName": "Astropolis Sentinel"
+  },
   "8033010": {
     "8033010": {
       "8033010": {
@@ -17041,6 +17289,26 @@ let basicEnemyList = {
       "baseName": "Senior Staff: Team Leader"
     },
     "groupName": "Senior Staff: Team Leader"
+  },
+  "8033020": {
+    "8033020": {
+      "8033020": {
+        "weak": [
+          "Fire",
+          "Wind",
+          "Quantum"
+        ]
+      },
+      "803302001": {
+        "weak": [
+          "Fire",
+          "Wind",
+          "Quantum"
+        ]
+      },
+      "hasReader": false
+    },
+    "groupName": "Lighthouse"
   },
   "8034010": {
     "8034010": {
@@ -17840,6 +18108,45 @@ let basicEnemyList = {
       "hasReader": true,
       "baseName": "Twig of Wintry Wind"
     },
+    "2022072": {
+      "2022072": {
+        "weak": [
+          "Ice",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "202207201": {
+        "weak": [
+          "Ice",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "202207202": {
+        "weak": [
+          "Ice",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "202207203": {
+        "weak": [
+          "Ice",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "202207204": {
+        "weak": [
+          "Ice",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Twig of Wintry Wind"
+    },
     "2022080": {
       "2022080": {
         "weak": [
@@ -17904,6 +18211,40 @@ let basicEnemyList = {
       "hasReader": true,
       "baseName": "Twig of Marple Leaf"
     },
+    "2022082": {
+      "2022082": {
+        "weak": [
+          "Fire",
+          "Quantum"
+        ]
+      },
+      "202208201": {
+        "weak": [
+          "Fire",
+          "Quantum"
+        ]
+      },
+      "202208202": {
+        "weak": [
+          "Fire",
+          "Quantum"
+        ]
+      },
+      "202208203": {
+        "weak": [
+          "Fire",
+          "Quantum"
+        ]
+      },
+      "202208204": {
+        "weak": [
+          "Fire",
+          "Quantum"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Twig of Marple Leaf"
+    },
     "2022090": {
       "2022090": {
         "weak": [
@@ -17957,6 +18298,40 @@ let basicEnemyList = {
       "hasReader": true,
       "baseName": "Twig of Glorious Blooms"
     },
+    "2022092": {
+      "2022092": {
+        "weak": [
+          "Ice",
+          "Imaginary"
+        ]
+      },
+      "202209201": {
+        "weak": [
+          "Ice",
+          "Imaginary"
+        ]
+      },
+      "202209202": {
+        "weak": [
+          "Ice",
+          "Imaginary"
+        ]
+      },
+      "202209203": {
+        "weak": [
+          "Ice",
+          "Imaginary"
+        ]
+      },
+      "202209204": {
+        "weak": [
+          "Ice",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Twig of Glorious Blooms"
+    },
     "2022100": {
       "2022100": {
         "weak": [
@@ -18006,6 +18381,45 @@ let basicEnemyList = {
         ]
       },
       "hasReader": true,
+      "baseName": "Twig of Lavish Fruits"
+    },
+    "2022102": {
+      "2022102": {
+        "weak": [
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "202210201": {
+        "weak": [
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "202210202": {
+        "weak": [
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "202210203": {
+        "weak": [
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "202210204": {
+        "weak": [
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
       "baseName": "Twig of Lavish Fruits"
     },
     "2032040": {
@@ -19685,6 +20099,13 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "502201001": {
+        "weak": [
+          "Fire",
+          "Ice",
+          "Imaginary"
+        ]
+      },
       "hasReader": true,
       "baseName": "Illwish Lotus"
     },
@@ -19734,6 +20155,28 @@ let basicEnemyList = {
       },
       "hasReader": true,
       "baseName": "Joy Ascendant: Finale"
+    },
+    "5023014": {
+      "5023014": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Joy Ascendant: Prelude (Bug)"
+    },
+    "5023015": {
+      "5023015": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "hasReader": false,
+      "baseName": "Joy Ascendant: Finale (Bug)"
     },
     "8002058": {
       "8002058": {

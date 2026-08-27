@@ -44,6 +44,18 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Player Team All}}.[[removeMemosprite]]"
         },
+        "compareType": "=",
+        "value2": 1
+      }
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "Compare: Target Count",
+        "target": {
+          "name": "Target Name",
+          "target": "{{Player Team All}}.[[removeMemosprite]]"
+        },
         "compareType": "<=",
         "value2": 2
       }

@@ -24,7 +24,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Player Team All}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"777357174\">Enemy_W2_Beast02_BlockDamage_FateRin</a>",
+          "modifier": "<a class=\"gModGreen\" id=\"777357174\">Enemy_W2_Beast02_BlockDamage_FateRin</a>[<span class=\"descriptionNumberColor\">Barrier</span>]",
           "duration": -1
         }
       ],
@@ -35,7 +35,7 @@ const configAbility = {
             "name": "Add Target by Unique Identifier",
             "identifier": "Activity_FateRin_MasterAvatar"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"777357174\">Enemy_W2_Beast02_BlockDamage_FateRin</a>",
+          "modifier": "<a class=\"gModGreen\" id=\"777357174\">Enemy_W2_Beast02_BlockDamage_FateRin</a>[<span class=\"descriptionNumberColor\">Barrier</span>]",
           "duration": -1
         }
       ]

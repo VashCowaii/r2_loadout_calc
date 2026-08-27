@@ -10557,11 +10557,11 @@ const compositeAbilityObject = {
                   ]
                 },
                 "MDF_EnergyRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_13983) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_13983",
+                  "operator": "Variables[0] (UnusedUnderThisBase_14223) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_14223",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_13983"
+                    "UnusedUnderThisBase_14223"
                   ]
                 },
                 "MDF_TargetCount": {

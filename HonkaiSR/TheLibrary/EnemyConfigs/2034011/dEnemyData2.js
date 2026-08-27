@@ -48,15 +48,15 @@ let enemyData = {
         "STAT_Entangle": 0.75
       },
       "abilities": [
-        888,
-        889,
-        890,
-        891,
-        892,
-        893,
-        894,
-        895,
-        896
+        931,
+        932,
+        933,
+        934,
+        935,
+        936,
+        937,
+        938,
+        939
       ],
       "enemyTag": [
         "MonsterType_W2_Lycan"
@@ -107,15 +107,15 @@ let enemyData = {
         "STAT_Entangle": 0.75
       },
       "abilities": [
-        888,
-        889,
-        890,
-        891,
-        892,
-        893,
-        894,
-        895,
-        896
+        931,
+        932,
+        933,
+        934,
+        935,
+        936,
+        937,
+        938,
+        939
       ],
       "enemyTag": [
         "MonsterType_W2_Lycan"

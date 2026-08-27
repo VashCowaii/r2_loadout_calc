@@ -768,11 +768,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1112261788\">Enemy_W4_PolluxPart_IF_Reflex</a>[<span class=\"descriptionNumberColor\">Corrosive Retaliation</span>]",
                   "valuePerStack": {
                     "MDF_ReflexDamageValue": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12648) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12648",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12807) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12807",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_12648"
+                        "UnusedUnderThisBase_12807"
                       ]
                     }
                   }
@@ -873,7 +873,8 @@ const compositeAbilityObject = {
                           },
                           "forceReduction": true,
                           "canDelay": true,
-                          "ToughnessDMGType": "Quantum"
+                          "ToughnessDMGType": "Quantum",
+                          "bypassBreakMute": true
                         }
                       ]
                     }
@@ -925,7 +926,8 @@ const compositeAbilityObject = {
                       },
                       "forceReduction": true,
                       "canDelay": true,
-                      "ToughnessDMGType": "Quantum"
+                      "ToughnessDMGType": "Quantum",
+                      "bypassBreakMute": true
                     }
                   ]
                 }
@@ -1475,19 +1477,19 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1512844653\">Enemy_W4_Pollux_IF_Strengthen_Shield</a>",
                   "valuePerStack": {
                     "MDF_ShieldPercentage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12662) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12662",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12821) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12821",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_12662"
+                        "UnusedUnderThisBase_12821"
                       ]
                     },
                     "MDF_ShieldAttack_HealRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_12645) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_12645",
+                      "operator": "Variables[0] (UnusedUnderThisBase_12804) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_12804",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_12645"
+                        "UnusedUnderThisBase_12804"
                       ]
                     }
                   }
@@ -2084,7 +2086,8 @@ const compositeAbilityObject = {
                       },
                       "forceReduction": true,
                       "canDelay": true,
-                      "ToughnessDMGType": "Quantum"
+                      "ToughnessDMGType": "Quantum",
+                      "bypassBreakMute": true
                     }
                   ]
                 },
@@ -2915,12 +2918,12 @@ const compositeAbilityObject = {
                       },
                       "variableName": "_EnergyValue",
                       "value": {
-                        "operator": "Variables[0] (_HPChangeRatio) || Variables[1] (UnusedUnderThisBase_12661) || MUL || RETURN",
-                        "displayLines": "(_HPChangeRatio * UnusedUnderThisBase_12661)",
+                        "operator": "Variables[0] (_HPChangeRatio) || Variables[1] (UnusedUnderThisBase_12820) || MUL || RETURN",
+                        "displayLines": "(_HPChangeRatio * UnusedUnderThisBase_12820)",
                         "constants": [],
                         "variables": [
                           "_HPChangeRatio",
-                          "UnusedUnderThisBase_12661"
+                          "UnusedUnderThisBase_12820"
                         ]
                       },
                       "max": 1

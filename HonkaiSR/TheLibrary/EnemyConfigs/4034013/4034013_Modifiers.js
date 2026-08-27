@@ -1440,7 +1440,8 @@ const configAbility = {
                   },
                   "forceReduction": true,
                   "canDelay": true,
-                  "ToughnessDMGType": "Physical"
+                  "ToughnessDMGType": "Physical",
+                  "bypassBreakMute": true
                 }
               ]
             }
@@ -2275,7 +2276,7 @@ const configAbility = {
     {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-557758203\">Enemy_W4_FireProwler_IF_Limit</a>[<span class=\"descriptionNumberColor\">Shackle Shatter</span>]",
-      "description": "Alternates between using \"Dying Sobs\" and \"But Suffering is Essential.\" \"Dying Sobs\" summons \"Long-Shattered Vessel\" and enters Charging state, and \"But Suffering is Essential\" deals Powerful Attacks. \"Calamity Power\" stacks increases the Hits Per Action of Powerful Attacks. After destroying \"Long-Shattered Vessel,\" Toughness and \"Calamity Power\" stacks can be reduced. In the second phase, \"Silent Sorrow\" and \"Cry Not for the Discarded\" will be used, and \"Calamity Power\" stacks increases.",
+      "description": "Alternates between using \"Dying Sobs\" and \"But Suffering is Essential.\" \"Dying Sobs\" summons \"Long-Shattered Vessel\" and enters Charging state, and \"But Suffering is Essential\" deals Powerful Attacks. \"Calamity Power\" stacks increases the Hits Per Action of Powerful Attacks. After destroying \"Long-Shattered Vessel,\" Toughness and \"Calamity Power\" stacks can be reduced. In the second phase, \"Silent Sorrow\" and \"Cry Not for the Discarded\" will be used, and \"Calamity Power\" stack increases.",
       "type": "Other",
       "effectName": "Shackle Shatter",
       "statusName": "Shackle Shatter",
@@ -2562,7 +2563,8 @@ const configAbility = {
                       },
                       "forceReduction": true,
                       "canDelay": true,
-                      "ToughnessDMGType": "Physical"
+                      "ToughnessDMGType": "Physical",
+                      "bypassBreakMute": true
                     }
                   ]
                 }

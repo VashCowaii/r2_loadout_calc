@@ -44,9 +44,9 @@ let enemyData = {
         "STAT_CTRL": 1
       },
       "abilities": [
-        1755,
-        1756,
-        1757
+        1798,
+        1799,
+        1800
       ],
       "enemyTag": [
         "MonsterType_W4_BossSummon"

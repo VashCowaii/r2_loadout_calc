@@ -42,15 +42,15 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2891,
-        2892,
-        2893,
-        2894
+        2968,
+        2969,
+        2970,
+        2971
       ],
       "abilityOrder": [
-        2891,
-        2892,
-        2893
+        2968,
+        2969,
+        2970
       ],
       "enemyTag": [
         "Monster_Minion04"

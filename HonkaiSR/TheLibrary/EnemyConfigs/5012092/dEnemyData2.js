@@ -41,12 +41,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2617,
-        2618,
-        2619
+        2660,
+        2661,
+        2662
       ],
       "abilityOrder": [
-        2618
+        2661
       ]
     },
     "501209201": {
@@ -73,15 +73,15 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2617,
-        2618,
-        2619
+        2660,
+        2661,
+        2662
       ],
       "abilityOrder": [
-        2618
+        2661
       ],
       "overrideParams": {
-        "2618": [
+        "2661": [
           [
             1,
             1.5
@@ -94,7 +94,7 @@ let enemyData = {
           "-",
           "-"
         ],
-        "2619": [
+        "2662": [
           [
             0
           ],

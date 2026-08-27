@@ -1,5 +1,5 @@
 let enemyData = {
-  "name": "Avenger Squad: Winged Serpent",
+  "name": "Avenger Squadron: Winged Serpent",
   "image": 4063012,
   "bar": 1,
   "bodyType": "LargeMonster",
@@ -42,14 +42,14 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        2534,
-        2535,
-        2536
+        2577,
+        2578,
+        2579
       ],
       "abilityOrder": [
-        2534,
-        2535,
-        2536
+        2577,
+        2578,
+        2579
       ]
     }
   }

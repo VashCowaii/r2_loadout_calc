@@ -1212,11 +1212,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "BattleEvent_Elation_00_BaseSpeed",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_3302) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_3302",
+                        "operator": "Variables[0] (UnusedUnderThisBase_3389) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_3389",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_3302"
+                          "UnusedUnderThisBase_3389"
                         ]
                       }
                     },
@@ -1295,11 +1295,11 @@ const compositeAbilityObject = {
                                   "name": "Define Custom Variable",
                                   "variableName": "MDF_SpeedCalTemp2",
                                   "value": {
-                                    "operator": "Variables[0] (UnusedUnderThisBase_3300) || RETURN",
-                                    "displayLines": "UnusedUnderThisBase_3300",
+                                    "operator": "Variables[0] (UnusedUnderThisBase_3387) || RETURN",
+                                    "displayLines": "UnusedUnderThisBase_3387",
                                     "constants": [],
                                     "variables": [
-                                      "UnusedUnderThisBase_3300"
+                                      "UnusedUnderThisBase_3387"
                                     ]
                                   }
                                 }
@@ -1313,11 +1313,11 @@ const compositeAbilityObject = {
                                   "name": "Define Custom Variable",
                                   "variableName": "MDF_SpeedCalTemp2",
                                   "value": {
-                                    "operator": "Variables[0] (UnusedUnderThisBase_3303) || RETURN",
-                                    "displayLines": "UnusedUnderThisBase_3303",
+                                    "operator": "Variables[0] (UnusedUnderThisBase_3390) || RETURN",
+                                    "displayLines": "UnusedUnderThisBase_3390",
                                     "constants": [],
                                     "variables": [
-                                      "UnusedUnderThisBase_3303"
+                                      "UnusedUnderThisBase_3390"
                                     ]
                                   }
                                 }
@@ -1331,11 +1331,11 @@ const compositeAbilityObject = {
                                   "name": "Define Custom Variable",
                                   "variableName": "MDF_SpeedCalTemp2",
                                   "value": {
-                                    "operator": "Variables[0] (UnusedUnderThisBase_3298) || RETURN",
-                                    "displayLines": "UnusedUnderThisBase_3298",
+                                    "operator": "Variables[0] (UnusedUnderThisBase_3385) || RETURN",
+                                    "displayLines": "UnusedUnderThisBase_3385",
                                     "constants": [],
                                     "variables": [
-                                      "UnusedUnderThisBase_3298"
+                                      "UnusedUnderThisBase_3385"
                                     ]
                                   }
                                 }
@@ -1349,11 +1349,11 @@ const compositeAbilityObject = {
                                   "name": "Define Custom Variable",
                                   "variableName": "MDF_SpeedCalTemp2",
                                   "value": {
-                                    "operator": "Variables[0] (UnusedUnderThisBase_3294) || RETURN",
-                                    "displayLines": "UnusedUnderThisBase_3294",
+                                    "operator": "Variables[0] (UnusedUnderThisBase_3381) || RETURN",
+                                    "displayLines": "UnusedUnderThisBase_3381",
                                     "constants": [],
                                     "variables": [
-                                      "UnusedUnderThisBase_3294"
+                                      "UnusedUnderThisBase_3381"
                                     ]
                                   }
                                 }
@@ -1367,11 +1367,11 @@ const compositeAbilityObject = {
                                   "name": "Define Custom Variable",
                                   "variableName": "MDF_SpeedCalTemp2",
                                   "value": {
-                                    "operator": "Variables[0] (UnusedUnderThisBase_3295) || RETURN",
-                                    "displayLines": "UnusedUnderThisBase_3295",
+                                    "operator": "Variables[0] (UnusedUnderThisBase_3382) || RETURN",
+                                    "displayLines": "UnusedUnderThisBase_3382",
                                     "constants": [],
                                     "variables": [
-                                      "UnusedUnderThisBase_3295"
+                                      "UnusedUnderThisBase_3382"
                                     ]
                                   }
                                 }
@@ -2193,19 +2193,19 @@ const compositeAbilityObject = {
               "name": "Random Event",
               "odds": [
                 {
-                  "operator": "Variables[0] (UnusedUnderThisBase_3301) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_3301",
+                  "operator": "Variables[0] (UnusedUnderThisBase_3388) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_3388",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_3301"
+                    "UnusedUnderThisBase_3388"
                   ]
                 },
                 {
-                  "operator": "Variables[0] (UnusedUnderThisBase_3296) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_3296",
+                  "operator": "Variables[0] (UnusedUnderThisBase_3383) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_3383",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_3296"
+                    "UnusedUnderThisBase_3383"
                   ]
                 }
               ],
@@ -2241,11 +2241,11 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_3297) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_3297",
+                        "operator": "Variables[0] (UnusedUnderThisBase_3384) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_3384",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_3297"
+                          "UnusedUnderThisBase_3384"
                         ]
                       },
                       "isFixed": "* ERR"
@@ -2269,11 +2269,11 @@ const compositeAbilityObject = {
                       "AttackScaling": {
                         "DamageType": "Quantum",
                         "DamageElation": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_3299) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_3299",
+                          "operator": "Variables[0] (UnusedUnderThisBase_3386) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_3386",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_3299"
+                            "UnusedUnderThisBase_3386"
                           ]
                         },
                         "dmgFormula": "Elation Scaling",

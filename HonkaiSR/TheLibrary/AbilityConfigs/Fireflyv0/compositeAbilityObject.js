@@ -2427,16 +2427,7 @@ const compositeAbilityObject = {
         {
           "name": "Change Character Model",
           "passed": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "Overworld Logic State",
-                "type": "MazeSkill"
-              },
-              "passed": [
-                "Deleted bullshit"
-              ]
-            }
+            "Deleted bullshit"
           ]
         }
       ],

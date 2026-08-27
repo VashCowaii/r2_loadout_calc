@@ -1084,6 +1084,18 @@ let battleEvents = {
     "type": "Assist",
     "isBattleEvent": true
   },
+  "11512": {
+    "internalID": 11512,
+    "name": 11512,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "BattleEvent_1512.png",
+    "team": "Player Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
   "16007": {
     "internalID": 16007,
     "name": 16007,
@@ -7853,6 +7865,18 @@ let battleEvents = {
     "type": "Assist",
     "isBattleEvent": true
   },
+  "44023": {
+    "internalID": 44023,
+    "name": 44023,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "BattleEvent_RogueFormula01.png",
+    "team": "Neutral Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
   "45001": {
     "internalID": 45001,
     "name": 45001,
@@ -13479,6 +13503,344 @@ let battleEvents = {
     "type": "Assist",
     "isBattleEvent": true
   },
+  "60048": {
+    "internalID": 60048,
+    "name": 60048,
+    "energyMax": null,
+    "params": [],
+    "skills": {
+      "Ultimate": {
+        "Heroes, Ever Ablaze": {
+          "variant1": {
+            "skillID": 6004801,
+            "trigger": "Skill03",
+            "name": "Heroes, Ever Ablaze",
+            "type": "Single Target",
+            "slot": "Ultimate",
+            "desc": "Ally targets using Ultimate can regenerate 1 Energy, deal massive Ice DMG to one enemy, and greatly reduce \"Amphorean Hatred\"!",
+            "energyCost": 4,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.03,
+                0.2,
+                0.15
+              ]
+            },
+            "skillEffect": "AoEAttack",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              120,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "null": {
+          "variant1": {
+            "skillID": 6004802,
+            "trigger": "SkillP01",
+            "name": null,
+            "type": "Talent",
+            "slot": "Talent",
+            "desc": "",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": []
+            },
+            "skillEffect": "Passive",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6004801,
+        "trigger": "Skill03",
+        "name": "Heroes, Ever Ablaze",
+        "type": "Single Target",
+        "slot": "Ultimate",
+        "desc": "Ally targets using Ultimate can regenerate 1 Energy, deal massive Ice DMG to one enemy, and greatly reduce \"Amphorean Hatred\"!",
+        "energyCost": 4,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0.03,
+            0.2,
+            0.15
+          ]
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          120,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6004802,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
+    "icon": "BattleEvent_60030.png",
+    "team": "Player Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "60049": {
+    "internalID": 60049,
+    "name": 60049,
+    "energyMax": null,
+    "params": [],
+    "skills": {
+      "Ultimate": {
+        "Epics, as We've Written": {
+          "variant1": {
+            "skillID": 6004901,
+            "trigger": "Skill03",
+            "name": "Epics, as We've Written",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Ally targets using Ultimate can regenerate 1 Energy, deal massive True DMG to all enemies, and greatly reduce \"Amphorean Hatred\"!",
+            "energyCost": 4,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.012,
+                0.2,
+                0.06
+              ]
+            },
+            "skillEffect": "AoEAttack",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              120,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Talent": {
+        "null": {
+          "variant1": {
+            "skillID": 6004902,
+            "trigger": "SkillP01",
+            "name": null,
+            "type": "Talent",
+            "slot": "Talent",
+            "desc": "",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": []
+            },
+            "skillEffect": "Passive",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6004901,
+        "trigger": "Skill03",
+        "name": "Epics, as We've Written",
+        "type": "AoE",
+        "slot": "Ultimate",
+        "desc": "Ally targets using Ultimate can regenerate 1 Energy, deal massive True DMG to all enemies, and greatly reduce \"Amphorean Hatred\"!",
+        "energyCost": 4,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": [
+            0.012,
+            0.2,
+            0.06
+          ]
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          120,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6004902,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Talent",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
+    "icon": "BattleEvent_60031.png",
+    "team": "Player Team",
+    "type": "Assist",
+    "isBattleEvent": true
+  },
+  "60050": {
+    "internalID": 60050,
+    "name": 60050,
+    "energyMax": null,
+    "params": [],
+    "skills": {
+      "Ultimate": {
+        "Cyrene's Support ♪": {
+          "variant1": {
+            "skillID": 6003201,
+            "trigger": "Skill03",
+            "name": "Cyrene's Support ♪",
+            "type": "Support",
+            "slot": "Ultimate",
+            "desc": "When \"Cyrene's Support ♪\" takes action, select an ally character to activate their Ultimate and dispel the \"Action Lock\" state.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": []
+            },
+            "skillEffect": "AoEAttack",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6003201,
+        "trigger": "Skill03",
+        "name": "Cyrene's Support ♪",
+        "type": "Support",
+        "slot": "Ultimate",
+        "desc": "When \"Cyrene's Support ♪\" takes action, select an ally character to activate their Ultimate and dispel the \"Action Lock\" state.",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
+    "icon": "BattleEvent_60033.png",
+    "team": "Neutral Team",
+    "type": "Entity Selection",
+    "isBattleEvent": true
+  },
   "61001": {
     "internalID": 61001,
     "name": 61001,
@@ -14764,6 +15126,77 @@ let battleEvents = {
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
+    "isBattleEvent": true
+  },
+  "61018": {
+    "internalID": 61018,
+    "name": 61018,
+    "energyMax": null,
+    "params": [
+      0.5
+    ],
+    "skills": {
+      "Path Resonance": {
+        "null": {
+          "variant1": {
+            "skillID": 6100901,
+            "trigger": "SkillP01",
+            "name": null,
+            "type": "Talent",
+            "slot": "Path Resonance",
+            "desc": "",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": []
+            },
+            "skillEffect": "Passive",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "baseTriggersObject": {
+      "SkillP01": {
+        "skillID": 6100901,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Path Resonance",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
+    "icon": "",
+    "team": "Neutral Team",
     "isBattleEvent": true
   },
   "62001": {
@@ -20452,9 +20885,7 @@ let battleEvents = {
         "toughnessReductionDisplayed": null,
         "skillPointCost": 0,
         "skillPointGain": 0,
-        "params": {
-          "1": []
-        },
+        "params": {},
         "skillEffect": "AoEAttack",
         "maxLevel": 1,
         "configAbilityList": null,
@@ -20794,9 +21225,7 @@ let battleEvents = {
         "toughnessReductionDisplayed": null,
         "skillPointCost": 0,
         "skillPointGain": 0,
-        "params": {
-          "1": []
-        },
+        "params": {},
         "skillEffect": "AoEAttack",
         "maxLevel": 1,
         "configAbilityList": null,
@@ -20920,9 +21349,7 @@ let battleEvents = {
         "toughnessReductionDisplayed": null,
         "skillPointCost": 0,
         "skillPointGain": 0,
-        "params": {
-          "1": []
-        },
+        "params": {},
         "skillEffect": "AoEAttack",
         "maxLevel": 1,
         "configAbilityList": null,

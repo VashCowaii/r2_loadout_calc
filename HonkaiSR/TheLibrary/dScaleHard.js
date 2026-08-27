@@ -10209,5 +10209,63 @@ let scaleHard = {
         5896
       ]
     }
+  },
+  "4501": {
+    "20": {
+      "attackScalar": 3.235554,
+      "defScalar": 1.904762,
+      "hpScalar": 3.025332,
+      "speedScalar": 1.1,
+      "toughnessScalar": 1,
+      "powerList": [
+        1016,
+        312,
+        788,
+        176
+      ]
+    },
+    "50": {
+      "attackScalar": 14.301951,
+      "defScalar": 3.333333,
+      "hpScalar": 22.140118,
+      "speedScalar": 1.1,
+      "toughnessScalar": 1,
+      "powerList": [
+        2728,
+        996,
+        2468,
+        3264
+      ]
+    },
+    "75": {
+      "attackScalar": 36,
+      "defScalar": 4.52381,
+      "hpScalar": 132.59991,
+      "speedScalar": 1.32,
+      "toughnessScalar": 1,
+      "ehr": 0.2,
+      "effectRES": 0.1,
+      "powerList": [
+        4472,
+        2204,
+        4120,
+        5432
+      ]
+    },
+    "100": {
+      "attackScalar": 40,
+      "defScalar": 5.714286,
+      "hpScalar": 460,
+      "speedScalar": 1.43,
+      "toughnessScalar": 1,
+      "ehr": 0.4,
+      "effectRES": 0.1,
+      "powerList": [
+        4632,
+        2648,
+        4252,
+        5896
+      ]
+    }
   }
 }

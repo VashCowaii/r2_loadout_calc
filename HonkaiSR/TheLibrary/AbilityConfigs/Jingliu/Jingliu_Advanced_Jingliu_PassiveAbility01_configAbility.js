@@ -29,7 +29,8 @@ const configAbility = {
       "on": {
         "name": "Target Name",
         "target": "{{Caster}}"
-      }
+      },
+      "isReset": false
     },
     {
       "name": "Read Variable Value",

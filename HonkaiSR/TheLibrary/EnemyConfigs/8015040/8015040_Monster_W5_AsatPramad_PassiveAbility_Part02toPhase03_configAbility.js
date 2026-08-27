@@ -82,11 +82,6 @@ const configAbility = {
       "passed": [
         {
           "name": "Change Battle Arena",
-          "status": "Inactive",
-          "arenaID": 2054102
-        },
-        {
-          "name": "Change Battle Arena",
           "arenaID": 2054103
         }
       ]
@@ -362,11 +357,11 @@ const configAbility = {
       "modifier": "<a class=\"gModGreen\" id=\"975723655\">Enemy_W5_AsatPramad_BESpeedUp</a>",
       "valuePerStack": {
         "MDF_SpeedAddedRatio": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13195) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13195",
+          "operator": "Variables[0] (UnusedUnderThisBase_13354) || RETURN",
+          "displayLines": "UnusedUnderThisBase_13354",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_13195"
+            "UnusedUnderThisBase_13354"
           ]
         }
       }

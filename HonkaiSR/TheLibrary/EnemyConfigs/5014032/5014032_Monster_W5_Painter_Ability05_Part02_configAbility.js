@@ -286,11 +286,11 @@ const configAbility = {
                     "name": "Compare: Variable",
                     "target": {
                       "name": "Target Name",
-                      "target": "{{All Team Members}}"
+                      "target": "{{Caster's Minions}}"
                     },
                     "value1": "TeamCharacterCount",
                     "compareType": "<=",
-                    "value2": 2
+                    "value2": 1
                   },
                   "passed": [
                     {
@@ -301,7 +301,8 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "team": "Enemy Team"
+                        "team": "Enemy Team",
+                        "location": "Right"
                       },
                       "passed": [
                         {
@@ -325,7 +326,48 @@ const configAbility = {
                                   "SummonList_ADF_1"
                                 ]
                               },
-                              "locationType": "BeforeCaster"
+                              "locationType": "AfterCaster"
+                            }
+                          ]
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Is Part Of Team Location",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "team": "Enemy Team",
+                            "location": "Left"
+                          },
+                          "passed": [
+                            {
+                              "name": "Create Enemies",
+                              "delayPercent": {
+                                "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
+                                "displayLines": "{[Skill05[1]]}",
+                                "constants": [],
+                                "variables": [
+                                  "{[Skill05[1]]}"
+                                ]
+                              },
+                              "enemyList": [
+                                {
+                                  "name": "Enemy Entry",
+                                  "enemyID": {
+                                    "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
+                                    "displayLines": "SummonList_ADF_1",
+                                    "constants": [],
+                                    "variables": [
+                                      "SummonList_ADF_1"
+                                    ]
+                                  },
+                                  "locationType": "BeforeCaster"
+                                }
+                              ]
                             }
                           ]
                         }
@@ -340,7 +382,7 @@ const configAbility = {
                           "target": "{{Caster}}"
                         },
                         "team": "Enemy Team",
-                        "location": "Max"
+                        "location": "Left"
                       },
                       "passed": [
                         {
@@ -364,7 +406,48 @@ const configAbility = {
                                   "SummonList_ADF_1"
                                 ]
                               },
-                              "locationType": "AfterCaster"
+                              "locationType": "BeforeCaster"
+                            }
+                          ]
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Is Part Of Team Location",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "team": "Enemy Team",
+                            "location": "Right"
+                          },
+                          "passed": [
+                            {
+                              "name": "Create Enemies",
+                              "delayPercent": {
+                                "operator": "Variables[0] ({[Skill05[0]]}) || RETURN",
+                                "displayLines": "{[Skill05[0]]}",
+                                "constants": [],
+                                "variables": [
+                                  "{[Skill05[0]]}"
+                                ]
+                              },
+                              "enemyList": [
+                                {
+                                  "name": "Enemy Entry",
+                                  "enemyID": {
+                                    "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
+                                    "displayLines": "SummonList_ADF_1",
+                                    "constants": [],
+                                    "variables": [
+                                      "SummonList_ADF_1"
+                                    ]
+                                  },
+                                  "locationType": "AfterCaster"
+                                }
+                              ]
                             }
                           ]
                         }

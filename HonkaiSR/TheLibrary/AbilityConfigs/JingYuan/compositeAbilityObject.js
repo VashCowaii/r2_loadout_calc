@@ -736,7 +736,7 @@ const compositeAbilityObject = {
                       "name": "Add Events/Bonuses",
                       "to": {
                         "name": "Target Name",
-                        "target": "{{Caster's Self-Made Battle-Events}}"
+                        "target": "{{Jing Yuan: Lightning Lord}}"
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
                       "valuePerStack": {
@@ -754,7 +754,7 @@ const compositeAbilityObject = {
                       "name": "Add Events/Bonuses",
                       "to": {
                         "name": "Target Name",
-                        "target": "{{Caster's Self-Made Battle-Events}}"
+                        "target": "{{Jing Yuan: Lightning Lord}}"
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-1762822846\">JingYuan_BattleEvent_SpeedUp</a>",
                       "stackLimit": {
@@ -1443,7 +1443,7 @@ const compositeAbilityObject = {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
-            "target": "{{Caster's Self-Made Battle-Events}}"
+            "target": "{{Jing Yuan: Lightning Lord}}"
           },
           "modifier": "<a class=\"gModGreen\" id=\"1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
           "valuePerStack": {
@@ -1461,7 +1461,7 @@ const compositeAbilityObject = {
           "name": "Remove Events/Bonuses",
           "to": {
             "name": "Target Name",
-            "target": "{{Caster's Self-Made Battle-Events}}"
+            "target": "{{Jing Yuan: Lightning Lord}}"
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1762822846\">JingYuan_BattleEvent_SpeedUp</a>"
         }
@@ -1621,7 +1621,7 @@ const compositeAbilityObject = {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
-            "target": "{{Caster's Self-Made Battle-Events}}"
+            "target": "{{Jing Yuan: Lightning Lord}}"
           },
           "modifier": "<a class=\"gModGreen\" id=\"1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
           "valuePerStack": {
@@ -1662,7 +1662,7 @@ const compositeAbilityObject = {
             "show": "Hide",
             "target": {
               "name": "Target Name",
-              "target": "{{Caster's Self-Made Battle-Events}}"
+              "target": "{{Jing Yuan: Lightning Lord}}"
             },
             "skillType": [
               "Ultimate"
@@ -1801,7 +1801,7 @@ const compositeAbilityObject = {
             "show": "Hide",
             "target": {
               "name": "Target Name",
-              "target": "{{Caster's Self-Made Battle-Events}}"
+              "target": "{{Jing Yuan: Lightning Lord}}"
             },
             "skillType": [
               "Skill"
@@ -2127,7 +2127,7 @@ const compositeAbilityObject = {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
-            "target": "{{Caster's Self-Made Battle-Events}}"
+            "target": "{{Jing Yuan: Lightning Lord}}"
           },
           "modifier": "<a class=\"gModGreen\" id=\"1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
           "valuePerStack": {
@@ -2145,7 +2145,7 @@ const compositeAbilityObject = {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
-            "target": "{{Caster's Self-Made Battle-Events}}"
+            "target": "{{Jing Yuan: Lightning Lord}}"
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1762822846\">JingYuan_BattleEvent_SpeedUp</a>",
           "stackLimit": {
@@ -2329,7 +2329,7 @@ const compositeAbilityObject = {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
-            "target": "{{Caster's Self-Made Battle-Events}}"
+            "target": "{{Jing Yuan: Lightning Lord}}"
           },
           "modifier": "<a class=\"gModGreen\" id=\"1141770667\">JingYuan_BattleEvent_ATKCountShowText</a>",
           "valuePerStack": {
@@ -2347,7 +2347,7 @@ const compositeAbilityObject = {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Name",
-            "target": "{{Caster's Self-Made Battle-Events}}"
+            "target": "{{Jing Yuan: Lightning Lord}}"
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1762822846\">JingYuan_BattleEvent_SpeedUp</a>",
           "stackLimit": {

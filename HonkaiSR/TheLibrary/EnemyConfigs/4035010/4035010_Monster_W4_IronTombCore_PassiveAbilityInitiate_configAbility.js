@@ -80,22 +80,55 @@ const configAbility = {
       },
       "passed": [
         {
-          "name": "Add Battle Event",
-          "eventID": 60030,
-          "assignOwner": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
+          "name": "IF",
+          "conditions": {
+            "name": "Check Boolean Value",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "value": "PeakBattle"
           },
-          "variables": null
-        },
-        {
-          "name": "Add Battle Event",
-          "eventID": 60032,
-          "assignOwner": {
-            "name": "Target Name",
-            "target": "{{Level Entity}}"
-          },
-          "variables": null
+          "passed": [
+            {
+              "name": "Add Battle Event",
+              "eventID": 60048,
+              "assignOwner": {
+                "name": "Target Name",
+                "target": "{{Level Entity}}"
+              },
+              "variables": null
+            },
+            {
+              "name": "Add Battle Event",
+              "eventID": 60050,
+              "assignOwner": {
+                "name": "Target Name",
+                "target": "{{Level Entity}}"
+              },
+              "variables": null
+            }
+          ],
+          "failed": [
+            {
+              "name": "Add Battle Event",
+              "eventID": 60030,
+              "assignOwner": {
+                "name": "Target Name",
+                "target": "{{Level Entity}}"
+              },
+              "variables": null
+            },
+            {
+              "name": "Add Battle Event",
+              "eventID": 60032,
+              "assignOwner": {
+                "name": "Target Name",
+                "target": "{{Level Entity}}"
+              },
+              "variables": null
+            }
+          ]
         }
       ]
     }

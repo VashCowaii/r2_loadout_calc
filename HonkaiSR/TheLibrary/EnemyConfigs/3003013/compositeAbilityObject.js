@@ -373,11 +373,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
                   "valuePerStack": {
                     "MDF_MaxCount": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_10216) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_10216",
+                      "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_10347",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_10216"
+                        "UnusedUnderThisBase_10347"
                       ]
                     },
                     "MDF_PartFlag": 0
@@ -460,14 +460,14 @@ const compositeAbilityObject = {
                             "value1": "Vibrate_Count",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_10216) || Constants[0] (3) || DIV || Constants[1] (2) || MUL || RETURN",
-                              "displayLines": "((UnusedUnderThisBase_10216 / 3) * 2)",
+                              "operator": "Variables[0] (UnusedUnderThisBase_10347) || Constants[0] (3) || DIV || Constants[1] (2) || MUL || RETURN",
+                              "displayLines": "((UnusedUnderThisBase_10347 / 3) * 2)",
                               "constants": [
                                 3,
                                 2
                               ],
                               "variables": [
-                                "UnusedUnderThisBase_10216"
+                                "UnusedUnderThisBase_10347"
                               ]
                             }
                           },
@@ -501,13 +501,13 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_10216) || Constants[0] (3) || DIV || RETURN",
-                                  "displayLines": "(UnusedUnderThisBase_10216 / 3)",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_10347) || Constants[0] (3) || DIV || RETURN",
+                                  "displayLines": "(UnusedUnderThisBase_10347 / 3)",
                                   "constants": [
                                     3
                                   ],
                                   "variables": [
-                                    "UnusedUnderThisBase_10216"
+                                    "UnusedUnderThisBase_10347"
                                   ]
                                 }
                               },
@@ -587,13 +587,13 @@ const compositeAbilityObject = {
                         "value1": "Vibrate_Count",
                         "compareType": ">=",
                         "value2": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_10218) || Constants[0] (1) || SUB || RETURN",
-                          "displayLines": "(UnusedUnderThisBase_10218 - 1)",
+                          "operator": "Variables[0] (UnusedUnderThisBase_10349) || Constants[0] (1) || SUB || RETURN",
+                          "displayLines": "(UnusedUnderThisBase_10349 - 1)",
                           "constants": [
                             1
                           ],
                           "variables": [
-                            "UnusedUnderThisBase_10218"
+                            "UnusedUnderThisBase_10349"
                           ]
                         }
                       },
@@ -778,11 +778,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
                   "valuePerStack": {
                     "MDF_MaxCount": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_10216) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_10216",
+                      "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_10347",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_10216"
+                        "UnusedUnderThisBase_10347"
                       ]
                     },
                     "MDF_PartFlag": 0
@@ -865,14 +865,14 @@ const compositeAbilityObject = {
                             "value1": "Vibrate_Count",
                             "compareType": ">=",
                             "value2": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_10216) || Constants[0] (3) || DIV || Constants[1] (2) || MUL || RETURN",
-                              "displayLines": "((UnusedUnderThisBase_10216 / 3) * 2)",
+                              "operator": "Variables[0] (UnusedUnderThisBase_10347) || Constants[0] (3) || DIV || Constants[1] (2) || MUL || RETURN",
+                              "displayLines": "((UnusedUnderThisBase_10347 / 3) * 2)",
                               "constants": [
                                 3,
                                 2
                               ],
                               "variables": [
-                                "UnusedUnderThisBase_10216"
+                                "UnusedUnderThisBase_10347"
                               ]
                             }
                           },
@@ -906,13 +906,13 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_10216) || Constants[0] (3) || DIV || RETURN",
-                                  "displayLines": "(UnusedUnderThisBase_10216 / 3)",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_10347) || Constants[0] (3) || DIV || RETURN",
+                                  "displayLines": "(UnusedUnderThisBase_10347 / 3)",
                                   "constants": [
                                     3
                                   ],
                                   "variables": [
-                                    "UnusedUnderThisBase_10216"
+                                    "UnusedUnderThisBase_10347"
                                   ]
                                 }
                               },
@@ -1011,11 +1011,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
                   "valuePerStack": {
                     "MDF_MaxCount": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_10216) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_10216",
+                      "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_10347",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_10216"
+                        "UnusedUnderThisBase_10347"
                       ]
                     },
                     "MDF_PartFlag": 0
@@ -1063,11 +1063,11 @@ const compositeAbilityObject = {
                           "context": "TargetEntity",
                           "value": 1,
                           "max": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_10216) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_10216",
+                            "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_10347",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_10216"
+                              "UnusedUnderThisBase_10347"
                             ]
                           }
                         },
@@ -1079,11 +1079,11 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_10216) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_10216",
+                            "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_10347",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_10216"
+                              "UnusedUnderThisBase_10347"
                             ]
                           },
                           "valuePerStack": {
@@ -1106,11 +1106,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
                           "valuePerStack": {
                             "MDF_MaxCount": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_10216) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_10216",
+                              "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_10347",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_10216"
+                                "UnusedUnderThisBase_10347"
                               ]
                             },
                             "MDF_PartFlag": 0
@@ -1130,13 +1130,13 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_10216) || Constants[0] (3) || DIV || RETURN",
-                                  "displayLines": "(UnusedUnderThisBase_10216 / 3)",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_10347) || Constants[0] (3) || DIV || RETURN",
+                                  "displayLines": "(UnusedUnderThisBase_10347 / 3)",
                                   "constants": [
                                     3
                                   ],
                                   "variables": [
-                                    "UnusedUnderThisBase_10216"
+                                    "UnusedUnderThisBase_10347"
                                   ]
                                 },
                                 "contextScope": "TargetEntity"
@@ -1186,14 +1186,14 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_10216) || Constants[0] (3) || DIV || Constants[1] (2) || MUL || RETURN",
-                                  "displayLines": "((UnusedUnderThisBase_10216 / 3) * 2)",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_10347) || Constants[0] (3) || DIV || Constants[1] (2) || MUL || RETURN",
+                                  "displayLines": "((UnusedUnderThisBase_10347 / 3) * 2)",
                                   "constants": [
                                     3,
                                     2
                                   ],
                                   "variables": [
-                                    "UnusedUnderThisBase_10216"
+                                    "UnusedUnderThisBase_10347"
                                   ]
                                 },
                                 "contextScope": "TargetEntity"
@@ -1243,11 +1243,11 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_10216) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_10216",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_10347",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_10216"
+                                    "UnusedUnderThisBase_10347"
                                   ]
                                 },
                                 "contextScope": "TargetEntity"
@@ -1294,11 +1294,11 @@ const compositeAbilityObject = {
                             "value1": "Vibrate_Count",
                             "compareType": "=",
                             "value2": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_10216) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_10216",
+                              "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_10347",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_10216"
+                                "UnusedUnderThisBase_10347"
                               ]
                             },
                             "contextScope": "TargetEntity"
@@ -1390,11 +1390,11 @@ const compositeAbilityObject = {
                               "context": "TargetEntity",
                               "value": 1,
                               "max": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_10218) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_10218",
+                                "operator": "Variables[0] (UnusedUnderThisBase_10349) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_10349",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_10218"
+                                  "UnusedUnderThisBase_10349"
                                 ]
                               }
                             },
@@ -1406,11 +1406,11 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_10218) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_10218",
+                                "operator": "Variables[0] (UnusedUnderThisBase_10349) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_10349",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_10218"
+                                  "UnusedUnderThisBase_10349"
                                 ]
                               },
                               "valuePerStack": {
@@ -1433,11 +1433,11 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
                               "valuePerStack": {
                                 "MDF_MaxCount": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_10218) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_10218",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_10349) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_10349",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_10218"
+                                    "UnusedUnderThisBase_10349"
                                   ]
                                 },
                                 "MDF_PartFlag": 1
@@ -1457,11 +1457,11 @@ const compositeAbilityObject = {
                                     "value1": "Vibrate_Count",
                                     "compareType": ">=",
                                     "value2": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_10218) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_10218",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_10349) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_10349",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_10218"
+                                        "UnusedUnderThisBase_10349"
                                       ]
                                     },
                                     "contextScope": "TargetEntity"
@@ -1498,11 +1498,11 @@ const compositeAbilityObject = {
                                     "value1": "Vibrate_Count",
                                     "compareType": "=",
                                     "value2": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_10218) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_10218",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_10349) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_10349",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_10218"
+                                        "UnusedUnderThisBase_10349"
                                       ]
                                     },
                                     "contextScope": "TargetEntity"
@@ -1625,11 +1625,11 @@ const compositeAbilityObject = {
                           "context": "TargetEntity",
                           "value": 1,
                           "max": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_10216) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_10216",
+                            "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_10347",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_10216"
+                              "UnusedUnderThisBase_10347"
                             ]
                           }
                         },
@@ -1641,11 +1641,11 @@ const compositeAbilityObject = {
                           },
                           "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]",
                           "stackLimit": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_10216) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_10216",
+                            "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_10347",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_10216"
+                              "UnusedUnderThisBase_10347"
                             ]
                           },
                           "valuePerStack": {
@@ -1668,11 +1668,11 @@ const compositeAbilityObject = {
                           "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
                           "valuePerStack": {
                             "MDF_MaxCount": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_10216) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_10216",
+                              "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_10347",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_10216"
+                                "UnusedUnderThisBase_10347"
                               ]
                             },
                             "MDF_PartFlag": 0
@@ -1692,13 +1692,13 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_10216) || Constants[0] (3) || DIV || RETURN",
-                                  "displayLines": "(UnusedUnderThisBase_10216 / 3)",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_10347) || Constants[0] (3) || DIV || RETURN",
+                                  "displayLines": "(UnusedUnderThisBase_10347 / 3)",
                                   "constants": [
                                     3
                                   ],
                                   "variables": [
-                                    "UnusedUnderThisBase_10216"
+                                    "UnusedUnderThisBase_10347"
                                   ]
                                 },
                                 "contextScope": "TargetEntity"
@@ -1748,14 +1748,14 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_10216) || Constants[0] (3) || DIV || Constants[1] (2) || MUL || RETURN",
-                                  "displayLines": "((UnusedUnderThisBase_10216 / 3) * 2)",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_10347) || Constants[0] (3) || DIV || Constants[1] (2) || MUL || RETURN",
+                                  "displayLines": "((UnusedUnderThisBase_10347 / 3) * 2)",
                                   "constants": [
                                     3,
                                     2
                                   ],
                                   "variables": [
-                                    "UnusedUnderThisBase_10216"
+                                    "UnusedUnderThisBase_10347"
                                   ]
                                 },
                                 "contextScope": "TargetEntity"
@@ -1805,11 +1805,11 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": ">=",
                                 "value2": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_10216) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_10216",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_10347",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_10216"
+                                    "UnusedUnderThisBase_10347"
                                   ]
                                 },
                                 "contextScope": "TargetEntity"
@@ -1856,11 +1856,11 @@ const compositeAbilityObject = {
                             "value1": "Vibrate_Count",
                             "compareType": "=",
                             "value2": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_10216) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_10216",
+                              "operator": "Variables[0] (UnusedUnderThisBase_10347) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_10347",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_10216"
+                                "UnusedUnderThisBase_10347"
                               ]
                             },
                             "contextScope": "TargetEntity"
@@ -1972,11 +1972,11 @@ const compositeAbilityObject = {
                                 "value1": "Vibrate_Count",
                                 "compareType": "=",
                                 "value2": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_10218) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_10218",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_10349) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_10349",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_10218"
+                                    "UnusedUnderThisBase_10349"
                                   ]
                                 },
                                 "contextScope": "TargetEntity"
@@ -1994,11 +1994,11 @@ const compositeAbilityObject = {
                               "context": "TargetEntity",
                               "value": 1,
                               "max": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_10218) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_10218",
+                                "operator": "Variables[0] (UnusedUnderThisBase_10349) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_10349",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_10218"
+                                  "UnusedUnderThisBase_10349"
                                 ]
                               }
                             },
@@ -2010,11 +2010,11 @@ const compositeAbilityObject = {
                               },
                               "modifier": "<a class=\"gModGreen\" id=\"308728299\">MModifier_Monster_W3_Dinosaur_AttackUpRatio</a>[<span class=\"descriptionNumberColor\">Stove Heating</span>]",
                               "stackLimit": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_10218) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_10218",
+                                "operator": "Variables[0] (UnusedUnderThisBase_10349) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_10349",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_10218"
+                                  "UnusedUnderThisBase_10349"
                                 ]
                               },
                               "valuePerStack": {
@@ -2037,11 +2037,11 @@ const compositeAbilityObject = {
                               "modifier": "<a class=\"gModGreen\" id=\"237937646\">MModifier_Monster_W3_Dinosaur_MonsterEnergyBar</a>",
                               "valuePerStack": {
                                 "MDF_MaxCount": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_10218) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_10218",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_10349) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_10349",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_10218"
+                                    "UnusedUnderThisBase_10349"
                                   ]
                                 },
                                 "MDF_PartFlag": 1
@@ -2061,11 +2061,11 @@ const compositeAbilityObject = {
                                     "value1": "Vibrate_Count",
                                     "compareType": ">=",
                                     "value2": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_10218) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_10218",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_10349) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_10349",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_10218"
+                                        "UnusedUnderThisBase_10349"
                                       ]
                                     },
                                     "contextScope": "TargetEntity"
@@ -2102,11 +2102,11 @@ const compositeAbilityObject = {
                                     "value1": "Vibrate_Count",
                                     "compareType": "=",
                                     "value2": {
-                                      "operator": "Variables[0] (UnusedUnderThisBase_10218) || RETURN",
-                                      "displayLines": "UnusedUnderThisBase_10218",
+                                      "operator": "Variables[0] (UnusedUnderThisBase_10349) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_10349",
                                       "constants": [],
                                       "variables": [
-                                        "UnusedUnderThisBase_10218"
+                                        "UnusedUnderThisBase_10349"
                                       ]
                                     },
                                     "contextScope": "TargetEntity"
@@ -2265,11 +2265,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1193792195\">MModifier_Monster_W3_Dinosaur_RLElite_SpeedUp</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]",
                       "valuePerStack": {
                         "MDF_PropertyValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_10213) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_10213",
+                          "operator": "Variables[0] (UnusedUnderThisBase_10344) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_10344",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_10213"
+                            "UnusedUnderThisBase_10344"
                           ]
                         }
                       }
@@ -4608,11 +4608,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1129261000\">MModifier_Monster_W3_Theater_RLBoss_AllDamageTypeAddedRatio</a>[<span class=\"descriptionNumberColor\">Oil to the Banabana</span>]",
               "valuePerStack": {
                 "MDF_PropertyValue": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_10344) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_10344",
+                  "operator": "Variables[0] (UnusedUnderThisBase_10475) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_10475",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_10344"
+                    "UnusedUnderThisBase_10475"
                   ]
                 }
               }

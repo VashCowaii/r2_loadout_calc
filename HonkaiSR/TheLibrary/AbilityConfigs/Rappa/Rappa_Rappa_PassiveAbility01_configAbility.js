@@ -65,11 +65,11 @@ const configAbility = {
           "name": "Define Custom Variable",
           "variableName": "_PassiveBreakCountBase",
           "value": {
-            "operator": "Variables[0] (UnusedUnderThisBase_6408) || Variables[1] (5) || ADD || RETURN",
-            "displayLines": "(UnusedUnderThisBase_6408 + 5)",
+            "operator": "Variables[0] (UnusedUnderThisBase_6495) || Variables[1] (5) || ADD || RETURN",
+            "displayLines": "(UnusedUnderThisBase_6495 + 5)",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_6408",
+              "UnusedUnderThisBase_6495",
               5
             ]
           }
@@ -93,11 +93,11 @@ const configAbility = {
           "name": "Define Custom Variable",
           "variableName": "_PassiveBreakCountBase",
           "value": {
-            "operator": "Variables[0] (UnusedUnderThisBase_6408) || RETURN",
-            "displayLines": "UnusedUnderThisBase_6408",
+            "operator": "Variables[0] (UnusedUnderThisBase_6495) || RETURN",
+            "displayLines": "UnusedUnderThisBase_6495",
             "constants": [],
             "variables": [
-              "UnusedUnderThisBase_6408"
+              "UnusedUnderThisBase_6495"
             ]
           }
         },

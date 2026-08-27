@@ -42,11 +42,42 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2794,
-        2795
+        2837,
+        2838
       ],
       "abilityOrder": [
-        2794
+        2837
+      ]
+    },
+    "502201001": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        0.555556,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Fire",
+        "Ice",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2
+      },
+      "abilities": [
+        2837,
+        2838
+      ],
+      "abilityOrder": [
+        2837
       ]
     }
   }

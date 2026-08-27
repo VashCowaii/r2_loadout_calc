@@ -18,7 +18,7 @@ const configAbility = {
           "name": "Target Name",
           "target": "{{Parameter Target}}"
         },
-        "modifier": "<a class=\"gModGreen\" id=\"-1045360944\">Monster_W4_PolluxPart_Shield_FateRin</a>",
+        "modifier": "<a class=\"gModGreen\" id=\"-1045360944\">Monster_W4_PolluxPart_Shield_FateRin</a>[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]",
         "invertCondition": true
       },
       "ifTargetFound": [
@@ -28,7 +28,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"-1045360944\">Monster_W4_PolluxPart_Shield_FateRin</a>",
+          "modifier": "<a class=\"gModGreen\" id=\"-1045360944\">Monster_W4_PolluxPart_Shield_FateRin</a>[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]",
           "duration": {
             "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
             "displayLines": "{[Skill04[1]]}",
@@ -54,7 +54,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"-1045360944\">Monster_W4_PolluxPart_Shield_FateRin</a>",
+              "modifier": "<a class=\"gModGreen\" id=\"-1045360944\">Monster_W4_PolluxPart_Shield_FateRin</a>[<span class=\"descriptionNumberColor\">Overdue Obituary</span>]",
               "duration": {
                 "operator": "Variables[0] ({[Skill04[1]]}) || RETURN",
                 "displayLines": "{[Skill04[1]]}",

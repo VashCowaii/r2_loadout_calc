@@ -261,7 +261,7 @@ const configAbility = {
           "name": "Dispel Debuffs",
           "target": {
             "name": "Target Name",
-            "target": "{{Player Team All}}"
+            "target": "{{Player Team All(with Unselectable)V2}}"
           },
           "toRemove": [
             "STAT_CTRL"

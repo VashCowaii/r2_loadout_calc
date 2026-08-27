@@ -258,7 +258,8 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{All Team Members}}"
-              }
+              },
+              "bypassBreakMute": true
             },
             {
               "name": "Define Custom Variable",
@@ -4966,7 +4967,8 @@ const configAbility = {
                   "ToughnessDMGType": {
                     "name": "Damage Type Source",
                     "sourceType": {}
-                  }
+                  },
+                  "bypassBreakMute": true
                 },
                 {
                   "name": "Remove Events/Bonuses",

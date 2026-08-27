@@ -994,11 +994,11 @@ const configAbility = {
                   "AttackScaling": {
                     "DamageType": "Quantum",
                     "Damage": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_13896) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_13896",
+                      "operator": "Variables[0] (UnusedUnderThisBase_14136) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_14136",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_13896"
+                        "UnusedUnderThisBase_14136"
                       ]
                     },
                     "Toughness": null,

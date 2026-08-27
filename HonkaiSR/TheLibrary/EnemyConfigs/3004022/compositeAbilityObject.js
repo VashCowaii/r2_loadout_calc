@@ -4243,11 +4243,11 @@ const compositeAbilityObject = {
                           "name": "Define Custom Variable",
                           "variableName": "MDF_Negative_Count_Max",
                           "value": {
-                            "operator": "Variables[0] (UnusedUnderThisBase_10924) || RETURN",
-                            "displayLines": "UnusedUnderThisBase_10924",
+                            "operator": "Variables[0] (UnusedUnderThisBase_11055) || RETURN",
+                            "displayLines": "UnusedUnderThisBase_11055",
                             "constants": [],
                             "variables": [
-                              "UnusedUnderThisBase_10924"
+                              "UnusedUnderThisBase_11055"
                             ]
                           }
                         }
@@ -4270,11 +4270,11 @@ const compositeAbilityObject = {
                               "name": "Define Custom Variable",
                               "variableName": "MDF_Negative_Count_Max",
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_10926) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_10926",
+                                "operator": "Variables[0] (UnusedUnderThisBase_11057) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_11057",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_10926"
+                                  "UnusedUnderThisBase_11057"
                                 ]
                               }
                             }
@@ -4297,11 +4297,11 @@ const compositeAbilityObject = {
                                   "name": "Define Custom Variable",
                                   "variableName": "MDF_Negative_Count_Max",
                                   "value": {
-                                    "operator": "Variables[0] (UnusedUnderThisBase_10918) || RETURN",
-                                    "displayLines": "UnusedUnderThisBase_10918",
+                                    "operator": "Variables[0] (UnusedUnderThisBase_11049) || RETURN",
+                                    "displayLines": "UnusedUnderThisBase_11049",
                                     "constants": [],
                                     "variables": [
-                                      "UnusedUnderThisBase_10918"
+                                      "UnusedUnderThisBase_11049"
                                     ]
                                   }
                                 }
@@ -4317,11 +4317,11 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_Negative_Count_Max",
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_10924) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_10924",
+                        "operator": "Variables[0] (UnusedUnderThisBase_11055) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_11055",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_10924"
+                          "UnusedUnderThisBase_11055"
                         ]
                       }
                     }
@@ -4419,13 +4419,13 @@ const compositeAbilityObject = {
                       "variableName": "MDF_Negative_Count",
                       "context": "ContextModifier",
                       "value": {
-                        "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_10925) || SUB || RETURN",
-                        "displayLines": "(0 - UnusedUnderThisBase_10925)",
+                        "operator": "Constants[0] (0) || Variables[0] (UnusedUnderThisBase_11056) || SUB || RETURN",
+                        "displayLines": "(0 - UnusedUnderThisBase_11056)",
                         "constants": [
                           0
                         ],
                         "variables": [
-                          "UnusedUnderThisBase_10925"
+                          "UnusedUnderThisBase_11056"
                         ]
                       },
                       "max": 100
@@ -6964,7 +6964,8 @@ const compositeAbilityObject = {
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
-                          }
+                          },
+                          "bypassBreakMute": true
                         }
                       ]
                     }

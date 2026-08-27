@@ -14,11 +14,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13192) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13192",
+          "operator": "Variables[0] (UnusedUnderThisBase_13351) || RETURN",
+          "displayLines": "UnusedUnderThisBase_13351",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_13192"
+            "UnusedUnderThisBase_13351"
           ]
         },
         "HitSplit": {
@@ -45,11 +45,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13192) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13192",
+          "operator": "Variables[0] (UnusedUnderThisBase_13351) || RETURN",
+          "displayLines": "UnusedUnderThisBase_13351",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_13192"
+            "UnusedUnderThisBase_13351"
           ]
         },
         "HitSplit": {
@@ -76,11 +76,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13192) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13192",
+          "operator": "Variables[0] (UnusedUnderThisBase_13351) || RETURN",
+          "displayLines": "UnusedUnderThisBase_13351",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_13192"
+            "UnusedUnderThisBase_13351"
           ]
         },
         "HitSplit": {
@@ -107,11 +107,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Quantum",
         "Damage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13192) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13192",
+          "operator": "Variables[0] (UnusedUnderThisBase_13351) || RETURN",
+          "displayLines": "UnusedUnderThisBase_13351",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_13192"
+            "UnusedUnderThisBase_13351"
           ]
         },
         "HitSplit": {
@@ -138,11 +138,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Fire",
         "Damage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13192) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13192",
+          "operator": "Variables[0] (UnusedUnderThisBase_13351) || RETURN",
+          "displayLines": "UnusedUnderThisBase_13351",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_13192"
+            "UnusedUnderThisBase_13351"
           ]
         },
         "HitSplit": {
@@ -169,11 +169,11 @@ const configAbility = {
       "AttackScaling": {
         "DamageType": "Imaginary",
         "Damage": {
-          "operator": "Variables[0] (UnusedUnderThisBase_13192) || RETURN",
-          "displayLines": "UnusedUnderThisBase_13192",
+          "operator": "Variables[0] (UnusedUnderThisBase_13351) || RETURN",
+          "displayLines": "UnusedUnderThisBase_13351",
           "constants": [],
           "variables": [
-            "UnusedUnderThisBase_13192"
+            "UnusedUnderThisBase_13351"
           ]
         },
         "HitSplit": {

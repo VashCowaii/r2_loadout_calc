@@ -41,7 +41,8 @@ const configAbility = {
       },
       "forceReduction": true,
       "canDelay": true,
-      "ToughnessDMGType": "Quantum"
+      "ToughnessDMGType": "Quantum",
+      "bypassBreakMute": true
     },
     "Trigger: Attack End",
     {

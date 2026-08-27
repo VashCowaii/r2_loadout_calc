@@ -77,11 +77,11 @@ const compositeAbilityObject = {
                         "value1": "TotalDamageRatio",
                         "compareType": "=",
                         "value2": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_11617) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_11617",
+                          "operator": "Variables[0] (UnusedUnderThisBase_11764) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_11764",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_11617"
+                            "UnusedUnderThisBase_11764"
                           ]
                         }
                       }
@@ -780,7 +780,8 @@ const compositeAbilityObject = {
                                           "target": {
                                             "name": "Target Name",
                                             "target": "{{Caster}}"
-                                          }
+                                          },
+                                          "bypassBreakMute": true
                                         },
                                         {
                                           "name": "Add Events/Bonuses",
@@ -797,7 +798,8 @@ const compositeAbilityObject = {
                                           "target": {
                                             "name": "Target Name",
                                             "target": "{{Caster}}"
-                                          }
+                                          },
+                                          "bypassBreakMute": true
                                         }
                                       ]
                                     },
@@ -1304,7 +1306,8 @@ const compositeAbilityObject = {
                                       "target": {
                                         "name": "Target Name",
                                         "target": "{{Caster}}"
-                                      }
+                                      },
+                                      "bypassBreakMute": true
                                     },
                                     {
                                       "name": "Add Events/Bonuses",
@@ -1321,7 +1324,8 @@ const compositeAbilityObject = {
                                       "target": {
                                         "name": "Target Name",
                                         "target": "{{Caster}}"
-                                      }
+                                      },
+                                      "bypassBreakMute": true
                                     }
                                   ]
                                 },
@@ -1784,7 +1788,8 @@ const compositeAbilityObject = {
                               "target": {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
-                              }
+                              },
+                              "bypassBreakMute": true
                             },
                             {
                               "name": "Add Events/Bonuses",
@@ -1801,7 +1806,8 @@ const compositeAbilityObject = {
                               "target": {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
-                              }
+                              },
+                              "bypassBreakMute": true
                             }
                           ]
                         },
@@ -1868,7 +1874,8 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
-                      }
+                      },
+                      "bypassBreakMute": true
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1885,7 +1892,8 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
-                      }
+                      },
+                      "bypassBreakMute": true
                     }
                   ]
                 },
@@ -5964,11 +5972,6 @@ const compositeAbilityObject = {
             },
             {
               "name": "Change Battle Arena",
-              "status": "Inactive",
-              "arenaID": 2043101
-            },
-            {
-              "name": "Change Battle Arena",
               "arenaID": 2043102
             }
           ],
@@ -6748,11 +6751,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"428140510\">Enemy_W4_DawnsEye_01_BESpeed</a>",
                   "valuePerStack": {
                     "MDF_Speed": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_11553) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_11553",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11700) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_11700",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_11553"
+                        "UnusedUnderThisBase_11700"
                       ]
                     }
                   }
@@ -6765,11 +6768,11 @@ const compositeAbilityObject = {
                     "target": "{{Parameter Target}}"
                   },
                   "multiBase": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_11615) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_11615",
+                    "operator": "Variables[0] (UnusedUnderThisBase_11762) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_11762",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_11615"
+                      "UnusedUnderThisBase_11762"
                     ]
                   }
                 },
@@ -6790,11 +6793,11 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-355315499\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamageActionListener</a>",
                   "valuePerStack": {
                     "MDF_TotalDamageRatioAdd": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_11576) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_11576",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11723) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_11723",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_11576"
+                        "UnusedUnderThisBase_11723"
                       ]
                     },
                     "MDF_TotalDamageRatioCut": 0
@@ -6812,27 +6815,27 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-2100215981\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamage</a>[<span class=\"descriptionNumberColor\">Black Tide Sync Rate</span>]",
               "valuePerStack": {
                 "MDF_TotalDamageRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_11562) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_11562",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11709) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11709",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_11562"
+                    "UnusedUnderThisBase_11709"
                   ]
                 },
                 "MDF_TotalDamageRatioMin": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_11562) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_11562",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11709) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11709",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_11562"
+                    "UnusedUnderThisBase_11709"
                   ]
                 },
                 "MDF_TotalDamageRatioMax": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_11617) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_11617",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11764) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11764",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_11617"
+                    "UnusedUnderThisBase_11764"
                   ]
                 },
                 "MDF_BaseAttack": {
@@ -6854,11 +6857,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-355315499\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarokTotalDamageActionListener</a>",
               "valuePerStack": {
                 "MDF_TotalDamageRatioAdd": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_11576) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_11576",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11723) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11723",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_11576"
+                    "UnusedUnderThisBase_11723"
                   ]
                 },
                 "MDF_TotalDamageRatioCut": 0
@@ -6931,11 +6934,11 @@ const compositeAbilityObject = {
                   "valuePerStack": {
                     "MDF_TotalDamageRatioAdd": 0,
                     "MDF_TotalDamageRatioCut": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_11578) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_11578",
+                      "operator": "Variables[0] (UnusedUnderThisBase_11725) || RETURN",
+                      "displayLines": "UnusedUnderThisBase_11725",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_11578"
+                        "UnusedUnderThisBase_11725"
                       ]
                     }
                   },
@@ -7002,11 +7005,11 @@ const compositeAbilityObject = {
                         "target": "{{Parameter Target}}"
                       },
                       "value": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_11567) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_11567",
+                        "operator": "Variables[0] (UnusedUnderThisBase_11714) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_11714",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_11567"
+                          "UnusedUnderThisBase_11714"
                         ]
                       },
                       "isFixed": "* ERR"
@@ -7068,11 +7071,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"1313380500\">Modifier_Monster_W4_DawnsEye_01_WheaterRognarok</a>",
               "valuePerStack": {
                 "MDF_DirtyHPBase": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_11560) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_11560",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11707) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11707",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_11560"
+                    "UnusedUnderThisBase_11707"
                   ]
                 },
                 "MDF_BaseAttack": {
@@ -7084,11 +7087,11 @@ const compositeAbilityObject = {
                   ]
                 },
                 "MDF_DeathSPAdd": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_11571) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_11571",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11718) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11718",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_11571"
+                    "UnusedUnderThisBase_11718"
                   ]
                 }
               }
@@ -7118,11 +7121,11 @@ const compositeAbilityObject = {
               "modifier": "<a class=\"gModGreen\" id=\"-1259657295\">Enemy_W4_DawnsEye_01_BreakController</a>",
               "valuePerStack": {
                 "StanceDamage": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_11574) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_11574",
+                  "operator": "Variables[0] (UnusedUnderThisBase_11721) || RETURN",
+                  "displayLines": "UnusedUnderThisBase_11721",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_11574"
+                    "UnusedUnderThisBase_11721"
                   ]
                 }
               }

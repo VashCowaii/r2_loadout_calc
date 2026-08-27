@@ -32,6 +32,14 @@ const configAbility = {
       "name": "Remove Events/Bonuses",
       "to": {
         "name": "Target Name",
+        "target": "{{Player Team All}}"
+      },
+      "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
+    },
+    {
+      "name": "Remove Events/Bonuses",
+      "to": {
+        "name": "Target Name",
         "target": "{{Caster}}"
       },
       "modifier": "<a class=\"gModGreen\" id=\"-693038758\">Monster_W5_Ripper_ChargeEffect</a>"
@@ -111,15 +119,29 @@ const configAbility = {
         "name": "OR",
         "conditionList": [
           {
-            "name": "Enemy ID",
-            "ID": 5024012,
-            "target": {
-              "name": "Target Name",
-              "target": "{{Caster}}"
-            },
-            "characterName": "Paramount Bliss Inverted: Illwish Archlotus",
-            "isBaseCompare": true,
-            "invertCondition": true
+            "name": "AND",
+            "conditionList": [
+              {
+                "name": "Enemy ID",
+                "ID": 5024012,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "characterName": "Paramount Bliss Inverted: Illwish Archlotus",
+                "isBaseCompare": true,
+                "invertCondition": true
+              },
+              {
+                "name": "Check Boolean Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "value": "RLBoss",
+                "invertCondition": true
+              }
+            ]
           },
           {
             "name": "Compare: Variable",

@@ -2437,19 +2437,19 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1873235590\">Monster_W4_Pollux_Strengthen_Shield</a>",
                       "valuePerStack": {
                         "MDF_ShieldPercentage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12685) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12685",
+                          "operator": "Variables[0] (UnusedUnderThisBase_12844) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_12844",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_12685"
+                            "UnusedUnderThisBase_12844"
                           ]
                         },
                         "MDF_ShieldAttack_HealRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_12713) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_12713",
+                          "operator": "Variables[0] (UnusedUnderThisBase_12872) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_12872",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_12713"
+                            "UnusedUnderThisBase_12872"
                           ]
                         }
                       }
@@ -3075,11 +3075,11 @@ const compositeAbilityObject = {
                 "target": "{{Caster}}"
               },
               "consumePercent": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12676) || RETURN",
-                "displayLines": "UnusedUnderThisBase_12676",
+                "operator": "Variables[0] (UnusedUnderThisBase_12835) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12835",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_12676"
+                  "UnusedUnderThisBase_12835"
                 ]
               }
             }
@@ -3133,11 +3133,11 @@ const compositeAbilityObject = {
                 "target": "{{Player Team All}}"
               },
               "healPercent": {
-                "operator": "Variables[0] (UnusedUnderThisBase_12686) || RETURN",
-                "displayLines": "UnusedUnderThisBase_12686",
+                "operator": "Variables[0] (UnusedUnderThisBase_12845) || RETURN",
+                "displayLines": "UnusedUnderThisBase_12845",
                 "constants": [],
                 "variables": [
-                  "UnusedUnderThisBase_12686"
+                  "UnusedUnderThisBase_12845"
                 ]
               },
               "formula": "Heal from Target MaxHP"

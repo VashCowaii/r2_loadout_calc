@@ -1066,19 +1066,19 @@ const compositeAbilityObject = {
                           "duration": 1,
                           "valuePerStack": {
                             "Ability04_P3_ToMonsterHpPercentage": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13333) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13333",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13494) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13494",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13333"
+                                "UnusedUnderThisBase_13494"
                               ]
                             },
                             "Ability04_P4_ElationPoint": {
-                              "operator": "Variables[0] (UnusedUnderThisBase_13314) || RETURN",
-                              "displayLines": "UnusedUnderThisBase_13314",
+                              "operator": "Variables[0] (UnusedUnderThisBase_13475) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_13475",
                               "constants": [],
                               "variables": [
-                                "UnusedUnderThisBase_13314"
+                                "UnusedUnderThisBase_13475"
                               ]
                             }
                           },
@@ -1108,11 +1108,11 @@ const compositeAbilityObject = {
                               "duration": 1,
                               "valuePerStack": {
                                 "Ability04_P6_BPPoint": {
-                                  "operator": "Variables[0] (UnusedUnderThisBase_13324) || RETURN",
-                                  "displayLines": "UnusedUnderThisBase_13324",
+                                  "operator": "Variables[0] (UnusedUnderThisBase_13485) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_13485",
                                   "constants": [],
                                   "variables": [
-                                    "UnusedUnderThisBase_13324"
+                                    "UnusedUnderThisBase_13485"
                                   ]
                                 }
                               }
@@ -2880,7 +2880,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifier": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>"
+          "modifier": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>[<span class=\"descriptionNumberColor\">Lasting Antibac</span>]"
         },
         {
           "name": "Remove Events/Bonuses",
@@ -3230,7 +3230,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
                       },
-                      "modifier": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>"
+                      "modifier": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>[<span class=\"descriptionNumberColor\">Lasting Antibac</span>]"
                     },
                     {
                       "name": "Define Custom Variable",
@@ -3530,7 +3530,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifierName": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>",
+          "modifierName": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>[<span class=\"descriptionNumberColor\">Lasting Antibac</span>]",
           "variableName": "UltraSkillTimelineStart",
           "value": 1
         },
@@ -3803,7 +3803,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifierName": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>",
+          "modifierName": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>[<span class=\"descriptionNumberColor\">Lasting Antibac</span>]",
           "variableName": "UltraSkillTimelineEnd",
           "value": 1
         },
@@ -3881,7 +3881,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "modifierName": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>",
+          "modifierName": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>[<span class=\"descriptionNumberColor\">Lasting Antibac</span>]",
           "variableName": "UltraSkillTimelineStart",
           "value": 1
         },
@@ -4140,7 +4140,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>",
+              "modifier": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>[<span class=\"descriptionNumberColor\">Lasting Antibac</span>]",
               "stackLimit": {
                 "operator": "Variables[0] ({[Skill03[1]]}) || RETURN",
                 "displayLines": "{[Skill03[1]]}",
@@ -4176,7 +4176,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "modifier": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>",
+              "modifier": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>[<span class=\"descriptionNumberColor\">Lasting Antibac</span>]",
               "stackLimit": {
                 "operator": "Variables[0] ({[Skill03[4]]}) || RETURN",
                 "displayLines": "{[Skill03[4]]}",
@@ -4303,7 +4303,7 @@ const compositeAbilityObject = {
       "references": [
         {
           "name": "Modifier Construction",
-          "for": "<a class=\"gModGreen\" id=\"mod__2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>",
+          "for": "<a class=\"gModGreen\" id=\"mod__2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>[<span class=\"descriptionNumberColor\">Lasting Antibac</span>]",
           "stackType": "Replace",
           "stackData": [
             "MDF_PropertyValue"
@@ -4311,6 +4311,10 @@ const compositeAbilityObject = {
           "latentQueue": [
             "MDF_IsAngry"
           ],
+          "description": "Loses 1 stack after being attacked. When all stacks are removed, exits the \"Steam Wash\" state and takes massive DMG.",
+          "type": "Buff",
+          "effectName": "Lasting Antibac",
+          "statusName": "Lasting Antibac",
           "execute": [
             {
               "eventTrigger": "When Constructing Modifier",
@@ -4329,8 +4333,90 @@ const compositeAbilityObject = {
               "eventTrigger": "When Modifier Destroyed/Removed",
               "execute": [
                 {
-                  "name": "UI Display Event",
-                  "popUpText": "Trailblazer's DMG dealt increases after launching multiple attacks"
+                  "name": "IF",
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Character ID",
+                        "ID": 6039,
+                        "target": {
+                          "name": "Add Target by Unique Identifier",
+                          "identifier": "Activity_FateRin_ServantAvatar"
+                        },
+                        "characterName": null
+                      },
+                      {
+                        "name": "Character ID",
+                        "ID": 6040,
+                        "target": {
+                          "name": "Add Target by Unique Identifier",
+                          "identifier": "Activity_FateRin_ServantAvatar"
+                        },
+                        "characterName": null
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "UI Display Event",
+                      "popUpText": "Trailblazer's DMG dealt increases after launching multiple attacks"
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Character ID",
+                    "ID": 6041,
+                    "target": {
+                      "name": "Add Target by Unique Identifier",
+                      "identifier": "Activity_FateRin_ServantAvatar"
+                    },
+                    "characterName": null
+                  },
+                  "passed": [
+                    {
+                      "name": "UI Display Event",
+                      "popUpText": "Generates \"Gate of Babylon!\" when drawing cards."
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Character ID",
+                    "ID": 6037,
+                    "target": {
+                      "name": "Add Target by Unique Identifier",
+                      "identifier": "Activity_FateRin_ServantAvatar"
+                    },
+                    "characterName": null
+                  },
+                  "passed": [
+                    {
+                      "name": "UI Display Event",
+                      "popUpText": "When playing a card, generate the corresponding Traced card."
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Character ID",
+                    "ID": 6036,
+                    "target": {
+                      "name": "Add Target by Unique Identifier",
+                      "identifier": "Activity_FateRin_ServantAvatar"
+                    },
+                    "characterName": null
+                  },
+                  "passed": [
+                    {
+                      "name": "UI Display Event",
+                      "popUpText": "When playing a card from hand, gains magical energy and Charges the holy sword."
+                    }
+                  ]
                 },
                 {
                   "name": "Set Hit-Class",
@@ -4782,7 +4868,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>",
+                  "modifier": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>[<span class=\"descriptionNumberColor\">Lasting Antibac</span>]",
                   "addStacksPerTrigger": -1
                 }
               ]
@@ -4836,7 +4922,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>"
+            "modifier": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>[<span class=\"descriptionNumberColor\">Lasting Antibac</span>]"
           }
         },
         "Ability Start",
@@ -4964,7 +5050,7 @@ const compositeAbilityObject = {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>"
+            "modifier": "<a class=\"gModGreen\" id=\"2128731606\">Modifier_Monster_W5_Pam_DefenceUp_FateRin</a>[<span class=\"descriptionNumberColor\">Lasting Antibac</span>]"
           }
         },
         "Trigger: Ability End"

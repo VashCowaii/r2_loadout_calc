@@ -306,28 +306,50 @@ const configAbility = {
       },
       "passed": [
         {
-          "name": "Advance/Delay up to Target",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}.[[getMemoAndSummon]] - {{Ability Target(ST)}}.[[getMemoAndSummon]].[[removeBattleEventsFromOthers]]"
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"1875337065\">RobinS_Ability03_SpecialGuest</a>[<span class=\"descriptionNumberColor\">Special Guest</span>]",
+            "invertCondition": true
           },
-          "targetRef": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "refPoint": "After"
-        },
-        {
-          "name": "Advance/Delay up to Target",
-          "target": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}.[[getMemoAndSummon]].[[removeBattleEventsFromOthers]]"
-          },
-          "targetRef": {
-            "name": "Target Name",
-            "target": "{{Ability Target(ST)}}"
-          },
-          "refPoint": "After"
+          "passed": [
+            {
+              "name": "Advance/Delay up to Target",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}.[[getMemoAndSummon]] - {{Ability Target(ST)}}.[[getMemoAndSummon]].[[removeBattleEventsFromOthers]]"
+              },
+              "targetRef": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "source": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "refPoint": "After"
+            },
+            {
+              "name": "Advance/Delay up to Target",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}.[[getMemoAndSummon]].[[removeBattleEventsFromOthers]]"
+              },
+              "targetRef": {
+                "name": "Target Name",
+                "target": "{{Ability Target(ST)}}"
+              },
+              "source": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "refPoint": "After"
+            }
+          ]
         }
       ]
     },

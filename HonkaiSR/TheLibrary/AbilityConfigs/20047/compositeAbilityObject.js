@@ -352,11 +352,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1432687016\">Enemy_W5_Shell_LightTeam_Shield_Stack</a>",
                       "valuePerStack": {
                         "MDF_ShieldPercentage_Add": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13494) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13494",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13718) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13718",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_13494"
+                            "UnusedUnderThisBase_13718"
                           ]
                         }
                       }
@@ -372,11 +372,11 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"234920767\">Enemy_W5_Shell_LightTeam_Shield</a>",
                       "valuePerStack": {
                         "MDF_ShieldPercentage": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13494) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13494",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13718) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13718",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_13494"
+                            "UnusedUnderThisBase_13718"
                           ]
                         }
                       }

@@ -439,10 +439,22 @@ const configAbility = {
     {
       "name": "IF",
       "conditions": {
-        "name": "Enemies Still Alive",
+        "name": "Compare: Variable",
         "target": {
           "name": "Target Name",
-          "target": "{{Caster}}"
+          "target": "{{Hostile Entities(AOE)}}"
+        },
+        "value1": "TeamCharacterCount",
+        "compareType": ">",
+        "value2": 0,
+        "conditions": {
+          "name": "Has Modifier",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Parameter Target}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"637823618\">Standard_LockHPThresholdReached_Mark</a>",
+          "invertCondition": true
         }
       },
       "passed": [

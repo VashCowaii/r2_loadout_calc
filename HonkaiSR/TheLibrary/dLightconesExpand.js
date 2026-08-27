@@ -10567,6 +10567,154 @@ let lightcones = {
       1.15
     ]
   },
+  "Rise and Sing": {
+    "lightconeID": 23063,
+    "name": "Rise and Sing",
+    "path": "Remembrance",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 396.9,
+      "HPBase": 1164.2399999999998
+    },
+    "fixedStats": {
+      "1": {
+        "HP%": 0.3
+      },
+      "2": {
+        "HP%": 0.375
+      },
+      "3": {
+        "HP%": 0.45
+      },
+      "4": {
+        "HP%": 0.525
+      },
+      "5": {
+        "HP%": 0.6
+      }
+    },
+    "skillName": "Improvisation",
+    "desc": "Increases the wearer's Max HP by #1[i]%. After the wearer uses Ultimate, recovers 1 Skill Point for allies. When entering combat, advances the wearer's action by #2[i]% and grants the wearer \"New Melody,\" lasting for #4[i] turn(s). While the wearer holds \"New Melody,\" all allies' SPD increases by #3[i]%.",
+    "params": [
+      [
+        0.3,
+        0.3,
+        0.2,
+        2
+      ],
+      [
+        0.375,
+        0.325,
+        0.25,
+        2
+      ],
+      [
+        0.45,
+        0.35,
+        0.3,
+        2
+      ],
+      [
+        0.525,
+        0.375,
+        0.35,
+        2
+      ],
+      [
+        0.6,
+        0.4,
+        0.4,
+        2
+      ]
+    ],
+    "statRef": [
+      "HPAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": null,
+    "preview": null,
+    "portrait": null,
+    "imageOffset": [
+      -16,
+      -119,
+      1.25
+    ]
+  },
+  "Summer Rides the Surf": {
+    "lightconeID": 23064,
+    "name": "Summer Rides the Surf",
+    "path": "Elation",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 582.1199999999999,
+      "DEFBase": 529.2,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "CritRateBase": 0.18
+      },
+      "2": {
+        "CritRateBase": 0.21
+      },
+      "3": {
+        "CritRateBase": 0.24
+      },
+      "4": {
+        "CritRateBase": 0.27
+      },
+      "5": {
+        "CritRateBase": 0.3
+      }
+    },
+    "skillName": "Waveriding",
+    "desc": "Increases the wearer's CRIT Rate by #1[i]%. When the wearer uses Elation Skill, gains \"Updraft,\" which increases the wearer's SPD by #2[i]%. If the Elation Skill used is different from the one used last time, additionally gains \"Uptrend,\" which increases the wearer's Elation by #3[i]%.\\nWhen every wave starts or after the wearer uses Elation Skill #4[i] time(s), recovers 1 Skill Point.",
+    "params": [
+      [
+        0.18,
+        0.24,
+        0.4,
+        3
+      ],
+      [
+        0.21,
+        0.28,
+        0.55,
+        3
+      ],
+      [
+        0.24,
+        0.32,
+        0.7,
+        3
+      ],
+      [
+        0.27,
+        0.36,
+        0.85,
+        3
+      ],
+      [
+        0.3,
+        0.4,
+        1,
+        3
+      ]
+    ],
+    "statRef": [
+      "CriticalChanceBase"
+    ],
+    "extraProperties": [],
+    "icon": null,
+    "preview": null,
+    "portrait": null,
+    "imageOffset": [
+      50,
+      -146,
+      1.43
+    ]
+  },
   "Until the Flowers Bloom Again": {
     "lightconeID": 23058,
     "name": "Until the Flowers Bloom Again",
@@ -10654,6 +10802,144 @@ let lightcones = {
       -4,
       -28,
       1.17
+    ]
+  },
+  "A Little Getaway": {
+    "lightconeID": 21066,
+    "name": "A Little Getaway",
+    "path": "Elation",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 423.36,
+      "DEFBase": 396.9,
+      "HPBase": 952.56
+    },
+    "fixedStats": {
+      "1": {
+        "ElationDMGAll": 0.2
+      },
+      "2": {
+        "ElationDMGAll": 0.25
+      },
+      "3": {
+        "ElationDMGAll": 0.3
+      },
+      "4": {
+        "ElationDMGAll": 0.35
+      },
+      "5": {
+        "ElationDMGAll": 0.4
+      }
+    },
+    "skillName": "Whisper",
+    "desc": "Increases the wearer's Elation by #1[i]%. During the use of Elation Skill by the wearer, ignores #2[i]% of the target's DEF.",
+    "params": [
+      [
+        0.2,
+        0.08
+      ],
+      [
+        0.25,
+        0.1
+      ],
+      [
+        0.3,
+        0.12
+      ],
+      [
+        0.35,
+        0.14
+      ],
+      [
+        0.4,
+        0.16
+      ]
+    ],
+    "statRef": [
+      "ElationDamageAddedRatioBase"
+    ],
+    "extraProperties": [],
+    "icon": null,
+    "preview": null,
+    "portrait": null,
+    "imageOffset": [
+      -4,
+      -88,
+      1.05
+    ]
+  },
+  "Race to the Horizon": {
+    "lightconeID": 22008,
+    "name": "Race to the Horizon",
+    "path": "The Hunt",
+    "rarity": "4",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 396.9,
+      "HPBase": 846.72
+    },
+    "fixedStats": {
+      "1": {
+        "ATK%": 0.12
+      },
+      "2": {
+        "ATK%": 0.15
+      },
+      "3": {
+        "ATK%": 0.18
+      },
+      "4": {
+        "ATK%": 0.21
+      },
+      "5": {
+        "ATK%": 0.24
+      }
+    },
+    "skillName": "Overtake",
+    "desc": "Increases the wearer's ATK by #1[i]%. After the wearer uses Follow-Up ATK, increases their CRIT DMG by #2[f1]% for #3[i] turn(s). This effect can stack up to #4[i] times.",
+    "params": [
+      [
+        0.12,
+        0.03,
+        2,
+        10
+      ],
+      [
+        0.15,
+        0.035,
+        2,
+        10
+      ],
+      [
+        0.18,
+        0.04,
+        2,
+        10
+      ],
+      [
+        0.21,
+        0.044999998,
+        2,
+        10
+      ],
+      [
+        0.24,
+        0.05,
+        2,
+        10
+      ]
+    ],
+    "statRef": [
+      "AttackAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": null,
+    "preview": null,
+    "portrait": null,
+    "imageOffset": [
+      0,
+      -62,
+      1.07
     ]
   }
 }

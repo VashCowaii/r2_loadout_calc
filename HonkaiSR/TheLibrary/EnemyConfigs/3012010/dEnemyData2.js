@@ -42,8 +42,8 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1334,
-        1335
+        1377,
+        1378
       ],
       "abilityOrder": [
         "ABILITY__DOES_NOT_EXIST"
@@ -77,8 +77,8 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        1334,
-        1335
+        1377,
+        1378
       ],
       "abilityOrder": [
         "ABILITY__DOES_NOT_EXIST"

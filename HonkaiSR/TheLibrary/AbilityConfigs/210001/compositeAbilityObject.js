@@ -18,9 +18,7 @@ const compositeAbilityObject = {
       "toughnessReductionDisplayed": null,
       "skillPointCost": 0,
       "skillPointGain": 0,
-      "params": {
-        "1": []
-      },
+      "params": {},
       "skillEffect": "AoEAttack",
       "maxLevel": 1,
       "configAbilityList": null,

@@ -41,12 +41,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        3057,
-        3058,
-        3059
+        3134,
+        3135,
+        3136
       ],
       "abilityOrder": [
-        3057
+        3134
       ],
       "enemyTag": [
         "W5_Shell"
@@ -76,12 +76,12 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        3057,
-        3058,
-        3059
+        3134,
+        3135,
+        3136
       ],
       "abilityOrder": [
-        3057
+        3134
       ],
       "enemyTag": [
         "W5_Shell"

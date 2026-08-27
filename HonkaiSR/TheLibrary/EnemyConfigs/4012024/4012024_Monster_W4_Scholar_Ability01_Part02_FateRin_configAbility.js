@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "modifier": "<a class=\"gModGreen\" id=\"-528839631\">Enemy_W4_Scholar_01_Stealth_FateRin</a>"
+      "modifier": "<a class=\"gModGreen\" id=\"-528839631\">Enemy_W4_Scholar_01_Stealth_FateRin</a>[<span class=\"descriptionNumberColor\">Lurking</span>]"
     },
     "Trigger: Ability End"
   ],

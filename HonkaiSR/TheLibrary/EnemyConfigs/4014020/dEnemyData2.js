@@ -43,10 +43,10 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1934,
-        1935,
-        1936,
-        1937
+        1977,
+        1978,
+        1979,
+        1980
       ],
       "summons": [
         {
@@ -90,10 +90,10 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1934,
-        1935,
-        1936,
-        1937
+        1977,
+        1978,
+        1979,
+        1980
       ],
       "summons": [
         {
@@ -137,10 +137,10 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1934,
-        1935,
-        1936,
-        1937
+        1977,
+        1978,
+        1979,
+        1980
       ],
       "summons": [
         {
@@ -184,10 +184,10 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        1934,
-        1935,
-        1936,
-        1937
+        1977,
+        1978,
+        1979,
+        1980
       ],
       "enemyTag": [
         "MGrid_4008"
@@ -205,7 +205,7 @@ let enemyData = {
         }
       ],
       "overrideParams": {
-        "1936": [
+        "1979": [
           [
             0.75,
             1,

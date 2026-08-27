@@ -189,7 +189,8 @@ const configAbility = {
       "ToughnessDMGType": {
         "name": "Damage Type Source",
         "sourceType": {}
-      }
+      },
+      "bypassBreakMute": true
     },
     {
       "name": "Find New Target",
