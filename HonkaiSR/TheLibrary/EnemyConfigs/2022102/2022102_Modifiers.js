@@ -507,11 +507,11 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__326) || RETURN",
-                "displayLines": "ENEMIES_OBJECT_UNUSED__326",
+                "operator": "Variables[0] (MDF_MaxChargeCount) || RETURN",
+                "displayLines": "MDF_MaxChargeCount",
                 "constants": [],
                 "variables": [
-                  "ENEMIES_OBJECT_UNUSED__326"
+                  "MDF_MaxChargeCount"
                 ]
               },
               "assignState": "True",
@@ -550,11 +550,11 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__326) || RETURN",
-                    "displayLines": "ENEMIES_OBJECT_UNUSED__326",
+                    "operator": "Variables[0] (MDF_MaxChargeCount) || RETURN",
+                    "displayLines": "MDF_MaxChargeCount",
                     "constants": [],
                     "variables": [
-                      "ENEMIES_OBJECT_UNUSED__326"
+                      "MDF_MaxChargeCount"
                     ]
                   },
                   "assignState": "True",
@@ -595,11 +595,11 @@ const configAbility = {
                   "variableName": "_CurrentChargeCount",
                   "value": 1,
                   "max": {
-                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__326) || RETURN",
-                    "displayLines": "ENEMIES_OBJECT_UNUSED__326",
+                    "operator": "Variables[0] (MDF_MaxChargeCount) || RETURN",
+                    "displayLines": "MDF_MaxChargeCount",
                     "constants": [],
                     "variables": [
-                      "ENEMIES_OBJECT_UNUSED__326"
+                      "MDF_MaxChargeCount"
                     ]
                   }
                 },
@@ -619,11 +619,11 @@ const configAbility = {
                     "target": "{{Modifier Holder}}"
                   },
                   "maximum": {
-                    "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__326) || RETURN",
-                    "displayLines": "ENEMIES_OBJECT_UNUSED__326",
+                    "operator": "Variables[0] (MDF_MaxChargeCount) || RETURN",
+                    "displayLines": "MDF_MaxChargeCount",
                     "constants": [],
                     "variables": [
-                      "ENEMIES_OBJECT_UNUSED__326"
+                      "MDF_MaxChargeCount"
                     ]
                   },
                   "assignState": "True",
@@ -640,11 +640,11 @@ const configAbility = {
                     "value1": "_CurrentChargeCount",
                     "compareType": "=",
                     "value2": {
-                      "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__326) || RETURN",
-                      "displayLines": "ENEMIES_OBJECT_UNUSED__326",
+                      "operator": "Variables[0] (MDF_MaxChargeCount) || RETURN",
+                      "displayLines": "MDF_MaxChargeCount",
                       "constants": [],
                       "variables": [
-                        "ENEMIES_OBJECT_UNUSED__326"
+                        "MDF_MaxChargeCount"
                       ]
                     }
                   },
@@ -698,11 +698,11 @@ const configAbility = {
                 "target": "{{Modifier Holder}}"
               },
               "maximum": {
-                "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__326) || RETURN",
-                "displayLines": "ENEMIES_OBJECT_UNUSED__326",
+                "operator": "Variables[0] (MDF_MaxChargeCount) || RETURN",
+                "displayLines": "MDF_MaxChargeCount",
                 "constants": [],
                 "variables": [
-                  "ENEMIES_OBJECT_UNUSED__326"
+                  "MDF_MaxChargeCount"
                 ]
               },
               "assignState": "True",
@@ -947,11 +947,11 @@ const configAbility = {
                     "value1": "_CurrentChargeCount",
                     "compareType": "<",
                     "value2": {
-                      "operator": "Variables[0] (ENEMIES_OBJECT_UNUSED__326) || RETURN",
-                      "displayLines": "ENEMIES_OBJECT_UNUSED__326",
+                      "operator": "Variables[0] (MDF_MaxChargeCount) || RETURN",
+                      "displayLines": "MDF_MaxChargeCount",
                       "constants": [],
                       "variables": [
-                        "ENEMIES_OBJECT_UNUSED__326"
+                        "MDF_MaxChargeCount"
                       ]
                     }
                   },
@@ -1325,7 +1325,7 @@ const configAbility = {
       "variableValueChange": [
         {
           "name": "Variable Value Changes",
-          "variableName": "ENEMIES_OBJECT_UNUSED__327",
+          "variableName": "CanUseUltra_IF",
           "from": "ContextOwner",
           "valueRanges": [
             {

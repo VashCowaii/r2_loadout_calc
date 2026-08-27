@@ -1,5 +1,5 @@
 const configAbility = {
-  "fileName": "2023032_Modifiers",
+  "fileName": "2024016_Modifiers",
   "abilityType": "Char. Modifiers",
   "energy": null,
   "toughnessList": [
@@ -99,11 +99,11 @@ const configAbility = {
               },
               "variableName": "MDF_MaxDirtyHPRatio",
               "value": {
-                "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                "displayLines": "{[SkillP01[0]]}",
+                "operator": "Variables[0] (UnusedUnderThisBase_14088) || RETURN",
+                "displayLines": "UnusedUnderThisBase_14088",
                 "constants": [],
                 "variables": [
-                  "{[SkillP01[0]]}"
+                  "UnusedUnderThisBase_14088"
                 ]
               }
             }
@@ -184,11 +184,11 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                       "duration": {
-                        "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                        "displayLines": "{[Skill05[1]]}",
+                        "operator": "Variables[0] (UnusedUnderThisBase_14076) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_14076",
                         "constants": [],
                         "variables": [
-                          "{[Skill05[1]]}"
+                          "UnusedUnderThisBase_14076"
                         ]
                       },
                       "valuePerStack": {
@@ -220,11 +220,11 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                       "duration": {
-                        "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                        "displayLines": "{[Skill05[1]]}",
+                        "operator": "Variables[0] (UnusedUnderThisBase_14076) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_14076",
                         "constants": [],
                         "variables": [
-                          "{[Skill05[1]]}"
+                          "UnusedUnderThisBase_14076"
                         ]
                       },
                       "valuePerStack": {
@@ -250,19 +250,19 @@ const configAbility = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                   "duration": {
-                    "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                    "displayLines": "{[Skill05[1]]}",
+                    "operator": "Variables[0] (UnusedUnderThisBase_14076) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_14076",
                     "constants": [],
                     "variables": [
-                      "{[Skill05[1]]}"
+                      "UnusedUnderThisBase_14076"
                     ]
                   },
                   "baseChance": {
-                    "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                    "displayLines": "{[Skill05[2]]}",
+                    "operator": "Variables[0] (UnusedUnderThisBase_14080) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_14080",
                     "constants": [],
                     "variables": [
-                      "{[Skill05[2]]}"
+                      "UnusedUnderThisBase_14080"
                     ]
                   },
                   "valuePerStack": {
@@ -415,11 +415,11 @@ const configAbility = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
                       "duration": {
-                        "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                        "displayLines": "{[Skill05[1]]}",
+                        "operator": "Variables[0] (UnusedUnderThisBase_14076) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_14076",
                         "constants": [],
                         "variables": [
-                          "{[Skill05[1]]}"
+                          "UnusedUnderThisBase_14076"
                         ]
                       },
                       "valuePerStack": {
@@ -1907,19 +1907,19 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_AllDamageReduce": {
-              "operator": "Variables[0] (UnusedUnderThisBase_9877) || RETURN",
-              "displayLines": "UnusedUnderThisBase_9877",
+              "operator": "Variables[0] ({[SkillEX04[0]]}) || RETURN",
+              "displayLines": "{[SkillEX04[0]]}",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_9877"
+                "{[SkillEX04[0]]}"
               ]
             },
             "MDF_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_9883) || RETURN",
-              "displayLines": "UnusedUnderThisBase_9883",
+              "operator": "Variables[0] ({[SkillEX04[1]]}) || RETURN",
+              "displayLines": "{[SkillEX04[1]]}",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_9883"
+                "{[SkillEX04[1]]}"
               ]
             }
           }
@@ -1975,19 +1975,19 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1640618291\">Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_EX04_Sub</a>",
                   "valuePerStack": {
                     "MDF_AllDamageReduce": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_9877) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_9877",
+                      "operator": "Variables[0] ({[SkillEX04[0]]}) || RETURN",
+                      "displayLines": "{[SkillEX04[0]]}",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_9877"
+                        "{[SkillEX04[0]]}"
                       ]
                     },
                     "MDF_AllDamageTypeAddedRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_9883) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_9883",
+                      "operator": "Variables[0] ({[SkillEX04[1]]}) || RETURN",
+                      "displayLines": "{[SkillEX04[1]]}",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_9883"
+                        "{[SkillEX04[1]]}"
                       ]
                     }
                   }
@@ -2094,11 +2094,11 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_HealMaxHPRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_9903) || RETURN",
-              "displayLines": "UnusedUnderThisBase_9903",
+              "operator": "Variables[0] ({[SkillP03[2]]}) || RETURN",
+              "displayLines": "{[SkillP03[2]]}",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_9903"
+                "{[SkillP03[2]]}"
               ]
             }
           }
@@ -2157,11 +2157,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"749231853\">Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_03_Sub</a>[<span class=\"descriptionNumberColor\">Resurrection Halo</span>]",
                   "valuePerStack": {
                     "MDF_HealMaxHPRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_9903) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_9903",
+                      "operator": "Variables[0] ({[SkillP03[2]]}) || RETURN",
+                      "displayLines": "{[SkillP03[2]]}",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_9903"
+                        "{[SkillP03[2]]}"
                       ]
                     }
                   }
@@ -2256,11 +2256,11 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_ActionDelayRatio": {
-              "operator": "Variables[0] (UnusedUnderThisBase_9882) || RETURN",
-              "displayLines": "UnusedUnderThisBase_9882",
+              "operator": "Variables[0] ({[SkillP03[1]]}) || RETURN",
+              "displayLines": "{[SkillP03[1]]}",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_9882"
+                "{[SkillP03[1]]}"
               ]
             }
           }
@@ -2319,11 +2319,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1326470310\">Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_02_Sub</a>[<span class=\"descriptionNumberColor\">Agility Halo</span>]",
                   "valuePerStack": {
                     "MDF_ActionDelayRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_9882) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_9882",
+                      "operator": "Variables[0] ({[SkillP03[1]]}) || RETURN",
+                      "displayLines": "{[SkillP03[1]]}",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_9882"
+                        "{[SkillP03[1]]}"
                       ]
                     }
                   }
@@ -2432,11 +2432,11 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_AllDamageReduce": {
-              "operator": "Variables[0] (UnusedUnderThisBase_9902) || RETURN",
-              "displayLines": "UnusedUnderThisBase_9902",
+              "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
+              "displayLines": "{[SkillP03[0]]}",
               "constants": [],
               "variables": [
-                "UnusedUnderThisBase_9902"
+                "{[SkillP03[0]]}"
               ]
             }
           }
@@ -2495,11 +2495,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-401086193\">Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_01_Sub</a>[<span class=\"descriptionNumberColor\">Tranquility Halo</span>]",
                   "valuePerStack": {
                     "MDF_AllDamageReduce": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_9902) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_9902",
+                      "operator": "Variables[0] ({[SkillP03[0]]}) || RETURN",
+                      "displayLines": "{[SkillP03[0]]}",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_9902"
+                        "{[SkillP03[0]]}"
                       ]
                     }
                   }
@@ -2777,11 +2777,11 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-809289172\">Enemy_W2_Xuanlu_IF_Bonus_SpecialMark</a>",
               "valuePerStack": {
                 "AbilityP04_P1_Bonus_DamageAddedRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9904) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9904",
+                  "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
+                  "displayLines": "{[SkillP04[0]]}",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_9904"
+                    "{[SkillP04[0]]}"
                   ]
                 }
               }
@@ -2815,19 +2815,19 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"427800791\">Enemy_W2_Xuanlu_IF_MinionsSuperArmorController</a>",
                   "valuePerStack": {
                     "MDF_MinionsSuperArmor_AllDamageReduce": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_13793) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_13793",
+                      "operator": "Variables[0] ({[SkillEX01[0]]}) || RETURN",
+                      "displayLines": "{[SkillEX01[0]]}",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_13793"
+                        "{[SkillEX01[0]]}"
                       ]
                     },
                     "MDF_MinionsSuperArmor_AllDamageTypeTakenRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_13759) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_13759",
+                      "operator": "Variables[0] ({[SkillEX01[1]]}) || RETURN",
+                      "displayLines": "{[SkillEX01[1]]}",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_13759"
+                        "{[SkillEX01[1]]}"
                       ]
                     }
                   }
@@ -2853,19 +2853,19 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-924434401\">Enemy_W2_Xuanlu_IF_Servant</a>",
                       "valuePerStack": {
                         "MDF_DamageRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_9879) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_9879",
+                          "operator": "Variables[0] ({[SkillP01[9]]}) || RETURN",
+                          "displayLines": "{[SkillP01[9]]}",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_9879"
+                            "{[SkillP01[9]]}"
                           ]
                         },
                         "MDF_DamageStanceValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_9884) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_9884",
+                          "operator": "Variables[0] ({[SkillP01[8]]}) || RETURN",
+                          "displayLines": "{[SkillP01[8]]}",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_9884"
+                            "{[SkillP01[8]]}"
                           ]
                         }
                       }
@@ -2893,19 +2893,19 @@ const configAbility = {
                       "modifier": "<a class=\"gModGreen\" id=\"-924434401\">Enemy_W2_Xuanlu_IF_Servant</a>",
                       "valuePerStack": {
                         "MDF_DamageRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_9885) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_9885",
+                          "operator": "Variables[0] ({[SkillP01[11]]}) || RETURN",
+                          "displayLines": "{[SkillP01[11]]}",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_9885"
+                            "{[SkillP01[11]]}"
                           ]
                         },
                         "MDF_DamageStanceValue": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_9901) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_9901",
+                          "operator": "Variables[0] ({[SkillP01[10]]}) || RETURN",
+                          "displayLines": "{[SkillP01[10]]}",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_9901"
+                            "{[SkillP01[10]]}"
                           ]
                         }
                       }
@@ -3300,11 +3300,11 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-809289172\">Enemy_W2_Xuanlu_IF_Bonus_SpecialMark</a>",
                   "valuePerStack": {
                     "AbilityP04_P1_Bonus_DamageAddedRatio": {
-                      "operator": "Variables[0] (UnusedUnderThisBase_9904) || RETURN",
-                      "displayLines": "UnusedUnderThisBase_9904",
+                      "operator": "Variables[0] ({[SkillP04[0]]}) || RETURN",
+                      "displayLines": "{[SkillP04[0]]}",
                       "constants": [],
                       "variables": [
-                        "UnusedUnderThisBase_9904"
+                        "{[SkillP04[0]]}"
                       ]
                     }
                   }
@@ -4206,51 +4206,200 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-765841098\">Monster_XP_Elite02_02_RLElite_TryAddDirtyHP</a>",
-      "stackType": "Replace",
+      "for": "<a class=\"gModGreen\" id=\"mod__-514199936\">Enemy_W2_Xuanlu_DisableAction</a>",
+      "modifierFlags": [
+        "DisableAction"
+      ],
+      "latentQueue": [
+        "InsertCheck"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-561335331\">Enemy_W2_Xuanlu_SecondPhase</a>",
       "execute": [
         {
-          "eventTrigger": "When Stacking/Receiving Modifier",
+          "eventTrigger": "When Stacking/Receiving Modifier"
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-585027897\">Enemy_W2_Xuanlu_Endurance</a>",
+      "modifierFlags": [
+        "Endurance"
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-776504343\">Enemy_W2_Xuanlu_PartController_LockHP</a>",
+      "execute": [
+        {
+          "eventTrigger": "Waiting in Limbo [Owner]",
           "execute": [
             {
               "name": "IF",
               "conditions": {
-                "name": "Has Flag",
+                "name": "Compare: Variable",
                 "target": {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
                 },
-                "flagName": "ImmuneDebuff"
+                "value1": "InsertCheck",
+                "compareType": "=",
+                "value2": 1,
+                "contextScope": "TargetEntity"
               },
               "passed": [
                 {
-                  "name": "Add Events/Bonuses",
+                  "name": "Remove Events/Bonuses",
                   "to": {
                     "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
+                    "target": "{{Player Team All}}"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
-                  "duration": {
-                    "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                    "displayLines": "{[Skill05[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[1]]}"
-                    ]
-                  },
-                  "valuePerStack": {
-                    "MDF_DirtyHPRatio": 0.1
-                  }
+                  "modifier": "<a class=\"gModGreen\" id=\"-1794338335\">Standard_CTRL_Crazy</a>[<span class=\"descriptionNumberColor\">Outrage</span>]"
                 },
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {
                     "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
+                    "target": "{{Caster}}"
                   },
-                  "modifier": "<a class=\"gModGreen\" id=\"-765841098\">Monster_XP_Elite02_02_RLElite_TryAddDirtyHP</a>"
+                  "modifier": "<a class=\"gModGreen\" id=\"-924806619\">Enemy_W2_Xuanlu_02_Bonus</a>[<span class=\"descriptionNumberColor\">Engender</span>]"
+                },
+                {
+                  "name": "Dispel Debuffs",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "silent": true
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-585027897\">Enemy_W2_Xuanlu_Endurance</a>"
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "InsertCheck"
+                },
+                {
+                  "name": "Set Enemy Phase",
+                  "mode": "Inc"
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster's Minions}}"
+                    },
+                    "value1": "TeamCharacterCount",
+                    "compareType": ">=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster's Minions}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-514199936\">Enemy_W2_Xuanlu_DisableAction</a>"
+                    }
+                  ]
+                },
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "Monster_W2_Xuanlu_PassiveAbility_Insert",
+                  "priorityTag": "EnemyPhaseChange",
+                  "ownerState": "Mask_AliveOrLimbo",
+                  "targetState": "Mask_AliveOrLimbo",
+                  "canHitNonTargets": true,
+                  "showInActionOrder": true,
+                  "allowAbilityTriggers": false
                 }
               ]
+            }
+          ],
+          "priorityLevel": -90
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1142936642\">Enemy_W2_Xuanlu_Mainline_Final</a>",
+      "execute": [
+        {
+          "eventTrigger": "HP Change [Owner]",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "ParameterValue",
+                    "compareType": "<",
+                    "value2": 0
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "HP_Bars_Remaining",
+                    "compareType": "=",
+                    "value2": 2
+                  },
+                  {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Compare: Variable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "value1": "CurrentHP%",
+                            "compareType": "<",
+                            "value2": 0.3
+                          },
+                          {
+                            "name": "Has Flag",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "flagName": "Break"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "value1": "CurrentHP%",
+                        "compareType": "<",
+                        "value2": 0.1
+                      }
+                    ]
+                  }
+                ]
+              }
             }
           ]
         }
@@ -4258,206 +4407,38 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-1807594786\">Monster_XP_Elite02_02_RLElite_DirtyHPListener</a>",
-      "stackType": "Replace",
-      "modifierFlags": [
-        "RemoveWhenCasterDead"
-      ],
+      "for": "<a class=\"gModGreen\" id=\"mod__-897449444\">Enemy_W2_Xuanlu_Mainline_HealHP</a>",
       "execute": [
         {
           "eventTrigger": "When Constructing Modifier",
           "execute": [
             {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "variableName": "MDF_CurrentDirtyHPRatio"
-            },
-            {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "variableName": "MDF_MaxDirtyHPRatio",
-              "value": {
-                "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
-                "displayLines": "{[SkillP01[0]]}",
-                "constants": [],
-                "variables": [
-                  "{[SkillP01[0]]}"
-                ]
-              }
+              "name": "Lock HP",
+              "threshold": 0.00010000006
             }
           ]
         },
         {
-          "eventTrigger": "When Stacking/Receiving Modifier",
+          "eventTrigger": "Action End [Owner]",
           "execute": [
-            {
-              "name": "Define Custom Variable with Stat",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "variableName": "MDF_CurrentDirtyHPRatio",
-              "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;"
-            },
-            {
-              "name": "Define Custom Variable with Added Value",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
-              },
-              "variableName": "MDF_CurrentDirtyHPRatio",
-              "value": {
-                "operator": "Variables[0] (MDF_DirtyHPAddedRatio) || RETURN",
-                "displayLines": "MDF_DirtyHPAddedRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_DirtyHPAddedRatio"
-                ]
-              },
-              "max": {
-                "operator": "Variables[0] (MDF_MaxDirtyHPRatio) || RETURN",
-                "displayLines": "MDF_MaxDirtyHPRatio",
-                "constants": [],
-                "variables": [
-                  "MDF_MaxDirtyHPRatio"
-                ]
-              }
-            },
             {
               "name": "IF",
               "conditions": {
-                "name": "Has Modifier",
+                "name": "Current Turn Is",
                 "target": {
                   "name": "Target Name",
-                  "target": "{{Modifier Holder}}"
-                },
-                "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
+                  "target": "{{Caster}}"
+                }
               },
               "passed": [
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Has Flag",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "flagName": "ImmuneDebuff"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Stat",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "MDF_CurrentDirtyHPRatio",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
-                      "duration": {
-                        "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                        "displayLines": "{[Skill05[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill05[1]]}"
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MDF_DirtyHPRatio": {
-                          "operator": "Variables[0] (MDF_CurrentDirtyHPRatio) || RETURN",
-                          "displayLines": "MDF_CurrentDirtyHPRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDirtyHPRatio"
-                          ]
-                        }
-                      }
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
-                      "duration": {
-                        "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                        "displayLines": "{[Skill05[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill05[1]]}"
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MDF_DirtyHPRatio": {
-                          "operator": "Variables[0] (MDF_CurrentDirtyHPRatio) || RETURN",
-                          "displayLines": "MDF_CurrentDirtyHPRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDirtyHPRatio"
-                          ]
-                        }
-                      }
-                    }
-                  ]
-                }
-              ],
-              "failed": [
-                {
-                  "name": "Add Events/Bonuses",
-                  "to": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
-                  "duration": {
-                    "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                    "displayLines": "{[Skill05[1]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[1]]}"
-                    ]
-                  },
-                  "baseChance": {
-                    "operator": "Variables[0] ({[Skill05[2]]}) || RETURN",
-                    "displayLines": "{[Skill05[2]]}",
-                    "constants": [],
-                    "variables": [
-                      "{[Skill05[2]]}"
-                    ]
-                  },
-                  "valuePerStack": {
-                    "MDF_DirtyHPRatio": {
-                      "operator": "Variables[0] (MDF_CurrentDirtyHPRatio) || RETURN",
-                      "displayLines": "MDF_CurrentDirtyHPRatio",
-                      "constants": [],
-                      "variables": [
-                        "MDF_CurrentDirtyHPRatio"
-                      ]
-                    }
+                    "name": "Compare: Variable",
+                    "value1": "SummonMinionTime",
+                    "compareType": "=",
+                    "value2": 3,
+                    "contextScope": "TargetEntity"
                   }
                 }
               ]
@@ -4465,215 +4446,107 @@ const configAbility = {
           ]
         },
         {
-          "eventTrigger": "Being Attacked [Owner]: Start",
+          "eventTrigger": "Turn [Anyone]: End",
           "execute": [
             {
               "name": "IF",
               "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
-                  },
-                  {
-                    "name": "Enemy ID",
-                    "ID": 2023031,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": "The Ascended (Bug)"
-                  }
-                ]
-              },
-              "passed": [
-                {
-                  "name": "Define Custom Variable with HP%",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_HPRatioBeforeAttacked"
+                "name": "Current Turn Is",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 }
-              ]
-            }
-          ]
-        },
-        {
-          "eventTrigger": "Being Attacked [Owner]: End [EVENT]",
-          "execute": [
-            {
-              "name": "IF",
-              "conditions": {
-                "name": "AND",
-                "conditionList": [
-                  {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
-                  },
-                  {
-                    "name": "Enemy ID",
-                    "ID": 2023031,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": "The Ascended (Bug)"
-                  }
-                ]
               },
               "passed": [
-                {
-                  "name": "Define Custom Variable with HP%",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_HPRatioAfterAttacked"
-                },
-                {
-                  "name": "Define Custom Variable with Stat",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "variableName": "MDF_CurrentDirtyHPRatio",
-                  "value": "&nbsp;<span class=\"descriptionNumberColor\">HPBlock%</span>&nbsp;"
-                },
                 {
                   "name": "Define Custom Variable with Added Value",
                   "target": {
                     "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
+                    "target": "{{Caster}}"
                   },
-                  "variableName": "MDF_CurrentDirtyHPRatio",
-                  "value": {
-                    "operator": "Variables[0] (MDF_HPRatioAfterAttacked) || Variables[1] (MDF_HPRatioBeforeAttacked) || SUB || RETURN",
-                    "displayLines": "(MDF_HPRatioAfterAttacked - MDF_HPRatioBeforeAttacked)",
-                    "constants": [],
-                    "variables": [
-                      "MDF_HPRatioAfterAttacked",
-                      "MDF_HPRatioBeforeAttacked"
-                    ]
-                  },
-                  "max": {
-                    "operator": "Variables[0] (MDF_MaxDirtyHPRatio) || RETURN",
-                    "displayLines": "MDF_MaxDirtyHPRatio",
-                    "constants": [],
-                    "variables": [
-                      "MDF_MaxDirtyHPRatio"
-                    ]
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Modifier Holder}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-765841098\">Monster_XP_Elite02_02_RLElite_TryAddDirtyHP</a>"
-                  },
-                  "passed": [
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]"
-                    },
-                    {
-                      "name": "Add Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-228419305\">Standard_BlackBlood</a>[<span class=\"descriptionNumberColor\">Prana-Siphoned</span>]",
-                      "duration": {
-                        "operator": "Variables[0] ({[Skill05[1]]}) || RETURN",
-                        "displayLines": "{[Skill05[1]]}",
-                        "constants": [],
-                        "variables": [
-                          "{[Skill05[1]]}"
-                        ]
-                      },
-                      "valuePerStack": {
-                        "MDF_DirtyHPRatio": {
-                          "operator": "Variables[0] (MDF_CurrentDirtyHPRatio) || RETURN",
-                          "displayLines": "MDF_CurrentDirtyHPRatio",
-                          "constants": [],
-                          "variables": [
-                            "MDF_CurrentDirtyHPRatio"
-                          ]
-                        }
-                      }
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-765841098\">Monster_XP_Elite02_02_RLElite_TryAddDirtyHP</a>"
-                    }
-                  ]
+                  "variableName": "HealHPTurn",
+                  "context": "TargetEntity",
+                  "value": 1,
+                  "max": 99
                 }
               ]
             }
           ]
         },
         {
-          "eventTrigger": "Custom Event",
+          "eventTrigger": "HP Change [Owner]",
           "execute": [
             {
-              "name": "Declare Custom Variable",
-              "target": {
-                "name": "Target Name",
-                "target": "{{Modifier Holder}}"
+              "name": "IF",
+              "conditions": {
+                "name": "AND",
+                "conditionList": [
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "ParameterValue",
+                    "compareType": "<",
+                    "value2": 0
+                  },
+                  {
+                    "name": "Compare: Variable",
+                    "value1": "HealHPCheck",
+                    "compareType": "=",
+                    "value2": 1,
+                    "contextScope": "TargetEntity"
+                  },
+                  {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "HealHPTurn",
+                        "compareType": ">=",
+                        "value2": 2,
+                        "contextScope": "TargetEntity"
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "value1": "CurrentHP%",
+                        "compareType": "<",
+                        "value2": 0.7
+                      }
+                    ]
+                  }
+                ]
               },
-              "variableName": "MDF_DirtyHPAddFlag",
-              "value": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__-773012193\">Monster_XP_Elite02_02_RLElite_ChargeEffect</a>[<span class=\"descriptionNumberColor\">Japa</span>]",
-      "description": "Uses Black Prana's Snare on all targets during the next action.",
-      "type": "Buff",
-      "effectName": "Japa",
-      "statusName": "Japa",
-      "execute": [
-        {
-          "eventTrigger": "When Constructing Modifier"
-        },
-        {
-          "eventTrigger": "When Modifier Destroyed/Removed"
-        },
-        {
-          "eventTrigger": "Being Weakness Broken: End [Owner]",
-          "execute": [
-            "Modifier Deletes Itself",
-            {
-              "name": "Remove Events/Bonuses",
-              "to": {
-                "name": "Target Name",
-                "target": "{{Caster}}"
-              },
-              "modifier": "<a class=\"gModGreen\" id=\"-773012193\">Monster_XP_Elite02_02_RLElite_ChargeEffect</a>[<span class=\"descriptionNumberColor\">Japa</span>]"
+              "passed": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "HealHPCheck"
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "HealHPTurn"
+                },
+                {
+                  "name": "Inject Ability Use",
+                  "abilityName": "Monster_W2_Xuanlu_Ability09_Part01",
+                  "priorityTag": "STAGE_Enemy",
+                  "ownerState": "Mask_AliveOrLimbo",
+                  "targetState": "Mask_AliveOrLimbo",
+                  "canHitNonTargets": true,
+                  "allowAbilityTriggers": false
+                }
+              ]
             }
           ]
         }
