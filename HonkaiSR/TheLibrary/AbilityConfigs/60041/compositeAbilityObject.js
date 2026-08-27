@@ -763,35 +763,35 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"766895631\">Standard_Monster_Floating_DamageReduceController</a>",
                       "valuePerStack": {
                         "MDF_LockHpActionDecreaseRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13493) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13493",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13685) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13685",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_13493"
+                            "UnusedUnderThisBase_13685"
                           ]
                         },
                         "MDF_LockHpUpLimitRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13461) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13461",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13653) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13653",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_13461"
+                            "UnusedUnderThisBase_13653"
                           ]
                         },
                         "MDF_DamageReduceRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13464) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13464",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13656) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13656",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_13464"
+                            "UnusedUnderThisBase_13656"
                           ]
                         },
                         "MDF_LastLockHpRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13460) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13460",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13652) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13652",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_13460"
+                            "UnusedUnderThisBase_13652"
                           ]
                         }
                       }
@@ -1216,10 +1216,31 @@ const compositeAbilityObject = {
               "eventTrigger": "When Modifier Destroyed/Removed",
               "execute": [
                 {
-                  "name": "Define Modifier-Specific Variable",
-                  "modifierName": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
-                  "variableName": "MDF_SummonFlag",
-                  "value": 1
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Check Boolean Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Ripper: Self}}"
+                    },
+                    "value": "InSkill05"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Modifier-Specific Variable",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                      "variableName": "MDF_SummonFlag",
+                      "value": 1
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "Define Modifier-Specific Variable",
+                      "modifierName": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                      "variableName": "MDF_SummonFlag",
+                      "value": 1
+                    }
+                  ]
                 },
                 {
                   "name": "Remove Events/Bonuses",
@@ -1460,22 +1481,55 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1275502108\">Monster_W5_Ripper_BattleScore2Count</a>"
                     },
                     {
-                      "name": "Define Modifier-Specific Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Ripper: Self}}"
+                        },
+                        "value": "InSkill05"
                       },
-                      "modifierName": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
-                      "variableName": "MDF_SummonFlag",
-                      "value": 1
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
+                      "passed": [
+                        {
+                          "name": "Define Modifier-Specific Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifierName": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                          "variableName": "MDF_SummonFlag",
+                          "value": 1
+                        },
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Define Modifier-Specific Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifierName": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                          "variableName": "MDF_SummonFlag",
+                          "value": 1
+                        },
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
+                        }
+                      ]
                     },
                     {
                       "name": "Add Events/Bonuses",
@@ -1563,22 +1617,55 @@ const compositeAbilityObject = {
                   ],
                   "failed": [
                     {
-                      "name": "Define Modifier-Specific Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Ripper: Self}}"
+                        },
+                        "value": "InSkill05"
                       },
-                      "modifierName": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
-                      "variableName": "MDF_SummonFlag",
-                      "value": 1
-                    },
-                    {
-                      "name": "Remove Events/Bonuses",
-                      "to": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
+                      "passed": [
+                        {
+                          "name": "Define Modifier-Specific Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifierName": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                          "variableName": "MDF_SummonFlag",
+                          "value": 1
+                        },
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Define Modifier-Specific Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifierName": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                          "variableName": "MDF_SummonFlag",
+                          "value": 1
+                        },
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
+                        }
+                      ]
                     }
                   ]
                 },
@@ -1714,11 +1801,11 @@ const compositeAbilityObject = {
                                   "name": "Define Custom Variable",
                                   "variableName": "MDF_DelayRatio",
                                   "value": {
-                                    "operator": "Variables[0] (UnusedUnderThisBase_13469) || RETURN",
-                                    "displayLines": "UnusedUnderThisBase_13469",
+                                    "operator": "Variables[0] (UnusedUnderThisBase_13694) || RETURN",
+                                    "displayLines": "UnusedUnderThisBase_13694",
                                     "constants": [],
                                     "variables": [
-                                      "UnusedUnderThisBase_13469"
+                                      "UnusedUnderThisBase_13694"
                                     ]
                                   }
                                 }
@@ -1728,11 +1815,11 @@ const compositeAbilityObject = {
                                   "name": "Define Custom Variable",
                                   "variableName": "MDF_DelayRatio",
                                   "value": {
-                                    "operator": "Variables[0] (UnusedUnderThisBase_13467) || RETURN",
-                                    "displayLines": "UnusedUnderThisBase_13467",
+                                    "operator": "Variables[0] (UnusedUnderThisBase_13692) || RETURN",
+                                    "displayLines": "UnusedUnderThisBase_13692",
                                     "constants": [],
                                     "variables": [
-                                      "UnusedUnderThisBase_13467"
+                                      "UnusedUnderThisBase_13692"
                                     ]
                                   }
                                 }
@@ -1776,11 +1863,11 @@ const compositeAbilityObject = {
                               },
                               "variableName": "Buff_DamageUpRatio",
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_13488) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_13488",
+                                "operator": "Variables[0] (UnusedUnderThisBase_13713) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_13713",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_13488"
+                                  "UnusedUnderThisBase_13713"
                                 ]
                               }
                             },
@@ -1792,11 +1879,11 @@ const compositeAbilityObject = {
                               },
                               "variableName": "Buff_MaxLayer",
                               "value": {
-                                "operator": "Variables[0] (UnusedUnderThisBase_13465) || RETURN",
-                                "displayLines": "UnusedUnderThisBase_13465",
+                                "operator": "Variables[0] (UnusedUnderThisBase_13690) || RETURN",
+                                "displayLines": "UnusedUnderThisBase_13690",
                                 "constants": [],
                                 "variables": [
-                                  "UnusedUnderThisBase_13465"
+                                  "UnusedUnderThisBase_13690"
                                 ]
                               }
                             },
@@ -1921,6 +2008,642 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+          "stackType": "ReplaceButKeepLifeTime",
+          "modifierFlags": [
+            "RemoveWhenCasterDead"
+          ],
+          "description": "At the start of each turn, gains <span class=\"descriptionNumberColor\">MDF_AddLayer</span> stack(s). Loses 1 stack after attacking an enemy target, and loses an additional stack after eliminating an enemy target. At the end of the turn, if stacks are greater than or equal to <span class=\"descriptionNumberColor\">MDF_MaxLayer</span>, the character will be converted into a \"Happiness Puppet.\" When stacks reach <span class=\"descriptionNumberColor\">MDF_RemoveLayer</span>, this state is dispelled and the \"Inverted Severance\" effect is inflicted.",
+          "type": "Other",
+          "effectName": "Happiness",
+          "statusName": "Happiness",
+          "addStacksPerTrigger": 1,
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Add Ability",
+                  "abilityName": "Monster_W5_Ripper_FleshChange"
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "FleshLifeTime",
+                  "value": {
+                    "operator": "Variables[0] (UnusedUnderThisBase_13699) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13699",
+                    "constants": [],
+                    "variables": [
+                      "UnusedUnderThisBase_13699"
+                    ]
+                  }
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "Buff_DamageUpRatio",
+                  "value": {
+                    "operator": "Variables[0] (UnusedUnderThisBase_13713) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13713",
+                    "constants": [],
+                    "variables": [
+                      "UnusedUnderThisBase_13713"
+                    ]
+                  }
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "Buff_MaxLayer",
+                  "value": {
+                    "operator": "Variables[0] (UnusedUnderThisBase_13690) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13690",
+                    "constants": [],
+                    "variables": [
+                      "UnusedUnderThisBase_13690"
+                    ]
+                  }
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "MDF_FleshElationPoint",
+                  "value": {
+                    "operator": "Variables[0] (UnusedUnderThisBase_13689) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13689",
+                    "constants": [],
+                    "variables": [
+                      "UnusedUnderThisBase_13689"
+                    ]
+                  }
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "MDF_FleshExtraChance",
+                  "value": {
+                    "operator": "Variables[0] (UnusedUnderThisBase_13697) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13697",
+                    "constants": [],
+                    "variables": [
+                      "UnusedUnderThisBase_13697"
+                    ]
+                  }
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "MDF_FleshExtraElationPoint",
+                  "value": {
+                    "operator": "Variables[0] (UnusedUnderThisBase_13711) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13711",
+                    "constants": [],
+                    "variables": [
+                      "UnusedUnderThisBase_13711"
+                    ]
+                  }
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "MDF_AttackEnemyChance",
+                  "value": {
+                    "operator": "Variables[0] (UnusedUnderThisBase_13695) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13695",
+                    "constants": [],
+                    "variables": [
+                      "UnusedUnderThisBase_13695"
+                    ]
+                  }
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "MDF_DamagePercentage",
+                  "value": {
+                    "operator": "Variables[0] (UnusedUnderThisBase_13691) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13691",
+                    "constants": [],
+                    "variables": [
+                      "UnusedUnderThisBase_13691"
+                    ]
+                  }
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "MDF_MaxDamageRatio",
+                  "value": {
+                    "operator": "Variables[0] (UnusedUnderThisBase_13693) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13693",
+                    "constants": [],
+                    "variables": [
+                      "UnusedUnderThisBase_13693"
+                    ]
+                  }
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "MDF_MinDamageRatio",
+                  "value": {
+                    "operator": "Variables[0] (UnusedUnderThisBase_13715) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13715",
+                    "constants": [],
+                    "variables": [
+                      "UnusedUnderThisBase_13715"
+                    ]
+                  }
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "MDF_ExtraDamageMultiple",
+                  "value": {
+                    "operator": "Variables[0] (UnusedUnderThisBase_13716) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13716",
+                    "constants": [],
+                    "variables": [
+                      "UnusedUnderThisBase_13716"
+                    ]
+                  }
+                },
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "MDF_EnemyExtraDamageMultiple",
+                  "value": {
+                    "operator": "Variables[0] (UnusedUnderThisBase_13717) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13717",
+                    "constants": [],
+                    "variables": [
+                      "UnusedUnderThisBase_13717"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]",
+                    "invertCondition": true
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Enemy Team All}}"
+                        },
+                        "value1": "TeamCharacterCount",
+                        "compareType": ">=",
+                        "value2": 5
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_AttackFlag",
+                        "compareType": "=",
+                        "value2": 1
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                          "addStacksPerTrigger": {
+                            "operator": "Variables[0] (MDF_AddLayer) || Constants[0] (1) || SUB || RETURN",
+                            "displayLines": "(MDF_AddLayer - 1)",
+                            "constants": [
+                              1
+                            ],
+                            "variables": [
+                              "MDF_AddLayer"
+                            ]
+                          }
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_AttackFlag",
+                          "value": 0
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                          "addStacksPerTrigger": {
+                            "operator": "Variables[0] (MDF_AddLayer) || RETURN",
+                            "displayLines": "MDF_AddLayer",
+                            "constants": [],
+                            "variables": [
+                              "MDF_AddLayer"
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_DieFlag",
+                        "compareType": "=",
+                        "value2": 1
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                          "addStacksPerTrigger": -1
+                        },
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_DieFlag",
+                          "value": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": 100
+            },
+            {
+              "eventTrigger": "Turn [Owner]: Action-End Phase",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "ModifierLayers",
+                    "compareType": ">=",
+                    "value2": {
+                      "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
+                      "displayLines": "MDF_MaxLayer",
+                      "constants": [],
+                      "variables": [
+                        "MDF_MaxLayer"
+                      ]
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_ConversionFlag",
+                        "compareType": "=",
+                        "value2": 0
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_ConversionFlag",
+                          "value": 1
+                        },
+                        {
+                          "name": "Inject Ability Use",
+                          "abilityName": "Monster_W5_Ripper_FleshChange",
+                          "priorityTag": "EnemyBuffOthers",
+                          "allowAbilityTriggers": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "LastModifierLayers",
+                  "value": {
+                    "operator": "Variables[0] (ModifierLayers) || RETURN",
+                    "displayLines": "ModifierLayers",
+                    "constants": [],
+                    "variables": [
+                      "ModifierLayers"
+                    ]
+                  }
+                },
+                {
+                  "name": "Define Custom Variable with Modifier Values",
+                  "valueType": "Layer",
+                  "variableName": "ModifierLayers",
+                  "multiplier": 1
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "ModifierLayers",
+                        "compareType": ">=",
+                        "value2": {
+                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
+                          "displayLines": "MDF_MaxLayer",
+                          "constants": [],
+                          "variables": [
+                            "MDF_MaxLayer"
+                          ]
+                        }
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "LastModifierLayers",
+                        "compareType": "<",
+                        "value2": {
+                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
+                          "displayLines": "MDF_MaxLayer",
+                          "constants": [],
+                          "variables": [
+                            "MDF_MaxLayer"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "ModifierLayers",
+                        "compareType": "<",
+                        "value2": {
+                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
+                          "displayLines": "MDF_MaxLayer",
+                          "constants": [],
+                          "variables": [
+                            "MDF_MaxLayer"
+                          ]
+                        }
+                      },
+                      {
+                        "name": "Compare: Variable",
+                        "value1": "LastModifierLayers",
+                        "compareType": ">=",
+                        "value2": {
+                          "operator": "Variables[0] (MDF_MaxLayer) || RETURN",
+                          "displayLines": "MDF_MaxLayer",
+                          "constants": [],
+                          "variables": [
+                            "MDF_MaxLayer"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "ModifierLayers",
+                    "compareType": "=",
+                    "value2": 2
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "MDF_Init",
+                        "compareType": "=",
+                        "value2": 0
+                      },
+                      "passed": [
+                        {
+                          "name": "Define Custom Variable",
+                          "variableName": "MDF_Init",
+                          "value": 1
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "ModifierLayers",
+                    "compareType": "=",
+                    "value2": 0
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-2109211182\">Monster_W5_Ripper_Bonus</a>[<span class=\"descriptionNumberColor\">Inverted Severance</span>]",
+                      "duration": {
+                        "operator": "Variables[0] (UnusedUnderThisBase_13708) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_13708",
+                        "constants": [],
+                        "variables": [
+                          "UnusedUnderThisBase_13708"
+                        ]
+                      },
+                      "valuePerStack": {
+                        "MDF_CriticalDamageUpRatio": {
+                          "operator": "Variables[0] (UnusedUnderThisBase_13707) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13707",
+                          "constants": [],
+                          "variables": [
+                            "UnusedUnderThisBase_13707"
+                          ]
+                        }
+                      }
+                    },
+                    "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Death [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Target Exists",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target 2}}"
+                        }
+                      },
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Enemy Team"
+                      },
+                      {
+                        "name": "Is Part Of",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target 2}}"
+                        },
+                        "mustBeAlive2": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                        "compareType": "=",
+                        "value2": 0,
+                        "valueType": "Layer"
+                      },
+                      "failed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                          "addStacksPerTrigger": -1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Attack DMG End [Owner]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "value1": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                    "compareType": "=",
+                    "value2": 0,
+                    "valueType": "Layer"
+                  },
+                  "failed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
+                      "addStacksPerTrigger": -1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-329548690\">Monster_W5_Ripper_Parasitism</a>[<span class=\"descriptionNumberColor\">Happiness</span>]",
           "stackType": "ReplaceButKeepLifeTime",
           "modifierFlags": [
@@ -1948,11 +2671,11 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "FleshLifeTime",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13474) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_13474",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13699) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13699",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_13474"
+                      "UnusedUnderThisBase_13699"
                     ]
                   }
                 },
@@ -1965,11 +2688,11 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "Buff_DamageUpRatio",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13488) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_13488",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13713) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13713",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_13488"
+                      "UnusedUnderThisBase_13713"
                     ]
                   }
                 },
@@ -1982,11 +2705,11 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "Buff_MaxLayer",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13465) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_13465",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13690) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13690",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_13465"
+                      "UnusedUnderThisBase_13690"
                     ]
                   }
                 },
@@ -1999,11 +2722,11 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "MDF_FleshElationPoint",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13463) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_13463",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13689) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13689",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_13463"
+                      "UnusedUnderThisBase_13689"
                     ]
                   }
                 },
@@ -2016,11 +2739,11 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "MDF_FleshExtraChance",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13472) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_13472",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13697) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13697",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_13472"
+                      "UnusedUnderThisBase_13697"
                     ]
                   }
                 },
@@ -2033,11 +2756,11 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "MDF_FleshExtraElationPoint",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13486) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_13486",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13711) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13711",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_13486"
+                      "UnusedUnderThisBase_13711"
                     ]
                   }
                 },
@@ -2050,11 +2773,11 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "MDF_AttackEnemyChance",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13470) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_13470",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13695) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13695",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_13470"
+                      "UnusedUnderThisBase_13695"
                     ]
                   }
                 },
@@ -2067,11 +2790,11 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "MDF_DamagePercentage",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13466) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_13466",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13691) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13691",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_13466"
+                      "UnusedUnderThisBase_13691"
                     ]
                   }
                 },
@@ -2084,11 +2807,11 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "MDF_MaxDamageRatio",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13468) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_13468",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13693) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13693",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_13468"
+                      "UnusedUnderThisBase_13693"
                     ]
                   }
                 },
@@ -2101,11 +2824,11 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "MDF_MinDamageRatio",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13490) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_13490",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13715) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13715",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_13490"
+                      "UnusedUnderThisBase_13715"
                     ]
                   }
                 },
@@ -2118,11 +2841,11 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "MDF_ExtraDamageMultiple",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13491) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_13491",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13716) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13716",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_13491"
+                      "UnusedUnderThisBase_13716"
                     ]
                   }
                 },
@@ -2135,11 +2858,11 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "MDF_EnemyExtraDamageMultiple",
                   "value": {
-                    "operator": "Variables[0] (UnusedUnderThisBase_13492) || RETURN",
-                    "displayLines": "UnusedUnderThisBase_13492",
+                    "operator": "Variables[0] (UnusedUnderThisBase_13717) || RETURN",
+                    "displayLines": "UnusedUnderThisBase_13717",
                     "constants": [],
                     "variables": [
-                      "UnusedUnderThisBase_13492"
+                      "UnusedUnderThisBase_13717"
                     ]
                   }
                 }
@@ -2454,20 +3177,20 @@ const compositeAbilityObject = {
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"-2109211182\">Monster_W5_Ripper_Bonus</a>[<span class=\"descriptionNumberColor\">Inverted Severance</span>]",
                       "duration": {
-                        "operator": "Variables[0] (UnusedUnderThisBase_13483) || RETURN",
-                        "displayLines": "UnusedUnderThisBase_13483",
+                        "operator": "Variables[0] (UnusedUnderThisBase_13708) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_13708",
                         "constants": [],
                         "variables": [
-                          "UnusedUnderThisBase_13483"
+                          "UnusedUnderThisBase_13708"
                         ]
                       },
                       "valuePerStack": {
                         "MDF_CriticalDamageUpRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_13482) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_13482",
+                          "operator": "Variables[0] (UnusedUnderThisBase_13707) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_13707",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_13482"
+                            "UnusedUnderThisBase_13707"
                           ]
                         }
                       }
@@ -3699,6 +4422,14 @@ const compositeAbilityObject = {
                           "target": "{{Modifier Holder}}"
                         },
                         "value": "ENEMIES_OBJECT_UNUSED__246"
+                      },
+                      {
+                        "name": "Check Boolean Value",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value": "InSkill05"
                       }
                     ]
                   },
@@ -3730,6 +4461,145 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "End Broken State [Owner]"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-328561201\">Monster_W5_Ripper_Passive_FantasticStory</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Find New Target",
+                  "from": {
+                    "name": "Target Name",
+                    "target": "{{Enemy Team All}}"
+                  },
+                  "conditions": {
+                    "name": "Enemy ID",
+                    "ID": {
+                      "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
+                      "displayLines": "SummonList_ADF_1",
+                      "constants": [],
+                      "variables": [
+                        "SummonList_ADF_1"
+                      ]
+                    },
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "characterName": null
+                  },
+                  "ifTargetFound": [
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "variableName": "Buff_DamageUpRatio",
+                      "value": {
+                        "operator": "Variables[0] (UnusedUnderThisBase_13713) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_13713",
+                        "constants": [],
+                        "variables": [
+                          "UnusedUnderThisBase_13713"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "variableName": "Buff_MaxLayer",
+                      "value": {
+                        "operator": "Variables[0] (UnusedUnderThisBase_13690) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_13690",
+                        "constants": [],
+                        "variables": [
+                          "UnusedUnderThisBase_13690"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Enemy Team"
+                      },
+                      {
+                        "name": "Enemy ID",
+                        "ID": {
+                          "operator": "Variables[0] (SummonList_ADF_1) || RETURN",
+                          "displayLines": "SummonList_ADF_1",
+                          "constants": [],
+                          "variables": [
+                            "SummonList_ADF_1"
+                          ]
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "characterName": null
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "variableName": "Buff_DamageUpRatio",
+                      "value": {
+                        "operator": "Variables[0] (UnusedUnderThisBase_13713) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_13713",
+                        "constants": [],
+                        "variables": [
+                          "UnusedUnderThisBase_13713"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "Define Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "variableName": "Buff_MaxLayer",
+                      "value": {
+                        "operator": "Variables[0] (UnusedUnderThisBase_13690) || RETURN",
+                        "displayLines": "UnusedUnderThisBase_13690",
+                        "constants": [],
+                        "variables": [
+                          "UnusedUnderThisBase_13690"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }

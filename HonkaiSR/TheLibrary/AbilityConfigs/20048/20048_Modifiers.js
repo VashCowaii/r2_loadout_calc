@@ -267,11 +267,15 @@ const configAbility = {
     },
     {
       "name": "Modifier Construction",
-      "for": "<a class=\"gModGreen\" id=\"mod__594195286\">Enemy_W5_AsatPramad_Debuff_05_Modifier</a>",
+      "for": "<a class=\"gModGreen\" id=\"mod__594195286\">Enemy_W5_AsatPramad_Debuff_05_Modifier</a>[<span class=\"descriptionNumberColor\">Shield</span>]",
       "stackType": "Replace",
       "modifierFlags": [
         "Shield"
       ],
+      "description": "Gains a Shield that can offset DMG.",
+      "type": "Buff",
+      "effectName": "Shield",
+      "statusName": "Shield",
       "execute": [
         {
           "eventTrigger": "When Modifier Destroyed/Removed",
