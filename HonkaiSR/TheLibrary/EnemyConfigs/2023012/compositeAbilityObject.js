@@ -1,2 +1,1277 @@
 const entityPageType = "enemy"
-let compositeAbilityObject = []
+const compositeAbilityObject = {
+  "fullCharacterName": 2023012,
+  "trimCharacterName": 2023012,
+  "abilityList": [
+    "2023012_Modifiers",
+    "2023012_Monster_W2_Abomi04_PassiveAbilityInitiate",
+    "2023012_Monster_W2_Abomi04_AbilityP01_Insert",
+    "2023012_Monster_W2_Abomi04_AbilityP01",
+    "2023012_Monster_W2_Abomi04_Ability04_Part02",
+    "2023012_Monster_W2_Abomi04_Ability04_Part01",
+    "2023012_Monster_W2_Abomi04_Ability03_Part02",
+    "2023012_Monster_W2_Abomi04_Ability03_Part01",
+    "2023012_Monster_W2_Abomi04_Ability02_Part02",
+    "2023012_Monster_W2_Abomi04_Ability02_Part01",
+    "2023012_Monster_W2_Abomi04_Ability01_Part02",
+    "2023012_Monster_W2_Abomi04_Ability01_Part01",
+    "2023012_Handling"
+  ],
+  "abilityObject": {
+    "2023012_Modifiers": {
+      "fileName": "2023012_Modifiers",
+      "abilityType": "Char. Modifiers",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-502774281\">Enemy_W2_Abomi04_PassiveAbility_Formation2</a>",
+          "execute": [
+            {
+              "eventTrigger": "Entity Created [Anyone]",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Related Summoned Entity",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "target2": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Assign Target Battle-Location",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "row": 1
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-488885736\">Monster_W2_Abomi04_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
+          "modifierFlags": [
+            "TeamAction",
+            "RemoveWhenCasterDead"
+          ],
+          "description": "All enemies will focus attacks on this target.",
+          "type": "Other",
+          "effectName": "Lock On",
+          "statusName": "Lock On",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__125847833\">Monster_W2_Abomi04_Command</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Team Action",
+                  "conditionsActor": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Enemy Team"
+                      }
+                    ]
+                  },
+                  "conditionsTarget": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"-488885736\">Monster_W2_Abomi04_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
+                  },
+                  "abilityName": "Abomi04Command"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-453804030\">Enemy_W2_Abomi04_SummonedMinions</a>"
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-98608309\">Enemy_W2_Abomi04_HitToHeal_Effect</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier"
+            },
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Has Flag",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "flagName": "STAT_CTRL_Frozen"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-301445203\">Enemy_W2_Abomi04_HitToHeal</a>[<span class=\"descriptionNumberColor\">Draining Hit</span>]",
+          "description": "When there are other enemy targets with \"Rebirth\" remaining on the field, Disciples of Sanctus Medicus: Shape Shifter will have the following effect — restores its HP when its attack hits.",
+          "type": "Buff",
+          "effectName": "Draining Hit",
+          "statusName": "Draining Hit",
+          "execute": [
+            {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-98608309\">Enemy_W2_Abomi04_HitToHeal_Effect</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Deal Damage End [Owner]: Hit",
+              "execute": [
+                {
+                  "name": "Heal",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "healPercent": {
+                    "operator": "Variables[0] ({[SkillP01[0]]}) || RETURN",
+                    "displayLines": "{[SkillP01[0]]}",
+                    "constants": [],
+                    "variables": [
+                      "{[SkillP01[0]]}"
+                    ]
+                  },
+                  "formula": "Heal from Target MaxHP"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__378580326\">Enemy_W2_Abomi04_HitToHeal_Controller</a>",
+          "modifierFlags": [
+            "ListenBattleEventSkill"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Declare Custom Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "scope": "TargetEntity",
+                  "variableName": "W2_Abomi04_00_InsertFlag"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Death [Anyone]",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1500255012\">TaskList_W2_Abomi04_HitToHeal_Controller_OnDieOrEscape</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Left Battle [Anyone]",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1500255012\">TaskList_W2_Abomi04_HitToHeal_Controller_OnDieOrEscape</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Entity Created [Anyone]"
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: End",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1500255012\">TaskList_W2_Abomi04_HitToHeal_Controller_OnDieOrEscape</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "When Modifier is Added [Anyone]"
+            },
+            {
+              "eventTrigger": "When Losing Modifier [Anyone]",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"1500255012\">TaskList_W2_Abomi04_HitToHeal_Controller_OnDieOrEscape</a>"
+                }
+              ]
+            }
+          ],
+          "modifierFunctions": [
+            {
+              "name": "CharacterFunctions",
+              "functionName": "<a class=\"gTempYellow\" id=\"fun__1500255012\">TaskList_W2_Abomi04_HitToHeal_Controller_OnDieOrEscape</a>",
+              "parse": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Compare: Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "value1": "W2_Abomi04_00_InsertFlag",
+                        "compareType": "=",
+                        "value2": 0,
+                        "contextScope": "TargetEntity"
+                      },
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Modifier Holder}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-301445203\">Enemy_W2_Abomi04_HitToHeal</a>[<span class=\"descriptionNumberColor\">Draining Hit</span>]"
+                      },
+                      {
+                        "name": "Compare: Target List Entities",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members(Exclude Self)}}"
+                        },
+                        "conditions": {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1533376830\">Monster_W2_Abomi01_Revive</a>[<span class=\"descriptionNumberColor\">Rebirth</span>]"
+                        },
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "W2_Abomi04_00_InsertFlag",
+                      "value": 1
+                    },
+                    {
+                      "name": "Inject Ability Use",
+                      "abilityName": "Monster_W2_Abomi04_AbilityP01_Insert",
+                      "priorityTag": "EnemyChangeState",
+                      "canHitNonTargets": true,
+                      "allowAbilityTriggers": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    },
+    "2023012_Monster_W2_Abomi04_PassiveAbilityInitiate": {
+      "fileName": "2023012_Monster_W2_Abomi04_PassiveAbilityInitiate",
+      "skillTrigger": "PassiveSkillInitiate",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "W2_Abomi04_00_AICounter",
+          "value": 1
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1019940220\">Enemy_Standard_HideMonsterHUD</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"1166907060\">Enemy_Standard_MuteHitFly</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"883139622\">OneMorePerTurn</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2023012_Monster_W2_Abomi04_AbilityP01_Insert": {
+      "fileName": "2023012_Monster_W2_Abomi04_AbilityP01_Insert",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Remove Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-301445203\">Enemy_W2_Abomi04_HitToHeal</a>[<span class=\"descriptionNumberColor\">Draining Hit</span>]"
+        },
+        {
+          "name": "Declare Custom Variable",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Modifier Holder}}"
+          },
+          "scope": "TargetEntity",
+          "variableName": "W2_Abomi04_00_InsertFlag"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2023012_Monster_W2_Abomi04_AbilityP01": {
+      "fileName": "2023012_Monster_W2_Abomi04_AbilityP01",
+      "childAbilityList": [
+        "2023012_Monster_W2_Abomi04_AbilityP01",
+        "2023012_Monster_W2_Abomi04_AbilityP01_Insert"
+      ],
+      "skillTrigger": "SkillP01",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"378580326\">Enemy_W2_Abomi04_HitToHeal_Controller</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2023012_Monster_W2_Abomi04_Ability04_Part02": {
+      "fileName": "2023012_Monster_W2_Abomi04_Ability04_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "OR",
+            "conditionList": [
+              {
+                "name": "Compare: Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{All Team Members(Exclude Self)}}"
+                },
+                "value1": "TeamCharacterCount",
+                "compareType": "<=",
+                "value2": 3
+              },
+              {
+                "name": "Compare: Target List Entities",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{All Team Members(Exclude Self)}}"
+                },
+                "conditions": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1533376830\">Monster_W2_Abomi01_Revive</a>[<span class=\"descriptionNumberColor\">Rebirth</span>]"
+                }
+              }
+            ]
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-98608309\">Enemy_W2_Abomi04_HitToHeal_Effect</a>"
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{All Team Members(Exclude Self)}}"
+            },
+            "value1": "TeamCharacterCount",
+            "compareType": "<=",
+            "value2": 3
+          },
+          "passed": [
+            {
+              "name": "Consume",
+              "consumeFrom": "MaxHP",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "consumePercent": {
+                "operator": "Variables[0] ({[Skill04[0]]}) || RETURN",
+                "displayLines": "{[Skill04[0]]}",
+                "constants": [],
+                "variables": [
+                  "{[Skill04[0]]}"
+                ]
+              },
+              "consumeFloor": 1
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Is Part Of Team Location",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "team": "Enemy Team",
+                "location": "Left"
+              },
+              "passed": [
+                {
+                  "name": "Create Enemies",
+                  "refreshPositions": false,
+                  "enemyList": [
+                    {
+                      "name": "Create Enemy from Custom",
+                      "value": "W2_Abomi04_00_SummonID",
+                      "summonLocation": "First"
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Create Enemies",
+                  "refreshPositions": false,
+                  "enemyList": [
+                    {
+                      "name": "Create Enemy from Custom",
+                      "value": "W2_Abomi04_00_SummonID",
+                      "summonLocation": "Last"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Variable",
+            "target": {
+              "name": "Target Name",
+              "target": "{{All Team Members(Exclude Self)}}"
+            },
+            "value1": "TeamCharacterCount",
+            "compareType": "<=",
+            "value2": 3
+          },
+          "passed": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Is Part Of Team Location",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "team": "Enemy Team",
+                "location": "Right"
+              },
+              "passed": [
+                {
+                  "name": "Create Enemies",
+                  "refreshPositions": false,
+                  "enemyList": [
+                    {
+                      "name": "Create Enemy from Custom",
+                      "value": "W2_Abomi04_00_SummonID",
+                      "summonLocation": "Last"
+                    }
+                  ]
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Create Enemies",
+                  "refreshPositions": false,
+                  "enemyList": [
+                    {
+                      "name": "Create Enemy from Custom",
+                      "value": "W2_Abomi04_00_SummonID",
+                      "summonLocation": "First"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Compare: Target List Entities",
+            "target": {
+              "name": "Target Name",
+              "target": "{{All Team Members(Exclude Self)}}"
+            },
+            "conditions": {
+              "name": "Has Modifier",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Parameter Target}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"1533376830\">Monster_W2_Abomi01_Revive</a>[<span class=\"descriptionNumberColor\">Rebirth</span>]"
+            }
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"-301445203\">Enemy_W2_Abomi04_HitToHeal</a>[<span class=\"descriptionNumberColor\">Draining Hit</span>]"
+            }
+          ]
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-453804030\">Enemy_W2_Abomi04_SummonedMinions</a>"
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster's Minions}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-136554165\">Standard_Servant</a>[<span class=\"descriptionNumberColor\">Self-Destruct</span>]"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2023012_Monster_W2_Abomi04_Ability04_Part01": {
+      "fileName": "2023012_Monster_W2_Abomi04_Ability04_Part01",
+      "childAbilityList": [
+        "2023012_Monster_W2_Abomi04_Ability04_Camera",
+        "2023012_Monster_W2_Abomi04_Ability04_Part01",
+        "2023012_Monster_W2_Abomi04_Ability04_Part02"
+      ],
+      "skillTrigger": "Skill04",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Abomi04_Ability04_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": []
+    },
+    "2023012_Monster_W2_Abomi04_Ability03_Part02": {
+      "fileName": "2023012_Monster_W2_Abomi04_Ability03_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "Shot Fired"
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.1) || MUL || RETURN",
+              "displayLines": "({[Skill03[0]]} * 0.1)",
+              "constants": [
+                0.1
+              ],
+              "variables": [
+                "{[Skill03[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "10%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.1) || MUL || RETURN",
+              "displayLines": "({[Skill03[0]]} * 0.1)",
+              "constants": [
+                0.1
+              ],
+              "variables": [
+                "{[Skill03[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "10%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.1) || MUL || RETURN",
+              "displayLines": "({[Skill03[0]]} * 0.1)",
+              "constants": [
+                0.1
+              ],
+              "variables": [
+                "{[Skill03[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "10%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.1) || MUL || RETURN",
+              "displayLines": "({[Skill03[0]]} * 0.1)",
+              "constants": [
+                0.1
+              ],
+              "variables": [
+                "{[Skill03[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "10%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.1) || MUL || RETURN",
+              "displayLines": "({[Skill03[0]]} * 0.1)",
+              "constants": [
+                0.1
+              ],
+              "variables": [
+                "{[Skill03[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "10%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.1) || MUL || RETURN",
+              "displayLines": "({[Skill03[0]]} * 0.1)",
+              "constants": [
+                0.1
+              ],
+              "variables": [
+                "{[Skill03[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "10%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.1) || MUL || RETURN",
+              "displayLines": "({[Skill03[0]]} * 0.1)",
+              "constants": [
+                0.1
+              ],
+              "variables": [
+                "{[Skill03[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "10%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill03[0]]}) || Constants[0] (0.3) || MUL || RETURN",
+              "displayLines": "({[Skill03[0]]} * 0.3)",
+              "constants": [
+                0.3
+              ],
+              "variables": [
+                "{[Skill03[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "EnergyGainPercent": "30%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Has Modifier",
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "modifier": "<a class=\"gModGreen\" id=\"-301445203\">Enemy_W2_Abomi04_HitToHeal</a>[<span class=\"descriptionNumberColor\">Draining Hit</span>]"
+          }
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "2023012_Monster_W2_Abomi04_Ability03_Part01": {
+      "fileName": "2023012_Monster_W2_Abomi04_Ability03_Part01",
+      "childAbilityList": [
+        "2023012_Monster_W2_Abomi04_Ability03_Camera",
+        "2023012_Monster_W2_Abomi04_Ability03_Part01",
+        "2023012_Monster_W2_Abomi04_Ability03_Part02"
+      ],
+      "skillTrigger": "Skill03",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Abomi04_Ability03_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
+    },
+    "2023012_Monster_W2_Abomi04_Ability02_Part02": {
+      "fileName": "2023012_Monster_W2_Abomi04_Ability02_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+              "displayLines": "{[Skill02[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Targets Adjacent(Blast)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill02[0]]}) || RETURN",
+              "displayLines": "{[Skill02[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill02[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "2023012_Monster_W2_Abomi04_Ability02_Part01": {
+      "fileName": "2023012_Monster_W2_Abomi04_Ability02_Part01",
+      "childAbilityList": [
+        "2023012_Monster_W2_Abomi04_Ability02_Camera",
+        "2023012_Monster_W2_Abomi04_Ability02_Part01",
+        "2023012_Monster_W2_Abomi04_Ability02_Part02"
+      ],
+      "skillTrigger": "Skill02",
+      "abilityType": "Skill",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Abomi04_Ability02_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target",
+        "subTarget": "Blast Targets"
+      },
+      "references": []
+    },
+    "2023012_Monster_W2_Abomi04_Ability01_Part02": {
+      "fileName": "2023012_Monster_W2_Abomi04_Ability01_Part02",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Thunder",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "2023012_Monster_W2_Abomi04_Ability01_Part01": {
+      "fileName": "2023012_Monster_W2_Abomi04_Ability01_Part01",
+      "childAbilityList": [
+        "2023012_Monster_W2_Abomi04_Ability01_Camera",
+        "2023012_Monster_W2_Abomi04_Ability01_Part01",
+        "2023012_Monster_W2_Abomi04_Ability01_Part02"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Abomi04_Ability01_Part02",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
+    },
+    "2023012_Handling": {
+      "fileName": "2023012_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler String",
+              "variableName": "CurrentPhase",
+              "value": "Phase01"
+            },
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill01",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill01"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 0.5,
+                  "conditions": {
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill02",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "W2_Abomi04_00_AICounter",
+                      "value": 2
+                    },
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill02"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 0.5,
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Compare: Variable",
+                            "value1": "W2_Abomi04_00_AICounter",
+                            "compareType": "=",
+                            "value2": 1,
+                            "contextScope": "TargetEntity"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill03",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Declare Custom Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "scope": "TargetEntity",
+                      "variableName": "W2_Abomi04_00_AICounter",
+                      "value": 1
+                    },
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill03"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE",
+              "check": [
+                {
+                  "name": "Check Ability Use Condition",
+                  "passedValue": 0.5,
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>",
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Compare: Variable",
+                            "value1": "W2_Abomi04_00_AICounter",
+                            "compareType": "=",
+                            "value2": 2,
+                            "contextScope": "TargetEntity"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "references": []
+    }
+  }
+}

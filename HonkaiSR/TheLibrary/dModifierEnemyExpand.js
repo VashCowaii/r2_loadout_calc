@@ -6390,7 +6390,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Modifier_Monster_W4_Claymore_04_Ability03_Charge_ForShow",
+    "name": "<a class=\"gModGreen\" id=\"-2082088888\">Modifier_Monster_W4_Claymore_04_Ability03_Charge_ForShow</a>",
     "realName": "Smite Evil",
     "aim": "Other",
     "desc": "Uses \"Smite All Evil\" in the next action.",
@@ -6398,7 +6398,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Modifier_Monster_W4_Claymore_04_Honor",
+    "name": "<a class=\"gModGreen\" id=\"-998413100\">Modifier_Monster_W4_Claymore_04_Honor</a>",
     "realName": "All Wishes",
     "aim": "Buff",
     "desc": "While in the \"Smite Evil\" state, all enemy targets gain the \"Inspire\" effect equal to Lighthouse's \"All Wishes\" stacks.",
@@ -6406,7 +6406,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Modifier_Monster_W4_Claymore_04_Enhanced",
+    "name": "<a class=\"gModGreen\" id=\"-950617106\">Modifier_Monster_W4_Claymore_04_Enhanced</a>",
     "realName": "Inspire",
     "aim": "Buff",
     "desc": "Each stack reduces DMG taken by #1[i]%.",
@@ -6418,7 +6418,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Modifier_Monster_W4_Claymore_04_Ability03_Protect_Weakness",
+    "name": "<a class=\"gModGreen\" id=\"1452769834\">Modifier_Monster_W4_Claymore_04_Ability03_Protect_Weakness</a>",
     "realName": "Weakness Protected",
     "aim": "Other",
     "desc": "This unit's Toughness cannot be reduced. This effect is dispelled when \"Lighthouse\" dispels the \"Smite Evil\" state.",
@@ -6426,7 +6426,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Modifier_Monster_W4_Claymore_04_Defeated",
+    "name": "<a class=\"gModGreen\" id=\"1394805142\">Modifier_Monster_W4_Claymore_04_Defeated</a>",
     "realName": "Ruined",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%.",
@@ -6445,7 +6445,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Xuanlu_IF_Bonus_AllDamageTypeAddedRatio",
+    "name": "<a class=\"gModGreen\" id=\"1349189357\">Enemy_W2_Xuanlu_IF_Bonus_AllDamageTypeAddedRatio</a>",
     "realName": "Power of Sustenance",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by #1[i]%.",
@@ -6456,7 +6456,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_01",
+    "name": "<a class=\"gModGreen\" id=\"-730134618\">Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_01</a>",
     "realName": "Tranquility Ascension",
     "aim": "Other",
     "desc": "When this unit is on the field, DMG dealt by target units inflicted with the \"Outrage\" state to all friendly units other than \"Twig of Wintry Wind\" is greatly reduced.",
@@ -6464,7 +6464,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_01_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-401086193\">Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_01_Sub</a>",
     "realName": "Tranquility Halo",
     "aim": "Other",
     "desc": "Ally target units inflicted with the \"Outrage\" state deal greatly reduced DMG to this unit.",
@@ -6472,7 +6472,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_02",
+    "name": "<a class=\"gModGreen\" id=\"-746912237\">Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_02</a>",
     "realName": "Agility Ascension",
     "aim": "Other",
     "desc": "When this unit is on the field, actions of all friendly units except \"Twig of Marple Leaf\" slightly advance after being attacked.",
@@ -6480,7 +6480,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_02_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1326470310\">Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_02_Sub</a>",
     "realName": "Agility Halo",
     "aim": "Other",
     "desc": "After being attacked, slightly advances action.",
@@ -6488,7 +6488,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_03",
+    "name": "<a class=\"gModGreen\" id=\"-763689856\">Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_03</a>",
     "realName": "Resurrection Ascension",
     "aim": "Other",
     "desc": "When this unit is on the field, all friendly units other than \"Twig of Glorious Blooms\" and \"Unwaning Ageless Immortal\" restore a small amount of HP at the start of their turn.",
@@ -6496,7 +6496,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_03_Sub",
+    "name": "<a class=\"gModGreen\" id=\"749231853\">Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_03_Sub</a>",
     "realName": "Resurrection Halo",
     "aim": "Other",
     "desc": "At the start of the turn, slightly restores HP.",
@@ -6504,7 +6504,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Xuanlu_IF_ServantLV3_01",
+    "name": "<a class=\"gModGreen\" id=\"-880477462\">Enemy_W4_Xuanlu_IF_ServantLV3_01</a>",
     "realName": "Right-Hand Man",
     "aim": "Other",
     "desc": "When this target is defeated, deals massive True DMG to \"Unwaning Ageless Immortal\" and massively reduces its Toughness.",
@@ -6512,7 +6512,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W4_Xuanlu_IF_ServantLV3_02",
+    "name": "<a class=\"gModGreen\" id=\"-897255081\">Enemy_W4_Xuanlu_IF_ServantLV3_02</a>",
     "realName": "Right-Hand Man",
     "aim": "Other",
     "desc": "When this target is defeated, deals massive True DMG to \"Unwaning Ageless Immortal\" and massively reduces its Toughness.",
@@ -6520,7 +6520,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Xuanlu_IF_DamageReduceP2_TGT",
+    "name": "<a class=\"gModGreen\" id=\"2055606231\">Enemy_W2_Xuanlu_IF_DamageReduceP2_TGT</a>",
     "realName": "Boss DMG Reduction",
     "aim": "Buff",
     "desc": "For every \"Right-Hand Man\" on the field, DMG taken by \"Unwaning Ageless Immortal\" reduces by #1[i]%.",
@@ -6531,7 +6531,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Xuanlu_IF_Ability07_WeaknessControl",
+    "name": "<a class=\"gModGreen\" id=\"677221093\">Enemy_W2_Xuanlu_IF_Ability07_WeaknessControl</a>",
     "realName": "Hardy Leaf Sheath",
     "aim": "Buff",
     "desc": "DEF increases. Toughness cannot be reduced.",
@@ -6542,7 +6542,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W5_Guardian_DoubleStrike",
+    "name": "<a class=\"gModGreen\" id=\"1679186730\">Enemy_W5_Guardian_DoubleStrike</a>",
     "realName": "Execute Justice",
     "aim": "Other",
     "desc": "After using \"What Descends From On High?\", uses \"Justice! Justice! Justice!\" on the same target. Dispelled when Weakness is Broken.",
@@ -6550,7 +6550,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "Enemy_W2_Xuanlu_IF_MinionsSuperArmor",
+    "name": "<a class=\"gModGreen\" id=\"924404347\">Enemy_W2_Xuanlu_IF_MinionsSuperArmor</a>",
     "realName": "Synchronized DMG Reduction",
     "aim": "Buff",
     "desc": "\"Unwaning Ageless Immortal\" is currently in the \"Steadfast Safeguard\" state. DMG taken by this unit reduces by #1[i]%.",
@@ -6561,7 +6561,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "Enemy_W2_Xuanlu_IF_MinionsSuperArmorBreak",
+    "name": "<a class=\"gModGreen\" id=\"-1785429522\">Enemy_W2_Xuanlu_IF_MinionsSuperArmorBreak</a>",
     "realName": "Synchronized Vulnerability",
     "aim": "Debuff",
     "desc": "\"Unwaning Ageless Immortal\" is currently in the \"Safeguard Breach\" state. DMG taken by this unit increases by #1[i]%.",
@@ -6593,7 +6593,7 @@ let modifiersEnemy = [
     "perma": false
   },
   {
-    "name": "Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_EX04_Sub_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1364394188\">Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_EX04_Sub_Sub</a>",
     "realName": "Dazzling Halo",
     "aim": "Buff",
     "desc": "DMG taken decreases by #1[i]% and DMG dealt increases by #2[i]%.",

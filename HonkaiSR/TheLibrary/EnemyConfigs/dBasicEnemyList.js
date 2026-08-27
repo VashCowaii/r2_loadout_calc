@@ -5793,7 +5793,7 @@ let basicEnemyList = {
           "Fire"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Celestial Cherub"
     },
     "groupName": "Disciples of Sanctus Medicus: Shape Shifter"
@@ -6144,7 +6144,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Celestial Maiden"
     },
     "groupName": "The Ascended"
@@ -6397,7 +6397,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Unwaning Ageless Immortal"
     },
     "groupName": "Abundant Ebon Deer"
@@ -12999,7 +12999,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Joy Ascendant (Bug)"
     },
     "groupName": "Joy Ascendant"
@@ -13069,7 +13069,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "God-Devourer Offspring (Bug)"
     },
     "groupName": "God-Devourer Offspring"
@@ -13132,7 +13132,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Paramount Bliss Inverted: Illwish Archlotus (Complete)"
     },
     "5024014": {
@@ -13143,7 +13143,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Paramount Bliss Inverted: Illwish Archlotus"
     },
     "groupName": "Paramount Bliss Inverted: Illwish Archlotus"
@@ -17111,7 +17111,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Astropolis Sentinel"
   },
@@ -17306,7 +17306,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Lighthouse"
   },
@@ -18144,7 +18144,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Twig of Wintry Wind"
     },
     "2022080": {
@@ -18242,7 +18242,7 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Twig of Marple Leaf"
     },
     "2022090": {
@@ -18329,7 +18329,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Twig of Glorious Blooms"
     },
     "2022100": {
@@ -18419,7 +18419,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Twig of Lavish Fruits"
     },
     "2032040": {
@@ -20164,7 +20164,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Joy Ascendant: Prelude (Bug)"
     },
     "5023015": {
@@ -20175,7 +20175,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Joy Ascendant: Finale (Bug)"
     },
     "8002058": {
