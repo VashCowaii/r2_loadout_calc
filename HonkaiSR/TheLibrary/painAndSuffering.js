@@ -11731,8 +11731,9 @@ const megaParsingFuckeryPain = {
         const knownKeySet = new Set ([
             "name",
             "values",
+            "globalValues",
             "options",
-            // "whenEnteringRange",
+            "transition",
             // "whenLeavingRange",
             // "whenValueChanges",
             // "includeMaxValueInRange",
@@ -11746,12 +11747,18 @@ const megaParsingFuckeryPain = {
 
         let parseString = "";
         let parseString2 = "";
+        let parseString3 = "";
+        let parseString4 = "";
         // let refString = "";
         const hasParse = parseRef.values?.length;
         const hasParse2 = parseRef.options?.length;
+        const hasParse3 = parseRef.globalValues?.length;
+        const hasParse4 = parseRef.transition?.length;
         // const hasRef = parseRef.whenValueChanges?.length;
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.values,initialCounter);}
         if (hasParse2) {parseString2 += megaParsingFuckery.fillEventBodyBox(parseRef.options,initialCounter);}
+        if (hasParse3) {parseString3 += megaParsingFuckery.fillEventBodyBox(parseRef.globalValues,initialCounter);}
+        if (hasParse4) {parseString4 += megaParsingFuckery.fillEventBodyBox(parseRef.transition,initialCounter);}
         // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.whenValueChanges,initialCounter);}
 
         return `
@@ -11770,9 +11777,17 @@ const megaParsingFuckeryPain = {
                 <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
                     ${parseString}
                 </div>` : ""}
+            ${hasParse3 ? `<div class="rotationConditionOperatorHeaderConditionTHEN">Global Values</div>
+                <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+                    ${parseString3}
+                </div>` : ""}
             ${hasParse2 ? `<div class="rotationConditionOperatorHeaderConditionTHEN">Options</div>
                 <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
                     ${parseString2}
+                </div>` : ""}
+            ${hasParse4 ? `<div class="rotationConditionOperatorHeaderConditionTHEN">Transition</div>
+                <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+                    ${parseString4}
                 </div>` : ""}
             </div>
         </details>
@@ -12507,7 +12522,7 @@ const megaParsingFuckeryPain = {
             "inheritAllProperties",
             "useType",
         ])
-        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Create Enemies");
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Create Enemy from Custom");
 
 
         return `
@@ -12560,6 +12575,7 @@ const megaParsingFuckeryPain = {
 
             "inheritAllProperties",
             "useType",
+            "execute",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Create Enemies");
 
@@ -12568,11 +12584,11 @@ const megaParsingFuckeryPain = {
         // failed
 
         let parseString = "";
-        // let refString = "";
+        let refString = "";
         const hasParse = parseRef.enemyList?.length;
-        // const hasRef = parseRef.failed?.length;
+        const hasRef = parseRef.execute?.length;
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.enemyList,initialCounter);}
-        // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed,initialCounter);}
+        if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.execute,initialCounter);}
 
 
 
@@ -12604,6 +12620,12 @@ const megaParsingFuckeryPain = {
                 ${hasParse ? `<div class="rotationConditionOperatorHeaderConditionTHEN">LIST</div>
                 <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
                     ${parseString}
+                </div>` : ""}
+            </div>
+            <div class="rotationConditionOperatorBoxMain">
+                ${hasRef ? `<div class="rotationConditionOperatorHeaderConditionTHEN">ON CREATION</div>
+                <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+                    ${refString}
                 </div>` : ""}
             </div>
         </details>
