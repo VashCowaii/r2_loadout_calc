@@ -1229,6 +1229,22 @@ const megaParsingFuckeryPain = {
         </div>
         `;
     },
+    "Define Custom Variable with Changes to Certified Banger"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "variableName",
+            "type",
+            // "context",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with Changes to Certified Banger");
+        // initialCounter++;
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Define with Changes to Certified Banger:</div>&nbsp;
+            ${parseRef.variableName}${parseRef.type ? ` (${parseRef.type})` : ""}
+        </div>
+        <div class="modifierDetailsBox">
+        </div>`;
+    },
     "Define Custom Variable with Changes to Stats"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
