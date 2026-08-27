@@ -1,2 +1,208 @@
 const entityPageType = "enemy"
-let compositeAbilityObject = []
+const compositeAbilityObject = {
+  "fullCharacterName": 2022072,
+  "trimCharacterName": 2022072,
+  "abilityList": [
+    "2022072_Monster_W2_Xuanlu_01_PassiveAbility_Effect",
+    "2022072_Monster_W2_Xuanlu_01_Ability01_Part02_RL",
+    "2022072_Monster_W2_Xuanlu_01_Ability01_Part01_RL",
+    "2022072_Handling"
+  ],
+  "abilityObject": {
+    "2022072_Monster_W2_Xuanlu_01_PassiveAbility_Effect": {
+      "fileName": "2022072_Monster_W2_Xuanlu_01_PassiveAbility_Effect",
+      "skillTrigger": "Passive",
+      "abilityType": "Talent",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-911926523\">Enemy_W2_Xuanlu_01_GroundEffect</a>"
+        }
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "{{Caster}}"
+      },
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-911926523\">Enemy_W2_Xuanlu_01_GroundEffect</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier"
+            }
+          ]
+        }
+      ]
+    },
+    "2022072_Monster_W2_Xuanlu_01_Ability01_Part02_RL": {
+      "fileName": "2022072_Monster_W2_Xuanlu_01_Ability01_Part02_RL",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        "Ability Start",
+        {
+          "name": "ATK Scaling DMG",
+          "target": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "AttackScaling": {
+            "DamageType": "Wind",
+            "Damage": {
+              "operator": "Variables[0] ({[Skill01[0]]}) || RETURN",
+              "displayLines": "{[Skill01[0]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[0]]}"
+              ]
+            },
+            "Toughness": null,
+            "Tags": null,
+            "attackType": "Basic ATK",
+            "EnergyGainPercent": "100%"
+          }
+        },
+        "Trigger: Attack End",
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-1794338335\">Standard_CTRL_Crazy</a>[<span class=\"descriptionNumberColor\">Outrage</span>]",
+          "duration": {
+            "operator": "Variables[0] ({[Skill01[1]]}) || RETURN",
+            "displayLines": "{[Skill01[1]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill01[1]]}"
+            ]
+          },
+          "baseChance": 1
+        },
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Ability Target(ST)}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+          "duration": {
+            "operator": "Variables[0] ({[Skill01[3]]}) || RETURN",
+            "displayLines": "{[Skill01[3]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill01[3]]}"
+            ]
+          },
+          "baseChance": {
+            "operator": "Variables[0] ({[Skill01[2]]}) || RETURN",
+            "displayLines": "{[Skill01[2]]}",
+            "constants": [],
+            "variables": [
+              "{[Skill01[2]]}"
+            ]
+          },
+          "valuePerStack": {
+            "Modifier_Poison_DamagePercentage": {
+              "operator": "Variables[0] ({[Skill01[4]]}) || RETURN",
+              "displayLines": "{[Skill01[4]]}",
+              "constants": [],
+              "variables": [
+                "{[Skill01[4]]}"
+              ]
+            }
+          },
+          "stackFlag": "CharacterSkill"
+        },
+        "Trigger: Ability End"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "references": []
+    },
+    "2022072_Monster_W2_Xuanlu_01_Ability01_Part01_RL": {
+      "fileName": "2022072_Monster_W2_Xuanlu_01_Ability01_Part01_RL",
+      "childAbilityList": [
+        "2022072_Monster_W2_Xuanlu_01_Ability01_Part01_RL",
+        "2022072_Monster_W2_Xuanlu_01_Ability01_Part02_RL",
+        "2022072_Monster_W2_Xuanlu_01_Ability01_Camera"
+      ],
+      "skillTrigger": "Skill01",
+      "abilityType": "Basic ATK",
+      "energy": null,
+      "toughnessList": null,
+      "parse": [
+        {
+          "name": "Trigger Ability",
+          "from": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "ability": "Monster_W2_Xuanlu_01_Ability01_Part02_RL",
+          "isTrigger": true
+        },
+        "Deleted bullshit"
+      ],
+      "targetObjectData": {
+        "primaryTarget": "{{Ability Target List}}"
+      },
+      "realTargetData": {
+        "primaryTarget": "Select Hostile Target"
+      },
+      "references": []
+    },
+    "2022072_Handling": {
+      "fileName": "2022072_Handling",
+      "abilityType": "Handling",
+      "energy": null,
+      "toughnessList": [
+        0,
+        0,
+        0
+      ],
+      "parse": [
+        {
+          "name": "Action Handling",
+          "values": [
+            {
+              "name": "Define Handler Boolean",
+              "variableName": "ForbidClearSkillUseRecord",
+              "value": true
+            }
+          ],
+          "options": [
+            {
+              "name": "HANDLER OPTION",
+              "option": "UseSkill01",
+              "goal": [
+                {
+                  "name": "Sequence Event",
+                  "passed": [
+                    {
+                      "name": "Use Ability Option",
+                      "skillName": "Skill01"
+                    }
+                  ]
+                }
+              ],
+              "type": "DefaultDSE"
+            }
+          ]
+        }
+      ],
+      "references": []
+    }
+  }
+}
