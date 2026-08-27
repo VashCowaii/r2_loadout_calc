@@ -31362,6 +31362,41 @@ let mocSchedule = [
             "stageDataArray": [
               {
                 "stageName": "Unwaning Ageless Immortal",
+                "corruptionID": 2,
+                "corruptionBuff": {
+                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+                  "realModifierNamne": "ChallengePeakBattle_GluttonyAbility_LV2",
+                  "BEKey": 1912336050,
+                  "name": "undefined",
+                  "desc": "undefined",
+                  "battleDesc": null,
+                  "buffType": "",
+                  "params": [
+                    0.4,
+                    0.2,
+                    1,
+                    1,
+                    0.35
+                  ]
+                },
+                "corruptionDesc": "The contaminated monsters have obtained the power of \"Voracity.\" Upon taking killing blow, they will not be defeated, but will instead immediately restore a certain percentage of their HP.\\nDealing DMG to them can continuously suppress their Max HP. Once suppressed to a certain percentage, the enemy can be completely defeated.",
+                "corruptionParams": [
+                  0.4,
+                  0.4,
+                  1,
+                  1,
+                  0.72
+                ],
+                "corruptionEnemies": [
+                  {
+                    "ID": 202206017,
+                    "params": []
+                  },
+                  {
+                    "ID": 202303203,
+                    "params": []
+                  }
+                ],
                 "enemyLevel": 80,
                 "modifiersToAdd": [],
                 "buffOverride": {
@@ -31715,6 +31750,41 @@ let mocSchedule = [
             "stageDataArray": [
               {
                 "stageName": "Unwaning Ageless Immortal",
+                "corruptionID": 2,
+                "corruptionBuff": {
+                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+                  "realModifierNamne": "ChallengePeakBattle_GluttonyAbility_LV2",
+                  "BEKey": 1912336050,
+                  "name": "undefined",
+                  "desc": "undefined",
+                  "battleDesc": null,
+                  "buffType": "",
+                  "params": [
+                    0.4,
+                    0.2,
+                    1,
+                    1,
+                    0.35
+                  ]
+                },
+                "corruptionDesc": "The contaminated monsters have obtained the power of \"Voracity.\" Upon taking killing blow, they will not be defeated, but will instead immediately restore a certain percentage of their HP.\\nDealing DMG to them can continuously suppress their Max HP. Once suppressed to a certain percentage, the enemy can be completely defeated.",
+                "corruptionParams": [
+                  0.4,
+                  0.4,
+                  1,
+                  1,
+                  0.72
+                ],
+                "corruptionEnemies": [
+                  {
+                    "ID": 202206018,
+                    "params": []
+                  },
+                  {
+                    "ID": 202303204,
+                    "params": []
+                  }
+                ],
                 "enemyLevel": 90,
                 "modifiersToAdd": [],
                 "buffOverride": {
