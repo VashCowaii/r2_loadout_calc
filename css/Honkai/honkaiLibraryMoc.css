@@ -735,6 +735,17 @@
     /* background: linear-gradient(200deg, #ffffff21,transparent, #0d393b7a); */
 }
 
+.enemyWaveEnemyDisplayBoxCorrupted {
+    /* min-height: 200px; */
+    /* background: linear-gradient(200deg, #ffffff21,transparent,#0d393b7a); */
+    /* background: linear-gradient(200deg, #0d393b7a,transparent,#ffffff21); */
+
+    background: linear-gradient(200deg, #71092B,transparent,#ffffff21);
+
+    /* border: 2px solid linear-gradient(200deg, #ffffff21,transparent, #0d393b7a); */
+    /* background: linear-gradient(200deg, #ffffff21,transparent, #0d393b7a); */
+}
+
 .actionDetailBody3Description {
     width: 100%;
     max-width: 95%;

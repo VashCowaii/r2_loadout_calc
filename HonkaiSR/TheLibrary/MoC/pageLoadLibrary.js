@@ -535,6 +535,23 @@ const endgameModeDisplay = {
                         overrideMainBuffDescUsed = true;
                         console.log(`Override main desc: used`)
                     }
+
+                    if (sideEntry.corruptionBuff) {
+                        const buffEntry = sideEntry.corruptionBuff;
+
+                        if (!buffEntry.isPushed) {
+                            buffEntry.params = sideEntry.corruptionParams ?? buffEntry.params;
+                            buffEntry.desc = sideEntry.corruptionDesc;
+                            buffEntry.isCorrupt = true;
+                            buffEntry.isPushed = true;
+                            buffEntry.level = sideEntry.corruptionID;
+
+                            checkBattleEventAbilities ??= [];
+                            checkBattleEventAbilities.push(buffEntry)
+                        }
+                    }
+
+
                     if (checkBattleEventAbilities && checkBattleEventAbilities.length) {
                         // ${pagePopulation.cleanDescription(buffEntry.params,buffEntry.desc)}
                         // readSelection("mocDescriptionBox").innerHTML = pagePopulation.cleanDescription(buffOverride.params,buffOverride.desc)
@@ -732,9 +749,25 @@ const endgameModeDisplay = {
                             // const baselineImage = enemyEntry.image;
 
 
+                            const currentEnemyID = enemyEntry.id;
+                            let isCorrupted = false;
+                            // buffEntry.level = sideEntry.corruptionID;params
+
+                            if (sideEntry.corruptionEnemies) {
+                                for (let corruption of sideEntry.corruptionEnemies) {
+                                    if (corruption.ID === currentEnemyID) {
+
+                                        isCorrupted = true;
+                                        break;
+                                    }
+                                }
+                            }
+                            // sideEntry.corruptionBuff
+
+
                             // href="/HonkaiSR/TheLibrary/EnemyConfigs/${enemyEntry.image}/?${serialized}"
                             // onclick="endgameModeDisplay.linkToEnemy()"
-                            wholeWaveString += `<div class="${isBigFucker ? "enemyWaveEnemyDisplayBoxWideEnemy" : "enemyWaveEnemyDisplayBox"}">
+                            wholeWaveString += `<div class="${isBigFucker ? "enemyWaveEnemyDisplayBoxWideEnemy" : "enemyWaveEnemyDisplayBox"}${isCorrupted ? " enemyWaveEnemyDisplayBoxCorrupted" : ""}">
     
                                 <img src="/HonkaiSR/${enemyImage}" class="enemyWaveEnemyIcon">
                                 <div class="enemyWaveEnemyLevel">${enemyLevel}</div>
@@ -2130,26 +2163,33 @@ const endgameModeDisplay = {
 
                     // const displayName = beEntry.realModifierNamne.replace("BattleEventAbility_","").replace("ChallengePeakBattle_","")
 
+                    // buffEntry.level = sideEntry.corruptionID;params
+
                     buttonString += `${beEntry.BEKey ? `<div class="eidolonRowBoxHolderBEAbility">
                         <div class="rightDescriptionBoxEidolons smallFont">
-                            <div class="eidolonRowNameTriggerBEAbility">Side ${beEntry.side}
+                            <div class="eidolonRowNameTriggerBEAbility">${beEntry.isCorrupt ? `COR LvL${beEntry.level} - ` : ""}Side ${beEntry.side}
                             
                                 <div class="actionDetailBody" style="width: auto;">
-                                    <a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigs/${beEntry.BEKey}/" >
+                                    <a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigs${beEntry.isCorrupt ? "BE" : ""}/${beEntry.BEKey}/" >
                                         Battle Event ${beEntry.BEKey}&nbsp;
                                         <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
                                     </a>
                                 </div>
 
                                 <div class="actionDetailBody" style="width: auto;">
-                                    <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${beEntry.actualParams ?? "N/A"}]</div>
+                                    <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${beEntry.actualParams ?? beEntry.params ??"N/A"}]</div>
                                 </div>
                                 
                             </div>
                             
                         </div>
+                        
                     </div>
-                    
+                    ${beEntry.isCorrupt ? `<div class="actionDetailBody">
+                            <div class="actionDetailBody2Description">
+                                ${beEntry.desc}
+                            </div>
+                        </div>` : ""}
                     ` : ""}`
                 }
 
@@ -2232,7 +2272,7 @@ const endgameModeDisplay = {
         
         let pointsArrayCompare = [];
         function getSideString(arraytoParse,pointsArrayCompare,activityIndex,stageName) {
-            let waveCounter = 0;
+            let waveCounter = 0;//buffOverride
 
 
 
