@@ -66931,7 +66931,7 @@ let characters = {
         "id": "151002",
         "name": "The Colors We Never Strike",
         "rank": 2,
-        "desc": "The cap of Himeko • Nova's Assist Skill uses increases to 2, and the DMG dealt by Ultimate and Assist Skill becomes 130% of their original DMG. During the \"Navigator's Semaphore\" state, at the start of each turn , additionally recovers 1 use of Assist Skill immediately. When a non-Trailblaze Companions character uses Assist Skill, the Trace \"Hark! The Express's Pulse Roars\" now also grants them 1 extra turn.",
+        "desc": "The cap of Himeko • Nova's Assist Skill uses increases to 2, and the DMG dealt by Ultimate and Assist Skill becomes 130% of their original DMG. During the \"Navigator's Semaphore\" state, at the start of each turn, additionally recovers 1 use of Assist Skill immediately. When a non-Trailblaze Companions character uses Assist Skill, the Trace \"Hark! The Express's Pulse Roars\" now also grants them 1 extra turn.",
         "icon": "icon/skill/1510_rank2.png",
         "paramsEido": [
           1.3
@@ -68702,6 +68702,2244 @@ let characters = {
       80,
       -19,
       0.64
+    ],
+    "isBuffed": false
+  },
+  "Robin • Summeretto": {
+    "internalID": 1512,
+    "name": "Robin • Summeretto",
+    "path": "Remembrance",
+    "element": "Wind",
+    "rarity": 5,
+    "energyMax": 140,
+    "baseStats": {
+      "ATKBase": 601.5239999999999,
+      "DEFBase": 485.1,
+      "HPBase": 1203.0479999999998,
+      "SPDBase": 95,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "151201",
+        "name": "Stray Bird of Summer",
+        "rank": 1,
+        "desc": "\"Summer Songbirds\" will keep a tally of 100% of the non-True DMG dealt by ally targets. When using the Memosprite Skill, additionally deals True DMG to the enemy target with the highest HP, equal to (11% + current Vibes × 0.1%) of the total tally. Then, clears 50% of the tally.",
+        "icon": null,
+        "paramsEido": [
+          0.11,
+          0.0009999999,
+          1,
+          0.5
+        ],
+        "extraEffects": {
+          "True DMG": {
+            "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as launching 1 attack."
+          }
+        }
+      },
+      {
+        "id": "151202",
+        "name": "A Heart of Still Water",
+        "rank": 2,
+        "desc": "Ally targets' All-Type RES PEN increases by 18%. The upper limit of Robin • Summeretto's Vibes increases by 20. The first time an ally target uses an ability during any target's turn to cause Robin • Summeretto to gain Vibes, she gains an additional 2 points.",
+        "icon": null,
+        "paramsEido": [
+          20,
+          2,
+          0.18
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      },
+      {
+        "id": "151203",
+        "name": "Echoes Left Along the Way",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.\nMemosprite Talent Lv. +1, up to a maximum of Lv. 10.",
+        "icon": null
+      },
+      {
+        "id": "151204",
+        "name": "Her Variation on the Theme",
+        "rank": 4,
+        "desc": "Upon entering the \"Fever\" state, immediately gains 12 Vibes, and increases the SPD of \"Summer Songbirds\" by an amount equal to (20% + current Vibes × 0.5%).",
+        "icon": null,
+        "paramsEido": [
+          12,
+          0.2,
+          0.005
+        ]
+      },
+      {
+        "id": "151205",
+        "name": "To Chase the Dawn Anew",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.\nMemosprite Skill Lv. +1, up to a maximum of Lv. 10.",
+        "icon": null
+      },
+      {
+        "id": "151206",
+        "name": "A Song Yet Unnamed",
+        "rank": 6,
+        "desc": "Increases the Memosprite Skill's DMG multiplier by 100% of its original value. While in the \"Fever\" state, Robin • Summeretto can store her Ultimate up to 2 times. After entering the \"Fever\" state for the first time in this battle or when the the \"Fever\" countdown's turn starts, regenerates a fixed 140 Energy.",
+        "icon": null,
+        "paramsEido": [
+          1,
+          140,
+          0
+        ]
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2,
+        "Memosprite Talent": 1
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2,
+        "Memosprite Skill": 1
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "The Sea Sings in My Key": {
+          "variant1": {
+            "skillID": 151201,
+            "trigger": "Skill01",
+            "name": "The Sea Sings in My Key",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Wind DMG equal to #1[i]% of Robin • Summeretto's Max HP to one enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.25
+              ],
+              "2": [
+                0.3
+              ],
+              "3": [
+                0.35
+              ],
+              "4": [
+                0.4
+              ],
+              "5": [
+                0.45
+              ],
+              "6": [
+                0.5
+              ],
+              "7": [
+                0.55
+              ],
+              "8": [
+                0.6
+              ],
+              "9": [
+                0.65
+              ],
+              "10": [
+                0.7
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_RobinS_00_Skill01_Camera",
+              "Avatar_RobinS_00_Skill01_Phase01",
+              "Avatar_RobinS_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Summer Strums the Soul": {
+          "variant1": {
+            "skillID": 151202,
+            "trigger": "Skill02",
+            "name": "Summer Strums the Soul",
+            "type": "Summon",
+            "slot": "Skill",
+            "desc": "Summons the memosprite \"Summer Songbirds\" Bessie. If any member of the \"Summer Songbirds\" is already on the field, restores their HP by an amount equal to #1[i]% of \"Summer Songbirds'\" Max HP, and gains #2[i] Vibes.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.5,
+                6
+              ],
+              "2": [
+                0.55,
+                6
+              ],
+              "3": [
+                0.6,
+                6
+              ],
+              "4": [
+                0.65,
+                6
+              ],
+              "5": [
+                0.7,
+                6
+              ],
+              "6": [
+                0.75,
+                6
+              ],
+              "7": [
+                0.8125,
+                6
+              ],
+              "8": [
+                0.875,
+                6
+              ],
+              "9": [
+                0.9375,
+                6
+              ],
+              "10": [
+                1,
+                6
+              ],
+              "11": [
+                1.05,
+                6
+              ],
+              "12": [
+                1.1,
+                6
+              ],
+              "13": [
+                1.15,
+                6
+              ],
+              "14": [
+                1.2,
+                6
+              ],
+              "15": [
+                1.25,
+                6
+              ]
+            },
+            "element": "Wind",
+            "attackType": "BPSkill",
+            "skillEffect": "Summon",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_RobinS_00_Skill02_Camera",
+              "Avatar_RobinS_00_Skill02_Phase01",
+              "Avatar_RobinS_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Summon Memosprite": {
+                "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Ascend That Rhapsody in Blue": {
+          "variant1": {
+            "skillID": 151203,
+            "trigger": "Skill03",
+            "name": "Ascend That Rhapsody in Blue",
+            "type": "Support",
+            "slot": "Ultimate",
+            "desc": "Advances the action of one designated ally character (excluding Robin • Summeretto) by #1[i]% and regenerates a fixed amount of Energy equal to #3[f1]% of their Max Energy. Then, grants them the \"Special Guest\" effect. When the \"Special Guest\" character or their summon attacks, they additionally grant Robin • Summeretto #2[i] Vibes but cannot make other friendly targets gain the action advance effect. This lasts for 2 turn(s), and its duration decreases by 1 at the start of this character's turn.",
+            "energyCost": 140,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                2,
+                0.12,
+                0
+              ],
+              "2": [
+                1,
+                2,
+                0.128,
+                0
+              ],
+              "3": [
+                1,
+                2,
+                0.13599999,
+                0
+              ],
+              "4": [
+                1,
+                2,
+                0.144,
+                0
+              ],
+              "5": [
+                1,
+                2,
+                0.152,
+                0
+              ],
+              "6": [
+                1,
+                2,
+                0.16,
+                0
+              ],
+              "7": [
+                1,
+                2,
+                0.17,
+                0
+              ],
+              "8": [
+                1,
+                2,
+                0.18,
+                0
+              ],
+              "9": [
+                1,
+                2,
+                0.19,
+                0
+              ],
+              "10": [
+                1,
+                2,
+                0.2,
+                0
+              ],
+              "11": [
+                1,
+                2,
+                0.208,
+                0
+              ],
+              "12": [
+                1,
+                2,
+                0.216,
+                0
+              ],
+              "13": [
+                1,
+                2,
+                0.224,
+                0
+              ],
+              "14": [
+                1,
+                2,
+                0.232,
+                0
+              ],
+              "15": [
+                1,
+                2,
+                0.24,
+                0
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Ultra",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_RobinS_00_Skill03_Camera",
+              "Avatar_RobinS_00_Skill03_EnterReady_Camera",
+              "Avatar_RobinS_00_Skill03_EnterReady",
+              "Avatar_RobinS_00_Skill03_Phase01",
+              "Avatar_RobinS_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Action Advance": {
+                "desc": "Reduces the target's waiting interval before the next action."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Wings Heed No Borders": {
+          "variant1": {
+            "skillID": 151204,
+            "trigger": "SkillP01",
+            "name": "Wings Heed No Borders",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "Memosprite \"Summer Songbirds\" has an initial Max HP equal to #1[i]% of Robin • Summeretto's Max HP and an initial SPD equal to #2[i]% of Robin • Summeretto's SPD. When an ally target uses an attack, or when they provide healing or Shield for the first time in any target's turn, Robin • Summeretto gains Vibes by 1 point, capped at #5[i]. While \"Summer Songbirds\" Bessie is on the field, if Robin • Summeretto's Vibes is #6[i] or higher, immediately summons \"Summer Songbirds\" Drummie, and if Vibes is #7[i] or higher, immediately summons \"Summer Songbirds\" Paddie. When all \"Summer Songbirds\" take the stage, dispels all Crowd Control debuffs inflicted upon Robin • Summeretto and the \"Summer Songbirds\", starts the \"Fever\" state, and deploys a Zone. When ally targets deal DMG within the Zone, they ignore a percentage of enemy targets' DEF equal to (#8[f1]% + Vibes × #9[f1]%).\\nWhile in the \"Fever\" state, Robin • Summeretto and the \"Summer Songbirds\" are immune to Crowd Control debuffs. Robin • Summeretto will not enter her turn until the \"Fever\" state ends.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.7,
+                1.8,
+                0,
+                0,
+                50,
+                6,
+                12,
+                0.1,
+                0.005
+              ],
+              "2": [
+                0.7,
+                1.8,
+                0,
+                0,
+                50,
+                6,
+                12,
+                0.105,
+                0.005
+              ],
+              "3": [
+                0.7,
+                1.8,
+                0,
+                0,
+                50,
+                6,
+                12,
+                0.11,
+                0.005
+              ],
+              "4": [
+                0.7,
+                1.8,
+                0,
+                0,
+                50,
+                6,
+                12,
+                0.115,
+                0.005
+              ],
+              "5": [
+                0.7,
+                1.8,
+                0,
+                0,
+                50,
+                6,
+                12,
+                0.12,
+                0.005
+              ],
+              "6": [
+                0.7,
+                1.8,
+                0,
+                0,
+                50,
+                6,
+                12,
+                0.125,
+                0.005
+              ],
+              "7": [
+                0.7,
+                1.8,
+                0,
+                0,
+                50,
+                6,
+                12,
+                0.13125,
+                0.005
+              ],
+              "8": [
+                0.7,
+                1.8,
+                0,
+                0,
+                50,
+                6,
+                12,
+                0.1375,
+                0.005
+              ],
+              "9": [
+                0.7,
+                1.8,
+                0,
+                0,
+                50,
+                6,
+                12,
+                0.14375,
+                0.005
+              ],
+              "10": [
+                0.7,
+                1.8,
+                0,
+                0,
+                50,
+                6,
+                12,
+                0.15,
+                0.005
+              ],
+              "11": [
+                0.7,
+                1.8,
+                0,
+                0,
+                50,
+                6,
+                12,
+                0.155,
+                0.005
+              ],
+              "12": [
+                0.7,
+                1.8,
+                0,
+                0,
+                50,
+                6,
+                12,
+                0.16,
+                0.005
+              ],
+              "13": [
+                0.7,
+                1.8,
+                0,
+                0,
+                50,
+                6,
+                12,
+                0.165,
+                0.005
+              ],
+              "14": [
+                0.7,
+                1.8,
+                0,
+                0,
+                50,
+                6,
+                12,
+                0.17,
+                0.005
+              ],
+              "15": [
+                0.7,
+                1.8,
+                0,
+                0,
+                50,
+                6,
+                12,
+                0.175,
+                0.005
+              ]
+            },
+            "element": "Wind",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_RobinS_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Crowd Control debuff": {
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet, Grudge Ablaze."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "We Are the Melody": {
+          "variant1": {
+            "skillID": 151207,
+            "trigger": "SkillMaze",
+            "name": "We Are the Melody",
+            "type": "Enhance",
+            "slot": "Technique",
+            "desc": "After using Technique, advances action by #3[i]% at the start of the next battle, immediately gains #1[i] Vibes, and increases all allies' DMG dealt by #2[i]%, lasting for 2 turn(s).",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                6,
+                0.3,
+                0.2
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Maze",
+            "skillEffect": "Enhance",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_RobinS_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Action Advance": {
+                "desc": "Reduces the target's waiting interval before the next action."
+              }
+            }
+          }
+        }
+      },
+      "Memosprite Skill": {
+        "Chirrup Quartet": {
+          "variant1": {
+            "skillID": 1151201,
+            "trigger": "Skill01",
+            "name": "Chirrup Quartet",
+            "type": "AoE",
+            "slot": "Memosprite Skill",
+            "desc": "Deals Wind DMG equal to #2[f1]% of \"Summer Songbirds'\" Max HP to all enemies.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0,
+                0.75
+              ],
+              "2": [
+                0,
+                0.9
+              ],
+              "3": [
+                0,
+                1.05
+              ],
+              "4": [
+                0,
+                1.2
+              ],
+              "5": [
+                0,
+                1.35
+              ],
+              "6": [
+                0,
+                1.5
+              ],
+              "7": [
+                0,
+                1.65
+              ],
+              "8": [
+                0,
+                1.8
+              ],
+              "9": [
+                0,
+                1.95
+              ],
+              "10": [
+                0,
+                2.1
+              ]
+            },
+            "element": "Wind",
+            "attackType": "Servant",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_RobinSServant_00_Skill01_Phase01",
+              "Servant_RobinSServant_00_Skill01_Phase02",
+              "Servant_RobinSServant_00_Skill01_Camera"
+            ],
+            "toughnessList": [
+              0,
+              30,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Memosprite Talent": {
+        "A Warble of Wings": {
+          "variant1": {
+            "skillID": 1151203,
+            "trigger": "SkillP01",
+            "name": "A Warble of Wings",
+            "type": "Support",
+            "slot": "Memosprite Talent",
+            "desc": "While in the \"Fever\" state, the \"Summer Songbirds\" and a countdown will appear on the Action Order. And the DMG dealt by Robin • Summeretto and \"Summer Songbirds\" increases by an amount equal to (#1[i]% + Vibes × #2[f1]%). When \"Summer Songbirds'\" turn starts, uses the Memosprite Skill. The countdown has an initial SPD of #9[i]. And when its turn starts, deducts #10[i]% of the current Vibes (minimum #6[i] points). When the Vibes reaches 0, the \"Summer Songbirds\" disappears and Robin • Summeretto exits the \"Fever\" state. While the \"Summer Songbirds\" is on the field, based on the number of its members present, increases the DMG taken by all enemies by #3[f1]%/#4[f1]%/#5[f1]% respectively.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.3,
+                0.01,
+                0.04,
+                0.06,
+                0.08,
+                12,
+                0,
+                0,
+                140,
+                0.5
+              ],
+              "2": [
+                0.36,
+                0.012,
+                0.048,
+                0.072,
+                0.096,
+                12,
+                0,
+                0,
+                140,
+                0.5
+              ],
+              "3": [
+                0.42,
+                0.0139999995,
+                0.055999998,
+                0.084,
+                0.112,
+                12,
+                0,
+                0,
+                140,
+                0.5
+              ],
+              "4": [
+                0.48,
+                0.015999999,
+                0.064,
+                0.096,
+                0.128,
+                12,
+                0,
+                0,
+                140,
+                0.5
+              ],
+              "5": [
+                0.54,
+                0.018,
+                0.072,
+                0.108,
+                0.144,
+                12,
+                0,
+                0,
+                140,
+                0.5
+              ],
+              "6": [
+                0.6,
+                0.02,
+                0.08,
+                0.12,
+                0.16,
+                12,
+                0,
+                0,
+                140,
+                0.5
+              ],
+              "7": [
+                0.66,
+                0.022,
+                0.088,
+                0.132,
+                0.176,
+                12,
+                0,
+                0,
+                140,
+                0.5
+              ],
+              "8": [
+                0.72,
+                0.024,
+                0.096,
+                0.144,
+                0.192,
+                12,
+                0,
+                0,
+                140,
+                0.5
+              ],
+              "9": [
+                0.78,
+                0.026,
+                0.104,
+                0.156,
+                0.208,
+                12,
+                0,
+                0,
+                140,
+                0.5
+              ],
+              "10": [
+                0.84,
+                0.027999999,
+                0.112,
+                0.168,
+                0.224,
+                12,
+                0,
+                0,
+                140,
+                0.5
+              ]
+            },
+            "element": "Wind",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_RobinSServant_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        },
+        "Near the Sea's Heartbeat": {
+          "variant1": {
+            "skillID": 1151205,
+            "trigger": "SkillP03",
+            "name": "Near the Sea's Heartbeat",
+            "type": "Support",
+            "slot": "Memosprite Talent",
+            "desc": "When the \"Summer Songbirds\" gets summoned, regenerates #1[i] Energy for Robin • Summeretto.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                20
+              ],
+              "2": [
+                20
+              ],
+              "3": [
+                20
+              ],
+              "4": [
+                20
+              ],
+              "5": [
+                20
+              ],
+              "6": [
+                20
+              ],
+              "7": [
+                20
+              ],
+              "8": [
+                20
+              ],
+              "9": [
+                20
+              ],
+              "10": [
+                20
+              ]
+            },
+            "element": "Wind",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_RobinSServant_00_BattleCry"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        },
+        "Astride Summer's Nightwind": {
+          "variant1": {
+            "skillID": 1151206,
+            "trigger": "SkillP04",
+            "name": "Astride Summer's Nightwind",
+            "type": "Support",
+            "slot": "Memosprite Talent",
+            "desc": "When the \"Summer Songbirds\" disappears, Robin • Summeretto's action advances by #1[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.5
+              ],
+              "3": [
+                0.5
+              ],
+              "4": [
+                0.5
+              ],
+              "5": [
+                0.5
+              ],
+              "6": [
+                0.5
+              ],
+              "7": [
+                0.5
+              ],
+              "8": [
+                0.5
+              ],
+              "9": [
+                0.5
+              ],
+              "10": [
+                0.5
+              ]
+            },
+            "element": "Wind",
+            "skillEffect": "Support",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Servant_RobinSServant_00_DeathRattle"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Action Advance": {
+                "desc": "Reduces the target's waiting interval before the next action."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "skillRef": {
+          "skillName": "The Sea Sings in My Key",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "skillRef": {
+          "skillName": "Summer Strums the Soul",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "skillRef": {
+          "skillName": "Ascend That Rhapsody in Blue",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "skillRef": {
+          "skillName": "Wings Heed No Borders",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "skillRef": {
+          "skillName": "We Are the Melody",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Deviated Chords",
+        "desc": "When an ally target causes Robin • Summeretto to gain Vibes, if their ATK is higher than Robin • Summeretto's, increases that target's ATK by an amount equal to (#1[i]% + Vibes × #2[f1]%) of Robin • Summeretto's Max HP. Otherwise, increases that target's CRIT DMG by an amount equal to (#3[i]% + Vibes × #4[f1]%). Lasts for #5[i] turn(s).",
+        "params": [
+          0.16,
+          0.0039999997,
+          0.4,
+          0.015,
+          2
+        ]
+      },
+      "Point07": {
+        "name": "Improvised Blues",
+        "desc": "When Robin • Summeretto or the \"Summer Songbirds\" receive healing or Shield provided by teammates, causes Robin • Summeretto to gain #1[i] stack(s) of \"Groove,\" capped at #3[i]. The first time Robin • Summeretto gains Vibes during any target's turn, if she has \"Groove,\" consumes 1 stack of \"Groove\" and regenerates a fixed #2[i] Energy.",
+        "params": [
+          12,
+          3,
+          12
+        ]
+      },
+      "Point08": {
+        "name": "Rebuilt Harmony",
+        "desc": "Increases the CRIT Rate of Robin • Summeretto and \"Summer Songbirds\" by #1[i]%.",
+        "params": [
+          0.5,
+          2
+        ]
+      },
+      "Point09": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point10": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.04
+        }
+      },
+      "Point11": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point12": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point13": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point14": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.06
+        }
+      },
+      "Point15": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point16": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point17": {
+        "name": "HP Boost",
+        "icon": "icon/property/IconMaxHP.png",
+        "stats": {
+          "HP%": 0.08
+        }
+      },
+      "Point18": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 4
+        }
+      },
+      "Point19": {
+        "name": "Chirrup Quartet",
+        "skillRef": {
+          "skillName": "Chirrup Quartet",
+          "skillSlot": "Memosprite Skill"
+        }
+      },
+      "Point20": {
+        "name": "A Warble of Wings",
+        "skillRef": {
+          "skillName": "A Warble of Wings",
+          "skillSlot": "Memosprite Talent"
+        }
+      }
+    },
+    "hasSummon": true,
+    "icon": null,
+    "preview": null,
+    "portrait": null,
+    "bannerOffsets": [
+      0,
+      0,
+      0.55,
+      0,
+      0,
+      0.55,
+      0,
+      0,
+      0.55
+    ],
+    "isBuffed": false,
+    "baseSummonInfo": {
+      "BaseAggro": 100
+    },
+    "hasRemembranceSummon": true,
+    "remembranceSummonID": 11512,
+    "summonName": "Summer Songbirds"
+  },
+  "Aventurine • Waveflair": {
+    "internalID": 1513,
+    "name": "Aventurine • Waveflair",
+    "path": "Elation",
+    "element": "Quantum",
+    "rarity": 5,
+    "energyMax": 130,
+    "baseStats": {
+      "ATKBase": 485.1,
+      "DEFBase": 606.375,
+      "HPBase": 1164.2399999999998,
+      "SPDBase": 107,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "151301",
+        "name": "A Holiday on the Line",
+        "rank": 1,
+        "desc": "Increases All-Type RES PEN by 24%.\nTalent gets enhanced: When \"Fervor\" reaches 10/20/30 points, immediately uses \"Cheers! To Summer's Blaze.\"",
+        "icon": null,
+        "paramsEido": [
+          0.24
+        ],
+        "extraEffects": {
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      },
+      {
+        "id": "151302",
+        "name": "Idle as the Turning Tide",
+        "rank": 2,
+        "desc": "Increases the upper limit of \"Fervor\" to 50 points. \"Fervor\" reaching 40/50 points can also trigger the Talent to use \"Cheers! To Summer's Blaze.\" After using Elation Skill, additionally gains 4 \"Fervor.\"",
+        "icon": null,
+        "paramsEido": [
+          50,
+          4
+        ]
+      },
+      {
+        "id": "151303",
+        "name": "A Rendezvous Served Chilled",
+        "rank": 3,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.\nElation Skill Lv. +1, up to a maximum of Lv. 15.",
+        "icon": null
+      },
+      {
+        "id": "151304",
+        "name": "Sunlight Runs No Tab",
+        "rank": 4,
+        "desc": "When Aventurine • Waveflair uses Skill, enables the DMG dealt by all allies to ignore 18% of enemy targets' DEF, lasting for 3 turn(s).",
+        "icon": null,
+        "paramsEido": [
+          0.18,
+          3
+        ]
+      },
+      {
+        "id": "151305",
+        "name": "Into the Eye of the Jackpot",
+        "rank": 5,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.\nElation Skill Lv. +1, up to a maximum of Lv. 15.",
+        "icon": null
+      },
+      {
+        "id": "151306",
+        "name": "The Past in Fast Lane",
+        "rank": 6,
+        "desc": "Elation DMG dealt by Aventurine • Waveflair merrymakes by 25%. After Aventurine • Waveflair uses his Elation Skill 2 time(s), all subsequent Elation Skills used become \"All In! To Summer's Blaze.\" And when using the Elation Skill \"All In! To Summer's Blaze\" to additionally deal DMG outside of Aha Instant, it no longer consumes \"Fervor.\"",
+        "icon": null,
+        "paramsEido": [
+          2,
+          0.25
+        ],
+        "extraEffects": {
+          "Elation DMG": {
+            "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+          },
+          "Merrymake": {
+            "desc": "A special effect that affects Elation DMG and can additionally boost Elation DMG dealt."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Skill": 2,
+        "Talent": 2,
+        "Elation Skill": 1
+      },
+      "5": {
+        "Basic ATK": 1,
+        "Ultimate": 2,
+        "Elation Skill": 1
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Dead Center, the Torrent Hits": {
+          "variant1": {
+            "skillID": 151301,
+            "trigger": "Skill01",
+            "name": "Dead Center, the Torrent Hits",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Aventurine • Waveflair's ATK to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5
+              ],
+              "2": [
+                0.6
+              ],
+              "3": [
+                0.7
+              ],
+              "4": [
+                0.8
+              ],
+              "5": [
+                0.9
+              ],
+              "6": [
+                1
+              ],
+              "7": [
+                1.1
+              ],
+              "8": [
+                1.2
+              ],
+              "9": [
+                1.3
+              ],
+              "10": [
+                1.4
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": [
+              "Avatar_AventurineW_00_Skill01_Camera",
+              "Avatar_AventurineW_00_Skill01_Phase01",
+              "Avatar_AventurineW_00_Skill01_Phase02"
+            ],
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Kill Shot, the Sands Boil": {
+          "variant1": {
+            "skillID": 151302,
+            "trigger": "Skill02",
+            "name": "Kill Shot, the Sands Boil",
+            "type": "AoE",
+            "slot": "Skill",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Aventurine • Waveflair's ATK to all enemies. Gains #2[i] Punchline and #3[i] \"Fervor.\"",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1.2,
+                4,
+                4
+              ],
+              "2": [
+                1.32,
+                4,
+                4
+              ],
+              "3": [
+                1.44,
+                4,
+                4
+              ],
+              "4": [
+                1.56,
+                4,
+                4
+              ],
+              "5": [
+                1.68,
+                4,
+                4
+              ],
+              "6": [
+                1.8,
+                4,
+                4
+              ],
+              "7": [
+                1.95,
+                4,
+                4
+              ],
+              "8": [
+                2.1,
+                4,
+                4
+              ],
+              "9": [
+                2.25,
+                4,
+                4
+              ],
+              "10": [
+                2.4,
+                4,
+                4
+              ],
+              "11": [
+                2.52,
+                4,
+                4
+              ],
+              "12": [
+                2.64,
+                4,
+                4
+              ],
+              "13": [
+                2.76,
+                4,
+                4
+              ],
+              "14": [
+                2.88,
+                4,
+                4
+              ],
+              "15": [
+                3,
+                4,
+                4
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "BPSkill",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_AventurineW_00_Skill02_Camera",
+              "Avatar_AventurineW_00_Skill02_Camera_Other",
+              "Avatar_AventurineW_00_Skill02_Phase01",
+              "Avatar_AventurineW_00_Skill02_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              30,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Punchline": {
+                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Grand Slam, Crest That High Tide": {
+          "variant1": {
+            "skillID": 151303,
+            "trigger": "Skill03",
+            "name": "Grand Slam, Crest That High Tide",
+            "type": "AoE",
+            "slot": "Ultimate",
+            "desc": "Deals Quantum DMG equal to #1[i]% of Aventurine • Waveflair's ATK to all enemies. Gains #3[i] Punchline and #2[i] \"Fervor.\" Increases this unit's SPD by #4[i]%, lasting for #5[i] turn(s).",
+            "energyCost": 130,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2.4,
+                8,
+                6,
+                0.12,
+                4
+              ],
+              "2": [
+                2.56,
+                8,
+                6,
+                0.138,
+                4
+              ],
+              "3": [
+                2.72,
+                8,
+                6,
+                0.156,
+                4
+              ],
+              "4": [
+                2.88,
+                8,
+                6,
+                0.174,
+                4
+              ],
+              "5": [
+                3.04,
+                8,
+                6,
+                0.192,
+                4
+              ],
+              "6": [
+                3.2,
+                8,
+                6,
+                0.21,
+                4
+              ],
+              "7": [
+                3.4,
+                8,
+                6,
+                0.2325,
+                4
+              ],
+              "8": [
+                3.6,
+                8,
+                6,
+                0.255,
+                4
+              ],
+              "9": [
+                3.8,
+                8,
+                6,
+                0.2775,
+                4
+              ],
+              "10": [
+                4,
+                8,
+                6,
+                0.3,
+                4
+              ],
+              "11": [
+                4.16,
+                8,
+                6,
+                0.318,
+                4
+              ],
+              "12": [
+                4.32,
+                8,
+                6,
+                0.336,
+                4
+              ],
+              "13": [
+                4.48,
+                8,
+                6,
+                0.354,
+                4
+              ],
+              "14": [
+                4.64,
+                8,
+                6,
+                0.372,
+                4
+              ],
+              "15": [
+                4.8,
+                8,
+                6,
+                0.39,
+                4
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Ultra",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_AventurineW_00_Skill03_Camera",
+              "Avatar_AventurineW_00_Skill03_EnterReady",
+              "Avatar_AventurineW_00_Skill03_Phase01",
+              "Avatar_AventurineW_00_Skill03_Phase02"
+            ],
+            "toughnessList": [
+              0,
+              60,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Punchline": {
+                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Ante Up, the Abyss Answers": {
+          "variant1": {
+            "skillID": 151304,
+            "trigger": "SkillP01",
+            "name": "Ante Up, the Abyss Answers",
+            "type": "Enhance",
+            "slot": "Talent",
+            "desc": "The duration of Aventurine • Waveflair's \"Certified Banger\" increases by 1 turn. After a teammate uses an attack, Aventurine • Waveflair gains #7[i] \"Fervor\" and #6[i] Punchline. \"Fervor\" is capped at #4[i] points.\\nWhen \"Fervor\" reaches #1[i], Aventurine • Waveflair uses 1 instance of \"Cheers! To Summer's Blaze\" that takes into account a fixed amount of #5[i] Punchline. After this use, the next Elation Skill used by this unit in the Aha Instant gets enhanced into \"All In! To Summer's Blaze.\"\\nWhile Aventurine • Waveflair holds \"Certified Banger,\" Skill additionally deals #2[i]% Quantum Elation DMG to all enemies, and Ultimate additionally deals #3[i]% Quantum Elation DMG to all enemies.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                10,
+                0.2,
+                0.36,
+                30,
+                20,
+                1,
+                1
+              ],
+              "2": [
+                10,
+                0.22,
+                0.396,
+                30,
+                20,
+                1,
+                1
+              ],
+              "3": [
+                10,
+                0.24,
+                0.432,
+                30,
+                20,
+                1,
+                1
+              ],
+              "4": [
+                10,
+                0.26,
+                0.468,
+                30,
+                20,
+                1,
+                1
+              ],
+              "5": [
+                10,
+                0.28,
+                0.504,
+                30,
+                20,
+                1,
+                1
+              ],
+              "6": [
+                10,
+                0.3,
+                0.54,
+                30,
+                20,
+                1,
+                1
+              ],
+              "7": [
+                10,
+                0.325,
+                0.585,
+                30,
+                20,
+                1,
+                1
+              ],
+              "8": [
+                10,
+                0.35,
+                0.63,
+                30,
+                20,
+                1,
+                1
+              ],
+              "9": [
+                10,
+                0.375,
+                0.675,
+                30,
+                20,
+                1,
+                1
+              ],
+              "10": [
+                10,
+                0.4,
+                0.72,
+                30,
+                20,
+                1,
+                1
+              ],
+              "11": [
+                10,
+                0.42,
+                0.756,
+                30,
+                20,
+                1,
+                1
+              ],
+              "12": [
+                10,
+                0.44,
+                0.792,
+                30,
+                20,
+                1,
+                1
+              ],
+              "13": [
+                10,
+                0.46,
+                0.828,
+                30,
+                20,
+                1,
+                1
+              ],
+              "14": [
+                10,
+                0.48,
+                0.864,
+                30,
+                20,
+                1,
+                1
+              ],
+              "15": [
+                10,
+                0.5,
+                0.9,
+                30,
+                20,
+                1,
+                1
+              ]
+            },
+            "element": "Quantum",
+            "skillEffect": "Enhance",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_AventurineW_00_PassiveSkill01"
+            ],
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Certified Banger": {
+                "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+              },
+              "Punchline": {
+                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+              },
+              "Elation DMG": {
+                "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Make Waves in Still Waters": {
+          "variant1": {
+            "skillID": 151307,
+            "trigger": "SkillMaze",
+            "name": "Make Waves in Still Waters",
+            "slot": "Technique",
+            "desc": "Moves forward rapidly for a set distance, attacking all enemies in contact and blocking all incoming attacks. After entering combat via actively attacking enemies, deals Quantum DMG to all enemies equal to #1[i]% of Aventurine • Waveflair's ATK, and gains #2[i] \"Fervor\" and #3[i] \"Certified Banger.\" Technique Points are not consumed if no enemies are hit.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                1,
+                2,
+                20
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "Maze",
+            "skillEffect": "MazeAttack",
+            "maxLevel": 1,
+            "configAbilityList": [
+              "Avatar_AventurineW_00_SkillMazeInLevel"
+            ],
+            "toughnessList": [
+              60,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Certified Banger": {
+                "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+              }
+            }
+          }
+        }
+      },
+      "Elation Skill": {
+        "Cheers! To Summer's Blaze": {
+          "variant1": {
+            "skillID": 151320,
+            "trigger": "Skill04",
+            "name": "Cheers! To Summer's Blaze",
+            "type": "AoE",
+            "slot": "Elation Skill",
+            "desc": "Deals #1[i]% Quantum Elation DMG to all enemies, and additionally deals #2[i] instance(s) of DMG, with each instance dealing #3[f1]% Quantum Elation DMG to one random enemy.",
+            "energyCost": null,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.3,
+                10,
+                0.09
+              ],
+              "2": [
+                0.33,
+                10,
+                0.099
+              ],
+              "3": [
+                0.36,
+                10,
+                0.108
+              ],
+              "4": [
+                0.39,
+                10,
+                0.117
+              ],
+              "5": [
+                0.42,
+                10,
+                0.126
+              ],
+              "6": [
+                0.45,
+                10,
+                0.135
+              ],
+              "7": [
+                0.4875,
+                10,
+                0.14625
+              ],
+              "8": [
+                0.525,
+                10,
+                0.1575
+              ],
+              "9": [
+                0.5625,
+                10,
+                0.16875
+              ],
+              "10": [
+                0.6,
+                10,
+                0.18
+              ],
+              "11": [
+                0.63,
+                10,
+                0.189
+              ],
+              "12": [
+                0.66,
+                10,
+                0.198
+              ],
+              "13": [
+                0.69,
+                10,
+                0.207
+              ],
+              "14": [
+                0.72,
+                10,
+                0.216
+              ],
+              "15": [
+                0.75,
+                10,
+                0.225
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "ElationDamage",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_AventurineW_00_ElationSkill_Phase01",
+              "Avatar_AventurineW_00_ElationSkill_Phase02",
+              "Avatar_AventurineW_00_Skill04_Camera"
+            ],
+            "toughnessList": [
+              10,
+              30,
+              0
+            ],
+            "hitSplits": [],
+            "participantID": 156,
+            "extraEffects": {
+              "Elation DMG": {
+                "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+              }
+            }
+          }
+        },
+        "All In! To Summer's Blaze": {
+          "variant1": {
+            "skillID": 151321,
+            "trigger": "Skill41",
+            "name": "All In! To Summer's Blaze",
+            "type": "AoE",
+            "slot": "Elation Skill",
+            "desc": "Deals #1[i]% Quantum Elation DMG to all enemies, and additionally deals #3[i] instances of DMG, with each instance dealing #4[f1]% Quantum Elation DMG to one random enemy. Consumes all \"Fervor\" upon use. For every 1 point of \"Fervor\" consumed, additionally deals 1 instance of #2[f1]% Quantum Elation DMG to one random enemy.",
+            "energyCost": null,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 20,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.3,
+                0.105,
+                10,
+                0.09
+              ],
+              "2": [
+                0.33,
+                0.1155,
+                10,
+                0.099
+              ],
+              "3": [
+                0.36,
+                0.126,
+                10,
+                0.108
+              ],
+              "4": [
+                0.39,
+                0.1365,
+                10,
+                0.117
+              ],
+              "5": [
+                0.42,
+                0.147,
+                10,
+                0.126
+              ],
+              "6": [
+                0.45,
+                0.1575,
+                10,
+                0.135
+              ],
+              "7": [
+                0.4875,
+                0.170625,
+                10,
+                0.14625
+              ],
+              "8": [
+                0.525,
+                0.18375,
+                10,
+                0.1575
+              ],
+              "9": [
+                0.5625,
+                0.196875,
+                10,
+                0.16875
+              ],
+              "10": [
+                0.6,
+                0.21,
+                10,
+                0.18
+              ],
+              "11": [
+                0.63,
+                0.2205,
+                10,
+                0.189
+              ],
+              "12": [
+                0.66,
+                0.231,
+                10,
+                0.198
+              ],
+              "13": [
+                0.69,
+                0.2415,
+                10,
+                0.207
+              ],
+              "14": [
+                0.72,
+                0.252,
+                10,
+                0.216
+              ],
+              "15": [
+                0.75,
+                0.2625,
+                10,
+                0.225
+              ]
+            },
+            "element": "Quantum",
+            "attackType": "ElationDamage",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 15,
+            "configAbilityList": [
+              "Avatar_AventurineW_00_ElationSkill_Phase11",
+              "Avatar_AventurineW_00_ElationSkill_Phase12",
+              "Avatar_AventurineW_00_Skill41_Camera"
+            ],
+            "toughnessList": [
+              15,
+              60,
+              0
+            ],
+            "hitSplits": [],
+            "participantID": 156,
+            "extraEffects": {
+              "Elation DMG": {
+                "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "skillRef": {
+          "skillName": "Dead Center, the Torrent Hits",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "skillRef": {
+          "skillName": "Kill Shot, the Sands Boil",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "skillRef": {
+          "skillName": "Grand Slam, Crest That High Tide",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "skillRef": {
+          "skillName": "Ante Up, the Abyss Answers",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "skillRef": {
+          "skillName": "Make Waves in Still Waters",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Party in Perfect Paradise",
+        "desc": "When SPD is #1[i] or higher, increases this unit's Elation by #2[i]%. For every #3[i] SPD exceeding that threshold, additionally increases this unit's Elation by #4[i]%. Up to a max of #5[i] excess SPD can be taken into account for this effect.",
+        "params": [
+          140,
+          0.3,
+          1,
+          0.01,
+          200
+        ]
+      },
+      "Point07": {
+        "name": "Revel in Raging Tides",
+        "desc": "At the start of combat, if the team includes an Elation character besides Aventurine • Waveflair, then while Aventurine • Waveflair is on the field, increases all allies' Elation by #5[i]% and Aventurine • Waveflair's Elation by an additional #1[i]%.\nAt the start of combat, if Aventurine • Waveflair is the only Elation character in the team, then when Aventurine • Waveflair uses Elation Skill to deal DMG, it is considered as having launched Follow-Up ATK. After a teammate uses an attack, Aventurine • Waveflair gains #2[i] \"Certified Banger\" and #4[i] Punchline, and increases Aha's SPD by #3[i]. The SPD Boost effect lasts until the end of Aha Instant.",
+        "params": [
+          0.8,
+          2,
+          25,
+          1,
+          0.2
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          },
+          "Certified Banger": {
+            "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+          },
+          "Punchline": {
+            "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+          },
+          "Aha": {
+            "desc": "When taking action, triggers an Aha Instant and causes units capable of using Elation Skills to each use their Elation Skill 1 time. If there are no units capable of using Elation Skills when Aha takes action, Aha will use \"Let There Be Laughter.\"\\nThe Aha Instant lasts until the final Elation Skill finishes this time.\\nWhen the Aha Instant ends, participating characters gain the \"Certified Banger\" state for the Punchline points taken into account this time, lasting for 2 turns. After Aha takes action, all Punchlines will be consumed."
+          }
+        }
+      },
+      "Point08": {
+        "name": "Sift Through Gilded Dreams",
+        "desc": "Increases CRIT DMG by #1[i]%. After a teammate uses Basic ATK, Skill, Follow-Up ATK, or Ultimate, all allies' CRIT DMG increases by #2[i]%, lasting for #3[i] turn(s), and Aventurine • Waveflair additionally gains #4[i] \"Fervor.\" This effect can trigger up to #5[i] time(s), and the trigger count resets when Aventurine • Waveflair uses Skill.",
+        "params": [
+          0.48,
+          0.48,
+          3,
+          2,
+          6
+        ],
+        "extraEffects": {
+          "Follow-Up ATK": {
+            "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met."
+          }
+        }
+      },
+      "Point09": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point10": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point11": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.026999999
+        }
+      },
+      "Point12": {
+        "name": "Elation Boost",
+        "icon": "icon/property/IconJoy.png",
+        "stats": {
+          "ElationDMGAll": 0.04
+        }
+      },
+      "Point13": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point14": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point15": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.04
+        }
+      },
+      "Point16": {
+        "name": "Elation Boost",
+        "icon": "icon/property/IconJoy.png",
+        "stats": {
+          "ElationDMGAll": 0.06
+        }
+      },
+      "Point17": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 4
+        }
+      },
+      "Point18": {
+        "name": "CRIT Rate Boost",
+        "icon": "icon/property/IconCriticalChance.png",
+        "stats": {
+          "CritRateBase": 0.053
+        }
+      },
+      "Point22": {
+        "name": "Elation Skill",
+        "skillRef": {
+          "skillName": "Cheers! To Summer's Blaze",
+          "skillSlot": "Elation Skill"
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": null,
+    "preview": null,
+    "portrait": null,
+    "bannerOffsets": [
+      -70,
+      70,
+      0.48,
+      -70,
+      70,
+      0.48,
+      -70,
+      70,
+      0.48
     ],
     "isBuffed": false
   },
