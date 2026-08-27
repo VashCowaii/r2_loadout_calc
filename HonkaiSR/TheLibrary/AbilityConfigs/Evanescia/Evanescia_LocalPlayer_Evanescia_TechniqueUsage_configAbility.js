@@ -293,6 +293,7 @@ const configAbility = {
     }
   ],
   "onAbortReg": [
+    "Deleted bullshit",
     {
       "name": "Remove Events/Bonuses",
       "to": {
