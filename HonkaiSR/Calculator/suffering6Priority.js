@@ -59,6 +59,7 @@ const priorityList = {
     "SummonInstance": 100,
     "CharacterAssistSkill": 101,
     "CharacterChainedSkill": 102,
-    "Windfury": 200
+    "Windfury": 200,
+    "AbilityIntercept": 300
   }
 }
