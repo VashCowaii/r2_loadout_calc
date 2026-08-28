@@ -1268,12 +1268,18 @@ const megaParsingFuckeryPain = {
             "variableName",
             "propertyName",
             "skillKey",
+            "currentAbility",
+            "context",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Define Custom Variable with Ability Property");
         // initialCounter++;
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Define with Ability Property:</div>&nbsp;
             ${parseRef.variableName} = ${parseRef.skillKey}'s ${parseRef.propertyName}
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.currentAbility,"Current Ability")}
+            ${getStandardNameDisplay(initialCounter,parseRef.context,"Context")}
         </div>`;
     },
     "Define Custom Variable with SkillPoint Changes"(parseRef,initialCounter) {
