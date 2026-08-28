@@ -24996,7 +24996,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23063_SpeedBonus",
+    "name": "<a class=\"gModGreen\" id=\"-679741368\">LC_23063_SpeedBonus</a>",
     "realName": "New Melody",
     "aim": "Other",
     "desc": "All allies' SPD increases while held.",
@@ -25007,7 +25007,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23063_SpeedBonus_Sub",
+    "name": "<a class=\"gModGreen\" id=\"1882738245\">LC_23063_SpeedBonus_Sub</a>",
     "realName": "New Melody",
     "aim": "Buff",
     "desc": "Increases SPD by #1[i]%.",
@@ -25110,7 +25110,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23064_Bonus_1",
+    "name": "<a class=\"gModGreen\" id=\"2111491576\">LC_23064_Bonus_1</a>",
     "realName": "Updraft",
     "aim": "Buff",
     "desc": "Increases SPD by #1[i]%.",
@@ -25121,7 +25121,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_23064_Bonus_2",
+    "name": "<a class=\"gModGreen\" id=\"-2133142863\">LC_23064_Bonus_2</a>",
     "realName": "Uptrend",
     "aim": "Buff",
     "desc": "Elation increases by #1[i]%.",
@@ -26129,7 +26129,7 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "LC_22008_Sub",
+    "name": "<a class=\"gModGreen\" id=\"-1966037906\">LC_22008_Sub</a>",
     "realName": "CRIT DMG Boost",
     "aim": "Buff",
     "desc": "Each stack increases CRIT DMG by #1[i]%. This effect can stack up to #2[i] time(s).",
