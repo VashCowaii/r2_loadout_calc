@@ -4507,6 +4507,14 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "lc",
+    "entryName": "Summer Rides the Surf",
+    "trimCharacterName": "SummerRidestheSurf",
+    "entryIcon": null,
+    "lineCount": 320,
+    "sizeCount": 11471
+  },
+  {
+    "entryType": "lc",
     "entryName": "Until the Flowers Bloom Again",
     "trimCharacterName": "UntiltheFlowersBloomAgain",
     "entryIcon": "icon/light_cone/23058.png",
@@ -5119,6 +5127,14 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "lc",
+    "entryName": "Rise and Sing",
+    "trimCharacterName": "RiseandSing",
+    "entryIcon": null,
+    "lineCount": 224,
+    "sizeCount": 7092
+  },
+  {
+    "entryType": "lc",
     "entryName": "Fly Into a Pink Tomorrow",
     "trimCharacterName": "FlyIntoaPinkTomorrow",
     "entryIcon": "icon/light_cone/22006.png",
@@ -5348,6 +5364,14 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/relic/323.png",
     "lineCount": 170,
     "sizeCount": 5920
+  },
+  {
+    "entryType": "lc",
+    "entryName": "Race to the Horizon",
+    "trimCharacterName": "RacetotheHorizon",
+    "entryIcon": null,
+    "lineCount": 196,
+    "sizeCount": 5904
   },
   {
     "entryType": "lc",
@@ -5930,6 +5954,14 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/relic/104.png",
     "lineCount": 119,
     "sizeCount": 3754
+  },
+  {
+    "entryType": "lc",
+    "entryName": "A Little Getaway",
+    "trimCharacterName": "ALittleGetaway",
+    "entryIcon": null,
+    "lineCount": 141,
+    "sizeCount": 3751
   },
   {
     "entryType": "lc",
