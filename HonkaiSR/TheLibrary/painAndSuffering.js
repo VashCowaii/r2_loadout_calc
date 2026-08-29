@@ -171,7 +171,9 @@ const megaParsingFuckeryPain = {
         const knownKeySet = new Set ([
             "name",
             "abilityName",
-            "parameters"
+            "parameters",
+
+            "isPool",
             // "ability",
             // "from",
             // "parse",
@@ -190,6 +192,7 @@ const megaParsingFuckeryPain = {
 
             <div class="modifierDetailsBox">
                 ${getStandardNameDisplay(initialCounter,parseRef.abilityName,"Ability Name")}
+                ${getStandardNameDisplay(initialCounter,parseRef.isPool,"Is Ability Pool")}
                 ${parseRef.parameters != undefined ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Parameters:</div>&nbsp;
                     ${parseRef.parameters.displayLines ?? typeof parseRef.parameters === "object" ? megaParsingFuckery.ValuePerStackParsing(parseRef.parameters,initialCounter) : parseRef.parameters}
