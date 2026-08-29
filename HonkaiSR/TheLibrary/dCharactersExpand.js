@@ -68727,7 +68727,7 @@ let characters = {
         "name": "Stray Bird of Summer",
         "rank": 1,
         "desc": "\"Summer Songbirds\" will keep a tally of 100% of the non-True DMG dealt by ally targets. When using the Memosprite Skill, additionally deals True DMG to the enemy target with the highest HP, equal to (11% + current Vibes × 0.1%) of the total tally. Then, clears 50% of the tally.",
-        "icon": null,
+        "icon": "icon/skill/1512_rank1.png",
         "paramsEido": [
           0.11,
           0.0009999999,
@@ -68745,7 +68745,7 @@ let characters = {
         "name": "A Heart of Still Water",
         "rank": 2,
         "desc": "Ally targets' All-Type RES PEN increases by 18%. The upper limit of Robin • Summeretto's Vibes increases by 20. The first time an ally target uses an ability during any target's turn to cause Robin • Summeretto to gain Vibes, she gains an additional 2 points.",
-        "icon": null,
+        "icon": "icon/skill/1512_rank2.png",
         "paramsEido": [
           20,
           2,
@@ -68762,14 +68762,14 @@ let characters = {
         "name": "Echoes Left Along the Way",
         "rank": 3,
         "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.\nMemosprite Talent Lv. +1, up to a maximum of Lv. 10.",
-        "icon": null
+        "icon": "icon/skill/1512_skill.png"
       },
       {
         "id": "151204",
         "name": "Her Variation on the Theme",
         "rank": 4,
         "desc": "Upon entering the \"Fever\" state, immediately gains 12 Vibes, and increases the SPD of \"Summer Songbirds\" by an amount equal to (20% + current Vibes × 0.5%).",
-        "icon": null,
+        "icon": "icon/skill/1512_rank4.png",
         "paramsEido": [
           12,
           0.2,
@@ -68781,14 +68781,14 @@ let characters = {
         "name": "To Chase the Dawn Anew",
         "rank": 5,
         "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.\nMemosprite Skill Lv. +1, up to a maximum of Lv. 10.",
-        "icon": null
+        "icon": "icon/skill/1512_ultimate.png"
       },
       {
         "id": "151206",
         "name": "A Song Yet Unnamed",
         "rank": 6,
         "desc": "Increases the Memosprite Skill's DMG multiplier by 100% of its original value. While in the \"Fever\" state, Robin • Summeretto can store her Ultimate up to 2 times. After entering the \"Fever\" state for the first time in this battle or when the the \"Fever\" countdown's turn starts, regenerates a fixed 140 Energy.",
-        "icon": null,
+        "icon": "icon/skill/1512_rank6.png",
         "paramsEido": [
           1,
           140,
@@ -69706,30 +69706,35 @@ let characters = {
     },
     "traces": {
       "Point01": {
+        "icon": "icon/skill/1512_basic_atk.png",
         "skillRef": {
           "skillName": "The Sea Sings in My Key",
           "skillSlot": "Basic ATK"
         }
       },
       "Point02": {
+        "icon": "icon/skill/1512_skill.png",
         "skillRef": {
           "skillName": "Summer Strums the Soul",
           "skillSlot": "Skill"
         }
       },
       "Point03": {
+        "icon": "icon/skill/1512_ultimate.png",
         "skillRef": {
           "skillName": "Ascend That Rhapsody in Blue",
           "skillSlot": "Ultimate"
         }
       },
       "Point04": {
+        "icon": "icon/skill/1512_talent.png",
         "skillRef": {
           "skillName": "Wings Heed No Borders",
           "skillSlot": "Talent"
         }
       },
       "Point05": {
+        "icon": "icon/skill/1512_technique.png",
         "skillRef": {
           "skillName": "We Are the Melody",
           "skillSlot": "Technique"
@@ -69737,6 +69742,7 @@ let characters = {
       },
       "Point06": {
         "name": "Deviated Chords",
+        "icon": "icon/skill/1512_skilltree1.png",
         "desc": "When an ally target causes Robin • Summeretto to gain Vibes, if their ATK is higher than Robin • Summeretto's, increases that target's ATK by an amount equal to (#1[i]% + Vibes × #2[f1]%) of Robin • Summeretto's Max HP. Otherwise, increases that target's CRIT DMG by an amount equal to (#3[i]% + Vibes × #4[f1]%). Lasts for #5[i] turn(s).",
         "params": [
           0.16,
@@ -69748,6 +69754,7 @@ let characters = {
       },
       "Point07": {
         "name": "Improvised Blues",
+        "icon": "icon/skill/1512_skilltree2.png",
         "desc": "When Robin • Summeretto or the \"Summer Songbirds\" receive healing or Shield provided by teammates, causes Robin • Summeretto to gain #1[i] stack(s) of \"Groove,\" capped at #3[i]. The first time Robin • Summeretto gains Vibes during any target's turn, if she has \"Groove,\" consumes 1 stack of \"Groove\" and regenerates a fixed #2[i] Energy.",
         "params": [
           12,
@@ -69757,6 +69764,7 @@ let characters = {
       },
       "Point08": {
         "name": "Rebuilt Harmony",
+        "icon": "icon/skill/1512_skilltree3.png",
         "desc": "Increases the CRIT Rate of Robin • Summeretto and \"Summer Songbirds\" by #1[i]%.",
         "params": [
           0.5,
@@ -69835,6 +69843,7 @@ let characters = {
       },
       "Point19": {
         "name": "Chirrup Quartet",
+        "icon": "icon/skill/1512_memosprite_skill.png",
         "skillRef": {
           "skillName": "Chirrup Quartet",
           "skillSlot": "Memosprite Skill"
@@ -69842,6 +69851,7 @@ let characters = {
       },
       "Point20": {
         "name": "A Warble of Wings",
+        "icon": "icon/skill/1512_memosprite_talent.png",
         "skillRef": {
           "skillName": "A Warble of Wings",
           "skillSlot": "Memosprite Talent"
@@ -69849,9 +69859,9 @@ let characters = {
       }
     },
     "hasSummon": true,
-    "icon": null,
-    "preview": null,
-    "portrait": null,
+    "icon": "icon/character/1512.png",
+    "preview": "image/character_preview/1512.png",
+    "portrait": "image/character_portrait/1512.png",
     "bannerOffsets": [
       0,
       0,
@@ -69893,7 +69903,7 @@ let characters = {
         "name": "A Holiday on the Line",
         "rank": 1,
         "desc": "Increases All-Type RES PEN by 24%.\nTalent gets enhanced: When \"Fervor\" reaches 10/20/30 points, immediately uses \"Cheers! To Summer's Blaze.\"",
-        "icon": null,
+        "icon": "icon/skill/1513_rank1.png",
         "paramsEido": [
           0.24
         ],
@@ -69908,7 +69918,7 @@ let characters = {
         "name": "Idle as the Turning Tide",
         "rank": 2,
         "desc": "Increases the upper limit of \"Fervor\" to 50 points. \"Fervor\" reaching 40/50 points can also trigger the Talent to use \"Cheers! To Summer's Blaze.\" After using Elation Skill, additionally gains 4 \"Fervor.\"",
-        "icon": null,
+        "icon": "icon/skill/1513_rank2.png",
         "paramsEido": [
           50,
           4
@@ -69919,14 +69929,14 @@ let characters = {
         "name": "A Rendezvous Served Chilled",
         "rank": 3,
         "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.\nElation Skill Lv. +1, up to a maximum of Lv. 15.",
-        "icon": null
+        "icon": "icon/skill/1513_skill.png"
       },
       {
         "id": "151304",
         "name": "Sunlight Runs No Tab",
         "rank": 4,
         "desc": "When Aventurine • Waveflair uses Skill, enables the DMG dealt by all allies to ignore 18% of enemy targets' DEF, lasting for 3 turn(s).",
-        "icon": null,
+        "icon": "icon/skill/1513_rank4.png",
         "paramsEido": [
           0.18,
           3
@@ -69937,14 +69947,14 @@ let characters = {
         "name": "Into the Eye of the Jackpot",
         "rank": 5,
         "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.\nElation Skill Lv. +1, up to a maximum of Lv. 15.",
-        "icon": null
+        "icon": "icon/skill/1513_ultimate.png"
       },
       {
         "id": "151306",
         "name": "The Past in Fast Lane",
         "rank": 6,
         "desc": "Elation DMG dealt by Aventurine • Waveflair merrymakes by 25%. After Aventurine • Waveflair uses his Elation Skill 2 time(s), all subsequent Elation Skills used become \"All In! To Summer's Blaze.\" And when using the Elation Skill \"All In! To Summer's Blaze\" to additionally deal DMG outside of Aha Instant, it no longer consumes \"Fervor.\"",
-        "icon": null,
+        "icon": "icon/skill/1513_rank6.png",
         "paramsEido": [
           2,
           0.25
@@ -70767,30 +70777,35 @@ let characters = {
     },
     "traces": {
       "Point01": {
+        "icon": "icon/skill/1513_basic_atk.png",
         "skillRef": {
           "skillName": "Dead Center, the Torrent Hits",
           "skillSlot": "Basic ATK"
         }
       },
       "Point02": {
+        "icon": "icon/skill/1513_skill.png",
         "skillRef": {
           "skillName": "Kill Shot, the Sands Boil",
           "skillSlot": "Skill"
         }
       },
       "Point03": {
+        "icon": "icon/skill/1513_ultimate.png",
         "skillRef": {
           "skillName": "Grand Slam, Crest That High Tide",
           "skillSlot": "Ultimate"
         }
       },
       "Point04": {
+        "icon": "icon/skill/1513_talent.png",
         "skillRef": {
           "skillName": "Ante Up, the Abyss Answers",
           "skillSlot": "Talent"
         }
       },
       "Point05": {
+        "icon": "icon/skill/1513_technique.png",
         "skillRef": {
           "skillName": "Make Waves in Still Waters",
           "skillSlot": "Technique"
@@ -70798,6 +70813,7 @@ let characters = {
       },
       "Point06": {
         "name": "Party in Perfect Paradise",
+        "icon": "icon/skill/1513_skilltree1.png",
         "desc": "When SPD is #1[i] or higher, increases this unit's Elation by #2[i]%. For every #3[i] SPD exceeding that threshold, additionally increases this unit's Elation by #4[i]%. Up to a max of #5[i] excess SPD can be taken into account for this effect.",
         "params": [
           140,
@@ -70809,6 +70825,7 @@ let characters = {
       },
       "Point07": {
         "name": "Revel in Raging Tides",
+        "icon": "icon/skill/1513_skilltree2.png",
         "desc": "At the start of combat, if the team includes an Elation character besides Aventurine • Waveflair, then while Aventurine • Waveflair is on the field, increases all allies' Elation by #5[i]% and Aventurine • Waveflair's Elation by an additional #1[i]%.\nAt the start of combat, if Aventurine • Waveflair is the only Elation character in the team, then when Aventurine • Waveflair uses Elation Skill to deal DMG, it is considered as having launched Follow-Up ATK. After a teammate uses an attack, Aventurine • Waveflair gains #2[i] \"Certified Banger\" and #4[i] Punchline, and increases Aha's SPD by #3[i]. The SPD Boost effect lasts until the end of Aha Instant.",
         "params": [
           0.8,
@@ -70834,6 +70851,7 @@ let characters = {
       },
       "Point08": {
         "name": "Sift Through Gilded Dreams",
+        "icon": "icon/skill/1513_skilltree3.png",
         "desc": "Increases CRIT DMG by #1[i]%. After a teammate uses Basic ATK, Skill, Follow-Up ATK, or Ultimate, all allies' CRIT DMG increases by #2[i]%, lasting for #3[i] turn(s), and Aventurine • Waveflair additionally gains #4[i] \"Fervor.\" This effect can trigger up to #5[i] time(s), and the trigger count resets when Aventurine • Waveflair uses Skill.",
         "params": [
           0.48,
@@ -70920,6 +70938,7 @@ let characters = {
       },
       "Point22": {
         "name": "Elation Skill",
+        "icon": "icon/skill/1513_elation.png",
         "skillRef": {
           "skillName": "Cheers! To Summer's Blaze",
           "skillSlot": "Elation Skill"
@@ -70927,9 +70946,9 @@ let characters = {
       }
     },
     "hasSummon": false,
-    "icon": null,
-    "preview": null,
-    "portrait": null,
+    "icon": "icon/character/1513.png",
+    "preview": "image/character_preview/1513.png",
+    "portrait": "image/character_portrait/1513.png",
     "bannerOffsets": [
       -70,
       70,
