@@ -3385,6 +3385,7 @@ const megaParsingFuckeryPain = {
             "name",
             "value",
             "adjustment",
+            "target",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Adjust Team Punchline Value");
 
@@ -3395,6 +3396,7 @@ const megaParsingFuckeryPain = {
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.value,"Value")}
             ${getStandardNameDisplay(initialCounter,parseRef.adjustment,"Operation")}
+            ${getStandardNameDisplay(initialCounter,parseRef.target,"Source",true)}
         </div>`;
     },
     "Set Netherwing Skill Phase"(parseRef,initialCounter) {
@@ -7766,6 +7768,33 @@ const megaParsingFuckeryPain = {
         return `<div class="actionDetailBody2">
             <div class="rotationConditionOperatorHeaderInline">Decrement Buff Durations:</div>&nbsp;
             ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
+        </div>
+        `;
+    },
+    "Add Charges Display CUSTOM"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "abilityName",
+            "displayType",
+            "isRemove",
+            // "formula",
+            // "value1",
+            // "compareType",
+            // "value2"
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Add Charges Display CUSTOM");
+
+        
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Add Charges Display CUSTOM:</div>&nbsp;
+            ${megaParsingFuckery.makeConditionTargetBox(parseRef.target,initialCounter)}
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.abilityName,"Ability")}
+            ${getStandardNameDisplay(initialCounter,parseRef.displayType,"Display Type")}
+            ${getStandardNameDisplay(initialCounter,parseRef.isRemove,"Is Removal")}
+            
         </div>
         `;
     },
