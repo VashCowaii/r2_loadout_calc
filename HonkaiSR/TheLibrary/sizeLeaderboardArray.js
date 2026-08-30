@@ -641,7 +641,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Saber",
     "entryIcon": "icon/character/1014.png",
     "lineCount": 6796,
-    "sizeCount": 253664
+    "sizeCount": 253655
   },
   {
     "entryType": "enemy",
@@ -692,6 +692,14 @@ let sizeLeaderboardArray = [
     "enemyID": 5014021,
     "lineCount": 6477,
     "sizeCount": 237770
+  },
+  {
+    "entryType": "char",
+    "entryName": "Robin • Summeretto",
+    "trimCharacterName": "RobinSummeretto",
+    "entryIcon": "icon/character/1512.png",
+    "lineCount": 6395,
+    "sizeCount": 236888
   },
   {
     "entryType": "enemy",
@@ -1395,7 +1403,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Gilgamesh",
     "entryIcon": "icon/character/1509.png",
     "lineCount": 4890,
-    "sizeCount": 173581
+    "sizeCount": 173572
   },
   {
     "entryType": "enemy",
@@ -1672,6 +1680,14 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1221.png",
     "lineCount": 4340,
     "sizeCount": 148295
+  },
+  {
+    "entryType": "char",
+    "entryName": "Aventurine • Waveflair",
+    "trimCharacterName": "AventurineWaveflair",
+    "entryIcon": "icon/character/1513.png",
+    "lineCount": 4158,
+    "sizeCount": 147527
   },
   {
     "entryType": "char",
@@ -2063,7 +2079,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Sparkle",
     "entryIcon": "icon/character/1306.png",
     "lineCount": 3160,
-    "sizeCount": 113328
+    "sizeCount": 113319
   },
   {
     "entryType": "enemy",
@@ -6366,22 +6382,6 @@ let sizeLeaderboardArray = [
     "enemyID": 8001031,
     "lineCount": 60,
     "sizeCount": 1435
-  },
-  {
-    "entryType": "char",
-    "entryName": "Robin • Summeretto",
-    "trimCharacterName": "RobinSummeretto",
-    "entryIcon": "icon/character/1512.png",
-    "lineCount": 9,
-    "sizeCount": 230
-  },
-  {
-    "entryType": "char",
-    "entryName": "Aventurine • Waveflair",
-    "trimCharacterName": "AventurineWaveflair",
-    "entryIcon": "icon/character/1513.png",
-    "lineCount": 7,
-    "sizeCount": 163
   },
   {
     "entryType": "char",
