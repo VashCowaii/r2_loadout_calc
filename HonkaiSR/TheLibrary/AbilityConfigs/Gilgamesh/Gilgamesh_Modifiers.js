@@ -471,11 +471,11 @@ const configAbility = {
               },
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceAllPEN</span>&nbsp;",
               "value": {
-                "operator": "Variables[0] (MDF_AllDamageTypePenetrateAll) || RETURN",
-                "displayLines": "MDF_AllDamageTypePenetrateAll",
+                "operator": "Variables[0] (MDF_AllDamageTypePenetrate) || RETURN",
+                "displayLines": "MDF_AllDamageTypePenetrate",
                 "constants": [],
                 "variables": [
-                  "MDF_AllDamageTypePenetrateAll"
+                  "MDF_AllDamageTypePenetrate"
                 ]
               },
               "isRefresh": true

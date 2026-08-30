@@ -194,6 +194,10 @@ const vashCharProgressList = [
         completed: true, live: true, needs80OrTraces: false, owned: true},
     {name: "Trailblazer - Remembrance",
         completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Robin • Summeretto",
+        completed: true, live: false, needs80OrTraces: false, owned: true},
+
+        
 
     //ELATION
     {name: "Yao Guang",
@@ -206,6 +210,9 @@ const vashCharProgressList = [
         completed: true, live: true, needs80OrTraces: false, owned: true},
     {name: "Evanescia",
         completed: true, live: true, needs80OrTraces: false, owned: true},
+    {name: "Aventurine • Waveflair",
+        completed: true, live: false, needs80OrTraces: false, owned: false},
+        
 ]
 
 let vashCharProgressListPOST = [];

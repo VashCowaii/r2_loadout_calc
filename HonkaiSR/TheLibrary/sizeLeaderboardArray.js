@@ -56,8 +56,8 @@ let sizeLeaderboardArray = [
   {
     "entryType": "enemy",
     "enemyID": 8015030,
-    "lineCount": 14068,
-    "sizeCount": 516913
+    "lineCount": 14069,
+    "sizeCount": 516947
   },
   {
     "entryType": "enemy",
@@ -130,14 +130,14 @@ let sizeLeaderboardArray = [
   {
     "entryType": "enemy",
     "enemyID": 8015040,
-    "lineCount": 12017,
-    "sizeCount": 444521
+    "lineCount": 12018,
+    "sizeCount": 444555
   },
   {
     "entryType": "enemy",
     "enemyID": 8015050,
-    "lineCount": 11737,
-    "sizeCount": 435779
+    "lineCount": 11738,
+    "sizeCount": 435813
   },
   {
     "entryType": "enemy",
@@ -641,7 +641,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Saber",
     "entryIcon": "icon/character/1014.png",
     "lineCount": 6796,
-    "sizeCount": 253664
+    "sizeCount": 253655
   },
   {
     "entryType": "enemy",
@@ -692,6 +692,14 @@ let sizeLeaderboardArray = [
     "enemyID": 5014021,
     "lineCount": 6477,
     "sizeCount": 237770
+  },
+  {
+    "entryType": "char",
+    "entryName": "Robin • Summeretto",
+    "trimCharacterName": "RobinSummeretto",
+    "entryIcon": "icon/character/1512.png",
+    "lineCount": 6395,
+    "sizeCount": 236888
   },
   {
     "entryType": "enemy",
@@ -1280,8 +1288,8 @@ let sizeLeaderboardArray = [
   {
     "entryType": "enemy",
     "enemyID": 5014032,
-    "lineCount": 4974,
-    "sizeCount": 179244
+    "lineCount": 4975,
+    "sizeCount": 179278
   },
   {
     "entryType": "enemy",
@@ -1395,7 +1403,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Gilgamesh",
     "entryIcon": "icon/character/1509.png",
     "lineCount": 4890,
-    "sizeCount": 173581
+    "sizeCount": 173572
   },
   {
     "entryType": "enemy",
@@ -1448,14 +1456,14 @@ let sizeLeaderboardArray = [
   {
     "entryType": "enemy",
     "enemyID": 5014030,
-    "lineCount": 4703,
-    "sizeCount": 169542
+    "lineCount": 4704,
+    "sizeCount": 169576
   },
   {
     "entryType": "enemy",
     "enemyID": 5014031,
-    "lineCount": 4703,
-    "sizeCount": 169542
+    "lineCount": 4704,
+    "sizeCount": 169576
   },
   {
     "entryType": "enemy",
@@ -1672,6 +1680,14 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1221.png",
     "lineCount": 4340,
     "sizeCount": 148295
+  },
+  {
+    "entryType": "char",
+    "entryName": "Aventurine • Waveflair",
+    "trimCharacterName": "AventurineWaveflair",
+    "entryIcon": "icon/character/1513.png",
+    "lineCount": 4158,
+    "sizeCount": 147527
   },
   {
     "entryType": "char",
@@ -2063,7 +2079,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "Sparkle",
     "entryIcon": "icon/character/1306.png",
     "lineCount": 3160,
-    "sizeCount": 113328
+    "sizeCount": 113319
   },
   {
     "entryType": "enemy",
@@ -4509,7 +4525,7 @@ let sizeLeaderboardArray = [
     "entryType": "lc",
     "entryName": "Summer Rides the Surf",
     "trimCharacterName": "SummerRidestheSurf",
-    "entryIcon": null,
+    "entryIcon": "icon/light_cone/23064.png",
     "lineCount": 320,
     "sizeCount": 11471
   },
@@ -5129,7 +5145,7 @@ let sizeLeaderboardArray = [
     "entryType": "lc",
     "entryName": "Rise and Sing",
     "trimCharacterName": "RiseandSing",
-    "entryIcon": null,
+    "entryIcon": "icon/light_cone/23063.png",
     "lineCount": 224,
     "sizeCount": 7092
   },
@@ -5369,7 +5385,7 @@ let sizeLeaderboardArray = [
     "entryType": "lc",
     "entryName": "Race to the Horizon",
     "trimCharacterName": "RacetotheHorizon",
-    "entryIcon": null,
+    "entryIcon": "icon/light_cone/22008.png",
     "lineCount": 196,
     "sizeCount": 5904
   },
@@ -5959,7 +5975,7 @@ let sizeLeaderboardArray = [
     "entryType": "lc",
     "entryName": "A Little Getaway",
     "trimCharacterName": "ALittleGetaway",
-    "entryIcon": null,
+    "entryIcon": "icon/light_cone/21066.png",
     "lineCount": 141,
     "sizeCount": 3751
   },

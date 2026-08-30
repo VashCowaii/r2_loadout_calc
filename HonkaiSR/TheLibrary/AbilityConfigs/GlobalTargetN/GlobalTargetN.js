@@ -136,6 +136,148 @@ const configAbility = {
     },
     {
       "name": "Target Configuration",
+      "nameTarget": "RobinS: Memos and Fake Partners",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Join Targets",
+          "TargetList": [
+            {
+              "name": "Target Name",
+              "target": "{{RobinS: Memosprite}}"
+            },
+            {
+              "name": "Target Name",
+              "target": "{{RobinS: Fake Partner 2}}"
+            },
+            {
+              "name": "Target Name",
+              "target": "{{RobinS: Fake Partner 3}}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "RobinS: Fake Partner 3",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Add Target by Pseudo-Character Partner",
+          "target": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{All Memosprites}}"
+              },
+              {
+                "name": "Target Filter",
+                "conditions": {
+                  "name": "Character ID",
+                  "ID": 11512,
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "characterName": null
+                }
+              }
+            ]
+          },
+          "identifier": "RobinS_PTN03"
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "RobinS: Fake Partner 2",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Add Target by Pseudo-Character Partner",
+          "target": {
+            "name": "Target Sequence",
+            "Sequence": [
+              {
+                "name": "Target Name",
+                "target": "{{All Memosprites}}"
+              },
+              {
+                "name": "Target Filter",
+                "conditions": {
+                  "name": "Character ID",
+                  "ID": 11512,
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
+                  "characterName": null
+                }
+              }
+            ]
+          },
+          "identifier": "RobinS_PTN02"
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "RobinS: Memosprite",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{All Memosprites}}"
+            },
+            {
+              "name": "Target Filter",
+              "conditions": {
+                "name": "Character ID",
+                "ID": 11512,
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Parameter Target}}"
+                },
+                "characterName": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
+      "nameTarget": "RobinS: E1 - HighestHP Enemy",
+      "isTargetOperator": false,
+      "execute": [
+        {
+          "name": "Target Sequence",
+          "Sequence": [
+            {
+              "name": "Target Name",
+              "target": "{{Enemy Team All}}"
+            },
+            {
+              "name": "Sort by Stat",
+              "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+              "living": true,
+              "sortByHighest": true
+            },
+            {
+              "name": "Return Target",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Target Configuration",
       "nameTarget": "Himeko Nova: Ult Target",
       "isTargetOperator": false,
       "execute": [

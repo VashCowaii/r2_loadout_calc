@@ -10632,9 +10632,9 @@ let lightcones = {
       "HPAddedRatio"
     ],
     "extraProperties": [],
-    "icon": null,
-    "preview": null,
-    "portrait": null,
+    "icon": "icon/light_cone/23063.png",
+    "preview": "image/light_cone_preview/23063.png",
+    "portrait": "image/light_cone_portrait/23063.png",
     "imageOffset": [
       -16,
       -119,
@@ -10706,9 +10706,9 @@ let lightcones = {
       "CriticalChanceBase"
     ],
     "extraProperties": [],
-    "icon": null,
-    "preview": null,
-    "portrait": null,
+    "icon": "icon/light_cone/23064.png",
+    "preview": "image/light_cone_preview/23064.png",
+    "portrait": "image/light_cone_portrait/23064.png",
     "imageOffset": [
       50,
       -146,
@@ -10859,9 +10859,9 @@ let lightcones = {
       "ElationDamageAddedRatioBase"
     ],
     "extraProperties": [],
-    "icon": null,
-    "preview": null,
-    "portrait": null,
+    "icon": "icon/light_cone/21066.png",
+    "preview": "image/light_cone_preview/21066.png",
+    "portrait": "image/light_cone_portrait/21066.png",
     "imageOffset": [
       -4,
       -88,
@@ -10933,9 +10933,9 @@ let lightcones = {
       "AttackAddedRatio"
     ],
     "extraProperties": [],
-    "icon": null,
-    "preview": null,
-    "portrait": null,
+    "icon": "icon/light_cone/22008.png",
+    "preview": "image/light_cone_preview/22008.png",
+    "portrait": "image/light_cone_portrait/22008.png",
     "imageOffset": [
       0,
       -62,

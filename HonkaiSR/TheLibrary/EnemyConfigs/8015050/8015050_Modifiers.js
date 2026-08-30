@@ -767,7 +767,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Ability",
-              "abilityName": "CommomAbility_W5_AsatPramad_00"
+              "abilityName": "CommomAbility_W5_AsatPramad_00",
+              "isPool": true
             },
             {
               "name": "IF",

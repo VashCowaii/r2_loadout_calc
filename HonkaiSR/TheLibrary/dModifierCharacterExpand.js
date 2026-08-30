@@ -7917,7 +7917,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Memosprite_RobinSServant_DamageTakenAura",
+    "name": "<a class=\"gModGreen\" id=\"1135445565\">Memosprite_RobinSServant_DamageTakenAura</a>",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%.",
@@ -7983,7 +7983,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "AventurineW_Eidolon6_Mark",
+    "name": "<a class=\"gModGreen\" id=\"-101576772\">AventurineW_Eidolon6_Mark</a>",
     "realName": "The Past in Fast Lane",
     "aim": "Other",
     "desc": "Has currently used Elation Skill #1[i] time(s).",
@@ -7994,7 +7994,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "AventurineW_Eidolon6_MarkFull",
+    "name": "<a class=\"gModGreen\" id=\"2124492609\">AventurineW_Eidolon6_MarkFull</a>",
     "realName": "The Past in Fast Lane",
     "aim": "Other",
     "desc": "All Elation Skills used become \"All In! To Summer's Blaze,\" and using the Elation Skill \"All In! To Summer's Blaze\" outside of Aha Instant to additionally deal DMG no longer consumes \"Fervor.\"",
@@ -8002,7 +8002,7 @@ let modifiersCharacter = [
     "perma": true
   },
   {
-    "name": "AventurineW_PointB2_PropertyRatio",
+    "name": "<a class=\"gModGreen\" id=\"192684333\">AventurineW_PointB2_PropertyRatio</a>",
     "realName": "Revel in Raging Tides",
     "aim": "Buff",
     "desc": "Elation increases by #1[i]%.",
@@ -8024,7 +8024,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "AventurineW_Eidolon6_ElationDamageExtra",
+    "name": "<a class=\"gModGreen\" id=\"-1946436058\">AventurineW_Eidolon6_ElationDamageExtra</a>",
     "realName": "The Past in Fast Lane",
     "aim": "Buff",
     "desc": "Elation DMG merrymakes by #1[i]%.",
@@ -8035,7 +8035,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "AventurineW_ExtraCritDamageRatio",
+    "name": "<a class=\"gModGreen\" id=\"663338938\">AventurineW_ExtraCritDamageRatio</a>",
     "realName": "CRIT DMG Boost",
     "aim": "Buff",
     "desc": "CRIT DMG increases by #1[i]%.",
@@ -8046,7 +8046,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "AventurineW_Tree03_TriggerNum",
+    "name": "<a class=\"gModGreen\" id=\"90748474\">AventurineW_Tree03_TriggerNum</a>",
     "realName": "Sift Through Gilded Dreams",
     "aim": "Other",
     "desc": "The \"Sift Through Gilded Dreams\" effect can be triggered #1[i] more time(s).",
@@ -8068,7 +8068,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "AventurineW_Eidolon1",
+    "name": "<a class=\"gModGreen\" id=\"-1353143847\">AventurineW_Eidolon1</a>",
     "realName": "A Holiday on the Line",
     "aim": "Buff",
     "desc": "All-Type RES PEN increases by #1[i]%.",
@@ -8109,7 +8109,7 @@ let modifiersCharacter = [
     "perma": true
   },
   {
-    "name": "AventurineW_ElationConvert_Sub",
+    "name": "<a class=\"gModGreen\" id=\"466307376\">AventurineW_ElationConvert_Sub</a>",
     "realName": "Party in Perfect Paradise",
     "aim": "Buff",
     "desc": "Elation increases by #1[i]%.",
@@ -8150,7 +8150,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Memosprite_RobinSServant_Fever_DmgUp",
+    "name": "<a class=\"gModGreen\" id=\"2093298982\">Memosprite_RobinSServant_Fever_DmgUp</a>",
     "realName": "Fever",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -8161,7 +8161,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "Memosprite_RobinSServant_Eidolon1_DamageRecord",
+    "name": "<a class=\"gModGreen\" id=\"358422144\">Memosprite_RobinSServant_Eidolon1_DamageRecord</a>",
     "realName": "Stray Bird of Summer",
     "aim": "Other",
     "desc": "Current DMG Tally: #1[i]",
@@ -8172,7 +8172,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "AventurineW_Eidolon4",
+    "name": "<a class=\"gModGreen\" id=\"-1302810990\">AventurineW_Eidolon4</a>",
     "realName": "Sunlight Runs No Tab",
     "aim": "Buff",
     "desc": "When dealing DMG, ignores #1[i]% of the target's DEF.",
@@ -8183,7 +8183,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "AventurineW_PointB2_TeammatePropertyRatio",
+    "name": "<a class=\"gModGreen\" id=\"2043488481\">AventurineW_PointB2_TeammatePropertyRatio</a>",
     "realName": "Revel in Raging Tides",
     "aim": "Buff",
     "desc": "Elation increases by #1[i]%.",
