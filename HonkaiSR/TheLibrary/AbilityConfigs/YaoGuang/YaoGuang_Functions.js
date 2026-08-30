@@ -82,14 +82,14 @@ const configAbility = {
           "name": "Define Custom Variable",
           "variableName": "_DeltaY",
           "value": {
-            "operator": "Variables[0] ([object Object]) || Constants[0] (1000) || DIV || Constants[1] (1.15) || ADD || RETURN",
-            "displayLines": "(([object Object] / 1000) + 1.15)",
+            "operator": "Variables[0] (_DeltaY) || Constants[0] (1000) || DIV || Constants[1] (1.15) || ADD || RETURN",
+            "displayLines": "((_DeltaY / 1000) + 1.15)",
             "constants": [
               1000,
               1.15
             ],
             "variables": [
-              {}
+              "_DeltaY"
             ]
           }
         },
@@ -210,14 +210,14 @@ const configAbility = {
           "name": "Define Custom Variable",
           "variableName": "_DeltaY",
           "value": {
-            "operator": "Variables[0] ([object Object]) || Constants[0] (1000) || DIV || Constants[1] (1.15) || ADD || RETURN",
-            "displayLines": "(([object Object] / 1000) + 1.15)",
+            "operator": "Variables[0] (_DeltaY) || Constants[0] (1000) || DIV || Constants[1] (1.15) || ADD || RETURN",
+            "displayLines": "((_DeltaY / 1000) + 1.15)",
             "constants": [
               1000,
               1.15
             ],
             "variables": [
-              {}
+              "_DeltaY"
             ]
           }
         },
