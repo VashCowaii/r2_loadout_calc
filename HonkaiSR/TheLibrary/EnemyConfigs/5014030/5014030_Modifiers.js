@@ -1432,7 +1432,8 @@ const configAbility = {
           "execute": [
             {
               "name": "Add Ability",
-              "abilityName": "CommomAbility_W5_Painter_00"
+              "abilityName": "CommomAbility_W5_Painter_00",
+              "isPool": true
             }
           ]
         }
