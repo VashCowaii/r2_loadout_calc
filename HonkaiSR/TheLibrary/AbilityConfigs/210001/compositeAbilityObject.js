@@ -47,7 +47,13 @@ const compositeAbilityObject = {
       },
       "skillEffect": "Passive",
       "maxLevel": 1,
-      "configAbilityList": null,
+      "configAbilityList": [
+        "Activity_Fate_LancerBE_Base_Skill_EnterReady",
+        "Activity_FateRin_RuleBreaker_Phase01",
+        "Activity_FateRin_RuleBreaker_Phase02",
+        "Activity_FateRin_RuleBreaker_Camera",
+        "Activity_FateRin_RuleBreaker_Effect"
+      ],
       "toughnessList": [
         0,
         0,
@@ -57,5 +63,20 @@ const compositeAbilityObject = {
     }
   },
   "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 210001,
+    "team": "Player Team",
+    "eventType": "Assist",
+    "abilityList": null,
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      }
+    ],
+    "hardLevelEvent": true,
+    "eliteGroup": true
+  },
   "noReader": true
 }

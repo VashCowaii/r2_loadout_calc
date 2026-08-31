@@ -4069,5 +4069,23 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 30118,
+    "team": "Neutral Team",
+    "eventType": "Challenge Event",
+    "abilityList": [
+      "BattleEventAbility_Challenge_Month_18"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      }
+    ],
+    "eventSpeed": 100,
+    "hardLevelEvent": true,
+    "actionDescription": "When an ally uses their Ultimate, obtain \"Memory Imprint.\" This effect stacks up to <unbreak>#2[i]</unbreak> time(s).\\nAt the start of every Cycle, regenerate Energy to all allies based on the number of \"Memory Imprint\" stacks (Each stack regenerates <unbreak>#3[i]</unbreak> Energy). Energy obtained in this way can exceed allies' Max Energy."
+  }
 }

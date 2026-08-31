@@ -217,5 +217,23 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 30020,
+    "team": "Neutral Team",
+    "eventType": "Challenge Event",
+    "abilityList": [
+      "BattleEventAbility_Challenge_New_03"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      }
+    ],
+    "eventSpeed": 100,
+    "hardLevelEvent": true,
+    "actionDescription": "At the beginning of each Cycle, increases the Weakness Break Efficiency of each ally's next attack by <unbreak>#1[i]%</unbreak>."
+  }
 }

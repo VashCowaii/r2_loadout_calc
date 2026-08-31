@@ -281,5 +281,23 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 30101,
+    "team": "Neutral Team",
+    "eventType": "Challenge Event",
+    "abilityList": [
+      "BattleEventAbility_Challenge_Month_01"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      }
+    ],
+    "eventSpeed": 100,
+    "hardLevelEvent": true,
+    "actionDescription": "At the beginning of each Cycle, increases the ATK of the character with the highest HP by <unbreak>#1[i]%</unbreak> until the beginning of the next Cycle. Additionally, restores HP for the character with the lowest HP by <unbreak>#2[i]%</unbreak> of their Max HP."
+  }
 }

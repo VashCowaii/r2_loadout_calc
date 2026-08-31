@@ -3654,5 +3654,23 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 30117,
+    "team": "Neutral Team",
+    "eventType": "Challenge Event",
+    "abilityList": [
+      "BattleEventAbility_Challenge_Month_17"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      }
+    ],
+    "eventSpeed": 100,
+    "hardLevelEvent": true,
+    "actionDescription": "At the start of every wave or Cycle, apply \"Memory Imprint\" to an Elite or rarer enemy target. When targets with \"Memory Imprint\" receive DMG, other enemy targets receive DMG equal to <unbreak>#1[i]%</unbreak> of the original DMG. This effect lasts until the start of the next Cycle."
+  }
 }

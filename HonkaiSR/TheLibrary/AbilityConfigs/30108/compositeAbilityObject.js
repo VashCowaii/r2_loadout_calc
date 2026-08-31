@@ -293,5 +293,23 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 30108,
+    "team": "Neutral Team",
+    "eventType": "Challenge Event",
+    "abilityList": [
+      "BattleEventAbility_Challenge_Month_08"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      }
+    ],
+    "eventSpeed": 100,
+    "hardLevelEvent": true,
+    "actionDescription": "Apply \"Memory Imprint\" to all enemies at the beginning of each Cycle. For each additional debuff currently on the enemy, apply 1 extra stack of \"Memory Imprint\" to that enemy. Each stack reduces the target's DEF by <unbreak>#1[i]%</unbreak> for a maximum of <unbreak>#2[i]</unbreak> stacks. This effect lasts until the start of the next Cycle."
+  }
 }

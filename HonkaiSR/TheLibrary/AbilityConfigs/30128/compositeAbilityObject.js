@@ -4804,5 +4804,23 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 30128,
+    "team": "Neutral Team",
+    "eventType": "Challenge Event",
+    "abilityList": [
+      "BattleEventAbility_Challenge_Month_28"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      }
+    ],
+    "eventSpeed": 100,
+    "hardLevelEvent": true,
+    "actionDescription": "At the start of every wave of Cycle, summons 1 Trotter onto the field. The Trotter will be immediately defeated when it is Weakness Broken.\\nAfter the Trotter is defeated, advances the attacker's action by <unbreak>#2[i]%</unbreak>, then applies \"Memory Imprint\" to all allies. Every \"Memory Imprint\" stack increases the target's ATK by <unbreak>#5[i]%</unbreak> and Break Effect by <unbreak>#3[i]%</unbreak>, up to a max of <unbreak>#4[i]</unbreak> stack(s)."
+  }
 }

@@ -33,5 +33,28 @@ const compositeAbilityObject = {
     }
   },
   "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 43002,
+    "team": "Neutral Team",
+    "eventType": "Assist",
+    "abilityList": [
+      "BattleEventAbility_RogueDLCRuin_Camera",
+      "BattleEventAbility_RogueDLCRuin_Insert"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      },
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+        "value": 18
+      }
+    ],
+    "eventSpeed": 50,
+    "hardLevelEvent": true,
+    "eliteGroup": true
+  },
   "noReader": true
 }

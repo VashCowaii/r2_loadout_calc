@@ -4026,5 +4026,23 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 30140,
+    "team": "Neutral Team",
+    "eventType": "Challenge Event",
+    "abilityList": [
+      "BattleEventAbility_Challenge_Month_40"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      }
+    ],
+    "eventSpeed": 100,
+    "hardLevelEvent": true,
+    "actionDescription": "When an ally character has a summon, the DMG dealt by this unit and the summon increases by <unbreak>#1[i]%</unbreak>.\\nAt the start of each Cycle, \"Memory Turbulence\" deals 1 instance of True DMG to all enemies, plus 1 additional instance of DMG for each ally summon, up to a maximum of <unbreak>#5[i]</unbreak> instances."
+  }
 }

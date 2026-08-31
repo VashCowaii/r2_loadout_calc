@@ -307,5 +307,14 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 16007,
+    "team": "Player Team",
+    "eventType": "Assist",
+    "abilityList": null,
+    "overridesArray": [],
+    "hardLevelEvent": true
+  }
 }

@@ -3923,5 +3923,23 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 30129,
+    "team": "Neutral Team",
+    "eventType": "Endgame Countdown",
+    "abilityList": [
+      "BattleEventAbility_Challenge_Month_29"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      }
+    ],
+    "eventSpeed": 100,
+    "hardLevelEvent": true,
+    "actionDescription": "After an ally target uses Follow-Up ATK or Skill to attack, add <unbreak>#3[i]</unbreak> Hit(s) Per Action to \"Memory Turbulence,\" up to <unbreak>#1[i]</unbreak> extra hits.\\nAt the start of every Cycle, every hit will deal 1 instance of DMG based on the enemy targets' respective Max HP to random enemy targets."
+  }
 }

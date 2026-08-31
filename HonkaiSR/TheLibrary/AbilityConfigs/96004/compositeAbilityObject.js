@@ -155,5 +155,21 @@ const compositeAbilityObject = {
     }
   },
   "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 96004,
+    "team": "Player Team",
+    "eventType": "Assist",
+    "abilityList": [
+      "W_BattleEvent_Activity_SummonMonster_PassiveAbility02"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+        "value": 100
+      }
+    ],
+    "hardLevelEvent": true
+  },
   "noReader": true
 }

@@ -395,5 +395,19 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 11506,
+    "team": "Player Team",
+    "eventType": "Assist",
+    "abilityList": [
+      "GlobalAbility_SilverWolf999_BattleEvent",
+      "GlobalAbility_SilverWolf999_Insert_Part01",
+      "GlobalAbility_SilverWolf999_Insert_Part02",
+      "GlobalAbility_SilverWolf999_Insert_Camera"
+    ],
+    "overridesArray": [],
+    "hardLevelEvent": true
+  }
 }

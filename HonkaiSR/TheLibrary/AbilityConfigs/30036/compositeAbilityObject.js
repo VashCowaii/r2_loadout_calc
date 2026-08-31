@@ -396,5 +396,23 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 30036,
+    "team": "Neutral Team",
+    "eventType": "Challenge Event",
+    "abilityList": [
+      "BattleEventAbility_Challenge_Xianzhou_06"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      }
+    ],
+    "eventSpeed": 100,
+    "hardLevelEvent": true,
+    "actionDescription": "DMG taken by enemy targets are <color=#f29e38ff>Distributed between all enemies</color>. When allies use <color=#f29e38ff>AoE or Blast ATK abilities</color>, increases DMG dealt by <unbreak>#1[i]%</unbreak>."
+  }
 }
