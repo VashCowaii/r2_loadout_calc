@@ -37,11 +37,9 @@ const activityModeList = [
     },
     {
         name: "Cavern of Corrosion",
-        // img: "/HonkaiSR/misc/Icon_Relics.png"
         img: "/HonkaiSR/icon/item/71009.png",
         link: "/HonkaiSR/TheLibrary/Cavern/"
     },
-    // 71009
     {
         name: "Ornament Extraction",
         img: "/HonkaiSR/icon/item/71026.png",
@@ -4818,6 +4816,7 @@ const userTriggers = {
                 `
             }
 
+            const finalData = BEREF.finalData;
             initialString += `
                             <div class="rotationsSectionRowHolder1Overview">
                                 <div class="eidolonRowBoxHolder">
@@ -4831,6 +4830,19 @@ const userTriggers = {
                                         ${pagePopulation.cleanDescription(paramsCheck2 ?? [],BEREF.actionBarDesc ?? "") || "No action bar description"}
                                     </div>
                                 </div>
+                                
+
+                                ${finalData.actionDescription ? `
+                                    <div class="eidolonRowBoxHolder">
+                                    
+                                        <div class="eidolonRowNameSkill">Battle Event Description</div>
+
+                                </div>
+                                    <div class="actionDetailBody">
+                                    <div class="actionDetailBody2Description">
+                                        ${pagePopulation.cleanDescription(paramsCheck2 ?? [],finalData.actionDescription ?? "") || "No action bar description"}
+                                    </div>
+                                </div>` : ""}
                                 ${paramsStringer2}
 
                             </div>`;
@@ -5190,7 +5202,7 @@ const userTriggers = {
 
 
         // console.log(overviewString)
-        readSelection("overviewMainBoxHolder").innerHTML = overviewString;
+        // readSelection("overviewMainBoxHolder").innerHTML = overviewString;
 
         // readSelection("eidolonsMainBoxHolder").innerHTML
         let statBox = readSelection("characterDisplayStatsBasic");
@@ -5198,6 +5210,8 @@ const userTriggers = {
         // const menuBoxDisplayOrder = Object.keys(charRef.baseStats);
 
         if (!isBattleEvent) {
+            readSelection("overviewMainBoxHolder").innerHTML = overviewString;
+
             charRef.baseStats.EnergyMax = charRef.energyMax;
 
             const menuBoxDisplayOrder = [];
@@ -5218,6 +5232,72 @@ const userTriggers = {
 
             // ["HPFinal","ATKFinal","DEFFinal","SPDFinal","CritRateFinal","CritDamageFinal"];
             statBox.innerHTML = customHTML.createAlternatingStatRowsFullNames(menuBoxDisplayOrder,convertedDisplayObject);
+        }
+        else {
+            // skillsMainBoxHolderEnemies
+            readSelection("overviewMainBoxHolder").classList = "skillsMainBoxHolderEnemies";
+
+
+            let addString = "";
+
+            const finalData = BEREF.finalData;
+            const initialSPD = finalData.eventSpeed;
+            const overrides = finalData.overridesArray;
+            // "overridesArray": [
+            //     {
+                //     "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+                //     "value": 18
+            //     }
+            // ],
+            // "eventSpeed": 100,
+
+            addString += `<div class="imageRowStatisticBox${2} imageRowStatisticBoxEnemyAdjustmentRow">
+                <div class="imageRowStatisticImageBoxEnemyAdjustment">
+                    <div class="imageRowStatisticNameBox">Initial Speed</div>
+                </div>
+                <div class="imageRowStatisticStatBox">${initialSPD}</div>
+            </div>`
+
+            addString += `<div class="characterDisplayNameAndElement">
+                <div class="characterDisplayNameBox">Stat Overrides</div>
+            </div>`
+
+            let iterator = 1;
+            for (let override of overrides) {
+                // addString += `<div class="actionDetailBody2">
+                //     <div class="rotationConditionOperatorHeaderInline">${override.statName}:</div>&nbsp;
+                //     ${override.value}
+                // </div>`;
+
+                // addString += `<div class="imageRowStatisticBox${iterator}">
+                //     <div class="imageRowStatisticNameBox">${override.statName}</div>
+                //     <div class="imageRowStatisticStatBox2">${override.value}</div>
+                    
+                // </div>`;
+
+                addString += `<div class="imageRowStatisticBox${iterator} imageRowStatisticBoxEnemyAdjustmentRow">
+                    <div class="imageRowStatisticImageBoxEnemyAdjustment">
+                        <div class="imageRowStatisticNameBox">${override.statName}</div>
+                    </div>
+                    <div class="imageRowStatisticStatBox">${override.value}</div>
+                </div>`;
+                // Action Bar Data
+
+
+
+                iterator++;
+                if (iterator === 3) {iterator = 1;}
+            }
+            statBox.innerHTML = addString;
+            readSelection("overviewMainBoxHolder").innerHTML = `<div class="enemyMainBoxOverviewColumn">
+                ${overviewString}
+            </div>
+            <div class="enemyMainBoxOverview">
+                <div class="enemyMainStatsBox">
+                    ${addString}
+                    
+                </div>
+            </div>`;
         }
 
 
