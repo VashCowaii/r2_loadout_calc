@@ -87,8 +87,45 @@ const configAbility = {
       "name": "Lock Battle Actions"
     },
     {
+      "name": "IF",
+      "conditions": {
+        "name": "AND",
+        "conditionList": [
+          {
+            "name": "Stage ID",
+            "ID": 205510800,
+            "compareType": ">="
+          },
+          {
+            "name": "Stage ID",
+            "ID": 205510800,
+            "compareType": "<="
+          }
+        ]
+      }
+    },
+    {
       "name": "Lock Battle Actions",
       "isLock": false
+    },
+    {
+      "name": "IF",
+      "conditions": {
+        "name": "AND",
+        "conditionList": [
+          {
+            "name": "Stage ID",
+            "ID": 205510800,
+            "compareType": ">="
+          },
+          {
+            "name": "Stage ID",
+            "ID": 205510800,
+            "compareType": "<="
+          }
+        ],
+        "invertCondition": true
+      }
     },
     {
       "name": "Define Variable with Elation Skill Count",

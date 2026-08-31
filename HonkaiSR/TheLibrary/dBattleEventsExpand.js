@@ -9,7 +9,27 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 1,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_TargetAttack",
+        "BattleEventAbility_TargetAttackInsert1",
+        "BattleEventAbility_TargetAttackInsert2",
+        "BattleEventAbility_ChallengeTurnLimit"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 18
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "2": {
     "internalID": 2,
@@ -21,7 +41,23 @@ let battleEvents = {
     "icon": "1204Shadow.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 2,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_JingYuan_Passive",
+        "BattleEventAbility_JingYuan_Passive_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ]
+    }
   },
   "3": {
     "internalID": 3,
@@ -33,7 +69,26 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 3,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Poison",
+        "BattleEventAbility_Poison_Insert",
+        "BattleEventAbility_ChallengeTurnLimit"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 18
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "4": {
     "internalID": 4,
@@ -45,7 +100,26 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 4,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_ThunderAttack",
+        "BattleEventAbility_ThunderAttack_Insert",
+        "BattleEventAbility_ChallengeTurnLimit"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 18
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "14": {
     "internalID": 14,
@@ -59,7 +133,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 14,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_01"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "15": {
     "internalID": 15,
@@ -73,7 +164,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 15,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_02"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "16": {
     "internalID": 16,
@@ -87,7 +195,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 16,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_03"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "17": {
     "internalID": 17,
@@ -101,7 +226,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 17,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_04"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "18": {
     "internalID": 18,
@@ -115,7 +257,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 18,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_05"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "19": {
     "internalID": 19,
@@ -131,7 +290,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 19,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_06"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "20": {
     "internalID": 20,
@@ -147,7 +323,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_07"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "21": {
     "internalID": 21,
@@ -163,7 +356,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 21,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_08"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "22": {
     "internalID": 22,
@@ -179,7 +389,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 22,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_09"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "26": {
     "internalID": 26,
@@ -195,7 +422,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 26,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_10"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "27": {
     "internalID": 27,
@@ -210,7 +454,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 27,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_11"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "28": {
     "internalID": 28,
@@ -225,7 +486,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 28,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_12"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "29": {
     "internalID": 29,
@@ -240,7 +518,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 29,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_13"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "30": {
     "internalID": 30,
@@ -255,7 +550,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_14"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "31": {
     "internalID": 31,
@@ -270,7 +582,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 31,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_15"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "32": {
     "internalID": 32,
@@ -291,7 +620,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 32,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_16",
+        "BattleEventAbility_Challenge_Month_01"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "33": {
     "internalID": 33,
@@ -312,7 +659,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 33,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_17",
+        "BattleEventAbility_Challenge_Month_01"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "34": {
     "internalID": 34,
@@ -333,7 +698,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 34,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_18",
+        "BattleEventAbility_Challenge_Month_01"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "35": {
     "internalID": 35,
@@ -354,7 +737,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 35,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_19",
+        "BattleEventAbility_Challenge_Month_01"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "36": {
     "internalID": 36,
@@ -375,7 +776,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 36,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_20",
+        "BattleEventAbility_Challenge_Month_01"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "37": {
     "internalID": 37,
@@ -396,7 +815,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 37,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_21",
+        "BattleEventAbility_Challenge_Month_01"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "38": {
     "internalID": 38,
@@ -417,7 +854,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 38,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_22",
+        "BattleEventAbility_Challenge_Month_01"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "39": {
     "internalID": 39,
@@ -438,7 +893,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 39,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_23",
+        "BattleEventAbility_Challenge_Month_01"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "40": {
     "internalID": 40,
@@ -459,7 +932,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 40,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_24",
+        "BattleEventAbility_Challenge_Month_01"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "41": {
     "internalID": 41,
@@ -480,7 +971,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 41,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_25",
+        "BattleEventAbility_Challenge_Month_01"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "42": {
     "internalID": 42,
@@ -492,7 +1001,26 @@ let battleEvents = {
     "icon": "HoshinoKami_001.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 42,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_620101",
+        "BattleEventAbility_620101_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 83,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "43": {
     "internalID": 43,
@@ -504,7 +1032,26 @@ let battleEvents = {
     "icon": "HoshinoKami_000.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 43,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_620201",
+        "BattleEventAbility_620201_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "44": {
     "internalID": 44,
@@ -516,7 +1063,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 44,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_620301"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 80,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "45": {
     "internalID": 45,
@@ -528,7 +1093,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 45,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_620401"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 60,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "46": {
     "internalID": 46,
@@ -540,7 +1123,26 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_ChallengeTurnLimit",
+        "BattleEventAbility_Challenge_03_temp",
+        "BattleEventAbility_Camear_SelectLightTeamEntity"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "47": {
     "internalID": 47,
@@ -552,7 +1154,26 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 47,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_ChallengeTurnLimit",
+        "BattleEventAbility_Challenge_04_temp",
+        "BattleEventAbility_Camear_SelectDarkTeamEntity"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "48": {
     "internalID": 48,
@@ -564,7 +1185,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 48,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_620501"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "49": {
     "internalID": 49,
@@ -576,7 +1215,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 49,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_620601"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "50": {
     "internalID": 50,
@@ -588,7 +1245,35 @@ let battleEvents = {
     "icon": "Monster_Flag.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 50,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_CocoliaP1_RL",
+        "BattleEventAbility_CocoliaP1_RL_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CharacterLevel</span>&nbsp;",
+          "value": 1
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
+          "value": 1
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
+          "value": 1
+        }
+      ]
+    }
   },
   "51": {
     "internalID": 51,
@@ -600,7 +1285,23 @@ let battleEvents = {
     "icon": "HoshinoKami_001.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 51,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "Yukong_Ability02_BattleEvent_Ability"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100
+    }
   },
   "52": {
     "internalID": 52,
@@ -612,7 +1313,26 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 52,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_620701",
+        "BattleEventAbility_620701_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 20,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "100": {
     "internalID": 100,
@@ -624,7 +1344,28 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 100,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_900100"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 200,
+      "hardLevelEvent": true
+    }
   },
   "101": {
     "internalID": 101,
@@ -636,7 +1377,28 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 101,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_900101"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 200,
+      "hardLevelEvent": true
+    }
   },
   "11203": {
     "internalID": 11203,
@@ -648,7 +1410,23 @@ let battleEvents = {
     "icon": "1204Shadow.png",
     "team": "Neutral Team",
     "type": "Summon",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 11203,
+      "team": "Neutral Team",
+      "eventType": "Summon",
+      "abilityList": [
+        "BattleEventAbility_JingYuan_Passive",
+        "BattleEventAbility_JingYuan_Passive_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ]
+    }
   },
   "11207": {
     "internalID": 11207,
@@ -660,7 +1438,23 @@ let battleEvents = {
     "icon": "HoshinoKami_001.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 11207,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "Yukong_Ability02_BattleEvent_Ability"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100
+    }
   },
   "11216": {
     "internalID": 11216,
@@ -764,7 +1558,45 @@ let battleEvents = {
     "icon": "1112_BE.png",
     "team": "Player Team",
     "type": "Summon",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 11216,
+      "team": "Player Team",
+      "eventType": "Summon",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFirePEN</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateSUM</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageFire</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;"
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "11222": {
     "internalID": 11222,
@@ -846,7 +1678,44 @@ let battleEvents = {
     "icon": "1222_BE.png",
     "team": "Player Team",
     "type": "Summon",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 11222,
+      "team": "Player Team",
+      "eventType": "Summon",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFirePEN</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateSUM</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageFire</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;"
+        }
+      ]
+    }
   },
   "11309": {
     "internalID": 11309,
@@ -858,7 +1727,25 @@ let battleEvents = {
     "icon": "BattleEvent_1309_A.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 11309,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_Robin_Ability03"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true,
+      "barType": 1,
+      "actionDescription": "While Robin is in the \"Concerto\" state, increases all allies' ATK. After an attack, Robin deals Physical Additional DMG. While \"Concerto\" lasts, Robin is immune to Crowd Control debuffs. Before \"Concerto\" ends, Robin won't take a turn or action, lasting until the \"Concerto\" countdown turn begins."
+    }
   },
   "11310": {
     "internalID": 11310,
@@ -870,7 +1757,25 @@ let battleEvents = {
     "icon": "BattleEvent_1312_02_A.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 11310,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "Sam_PassiveAbility01_BattleEvent"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true,
+      "barType": 1,
+      "actionDescription": "While SAM is in the Complete Combustion state, gains Enhanced Basic ATK and Enhanced Skill. Increases this unit's SPD, Weakness Break Efficiency, and the Break DMG taken by enemy targets, lasting until the Complete Combustion countdown turn begins."
+    }
   },
   "11402": {
     "internalID": 11402,
@@ -882,7 +1787,25 @@ let battleEvents = {
     "icon": "BattleEvent_1402_A.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 11402,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "Aglaea_PassiveAbility01_BattleEvent"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true,
+      "barType": 1,
+      "actionDescription": "Aglaea is in the \"Supreme Stance\" state, gains the SPD Boost stacks from Garmentmaker's Memosprite Talent, enhances Basic ATK to \"Slash by a Thousandfold Kiss,\" and cannot use Skill. Garmentmaker is immune to Crowd Control debuffs."
+    }
   },
   "11407": {
     "internalID": 11407,
@@ -894,7 +1817,16 @@ let battleEvents = {
     "icon": "1407.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 11407,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [],
+      "hardLevelEvent": true
+    }
   },
   "11408": {
     "internalID": 11408,
@@ -906,7 +1838,20 @@ let battleEvents = {
     "icon": "1408_02.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 11408,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "Phainon_Ability03_BattleEvent",
+        "BattleEventAbility_620601_Camera"
+      ],
+      "overridesArray": [],
+      "hardLevelEvent": true,
+      "barType": 1
+    }
   },
   "11414": {
     "internalID": 11414,
@@ -1058,7 +2003,45 @@ let battleEvents = {
     "icon": "1414_BE.png",
     "team": "Player Team",
     "type": "Summon",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 11414,
+      "team": "Player Team",
+      "eventType": "Summon",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFirePEN</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateSUM</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageFire</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;"
+        }
+      ],
+      "eventSpeed": 165
+    }
   },
   "11505": {
     "internalID": 11505,
@@ -1070,7 +2053,21 @@ let battleEvents = {
     "icon": "1505_BE.png",
     "team": "Player Team",
     "type": "Summon",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 11505,
+      "team": "Player Team",
+      "eventType": "Summon",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "11506": {
     "internalID": 11506,
@@ -1082,7 +2079,21 @@ let battleEvents = {
     "icon": "1506.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 11506,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "GlobalAbility_SilverWolf999_BattleEvent",
+        "GlobalAbility_SilverWolf999_Insert_Part01",
+        "GlobalAbility_SilverWolf999_Insert_Part02",
+        "GlobalAbility_SilverWolf999_Insert_Camera"
+      ],
+      "overridesArray": [],
+      "hardLevelEvent": true
+    }
   },
   "11512": {
     "internalID": 11512,
@@ -1094,7 +2105,25 @@ let battleEvents = {
     "icon": "BattleEvent_1512.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 11512,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_RobinS_BE"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true,
+      "barType": 1,
+      "actionDescription": "Robin • Summeretto and her memosprite are in the \"Fever\" state. When ally targets deal DMG, they ignore a portion of enemy targets' DEF. During the \"Fever\" state, she and her memosprite are immune to Crowd Control debuffs, and cannot take their turn until the state ends. The state ends when Vibes are depleted."
+    }
   },
   "16007": {
     "internalID": 16007,
@@ -1106,7 +2135,16 @@ let battleEvents = {
     "icon": "Monster_2022051.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 16007,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [],
+      "hardLevelEvent": true
+    }
   },
   "16011": {
     "internalID": 16011,
@@ -1118,7 +2156,16 @@ let battleEvents = {
     "icon": "Monster_2012010.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 16011,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [],
+      "hardLevelEvent": true
+    }
   },
   "19132": {
     "internalID": 19132,
@@ -1130,7 +2177,16 @@ let battleEvents = {
     "icon": "1204Shadow.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 19132,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [],
+      "hardLevelEvent": true
+    }
   },
   "19133": {
     "internalID": 19133,
@@ -1142,7 +2198,16 @@ let battleEvents = {
     "icon": "Monster_MultiMindControl.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 19133,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [],
+      "hardLevelEvent": true
+    }
   },
   "20001": {
     "internalID": 20001,
@@ -1154,7 +2219,35 @@ let battleEvents = {
     "icon": "Monster_Flag.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20001,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_CocoliaP1_RL",
+        "BattleEventAbility_CocoliaP1_RL_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CharacterLevel</span>&nbsp;",
+          "value": 1
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
+          "value": 1
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
+          "value": 1
+        }
+      ]
+    }
   },
   "20002": {
     "internalID": 20002,
@@ -1166,7 +2259,35 @@ let battleEvents = {
     "icon": "Monster_MultiMindControl.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20002,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_W2_Kafka_RL",
+        "BattleEventAbility_W2_Kafka_RL_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CharacterLevel</span>&nbsp;",
+          "value": 1
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
+          "value": 1
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
+          "value": 1
+        }
+      ]
+    }
   },
   "20005": {
     "internalID": 20005,
@@ -1178,7 +2299,22 @@ let battleEvents = {
     "icon": "Monster_OutSource.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20005,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "20006": {
     "internalID": 20006,
@@ -1190,7 +2326,28 @@ let battleEvents = {
     "icon": "Monster_Belobog.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20006,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_Monster_W1_Gepard_IF_03_SwitchTimer"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 70,
+      "hardLevelEvent": true
+    }
   },
   "20007": {
     "internalID": 20007,
@@ -1202,7 +2359,34 @@ let battleEvents = {
     "icon": "Monster_2035010.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20007,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_W2_Feixiao_00"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CharacterLevel</span>&nbsp;",
+          "value": 1
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
+          "value": 1
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
+          "value": 1
+        }
+      ]
+    }
   },
   "20008": {
     "internalID": 20008,
@@ -1214,7 +2398,28 @@ let battleEvents = {
     "icon": "Monster_SummonLycan.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20008,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_W2_LycanKing_Summon"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 105,
+      "hardLevelEvent": true
+    }
   },
   "20009": {
     "internalID": 20009,
@@ -1226,7 +2431,28 @@ let battleEvents = {
     "icon": "BattleEvent_Rage.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20009,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_Monster_Lycan_Rage"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 105,
+      "hardLevelEvent": true
+    }
   },
   "20010": {
     "internalID": 20010,
@@ -1238,7 +2464,23 @@ let battleEvents = {
     "icon": "Monster_3004020.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20010,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "Monster_W3_Theater_BattleEvent"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "20011": {
     "internalID": 20011,
@@ -1250,7 +2492,28 @@ let battleEvents = {
     "icon": "BattleEvent_Rage.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20011,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_Monster_Lycan_Rage"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 60,
+      "hardLevelEvent": true
+    }
   },
   "20012": {
     "internalID": 20012,
@@ -1262,7 +2525,23 @@ let battleEvents = {
     "icon": "Monster_3004010.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20012,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "Monster_W3_DollElite_Standard_BattleEvent"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "20013": {
     "internalID": 20013,
@@ -1274,7 +2553,28 @@ let battleEvents = {
     "icon": "BattleEvent_Rage.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20013,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_WMonster_W4_Manta_BattleEvent"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "20014": {
     "internalID": 20014,
@@ -1286,7 +2586,29 @@ let battleEvents = {
     "icon": "Monster_SummonLycan.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20014,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_WMonster_W4_Theoroi_Summon"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 105,
+      "hardLevelEvent": true,
+      "actionDescription": "Generates \"Titankin\" upon taking action."
+    }
   },
   "20015": {
     "internalID": 20015,
@@ -1298,7 +2620,28 @@ let battleEvents = {
     "icon": "BattleEvent_DawnsEye_Rognarok.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20015,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_Monster_DawnEye_01_Rognarok"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 167,
+      "hardLevelEvent": true
+    }
   },
   "20018": {
     "internalID": 20018,
@@ -1432,7 +2775,21 @@ let battleEvents = {
     "icon": "BattleEvent_W2_LycanKing_PickUp.png",
     "team": "Neutral Team",
     "type": "Entity Selection",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20018,
+      "team": "Neutral Team",
+      "eventType": "Entity Selection",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "20019": {
     "internalID": 20019,
@@ -1444,7 +2801,23 @@ let battleEvents = {
     "icon": "Monster_3004010.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20019,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "Monster_W3_FigureBoss_BattleEvent"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "20020": {
     "internalID": 20020,
@@ -1456,7 +2829,28 @@ let battleEvents = {
     "icon": "BattleEvent_W4_Manta_WormPassive.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20020,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_Monster_W4_Manta_BattleEvent"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 80,
+      "hardLevelEvent": true
+    }
   },
   "20021": {
     "internalID": 20021,
@@ -1468,7 +2862,34 @@ let battleEvents = {
     "icon": "Monster_2035010.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20021,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_W2_Feixiao_IF"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CharacterLevel</span>&nbsp;",
+          "value": 1
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
+          "value": 1
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
+          "value": 1
+        }
+      ]
+    }
   },
   "20022": {
     "internalID": 20022,
@@ -1480,7 +2901,27 @@ let battleEvents = {
     "icon": "BattleEvent_W4_Unicorn_Prepare.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20022,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_Monster_W4_Unicorn_01_Summon"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "20023": {
     "internalID": 20023,
@@ -1614,7 +3055,21 @@ let battleEvents = {
     "icon": "BattleEvent_W2_Feixiao_PickUp.png",
     "team": "Neutral Team",
     "type": "Entity Selection",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20023,
+      "team": "Neutral Team",
+      "eventType": "Entity Selection",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "20024": {
     "internalID": 20024,
@@ -1626,7 +3081,29 @@ let battleEvents = {
     "icon": "BattleEvent_W4_Theoroi_00_Phase1.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20024,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_Monster_W4_Theoroi_Summon"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 170,
+      "hardLevelEvent": true,
+      "actionDescription": "Generates \"Titankin\" upon taking action."
+    }
   },
   "20025": {
     "internalID": 20025,
@@ -1638,7 +3115,23 @@ let battleEvents = {
     "icon": "Monster_3004023.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20025,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "Monster_W3_Theater_BattleEvent"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "20028": {
     "internalID": 20028,
@@ -1650,7 +3143,29 @@ let battleEvents = {
     "icon": "BattleEvent_W4_Theoroi_00_Phase2.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20028,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_Monster_W4_Theoroi_Enhance"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 210,
+      "hardLevelEvent": true,
+      "actionDescription": "When taking action, enhances Zandar and his next use of \"Query: Prime Mover's Outcome.\""
+    }
   },
   "20029": {
     "internalID": 20029,
@@ -1784,7 +3299,21 @@ let battleEvents = {
     "icon": "BattleEvent_W3_Sam_01.png",
     "team": "Neutral Team",
     "type": "Entity Selection",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20029,
+      "team": "Neutral Team",
+      "eventType": "Entity Selection",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "20030": {
     "internalID": 20030,
@@ -1918,7 +3447,21 @@ let battleEvents = {
     "icon": "BattleEvent_W4_Serpent_MainTarget.png",
     "team": "Neutral Team",
     "type": "Entity Selection",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20030,
+      "team": "Neutral Team",
+      "eventType": "Entity Selection",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "20032": {
     "internalID": 20032,
@@ -2158,7 +3701,30 @@ let battleEvents = {
     "icon": "Monster_5012120.png",
     "team": "Neutral Team",
     "type": "Summon",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20032,
+      "team": "Neutral Team",
+      "eventType": "Summon",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 110
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "Ally's \"Alloy Pommy.\"\\nEach time allies gain 1 Punchline, accumulates 1 point of Charge. When the Charge reaches <unbreak>#1[i]</unbreak> points, immediately gains 1 extra turn and enhances Basic ATK.\\nBasic ATK deals Quantum DMG to one designated enemy target and gains Punchlines.\\nEnhanced Basic ATK consumes <unbreak>#1[i]</unbreak> points of Charge, dealing Quantum DMG to one designated enemy target and True DMG equal to a certain percentage of the target's Max HP, and removes 1 stack of the \"Lasting Antibac\" effect from the target."
+    }
   },
   "20033": {
     "internalID": 20033,
@@ -2170,7 +3736,32 @@ let battleEvents = {
     "icon": "BattleEvent_W5_Pam_00_Summon.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20033,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_W5_Pam_Summon"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 120
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "When taking action, summons an \"Alloy Pommy\" for both ally and enemy teams.\\nAllies can only have 1 \"Alloy Pommy,\" and it cannot be targeted by abilities from either team."
+    }
   },
   "20034": {
     "internalID": 20034,
@@ -2304,7 +3895,22 @@ let battleEvents = {
     "icon": "BattleEvent_DoubleAreaActive.png",
     "team": "Neutral Team",
     "type": "Entity Selection",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20034,
+      "team": "Neutral Team",
+      "eventType": "Entity Selection",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "Select ally characters to face \"Synergy Duo: Bloodbound Dark Duelist,\" while the unselected characters will face \"Synergy Duo: Ironclad White Guard.\""
+    }
   },
   "20035": {
     "internalID": 20035,
@@ -2438,7 +4044,22 @@ let battleEvents = {
     "icon": "BattleEvent_W2_Feixiao_PickUp.png",
     "team": "Neutral Team",
     "type": "Entity Selection",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20035,
+      "team": "Neutral Team",
+      "eventType": "Entity Selection",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "The target can select 1 character. Then, deals Ice DMG to the selected character and causes them to enter the \"Phantom Illusion\" state. In \"Phantom Illusion\" state, the target character and their summon are Departed. At the same time, summons \"Hallucinogenic Mermaid\" to replace the Departed character in battle. \"Hallucinogenic Mermaid\" is considered as a non-friendly target."
+    }
   },
   "20036": {
     "internalID": 20036,
@@ -2450,7 +4071,22 @@ let battleEvents = {
     "icon": "BattleEvent_NegativeHP.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20036,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 65
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "When \"Overload Settlement\" on the action bar takes action, HP calculation will be performed. Units with HP below 0 will receive fatal damage. \"Overload Settlement\" will increase in speed as the number of enemy summons decreases, and will be removed when all enemy summons are defeated."
+    }
   },
   "20037": {
     "internalID": 20037,
@@ -2464,7 +4100,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20037,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "LocalLegend_ChallengeTurnLimit"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "20038": {
     "internalID": 20038,
@@ -2598,7 +4251,21 @@ let battleEvents = {
     "icon": "BattleEvent_W4_Serpent_MainTarget.png",
     "team": "Neutral Team",
     "type": "Entity Selection",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20038,
+      "team": "Neutral Team",
+      "eventType": "Entity Selection",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "20039": {
     "internalID": 20039,
@@ -2610,7 +4277,21 @@ let battleEvents = {
     "icon": "BattleEvent_W5_Vtuber_00_CountDown.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20039,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 40
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "20040": {
     "internalID": 20040,
@@ -2744,7 +4425,21 @@ let battleEvents = {
     "icon": "BattleEvent_W5_Vtuber_00_CountDown.png",
     "team": "Neutral Team",
     "type": "Entity Selection",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20040,
+      "team": "Neutral Team",
+      "eventType": "Entity Selection",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "20045": {
     "internalID": 20045,
@@ -2756,7 +4451,32 @@ let battleEvents = {
     "icon": "BattleEvent_W5_AsatPramad_00_SummonMonster.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20045,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_Monster_W5_AsatPramad_Summon"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 115
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "Upon every action, summons \"Comediologist.\""
+    }
   },
   "20046": {
     "internalID": 20046,
@@ -2768,7 +4488,31 @@ let battleEvents = {
     "icon": "BattleEvent_W5_AsatPramad_00_Ultra.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20046,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_Monster_W5_AsatPramad_Ultra"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 95
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "20047": {
     "internalID": 20047,
@@ -2780,7 +4524,32 @@ let battleEvents = {
     "icon": "BattleEvent_W5_Shell_00_Attack.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20047,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_Monster_W5_Shell_Ability01Check"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 150
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "Whenever \"Comedian Ensemble\" takes action, all \"Comediologists\" will attack simultaneously."
+    }
   },
   "20048": {
     "internalID": 20048,
@@ -2792,7 +4561,32 @@ let battleEvents = {
     "icon": "BattleEvent_60012.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20048,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_Monster_W5_AsatPramad_MainStoryTrain"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 45
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "The Express Crew is on the way!"
+    }
   },
   "20049": {
     "internalID": 20049,
@@ -2828,7 +4622,11 @@ let battleEvents = {
             "attackType": "Normal",
             "skillEffect": "SingleAttack",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_W5_PamPart_Skill01_Camera",
+              "Avatar_W5_PamPart_Skill01_Phase01",
+              "Avatar_W5_PamPart_Skill01_Phase02"
+            ],
             "toughnessList": [
               30,
               0,
@@ -2865,7 +4663,11 @@ let battleEvents = {
             "attackType": "BPSkill",
             "skillEffect": "Impair",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_W5_PamPart_Skill02_Camera",
+              "Avatar_W5_PamPart_Skill02_Phase01",
+              "Avatar_W5_PamPart_Skill02_Phase02"
+            ],
             "toughnessList": [
               60,
               0,
@@ -2898,7 +4700,11 @@ let battleEvents = {
             "element": "Quantum",
             "skillEffect": "Passive",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_W5_PamPart_PassiveSkill",
+              "Avatar_W5_PamPart_PassiveSkill_InsertAbility",
+              "Avatar_W5_PamPart_PassiveSkill_InsertAbility_Camera"
+            ],
             "toughnessList": [
               0,
               0,
@@ -2934,7 +4740,11 @@ let battleEvents = {
         "attackType": "Normal",
         "skillEffect": "SingleAttack",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Avatar_W5_PamPart_Skill01_Camera",
+          "Avatar_W5_PamPart_Skill01_Phase01",
+          "Avatar_W5_PamPart_Skill01_Phase02"
+        ],
         "toughnessList": [
           30,
           0,
@@ -2967,7 +4777,11 @@ let battleEvents = {
         "attackType": "BPSkill",
         "skillEffect": "Impair",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Avatar_W5_PamPart_Skill02_Camera",
+          "Avatar_W5_PamPart_Skill02_Phase01",
+          "Avatar_W5_PamPart_Skill02_Phase02"
+        ],
         "toughnessList": [
           60,
           0,
@@ -2996,7 +4810,11 @@ let battleEvents = {
         "element": "Quantum",
         "skillEffect": "Passive",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Avatar_W5_PamPart_PassiveSkill",
+          "Avatar_W5_PamPart_PassiveSkill_InsertAbility",
+          "Avatar_W5_PamPart_PassiveSkill_InsertAbility_Camera"
+        ],
         "toughnessList": [
           0,
           0,
@@ -3008,7 +4826,30 @@ let battleEvents = {
     "icon": "Monster_5012120.png",
     "team": "Neutral Team",
     "type": "Summon",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20049,
+      "team": "Neutral Team",
+      "eventType": "Summon",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 140
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "Ally's \"Alloy Pommy.\"\\nEach time allies gain 1 Punchline, accumulates 1 point of Charge. When the Charge reaches <unbreak>#1[i]</unbreak> points, immediately gains 1 extra turn and enhances Basic ATK.\\nBasic ATK deals Quantum DMG to one designated enemy target and gains Punchlines.\\nEnhanced Basic ATK consumes <unbreak>#1[i]</unbreak> points of Charge, dealing Quantum DMG to one designated enemy target and True DMG equal to a certain percentage of the target's Max HP, and removes 1 stack of the \"Lasting Antibac\" effect from the target."
+    }
   },
   "20050": {
     "internalID": 20050,
@@ -3020,7 +4861,31 @@ let battleEvents = {
     "icon": "Monster_8015030.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20050,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_Monster_W5_AsatPramad_Part03Act00"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 120
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "20051": {
     "internalID": 20051,
@@ -3032,7 +4897,31 @@ let battleEvents = {
     "icon": "Monster_8015040.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20051,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_Monster_W5_AsatPramad_Part03Act01"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 140
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "20052": {
     "internalID": 20052,
@@ -3044,7 +4933,31 @@ let battleEvents = {
     "icon": "Monster_8015050.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20052,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_Monster_W5_AsatPramad_RestartAfterBE"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "30001": {
     "internalID": 30001,
@@ -3058,7 +4971,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30001,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_01"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "Increases Wind DMG dealt by all allies by <unbreak>#1[i]%</unbreak>"
+    }
   },
   "30002": {
     "internalID": 30002,
@@ -3072,7 +5003,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30002,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_02"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "Increases Ice DMG dealt by all allies by <unbreak>#1[i]%</unbreak>"
+    }
   },
   "30003": {
     "internalID": 30003,
@@ -3086,7 +5035,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30003,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_03"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "Increases Fire DMG dealt by all allies by <unbreak>#1[i]%</unbreak>"
+    }
   },
   "30004": {
     "internalID": 30004,
@@ -3100,7 +5067,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30004,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_04"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "Increases Physical DMG dealt by all allies by <unbreak>#1[i]%</unbreak>"
+    }
   },
   "30005": {
     "internalID": 30005,
@@ -3114,7 +5099,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30005,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_05"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "Increases Lightning DMG dealt by all allies by <unbreak>#1[i]%</unbreak>"
+    }
   },
   "30006": {
     "internalID": 30006,
@@ -3130,7 +5133,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30006,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_06"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "30007": {
     "internalID": 30007,
@@ -3146,7 +5166,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30007,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_07"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "30008": {
     "internalID": 30008,
@@ -3162,7 +5199,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30008,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_08"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "30009": {
     "internalID": 30009,
@@ -3178,7 +5232,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30009,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_09"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "30010": {
     "internalID": 30010,
@@ -3194,7 +5265,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30010,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_10"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "30011": {
     "internalID": 30011,
@@ -3209,7 +5297,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30011,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_11"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the beginning of each Cycle, increases all allies' CRIT Rate by <unbreak>#1[i]%</unbreak>. This effect can stack up to <unbreak>#2[i]</unbreak> times."
+    }
   },
   "30012": {
     "internalID": 30012,
@@ -3224,7 +5330,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30012,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_12"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "30013": {
     "internalID": 30013,
@@ -3239,7 +5362,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30013,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_13"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "30014": {
     "internalID": 30014,
@@ -3254,7 +5394,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30014,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_14"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "30015": {
     "internalID": 30015,
@@ -3269,7 +5426,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30015,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_15"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "30016": {
     "internalID": 30016,
@@ -3283,7 +5457,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30016,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Group_01"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the beginning of each Cycle, increases the DMG of every ally's next attack by <unbreak>#1[i]%</unbreak>."
+    }
   },
   "30017": {
     "internalID": 30017,
@@ -3297,7 +5489,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30017,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Group_02"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the beginning of each Cycle, increases the DMG taken by all enemies by <unbreak>#1[i]%</unbreak>, lasting until the enemies' next action begins."
+    }
   },
   "30018": {
     "internalID": 30018,
@@ -3312,7 +5522,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30018,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_New_01"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "Increases DMG dealt by all allies' Ultimate by <unbreak>#1[i]%</unbreak>. At the beginning of each Cycle, all allies regenerate <unbreak>#2[i]</unbreak> Energy."
+    }
   },
   "30019": {
     "internalID": 30019,
@@ -3327,7 +5555,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30019,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_New_02"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "Increases the DMG dealt by all allies' Skill by <unbreak>#1[i]%</unbreak>. At the beginning of each Cycle, regenerates <unbreak>#2[i]</unbreak> Skill Point(s)."
+    }
   },
   "30020": {
     "internalID": 30020,
@@ -3341,7 +5587,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30020,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_New_03"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the beginning of each Cycle, increases the Weakness Break Efficiency of each ally's next attack by <unbreak>#1[i]%</unbreak>."
+    }
   },
   "30021": {
     "internalID": 30021,
@@ -3355,7 +5619,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30021,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_New_04"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the beginning of each Cycle, restores HP for the ally with the lowest HP by <unbreak>#1[i]%</unbreak> of their Max HP."
+    }
   },
   "30022": {
     "internalID": 30022,
@@ -3370,7 +5652,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30022,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_New_05"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the beginning of each Cycle, increases the DMG dealt by the ally with the highest ATK by <unbreak>#1[i]%</unbreak> for <unbreak>#2[i]</unbreak> turn(s)."
+    }
   },
   "30023": {
     "internalID": 30023,
@@ -3387,7 +5687,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30023,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_New_06"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the beginning of each Cycle, increases CRIT Rate by <unbreak>#2[i]%</unbreak> and CRIT DMG by <unbreak>#3[i]%</unbreak> for allies with HP percentage higher than <unbreak>#1[i]%</unbreak> of their Max HP for <unbreak>#4[i]</unbreak> turn(s)."
+    }
   },
   "30024": {
     "internalID": 30024,
@@ -3401,7 +5719,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30024,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_New_07"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the beginning of each Cycle, provide a Shield to all allies that can absorb DMG equal to <unbreak>#1[i]%</unbreak> of their respective Max HP."
+    }
   },
   "30031": {
     "internalID": 30031,
@@ -3416,7 +5752,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30031,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Xianzhou_01"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the start of every Cycle, summon 2 <color=#f29e38ff>Mara-Struck Soldiers</color> or <color=#f29e38ff>Abundance Sprite: Golden Hounds</color>.\\nAfter an enemy target is defeated, deals a <color=#f29e38ff>set amount of DMG</color> to all enemies."
+    }
   },
   "30032": {
     "internalID": 30032,
@@ -3433,7 +5787,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30032,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Xianzhou_02"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "Increases <color=#f29e38ff>DoT</color> taken by enemies by <unbreak>#1[i]%</unbreak>.\\nAt the start of every Cycle, there is a high chance of inflicting <color=#f29e38ff>Bleed</color>, <color=#f29e38ff>Shock</color>, <color=#f29e38ff>Burn</color>, and <color=#f29e38ff>Wind Shear</color> on all enemies. Status inflicted in this way will last for <unbreak>#3[i]</unbreak> turn(s)."
+    }
   },
   "30033": {
     "internalID": 30033,
@@ -3449,7 +5821,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30033,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Xianzhou_03"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "After an ally uses <color=#f29e38ff>Basic ATK</color>, increases DMG dealt by them and adjacent allies by <unbreak>#3[i]%</unbreak> and reduces their DMG taken by <unbreak>#1[i]%</unbreak> for <unbreak>#2[i]</unbreak> turn(s)."
+    }
   },
   "30034": {
     "internalID": 30034,
@@ -3463,7 +5853,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30034,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Xianzhou_04"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "After an ally target uses their <color=#f29e38ff>Ultimate</color> or launches a <color=#f29e38ff>Follow-Up ATK</color>, additionally deals a <color=#f29e38ff>set amount of DMG</color> to the attacked enemy target."
+    }
   },
   "30035": {
     "internalID": 30035,
@@ -3478,7 +5886,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30035,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Xianzhou_05"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "After an ally <color=#f29e38ff>uses Skill</color> on any ally (including on themselves), dispels 1 <color=#f29e38ff>debuff</color> on the ally which the Skill was used on. For each <color=#f29e38ff>debuff</color> dispelled, increases the DMG dealt by all allies by <unbreak>#1[i]%</unbreak>. This effect can stack up to <unbreak>#2[i]</unbreak> times.\\nDefeating the <color=#f29e38ff>Elite or rarer enemy</color> in the final wave will immediately result in victory."
+    }
   },
   "30036": {
     "internalID": 30036,
@@ -3492,7 +5918,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30036,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Xianzhou_06"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "DMG taken by enemy targets are <color=#f29e38ff>Distributed between all enemies</color>. When allies use <color=#f29e38ff>AoE or Blast ATK abilities</color>, increases DMG dealt by <unbreak>#1[i]%</unbreak>."
+    }
   },
   "30101": {
     "internalID": 30101,
@@ -3507,7 +5951,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30101,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_01"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the beginning of each Cycle, increases the ATK of the character with the highest HP by <unbreak>#1[i]%</unbreak> until the beginning of the next Cycle. Additionally, restores HP for the character with the lowest HP by <unbreak>#2[i]%</unbreak> of their Max HP."
+    }
   },
   "30102": {
     "internalID": 30102,
@@ -3524,7 +5986,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30102,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_02"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the beginning of each Cycle, increases CRIT Rate of all Shielded allies by <unbreak>#1[i]%</unbreak> and their CRIT DMG by <unbreak>#2[i]%</unbreak> for <unbreak>#3[i]</unbreak> turn(s). This effect can stack up to <unbreak>#4[i]</unbreak> times."
+    }
   },
   "30103": {
     "internalID": 30103,
@@ -3538,7 +6018,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30103,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_03"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the beginning of each Cycle, one random enemy target receives <unbreak>#1[i]%</unbreak> increased DMG from Ultimates and Follow-Up ATKs. This effect lasts until the beginning of the next Cycle."
+    }
   },
   "30104": {
     "internalID": 30104,
@@ -3553,7 +6051,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30104,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_04"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the beginning of each Cycle, randomly causes an ally following the Path of The Hunt or Erudition to take action immediately, and increases their DMG dealt by <unbreak>#1[i]%</unbreak> for <unbreak>#2[i]</unbreak> turn(s)."
+    }
   },
   "30105": {
     "internalID": 30105,
@@ -3568,7 +6084,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30105,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_05"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the beginning of each Cycle, applies <unbreak>#1[i]</unbreak> stack(s) of \"Memory Imprint\" to all allies until the beginning of the next Cycle. After allies who are under \"Memory Imprint\" launch an attack, deals Additional DMG equal to <unbreak>#2[i]%</unbreak> of their ATK to a random attacked enemy, and consumes 1 stack of \"Memory Imprint.\""
+    }
   },
   "30106": {
     "internalID": 30106,
@@ -3582,7 +6116,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30106,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_06"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the beginning of each Cycle, increases the Lightning DMG taken by all enemies by <unbreak>#1[i]%</unbreak>, lasting until the enemies' next action begins."
+    }
   },
   "30107": {
     "internalID": 30107,
@@ -3597,7 +6149,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30107,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_07"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "Apply \"Memory Imprint\" to all enemies at the beginning of each Cycle. For each additional debuff currently on the enemy, apply 1 extra stack of \"Memory Imprint\" to that enemy. Each stack reduces the target's DMG dealt by <unbreak>#1[i]%</unbreak> for a maximum of <unbreak>#2[i]</unbreak> stacks. This effect lasts until the start of the next Cycle."
+    }
   },
   "30108": {
     "internalID": 30108,
@@ -3612,7 +6182,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30108,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_08"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "Apply \"Memory Imprint\" to all enemies at the beginning of each Cycle. For each additional debuff currently on the enemy, apply 1 extra stack of \"Memory Imprint\" to that enemy. Each stack reduces the target's DEF by <unbreak>#1[i]%</unbreak> for a maximum of <unbreak>#2[i]</unbreak> stacks. This effect lasts until the start of the next Cycle."
+    }
   },
   "30109": {
     "internalID": 30109,
@@ -3628,7 +6216,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30109,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_09"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the start of every Cycle, allies whose current HP percentage is greater than <unbreak>#1[i]%</unbreak> increase their ATK by <unbreak>#2[i]%</unbreak> for <unbreak>#3[i]</unbreak> turn(s)."
+    }
   },
   "30110": {
     "internalID": 30110,
@@ -3644,7 +6250,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30110,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_10"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "When an ally is hit or consumes their own HP, gain 1 stack of \"Memory Imprint.\" Each stack of \"Memory Imprint\" reduces DMG taken by the target by <unbreak>#1[i]%</unbreak>, up to <unbreak>#2[i]</unbreak> stack(s).\\nAt the start of each Cycle, deals a set amount of DMG to all enemies based on the highest \"Memory Imprint\" stack count on an ally. Then, remove all \"Memory Imprint\" stacks from all allies."
+    }
   },
   "30111": {
     "internalID": 30111,
@@ -3659,7 +6283,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30111,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_11"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "After an ally character uses a Follow-Up ATK, reduces the attacked enemy target's All-Type RES by <unbreak>#1[i]%</unbreak> for <unbreak>#2[i]</unbreak> turn(s)."
+    }
   },
   "30112": {
     "internalID": 30112,
@@ -3673,7 +6315,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30112,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_12"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the start of each Cycle, all enemies currently inflicted with DoT are immediately dealt DMG equal to <unbreak>#1[i]%</unbreak> of the original DMG from all their DoT effects."
+    }
   },
   "30113": {
     "internalID": 30113,
@@ -3688,7 +6348,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30113,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_13"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "Summons a Trotter at the beginning of each wave or each Cycle. The Trotter takes <unbreak>#1[i]%</unbreak> more DMG from Basic ATKs and DoT effects. When defeated, recovers <unbreak>#2[i]</unbreak> Skill Points for allies."
+    }
   },
   "30114": {
     "internalID": 30114,
@@ -3703,7 +6381,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30114,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_14"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "Summons a Trotter at the beginning of each wave or each Cycle. The Trotter takes <unbreak>#1[i]%</unbreak> increased Basic ATK and Ultimate DMG. When defeated, it deals 1 instance of a set amount of damage to all enemies."
+    }
   },
   "30115": {
     "internalID": 30115,
@@ -3720,7 +6416,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30115,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_15"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "Summons a Trotter at the beginning of each wave and each Cycle. The Trotter takes <unbreak>#1[i]%</unbreak> increased Skill and Ultimate DMG. When defeated, it inflicts Vulnerability on all enemies, making them take <unbreak>#2[i]%</unbreak> more DMG for <unbreak>#3[i]</unbreak> turns. This effect stacks up to <unbreak>#4[i]</unbreak> times."
+    }
   },
   "30116": {
     "internalID": 30116,
@@ -3736,7 +6450,33 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30116,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_16"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
+          "value": 1
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
+          "value": 1
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "When the same ally acts consecutively, they receive 1 stack of \"Memory Imprint.\" After allies with \"Memory Imprint\" attacks, every \"Memory Imprint\" stack has a <unbreak>#1[i]%</unbreak> fixed chance to inflict the target with \"Dissociation\" that lasts for 1 turn. Allies with \"Memory Imprint\" deal <unbreak>#3[i]%</unbreak> more DMG. This effect cannot be stacked. When a different ally acts, remove all \"Memory Imprint\" stacks on the field.\\n\"Dissociation\": This state is considered as being Frozen. Affected units cannot take action. When this state is removed, the affected target receives Ice Additional DMG equal to <unbreak>#2[i]%</unbreak> of their respective Max HP."
+    }
   },
   "30117": {
     "internalID": 30117,
@@ -3751,7 +6491,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30117,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_17"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the start of every wave or Cycle, apply \"Memory Imprint\" to an Elite or rarer enemy target. When targets with \"Memory Imprint\" receive DMG, other enemy targets receive DMG equal to <unbreak>#1[i]%</unbreak> of the original DMG. This effect lasts until the start of the next Cycle."
+    }
   },
   "30118": {
     "internalID": 30118,
@@ -3767,7 +6525,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30118,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_18"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "When an ally uses their Ultimate, obtain \"Memory Imprint.\" This effect stacks up to <unbreak>#2[i]</unbreak> time(s).\\nAt the start of every Cycle, regenerate Energy to all allies based on the number of \"Memory Imprint\" stacks (Each stack regenerates <unbreak>#3[i]</unbreak> Energy). Energy obtained in this way can exceed allies' Max Energy."
+    }
   },
   "30119": {
     "internalID": 30119,
@@ -3785,7 +6561,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30119,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_19"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "After an ally uses their Skill or Ultimate to attack, add <unbreak>#3[i]</unbreak> Hit(s) Per Action to \"Memory Turbulence,\" up to <unbreak>#1[i]</unbreak> extra hits.\\nAt the start of every Cycle, every hit will deal 1 instance of DMG based on the enemy targets' respective Max HP to random enemy targets."
+    }
   },
   "30120": {
     "internalID": 30120,
@@ -3800,7 +6594,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30120,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_20"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "After an ally target unleashes an Ultimate or a Follow-Up ATK, deals Additional DMG equal to <unbreak>#2[i]%</unbreak> of the attacking character's ATK to the attacked enemy target for <unbreak>#1[i]</unbreak> times."
+    }
   },
   "30121": {
     "internalID": 30121,
@@ -3817,7 +6629,26 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
-    "isBattleEvent": true
+    "type": "Endgame Countdown",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30121,
+      "team": "Neutral Team",
+      "eventType": "Endgame Countdown",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_21"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "After an ally Breaks enemies' Weaknesses or attacks Weakness Broken enemies, add <unbreak>#3[i]</unbreak> Hit(s) Per Action to \"Memory Turbulence,\" up to <unbreak>#1[i]</unbreak> extra hits.\\nAt the start of every Cycle, every hit will deal 1 instance of DMG based on the enemy targets' respective Max HP to random enemy targets."
+    }
   },
   "30123": {
     "internalID": 30123,
@@ -3835,7 +6666,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30123,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_23"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the start of every wave or Cycle, randomly applies one of the following debuffs to all enemies <unbreak>#1[i]</unbreak> time(s): Reduce ATK by <unbreak>#2[i]%</unbreak>, reduce DEF by <unbreak>#2[i]%</unbreak>, reduce SPD by <unbreak>#2[i]%</unbreak>, reduce Effect RES by <unbreak>#2[i]%</unbreak>, or increase the Follow-Up ATK DMG taken by <unbreak>#5[i]%</unbreak>. Each debuff can stack up to <unbreak>#3[i]</unbreak> time(s) and lasts for <unbreak>#4[i]</unbreak> turn(s). At the same time, enables 1 ally target following either the Path of The Hunt or Destruction to immediately take action."
+    }
   },
   "30124": {
     "internalID": 30124,
@@ -3852,7 +6701,26 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
-    "isBattleEvent": true
+    "type": "Endgame Countdown",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30124,
+      "team": "Neutral Team",
+      "eventType": "Endgame Countdown",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_24"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "All allies' Basic ATK and Skill deal <unbreak>#1[i]%</unbreak> more DMG. Whenever a Skill Point is consumed, \"Memory Turbulence\" gains <unbreak>#3[i]</unbreak> Hits Per Action, up to a maximum of <unbreak>#4[i]</unbreak>.\\nAt the beginning of each Cycle, each Hit Per Action deals 1 instance of DMG to a random enemy based on the target's Max HP."
+    }
   },
   "30125": {
     "internalID": 30125,
@@ -3870,7 +6738,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30125,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_25"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "Summons a Trotter at the beginning of each wave or each Cycle. The Trotter takes <unbreak>#1[i]%</unbreak> more damage from Basic ATKs and DoTs.\\nWhen the Trotter is defeated and if an enemy is afflicted with <color=#f29e38ff>Bleed</color>, <color=#f29e38ff>Shock</color>, <color=#f29e38ff>Burn</color>, or <color=#f29e38ff>Wind Shear</color>, the DoT it is currently afflicted with will immediately deal damage equal to <unbreak>#5[i]%</unbreak> of the original damage with a high chance to inflict Bleed, Shock, Burn, and Wind Shear on all enemies, lasting for <unbreak>#3[i]</unbreak> turn(s)."
+    }
   },
   "30126": {
     "internalID": 30126,
@@ -3887,7 +6773,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30126,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_26"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "After every attack launched by an ally, applies 1 stack of \"Memory Imprint\" to all enemies. Enemies with \"Memory Imprint\" take <unbreak>#2[i]%</unbreak> more DMG. This effect stacks up to <unbreak>#1[i]</unbreak> stack(s). When \"Memory Imprint\" stacks to maximum, immediately deals 1 instance of DMG to all enemies based on a certain percentage of each enemy's respective Max HP.\\nWhen enemy targets enter combat and other units in the field currently have \"Memory Imprint,\" the new enemies will receive the same number of \"Memory Imprint\" stacks as those on the field.\\nAt the start of every wave or Cycle, removes \"Memory Imprint\" from all enemies."
+    }
   },
   "30127": {
     "internalID": 30127,
@@ -3903,7 +6807,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30127,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_27"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "After every attack launched by an ally, apply 1 stack of \"Memory Imprint\" to all allies. Allies in the \"Memory Imprint\" state deal <unbreak>#2[i]%</unbreak> more DMG. This effect stacks up to <unbreak>#1[i]</unbreak> time(s). When \"Memory Imprint\" reaches max stacks, immediately regenerates <unbreak>#3[i]%</unbreak> Energy for all allies. The Energy regenerated by this effect can exceed the target's Max Energy.\\nRemove all \"Memory Imprints\" from all allies at the start of every wave or Cycle."
+    }
   },
   "30128": {
     "internalID": 30128,
@@ -3921,7 +6843,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30128,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_28"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the start of every wave of Cycle, summons 1 Trotter onto the field. The Trotter will be immediately defeated when it is Weakness Broken.\\nAfter the Trotter is defeated, advances the attacker's action by <unbreak>#2[i]%</unbreak>, then applies \"Memory Imprint\" to all allies. Every \"Memory Imprint\" stack increases the target's ATK by <unbreak>#5[i]%</unbreak> and Break Effect by <unbreak>#3[i]%</unbreak>, up to a max of <unbreak>#4[i]</unbreak> stack(s)."
+    }
   },
   "30129": {
     "internalID": 30129,
@@ -3938,7 +6878,26 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
-    "isBattleEvent": true
+    "type": "Endgame Countdown",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30129,
+      "team": "Neutral Team",
+      "eventType": "Endgame Countdown",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_29"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "After an ally target uses Follow-Up ATK or Skill to attack, add <unbreak>#3[i]</unbreak> Hit(s) Per Action to \"Memory Turbulence,\" up to <unbreak>#1[i]</unbreak> extra hits.\\nAt the start of every Cycle, every hit will deal 1 instance of DMG based on the enemy targets' respective Max HP to random enemy targets."
+    }
   },
   "30130": {
     "internalID": 30130,
@@ -3955,7 +6914,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30130,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_30"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "After every attack launched by an ally, applies 1 stack of \"Memory Imprint\" to all allies. Allies in the \"Memory Imprint\" state deal <unbreak>#2[i]%</unbreak> more DMG. This effect stacks up to <unbreak>#1[i]</unbreak> time(s). When \"Memory Imprint\" reaches max stacks, immediately deals 1 instance of DMG to all enemies based on a certain percentage of their respective Max HP.\\nRemove all \"Memory Imprints\" from all allies at the start of every wave or Cycle."
+    }
   },
   "30131": {
     "internalID": 30131,
@@ -3976,7 +6953,26 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
-    "isBattleEvent": true
+    "type": "Endgame Countdown",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30131,
+      "team": "Neutral Team",
+      "eventType": "Endgame Countdown",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_31"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "Enemies have Exo-Toughness and their actions are delayed by <unbreak>#2[i]%</unbreak> when they are Weakness Broken. At the same time, add <unbreak>#1[i]</unbreak> hit(s) to \"Memory Turbulence\"'s Hits Per Action. If the target is an Elite enemy or rarer, then additionally add <unbreak>#8[i]</unbreak> hit(s). A max of <unbreak>#5[i]</unbreak> hit(s) can be added in total.\\nAt the start of every Cycle, every hit by \"Memory Turbulence\" deals 1 instance of a set amount of DMG to random enemy targets."
+    }
   },
   "30132": {
     "internalID": 30132,
@@ -3994,7 +6990,26 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
-    "isBattleEvent": true
+    "type": "Endgame Countdown",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30132,
+      "team": "Neutral Team",
+      "eventType": "Endgame Countdown",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_32"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "When an enemy target's Weakness is Broken, adds <unbreak>#1[i]</unbreak> hits to \"Memory Turbulence's\" Hits Per Action. If the target is an Elite enemy or rarer, then additionally adds <unbreak>#2[i]</unbreak> hits, up to a max increase of <unbreak>#3[i]</unbreak> hits.\\nAt the start of every Cycle, every hit by \"Memory Turbulence\" deals 1 instance of a set amount of DMG to random enemy targets, and the Hits Per Action is not reset."
+    }
   },
   "30133": {
     "internalID": 30133,
@@ -4009,7 +7024,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30133,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_33"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the start of each wave or Cycle, summons 2 Trotters onto the field. When defeated, the Trotters deal 1 instance of a set amount of DMG to all Elite or rarer enemies."
+    }
   },
   "30134": {
     "internalID": 30134,
@@ -4023,7 +7056,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30134,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_34"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the start of each Cycle, regenerates <unbreak>#1[i]%</unbreak> Energy for all ally characters. The Energy regenerated by this effect can exceed the target's Max Energy, and enables all memosprites on the field to immediately take action again after their next action."
+    }
   },
   "30135": {
     "internalID": 30135,
@@ -4044,7 +7095,26 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
-    "isBattleEvent": true
+    "type": "Endgame Countdown",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30135,
+      "team": "Neutral Team",
+      "eventType": "Endgame Countdown",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_35"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "Increases all allies' Max HP by <unbreak>#7[i]%</unbreak>. Every time an ally is attacked, restores HP equal to <unbreak>#1[i]%</unbreak> of their Max HP and adds <unbreak>#2[i]</unbreak> hit(s) to the Hits Per Action of \"Memory Turbulence.\" Every time an ally consumes HP, restores HP equal to <unbreak>#8[i]%</unbreak> of their Max HP and adds <unbreak>#9[i]</unbreak> hit(s) to the Hits Per Action of \"Memory Turbulence.\" This effect can only trigger once per attack and up to <unbreak>#3[i]</unbreak> hit(s) can be added this way.\\nAt the beginning of each Cycle, each hit from \"Memory Turbulence\" deals 1 instance of True DMG to a random enemy target."
+    }
   },
   "30136": {
     "internalID": 30136,
@@ -4062,7 +7132,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30136,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_36"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "All allies' Skill Lv. +<unbreak>#1[i]</unbreak> and Memosprite Skill Lv. +<unbreak>#2[i]</unbreak>. After any character uses their Skill or Memosprite Skill, 1 random attacked target gains 1 random Weakness they did not already possess.\\nAt the beginning of each Cycle, \"Memory Turbulence\" deals 1 instance of True DMG to all enemy targets. If a target has more than 3 Weaknesses, deals 1 additional instance of True DMG for each additional Weakness."
+    }
   },
   "30137": {
     "internalID": 30137,
@@ -4081,7 +7169,26 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
-    "isBattleEvent": true
+    "type": "Endgame Countdown",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30137,
+      "team": "Neutral Team",
+      "eventType": "Endgame Countdown",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_37"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "After the ally character in position 1 uses their Ultimate, both they and their memosprite will gain \"Memory Imprint,\" lasting for <unbreak>#1[i]</unbreak> turn(s). DMG dealt by targets with \"Memory Imprint\" increases by <unbreak>#2[i]%</unbreak>, and adds <unbreak>#3[i]</unbreak> Hits Per Action to \"Memory Turbulence,\" up to <unbreak>#4[i]</unbreak> Hits.\\nAt the start of each Cycle, \"Memory Turbulence\" deals 1 instance of True DMG to random enemy target with each Hit Per Action."
+    }
   },
   "30138": {
     "internalID": 30138,
@@ -4096,7 +7203,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30138,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_38"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the start of every Wave or Cycle, apply \"Memory Imprint\" to an enemy target of elite level or higher. This effect lasts until the start of the next Cycle. \"Memory Imprint\" is a special kind of <color=#f29e38ff>Burn</color> effect. The holders of this effect receive Fire DoT at the start of each turn. When ally targets use their Skill Attacks on a target with \"Memory Imprint,\" they will deal Additional DMG equal to <unbreak>#1[i]%</unbreak> of the attacker's ATK to the target and adjacent targets."
+    }
   },
   "30139": {
     "internalID": 30139,
@@ -4113,7 +7238,26 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
-    "isBattleEvent": true
+    "type": "Endgame Countdown",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30139,
+      "team": "Neutral Team",
+      "eventType": "Endgame Countdown",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_39"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "After an ally character uses a Skill to attack or a memosprite attacks, add <unbreak>#1[i]</unbreak> Hit(s) Per Action to \"Memory Turbulence,\" up to <unbreak>#2[i]</unbreak> hits.\\nAt the start of every Cycle, each hit from \"Memory Turbulence\" deals True DMG to a random enemy target 1 time."
+    }
   },
   "30140": {
     "internalID": 30140,
@@ -4131,7 +7275,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30140,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_40"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "When an ally character has a summon, the DMG dealt by this unit and the summon increases by <unbreak>#1[i]%</unbreak>.\\nAt the start of each Cycle, \"Memory Turbulence\" deals 1 instance of True DMG to all enemies, plus 1 additional instance of DMG for each ally summon, up to a maximum of <unbreak>#5[i]</unbreak> instances."
+    }
   },
   "30141": {
     "internalID": 30141,
@@ -4149,7 +7311,26 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
-    "isBattleEvent": true
+    "type": "Endgame Countdown",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30141,
+      "team": "Neutral Team",
+      "eventType": "Endgame Countdown",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_41"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "When an ally target attacks an Elite or Boss enemy with a corresponding Type weakness, add <unbreak>#1[i]</unbreak> Hits Per Action to \"Memory Turbulence.\" Breaking an Elite or Boss enemy's weakness adds an additional <unbreak>#2[i]</unbreak> Hits Per Action, stacking up to <unbreak>#3[i]</unbreak> hits.\\nAt the start of each Cycle, each hit of \"Memory Turbulence\" deals 1 instance of True DMG to a random enemy target."
+    }
   },
   "30142": {
     "internalID": 30142,
@@ -4167,7 +7348,26 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
-    "isBattleEvent": true
+    "type": "Endgame Countdown",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30142,
+      "team": "Neutral Team",
+      "eventType": "Endgame Countdown",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_42"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the start of each wave, recovers <unbreak>#1[i]</unbreak> Skill Point(s) for allies. When ally targets use Skills or consume Skill Points, add <unbreak>#2[i]</unbreak> hits to \"Memory Turbulence,\" stacking up to <unbreak>#3[i]</unbreak> hits.\\nAt the start of each Cycle, each hit of \"Memory Turbulence\" deals True DMG once to a random enemy target."
+    }
   },
   "30143": {
     "internalID": 30143,
@@ -4184,7 +7384,26 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
-    "isBattleEvent": true
+    "type": "Endgame Countdown",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30143,
+      "team": "Neutral Team",
+      "eventType": "Endgame Countdown",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_43"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the start of each wave or Cycle, gains <unbreak>#1[i]</unbreak> Punchline point(s). When obtaining Punchline, adds a corresponding amount of Charge to \"Memory Turbulence,\" stacking up to <unbreak>#2[i]</unbreak> points.\\nAt the start of every Cycle, \"Memory Turbulence\" deals 1 instance of True DMG to enemy targets based on the amount of Charge points."
+    }
   },
   "30144": {
     "internalID": 30144,
@@ -4201,7 +7420,26 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
-    "isBattleEvent": true
+    "type": "Endgame Countdown",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30144,
+      "team": "Neutral Team",
+      "eventType": "Endgame Countdown",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_44"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "After an ally target uses an attack, they gain <unbreak>#1[i]</unbreak> Punchline point(s) and adds a corresponding amount of Charge to \"Memory Turbulence,\" stacking up to <unbreak>#2[i]</unbreak> points.\\nAt the start of every Cycle, \"Memory Turbulence\" deals 1 instance of True DMG to all enemies based on the amount of Charge points."
+    }
   },
   "30145": {
     "internalID": 30145,
@@ -4219,7 +7457,26 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
-    "isBattleEvent": true
+    "type": "Endgame Countdown",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30145,
+      "team": "Neutral Team",
+      "eventType": "Endgame Countdown",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_45"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "Increases CRIT DMG dealt by ally targets when they use their Ultimate by <unbreak>#1[i]%</unbreak>. After using an Ultimate, adds <unbreak>#2[i]</unbreak> hit(s) to \"Memory Turbulence,\" stacking up to <unbreak>#6[i]</unbreak> hit(s).\\nAt the start of each Cycle, each hit of \"Memory Turbulence\" deals True DMG 1 time to a random enemy target."
+    }
   },
   "30146": {
     "internalID": 30146,
@@ -4237,7 +7494,26 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
-    "isBattleEvent": true
+    "type": "Endgame Countdown",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30146,
+      "team": "Neutral Team",
+      "eventType": "Endgame Countdown",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_46"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "Increases Ultimate and Follow-Up ATK DMG dealt by ally targets by <unbreak>#1[i]%</unbreak>. After an ally character uses an Ultimate or Follow-Up ATK, adds <unbreak>#2[i]</unbreak> Hit(s) Per Action to \"Memory Turbulence,\" stacking up to <unbreak>#3[i]</unbreak> hits.\\nAt the start of each Cycle, each hit of \"Memory Turbulence\" deals 1 instance of True DMG to one random enemy target."
+    }
   },
   "30147": {
     "internalID": 30147,
@@ -4252,7 +7528,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30147,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_47"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "At the start of each Cycle, randomly causes 1 ally target following the Path of The Hunt or Erudition to immediately take action and increases their DMG dealt by <unbreak>#1[i]%</unbreak> for <unbreak>#2[i]</unbreak> turn(s)."
+    }
   },
   "30500": {
     "internalID": 30500,
@@ -4264,7 +7558,24 @@ let battleEvents = {
     "icon": "ChallengeStory_Fever.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30500,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEvent_FantasticStory_BaseAbility_2060"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true,
+      "barType": 3
+    }
   },
   "30501": {
     "internalID": 30501,
@@ -4276,7 +7587,24 @@ let battleEvents = {
     "icon": "ChallengeStory_Fever.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30501,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEvent_FantasticStory_BaseAbility_Standard"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true,
+      "barType": 3
+    }
   },
   "30502": {
     "internalID": 30502,
@@ -4293,7 +7621,30 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "VS. Warning Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30502,
+      "team": "Neutral Team",
+      "eventType": "VS. Warning Event",
+      "abilityList": [
+        "BattleEventAbility_SummonMonsterInfinite",
+        "BattleEventAbility_ChallengePeakBattle_CountDown"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "Starting from Cycle 3, at the beginning of each Cycle, all allies enter the \"Middlegame Mayhem\" state, which greatly increases their final DMG dealt. This effect can be stacked."
+    }
   },
   "30503": {
     "internalID": 30503,
@@ -4310,7 +7661,30 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "VS. Warning Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30503,
+      "team": "Neutral Team",
+      "eventType": "VS. Warning Event",
+      "abilityList": [
+        "BattleEventAbility_SummonMonsterInfinite",
+        "BattleEventAbility_ChallengePeakBattle_CountDown"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "Starting from Cycle 3, at the beginning of each Cycle, all allies enter the \"Middlegame Mayhem\" state, which greatly increases their final DMG dealt. This effect can be stacked."
+    }
   },
   "30504": {
     "internalID": 30504,
@@ -4327,7 +7701,30 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "VS. Warning Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30504,
+      "team": "Neutral Team",
+      "eventType": "VS. Warning Event",
+      "abilityList": [
+        "BattleEventAbility_SummonMonsterInfinite",
+        "BattleEventAbility_ChallengePeakBattle_CountDown",
+        "BattleEventAbility_ChallengePeakBattle_HardBossScreenEffect"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "30505": {
     "internalID": 30505,
@@ -4409,7 +7806,22 @@ let battleEvents = {
     "icon": "HoshinoKami_007.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30505,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "Deals multiple hits of Imaginary Elation DMG to a random enemy target."
+    }
   },
   "31001": {
     "internalID": 31001,
@@ -4423,7 +7835,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 31001,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_SummonMonsterInfinite",
+        "Local_SPAdd_Modify"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "31002": {
     "internalID": 31002,
@@ -4435,7 +7865,20 @@ let battleEvents = {
     "icon": "BattleEvent_Shenyuan.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 31002,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ]
+    }
   },
   "31003": {
     "internalID": 31003,
@@ -4447,7 +7890,20 @@ let battleEvents = {
     "icon": "BattleEvent_Shenyuan.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 31003,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ]
+    }
   },
   "40001": {
     "internalID": 40001,
@@ -4459,7 +7915,26 @@ let battleEvents = {
     "icon": "HoshinoKami_001.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 40001,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_620101",
+        "BattleEventAbility_620101_Camera1"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 83,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "40002": {
     "internalID": 40002,
@@ -4471,7 +7946,26 @@ let battleEvents = {
     "icon": "HoshinoKami_000.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 40002,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_620201",
+        "BattleEventAbility_620201_Camera1"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "40003": {
     "internalID": 40003,
@@ -4483,7 +7977,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 40003,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_620301"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 80,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "40004": {
     "internalID": 40004,
@@ -4495,7 +8007,26 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 40004,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_620401",
+        "BattleEventAbility_620401_Camera1"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 60,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "40005": {
     "internalID": 40005,
@@ -4507,7 +8038,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 40005,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_620501"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "40006": {
     "internalID": 40006,
@@ -4519,7 +8068,26 @@ let battleEvents = {
     "icon": "HoshinoKami_003.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 40006,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_620601",
+        "BattleEventAbility_620601_Camera1"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "40007": {
     "internalID": 40007,
@@ -4531,7 +8099,26 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 40007,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_620701",
+        "BattleEventAbility_620701_Camera1"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 20,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "40008": {
     "internalID": 40008,
@@ -4543,7 +8130,25 @@ let battleEvents = {
     "icon": "HoshinoKami_003.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 40008,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_128"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "41001": {
     "internalID": 41001,
@@ -4667,7 +8272,23 @@ let battleEvents = {
     "icon": "HoshinoKami_001.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 41001,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "41002": {
     "internalID": 41002,
@@ -4791,7 +8412,23 @@ let battleEvents = {
     "icon": "HoshinoKami_004.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 41002,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "41003": {
     "internalID": 41003,
@@ -4915,7 +8552,23 @@ let battleEvents = {
     "icon": "HoshinoKami_003.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 41003,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 60,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "41004": {
     "internalID": 41004,
@@ -5039,7 +8692,23 @@ let battleEvents = {
     "icon": "HoshinoKami_005.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 41004,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "41005": {
     "internalID": 41005,
@@ -5163,7 +8832,23 @@ let battleEvents = {
     "icon": "HoshinoKami_002.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 41005,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "41006": {
     "internalID": 41006,
@@ -5287,7 +8972,23 @@ let battleEvents = {
     "icon": "HoshinoKami_006.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 41006,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "41007": {
     "internalID": 41007,
@@ -5411,7 +9112,23 @@ let battleEvents = {
     "icon": "HoshinoKami_007.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 41007,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "41008": {
     "internalID": 41008,
@@ -5535,7 +9252,23 @@ let battleEvents = {
     "icon": "HoshinoKami_009.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 41008,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "41009": {
     "internalID": 41009,
@@ -5659,7 +9392,23 @@ let battleEvents = {
     "icon": "HoshinoKami_012.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 41009,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "41101": {
     "internalID": 41101,
@@ -5783,7 +9532,23 @@ let battleEvents = {
     "icon": "HoshinoKami_001.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 41101,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "41102": {
     "internalID": 41102,
@@ -5907,7 +9672,23 @@ let battleEvents = {
     "icon": "HoshinoKami_004.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 41102,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "41103": {
     "internalID": 41103,
@@ -6031,7 +9812,23 @@ let battleEvents = {
     "icon": "HoshinoKami_003.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 41103,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 60,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "41104": {
     "internalID": 41104,
@@ -6155,7 +9952,23 @@ let battleEvents = {
     "icon": "HoshinoKami_005.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 41104,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "41105": {
     "internalID": 41105,
@@ -6279,7 +10092,23 @@ let battleEvents = {
     "icon": "HoshinoKami_002.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 41105,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "41106": {
     "internalID": 41106,
@@ -6403,7 +10232,23 @@ let battleEvents = {
     "icon": "HoshinoKami_006.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 41106,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "41107": {
     "internalID": 41107,
@@ -6527,7 +10372,23 @@ let battleEvents = {
     "icon": "HoshinoKami_007.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 41107,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "41108": {
     "internalID": 41108,
@@ -6651,7 +10512,23 @@ let battleEvents = {
     "icon": "HoshinoKami_009.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 41108,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "41109": {
     "internalID": 41109,
@@ -6775,7 +10652,23 @@ let battleEvents = {
     "icon": "HoshinoKami_012.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 41109,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "41110": {
     "internalID": 41110,
@@ -6899,7 +10792,23 @@ let battleEvents = {
     "icon": "HoshinoKami_008.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 41110,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "41111": {
     "internalID": 41111,
@@ -7023,7 +10932,23 @@ let battleEvents = {
     "icon": "HoshinoKami_006.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 41111,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "41112": {
     "internalID": 41112,
@@ -7147,7 +11072,23 @@ let battleEvents = {
     "icon": "HoshinoKami_002.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 41112,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "41113": {
     "internalID": 41113,
@@ -7271,7 +11212,23 @@ let battleEvents = {
     "icon": "HoshinoKami_007.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 41113,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "42001": {
     "internalID": 42001,
@@ -7285,7 +11242,24 @@ let battleEvents = {
     "icon": "BattleEventRogueDlc.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 42001,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_RogueDLCReinforce"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "42002": {
     "internalID": 42002,
@@ -7297,7 +11271,26 @@ let battleEvents = {
     "icon": "",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 42002,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_RogueDLCSummonMonsterEvent01",
+        "BattleEventAbility_RogueDLCSummonMonsterEvent01_Insert",
+        "BattleEventAbility_SummonMonsterInfinite_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "42003": {
     "internalID": 42003,
@@ -7309,7 +11302,26 @@ let battleEvents = {
     "icon": "",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 42003,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_RogueDLCSummonMonsterEvent02",
+        "BattleEventAbility_RogueDLCSummonMonsterEvent02_Insert",
+        "BattleEventAbility_SummonMonsterInfinite_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "42004": {
     "internalID": 42004,
@@ -7321,7 +11333,27 @@ let battleEvents = {
     "icon": "HoshinoKami_012.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 42004,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_RogueDLCHunting_Camera",
+        "BattleEventAbility_RogueDLCHunting_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true,
+      "actionDescription": "Deals Wind DMG to all enemies based on the ATK of the character on the team with the highest ATK."
+    }
   },
   "43001": {
     "internalID": 43001,
@@ -7391,7 +11423,26 @@ let battleEvents = {
     "icon": "HoshinoKami_012.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 43001,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_RogueDLCHunting_Camera",
+        "BattleEventAbility_RogueDLCHunting_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 50,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "43002": {
     "internalID": 43002,
@@ -7461,7 +11512,30 @@ let battleEvents = {
     "icon": "HoshinoKami_012.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 43002,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_RogueDLCRuin_Camera",
+        "BattleEventAbility_RogueDLCRuin_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 18
+        }
+      ],
+      "eventSpeed": 50,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "43003": {
     "internalID": 43003,
@@ -7531,7 +11605,30 @@ let battleEvents = {
     "icon": "HoshinoKami_012.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 43003,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_RogueDLCSandworm_Camera",
+        "BattleEventAbility_RogueDLCSandworm_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 18
+        }
+      ],
+      "eventSpeed": 50,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "43004": {
     "internalID": 43004,
@@ -7601,7 +11698,26 @@ let battleEvents = {
     "icon": "HoshinoKami_012.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 43004,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_RogueDLCAbundance_Camera",
+        "BattleEventAbility_RogueDLCAbundance_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 50,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "44001": {
     "internalID": 44001,
@@ -7613,7 +11729,30 @@ let battleEvents = {
     "icon": "BattleEvent_RogueFormula01.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 44001,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_670010_Insert",
+        "StageAbility_670010_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 80
+        }
+      ],
+      "hardLevelEvent": true,
+      "eliteGroup": true,
+      "actionDescription": "Each time it takes a turn, absorbs all allies' Shields, reducing their values to 1, and turning the absorbed values into its own Shield. Then, it deals Physical DMG equal to a certain value to all enemies, with a chance to Freeze enemies. When characters take damage, \"Comet Nucleus\"'s Shield will be consumed first. When \"Quake\" DMG is triggered, a portion of \"Comet Nucleus\"'s Shield value will be considered as the character's Shield."
+    }
   },
   "44002": {
     "internalID": 44002,
@@ -7625,7 +11764,30 @@ let battleEvents = {
     "icon": "BattleEvent_RogueFormula02.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 44002,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_670350_Insert",
+        "StageAbility_670010_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 120
+        }
+      ],
+      "hardLevelEvent": true,
+      "eliteGroup": true,
+      "actionDescription": "When \"Dewdrop\" breaks, it will Charge the \"Flower of Annihilation\" based on \"Dewdrop\"'s Charge. When \"Flower of Annihilation\" takes action, it deals Charge-based Fire DMG to all enemies. Every stack of \"Grit\" held by the team will additionally increase the DMG."
+    }
   },
   "44003": {
     "internalID": 44003,
@@ -7637,7 +11799,30 @@ let battleEvents = {
     "icon": "BE_RogueFormula02.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 44003,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_670640_Insert",
+        "StageAbility_670860_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 40
+        }
+      ],
+      "hardLevelEvent": true,
+      "eliteGroup": true,
+      "actionDescription": "After a character launches a Follow-Up ATK, advances their action. When taking action, advances the action of the character in position 1 in the team lineup. After that character uses an attack, deals a set number of instances of \"Aftertaste\" DMG and increases \"Aftertaste\" DMG dealt by all allies."
+    }
   },
   "44004": {
     "internalID": 44004,
@@ -7649,7 +11834,30 @@ let battleEvents = {
     "icon": "BE_RogueFormula01.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 44004,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_670150_Insert",
+        "StageAbility_670500_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 40
+        }
+      ],
+      "hardLevelEvent": true,
+      "eliteGroup": true,
+      "actionDescription": "Every <unbreak>10</unbreak> actual Toughness Reduction dealt by an ally target advances their action. When taking action, deals Ice DMG and reduces Toughness to all enemies with a chance of inflicting targets with \"Dissociation,\" which increases DMG taken."
+    }
   },
   "44005": {
     "internalID": 44005,
@@ -7661,7 +11869,20 @@ let battleEvents = {
     "icon": "BE_RogueFormula02_CD.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 44005,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ]
+    }
   },
   "44006": {
     "internalID": 44006,
@@ -7673,7 +11894,30 @@ let battleEvents = {
     "icon": "BE_RogueFormula03.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 44006,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_670700_Insert",
+        "StageAbility_670700_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true,
+      "eliteGroup": true,
+      "actionDescription": "When ally targets gain or consume Skill Points, they will gain 1 Hits Per Action for the next attack. Should their Hits Per Action reach the maximum or when the turn starts, each Hit Per Action deals Wind DMG to a random enemy and grants a Shield for all allies."
+    }
   },
   "44007": {
     "internalID": 44007,
@@ -7684,7 +11928,23 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "BattleEvent_FightFest.png",
     "team": "Player Team",
-    "isBattleEvent": true
+    "type": "DU Day/Night Event",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 44007,
+      "team": "Player Team",
+      "eventType": "DU Day/Night Event",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "When entering Day, ally targets restore HP. During the Day, ally targets will restore HP at the start of the turn."
+    }
   },
   "44008": {
     "internalID": 44008,
@@ -7695,7 +11955,23 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "BattleEvent_FightFest.png",
     "team": "Player Team",
-    "isBattleEvent": true
+    "type": "DU Day/Night Event",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 44008,
+      "team": "Player Team",
+      "eventType": "DU Day/Night Event",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "During the Night, greatly increases allies' final DMG dealt and slightly increases enemies' final DMG dealt."
+    }
   },
   "44009": {
     "internalID": 44009,
@@ -7707,7 +11983,30 @@ let battleEvents = {
     "icon": "BattleEvent_RogueFormula02.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 44009,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_673150_Insert",
+        "StageAbility_670500_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 80
+        }
+      ],
+      "hardLevelEvent": true,
+      "eliteGroup": true,
+      "actionDescription": "Records all \"Blazars\" obtained by all allies, and deals DMG based on the recorded amount to all enemies when taking action."
+    }
   },
   "44010": {
     "internalID": 44010,
@@ -7719,7 +12018,30 @@ let battleEvents = {
     "icon": "BE_RogueFormula02.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 44010,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_673640_Insert",
+        "StageAbility_670860_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 40
+        }
+      ],
+      "hardLevelEvent": true,
+      "eliteGroup": true,
+      "actionDescription": "After an ally target launches a Follow-Up ATK, advances their action. When taking action, advances the action of the first ally target in the team lineup. After that character uses an attack, deals a set number of instances of \"Aftertaste\" DMG, and \"Aftertaste\" DMG dealt by all allies is increased."
+    }
   },
   "44011": {
     "internalID": 44011,
@@ -7731,7 +12053,20 @@ let battleEvents = {
     "icon": "BE_RogueFormula02_CD.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 44011,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ]
+    }
   },
   "44012": {
     "internalID": 44012,
@@ -7743,7 +12078,23 @@ let battleEvents = {
     "icon": "BE_RogueFormula02.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 44012,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_673670_Insert",
+        "StageAbility_673670_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ]
+    }
   },
   "44013": {
     "internalID": 44013,
@@ -7755,7 +12106,27 @@ let battleEvents = {
     "icon": "BE_RogueMiracle1180.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 44013,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_633316_Ability",
+        "StageAbility_670500_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 70,
+      "hardLevelEvent": true,
+      "eliteGroup": true,
+      "actionDescription": "Deals massive DMG to all allies based on their current HP, and deals minor DMG to enemy targets."
+    }
   },
   "44014": {
     "internalID": 44014,
@@ -7767,7 +12138,27 @@ let battleEvents = {
     "icon": "BE_RogueMiracle1180.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 44014,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_633326_Ability",
+        "StageAbility_670500_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 70,
+      "hardLevelEvent": true,
+      "eliteGroup": true,
+      "actionDescription": "Deals massive DMG to all allies based on their current HP, and deals minor DMG to enemy targets."
+    }
   },
   "44015": {
     "internalID": 44015,
@@ -7779,7 +12170,30 @@ let battleEvents = {
     "icon": "BattleEvent_EvoLveBuild_3113201.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 44015,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_673890_Laser_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "When taking action, increases the DMG taken by all enemies, deals Ice and Fire DMG to all enemies. This attack delays enemies' actions and ignores Weakness Type to reduce all enemies' Toughness. When Breaking enemies' Weakness, triggers both Ice and Fire Weakness Break effects."
+    }
   },
   "44016": {
     "internalID": 44016,
@@ -7791,7 +12205,18 @@ let battleEvents = {
     "icon": "BE_RogueFormula_ShowTime.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 44016,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "Spotlight_Insert"
+      ],
+      "overridesArray": [],
+      "hardLevelEvent": true
+    }
   },
   "44017": {
     "internalID": 44017,
@@ -7803,7 +12228,19 @@ let battleEvents = {
     "icon": "BE_RogueFormula_676650.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 44017,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_676650_Insert"
+      ],
+      "overridesArray": [],
+      "hardLevelEvent": true,
+      "actionDescription": "When taking action, increases DMG dealt by all allies and Charges \"Blazar,\" causing each ally target to deal \"Blazar\" DMG of a random Type to their attack target after launching their next attack."
+    }
   },
   "44018": {
     "internalID": 44018,
@@ -7815,7 +12252,29 @@ let battleEvents = {
     "icon": "BE_RogueFormula_617610.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 44018,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_617610_Insert_Normal",
+        "StageAbility_617610_Insert_Plus"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "When taking action, deals DMG of a random Type to enemies and permanently gains 1 Charge. For every 1 Charge, increases the SPD of all allies, their summons, and Neutral Combat Events. After Aha takes action, immediately triggers \"Dealer\" one extra time."
+    }
   },
   "44019": {
     "internalID": 44019,
@@ -7827,7 +12286,19 @@ let battleEvents = {
     "icon": "BE_RogueFormula_676180.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 44019,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_676180_Insert"
+      ],
+      "overridesArray": [],
+      "hardLevelEvent": true,
+      "actionDescription": "When taking action, deals Ice DMG to all enemies, activates all allies' Ultimates, and the higher the \"Obsession\" stacks on the first character and their memosprite in the team, the higher the SPD and DMG of \"Sudden Insight.\""
+    }
   },
   "44020": {
     "internalID": 44020,
@@ -7839,7 +12310,30 @@ let battleEvents = {
     "icon": "BattleEvent_EvoLveBuild_3113201.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 44020,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_676890_Laser_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "When taking action, increases the DMG taken by all enemies, deals Ice and Fire DMG to all enemies. This attack delays enemies' actions and ignores Weakness Type to reduce all enemies' Toughness. When Breaking enemies' Weakness, triggers both Ice and Fire Weakness Break effects."
+    }
   },
   "44021": {
     "internalID": 44021,
@@ -7851,7 +12345,24 @@ let battleEvents = {
     "icon": "BE_RogueFormula02.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 44021,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_676760_Insert",
+        "StageAbility_676760_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "44022": {
     "internalID": 44022,
@@ -7863,7 +12374,26 @@ let battleEvents = {
     "icon": "BE_RogueMiracle1180.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 44022,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_633560_Ability",
+        "StageAbility_633560_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "hardLevelEvent": true,
+      "eliteGroup": true,
+      "actionDescription": "Deals massive DMG to all allies based on their current HP, and deals minor DMG to enemy targets."
+    }
   },
   "44023": {
     "internalID": 44023,
@@ -7875,7 +12405,17 @@ let battleEvents = {
     "icon": "BattleEvent_RogueFormula01.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 44023,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [],
+      "hardLevelEvent": true,
+      "actionDescription": "When taking action, absorbs the Shields of all ally characters down to 1, converts them into this unit's Shield value, and Charges \"Brain in a Vat.\" When an ally target takes DMG, the Shield value of \"Magnetic Storm\" is consumed first, and when dealing \"Blazar\" DMG, the Shield value of \"Magnetic Storm\" is additionally taken into account."
+    }
   },
   "45001": {
     "internalID": 45001,
@@ -7949,7 +12489,23 @@ let battleEvents = {
     "icon": "FightFest_Coach_01.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 45001,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "45002": {
     "internalID": 45002,
@@ -8023,7 +12579,23 @@ let battleEvents = {
     "icon": "FightFest_Coach_02.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 45002,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "45003": {
     "internalID": 45003,
@@ -8097,7 +12669,23 @@ let battleEvents = {
     "icon": "FightFest_Coach_03.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 45003,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "45004": {
     "internalID": 45004,
@@ -8171,7 +12759,23 @@ let battleEvents = {
     "icon": "FightFest_Coach_04.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 45004,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "45005": {
     "internalID": 45005,
@@ -8245,7 +12849,23 @@ let battleEvents = {
     "icon": "FightFest_Coach_05.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 45005,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "45006": {
     "internalID": 45006,
@@ -8319,7 +12939,23 @@ let battleEvents = {
     "icon": "FightFest_Coach_06.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 45006,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "46101": {
     "internalID": 46101,
@@ -8331,7 +12967,35 @@ let battleEvents = {
     "icon": "RogueMagicScepter_Dot_05.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46101,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "value": 0.5
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "barType": 2,
+      "actionDescription": "<color=#87e0ffff>\"Bounce\"</color> deals Lightning DMG to random enemy targets and applies the special Shock state \"Ionization.\" This effect is stackable."
+    }
   },
   "46102": {
     "internalID": 46102,
@@ -8343,7 +13007,35 @@ let battleEvents = {
     "icon": "RogueMagicScepter_Follow_04.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46102,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "value": 0.5
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "barType": 2,
+      "actionDescription": "<color=#87e0ffff>\"Bounce\"</color> deals Imaginary Follow-Up ATK DMG to random enemy targets with a chance to CRIT, and also increases the Follow-Up ATK DMG taken by the target. This is stackable."
+    }
   },
   "46103": {
     "internalID": 46103,
@@ -8355,7 +13047,35 @@ let battleEvents = {
     "icon": "RogueMagicScepter_Follow_05.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46103,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "value": 0.5
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "barType": 2,
+      "actionDescription": "<color=#87e0ffff>\"Focus\"</color> deals Quantum Follow-Up ATK DMG to the enemy target who currently has the lowest HP. If the target is defeated, attacks again and advances all ally targets' actions."
+    }
   },
   "46104": {
     "internalID": 46104,
@@ -8367,7 +13087,35 @@ let battleEvents = {
     "icon": "RogueMagicScepter_Ultimate_04.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46104,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "value": 0.5
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "barType": 2,
+      "actionDescription": "<color=#87e0ffff>\"Focus\"</color> deals Quantum Ultimate DMG to the enemy target with the highest HP and applies a \"Delay Effect\" that activates whenever a set number of enemy targets are defeated."
+    }
   },
   "46105": {
     "internalID": 46105,
@@ -8379,7 +13127,35 @@ let battleEvents = {
     "icon": "RogueMagicScepter_Dot_06.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46105,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "value": 0.5
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "barType": 2,
+      "actionDescription": "<color=#87e0ffff>\"AoE ATK\"</color> deals Physical DMG to all enemies and inflicts the special Bleed effect \"Peeled.\""
+    }
   },
   "46106": {
     "internalID": 46106,
@@ -8391,7 +13167,35 @@ let battleEvents = {
     "icon": "RogueMagicScepter_Ultimate_05.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46106,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "value": 0.5
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "barType": 2,
+      "actionDescription": "<color=#87e0ffff>\"AoE ATK\"</color> deals Fire Ultimate DMG to all enemies and applies a \"Delay Effect\" that activates when the target is defeated."
+    }
   },
   "46107": {
     "internalID": 46107,
@@ -8403,7 +13207,35 @@ let battleEvents = {
     "icon": "RogueMagicScepter_Ultimate_06.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46107,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "value": 0.5
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "barType": 2,
+      "actionDescription": "<color=#87e0ffff>\"Blast\"</color> deals Lightning Ultimate DMG that can Blast to the enemy target with the highest HP and applies a \"Delay Effect\" that activates when any enemy target enters the battle."
+    }
   },
   "46108": {
     "internalID": 46108,
@@ -8415,7 +13247,35 @@ let battleEvents = {
     "icon": "RogueMagicScepter_Follow_06.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46108,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "value": 0.5
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "barType": 2,
+      "actionDescription": "<color=#87e0ffff>\"Blast\"</color> deals Imaginary Follow-Up ATK DMG that can Blast to random enemy targets. After the target has taken a set number of attacks or is defeated, regenerate Energy and recover Skill Points for all ally targets."
+    }
   },
   "46109": {
     "internalID": 46109,
@@ -8427,7 +13287,35 @@ let battleEvents = {
     "icon": "RogueMagicScepter_Break_04.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46109,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "value": 0.5
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "barType": 2,
+      "actionDescription": "<color=#87e0ffff>\"Bounce\"</color> deals Fire DMG to random enemy targets to reduce Toughness regardless of Weaknesses and additionally deals Break DMG if the target is already Weakness Broken. It also increases SPD for all ally targets, which is stackable."
+    }
   },
   "46110": {
     "internalID": 46110,
@@ -8439,7 +13327,35 @@ let battleEvents = {
     "icon": "RogueMagicScepter_Break_05.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46110,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "value": 0.5
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "barType": 2,
+      "actionDescription": "<color=#87e0ffff>\"AoE ATK\"</color> deals Ice DMG to all enemies and reduces Toughness regardless of Weakness, and additionally deals Break DMG if the target is already Weakness Broken. Moreover, increases Toughness reduction taken by the target."
+    }
   },
   "46111": {
     "internalID": 46111,
@@ -8451,7 +13367,35 @@ let battleEvents = {
     "icon": "RogueMagicScepter_Break_06.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46111,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "value": 0.5
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "barType": 2,
+      "actionDescription": "<color=#87e0ffff>\"Blast\"</color> deals Quantum DMG that can Blast to random enemy targets and reduces Toughness regardless of Weakness, additionally dealing Break DMG if the target is already Weakness Broken. Also, randomly adds to the target 1 Weakness of an ally character's Type and reduces the target's corresponding Type RES."
+    }
   },
   "46112": {
     "internalID": 46112,
@@ -8463,7 +13407,35 @@ let battleEvents = {
     "icon": "RogueMagicScepter_Dot_04.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46112,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "value": 0.5
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "barType": 2,
+      "actionDescription": "<color=#87e0ffff>\"Focus\"</color> deals Quantum DMG to the enemy target with the most DoT in possession. Every time this DMG is dealt, immediately trigger 1 DoT."
+    }
   },
   "46201": {
     "internalID": 46201,
@@ -8475,7 +13447,34 @@ let battleEvents = {
     "icon": "RogueMagicScepter_Dot_01.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46201,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "value": 0.5
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "<color=#87e0ffff>\"Bounce\"</color> deals Fire DMG to random enemy targets and applies the special Burn state \"Starcrown.\" This effect is stackable."
+    }
   },
   "46202": {
     "internalID": 46202,
@@ -8487,7 +13486,34 @@ let battleEvents = {
     "icon": "RogueMagicScepter_Follow_01.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46202,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "value": 0.5
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "<color=#87e0ffff>\"Bounce\"</color> deals Ice Follow-Up ATK DMG to random enemy targets with a chance to CRIT and also increases the CRIT Rate and CRIT DMG taken by the target when hit by Follow-Up ATK."
+    }
   },
   "46203": {
     "internalID": 46203,
@@ -8499,7 +13525,34 @@ let battleEvents = {
     "icon": "RogueMagicScepter_Ultimate_01.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46203,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "value": 0.5
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "<color=#87e0ffff>\"Bounce\"</color> deals Ice Ultimate DMG to random enemy targets and applies \"Delay Effect\" that activates when the target's Weakness is Broken. This effect is stackable."
+    }
   },
   "46204": {
     "internalID": 46204,
@@ -8511,7 +13564,34 @@ let battleEvents = {
     "icon": "RogueMagicScepter_Follow_02.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46204,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "value": 0.5
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "<color=#87e0ffff>\"Focus\"</color> deals Wind Follow-Up ATK DMG to the enemy target who currently has the highest HP with a chance to CRIT. The target additionally takes DMG after receiving a certain number of attacks."
+    }
   },
   "46205": {
     "internalID": 46205,
@@ -8523,7 +13603,34 @@ let battleEvents = {
     "icon": "RogueMagicScepter_Break_01.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46205,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "value": 0.5
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "<color=#87e0ffff>\"Focus\"</color> deals Physical DMG to the enemy target with the highest Max Toughness and ignores its Weakness to reduce Toughness. If the target is already Weakness Broken, then additionally deals Break DMG."
+    }
   },
   "46206": {
     "internalID": 46206,
@@ -8535,7 +13642,34 @@ let battleEvents = {
     "icon": "RogueMagicScepter_Break_02.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46206,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "value": 0.5
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "<color=#87e0ffff>\"Focus\"</color> deals Imaginary DMG to the enemy target who currently has the lowest Toughness and reduces Toughness regardless of Weakness. If the target is already Weakness Broken, then additionally deals Break DMG. Moreover, after the target takes Break DMG, all other Weakness Broken enemy targets also take DMG."
+    }
   },
   "46207": {
     "internalID": 46207,
@@ -8547,7 +13681,34 @@ let battleEvents = {
     "icon": "1086.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46207,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "value": 0.5
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "<color=#87e0ffff>\"Focus\"</color> deals Quantum DMG to the enemy target with the most DoT in possession. Every time this DMG is dealt, immediately trigger 1 DoT."
+    }
   },
   "46208": {
     "internalID": 46208,
@@ -8559,7 +13720,34 @@ let battleEvents = {
     "icon": "RogueMagicScepter_Dot_02.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46208,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "value": 0.5
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "<color=#87e0ffff>\"AoE ATK\"</color> deals Fire DMG to all enemies and immediately triggers all DoTs."
+    }
   },
   "46209": {
     "internalID": 46209,
@@ -8571,7 +13759,34 @@ let battleEvents = {
     "icon": "RogueMagicScepter_Ultimate_02.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46209,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "value": 0.5
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "<color=#87e0ffff>\"AoE ATK\"</color> deals Fire Ultimate DMG to all enemies and applies a \"Delay Effect\" that activates after taking a set amount of total DMG."
+    }
   },
   "46210": {
     "internalID": 46210,
@@ -8583,7 +13798,34 @@ let battleEvents = {
     "icon": "RogueMagicScepter_Follow_03.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46210,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "value": 0.5
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "<color=#87e0ffff>\"AoE ATK\"</color> deals Ice Follow-Up ATK DMG to all enemies with a chance to CRIT. Also, targets are more likely to take CRIT Hits when taking DMG and take extra DMG when taking Follow-Up ATK CRIT DMG."
+    }
   },
   "46211": {
     "internalID": 46211,
@@ -8595,7 +13837,34 @@ let battleEvents = {
     "icon": "RogueMagicScepter_Ultimate_03.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46211,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "value": 0.5
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "<color=#87e0ffff>\"Blast\"</color> deals Ice Ultimate DMG that can Blast to random enemy targets and applies a \"Delay Effect\" that activates after receiving an attack from any ally target that dealt Ultimate DMG."
+    }
   },
   "46212": {
     "internalID": 46212,
@@ -8607,7 +13876,34 @@ let battleEvents = {
     "icon": "RogueMagicScepter_Break_03.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46212,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "value": 0.5
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "<color=#87e0ffff>\"Blast\"</color> deals Quantum DMG that can Blast to the enemy target with the lowest Toughness and reduces Toughness regardless of Weakness, additionally dealing Break DMG if the target is already Weakness Broken. Also, after the target receives Break DMG, regenerates Energy for all ally targets and advances their action."
+    }
   },
   "46213": {
     "internalID": 46213,
@@ -8619,7 +13915,34 @@ let battleEvents = {
     "icon": "RogueMagicScepter_Dot_03.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 46213,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "value": 0.5
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "<color=#87e0ffff>\"Blast\"</color> deals Wind DMG that can Blast to random enemy targets and inflicts the special Wind Shear effect \"Turbulence\" to the targets."
+    }
   },
   "48001": {
     "internalID": 48001,
@@ -8631,7 +13954,28 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 48001,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_RogueChallengeTurnLimit_SpecialDrop"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "48002": {
     "internalID": 48002,
@@ -8643,7 +13987,28 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 48002,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_RogueChallengeTurnLimitSurvive_SpecialDrop"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "48003": {
     "internalID": 48003,
@@ -8655,7 +14020,22 @@ let battleEvents = {
     "icon": "",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 48003,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "48004": {
     "internalID": 48004,
@@ -8667,7 +14047,26 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 48004,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "48005": {
     "internalID": 48005,
@@ -8679,7 +14078,28 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 48005,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_RogueChallengeTurnLimitEvent_SpecialDrop"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "48006": {
     "internalID": 48006,
@@ -8691,7 +14111,28 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 48006,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_RogueChallengeTurnLimitEventSurvive_SpecialDrop"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "48007": {
     "internalID": 48007,
@@ -8705,7 +14146,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Countdown Warning",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 48007,
+      "team": "Neutral Team",
+      "eventType": "Countdown Warning",
+      "abilityList": [
+        "BattleEventAbility_SummonMonsterInfinite",
+        "BattleEventAbility_RogueMagicTurnCount"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "48008": {
     "internalID": 48008,
@@ -8718,7 +14177,25 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
-    "isBattleEvent": true
+    "type": "UD Countdown Event",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 48008,
+      "team": "Neutral Team",
+      "eventType": "UD Countdown Event",
+      "abilityList": [
+        "BattleEventAbility_SummonMonsterInfinite"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "48009": {
     "internalID": 48009,
@@ -8732,7 +14209,25 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
-    "isBattleEvent": true
+    "type": "Turn Prompt",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 48009,
+      "team": "Neutral Team",
+      "eventType": "Turn Prompt",
+      "abilityList": [
+        "RogueMagic_Level_RogueRage"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "49001": {
     "internalID": 49001,
@@ -8745,7 +14240,25 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
-    "isBattleEvent": true
+    "type": "Turn Prompt",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 49001,
+      "team": "Neutral Team",
+      "eventType": "Turn Prompt",
+      "abilityList": [
+        "BattleEventAbility_RogueRage"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "49002": {
     "internalID": 49002,
@@ -8758,7 +14271,25 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
-    "isBattleEvent": true
+    "type": "Turn Prompt",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 49002,
+      "team": "Neutral Team",
+      "eventType": "Turn Prompt",
+      "abilityList": [
+        "BattleEventAbility_RogueRage_Enhance"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "49003": {
     "internalID": 49003,
@@ -8773,7 +14304,25 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
-    "isBattleEvent": true
+    "type": "Turn Prompt",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 49003,
+      "team": "Neutral Team",
+      "eventType": "Turn Prompt",
+      "abilityList": [
+        "BattleEventAbility_RogueRage_Enhance_V2"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "60001": {
     "internalID": 60001,
@@ -8933,7 +14482,28 @@ let battleEvents = {
     "icon": "Monster_9003020.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60001,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "Colossus_PassiveAbility02"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 140
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "Deals massive Fire DMG to all enemies."
+    }
   },
   "60002": {
     "internalID": 60002,
@@ -9063,7 +14633,25 @@ let battleEvents = {
     "icon": "HoshinoKami_001.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60002,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_620101_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 83,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "60003": {
     "internalID": 60003,
@@ -9193,7 +14781,26 @@ let battleEvents = {
     "icon": "HoshinoKami_001.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60003,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_620701",
+        "BattleEventAbility_620701_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 83,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "60004": {
     "internalID": 60004,
@@ -9353,7 +14960,28 @@ let battleEvents = {
     "icon": "Monster_9003020.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60004,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "Colossus_PassiveAbility02_Weekly"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 180
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "Deals massive Fire DMG to all enemies."
+    }
   },
   "60005": {
     "internalID": 60005,
@@ -9439,7 +15067,32 @@ let battleEvents = {
     "icon": "Monster_9003020.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60005,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 465
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 18
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CharacterLevel</span>&nbsp;",
+          "value": 1
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true,
+      "actionDescription": "Deals Fire DMG to all targets"
+    }
   },
   "60006": {
     "internalID": 60006,
@@ -9596,7 +15249,25 @@ let battleEvents = {
     "icon": "BE1213_Special.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60006,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 120
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "60007": {
     "internalID": 60007,
@@ -9608,7 +15279,25 @@ let battleEvents = {
     "icon": "1213.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60007,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 120
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "60008": {
     "internalID": 60008,
@@ -9689,7 +15378,25 @@ let battleEvents = {
     "icon": "BE1213_Special.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60008,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 120
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "60010": {
     "internalID": 60010,
@@ -9855,7 +15562,29 @@ let battleEvents = {
     "icon": "BE1307_Special.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60010,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "60011": {
     "internalID": 60011,
@@ -9936,7 +15665,28 @@ let battleEvents = {
     "icon": "1217.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60011,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "MissionBattleEvent60008_Listener"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 120
+        }
+      ],
+      "eventSpeed": 120,
+      "hardLevelEvent": true
+    }
   },
   "60012": {
     "internalID": 60012,
@@ -10088,7 +15838,30 @@ let battleEvents = {
     "icon": "BattleEvent_60012.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60012,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 160
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "Deals massive Imaginary DMG to all enemies."
+    }
   },
   "60013": {
     "internalID": 60013,
@@ -10240,7 +16013,30 @@ let battleEvents = {
     "icon": "BattleEvent_60012.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60013,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 200
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "Deals massive Imaginary DMG to all enemies."
+    }
   },
   "60014": {
     "internalID": 60014,
@@ -10332,7 +16128,35 @@ let battleEvents = {
     "icon": "BattleEvent_1221Special.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60014,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "MissionBattleEvent60014_Ability03_Part01",
+        "MissionBattleEvent60014_Ability03_Camera",
+        "BattleEventAbility_SummonMonsterInfinite"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 60
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "60015": {
     "internalID": 60015,
@@ -10344,7 +16168,25 @@ let battleEvents = {
     "icon": "",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60015,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 120
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "60016": {
     "internalID": 60016,
@@ -10356,7 +16198,25 @@ let battleEvents = {
     "icon": "",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60016,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 120
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "60017": {
     "internalID": 60017,
@@ -10368,7 +16228,25 @@ let battleEvents = {
     "icon": "",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60017,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 120
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "60018": {
     "internalID": 60018,
@@ -10380,7 +16258,21 @@ let battleEvents = {
     "icon": "",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60018,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "60019": {
     "internalID": 60019,
@@ -10532,7 +16424,26 @@ let battleEvents = {
     "icon": "BattleEvent_60012.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60019,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 8
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "Deals massive Imaginary DMG to all enemies."
+    }
   },
   "60020": {
     "internalID": 60020,
@@ -10684,7 +16595,30 @@ let battleEvents = {
     "icon": "BattleEvent_20421076.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60020,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "Deals massive Imaginary DMG to all enemies."
+    }
   },
   "60021": {
     "internalID": 60021,
@@ -10844,7 +16778,30 @@ let battleEvents = {
     "icon": "1006.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60021,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 160
+        }
+      ],
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "60022": {
     "internalID": 60022,
@@ -10957,7 +16914,30 @@ let battleEvents = {
     "icon": "BattleEvent_20421076.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60022,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "60023": {
     "internalID": 60023,
@@ -11105,7 +17085,29 @@ let battleEvents = {
     "icon": "BattleEvent_20421076.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60023,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "60024": {
     "internalID": 60024,
@@ -11283,7 +17285,26 @@ let battleEvents = {
     "icon": "BattleEvent_60024.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60024,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_620101_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true,
+      "actionDescription": "Removes the \"Tide-Corrosion\" state from all ally targets. Adds \"Flame-Chase\" and \"Eagerness\" to all ally targets and restores HP."
+    }
   },
   "60025": {
     "internalID": 60025,
@@ -11359,7 +17380,31 @@ let battleEvents = {
     "icon": "1408_02.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60025,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "60026": {
     "internalID": 60026,
@@ -11435,7 +17480,31 @@ let battleEvents = {
     "icon": "1408_02.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60026,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "60027": {
     "internalID": 60027,
@@ -11511,7 +17580,31 @@ let battleEvents = {
     "icon": "1408_02.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60027,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "60028": {
     "internalID": 60028,
@@ -11665,7 +17758,31 @@ let battleEvents = {
     "icon": "BattleEvent_60028.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60028,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true,
+      "eliteGroup": true,
+      "actionDescription": "Regenerates <unbreak>100%</unbreak> Energy for Saber and increases her DMG dealt."
+    }
   },
   "60029": {
     "internalID": 60029,
@@ -11841,7 +17958,26 @@ let battleEvents = {
     "icon": "BattleEvent_60024.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60029,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_620101_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true,
+      "actionDescription": "Removes the \"Tide-Corrosion\" state from all ally targets. Adds \"Flame-Chase\" and \"Eagerness\" to all ally targets and restores HP."
+    }
   },
   "60030": {
     "internalID": 60030,
@@ -11991,7 +18127,26 @@ let battleEvents = {
     "icon": "BattleEvent_60030.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60030,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 8
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "Deal massive Ice DMG to one enemy and greatly reduce \"Amphorean Hatred\"!"
+    }
   },
   "60031": {
     "internalID": 60031,
@@ -12143,7 +18298,26 @@ let battleEvents = {
     "icon": "BattleEvent_60031.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60031,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 8
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "Deals massive True DMG to all enemies and greatly reduces \"Amphorean Hatred\"!"
+    }
   },
   "60032": {
     "internalID": 60032,
@@ -12223,7 +18397,26 @@ let battleEvents = {
     "icon": "BattleEvent_60033.png",
     "team": "Neutral Team",
     "type": "Entity Selection",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60032,
+      "team": "Neutral Team",
+      "eventType": "Entity Selection",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 70
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "When \"Cyrene's Support ♪\" takes action, select an ally character to activate their Ultimate and dispel the \"Action Lock\" state."
+    }
   },
   "60033": {
     "internalID": 60033,
@@ -12235,7 +18428,21 @@ let battleEvents = {
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60033,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "60035": {
     "internalID": 60035,
@@ -12247,7 +18454,21 @@ let battleEvents = {
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60035,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "60036": {
     "internalID": 60036,
@@ -12399,7 +18620,32 @@ let battleEvents = {
     "icon": "BattleEvent_20421076.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60036,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_60036_ModifySP"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 40
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "Deals massive Imaginary DMG to all enemies."
+    }
   },
   "60037": {
     "internalID": 60037,
@@ -12572,7 +18818,26 @@ let battleEvents = {
     "icon": "BattleEvent_60024.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60037,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_620101_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 120,
+      "hardLevelEvent": true,
+      "eliteGroup": true,
+      "actionDescription": "Removes the \"Tide-Corrosion\" state from all ally targets, adds \"Flame-Chase\" to all ally targets and restores HP."
+    }
   },
   "60038": {
     "internalID": 60038,
@@ -12726,7 +18991,30 @@ let battleEvents = {
     "icon": "BattleEvent_60012.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60038,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 200
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "Deals massive Imaginary DMG to all enemies."
+    }
   },
   "60039": {
     "internalID": 60039,
@@ -12878,7 +19166,30 @@ let battleEvents = {
     "icon": "BattleEvent_60012.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60039,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 160
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "Deals massive Imaginary DMG to all enemies."
+    }
   },
   "60040": {
     "internalID": 60040,
@@ -13030,7 +19341,30 @@ let battleEvents = {
     "icon": "BattleEvent_60012.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60040,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 160
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "Deals massive Imaginary DMG to all enemies."
+    }
   },
   "60041": {
     "internalID": 60041,
@@ -13045,7 +19379,32 @@ let battleEvents = {
     "icon": "BattleEventMainStoryTVStation_Negative.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60041,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_TVBroadcast_Negative"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 144
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "When taking action, decreases the SPD for all ally characters."
+    }
   },
   "60042": {
     "internalID": 60042,
@@ -13060,7 +19419,32 @@ let battleEvents = {
     "icon": "BattleEventMainStoryTVStation_Neutrality.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60042,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_TVBroadcast_Neutral"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 144
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "When taking action, allies gain Punchline."
+    }
   },
   "60043": {
     "internalID": 60043,
@@ -13077,7 +19461,32 @@ let battleEvents = {
     "icon": "BattleEventMainStoryTVStation_Positive.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60043,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_TVBroadcast_Positive"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 144
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "When taking action, grants allies Punchline, while increasing all allies' CRIT DMG and advancing their actions."
+    }
   },
   "60044": {
     "internalID": 60044,
@@ -13113,7 +19522,11 @@ let battleEvents = {
             "attackType": "Ultra",
             "skillEffect": "SingleAttack",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_MissionBattleEvent60044_Skill03_Phase01",
+              "Avatar_MissionBattleEvent60044_Skill03_Phase02",
+              "Avatar_MissionBattleEvent60044_Skill03_Camera"
+            ],
             "toughnessList": [
               0,
               180,
@@ -13143,7 +19556,9 @@ let battleEvents = {
             },
             "skillEffect": "Passive",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_MissionBattleEvent60044_SkillP01"
+            ],
             "toughnessList": [
               0,
               0,
@@ -13175,7 +19590,11 @@ let battleEvents = {
         "attackType": "Ultra",
         "skillEffect": "SingleAttack",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Avatar_MissionBattleEvent60044_Skill03_Phase01",
+          "Avatar_MissionBattleEvent60044_Skill03_Phase02",
+          "Avatar_MissionBattleEvent60044_Skill03_Camera"
+        ],
         "toughnessList": [
           0,
           180,
@@ -13201,7 +19620,9 @@ let battleEvents = {
         },
         "skillEffect": "Passive",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Avatar_MissionBattleEvent60044_SkillP01"
+        ],
         "toughnessList": [
           0,
           0,
@@ -13213,7 +19634,30 @@ let battleEvents = {
     "icon": "BattleEvent_60044.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60044,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "Deals massive DMG to all enemy targets, applies \"Knockdown\" to Asat Pramad, and causes all ally targets to immediately take action. A \"Knockdown\" countdown appears on the Action Order. At the start of the countdown's turn, Lord of Saṃvartasthāyi, Asat Pramad exits the \"Knockdown\" state and immediately takes action."
+    }
   },
   "60045": {
     "internalID": 60045,
@@ -13361,7 +19805,30 @@ let battleEvents = {
     "icon": "BattleEvent_1507Special.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60045,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 60
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "Deals massive Fire DMG to all enemies."
+    }
   },
   "60047": {
     "internalID": 60047,
@@ -13426,7 +19893,12 @@ let battleEvents = {
             },
             "skillEffect": "Passive",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_MissionBattleEvent60047_Passive",
+              "Avatar_MissionBattleEvent60047_Skill03_Phase01",
+              "Avatar_MissionBattleEvent60047_Skill03_Phase02",
+              "BattleEventAbility_60047_Camera"
+            ],
             "toughnessList": [
               0,
               0,
@@ -13489,7 +19961,12 @@ let battleEvents = {
         },
         "skillEffect": "Passive",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Avatar_MissionBattleEvent60047_Passive",
+          "Avatar_MissionBattleEvent60047_Skill03_Phase01",
+          "Avatar_MissionBattleEvent60047_Skill03_Phase02",
+          "BattleEventAbility_60047_Camera"
+        ],
         "toughnessList": [
           0,
           0,
@@ -13501,7 +19978,30 @@ let battleEvents = {
     "icon": "BattleEvent_60047.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60047,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "60048": {
     "internalID": 60048,
@@ -13533,7 +20033,13 @@ let battleEvents = {
             },
             "skillEffect": "AoEAttack",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_MissionBattleEvent60030_Skill03_EnterReady",
+              "Avatar_MissionBattleEvent60030_Skill03_Phase01",
+              "Avatar_MissionBattleEvent60030_Skill03_Phase02",
+              "Avatar_MissionBattleEvent60030_Skill03_Camera",
+              "Avatar_MissionBattleEvent60030_Skill03Ready_Camera"
+            ],
             "toughnessList": [
               0,
               120,
@@ -13563,7 +20069,9 @@ let battleEvents = {
             },
             "skillEffect": "Passive",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_MissionBattleEvent60030_SkillP01"
+            ],
             "toughnessList": [
               0,
               0,
@@ -13597,7 +20105,13 @@ let battleEvents = {
         },
         "skillEffect": "AoEAttack",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Avatar_MissionBattleEvent60030_Skill03_EnterReady",
+          "Avatar_MissionBattleEvent60030_Skill03_Phase01",
+          "Avatar_MissionBattleEvent60030_Skill03_Phase02",
+          "Avatar_MissionBattleEvent60030_Skill03_Camera",
+          "Avatar_MissionBattleEvent60030_Skill03Ready_Camera"
+        ],
         "toughnessList": [
           0,
           120,
@@ -13623,7 +20137,9 @@ let battleEvents = {
         },
         "skillEffect": "Passive",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Avatar_MissionBattleEvent60030_SkillP01"
+        ],
         "toughnessList": [
           0,
           0,
@@ -13635,7 +20151,25 @@ let battleEvents = {
     "icon": "BattleEvent_60030.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60048,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 1
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 8
+        }
+      ],
+      "actionDescription": "Deals massive Ice DMG to one enemy and greatly reduces \"Amphorean Hatred\"!"
+    }
   },
   "60049": {
     "internalID": 60049,
@@ -13667,7 +20201,14 @@ let battleEvents = {
             },
             "skillEffect": "AoEAttack",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_MissionBattleEvent60031_Skill03_Phase01",
+              "Avatar_MissionBattleEvent60031_Skill03_Phase02",
+              "Avatar_MissionBattleEvent60031_Skill03_Insert",
+              "Avatar_MissionBattleEvent60031_Skill03_Phase022",
+              "Avatar_MissionBattleEvent60031_Skill03_Camera",
+              "Avatar_MissionBattleEvent60031_Skill03_Camera02"
+            ],
             "toughnessList": [
               0,
               120,
@@ -13697,7 +20238,9 @@ let battleEvents = {
             },
             "skillEffect": "Passive",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_MissionBattleEvent60031_SkillP01"
+            ],
             "toughnessList": [
               0,
               0,
@@ -13731,7 +20274,14 @@ let battleEvents = {
         },
         "skillEffect": "AoEAttack",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Avatar_MissionBattleEvent60031_Skill03_Phase01",
+          "Avatar_MissionBattleEvent60031_Skill03_Phase02",
+          "Avatar_MissionBattleEvent60031_Skill03_Insert",
+          "Avatar_MissionBattleEvent60031_Skill03_Phase022",
+          "Avatar_MissionBattleEvent60031_Skill03_Camera",
+          "Avatar_MissionBattleEvent60031_Skill03_Camera02"
+        ],
         "toughnessList": [
           0,
           120,
@@ -13757,7 +20307,9 @@ let battleEvents = {
         },
         "skillEffect": "Passive",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Avatar_MissionBattleEvent60031_SkillP01"
+        ],
         "toughnessList": [
           0,
           0,
@@ -13769,7 +20321,25 @@ let battleEvents = {
     "icon": "BattleEvent_60031.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60049,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 1
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 8
+        }
+      ],
+      "actionDescription": "Deals massive True DMG to all enemies and greatly reduces \"Amphorean Hatred\"!"
+    }
   },
   "60050": {
     "internalID": 60050,
@@ -13797,7 +20367,12 @@ let battleEvents = {
             },
             "skillEffect": "AoEAttack",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Avatar_MissionBattleEvent60032_Skill03_Camera",
+              "Avatar_MissionBattleEvent60032_Skill03_EnterReady",
+              "Avatar_MissionBattleEvent60032_Skill03_Phase01",
+              "Avatar_MissionBattleEvent60032_Skill03_Phase02"
+            ],
             "toughnessList": [
               0,
               0,
@@ -13827,7 +20402,12 @@ let battleEvents = {
         },
         "skillEffect": "AoEAttack",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Avatar_MissionBattleEvent60032_Skill03_Camera",
+          "Avatar_MissionBattleEvent60032_Skill03_EnterReady",
+          "Avatar_MissionBattleEvent60032_Skill03_Phase01",
+          "Avatar_MissionBattleEvent60032_Skill03_Phase02"
+        ],
         "toughnessList": [
           0,
           0,
@@ -13839,7 +20419,26 @@ let battleEvents = {
     "icon": "BattleEvent_60033.png",
     "team": "Neutral Team",
     "type": "Entity Selection",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 60050,
+      "team": "Neutral Team",
+      "eventType": "Entity Selection",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 1
+        }
+      ],
+      "eventSpeed": 70,
+      "actionDescription": "When \"Cyrene's Support ♪\" takes action, select an ally character to activate their Ultimate and dispel the \"Action Lock\" state."
+    }
   },
   "61001": {
     "internalID": 61001,
@@ -13917,7 +20516,23 @@ let battleEvents = {
     "icon": "BattleEvent_Gourd.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 61001,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "61002": {
     "internalID": 61002,
@@ -13994,7 +20609,23 @@ let battleEvents = {
     "icon": "BattleEvent_Gourd.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 61002,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "61003": {
     "internalID": 61003,
@@ -14071,7 +20702,23 @@ let battleEvents = {
     "icon": "BattleEvent_Gourd.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 61003,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "61004": {
     "internalID": 61004,
@@ -14151,7 +20798,23 @@ let battleEvents = {
     "icon": "BattleEvent_Gourd.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 61004,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "61005": {
     "internalID": 61005,
@@ -14229,7 +20892,23 @@ let battleEvents = {
     "icon": "BattleEvent_Gourd.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 61005,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "61006": {
     "internalID": 61006,
@@ -14309,7 +20988,23 @@ let battleEvents = {
     "icon": "BattleEvent_Gourd.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 61006,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "61007": {
     "internalID": 61007,
@@ -14387,7 +21082,23 @@ let battleEvents = {
     "icon": "BattleEvent_Gourd.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 61007,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "61008": {
     "internalID": 61008,
@@ -14478,7 +21189,23 @@ let battleEvents = {
     "icon": "BattleEvent_Gourd.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 61008,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "61009": {
     "internalID": 61009,
@@ -14550,7 +21277,24 @@ let battleEvents = {
     "icon": "",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 61009,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_SummonMonsterInfinite"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "61010": {
     "internalID": 61010,
@@ -14622,7 +21366,24 @@ let battleEvents = {
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 61010,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_SummonMonsterInfinite"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "61011": {
     "internalID": 61011,
@@ -14694,7 +21455,24 @@ let battleEvents = {
     "icon": "",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 61011,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_SummonMonsterInfinite2"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "61012": {
     "internalID": 61012,
@@ -14766,7 +21544,24 @@ let battleEvents = {
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 61012,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_SummonMonsterInfinite2"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "61013": {
     "internalID": 61013,
@@ -14838,7 +21633,24 @@ let battleEvents = {
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 61013,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_SummonMonsterInfinite"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "61014": {
     "internalID": 61014,
@@ -14910,7 +21722,24 @@ let battleEvents = {
     "icon": "",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 61014,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_SummonMonsterInfinite"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "61015": {
     "internalID": 61015,
@@ -14982,7 +21811,28 @@ let battleEvents = {
     "icon": "",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 61015,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_SummonMonsterInfinite"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 75.757576
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "61016": {
     "internalID": 61016,
@@ -15054,7 +21904,28 @@ let battleEvents = {
     "icon": "",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 61016,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_SummonMonsterInfinite"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 75.757576
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "61017": {
     "internalID": 61017,
@@ -15126,7 +21997,24 @@ let battleEvents = {
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 61017,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_SummonMonsterInfinite_Fuyan"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "61018": {
     "internalID": 61018,
@@ -15197,7 +22085,25 @@ let battleEvents = {
     },
     "icon": "",
     "team": "Neutral Team",
-    "isBattleEvent": true
+    "type": "DU Countdown Event",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 61018,
+      "team": "Neutral Team",
+      "eventType": "DU Countdown Event",
+      "abilityList": [
+        "BattleEventAbility_SummonMonsterInfinite"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "62001": {
     "internalID": 62001,
@@ -15209,7 +22115,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62001,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "LevelAbility_BoxingClubResonance_Fire_BattleEvent"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "62002": {
     "internalID": 62002,
@@ -15221,7 +22144,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62002,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "LevelAbility_BoxingClubResonance_Fire_BattleEvent02"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "62003": {
     "internalID": 62003,
@@ -15236,7 +22176,28 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62003,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_ActivityTelevision_Timer1"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "62004": {
     "internalID": 62004,
@@ -15250,7 +22211,28 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Countdown Warning",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62004,
+      "team": "Neutral Team",
+      "eventType": "Countdown Warning",
+      "abilityList": [
+        "BattleEventAbility_ActivityTelevision_TimerFirstPart"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "62005": {
     "internalID": 62005,
@@ -15264,7 +22246,28 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62005,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_ActivityTelevision_TimerSecondPart"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "62006": {
     "internalID": 62006,
@@ -15278,7 +22281,29 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Countdown Warning",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62006,
+      "team": "Neutral Team",
+      "eventType": "Countdown Warning",
+      "abilityList": [
+        "BattleEventAbility_Activity_LuckyScroll_TimerFirstPart"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "During the Buff Buildup phase, increase Stage Buff ranks as much as possible by using key enemies' Mutation Mechanic. When the Cycle countdown ends, the current stage will enter the Final Showdown phase."
+    }
   },
   "62007": {
     "internalID": 62007,
@@ -15294,7 +22319,29 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62007,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Activity_LuckyScroll_TimerSecondPart"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "In the Final Showdown phase, the Stage Buff rank can no longer be increased. Defeat more waves of enemies before the Cycle countdown ends to get more points."
+    }
   },
   "62008": {
     "internalID": 62008,
@@ -15306,7 +22353,22 @@ let battleEvents = {
     "icon": "BattleEvent_TVSeason2.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62008,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 50,
+      "actionDescription": "After any ally target takes action, Shadesever Bow's action advances. During its action, it prioritizes attacking all enemy targets 1 time each, with the remaining attack counts attacking random enemy targets."
+    }
   },
   "62101": {
     "internalID": 62101,
@@ -15319,7 +22381,26 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "999.png",
     "team": "Neutral Team",
-    "isBattleEvent": true
+    "type": "Evolve Event Countdown",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62101,
+      "team": "Neutral Team",
+      "eventType": "Evolve Event Countdown",
+      "abilityList": [
+        "BattleEventAbility_SummonMonsterInfinite",
+        "BattleEventAbility_VS_Standard_WaveTimer"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "62102": {
     "internalID": 62102,
@@ -15331,7 +22412,23 @@ let battleEvents = {
     "icon": "BattleEvent_EvoLveBuild_3106002.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62102,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_VS_Weapon_002_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "62103": {
     "internalID": 62103,
@@ -15343,7 +22440,23 @@ let battleEvents = {
     "icon": "BattleEvent_EvoLveBuild_3106008.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62103,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_VS_Weapon_008_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "62104": {
     "internalID": 62104,
@@ -15355,7 +22468,23 @@ let battleEvents = {
     "icon": "BattleEvent_EvoLveBuild_3106009.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62104,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_VS_Weapon_009_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "62105": {
     "internalID": 62105,
@@ -15367,7 +22496,23 @@ let battleEvents = {
     "icon": "BattleEvent_EvoLveBuild_3106010.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62105,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_VS_Weapon_010_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "62106": {
     "internalID": 62106,
@@ -15379,7 +22524,23 @@ let battleEvents = {
     "icon": "BattleEvent_EvoLveBuild_3106011.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62106,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_VS_Weapon_011_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "62107": {
     "internalID": 62107,
@@ -15391,7 +22552,23 @@ let battleEvents = {
     "icon": "BattleEvent_EvoLveBuild_3106013.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62107,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_VS_Weapon_013_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "62111": {
     "internalID": 62111,
@@ -15405,7 +22582,25 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62111,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_SummonMonsterInfinite",
+        "BattleEventAbility_VS_Standard_WaveTimer"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "62112": {
     "internalID": 62112,
@@ -15417,7 +22612,29 @@ let battleEvents = {
     "icon": "BattleEvent_EvoLveBuild_3113001.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62112,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_VS_Weapon_S2_001_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "62113": {
     "internalID": 62113,
@@ -15429,7 +22646,27 @@ let battleEvents = {
     "icon": "BattleEvent_EvoLveBuild_3113002.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62113,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "62114": {
     "internalID": 62114,
@@ -15441,7 +22678,27 @@ let battleEvents = {
     "icon": "BattleEvent_EvoLveBuild_3113003.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62114,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "62115": {
     "internalID": 62115,
@@ -15453,7 +22710,27 @@ let battleEvents = {
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62115,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "62116": {
     "internalID": 62116,
@@ -15465,7 +22742,27 @@ let battleEvents = {
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62116,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "62117": {
     "internalID": 62117,
@@ -15477,7 +22774,27 @@ let battleEvents = {
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62117,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "62118": {
     "internalID": 62118,
@@ -15489,7 +22806,27 @@ let battleEvents = {
     "icon": "BattleEvent_EvoLveBuild_3113010.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62118,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "62119": {
     "internalID": 62119,
@@ -15501,7 +22838,27 @@ let battleEvents = {
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62119,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "62120": {
     "internalID": 62120,
@@ -15513,7 +22870,27 @@ let battleEvents = {
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62120,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "62121": {
     "internalID": 62121,
@@ -15525,7 +22902,27 @@ let battleEvents = {
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62121,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "62122": {
     "internalID": 62122,
@@ -15537,7 +22934,27 @@ let battleEvents = {
     "icon": "BattleEvent_EvoLveBuild_3113903.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62122,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "62123": {
     "internalID": 62123,
@@ -15549,7 +22966,27 @@ let battleEvents = {
     "icon": "BattleEvent_EvoLveBuild_3106009.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62123,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "62130": {
     "internalID": 62130,
@@ -15561,7 +22998,29 @@ let battleEvents = {
     "icon": "BattleEvent_EvoLveBuild_3113004.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62130,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_VS_Weapon_S2_004_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "62131": {
     "internalID": 62131,
@@ -15573,7 +23032,29 @@ let battleEvents = {
     "icon": "BattleEvent_EvoLveBuild_3113005.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62131,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_VS_Weapon_S2_005_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "62132": {
     "internalID": 62132,
@@ -15585,7 +23066,29 @@ let battleEvents = {
     "icon": "BattleEvent_EvoLveBuild_3113006.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62132,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_VS_Weapon_S2_006_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "62133": {
     "internalID": 62133,
@@ -15597,7 +23100,29 @@ let battleEvents = {
     "icon": "BattleEvent_EvoLveBuild_3106008.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62133,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_VS_Weapon_S2_011_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "62134": {
     "internalID": 62134,
@@ -15609,7 +23134,29 @@ let battleEvents = {
     "icon": "BattleEvent_EvoLveBuild_3113201.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62134,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_VS_Weapon_S2_005_Max_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "62135": {
     "internalID": 62135,
@@ -15621,7 +23168,27 @@ let battleEvents = {
     "icon": "BattleEvent_EvoLveBuild_3113301.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62135,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "62136": {
     "internalID": 62136,
@@ -15633,7 +23200,27 @@ let battleEvents = {
     "icon": "BattleEvent_EvoLveBuild_3113799.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 62136,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "63001": {
     "internalID": 63001,
@@ -15644,7 +23231,22 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "BattleEvent_ActivityElationBattle_Open.png",
     "team": "Neutral Team",
-    "isBattleEvent": true
+    "type": "Elation Gift Box",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 63001,
+      "team": "Neutral Team",
+      "eventType": "Elation Gift Box",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "actionDescription": "When \"Surprise Box\" takes action, all Comedians will consecutively activate their \"Surprise Gifts.\"\\nEach Comedian can charge the \"Surprise Box\" in different ways to enhance the effects of \"Surprise Gifts.\""
+    }
   },
   "70001": {
     "internalID": 70001,
@@ -15886,7 +23488,25 @@ let battleEvents = {
     "icon": "HoshinoKami_007.png",
     "team": "Neutral Team",
     "type": "Elation Battle-Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 70001,
+      "team": "Neutral Team",
+      "eventType": "Elation Battle-Event",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 10000
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "90001": {
     "internalID": 90001,
@@ -15898,7 +23518,27 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 90001,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_TargetAttack",
+        "BattleEventAbility_TargetAttackInsert1",
+        "BattleEventAbility_TargetAttackInsert2",
+        "BattleEventAbility_ChallengeTurnLimit"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 18
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "90002": {
     "internalID": 90002,
@@ -15910,7 +23550,26 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 90002,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Poison",
+        "BattleEventAbility_Poison_Insert",
+        "BattleEventAbility_ChallengeTurnLimit"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 18
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "90003": {
     "internalID": 90003,
@@ -15922,7 +23581,26 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 90003,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_ThunderAttack",
+        "BattleEventAbility_ThunderAttack_Insert",
+        "BattleEventAbility_ChallengeTurnLimit"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 18
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "90004": {
     "internalID": 90004,
@@ -15934,7 +23612,26 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 90004,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_ChallengeTurnLimit",
+        "BattleEventAbility_Challenge_03_temp",
+        "BattleEventAbility_Camear_SelectLightTeamEntity"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "90005": {
     "internalID": 90005,
@@ -15946,7 +23643,26 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 90005,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_ChallengeTurnLimit",
+        "BattleEventAbility_Challenge_04_temp",
+        "BattleEventAbility_Camear_SelectDarkTeamEntity"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "90006": {
     "internalID": 90006,
@@ -15958,7 +23674,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 90006,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_ChallengeTurnLimit"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "90007": {
     "internalID": 90007,
@@ -15970,7 +23703,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 90007,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_ChallengeTurnLimit"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "90009": {
     "internalID": 90009,
@@ -15982,7 +23732,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 90009,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_ChallengeTurnLimit"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "95001": {
     "internalID": 95001,
@@ -15994,7 +23761,28 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 95001,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_900100"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 200,
+      "hardLevelEvent": true
+    }
   },
   "95002": {
     "internalID": 95002,
@@ -16006,7 +23794,28 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 95002,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_900101"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 200,
+      "hardLevelEvent": true
+    }
   },
   "95003": {
     "internalID": 95003,
@@ -16018,7 +23827,28 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 95003,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_95003"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 200,
+      "hardLevelEvent": true
+    }
   },
   "95004": {
     "internalID": 95004,
@@ -16030,7 +23860,28 @@ let battleEvents = {
     "icon": "Monster_8003010.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 95004,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_629912"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "95005": {
     "internalID": 95005,
@@ -16042,7 +23893,28 @@ let battleEvents = {
     "icon": "Monster_8003020.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 95005,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_629911"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "96001": {
     "internalID": 96001,
@@ -16053,7 +23925,26 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "1204Shadow.png",
     "team": "Player Team",
-    "isBattleEvent": true
+    "type": "Stage Entry",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96001,
+      "team": "Player Team",
+      "eventType": "Stage Entry",
+      "abilityList": [
+        "BattleEventAbility_Vanish_Revert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;"
+        }
+      ]
+    }
   },
   "96002": {
     "internalID": 96002,
@@ -16065,7 +23956,21 @@ let battleEvents = {
     "icon": "HoshinoKami_001.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96002,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96003": {
     "internalID": 96003,
@@ -16383,7 +24288,23 @@ let battleEvents = {
     "icon": "1006.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96003,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "W_BattleEvent_SilWolf_PassiveAbility02"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96004": {
     "internalID": 96004,
@@ -16701,7 +24622,23 @@ let battleEvents = {
     "icon": "1006.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96004,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "W_BattleEvent_Activity_SummonMonster_PassiveAbility02"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96005": {
     "internalID": 96005,
@@ -16835,7 +24772,21 @@ let battleEvents = {
     "icon": "1006.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96005,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96006": {
     "internalID": 96006,
@@ -16965,7 +24916,21 @@ let battleEvents = {
     "icon": "HoshinoKami_000.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96006,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96007": {
     "internalID": 96007,
@@ -17095,7 +25060,21 @@ let battleEvents = {
     "icon": "HoshinoKami_000.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96007,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96010": {
     "internalID": 96010,
@@ -17225,7 +25204,21 @@ let battleEvents = {
     "icon": "HoshinoKami_000.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96010,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96011": {
     "internalID": 96011,
@@ -17467,7 +25460,21 @@ let battleEvents = {
     "icon": "HoshinoKami_000.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96011,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96012": {
     "internalID": 96012,
@@ -17597,7 +25604,21 @@ let battleEvents = {
     "icon": "HoshinoKami_000.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96012,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96013": {
     "internalID": 96013,
@@ -17839,7 +25860,21 @@ let battleEvents = {
     "icon": "HoshinoKami_000.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96013,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96014": {
     "internalID": 96014,
@@ -17969,7 +26004,21 @@ let battleEvents = {
     "icon": "HoshinoKami_000.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96014,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96015": {
     "internalID": 96015,
@@ -17981,7 +26030,23 @@ let battleEvents = {
     "icon": "1204Shadow.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96015,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "W_TimeLock_ReleaseDamageAbility"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100
+    }
   },
   "96016": {
     "internalID": 96016,
@@ -17993,7 +26058,21 @@ let battleEvents = {
     "icon": "8002.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96016,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96017": {
     "internalID": 96017,
@@ -18005,7 +26084,28 @@ let battleEvents = {
     "icon": "BattleEventSilverWolf.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96017,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEvent_SilverWolf_DamageAbility"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreak</span>&nbsp;",
+          "value": 0.5
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "96018": {
     "internalID": 96018,
@@ -18017,7 +26117,28 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96018,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_RaidTimeCount"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "96019": {
     "internalID": 96019,
@@ -18259,7 +26380,21 @@ let battleEvents = {
     "icon": "HoshinoKami_000.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96019,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96020": {
     "internalID": 96020,
@@ -18501,7 +26636,21 @@ let battleEvents = {
     "icon": "HoshinoKami_000.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96020,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96021": {
     "internalID": 96021,
@@ -18631,7 +26780,21 @@ let battleEvents = {
     "icon": "HoshinoKami_000.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96021,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96022": {
     "internalID": 96022,
@@ -18643,7 +26806,24 @@ let battleEvents = {
     "icon": "8002.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96022,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "W_BattleEvent_Activity_Summon3Monster_PassiveAbility02"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 60,
+      "hardLevelEvent": true
+    }
   },
   "96024": {
     "internalID": 96024,
@@ -18770,7 +26950,22 @@ let battleEvents = {
     },
     "icon": "Treasure_Attack.png",
     "team": "Player Team",
-    "isBattleEvent": true
+    "type": "Item",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96024,
+      "team": "Player Team",
+      "eventType": "Item",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96025": {
     "internalID": 96025,
@@ -18897,7 +27092,22 @@ let battleEvents = {
     },
     "icon": "Treasure_Buff.png",
     "team": "Player Team",
-    "isBattleEvent": true
+    "type": "Item",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96025,
+      "team": "Player Team",
+      "eventType": "Item",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96026": {
     "internalID": 96026,
@@ -19024,7 +27234,22 @@ let battleEvents = {
     },
     "icon": "HoshinoKami_000.png",
     "team": "Player Team",
-    "isBattleEvent": true
+    "type": "Item",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96026,
+      "team": "Player Team",
+      "eventType": "Item",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96027": {
     "internalID": 96027,
@@ -19151,7 +27376,22 @@ let battleEvents = {
     },
     "icon": "HoshinoKami_000.png",
     "team": "Player Team",
-    "isBattleEvent": true
+    "type": "Item",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96027,
+      "team": "Player Team",
+      "eventType": "Item",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96028": {
     "internalID": 96028,
@@ -19278,7 +27518,22 @@ let battleEvents = {
     },
     "icon": "Treasure_Buff.png",
     "team": "Player Team",
-    "isBattleEvent": true
+    "type": "Item",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96028,
+      "team": "Player Team",
+      "eventType": "Item",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96029": {
     "internalID": 96029,
@@ -19292,7 +27547,24 @@ let battleEvents = {
     "icon": "",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96029,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_SummonMonsterInfinite"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "96031": {
     "internalID": 96031,
@@ -19421,7 +27693,22 @@ let battleEvents = {
     },
     "icon": "HoshinoKami_000.png",
     "team": "Player Team",
-    "isBattleEvent": true
+    "type": "Item",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96031,
+      "team": "Player Team",
+      "eventType": "Item",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96032": {
     "internalID": 96032,
@@ -19548,7 +27835,22 @@ let battleEvents = {
     },
     "icon": "Treasure_Buff.png",
     "team": "Player Team",
-    "isBattleEvent": true
+    "type": "Item",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96032,
+      "team": "Player Team",
+      "eventType": "Item",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96033": {
     "internalID": 96033,
@@ -19675,7 +27977,22 @@ let battleEvents = {
     },
     "icon": "Treasure_Debuff.png",
     "team": "Player Team",
-    "isBattleEvent": true
+    "type": "Item",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96033,
+      "team": "Player Team",
+      "eventType": "Item",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96034": {
     "internalID": 96034,
@@ -19804,7 +28121,22 @@ let battleEvents = {
     },
     "icon": "HoshinoKami_000.png",
     "team": "Player Team",
-    "isBattleEvent": true
+    "type": "Item",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96034,
+      "team": "Player Team",
+      "eventType": "Item",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96035": {
     "internalID": 96035,
@@ -19933,7 +28265,22 @@ let battleEvents = {
     },
     "icon": "HoshinoKami_000.png",
     "team": "Player Team",
-    "isBattleEvent": true
+    "type": "Item",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96035,
+      "team": "Player Team",
+      "eventType": "Item",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96036": {
     "internalID": 96036,
@@ -19945,7 +28292,26 @@ let battleEvents = {
     "icon": "Monster_Flag.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96036,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "FantasticStory_Big_Ability_0006_Insert",
+        "FantasticStory_Big_Ability_0006_Insert_BattleEvent",
+        "BattleEventAbility_SummonMonsterInfinite_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "96038": {
     "internalID": 96038,
@@ -20015,7 +28381,23 @@ let battleEvents = {
     "icon": "HoshinoKami_005.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96038,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "96039": {
     "internalID": 96039,
@@ -20027,7 +28409,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96039,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_SummonTest"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "96061": {
     "internalID": 96061,
@@ -20038,7 +28437,23 @@ let battleEvents = {
     "baseTriggersObject": {},
     "icon": "",
     "team": "Neutral Team",
-    "isBattleEvent": true
+    "type": "Item",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96061,
+      "team": "Neutral Team",
+      "eventType": "Item",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 1000,
+      "hardLevelEvent": true
+    }
   },
   "96071": {
     "internalID": 96071,
@@ -20050,7 +28465,23 @@ let battleEvents = {
     "icon": "Monster_3004010.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96071,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "Monster_W3_DollElite_Standard_BattleEvent"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96082": {
     "internalID": 96082,
@@ -20064,7 +28495,24 @@ let battleEvents = {
     "icon": "",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96082,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_SummonMonsterInfinite"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "96083": {
     "internalID": 96083,
@@ -20076,7 +28524,46 @@ let battleEvents = {
     "icon": "1112_BE.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96083,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFirePEN</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateSUM</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageFire</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;"
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "96085": {
     "internalID": 96085,
@@ -20088,7 +28575,21 @@ let battleEvents = {
     "icon": "BattleEvent_FeverTimeLastPhase.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96085,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96107": {
     "internalID": 96107,
@@ -20100,7 +28601,22 @@ let battleEvents = {
     "icon": "Treasure_Buff.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96107,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 50,
+      "hardLevelEvent": true
+    }
   },
   "96113": {
     "internalID": 96113,
@@ -20112,7 +28628,22 @@ let battleEvents = {
     "icon": "Treasure_Attack.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96113,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "96114": {
     "internalID": 96114,
@@ -20124,7 +28655,23 @@ let battleEvents = {
     "icon": "Monster_3004010.png",
     "team": "Enemy Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96114,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "Monster_W3_FigureBoss_BattleEvent"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96121": {
     "internalID": 96121,
@@ -20248,7 +28795,25 @@ let battleEvents = {
     "icon": "HoshinoKami_001.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96121,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_620101_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "96122": {
     "internalID": 96122,
@@ -20260,7 +28825,23 @@ let battleEvents = {
     "icon": "BattleEvent_EvoLveBuild_3106002.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96122,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_VS_Weapon_002_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96123": {
     "internalID": 96123,
@@ -20384,7 +28965,25 @@ let battleEvents = {
     "icon": "HoshinoKami_001.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96123,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_620101_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "96124": {
     "internalID": 96124,
@@ -20396,7 +28995,23 @@ let battleEvents = {
     "icon": "BattleEvent_EvoLveBuild_3106002.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96124,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageAbility_VS_Weapon_002_Insert"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96135": {
     "internalID": 96135,
@@ -20408,7 +29023,23 @@ let battleEvents = {
     "icon": "BattleEvent_TrashCan.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96135,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "StageSpecialAbility_ActivitySummon_BattEventAbility_Lv4LifeCount"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96140": {
     "internalID": 96140,
@@ -20420,7 +29051,24 @@ let battleEvents = {
     "icon": "ChallengeStory_Fever.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96140,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEvent_FantasticStory_BaseAbility_2010"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true,
+      "barType": 3
+    }
   },
   "96144": {
     "internalID": 96144,
@@ -20432,7 +29080,21 @@ let battleEvents = {
     "icon": "BattleEvent_FightFest.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96144,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96152": {
     "internalID": 96152,
@@ -20556,7 +29218,23 @@ let battleEvents = {
     "icon": "HoshinoKami_001.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96152,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "96153": {
     "internalID": 96153,
@@ -20680,7 +29358,23 @@ let battleEvents = {
     "icon": "BE_StarChallenge.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96153,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "96156": {
     "internalID": 96156,
@@ -20692,7 +29386,51 @@ let battleEvents = {
     "icon": "BE_StarChallenge.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96156,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "Activity_StarFightActivity_03_BEAbility"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFirePEN</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateSUM</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageFire</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CharacterLevel</span>&nbsp;",
+          "value": 1
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96157": {
     "internalID": 96157,
@@ -20704,7 +29442,24 @@ let battleEvents = {
     "icon": "ChallengeStory_Fever.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96157,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEvent_FantasticStory_BaseAbility_2060"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true,
+      "barType": 3
+    }
   },
   "96159": {
     "internalID": 96159,
@@ -20716,7 +29471,23 @@ let battleEvents = {
     "icon": "Treasure_Buff.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96159,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "Activity_StarFightActivity_04_BEAbility"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96160": {
     "internalID": 96160,
@@ -20728,7 +29499,52 @@ let battleEvents = {
     "icon": "BE_StarChallenge.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96160,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "Activity_StarFightActivity_05_BEAbility"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ResistanceFirePEN</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRateSUM</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageFire</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;"
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">CharacterLevel</span>&nbsp;",
+          "value": 1
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "96161": {
     "internalID": 96161,
@@ -20740,7 +29556,23 @@ let battleEvents = {
     "icon": "Treasure_Debuff.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96161,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "Activity_StarFightActivity_05_CountDown_BEAbility"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "96171": {
     "internalID": 96171,
@@ -20754,7 +29586,24 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96171,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "LocalLegend_ChallengeTurnLimit"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "96217": {
     "internalID": 96217,
@@ -20766,7 +29615,25 @@ let battleEvents = {
     "icon": "BattleEvent_1507.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 96217,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_MortenaxBlade_00"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true,
+      "barType": 1,
+      "actionDescription": "Mortenax Blade enters the \"Infinite Fury\" state, unlocking his Skill, gaining an Enhanced Basic ATK and the new Ultimate \"Tenax Per Ignem,\" and simultaneously increasing this unit's CRIT Rate and CRIT DMG until the start of \"Infinite Fury's\" countdown turn."
+    }
   },
   "98001": {
     "internalID": 98001,
@@ -20778,7 +29645,28 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 98001,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_RogueChallengeTurnLimit_SpecialDrop"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "98002": {
     "internalID": 98002,
@@ -20790,7 +29678,28 @@ let battleEvents = {
     "icon": "999.png",
     "team": "Neutral Team",
     "type": "Challenge Event",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 98002,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_RogueChallengeTurnLimit"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "100000": {
     "internalID": 100000,
@@ -20802,7 +29711,25 @@ let battleEvents = {
     "icon": "HoshinoKami_001.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 100000,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_620101_Camera"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "100001": {
     "internalID": 100001,
@@ -20926,7 +29853,23 @@ let battleEvents = {
     "icon": "FateHojuGaeBolg.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 100001,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "100002": {
     "internalID": 100002,
@@ -20938,7 +29881,21 @@ let battleEvents = {
     "icon": "FateHojuKanshou.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 100002,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "100003": {
     "internalID": 100003,
@@ -20950,7 +29907,22 @@ let battleEvents = {
     "icon": "FateHojuCaladbolg.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 100003,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 130,
+      "hardLevelEvent": true
+    }
   },
   "100004": {
     "internalID": 100004,
@@ -20962,7 +29934,22 @@ let battleEvents = {
     "icon": "FateHojuAvalon.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 100004,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "eventSpeed": 130,
+      "hardLevelEvent": true
+    }
   },
   "100005": {
     "internalID": 100005,
@@ -20974,7 +29961,22 @@ let battleEvents = {
     "icon": "FateHojuBloodfield.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 100005,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "100006": {
     "internalID": 100006,
@@ -20986,7 +29988,22 @@ let battleEvents = {
     "icon": "FateHojuBloodfield.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 100006,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "100007": {
     "internalID": 100007,
@@ -20998,7 +30015,22 @@ let battleEvents = {
     "icon": "FateHojuGaeBolg.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 100007,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "100008": {
     "internalID": 100008,
@@ -21010,7 +30042,21 @@ let battleEvents = {
     "icon": "FateHojuCaladbolg.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 100008,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "100009": {
     "internalID": 100009,
@@ -21022,7 +30068,22 @@ let battleEvents = {
     "icon": "FateHojuHolyGaril.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 100009,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "100010": {
     "internalID": 100010,
@@ -21034,7 +30095,22 @@ let battleEvents = {
     "icon": "1014.png",
     "team": "Neutral Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 100010,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "113101": {
     "internalID": 113101,
@@ -21046,7 +30122,25 @@ let battleEvents = {
     "icon": "BattleEvent_1312_02_A.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 113101,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "Advanced_Sam_PassiveAbility01_BattleEvent"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true,
+      "barType": 1,
+      "actionDescription": "While SAM is in the Complete Combustion state, gains Enhanced Basic ATK and Enhanced Skill. Increases this unit's SPD, Weakness Break Efficiency, and the Break DMG taken by enemy targets, lasting until the Complete Combustion countdown turn begins."
+    }
   },
   "200000": {
     "internalID": 200000,
@@ -21058,7 +30152,26 @@ let battleEvents = {
     "icon": "BattleEvent_1309_A.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 200000,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 600
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 40
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
   },
   "200001": {
     "internalID": 200001,
@@ -21070,7 +30183,29 @@ let battleEvents = {
     "icon": "1509.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 200001,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 120
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 400
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "200002": {
     "internalID": 200002,
@@ -21082,7 +30217,29 @@ let battleEvents = {
     "icon": "1015.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 200002,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 120
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 40
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "200003": {
     "internalID": 200003,
@@ -21094,7 +30251,29 @@ let battleEvents = {
     "icon": "1014.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 200003,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 120
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 400
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "200004": {
     "internalID": 200004,
@@ -21106,7 +30285,29 @@ let battleEvents = {
     "icon": "1408.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 200004,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 120
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 40
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "200005": {
     "internalID": 200005,
@@ -21118,7 +30319,29 @@ let battleEvents = {
     "icon": "8001.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 200005,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 120
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 40
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "200006": {
     "internalID": 200006,
@@ -21130,7 +30353,29 @@ let battleEvents = {
     "icon": "8002.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 200006,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 120
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 40
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "200007": {
     "internalID": 200007,
@@ -21142,7 +30387,29 @@ let battleEvents = {
     "icon": "1014.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 200007,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+          "value": 120
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 40
+        }
+      ],
+      "hardLevelEvent": true
+    }
   },
   "210000": {
     "internalID": 210000,
@@ -21170,7 +30437,13 @@ let battleEvents = {
             },
             "skillEffect": "AoEAttack",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Activity_Fate_LancerBE_Base_Skill_EnterReady",
+              "Activity_FateRin_Aias_Phase01",
+              "Activity_FateRin_Aias_Phase02",
+              "Activity_FateRin_Aias_Camera",
+              "Activity_FateRin_Aias_Effect"
+            ],
             "toughnessList": [
               0,
               0,
@@ -21200,7 +30473,9 @@ let battleEvents = {
             },
             "skillEffect": "Passive",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Activity_Fate_LancerBE_Base_Passive"
+            ],
             "toughnessList": [
               0,
               0,
@@ -21228,7 +30503,13 @@ let battleEvents = {
         "params": {},
         "skillEffect": "AoEAttack",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Activity_Fate_LancerBE_Base_Skill_EnterReady",
+          "Activity_FateRin_Aias_Phase01",
+          "Activity_FateRin_Aias_Phase02",
+          "Activity_FateRin_Aias_Camera",
+          "Activity_FateRin_Aias_Effect"
+        ],
         "toughnessList": [
           0,
           0,
@@ -21254,7 +30535,9 @@ let battleEvents = {
         },
         "skillEffect": "Passive",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Activity_Fate_LancerBE_Base_Passive"
+        ],
         "toughnessList": [
           0,
           0,
@@ -21266,7 +30549,22 @@ let battleEvents = {
     "icon": "IconFateHojuRhoAias.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 210000,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   },
   "210001": {
     "internalID": 210001,
@@ -21324,7 +30622,13 @@ let battleEvents = {
             },
             "skillEffect": "Passive",
             "maxLevel": 1,
-            "configAbilityList": null,
+            "configAbilityList": [
+              "Activity_Fate_LancerBE_Base_Skill_EnterReady",
+              "Activity_FateRin_RuleBreaker_Phase01",
+              "Activity_FateRin_RuleBreaker_Phase02",
+              "Activity_FateRin_RuleBreaker_Camera",
+              "Activity_FateRin_RuleBreaker_Effect"
+            ],
             "toughnessList": [
               0,
               0,
@@ -21378,7 +30682,13 @@ let battleEvents = {
         },
         "skillEffect": "Passive",
         "maxLevel": 1,
-        "configAbilityList": null,
+        "configAbilityList": [
+          "Activity_Fate_LancerBE_Base_Skill_EnterReady",
+          "Activity_FateRin_RuleBreaker_Phase01",
+          "Activity_FateRin_RuleBreaker_Phase02",
+          "Activity_FateRin_RuleBreaker_Camera",
+          "Activity_FateRin_RuleBreaker_Effect"
+        ],
         "toughnessList": [
           0,
           0,
@@ -21390,6 +30700,21 @@ let battleEvents = {
     "icon": "IconFateHojuRuleBreaker.png",
     "team": "Player Team",
     "type": "Assist",
-    "isBattleEvent": true
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 210001,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
   }
 }
