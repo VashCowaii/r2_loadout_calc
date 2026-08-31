@@ -941,7 +941,7 @@ const compositeAbilityObject = {
     "name": "Battle Event Construction",
     "ID": 61018,
     "team": "Neutral Team",
-    "eventType": "SU Countdown Event",
+    "eventType": "DU Countdown Event",
     "abilityList": [
       "BattleEventAbility_SummonMonsterInfinite"
     ],
