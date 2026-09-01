@@ -107,13 +107,13 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "variableName": "Flag_21048_SPAddCount",
                   "value": {
-                    "operator": "Variables[0] ([object Object]) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "([object Object] + 1)",
+                    "operator": "Variables[0] (Flag_21048_SPAddCount) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(Flag_21048_SPAddCount + 1)",
                     "constants": [
                       1
                     ],
                     "variables": [
-                      {}
+                      "Flag_21048_SPAddCount"
                     ]
                   }
                 }

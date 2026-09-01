@@ -135,6 +135,16 @@
     background-repeat: no-repeat;
 }
 
+.reworkBEImage {
+    /* background: url('/HonkaiSR/misc/BtnFarmMultipleDrop.png'), center / cover; */
+
+    background-image: url("/HonkaiSR/BEicons/HoshinoKami_007.png");
+    background-size: contain;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .reworkEndgameImage {
     /* background: url('/HonkaiSR/misc/BtnFarmMultipleDrop.png'), center / cover; */
 

@@ -257,5 +257,23 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 30105,
+    "team": "Neutral Team",
+    "eventType": "Challenge Event",
+    "abilityList": [
+      "BattleEventAbility_Challenge_Month_05"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      }
+    ],
+    "eventSpeed": 100,
+    "hardLevelEvent": true,
+    "actionDescription": "At the beginning of each Cycle, applies <unbreak>#1[i]</unbreak> stack(s) of \"Memory Imprint\" to all allies until the beginning of the next Cycle. After allies who are under \"Memory Imprint\" launch an attack, deals Additional DMG equal to <unbreak>#2[i]%</unbreak> of their ATK to a random attacked enemy, and consumes 1 stack of \"Memory Imprint.\""
+  }
 }

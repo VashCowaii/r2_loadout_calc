@@ -672,5 +672,26 @@ const compositeAbilityObject = {
       "hitSplits": []
     }
   },
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 60004,
+    "team": "Player Team",
+    "eventType": "Assist",
+    "abilityList": [
+      "Colossus_PassiveAbility02_Weekly"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+        "value": 100
+      },
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+        "value": 180
+      }
+    ],
+    "hardLevelEvent": true,
+    "actionDescription": "Deals massive Fire DMG to all enemies."
+  }
 }

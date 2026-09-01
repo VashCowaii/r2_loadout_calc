@@ -3799,5 +3799,31 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 30116,
+    "team": "Neutral Team",
+    "eventType": "Challenge Event",
+    "abilityList": [
+      "BattleEventAbility_Challenge_Month_16"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      },
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateSUM</span>&nbsp;",
+        "value": 1
+      },
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageSUM</span>&nbsp;",
+        "value": 1
+      }
+    ],
+    "eventSpeed": 100,
+    "hardLevelEvent": true,
+    "actionDescription": "When the same ally acts consecutively, they receive 1 stack of \"Memory Imprint.\" After allies with \"Memory Imprint\" attacks, every \"Memory Imprint\" stack has a <unbreak>#1[i]%</unbreak> fixed chance to inflict the target with \"Dissociation\" that lasts for 1 turn. Allies with \"Memory Imprint\" deal <unbreak>#3[i]%</unbreak> more DMG. This effect cannot be stacked. When a different ally acts, remove all \"Memory Imprint\" stacks on the field.\\n\"Dissociation\": This state is considered as being Frozen. Affected units cannot take action. When this state is removed, the affected target receives Ice Additional DMG equal to <unbreak>#2[i]%</unbreak> of their respective Max HP."
+  }
 }

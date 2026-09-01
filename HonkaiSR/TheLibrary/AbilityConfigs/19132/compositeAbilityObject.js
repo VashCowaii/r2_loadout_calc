@@ -6,5 +6,14 @@ const compositeAbilityObject = {
   "abilityObject": {},
   "enemyData": {},
   "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 19132,
+    "team": "Player Team",
+    "eventType": "Assist",
+    "abilityList": null,
+    "overridesArray": [],
+    "hardLevelEvent": true
+  },
   "noReader": true
 }

@@ -655,13 +655,13 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable",
                   "variableName": "_CommonTalkType",
                   "value": {
-                    "operator": "Variables[0] (_MissionTalkType) || Constants[0] (1) || ADD || RETURN",
-                    "displayLines": "(_MissionTalkType + 1)",
+                    "operator": "Variables[0] (_CommonTalkType) || Constants[0] (1) || ADD || RETURN",
+                    "displayLines": "(_CommonTalkType + 1)",
                     "constants": [
                       1
                     ],
                     "variables": [
-                      "_MissionTalkType"
+                      "_CommonTalkType"
                     ]
                   }
                 }
@@ -1509,5 +1509,24 @@ const compositeAbilityObject = {
       "hitSplits": []
     }
   },
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 60031,
+    "team": "Player Team",
+    "eventType": "Assist",
+    "abilityList": null,
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      },
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+        "value": 8
+      }
+    ],
+    "hardLevelEvent": true,
+    "actionDescription": "Deals massive True DMG to all enemies and greatly reduces \"Amphorean Hatred\"!"
+  }
 }

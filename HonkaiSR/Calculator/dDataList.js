@@ -126,12 +126,14 @@ const dataListerObject = {
         "Long May Rainbows Adorn the Sky": "Hyacine",
         "To Evernight's Stars": "Evernight",
         "This Love, Forever": "Cyrene",
+        "Rise and Sing": "Robin • Summeretto",
 
         //ELATION
         "Dazzled by a Flowery World": "Sparxie",
         "When She Decided to See": "Yao Guang",
         "Until the Flowers Bloom Again": "Evanescia",
         "Welcome to the Cosmic City": "Silver Wolf LV.999",
+        "Summer Rides the Surf": "Aventurine • Waveflair",
         
     },
     starlightLCList: new Set ([
@@ -179,5 +181,6 @@ const dataListerObject = {
         "The Forever Victual",
         "Tomorrow, Together",
         "Fly Into a Pink Tomorrow",
+        "Race to the Horizon",
     ]),
 }

@@ -3100,5 +3100,18 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 11408,
+    "team": "Player Team",
+    "eventType": "Assist",
+    "abilityList": [
+      "Phainon_Ability03_BattleEvent",
+      "BattleEventAbility_620601_Camera"
+    ],
+    "overridesArray": [],
+    "hardLevelEvent": true,
+    "barType": 1
+  }
 }

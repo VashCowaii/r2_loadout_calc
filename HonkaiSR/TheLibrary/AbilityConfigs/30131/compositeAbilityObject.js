@@ -4059,5 +4059,23 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 30131,
+    "team": "Neutral Team",
+    "eventType": "Endgame Countdown",
+    "abilityList": [
+      "BattleEventAbility_Challenge_Month_31"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      }
+    ],
+    "eventSpeed": 100,
+    "hardLevelEvent": true,
+    "actionDescription": "Enemies have Exo-Toughness and their actions are delayed by <unbreak>#2[i]%</unbreak> when they are Weakness Broken. At the same time, add <unbreak>#1[i]</unbreak> hit(s) to \"Memory Turbulence\"'s Hits Per Action. If the target is an Elite enemy or rarer, then additionally add <unbreak>#8[i]</unbreak> hit(s). A max of <unbreak>#5[i]</unbreak> hit(s) can be added in total.\\nAt the start of every Cycle, every hit by \"Memory Turbulence\" deals 1 instance of a set amount of DMG to random enemy targets."
+  }
 }

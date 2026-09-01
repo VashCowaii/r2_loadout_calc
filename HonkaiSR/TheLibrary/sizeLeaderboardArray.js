@@ -2119,7 +2119,7 @@ let sizeLeaderboardArray = [
     "trimCharacterName": "YaoGuang",
     "entryIcon": "icon/character/1502.png",
     "lineCount": 3073,
-    "sizeCount": 108175
+    "sizeCount": 108157
   },
   {
     "entryType": "char",
@@ -5543,19 +5543,19 @@ let sizeLeaderboardArray = [
   },
   {
     "entryType": "lc",
+    "entryName": "Dream's Montage",
+    "trimCharacterName": "DreamsMontage",
+    "entryIcon": "icon/light_cone/21048.png",
+    "lineCount": 183,
+    "sizeCount": 5341
+  },
+  {
+    "entryType": "lc",
     "entryName": "In the Name of the World",
     "trimCharacterName": "IntheNameoftheWorld",
     "entryIcon": "icon/light_cone/23004.png",
     "lineCount": 173,
     "sizeCount": 5316
-  },
-  {
-    "entryType": "lc",
-    "entryName": "Dream's Montage",
-    "trimCharacterName": "DreamsMontage",
-    "entryIcon": "icon/light_cone/21048.png",
-    "lineCount": 183,
-    "sizeCount": 5308
   },
   {
     "entryType": "relic",

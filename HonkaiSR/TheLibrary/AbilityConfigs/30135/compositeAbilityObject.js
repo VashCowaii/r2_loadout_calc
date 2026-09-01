@@ -4261,5 +4261,23 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 30135,
+    "team": "Neutral Team",
+    "eventType": "Endgame Countdown",
+    "abilityList": [
+      "BattleEventAbility_Challenge_Month_35"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      }
+    ],
+    "eventSpeed": 100,
+    "hardLevelEvent": true,
+    "actionDescription": "Increases all allies' Max HP by <unbreak>#7[i]%</unbreak>. Every time an ally is attacked, restores HP equal to <unbreak>#1[i]%</unbreak> of their Max HP and adds <unbreak>#2[i]</unbreak> hit(s) to the Hits Per Action of \"Memory Turbulence.\" Every time an ally consumes HP, restores HP equal to <unbreak>#8[i]%</unbreak> of their Max HP and adds <unbreak>#9[i]</unbreak> hit(s) to the Hits Per Action of \"Memory Turbulence.\" This effect can only trigger once per attack and up to <unbreak>#3[i]</unbreak> hit(s) can be added this way.\\nAt the beginning of each Cycle, each hit from \"Memory Turbulence\" deals 1 instance of True DMG to a random enemy target."
+  }
 }

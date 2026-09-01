@@ -5947,5 +5947,30 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 20045,
+    "team": "Enemy Team",
+    "eventType": "Assist",
+    "abilityList": [
+      "BattleEventAbility_Monster_W5_AsatPramad_Summon"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      },
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+        "value": 100
+      },
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+        "value": 115
+      }
+    ],
+    "hardLevelEvent": true,
+    "actionDescription": "Upon every action, summons \"Comediologist.\""
+  }
 }

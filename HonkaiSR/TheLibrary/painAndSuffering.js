@@ -4656,7 +4656,7 @@ const megaParsingFuckeryPain = {
         </div>
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.show,"Show")}
-            ${getStandardNameDisplay(initialCounter,parseRef.targetCustom,"Custom Target")}
+            ${getStandardNameDisplay(initialCounter,parseRef.targetCustom,"Custom Target",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.showKey,"Display Key")}
             ${getStandardNameDisplay(initialCounter,parseRef.forceDisplayUltButton,"Force Display Ult-Button")}
             

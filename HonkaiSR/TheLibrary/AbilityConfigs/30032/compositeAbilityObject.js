@@ -545,5 +545,23 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 30032,
+    "team": "Neutral Team",
+    "eventType": "Challenge Event",
+    "abilityList": [
+      "BattleEventAbility_Challenge_Xianzhou_02"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      }
+    ],
+    "eventSpeed": 100,
+    "hardLevelEvent": true,
+    "actionDescription": "Increases <color=#f29e38ff>DoT</color> taken by enemies by <unbreak>#1[i]%</unbreak>.\\nAt the start of every Cycle, there is a high chance of inflicting <color=#f29e38ff>Bleed</color>, <color=#f29e38ff>Shock</color>, <color=#f29e38ff>Burn</color>, and <color=#f29e38ff>Wind Shear</color> on all enemies. Status inflicted in this way will last for <unbreak>#3[i]</unbreak> turn(s)."
+  }
 }

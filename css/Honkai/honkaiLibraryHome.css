@@ -45,6 +45,22 @@
     box-sizing: border-box;
     mask-image: linear-gradient(to right, black 60%, transparent 100%);
 }
+.customMenuResultImgRoundedEnemyBE {
+    z-index: 1;
+    /* width: 80px; */
+    height: 100px;
+    scale: 1.2;
+
+    margin-right: 10px;
+    margin-left: 10px;
+    /* transform: translateY(20px); */
+
+    /* border: 2px solid white; */
+    /* border-radius: 50%; */
+    /* background-color: black; */
+    box-sizing: border-box;
+    mask-image: linear-gradient(to right, black 60%, transparent 100%);
+}
 .customMenuResultImgRoundedEnemyCodeIcon {
     z-index: 1;
     /* width: 80px; */

@@ -4274,5 +4274,23 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 30141,
+    "team": "Neutral Team",
+    "eventType": "Endgame Countdown",
+    "abilityList": [
+      "BattleEventAbility_Challenge_Month_41"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      }
+    ],
+    "eventSpeed": 100,
+    "hardLevelEvent": true,
+    "actionDescription": "When an ally target attacks an Elite or Boss enemy with a corresponding Type weakness, add <unbreak>#1[i]</unbreak> Hits Per Action to \"Memory Turbulence.\" Breaking an Elite or Boss enemy's weakness adds an additional <unbreak>#2[i]</unbreak> Hits Per Action, stacking up to <unbreak>#3[i]</unbreak> hits.\\nAt the start of each Cycle, each hit of \"Memory Turbulence\" deals 1 instance of True DMG to a random enemy target."
+  }
 }

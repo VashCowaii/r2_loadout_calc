@@ -111,7 +111,7 @@
               <div class="reworkDotCircle"></div>
               <div class="reworkCircleInner"></div>
               
-              <div class="mainSelectionHeaderRework reworkCharImage" onclick="customMenu.createCharacterSearchMenu();">
+              <div class="mainSelectionHeaderRework reworkCharImage clickable" onclick="customMenu.createCharacterSearchMenu();">
                 
                 <div class="mainSelectionHeaderReworkText">Characters</div>
               </div>
@@ -141,6 +141,15 @@
               <a class="mainSelectionHeaderRework reworkEnemyImage clickable" onclick="customMenu.createEnemySearchMenu();">
                 
                 <div class="mainSelectionHeaderReworkText">Enemies</div>
+              </a>
+            </div>
+
+            <div class="mainSelectionHeaderReworkHolder">
+              <div class="reworkDotCircle"></div>
+              <div class="reworkCircleInner"></div>
+              <a class="mainSelectionHeaderRework reworkBEImage clickable" onclick="customMenu.createBESearchMenu();">
+                
+                <div class="mainSelectionHeaderReworkText">Battle Events</div>
               </a>
             </div>
 
@@ -276,6 +285,7 @@
 <script src="/htmlTemplates/injectHSRHTML.js"></script> <!-- TFD Header -->
 <script src="/htmlTemplates/adjustMobileNav.js"></script>
 
+<script src="dBattleEvents.js"></script>
 <script src="dCharacters.js"></script>
 <!-- <script src="/HonkaiSR/Calculator/dCharacters.js"></script> -->
 

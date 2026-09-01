@@ -3938,5 +3938,23 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 30123,
+    "team": "Neutral Team",
+    "eventType": "Challenge Event",
+    "abilityList": [
+      "BattleEventAbility_Challenge_Month_23"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      }
+    ],
+    "eventSpeed": 100,
+    "hardLevelEvent": true,
+    "actionDescription": "At the start of every wave or Cycle, randomly applies one of the following debuffs to all enemies <unbreak>#1[i]</unbreak> time(s): Reduce ATK by <unbreak>#2[i]%</unbreak>, reduce DEF by <unbreak>#2[i]%</unbreak>, reduce SPD by <unbreak>#2[i]%</unbreak>, reduce Effect RES by <unbreak>#2[i]%</unbreak>, or increase the Follow-Up ATK DMG taken by <unbreak>#5[i]%</unbreak>. Each debuff can stack up to <unbreak>#3[i]</unbreak> time(s) and lasts for <unbreak>#4[i]</unbreak> turn(s). At the same time, enables 1 ally target following either the Path of The Hunt or Destruction to immediately take action."
+  }
 }

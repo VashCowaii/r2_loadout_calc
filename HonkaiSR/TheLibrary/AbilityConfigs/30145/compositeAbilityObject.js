@@ -3920,5 +3920,23 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 30145,
+    "team": "Neutral Team",
+    "eventType": "Endgame Countdown",
+    "abilityList": [
+      "BattleEventAbility_Challenge_Month_45"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      }
+    ],
+    "eventSpeed": 100,
+    "hardLevelEvent": true,
+    "actionDescription": "Increases CRIT DMG dealt by ally targets when they use their Ultimate by <unbreak>#1[i]%</unbreak>. After using an Ultimate, adds <unbreak>#2[i]</unbreak> hit(s) to \"Memory Turbulence,\" stacking up to <unbreak>#6[i]</unbreak> hit(s).\\nAt the start of each Cycle, each hit of \"Memory Turbulence\" deals True DMG 1 time to a random enemy target."
+  }
 }

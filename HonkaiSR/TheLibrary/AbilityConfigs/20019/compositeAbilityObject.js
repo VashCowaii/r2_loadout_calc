@@ -2611,5 +2611,21 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 20019,
+    "team": "Enemy Team",
+    "eventType": "Assist",
+    "abilityList": [
+      "Monster_W3_FigureBoss_BattleEvent"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+        "value": 100
+      }
+    ],
+    "hardLevelEvent": true
+  }
 }

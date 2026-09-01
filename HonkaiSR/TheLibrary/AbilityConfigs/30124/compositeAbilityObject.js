@@ -3847,5 +3847,23 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 30124,
+    "team": "Neutral Team",
+    "eventType": "Endgame Countdown",
+    "abilityList": [
+      "BattleEventAbility_Challenge_Month_24"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      }
+    ],
+    "eventSpeed": 100,
+    "hardLevelEvent": true,
+    "actionDescription": "All allies' Basic ATK and Skill deal <unbreak>#1[i]%</unbreak> more DMG. Whenever a Skill Point is consumed, \"Memory Turbulence\" gains <unbreak>#3[i]</unbreak> Hits Per Action, up to a maximum of <unbreak>#4[i]</unbreak>.\\nAt the beginning of each Cycle, each Hit Per Action deals 1 instance of DMG to a random enemy based on the target's Max HP."
+  }
 }

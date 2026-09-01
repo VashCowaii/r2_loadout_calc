@@ -4417,5 +4417,23 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 30130,
+    "team": "Neutral Team",
+    "eventType": "Challenge Event",
+    "abilityList": [
+      "BattleEventAbility_Challenge_Month_30"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      }
+    ],
+    "eventSpeed": 100,
+    "hardLevelEvent": true,
+    "actionDescription": "After every attack launched by an ally, applies 1 stack of \"Memory Imprint\" to all allies. Allies in the \"Memory Imprint\" state deal <unbreak>#2[i]%</unbreak> more DMG. This effect stacks up to <unbreak>#1[i]</unbreak> time(s). When \"Memory Imprint\" reaches max stacks, immediately deals 1 instance of DMG to all enemies based on a certain percentage of their respective Max HP.\\nRemove all \"Memory Imprints\" from all allies at the start of every wave or Cycle."
+  }
 }

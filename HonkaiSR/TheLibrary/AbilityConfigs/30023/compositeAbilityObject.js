@@ -270,5 +270,23 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 30023,
+    "team": "Neutral Team",
+    "eventType": "Challenge Event",
+    "abilityList": [
+      "BattleEventAbility_Challenge_New_06"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      }
+    ],
+    "eventSpeed": 100,
+    "hardLevelEvent": true,
+    "actionDescription": "At the beginning of each Cycle, increases CRIT Rate by <unbreak>#2[i]%</unbreak> and CRIT DMG by <unbreak>#3[i]%</unbreak> for allies with HP percentage higher than <unbreak>#1[i]%</unbreak> of their Max HP for <unbreak>#4[i]</unbreak> turn(s)."
+  }
 }

@@ -3818,5 +3818,23 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 30144,
+    "team": "Neutral Team",
+    "eventType": "Endgame Countdown",
+    "abilityList": [
+      "BattleEventAbility_Challenge_Month_44"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      }
+    ],
+    "eventSpeed": 100,
+    "hardLevelEvent": true,
+    "actionDescription": "After an ally target uses an attack, they gain <unbreak>#1[i]</unbreak> Punchline point(s) and adds a corresponding amount of Charge to \"Memory Turbulence,\" stacking up to <unbreak>#2[i]</unbreak> points.\\nAt the start of every Cycle, \"Memory Turbulence\" deals 1 instance of True DMG to all enemies based on the amount of Charge points."
+  }
 }

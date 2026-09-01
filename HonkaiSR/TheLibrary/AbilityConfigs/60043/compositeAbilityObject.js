@@ -4849,5 +4849,30 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 60043,
+    "team": "Neutral Team",
+    "eventType": "Assist",
+    "abilityList": [
+      "BattleEventAbility_TVBroadcast_Positive"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      },
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+        "value": 100
+      },
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+        "value": 144
+      }
+    ],
+    "hardLevelEvent": true,
+    "actionDescription": "When taking action, grants allies Punchline, while increasing all allies' CRIT DMG and advancing their actions."
+  }
 }

@@ -3879,5 +3879,23 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 30136,
+    "team": "Neutral Team",
+    "eventType": "Challenge Event",
+    "abilityList": [
+      "BattleEventAbility_Challenge_Month_36"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      }
+    ],
+    "eventSpeed": 100,
+    "hardLevelEvent": true,
+    "actionDescription": "All allies' Skill Lv. +<unbreak>#1[i]</unbreak> and Memosprite Skill Lv. +<unbreak>#2[i]</unbreak>. After any character uses their Skill or Memosprite Skill, 1 random attacked target gains 1 random Weakness they did not already possess.\\nAt the beginning of each Cycle, \"Memory Turbulence\" deals 1 instance of True DMG to all enemy targets. If a target has more than 3 Weaknesses, deals 1 additional instance of True DMG for each additional Weakness."
+  }
 }

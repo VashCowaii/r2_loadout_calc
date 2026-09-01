@@ -365,7 +365,7 @@
     background-color: #c0c1d60D;
 }
 
-.imageRowStatisticImage,.imageRowStatisticImageMain,.imageRowStatisticImageStatMenu {
+.imageRowStatisticImage,.imageRowStatisticImageMain,.imageRowStatisticImageStatMenu,.imageRowStatisticImageCORRUPT {
     /* width: 100%; */
     width: 20px;
     min-width: 20px;
@@ -373,6 +373,30 @@
     min-height: 20px;
     object-fit: contain;
     scale: 1.2;
+}
+
+.imageRowStatisticImageBoxCORRUPT {
+    /* width: 10%;
+    max-width: 20px; */
+    /* position: absolute;
+    top: 2%;
+    right: 2%; */
+    width:  40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid green; */
+}
+.imageRowStatisticImageCORRUPT {
+    /* width:  70px;
+    height: 70px; */
+    width: fit-content;
+    height: fit-content;
+    scale: .95;
+    /* width: 50px;
+    height: 50px; */
+    /* border: 1px solid red; */
 }
 
 
@@ -419,7 +443,39 @@
     /* margin: 2px; */
     /* max-width: 400px; */
     box-sizing: border-box;
+    position: relative;
 }
+
+.actionDetailBodyDetailExpandHeaderBackground {
+    width: 100%;
+    box-sizing: border-box;
+    white-space: normal;
+    /* border: 1px solid red; */
+    /* background-color: #ffffff1A; */
+    padding-left: 3px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.rotationsPermaConditionsExpandCORRUPT {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    box-sizing: border-box;
+    /* padding: 5px; */
+    white-space: normal;
+    flex-direction: column;
+    /* border: 1px solid green; */
+    /* background: linear-gradient(200deg, transparent,transparent, #0d393b3d); */
+    /* border-bottom: 2px solid #ffffff1A;
+    border-top: 2px solid #ffffff1A; */
+
+}
+
+
+
 .eidolonRowNameTriggerBEAbility {
     font-size: 20px;
     width: 100%;
@@ -610,6 +666,11 @@
     box-sizing: border-box;
     background-color: transparent;
 }
+
+.actionDetailBody2DescriptionCORRUPT {
+    color: white;
+}
+
 .eidolonRowNameStratCounterTitle {
     font-size: 15px;
     width: 100%;
@@ -824,6 +885,29 @@
     background-color: rgba(0, 0, 0, 0.726);
     /* background-color: rgb(0, 0, 0); */
 }
+.rotationsSectionRowHolder2OverviewCORRUPT {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    overflow: hidden;
+
+
+    /* backdrop-filter: blur(8px); */
+    background-color: rgba(0, 0, 0, 0.726);
+    background: linear-gradient(180deg, #71092c8a,transparent,transparent,#71092B);
+    /* background: linear-gradient(200deg, #71092B,transparent,#ffffff21); */
+    border-radius: 0px;
+}
+
+
+
 
 
 .cardBoxIconTextBanner {

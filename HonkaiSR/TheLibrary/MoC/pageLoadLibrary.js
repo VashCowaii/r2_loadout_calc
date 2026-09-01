@@ -544,6 +544,7 @@ const endgameModeDisplay = {
                             buffEntry.desc = sideEntry.corruptionDesc;
                             buffEntry.isCorrupt = true;
                             buffEntry.isPushed = true;
+                            buffEntry.corruptionEnemies = sideEntry.corruptionEnemies;
                             buffEntry.level = sideEntry.corruptionID;
 
                             checkBattleEventAbilities ??= [];
@@ -597,6 +598,118 @@ const endgameModeDisplay = {
                     const waveArray = sideEntry.enemyList;
     
                     let allWavesString = `<div class="statFiltersRowHeaderSides">Part ${sideNumber}</div>`;
+
+                    let corruptionBufferString = "";
+                    for (let beEntry of battleEventAbilities) {
+
+                        if (!beEntry.isCorrupt || beEntry.side != sideNumber) {continue;}
+
+                        const corruptionEnemies = beEntry.corruptionEnemies;
+                        let enemyListString = "";
+
+                        for (let enemy of corruptionEnemies) {
+                            let ID = `${enemy.ID}`;
+                            console.log(ID)
+                            if (ID.length > 7) {ID = ID.slice(0, 7)}
+                            // enemyImages
+
+                            console.log(ID)
+                            let imageString = enemyImages[ID].replace("enemies/","enemiesSmol/");
+
+
+                            // enemyListString += `<div class="rotationsCharacterTargetPreviewBox">
+                            //     <img src="/HonkaiSR/${imageString}" class="rotationsCharacterTargetPreviewBoxIcon">
+                            // </div>`
+                            enemyListString += `<img src="/HonkaiSR/${imageString}" class="rotationsCharacterTargetPreviewBoxIcon">`
+                        }
+
+                        corruptionBufferString += `<div class="rotationsSectionRowHolder2OverviewCORRUPT" id="rotationsConditionsBoxUltimatePerma">
+                            <details class="rotationsPermaConditionsExpandCORRUPT">
+                                <summary class="actionDetailBodyDetailExpandHeaderBackground clickable">
+                                    <div class="imageRowStatisticImageBoxCORRUPT"><img src="/HonkaiSR/misc/Cor${beEntry.level}.png" class="imageRowStatisticImageCORRUPT"></div>
+                                    Corruption LvL ${beEntry.level} [?]</summary>
+
+                                    <div class="eidolonRowNameTriggerBEAbility">
+                                
+                                        <div class="actionDetailBody" style="width: auto;">
+                                            <a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigs${beEntry.isCorrupt ? "BE" : ""}/${beEntry.BEKey}/" >
+                                                Battle Event ${beEntry.BEKey}&nbsp;
+                                                <img src="/HonkaiSR/misc/export.png" class="exportButtonIcon">
+                                            </a>
+                                        </div>
+
+                                        <div class="actionDetailBody" style="width: auto;">
+                                            <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [${beEntry.actualParams ?? beEntry.params ??"N/A"}]</div>
+                                        </div>
+                                        
+                                    </div>
+                                    ${beEntry.isCorrupt ? `<div class="actionDetailBody">
+                                        <div class="actionDetailBody2Description actionDetailBody2DescriptionCORRUPT">
+                                            ${beEntry.desc ? beEntry.desc.replaceAll("\\n","<br>") : ""}
+                                        </div>
+                                    </div>` : ""}
+
+                                    ${enemyListString ? `<div class="actionDetailBody">
+                                        ${enemyListString}
+                                    </div>` : ""}
+
+
+
+                            </details>
+                            
+                        </div>`;
+                    }
+                    // if (corruptionBufferString) {
+                    //     // readSelection("PFDescriptionBox").style.display = "block";
+                    //     corruptionBufferString = `<div class="rotationsSectionRowHolder2Overview rotationsSectionRowHolder2OverviewCORRUPT" style="display: flex">
+                    //         ${corruptionBufferString}
+                    //     </div>`;
+
+                    //     // readSelection("PFDescriptionBox").innerHTML += corruptionBufferString;
+                    // }
+
+                    allWavesString += corruptionBufferString;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     for (let waveEntry of waveArray) {
                         waveCounter++;
                         let wholeWaveString = "";
@@ -2131,30 +2244,6 @@ const endgameModeDisplay = {
                 
                 let buttonString = "";
 
-
-                `<div class="rotationsSectionRowHolder2Overview" style="display: flex">
-                    <div class="eidolonRowBoxHolder">
-                        <div class="rightDescriptionBoxEidolons smallFont">
-                            <div class="eidolonRowNameTrigger">Memory Turbulence</div>
-                        </div>
-                    </div>
-                    
-                    <div class="actionDetailBody">
-                        <div class="actionDetailBody2Description">
-                            At the beginning of each Cycle, randomly causes an ally following the Path of The Hunt or the Path of Erudition to take action immediately, and increases their DMG dealt by <span class="descriptionNumberColor">50.00%</span> for <span class="descriptionNumberColor">1</span> turn(s).
-                        </div>
-                    </div>
-
-                    <div class="actionDetailBody">
-                        <div class="rotationConditionOperatorHeaderInlineParams">Parameters: [0.5,1]</div>
-                    </div>
-
-                    
-                    <div class="actionDetailBody">
-                    </div>
-                
-                </div>`
-
                 for (let beEntry of battleEventAbilities) {
                     // buttonString += `${beEntry.BEKey ? `<a class="exportIconBoxHolderBuffButton clickable" href="/HonkaiSR/TheLibrary/AbilityConfigsBE/${beEntry.BEKey}/#${encodeURIComponent(beEntry.realModifierNamne)}" target="_blank">
                     //     ${beEntry.realModifierNamne}&nbsp;
@@ -2164,6 +2253,8 @@ const endgameModeDisplay = {
                     // const displayName = beEntry.realModifierNamne.replace("BattleEventAbility_","").replace("ChallengePeakBattle_","")
 
                     // buffEntry.level = sideEntry.corruptionID;params
+
+                    if (beEntry.isCorrupt) {continue;}
 
                     buttonString += `${beEntry.BEKey ? `<div class="eidolonRowBoxHolderBEAbility">
                         <div class="rightDescriptionBoxEidolons smallFont">

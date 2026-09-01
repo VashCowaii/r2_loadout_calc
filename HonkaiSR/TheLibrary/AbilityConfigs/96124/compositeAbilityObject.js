@@ -6,5 +6,21 @@ const compositeAbilityObject = {
   "abilityObject": {},
   "enemyData": {},
   "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 96124,
+    "team": "Neutral Team",
+    "eventType": "Assist",
+    "abilityList": [
+      "StageAbility_VS_Weapon_002_Insert"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+        "value": 100
+      }
+    ],
+    "hardLevelEvent": true
+  },
   "noReader": true
 }

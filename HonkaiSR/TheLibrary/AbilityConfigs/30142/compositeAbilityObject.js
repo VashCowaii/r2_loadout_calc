@@ -4055,5 +4055,23 @@ const compositeAbilityObject = {
     }
   },
   "enemyData": {},
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 30142,
+    "team": "Neutral Team",
+    "eventType": "Endgame Countdown",
+    "abilityList": [
+      "BattleEventAbility_Challenge_Month_42"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      }
+    ],
+    "eventSpeed": 100,
+    "hardLevelEvent": true,
+    "actionDescription": "At the start of each wave, recovers <unbreak>#1[i]</unbreak> Skill Point(s) for allies. When ally targets use Skills or consume Skill Points, add <unbreak>#2[i]</unbreak> hits to \"Memory Turbulence,\" stacking up to <unbreak>#3[i]</unbreak> hits.\\nAt the start of each Cycle, each hit of \"Memory Turbulence\" deals True DMG once to a random enemy target."
+  }
 }

@@ -74,5 +74,23 @@ const compositeAbilityObject = {
       "hitSplits": []
     }
   },
-  "isBattleEvent": true
+  "isBattleEvent": true,
+  "finalData": {
+    "name": "Battle Event Construction",
+    "ID": 60002,
+    "team": "Neutral Team",
+    "eventType": "Assist",
+    "abilityList": [
+      "BattleEventAbility_620101_Camera"
+    ],
+    "overridesArray": [
+      {
+        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+        "value": 90
+      }
+    ],
+    "eventSpeed": 83,
+    "hardLevelEvent": true,
+    "eliteGroup": true
+  }
 }
