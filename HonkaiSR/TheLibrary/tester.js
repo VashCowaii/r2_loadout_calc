@@ -226,6 +226,30 @@ const customMenu = {
         globalUI.volumeIsLock = isLock;
         customMenu.updateSearchResults(isOcclusion,isLock);
     },
+    createBESearchMenu(isOcclusion,isLock) {
+        if (globalUI.queryIsActive) {return;}//do NOT allow modifications while a query is running, I am not confident that I've handled things properly enough yet for that
+        readSelection("blockoutBackgroundShutter").style.display = "flex";
+        readSelection("customMenuMainHolderBox").style.display = "flex";
+        readSelection("customMenuSearchTitle").innerHTML = "Battle Events";
+
+        // readSelection("customMenuSearchNote").innerHTML = 
+        // `Search for an Enemy <span class="descriptionNumberColor">NAME</span>, <span class="descriptionNumberColor">MASK NAME</span>, or <span class="descriptionNumberColor">ID</span>.
+        // <br><br>This search spans BASE enemies, so you may search for a specific name that doesn't show up visibly, but will display as a Mask match.
+        // <br><br>ID search will only match ID's that START with your input.`;
+        readSelection("customMenuSearchNote").innerHTML = 
+        `Search for a Battle Event by <span class="descriptionNumberColor">TEAM</span>, <span class="descriptionNumberColor">TYPE</span>, <span class="descriptionNumberColor">DESCRIPTION</span>, or <span class="descriptionNumberColor">ID</span>.
+        <br><br>Not all Battle Events have descriptions, and some duplicate enemies also have duplicate Battle Events with slight changes.
+        <br><br>ID search will only match ID's that START with your input.
+        <br>Battle Events that have no image assigned will Glorp instead.`;
+        
+        globalUI.currentSearchOpen = "battleEvents";
+        globalUI.currentSearchVolume = battleEvents;
+        readSelection("customMenuSearchBarInput").focus();
+
+        globalUI.volumeIsOcclusion = isOcclusion;
+        globalUI.volumeIsLock = isLock;
+        customMenu.updateSearchResults(isOcclusion,isLock);
+    },
     //for sets search
     createRelicSearchMenu(relicSet) {
         if (globalUI.queryIsActive) {return;}//do NOT allow modifications while a query is running, I am not confident that I've handled things properly enough yet for that
@@ -3139,6 +3163,186 @@ const customMenu = {
                 if (currentArray.length) {resultString += getPathDivider(pathKey,true) + getResultStringForCharacterPath(currentArray)}
 
             }
+        }
+        else if (globalUI.currentSearchOpen === "battleEvents") {//battleEvents
+            let pathsObject = [];
+            // pathImagePaths
+            for (let charEntry of volumeKeys) {
+                let currentCharacterEntry = battleEvents[charEntry];
+                let currentPath = null;
+                if (!pathsObject[currentPath]) {pathsObject[currentPath] = [];}//only make a new entry when it doesn't exist yet
+                //skip any char name, path, or element that does NOT contain our search, and forced lowercase just to avoid headaches
+
+
+                const icon = currentCharacterEntry.icon || "999.png";
+                const params = currentCharacterEntry.params;
+                const finalData = currentCharacterEntry.finalData;
+                console.log(finalData)
+                const ID = finalData.ID;
+                const team = finalData.team;
+                const type = finalData.eventType;
+                const desc = finalData.actionDescription;
+
+
+
+                // const currentEnemyEntry = currentCharacterEntry[innerEnemyEntry];
+
+                let fuzzy = (team)?.toLowerCase().includes(currentInput);
+                let fuzzy2 = (type)?.toLowerCase().includes(currentInput);
+                let fuzzy3 = (desc)?.toLowerCase().includes(currentInput);
+                let fuzzy4 = false;
+                if (ID.toString().startsWith(currentInput)) {fuzzy4 = true;}
+
+                if ((!fuzzy && !fuzzy2 && !fuzzy3 && !fuzzy4) && currentInput != "") {continue;}
+
+                
+
+                pathsObject.push({
+                    name: ID,
+                    image: icon,
+                    desc,team,type,params
+                });
+
+
+
+
+
+
+
+
+
+
+                // const innerEnemyKeys = Object.keys(currentCharacterEntry);
+                // // console.log(currentCharacterEntry)
+                // for (let innerEnemyEntry of innerEnemyKeys) {
+                //     if (innerEnemyEntry === "groupName") {continue;}
+                //     const currentEnemyEntry = currentCharacterEntry[innerEnemyEntry];
+
+
+
+                //     // console.log(innerEnemyEntry,currentEnemyEntry)
+                //     let fuzzy = (currentEnemyEntry.baseName ?? currentCharacterEntry.groupName)?.toLowerCase().includes(currentInput)// || currentCharacterEntry.path.toLowerCase().includes(currentInput) || currentCharacterEntry.element.toLowerCase().includes(currentInput);
+                //     // if (!fuzzy && currentInput != "" || !turnLogic[currentCharacterEntry.name]) {continue;}
+
+                //     let fuzzy2 = false;
+                //     let variantCounter = 0;
+                //     for (let innermostEntry in currentEnemyEntry) {
+                //         if (innermostEntry === "baseName" || innermostEntry === "hasReader") {continue;}
+                //         variantCounter++;
+                //         const currentInnermost = currentEnemyEntry[innermostEntry];
+
+                //         let fuzzy2Inner = currentInnermost.name?.toLowerCase().includes(currentInput);
+                //         if (currentInnermost.name && fuzzy2Inner && currentInput != "") {fuzzy2 = true;}
+                //     }
+
+                //     let fuzzy3 = false;
+                //     if (charEntry.startsWith(currentInput) || innerEnemyEntry.startsWith(currentInput)) {fuzzy3 = true;}
+
+
+                //     if ((!fuzzy && !fuzzy2 && !fuzzy3) && currentInput != "") {continue;}
+
+                //     // console.log(currentEnemyEntry.baseName,charEntry)
+
+
+                //     pathsObject[currentPath].push({
+                //         name: currentEnemyEntry.baseName ?? currentCharacterEntry.groupName,
+                //         image: innerEnemyEntry,
+                //         variantCounter,
+                //         variantMatch: !fuzzy && fuzzy2 && currentInput != "",
+                //         hasReader: currentEnemyEntry.hasReader,
+                //     });
+
+                // }
+
+                
+                //TODO: remove the logic check later
+
+
+                // let foundAllowedCharacter = false;
+                // for (let allowEntry of allowedCharacterList) {
+                //     // console.log(allowEntry.fullName,currentCharacterEntry.name)
+                //     if (allowEntry.fullName === currentCharacterEntry.name) {
+                //         foundAllowedCharacter = true;
+                //         break;
+                //     }
+                // }
+                // if (!foundAllowedCharacter) {continue;}
+
+                
+            }
+
+            // for (let pathKey of Object.keys(pathsObject)) {pathsObject[pathKey].sort(raritySort);}//sort rarity -> name
+
+
+            // <div class="characterDisplayElementBox">
+            //                             <img src="${elementImagePaths[result.element]}" class="characterDisplayElement"/>
+            //                         </div>
+            function fuckyCutoffFix(snippet) {
+                const lastOpen = snippet.lastIndexOf("<");
+                const lastClose = snippet.lastIndexOf(">");
+                
+                //if we see a <> that is incomplete, and our desc trimming left it open, we need to remove the unfinished tab
+                if (lastOpen > lastClose) {snippet = snippet.slice(0, lastOpen) + "...";}
+                
+                return snippet;
+            }
+            function getResultStringForCharacterPath(array) {
+                let returnString = "";
+                for (let result of array) {
+                    // onclick="customMenu.closeMenu();userTriggers.updateSelectedCharacter(\`${result.name}\`)"
+
+                    // a href="/HonkaiSR/TheLibrary/"
+
+                    // const trimmedCharacterName = customMenu.trimToFirstWordAndInitials(result.name);
+
+                    // "/HonkaiSR/BEicons/HoshinoKami_007.png"
+
+
+                    let cleanDesc = pagePopulation.cleanDescription(result.params ?? [],result.desc ?? '');
+                    let cleanDescTrim = result.desc ? fuckyCutoffFix(cleanDesc.length > 150 ? cleanDesc.slice(0, 150) + "..." : cleanDesc) : null;
+
+
+                    // pathsObject.push({
+                    //     name: ID,
+                    //     image: icon,
+                    //     desc,team,type
+                    // });
+                    let stringCustom = `
+                        <a class="customMenuResultRowBox clickable" href="/HonkaiSR/TheLibrary/AbilityConfigs/${result.name}/" >
+                            <div class="customMenuResultRowIcon">
+                                <img src="/HonkaiSR/BEicons/${result.image}" class="customMenuResultImgRoundedEnemyBE${result.name?.toString().includes("_v") ? " turnOrderDisplayPreviewGREY" : ""}"/>
+                            </div>
+                            <div class="customMenuResultBodyBox">
+
+                                <div class="characterDisplayNameAndElement">
+                                    <div class="characterDisplayNameBox">${result.name}</div>
+                                    
+                                </div>
+
+                                
+                                <div class="characterDisplayEnemyVariantsCount">${result.team}</div>
+                                <div class="characterDisplayEnemyVariantsCount">${result.type}</div>
+
+                                ${cleanDescTrim ? `<div class="customMenuResultBodyDesc">${cleanDescTrim}</div>` : ""}
+                                
+                            </div>
+                            
+                            
+                        </a>
+                    `;
+                    // ${!result.hasReader ? `<img src="/HonkaiSR/misc/code.png" class="customMenuResultImgRoundedEnemyCodeIcon"/>` : ""}
+                    //${turnLogic[result.name] ? "" : `<div class="characterDisplayNameAndElementItemNotAdded">Not added yet</div>`}
+                    returnString += stringCustom;
+                }
+                return returnString;
+            }
+            resultString += getResultStringForCharacterPath(pathsObject)
+
+            // for (let pathKey of Object.keys(pathsObject)) {
+            //     let currentArray = pathsObject[pathKey];
+            //     if (currentArray.length) {resultString += getPathDivider(pathKey,true) + getResultStringForCharacterPath(currentArray)}
+
+            // }
         }
 
         // "endgame";endgameModeList
