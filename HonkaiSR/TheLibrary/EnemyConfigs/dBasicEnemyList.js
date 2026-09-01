@@ -17356,7 +17356,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": true
+      "hasReader": false
     },
     "8034011": {
       "8034011": {
@@ -17367,7 +17367,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 3,
-      "hasReader": true,
+      "hasReader": false,
       "baseName": "Ten Stonehearts: Aventurine of Stratagems (Complete)"
     },
     "8034012": {
@@ -17412,7 +17412,7 @@ let basicEnemyList = {
         ]
       },
       "phases": 2,
-      "hasReader": true,
+      "hasReader": false,
       "baseName": "Daring Diceroller"
     },
     "groupName": "Ten Stonehearts: Aventurine of Stratagems"

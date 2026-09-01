@@ -1891,7 +1891,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "<a class=\"gModGreen\" id=\"1454354819\">Monster_W3_Aventurine_Gambling</a>",
+    "name": "Monster_W3_Aventurine_Gambling",
     "realName": "Gamble",
     "aim": "Other",
     "desc": "Attack \"All or Nothing\" to obtain a number. The currently obtained number is #1[i].",
@@ -1902,7 +1902,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "<a class=\"gModGreen\" id=\"549807086\">Monster_W3_Aventurine_Ability04_NoGambling</a>",
+    "name": "Monster_W3_Aventurine_Ability04_NoGambling",
     "realName": "Look, Don't Speak",
     "aim": "Other",
     "desc": "Characters who have not taken part in the Gamble will be inflicted with Strong Reverberation until the end of the Gamble. This effect cannot be immunized against or resisted.",
@@ -1910,7 +1910,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "<a class=\"gModGreen\" id=\"-2146147148\">Monster_W3_Aventurine_DamageUp</a>",
+    "name": "Monster_W3_Aventurine_DamageUp",
     "realName": "Favored by Fortune",
     "aim": "Buff",
     "desc": "Increases DMG dealt by #1[i]%.",
@@ -1921,7 +1921,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "<a class=\"gModGreen\" id=\"-2016354343\">Monster_W3_Aventurine_DamageTakenUp</a>",
+    "name": "Monster_W3_Aventurine_DamageTakenUp",
     "realName": "Down on Your Luck",
     "aim": "Debuff",
     "desc": "Increases DMG received by #1[i]%.",
@@ -2096,7 +2096,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "<a class=\"gModGreen\" id=\"82506831\">Monster_W3_Aventurine_DamageUp_RL</a>",
+    "name": "Monster_W3_Aventurine_DamageUp_RL",
     "realName": "Fenge's Gift",
     "aim": "Buff",
     "desc": "Each stack increases DMG dealt by #1[i]% for a total of #2[i]%.",
@@ -2108,7 +2108,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "<a class=\"gModGreen\" id=\"-1139497276\">Monster_W3_Aventurine_DamageTakenUp_RL</a>",
+    "name": "Monster_W3_Aventurine_DamageTakenUp_RL",
     "realName": "Fenge's Curse",
     "aim": "Debuff",
     "desc": "Each stack increases DMG taken by #1[i]% for a total of #2[i]%.",
@@ -2244,7 +2244,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "<a class=\"gModGreen\" id=\"1674422076\">Monster_W3_Aventurine_DamageUpPunish_RL</a>",
+    "name": "Monster_W3_Aventurine_DamageUpPunish_RL",
     "realName": "Deep in Debt",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%. This effect can stack.",
@@ -3076,7 +3076,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "<a class=\"gModGreen\" id=\"1819991066\">Enemy_W3_Aventurine_IF_Score_Light</a>",
+    "name": "Enemy_W3_Aventurine_IF_Score_Light",
     "realName": "Gambler Points",
     "aim": "Buff",
     "desc": "Current Points: #2[i]. When enemy target's Points are more than allies' Points, the enemies' DMG taken greatly decreases. When enemy target's Points are equal to or less than allies' Points, the DMG taken by the enemies' increases by #1[i]%.",
@@ -3088,7 +3088,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "<a class=\"gModGreen\" id=\"1416259547\">Enemy_W3_Aventurine_IF_Defence</a>",
+    "name": "Enemy_W3_Aventurine_IF_Defence",
     "realName": "House Advantage (I)",
     "aim": "Buff",
     "desc": "When the Current Points are more than allies' Points, DMG taken decreases by #1[i]%.",
@@ -3099,7 +3099,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "<a class=\"gModGreen\" id=\"-1592277974\">Enemy_W3_Aventurine_IF_Score_Dark</a>",
+    "name": "Enemy_W3_Aventurine_IF_Score_Dark",
     "realName": "House Points",
     "aim": "Other",
     "desc": "The Current Points are #1[i].",
@@ -3132,7 +3132,7 @@ let modifiersEnemy = [
     ]
   },
   {
-    "name": "<a class=\"gModGreen\" id=\"280539715\">Enemy_W3_Aventurine_IF_Defence_Protect</a>",
+    "name": "Enemy_W3_Aventurine_IF_Defence_Protect",
     "realName": "House Advantage (II)",
     "aim": "Buff",
     "desc": "When current Points are more than allies' Points, gains Toughness Protection.",
@@ -3180,7 +3180,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "<a class=\"gModGreen\" id=\"-1375999699\">Enemy_W3_Aventurine_IF_Ability11_Charge</a>",
+    "name": "Enemy_W3_Aventurine_IF_Ability11_Charge",
     "realName": "Activate",
     "aim": "Buff",
     "desc": "The Daring Diceroller's DMG and the chance to inflict Imprisonment on allies increase.",
@@ -3438,7 +3438,7 @@ let modifiersEnemy = [
     "perma": true
   },
   {
-    "name": "<a class=\"gModGreen\" id=\"-505266167\">Monster_W3_Aventurine_Gambling_Servant</a>",
+    "name": "Monster_W3_Aventurine_Gambling_Servant",
     "realName": "Gamble",
     "aim": "Other",
     "desc": "Attack \"All or Nothing\" to obtain a number. The currently obtained number is #1[i].",
