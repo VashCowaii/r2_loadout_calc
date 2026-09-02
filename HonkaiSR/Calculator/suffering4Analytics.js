@@ -3923,6 +3923,7 @@ const graphs = {
         "Aha Instant": "BEicons/HoshinoKami_007.png",
         "Lightning Lord": "misc/jingYuan/1204Shadow.png",
         "Level Entity": "misc/swagCat.png",
+        "Summer Songbirds": "misc/swagCat.png",
     },
     enemyCustomImages: {
         "default": "misc/glorp.png",
