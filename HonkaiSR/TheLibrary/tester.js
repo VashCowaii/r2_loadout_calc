@@ -3177,7 +3177,7 @@ const customMenu = {
                 const icon = currentCharacterEntry.icon || "999.png";
                 const params = currentCharacterEntry.params;
                 const finalData = currentCharacterEntry.finalData;
-                console.log(finalData)
+                // console.log(finalData)
                 const ID = finalData.ID;
                 const team = finalData.team;
                 const type = finalData.eventType;
