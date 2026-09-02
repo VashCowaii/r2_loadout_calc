@@ -25646,6 +25646,36 @@ const turnLogic = {
                 const allyArray = battleData.allAlliesArray;
                 removeBuffFromBatch(battleData,allyArray,buffSheet);
             },
+            robinATKConversion(battleData,sourceTurn) {
+                const logicRef = turnLogic[sourceTurn.properName];
+                const ATKObjects = logicRef.ATKObjects;
+
+                const buffSheet = ATKObjects.robinConcertoCountdownBuffSHEET;
+                const buffName = buffSheet.buffName;
+                let values = ATKObjects.robinUltimateREFVALUES;
+
+
+                const conversionRatio = values[0];
+                const flatBonus = values[2];
+                const robinStats = sourceTurn.statTable;
+                const atkFinal = calcs.getATKFinal(robinStats).ATKFinal + robinStats[ATKFlatNULL];
+                const conversion = +((conversionRatio * atkFinal) + flatBonus).toFixed(7);
+
+                const buffCheck = sourceTurn.buffsObject[buffName];
+                const allyTargets = battleData.allAllyTargetsArray;
+                if (buffCheck) {
+                    const currentValue = buffCheck[ATKFlat];
+                    if (currentValue === conversion) {return;}
+                    else {
+                        removeBuffFromBatch(battleData,allyTargets,buffCheck,true,null,null,true);
+                    }
+                }
+            
+                buffSheet[ATKFlat] = conversion;
+                buffSheet[ATKFlatNULL] = -conversion;
+
+                updateBuffBatchTargets(battleData,allyTargets,buffSheet);
+            },
             robinUltimate(battleData,actionObject,sourceTurn) {
                 let characterName = sourceTurn.properName;
                 const logicRef = turnLogic[characterName];
@@ -25660,7 +25690,7 @@ const turnLogic = {
 
                 if (rank >= 6) {sourceTurn.robinE6TriggerCount = 0;}
 
-                if (!ATKObjects.robinConcertoCountdownSHEET) {
+                if (!ATKObjects.robinConcertoCountdownBuffSHEET) {
                     const buffNames = logicRef.buffNames;
                     
                     
@@ -25703,23 +25733,13 @@ const turnLogic = {
                         "buffDisplayIcon": "misc/robin/Icon1309Ultra.png"
                     }
                 }
+
+                logicRef.skillFunctions.robinATKConversion(battleData,sourceTurn);
                 
                 // const countdownSheet = sourceTurn.robinConcertoCountdownSHEET;
                 // updateBuff(battleData,sourceTurn,countdownSheet);
-
-                const conversionRatio = values[0];
-                const flatBonus = values[2];
-                const robinStats = sourceTurn.statTable;
-                const atkFinal = calcs.getATKFinal(robinStats).ATKFinal + robinStats[ATKFlatNULL];
-                const conversion = (conversionRatio * atkFinal) + flatBonus;
-            
-                const buffSheet = ATKObjects.robinConcertoCountdownBuffSHEET;
-                const buffSheetFUA = ATKObjects.robinConcertoCountdownBuffFUASHEET;
-                buffSheet[ATKFlat] = conversion;
-                buffSheet[ATKFlatNULL] = -conversion;
-
                 const allyTargets = battleData.allAllyTargetsArray;
-                updateBuffBatchTargets(battleData,allyTargets,buffSheet);
+                const buffSheetFUA = ATKObjects.robinConcertoCountdownBuffFUASHEET;
                 updateBuffBatchTargets(battleData,allyTargets,buffSheetFUA);
                 
                 const nextAV = battleData.nextTurnAV;
@@ -25949,6 +25969,10 @@ const turnLogic = {
                         addListenerWithPriority(battleData,listener3,listener3.trigger,ally,null,ownerTurn);
                     }
 
+                    //ult atk listener
+                    const listener4 = passiveListeners[3];
+                    addListenerWithPriority(battleData,listener4,listener4.trigger,ownerTurn);
+
                     getTechnique(battleData,ownerTurn,logicRef,1,false,true)
                 },
                 "target": "self",
@@ -26000,6 +26024,20 @@ const turnLogic = {
                         "target": "enemy",
                         "isPersonal": true,
                         "listenerName": "Robin ult - ally attack listener for additional dmg",
+                        "ownerTurn": {},
+                    },
+                    {
+                        "trigger": "UpdateStatATK",//ATK stat family
+                        condition(battleData,generalInfo) {
+                            let ownerTurn = this.ownerTurn;
+                            if (!ownerTurn.battleValues.robinConcertoActive) {return;}
+
+                            const robinATKConversion = this.robinATKConversion ??= turnLogic[ownerTurn.properName].skillFunctions.robinATKConversion;
+                            robinATKConversion(battleData,ownerTurn);
+                        },
+                        "target": "self",
+                        "isPersonal": true,
+                        "listenerName": "Robin concerto: attack update",
                         "ownerTurn": {},
                     },
                 ],
