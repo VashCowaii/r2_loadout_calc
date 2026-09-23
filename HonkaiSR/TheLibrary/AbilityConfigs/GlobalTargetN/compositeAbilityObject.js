@@ -7716,7 +7716,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
-          "nameTarget": "Enemies by Taunt OR Random Highest Aggro(Exclude Memosprites)",
+          "nameTarget": "Enemies by Taunt OR Random Aggro(Exclude Memosprites)",
           "isTargetOperator": false,
           "execute": [
             {
@@ -7736,7 +7736,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
-          "nameTarget": "Enemies by Taunt OR Random Highest Aggro",
+          "nameTarget": "Enemies by Taunt OR Random Aggro",
           "isTargetOperator": false,
           "execute": [
             {

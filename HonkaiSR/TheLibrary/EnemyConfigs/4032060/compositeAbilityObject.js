@@ -1108,7 +1108,7 @@ const compositeAbilityObject = {
                       "name": "Add Events/Bonuses",
                       "to": {
                         "name": "Target Name",
-                        "target": "{{Enemies by Taunt OR Random Highest Aggro}}"
+                        "target": "{{Enemies by Taunt OR Random Aggro}}"
                       },
                       "modifier": "<a class=\"gModGreen\" id=\"1171334947\">Enemy_W4_IronTombCorePart_Ability02_SkillMark</a>"
                     }
@@ -1271,7 +1271,7 @@ const compositeAbilityObject = {
                   "name": "Add Events/Bonuses",
                   "to": {
                     "name": "Target Name",
-                    "target": "{{Enemies by Taunt OR Random Highest Aggro}}"
+                    "target": "{{Enemies by Taunt OR Random Aggro}}"
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1171334947\">Enemy_W4_IronTombCorePart_Ability02_SkillMark</a>"
                 },

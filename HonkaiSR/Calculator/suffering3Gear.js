@@ -9743,7 +9743,7 @@ const turnLogicLCHarmony = {
                             const regenFunction = this.lcRegenEnergy ??= turnLogicLightcones[lcNameRef].skillFunctions.lcRegenEnergy;
                             let lcPathing = lightcones[lcNameRef].params;
 
-                            const currentRank = ownersSlots[allyHit];
+                            const currentRank = ownersSlots[personalOwner.name];
                             const rankParams = lcPathing[currentRank-1];
                             const regenValue = rankParams[0];
                             regenFunction(battleData,personalOwner,regenValue);

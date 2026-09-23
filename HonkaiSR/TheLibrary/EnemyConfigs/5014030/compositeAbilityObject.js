@@ -3463,7 +3463,7 @@ const compositeAbilityObject = {
           "name": "Find New Target",
           "from": {
             "name": "Target Name",
-            "target": "{{Enemies by Taunt OR Random Highest Aggro}}.[[removeMemosprite]]"
+            "target": "{{Enemies by Taunt OR Random Aggro}}.[[removeMemosprite]]"
           },
           "searchRandom": true,
           "maxTargets": 1,

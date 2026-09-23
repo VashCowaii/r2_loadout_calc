@@ -836,7 +836,7 @@ const compositeAbilityObject = {
           },
           "paramTarget": {
             "name": "Target Name",
-            "target": "{{Enemies by Taunt OR Random Highest Aggro}}"
+            "target": "{{Enemies by Taunt OR Random Aggro}}"
           },
           "variableName": "ProjectileFirstTarget"
         },
