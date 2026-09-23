@@ -45842,7 +45842,7 @@ const turnLogic = {
                         const realPENKeys = keyShortcut(resPENKeys,tags);
                         const realShredKeys = keyShortcut(defShredKeys,tags);
                         const realVulnKeys = keyShortcut(vulnKeys,tags);
-                        const actionTags = ["Attack","MemoSkill","Summon","Memosprite","CasE1Ability"];
+                        const actionTags = ["All","Attack","MemoSkill","Summon","Memosprite","CasE1Ability"];
                         const compositeCacheTag = tags + actionTags + ownerTurn.properName;
     
                         const rank = ownerTurn.rank;
