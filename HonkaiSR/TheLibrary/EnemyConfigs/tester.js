@@ -3605,7 +3605,7 @@ const userTriggers = {
                     "name": currentSkillEntry.name ?? "-N/A-",
                     "type": currentSkillEntry.tag,
                     "slot": currentSkillEntry.type,
-                    "desc": currentSkillEntry.desc,
+                    "desc": paramOverrides && paramOverrides[enemyAbility]?.length && paramOverrides[enemyAbility][8] ? paramOverrides[enemyAbility][8] : currentSkillEntry.desc,
                     "energyRegen": currentSkillEntry.energyPerHit,
                     "delay": currentSkillEntry.delay,
                     "params": currentSkillEntry.params,

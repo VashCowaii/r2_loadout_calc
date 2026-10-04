@@ -162,6 +162,97 @@ let enemyData = {
         "SummonID0": 401207001,
         "SummonID1": 401207101
       }
+    },
+    "401403002": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1.969231,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Wind",
+        "Quantum",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Fire": 0.2,
+        "Ice": 0.2,
+        "Thunder": 0.2
+      },
+      "resMod": {
+        "STAT_CTRL": 0.5
+      },
+      "abilities": [
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999
+      ],
+      "summons": [
+        {
+          "name": "The Long Arms of Sorrow",
+          "over": 4012070,
+          "base": 4012070
+        },
+        {
+          "name": "The Long Arms of Sorrow",
+          "over": 4012071,
+          "base": 4012071
+        }
+      ],
+      "overrideParams": {
+        "1994": [
+          [
+            0.1
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ],
+        "1998": [
+          [
+            "-",
+            0
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ],
+        "1999": [
+          [],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-",
+          "When \"Pollux\" or \"The Long Arms of Sorrow\" hits a target with an ability, a special Unremovable DoT DMG state is applied to the target. While under this state, the higher the target's HP percentage is, the more DMG they take. This DMG is \"Non-fatal\"."
+        ]
+      },
+      "itNeverEnds": {
+        "SummonID0": 4012070,
+        "SummonID1": 4012071
+      }
     }
   }
 }

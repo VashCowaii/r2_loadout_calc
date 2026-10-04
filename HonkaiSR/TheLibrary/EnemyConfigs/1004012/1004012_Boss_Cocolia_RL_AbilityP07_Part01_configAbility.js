@@ -78,12 +78,12 @@ const configAbility = {
                 "attackType": "Basic ATK",
                 "EnergyGainPercent": "50%"
               }
-            },
-            "Trigger: Attack End"
+            }
           ]
         }
       ]
     },
+    "Trigger: Attack End",
     {
       "name": "Find New Target",
       "from": {

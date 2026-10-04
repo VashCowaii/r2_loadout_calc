@@ -329,7 +329,7 @@ let enemyData = {
       "stArray": [
         1,
         1,
-        1,
+        1.096774,
         1,
         null,
         1,

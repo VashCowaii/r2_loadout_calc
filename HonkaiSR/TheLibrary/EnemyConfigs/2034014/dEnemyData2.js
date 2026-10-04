@@ -293,7 +293,7 @@ let enemyData = {
         1,
         null,
         1,
-        null
+        240
       ],
       "weak": [
         "Physical",
