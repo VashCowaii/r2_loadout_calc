@@ -1,6 +1,6 @@
 let readyEnemyCounts = {
-  "totalEnemyCount": 628,
-  "totalAllEnemyCount": 2649,
+  "totalEnemyCount": 632,
+  "totalAllEnemyCount": 2722,
   "readyEnemyCount": 625,
-  "readyMaskCount": 2637
+  "readyMaskCount": 2701
 }
