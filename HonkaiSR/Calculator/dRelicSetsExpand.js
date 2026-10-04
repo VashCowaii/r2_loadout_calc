@@ -917,6 +917,66 @@ let relicSets = {
       "4": []
     }
   },
+  "Dreamlit Actor": {
+    "name": "Dreamlit Actor",
+    "setID": 133,
+    "desc": [
+      "Increases SPD by 6%.",
+      "When the wearer uses their Skill or Ultimate on one other ally target, increases the ability target's Elation by 16%, lasting for 3 turn(s). If the wearer has 10 or more points of Certified Banger, additionally increases all ally targets' CRIT DMG by 12%, lasting for 3 turn(s)."
+    ],
+    "icon": "icon/relic/133.png",
+    "fixedStats": {
+      "2": {
+        "SPD%": 0.06
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.06
+      ],
+      [
+        0.16,
+        3,
+        10,
+        0.12,
+        3
+      ]
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
+  "The Edacious Heretic": {
+    "name": "The Edacious Heretic",
+    "setID": 134,
+    "desc": [
+      "Increases CRIT DMG by 16%.",
+      "Increases DMG dealt by the wearer's Basic ATK by 36%. When the wearer uses Basic ATK, increases the wearer's ATK by 20%, lasting for 2 turn(s)."
+    ],
+    "icon": "icon/relic/134.png",
+    "fixedStats": {
+      "2": {
+        "CritDamageBase": 0.16
+      },
+      "4": {}
+    },
+    "params": [
+      [
+        0.16
+      ],
+      [
+        0.36,
+        0.2,
+        2
+      ]
+    ],
+    "extraProperties": {
+      "2": [],
+      "4": []
+    }
+  },
   "Space Sealing Station": {
     "name": "Space Sealing Station",
     "setID": 301,

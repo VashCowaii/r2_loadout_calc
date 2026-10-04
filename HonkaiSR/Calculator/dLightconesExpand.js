@@ -10595,7 +10595,7 @@ let lightcones = {
       }
     },
     "skillName": "Improvisation",
-    "desc": "Increases the wearer's Max HP by #1[i]%. After the wearer uses Ultimate, recovers 1 Skill Point for allies. When entering combat, advances the wearer's action by #2[i]% and grants the wearer \"New Melody,\" lasting for #4[i] turn(s). While the wearer holds \"New Melody,\" all allies' SPD increases by #3[i]%.",
+    "desc": "Increases the wearer's Max HP by #1[i]%. After the wearer uses their Ultimate, recovers 1 Skill Point for allies. When entering combat, advances the wearer's action by #2[i]% and grants the wearer \"New Melody\" for #4[i] turn(s). While the wearer has \"New Melody,\" all allies' SPD increases by #3[i]%.",
     "params": [
       [
         0.3,
@@ -10940,6 +10940,85 @@ let lightcones = {
       0,
       -62,
       1.07
+    ]
+  },
+  "Colors for Tomorrow": {
+    "lightconeID": 23055,
+    "name": "Colors for Tomorrow",
+    "path": "Elation",
+    "rarity": "5",
+    "baseStats": {
+      "ATKBase": 476.28,
+      "DEFBase": 595.3499999999999,
+      "HPBase": 1058.4
+    },
+    "fixedStats": {
+      "1": {
+        "DEF%": 0.48
+      },
+      "2": {
+        "DEF%": 0.6
+      },
+      "3": {
+        "DEF%": 0.72
+      },
+      "4": {
+        "DEF%": 0.84
+      },
+      "5": {
+        "DEF%": 0.96
+      }
+    },
+    "skillName": "Ink Splash",
+    "desc": "Increases the wearer's DEF by #1[i]%. When the wearer uses Elation Skill on all allies, increases DMG taken by all enemies by #4[i]%, lasting for #3[i] turn(s). Regenerates a fixed #2[i] Energy for the wearer, and restores HP equal to #5[i]% of the wearer's DEF for all allies.",
+    "params": [
+      [
+        0.48,
+        10,
+        3,
+        0.22,
+        0.1
+      ],
+      [
+        0.6,
+        10,
+        3,
+        0.275,
+        0.125
+      ],
+      [
+        0.72,
+        10,
+        3,
+        0.33,
+        0.15
+      ],
+      [
+        0.84,
+        10,
+        3,
+        0.385,
+        0.175
+      ],
+      [
+        0.96,
+        10,
+        3,
+        0.44,
+        0.2
+      ]
+    ],
+    "statRef": [
+      "DefenceAddedRatio"
+    ],
+    "extraProperties": [],
+    "icon": "icon/light_cone/23055.png",
+    "preview": "image/light_cone_preview/23055.png",
+    "portrait": "image/light_cone_portrait/23055.png",
+    "imageOffset": [
+      18,
+      -150,
+      1.25
     ]
   }
 }
