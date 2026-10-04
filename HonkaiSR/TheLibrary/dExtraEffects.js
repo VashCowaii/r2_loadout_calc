@@ -132,6 +132,10 @@ let modifiersExtraEffects = [
     "desc": "An extra ability that can be granted to an ally target. Using an Assist Skill will also consume the current action turn."
   },
   {
+    "name": "Repellency",
+    "desc": "When an ally target takes DMG, consumes Repellency to block a certain percentage of the DMG."
+  },
+  {
     "name": "Arcana",
     "desc": "\"Arcana\" is a debuff that deals DMG over time. This debuff cannot be dispelled.\\nWhile in the \"Arcana\" state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\\nThe infliction of \"Arcana\" ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES."
   },
@@ -562,6 +566,22 @@ let modifiersExtraEffects = [
   {
     "name": "Wicked Grin",
     "desc": "DMG dealt increases. This effect is stackable."
+  },
+  {
+    "name": "Happiness",
+    "desc": "Gains stacks at the start of each turn. Loses 1 stack after attacking an enemy target. Further loses 1 stack after defeating an enemy target. At the end of a turn, if stacks are at or above a certain amount, it will be converted into \"Happiness Puppet.\" When stacks reach 0, this state is dispelled and the \"Inverted Severance\" effect is applied."
+  },
+  {
+    "name": "Fallen God's Decay",
+    "desc": "After each use of abilities, decreases by 1 stack. Upon reaching a certain number of stacks, the character enters the \"Phantom Illusion\" state. The \"Phantom Illusion\" state is dispelled when its duration ends or upon receiving a killing blow. Ally characters in the \"Phantom Illusion\" state and their summons become Departed, and \"Frenzied Beast's Seed Germ\" is summoned to take the place of the Departed character and continue combat. \"Frenzied Beast's Seed Germ\" is considered as an ally character."
+  },
+  {
+    "name": "Essence Devour",
+    "desc": "Maximum Restorable HP decreases. This effect is stackable."
+  },
+  {
+    "name": "Decay",
+    "desc": "SPD decreases. This effect is stackable."
   },
   {
     "name": "Base Chance",
