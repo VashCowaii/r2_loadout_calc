@@ -6572,6 +6572,134 @@ let modifiersEnemy = [
     ]
   },
   {
+    "name": "Monster_W5_Witch_Bonus",
+    "realName": "Depredate Evolution",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%. This effect is stackable.",
+    "type": "Depredate Evolution",
+    "perma": false,
+    "params": [
+      "MDF_DamageUpRatio_PerLayer"
+    ]
+  },
+  {
+    "name": "Monster_W5_Witch_Corrosion",
+    "realName": "Fallen God's Decay",
+    "aim": "Other",
+    "desc": "After each use of abilities, decreases by 1 stack. Upon reaching #1[i] stacks, the character enters the \"Phantom Illusion\" state. The \"Phantom Illusion\" state is dispelled when its duration ends or upon receiving a killing blow. Ally characters in the \"Phantom Illusion\" state and their summons become Departed, and \"Frenzied Beast's Seed Germ\" is summoned to take the place of the Departed character and continue combat. \"Frenzied Beast's Seed Germ\" is considered as an ally character.",
+    "type": "Fallen God's Decay",
+    "perma": true,
+    "params": [
+      "MDF_MaxLayer"
+    ]
+  },
+  {
+    "name": "Monster_W5_Witch_CorrosionNormal",
+    "realName": "Decay",
+    "aim": "Debuff",
+    "desc": "SPD decreases by #1[i]%. This effect can stack.",
+    "type": "Decay",
+    "perma": true,
+    "params": [
+      "MDF_SpeedDownRatio"
+    ]
+  },
+  {
+    "name": "Monster_W5_Witch_SpecialPassive",
+    "realName": "Primordial Hunger",
+    "aim": "Other",
+    "desc": "When attacking, inflicts the target with the \"Fallen God's Decay\" and \"Essence Devour\" states.",
+    "type": "Primordial Hunger",
+    "perma": true
+  },
+  {
+    "name": "Monster_W5_Fallen_Sign",
+    "realName": "Calibration",
+    "aim": "Other",
+    "desc": "Locked on by \"Frenzied Beast's Seed Germs\" as the priority attack target.",
+    "type": "Calibration",
+    "perma": true
+  },
+  {
+    "name": "Monster_W5_FallenPart_SpecialShield",
+    "realName": "Blood-Brain Barrier",
+    "aim": "Other",
+    "desc": "All DMG taken is greatly reduced. The Elation DMG's efficiency to dispel \"Blood-Brain Barrier\" greatly increases.",
+    "type": "Blood-Brain Barrier",
+    "perma": true
+  },
+  {
+    "name": "Monster_W5_Fallen_Part2",
+    "realName": "Beast's Gaze",
+    "aim": "Other",
+    "desc": "After illuminating #1[i] more eyes, immediately uses \"All Are Within Me.\"",
+    "type": "Beast's Gaze",
+    "perma": true,
+    "params": [
+      "MDF_RemainCount"
+    ]
+  },
+  {
+    "name": "Monster_W5_Fallen_BlackBlood",
+    "realName": "Essence Devour",
+    "aim": "Debuff",
+    "desc": "Maximum Restorable HP decreases by #1[i]%. This effect is stackable.",
+    "type": "Essence Devour",
+    "perma": true,
+    "params": [
+      "MDF_DirtyHPRatio"
+    ]
+  },
+  {
+    "name": "Monster_W5_Fallen_Bonus",
+    "realName": "Endocytosis",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]%. This effect is stackable.",
+    "type": "Endocytosis",
+    "perma": false,
+    "params": [
+      "MDF_DamageUpRatio_PerLayer"
+    ]
+  },
+  {
+    "name": "Monster_W5_Witch_BlackBlood",
+    "realName": "Essence Devour",
+    "aim": "Debuff",
+    "desc": "Maximum Restorable HP decreases by #1[i]%. This effect is stackable.",
+    "type": "Essence Devour",
+    "perma": true,
+    "params": [
+      "MDF_DirtyHPRatio"
+    ]
+  },
+  {
+    "name": "AvatarChange_W5_Witch_SheepStatus",
+    "realName": "Assimilation",
+    "aim": "Other",
+    "desc": "Those in the Departed state cannot be designated as ability targets and will not appear in the Action Order.",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "AvatarChange_W5_Witch_Status",
+    "realName": "Soul Departure Experience",
+    "aim": "Other",
+    "desc": "Dispels the \"Phantom Illusion\" state when the duration ends or upon receiving a killing blow.",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "Monster_W5_Fallen_SpeedUp",
+    "realName": "SPD Boost",
+    "aim": "Buff",
+    "desc": "SPD increases by #1[i]%.",
+    "type": "SPD Boost",
+    "perma": true,
+    "params": [
+      "MDF_SpeedUpRatio"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>",
     "realName": "Happiness",
     "aim": "Other",
@@ -6602,6 +6730,28 @@ let modifiersEnemy = [
     "params": [
       "MDF_AllDamageReduce_Sub",
       "MDF_AllDamageTypeAddedRatio_Sub"
+    ]
+  },
+  {
+    "name": "Monster_W5_Fallen_Part1Bonus",
+    "realName": "DMG Boost",
+    "aim": "Buff",
+    "desc": "DMG dealt increases by #1[i]% of the original DMG. This effect is stackable.",
+    "type": "DMG Boost",
+    "perma": false,
+    "params": [
+      "MDF_DamageUpRatio_PerLayer"
+    ]
+  },
+  {
+    "name": "Monster_W5_Fallen_DamageTakenUp",
+    "realName": "Vulnerability",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": "Vulnerability",
+    "perma": false,
+    "params": [
+      "MDF_DamageTakenUpRatio_PerLayer"
     ]
   }
 ]

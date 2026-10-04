@@ -8101,14 +8101,6 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "RobinS_Eidolon6_PursuedDmg",
-    "realName": "A Song Yet Unnamed",
-    "aim": "Buff",
-    "desc": "After an attack, Robin • Summeretto deals Additional DMG.",
-    "type": null,
-    "perma": true
-  },
-  {
     "name": "<a class=\"gModGreen\" id=\"466307376\">AventurineW_ElationConvert_Sub</a>",
     "realName": "Party in Perfect Paradise",
     "aim": "Buff",
@@ -8143,6 +8135,102 @@ let modifiersCharacter = [
     "realName": "Groove",
     "aim": "Other",
     "desc": "The first time Robin • Summeretto gains Vibes each turn, additionally regenerates #1[i] Energy.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Pearl_Ability04_Bonus",
+    "realName": "Dissolve Reason into Elation",
+    "aim": "Buff",
+    "desc": "After the next attack, additionally deals #1[i]% Elation DMG of the corresponding Type to the attack target.",
+    "type": "Dissolve Reason into Elation",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Pearl_Ability03_Target",
+    "realName": "Aesthetic Archetype",
+    "aim": "Other",
+    "desc": "Currently subject to Pearl's Deep Learning.",
+    "type": null,
+    "perma": true
+  },
+  {
+    "name": "Pearl_PointB3_EnergyRefund",
+    "realName": "Aesthetic Firewall",
+    "aim": "Buff",
+    "desc": "In the next use of Ultimate, regenerates a fixed amount of #1[i] Energy for Pearl.",
+    "type": "Sensory Latitude",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Pearl_Ability03_Caster_BaseType",
+    "realName": "unnamed6",
+    "aim": "Other",
+    "desc": null,
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Pearl_Ability03_Caster_BonusB",
+    "realName": "Deep Learning",
+    "aim": "Buff",
+    "desc": "Basic ATK \"Brushstroke: Trace the Severed Stream\" is enhanced to \"Brushstroke: Render the Great Wave.\"",
+    "type": "Deep Learning...",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Pearl_PointB1_Effect",
+    "realName": "Panoptic Vision",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Pearl_Ability03_Caster_BonusA",
+    "realName": "Deep Learning",
+    "aim": "Buff",
+    "desc": "When dealing DMG, additionally deals #1[i]% Ice Elation DMG. This Elation DMG is calculated using the stats of \"Aesthetic Archetype\". Basic ATK \"Brushstroke: Trace the Severed Stream\" is enhanced to \"Brushstroke: Imagenate the Starry Night\".",
+    "type": "Deep Learning...",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Pearl_Eidolon1_ElationUp",
+    "realName": "Nestle That Pearl in Uninked Tides",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[i]%.",
+    "type": "SPD Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Pearl_Eidolon6_AllDamageTypePenetrate",
+    "realName": "Compute Life From One Shell",
+    "aim": "Buff",
+    "desc": "All-Type RES PEN increases by #1[i]%.",
     "type": null,
     "perma": true,
     "params": [
@@ -8191,6 +8279,62 @@ let modifiersCharacter = [
     "perma": true,
     "params": [
       "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Pearl_Eidolon2_DamageUp",
+    "realName": "Crop That Dappled Dawn",
+    "aim": "Buff",
+    "desc": "Elation DMG merrymakes by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Pearl_Passive_DamageReduce",
+    "realName": "Grow Grace from Grit",
+    "aim": "Buff",
+    "desc": "DMG taken decreases by #1[i]%.",
+    "type": "DMG Mitigation",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Pearl_Eidolon1_Revive",
+    "realName": "Nestle That Pearl in Uninked Tides",
+    "aim": "Buff",
+    "desc": "If an ally target takes fatal damage, they will not get knocked down. Instead, their HP will immediately be restored by an amount equal to #1[i]% of their Max HP. The remaining trigger count is #2[i].",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue",
+      "MDF_PropertyValue1"
+    ]
+  },
+  {
+    "name": "Pearl_PointB2_Resistance",
+    "realName": "Sensory Latitude",
+    "aim": "Buff",
+    "desc": "Effect RES increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Pearl_PointB1_HealEffect",
+    "realName": "Panoptic Vision",
+    "aim": "Buff",
+    "desc": "Outgoing Healing Boost increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue1"
     ]
   },
   {
