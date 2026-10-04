@@ -5359,6 +5359,20 @@ const compositeAbilityObject = {
           ],
           "execute": [
             {
+              "eventTrigger": "When Modifier Destroyed/Removed",
+              "execute": [
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[removeMemosprite]]"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"835315990\">Memosprite_CyreneServant_AmazingBonus_Anaxa_Halo</a>[<span class=\"descriptionNumberColor\">True Knowledge</span>]",
+                  "onlyRemoveOwnersInstance": true
+                }
+              ]
+            },
+            {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
               "execute": [
                 "Modifier Deletes Itself"
@@ -5380,6 +5394,75 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     "Modifier Deletes Itself"
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Character Path [Anyone]: Change",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Is Part Of Team",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "team": "Player Team"
+                  },
+                  "passed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Target is Pathstrider",
+                        "path": [
+                          "Erudition"
+                        ],
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"835315990\">Memosprite_CyreneServant_AmazingBonus_Anaxa_Halo</a>[<span class=\"descriptionNumberColor\">True Knowledge</span>]",
+                          "valuePerStack": {
+                            "MDF_DamageIncrease": {
+                              "operator": "Variables[0] (MDF_DamageIncrease) || RETURN",
+                              "displayLines": "MDF_DamageIncrease",
+                              "constants": [],
+                              "variables": [
+                                "MDF_DamageIncrease"
+                              ]
+                            },
+                            "MDF_AttackAddRatio": {
+                              "operator": "Variables[0] (MDF_AttackAddRatio) || RETURN",
+                              "displayLines": "MDF_AttackAddRatio",
+                              "constants": [],
+                              "variables": [
+                                "MDF_AttackAddRatio"
+                              ]
+                            }
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"835315990\">Memosprite_CyreneServant_AmazingBonus_Anaxa_Halo</a>[<span class=\"descriptionNumberColor\">True Knowledge</span>]"
+                        }
+                      ]
+                    }
                   ]
                 }
               ]
