@@ -448,7 +448,6 @@ const compositeAbilityObject = {
             }
           ]
         },
-        "Trigger: Attack End",
         {
           "name": "Change Entity Turn-State",
           "target": {
@@ -457,6 +456,7 @@ const compositeAbilityObject = {
           },
           "phase": "Phase1"
         },
+        "Trigger: Attack End",
         {
           "name": "Find New Target",
           "from": {

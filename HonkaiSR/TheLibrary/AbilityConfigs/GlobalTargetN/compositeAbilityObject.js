@@ -6732,6 +6732,33 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
+          "nameTarget": "Elation: Extra Members",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team All(with Unselectable)V2}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1284000426\">Modifier_Standard_ExtraElationAbility</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
           "nameTarget": "Dying Enemies",
           "isTargetOperator": false,
           "execute": [
@@ -6766,6 +6793,49 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Aha Instant: Anomaly Arbitration Standard",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team All(with Unselectable)V2}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-1941769548\">ElationTime_PeakBattle_Standard_Mark</a>"
+                      },
+                      {
+                        "name": "Target is Pathstrider",
+                        "path": [
+                          "Elation"
+                        ],
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "invertCondition": true
+                      }
+                    ]
                   }
                 }
               ]
@@ -7143,12 +7213,25 @@ const compositeAbilityObject = {
                         "tag": "ElationTime"
                       },
                       {
-                        "name": "Battle Event ID",
-                        "ID": 70001,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Battle Event ID",
+                            "ID": 70001,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            }
+                          },
+                          {
+                            "name": "Battle Event ID",
+                            "ID": 70002,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            }
+                          }
+                        ],
                         "invertCondition": true
                       },
                       {
@@ -7193,6 +7276,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Target Name",
                       "target": "{{Elation: Currency Wars Himeko Origin}}"
+                    },
+                    {
+                      "name": "Target Name",
+                      "target": "{{Aha Instant: Anomaly Arbitration Standard}}"
+                    },
+                    {
+                      "name": "Target Name",
+                      "target": "{{Elation: Extra Members}}"
                     }
                   ]
                 }
@@ -7226,6 +7317,10 @@ const compositeAbilityObject = {
                     {
                       "name": "Target Name",
                       "target": "{{Elation: Currency Wars Himeko Origin}}"
+                    },
+                    {
+                      "name": "Target Name",
+                      "target": "{{Aha Instant: Anomaly Arbitration Standard}}"
                     }
                   ]
                 }
@@ -9673,6 +9768,43 @@ const compositeAbilityObject = {
                   "target": "{{Current Action Owner}}"
                 },
                 "Adjust Target by Ability Attack Source"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Current Action Target List",
+          "isTargetOperator": false,
+          "math": "Union",
+          "execute": [
+            {
+              "name": "Compute Targets",
+              "type": "Union",
+              "TargetList": [
+                {
+                  "name": "Target Sequence",
+                  "Sequence": [
+                    {
+                      "name": "Target Name",
+                      "target": "{{Current Action Owner}}"
+                    },
+                    {
+                      "name": "Adjust Target by Ability Target"
+                    }
+                  ]
+                },
+                {
+                  "name": "Target Sequence",
+                  "Sequence": [
+                    {
+                      "name": "Target Name",
+                      "target": "{{Current Action Owner}}"
+                    },
+                    "Adjust Target by Ability Sub-Targets"
+                  ]
+                },
+                "Add Target by Current Ability Target"
               ]
             }
           ]
