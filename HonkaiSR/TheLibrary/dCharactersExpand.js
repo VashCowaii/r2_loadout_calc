@@ -62794,6 +62794,1178 @@ let characters = {
     ],
     "isBuffed": false
   },
+  "Pearl": {
+    "internalID": 1503,
+    "name": "Pearl",
+    "path": "Elation",
+    "element": "Ice",
+    "rarity": 5,
+    "energyMax": 180,
+    "baseStats": {
+      "ATKBase": 465.696,
+      "DEFBase": 727.6500000000001,
+      "HPBase": 1203.0479999999998,
+      "SPDBase": 99,
+      "CritRateBase": 0.05,
+      "CritDamageBase": 0.5,
+      "CharacterAggroBase": 100
+    },
+    "eidolons": [
+      {
+        "id": "150301",
+        "name": "Nestle That Pearl in Uninked Tides",
+        "rank": 1,
+        "desc": "When the number of Elation Path characters on the team equals 2/3/(4 or more), increases Elation for all allies by 10%/20%/60% respectively. If an ally target takes fatal damage, they will not get knocked down. Instead, immediately restores their HP by an amount equal to 50% of their Max HP. This effect can trigger 2 time(s) per battle.",
+        "icon": "icon/skill/1503_rank1.png",
+        "paramsEido": [
+          0.1,
+          0.2,
+          0.6,
+          0.5,
+          2
+        ],
+        "extraEffects": {
+          "Downed State": {
+            "desc": "An ally will be incapacitated once their HP is reduced to 0."
+          }
+        }
+      },
+      {
+        "id": "150302",
+        "name": "Crop That Dappled Dawn",
+        "rank": 2,
+        "desc": "Merrymakes all ally targets' Elation DMG by 15%. When using Ultimate, causes other ally Elation characters (excluding Pearl and \"Aesthetic Archetype\") to also trigger the action advance effect. And the \"Certified Banger\" and Punchline gained at the start of the extra turn provided by the Ultimate increase by 100%.",
+        "icon": "icon/skill/1503_rank2.png",
+        "paramsEido": [
+          0.15,
+          1
+        ],
+        "extraEffects": {
+          "Punchline": {
+            "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+          },
+          "Elation DMG": {
+            "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+          },
+          "Certified Banger": {
+            "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+          },
+          "Extra Turn": {
+            "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+          },
+          "Merrymake": {
+            "desc": "A special effect that affects Elation DMG and can additionally boost Elation DMG dealt."
+          }
+        }
+      },
+      {
+        "id": "150303",
+        "name": "Sketch That Suspended Wave",
+        "rank": 3,
+        "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.\nBasic ATK Lv. +1, up to a maximum of Lv. 10.\nElation Skill Lv. +1, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1503_ultimate.png"
+      },
+      {
+        "id": "150304",
+        "name": "Study That Veiled Smile",
+        "rank": 4,
+        "desc": "The Elation DMG provided by Elation Skill to all ally targets has its multiplier increased by 100% of its original multiplier.",
+        "icon": "icon/skill/1503_rank4.png",
+        "paramsEido": [
+          1
+        ],
+        "extraEffects": {
+          "Elation DMG": {
+            "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+          }
+        }
+      },
+      {
+        "id": "150305",
+        "name": "Render Those Starlit Swirls",
+        "rank": 5,
+        "desc": "Skill Lv. +2, up to a maximum of Lv. 15.\nTalent Lv. +2, up to a maximum of Lv. 15.\nElation Skill Lv. +1, up to a maximum of Lv. 15.",
+        "icon": "icon/skill/1503_skill.png"
+      },
+      {
+        "id": "150306",
+        "name": "Compute Life From One Shell",
+        "rank": 6,
+        "desc": "While \"Deep Learning,\" all ally targets' All-Type RES PEN increases by 20%. Pearl's Enhanced Basic ATK additionally deals 240% Ice Elation DMG, which is calculated based on the stats of \"Aesthetic Archetype.\"",
+        "icon": "icon/skill/1503_rank6.png",
+        "paramsEido": [
+          0.2,
+          2.4
+        ],
+        "extraEffects": {
+          "Elation DMG": {
+            "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+          },
+          "RES PEN": {
+            "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type."
+          }
+        }
+      }
+    ],
+    "eidlonLevelBonuses": {
+      "3": {
+        "Basic ATK": 1,
+        "Ultimate": 2,
+        "Elation Skill": 1
+      },
+      "5": {
+        "Skill": 2,
+        "Talent": 2,
+        "Elation Skill": 1
+      }
+    },
+    "skills": {
+      "Basic ATK": {
+        "Brushstroke: Trace the Severed Stream": {
+          "variant1": {
+            "skillID": 150301,
+            "trigger": "Skill01",
+            "name": "Brushstroke: Trace the Severed Stream",
+            "type": "Single Target",
+            "slot": "Basic ATK",
+            "desc": "Deals Ice DMG equal to #1[i]% of Pearl's DEF to one designated enemy.",
+            "energyCost": null,
+            "energyRegen": 20,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 10,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.45
+              ],
+              "2": [
+                0.54
+              ],
+              "3": [
+                0.63
+              ],
+              "4": [
+                0.72
+              ],
+              "5": [
+                0.81
+              ],
+              "6": [
+                0.9
+              ],
+              "7": [
+                0.99
+              ],
+              "8": [
+                1.08
+              ],
+              "9": [
+                1.17
+              ],
+              "10": [
+                1.26
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Normal",
+            "skillEffect": "SingleAttack",
+            "maxLevel": 10,
+            "configAbilityList": null,
+            "toughnessList": [
+              30,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        },
+        "Brushstroke: Imagenate the Starry Night": {
+          "variant1": {
+            "skillID": 150308,
+            "trigger": "Skill11",
+            "name": "Brushstroke: Imagenate the Starry Night",
+            "type": "AoE",
+            "slot": "Basic ATK",
+            "desc": "Deals Ice DMG equal to #1[i]% of Pearl's DEF to all enemies, restores HP for all ally targets equal to #2[f1]% of Pearl's DEF plus #4[i], and additionally restores HP for the ally target with the lowest current HP percentage by an amount equal to #2[f1]% of Pearl's DEF plus #4[i]. While holding \"Certified Banger\", additionally deals #5[i]% Ice Elation DMG.",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5,
+                0.04,
+                1,
+                80,
+                0.1
+              ],
+              "2": [
+                0.6,
+                0.048,
+                1,
+                96,
+                0.11
+              ],
+              "3": [
+                0.7,
+                0.055999998,
+                1,
+                112,
+                0.12
+              ],
+              "4": [
+                0.8,
+                0.064,
+                1,
+                128,
+                0.13
+              ],
+              "5": [
+                0.9,
+                0.072,
+                1,
+                144,
+                0.14
+              ],
+              "6": [
+                1,
+                0.08,
+                1,
+                160,
+                0.15
+              ],
+              "7": [
+                1.1,
+                0.088,
+                1,
+                176,
+                0.1625
+              ],
+              "8": [
+                1.2,
+                0.096,
+                1,
+                192,
+                0.175
+              ],
+              "9": [
+                1.3,
+                0.104,
+                1,
+                208,
+                0.1875
+              ],
+              "10": [
+                1.4,
+                0.112,
+                1,
+                224,
+                0.2
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Normal",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              90,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Elation DMG": {
+                "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+              },
+              "Certified Banger": {
+                "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+              }
+            }
+          }
+        },
+        "Brushstroke: Render the Great Wave": {
+          "variant1": {
+            "skillID": 150310,
+            "trigger": "Skill12",
+            "name": "Brushstroke: Render the Great Wave",
+            "type": "AoE",
+            "slot": "Basic ATK",
+            "desc": "Deals Ice DMG equal to #1[i]% of Pearl's DEF to all enemies. Restores HP for all ally targets equal to #2[f1]% of Pearl's DEF plus #4[i], and additionally restores HP for the ally with the lowest current HP percentage by an amount equal to #2[f1]% of Pearl's DEF plus #4[i].",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": 30,
+            "skillPointCost": 0,
+            "skillPointGain": 1,
+            "params": {
+              "1": [
+                0.5,
+                0.04,
+                1,
+                80
+              ],
+              "2": [
+                0.6,
+                0.048,
+                1,
+                96
+              ],
+              "3": [
+                0.7,
+                0.055999998,
+                1,
+                112
+              ],
+              "4": [
+                0.8,
+                0.064,
+                1,
+                128
+              ],
+              "5": [
+                0.9,
+                0.072,
+                1,
+                144
+              ],
+              "6": [
+                1,
+                0.08,
+                1,
+                160
+              ],
+              "7": [
+                1.1,
+                0.088,
+                1,
+                176
+              ],
+              "8": [
+                1.2,
+                0.096,
+                1,
+                192
+              ],
+              "9": [
+                1.3,
+                0.104,
+                1,
+                208
+              ],
+              "10": [
+                1.4,
+                0.112,
+                1,
+                224
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Normal",
+            "skillEffect": "AoEAttack",
+            "maxLevel": 10,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              90,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      },
+      "Skill": {
+        "Relume Life's Light": {
+          "variant1": {
+            "skillID": 150302,
+            "trigger": "Skill02",
+            "name": "Relume Life's Light",
+            "type": "Defense",
+            "slot": "Skill",
+            "desc": "Gains #1[i] point(s) of \"Certified Banger,\" restores HP for all ally targets equal to #2[f1]% of Pearl's DEF plus #3[i], and additionally restores HP for the ally target with the lowest current HP percentage by an amount equal to #2[f1]% of Pearl's DEF plus #3[i].",
+            "energyCost": null,
+            "energyRegen": 30,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 1,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                15,
+                0.06,
+                120
+              ],
+              "2": [
+                15,
+                0.066,
+                132
+              ],
+              "3": [
+                15,
+                0.072,
+                144
+              ],
+              "4": [
+                15,
+                0.078,
+                156
+              ],
+              "5": [
+                15,
+                0.084,
+                168
+              ],
+              "6": [
+                15,
+                0.09,
+                180
+              ],
+              "7": [
+                15,
+                0.0975,
+                195
+              ],
+              "8": [
+                15,
+                0.105,
+                210
+              ],
+              "9": [
+                15,
+                0.1125,
+                225
+              ],
+              "10": [
+                15,
+                0.12,
+                240
+              ],
+              "11": [
+                15,
+                0.126,
+                252
+              ],
+              "12": [
+                15,
+                0.132,
+                264
+              ],
+              "13": [
+                15,
+                0.138,
+                276
+              ],
+              "14": [
+                15,
+                0.144,
+                288
+              ],
+              "15": [
+                15,
+                0.15,
+                300
+              ]
+            },
+            "element": "Ice",
+            "attackType": "BPSkill",
+            "skillEffect": "Defence",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Certified Banger": {
+                "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+              }
+            }
+          }
+        }
+      },
+      "Ultimate": {
+        "Appraise Soul's Ground": {
+          "variant1": {
+            "skillID": 150303,
+            "trigger": "Skill03",
+            "name": "Appraise Soul's Ground",
+            "type": "Support",
+            "slot": "Ultimate",
+            "desc": "Gains #3[i] point(s) of \"Certified Banger\". Uses \"Deep Learning\" on one designated ally character other than this unit, making the target the \"Aesthetic Archetype.\"\\nWhen there are 1/2/(3 or more) Elation characters on the team, advances the \"Aesthetic Archetype's\" action by #4[i]%/#5[i]%/#6[i]% respectively. When there are 4 or more Elation characters on the team, the \"Aesthetic Archetype\" gains 1 extra turn. At the start of this extra turn, the \"Aesthetic Archetype\" gains #8[i] point(s) of \"Certified Banger\" and #7[i] point(s) of Punchline, which are removed at the end of the extra turn.\\nWhile \"Deep Learning,\" Basic ATK \"Brushstroke: Trace the Severed Stream\" gets enhanced to \"Brushstroke: Render the Great Wave.\" If the \"Aesthetic Archetype\" is on the Path of Elation, it is instead enhanced to \"Brushstroke: Imagenate the Starry Night.\" And after attacking, additionally deals #2[i]% Ice Elation DMG. This Elation DMG is calculated based on the \"Aesthetic Archetype's\" stats. \"Deep Learning\" has #1[i] point(s) of Charge. After Pearl uses an Enhanced Basic ATK, 1 point of Charge is consumed. If no Charge remains after taking action, \"Deep Learning\" ends.",
+            "energyCost": 180,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                3,
+                0.3,
+                20,
+                0.1,
+                0.15,
+                0.3,
+                60,
+                30
+              ],
+              "2": [
+                3,
+                0.33,
+                20,
+                0.1,
+                0.15,
+                0.3,
+                60,
+                30
+              ],
+              "3": [
+                3,
+                0.36,
+                20,
+                0.1,
+                0.15,
+                0.3,
+                60,
+                30
+              ],
+              "4": [
+                3,
+                0.39,
+                20,
+                0.1,
+                0.15,
+                0.3,
+                60,
+                30
+              ],
+              "5": [
+                3,
+                0.42,
+                20,
+                0.1,
+                0.15,
+                0.3,
+                60,
+                30
+              ],
+              "6": [
+                3,
+                0.45,
+                20,
+                0.1,
+                0.15,
+                0.3,
+                60,
+                30
+              ],
+              "7": [
+                3,
+                0.4875,
+                20,
+                0.1,
+                0.15,
+                0.3,
+                60,
+                30
+              ],
+              "8": [
+                3,
+                0.525,
+                20,
+                0.1,
+                0.15,
+                0.3,
+                60,
+                30
+              ],
+              "9": [
+                3,
+                0.5625,
+                20,
+                0.1,
+                0.15,
+                0.3,
+                60,
+                30
+              ],
+              "10": [
+                3,
+                0.6,
+                20,
+                0.1,
+                0.15,
+                0.3,
+                60,
+                30
+              ],
+              "11": [
+                3,
+                0.63,
+                20,
+                0.1,
+                0.15,
+                0.3,
+                60,
+                30
+              ],
+              "12": [
+                3,
+                0.66,
+                20,
+                0.1,
+                0.15,
+                0.3,
+                60,
+                30
+              ],
+              "13": [
+                3,
+                0.69,
+                20,
+                0.1,
+                0.15,
+                0.3,
+                60,
+                30
+              ],
+              "14": [
+                3,
+                0.72,
+                20,
+                0.1,
+                0.15,
+                0.3,
+                60,
+                30
+              ],
+              "15": [
+                3,
+                0.75,
+                20,
+                0.1,
+                0.15,
+                0.3,
+                60,
+                30
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Ultra",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Punchline": {
+                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG."
+              },
+              "Elation DMG": {
+                "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+              },
+              "Certified Banger": {
+                "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+              },
+              "Extra Turn": {
+                "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used."
+              }
+            }
+          }
+        }
+      },
+      "Talent": {
+        "Grow Grace from Grit": {
+          "variant1": {
+            "skillID": 150304,
+            "trigger": "SkillP01",
+            "name": "Grow Grace from Grit",
+            "type": "Defense",
+            "slot": "Talent",
+            "desc": "Pearl can use \"Certified Banger\" as Repellency. Each point of \"Certified Banger\" is equivalent to #5[i] point(s) of Repellency. When an ally target takes DMG, Pearl can consume Repellency to offset #2[i]% of that DMG for the ally target. Pearl's \"Certified Banger\" lasts indefinitely and has a max limit of #3[i].\\nWhen an ally target's current HP percentage is #1[i]% or lower, their DMG taken gets reduced by #4[i]%.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.5,
+                0.6,
+                50,
+                0.15,
+                200
+              ],
+              "2": [
+                0.5,
+                0.6,
+                50,
+                0.165,
+                200
+              ],
+              "3": [
+                0.5,
+                0.6,
+                50,
+                0.18,
+                200
+              ],
+              "4": [
+                0.5,
+                0.6,
+                50,
+                0.195,
+                200
+              ],
+              "5": [
+                0.5,
+                0.6,
+                50,
+                0.21,
+                200
+              ],
+              "6": [
+                0.5,
+                0.6,
+                50,
+                0.225,
+                200
+              ],
+              "7": [
+                0.5,
+                0.6,
+                50,
+                0.24375,
+                200
+              ],
+              "8": [
+                0.5,
+                0.6,
+                50,
+                0.2625,
+                200
+              ],
+              "9": [
+                0.5,
+                0.6,
+                50,
+                0.28125,
+                200
+              ],
+              "10": [
+                0.5,
+                0.6,
+                50,
+                0.3,
+                200
+              ],
+              "11": [
+                0.5,
+                0.6,
+                50,
+                0.315,
+                200
+              ],
+              "12": [
+                0.5,
+                0.6,
+                50,
+                0.33,
+                200
+              ],
+              "13": [
+                0.5,
+                0.6,
+                50,
+                0.345,
+                200
+              ],
+              "14": [
+                0.5,
+                0.6,
+                50,
+                0.36,
+                200
+              ],
+              "15": [
+                0.5,
+                0.6,
+                50,
+                0.375,
+                200
+              ]
+            },
+            "element": "Ice",
+            "skillEffect": "Defence",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Certified Banger": {
+                "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+              },
+              "Repellency": {
+                "desc": "When an ally target takes DMG, consumes Repellency to block a certain percentage of the DMG."
+              }
+            }
+          }
+        }
+      },
+      "Technique": {
+        "Recast Masterwork in Nacre": {
+          "variant1": {
+            "skillID": 150307,
+            "trigger": "SkillMaze",
+            "name": "Recast Masterwork in Nacre",
+            "type": "Support",
+            "slot": "Technique",
+            "desc": "After using Technique, gains \"Aesthetic Archetype.\" When switching active characters, \"Aesthetic Archetype\" transfers to the currently active character. At the start of the next battle, Pearl gains #2[i] \"Certified Banger\" and applies \"Deep Learning\" on the character with \"Aesthetic Archetype.\" This \"Deep Learning\" has #1[i] Charge. Pearl can only apply \"Deep Learning\" on characters other than herself.",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                2,
+                20
+              ]
+            },
+            "element": "Ice",
+            "attackType": "Maze",
+            "skillEffect": "Support",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "extraEffects": {
+              "Certified Banger": {
+                "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+              }
+            }
+          }
+        }
+      },
+      "Elation Skill": {
+        "Dissolve Reason into Elation": {
+          "variant1": {
+            "skillID": 150320,
+            "trigger": "Skill04",
+            "name": "Dissolve Reason into Elation",
+            "type": "Support",
+            "slot": "Elation Skill",
+            "desc": "When there are 1/2/3/(4 or more) Elation characters in the team, then after all ally targets use their next attack, enables them to additionally deal Elation DMG of their corresponding Type to the attack target, equal to #1[f1]%/#2[f1]%/#3[f1]%/#4[f1]% respectively.",
+            "energyCost": null,
+            "energyRegen": 5,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": [
+                0.05,
+                0.075,
+                0.1,
+                0.2
+              ],
+              "2": [
+                0.055,
+                0.0825,
+                0.11,
+                0.22
+              ],
+              "3": [
+                0.06,
+                0.09,
+                0.12,
+                0.24
+              ],
+              "4": [
+                0.065,
+                0.0975,
+                0.13,
+                0.26
+              ],
+              "5": [
+                0.07,
+                0.105,
+                0.14,
+                0.28
+              ],
+              "6": [
+                0.075,
+                0.1125,
+                0.15,
+                0.3
+              ],
+              "7": [
+                0.08125,
+                0.121875,
+                0.1625,
+                0.325
+              ],
+              "8": [
+                0.0875,
+                0.13125,
+                0.175,
+                0.35
+              ],
+              "9": [
+                0.09375,
+                0.140625,
+                0.1875,
+                0.375
+              ],
+              "10": [
+                0.1,
+                0.15,
+                0.2,
+                0.4
+              ],
+              "11": [
+                0.105,
+                0.1575,
+                0.21,
+                0.42
+              ],
+              "12": [
+                0.11,
+                0.165,
+                0.22,
+                0.44
+              ],
+              "13": [
+                0.115,
+                0.1725,
+                0.23,
+                0.46
+              ],
+              "14": [
+                0.12,
+                0.18,
+                0.24,
+                0.48
+              ],
+              "15": [
+                0.125,
+                0.1875,
+                0.25,
+                0.5
+              ]
+            },
+            "element": "Ice",
+            "attackType": "ElationDamage",
+            "skillEffect": "Support",
+            "maxLevel": 15,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": [],
+            "participantID": 104,
+            "extraEffects": {
+              "Elation DMG": {
+                "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects."
+              }
+            }
+          }
+        }
+      }
+    },
+    "traces": {
+      "Point01": {
+        "icon": "icon/skill/1503_basic_atk.png",
+        "skillRef": {
+          "skillName": "Brushstroke: Trace the Severed Stream",
+          "skillSlot": "Basic ATK"
+        }
+      },
+      "Point02": {
+        "icon": "icon/skill/1503_skill.png",
+        "skillRef": {
+          "skillName": "Relume Life's Light",
+          "skillSlot": "Skill"
+        }
+      },
+      "Point03": {
+        "icon": "icon/skill/1503_ultimate.png",
+        "skillRef": {
+          "skillName": "Appraise Soul's Ground",
+          "skillSlot": "Ultimate"
+        }
+      },
+      "Point04": {
+        "icon": "icon/skill/1503_talent.png",
+        "skillRef": {
+          "skillName": "Grow Grace from Grit",
+          "skillSlot": "Talent"
+        }
+      },
+      "Point05": {
+        "icon": "icon/skill/1503_technique.png",
+        "skillRef": {
+          "skillName": "Recast Masterwork in Nacre",
+          "skillSlot": "Technique"
+        }
+      },
+      "Point06": {
+        "name": "Panoptic Vision",
+        "icon": "icon/skill/1503_skilltree1.png",
+        "desc": "When Pearl's DEF is #1[i] or higher, increases this unit's Elation by #2[i]%. For every #3[i] DEF exceeding that threshold, increases this unit's Elation by #4[i]%. Up to a max of #5[i] excess DEF can be taken into account for this effect. Pearl gains Outgoing Healing Boost, equal to #6[i]% of this unit's Elation.",
+        "params": [
+          2400,
+          0.32,
+          100,
+          0.03,
+          3600,
+          0.2
+        ]
+      },
+      "Point07": {
+        "name": "Sensory Latitude",
+        "icon": "icon/skill/1503_skilltree2.png",
+        "desc": "While holding \"Certified Banger,\" increases all ally targets' Effect RES by #3[i]%. When an ally target's turn begins, Pearl gains #1[i] point(s) of \"Certified Banger,\" up to a max of #2[i] point(s) of \"Certified Banger.\" The obtainable amount of \"Certified Banger\" resets at the start of Pearl's turn. When using Enhanced Basic ATK or Skill, dispels #4[i] debuff(s) from all ally targets.",
+        "params": [
+          5,
+          50,
+          0.5,
+          1
+        ],
+        "extraEffects": {
+          "Certified Banger": {
+            "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently."
+          },
+          "Debuff": {
+            "desc": "All status effects that provide negative combat debuffs, can be dispelled unless stated otherwise."
+          }
+        }
+      },
+      "Point08": {
+        "name": "Aesthetic Firewall",
+        "icon": "icon/skill/1503_skilltree3.png",
+        "desc": "After entering combat or using Ultimate, if the \"Aesthetic Archetype\" is an Elation character, their next use of Ultimate regenerates a fixed #1[i] Energy for Pearl. This effect cannot stack.",
+        "params": [
+          90
+        ]
+      },
+      "Point09": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.05
+        }
+      },
+      "Point10": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 2
+        }
+      },
+      "Point11": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.04
+        }
+      },
+      "Point12": {
+        "name": "Elation Boost",
+        "icon": "icon/property/IconJoy.png",
+        "stats": {
+          "ElationDMGAll": 0.04
+        }
+      },
+      "Point13": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.075
+        }
+      },
+      "Point14": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 3
+        }
+      },
+      "Point15": {
+        "name": "Effect RES Boost",
+        "icon": "icon/property/IconStatusResistance.png",
+        "stats": {
+          "EffectRES": 0.06
+        }
+      },
+      "Point16": {
+        "name": "Elation Boost",
+        "icon": "icon/property/IconJoy.png",
+        "stats": {
+          "ElationDMGAll": 0.06
+        }
+      },
+      "Point17": {
+        "name": "SPD Boost",
+        "icon": "icon/property/IconSpeed.png",
+        "stats": {
+          "SPDFlat": 4
+        }
+      },
+      "Point18": {
+        "name": "DEF Boost",
+        "icon": "icon/property/IconDefence.png",
+        "stats": {
+          "DEF%": 0.1
+        }
+      },
+      "Point22": {
+        "name": "Elation Skill",
+        "icon": "icon/skill/1503_elation.png",
+        "skillRef": {
+          "skillName": "Dissolve Reason into Elation",
+          "skillSlot": "Elation Skill"
+        }
+      }
+    },
+    "hasSummon": false,
+    "icon": "icon/character/1503.png",
+    "preview": "image/character_preview/1503.png",
+    "portrait": "image/character_portrait/1503.png",
+    "bannerOffsets": [
+      20,
+      35,
+      0.55,
+      20,
+      35,
+      0.55,
+      20,
+      35,
+      0.55
+    ],
+    "isBuffed": false
+  },
   "Ashveil": {
     "internalID": 1504,
     "name": "Ashveil",
