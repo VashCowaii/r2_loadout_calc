@@ -1480,7 +1480,7 @@ let enemyAbilityData = [
       60
     ],
     "extraEffects": [
-      278
+      283
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -1493,7 +1493,7 @@ let enemyAbilityData = [
     "desc": "When Annihilator of Desolation Mistral uses Chill of Bone-Piercing Coagulation or Hoarfrost of Eternal Isolation, these abilities will be unleashed additional times against targets locked on by Ice Edge.",
     "tag": "Talent",
     "extraEffects": [
-      276
+      281
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -4376,7 +4376,7 @@ let enemyAbilityData = [
       30
     ],
     "extraEffects": [
-      278
+      283
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -4395,7 +4395,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      276
+      281
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -9086,7 +9086,7 @@ let enemyAbilityData = [
       1.25
     ],
     "extraEffects": [
-      65
+      66
     ],
     "delay": 1,
     "alert": true,
@@ -9130,7 +9130,7 @@ let enemyAbilityData = [
       0
     ],
     "extraEffects": [
-      67
+      68
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -10536,7 +10536,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      59
+      60
     ],
     "delay": 1,
     "element": "Wind",
@@ -10625,8 +10625,8 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      58,
-      59
+      59,
+      60
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -14129,7 +14129,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      43
+      44
     ],
     "delay": 1,
     "alert": true,
@@ -14180,8 +14180,8 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      44,
-      43
+      45,
+      44
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -14200,7 +14200,7 @@ let enemyAbilityData = [
       0.45
     ],
     "extraEffects": [
-      43
+      44
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -14222,7 +14222,7 @@ let enemyAbilityData = [
       0.05
     ],
     "extraEffects": [
-      45
+      46
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -14242,7 +14242,7 @@ let enemyAbilityData = [
       0.1
     ],
     "extraEffects": [
-      43
+      44
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -14450,7 +14450,7 @@ let enemyAbilityData = [
       1.8
     ],
     "extraEffects": [
-      47
+      48
     ],
     "delay": 1,
     "element": "Physical",
@@ -14476,9 +14476,9 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      46,
-      48,
-      47
+      47,
+      49,
+      48
     ],
     "delay": 1,
     "element": "Physical",
@@ -14521,9 +14521,9 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      55,
       56,
-      291
+      57,
+      296
     ],
     "delay": 1,
     "element": "Physical",
@@ -14543,7 +14543,7 @@ let enemyAbilityData = [
       2.8
     ],
     "extraEffects": [
-      49
+      50
     ],
     "delay": 1,
     "element": "Physical",
@@ -14567,9 +14567,9 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      46,
-      48,
-      49
+      47,
+      49,
+      50
     ],
     "delay": 1,
     "element": "Physical",
@@ -14589,7 +14589,7 @@ let enemyAbilityData = [
       2.8
     ],
     "extraEffects": [
-      49
+      50
     ],
     "delay": 1,
     "element": "Physical",
@@ -14613,9 +14613,9 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      46,
-      48,
-      49
+      47,
+      49,
+      50
     ],
     "delay": 1,
     "element": "Physical",
@@ -14656,9 +14656,9 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      55,
       56,
-      291
+      57,
+      296
     ],
     "delay": 1,
     "element": "Physical",
@@ -14699,7 +14699,7 @@ let enemyAbilityData = [
       3.6
     ],
     "extraEffects": [
-      58
+      59
     ],
     "delay": 1,
     "alert": true,
@@ -14755,7 +14755,7 @@ let enemyAbilityData = [
       3.6
     ],
     "extraEffects": [
-      58
+      59
     ],
     "delay": 1,
     "alert": true,
@@ -14811,7 +14811,7 @@ let enemyAbilityData = [
       3.6
     ],
     "extraEffects": [
-      58
+      59
     ],
     "delay": 1,
     "alert": true,
@@ -15000,7 +15000,7 @@ let enemyAbilityData = [
       3.6
     ],
     "extraEffects": [
-      59
+      60
     ],
     "delay": 1,
     "alert": true,
@@ -15056,7 +15056,7 @@ let enemyAbilityData = [
       3.6
     ],
     "extraEffects": [
-      59
+      60
     ],
     "delay": 1,
     "alert": true,
@@ -15112,7 +15112,7 @@ let enemyAbilityData = [
       3.6
     ],
     "extraEffects": [
-      59
+      60
     ],
     "delay": 1,
     "alert": true,
@@ -15172,7 +15172,7 @@ let enemyAbilityData = [
       4
     ],
     "extraEffects": [
-      50
+      51
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -15194,7 +15194,7 @@ let enemyAbilityData = [
       1.2
     ],
     "extraEffects": [
-      51
+      52
     ],
     "delay": 1,
     "element": "Physical",
@@ -15217,8 +15217,8 @@ let enemyAbilityData = [
       1.8
     ],
     "extraEffects": [
-      51,
-      52
+      52,
+      53
     ],
     "delay": 1,
     "alert": true,
@@ -15241,9 +15241,9 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      46,
-      48,
-      50
+      47,
+      49,
+      51
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -15262,7 +15262,7 @@ let enemyAbilityData = [
       3.2
     ],
     "extraEffects": [
-      50
+      51
     ],
     "delay": 1,
     "element": "Physical",
@@ -15284,7 +15284,7 @@ let enemyAbilityData = [
       1.8
     ],
     "extraEffects": [
-      50
+      51
     ],
     "delay": 1,
     "element": "Physical",
@@ -15306,7 +15306,7 @@ let enemyAbilityData = [
       4
     ],
     "extraEffects": [
-      50
+      51
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -15328,7 +15328,7 @@ let enemyAbilityData = [
       1.2
     ],
     "extraEffects": [
-      51
+      52
     ],
     "delay": 1,
     "element": "Physical",
@@ -15351,8 +15351,8 @@ let enemyAbilityData = [
       2.8
     ],
     "extraEffects": [
-      51,
-      52
+      52,
+      53
     ],
     "delay": 1,
     "alert": true,
@@ -15375,9 +15375,9 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      46,
-      48,
-      50
+      47,
+      49,
+      51
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -15542,8 +15542,8 @@ let enemyAbilityData = [
       60
     ],
     "extraEffects": [
-      51,
-      52
+      52,
+      53
     ],
     "delay": 1,
     "alert": true,
@@ -15569,9 +15569,9 @@ let enemyAbilityData = [
       0.8
     ],
     "extraEffects": [
-      46,
-      48,
-      53
+      47,
+      49,
+      54
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -15595,7 +15595,7 @@ let enemyAbilityData = [
       0.25
     ],
     "extraEffects": [
-      53
+      54
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -15711,8 +15711,8 @@ let enemyAbilityData = [
       60
     ],
     "extraEffects": [
-      51,
-      52
+      52,
+      53
     ],
     "delay": 1,
     "alert": true,
@@ -15737,9 +15737,9 @@ let enemyAbilityData = [
       0.8
     ],
     "extraEffects": [
-      46,
-      48,
-      53
+      47,
+      49,
+      54
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -15762,7 +15762,7 @@ let enemyAbilityData = [
       0.25
     ],
     "extraEffects": [
-      53
+      54
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -15877,8 +15877,8 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      51,
-      52
+      52,
+      53
     ],
     "delay": 1,
     "element": "Thunder",
@@ -15903,8 +15903,8 @@ let enemyAbilityData = [
       60
     ],
     "extraEffects": [
-      51,
-      52
+      52,
+      53
     ],
     "delay": 1,
     "alert": true,
@@ -15931,9 +15931,9 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      46,
-      48,
-      53
+      47,
+      49,
+      54
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -15958,7 +15958,7 @@ let enemyAbilityData = [
       0.25
     ],
     "extraEffects": [
-      53
+      54
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -16110,8 +16110,8 @@ let enemyAbilityData = [
       60
     ],
     "extraEffects": [
-      51,
-      52
+      52,
+      53
     ],
     "delay": 1,
     "alert": true,
@@ -16136,9 +16136,9 @@ let enemyAbilityData = [
       0.8
     ],
     "extraEffects": [
-      46,
-      48,
-      53
+      47,
+      49,
+      54
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -16161,7 +16161,7 @@ let enemyAbilityData = [
       0.25
     ],
     "extraEffects": [
-      53
+      54
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -16303,9 +16303,9 @@ let enemyAbilityData = [
       4
     ],
     "extraEffects": [
-      55,
       56,
-      291
+      57,
+      296
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -16330,7 +16330,7 @@ let enemyAbilityData = [
       0.6
     ],
     "extraEffects": [
-      291
+      296
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -16355,8 +16355,8 @@ let enemyAbilityData = [
       0.03
     ],
     "extraEffects": [
-      54,
-      56
+      55,
+      57
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -16382,8 +16382,8 @@ let enemyAbilityData = [
     ],
     "extraEffects": [
       16,
-      54,
-      57
+      55,
+      58
     ],
     "delay": 1,
     "element": "Thunder",
@@ -16717,8 +16717,8 @@ let enemyAbilityData = [
       60
     ],
     "extraEffects": [
-      51,
-      52
+      52,
+      53
     ],
     "delay": 1,
     "alert": true,
@@ -16743,9 +16743,9 @@ let enemyAbilityData = [
       0.8
     ],
     "extraEffects": [
-      46,
-      48,
-      53
+      47,
+      49,
+      54
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -16768,7 +16768,7 @@ let enemyAbilityData = [
       0.25
     ],
     "extraEffects": [
-      53
+      54
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -16831,7 +16831,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      59
+      60
     ],
     "delay": 1,
     "element": "Wind",
@@ -16932,8 +16932,8 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      58,
-      59
+      59,
+      60
     ],
     "delay": 1,
     "alert": true,
@@ -17017,7 +17017,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      59
+      60
     ],
     "delay": 1,
     "element": "Wind",
@@ -17118,8 +17118,8 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      58,
-      59
+      59,
+      60
     ],
     "delay": 1,
     "alert": true,
@@ -17201,7 +17201,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      59
+      60
     ],
     "delay": 1,
     "element": "Wind",
@@ -17305,8 +17305,8 @@ let enemyAbilityData = [
       0.1
     ],
     "extraEffects": [
-      58,
-      59
+      59,
+      60
     ],
     "delay": 1,
     "alert": true,
@@ -19631,7 +19631,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      68
+      69
     ],
     "delay": 1,
     "alert": true,
@@ -20243,7 +20243,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      69
+      70
     ],
     "delay": 1,
     "alert": true,
@@ -20368,7 +20368,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      69
+      70
     ],
     "delay": 1,
     "alert": true,
@@ -20745,7 +20745,7 @@ let enemyAbilityData = [
       15
     ],
     "extraEffects": [
-      107
+      108
     ],
     "delay": 1,
     "alert": true,
@@ -20849,7 +20849,7 @@ let enemyAbilityData = [
       12
     ],
     "extraEffects": [
-      107
+      108
     ],
     "delay": 1,
     "alert": true,
@@ -20958,7 +20958,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      107
+      108
     ],
     "delay": 1,
     "alert": true,
@@ -21080,7 +21080,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      107
+      108
     ],
     "delay": 1,
     "alert": true,
@@ -21206,7 +21206,7 @@ let enemyAbilityData = [
       0.35
     ],
     "extraEffects": [
-      39
+      40
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -21260,7 +21260,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      39
+      40
     ],
     "delay": 1,
     "alert": true,
@@ -21326,7 +21326,7 @@ let enemyAbilityData = [
       0.35
     ],
     "extraEffects": [
-      39
+      40
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -21380,7 +21380,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      39
+      40
     ],
     "delay": 1,
     "alert": true,
@@ -21446,7 +21446,7 @@ let enemyAbilityData = [
       0.35
     ],
     "extraEffects": [
-      39
+      40
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -21500,7 +21500,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      39
+      40
     ],
     "delay": 1,
     "alert": true,
@@ -21547,7 +21547,7 @@ let enemyAbilityData = [
       10
     ],
     "extraEffects": [
-      39
+      40
     ],
     "delay": 1,
     "element": "Imaginary",
@@ -21592,7 +21592,7 @@ let enemyAbilityData = [
       0.05
     ],
     "extraEffects": [
-      39
+      40
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -21652,7 +21652,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      39
+      40
     ],
     "delay": 1,
     "alert": true,
@@ -21701,7 +21701,7 @@ let enemyAbilityData = [
       10
     ],
     "extraEffects": [
-      39
+      40
     ],
     "delay": 1,
     "element": "Imaginary",
@@ -21757,8 +21757,8 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      41,
-      42
+      42,
+      43
     ],
     "delay": 1,
     "element": "Wind",
@@ -21781,8 +21781,8 @@ let enemyAbilityData = [
       1.2
     ],
     "extraEffects": [
-      41,
-      42
+      42,
+      43
     ],
     "delay": 1,
     "element": "Wind",
@@ -21820,8 +21820,8 @@ let enemyAbilityData = [
       1.2
     ],
     "extraEffects": [
-      41,
-      42
+      42,
+      43
     ],
     "delay": 1,
     "element": "Wind",
@@ -21890,8 +21890,8 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      41,
-      42
+      42,
+      43
     ],
     "delay": 1,
     "element": "Wind",
@@ -21914,8 +21914,8 @@ let enemyAbilityData = [
       0.9
     ],
     "extraEffects": [
-      41,
-      42
+      42,
+      43
     ],
     "delay": 1,
     "element": "Wind",
@@ -21953,8 +21953,8 @@ let enemyAbilityData = [
       0.9
     ],
     "extraEffects": [
-      41,
-      42
+      42,
+      43
     ],
     "delay": 1,
     "element": "Wind",
@@ -22024,8 +22024,8 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      41,
-      42
+      42,
+      43
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -22047,8 +22047,8 @@ let enemyAbilityData = [
       1.2
     ],
     "extraEffects": [
-      41,
-      42
+      42,
+      43
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -22083,8 +22083,8 @@ let enemyAbilityData = [
       1.2
     ],
     "extraEffects": [
-      41,
-      42
+      42,
+      43
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -22152,8 +22152,8 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      41,
-      42
+      42,
+      43
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -22177,8 +22177,8 @@ let enemyAbilityData = [
       1.5
     ],
     "extraEffects": [
-      41,
-      42
+      42,
+      43
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -22215,8 +22215,8 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      41,
-      42
+      42,
+      43
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -22368,9 +22368,9 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      41,
       42,
-      39
+      43,
+      40
     ],
     "delay": 1,
     "alert": true,
@@ -22484,9 +22484,9 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      41,
       42,
-      39
+      43,
+      40
     ],
     "delay": 1,
     "alert": true,
@@ -22567,9 +22567,9 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      41,
       42,
-      39
+      43,
+      40
     ],
     "delay": 1,
     "alert": true,
@@ -22683,9 +22683,9 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      41,
       42,
-      39
+      43,
+      40
     ],
     "delay": 1,
     "alert": true,
@@ -23015,7 +23015,7 @@ let enemyAbilityData = [
       1.25
     ],
     "extraEffects": [
-      70
+      71
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -25995,7 +25995,7 @@ let enemyAbilityData = [
       0.1
     ],
     "extraEffects": [
-      277
+      282
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -26815,7 +26815,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      63
+      64
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -27661,7 +27661,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      39
+      40
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -27818,7 +27818,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      40
+      41
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -27842,7 +27842,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      40
+      41
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -27898,7 +27898,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      39
+      40
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -27961,7 +27961,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      40
+      41
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -28020,7 +28020,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      39
+      40
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -28177,7 +28177,7 @@ let enemyAbilityData = [
       0.9
     ],
     "extraEffects": [
-      40
+      41
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -28201,7 +28201,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      40
+      41
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -28257,7 +28257,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      39
+      40
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -28415,7 +28415,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      40
+      41
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -28437,7 +28437,7 @@ let enemyAbilityData = [
       0
     ],
     "extraEffects": [
-      40
+      41
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -28562,7 +28562,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      39
+      40
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -28678,7 +28678,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      40
+      41
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -28725,7 +28725,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      39
+      40
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -28867,7 +28867,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      40
+      41
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -28887,7 +28887,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      40
+      41
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -28964,7 +28964,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      39
+      40
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -29121,7 +29121,7 @@ let enemyAbilityData = [
       0.8
     ],
     "extraEffects": [
-      40
+      41
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -29145,7 +29145,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      40
+      41
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -29777,7 +29777,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      272
+      277
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -29796,7 +29796,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      272
+      277
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -29968,7 +29968,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      273
+      278
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -30026,8 +30026,8 @@ let enemyAbilityData = [
       60
     ],
     "extraEffects": [
-      74,
-      75
+      75,
+      76
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -30052,9 +30052,9 @@ let enemyAbilityData = [
       180
     ],
     "extraEffects": [
-      74,
       75,
-      72
+      76,
+      73
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -30160,7 +30160,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      109
+      110
     ],
     "delay": 1,
     "element": "Quantum",
@@ -30215,7 +30215,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      109
+      110
     ],
     "delay": 1,
     "element": "Quantum",
@@ -30270,7 +30270,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      109
+      110
     ],
     "delay": 1,
     "element": "Quantum",
@@ -30325,7 +30325,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      109
+      110
     ],
     "delay": 1,
     "element": "Quantum",
@@ -30486,7 +30486,7 @@ let enemyAbilityData = [
       0.08
     ],
     "extraEffects": [
-      109
+      110
     ],
     "delay": 1,
     "element": "Quantum",
@@ -30510,7 +30510,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      113
+      114
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -30563,7 +30563,7 @@ let enemyAbilityData = [
       0.08
     ],
     "extraEffects": [
-      109
+      110
     ],
     "delay": 1,
     "element": "Quantum",
@@ -30587,7 +30587,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      113
+      114
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -30642,7 +30642,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      76
+      77
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -30658,7 +30658,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      78
+      79
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -30700,7 +30700,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      76
+      77
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -30716,7 +30716,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      78
+      79
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -30827,7 +30827,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      107
+      108
     ],
     "delay": 1,
     "alert": true,
@@ -30941,7 +30941,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      107
+      108
     ],
     "delay": 1,
     "alert": true,
@@ -31050,7 +31050,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      107
+      108
     ],
     "delay": 1,
     "alert": true,
@@ -31146,7 +31146,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      107
+      108
     ],
     "delay": 1,
     "alert": true,
@@ -31254,7 +31254,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      272
+      277
     ],
     "delay": 1,
     "alert": true,
@@ -31302,7 +31302,7 @@ let enemyAbilityData = [
       6
     ],
     "extraEffects": [
-      272
+      277
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -31489,7 +31489,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      272
+      277
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -31623,7 +31623,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      107
+      108
     ],
     "delay": 1,
     "alert": true,
@@ -32072,7 +32072,7 @@ let enemyAbilityData = [
       0.15
     ],
     "extraEffects": [
-      71
+      72
     ],
     "delay": 1.25,
     "alert": true,
@@ -32094,7 +32094,7 @@ let enemyAbilityData = [
       22
     ],
     "extraEffects": [
-      107
+      108
     ],
     "delay": 1,
     "alert": true,
@@ -32144,7 +32144,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      71
+      72
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -32296,7 +32296,7 @@ let enemyAbilityData = [
       0.15
     ],
     "extraEffects": [
-      71
+      72
     ],
     "delay": 1.25,
     "alert": true,
@@ -32315,7 +32315,7 @@ let enemyAbilityData = [
       22
     ],
     "extraEffects": [
-      107
+      108
     ],
     "delay": 1,
     "alert": true,
@@ -32363,7 +32363,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      71
+      72
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -32520,7 +32520,7 @@ let enemyAbilityData = [
       0.15
     ],
     "extraEffects": [
-      71
+      72
     ],
     "delay": 1.25,
     "alert": true,
@@ -32543,7 +32543,7 @@ let enemyAbilityData = [
       14
     ],
     "extraEffects": [
-      107
+      108
     ],
     "delay": 1,
     "alert": true,
@@ -32593,7 +32593,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      71
+      72
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -32771,7 +32771,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      74
+      75
     ],
     "delay": 1.25,
     "alert": true,
@@ -32793,8 +32793,8 @@ let enemyAbilityData = [
       22
     ],
     "extraEffects": [
-      107,
-      72
+      108,
+      73
     ],
     "delay": 1,
     "alert": true,
@@ -32822,8 +32822,8 @@ let enemyAbilityData = [
       240
     ],
     "extraEffects": [
-      74,
-      72
+      75,
+      73
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -32846,9 +32846,9 @@ let enemyAbilityData = [
       960
     ],
     "extraEffects": [
-      74,
       75,
-      72
+      76,
+      73
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -32867,7 +32867,7 @@ let enemyAbilityData = [
       0.02
     ],
     "extraEffects": [
-      72
+      73
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -32883,7 +32883,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      72
+      73
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -32899,8 +32899,8 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      75,
-      73
+      76,
+      74
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -33119,7 +33119,7 @@ let enemyAbilityData = [
       0.15
     ],
     "extraEffects": [
-      71
+      72
     ],
     "delay": 1.25,
     "alert": true,
@@ -33141,7 +33141,7 @@ let enemyAbilityData = [
       22
     ],
     "extraEffects": [
-      107
+      108
     ],
     "delay": 1,
     "alert": true,
@@ -33189,7 +33189,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      71
+      72
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -33359,7 +33359,7 @@ let enemyAbilityData = [
       0.15
     ],
     "extraEffects": [
-      71
+      72
     ],
     "delay": 1.5,
     "alert": true,
@@ -33382,7 +33382,7 @@ let enemyAbilityData = [
       18
     ],
     "extraEffects": [
-      107
+      108
     ],
     "delay": 1,
     "alert": true,
@@ -33434,7 +33434,7 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      71
+      72
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -33604,7 +33604,7 @@ let enemyAbilityData = [
       0.15
     ],
     "extraEffects": [
-      71
+      72
     ],
     "delay": 1.25,
     "alert": true,
@@ -33628,7 +33628,7 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      107
+      108
     ],
     "delay": 1,
     "alert": true,
@@ -33676,7 +33676,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      71
+      72
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -33850,7 +33850,7 @@ let enemyAbilityData = [
       0.4
     ],
     "extraEffects": [
-      71
+      72
     ],
     "delay": 1.25,
     "alert": true,
@@ -33874,7 +33874,7 @@ let enemyAbilityData = [
       10
     ],
     "extraEffects": [
-      107
+      108
     ],
     "delay": 1,
     "alert": true,
@@ -33924,7 +33924,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      71
+      72
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -34062,7 +34062,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      75
+      76
     ],
     "delay": 1,
     "alert": true,
@@ -34245,7 +34245,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      109
+      110
     ],
     "delay": 1,
     "element": "Quantum",
@@ -34270,8 +34270,8 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      107,
-      109
+      108,
+      110
     ],
     "delay": 1,
     "element": "Quantum",
@@ -34293,7 +34293,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      109
+      110
     ],
     "delay": 1,
     "element": "Quantum",
@@ -34339,10 +34339,10 @@ let enemyAbilityData = [
       0.9
     ],
     "extraEffects": [
-      108,
       109,
       110,
-      111
+      111,
+      112
     ],
     "delay": 1,
     "alert": true,
@@ -34369,8 +34369,8 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      109,
-      111
+      110,
+      112
     ],
     "delay": 1,
     "alert": true,
@@ -34398,7 +34398,7 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      110
+      111
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -34422,7 +34422,7 @@ let enemyAbilityData = [
       0.9
     ],
     "extraEffects": [
-      108
+      109
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -34446,7 +34446,7 @@ let enemyAbilityData = [
       0.25
     ],
     "extraEffects": [
-      109
+      110
     ],
     "delay": 1,
     "element": "Quantum",
@@ -34472,8 +34472,8 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      107,
-      109
+      108,
+      110
     ],
     "delay": 1,
     "element": "Quantum",
@@ -34496,7 +34496,7 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      109
+      110
     ],
     "delay": 1,
     "element": "Quantum",
@@ -34543,10 +34543,10 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      108,
       109,
       110,
-      111
+      111,
+      112
     ],
     "delay": 1,
     "element": "Quantum",
@@ -34573,8 +34573,8 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      109,
-      111
+      110,
+      112
     ],
     "delay": 1,
     "alert": true,
@@ -34603,7 +34603,7 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      110
+      111
     ],
     "delay": 1,
     "alert": true,
@@ -34629,7 +34629,7 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      108
+      109
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -34654,7 +34654,7 @@ let enemyAbilityData = [
       0.08
     ],
     "extraEffects": [
-      110
+      111
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -34677,7 +34677,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      109
+      110
     ],
     "delay": 1,
     "element": "Quantum",
@@ -34702,8 +34702,8 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      107,
-      109
+      108,
+      110
     ],
     "delay": 1,
     "element": "Quantum",
@@ -34725,7 +34725,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      109
+      110
     ],
     "delay": 1,
     "element": "Quantum",
@@ -34771,10 +34771,10 @@ let enemyAbilityData = [
       0.9
     ],
     "extraEffects": [
-      108,
       109,
       110,
-      111
+      111,
+      112
     ],
     "delay": 1,
     "alert": true,
@@ -34801,8 +34801,8 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      109,
-      111
+      110,
+      112
     ],
     "delay": 1,
     "alert": true,
@@ -34830,7 +34830,7 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      110
+      111
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -34854,7 +34854,7 @@ let enemyAbilityData = [
       0.9
     ],
     "extraEffects": [
-      108
+      109
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -34908,7 +34908,7 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      109
+      110
     ],
     "delay": 1,
     "element": "Quantum",
@@ -34932,8 +34932,8 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      107,
-      109
+      108,
+      110
     ],
     "delay": 1,
     "element": "Quantum",
@@ -34954,7 +34954,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      109
+      110
     ],
     "delay": 1,
     "element": "Quantum",
@@ -34998,10 +34998,10 @@ let enemyAbilityData = [
       0.9
     ],
     "extraEffects": [
-      108,
       109,
-      112,
-      111
+      110,
+      113,
+      112
     ],
     "delay": 1,
     "alert": true,
@@ -35028,8 +35028,8 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      109,
-      111
+      110,
+      112
     ],
     "delay": 1,
     "alert": true,
@@ -35056,7 +35056,7 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      112
+      113
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -35080,7 +35080,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      108
+      109
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -35156,8 +35156,8 @@ let enemyAbilityData = [
       0.145
     ],
     "extraEffects": [
-      108,
-      110
+      109,
+      111
     ],
     "delay": 1,
     "alert": true,
@@ -35201,7 +35201,7 @@ let enemyAbilityData = [
       0.05
     ],
     "extraEffects": [
-      110
+      111
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -35224,7 +35224,7 @@ let enemyAbilityData = [
       1.75
     ],
     "extraEffects": [
-      109
+      110
     ],
     "delay": 1,
     "element": "Quantum",
@@ -35249,8 +35249,8 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      107,
-      109
+      108,
+      110
     ],
     "delay": 1,
     "element": "Quantum",
@@ -35272,7 +35272,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      109
+      110
     ],
     "delay": 1,
     "element": "Quantum",
@@ -35318,10 +35318,10 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      108,
       109,
       110,
-      111
+      111,
+      112
     ],
     "delay": 1,
     "alert": true,
@@ -35348,8 +35348,8 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      109,
-      111
+      110,
+      112
     ],
     "delay": 1,
     "alert": true,
@@ -35377,7 +35377,7 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      110
+      111
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -35401,7 +35401,7 @@ let enemyAbilityData = [
       0.1
     ],
     "extraEffects": [
-      108
+      109
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -35436,8 +35436,8 @@ let enemyAbilityData = [
       0.15
     ],
     "extraEffects": [
-      113,
-      109
+      114,
+      110
     ],
     "delay": 1,
     "element": "Quantum",
@@ -35460,9 +35460,9 @@ let enemyAbilityData = [
       0.15
     ],
     "extraEffects": [
-      107,
-      113,
-      109
+      108,
+      114,
+      110
     ],
     "delay": 1,
     "element": "Quantum",
@@ -35484,7 +35484,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      109
+      110
     ],
     "delay": 1,
     "element": "Quantum",
@@ -35524,8 +35524,8 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      113,
-      109
+      114,
+      110
     ],
     "delay": 1,
     "alert": true,
@@ -35547,9 +35547,9 @@ let enemyAbilityData = [
       0.8
     ],
     "extraEffects": [
-      109,
-      115,
-      114
+      110,
+      116,
+      115
     ],
     "delay": 1,
     "alert": true,
@@ -35577,7 +35577,7 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      113
+      114
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -35675,9 +35675,9 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
+      116,
       115,
-      114,
-      117
+      118
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -35697,8 +35697,8 @@ let enemyAbilityData = [
       600
     ],
     "extraEffects": [
-      116,
-      109
+      117,
+      110
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -35733,8 +35733,8 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      76,
-      80
+      77,
+      81
     ],
     "delay": 1,
     "element": "Fire",
@@ -35757,8 +35757,8 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      76,
-      80
+      77,
+      81
     ],
     "delay": 1,
     "element": "Fire",
@@ -35782,8 +35782,8 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      76,
-      80
+      77,
+      81
     ],
     "delay": 1,
     "element": "Fire",
@@ -35808,7 +35808,7 @@ let enemyAbilityData = [
       1.2
     ],
     "extraEffects": [
-      77
+      78
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -35827,10 +35827,10 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      76,
       77,
-      107,
-      80
+      78,
+      108,
+      81
     ],
     "delay": 1,
     "alert": true,
@@ -35853,8 +35853,8 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      78,
-      80
+      79,
+      81
     ],
     "delay": 1,
     "element": "Thunder",
@@ -35876,8 +35876,8 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      78,
-      80
+      79,
+      81
     ],
     "delay": 1,
     "element": "Thunder",
@@ -35899,8 +35899,8 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      78,
-      80
+      79,
+      81
     ],
     "delay": 1,
     "element": "Thunder",
@@ -35921,8 +35921,8 @@ let enemyAbilityData = [
       20
     ],
     "extraEffects": [
-      78,
-      79
+      79,
+      80
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -35942,7 +35942,7 @@ let enemyAbilityData = [
       20
     ],
     "extraEffects": [
-      80
+      81
     ],
     "delay": 1,
     "alert": true,
@@ -35990,8 +35990,8 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      78,
-      79
+      79,
+      80
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -36026,8 +36026,8 @@ let enemyAbilityData = [
       0.01
     ],
     "extraEffects": [
-      76,
-      108
+      77,
+      109
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -36062,8 +36062,8 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      76,
-      80
+      77,
+      81
     ],
     "delay": 1,
     "element": "Fire",
@@ -36086,8 +36086,8 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      76,
-      80
+      77,
+      81
     ],
     "delay": 1,
     "element": "Fire",
@@ -36111,8 +36111,8 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      76,
-      80
+      77,
+      81
     ],
     "delay": 1,
     "element": "Fire",
@@ -36137,7 +36137,7 @@ let enemyAbilityData = [
       1.2
     ],
     "extraEffects": [
-      77
+      78
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -36156,10 +36156,10 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      76,
       77,
-      107,
-      80
+      78,
+      108,
+      81
     ],
     "delay": 1,
     "alert": true,
@@ -36182,8 +36182,8 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      78,
-      80
+      79,
+      81
     ],
     "delay": 1,
     "element": "Thunder",
@@ -36205,8 +36205,8 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      78,
-      80
+      79,
+      81
     ],
     "delay": 1,
     "element": "Thunder",
@@ -36228,8 +36228,8 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      78,
-      80
+      79,
+      81
     ],
     "delay": 1,
     "element": "Thunder",
@@ -36250,8 +36250,8 @@ let enemyAbilityData = [
       20
     ],
     "extraEffects": [
-      78,
-      79
+      79,
+      80
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -36271,7 +36271,7 @@ let enemyAbilityData = [
       20
     ],
     "extraEffects": [
-      80
+      81
     ],
     "delay": 1,
     "alert": true,
@@ -36319,8 +36319,8 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      78,
-      79
+      79,
+      80
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -36355,8 +36355,8 @@ let enemyAbilityData = [
       0.01
     ],
     "extraEffects": [
-      76,
-      108
+      77,
+      109
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -36392,8 +36392,8 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      82,
-      80
+      83,
+      81
     ],
     "delay": 1,
     "alert": true,
@@ -36416,8 +36416,8 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      107,
-      80
+      108,
+      81
     ],
     "delay": 1,
     "element": "Imaginary",
@@ -36438,7 +36438,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      80
+      81
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -36457,7 +36457,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      80
+      81
     ],
     "delay": 1,
     "alert": true,
@@ -36504,8 +36504,8 @@ let enemyAbilityData = [
       150
     ],
     "extraEffects": [
-      81,
-      82
+      82,
+      83
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -36530,7 +36530,7 @@ let enemyAbilityData = [
     ],
     "extraEffects": [
       17,
-      108
+      109
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -36583,8 +36583,8 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      76,
-      80
+      77,
+      81
     ],
     "delay": 1,
     "element": "Fire",
@@ -36607,8 +36607,8 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      76,
-      80
+      77,
+      81
     ],
     "delay": 1,
     "element": "Fire",
@@ -36632,8 +36632,8 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      76,
-      80
+      77,
+      81
     ],
     "delay": 1,
     "element": "Fire",
@@ -36658,7 +36658,7 @@ let enemyAbilityData = [
       1.2
     ],
     "extraEffects": [
-      77
+      78
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -36677,10 +36677,10 @@ let enemyAbilityData = [
       0.1
     ],
     "extraEffects": [
-      76,
       77,
-      107,
-      80
+      78,
+      108,
+      81
     ],
     "delay": 1,
     "alert": true,
@@ -36703,8 +36703,8 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      78,
-      80
+      79,
+      81
     ],
     "delay": 1,
     "element": "Thunder",
@@ -36726,8 +36726,8 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      78,
-      80
+      79,
+      81
     ],
     "delay": 1,
     "element": "Thunder",
@@ -36749,8 +36749,8 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      78,
-      80
+      79,
+      81
     ],
     "delay": 1,
     "element": "Thunder",
@@ -36771,8 +36771,8 @@ let enemyAbilityData = [
       20
     ],
     "extraEffects": [
-      78,
-      79
+      79,
+      80
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -36792,7 +36792,7 @@ let enemyAbilityData = [
       8
     ],
     "extraEffects": [
-      80
+      81
     ],
     "delay": 1,
     "alert": true,
@@ -36840,8 +36840,8 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      78,
-      79
+      79,
+      80
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -36876,8 +36876,8 @@ let enemyAbilityData = [
       0.01
     ],
     "extraEffects": [
-      76,
-      108
+      77,
+      109
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -36913,8 +36913,8 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      82,
-      80
+      83,
+      81
     ],
     "delay": 1,
     "alert": true,
@@ -36937,8 +36937,8 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      107,
-      80
+      108,
+      81
     ],
     "delay": 1,
     "element": "Imaginary",
@@ -36959,7 +36959,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      80
+      81
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -36978,7 +36978,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      80
+      81
     ],
     "delay": 1,
     "alert": true,
@@ -37025,8 +37025,8 @@ let enemyAbilityData = [
       150
     ],
     "extraEffects": [
-      81,
-      82
+      82,
+      83
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -37051,7 +37051,7 @@ let enemyAbilityData = [
     ],
     "extraEffects": [
       17,
-      108
+      109
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -37105,8 +37105,8 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      82,
-      80
+      83,
+      81
     ],
     "delay": 1,
     "alert": true,
@@ -37129,8 +37129,8 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      107,
-      80
+      108,
+      81
     ],
     "delay": 1,
     "element": "Imaginary",
@@ -37151,7 +37151,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      80
+      81
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -37170,7 +37170,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      80
+      81
     ],
     "delay": 1,
     "alert": true,
@@ -37217,8 +37217,8 @@ let enemyAbilityData = [
       150
     ],
     "extraEffects": [
-      81,
-      82
+      82,
+      83
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -37243,7 +37243,7 @@ let enemyAbilityData = [
     ],
     "extraEffects": [
       17,
-      108
+      109
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -37309,7 +37309,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      83
+      84
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -37347,7 +37347,7 @@ let enemyAbilityData = [
       12
     ],
     "extraEffects": [
-      83
+      84
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -37363,7 +37363,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      273
+      278
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -37404,7 +37404,7 @@ let enemyAbilityData = [
       1.5
     ],
     "extraEffects": [
-      118
+      119
     ],
     "delay": 1,
     "element": "Fire",
@@ -37422,7 +37422,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      118
+      119
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -37442,7 +37442,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      118
+      119
     ],
     "delay": 1,
     "alert": true,
@@ -37461,7 +37461,7 @@ let enemyAbilityData = [
       0.25
     ],
     "extraEffects": [
-      118
+      119
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -37574,7 +37574,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      273
+      278
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -37706,7 +37706,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      273
+      278
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -37888,7 +37888,7 @@ let enemyAbilityData = [
       2.6
     ],
     "extraEffects": [
-      119
+      120
     ],
     "delay": 1,
     "element": "Quantum",
@@ -37906,7 +37906,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      119
+      120
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -37925,7 +37925,7 @@ let enemyAbilityData = [
       4.5
     ],
     "extraEffects": [
-      119
+      120
     ],
     "delay": 1,
     "alert": true,
@@ -37944,7 +37944,7 @@ let enemyAbilityData = [
       0.25
     ],
     "extraEffects": [
-      119
+      120
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -38049,7 +38049,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      273
+      278
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -38090,7 +38090,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -38162,7 +38162,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -38183,8 +38183,8 @@ let enemyAbilityData = [
       0.06
     ],
     "extraEffects": [
-      120,
-      121
+      121,
+      122
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -38204,8 +38204,8 @@ let enemyAbilityData = [
       0.02
     ],
     "extraEffects": [
-      120,
-      121
+      121,
+      122
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -38242,7 +38242,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -38282,8 +38282,8 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      88,
-      120
+      89,
+      121
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -38321,7 +38321,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -38359,7 +38359,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -38380,8 +38380,8 @@ let enemyAbilityData = [
       0.06
     ],
     "extraEffects": [
-      120,
-      121
+      121,
+      122
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -38401,8 +38401,8 @@ let enemyAbilityData = [
       0.02
     ],
     "extraEffects": [
-      120,
-      121
+      121,
+      122
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -38442,7 +38442,7 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -38463,8 +38463,8 @@ let enemyAbilityData = [
       0.08
     ],
     "extraEffects": [
-      120,
-      271
+      121,
+      276
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -38484,8 +38484,8 @@ let enemyAbilityData = [
       0.05
     ],
     "extraEffects": [
-      120,
-      271
+      121,
+      276
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -38522,7 +38522,7 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -38560,7 +38560,7 @@ let enemyAbilityData = [
       0.02
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -38597,7 +38597,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -38637,8 +38637,8 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      88,
-      120
+      89,
+      121
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -38676,7 +38676,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -38714,7 +38714,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -38735,8 +38735,8 @@ let enemyAbilityData = [
       0.06
     ],
     "extraEffects": [
-      120,
-      121
+      121,
+      122
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -38756,8 +38756,8 @@ let enemyAbilityData = [
       0.02
     ],
     "extraEffects": [
-      120,
-      121
+      121,
+      122
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -38828,7 +38828,7 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -38846,8 +38846,8 @@ let enemyAbilityData = [
       0.08
     ],
     "extraEffects": [
-      120,
-      271
+      121,
+      276
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -38864,8 +38864,8 @@ let enemyAbilityData = [
       0.05
     ],
     "extraEffects": [
-      120,
-      271
+      121,
+      276
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -38902,7 +38902,7 @@ let enemyAbilityData = [
       14
     ],
     "extraEffects": [
-      107
+      108
     ],
     "delay": 1,
     "element": "Fire",
@@ -38954,7 +38954,7 @@ let enemyAbilityData = [
       6
     ],
     "extraEffects": [
-      107
+      108
     ],
     "delay": 1,
     "element": "Fire",
@@ -38988,7 +38988,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      85
+      86
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -39026,7 +39026,7 @@ let enemyAbilityData = [
       4.5
     ],
     "extraEffects": [
-      85
+      86
     ],
     "delay": 1,
     "element": "Physical",
@@ -39048,7 +39048,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      85
+      86
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -39065,7 +39065,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      85
+      86
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -39103,7 +39103,7 @@ let enemyAbilityData = [
       4.5
     ],
     "extraEffects": [
-      85
+      86
     ],
     "delay": 1,
     "element": "Physical",
@@ -39137,7 +39137,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      85
+      86
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -39175,7 +39175,7 @@ let enemyAbilityData = [
       4.5
     ],
     "extraEffects": [
-      85
+      86
     ],
     "delay": 1,
     "element": "Physical",
@@ -39197,7 +39197,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      85
+      86
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -39237,7 +39237,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -39311,7 +39311,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -39414,7 +39414,7 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      122
+      123
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -39513,7 +39513,7 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      122
+      123
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -39637,7 +39637,7 @@ let enemyAbilityData = [
       0.15
     ],
     "extraEffects": [
-      122
+      123
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -39756,7 +39756,7 @@ let enemyAbilityData = [
       0.15
     ],
     "extraEffects": [
-      122
+      123
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -39775,7 +39775,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "element": "Physical",
@@ -39797,7 +39797,7 @@ let enemyAbilityData = [
       4
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "alert": true,
@@ -39816,7 +39816,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -39832,7 +39832,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      86
+      87
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -39852,7 +39852,7 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "alert": true,
@@ -39878,7 +39878,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -39895,7 +39895,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -39958,7 +39958,7 @@ let enemyAbilityData = [
       8
     ],
     "extraEffects": [
-      114
+      115
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -40113,7 +40113,7 @@ let enemyAbilityData = [
       8
     ],
     "extraEffects": [
-      114
+      115
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -40217,7 +40217,7 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      87
+      88
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -40276,7 +40276,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -40407,7 +40407,7 @@ let enemyAbilityData = [
       0.15
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -40427,7 +40427,7 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -40565,7 +40565,7 @@ let enemyAbilityData = [
       0
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -40585,7 +40585,7 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -40677,7 +40677,7 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      87
+      88
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -40736,7 +40736,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -40759,7 +40759,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "element": "Wind",
@@ -40813,7 +40813,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "element": "Wind",
@@ -40875,7 +40875,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -40910,7 +40910,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -40932,7 +40932,7 @@ let enemyAbilityData = [
       2.5
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -40954,7 +40954,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "alert": true,
@@ -40977,7 +40977,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "alert": true,
@@ -41000,8 +41000,8 @@ let enemyAbilityData = [
       16
     ],
     "extraEffects": [
-      120,
-      121
+      121,
+      122
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -41024,8 +41024,8 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      120,
-      121
+      121,
+      122
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -41079,7 +41079,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -41112,7 +41112,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -41131,7 +41131,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -41153,7 +41153,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "alert": true,
@@ -41173,7 +41173,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "alert": true,
@@ -41199,8 +41199,8 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      120,
-      121
+      121,
+      122
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -41220,8 +41220,8 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      120,
-      121
+      121,
+      122
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -41237,8 +41237,8 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      120,
-      121
+      121,
+      122
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -41282,7 +41282,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -41319,7 +41319,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -41342,7 +41342,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -41364,7 +41364,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "alert": true,
@@ -41388,7 +41388,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "alert": true,
@@ -41412,8 +41412,8 @@ let enemyAbilityData = [
       16
     ],
     "extraEffects": [
-      120,
-      271
+      121,
+      276
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -41437,8 +41437,8 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      120,
-      271
+      121,
+      276
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -41456,8 +41456,8 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      120,
-      271
+      121,
+      276
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -41511,7 +41511,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1.5,
     "atkType": "Basic ATK",
@@ -41560,7 +41560,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1.8,
     "atkType": "Basic ATK"
@@ -41581,7 +41581,7 @@ let enemyAbilityData = [
       2.5
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1.8,
     "atkType": "Basic ATK"
@@ -41602,7 +41602,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1.5,
     "alert": true,
@@ -41625,7 +41625,7 @@ let enemyAbilityData = [
       2.5
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1.5,
     "alert": true,
@@ -41670,7 +41670,7 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      88
+      89
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -41738,7 +41738,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      88
+      89
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -41763,7 +41763,7 @@ let enemyAbilityData = [
       225
     ],
     "extraEffects": [
-      88
+      89
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -41832,7 +41832,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -41859,7 +41859,7 @@ let enemyAbilityData = [
     "desc": "Uses \"Demise's Storm\" or \"Fading Fate\" together with \"Long-Shattered Vessel.\" Then, absorbs \"Long-Shattered Vessel\" to heal this unit while obtaining \"Calamity Power.\"",
     "tag": "AoE ATK",
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -41881,7 +41881,7 @@ let enemyAbilityData = [
       1.5
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -41900,7 +41900,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "alert": true,
@@ -41923,7 +41923,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "alert": true,
@@ -41942,8 +41942,8 @@ let enemyAbilityData = [
       16
     ],
     "extraEffects": [
-      120,
-      121
+      121,
+      122
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -41966,7 +41966,7 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -42018,7 +42018,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -42053,7 +42053,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -42075,7 +42075,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -42097,7 +42097,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "alert": true,
@@ -42120,7 +42120,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "alert": true,
@@ -42143,8 +42143,8 @@ let enemyAbilityData = [
       16
     ],
     "extraEffects": [
-      120,
-      121
+      121,
+      122
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -42167,8 +42167,8 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      120,
-      121
+      121,
+      122
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -42224,7 +42224,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -42259,7 +42259,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -42282,7 +42282,7 @@ let enemyAbilityData = [
       1.25
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -42296,7 +42296,7 @@ let enemyAbilityData = [
     "desc": "Obtains \"Calamity Power\" and enters the \"Silent Sorrow\" state. Uses \"Cry Not for the Discarded\" in the next action.",
     "tag": "Charging",
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -42318,7 +42318,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "alert": true,
@@ -42342,7 +42342,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "alert": true,
@@ -42357,7 +42357,7 @@ let enemyAbilityData = [
     "desc": "Deals Physical DMG to all targets and consumes all \"Calamity Power\" to additionally deal several instances of minor Physical DMG. The more \"Calamity Power\" stacks are consumed, the more instances of DMG.",
     "tag": "AoE ATK",
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "alert": true,
@@ -42381,8 +42381,8 @@ let enemyAbilityData = [
       0.0029999998
     ],
     "extraEffects": [
-      120,
-      121
+      121,
+      122
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -42405,8 +42405,8 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      120,
-      121
+      121,
+      122
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -42436,7 +42436,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      88
+      89
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -42521,7 +42521,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -42554,7 +42554,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -42576,7 +42576,7 @@ let enemyAbilityData = [
       1.5
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -42595,7 +42595,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "alert": true,
@@ -42618,7 +42618,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "alert": true,
@@ -42640,8 +42640,8 @@ let enemyAbilityData = [
       16
     ],
     "extraEffects": [
-      120,
-      121
+      121,
+      122
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -42664,8 +42664,8 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      120,
-      121
+      121,
+      122
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -42715,7 +42715,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1.5,
     "atkType": "Basic ATK",
@@ -42759,7 +42759,7 @@ let enemyAbilityData = [
     "desc": "Obtains \"Calamity Power\" and enters the \"Dying Sobs\" state. Uses \"But Suffering is Essential\" in the next action.",
     "tag": "Charging",
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1.5,
     "atkType": "Basic ATK"
@@ -42780,7 +42780,7 @@ let enemyAbilityData = [
       2.5
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1.5,
     "atkType": "Basic ATK",
@@ -42799,7 +42799,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "alert": true,
@@ -42822,7 +42822,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "alert": true,
@@ -42865,7 +42865,7 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      89
+      90
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -42881,7 +42881,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      89
+      90
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -42905,7 +42905,7 @@ let enemyAbilityData = [
       120
     ],
     "extraEffects": [
-      89
+      90
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -42976,7 +42976,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -43011,7 +43011,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -43034,7 +43034,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -43056,7 +43056,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "alert": true,
@@ -43079,7 +43079,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      120
+      121
     ],
     "delay": 1,
     "alert": true,
@@ -43102,8 +43102,8 @@ let enemyAbilityData = [
       16
     ],
     "extraEffects": [
-      120,
-      121
+      121,
+      122
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -43126,8 +43126,8 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      120,
-      121
+      121,
+      122
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -43254,7 +43254,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      122
+      123
     ],
     "delay": 1,
     "element": "Imaginary",
@@ -43300,7 +43300,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      122
+      123
     ],
     "delay": 1,
     "alert": true,
@@ -43341,7 +43341,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      122
+      123
     ],
     "delay": 1,
     "alert": true,
@@ -43502,7 +43502,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      122
+      123
     ],
     "delay": 1,
     "element": "Imaginary",
@@ -43545,7 +43545,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      122
+      123
     ],
     "delay": 1,
     "alert": true,
@@ -43737,7 +43737,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      91
+      92
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -43758,7 +43758,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      90
+      91
     ],
     "delay": 1,
     "element": "Quantum",
@@ -43829,8 +43829,8 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      83,
-      92
+      84,
+      93
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -43849,7 +43849,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      90
+      91
     ],
     "delay": 1,
     "element": "Quantum",
@@ -43893,7 +43893,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      107
+      108
     ],
     "delay": 1,
     "alert": true,
@@ -43993,7 +43993,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      91
+      92
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -44014,7 +44014,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      90
+      91
     ],
     "delay": 1,
     "element": "Quantum",
@@ -44085,8 +44085,8 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      83,
-      92
+      84,
+      93
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -44105,7 +44105,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      90
+      91
     ],
     "delay": 1,
     "element": "Quantum",
@@ -44149,7 +44149,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      107
+      108
     ],
     "delay": 1,
     "alert": true,
@@ -44249,7 +44249,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      91
+      92
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -44270,7 +44270,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      90
+      91
     ],
     "delay": 1,
     "element": "Quantum",
@@ -44341,8 +44341,8 @@ let enemyAbilityData = [
       0.2
     ],
     "extraEffects": [
-      83,
-      92
+      84,
+      93
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -44361,7 +44361,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      90
+      91
     ],
     "delay": 1,
     "element": "Quantum",
@@ -44405,7 +44405,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      107
+      108
     ],
     "delay": 1,
     "alert": true,
@@ -44486,8 +44486,8 @@ let enemyAbilityData = [
       0.7
     ],
     "extraEffects": [
-      123,
-      124
+      124,
+      125
     ],
     "delay": 1,
     "element": "Ice",
@@ -44526,7 +44526,7 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      123
+      124
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -44580,7 +44580,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      274
+      279
     ],
     "delay": 1,
     "element": "Ice",
@@ -44601,8 +44601,8 @@ let enemyAbilityData = [
       0.7
     ],
     "extraEffects": [
-      123,
-      124
+      124,
+      125
     ],
     "delay": 1,
     "element": "Ice",
@@ -44641,7 +44641,7 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      123
+      124
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -44724,7 +44724,7 @@ let enemyAbilityData = [
       4
     ],
     "extraEffects": [
-      123
+      124
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -44801,8 +44801,8 @@ let enemyAbilityData = [
       0.7
     ],
     "extraEffects": [
-      123,
-      125
+      124,
+      126
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -44822,8 +44822,8 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      123,
-      124
+      124,
+      125
     ],
     "delay": 1,
     "alert": true,
@@ -44845,7 +44845,7 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      123
+      124
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -44976,7 +44976,7 @@ let enemyAbilityData = [
       0.7
     ],
     "extraEffects": [
-      274
+      279
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45071,8 +45071,8 @@ let enemyAbilityData = [
       0.7
     ],
     "extraEffects": [
-      123,
-      125
+      124,
+      126
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45092,8 +45092,8 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      123,
-      124
+      124,
+      125
     ],
     "delay": 1,
     "alert": true,
@@ -45115,7 +45115,7 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      123
+      124
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45210,7 +45210,7 @@ let enemyAbilityData = [
       0.7
     ],
     "extraEffects": [
-      274
+      279
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45304,8 +45304,8 @@ let enemyAbilityData = [
       0.7
     ],
     "extraEffects": [
-      123,
-      125
+      124,
+      126
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45325,8 +45325,8 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      123,
-      124
+      124,
+      125
     ],
     "delay": 1,
     "alert": true,
@@ -45348,7 +45348,7 @@ let enemyAbilityData = [
       4
     ],
     "extraEffects": [
-      123
+      124
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45421,7 +45421,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      93
+      94
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45473,7 +45473,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      123
+      124
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45508,7 +45508,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      94
+      95
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45524,7 +45524,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      94
+      95
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45580,8 +45580,8 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      95,
-      96
+      96,
+      97
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45597,8 +45597,8 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      95,
-      96
+      96,
+      97
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -45973,7 +45973,7 @@ let enemyAbilityData = [
       180
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "element": "Imaginary",
@@ -45998,7 +45998,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "element": "Imaginary",
@@ -46019,7 +46019,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      96
+      97
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -46040,7 +46040,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      96
+      97
     ],
     "delay": 1,
     "alert": true,
@@ -46145,7 +46145,7 @@ let enemyAbilityData = [
       180
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "element": "Imaginary",
@@ -46171,7 +46171,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "element": "Imaginary",
@@ -46193,7 +46193,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      96
+      97
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -46215,7 +46215,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      96
+      97
     ],
     "delay": 1,
     "alert": true,
@@ -46260,7 +46260,7 @@ let enemyAbilityData = [
       0.06
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -46282,7 +46282,7 @@ let enemyAbilityData = [
       0
     ],
     "extraEffects": [
-      97
+      98
     ],
     "delay": 1,
     "element": "Imaginary",
@@ -46307,7 +46307,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      97
+      98
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -46347,8 +46347,8 @@ let enemyAbilityData = [
       180
     ],
     "extraEffects": [
-      84,
-      97
+      85,
+      98
     ],
     "delay": 1,
     "element": "Imaginary",
@@ -46373,7 +46373,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "element": "Imaginary",
@@ -46394,7 +46394,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      96
+      97
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -46415,7 +46415,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      96
+      97
     ],
     "delay": 1,
     "alert": true,
@@ -46455,7 +46455,7 @@ let enemyAbilityData = [
       0.25
     ],
     "extraEffects": [
-      97
+      98
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -46499,8 +46499,8 @@ let enemyAbilityData = [
       1440
     ],
     "extraEffects": [
-      98,
-      99
+      99,
+      100
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -46635,7 +46635,7 @@ let enemyAbilityData = [
       180
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "element": "Imaginary",
@@ -46659,7 +46659,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "element": "Imaginary",
@@ -46677,7 +46677,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      96
+      97
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -46695,7 +46695,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      96
+      97
     ],
     "delay": 1,
     "alert": true,
@@ -46791,7 +46791,7 @@ let enemyAbilityData = [
       120
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "element": "Imaginary",
@@ -46815,7 +46815,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      84
+      85
     ],
     "delay": 1,
     "element": "Imaginary",
@@ -46836,7 +46836,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      96
+      97
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -46857,7 +46857,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      96
+      97
     ],
     "delay": 1,
     "alert": true,
@@ -47351,7 +47351,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      128
+      129
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -47367,7 +47367,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      128
+      129
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -47383,7 +47383,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      129
+      130
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -47399,7 +47399,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      129
+      130
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -47820,7 +47820,7 @@ let enemyAbilityData = [
       10
     ],
     "extraEffects": [
-      126,
+      127,
       27
     ],
     "delay": 1,
@@ -47937,7 +47937,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      126,
+      127,
       27
     ],
     "delay": 1,
@@ -48056,7 +48056,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      126,
+      127,
       27
     ],
     "delay": 1,
@@ -48180,7 +48180,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      102
+      103
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -48200,7 +48200,7 @@ let enemyAbilityData = [
       2.5
     ],
     "extraEffects": [
-      102
+      103
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -48220,7 +48220,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      102
+      103
     ],
     "delay": 1,
     "alert": true,
@@ -48248,9 +48248,9 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      100,
       101,
-      102
+      102,
+      103
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -48266,7 +48266,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      102
+      103
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -48282,9 +48282,9 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      100,
       101,
       102,
+      103,
       27
     ],
     "delay": 1,
@@ -48321,7 +48321,7 @@ let enemyAbilityData = [
       2.5
     ],
     "extraEffects": [
-      102
+      103
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -48341,7 +48341,7 @@ let enemyAbilityData = [
       2.5
     ],
     "extraEffects": [
-      102
+      103
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -48361,7 +48361,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      102
+      103
     ],
     "delay": 1,
     "alert": true,
@@ -48389,9 +48389,9 @@ let enemyAbilityData = [
       5
     ],
     "extraEffects": [
-      100,
       101,
-      102
+      102,
+      103
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -48407,7 +48407,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      102
+      103
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -48423,9 +48423,9 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      100,
       101,
       102,
+      103,
       27
     ],
     "delay": 1,
@@ -49160,7 +49160,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      127
+      128
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -49206,7 +49206,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      127,
+      128,
       27,
       26,
       0
@@ -49228,7 +49228,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      127,
+      128,
       27,
       26,
       0
@@ -49259,8 +49259,8 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      127,
-      130
+      128,
+      131
     ],
     "delay": 1,
     "alert": true,
@@ -49285,7 +49285,7 @@ let enemyAbilityData = [
       0.4
     ],
     "extraEffects": [
-      127
+      128
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -49305,7 +49305,7 @@ let enemyAbilityData = [
       0.75
     ],
     "extraEffects": [
-      127
+      128
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -49407,7 +49407,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      127
+      128
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -49454,7 +49454,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      127,
+      128,
       27,
       26,
       0
@@ -49477,7 +49477,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      127,
+      128,
       27,
       26,
       0
@@ -49509,8 +49509,8 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      127,
-      130
+      128,
+      131
     ],
     "delay": 1,
     "alert": true,
@@ -49536,7 +49536,7 @@ let enemyAbilityData = [
       0.4
     ],
     "extraEffects": [
-      127
+      128
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -49557,7 +49557,7 @@ let enemyAbilityData = [
       0.75
     ],
     "extraEffects": [
-      127
+      128
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -49620,7 +49620,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      127
+      128
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -49666,7 +49666,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      127,
+      128,
       27,
       26,
       0
@@ -49688,7 +49688,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      127,
+      128,
       27,
       26,
       0
@@ -49719,8 +49719,8 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      127,
-      130
+      128,
+      131
     ],
     "delay": 1,
     "alert": true,
@@ -49751,7 +49751,7 @@ let enemyAbilityData = [
       0.1
     ],
     "extraEffects": [
-      127
+      128
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -49771,7 +49771,7 @@ let enemyAbilityData = [
       0.75
     ],
     "extraEffects": [
-      127
+      128
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -49860,8 +49860,8 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      127,
-      292
+      128,
+      297
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -49927,7 +49927,7 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      127
+      128
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -49974,7 +49974,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      127,
+      128,
       27,
       26,
       0
@@ -49997,7 +49997,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      127,
+      128,
       27,
       26,
       0
@@ -50029,8 +50029,8 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      127,
-      130
+      128,
+      131
     ],
     "delay": 1,
     "alert": true,
@@ -50056,7 +50056,7 @@ let enemyAbilityData = [
       0.4
     ],
     "extraEffects": [
-      127
+      128
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -50077,7 +50077,7 @@ let enemyAbilityData = [
       0.75
     ],
     "extraEffects": [
-      127
+      128
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -50098,7 +50098,7 @@ let enemyAbilityData = [
       0.1
     ],
     "extraEffects": [
-      127
+      128
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -50188,7 +50188,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      131,
+      132,
       27
     ],
     "delay": 1,
@@ -50347,7 +50347,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      131,
+      132,
       27
     ],
     "delay": 1,
@@ -50616,7 +50616,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      131,
+      132,
       27
     ],
     "delay": 1,
@@ -50721,9 +50721,9 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      132,
-      134,
-      135
+      133,
+      135,
+      136
     ],
     "delay": 1,
     "element": "Fire",
@@ -50746,9 +50746,9 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      132,
-      134,
-      135
+      133,
+      135,
+      136
     ],
     "delay": 1,
     "element": "Fire",
@@ -50775,7 +50775,7 @@ let enemyAbilityData = [
       0.1
     ],
     "extraEffects": [
-      133
+      134
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -50798,9 +50798,9 @@ let enemyAbilityData = [
       0
     ],
     "extraEffects": [
-      132,
-      134,
-      135
+      133,
+      135,
+      136
     ],
     "delay": 1,
     "alert": true,
@@ -50827,9 +50827,9 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      132,
-      134,
-      135
+      133,
+      135,
+      136
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -50869,9 +50869,9 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      132,
-      134,
-      135
+      133,
+      135,
+      136
     ],
     "delay": 1,
     "element": "Fire",
@@ -50894,9 +50894,9 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      132,
-      134,
-      135
+      133,
+      135,
+      136
     ],
     "delay": 1,
     "element": "Fire",
@@ -50923,7 +50923,7 @@ let enemyAbilityData = [
       0.1
     ],
     "extraEffects": [
-      133
+      134
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -50946,9 +50946,9 @@ let enemyAbilityData = [
       0.35
     ],
     "extraEffects": [
-      132,
-      134,
-      135
+      133,
+      135,
+      136
     ],
     "delay": 1,
     "alert": true,
@@ -50975,9 +50975,9 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      132,
-      134,
-      135
+      133,
+      135,
+      136
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -51018,9 +51018,9 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      132,
-      134,
-      135
+      133,
+      135,
+      136
     ],
     "delay": 1,
     "element": "Fire",
@@ -51044,9 +51044,9 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      132,
-      134,
-      135
+      133,
+      135,
+      136
     ],
     "delay": 1,
     "element": "Fire",
@@ -51074,7 +51074,7 @@ let enemyAbilityData = [
       0.1
     ],
     "extraEffects": [
-      133
+      134
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -51097,9 +51097,9 @@ let enemyAbilityData = [
       0
     ],
     "extraEffects": [
-      132,
-      134,
-      135
+      133,
+      135,
+      136
     ],
     "delay": 1,
     "alert": true,
@@ -51127,9 +51127,9 @@ let enemyAbilityData = [
       0.3
     ],
     "extraEffects": [
-      132,
-      134,
-      135
+      133,
+      135,
+      136
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -51145,7 +51145,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      140
+      141
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -51204,7 +51204,7 @@ let enemyAbilityData = [
       0.7
     ],
     "extraEffects": [
-      136
+      137
     ],
     "delay": 1,
     "element": "Wind",
@@ -51241,7 +51241,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      136
+      137
     ],
     "delay": 1,
     "alert": true,
@@ -51313,7 +51313,7 @@ let enemyAbilityData = [
       0.7
     ],
     "extraEffects": [
-      136
+      137
     ],
     "delay": 1,
     "element": "Wind",
@@ -51350,7 +51350,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      136
+      137
     ],
     "delay": 1,
     "alert": true,
@@ -51422,7 +51422,7 @@ let enemyAbilityData = [
       0.7
     ],
     "extraEffects": [
-      136
+      137
     ],
     "delay": 1,
     "element": "Wind",
@@ -51459,7 +51459,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      136
+      137
     ],
     "delay": 1,
     "alert": true,
@@ -51531,7 +51531,7 @@ let enemyAbilityData = [
       0.7
     ],
     "extraEffects": [
-      136
+      137
     ],
     "delay": 1,
     "element": "Wind",
@@ -51568,7 +51568,7 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      136
+      137
     ],
     "delay": 1,
     "alert": true,
@@ -51637,7 +51637,7 @@ let enemyAbilityData = [
       0.7
     ],
     "extraEffects": [
-      136
+      137
     ],
     "delay": 1,
     "element": "Wind",
@@ -51674,7 +51674,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      136
+      137
     ],
     "delay": 1,
     "alert": true,
@@ -51746,7 +51746,7 @@ let enemyAbilityData = [
       0.7
     ],
     "extraEffects": [
-      136
+      137
     ],
     "delay": 1,
     "element": "Wind",
@@ -51783,7 +51783,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      136
+      137
     ],
     "delay": 1,
     "alert": true,
@@ -51855,7 +51855,7 @@ let enemyAbilityData = [
       0.7
     ],
     "extraEffects": [
-      136
+      137
     ],
     "delay": 1,
     "element": "Wind",
@@ -51892,7 +51892,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      136
+      137
     ],
     "delay": 1,
     "alert": true,
@@ -52224,8 +52224,8 @@ let enemyAbilityData = [
       0.005
     ],
     "extraEffects": [
-      137,
-      138
+      138,
+      139
     ],
     "delay": 1,
     "element": "Thunder",
@@ -52256,9 +52256,9 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      137,
       138,
-      139
+      139,
+      140
     ],
     "delay": 1,
     "alert": true,
@@ -52298,8 +52298,8 @@ let enemyAbilityData = [
       10
     ],
     "extraEffects": [
-      138,
-      140
+      139,
+      141
     ],
     "delay": 1,
     "alert": true,
@@ -52327,7 +52327,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      140
+      141
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -52383,8 +52383,8 @@ let enemyAbilityData = [
       0.03
     ],
     "extraEffects": [
-      137,
-      138
+      138,
+      139
     ],
     "delay": 1,
     "element": "Thunder",
@@ -52415,9 +52415,9 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      137,
       138,
-      139
+      139,
+      140
     ],
     "delay": 1,
     "alert": true,
@@ -52457,8 +52457,8 @@ let enemyAbilityData = [
       10
     ],
     "extraEffects": [
-      138,
-      140
+      139,
+      141
     ],
     "delay": 1,
     "alert": true,
@@ -52486,7 +52486,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      140
+      141
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -52548,8 +52548,8 @@ let enemyAbilityData = [
       0.005
     ],
     "extraEffects": [
-      137,
-      138
+      138,
+      139
     ],
     "delay": 1,
     "element": "Thunder",
@@ -52581,9 +52581,9 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      137,
       138,
-      139
+      139,
+      140
     ],
     "delay": 1,
     "alert": true,
@@ -52625,8 +52625,8 @@ let enemyAbilityData = [
       10
     ],
     "extraEffects": [
-      138,
-      140
+      139,
+      141
     ],
     "delay": 1,
     "alert": true,
@@ -52655,7 +52655,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      140
+      141
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -52713,8 +52713,8 @@ let enemyAbilityData = [
       0.005
     ],
     "extraEffects": [
-      137,
-      138
+      138,
+      139
     ],
     "delay": 1,
     "element": "Thunder",
@@ -52746,9 +52746,9 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      137,
       138,
-      139
+      139,
+      140
     ],
     "delay": 1,
     "alert": true,
@@ -52790,8 +52790,8 @@ let enemyAbilityData = [
       10
     ],
     "extraEffects": [
-      138,
-      140
+      139,
+      141
     ],
     "delay": 1,
     "alert": true,
@@ -52820,7 +52820,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      140
+      141
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -52882,8 +52882,8 @@ let enemyAbilityData = [
       0.005
     ],
     "extraEffects": [
-      137,
-      138
+      142,
+      139
     ],
     "delay": 1,
     "element": "Thunder",
@@ -52913,9 +52913,9 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      137,
-      138,
-      139
+      142,
+      139,
+      140
     ],
     "delay": 1,
     "alert": true,
@@ -52955,8 +52955,8 @@ let enemyAbilityData = [
       10
     ],
     "extraEffects": [
-      138,
-      140
+      139,
+      141
     ],
     "delay": 1,
     "alert": true,
@@ -52983,7 +52983,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      140
+      141
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -53000,6 +53000,407 @@ let enemyAbilityData = [
       0.5,
       1.5,
       9
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 503201001,
+    "name": "Nip It in the Bud",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Quantum DMG to one designated target character and inflicts them with 1 stack of the \"Decay\" state.",
+    "tag": "Single Target",
+    "phases": [
+      1
+    ],
+    "params": [
+      2.2,
+      3,
+      2,
+      3,
+      0.1,
+      0.1,
+      3,
+      5
+    ],
+    "extraEffects": [
+      145
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 503201002,
+    "name": "Feedforward Control Operation",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Restores HP for one designated friendly unit and increases their DMG dealt.",
+    "tag": "Support",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.02,
+      0.1,
+      2,
+      5
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 503401001,
+    "name": "Mark of Predation",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Quantum DMG to one designated target character, and inflicts 1 stack of the \"Fallen God's Decay\" state on them.",
+    "tag": "Single Target",
+    "phases": [
+      2
+    ],
+    "params": [
+      5
+    ],
+    "extraEffects": [
+      143
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 503401002,
+    "name": "Howl of Hunger",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Quantum DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      2
+    ],
+    "params": [
+      1.8
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 503401003,
+    "name": "Macroecosystem",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Devours \"Frenzied Beast's Seed Germ\" to increase DMG dealt by this unit and restore HP.",
+    "tag": "Enhance",
+    "phases": [
+      2
+    ],
+    "params": [
+      0.1,
+      2,
+      0.04,
+      5
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 503401004,
+    "name": "All Are Within Me",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals massive Quantum DMG to all targets, and has a high chance to inflict an \"Essence Devour\" state on all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      2
+    ],
+    "params": [
+      5,
+      0.1
+    ],
+    "extraEffects": [
+      144
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 20
+  },
+  {
+    "id": 503401005,
+    "name": "Linked Cluster Stress Response",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "Being attacked during the ceremony advances the action of \"Frenzied Beast's Seed Germs,\" and \"Blood of the Fallen God\" is unaffected by action advance effects.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.08,
+      0.7,
+      0.65,
+      0.75,
+      0.35,
+      2,
+      0.3,
+      0.1,
+      0.05,
+      66
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 503401006,
+    "name": "Myriad Aspects of the Beast Eye",
+    "type": "Talent",
+    "trigger": "PassiveSkill02",
+    "desc": "Gains 1 Eye of Voracity after every action. At the end of the turn, if Eye of Voracity reaches a certain amount, immediately uses \"All Are Within Me.\" When gaining \"Blood-Brain Barrier,\" SPD greatly increases.",
+    "tag": "Talent",
+    "phases": [
+      2
+    ],
+    "params": [
+      0.7,
+      0.65,
+      0.75,
+      0.35,
+      1,
+      0.5,
+      0.3,
+      0.05,
+      0.025,
+      40
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 503401007,
+    "name": "Dream of Embryos",
+    "type": "Talent",
+    "trigger": "PassiveSkill03",
+    "desc": "Adds \"Lysisgenesis\" to the Action Order. Each time \"Lysisgenesis\" takes action, summons a \"Frenzied Beast's Seed Germ.\" While \"Blood of the Fallen God\" is on the field, attacks from \"Frenzied Beast's Seed Germ\" will additionally inflict \"Fallen God's Decay\" and \"Essence Devour.\" When \"Frenzied Beast's Seed Germ\" is defeated, the HP of \"Blood of the Fallen God\" will decrease. When attacked, causes \"Frenzied Beast's Seed Germs\" to lock onto the attacking character. When all target characters are under the \"Phantom Illusion\" state, the battle fails.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      3,
+      2,
+      3,
+      0.02
+    ],
+    "extraEffects": [
+      143,
+      144,
+      16
+    ],
+    "delay": 1,
+    "alert": true,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 503401008,
+    "name": "Blood-Brain Barrier",
+    "type": "Talent",
+    "trigger": "PassiveSkill04",
+    "desc": "When HP drops to a certain value, this unit gains \"Blood-Brain Barrier,\" Toughness cannot be reduced, and all DMG taken is greatly reduced. Elation DMG's efficiency at dispelling \"Blood-Brain Barrier\" greatly increases. Upon gaining \"Blood-Brain Barrier,\" adds \"Homeostatic Imbalance\" to the Action Order. Defeating \"Frenzied Beast's Seed Germ\" increases \"Homeostatic Imbalance's\" Charge. When \"Homeostatic Imbalance\" takes action, it deals DMG to \"Blood-Brain Barrier\" based on the Charge accumulated. When \"Blood-Brain Barrier\" is dispelled, this unit takes a massive amount of DMG.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0.3,
+      0.2,
+      0.98,
+      1
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 503401101,
+    "name": "Mark of Predation",
+    "type": "Ability",
+    "trigger": "Skill01",
+    "desc": "Deals minor Quantum DMG to one designated target character, and inflicts 1 stack of the \"Fallen God's Decay\" state on them.",
+    "tag": "Single Target",
+    "phases": [
+      2
+    ],
+    "params": [
+      1.5
+    ],
+    "extraEffects": [
+      143
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 503401102,
+    "name": "Howl of Hunger",
+    "type": "Ability",
+    "trigger": "Skill02",
+    "desc": "Deals Quantum DMG to all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      2
+    ],
+    "params": [
+      1.5
+    ],
+    "delay": 1,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 10
+  },
+  {
+    "id": 503401103,
+    "name": "Macroecosystem",
+    "type": "Ability",
+    "trigger": "Skill03",
+    "desc": "Devours \"Frenzied Beast's Seed Germ\" to increase DMG dealt by this unit and restore HP.",
+    "tag": "Enhance",
+    "phases": [
+      2
+    ],
+    "params": [
+      0.1,
+      2,
+      0.04,
+      5
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 503401104,
+    "name": "All Are Within Me",
+    "type": "Ability",
+    "trigger": "Skill04",
+    "desc": "Deals massive Quantum DMG to all targets, and has a high chance to inflict an \"Essence Devour\" state on all targets.",
+    "tag": "AoE ATK",
+    "phases": [
+      2
+    ],
+    "params": [
+      3.6,
+      0.05
+    ],
+    "extraEffects": [
+      144
+    ],
+    "delay": 1,
+    "alert": true,
+    "element": "Quantum",
+    "atkType": "Basic ATK",
+    "energyPerHit": 20
+  },
+  {
+    "id": 503401105,
+    "name": "Linked Cluster Stress Response",
+    "type": "Talent",
+    "trigger": "PassiveSkill01",
+    "desc": "Being attacked during the ceremony advances the action of \"Frenzied Beast's Seed Germs,\" and \"Blood of the Fallen God\" is unaffected by action advance effects.",
+    "tag": "Talent",
+    "phases": [
+      1
+    ],
+    "params": [
+      0.08,
+      0.7,
+      0.65,
+      0.4,
+      0.35,
+      2,
+      0.3,
+      0.12,
+      0.06,
+      66
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 503401106,
+    "name": "Myriad Aspects of the Beast Eye",
+    "type": "Talent",
+    "trigger": "PassiveSkill02",
+    "desc": "Gains 1 Eye of Voracity after every action. At the end of the turn, if Eye of Voracity reaches a certain amount, immediately uses \"All Are Within Me.\" When gaining \"Blood-Brain Barrier,\" SPD greatly increases.",
+    "tag": "Talent",
+    "phases": [
+      2
+    ],
+    "params": [
+      0.7,
+      0.65,
+      0.4,
+      0.35,
+      1,
+      0.5,
+      0.3,
+      0.06,
+      0.03,
+      40
+    ],
+    "delay": 1,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 503401107,
+    "name": "Dream of Embryos",
+    "type": "Talent",
+    "trigger": "PassiveSkill03",
+    "desc": "Adds \"Lysisgenesis\" to the Action Order. Each time \"Lysisgenesis\" takes action, summons a \"Frenzied Beast's Seed Germ.\" While \"Blood of the Fallen God\" is on the field, attacks from \"Frenzied Beast's Seed Germ\" will additionally inflict \"Fallen God's Decay\" and \"Essence Devour.\" When \"Frenzied Beast's Seed Germ\" is defeated, the HP of \"Blood of the Fallen God\" will decrease. When attacked, causes \"Frenzied Beast's Seed Germs\" to lock onto the attacking character. When all target characters are under the \"Phantom Illusion\" state, the battle fails.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      3,
+      2,
+      3,
+      0.02
+    ],
+    "extraEffects": [
+      143,
+      144,
+      16
+    ],
+    "delay": 1,
+    "alert": true,
+    "atkType": "Basic ATK"
+  },
+  {
+    "id": 503401108,
+    "name": "Blood-Brain Barrier",
+    "type": "Talent",
+    "trigger": "PassiveSkill04",
+    "desc": "When HP drops to a certain value, this unit gains \"Blood-Brain Barrier,\" Toughness cannot be reduced, and all DMG taken is greatly reduced. Elation DMG's efficiency at dispelling \"Blood-Brain Barrier\" greatly increases. Upon gaining \"Blood-Brain Barrier,\" adds \"Homeostatic Imbalance\" to the Action Order. Defeating \"Frenzied Beast's Seed Germ\" increases \"Homeostatic Imbalance's\" Charge. When \"Homeostatic Imbalance\" takes action, it deals DMG to \"Blood-Brain Barrier\" based on the Charge accumulated. When \"Blood-Brain Barrier\" is dispelled, this unit takes a massive amount of DMG.",
+    "tag": "Talent",
+    "phases": [
+      1,
+      2
+    ],
+    "params": [
+      0.3,
+      0.2,
+      0.98,
+      1
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -56273,7 +56674,7 @@ let enemyAbilityData = [
       1.5
     ],
     "extraEffects": [
-      105
+      106
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -56618,7 +57019,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      104
+      105
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -56727,7 +57128,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      104
+      105
     ],
     "delay": 1,
     "atkType": "Basic ATK",
@@ -58241,7 +58642,7 @@ let enemyAbilityData = [
       0.5
     ],
     "extraEffects": [
-      104
+      105
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -59323,7 +59724,7 @@ let enemyAbilityData = [
       0
     ],
     "extraEffects": [
-      106
+      107
     ],
     "delay": 1,
     "element": "Quantum",
@@ -59347,7 +59748,7 @@ let enemyAbilityData = [
       5.6
     ],
     "extraEffects": [
-      106
+      107
     ],
     "delay": 1,
     "alert": true,
@@ -59692,7 +60093,7 @@ let enemyAbilityData = [
       0
     ],
     "extraEffects": [
-      106
+      107
     ],
     "delay": 1,
     "element": "Quantum",
@@ -59712,7 +60113,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      106
+      107
     ],
     "delay": 1,
     "alert": true,
@@ -59999,7 +60400,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      106
+      107
     ],
     "delay": 1,
     "element": "Quantum",
@@ -60019,7 +60420,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      106
+      107
     ],
     "delay": 1,
     "alert": true,
@@ -61863,7 +62264,7 @@ let enemyAbilityData = [
       15
     ],
     "extraEffects": [
-      60
+      61
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -61915,7 +62316,7 @@ let enemyAbilityData = [
       15
     ],
     "extraEffects": [
-      60
+      61
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -62849,7 +63250,7 @@ let enemyAbilityData = [
       0
     ],
     "extraEffects": [
-      60
+      61
     ],
     "delay": 1.1,
     "alert": true,
@@ -62873,7 +63274,7 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      60
+      61
     ],
     "delay": 1.1,
     "alert": true,
@@ -62890,7 +63291,7 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      60
+      61
     ],
     "delay": 1.1,
     "alert": true,
@@ -62948,8 +63349,8 @@ let enemyAbilityData = [
       1
     ],
     "extraEffects": [
-      61,
-      62
+      62,
+      63
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -62965,8 +63366,8 @@ let enemyAbilityData = [
       2
     ],
     "extraEffects": [
-      61,
-      62
+      62,
+      63
     ],
     "delay": 1,
     "atkType": "Basic ATK"
@@ -62982,8 +63383,8 @@ let enemyAbilityData = [
       3
     ],
     "extraEffects": [
-      61,
-      62
+      62,
+      63
     ],
     "delay": 1,
     "atkType": "Basic ATK"
