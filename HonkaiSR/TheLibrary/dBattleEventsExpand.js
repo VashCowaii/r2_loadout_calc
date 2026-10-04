@@ -2122,7 +2122,7 @@ let battleEvents = {
       ],
       "hardLevelEvent": true,
       "barType": 1,
-      "actionDescription": "Robin • Summeretto and her memosprite are in the \"Fever\" state. When ally targets deal DMG, they ignore a portion of enemy targets' DEF. During the \"Fever\" state, she and her memosprite are immune to Crowd Control debuffs, and cannot take their turn until the state ends. The state ends when Vibes are depleted."
+      "actionDescription": "Robin • Summeretto and her memosprite are in the \"Fever\" state. When ally targets deal DMG, they ignore enemy targets' DEF. During the \"Fever\" state, she and her memosprite are immune to Crowd Control debuffs, and cannot take their turn or take action until the state ends. The state ends when Vibes are depleted."
     }
   },
   "16007": {
@@ -4441,6 +4441,43 @@ let battleEvents = {
       "hardLevelEvent": true
     }
   },
+  "20041": {
+    "internalID": 20041,
+    "name": 20041,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "BattleEvent_W5_Fallen_Summon.png",
+    "team": "Enemy Team",
+    "type": "Assist",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20041,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_Monster_W5_Fallen_Summon"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "Upon every action, summons \"Frenzied Beast's Seed Germ.\""
+    }
+  },
   "20045": {
     "internalID": 20045,
     "name": 20045,
@@ -4957,6 +4994,41 @@ let battleEvents = {
         }
       ],
       "hardLevelEvent": true
+    }
+  },
+  "20062": {
+    "internalID": 20062,
+    "name": 20062,
+    "energyMax": null,
+    "params": [
+      1
+    ],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "BattleEvent_W5_Fallen_Ritual.png",
+    "team": "Enemy Team",
+    "type": "Assist",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 20062,
+      "team": "Enemy Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "BattleEventAbility_Monster_W5_Fallen_Broken"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        },
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
+          "value": 100
+        }
+      ],
+      "hardLevelEvent": true,
+      "actionDescription": "Deals DMG to the \"Blood-Brain Barrier\" with each action based on the Charge gained."
     }
   },
   "30001": {
@@ -7546,6 +7618,72 @@ let battleEvents = {
       "eventSpeed": 100,
       "hardLevelEvent": true,
       "actionDescription": "At the start of each Cycle, randomly causes 1 ally target following the Path of The Hunt or Erudition to immediately take action and increases their DMG dealt by <unbreak>#1[i]%</unbreak> for <unbreak>#2[i]</unbreak> turn(s)."
+    }
+  },
+  "30148": {
+    "internalID": 30148,
+    "name": 30148,
+    "energyMax": null,
+    "params": [
+      1,
+      20
+    ],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "999.png",
+    "team": "Neutral Team",
+    "type": "Challenge Event",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30148,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_48"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "The character in position 1 of the ally lineup gains the Elation Skill \"Euphoric Maelstrom,\" dealing <unbreak>#1[i]%</unbreak> Elation DMG of the character's Type to all enemies. At the start of each cycle, Aha immediately gains 1 extra turn, taking into account a fixed <unbreak>#2[i]</unbreak> Punchlines. This turn does not consume Punchlines."
+    }
+  },
+  "30149": {
+    "internalID": 30149,
+    "name": 30149,
+    "energyMax": null,
+    "params": [
+      5,
+      20
+    ],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "999.png",
+    "team": "Neutral Team",
+    "type": "Challenge Event",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 30149,
+      "team": "Neutral Team",
+      "eventType": "Challenge Event",
+      "abilityList": [
+        "BattleEventAbility_Challenge_Month_49"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "actionDescription": "When an ally target uses their Ultimate, they gain <unbreak>#1[i]</unbreak> Punchlines.\\nAt the start of each Cycle, Aha immediately gains 1 extra turn with a fixed <unbreak>#2[i]</unbreak> Punchlines taken into account. This turn does not consume Punchlines."
     }
   },
   "30500": {
@@ -23248,6 +23386,340 @@ let battleEvents = {
       "actionDescription": "When \"Surprise Box\" takes action, all Comedians will consecutively activate their \"Surprise Gifts.\"\\nEach Comedian can charge the \"Surprise Box\" in different ways to enhance the effects of \"Surprise Gifts.\""
     }
   },
+  "63002": {
+    "internalID": 63002,
+    "name": 63002,
+    "energyMax": null,
+    "params": [],
+    "skills": {
+      "Highlight": {
+        "Highlight": {
+          "variant1": {
+            "skillID": 6300201,
+            "trigger": "Skill03",
+            "name": "Highlight",
+            "type": "AoE",
+            "slot": "Highlight",
+            "desc": "",
+            "energyCost": 100,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": []
+            },
+            "skillEffect": "AoEAttack",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        },
+        "null": {
+          "variant1": {
+            "skillID": 6300202,
+            "trigger": "SkillP01",
+            "name": null,
+            "type": "Talent",
+            "slot": "Highlight",
+            "desc": "",
+            "energyCost": null,
+            "energyRegen": null,
+            "energyRate": 0.5,
+            "toughnessReductionDisplayed": null,
+            "skillPointCost": 0,
+            "skillPointGain": 0,
+            "params": {
+              "1": []
+            },
+            "skillEffect": "Passive",
+            "maxLevel": 1,
+            "configAbilityList": null,
+            "toughnessList": [
+              0,
+              0,
+              0
+            ],
+            "hitSplits": []
+          }
+        }
+      }
+    },
+    "baseTriggersObject": {
+      "Skill03": {
+        "skillID": 6300201,
+        "trigger": "Skill03",
+        "name": "Highlight",
+        "type": "AoE",
+        "slot": "Highlight",
+        "desc": "",
+        "energyCost": 100,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "AoEAttack",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      },
+      "SkillP01": {
+        "skillID": 6300202,
+        "trigger": "SkillP01",
+        "name": null,
+        "type": "Talent",
+        "slot": "Highlight",
+        "desc": "",
+        "energyCost": null,
+        "energyRegen": null,
+        "energyRate": 0.5,
+        "toughnessReductionDisplayed": null,
+        "skillPointCost": 0,
+        "skillPointGain": 0,
+        "params": {
+          "1": []
+        },
+        "skillEffect": "Passive",
+        "maxLevel": 1,
+        "configAbilityList": null,
+        "toughnessList": [
+          0,
+          0,
+          0
+        ],
+        "hitSplits": []
+      }
+    },
+    "icon": "BattleEvent_FinalityBattle.png",
+    "team": "Neutral Team",
+    "type": "Assist",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 63002,
+      "team": "Neutral Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true,
+      "eliteGroup": true
+    }
+  },
+  "63003": {
+    "internalID": 63003,
+    "name": 63003,
+    "energyMax": null,
+    "params": [
+      0.4,
+      0.2
+    ],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "BattleEvent_FinalityBattle.png",
+    "team": "Player Team",
+    "type": "Assist",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 63003,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": [
+        "Activity_FinalityBattle_1_CountDown63003"
+      ],
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
+  },
+  "63004": {
+    "internalID": 63004,
+    "name": 63004,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "HoshinoKami_005.png",
+    "team": "Player Team",
+    "type": "Assist",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 63004,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
+  },
+  "63005": {
+    "internalID": 63005,
+    "name": 63005,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "HoshinoKami_005.png",
+    "team": "Player Team",
+    "type": "Assist",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 63005,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
+  },
+  "63006": {
+    "internalID": 63006,
+    "name": 63006,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "HoshinoKami_005.png",
+    "team": "Player Team",
+    "type": "Assist",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 63006,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
+  },
+  "63007": {
+    "internalID": 63007,
+    "name": 63007,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "HoshinoKami_005.png",
+    "team": "Player Team",
+    "type": "Assist",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 63007,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
+  },
+  "63008": {
+    "internalID": 63008,
+    "name": 63008,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "HoshinoKami_005.png",
+    "team": "Player Team",
+    "type": "Assist",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 63008,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
+  },
+  "63009": {
+    "internalID": 63009,
+    "name": 63009,
+    "energyMax": null,
+    "params": [],
+    "skills": {},
+    "baseTriggersObject": {},
+    "icon": "HoshinoKami_005.png",
+    "team": "Player Team",
+    "type": "Assist",
+    "isBattleEvent": true,
+    "finalData": {
+      "name": "Battle Event Construction",
+      "ID": 63009,
+      "team": "Player Team",
+      "eventType": "Assist",
+      "abilityList": null,
+      "overridesArray": [
+        {
+          "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "value": 90
+        }
+      ],
+      "eventSpeed": 100,
+      "hardLevelEvent": true
+    }
+  },
   "70001": {
     "internalID": 70001,
     "name": 70001,
@@ -30416,136 +30888,8 @@ let battleEvents = {
     "name": 210000,
     "energyMax": null,
     "params": [],
-    "skills": {
-      "Gáe Bolg": {
-        "Gáe Bolg": {
-          "variant1": {
-            "skillID": 10000101,
-            "trigger": "Skill03",
-            "name": "Gáe Bolg",
-            "type": "Single Target",
-            "slot": "Gáe Bolg",
-            "desc": "Using \"Gáe Bolg\" can instantly defeat non-Elite Enemies, and can deal massive DMG to Elite Enemies.",
-            "energyCost": 100,
-            "energyRegen": null,
-            "energyRate": 0.5,
-            "toughnessReductionDisplayed": null,
-            "skillPointCost": 0,
-            "skillPointGain": 0,
-            "params": {
-              "1": []
-            },
-            "skillEffect": "AoEAttack",
-            "maxLevel": 1,
-            "configAbilityList": [
-              "Activity_Fate_LancerBE_Base_Skill_EnterReady",
-              "Activity_FateRin_Aias_Phase01",
-              "Activity_FateRin_Aias_Phase02",
-              "Activity_FateRin_Aias_Camera",
-              "Activity_FateRin_Aias_Effect"
-            ],
-            "toughnessList": [
-              0,
-              0,
-              0
-            ],
-            "hitSplits": []
-          }
-        }
-      },
-      "Path Resonance": {
-        "null": {
-          "variant1": {
-            "skillID": 9615302,
-            "trigger": "SkillP01",
-            "name": null,
-            "type": "Talent",
-            "slot": "Path Resonance",
-            "desc": "",
-            "energyCost": null,
-            "energyRegen": null,
-            "energyRate": 0.5,
-            "toughnessReductionDisplayed": null,
-            "skillPointCost": 0,
-            "skillPointGain": 0,
-            "params": {
-              "1": []
-            },
-            "skillEffect": "Passive",
-            "maxLevel": 1,
-            "configAbilityList": [
-              "Activity_Fate_LancerBE_Base_Passive"
-            ],
-            "toughnessList": [
-              0,
-              0,
-              0
-            ],
-            "hitSplits": []
-          }
-        }
-      }
-    },
-    "baseTriggersObject": {
-      "Skill03": {
-        "skillID": 10000101,
-        "trigger": "Skill03",
-        "name": "Gáe Bolg",
-        "type": "Single Target",
-        "slot": "Gáe Bolg",
-        "desc": "Using \"Gáe Bolg\" can instantly defeat non-Elite Enemies, and can deal massive DMG to Elite Enemies.",
-        "energyCost": 100,
-        "energyRegen": null,
-        "energyRate": 0.5,
-        "toughnessReductionDisplayed": null,
-        "skillPointCost": 0,
-        "skillPointGain": 0,
-        "params": {},
-        "skillEffect": "AoEAttack",
-        "maxLevel": 1,
-        "configAbilityList": [
-          "Activity_Fate_LancerBE_Base_Skill_EnterReady",
-          "Activity_FateRin_Aias_Phase01",
-          "Activity_FateRin_Aias_Phase02",
-          "Activity_FateRin_Aias_Camera",
-          "Activity_FateRin_Aias_Effect"
-        ],
-        "toughnessList": [
-          0,
-          0,
-          0
-        ],
-        "hitSplits": []
-      },
-      "SkillP01": {
-        "skillID": 9615302,
-        "trigger": "SkillP01",
-        "name": null,
-        "type": "Talent",
-        "slot": "Path Resonance",
-        "desc": "",
-        "energyCost": null,
-        "energyRegen": null,
-        "energyRate": 0.5,
-        "toughnessReductionDisplayed": null,
-        "skillPointCost": 0,
-        "skillPointGain": 0,
-        "params": {
-          "1": []
-        },
-        "skillEffect": "Passive",
-        "maxLevel": 1,
-        "configAbilityList": [
-          "Activity_Fate_LancerBE_Base_Passive"
-        ],
-        "toughnessList": [
-          0,
-          0,
-          0
-        ],
-        "hitSplits": []
-      }
-    },
+    "skills": {},
+    "baseTriggersObject": {},
     "icon": "IconFateHojuRhoAias.png",
     "team": "Player Team",
     "type": "Assist",
