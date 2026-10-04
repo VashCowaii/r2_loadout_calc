@@ -2866,7 +2866,7 @@ const configAbility = {
       "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__909057422\">Standard_CriticalDamageDown</a>[<span class=\"descriptionNumberColor\">CRIT DMG Reduction</span>]",
       "stackType": "ReplaceByCaster",
-      "description": "CRIT DMG -<span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
+      "description": "CRIT DMG decreases by <span class=\"descriptionNumberColor\">MDF_PropertyValue</span>.",
       "type": "Debuff",
       "effectName": "CRIT DMG Reduction",
       "statusName": "CRIT DMG Reduction",
