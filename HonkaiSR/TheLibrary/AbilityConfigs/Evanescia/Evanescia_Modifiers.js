@@ -161,6 +161,7 @@ const configAbility = {
                 },
                 {
                   "name": "Inject Elation Skill Extra-Turn (Default priority)",
+                  "actionTag": null,
                   "abortFlags": [
                     "STAT_CTRL",
                     "DisableAction"
