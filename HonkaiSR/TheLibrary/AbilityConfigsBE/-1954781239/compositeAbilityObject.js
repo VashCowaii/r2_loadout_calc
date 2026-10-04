@@ -8512,6 +8512,81 @@ const compositeAbilityObject = {
               ]
             },
             {
+              "eventTrigger": "Character Path [Anyone]: Change",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "DV_FantasticStory_PlusAbility_0026",
+                    "compareType": "=",
+                    "value2": 1,
+                    "contextScope": "ContextCaster"
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Matching Path",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
+                      },
+                      "matchToPathFrom": [
+                        "Nihility"
+                      ],
+                      "variableName": "DV_Plus6_WarlockCount"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "DV_Plus6_WarlockCount",
+                        "compareType": ">=",
+                        "value2": 3
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Player Team All(with Unselectable)V2}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1437269613\">Modifier_FantasticStory_BaseAbility_0020_sub4</a>[<span class=\"descriptionNumberColor\">Verification</span>]",
+                          "valuePerStack": {
+                            "DmgAddedRatio": {
+                              "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0026_ADF_1) || RETURN",
+                              "displayLines": "DV_FantasticStory_PlusAbility_0026_ADF_1",
+                              "constants": [],
+                              "variables": [
+                                "DV_FantasticStory_PlusAbility_0026_ADF_1"
+                              ]
+                            },
+                            "SpdAddedRatio": {
+                              "operator": "Variables[0] (DV_FantasticStory_PlusAbility_0026_ADF_2) || RETURN",
+                              "displayLines": "DV_FantasticStory_PlusAbility_0026_ADF_2",
+                              "constants": [],
+                              "variables": [
+                                "DV_FantasticStory_PlusAbility_0026_ADF_2"
+                              ]
+                            }
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Player Team All(with Unselectable)V2}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-1437269613\">Modifier_FantasticStory_BaseAbility_0020_sub4</a>[<span class=\"descriptionNumberColor\">Verification</span>]"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "eventTrigger": "Enter Battle",
               "execute": [
                 {
