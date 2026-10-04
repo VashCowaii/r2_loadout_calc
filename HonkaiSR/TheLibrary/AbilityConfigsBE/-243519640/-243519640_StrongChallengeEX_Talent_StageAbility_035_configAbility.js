@@ -104,6 +104,71 @@ const configAbility = {
           ]
         },
         {
+          "eventTrigger": "Character Path [Anyone]: Change",
+          "execute": [
+            {
+              "name": "Define Custom Variable with Matching Path",
+              "target": {
+                "name": "Target Name",
+                "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
+              },
+              "matchToPathFrom": [
+                "Erudition"
+              ],
+              "variableName": "MageTypeCount"
+            },
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Compare: Variable",
+                "value1": "MageTypeCount",
+                "compareType": ">=",
+                "value2": 2
+              },
+              "passed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "PermissionFlag",
+                  "value": 1
+                },
+                {
+                  "name": "Add Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1091628878\">MStrongChallengeEX_Talent_StageAbility_PLY_035</a>",
+                  "valuePerStack": {
+                    "MDF_AttackAddedRatio": {
+                      "operator": "Variables[0] (#ADF_1) || RETURN",
+                      "displayLines": "#ADF_1",
+                      "constants": [],
+                      "variables": [
+                        "#ADF_1"
+                      ]
+                    }
+                  }
+                }
+              ],
+              "failed": [
+                {
+                  "name": "Define Custom Variable",
+                  "variableName": "PermissionFlag",
+                  "value": 0
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-1091628878\">MStrongChallengeEX_Talent_StageAbility_PLY_035</a>"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "eventTrigger": "Enter Battle",
           "execute": [
             {
