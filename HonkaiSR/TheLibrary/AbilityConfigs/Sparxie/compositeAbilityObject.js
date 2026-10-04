@@ -282,7 +282,7 @@ const compositeAbilityObject = {
               "whenEnteringRange": [
                 {
                   "name": "Declare Custom Variable",
-                  "propertyType": "BasePoint",
+                  "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;",
                   "variableName": "_CurrentEP"
                 },
                 {
@@ -357,7 +357,7 @@ const compositeAbilityObject = {
               "whenValueChanges": [
                 {
                   "name": "Declare Custom Variable",
-                  "propertyType": "BasePoint",
+                  "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;",
                   "variableName": "_CurrentEP"
                 },
                 {
@@ -616,7 +616,7 @@ const compositeAbilityObject = {
               "whenEnteringRange": [
                 {
                   "name": "Declare Custom Variable",
-                  "propertyType": "BasePoint",
+                  "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;",
                   "variableName": "_CurrentEP"
                 },
                 {
@@ -691,7 +691,7 @@ const compositeAbilityObject = {
               "whenValueChanges": [
                 {
                   "name": "Declare Custom Variable",
-                  "propertyType": "BasePoint",
+                  "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;",
                   "variableName": "_CurrentEP"
                 },
                 {

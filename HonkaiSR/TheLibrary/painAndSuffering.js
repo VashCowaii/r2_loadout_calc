@@ -12190,7 +12190,7 @@ const megaParsingFuckeryPain = {
 
         const displayStrings = parseRef.dynamicStringsArray ? megaParsingFuckeryPain.getStringsArrayResult(parseRef.dynamicStringsArray) : "";
             
-        actionTag
+        
         return `
         <details class="rotationsPermaConditionsExpand" open="">
             <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">

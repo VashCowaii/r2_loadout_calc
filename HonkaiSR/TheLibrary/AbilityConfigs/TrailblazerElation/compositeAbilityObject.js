@@ -204,6 +204,10 @@ const compositeAbilityObject = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
+                          "customSource": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          },
                           "punchlineFixed": {
                             "operator": "Variables[0] (20) || RETURN",
                             "displayLines": "20",
@@ -212,6 +216,7 @@ const compositeAbilityObject = {
                               20
                             ]
                           },
+                          "actionTag": null,
                           "execute": [
                             {
                               "name": "Add Events/Bonuses",
@@ -1245,9 +1250,9 @@ const compositeAbilityObject = {
                 {
                   "name": "IF",
                   "conditions": {
-                    "name": "Skill Type",
-                    "skillType": "Ultimate",
-                    "activeSkill": true
+                    "name": "Skill Name",
+                    "skillName": "Skill03",
+                    "useActive": true
                   },
                   "passed": [
                     {
@@ -2175,6 +2180,10 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
+                      "customSource": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
                       "punchlineFixed": {
                         "operator": "Variables[0] (20) || RETURN",
                         "displayLines": "20",
@@ -2183,6 +2192,7 @@ const compositeAbilityObject = {
                           20
                         ]
                       },
+                      "actionTag": null,
                       "execute": [
                         {
                           "name": "Add Events/Bonuses",

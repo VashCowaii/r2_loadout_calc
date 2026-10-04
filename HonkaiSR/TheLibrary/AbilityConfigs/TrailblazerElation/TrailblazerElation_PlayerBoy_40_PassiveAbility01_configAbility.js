@@ -280,9 +280,9 @@ const configAbility = {
             {
               "name": "IF",
               "conditions": {
-                "name": "Skill Type",
-                "skillType": "Ultimate",
-                "activeSkill": true
+                "name": "Skill Name",
+                "skillName": "Skill03",
+                "useActive": true
               },
               "passed": [
                 {
