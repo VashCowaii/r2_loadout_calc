@@ -497,6 +497,40 @@ let enemyData = {
       "enemyTag": [
         "W2_Mecha02"
       ]
+    },
+    "201201015": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Thunder",
+        "Imaginary"
+      ],
+      "res": {
+        "Fire": 0.2,
+        "Ice": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2
+      },
+      "abilities": [
+        649,
+        650
+      ],
+      "abilityOrder": [
+        649
+      ],
+      "enemyTag": [
+        "W2_Mecha02"
+      ]
     }
   }
 }

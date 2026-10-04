@@ -374,6 +374,45 @@ let enemyData = {
           "base": 4012010
         }
       ]
+    },
+    "401301009": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        -30
+      ],
+      "weak": [
+        "Ice",
+        "Thunder",
+        "Quantum"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Fire": 0.2,
+        "Wind": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        1808,
+        1809,
+        1810,
+        1811,
+        1812,
+        1813
+      ],
+      "summons": [
+        {
+          "name": "Furiae Warrior",
+          "over": 401201016,
+          "base": 4012010
+        }
+      ]
     }
   }
 }

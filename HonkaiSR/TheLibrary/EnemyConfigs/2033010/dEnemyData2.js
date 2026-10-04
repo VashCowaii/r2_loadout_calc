@@ -341,6 +341,42 @@ let enemyData = {
         "MonsterType_W2_Lycan",
         "MonsterType_W2_LycanMecha_00"
       ]
+    },
+    "203301009": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1.166667,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Thunder",
+        "Wind",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Fire": 0.2,
+        "Ice": 0.2,
+        "Quantum": 0.2
+      },
+      "abilities": [
+        907,
+        908,
+        909,
+        910,
+        911,
+        912
+      ],
+      "enemyTag": [
+        "MonsterType_W2_Lycan",
+        "MonsterType_W2_LycanMecha_00"
+      ]
     }
   }
 }

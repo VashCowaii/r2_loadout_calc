@@ -234,6 +234,59 @@ let enemyData = {
       "itNeverEnds": {
         "MonsterCount": 54
       }
+    },
+    "202402008": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        -75,
+        1,
+        null
+      ],
+      "resMod": {
+        "STAT_CTRL": 1
+      },
+      "abilities": [
+        865,
+        866,
+        867
+      ],
+      "abilityOrder": [
+        866
+      ],
+      "overrideParams": {
+        "865": [
+          [
+            0.04
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ],
+        "866": [
+          [
+            0.05
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      },
+      "itNeverEnds": {
+        "MonsterCount": 25
+      }
     }
   }
 }

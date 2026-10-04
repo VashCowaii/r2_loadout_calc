@@ -285,6 +285,99 @@ let enemyData = {
           "-"
         ]
       }
+    },
+    "502302006": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        0.875,
+        1,
+        -10,
+        1,
+        null
+      ],
+      "weak": [
+        "Fire",
+        "Thunder",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Ice": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2
+      },
+      "abilities": [
+        2874,
+        2875,
+        2876,
+        2877,
+        2878
+      ]
+    },
+    "502302007": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Fire",
+        "Thunder",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Ice": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2
+      },
+      "abilities": [
+        2874,
+        2875,
+        2876,
+        2877,
+        2878
+      ]
+    },
+    "502302008": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        0.625,
+        1,
+        null,
+        1,
+        -120
+      ],
+      "weak": [
+        "Fire",
+        "Thunder",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Ice": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2
+      },
+      "abilities": [
+        2874,
+        2875,
+        2876,
+        2877,
+        2878
+      ]
     }
   }
 }

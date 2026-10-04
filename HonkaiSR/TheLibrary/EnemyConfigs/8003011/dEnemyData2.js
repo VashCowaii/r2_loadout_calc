@@ -45,12 +45,12 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        3034,
-        3035,
-        3036,
-        3037,
-        3038,
-        3039
+        3052,
+        3053,
+        3054,
+        3055,
+        3056,
+        3057
       ],
       "enemyTag": [
         "SPRL"
@@ -83,12 +83,12 @@ let enemyData = {
         "STAT_CTRL_Frozen": 1
       },
       "abilities": [
-        3034,
-        3035,
-        3036,
-        3037,
-        3038,
-        3039
+        3052,
+        3053,
+        3054,
+        3055,
+        3056,
+        3057
       ],
       "enemyTag": [
         "SPRL"

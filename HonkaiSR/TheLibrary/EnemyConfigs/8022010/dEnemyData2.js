@@ -42,13 +42,13 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        3352,
-        3353,
-        3354,
-        3355
+        3370,
+        3371,
+        3372,
+        3373
       ],
       "abilityOrder": [
-        3352
+        3370
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -86,13 +86,13 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3352,
-        3353,
-        3354,
-        3355
+        3370,
+        3371,
+        3372,
+        3373
       ],
       "abilityOrder": [
-        3352
+        3370
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -130,13 +130,13 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        3352,
-        3353,
-        3354,
-        3355
+        3370,
+        3371,
+        3372,
+        3373
       ],
       "abilityOrder": [
-        3352
+        3370
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -174,13 +174,13 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        3352,
-        3353,
-        3354,
-        3355
+        3370,
+        3371,
+        3372,
+        3373
       ],
       "abilityOrder": [
-        3352
+        3370
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -194,7 +194,7 @@ let enemyData = {
         }
       ],
       "overrideParams": {
-        "3352": [
+        "3370": [
           [
             1,
             0,
@@ -210,7 +210,7 @@ let enemyData = {
           5,
           "-"
         ],
-        "3354": [
+        "3372": [
           [
             1,
             0,
@@ -224,7 +224,7 @@ let enemyData = {
           5,
           "-"
         ],
-        "3355": [
+        "3373": [
           [
             0.125,
             "-",
@@ -232,6 +232,66 @@ let enemyData = {
             2,
             "-",
             0
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      }
+    },
+    "802201004": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1.466667,
+        1,
+        -54,
+        1,
+        null
+      ],
+      "weak": [
+        "Quantum",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Fire": 0.2,
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2
+      },
+      "abilities": [
+        3370,
+        3371,
+        3372,
+        3373
+      ],
+      "abilityOrder": [
+        3370
+      ],
+      "enemyTag": [
+        "SW_Minion01",
+        "SW_Minion"
+      ],
+      "summons": [
+        {
+          "name": "Juvenile Sting",
+          "over": 8022010,
+          "base": 8022010
+        }
+      ],
+      "overrideParams": {
+        "3373": [
+          [
+            0.2,
+            "-",
+            0.2
           ],
           null,
           null,
@@ -267,13 +327,13 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        3352,
-        3353,
-        3354,
-        3355
+        3370,
+        3371,
+        3372,
+        3373
       ],
       "abilityOrder": [
-        3352
+        3370
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -288,7 +348,7 @@ let enemyData = {
         }
       ],
       "overrideParams": {
-        "3355": [
+        "3373": [
           [
             0.15
           ],

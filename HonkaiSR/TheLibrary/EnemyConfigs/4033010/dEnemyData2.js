@@ -218,6 +218,110 @@ let enemyData = {
         2269,
         2270
       ]
+    },
+    "403301006": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1.189286,
+        1,
+        -18,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Wind",
+        "Quantum"
+      ],
+      "res": {
+        "Fire": 0.2,
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        2264,
+        2265,
+        2266,
+        2267,
+        2268,
+        2269,
+        2270
+      ]
+    },
+    "403301007": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1.75,
+        1,
+        8,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Wind",
+        "Quantum"
+      ],
+      "res": {
+        "Fire": 0.2,
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        2264,
+        2265,
+        2266,
+        2267,
+        2268,
+        2269,
+        2270
+      ],
+      "abilityOrder": [
+        2267,
+        2268,
+        2265
+      ]
+    },
+    "403301008": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1.189286,
+        1,
+        -45,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Wind",
+        "Quantum"
+      ],
+      "res": {
+        "Fire": 0.2,
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        2264,
+        2265,
+        2266,
+        2267,
+        2268,
+        2269,
+        2270
+      ]
     }
   }
 }

@@ -107,6 +107,49 @@ let enemyData = {
           "base": 5022010
         }
       ]
+    },
+    "502401002": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Thunder",
+        "Imaginary"
+      ],
+      "res": {
+        "Fire": 0.4,
+        "Ice": 0.4,
+        "Wind": 0.4,
+        "Quantum": 0.4
+      },
+      "resMod": {
+        "STAT_CTRL": 0.5
+      },
+      "abilities": [
+        2889,
+        2890,
+        2891,
+        2892,
+        2893,
+        2894,
+        2895
+      ],
+      "summons": [
+        {
+          "name": "Illwish Lotus",
+          "over": 5022010,
+          "base": 5022010
+        }
+      ]
     }
   }
 }

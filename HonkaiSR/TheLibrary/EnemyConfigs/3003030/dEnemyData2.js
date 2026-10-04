@@ -448,6 +448,49 @@ let enemyData = {
         "W3_Figure_02",
         "MGrid_4006"
       ]
+    },
+    "300303010": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1.5,
+        1,
+        60,
+        1,
+        60
+      ],
+      "weak": [
+        "Fire",
+        "Thunder",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Ice": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2
+      },
+      "abilities": [
+        1225,
+        1226,
+        1227,
+        1228,
+        1229,
+        1230,
+        1231
+      ],
+      "abilityOrder": [
+        1225,
+        1226,
+        1227,
+        1228,
+        1229
+      ],
+      "enemyTag": [
+        "W3_Figure_02"
+      ]
     }
   }
 }

@@ -268,6 +268,37 @@ let enemyData = {
       "enemyTag": [
         "MGrid_4008"
       ]
+    },
+    "401203008": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Ice",
+        "Thunder",
+        "Quantum"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Fire": 0.2,
+        "Wind": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        1736,
+        1737
+      ],
+      "abilityOrder": [
+        1736
+      ]
     }
   }
 }

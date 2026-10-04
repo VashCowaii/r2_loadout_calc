@@ -43,11 +43,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        3130,
-        3131
+        3148,
+        3149
       ],
       "abilityOrder": [
-        3131
+        3149
       ],
       "enemyTag": [
         "LockTarget01"
@@ -77,11 +77,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        3130,
-        3131
+        3148,
+        3149
       ],
       "abilityOrder": [
-        3131
+        3149
       ],
       "enemyTag": [
         "LockTarget01"
@@ -111,11 +111,11 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        3130,
-        3131
+        3148,
+        3149
       ],
       "abilityOrder": [
-        3131
+        3149
       ],
       "enemyTag": [
         "LockTarget01"
@@ -145,11 +145,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3130,
-        3131
+        3148,
+        3149
       ],
       "abilityOrder": [
-        3131
+        3149
       ],
       "enemyTag": [
         "LockTarget01"
@@ -179,11 +179,11 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3130,
-        3131
+        3148,
+        3149
       ],
       "abilityOrder": [
-        3131
+        3149
       ],
       "enemyTag": [
         "LockTarget01"
