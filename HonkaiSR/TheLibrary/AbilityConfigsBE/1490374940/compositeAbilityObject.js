@@ -8,6 +8,8 @@ const compositeAbilityObject = {
     "1490374940_BossInfiniteWave_Boss_Insert",
     "1490374940_BossInfiniteWave_Ability_2",
     "1490374940_BossInfiniteWave_Ability",
+    "1490374940_BattleEventAbility_Challenge_Month_49",
+    "1490374940_BattleEventAbility_Challenge_Month_48",
     "1490374940_BattleEventAbility_Challenge_Month_47",
     "1490374940_BattleEventAbility_Challenge_Month_46",
     "1490374940_BattleEventAbility_Challenge_Month_45",
@@ -70,6 +72,60 @@ const compositeAbilityObject = {
         0
       ],
       "parse": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1941769548\">ElationTime_PeakBattle_Standard_Mark</a>",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Add Ability",
+                  "abilityName": "CommomAbility_PeakBattle_ElationSkill",
+                  "isPool": true
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Aha Instant: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Target is Pathstrider",
+                    "path": [
+                      "Elation"
+                    ],
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "invertCondition": true
+                  }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Aha Instant: End",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Target is Pathstrider",
+                    "path": [
+                      "Elation"
+                    ],
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "invertCondition": true
+                  }
+                }
+              ]
+            }
+          ]
+        },
         {
           "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__-1189881261\">BAttleEventAbility_Weakness_Imaginary</a>",
@@ -2961,6 +3017,182 @@ const compositeAbilityObject = {
         }
       ],
       "references": []
+    },
+    "1490374940_BattleEventAbility_Challenge_Month_49": {
+      "fileName": "1490374940_BattleEventAbility_Challenge_Month_49",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"935127528\">Modifier_BattleEventAbility_Challenge_Month_49</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__935127528\">Modifier_BattleEventAbility_Challenge_Month_49</a>",
+          "execute": [
+            {
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"101547145\">Elation_StartElationTime</a>",
+                  "variables": {
+                    "TryStartElationTime_OverrideElationPoint": {
+                      "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
+                      "displayLines": "#BattleEvent_P2_ADF",
+                      "constants": [],
+                      "variables": [
+                        "#BattleEvent_P2_ADF"
+                      ]
+                    },
+                    "TryStartElationTime_ElationTimeIsNoConsume": 1
+                  },
+                  "dynamicStringsArray": [
+                    {
+                      "name": "TryStartElationTime_CustomTag",
+                      "value": "BattleEventAbility_Challenge_Month_49"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Ability Use [Anyone]: Start",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Is Part Of Team",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "team": "Player Team"
+                      },
+                      {
+                        "name": "Skill Type",
+                        "skillType": "Ultimate"
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Adjust Team Punchline Value",
+                      "value": {
+                        "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
+                        "displayLines": "#BattleEvent_P1_ADF",
+                        "constants": [],
+                        "variables": [
+                          "#BattleEvent_P1_ADF"
+                        ]
+                      },
+                      "adjustment": "Add"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "1490374940_BattleEventAbility_Challenge_Month_48": {
+      "fileName": "1490374940_BattleEventAbility_Challenge_Month_48",
+      "abilityType": null,
+      "energy": null,
+      "toughnessList": null,
+      "parse": [],
+      "whenAdded": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"951905147\">Modifier_BattleEventAbility_Challenge_Month_48</a>"
+        }
+      ],
+      "references": [
+        {
+          "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__951905147\">Modifier_BattleEventAbility_Challenge_Month_48</a>",
+          "execute": [
+            {
+              "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "execute": [
+                {
+                  "name": "Use Custom Character Function",
+                  "functionName": "<a class=\"gTempYellow\" id=\"101547145\">Elation_StartElationTime</a>",
+                  "variables": {
+                    "TryStartElationTime_OverrideElationPoint": {
+                      "operator": "Variables[0] (#BattleEvent_P2_ADF) || RETURN",
+                      "displayLines": "#BattleEvent_P2_ADF",
+                      "constants": [],
+                      "variables": [
+                        "#BattleEvent_P2_ADF"
+                      ]
+                    },
+                    "TryStartElationTime_ElationTimeIsNoConsume": 1
+                  },
+                  "dynamicStringsArray": [
+                    {
+                      "name": "TryStartElationTime_CustomTag",
+                      "value": "BattleEventAbility_Challenge_Month_48"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Enter Battle",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "value1": "Wave Count",
+                    "compareType": "=",
+                    "value2": 1
+                  },
+                  "passed": [
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Far Left Player Entity(no Memosprite)}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1941769548\">ElationTime_PeakBattle_Standard_Mark</a>",
+                      "valuePerStack": {
+                        "MDF_DamagePercentage": {
+                          "operator": "Variables[0] (#BattleEvent_P1_ADF) || RETURN",
+                          "displayLines": "#BattleEvent_P1_ADF",
+                          "constants": [],
+                          "variables": [
+                            "#BattleEvent_P1_ADF"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "priorityLevel": -90
+            }
+          ]
+        }
+      ]
     },
     "1490374940_BattleEventAbility_Challenge_Month_47": {
       "fileName": "1490374940_BattleEventAbility_Challenge_Month_47",
