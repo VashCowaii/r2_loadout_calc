@@ -7917,7 +7917,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "<a class=\"gModGreen\" id=\"1135445565\">Memosprite_RobinSServant_DamageTakenAura</a>",
+    "name": "Memosprite_RobinSServant_DamageTakenAura",
     "realName": "Vulnerability",
     "aim": "Debuff",
     "desc": "DMG taken increases by #1[i]%.",
@@ -8150,7 +8150,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "<a class=\"gModGreen\" id=\"2093298982\">Memosprite_RobinSServant_Fever_DmgUp</a>",
+    "name": "Memosprite_RobinSServant_Fever_DmgUp",
     "realName": "Fever",
     "aim": "Buff",
     "desc": "DMG dealt increases by #1[i]%.",
@@ -8161,7 +8161,7 @@ let modifiersCharacter = [
     ]
   },
   {
-    "name": "<a class=\"gModGreen\" id=\"358422144\">Memosprite_RobinSServant_Eidolon1_DamageRecord</a>",
+    "name": "Memosprite_RobinSServant_Eidolon1_DamageRecord",
     "realName": "Stray Bird of Summer",
     "aim": "Other",
     "desc": "Current DMG Tally: #1[i]",

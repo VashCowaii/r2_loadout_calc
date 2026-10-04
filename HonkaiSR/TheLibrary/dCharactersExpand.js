@@ -70826,7 +70826,7 @@ let characters = {
       "Point07": {
         "name": "Revel in Raging Tides",
         "icon": "icon/skill/1513_skilltree2.png",
-        "desc": "At the start of combat, if the team includes an Elation character besides Aventurine • Waveflair, then while Aventurine • Waveflair is on the field, increases all allies' Elation by #5[i]% and Aventurine • Waveflair's Elation by an additional #1[i]%.\nAt the start of combat, if Aventurine • Waveflair is the only Elation character in the team, then when Aventurine • Waveflair uses Elation Skill to deal DMG, it is considered as having launched Follow-Up ATK. After a teammate uses an attack, Aventurine • Waveflair gains #2[i] \"Certified Banger\" and #4[i] Punchline, and increases Aha's SPD by #3[i]. The SPD Boost effect lasts until the end of Aha Instant.",
+        "desc": "At the start of the battle, if there are other Elation characters in the team besides Aventurine • Waveflair, while Aventurine • Waveflair is on the field, increases all allies' Elation by #5[i]%, with Aventurine • Waveflair's Elation additionally increases by #1[i]%.\nAt the start of the battle, if Aventurine • Waveflair is the only Elation character in the team, when Aventurine • Waveflair deals DMG using his Elation Skill, it is considered as launching a Follow-Up ATK. After a teammate uses an attack, Aventurine • Waveflair gains #2[i] point(s) of \"Certified Banger\" and #4[i] Punchline(s), and increases Aha's SPD by #3[i]. The SPD Boost effect lasts until the end of Aha Instant.",
         "params": [
           0.8,
           2,
