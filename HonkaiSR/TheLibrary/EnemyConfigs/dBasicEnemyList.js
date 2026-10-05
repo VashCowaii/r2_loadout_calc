@@ -13528,7 +13528,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "groupName": "Frenzied Beast's Seed Germ"
   },
@@ -13548,7 +13548,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false
+      "hasReader": true
     },
     "5034011": {
       "5034011": {
@@ -13558,7 +13558,7 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Blood of the Fallen God: Yabuli"
     },
     "groupName": "Blood of the Fallen God: Yabuli"
@@ -13931,7 +13931,7 @@ let basicEnemyList = {
     },
     "8001032": {
       "8001032": {},
-      "hasReader": false,
+      "hasReader": true,
       "baseName": "Borrowed Force"
     },
     "groupName": "Mask of No Thought"

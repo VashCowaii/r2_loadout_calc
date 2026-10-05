@@ -6376,6 +6376,12 @@ let sizeLeaderboardArray = [
     "sizeCount": 1435
   },
   {
+    "entryType": "enemy",
+    "enemyID": 8001032,
+    "lineCount": 60,
+    "sizeCount": 1435
+  },
+  {
     "entryType": "char",
     "entryName": "Robin • Summeretto",
     "trimCharacterName": "RobinSummeretto",
@@ -6398,6 +6404,24 @@ let sizeLeaderboardArray = [
     "entryIcon": "icon/character/1503.png",
     "lineCount": 7,
     "sizeCount": 130
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5032010,
+    "lineCount": 6,
+    "sizeCount": 110
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5034010,
+    "lineCount": 6,
+    "sizeCount": 110
+  },
+  {
+    "entryType": "enemy",
+    "enemyID": 5034011,
+    "lineCount": 6,
+    "sizeCount": 110
   },
   {
     "entryType": "enemy",
