@@ -2328,7 +2328,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1650122283\">Enemy_W4_Manta_Passive</a>[<span class=\"descriptionNumberColor\">Respite By The Waters</span>]",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "value1": "Modifier_Callback_Variable",
+                        "value1": "MDF_Trigger",
                         "compareType": "=",
                         "value2": 1
                       },

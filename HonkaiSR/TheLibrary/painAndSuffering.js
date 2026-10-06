@@ -758,6 +758,25 @@ const megaParsingFuckeryPain = {
             ${getStandardNameDisplay(initialCounter,parseRef.scope,"Context")}
         </div>`;
     },
+    "Unknown Elation Event1"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            // "variableName",
+            // "value",
+            "target",
+            // "scope",
+            // "statValue",
+            // "propertyType",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Unknown Elation Event1");
+        // initialCounter++;
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Unknown Elation Event1:</div>&nbsp;
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.target,"Target")}
+        </div>`;
+    },
     "Assign Value to Stat"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",

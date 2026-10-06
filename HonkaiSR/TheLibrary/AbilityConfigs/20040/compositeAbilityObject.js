@@ -118,7 +118,7 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "value1": "Modifier_Callback_Variable",
+                        "value1": "MDF_SwitchField",
                         "compareType": "=",
                         "value2": 1
                       },
@@ -300,7 +300,7 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Compare: Variable",
-                        "value1": "Modifier_Callback_Variable",
+                        "value1": "MDF_SwitchField",
                         "compareType": "=",
                         "value2": 0
                       },
