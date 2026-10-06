@@ -461,6 +461,29 @@ const megaParsingFuckeryPain = {
         </div>
         `;
     },
+    "Is Unable to Advance Other"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            "target",
+            "targetAdvance",
+            "changeType",
+            "invertCondition"
+            // "action",
+            // "valueList",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Is Unable to Advance Others");
+        // initialCounter++;
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}</div>
+            ${parseRef.invertCondition ? "NOT": ""}
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
+            ${getStandardNameDisplay(initialCounter,parseRef.targetAdvance,"Advance Target",true)}
+            ${getStandardNameDisplay(initialCounter,parseRef.changeType,"Change Type")}
+        </div>
+        `;
+    },
     "Is Ability Ongoing"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -733,6 +756,25 @@ const megaParsingFuckeryPain = {
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.propertyType,"Variable Type")}
             ${getStandardNameDisplay(initialCounter,parseRef.scope,"Context")}
+        </div>`;
+    },
+    "Unknown Elation Event1"(parseRef,initialCounter) {
+        const knownKeySet = new Set ([
+            "name",
+            // "variableName",
+            // "value",
+            "target",
+            // "scope",
+            // "statValue",
+            // "propertyType",
+        ])
+        megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Unknown Elation Event1");
+        // initialCounter++;
+        return `<div class="actionDetailBody2">
+            <div class="rotationConditionOperatorHeaderInline">Unknown Elation Event1:</div>&nbsp;
+        </div>
+        <div class="modifierDetailsBox">
+            ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
         </div>`;
     },
     "Assign Value to Stat"(parseRef,initialCounter) {
@@ -3038,6 +3080,7 @@ const megaParsingFuckeryPain = {
             "name",
             "functionName",
             "target",
+            "overrideParamEntity",
             "variables",
             "paramSequence",
             "paramSequence2",
@@ -3048,6 +3091,7 @@ const megaParsingFuckeryPain = {
             "delayInterval",
             "parallelCount",
             "dynamicStringsArray",
+            "useParamEntitiesForParallelCount",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Use Custom Character Function");
 
@@ -3103,9 +3147,11 @@ const megaParsingFuckeryPain = {
         </div>
         <div class="modifierDetailsBox">
             ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
+            ${getStandardNameDisplay(initialCounter,parseRef.overrideParamEntity,"Override Param Entity",true)}
             ${getStandardNameDisplay(initialCounter,parseRef.baseDelay,"baseDelay")}
             ${getStandardNameDisplay(initialCounter,parseRef.delayInterval,"delayInterval")}
             ${getStandardNameDisplay(initialCounter,parseRef.parallelCount,"parallelCount")}
+            ${getStandardNameDisplay(initialCounter,parseRef.useParamEntitiesForParallelCount,"Set Param Entities as Parallel Count")}
             ${displayStrings}
         </div>
         <div class="modifierDetailsBox">
@@ -10766,6 +10812,7 @@ const megaParsingFuckeryPain = {
             "isTargetOperator",
             "targetFound",
             "targetFailed",
+            "math",
 
             //old modifier stuff
             "execute",
@@ -10801,6 +10848,7 @@ const megaParsingFuckeryPain = {
 
             <div class="modifierDetailsBox">
                 ${getStandardNameDisplay(initialCounter,parseRef.effectName && parseRef.effectName != parseRef.statusName ? parseRef.effectName : undefined,"Effect")}
+                ${getStandardNameDisplay(initialCounter,parseRef.math,"Math")}
                 
                 ${parseRef.description ? `<div class="actionDetailBody2">
                     <div class="rotationConditionOperatorHeaderInline">Description:</div>&nbsp;
@@ -12139,8 +12187,11 @@ const megaParsingFuckeryPain = {
             "name",
             "execute",
             "target",
+            "customSource",
             "punchlineFixed",
             "abortFlags",
+            "eventType",
+            "actionTag",
 
             // "counter",
             // "execute",
@@ -12156,30 +12207,33 @@ const megaParsingFuckeryPain = {
         if (hasParse) {parseString += megaParsingFuckery.fillEventBodyBox(parseRef.execute,initialCounter);}
         // if (hasRef) {refString += megaParsingFuckery.fillEventBodyBox(parseRef.failed,initialCounter);}
 
-
-
+        const displayStrings = parseRef.dynamicStringsArray ? megaParsingFuckeryPain.getStringsArrayResult(parseRef.dynamicStringsArray) : "";
+            
+        
         return `
         <details class="rotationsPermaConditionsExpand" open="">
             <summary class="rotationConditionOperatorHeaderAbilityTriggerConditionHeader clickable">
                 <div class="rotationConditionOperatorHeaderCondition">Inject Elation Skill Extra-Turn (Default priority)</div>
+                ${parseRef.actionTag ? `${parseRef.actionTag} tag` : ""}
             </summary>
 
             <div class="rotationConditionOperatorBoxMainAttack">
-            <div class="modifierDetailsBox">
-                ${getStandardNameDisplay(initialCounter,parseRef.punchlineFixed,"Fixed Punchline")}
-                ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
-                ${getStandardNameDisplay(initialCounter,parseRef.caster,"Caster",true)}
-                ${getStandardNameDisplay(initialCounter,parseRef.abortFlags,"Abort Flags")}
-                
+                <div class="modifierDetailsBox">
+                    ${getStandardNameDisplay(initialCounter,parseRef.punchlineFixed,"Fixed Punchline")}
+                    ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
+                    ${getStandardNameDisplay(initialCounter,parseRef.customSource,"Custom Source",true)}
+                    ${getStandardNameDisplay(initialCounter,parseRef.caster,"Caster",true)}
+                    ${getStandardNameDisplay(initialCounter,parseRef.eventType,"Skill Tag")}
+                    ${getStandardNameDisplay(initialCounter,parseRef.abortFlags,"Abort Flags")}
 
-            </div>
+                </div>
 
-            <div class="rotationConditionOperatorBoxMain">
-            ${hasParse ? `<div class="rotationConditionOperatorHeaderConditionTHEN">Execute</div>
-                <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
-                    ${parseString}
-                </div>` : ""}
-            </div>
+                <div class="rotationConditionOperatorBoxMain">
+                    ${hasParse ? `<div class="rotationConditionOperatorHeaderConditionTHEN">Execute</div>
+                        <div class="rotationsSectionRowHolder${initialCounter%2 === 0 ? 2 : 1}">
+                            ${parseString}
+                        </div>` : ""}
+                </div>
             </div>
         </details>
         `;

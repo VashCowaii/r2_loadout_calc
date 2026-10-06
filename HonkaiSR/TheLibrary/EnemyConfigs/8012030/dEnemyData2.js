@@ -42,12 +42,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3132,
-        3133
+        3150,
+        3151
       ],
       "abilityOrder": [
-        3132,
-        3133
+        3150,
+        3151
       ]
     },
     "801203001": {
@@ -74,12 +74,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3132,
-        3133
+        3150,
+        3151
       ],
       "abilityOrder": [
-        3132,
-        3133
+        3150,
+        3151
       ],
       "enemyTag": [
         "LockTarget801203001"
@@ -109,12 +109,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3132,
-        3133
+        3150,
+        3151
       ],
       "abilityOrder": [
-        3132,
-        3133
+        3150,
+        3151
       ],
       "enemyTag": [
         "LockTarget801203002"
@@ -144,12 +144,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3132,
-        3133
+        3150,
+        3151
       ],
       "abilityOrder": [
-        3132,
-        3133
+        3150,
+        3151
       ]
     },
     "801203004": {
@@ -176,12 +176,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3132,
-        3133
+        3150,
+        3151
       ],
       "abilityOrder": [
-        3132,
-        3133
+        3150,
+        3151
       ]
     },
     "801203005": {
@@ -208,12 +208,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3132,
-        3133
+        3150,
+        3151
       ],
       "abilityOrder": [
-        3132,
-        3133
+        3150,
+        3151
       ]
     },
     "801203006": {
@@ -240,12 +240,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3132,
-        3133
+        3150,
+        3151
       ],
       "abilityOrder": [
-        3132,
-        3133
+        3150,
+        3151
       ]
     },
     "801203007": {
@@ -272,12 +272,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3132,
-        3133
+        3150,
+        3151
       ],
       "abilityOrder": [
-        3132,
-        3133
+        3150,
+        3151
       ]
     },
     "801203008": {
@@ -304,12 +304,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3132,
-        3133
+        3150,
+        3151
       ],
       "abilityOrder": [
-        3132,
-        3133
+        3150,
+        3151
       ]
     },
     "801203009": {
@@ -336,12 +336,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3132,
-        3133
+        3150,
+        3151
       ],
       "abilityOrder": [
-        3132,
-        3133
+        3150,
+        3151
       ]
     },
     "801203010": {
@@ -368,12 +368,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3132,
-        3133
+        3150,
+        3151
       ],
       "abilityOrder": [
-        3132,
-        3133
+        3150,
+        3151
       ]
     },
     "801203011": {
@@ -400,12 +400,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3132,
-        3133
+        3150,
+        3151
       ],
       "abilityOrder": [
-        3132,
-        3133
+        3150,
+        3151
       ],
       "enemyTag": [
         "MGrid_4007"
@@ -435,12 +435,12 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3132,
-        3133
+        3150,
+        3151
       ],
       "abilityOrder": [
-        3132,
-        3133
+        3150,
+        3151
       ]
     }
   }

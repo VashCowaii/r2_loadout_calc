@@ -4185,6 +4185,20 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "200401011": {
+        "weak": [
+          "Fire",
+          "Wind",
+          "Imaginary"
+        ]
+      },
+      "200401012": {
+        "weak": [
+          "Physical",
+          "Wind",
+          "Imaginary"
+        ]
+      },
       "hasReader": true
     },
     "2004011": {
@@ -4718,6 +4732,13 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "201201015": {
+        "weak": [
+          "Physical",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
       "hasReader": true
     },
     "groupName": "Entranced Ingenium: Illumination Dragonfish"
@@ -4808,6 +4829,13 @@ let basicEnemyList = {
           "Ice",
           "Thunder",
           "Wind"
+        ]
+      },
+      "201301012": {
+        "weak": [
+          "Thunder",
+          "Wind",
+          "Quantum"
         ]
       },
       "hasReader": true
@@ -5924,6 +5952,13 @@ let basicEnemyList = {
           "Wind"
         ]
       },
+      "202302018": {
+        "weak": [
+          "Fire",
+          "Ice",
+          "Wind"
+        ]
+      },
       "hasReader": true
     },
     "2023021": {
@@ -6414,6 +6449,7 @@ let basicEnemyList = {
       "202402007": {
         "name": "Karmic Hinkypunk"
       },
+      "202402008": {},
       "hasReader": true
     },
     "2024021": {
@@ -6445,6 +6481,12 @@ let basicEnemyList = {
         ]
       },
       "203201003": {
+        "weak": [
+          "Fire",
+          "Imaginary"
+        ]
+      },
+      "203201004": {
         "weak": [
           "Fire",
           "Imaginary"
@@ -6494,6 +6536,12 @@ let basicEnemyList = {
         ]
       },
       "203202004": {
+        "weak": [
+          "Physical",
+          "Wind"
+        ]
+      },
+      "203202005": {
         "weak": [
           "Physical",
           "Wind"
@@ -6591,6 +6639,13 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "203301009": {
+        "weak": [
+          "Thunder",
+          "Wind",
+          "Imaginary"
+        ]
+      },
       "hasReader": true
     },
     "2033011": {
@@ -6657,6 +6712,13 @@ let basicEnemyList = {
         "weak": [
           "Fire",
           "Thunder",
+          "Wind"
+        ]
+      },
+      "203401003": {
+        "weak": [
+          "Physical",
+          "Fire",
           "Wind"
         ]
       },
@@ -7831,6 +7893,20 @@ let basicEnemyList = {
           "Wind"
         ]
       },
+      "300301013": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Wind"
+        ]
+      },
+      "300301014": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Wind"
+        ]
+      },
       "hasReader": true
     },
     "3003011": {
@@ -8116,6 +8192,13 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "300302012": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Imaginary"
+        ]
+      },
       "300302013": {
         "weak": [
           "Physical",
@@ -8237,6 +8320,13 @@ let basicEnemyList = {
         ]
       },
       "300303009": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "300303010": {
         "weak": [
           "Fire",
           "Thunder",
@@ -8705,6 +8795,14 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "300402005": {
+        "weak": [
+          "Fire",
+          "Ice",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
       "phases": 2,
       "hasReader": true
     },
@@ -8939,6 +9037,13 @@ let basicEnemyList = {
         "weak": [
           "Thunder",
           "Quantum",
+          "Imaginary"
+        ]
+      },
+      "301301011": {
+        "weak": [
+          "Fire",
+          "Thunder",
           "Imaginary"
         ]
       },
@@ -9219,6 +9324,13 @@ let basicEnemyList = {
       },
       "302401014": {
         "name": "Red Knight",
+        "weak": [
+          "Physical",
+          "Fire",
+          "Ice"
+        ]
+      },
+      "302401015": {
         "weak": [
           "Physical",
           "Fire",
@@ -9805,6 +9917,20 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "401201016": {
+        "weak": [
+          "Thunder",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "401201017": {
+        "weak": [
+          "Thunder",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
       "hasReader": true
     },
     "groupName": "Furiae Warrior"
@@ -9861,6 +9987,13 @@ let basicEnemyList = {
         ]
       },
       "401202007": {
+        "weak": [
+          "Fire",
+          "Ice",
+          "Imaginary"
+        ]
+      },
+      "401202008": {
         "weak": [
           "Fire",
           "Ice",
@@ -9934,6 +10067,13 @@ let basicEnemyList = {
         ]
       },
       "401203007": {
+        "weak": [
+          "Ice",
+          "Thunder",
+          "Quantum"
+        ]
+      },
+      "401203008": {
         "weak": [
           "Ice",
           "Thunder",
@@ -10388,6 +10528,13 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
+      "401301009": {
+        "weak": [
+          "Ice",
+          "Thunder",
+          "Quantum"
+        ]
+      },
       "hasReader": true
     },
     "4013011": {
@@ -10710,6 +10857,13 @@ let basicEnemyList = {
         ]
       },
       "401403001": {
+        "weak": [
+          "Wind",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "401403002": {
         "weak": [
           "Wind",
           "Quantum",
@@ -11041,6 +11195,13 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "403201003": {
+        "weak": [
+          "Thunder",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
       "hasReader": true
     },
     "groupName": "Tide-Eroded Blade"
@@ -11110,6 +11271,13 @@ let basicEnemyList = {
       },
       "403205002": {
         "name": "Archer of the Dark Sun",
+        "weak": [
+          "Physical",
+          "Ice",
+          "Quantum"
+        ]
+      },
+      "403205003": {
         "weak": [
           "Physical",
           "Ice",
@@ -11190,6 +11358,27 @@ let basicEnemyList = {
           "Wind",
           "Quantum",
           "Imaginary"
+        ]
+      },
+      "403301006": {
+        "weak": [
+          "Physical",
+          "Wind",
+          "Quantum"
+        ]
+      },
+      "403301007": {
+        "weak": [
+          "Physical",
+          "Wind",
+          "Quantum"
+        ]
+      },
+      "403301008": {
+        "weak": [
+          "Physical",
+          "Wind",
+          "Quantum"
         ]
       },
       "hasReader": true
@@ -11294,6 +11483,20 @@ let basicEnemyList = {
           "Fire",
           "Wind",
           "Imaginary"
+        ]
+      },
+      "403303005": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Quantum"
+        ]
+      },
+      "403303006": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Quantum"
         ]
       },
       "hasReader": true
@@ -11551,6 +11754,13 @@ let basicEnemyList = {
           "Wind"
         ]
       },
+      "404401003": {
+        "weak": [
+          "Physical",
+          "Ice",
+          "Wind"
+        ]
+      },
       "hasReader": true
     },
     "4044011": {
@@ -11608,6 +11818,20 @@ let basicEnemyList = {
         ]
       },
       "405201004": {
+        "weak": [
+          "Physical",
+          "Thunder",
+          "Wind"
+        ]
+      },
+      "405201005": {
+        "weak": [
+          "Physical",
+          "Ice",
+          "Thunder"
+        ]
+      },
+      "405201006": {
         "weak": [
           "Physical",
           "Thunder",
@@ -11678,6 +11902,20 @@ let basicEnemyList = {
         ]
       },
       "405301004": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
+      "405301005": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "405301006": {
         "weak": [
           "Physical",
           "Fire",
@@ -12151,6 +12389,13 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
+      "501203005": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
       "hasReader": true
     },
     "5012031": {
@@ -12428,6 +12673,13 @@ let basicEnemyList = {
           "Thunder"
         ]
       },
+      "501209001": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Thunder"
+        ]
+      },
       "501209002": {
         "weak": [
           "Physical",
@@ -12572,6 +12824,13 @@ let basicEnemyList = {
           "Wind"
         ]
       },
+      "501301005": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Wind"
+        ]
+      },
       "hasReader": true
     },
     "5013011": {
@@ -12653,6 +12912,20 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "501304003": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Imaginary"
+        ]
+      },
+      "501304004": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Imaginary"
+        ]
+      },
       "hasReader": true
     },
     "5013041": {
@@ -12684,6 +12957,20 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "501305002": {
+        "weak": [
+          "Physical",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501305003": {
+        "weak": [
+          "Physical",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
       "hasReader": true
     },
     "5013051": {
@@ -12708,6 +12995,20 @@ let basicEnemyList = {
           "Quantum"
         ]
       },
+      "501306001": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Quantum"
+        ]
+      },
+      "501306002": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Quantum"
+        ]
+      },
       "hasReader": true
     },
     "5013061": {
@@ -12726,6 +13027,13 @@ let basicEnemyList = {
   "5013070": {
     "5013070": {
       "5013070": {
+        "weak": [
+          "Fire",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "501307001": {
         "weak": [
           "Fire",
           "Quantum",
@@ -13048,6 +13356,27 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "502302006": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "502302007": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "502302008": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
       "hasReader": true
     },
     "5023021": {
@@ -13069,6 +13398,13 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "502302201": {
+        "weak": [
+          "Fire",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
       "hasReader": true,
       "baseName": "God-Devourer Offspring (Bug)"
     },
@@ -13084,6 +13420,13 @@ let basicEnemyList = {
         ]
       },
       "502401001": {
+        "weak": [
+          "Physical",
+          "Thunder",
+          "Imaginary"
+        ]
+      },
+      "502401002": {
         "weak": [
           "Physical",
           "Thunder",
@@ -13147,6 +13490,78 @@ let basicEnemyList = {
       "baseName": "Paramount Bliss Inverted: Illwish Archlotus"
     },
     "groupName": "Paramount Bliss Inverted: Illwish Archlotus"
+  },
+  "5032010": {
+    "5032010": {
+      "5032010": {
+        "weak": [
+          "Fire",
+          "Wind",
+          "Imaginary"
+        ]
+      },
+      "503201001": {
+        "weak": [
+          "Fire",
+          "Wind",
+          "Imaginary"
+        ]
+      },
+      "503201002": {
+        "weak": [
+          "Fire",
+          "Wind",
+          "Imaginary"
+        ]
+      },
+      "503201003": {
+        "weak": [
+          "Fire",
+          "Wind",
+          "Imaginary"
+        ]
+      },
+      "503201004": {
+        "weak": [
+          "Fire",
+          "Wind",
+          "Imaginary"
+        ]
+      },
+      "hasReader": true
+    },
+    "groupName": "Frenzied Beast's Seed Germ"
+  },
+  "5034010": {
+    "5034010": {
+      "5034010": {
+        "weak": [
+          "Ice",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "503401002": {
+        "weak": [
+          "Ice",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "hasReader": true
+    },
+    "5034011": {
+      "5034011": {
+        "weak": [
+          "Ice",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
+      "hasReader": true,
+      "baseName": "Blood of the Fallen God: Yabuli"
+    },
+    "groupName": "Blood of the Fallen God: Yabuli"
   },
   "8001010": {
     "8001010": {
@@ -13511,6 +13926,11 @@ let basicEnemyList = {
     },
     "8001031": {
       "8001031": {},
+      "hasReader": true,
+      "baseName": "Borrowed Force"
+    },
+    "8001032": {
+      "8001032": {},
       "hasReader": true,
       "baseName": "Borrowed Force"
     },
@@ -16191,6 +16611,13 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "801301029": {
+        "weak": [
+          "Physical",
+          "Wind",
+          "Imaginary"
+        ]
+      },
       "hasReader": true
     },
     "8013011": {
@@ -16479,6 +16906,12 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "802201004": {
+        "weak": [
+          "Quantum",
+          "Imaginary"
+        ]
+      },
       "802201005": {
         "weak": [
           "Quantum",
@@ -16590,6 +17023,13 @@ let basicEnemyList = {
         ]
       },
       "802202006": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Imaginary"
+        ]
+      },
+      "802202007": {
         "weak": [
           "Physical",
           "Fire",
@@ -16777,6 +17217,13 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "802401108": {
+        "weak": [
+          "Ice",
+          "Quantum",
+          "Imaginary"
+        ]
+      },
       "phases": 2,
       "hasReader": true,
       "baseName": "Swarm: True Sting"
@@ -16910,6 +17357,12 @@ let basicEnemyList = {
           "Ice"
         ]
       },
+      "803201001": {
+        "weak": [
+          "Fire",
+          "Ice"
+        ]
+      },
       "803201002": {
         "weak": [
           "Fire",
@@ -16987,6 +17440,12 @@ let basicEnemyList = {
           "Ice"
         ]
       },
+      "803201014": {
+        "weak": [
+          "Fire",
+          "Ice"
+        ]
+      },
       "hasReader": true
     },
     "groupName": "Grunt: Field Personnel"
@@ -16994,6 +17453,13 @@ let basicEnemyList = {
   "8032020": {
     "8032020": {
       "8032020": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Ice"
+        ]
+      },
+      "803202001": {
         "weak": [
           "Physical",
           "Fire",
@@ -17087,6 +17553,13 @@ let basicEnemyList = {
         ]
       },
       "803202014": {
+        "weak": [
+          "Physical",
+          "Fire",
+          "Ice"
+        ]
+      },
+      "803202015": {
         "weak": [
           "Physical",
           "Fire",
@@ -17224,6 +17697,20 @@ let basicEnemyList = {
           "Imaginary"
         ]
       },
+      "803301016": {
+        "weak": [
+          "Fire",
+          "Ice",
+          "Imaginary"
+        ]
+      },
+      "803301017": {
+        "weak": [
+          "Fire",
+          "Ice",
+          "Imaginary"
+        ]
+      },
       "hasReader": true
     },
     "8033011": {
@@ -17300,6 +17787,13 @@ let basicEnemyList = {
         ]
       },
       "803302001": {
+        "weak": [
+          "Fire",
+          "Wind",
+          "Quantum"
+        ]
+      },
+      "803302002": {
         "weak": [
           "Fire",
           "Wind",
@@ -18584,6 +19078,12 @@ let basicEnemyList = {
           "Ice"
         ]
       },
+      "302102005": {
+        "weak": [
+          "Fire",
+          "Ice"
+        ]
+      },
       "hasReader": true,
       "baseName": "\"The Honored\""
     },
@@ -18687,6 +19187,12 @@ let basicEnemyList = {
           "Fire"
         ]
       },
+      "302103007": {
+        "weak": [
+          "Physical",
+          "Fire"
+        ]
+      },
       "hasReader": true,
       "baseName": "\"Speartip\""
     },
@@ -18755,6 +19261,12 @@ let basicEnemyList = {
         ]
       },
       "302104004": {
+        "weak": [
+          "Physical",
+          "Thunder"
+        ]
+      },
+      "302104005": {
         "weak": [
           "Physical",
           "Thunder"

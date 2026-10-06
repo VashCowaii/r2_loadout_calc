@@ -1639,6 +1639,36 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__-1618817275\">Monster_Rogue_Gluttony_DamageTakenUp</a>[<span class=\"descriptionNumberColor\">Reposeful Elwood Caress</span>]",
+          "description": "Due to the Elwood's suppression of restless greed, DMG taken increases by <span class=\"descriptionNumberColor\">MDF_DamageTakenUpRatio</span>.",
+          "type": "Debuff",
+          "statusName": "Reposeful Elwood Caress",
+          "execute": [
+            {
+              "eventTrigger": "When Stacking/Receiving Modifier",
+              "execute": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">Vulnerability</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (MDF_DamageTakenUpRatio) || RETURN",
+                    "displayLines": "MDF_DamageTakenUpRatio",
+                    "constants": [],
+                    "variables": [
+                      "MDF_DamageTakenUpRatio"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2068031350\">Monster_RogueBoss_DamageUp</a>[<span class=\"descriptionNumberColor\">Berserk</span>]",
           "stackType": "Replace",
           "description": "Increases DMG dealt by <span class=\"descriptionNumberColor\">MDF_DamageUpRatio_PerLayer</span>. This effect can stack.",

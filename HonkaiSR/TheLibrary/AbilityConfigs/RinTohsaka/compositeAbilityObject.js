@@ -4776,6 +4776,7 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Looped Event",
+              "maxLoops": 333,
               "conditions": {
                 "name": "Compare: Variable",
                 "value1": "CurrentSkillPoints",

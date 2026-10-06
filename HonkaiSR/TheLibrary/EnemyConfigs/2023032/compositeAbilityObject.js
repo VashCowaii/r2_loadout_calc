@@ -1927,19 +1927,19 @@ const compositeAbilityObject = {
               "haloStatus": true,
               "valuePerStack": {
                 "MDF_AllDamageReduce": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9877) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9877",
+                  "operator": "Variables[0] (AbilityEX04_P1_DamageReduceRatio) || RETURN",
+                  "displayLines": "AbilityEX04_P1_DamageReduceRatio",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_9877"
+                    "AbilityEX04_P1_DamageReduceRatio"
                   ]
                 },
                 "MDF_AllDamageTypeAddedRatio": {
-                  "operator": "Variables[0] (UnusedUnderThisBase_9883) || RETURN",
-                  "displayLines": "UnusedUnderThisBase_9883",
+                  "operator": "Variables[0] (AbilityEX04_P2_AllDamageTypeAddedRatio) || RETURN",
+                  "displayLines": "AbilityEX04_P2_AllDamageTypeAddedRatio",
                   "constants": [],
                   "variables": [
-                    "UnusedUnderThisBase_9883"
+                    "AbilityEX04_P2_AllDamageTypeAddedRatio"
                   ]
                 }
               }
@@ -1995,19 +1995,19 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1640618291\">Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_EX04_Sub</a>",
                       "valuePerStack": {
                         "MDF_AllDamageReduce": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_9877) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_9877",
+                          "operator": "Variables[0] (AbilityEX04_P1_DamageReduceRatio) || RETURN",
+                          "displayLines": "AbilityEX04_P1_DamageReduceRatio",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_9877"
+                            "AbilityEX04_P1_DamageReduceRatio"
                           ]
                         },
                         "MDF_AllDamageTypeAddedRatio": {
-                          "operator": "Variables[0] (UnusedUnderThisBase_9883) || RETURN",
-                          "displayLines": "UnusedUnderThisBase_9883",
+                          "operator": "Variables[0] (AbilityEX04_P2_AllDamageTypeAddedRatio) || RETURN",
+                          "displayLines": "AbilityEX04_P2_AllDamageTypeAddedRatio",
                           "constants": [],
                           "variables": [
-                            "UnusedUnderThisBase_9883"
+                            "AbilityEX04_P2_AllDamageTypeAddedRatio"
                           ]
                         }
                       }
@@ -3287,7 +3287,25 @@ const compositeAbilityObject = {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
                               },
-                              "modifier": "<a class=\"gModGreen\" id=\"1959486176\">Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_EX04</a>"
+                              "modifier": "<a class=\"gModGreen\" id=\"1959486176\">Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_EX04</a>",
+                              "valuePerStack": {
+                                "AbilityEX04_P1_DamageReduceRatio": {
+                                  "operator": "Variables[0] (UnusedUnderThisBase_9877) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_9877",
+                                  "constants": [],
+                                  "variables": [
+                                    "UnusedUnderThisBase_9877"
+                                  ]
+                                },
+                                "AbilityEX04_P2_AllDamageTypeAddedRatio": {
+                                  "operator": "Variables[0] (UnusedUnderThisBase_9883) || RETURN",
+                                  "displayLines": "UnusedUnderThisBase_9883",
+                                  "constants": [],
+                                  "variables": [
+                                    "UnusedUnderThisBase_9883"
+                                  ]
+                                }
+                              }
                             }
                           ]
                         }

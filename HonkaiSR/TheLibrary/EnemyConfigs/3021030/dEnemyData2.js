@@ -314,6 +314,40 @@ let enemyData = {
           "-"
         ]
       }
+    },
+    "302103007": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        4.6875,
+        1,
+        60,
+        1,
+        60
+      ],
+      "weak": [
+        "Physical",
+        "Fire"
+      ],
+      "res": {
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        1478,
+        1479
+      ],
+      "abilityOrder": [
+        1478
+      ],
+      "enemyTag": [
+        "Argenti_Totem"
+      ]
     }
   }
 }

@@ -225,6 +225,92 @@ let enemyData = {
       "enemyTag": [
         "BattleScore_Manta"
       ]
+    },
+    "405301005": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        16,
+        1,
+        -180
+      ],
+      "weak": [
+        "Fire",
+        "Thunder",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Ice": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2
+      },
+      "abilities": [
+        2518,
+        2519,
+        2520,
+        2521,
+        2522,
+        2523,
+        2524
+      ],
+      "enemyTag": [
+        "BattleScore_Manta"
+      ],
+      "summons": [
+        {
+          "name": "Servant of Tides",
+          "over": 405201005,
+          "base": 4052010
+        }
+      ]
+    },
+    "405301006": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        16,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Fire",
+        "Thunder"
+      ],
+      "res": {
+        "Ice": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        2518,
+        2519,
+        2520,
+        2521,
+        2522,
+        2523,
+        2524
+      ],
+      "enemyTag": [
+        "BattleScore_Manta"
+      ],
+      "summons": [
+        {
+          "name": "Servant of Tides",
+          "over": 4052010,
+          "base": 4052010
+        }
+      ]
     }
   }
 }

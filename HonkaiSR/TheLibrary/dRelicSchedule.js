@@ -1,6 +1,179 @@
 const stageTypers = "relic"
 let mocSchedule = [
   {
+    "id": 1217,
+    "realName": "Path of the Secret Actor",
+    "worldLevel": 6,
+    "testWorldLevel": 6,
+    "testMapID": 1217,
+    "buffData": {
+      "modifierName": "",
+      "realModifierNamne": "",
+      "name": "",
+      "desc": "Increases the SPD of Elation ally characters by #1[i]%.",
+      "battleDesc": null,
+      "buffType": "",
+      "params": [
+        0.4
+      ],
+      "abilitiesArray": [
+        {
+          "realModifierNamne": "FarmRelicAbility_104317",
+          "BEKey": 20085023
+        }
+      ]
+    },
+    "floorData": {
+      "1": {
+        "floorName": "Path of the Secret Actor",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              1043176
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Lighthouse",
+                "enemyLevel": 82,
+                "modifiersToAdd": [
+                  "FarmRelicAbility_104317"
+                ],
+                "buffOverride": null,
+                "stageType": "Cocoon",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Astropolis Sentinel",
+                      "id": 8032040,
+                      "image": 8032040,
+                      "rank": "MinionLv2",
+                      "attackBase": 402.0895242,
+                      "defBase": 1020.00003,
+                      "hpBase": 29603.657421,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.2,
+                      "ehr": 0.256,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Wind",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 29603.657421
+                    },
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Astropolis Sentinel",
+                      "id": 8032040,
+                      "image": 8032040,
+                      "rank": "MinionLv2",
+                      "attackBase": 402.0895242,
+                      "defBase": 1020.00003,
+                      "hpBase": 29603.657421,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.2,
+                      "ehr": 0.256,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Wind",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 29603.657421
+                    },
+                    {
+                      "name": "Lighthouse",
+                      "id": 8033020,
+                      "image": 8033020,
+                      "rank": "Elite",
+                      "attackBase": 402.0895242,
+                      "defBase": 1020.00003,
+                      "hpBase": 276300.802596,
+                      "speedBase": 172.8,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.256,
+                      "delay": null,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 212.212598,
+                      "toughnessBase": 160,
+                      "weaknessList": [
+                        "Fire",
+                        "Wind",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 276300.802596
+                    },
+                    0
+                  ]
+                ],
+                "scalarElite": 3,
+                "scalarHard": 1,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1"
+                },
+                "highSTSUM": 305904.46001700003,
+                "aoeSUM": 453922.74712200003
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [],
+            "stageDataArray": []
+          }
+        }
+      }
+    },
+    "realDropList": [
+      "71061.png",
+      "71060.png",
+      "2.png"
+    ]
+  },
+  {
     "id": 1216,
     "realName": "Path of Insight",
     "worldLevel": 6,

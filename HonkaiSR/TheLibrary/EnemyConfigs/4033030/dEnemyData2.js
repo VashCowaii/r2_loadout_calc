@@ -221,6 +221,104 @@ let enemyData = {
       "itNeverEnds": {
         "SummonID01": 403205002
       }
+    },
+    "403303005": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        0.466667,
+        1,
+        -19,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Fire",
+        "Quantum"
+      ],
+      "res": {
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        2311,
+        2312,
+        2313,
+        2314
+      ],
+      "summons": [
+        {
+          "name": "Black Tide's Decrepit Bow",
+          "over": 403205003,
+          "base": 4032050
+        }
+      ],
+      "itNeverEnds": {
+        "SummonID01": 403205003
+      }
+    },
+    "403303006": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        -54,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Fire",
+        "Quantum"
+      ],
+      "res": {
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        2311,
+        2312,
+        2313,
+        2314
+      ],
+      "abilityOrder": [
+        2313,
+        2314
+      ],
+      "summons": [
+        {
+          "name": "Archer of the Dark Sun",
+          "over": 403205002,
+          "base": 4032050
+        }
+      ],
+      "overrideParams": {
+        "2311": [
+          [
+            3
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      },
+      "itNeverEnds": {
+        "SummonID01": 403205002
+      }
     }
   }
 }

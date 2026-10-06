@@ -1,46 +1,46 @@
 const stageTypers = "moc";
 let mocSchedule = [
   {
-    "id": 1035,
-    "image": "mocBG/AbyssSenceBgl_Red_16.png",
-    "realName": null,
-    "start": "2026-09-28 06:00:00",
-    "end": "2026-11-02 04:00:00",
+    "id": 1036,
+    "image": "mocBG/AbyssSenceBgl_Red_08.png",
+    "realName": "Survival of the Fittest",
+    "start": "2026-11-02 04:00:00",
+    "end": "2026-12-14 04:00:00",
     "buffData": {
       "modifierName": "ADV_StageAbility_MazeCommon_Empty",
       "realModifierNamne": "",
       "name": "Memory Turbulence",
-      "desc": "At the beginning of each Cycle, randomly causes an ally target following the Path of The Hunt or the Path of Erudition to take action immediately, and increases their DMG dealt by #1[i]% for #2[i] turn(s).",
+      "desc": "When an ally target uses their Ultimate, they gain #1[i] Punchlines.\\nAt the start of each Cycle, Aha immediately gains 1 extra turn with a fixed #2[i] Punchlines taken into account. This turn does not consume Punchlines.",
       "battleDesc": null,
       "buffType": "",
       "params": [
-        0.8,
-        1
+        5,
+        20
       ]
     },
     "floorData": {
       "1": {
-        "floorName": "undefined",
+        "floorName": "Survival of the Fittest (I)",
         "cycleCount": 30,
         "sides": 2,
         "stageDataObject": {
           "stage1": {
             "ids": [
-              30124011
+              30126011
             ],
             "stageDataArray": [
               {
-                "stageName": "Black Tide's Corroded Daemon",
+                "stageName": "Daybreak Squadron: Dawnlance",
                 "enemyLevel": 68,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
                     "realModifierNamne": null,
-                    "BEKey": 30147,
+                    "BEKey": 30149,
                     "actualParams": [
-                      0.8,
-                      1
+                      5,
+                      20
                     ]
                   }
                 ],
@@ -48,46 +48,46 @@ let mocSchedule = [
                 "enemyList": [
                   [
                     {
-                      "name": "Meteoric Eagle",
-                      "id": 4022010,
-                      "image": 4022010,
+                      "name": "Voidranger: Eliminator",
+                      "id": 8012030,
+                      "image": 8012030,
                       "rank": "MinionLv2",
                       "attackBase": 416.304594,
                       "defBase": 879.99996,
-                      "hpBase": 24143.14224,
+                      "hpBase": 16900.199568,
                       "speedBase": 110,
                       "critDMG": 0.2,
-                      "effectRES": 0.272,
+                      "effectRES": 0.172,
                       "ehr": 0.144,
                       "delay": 1,
                       "toughnessBars": 1,
-                      "toughnessElement": "Wind",
+                      "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
                       "compACT": 86.53456,
                       "toughnessBase": 30,
                       "weaknessList": [
-                        "Wind",
-                        "Quantum",
-                        "Imaginary"
+                        "Fire",
+                        "Ice",
+                        "Quantum"
                       ],
                       "resistances": {
                         "Physical": 0.2,
-                        "Fire": 0.2,
-                        "Ice": 0.2,
-                        "Thunder": 0.2
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 24143.14224
+                      "compSUM": 16900.199568
                     },
                     {
-                      "name": "Black Tide's Corroded Daemon",
-                      "id": 4033010,
-                      "image": 4033010,
+                      "name": "Daybreak Squadron: Dawnlance",
+                      "id": 5013060,
+                      "image": 5013060,
                       "rank": "Elite",
                       "attackBase": 416.304594,
                       "defBase": 879.99996,
-                      "hpBase": 112667.99712,
+                      "hpBase": 120715.7112,
                       "speedBase": 132,
                       "critDMG": 0.2,
                       "effectRES": 0.272,
@@ -101,29 +101,29 @@ let mocSchedule = [
                       "toughnessBase": 160,
                       "weaknessList": [
                         "Physical",
-                        "Wind",
+                        "Fire",
                         "Quantum"
                       ],
                       "resistances": {
-                        "Fire": 0.2,
                         "Ice": 0.2,
                         "Thunder": 0.2,
-                        "Imaginary": 0.2
+                        "Wind": 0.2,
+                        "Imaginary": 0.8
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 112667.99712
+                      "compSUM": 120715.7112
                     },
                     0
                   ],
                   [
                     {
-                      "name": "Black Tide's Corroded Daemon",
-                      "id": 4033010,
-                      "image": 4033010,
+                      "name": "Daybreak Squadron: Dawnlance",
+                      "id": 5013060,
+                      "image": 5013060,
                       "rank": "Elite",
                       "attackBase": 416.304594,
                       "defBase": 879.99996,
-                      "hpBase": 112667.99712,
+                      "hpBase": 120715.7112,
                       "speedBase": 132,
                       "critDMG": 0.2,
                       "effectRES": 0.272,
@@ -137,26 +137,26 @@ let mocSchedule = [
                       "toughnessBase": 160,
                       "weaknessList": [
                         "Physical",
-                        "Wind",
+                        "Fire",
                         "Quantum"
                       ],
                       "resistances": {
-                        "Fire": 0.2,
                         "Ice": 0.2,
                         "Thunder": 0.2,
-                        "Imaginary": 0.2
+                        "Wind": 0.2,
+                        "Imaginary": 0.8
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 112667.99712
+                      "compSUM": 120715.7112
                     },
                     {
-                      "name": "Guardian Shadow",
-                      "id": 8003030,
-                      "image": 8003030,
+                      "name": "Daybreak Squadron: Cinderborne",
+                      "id": 5013070,
+                      "image": 5013070,
                       "rank": "Elite",
                       "attackBase": 416.304594,
                       "defBase": 879.99996,
-                      "hpBase": 88524.85488,
+                      "hpBase": 120715.7112,
                       "speedBase": 132,
                       "critDMG": 0.2,
                       "effectRES": 0.272,
@@ -167,52 +167,52 @@ let mocSchedule = [
                       "hpBars": 1,
                       "compEN": 1,
                       "compACT": 86.53456,
-                      "toughnessBase": 100,
+                      "toughnessBase": 160,
                       "weaknessList": [
-                        "Physical",
-                        "Wind",
-                        "Quantum"
+                        "Fire",
+                        "Quantum",
+                        "Imaginary"
                       ],
                       "resistances": {
-                        "Fire": 0.2,
+                        "Physical": 0.8,
                         "Ice": 0.2,
                         "Thunder": 0.2,
-                        "Imaginary": 0.2
+                        "Wind": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 88524.85488
+                      "compSUM": 120715.7112
                     }
                   ]
                 ],
                 "scalarElite": 273,
                 "scalarHard": 3,
                 "configData": {
-                  "_Wave": "2",
+                  "_Wave": "",
                   "_IsEliteBattle": "1",
-                  "_CreateBattleEvent": "30147"
+                  "_CreateBattleEvent": "30149"
                 },
-                "highSTSUM": 225335.99424,
-                "aoeSUM": 362147.1336
+                "highSTSUM": 241431.4224,
+                "aoeSUM": 395947.532736
               }
             ]
           },
           "stage2": {
             "ids": [
-              30124012
+              30126012
             ],
             "stageDataArray": [
               {
-                "stageName": "Voidranger: Trampler",
+                "stageName": "Aurumaton Spectral Envoy",
                 "enemyLevel": 68,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
                     "realModifierNamne": null,
-                    "BEKey": 30147,
+                    "BEKey": 30149,
                     "actualParams": [
-                      0.8,
-                      1
+                      5,
+                      20
                     ]
                   }
                 ],
@@ -253,78 +253,9 @@ let mocSchedule = [
                       "compSUM": 12071.57112
                     },
                     {
-                      "name": "Voidranger: Trampler",
-                      "id": 8013010,
-                      "image": 8013010,
-                      "rank": "Elite",
-                      "attackBase": 416.304594,
-                      "defBase": 879.99996,
-                      "hpBase": 88524.85488,
-                      "speedBase": 110,
-                      "critDMG": 0.2,
-                      "effectRES": 0.272,
-                      "ehr": 0.144,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 86.53456,
-                      "toughnessBase": 100,
-                      "weaknessList": [
-                        "Physical",
-                        "Wind",
-                        "Imaginary"
-                      ],
-                      "resistances": {
-                        "Fire": 0.2,
-                        "Ice": 0.2,
-                        "Thunder": 0.2,
-                        "Quantum": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 88524.85488
-                    },
-                    0
-                  ],
-                  [
-                    {
-                      "name": "Voidranger: Trampler",
-                      "id": 8013010,
-                      "image": 8013010,
-                      "rank": "Elite",
-                      "attackBase": 416.304594,
-                      "defBase": 879.99996,
-                      "hpBase": 88524.85488,
-                      "speedBase": 110,
-                      "critDMG": 0.2,
-                      "effectRES": 0.272,
-                      "ehr": 0.144,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 86.53456,
-                      "toughnessBase": 100,
-                      "weaknessList": [
-                        "Physical",
-                        "Wind",
-                        "Imaginary"
-                      ],
-                      "resistances": {
-                        "Fire": 0.2,
-                        "Ice": 0.2,
-                        "Thunder": 0.2,
-                        "Quantum": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 88524.85488
-                    },
-                    {
-                      "name": "\"Present Inebriated in Revelry\"",
-                      "id": 3003050,
-                      "image": 3003050,
+                      "name": "Aurumaton Spectral Envoy",
+                      "id": 2013020,
+                      "image": 2013020,
                       "rank": "Elite",
                       "attackBase": 416.304594,
                       "defBase": 879.99996,
@@ -342,56 +273,93 @@ let mocSchedule = [
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Physical",
-                        "Fire",
+                        "Thunder",
                         "Imaginary"
                       ],
                       "resistances": {
+                        "Fire": 0.2,
                         "Ice": 0.2,
-                        "Thunder": 0.2,
                         "Wind": 0.2,
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
                       "compSUM": 96572.56896
-                    }
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Aurumaton Spectral Envoy",
+                      "id": 2013020,
+                      "image": 2013020,
+                      "rank": "Elite",
+                      "attackBase": 416.304594,
+                      "defBase": 879.99996,
+                      "hpBase": 96572.56896,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.272,
+                      "ehr": 0.144,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 86.53456,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Physical",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 96572.56896
+                    },
+                    0
                   ]
                 ],
                 "scalarElite": 273,
                 "scalarHard": 3,
                 "configData": {
-                  "_Wave": "2",
+                  "_Wave": "",
                   "_IsEliteBattle": "1",
-                  "_CreateBattleEvent": "30147"
+                  "_CreateBattleEvent": "30149"
                 },
-                "highSTSUM": 185097.42384,
-                "aoeSUM": 297765.42096
+                "highSTSUM": 193145.13792,
+                "aoeSUM": 313860.84912
               }
             ]
           }
         }
       },
       "2": {
-        "floorName": "undefined",
+        "floorName": "Survival of the Fittest (II)",
         "cycleCount": 30,
         "sides": 2,
         "stageDataObject": {
           "stage1": {
             "ids": [
-              30124021
+              30126021
             ],
             "stageDataArray": [
               {
-                "stageName": "Rocking Rebel",
-                "enemyLevel": 72,
+                "stageName": "\"Tomorrow in Harmonious Chords\"",
+                "enemyLevel": 70,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
                     "realModifierNamne": null,
-                    "BEKey": 30147,
+                    "BEKey": 30149,
                     "actualParams": [
-                      0.8,
-                      1
+                      5,
+                      20
                     ]
                   }
                 ],
@@ -399,24 +367,57 @@ let mocSchedule = [
                 "enemyList": [
                   [
                     {
-                      "name": "Aggressive Reading Material",
-                      "id": 5012030,
-                      "image": 5012030,
+                      "name": "Voidranger: Eliminator",
+                      "id": 8012030,
+                      "image": 8012030,
                       "rank": "MinionLv2",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 25582.502775,
+                      "attackBase": 435.804984,
+                      "defBase": 899.99994,
+                      "hpBase": 18550.994301,
                       "speedBase": 110,
                       "critDMG": 0.2,
-                      "effectRES": 0.188,
-                      "ehr": 0.176,
+                      "effectRES": 0.18,
+                      "ehr": 0.16,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 110.03227,
+                      "compACT": 94.98717,
                       "toughnessBase": 30,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 18550.994301
+                    },
+                    {
+                      "name": "\"Tomorrow in Harmonious Chords\"",
+                      "id": 3003040,
+                      "image": 3003040,
+                      "rank": "Elite",
+                      "attackBase": 435.804984,
+                      "defBase": 899.99994,
+                      "hpBase": 106005.68172,
+                      "speedBase": 110,
+                      "critDMG": 0.2,
+                      "effectRES": 0.28,
+                      "ehr": 0.16,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 94.98717,
+                      "toughnessBase": 100,
                       "weaknessList": [
                         "Physical",
                         "Fire",
@@ -429,95 +430,62 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 25582.502775
-                    },
-                    {
-                      "name": "Rocking Rebel",
-                      "id": 5013010,
-                      "image": 5013010,
-                      "rank": "Elite",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 184194.01998,
-                      "speedBase": 145.2,
-                      "critDMG": 0.2,
-                      "effectRES": 0.288,
-                      "ehr": 0.176,
-                      "delay": 0.25,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Imaginary",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 110.03227,
-                      "toughnessBase": 120,
-                      "weaknessList": [
-                        "Physical",
-                        "Fire",
-                        "Wind"
-                      ],
-                      "resistances": {
-                        "Ice": 0.2,
-                        "Thunder": 0.2,
-                        "Quantum": 0.2,
-                        "Imaginary": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 184194.01998
+                      "compSUM": 106005.68172
                     },
                     0
                   ],
                   [
                     {
-                      "name": "Rocking Rebel",
-                      "id": 5013010,
-                      "image": 5013010,
+                      "name": "\"Tomorrow in Harmonious Chords\"",
+                      "id": 3003040,
+                      "image": 3003040,
                       "rank": "Elite",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 184194.01998,
-                      "speedBase": 145.2,
+                      "attackBase": 435.804984,
+                      "defBase": 899.99994,
+                      "hpBase": 106005.68172,
+                      "speedBase": 110,
                       "critDMG": 0.2,
-                      "effectRES": 0.288,
-                      "ehr": 0.176,
-                      "delay": 0.25,
+                      "effectRES": 0.28,
+                      "ehr": 0.16,
+                      "delay": 1,
                       "toughnessBars": 1,
-                      "toughnessElement": "Imaginary",
+                      "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 110.03227,
-                      "toughnessBase": 120,
+                      "compACT": 94.98717,
+                      "toughnessBase": 100,
                       "weaknessList": [
                         "Physical",
                         "Fire",
-                        "Wind"
+                        "Thunder"
                       ],
                       "resistances": {
                         "Ice": 0.2,
-                        "Thunder": 0.2,
+                        "Wind": 0.2,
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 184194.01998
+                      "compSUM": 106005.68172
                     },
                     {
                       "name": "Lady of Crashing Waves",
                       "id": 4053010,
                       "image": 4053010,
                       "rank": "Elite",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 153495.01665,
+                      "attackBase": 435.804984,
+                      "defBase": 899.99994,
+                      "hpBase": 132507.10215,
                       "speedBase": 158.4,
                       "critDMG": 0.2,
-                      "effectRES": 0.288,
-                      "ehr": 0.176,
+                      "effectRES": 0.28,
+                      "ehr": 0.16,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 110.03227,
+                      "compACT": 94.98717,
                       "toughnessBase": 180,
                       "weaknessList": [
                         "Physical",
@@ -531,39 +499,39 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 153495.01665
+                      "compSUM": 132507.10215
                     }
                   ]
                 ],
-                "scalarElite": 275,
+                "scalarElite": 274,
                 "scalarHard": 3,
                 "configData": {
-                  "_Wave": "2",
+                  "_Wave": "",
                   "_IsEliteBattle": "1",
-                  "_CreateBattleEvent": "30147"
+                  "_CreateBattleEvent": "30149"
                 },
-                "highSTSUM": 368388.03996,
-                "aoeSUM": 573048.06216
+                "highSTSUM": 238512.78386999998,
+                "aoeSUM": 381620.454192
               }
             ]
           },
           "stage2": {
             "ids": [
-              30124022
+              30126022
             ],
             "stageDataArray": [
               {
-                "stageName": "Disciples of Sanctus Medicus: Shape Shifter",
-                "enemyLevel": 72,
+                "stageName": "Abundance Sprite: Malefic Ape",
+                "enemyLevel": 70,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
                     "realModifierNamne": null,
-                    "BEKey": 30147,
+                    "BEKey": 30149,
                     "actualParams": [
-                      0.8,
-                      1
+                      5,
+                      20
                     ]
                   }
                 ],
@@ -571,125 +539,56 @@ let mocSchedule = [
                 "enemyList": [
                   [
                     {
-                      "name": "Disciples of Sanctus Medicus: Ballistarius",
-                      "id": 2022060,
-                      "image": 2022060,
+                      "name": "Voidranger: Eliminator",
+                      "id": 8012030,
+                      "image": 8012030,
                       "rank": "MinionLv2",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 22512.602442,
-                      "speedBase": 91.3,
+                      "attackBase": 435.804984,
+                      "defBase": 899.99994,
+                      "hpBase": 18550.994301,
+                      "speedBase": 110,
                       "critDMG": 0.2,
-                      "effectRES": 0.188,
-                      "ehr": 0.176,
+                      "effectRES": 0.18,
+                      "ehr": 0.16,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 110.03227,
+                      "compACT": 94.98717,
                       "toughnessBase": 30,
                       "weaknessList": [
-                        "Physical",
+                        "Fire",
                         "Ice",
-                        "Wind"
+                        "Quantum"
                       ],
                       "resistances": {
-                        "Fire": 0.2,
+                        "Physical": 0.2,
                         "Thunder": 0.2,
-                        "Quantum": 0.2,
+                        "Wind": 0.2,
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 22512.602442
-                    },
-                    {
-                      "name": "Disciples of Sanctus Medicus: Shape Shifter",
-                      "id": 2023010,
-                      "image": 2023010,
-                      "rank": "Elite",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 122796.01332,
-                      "speedBase": 132,
-                      "critDMG": 0.2,
-                      "effectRES": 0.288,
-                      "ehr": 0.176,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 110.03227,
-                      "toughnessBase": 120,
-                      "weaknessList": [
-                        "Ice",
-                        "Wind",
-                        "Imaginary"
-                      ],
-                      "resistances": {
-                        "Physical": 0.2,
-                        "Fire": 0.2,
-                        "Thunder": 0.4,
-                        "Quantum": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 122796.01332
-                    },
-                    0
-                  ],
-                  [
-                    {
-                      "name": "Disciples of Sanctus Medicus: Shape Shifter",
-                      "id": 2023010,
-                      "image": 2023010,
-                      "rank": "Elite",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 122796.01332,
-                      "speedBase": 132,
-                      "critDMG": 0.2,
-                      "effectRES": 0.288,
-                      "ehr": 0.176,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 110.03227,
-                      "toughnessBase": 120,
-                      "weaknessList": [
-                        "Ice",
-                        "Wind",
-                        "Imaginary"
-                      ],
-                      "resistances": {
-                        "Physical": 0.2,
-                        "Fire": 0.2,
-                        "Thunder": 0.4,
-                        "Quantum": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 122796.01332
+                      "compSUM": 18550.994301
                     },
                     {
                       "name": "Abundance Sprite: Malefic Ape",
                       "id": 2023020,
                       "image": 2023020,
                       "rank": "Elite",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 122796.01332,
+                      "attackBase": 435.804984,
+                      "defBase": 899.99994,
+                      "hpBase": 106005.68172,
                       "speedBase": 158.4,
                       "critDMG": 0.2,
-                      "effectRES": 0.288,
-                      "ehr": 0.176,
+                      "effectRES": 0.28,
+                      "ehr": 0.16,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 110.03227,
+                      "compACT": 94.98717,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Fire",
@@ -703,46 +602,83 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 122796.01332
-                    }
+                      "compSUM": 106005.68172
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Abundance Sprite: Malefic Ape",
+                      "id": 2023020,
+                      "image": 2023020,
+                      "rank": "Elite",
+                      "attackBase": 435.804984,
+                      "defBase": 899.99994,
+                      "hpBase": 106005.68172,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.28,
+                      "ehr": 0.16,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 94.98717,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Thunder": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 106005.68172
+                    },
+                    0
                   ]
                 ],
-                "scalarElite": 275,
+                "scalarElite": 274,
                 "scalarHard": 3,
                 "configData": {
-                  "_Wave": "2",
+                  "_Wave": "",
                   "_IsEliteBattle": "1",
-                  "_CreateBattleEvent": "30147"
+                  "_CreateBattleEvent": "30149"
                 },
-                "highSTSUM": 245592.02664,
-                "aoeSUM": 413413.244844
+                "highSTSUM": 212011.36344,
+                "aoeSUM": 355119.033762
               }
             ]
           }
         }
       },
       "3": {
-        "floorName": "undefined",
+        "floorName": "Survival of the Fittest (III)",
         "cycleCount": 30,
         "sides": 2,
         "stageDataObject": {
           "stage1": {
             "ids": [
-              30124031
+              30126031
             ],
             "stageDataArray": [
               {
-                "stageName": "Automaton Grizzly",
-                "enemyLevel": 76,
+                "stageName": "Ichor Memosprite: Winged Serpent",
+                "enemyLevel": 73,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
                     "realModifierNamne": null,
-                    "BEKey": 30147,
+                    "BEKey": 30149,
                     "actualParams": [
-                      0.8,
-                      1
+                      5,
+                      20
                     ]
                   }
                 ],
@@ -750,125 +686,125 @@ let mocSchedule = [
                 "enemyList": [
                   [
                     {
-                      "name": "Vagrant",
-                      "id": 1002020,
-                      "image": 1002020,
+                      "name": "Voidranger: Eliminator",
+                      "id": 8012030,
+                      "image": 8012030,
                       "rank": "MinionLv2",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 19547.084565,
+                      "attackBase": 470.759724,
+                      "defBase": 929.99991,
+                      "hpBase": 22958.456346,
                       "speedBase": 110,
                       "critDMG": 0.2,
-                      "effectRES": 0.2,
-                      "ehr": 0.208,
+                      "effectRES": 0.192,
+                      "ehr": 0.184,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
-                      "toughnessBase": 20,
+                      "compACT": 117.55482,
+                      "toughnessBase": 30,
                       "weaknessList": [
                         "Fire",
                         "Ice",
-                        "Imaginary"
+                        "Quantum"
                       ],
                       "resistances": {
                         "Physical": 0.2,
                         "Thunder": 0.2,
                         "Wind": 0.2,
-                        "Quantum": 0.2
+                        "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 19547.084565
+                      "compSUM": 22958.456346
                     },
                     {
-                      "name": "Automaton Grizzly",
-                      "id": 1013010,
-                      "image": 1013010,
+                      "name": "Ichor Memosprite: Winged Serpent",
+                      "id": 4063010,
+                      "image": 4063010,
                       "rank": "Elite",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 169408.06623,
+                      "attackBase": 470.759724,
+                      "defBase": 929.99991,
+                      "hpBase": 174921.57216,
                       "speedBase": 132,
                       "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.208,
+                      "effectRES": 0.292,
+                      "ehr": 0.184,
                       "delay": 1,
                       "toughnessBars": 1,
-                      "toughnessElement": "Physical",
+                      "toughnessElement": "Imaginary",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
-                      "toughnessBase": 140,
+                      "compACT": 117.55482,
+                      "toughnessBase": 160,
                       "weaknessList": [
+                        "Physical",
                         "Fire",
-                        "Ice",
-                        "Thunder"
+                        "Ice"
                       ],
                       "resistances": {
-                        "Physical": 0.2,
+                        "Thunder": 0.2,
                         "Wind": 0.2,
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 169408.06623
+                      "compSUM": 174921.57216
                     },
                     0
                   ],
                   [
                     {
-                      "name": "Automaton Grizzly",
-                      "id": 1013010,
-                      "image": 1013010,
+                      "name": "Ichor Memosprite: Winged Serpent",
+                      "id": 4063010,
+                      "image": 4063010,
                       "rank": "Elite",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 169408.06623,
+                      "attackBase": 470.759724,
+                      "defBase": 929.99991,
+                      "hpBase": 174921.57216,
                       "speedBase": 132,
                       "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.208,
+                      "effectRES": 0.292,
+                      "ehr": 0.184,
                       "delay": 1,
                       "toughnessBars": 1,
-                      "toughnessElement": "Physical",
+                      "toughnessElement": "Imaginary",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
-                      "toughnessBase": 140,
+                      "compACT": 117.55482,
+                      "toughnessBase": 160,
                       "weaknessList": [
+                        "Physical",
                         "Fire",
-                        "Ice",
-                        "Thunder"
+                        "Ice"
                       ],
                       "resistances": {
-                        "Physical": 0.2,
+                        "Thunder": 0.2,
                         "Wind": 0.2,
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 169408.06623
+                      "compSUM": 174921.57216
                     },
                     {
                       "name": "Cyclonic Swarm Mother",
                       "id": 4053020,
                       "image": 4053020,
                       "rank": "Elite",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 195470.84565,
+                      "attackBase": 470.759724,
+                      "defBase": 929.99991,
+                      "hpBase": 163988.9739,
                       "speedBase": 181.5,
                       "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.208,
+                      "effectRES": 0.292,
+                      "ehr": 0.184,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Quantum",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
+                      "compACT": 117.55482,
                       "toughnessBase": 160,
                       "weaknessList": [
                         "Fire",
@@ -882,39 +818,39 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 195470.84565
+                      "compSUM": 163988.9739
                     }
                   ]
                 ],
-                "scalarElite": 277,
+                "scalarElite": 275,
                 "scalarHard": 3,
                 "configData": {
-                  "_Wave": "2",
+                  "_Wave": "",
                   "_IsEliteBattle": "1",
-                  "_CreateBattleEvent": "30147"
+                  "_CreateBattleEvent": "30149"
                 },
-                "highSTSUM": 364878.91188,
-                "aoeSUM": 573381.14724
+                "highSTSUM": 349843.14432,
+                "aoeSUM": 559749.030912
               }
             ]
           },
           "stage2": {
             "ids": [
-              30124032
+              30126032
             ],
             "stageDataArray": [
               {
-                "stageName": "Dreamjolt Troupe's Beyond Overcooked",
-                "enemyLevel": 76,
+                "stageName": "Rocking Rebel",
+                "enemyLevel": 73,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
                     "realModifierNamne": null,
-                    "BEKey": 30147,
+                    "BEKey": 30149,
                     "actualParams": [
-                      0.8,
-                      1
+                      5,
+                      20
                     ]
                   }
                 ],
@@ -922,125 +858,2851 @@ let mocSchedule = [
                 "enemyList": [
                   [
                     {
-                      "name": "Dreamjolt Troupe's Fortune Seller",
-                      "id": 3002020,
-                      "image": 3002020,
+                      "name": "Voidranger: Reaver",
+                      "id": 8012010,
+                      "image": 8012010,
                       "rank": "MinionLv2",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 29320.6268475,
-                      "speedBase": 132,
+                      "attackBase": 470.759724,
+                      "defBase": 929.99991,
+                      "hpBase": 16398.89739,
+                      "speedBase": 110,
                       "critDMG": 0.2,
-                      "effectRES": 0.2,
-                      "ehr": 0.208,
+                      "effectRES": 0.192,
+                      "ehr": 0.184,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
+                      "compACT": 117.55482,
                       "toughnessBase": 20,
                       "weaknessList": [
+                        "Physical",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 16398.89739
+                    },
+                    {
+                      "name": "Rocking Rebel",
+                      "id": 5013010,
+                      "image": 5013010,
+                      "rank": "Elite",
+                      "attackBase": 470.759724,
+                      "defBase": 929.99991,
+                      "hpBase": 196786.76868,
+                      "speedBase": 145.2,
+                      "critDMG": 0.2,
+                      "effectRES": 0.292,
+                      "ehr": 0.184,
+                      "delay": 0.25,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Imaginary",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 117.55482,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Physical",
                         "Fire",
                         "Wind"
                       ],
                       "resistances": {
-                        "Physical": 0.2,
                         "Ice": 0.2,
                         "Thunder": 0.2,
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 29320.6268475
-                    },
-                    {
-                      "name": "Dreamjolt Troupe's Beyond Overcooked",
-                      "id": 3003010,
-                      "image": 3003010,
-                      "rank": "Elite",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 234565.01478,
-                      "speedBase": 110,
-                      "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.208,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 140.12247,
-                      "toughnessBase": 160,
-                      "weaknessList": [
-                        "Fire",
-                        "Thunder",
-                        "Wind"
-                      ],
-                      "resistances": {
-                        "Physical": 0.2,
-                        "Ice": 0.2,
-                        "Quantum": 0.2,
-                        "Imaginary": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 234565.01478
+                      "compSUM": 196786.76868
                     },
                     0
                   ],
                   [
                     {
-                      "name": "Dreamjolt Troupe's Beyond Overcooked",
-                      "id": 3003010,
-                      "image": 3003010,
+                      "name": "Rocking Rebel",
+                      "id": 5013010,
+                      "image": 5013010,
                       "rank": "Elite",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 234565.01478,
-                      "speedBase": 110,
+                      "attackBase": 470.759724,
+                      "defBase": 929.99991,
+                      "hpBase": 196786.76868,
+                      "speedBase": 145.2,
                       "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.208,
-                      "delay": 1,
+                      "effectRES": 0.292,
+                      "ehr": 0.184,
+                      "delay": 0.25,
                       "toughnessBars": 1,
-                      "toughnessElement": "Physical",
+                      "toughnessElement": "Imaginary",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
-                      "toughnessBase": 160,
+                      "compACT": 117.55482,
+                      "toughnessBase": 120,
                       "weaknessList": [
+                        "Physical",
                         "Fire",
-                        "Thunder",
                         "Wind"
                       ],
                       "resistances": {
-                        "Physical": 0.2,
                         "Ice": 0.2,
+                        "Thunder": 0.2,
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 234565.01478
+                      "compSUM": 196786.76868
                     },
                     {
-                      "name": "Decaying Shadow",
-                      "id": 8003040,
-                      "image": 8003040,
+                      "name": "Lady of Crashing Waves",
+                      "id": 4053010,
+                      "image": 4053010,
                       "rank": "Elite",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 130313.8971,
-                      "speedBase": 189.2,
+                      "attackBase": 470.759724,
+                      "defBase": 929.99991,
+                      "hpBase": 163988.9739,
+                      "speedBase": 158.4,
                       "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.208,
+                      "effectRES": 0.292,
+                      "ehr": 0.184,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Ice",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 117.55482,
+                      "toughnessBase": 180,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 163988.9739
+                    }
+                  ]
+                ],
+                "scalarElite": 275,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30149"
+                },
+                "highSTSUM": 393573.53736,
+                "aoeSUM": 590360.30604
+              }
+            ]
+          }
+        }
+      },
+      "4": {
+        "floorName": "Survival of the Fittest (IV)",
+        "cycleCount": 30,
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30126041
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Howling Casket",
+                "enemyLevel": 75,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30149,
+                    "actualParams": [
+                      5,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Eclipse Wolftrooper",
+                      "id": 2032020,
+                      "image": 2032020,
+                      "rank": "MinionLv2",
+                      "attackBase": 494.062902,
+                      "defBase": 950.0001,
+                      "hpBase": 24663.58326,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.2,
+                      "ehr": 0.2,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
+                      "compACT": 132.59991,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 24663.58326
+                    },
+                    {
+                      "name": "Howling Casket",
+                      "id": 2033010,
+                      "image": 2033010,
+                      "rank": "Elite",
+                      "attackBase": 494.062902,
+                      "defBase": 950.0001,
+                      "hpBase": 147981.49956,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.2,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 132.59991,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Thunder",
+                        "Wind",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 147981.49956
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Howling Casket",
+                      "id": 2033010,
+                      "image": 2033010,
+                      "rank": "Elite",
+                      "attackBase": 494.062902,
+                      "defBase": 950.0001,
+                      "hpBase": 147981.49956,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.2,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 132.59991,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Thunder",
+                        "Wind",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 147981.49956
+                    },
+                    {
+                      "name": "Ice Out of Space",
+                      "id": 8003010,
+                      "image": 8003010,
+                      "rank": "Elite",
+                      "attackBase": 494.062902,
+                      "defBase": 950.0001,
+                      "hpBase": 123317.9163,
+                      "speedBase": 110,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.2,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 132.59991,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Fire",
+                        "Wind",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Ice": 0.4,
+                        "Thunder": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL_Frozen": 1
+                      },
+                      "compSUM": 123317.9163
+                    }
+                  ]
+                ],
+                "scalarElite": 276,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30149"
+                },
+                "highSTSUM": 295962.99912,
+                "aoeSUM": 468608.08194
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              30126042
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Aurumaton Spectral Envoy",
+                "enemyLevel": 75,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30149,
+                    "actualParams": [
+                      5,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Voidranger: Distorter",
+                      "id": 8012020,
+                      "image": 8012020,
+                      "rank": "MinionLv2",
+                      "attackBase": 494.062902,
+                      "defBase": 950.0001,
+                      "hpBase": 22197.224934,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.2,
+                      "ehr": 0.2,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 132.59991,
+                      "toughnessBase": 20,
+                      "weaknessList": [
+                        "Wind",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 22197.224934
+                    },
+                    {
+                      "name": "Aurumaton Spectral Envoy",
+                      "id": 2013020,
+                      "image": 2013020,
+                      "rank": "Elite",
+                      "attackBase": 494.062902,
+                      "defBase": 950.0001,
+                      "hpBase": 147981.49956,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.2,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 132.59991,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Physical",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 147981.49956
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Aurumaton Spectral Envoy",
+                      "id": 2013020,
+                      "image": 2013020,
+                      "rank": "Elite",
+                      "attackBase": 494.062902,
+                      "defBase": 950.0001,
+                      "hpBase": 147981.49956,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.2,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 132.59991,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Physical",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 147981.49956
+                    },
+                    {
+                      "name": "Memory Zone Meme \"Shell of Faded Rage\"",
+                      "id": 3013010,
+                      "image": 3013010,
+                      "rank": "Elite",
+                      "attackBase": 494.062902,
+                      "defBase": 950.0001,
+                      "hpBase": 172645.08282,
+                      "speedBase": 121,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.2,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 132.59991,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Thunder",
+                        "Quantum",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 172645.08282
+                    }
+                  ]
+                ],
+                "scalarElite": 276,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30149"
+                },
+                "highSTSUM": 320626.58238000004,
+                "aoeSUM": 513002.531808
+              }
+            ]
+          }
+        }
+      },
+      "5": {
+        "floorName": "Survival of the Fittest (V)",
+        "cycleCount": 30,
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30126051
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Howling Casket",
+                "enemyLevel": 78,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30149,
+                    "actualParams": [
+                      5,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Eclipse Wolftrooper",
+                      "id": 2032020,
+                      "image": 2032020,
+                      "rank": "MinionLv2",
+                      "attackBase": 529.017624,
+                      "defBase": 980.00007,
+                      "hpBase": 28861.16802,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.2,
+                      "ehr": 0.224,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 155.16757,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 28861.16802
+                    },
+                    {
+                      "name": "Howling Casket",
+                      "id": 2033010,
+                      "image": 2033010,
+                      "rank": "Elite",
+                      "attackBase": 529.017624,
+                      "defBase": 980.00007,
+                      "hpBase": 173167.00812,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.224,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 155.16757,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Thunder",
+                        "Wind",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 173167.00812
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Howling Casket",
+                      "id": 2033010,
+                      "image": 2033010,
+                      "rank": "Elite",
+                      "attackBase": 529.017624,
+                      "defBase": 980.00007,
+                      "hpBase": 173167.00812,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.224,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 155.16757,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Thunder",
+                        "Wind",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 173167.00812
+                    },
+                    {
+                      "name": "Ice Out of Space",
+                      "id": 8003010,
+                      "image": 8003010,
+                      "rank": "Elite",
+                      "attackBase": 529.017624,
+                      "defBase": 980.00007,
+                      "hpBase": 144305.8401,
+                      "speedBase": 120,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.224,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 155.16757,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Fire",
+                        "Wind",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Ice": 0.4,
+                        "Thunder": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL_Frozen": 1
+                      },
+                      "compSUM": 144305.8401
+                    }
+                  ]
+                ],
+                "scalarElite": 277,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30149"
+                },
+                "highSTSUM": 346334.01624,
+                "aoeSUM": 548362.19238
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              30126052
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Ichor Memosprite: Winged Serpent",
+                "enemyLevel": 78,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30149,
+                    "actualParams": [
+                      5,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Voidranger: Eliminator",
+                      "id": 8012030,
+                      "image": 8012030,
+                      "rank": "MinionLv2",
+                      "attackBase": 529.017624,
+                      "defBase": 980.00007,
+                      "hpBase": 30304.226421,
+                      "speedBase": 120,
+                      "critDMG": 0.2,
+                      "effectRES": 0.2,
+                      "ehr": 0.224,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 155.16757,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 30304.226421
+                    },
+                    {
+                      "name": "Ichor Memosprite: Winged Serpent",
+                      "id": 4063010,
+                      "image": 4063010,
+                      "rank": "Elite",
+                      "attackBase": 529.017624,
+                      "defBase": 980.00007,
+                      "hpBase": 230889.34416,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.224,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Imaginary",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 155.16757,
+                      "toughnessBase": 160,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Ice"
+                      ],
+                      "resistances": {
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 230889.34416
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Ichor Memosprite: Winged Serpent",
+                      "id": 4063010,
+                      "image": 4063010,
+                      "rank": "Elite",
+                      "attackBase": 529.017624,
+                      "defBase": 980.00007,
+                      "hpBase": 230889.34416,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.224,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Imaginary",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 155.16757,
+                      "toughnessBase": 160,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Ice"
+                      ],
+                      "resistances": {
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 230889.34416
+                    },
+                    {
+                      "name": "God-Devourer Offspring",
+                      "id": 5023020,
+                      "image": 5023020,
+                      "rank": "Elite",
+                      "attackBase": 529.017624,
+                      "defBase": 980.00007,
+                      "hpBase": 230889.34416,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.224,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Fire",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 155.16757,
+                      "toughnessBase": 180,
+                      "weaknessList": [
+                        "Fire",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 230889.34416
+                    }
+                  ]
+                ],
+                "scalarElite": 277,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30149"
+                },
+                "highSTSUM": 461778.68832,
+                "aoeSUM": 753276.485322
+              }
+            ]
+          }
+        }
+      },
+      "6": {
+        "floorName": "Survival of the Fittest (VI)",
+        "cycleCount": 30,
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30126061
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Daybreak Squadron: Dawnlance",
+                "enemyLevel": 80,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30149,
+                    "actualParams": [
+                      5,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Voidranger: Eliminator",
+                      "id": 8012030,
+                      "image": 8012030,
+                      "rank": "MinionLv2",
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": 36566.7900444,
+                      "speedBase": 120,
+                      "critDMG": 0.2,
+                      "effectRES": 0.2,
+                      "ehr": 0.24,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 187.23394800000003,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 36566.7900444
+                    },
+                    {
+                      "name": "Daybreak Squadron: Dawnlance",
+                      "id": 5013060,
+                      "image": 5013060,
+                      "rank": "Elite",
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": 261191.35746,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.24,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 187.23394800000003,
+                      "toughnessBase": 160,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Imaginary": 0.8
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 261191.35746
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Daybreak Squadron: Dawnlance",
+                      "id": 5013060,
+                      "image": 5013060,
+                      "rank": "Elite",
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": 261191.35746,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.24,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 187.23394800000003,
+                      "toughnessBase": 160,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Imaginary": 0.8
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 261191.35746
+                    },
+                    {
+                      "name": "Daybreak Squadron: Cinderborne",
+                      "id": 5013070,
+                      "image": 5013070,
+                      "rank": "Elite",
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": 261191.35746,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.24,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 187.23394800000003,
+                      "toughnessBase": 160,
+                      "weaknessList": [
+                        "Fire",
+                        "Quantum",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.8,
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 261191.35746
+                    }
+                  ]
+                ],
+                "scalarElite": 278,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30149"
+                },
+                "highSTSUM": 522382.71492,
+                "aoeSUM": 856707.6524688
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              30126062
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Aurumaton Spectral Envoy",
+                "enemyLevel": 80,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30149,
+                    "actualParams": [
+                      5,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Voidranger: Reaver",
+                      "id": 8012010,
+                      "image": 8012010,
+                      "rank": "MinionLv2",
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": 26119.135746,
+                      "speedBase": 120,
+                      "critDMG": 0.2,
+                      "effectRES": 0.2,
+                      "ehr": 0.24,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 187.23394800000003,
+                      "toughnessBase": 20,
+                      "weaknessList": [
+                        "Physical",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 26119.135746
+                    },
+                    {
+                      "name": "Aurumaton Spectral Envoy",
+                      "id": 2013020,
+                      "image": 2013020,
+                      "rank": "Elite",
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": 208953.085968,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.24,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 187.23394800000003,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Physical",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 208953.085968
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Aurumaton Spectral Envoy",
+                      "id": 2013020,
+                      "image": 2013020,
+                      "rank": "Elite",
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": 208953.085968,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.24,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 187.23394800000003,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Physical",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 208953.085968
+                    },
+                    0
+                  ]
+                ],
+                "scalarElite": 278,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30149"
+                },
+                "highSTSUM": 417906.171936,
+                "aoeSUM": 679097.529396
+              }
+            ]
+          }
+        }
+      },
+      "7": {
+        "floorName": "Survival of the Fittest (VII)",
+        "cycleCount": 30,
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30126071
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "\"Tomorrow in Harmonious Chords\"",
+                "enemyLevel": 82,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30149,
+                    "actualParams": [
+                      5,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Voidranger: Eliminator",
+                      "id": 8012030,
+                      "image": 8012030,
+                      "rank": "MinionLv2",
+                      "attackBase": 563.422446,
+                      "defBase": 1020.00003,
+                      "hpBase": 40755.2854401,
+                      "speedBase": 120,
+                      "critDMG": 0.2,
+                      "effectRES": 0.2,
+                      "ehr": 0.256,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 208.68041700000003,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 40755.2854401
+                    },
+                    {
+                      "name": "\"Tomorrow in Harmonious Chords\"",
+                      "id": 3003040,
+                      "image": 3003040,
+                      "rank": "Elite",
+                      "attackBase": 563.422446,
+                      "defBase": 1020.00003,
+                      "hpBase": 232887.345372,
+                      "speedBase": 120,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.256,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 208.68041700000003,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 232887.345372
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "\"Tomorrow in Harmonious Chords\"",
+                      "id": 3003040,
+                      "image": 3003040,
+                      "rank": "Elite",
+                      "attackBase": 563.422446,
+                      "defBase": 1020.00003,
+                      "hpBase": 232887.345372,
+                      "speedBase": 120,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.256,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 208.68041700000003,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 232887.345372
+                    },
+                    {
+                      "name": "Dark Sun Gryphon",
+                      "id": 4033030,
+                      "image": 4033030,
+                      "rank": "Elite",
+                      "attackBase": 563.422446,
+                      "defBase": 1020.00003,
+                      "hpBase": 291109.181715,
+                      "speedBase": 172.8,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.256,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Wind",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 208.68041700000003,
+                      "toughnessBase": 160,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 291109.181715
+                    }
+                  ]
+                ],
+                "scalarElite": 279,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30149"
+                },
+                "highSTSUM": 523996.527087,
+                "aoeSUM": 838394.4433392
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              30126072
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Abundance Sprite: Malefic Ape",
+                "enemyLevel": 82,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30149,
+                    "actualParams": [
+                      5,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Voidranger: Eliminator",
+                      "id": 8012030,
+                      "image": 8012030,
+                      "rank": "MinionLv2",
+                      "attackBase": 563.422446,
+                      "defBase": 1020.00003,
+                      "hpBase": 40755.2854401,
+                      "speedBase": 120,
+                      "critDMG": 0.2,
+                      "effectRES": 0.2,
+                      "ehr": 0.256,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 208.68041700000003,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 40755.2854401
+                    },
+                    {
+                      "name": "Abundance Sprite: Malefic Ape",
+                      "id": 2023020,
+                      "image": 2023020,
+                      "rank": "Elite",
+                      "attackBase": 563.422446,
+                      "defBase": 1020.00003,
+                      "hpBase": 232887.345372,
+                      "speedBase": 172.8,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.256,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 208.68041700000003,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Thunder": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 232887.345372
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Abundance Sprite: Malefic Ape",
+                      "id": 2023020,
+                      "image": 2023020,
+                      "rank": "Elite",
+                      "attackBase": 563.422446,
+                      "defBase": 1020.00003,
+                      "hpBase": 232887.345372,
+                      "speedBase": 172.8,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.256,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 208.68041700000003,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Thunder": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 232887.345372
+                    },
+                    0
+                  ]
+                ],
+                "scalarElite": 279,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30149"
+                },
+                "highSTSUM": 465774.690744,
+                "aoeSUM": 780172.6069962
+              }
+            ]
+          }
+        }
+      },
+      "8": {
+        "floorName": "Survival of the Fittest (VIII)",
+        "cycleCount": 30,
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30126081
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Ichor Memosprite: Winged Serpent",
+                "enemyLevel": 85,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30149,
+                    "actualParams": [
+                      5,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Voidranger: Eliminator",
+                      "id": 8012030,
+                      "image": 8012030,
+                      "rank": "MinionLv2",
+                      "attackBase": 580.494708,
+                      "defBase": 1050,
+                      "hpBase": 47856.5920602,
+                      "speedBase": 120,
+                      "critDMG": 0.2,
+                      "effectRES": 0.2,
+                      "ehr": 0.28,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 245.041434,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 47856.5920602
+                    },
+                    {
+                      "name": "Ichor Memosprite: Winged Serpent",
+                      "id": 4063010,
+                      "image": 4063010,
+                      "rank": "Elite",
+                      "attackBase": 580.494708,
+                      "defBase": 1050,
+                      "hpBase": 364621.653792,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.28,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Imaginary",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 245.041434,
+                      "toughnessBase": 160,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Ice"
+                      ],
+                      "resistances": {
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 364621.653792
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Ichor Memosprite: Winged Serpent",
+                      "id": 4063010,
+                      "image": 4063010,
+                      "rank": "Elite",
+                      "attackBase": 580.494708,
+                      "defBase": 1050,
+                      "hpBase": 364621.653792,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.28,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Imaginary",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 245.041434,
+                      "toughnessBase": 160,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Ice"
+                      ],
+                      "resistances": {
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 364621.653792
+                    },
+                    {
+                      "name": "Cyclonic Swarm Mother",
+                      "id": 4053020,
+                      "image": 4053020,
+                      "rank": "Elite",
+                      "attackBase": 580.494708,
+                      "defBase": 1050,
+                      "hpBase": 341832.80043,
+                      "speedBase": 198,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.28,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 245.041434,
+                      "toughnessBase": 160,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 341832.80043
+                    }
+                  ]
+                ],
+                "scalarElite": 280,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30149"
+                },
+                "highSTSUM": 729243.307584,
+                "aoeSUM": 1166789.2921344
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              30126082
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Rocking Rebel",
+                "enemyLevel": 85,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30149,
+                    "actualParams": [
+                      5,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Voidranger: Reaver",
+                      "id": 8012010,
+                      "image": 8012010,
+                      "rank": "MinionLv2",
+                      "attackBase": 580.494708,
+                      "defBase": 1050,
+                      "hpBase": 34183.280043,
+                      "speedBase": 120,
+                      "critDMG": 0.2,
+                      "effectRES": 0.2,
+                      "ehr": 0.28,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 245.041434,
+                      "toughnessBase": 20,
+                      "weaknessList": [
+                        "Physical",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 34183.280043
+                    },
+                    {
+                      "name": "Rocking Rebel",
+                      "id": 5013010,
+                      "image": 5013010,
+                      "rank": "Elite",
+                      "attackBase": 580.494708,
+                      "defBase": 1050,
+                      "hpBase": 410199.360516,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.28,
+                      "delay": 0.25,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Imaginary",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 245.041434,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 410199.360516
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Rocking Rebel",
+                      "id": 5013010,
+                      "image": 5013010,
+                      "rank": "Elite",
+                      "attackBase": 580.494708,
+                      "defBase": 1050,
+                      "hpBase": 410199.360516,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.28,
+                      "delay": 0.25,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Imaginary",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 245.041434,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 410199.360516
+                    },
+                    {
+                      "name": "Lady of Crashing Waves",
+                      "id": 4053010,
+                      "image": 4053010,
+                      "rank": "Elite",
+                      "attackBase": 580.494708,
+                      "defBase": 1050,
+                      "hpBase": 341832.80043,
+                      "speedBase": 172.8,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.28,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Ice",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 245.041434,
+                      "toughnessBase": 180,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 341832.80043
+                    }
+                  ]
+                ],
+                "scalarElite": 280,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30149"
+                },
+                "highSTSUM": 820398.721032,
+                "aoeSUM": 1230598.081548
+              }
+            ]
+          }
+        }
+      },
+      "9": {
+        "floorName": "Survival of the Fittest (IX)",
+        "cycleCount": 30,
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30126091
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Howling Casket",
+                "enemyLevel": 88,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30149,
+                    "actualParams": [
+                      5,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Eclipse Wolftrooper",
+                      "id": 2032020,
+                      "image": 2032020,
+                      "rank": "MinionLv2",
+                      "attackBase": 598.084308,
+                      "defBase": 1079.99997,
+                      "hpBase": 55834.479564,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.2,
+                      "ehr": 0.304,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 300.18537399999997,
+                      "toughnessBase": 30,
+                      "weaknessList": [
+                        "Physical",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 55834.479564
+                    },
+                    {
+                      "name": "Howling Casket",
+                      "id": 2033010,
+                      "image": 2033010,
+                      "rank": "Elite",
+                      "attackBase": 598.084308,
+                      "defBase": 1079.99997,
+                      "hpBase": 335006.877384,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.304,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 300.18537399999997,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Thunder",
+                        "Wind",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 335006.877384
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Howling Casket",
+                      "id": 2033010,
+                      "image": 2033010,
+                      "rank": "Elite",
+                      "attackBase": 598.084308,
+                      "defBase": 1079.99997,
+                      "hpBase": 335006.877384,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.304,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 300.18537399999997,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Thunder",
+                        "Wind",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 335006.877384
+                    },
+                    {
+                      "name": "Rocking Rebel",
+                      "id": 5013010,
+                      "image": 5013010,
+                      "rank": "Elite",
+                      "attackBase": 598.084308,
+                      "defBase": 1079.99997,
+                      "hpBase": 502510.316076,
+                      "speedBase": 174.24,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.304,
+                      "delay": 0.25,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Imaginary",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 300.18537399999997,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 502510.316076
+                    }
+                  ]
+                ],
+                "scalarElite": 281,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30149"
+                },
+                "highSTSUM": 837517.19346,
+                "aoeSUM": 1284193.029972
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              30126092
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Aurumaton Spectral Envoy",
+                "enemyLevel": 88,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30149,
+                    "actualParams": [
+                      5,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Voidranger: Distorter",
+                      "id": 8012020,
+                      "image": 8012020,
+                      "rank": "MinionLv2",
+                      "attackBase": 598.084308,
+                      "defBase": 1079.99997,
+                      "hpBase": 50251.0316076,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.2,
+                      "ehr": 0.304,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 300.18537399999997,
+                      "toughnessBase": 20,
+                      "weaknessList": [
+                        "Wind",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 50251.0316076
+                    },
+                    {
+                      "name": "Aurumaton Spectral Envoy",
+                      "id": 2013020,
+                      "image": 2013020,
+                      "rank": "Elite",
+                      "attackBase": 598.084308,
+                      "defBase": 1079.99997,
+                      "hpBase": 335006.877384,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.304,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 300.18537399999997,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Physical",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 335006.877384
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Aurumaton Spectral Envoy",
+                      "id": 2013020,
+                      "image": 2013020,
+                      "rank": "Elite",
+                      "attackBase": 598.084308,
+                      "defBase": 1079.99997,
+                      "hpBase": 335006.877384,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.304,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 300.18537399999997,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Physical",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 335006.877384
+                    },
+                    {
+                      "name": "Memory Zone Meme \"Shell of Faded Rage\"",
+                      "id": 3013010,
+                      "image": 3013010,
+                      "rank": "Elite",
+                      "attackBase": 598.084308,
+                      "defBase": 1079.99997,
+                      "hpBase": 390841.356948,
+                      "speedBase": 145.2,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.304,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 300.18537399999997,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Thunder",
+                        "Quantum",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 390841.356948
+                    }
+                  ]
+                ],
+                "scalarElite": 281,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30149"
+                },
+                "highSTSUM": 725848.2343319999,
+                "aoeSUM": 1161357.1749312
+              }
+            ]
+          }
+        }
+      },
+      "10": {
+        "floorName": "Survival of the Fittest (X)",
+        "cycleCount": 30,
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30126101
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Wonder Forest's Banacademic Office Staff",
+                "enemyLevel": 90,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30149,
+                    "actualParams": [
+                      5,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "\"Past Confined and Caged\"",
+                      "id": 3003030,
+                      "image": 3003030,
+                      "rank": "Elite",
+                      "attackBase": 610.105752,
+                      "defBase": 1099.99995,
+                      "hpBase": 420494.64912,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.32,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 376.78732,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Fire",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 420494.64912
+                    },
+                    {
+                      "name": "\"Present Inebriated in Revelry\"",
+                      "id": 3003050,
+                      "image": 3003050,
+                      "rank": "Elite",
+                      "attackBase": 610.105752,
+                      "defBase": 1099.99995,
+                      "hpBase": 420494.64912,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.32,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 376.78732,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 420494.64912
+                    }
+                  ],
+                  [
+                    {
+                      "name": "Wonder Forest's Banacademic Office Staff",
+                      "id": 3004020,
+                      "image": 3004020,
+                      "rank": "LittleBoss",
+                      "attackBase": 610.105752,
+                      "defBase": 1099.99995,
+                      "hpBase": 1401648.8304,
+                      "speedBase": 105.6,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.32,
+                      "delay": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 376.78732,
+                      "toughnessBase": null,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {},
+                      "resistancesDebuff": {},
+                      "compSUM": 2803297.6608
+                    }
+                  ]
+                ],
+                "scalarElite": 282,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30149"
+                },
+                "highSTSUM": 3223792.3099200004,
+                "aoeSUM": 3644286.95904
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              30126102
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Flame Reaver of the Deepest Dark",
+                "enemyLevel": 90,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30149,
+                    "actualParams": [
+                      5,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Automaton Direwolf",
+                      "id": 1013020,
+                      "image": 1013020,
+                      "rank": "Elite",
+                      "attackBase": 610.105752,
+                      "defBase": 1099.99995,
+                      "hpBase": 385453.42836,
+                      "speedBase": 190.08,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.32,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 376.78732,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Ice",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 385453.42836
+                    },
+                    {
+                      "name": "Searing Prowler",
+                      "id": 1023010,
+                      "image": 1023010,
+                      "rank": "Elite",
+                      "attackBase": 610.105752,
+                      "defBase": 1099.99995,
+                      "hpBase": 385453.42836,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.32,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 376.78732,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Ice",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.4,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {
+                        "STAT_DOT_Burn": 1
+                      },
+                      "compSUM": 385453.42836
+                    }
+                  ],
+                  [
+                    {
+                      "name": "Flame Reaver of the Deepest Dark",
+                      "id": 4034010,
+                      "image": 4034010,
+                      "rank": "LittleBoss",
+                      "attackBase": 610.105752,
+                      "defBase": 1099.99995,
+                      "hpBase": 1138839.6747,
+                      "speedBase": 174.24,
+                      "critDMG": 0.2,
+                      "effectRES": 0.4,
+                      "ehr": 0.32,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 376.78732,
+                      "toughnessBase": 240,
+                      "weaknessList": [
+                        "Ice",
+                        "Thunder",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Wind": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL_Frozen": 0.75,
+                        "STAT_Confine": 0.75,
+                        "STAT_Entangle": 0.75
+                      },
+                      "compSUM": 2277679.3494
+                    }
+                  ]
+                ],
+                "scalarElite": 282,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30149"
+                },
+                "highSTSUM": 2663132.77776,
+                "aoeSUM": 3048586.20612
+              }
+            ]
+          }
+        }
+      },
+      "11": {
+        "floorName": "Survival of the Fittest (XI)",
+        "cycleCount": 30,
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30126111
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Harbinger of Death: Swarm Nightmare",
+                "enemyLevel": 92,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30149,
+                    "actualParams": [
+                      5,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Rocking Rebel",
+                      "id": 5013010,
+                      "image": 5013010,
+                      "rank": "Elite",
+                      "attackBase": 616.22208,
+                      "defBase": 1119.99993,
+                      "hpBase": 1076698.85472,
+                      "speedBase": 174.24,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.336,
+                      "delay": 0.25,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Imaginary",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 643.18928,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 1076698.85472
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Harbinger of Death: Swarm Nightmare",
+                      "id": 3024030,
+                      "image": 3024030,
+                      "rank": "LittleBoss",
+                      "attackBase": 616.22208,
+                      "defBase": 1119.99993,
+                      "hpBase": 4785328.2432,
+                      "speedBase": 190.08,
+                      "critDMG": 0.2,
+                      "effectRES": 0.4,
+                      "ehr": 0.336,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Fire",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 643.18928,
+                      "toughnessBase": 200,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL": 0.5
+                      },
+                      "compSUM": 4785328.2432
+                    }
+                  ]
+                ],
+                "scalarElite": 266,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30149"
+                },
+                "highSTSUM": 5862027.097920001,
+                "aoeSUM": 6938725.952640001
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              30126112
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Swarm: True Sting (Complete)",
+                "corruptionID": 2,
+                "corruptionBuff": {
+                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+                  "realModifierNamne": "ChallengePeakBattle_GluttonyAbility_LV2",
+                  "BEKey": 1912336050,
+                  "name": "undefined",
+                  "desc": "undefined",
+                  "battleDesc": null,
+                  "buffType": "",
+                  "params": [
+                    0.4,
+                    0.2,
+                    1,
+                    1,
+                    0.35
+                  ]
+                },
+                "corruptionDesc": "The contaminated monsters have obtained the power of \"Voracity.\" Upon taking killing blow, they will not be defeated, but will instead immediately restore a certain percentage of their HP.\\nDealing DMG to them can continuously suppress their Max HP. Once suppressed to a certain percentage, the enemy can be completely defeated.",
+                "corruptionParams": [
+                  0.4,
+                  0.4,
+                  1,
+                  1,
+                  0.72
+                ],
+                "corruptionEnemies": [
+                  {
+                    "ID": 802401106,
+                    "params": []
+                  }
+                ],
+                "enemyLevel": 92,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30149,
+                    "actualParams": [
+                      5,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "God-Devourer Offspring",
+                      "id": 5023020,
+                      "image": 5023020,
+                      "rank": "Elite",
+                      "attackBase": 616.22208,
+                      "defBase": 1119.99993,
+                      "hpBase": 957065.64864,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.336,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Fire",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 643.18928,
+                      "toughnessBase": 180,
+                      "weaknessList": [
+                        "Fire",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 957065.64864
+                    },
+                    {
+                      "name": "Blaze Out of Space",
+                      "id": 8003020,
+                      "image": 8003020,
+                      "rank": "Elite",
+                      "attackBase": 616.22208,
+                      "defBase": 1119.99993,
+                      "hpBase": 598166.0304,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.336,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 643.18928,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Physical",
+                        "Ice",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Fire": 0.4,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {
+                        "STAT_DOT_Burn": 1
+                      },
+                      "compSUM": 598166.0304
+                    }
+                  ],
+                  [
+                    {
+                      "name": "Swarm: True Sting",
+                      "id": 802401106,
+                      "image": 8024011,
+                      "rank": "LittleBoss",
+                      "attackBase": 616.22208,
+                      "defBase": 1119.99993,
+                      "hpBase": 1435598.1140604,
+                      "speedBase": 190.08,
+                      "critDMG": 0.2,
+                      "effectRES": 0.4,
+                      "ehr": 0.336,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Wind",
+                      "hpBars": 2,
+                      "compEN": 1.333333,
+                      "compACT": 643.18928,
+                      "toughnessBase": 160,
+                      "weaknessList": [
+                        "Ice",
+                        "Quantum",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 2871196.2281208
+                    }
+                  ]
+                ],
+                "scalarElite": 266,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30149"
+                },
+                "highSTSUM": 3828261.8767608004,
+                "aoeSUM": 4426427.9071608
+              }
+            ]
+          }
+        }
+      },
+      "12": {
+        "floorName": "Survival of the Fittest (XII)",
+        "cycleCount": 30,
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30126121
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Borisin Warhead: Hoolay",
+                "enemyLevel": 95,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30149,
+                    "actualParams": [
+                      5,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Rocking Rebel",
+                      "id": 5013010,
+                      "image": 5013010,
+                      "rank": "Elite",
+                      "attackBase": 625.5117,
+                      "defBase": 1149.9999,
+                      "hpBase": 4085146.3185,
+                      "speedBase": 174.24,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.36,
+                      "delay": 0.25,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Imaginary",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 2440.35025,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 4085146.3185
+                    },
+                    {
+                      "name": "Decaying Shadow",
+                      "id": 800304016,
+                      "image": 8003040,
+                      "rank": "Elite",
+                      "attackBase": 625.5117,
+                      "defBase": 1149.9999,
+                      "hpBase": 3404288.59875,
+                      "speedBase": 227.04,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.36,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1.5,
+                      "compACT": 2440.35025,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Fire",
@@ -1054,46 +3716,78 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 130313.8971
+                      "compSUM": 3404288.59875
+                    }
+                  ],
+                  [
+                    {
+                      "name": "Borisin Warhead: Hoolay",
+                      "id": 2034010,
+                      "image": 2034010,
+                      "rank": "LittleBoss",
+                      "attackBase": 625.5117,
+                      "defBase": 1149.9999,
+                      "hpBase": 6241195.764375,
+                      "speedBase": 264,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.36,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Thunder",
+                      "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 2440.35025,
+                      "toughnessBase": 240,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL_Frozen": 0.75,
+                        "STAT_Confine": 0.75,
+                        "STAT_Entangle": 0.75
+                      },
+                      "compSUM": 12482391.52875
                     }
                   ]
                 ],
-                "scalarElite": 277,
+                "scalarElite": 164,
                 "scalarHard": 3,
                 "configData": {
-                  "_Wave": "2",
+                  "_Wave": "",
                   "_IsEliteBattle": "1",
-                  "_CreateBattleEvent": "30147"
+                  "_CreateBattleEvent": "30149"
                 },
-                "highSTSUM": 469130.02956,
-                "aoeSUM": 658085.1803550001
+                "highSTSUM": 16567537.84725,
+                "aoeSUM": 19971826.446000002
               }
             ]
-          }
-        }
-      },
-      "4": {
-        "floorName": "undefined",
-        "cycleCount": 30,
-        "sides": 2,
-        "stageDataObject": {
-          "stage1": {
+          },
+          "stage2": {
             "ids": [
-              30124041
+              30126122
             ],
             "stageDataArray": [
               {
-                "stageName": "Howling Casket",
-                "enemyLevel": 80,
+                "stageName": "Blood of the Fallen God: Yabuli",
+                "enemyLevel": 95,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
                     "realModifierNamne": null,
-                    "BEKey": 30147,
+                    "BEKey": 30149,
                     "actualParams": [
-                      0.8,
-                      1
+                      5,
+                      20
                     ]
                   }
                 ],
@@ -1101,125 +3795,1473 @@ let mocSchedule = [
                 "enemyList": [
                   [
                     {
-                      "name": "Eclipse Wolftrooper",
-                      "id": 2032020,
-                      "image": 2032020,
-                      "rank": "MinionLv2",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 34825.514328,
-                      "speedBase": 144,
+                      "name": "Moonlit Pegasus",
+                      "id": 402302001,
+                      "image": 4023020,
+                      "rank": "Elite",
+                      "attackBase": 625.5117,
+                      "defBase": 1149.9999,
+                      "hpBase": 3631240.0372371,
+                      "speedBase": 132,
                       "critDMG": 0.2,
-                      "effectRES": 0.2,
-                      "ehr": 0.24,
+                      "effectRES": 0.3,
+                      "ehr": 0.36,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 1,
+                      "compEN": 1.454545,
+                      "compACT": 2440.35025,
+                      "toughnessBase": 160,
+                      "weaknessList": [
+                        "Fire",
+                        "Quantum",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 3631240.0372371
+                    },
+                    {
+                      "name": "Noontide Gryphon",
+                      "id": 402301001,
+                      "image": 4023010,
+                      "rank": "Elite",
+                      "attackBase": 625.5117,
+                      "defBase": 1149.9999,
+                      "hpBase": 4085145.1837371,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.36,
+                      "delay": 0.5,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Fire",
+                      "hpBars": 1,
+                      "compEN": 1.384615,
+                      "compACT": 2440.35025,
+                      "toughnessBase": 160,
+                      "weaknessList": [
+                        "Physical",
+                        "Quantum",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 4085145.1837371
+                    }
+                  ],
+                  [
+                    {
+                      "name": "Blood of the Fallen God: Yabuli",
+                      "id": 5034010,
+                      "image": 5034010,
+                      "rank": "LittleBoss",
+                      "attackBase": 625.5117,
+                      "defBase": 1149.9999,
+                      "hpBase": 5106432.898125,
+                      "speedBase": 237.6,
+                      "critDMG": 0.2,
+                      "effectRES": 0.4,
+                      "ehr": 0.36,
+                      "delay": null,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 2440.35025,
+                      "toughnessBase": 360,
+                      "weaknessList": [
+                        "Ice",
+                        "Quantum",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL": 1
+                      },
+                      "compSUM": 5106432.898125
+                    }
+                  ]
+                ],
+                "scalarElite": 164,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30149"
+                },
+                "highSTSUM": 9191578.0818621,
+                "aoeSUM": 12822818.1190992
+              }
+            ]
+          }
+        }
+      },
+      "13": {
+        "floorName": "STARWARD",
+        "sides": 1,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30126123
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Ichor Memosprite: Judge of Oblivion",
+                "corruptionID": 3,
+                "corruptionBuff": {
+                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+                  "realModifierNamne": "ChallengePeakBattle_GluttonyAbility_LV3",
+                  "BEKey": 1912336050,
+                  "name": "undefined",
+                  "desc": "undefined",
+                  "battleDesc": null,
+                  "buffType": "",
+                  "params": [
+                    0.65,
+                    0.3,
+                    0.5,
+                    1,
+                    0.5
+                  ]
+                },
+                "corruptionDesc": "The contaminated monsters have obtained the power of \"Voracity.\" Upon taking killing blow, they will not be defeated, but will instead immediately restore a certain percentage of their HP.\\nDealing DMG to them can continuously suppress their Max HP. Once suppressed to a certain percentage, the enemy can be completely defeated.",
+                "corruptionParams": [
+                  0.6,
+                  0.8,
+                  1,
+                  3,
+                  1.44
+                ],
+                "corruptionEnemies": [
+                  {
+                    "ID": 4064010,
+                    "params": []
+                  },
+                  {
+                    "ID": 4062010,
+                    "params": [
+                      1,
+                      0
+                    ]
+                  },
+                  {
+                    "ID": 4063010,
+                    "params": []
+                  }
+                ],
+                "enemyLevel": 95,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30149,
+                    "actualParams": [
+                      5,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Ichor Memosprite: Winged Serpent",
+                      "id": 4063010,
+                      "image": 4063010,
+                      "rank": "Elite",
+                      "attackBase": 625.5117,
+                      "defBase": 1149.9999,
+                      "hpBase": 4301624.1576,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.36,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Imaginary",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 2890.8764499999997,
+                      "toughnessBase": 160,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Ice"
+                      ],
+                      "resistances": {
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 4301624.1576
+                    },
+                    {
+                      "name": "Aurumaton Spectral Envoy",
+                      "id": 2013020,
+                      "image": 2013020,
+                      "rank": "Elite",
+                      "attackBase": 625.5117,
+                      "defBase": 1149.9999,
+                      "hpBase": 3226218.1182,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.36,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
-                      "toughnessBase": 30,
+                      "compACT": 2890.8764499999997,
+                      "toughnessBase": 100,
                       "weaknessList": [
                         "Physical",
-                        "Wind"
+                        "Thunder",
+                        "Imaginary"
                       ],
                       "resistances": {
                         "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 3226218.1182
+                    }
+                  ],
+                  [
+                    {
+                      "name": "Ichor Memosprite: Judge of Oblivion",
+                      "id": 4064010,
+                      "image": 4064010,
+                      "rank": "LittleBoss",
+                      "attackBase": 625.5117,
+                      "defBase": 1149.9999,
+                      "hpBase": 7258990.76595,
+                      "speedBase": 198,
+                      "critDMG": 0.2,
+                      "effectRES": 0.4,
+                      "ehr": 0.36,
+                      "delay": 1,
+                      "toughnessBars": 4,
+                      "toughnessElement": "Imaginary",
+                      "hpBars": 2,
+                      "compEN": 1,
+                      "compACT": 2890.8764499999997,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Physical",
+                        "Ice",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL": 0.5
+                      },
+                      "compSUM": 14517981.5319
+                    }
+                  ]
+                ],
+                "scalarElite": 168,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30149"
+                },
+                "highSTSUM": 18819605.6895,
+                "aoeSUM": 22045823.8077
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 1035,
+    "image": "mocBG/AbyssSenceBgl_Red_17.png",
+    "realName": "Crossing the Afterlife",
+    "start": "2026-09-28 06:00:00",
+    "end": "2026-11-02 04:00:00",
+    "buffData": {
+      "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+      "realModifierNamne": "",
+      "name": "Memory Turbulence",
+      "desc": "The character in position 1 of the ally lineup gains the Elation Skill \"Euphoric Maelstrom,\" dealing #1[i]% Elation DMG of the character's Type to all enemies.\\nAt the start of each cycle, Aha immediately gains 1 extra turn, taking into account a fixed #2[i] Punchlines. This turn does not consume Punchlines.",
+      "battleDesc": null,
+      "buffType": "",
+      "params": [
+        1,
+        20
+      ]
+    },
+    "floorData": {
+      "1": {
+        "floorName": "Crossing the Afterlife (I)",
+        "cycleCount": 30,
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30125011
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Silvermane Lieutenant",
+                "enemyLevel": 68,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30148,
+                    "actualParams": [
+                      1,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Silvermane Soldier",
+                      "id": 1002040,
+                      "image": 1002040,
+                      "rank": "MinionLv2",
+                      "attackBase": 416.304594,
+                      "defBase": 879.99996,
+                      "hpBase": 10462.028304,
+                      "speedBase": 91.3,
+                      "critDMG": 0.2,
+                      "effectRES": 0.172,
+                      "ehr": 0.144,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 86.53456,
+                      "toughnessBase": 20,
+                      "weaknessList": [
+                        "Wind",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 10462.028304
+                    },
+                    {
+                      "name": "Silvermane Lieutenant",
+                      "id": 1003010,
+                      "image": 1003010,
+                      "rank": "Elite",
+                      "attackBase": 416.304594,
+                      "defBase": 879.99996,
+                      "hpBase": 80477.1408,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.272,
+                      "ehr": 0.144,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 86.53456,
+                      "toughnessBase": 80,
+                      "weaknessList": [
+                        "Physical",
+                        "Ice",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 80477.1408
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Silvermane Lieutenant",
+                      "id": 1003010,
+                      "image": 1003010,
+                      "rank": "Elite",
+                      "attackBase": 416.304594,
+                      "defBase": 879.99996,
+                      "hpBase": 80477.1408,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.272,
+                      "ehr": 0.144,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 86.53456,
+                      "toughnessBase": 80,
+                      "weaknessList": [
+                        "Physical",
+                        "Ice",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 80477.1408
+                    },
+                    {
+                      "name": "Frigid Prowler",
+                      "id": 1023020,
+                      "image": 1023020,
+                      "rank": "Elite",
+                      "attackBase": 416.304594,
+                      "defBase": 879.99996,
+                      "hpBase": 96572.56896,
+                      "speedBase": 110,
+                      "critDMG": 0.2,
+                      "effectRES": 0.272,
+                      "ehr": 0.144,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 86.53456,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Fire",
+                        "Thunder",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Ice": 0.4,
+                        "Wind": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL_Frozen": 1
+                      },
+                      "compSUM": 96572.56896
+                    }
+                  ]
+                ],
+                "scalarElite": 273,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30148"
+                },
+                "highSTSUM": 177049.70976,
+                "aoeSUM": 278450.907168
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              30125012
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Aurumaton Spectral Envoy",
+                "enemyLevel": 68,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30148,
+                    "actualParams": [
+                      1,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Entranced Ingenium: Illumination Dragonfish",
+                      "id": 2012010,
+                      "image": 2012010,
+                      "rank": "MinionLv2",
+                      "attackBase": 416.304594,
+                      "defBase": 879.99996,
+                      "hpBase": 12071.57112,
+                      "speedBase": 110,
+                      "critDMG": 0.2,
+                      "effectRES": 0.172,
+                      "ehr": 0.144,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Fire",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 86.53456,
+                      "toughnessBase": 20,
+                      "weaknessList": [
+                        "Physical",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 12071.57112
+                    },
+                    {
+                      "name": "Aurumaton Spectral Envoy",
+                      "id": 2013020,
+                      "image": 2013020,
+                      "rank": "Elite",
+                      "attackBase": 416.304594,
+                      "defBase": 879.99996,
+                      "hpBase": 96572.56896,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.272,
+                      "ehr": 0.144,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 86.53456,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Physical",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 96572.56896
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Aurumaton Spectral Envoy",
+                      "id": 2013020,
+                      "image": 2013020,
+                      "rank": "Elite",
+                      "attackBase": 416.304594,
+                      "defBase": 879.99996,
+                      "hpBase": 96572.56896,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.272,
+                      "ehr": 0.144,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 86.53456,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Physical",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 96572.56896
+                    },
+                    {
+                      "name": "Dreamjolt Troupe's Sweet Gorilla",
+                      "id": 3003020,
+                      "image": 3003020,
+                      "rank": "Elite",
+                      "attackBase": 416.304594,
+                      "defBase": 879.99996,
+                      "hpBase": 144858.85344,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.272,
+                      "ehr": 0.144,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 86.53456,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 144858.85344
+                    }
+                  ]
+                ],
+                "scalarElite": 273,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30148"
+                },
+                "highSTSUM": 241431.4224,
+                "aoeSUM": 362147.13360000006
+              }
+            ]
+          }
+        }
+      },
+      "2": {
+        "floorName": "Crossing the Afterlife (II)",
+        "cycleCount": 30,
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30125021
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Dreamjolt Troupe's Sweet Gorilla",
+                "enemyLevel": 70,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30148,
+                    "actualParams": [
+                      1,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Dreamjolt Troupe's Fortune Seller",
+                      "id": 3002020,
+                      "image": 3002020,
+                      "rank": "MinionLv2",
+                      "attackBase": 435.804984,
+                      "defBase": 899.99994,
+                      "hpBase": 19876.0653225,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.18,
+                      "ehr": 0.16,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 94.98717,
+                      "toughnessBase": 20,
+                      "weaknessList": [
+                        "Fire",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
                         "Ice": 0.2,
                         "Thunder": 0.2,
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 34825.514328
+                      "compSUM": 19876.0653225
                     },
                     {
-                      "name": "Howling Casket",
-                      "id": 2033010,
-                      "image": 2033010,
+                      "name": "Dreamjolt Troupe's Sweet Gorilla",
+                      "id": 3003020,
+                      "image": 3003020,
                       "rank": "Elite",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 208953.085968,
-                      "speedBase": 144,
+                      "attackBase": 435.804984,
+                      "defBase": 899.99994,
+                      "hpBase": 159008.52258,
+                      "speedBase": 158.4,
                       "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.24,
+                      "effectRES": 0.28,
+                      "ehr": 0.16,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
-                      "toughnessBase": 120,
+                      "compACT": 94.98717,
+                      "toughnessBase": 100,
                       "weaknessList": [
-                        "Thunder",
-                        "Wind",
+                        "Physical",
+                        "Fire",
                         "Imaginary"
                       ],
                       "resistances": {
-                        "Physical": 0.2,
-                        "Fire": 0.2,
                         "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 208953.085968
+                      "compSUM": 159008.52258
                     },
                     0
                   ],
                   [
                     {
-                      "name": "Howling Casket",
-                      "id": 2033010,
-                      "image": 2033010,
+                      "name": "Dreamjolt Troupe's Sweet Gorilla",
+                      "id": 3003020,
+                      "image": 3003020,
                       "rank": "Elite",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 208953.085968,
-                      "speedBase": 144,
+                      "attackBase": 435.804984,
+                      "defBase": 899.99994,
+                      "hpBase": 159008.52258,
+                      "speedBase": 158.4,
                       "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.24,
+                      "effectRES": 0.28,
+                      "ehr": 0.16,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 94.98717,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 159008.52258
+                    },
+                    {
+                      "name": "\"Tomorrow in Harmonious Chords\"",
+                      "id": 3003040,
+                      "image": 3003040,
+                      "rank": "Elite",
+                      "attackBase": 435.804984,
+                      "defBase": 899.99994,
+                      "hpBase": 106005.68172,
+                      "speedBase": 110,
+                      "critDMG": 0.2,
+                      "effectRES": 0.28,
+                      "ehr": 0.16,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 94.98717,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 106005.68172
+                    }
+                  ]
+                ],
+                "scalarElite": 274,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30148"
+                },
+                "highSTSUM": 318017.04516,
+                "aoeSUM": 463774.857525
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              30125022
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Disciples of Sanctus Medicus: Shape Shifter",
+                "enemyLevel": 70,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30148,
+                    "actualParams": [
+                      1,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Mara-Struck Soldier",
+                      "id": 2022010,
+                      "image": 2022010,
+                      "rank": "MinionLv2",
+                      "attackBase": 435.804984,
+                      "defBase": 899.99994,
+                      "hpBase": 10600.568172,
+                      "speedBase": 91.3,
+                      "critDMG": 0.2,
+                      "effectRES": 0.18,
+                      "ehr": 0.16,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 94.98717,
+                      "toughnessBase": 20,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.4,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 10600.568172
+                    },
+                    {
+                      "name": "Disciples of Sanctus Medicus: Shape Shifter",
+                      "id": 2023010,
+                      "image": 2023010,
+                      "rank": "Elite",
+                      "attackBase": 435.804984,
+                      "defBase": 899.99994,
+                      "hpBase": 106005.68172,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.28,
+                      "ehr": 0.16,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 94.98717,
                       "toughnessBase": 120,
                       "weaknessList": [
-                        "Thunder",
+                        "Ice",
                         "Wind",
                         "Imaginary"
                       ],
                       "resistances": {
                         "Physical": 0.2,
                         "Fire": 0.2,
-                        "Ice": 0.2,
+                        "Thunder": 0.4,
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 208953.085968
+                      "compSUM": 106005.68172
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Disciples of Sanctus Medicus: Shape Shifter",
+                      "id": 2023010,
+                      "image": 2023010,
+                      "rank": "Elite",
+                      "attackBase": 435.804984,
+                      "defBase": 899.99994,
+                      "hpBase": 106005.68172,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.28,
+                      "ehr": 0.16,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 94.98717,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Ice",
+                        "Wind",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Thunder": 0.4,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 106005.68172
+                    },
+                    {
+                      "name": "Abundance Sprite: Malefic Ape",
+                      "id": 2023020,
+                      "image": 2023020,
+                      "rank": "Elite",
+                      "attackBase": 435.804984,
+                      "defBase": 899.99994,
+                      "hpBase": 106005.68172,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.28,
+                      "ehr": 0.16,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 94.98717,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Thunder": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 106005.68172
+                    }
+                  ]
+                ],
+                "scalarElite": 274,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30148"
+                },
+                "highSTSUM": 212011.36344,
+                "aoeSUM": 339218.181504
+              }
+            ]
+          }
+        }
+      },
+      "3": {
+        "floorName": "Crossing the Afterlife (III)",
+        "cycleCount": 30,
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30125031
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Automaton Grizzly",
+                "enemyLevel": 73,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30148,
+                    "actualParams": [
+                      1,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Vagrant",
+                      "id": 1002020,
+                      "image": 1002020,
+                      "rank": "MinionLv2",
+                      "attackBase": 470.759724,
+                      "defBase": 929.99991,
+                      "hpBase": 16398.89739,
+                      "speedBase": 110,
+                      "critDMG": 0.2,
+                      "effectRES": 0.192,
+                      "ehr": 0.184,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 117.55482,
+                      "toughnessBase": 20,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 16398.89739
+                    },
+                    {
+                      "name": "Automaton Grizzly",
+                      "id": 1013010,
+                      "image": 1013010,
+                      "rank": "Elite",
+                      "attackBase": 470.759724,
+                      "defBase": 929.99991,
+                      "hpBase": 142123.77738,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.292,
+                      "ehr": 0.184,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 117.55482,
+                      "toughnessBase": 140,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 142123.77738
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Automaton Grizzly",
+                      "id": 1013010,
+                      "image": 1013010,
+                      "rank": "Elite",
+                      "attackBase": 470.759724,
+                      "defBase": 929.99991,
+                      "hpBase": 142123.77738,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.292,
+                      "ehr": 0.184,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 117.55482,
+                      "toughnessBase": 140,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 142123.77738
+                    },
+                    {
+                      "name": "Abundance Sprite: Malefic Ape",
+                      "id": 2023020,
+                      "image": 2023020,
+                      "rank": "Elite",
+                      "attackBase": 470.759724,
+                      "defBase": 929.99991,
+                      "hpBase": 131191.17912,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.292,
+                      "ehr": 0.184,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 117.55482,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Thunder": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 131191.17912
+                    }
+                  ]
+                ],
+                "scalarElite": 275,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30148"
+                },
+                "highSTSUM": 284247.55476,
+                "aoeSUM": 448236.52866
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              30125032
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Automaton Grizzly",
+                "enemyLevel": 73,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30148,
+                    "actualParams": [
+                      1,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Vagrant",
+                      "id": 1002020,
+                      "image": 1002020,
+                      "rank": "MinionLv2",
+                      "attackBase": 470.759724,
+                      "defBase": 929.99991,
+                      "hpBase": 16398.89739,
+                      "speedBase": 110,
+                      "critDMG": 0.2,
+                      "effectRES": 0.192,
+                      "ehr": 0.184,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 117.55482,
+                      "toughnessBase": 20,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 16398.89739
+                    },
+                    {
+                      "name": "Automaton Grizzly",
+                      "id": 1013010,
+                      "image": 1013010,
+                      "rank": "Elite",
+                      "attackBase": 470.759724,
+                      "defBase": 929.99991,
+                      "hpBase": 142123.77738,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.292,
+                      "ehr": 0.184,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 117.55482,
+                      "toughnessBase": 140,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 142123.77738
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Automaton Grizzly",
+                      "id": 1013010,
+                      "image": 1013010,
+                      "rank": "Elite",
+                      "attackBase": 470.759724,
+                      "defBase": 929.99991,
+                      "hpBase": 142123.77738,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.292,
+                      "ehr": 0.184,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 117.55482,
+                      "toughnessBase": 140,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 142123.77738
+                    },
+                    {
+                      "name": "Frigid Prowler",
+                      "id": 1023020,
+                      "image": 1023020,
+                      "rank": "Elite",
+                      "attackBase": 470.759724,
+                      "defBase": 929.99991,
+                      "hpBase": 131191.17912,
+                      "speedBase": 110,
+                      "critDMG": 0.2,
+                      "effectRES": 0.292,
+                      "ehr": 0.184,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 117.55482,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Fire",
+                        "Thunder",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Ice": 0.4,
+                        "Wind": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL_Frozen": 1
+                      },
+                      "compSUM": 131191.17912
+                    }
+                  ]
+                ],
+                "scalarElite": 275,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30148"
+                },
+                "highSTSUM": 284247.55476,
+                "aoeSUM": 448236.52866
+              }
+            ]
+          }
+        }
+      },
+      "4": {
+        "floorName": "Crossing the Afterlife (IV)",
+        "cycleCount": 30,
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30125041
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Aurumaton Gatekeeper",
+                "enemyLevel": 75,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30148,
+                    "actualParams": [
+                      1,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Silvermane Soldier",
+                      "id": 1002040,
+                      "image": 1002040,
+                      "rank": "MinionLv2",
+                      "attackBase": 494.062902,
+                      "defBase": 950.0001,
+                      "hpBase": 16031.329119,
+                      "speedBase": 91.3,
+                      "critDMG": 0.2,
+                      "effectRES": 0.2,
+                      "ehr": 0.2,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 132.59991,
+                      "toughnessBase": 20,
+                      "weaknessList": [
+                        "Wind",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 16031.329119
                     },
                     {
                       "name": "Aurumaton Gatekeeper",
                       "id": 2013010,
                       "image": 2013010,
                       "rank": "Elite",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 174127.57164,
-                      "speedBase": 120,
+                      "attackBase": 494.062902,
+                      "defBase": 950.0001,
+                      "hpBase": 123317.9163,
+                      "speedBase": 110,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.24,
+                      "ehr": 0.2,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 132.59991,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Thunder",
@@ -1233,39 +5275,108 @@ let mocSchedule = [
                         "Imaginary": 0.4
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 174127.57164
+                      "compSUM": 123317.9163
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Aurumaton Gatekeeper",
+                      "id": 2013010,
+                      "image": 2013010,
+                      "rank": "Elite",
+                      "attackBase": 494.062902,
+                      "defBase": 950.0001,
+                      "hpBase": 123317.9163,
+                      "speedBase": 110,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.2,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 132.59991,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Thunder",
+                        "Wind",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Imaginary": 0.4
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 123317.9163
+                    },
+                    {
+                      "name": "Disciples of Sanctus Medicus: Shape Shifter",
+                      "id": 2023010,
+                      "image": 2023010,
+                      "rank": "Elite",
+                      "attackBase": 494.062902,
+                      "defBase": 950.0001,
+                      "hpBase": 147981.49956,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.2,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 132.59991,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Ice",
+                        "Wind",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Thunder": 0.4,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 147981.49956
                     }
                   ]
                 ],
-                "scalarElite": 279,
+                "scalarElite": 276,
                 "scalarHard": 3,
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1",
-                  "_CreateBattleEvent": "30147"
+                  "_CreateBattleEvent": "30148"
                 },
-                "highSTSUM": 417906.171936,
-                "aoeSUM": 661684.772232
+                "highSTSUM": 271299.41586,
+                "aoeSUM": 426679.990398
               }
             ]
           },
           "stage2": {
             "ids": [
-              30124042
+              30125042
             ],
             "stageDataArray": [
               {
                 "stageName": "Automaton Direwolf",
-                "enemyLevel": 80,
+                "enemyLevel": 75,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
                     "realModifierNamne": null,
-                    "BEKey": 30147,
+                    "BEKey": 30148,
                     "actualParams": [
-                      0.8,
-                      1
+                      1,
+                      20
                     ]
                   }
                 ],
@@ -1273,24 +5384,307 @@ let mocSchedule = [
                 "enemyList": [
                   [
                     {
-                      "name": "Automaton Beetle",
-                      "id": 1012030,
-                      "image": 1012030,
+                      "name": "Automaton Hound",
+                      "id": 1012010,
+                      "image": 1012010,
                       "rank": "MinionLv2",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 24377.8600296,
-                      "speedBase": 120,
+                      "attackBase": 494.062902,
+                      "defBase": 950.0001,
+                      "hpBase": 17264.508282,
+                      "speedBase": 110,
                       "critDMG": 0.2,
                       "effectRES": 0.2,
-                      "ehr": 0.24,
+                      "ehr": 0.2,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 132.59991,
                       "toughnessBase": 20,
+                      "weaknessList": [
+                        "Physical",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 17264.508282
+                    },
+                    {
+                      "name": "Automaton Direwolf",
+                      "id": 1013020,
+                      "image": 1013020,
+                      "rank": "Elite",
+                      "attackBase": 494.062902,
+                      "defBase": 950.0001,
+                      "hpBase": 135649.70793,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.2,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 132.59991,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Ice",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 135649.70793
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Automaton Direwolf",
+                      "id": 1013020,
+                      "image": 1013020,
+                      "rank": "Elite",
+                      "attackBase": 494.062902,
+                      "defBase": 950.0001,
+                      "hpBase": 135649.70793,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.2,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 132.59991,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Ice",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 135649.70793
+                    },
+                    {
+                      "name": "Searing Prowler",
+                      "id": 1023010,
+                      "image": 1023010,
+                      "rank": "Elite",
+                      "attackBase": 494.062902,
+                      "defBase": 950.0001,
+                      "hpBase": 135649.70793,
+                      "speedBase": 110,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.2,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 132.59991,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Ice",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.4,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {
+                        "STAT_DOT_Burn": 1
+                      },
+                      "compSUM": 135649.70793
+                    }
+                  ]
+                ],
+                "scalarElite": 276,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30148"
+                },
+                "highSTSUM": 271299.41586,
+                "aoeSUM": 441478.14035400003
+              }
+            ]
+          }
+        }
+      },
+      "5": {
+        "floorName": "Crossing the Afterlife (V)",
+        "cycleCount": 30,
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30125051
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Aurumaton Gatekeeper",
+                "enemyLevel": 78,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30148,
+                    "actualParams": [
+                      1,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Entranced Ingenium: Illumination Dragonfish",
+                      "id": 2012010,
+                      "image": 2012010,
+                      "rank": "MinionLv2",
+                      "attackBase": 529.017624,
+                      "defBase": 980.00007,
+                      "hpBase": 21645.876015,
+                      "speedBase": 120,
+                      "critDMG": 0.2,
+                      "effectRES": 0.2,
+                      "ehr": 0.224,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Fire",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 155.16757,
+                      "toughnessBase": 20,
+                      "weaknessList": [
+                        "Physical",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 21645.876015
+                    },
+                    {
+                      "name": "Aurumaton Gatekeeper",
+                      "id": 2013010,
+                      "image": 2013010,
+                      "rank": "Elite",
+                      "attackBase": 529.017624,
+                      "defBase": 980.00007,
+                      "hpBase": 144305.8401,
+                      "speedBase": 120,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.224,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 155.16757,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Thunder",
+                        "Wind",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Imaginary": 0.4
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 144305.8401
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Aurumaton Gatekeeper",
+                      "id": 2013010,
+                      "image": 2013010,
+                      "rank": "Elite",
+                      "attackBase": 529.017624,
+                      "defBase": 980.00007,
+                      "hpBase": 144305.8401,
+                      "speedBase": 120,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.224,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 155.16757,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Thunder",
+                        "Wind",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Imaginary": 0.4
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 144305.8401
+                    },
+                    {
+                      "name": "Howling Casket",
+                      "id": 2033010,
+                      "image": 2033010,
+                      "rank": "Elite",
+                      "attackBase": 529.017624,
+                      "defBase": 980.00007,
+                      "hpBase": 173167.00812,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.224,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 155.16757,
+                      "toughnessBase": 120,
                       "weaknessList": [
                         "Thunder",
                         "Wind",
@@ -1303,320 +5697,39 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 24377.8600296
-                    },
-                    {
-                      "name": "Automaton Direwolf",
-                      "id": 1013020,
-                      "image": 1013020,
-                      "rank": "Elite",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 191540.328804,
-                      "speedBase": 172.8,
-                      "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.24,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 187.23394800000003,
-                      "toughnessBase": 100,
-                      "weaknessList": [
-                        "Ice",
-                        "Thunder",
-                        "Imaginary"
-                      ],
-                      "resistances": {
-                        "Physical": 0.2,
-                        "Fire": 0.2,
-                        "Wind": 0.2,
-                        "Quantum": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 191540.328804
-                    },
-                    0
-                  ],
-                  [
-                    {
-                      "name": "Automaton Direwolf",
-                      "id": 1013020,
-                      "image": 1013020,
-                      "rank": "Elite",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 191540.328804,
-                      "speedBase": 172.8,
-                      "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.24,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 187.23394800000003,
-                      "toughnessBase": 100,
-                      "weaknessList": [
-                        "Ice",
-                        "Thunder",
-                        "Imaginary"
-                      ],
-                      "resistances": {
-                        "Physical": 0.2,
-                        "Fire": 0.2,
-                        "Wind": 0.2,
-                        "Quantum": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 191540.328804
-                    },
-                    {
-                      "name": "\"Past Confined and Caged\"",
-                      "id": 3003030,
-                      "image": 3003030,
-                      "rank": "Elite",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 208953.085968,
-                      "speedBase": 120,
-                      "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.24,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 187.23394800000003,
-                      "toughnessBase": 100,
-                      "weaknessList": [
-                        "Fire",
-                        "Thunder",
-                        "Imaginary"
-                      ],
-                      "resistances": {
-                        "Physical": 0.2,
-                        "Ice": 0.2,
-                        "Wind": 0.2,
-                        "Quantum": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 208953.085968
+                      "compSUM": 173167.00812
                     }
                   ]
                 ],
-                "scalarElite": 279,
+                "scalarElite": 277,
                 "scalarHard": 3,
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1",
-                  "_CreateBattleEvent": "30147"
+                  "_CreateBattleEvent": "30148"
                 },
-                "highSTSUM": 400493.414772,
-                "aoeSUM": 640789.4636351999
-              }
-            ]
-          }
-        }
-      },
-      "5": {
-        "floorName": "undefined",
-        "cycleCount": 30,
-        "sides": 2,
-        "stageDataObject": {
-          "stage1": {
-            "ids": [
-              30124051
-            ],
-            "stageDataArray": [
-              {
-                "stageName": "Black Tide's Champion",
-                "enemyLevel": 84,
-                "modifiersToAdd": [],
-                "buffOverride": null,
-                "battleEventAbilities": [
-                  {
-                    "realModifierNamne": null,
-                    "BEKey": 30147,
-                    "actualParams": [
-                      0.8,
-                      1
-                    ]
-                  }
-                ],
-                "stageType": "Challenge",
-                "enemyList": [
-                  [
-                    {
-                      "name": "Black Tide Council",
-                      "id": 4032040,
-                      "image": 4032040,
-                      "rank": "MinionLv2",
-                      "attackBase": 574.747254,
-                      "defBase": 1040.00001,
-                      "hpBase": 86424.96324,
-                      "speedBase": 186,
-                      "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.272,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 232.32517,
-                      "toughnessBase": 30,
-                      "weaknessList": [
-                        "Fire",
-                        "Thunder",
-                        "Wind"
-                      ],
-                      "resistances": {
-                        "Physical": 0.2,
-                        "Ice": 0.2,
-                        "Quantum": 0.2,
-                        "Imaginary": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 86424.96324
-                    },
-                    {
-                      "name": "Black Tide's Champion",
-                      "id": 4033020,
-                      "image": 4033020,
-                      "rank": "Elite",
-                      "attackBase": 574.747254,
-                      "defBase": 1040.00001,
-                      "hpBase": 388912.33458,
-                      "speedBase": 158.4,
-                      "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.272,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 232.32517,
-                      "toughnessBase": 160,
-                      "weaknessList": [
-                        "Physical",
-                        "Thunder",
-                        "Wind"
-                      ],
-                      "resistances": {
-                        "Fire": 0.2,
-                        "Ice": 0.2,
-                        "Quantum": 0.2,
-                        "Imaginary": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 388912.33458
-                    },
-                    0
-                  ],
-                  [
-                    {
-                      "name": "Black Tide's Champion",
-                      "id": 4033020,
-                      "image": 4033020,
-                      "rank": "Elite",
-                      "attackBase": 574.747254,
-                      "defBase": 1040.00001,
-                      "hpBase": 388912.33458,
-                      "speedBase": 158.4,
-                      "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.272,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 232.32517,
-                      "toughnessBase": 160,
-                      "weaknessList": [
-                        "Physical",
-                        "Thunder",
-                        "Wind"
-                      ],
-                      "resistances": {
-                        "Fire": 0.2,
-                        "Ice": 0.2,
-                        "Quantum": 0.2,
-                        "Imaginary": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 388912.33458
-                    },
-                    {
-                      "name": "Decaying Shadow",
-                      "id": 8003040,
-                      "image": 8003040,
-                      "rank": "Elite",
-                      "attackBase": 574.747254,
-                      "defBase": 1040.00001,
-                      "hpBase": 216062.4081,
-                      "speedBase": 206.4,
-                      "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.272,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 232.32517,
-                      "toughnessBase": 100,
-                      "weaknessList": [
-                        "Fire",
-                        "Thunder",
-                        "Wind"
-                      ],
-                      "resistances": {
-                        "Physical": 0.2,
-                        "Ice": 0.2,
-                        "Quantum": 0.2,
-                        "Imaginary": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 216062.4081
-                    }
-                  ]
-                ],
-                "scalarElite": 280,
-                "scalarHard": 3,
-                "configData": {
-                  "_Wave": "2",
-                  "_IsEliteBattle": "1",
-                  "_CreateBattleEvent": "30147"
-                },
-                "highSTSUM": 777824.66916,
-                "aoeSUM": 1166737.00374
+                "highSTSUM": 317472.84822000004,
+                "aoeSUM": 505070.44035000005
               }
             ]
           },
           "stage2": {
             "ids": [
-              30124052
+              30125052
             ],
             "stageDataArray": [
               {
                 "stageName": "Silvermane Lieutenant",
-                "enemyLevel": 84,
+                "enemyLevel": 78,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
                     "realModifierNamne": null,
-                    "BEKey": 30147,
+                    "BEKey": 30148,
                     "actualParams": [
-                      0.8,
-                      1
+                      1,
+                      20
                     ]
                   }
                 ],
@@ -1624,56 +5737,56 @@ let mocSchedule = [
                 "enemyList": [
                   [
                     {
-                      "name": "Silvermane Gunner",
-                      "id": 1002050,
-                      "image": 1002050,
+                      "name": "Vagrant",
+                      "id": 1002020,
+                      "image": 1002020,
                       "rank": "MinionLv2",
-                      "attackBase": 574.747254,
-                      "defBase": 1040.00001,
-                      "hpBase": 23766.864891,
+                      "attackBase": 529.017624,
+                      "defBase": 980.00007,
+                      "hpBase": 21645.876015,
                       "speedBase": 120,
                       "critDMG": 0.2,
                       "effectRES": 0.2,
-                      "ehr": 0.272,
+                      "ehr": 0.224,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 232.32517,
+                      "compACT": 155.16757,
                       "toughnessBase": 20,
                       "weaknessList": [
-                        "Physical",
-                        "Ice"
+                        "Fire",
+                        "Ice",
+                        "Imaginary"
                       ],
                       "resistances": {
-                        "Fire": 0.2,
+                        "Physical": 0.2,
                         "Thunder": 0.2,
                         "Wind": 0.2,
-                        "Quantum": 0.2,
-                        "Imaginary": 0.2
+                        "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 23766.864891
+                      "compSUM": 21645.876015
                     },
                     {
                       "name": "Silvermane Lieutenant",
                       "id": 1003010,
                       "image": 1003010,
                       "rank": "Elite",
-                      "attackBase": 574.747254,
-                      "defBase": 1040.00001,
-                      "hpBase": 216062.4081,
+                      "attackBase": 529.017624,
+                      "defBase": 980.00007,
+                      "hpBase": 144305.8401,
                       "speedBase": 144,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.272,
+                      "ehr": 0.224,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 232.32517,
+                      "compACT": 155.16757,
                       "toughnessBase": 80,
                       "weaknessList": [
                         "Physical",
@@ -1687,7 +5800,7 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 216062.4081
+                      "compSUM": 144305.8401
                     },
                     0
                   ],
@@ -1697,19 +5810,19 @@ let mocSchedule = [
                       "id": 1003010,
                       "image": 1003010,
                       "rank": "Elite",
-                      "attackBase": 574.747254,
-                      "defBase": 1040.00001,
-                      "hpBase": 216062.4081,
+                      "attackBase": 529.017624,
+                      "defBase": 980.00007,
+                      "hpBase": 144305.8401,
                       "speedBase": 144,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.272,
+                      "ehr": 0.224,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 232.32517,
+                      "compACT": 155.16757,
                       "toughnessBase": 80,
                       "weaknessList": [
                         "Physical",
@@ -1723,26 +5836,26 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 216062.4081
+                      "compSUM": 144305.8401
                     },
                     {
                       "name": "The Ascended",
                       "id": 2023030,
                       "image": 2023030,
                       "rank": "Elite",
-                      "attackBase": 574.747254,
-                      "defBase": 1040.00001,
-                      "hpBase": 237668.64891,
+                      "attackBase": 529.017624,
+                      "defBase": 980.00007,
+                      "hpBase": 158736.42411,
                       "speedBase": 144,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.272,
+                      "ehr": 0.224,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 232.32517,
+                      "compACT": 155.16757,
                       "toughnessBase": 140,
                       "weaknessList": [
                         "Physical",
@@ -1756,888 +5869,7 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 237668.64891
-                    }
-                  ]
-                ],
-                "scalarElite": 280,
-                "scalarHard": 3,
-                "configData": {
-                  "_Wave": "2",
-                  "_IsEliteBattle": "1",
-                  "_CreateBattleEvent": "30147"
-                },
-                "highSTSUM": 453731.05701,
-                "aoeSUM": 717327.1948919999
-              }
-            ]
-          }
-        }
-      },
-      "6": {
-        "floorName": "undefined",
-        "cycleCount": 30,
-        "sides": 2,
-        "stageDataObject": {
-          "stage1": {
-            "ids": [
-              30124061
-            ],
-            "stageDataArray": [
-              {
-                "stageName": "Black Tide's Corroded Daemon",
-                "enemyLevel": 68,
-                "modifiersToAdd": [],
-                "buffOverride": null,
-                "battleEventAbilities": [
-                  {
-                    "realModifierNamne": null,
-                    "BEKey": 30147,
-                    "actualParams": [
-                      0.8,
-                      1
-                    ]
-                  }
-                ],
-                "stageType": "Challenge",
-                "enemyList": [
-                  [
-                    {
-                      "name": "Meteoric Eagle",
-                      "id": 4022010,
-                      "image": 4022010,
-                      "rank": "MinionLv2",
-                      "attackBase": 416.304594,
-                      "defBase": 879.99996,
-                      "hpBase": 24143.14224,
-                      "speedBase": 110,
-                      "critDMG": 0.2,
-                      "effectRES": 0.272,
-                      "ehr": 0.144,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Wind",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 86.53456,
-                      "toughnessBase": 30,
-                      "weaknessList": [
-                        "Wind",
-                        "Quantum",
-                        "Imaginary"
-                      ],
-                      "resistances": {
-                        "Physical": 0.2,
-                        "Fire": 0.2,
-                        "Ice": 0.2,
-                        "Thunder": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 24143.14224
-                    },
-                    {
-                      "name": "Black Tide's Corroded Daemon",
-                      "id": 4033010,
-                      "image": 4033010,
-                      "rank": "Elite",
-                      "attackBase": 416.304594,
-                      "defBase": 879.99996,
-                      "hpBase": 112667.99712,
-                      "speedBase": 132,
-                      "critDMG": 0.2,
-                      "effectRES": 0.272,
-                      "ehr": 0.144,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 86.53456,
-                      "toughnessBase": 160,
-                      "weaknessList": [
-                        "Physical",
-                        "Wind",
-                        "Quantum"
-                      ],
-                      "resistances": {
-                        "Fire": 0.2,
-                        "Ice": 0.2,
-                        "Thunder": 0.2,
-                        "Imaginary": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 112667.99712
-                    },
-                    0
-                  ],
-                  [
-                    {
-                      "name": "Black Tide's Corroded Daemon",
-                      "id": 4033010,
-                      "image": 4033010,
-                      "rank": "Elite",
-                      "attackBase": 416.304594,
-                      "defBase": 879.99996,
-                      "hpBase": 112667.99712,
-                      "speedBase": 132,
-                      "critDMG": 0.2,
-                      "effectRES": 0.272,
-                      "ehr": 0.144,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 86.53456,
-                      "toughnessBase": 160,
-                      "weaknessList": [
-                        "Physical",
-                        "Wind",
-                        "Quantum"
-                      ],
-                      "resistances": {
-                        "Fire": 0.2,
-                        "Ice": 0.2,
-                        "Thunder": 0.2,
-                        "Imaginary": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 112667.99712
-                    },
-                    {
-                      "name": "Guardian Shadow",
-                      "id": 8003030,
-                      "image": 8003030,
-                      "rank": "Elite",
-                      "attackBase": 416.304594,
-                      "defBase": 879.99996,
-                      "hpBase": 88524.85488,
-                      "speedBase": 132,
-                      "critDMG": 0.2,
-                      "effectRES": 0.272,
-                      "ehr": 0.144,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 86.53456,
-                      "toughnessBase": 100,
-                      "weaknessList": [
-                        "Physical",
-                        "Wind",
-                        "Quantum"
-                      ],
-                      "resistances": {
-                        "Fire": 0.2,
-                        "Ice": 0.2,
-                        "Thunder": 0.2,
-                        "Imaginary": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 88524.85488
-                    }
-                  ]
-                ],
-                "scalarElite": 273,
-                "scalarHard": 3,
-                "configData": {
-                  "_Wave": "2",
-                  "_IsEliteBattle": "1",
-                  "_CreateBattleEvent": "30147"
-                },
-                "highSTSUM": 225335.99424,
-                "aoeSUM": 362147.1336
-              }
-            ]
-          },
-          "stage2": {
-            "ids": [
-              30124062
-            ],
-            "stageDataArray": [
-              {
-                "stageName": "Voidranger: Trampler",
-                "enemyLevel": 68,
-                "modifiersToAdd": [],
-                "buffOverride": null,
-                "battleEventAbilities": [
-                  {
-                    "realModifierNamne": null,
-                    "BEKey": 30147,
-                    "actualParams": [
-                      0.8,
-                      1
-                    ]
-                  }
-                ],
-                "stageType": "Challenge",
-                "enemyList": [
-                  [
-                    {
-                      "name": "Voidranger: Reaver",
-                      "id": 8012010,
-                      "image": 8012010,
-                      "rank": "MinionLv2",
-                      "attackBase": 416.304594,
-                      "defBase": 879.99996,
-                      "hpBase": 12071.57112,
-                      "speedBase": 110,
-                      "critDMG": 0.2,
-                      "effectRES": 0.172,
-                      "ehr": 0.144,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 86.53456,
-                      "toughnessBase": 20,
-                      "weaknessList": [
-                        "Physical",
-                        "Thunder"
-                      ],
-                      "resistances": {
-                        "Fire": 0.2,
-                        "Ice": 0.2,
-                        "Wind": 0.2,
-                        "Quantum": 0.2,
-                        "Imaginary": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 12071.57112
-                    },
-                    {
-                      "name": "Voidranger: Trampler",
-                      "id": 8013010,
-                      "image": 8013010,
-                      "rank": "Elite",
-                      "attackBase": 416.304594,
-                      "defBase": 879.99996,
-                      "hpBase": 88524.85488,
-                      "speedBase": 110,
-                      "critDMG": 0.2,
-                      "effectRES": 0.272,
-                      "ehr": 0.144,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 86.53456,
-                      "toughnessBase": 100,
-                      "weaknessList": [
-                        "Physical",
-                        "Wind",
-                        "Imaginary"
-                      ],
-                      "resistances": {
-                        "Fire": 0.2,
-                        "Ice": 0.2,
-                        "Thunder": 0.2,
-                        "Quantum": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 88524.85488
-                    },
-                    0
-                  ],
-                  [
-                    {
-                      "name": "Voidranger: Trampler",
-                      "id": 8013010,
-                      "image": 8013010,
-                      "rank": "Elite",
-                      "attackBase": 416.304594,
-                      "defBase": 879.99996,
-                      "hpBase": 88524.85488,
-                      "speedBase": 110,
-                      "critDMG": 0.2,
-                      "effectRES": 0.272,
-                      "ehr": 0.144,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 86.53456,
-                      "toughnessBase": 100,
-                      "weaknessList": [
-                        "Physical",
-                        "Wind",
-                        "Imaginary"
-                      ],
-                      "resistances": {
-                        "Fire": 0.2,
-                        "Ice": 0.2,
-                        "Thunder": 0.2,
-                        "Quantum": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 88524.85488
-                    },
-                    {
-                      "name": "\"Present Inebriated in Revelry\"",
-                      "id": 3003050,
-                      "image": 3003050,
-                      "rank": "Elite",
-                      "attackBase": 416.304594,
-                      "defBase": 879.99996,
-                      "hpBase": 96572.56896,
-                      "speedBase": 132,
-                      "critDMG": 0.2,
-                      "effectRES": 0.272,
-                      "ehr": 0.144,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 86.53456,
-                      "toughnessBase": 100,
-                      "weaknessList": [
-                        "Physical",
-                        "Fire",
-                        "Imaginary"
-                      ],
-                      "resistances": {
-                        "Ice": 0.2,
-                        "Thunder": 0.2,
-                        "Wind": 0.2,
-                        "Quantum": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 96572.56896
-                    }
-                  ]
-                ],
-                "scalarElite": 273,
-                "scalarHard": 3,
-                "configData": {
-                  "_Wave": "2",
-                  "_IsEliteBattle": "1",
-                  "_CreateBattleEvent": "30147"
-                },
-                "highSTSUM": 185097.42384,
-                "aoeSUM": 297765.42096
-              }
-            ]
-          }
-        }
-      },
-      "7": {
-        "floorName": "undefined",
-        "cycleCount": 30,
-        "sides": 2,
-        "stageDataObject": {
-          "stage1": {
-            "ids": [
-              30124071
-            ],
-            "stageDataArray": [
-              {
-                "stageName": "Rocking Rebel",
-                "enemyLevel": 72,
-                "modifiersToAdd": [],
-                "buffOverride": null,
-                "battleEventAbilities": [
-                  {
-                    "realModifierNamne": null,
-                    "BEKey": 30147,
-                    "actualParams": [
-                      0.8,
-                      1
-                    ]
-                  }
-                ],
-                "stageType": "Challenge",
-                "enemyList": [
-                  [
-                    {
-                      "name": "Aggressive Reading Material",
-                      "id": 5012030,
-                      "image": 5012030,
-                      "rank": "MinionLv2",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 25582.502775,
-                      "speedBase": 110,
-                      "critDMG": 0.2,
-                      "effectRES": 0.188,
-                      "ehr": 0.176,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 110.03227,
-                      "toughnessBase": 30,
-                      "weaknessList": [
-                        "Physical",
-                        "Fire",
-                        "Thunder"
-                      ],
-                      "resistances": {
-                        "Ice": 0.2,
-                        "Wind": 0.2,
-                        "Quantum": 0.2,
-                        "Imaginary": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 25582.502775
-                    },
-                    {
-                      "name": "Rocking Rebel",
-                      "id": 5013010,
-                      "image": 5013010,
-                      "rank": "Elite",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 184194.01998,
-                      "speedBase": 145.2,
-                      "critDMG": 0.2,
-                      "effectRES": 0.288,
-                      "ehr": 0.176,
-                      "delay": 0.25,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Imaginary",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 110.03227,
-                      "toughnessBase": 120,
-                      "weaknessList": [
-                        "Physical",
-                        "Fire",
-                        "Wind"
-                      ],
-                      "resistances": {
-                        "Ice": 0.2,
-                        "Thunder": 0.2,
-                        "Quantum": 0.2,
-                        "Imaginary": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 184194.01998
-                    },
-                    0
-                  ],
-                  [
-                    {
-                      "name": "Rocking Rebel",
-                      "id": 5013010,
-                      "image": 5013010,
-                      "rank": "Elite",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 184194.01998,
-                      "speedBase": 145.2,
-                      "critDMG": 0.2,
-                      "effectRES": 0.288,
-                      "ehr": 0.176,
-                      "delay": 0.25,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Imaginary",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 110.03227,
-                      "toughnessBase": 120,
-                      "weaknessList": [
-                        "Physical",
-                        "Fire",
-                        "Wind"
-                      ],
-                      "resistances": {
-                        "Ice": 0.2,
-                        "Thunder": 0.2,
-                        "Quantum": 0.2,
-                        "Imaginary": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 184194.01998
-                    },
-                    {
-                      "name": "Lady of Crashing Waves",
-                      "id": 4053010,
-                      "image": 4053010,
-                      "rank": "Elite",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 153495.01665,
-                      "speedBase": 158.4,
-                      "critDMG": 0.2,
-                      "effectRES": 0.288,
-                      "ehr": 0.176,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Ice",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 110.03227,
-                      "toughnessBase": 180,
-                      "weaknessList": [
-                        "Physical",
-                        "Fire",
-                        "Thunder"
-                      ],
-                      "resistances": {
-                        "Ice": 0.2,
-                        "Wind": 0.2,
-                        "Quantum": 0.2,
-                        "Imaginary": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 153495.01665
-                    }
-                  ]
-                ],
-                "scalarElite": 275,
-                "scalarHard": 3,
-                "configData": {
-                  "_Wave": "2",
-                  "_IsEliteBattle": "1",
-                  "_CreateBattleEvent": "30147"
-                },
-                "highSTSUM": 368388.03996,
-                "aoeSUM": 573048.06216
-              }
-            ]
-          },
-          "stage2": {
-            "ids": [
-              30124072
-            ],
-            "stageDataArray": [
-              {
-                "stageName": "Disciples of Sanctus Medicus: Shape Shifter",
-                "enemyLevel": 72,
-                "modifiersToAdd": [],
-                "buffOverride": null,
-                "battleEventAbilities": [
-                  {
-                    "realModifierNamne": null,
-                    "BEKey": 30147,
-                    "actualParams": [
-                      0.8,
-                      1
-                    ]
-                  }
-                ],
-                "stageType": "Challenge",
-                "enemyList": [
-                  [
-                    {
-                      "name": "Disciples of Sanctus Medicus: Ballistarius",
-                      "id": 2022060,
-                      "image": 2022060,
-                      "rank": "MinionLv2",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 22512.602442,
-                      "speedBase": 91.3,
-                      "critDMG": 0.2,
-                      "effectRES": 0.188,
-                      "ehr": 0.176,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 110.03227,
-                      "toughnessBase": 30,
-                      "weaknessList": [
-                        "Physical",
-                        "Ice",
-                        "Wind"
-                      ],
-                      "resistances": {
-                        "Fire": 0.2,
-                        "Thunder": 0.2,
-                        "Quantum": 0.2,
-                        "Imaginary": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 22512.602442
-                    },
-                    {
-                      "name": "Disciples of Sanctus Medicus: Shape Shifter",
-                      "id": 2023010,
-                      "image": 2023010,
-                      "rank": "Elite",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 122796.01332,
-                      "speedBase": 132,
-                      "critDMG": 0.2,
-                      "effectRES": 0.288,
-                      "ehr": 0.176,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 110.03227,
-                      "toughnessBase": 120,
-                      "weaknessList": [
-                        "Ice",
-                        "Wind",
-                        "Imaginary"
-                      ],
-                      "resistances": {
-                        "Physical": 0.2,
-                        "Fire": 0.2,
-                        "Thunder": 0.4,
-                        "Quantum": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 122796.01332
-                    },
-                    0
-                  ],
-                  [
-                    {
-                      "name": "Disciples of Sanctus Medicus: Shape Shifter",
-                      "id": 2023010,
-                      "image": 2023010,
-                      "rank": "Elite",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 122796.01332,
-                      "speedBase": 132,
-                      "critDMG": 0.2,
-                      "effectRES": 0.288,
-                      "ehr": 0.176,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 110.03227,
-                      "toughnessBase": 120,
-                      "weaknessList": [
-                        "Ice",
-                        "Wind",
-                        "Imaginary"
-                      ],
-                      "resistances": {
-                        "Physical": 0.2,
-                        "Fire": 0.2,
-                        "Thunder": 0.4,
-                        "Quantum": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 122796.01332
-                    },
-                    {
-                      "name": "Abundance Sprite: Malefic Ape",
-                      "id": 2023020,
-                      "image": 2023020,
-                      "rank": "Elite",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 122796.01332,
-                      "speedBase": 158.4,
-                      "critDMG": 0.2,
-                      "effectRES": 0.288,
-                      "ehr": 0.176,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 110.03227,
-                      "toughnessBase": 120,
-                      "weaknessList": [
-                        "Fire",
-                        "Ice",
-                        "Wind"
-                      ],
-                      "resistances": {
-                        "Physical": 0.2,
-                        "Thunder": 0.2,
-                        "Quantum": 0.2,
-                        "Imaginary": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 122796.01332
-                    }
-                  ]
-                ],
-                "scalarElite": 275,
-                "scalarHard": 3,
-                "configData": {
-                  "_Wave": "2",
-                  "_IsEliteBattle": "1",
-                  "_CreateBattleEvent": "30147"
-                },
-                "highSTSUM": 245592.02664,
-                "aoeSUM": 413413.244844
-              }
-            ]
-          }
-        }
-      },
-      "8": {
-        "floorName": "undefined",
-        "cycleCount": 30,
-        "sides": 2,
-        "stageDataObject": {
-          "stage1": {
-            "ids": [
-              30124081
-            ],
-            "stageDataArray": [
-              {
-                "stageName": "Automaton Grizzly",
-                "enemyLevel": 76,
-                "modifiersToAdd": [],
-                "buffOverride": null,
-                "battleEventAbilities": [
-                  {
-                    "realModifierNamne": null,
-                    "BEKey": 30147,
-                    "actualParams": [
-                      0.8,
-                      1
-                    ]
-                  }
-                ],
-                "stageType": "Challenge",
-                "enemyList": [
-                  [
-                    {
-                      "name": "Vagrant",
-                      "id": 1002020,
-                      "image": 1002020,
-                      "rank": "MinionLv2",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 19547.084565,
-                      "speedBase": 110,
-                      "critDMG": 0.2,
-                      "effectRES": 0.2,
-                      "ehr": 0.208,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 140.12247,
-                      "toughnessBase": 20,
-                      "weaknessList": [
-                        "Fire",
-                        "Ice",
-                        "Imaginary"
-                      ],
-                      "resistances": {
-                        "Physical": 0.2,
-                        "Thunder": 0.2,
-                        "Wind": 0.2,
-                        "Quantum": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 19547.084565
-                    },
-                    {
-                      "name": "Automaton Grizzly",
-                      "id": 1013010,
-                      "image": 1013010,
-                      "rank": "Elite",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 169408.06623,
-                      "speedBase": 132,
-                      "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.208,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 140.12247,
-                      "toughnessBase": 140,
-                      "weaknessList": [
-                        "Fire",
-                        "Ice",
-                        "Thunder"
-                      ],
-                      "resistances": {
-                        "Physical": 0.2,
-                        "Wind": 0.2,
-                        "Quantum": 0.2,
-                        "Imaginary": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 169408.06623
-                    },
-                    0
-                  ],
-                  [
-                    {
-                      "name": "Automaton Grizzly",
-                      "id": 1013010,
-                      "image": 1013010,
-                      "rank": "Elite",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 169408.06623,
-                      "speedBase": 132,
-                      "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.208,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 140.12247,
-                      "toughnessBase": 140,
-                      "weaknessList": [
-                        "Fire",
-                        "Ice",
-                        "Thunder"
-                      ],
-                      "resistances": {
-                        "Physical": 0.2,
-                        "Wind": 0.2,
-                        "Quantum": 0.2,
-                        "Imaginary": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 169408.06623
-                    },
-                    {
-                      "name": "Cyclonic Swarm Mother",
-                      "id": 4053020,
-                      "image": 4053020,
-                      "rank": "Elite",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 195470.84565,
-                      "speedBase": 181.5,
-                      "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.208,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Quantum",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 140.12247,
-                      "toughnessBase": 160,
-                      "weaknessList": [
-                        "Fire",
-                        "Ice",
-                        "Thunder"
-                      ],
-                      "resistances": {
-                        "Physical": 0.2,
-                        "Wind": 0.2,
-                        "Quantum": 0.2,
-                        "Imaginary": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 195470.84565
+                      "compSUM": 158736.42411
                     }
                   ]
                 ],
@@ -2646,30 +5878,390 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1",
-                  "_CreateBattleEvent": "30147"
+                  "_CreateBattleEvent": "30148"
                 },
-                "highSTSUM": 364878.91188,
-                "aoeSUM": 573381.14724
+                "highSTSUM": 303042.26421,
+                "aoeSUM": 490639.85634000006
               }
             ]
-          },
-          "stage2": {
+          }
+        }
+      },
+      "6": {
+        "floorName": "Crossing the Afterlife (VI)",
+        "cycleCount": 30,
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
             "ids": [
-              30124082
+              30125061
             ],
             "stageDataArray": [
               {
-                "stageName": "Dreamjolt Troupe's Beyond Overcooked",
-                "enemyLevel": 76,
+                "stageName": "Silvermane Lieutenant",
+                "enemyLevel": 80,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
                     "realModifierNamne": null,
-                    "BEKey": 30147,
+                    "BEKey": 30148,
                     "actualParams": [
-                      0.8,
-                      1
+                      1,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Silvermane Soldier",
+                      "id": 1002040,
+                      "image": 1002040,
+                      "rank": "MinionLv2",
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": 22636.5843132,
+                      "speedBase": 99.6,
+                      "critDMG": 0.2,
+                      "effectRES": 0.2,
+                      "ehr": 0.24,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 187.23394800000003,
+                      "toughnessBase": 20,
+                      "weaknessList": [
+                        "Wind",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 22636.5843132
+                    },
+                    {
+                      "name": "Silvermane Lieutenant",
+                      "id": 1003010,
+                      "image": 1003010,
+                      "rank": "Elite",
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": 174127.57164,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.24,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 187.23394800000003,
+                      "toughnessBase": 80,
+                      "weaknessList": [
+                        "Physical",
+                        "Ice",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 174127.57164
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Silvermane Lieutenant",
+                      "id": 1003010,
+                      "image": 1003010,
+                      "rank": "Elite",
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": 174127.57164,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.24,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 187.23394800000003,
+                      "toughnessBase": 80,
+                      "weaknessList": [
+                        "Physical",
+                        "Ice",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 174127.57164
+                    },
+                    {
+                      "name": "Frigid Prowler",
+                      "id": 1023020,
+                      "image": 1023020,
+                      "rank": "Elite",
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": 208953.085968,
+                      "speedBase": 120,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.24,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 187.23394800000003,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Fire",
+                        "Thunder",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Ice": 0.4,
+                        "Wind": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL_Frozen": 1
+                      },
+                      "compSUM": 208953.085968
+                    }
+                  ]
+                ],
+                "scalarElite": 278,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30148"
+                },
+                "highSTSUM": 383080.657608,
+                "aoeSUM": 602481.3978744
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              30125062
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Aurumaton Spectral Envoy",
+                "enemyLevel": 80,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30148,
+                    "actualParams": [
+                      1,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Entranced Ingenium: Illumination Dragonfish",
+                      "id": 2012010,
+                      "image": 2012010,
+                      "rank": "MinionLv2",
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": 26119.135746,
+                      "speedBase": 120,
+                      "critDMG": 0.2,
+                      "effectRES": 0.2,
+                      "ehr": 0.24,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Fire",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 187.23394800000003,
+                      "toughnessBase": 20,
+                      "weaknessList": [
+                        "Physical",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 26119.135746
+                    },
+                    {
+                      "name": "Aurumaton Spectral Envoy",
+                      "id": 2013020,
+                      "image": 2013020,
+                      "rank": "Elite",
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": 208953.085968,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.24,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 187.23394800000003,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Physical",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 208953.085968
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Aurumaton Spectral Envoy",
+                      "id": 2013020,
+                      "image": 2013020,
+                      "rank": "Elite",
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": 208953.085968,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.24,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 187.23394800000003,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Physical",
+                        "Thunder",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 208953.085968
+                    },
+                    {
+                      "name": "Dreamjolt Troupe's Sweet Gorilla",
+                      "id": 3003020,
+                      "image": 3003020,
+                      "rank": "Elite",
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": 313429.628952,
+                      "speedBase": 172.8,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.24,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 187.23394800000003,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 313429.628952
+                    }
+                  ]
+                ],
+                "scalarElite": 278,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30148"
+                },
+                "highSTSUM": 522382.71492,
+                "aoeSUM": 783574.07238
+              }
+            ]
+          }
+        }
+      },
+      "7": {
+        "floorName": "Crossing the Afterlife (VII)",
+        "cycleCount": 30,
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30125071
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Dreamjolt Troupe's Sweet Gorilla",
+                "enemyLevel": 82,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30148,
+                    "actualParams": [
+                      1,
+                      20
                     ]
                   }
                 ],
@@ -2681,19 +6273,19 @@ let mocSchedule = [
                       "id": 3002020,
                       "image": 3002020,
                       "rank": "MinionLv2",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 29320.6268475,
-                      "speedBase": 132,
+                      "attackBase": 563.422446,
+                      "defBase": 1020.00003,
+                      "hpBase": 43666.3772573,
+                      "speedBase": 144,
                       "critDMG": 0.2,
                       "effectRES": 0.2,
-                      "ehr": 0.208,
+                      "ehr": 0.256,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
+                      "compACT": 208.68041700000003,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Fire",
@@ -2707,148 +6299,141 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 29320.6268475
+                      "compSUM": 43666.3772573
                     },
                     {
-                      "name": "Dreamjolt Troupe's Beyond Overcooked",
-                      "id": 3003010,
-                      "image": 3003010,
+                      "name": "Dreamjolt Troupe's Sweet Gorilla",
+                      "id": 3003020,
+                      "image": 3003020,
                       "rank": "Elite",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 234565.01478,
-                      "speedBase": 110,
+                      "attackBase": 563.422446,
+                      "defBase": 1020.00003,
+                      "hpBase": 349331.018058,
+                      "speedBase": 172.8,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.208,
+                      "ehr": 0.256,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
-                      "toughnessBase": 160,
+                      "compACT": 208.68041700000003,
+                      "toughnessBase": 100,
                       "weaknessList": [
+                        "Physical",
                         "Fire",
-                        "Thunder",
-                        "Wind"
+                        "Imaginary"
                       ],
                       "resistances": {
-                        "Physical": 0.2,
                         "Ice": 0.2,
-                        "Quantum": 0.2,
-                        "Imaginary": 0.2
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 234565.01478
+                      "compSUM": 349331.018058
                     },
                     0
                   ],
                   [
                     {
-                      "name": "Dreamjolt Troupe's Beyond Overcooked",
-                      "id": 3003010,
-                      "image": 3003010,
+                      "name": "Dreamjolt Troupe's Sweet Gorilla",
+                      "id": 3003020,
+                      "image": 3003020,
                       "rank": "Elite",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 234565.01478,
-                      "speedBase": 110,
+                      "attackBase": 563.422446,
+                      "defBase": 1020.00003,
+                      "hpBase": 349331.018058,
+                      "speedBase": 172.8,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.208,
+                      "ehr": 0.256,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
-                      "toughnessBase": 160,
-                      "weaknessList": [
-                        "Fire",
-                        "Thunder",
-                        "Wind"
-                      ],
-                      "resistances": {
-                        "Physical": 0.2,
-                        "Ice": 0.2,
-                        "Quantum": 0.2,
-                        "Imaginary": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 234565.01478
-                    },
-                    {
-                      "name": "Decaying Shadow",
-                      "id": 8003040,
-                      "image": 8003040,
-                      "rank": "Elite",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 130313.8971,
-                      "speedBase": 189.2,
-                      "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.208,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 140.12247,
+                      "compACT": 208.68041700000003,
                       "toughnessBase": 100,
                       "weaknessList": [
+                        "Physical",
                         "Fire",
-                        "Thunder",
-                        "Wind"
+                        "Imaginary"
                       ],
                       "resistances": {
-                        "Physical": 0.2,
                         "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 349331.018058
+                    },
+                    {
+                      "name": "\"Tomorrow in Harmonious Chords\"",
+                      "id": 3003040,
+                      "image": 3003040,
+                      "rank": "Elite",
+                      "attackBase": 563.422446,
+                      "defBase": 1020.00003,
+                      "hpBase": 232887.345372,
+                      "speedBase": 120,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.256,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 208.68041700000003,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Ice": 0.2,
+                        "Wind": 0.2,
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 130313.8971
+                      "compSUM": 232887.345372
                     }
                   ]
                 ],
-                "scalarElite": 277,
+                "scalarElite": 279,
                 "scalarHard": 3,
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1",
-                  "_CreateBattleEvent": "30147"
+                  "_CreateBattleEvent": "30148"
                 },
-                "highSTSUM": 469130.02956,
-                "aoeSUM": 658085.1803550001
+                "highSTSUM": 698662.036116,
+                "aoeSUM": 1018882.1360026001
               }
             ]
-          }
-        }
-      },
-      "9": {
-        "floorName": "undefined",
-        "cycleCount": 30,
-        "sides": 2,
-        "stageDataObject": {
-          "stage1": {
+          },
+          "stage2": {
             "ids": [
-              30124091
+              30125072
             ],
             "stageDataArray": [
               {
-                "stageName": "Howling Casket",
-                "enemyLevel": 80,
+                "stageName": "Disciples of Sanctus Medicus: Shape Shifter",
+                "enemyLevel": 82,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
                     "realModifierNamne": null,
-                    "BEKey": 30147,
+                    "BEKey": 30148,
                     "actualParams": [
-                      0.8,
-                      1
+                      1,
+                      20
                     ]
                   }
                 ],
@@ -2856,125 +6441,588 @@ let mocSchedule = [
                 "enemyList": [
                   [
                     {
-                      "name": "Eclipse Wolftrooper",
-                      "id": 2032020,
-                      "image": 2032020,
+                      "name": "Mara-Struck Soldier",
+                      "id": 2022010,
+                      "image": 2022010,
                       "rank": "MinionLv2",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 34825.514328,
-                      "speedBase": 144,
+                      "attackBase": 563.422446,
+                      "defBase": 1020.00003,
+                      "hpBase": 23288.7345372,
+                      "speedBase": 99.6,
                       "critDMG": 0.2,
                       "effectRES": 0.2,
-                      "ehr": 0.24,
+                      "ehr": 0.256,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
-                      "toughnessBase": 30,
+                      "compACT": 208.68041700000003,
+                      "toughnessBase": 20,
                       "weaknessList": [
-                        "Physical",
-                        "Wind"
+                        "Fire",
+                        "Ice",
+                        "Quantum"
                       ],
                       "resistances": {
-                        "Fire": 0.2,
-                        "Ice": 0.2,
+                        "Physical": 0.2,
                         "Thunder": 0.2,
-                        "Quantum": 0.2,
+                        "Wind": 0.4,
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 34825.514328
+                      "compSUM": 23288.7345372
                     },
                     {
-                      "name": "Howling Casket",
-                      "id": 2033010,
-                      "image": 2033010,
+                      "name": "Disciples of Sanctus Medicus: Shape Shifter",
+                      "id": 2023010,
+                      "image": 2023010,
                       "rank": "Elite",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 208953.085968,
+                      "attackBase": 563.422446,
+                      "defBase": 1020.00003,
+                      "hpBase": 232887.345372,
                       "speedBase": 144,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.24,
+                      "ehr": 0.256,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 208.68041700000003,
                       "toughnessBase": 120,
                       "weaknessList": [
-                        "Thunder",
+                        "Ice",
                         "Wind",
                         "Imaginary"
                       ],
                       "resistances": {
                         "Physical": 0.2,
                         "Fire": 0.2,
-                        "Ice": 0.2,
+                        "Thunder": 0.4,
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 208953.085968
+                      "compSUM": 232887.345372
                     },
                     0
                   ],
                   [
                     {
-                      "name": "Howling Casket",
-                      "id": 2033010,
-                      "image": 2033010,
+                      "name": "Disciples of Sanctus Medicus: Shape Shifter",
+                      "id": 2023010,
+                      "image": 2023010,
                       "rank": "Elite",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 208953.085968,
+                      "attackBase": 563.422446,
+                      "defBase": 1020.00003,
+                      "hpBase": 232887.345372,
                       "speedBase": 144,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.24,
+                      "ehr": 0.256,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 208.68041700000003,
                       "toughnessBase": 120,
                       "weaknessList": [
-                        "Thunder",
+                        "Ice",
                         "Wind",
                         "Imaginary"
                       ],
                       "resistances": {
                         "Physical": 0.2,
                         "Fire": 0.2,
-                        "Ice": 0.2,
+                        "Thunder": 0.4,
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 208953.085968
+                      "compSUM": 232887.345372
+                    },
+                    {
+                      "name": "Abundance Sprite: Malefic Ape",
+                      "id": 2023020,
+                      "image": 2023020,
+                      "rank": "Elite",
+                      "attackBase": 563.422446,
+                      "defBase": 1020.00003,
+                      "hpBase": 232887.345372,
+                      "speedBase": 172.8,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.256,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 208.68041700000003,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Thunder": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 232887.345372
+                    }
+                  ]
+                ],
+                "scalarElite": 279,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30148"
+                },
+                "highSTSUM": 465774.690744,
+                "aoeSUM": 745239.5051904
+              }
+            ]
+          }
+        }
+      },
+      "8": {
+        "floorName": "Crossing the Afterlife (VIII)",
+        "cycleCount": 30,
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30125081
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Automaton Grizzly",
+                "enemyLevel": 85,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30148,
+                    "actualParams": [
+                      1,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Vagrant",
+                      "id": 1002020,
+                      "image": 1002020,
+                      "rank": "MinionLv2",
+                      "attackBase": 580.494708,
+                      "defBase": 1050,
+                      "hpBase": 34183.280043,
+                      "speedBase": 120,
+                      "critDMG": 0.2,
+                      "effectRES": 0.2,
+                      "ehr": 0.28,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 245.041434,
+                      "toughnessBase": 20,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 34183.280043
+                    },
+                    {
+                      "name": "Automaton Grizzly",
+                      "id": 1013010,
+                      "image": 1013010,
+                      "rank": "Elite",
+                      "attackBase": 580.494708,
+                      "defBase": 1050,
+                      "hpBase": 296255.093706,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.28,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 245.041434,
+                      "toughnessBase": 140,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 296255.093706
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Automaton Grizzly",
+                      "id": 1013010,
+                      "image": 1013010,
+                      "rank": "Elite",
+                      "attackBase": 580.494708,
+                      "defBase": 1050,
+                      "hpBase": 296255.093706,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.28,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 245.041434,
+                      "toughnessBase": 140,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 296255.093706
+                    },
+                    {
+                      "name": "Abundance Sprite: Malefic Ape",
+                      "id": 2023020,
+                      "image": 2023020,
+                      "rank": "Elite",
+                      "attackBase": 580.494708,
+                      "defBase": 1050,
+                      "hpBase": 273466.240344,
+                      "speedBase": 172.8,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.28,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 245.041434,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Thunder": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 273466.240344
+                    }
+                  ]
+                ],
+                "scalarElite": 280,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30148"
+                },
+                "highSTSUM": 592510.187412,
+                "aoeSUM": 934342.9878420001
+              }
+            ]
+          },
+          "stage2": {
+            "ids": [
+              30125082
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Automaton Grizzly",
+                "enemyLevel": 85,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30148,
+                    "actualParams": [
+                      1,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Vagrant",
+                      "id": 1002020,
+                      "image": 1002020,
+                      "rank": "MinionLv2",
+                      "attackBase": 580.494708,
+                      "defBase": 1050,
+                      "hpBase": 34183.280043,
+                      "speedBase": 120,
+                      "critDMG": 0.2,
+                      "effectRES": 0.2,
+                      "ehr": 0.28,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 245.041434,
+                      "toughnessBase": 20,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 34183.280043
+                    },
+                    {
+                      "name": "Automaton Grizzly",
+                      "id": 1013010,
+                      "image": 1013010,
+                      "rank": "Elite",
+                      "attackBase": 580.494708,
+                      "defBase": 1050,
+                      "hpBase": 296255.093706,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.28,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 245.041434,
+                      "toughnessBase": 140,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 296255.093706
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Automaton Grizzly",
+                      "id": 1013010,
+                      "image": 1013010,
+                      "rank": "Elite",
+                      "attackBase": 580.494708,
+                      "defBase": 1050,
+                      "hpBase": 296255.093706,
+                      "speedBase": 144,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.28,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 245.041434,
+                      "toughnessBase": 140,
+                      "weaknessList": [
+                        "Fire",
+                        "Ice",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 296255.093706
+                    },
+                    {
+                      "name": "Frigid Prowler",
+                      "id": 1023020,
+                      "image": 1023020,
+                      "rank": "Elite",
+                      "attackBase": 580.494708,
+                      "defBase": 1050,
+                      "hpBase": 273466.240344,
+                      "speedBase": 120,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.28,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 245.041434,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Fire",
+                        "Thunder",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Ice": 0.4,
+                        "Wind": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL_Frozen": 1
+                      },
+                      "compSUM": 273466.240344
+                    }
+                  ]
+                ],
+                "scalarElite": 280,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30148"
+                },
+                "highSTSUM": 592510.187412,
+                "aoeSUM": 934342.9878420001
+              }
+            ]
+          }
+        }
+      },
+      "9": {
+        "floorName": "Crossing the Afterlife (IX)",
+        "cycleCount": 30,
+        "sides": 2,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30125091
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Aurumaton Gatekeeper",
+                "enemyLevel": 88,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30148,
+                    "actualParams": [
+                      1,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Silvermane Soldier",
+                      "id": 1002040,
+                      "image": 1002040,
+                      "rank": "MinionLv2",
+                      "attackBase": 598.084308,
+                      "defBase": 1079.99997,
+                      "hpBase": 36292.4117166,
+                      "speedBase": 109.56,
+                      "critDMG": 0.2,
+                      "effectRES": 0.2,
+                      "ehr": 0.304,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 300.18537399999997,
+                      "toughnessBase": 20,
+                      "weaknessList": [
+                        "Wind",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Thunder": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 36292.4117166
                     },
                     {
                       "name": "Aurumaton Gatekeeper",
                       "id": 2013010,
                       "image": 2013010,
                       "rank": "Elite",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 174127.57164,
-                      "speedBase": 120,
+                      "attackBase": 598.084308,
+                      "defBase": 1079.99997,
+                      "hpBase": 279172.39782,
+                      "speedBase": 132,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.24,
+                      "ehr": 0.304,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 300.18537399999997,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Thunder",
@@ -2988,39 +7036,108 @@ let mocSchedule = [
                         "Imaginary": 0.4
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 174127.57164
+                      "compSUM": 279172.39782
+                    },
+                    0
+                  ],
+                  [
+                    {
+                      "name": "Aurumaton Gatekeeper",
+                      "id": 2013010,
+                      "image": 2013010,
+                      "rank": "Elite",
+                      "attackBase": 598.084308,
+                      "defBase": 1079.99997,
+                      "hpBase": 279172.39782,
+                      "speedBase": 132,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.304,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 300.18537399999997,
+                      "toughnessBase": 100,
+                      "weaknessList": [
+                        "Thunder",
+                        "Wind",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Imaginary": 0.4
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 279172.39782
+                    },
+                    {
+                      "name": "Disciples of Sanctus Medicus: Shape Shifter",
+                      "id": 2023010,
+                      "image": 2023010,
+                      "rank": "Elite",
+                      "attackBase": 598.084308,
+                      "defBase": 1079.99997,
+                      "hpBase": 335006.877384,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.304,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 300.18537399999997,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Ice",
+                        "Wind",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Thunder": 0.4,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 335006.877384
                     }
                   ]
                 ],
-                "scalarElite": 279,
+                "scalarElite": 281,
                 "scalarHard": 3,
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1",
-                  "_CreateBattleEvent": "30147"
+                  "_CreateBattleEvent": "30148"
                 },
-                "highSTSUM": 417906.171936,
-                "aoeSUM": 661684.772232
+                "highSTSUM": 614179.2752040001,
+                "aoeSUM": 965936.4964572
               }
             ]
           },
           "stage2": {
             "ids": [
-              30124092
+              30125092
             ],
             "stageDataArray": [
               {
                 "stageName": "Automaton Direwolf",
-                "enemyLevel": 80,
+                "enemyLevel": 88,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
                     "realModifierNamne": null,
-                    "BEKey": 30147,
+                    "BEKey": 30148,
                     "actualParams": [
-                      0.8,
-                      1
+                      1,
+                      20
                     ]
                   }
                 ],
@@ -3028,56 +7145,56 @@ let mocSchedule = [
                 "enemyList": [
                   [
                     {
-                      "name": "Automaton Beetle",
-                      "id": 1012030,
-                      "image": 1012030,
+                      "name": "Automaton Hound",
+                      "id": 1012010,
+                      "image": 1012010,
                       "rank": "MinionLv2",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 24377.8600296,
-                      "speedBase": 120,
+                      "attackBase": 598.084308,
+                      "defBase": 1079.99997,
+                      "hpBase": 39084.1356948,
+                      "speedBase": 132,
                       "critDMG": 0.2,
                       "effectRES": 0.2,
-                      "ehr": 0.24,
+                      "ehr": 0.304,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 300.18537399999997,
                       "toughnessBase": 20,
                       "weaknessList": [
-                        "Thunder",
-                        "Wind",
-                        "Imaginary"
+                        "Physical",
+                        "Thunder"
                       ],
                       "resistances": {
-                        "Physical": 0.2,
                         "Fire": 0.2,
                         "Ice": 0.2,
-                        "Quantum": 0.2
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 24377.8600296
+                      "compSUM": 39084.1356948
                     },
                     {
                       "name": "Automaton Direwolf",
                       "id": 1013020,
                       "image": 1013020,
                       "rank": "Elite",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 191540.328804,
-                      "speedBase": 172.8,
+                      "attackBase": 598.084308,
+                      "defBase": 1079.99997,
+                      "hpBase": 307089.637602,
+                      "speedBase": 190.08,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.24,
+                      "ehr": 0.304,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 300.18537399999997,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Ice",
@@ -3091,7 +7208,7 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 191540.328804
+                      "compSUM": 307089.637602
                     },
                     0
                   ],
@@ -3101,19 +7218,19 @@ let mocSchedule = [
                       "id": 1013020,
                       "image": 1013020,
                       "rank": "Elite",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 191540.328804,
-                      "speedBase": 172.8,
+                      "attackBase": 598.084308,
+                      "defBase": 1079.99997,
+                      "hpBase": 307089.637602,
+                      "speedBase": 190.08,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.24,
+                      "ehr": 0.304,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 300.18537399999997,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Ice",
@@ -3127,65 +7244,67 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 191540.328804
+                      "compSUM": 307089.637602
                     },
                     {
-                      "name": "\"Past Confined and Caged\"",
-                      "id": 3003030,
-                      "image": 3003030,
+                      "name": "Searing Prowler",
+                      "id": 1023010,
+                      "image": 1023010,
                       "rank": "Elite",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 208953.085968,
-                      "speedBase": 120,
+                      "attackBase": 598.084308,
+                      "defBase": 1079.99997,
+                      "hpBase": 307089.637602,
+                      "speedBase": 132,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.24,
+                      "ehr": 0.304,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 300.18537399999997,
                       "toughnessBase": 100,
                       "weaknessList": [
-                        "Fire",
+                        "Ice",
                         "Thunder",
                         "Imaginary"
                       ],
                       "resistances": {
                         "Physical": 0.2,
-                        "Ice": 0.2,
+                        "Fire": 0.4,
                         "Wind": 0.2,
                         "Quantum": 0.2
                       },
-                      "resistancesDebuff": {},
-                      "compSUM": 208953.085968
+                      "resistancesDebuff": {
+                        "STAT_DOT_Burn": 1
+                      },
+                      "compSUM": 307089.637602
                     }
                   ]
                 ],
-                "scalarElite": 279,
+                "scalarElite": 281,
                 "scalarHard": 3,
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1",
-                  "_CreateBattleEvent": "30147"
+                  "_CreateBattleEvent": "30148"
                 },
-                "highSTSUM": 400493.414772,
-                "aoeSUM": 640789.4636351999
+                "highSTSUM": 614179.275204,
+                "aoeSUM": 999437.1841956
               }
             ]
           }
         }
       },
       "10": {
-        "floorName": "undefined",
+        "floorName": "Crossing the Afterlife (X)",
         "cycleCount": 30,
         "sides": 2,
         "stageDataObject": {
           "stage1": {
             "ids": [
-              30124101
+              30125101
             ],
             "stageDataArray": [
               {
@@ -3196,10 +7315,10 @@ let mocSchedule = [
                 "battleEventAbilities": [
                   {
                     "realModifierNamne": null,
-                    "BEKey": 30147,
+                    "BEKey": 30148,
                     "actualParams": [
-                      0.8,
-                      1
+                      1,
+                      20
                     ]
                   }
                 ],
@@ -3318,7 +7437,7 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1",
-                  "_CreateBattleEvent": "30147"
+                  "_CreateBattleEvent": "30148"
                 },
                 "highSTSUM": 2733215.2192800003,
                 "aoeSUM": 3118668.64764
@@ -3327,21 +7446,21 @@ let mocSchedule = [
           },
           "stage2": {
             "ids": [
-              30124102
+              30125102
             ],
             "stageDataArray": [
               {
-                "stageName": "Abundant Ebon Deer",
+                "stageName": "Argenti",
                 "enemyLevel": 90,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
                     "realModifierNamne": null,
-                    "BEKey": 30147,
+                    "BEKey": 30148,
                     "actualParams": [
-                      0.8,
-                      1
+                      1,
+                      20
                     ]
                   }
                 ],
@@ -3349,9 +7468,9 @@ let mocSchedule = [
                 "enemyList": [
                   [
                     {
-                      "name": "Senior Staff: Team Leader",
-                      "id": 803301014,
-                      "image": 8033010,
+                      "name": "Ichor Memosprite: Winged Serpent",
+                      "id": 4063010,
+                      "image": 4063010,
                       "rank": "Elite",
                       "attackBase": 610.105752,
                       "defBase": 1099.99995,
@@ -3362,34 +7481,34 @@ let mocSchedule = [
                       "ehr": 0.32,
                       "delay": 1,
                       "toughnessBars": 1,
-                      "toughnessElement": "Physical",
+                      "toughnessElement": "Imaginary",
                       "hpBars": 1,
                       "compEN": 1,
                       "compACT": 376.78732,
-                      "toughnessBase": 120,
+                      "toughnessBase": 160,
                       "weaknessList": [
+                        "Physical",
                         "Fire",
-                        "Ice",
-                        "Imaginary"
+                        "Ice"
                       ],
                       "resistances": {
-                        "Physical": 0.2,
                         "Thunder": 0.2,
                         "Wind": 0.2,
-                        "Quantum": 0.2
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
                       "compSUM": 560659.53216
                     },
                     {
-                      "name": "Stormbringer",
-                      "id": 8003050,
-                      "image": 8003050,
+                      "name": "Automaton Grizzly",
+                      "id": 1013010,
+                      "image": 1013010,
                       "rank": "Elite",
                       "attackBase": 610.105752,
                       "defBase": 1099.99995,
-                      "hpBase": 385453.42836,
-                      "speedBase": 132,
+                      "hpBase": 455535.86988,
+                      "speedBase": 158.4,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
                       "ehr": 0.32,
@@ -3399,32 +7518,32 @@ let mocSchedule = [
                       "hpBars": 1,
                       "compEN": 1,
                       "compACT": 376.78732,
-                      "toughnessBase": 100,
+                      "toughnessBase": 140,
                       "weaknessList": [
                         "Fire",
                         "Ice",
-                        "Imaginary"
+                        "Thunder"
                       ],
                       "resistances": {
                         "Physical": 0.2,
-                        "Thunder": 0.2,
-                        "Wind": 0.4,
-                        "Quantum": 0.2
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 385453.42836
+                      "compSUM": 455535.86988
                     }
                   ],
                   [
                     {
-                      "name": "Abundant Ebon Deer",
-                      "id": 202401008,
-                      "image": 2024010,
+                      "name": "Argenti",
+                      "id": 302401012,
+                      "image": 3024010,
                       "rank": "LittleBoss",
                       "attackBase": 610.105752,
                       "defBase": 1099.99995,
-                      "hpBase": 665783.2995637,
-                      "speedBase": 151.8,
+                      "hpBase": 788427.4671,
+                      "speedBase": 190.08,
                       "critDMG": 0.2,
                       "effectRES": 0.4,
                       "ehr": 0.32,
@@ -3432,25 +7551,24 @@ let mocSchedule = [
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 2,
-                      "compEN": 1.727273,
+                      "compEN": 1.5,
                       "compACT": 376.78732,
-                      "toughnessBase": 140,
+                      "toughnessBase": 160,
                       "weaknessList": [
+                        "Physical",
                         "Fire",
-                        "Ice",
-                        "Quantum"
+                        "Ice"
                       ],
                       "resistances": {
-                        "Physical": 0.2,
-                        "Thunder": 0.4,
-                        "Wind": 0.4,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {
-                        "STAT_CTRL_Frozen": 0.5,
-                        "STAT_Confine": 0.5
+                        "STAT_CTRL": 0.5
                       },
-                      "compSUM": 1331566.5991274
+                      "compSUM": 1576854.9342
                     }
                   ]
                 ],
@@ -3459,23 +7577,23 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1",
-                  "_CreateBattleEvent": "30147"
+                  "_CreateBattleEvent": "30148"
                 },
-                "highSTSUM": 1892226.1312874,
-                "aoeSUM": 2277679.5596474
+                "highSTSUM": 2137514.46636,
+                "aoeSUM": 2593050.33624
               }
             ]
           }
         }
       },
       "11": {
-        "floorName": "undefined",
+        "floorName": "Crossing the Afterlife (XI)",
         "cycleCount": 30,
         "sides": 2,
         "stageDataObject": {
           "stage1": {
             "ids": [
-              30124111
+              30125111
             ],
             "stageDataArray": [
               {
@@ -3486,10 +7604,10 @@ let mocSchedule = [
                 "battleEventAbilities": [
                   {
                     "realModifierNamne": null,
-                    "BEKey": 30147,
+                    "BEKey": 30148,
                     "actualParams": [
-                      0.8,
-                      1
+                      1,
+                      20
                     ]
                   }
                 ],
@@ -3497,14 +7615,47 @@ let mocSchedule = [
                 "enemyList": [
                   [
                     {
-                      "name": "Black Tide's Corroded Daemon",
-                      "id": 4033010,
-                      "image": 4033010,
+                      "name": "Howling Casket",
+                      "id": 2033010,
+                      "image": 2033010,
+                      "rank": "Elite",
+                      "attackBase": 616.22208,
+                      "defBase": 1119.99993,
+                      "hpBase": 717799.23648,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.336,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 643.18928,
+                      "toughnessBase": 120,
+                      "weaknessList": [
+                        "Thunder",
+                        "Wind",
+                        "Imaginary"
+                      ],
+                      "resistances": {
+                        "Physical": 0.2,
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Quantum": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 717799.23648
+                    },
+                    {
+                      "name": "Memory Zone Meme \"Shell of Faded Rage\"",
+                      "id": 3013010,
+                      "image": 3013010,
                       "rank": "Elite",
                       "attackBase": 616.22208,
                       "defBase": 1119.99993,
                       "hpBase": 837432.44256,
-                      "speedBase": 158.4,
+                      "speedBase": 145.2,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
                       "ehr": 0.336,
@@ -3514,53 +7665,20 @@ let mocSchedule = [
                       "hpBars": 1,
                       "compEN": 1,
                       "compACT": 643.18928,
-                      "toughnessBase": 160,
+                      "toughnessBase": 120,
                       "weaknessList": [
-                        "Physical",
-                        "Wind",
-                        "Quantum"
+                        "Thunder",
+                        "Quantum",
+                        "Imaginary"
                       ],
                       "resistances": {
+                        "Physical": 0.2,
                         "Fire": 0.2,
                         "Ice": 0.2,
-                        "Thunder": 0.2,
-                        "Imaginary": 0.2
+                        "Wind": 0.2
                       },
                       "resistancesDebuff": {},
                       "compSUM": 837432.44256
-                    },
-                    {
-                      "name": "Guardian Shadow",
-                      "id": 8003030,
-                      "image": 8003030,
-                      "rank": "Elite",
-                      "attackBase": 616.22208,
-                      "defBase": 1119.99993,
-                      "hpBase": 657982.63344,
-                      "speedBase": 158.4,
-                      "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.336,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 643.18928,
-                      "toughnessBase": 100,
-                      "weaknessList": [
-                        "Physical",
-                        "Wind",
-                        "Quantum"
-                      ],
-                      "resistances": {
-                        "Fire": 0.2,
-                        "Ice": 0.2,
-                        "Thunder": 0.2,
-                        "Imaginary": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 657982.63344
                     }
                   ],
                   [
@@ -3606,30 +7724,61 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1",
-                  "_CreateBattleEvent": "30147"
+                  "_CreateBattleEvent": "30148"
                 },
                 "highSTSUM": 4725511.64016,
-                "aoeSUM": 5383494.2736
+                "aoeSUM": 5443310.876639999
               }
             ]
           },
           "stage2": {
             "ids": [
-              30124112
+              30125112
             ],
             "stageDataArray": [
               {
-                "stageName": "Paramount Bliss Inverted: Illwish Archlotus",
+                "stageName": "Harbinger of Death: Swarm Nightmare",
+                "corruptionID": 2,
+                "corruptionBuff": {
+                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+                  "realModifierNamne": "ChallengePeakBattle_GluttonyAbility_LV2",
+                  "BEKey": 1912336050,
+                  "name": "undefined",
+                  "desc": "undefined",
+                  "battleDesc": null,
+                  "buffType": "",
+                  "params": [
+                    0.4,
+                    0.2,
+                    1,
+                    1,
+                    0.35
+                  ]
+                },
+                "corruptionDesc": "The contaminated monsters have obtained the power of \"Voracity.\" Upon taking killing blow, they will not be defeated, but will instead immediately restore a certain percentage of their HP.\\nDealing DMG to them can continuously suppress their Max HP. Once suppressed to a certain percentage, the enemy can be completely defeated.",
+                "corruptionParams": [
+                  0.4,
+                  0.4,
+                  1,
+                  1,
+                  0.72
+                ],
+                "corruptionEnemies": [
+                  {
+                    "ID": 4063010,
+                    "params": []
+                  }
+                ],
                 "enemyLevel": 92,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
                     "realModifierNamne": null,
-                    "BEKey": 30147,
+                    "BEKey": 30148,
                     "actualParams": [
-                      0.8,
-                      1
+                      1,
+                      20
                     ]
                   }
                 ],
@@ -3637,9 +7786,9 @@ let mocSchedule = [
                 "enemyList": [
                   [
                     {
-                      "name": "Rocking Rebel",
-                      "id": 5013010,
-                      "image": 5013010,
+                      "name": "Black Tide's Champion",
+                      "id": 4033020,
+                      "image": 4033020,
                       "rank": "Elite",
                       "attackBase": 616.22208,
                       "defBase": 1119.99993,
@@ -3648,13 +7797,81 @@ let mocSchedule = [
                       "critDMG": 0.2,
                       "effectRES": 0.3,
                       "ehr": 0.336,
-                      "delay": 0.25,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 643.18928,
+                      "toughnessBase": 160,
+                      "weaknessList": [
+                        "Physical",
+                        "Thunder",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Ice": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 1076698.85472
+                    },
+                    {
+                      "name": "Ichor Memosprite: Winged Serpent",
+                      "id": 4063010,
+                      "image": 4063010,
+                      "rank": "Elite",
+                      "attackBase": 616.22208,
+                      "defBase": 1119.99993,
+                      "hpBase": 957065.64864,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.336,
+                      "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 1,
                       "compEN": 1,
                       "compACT": 643.18928,
-                      "toughnessBase": 120,
+                      "toughnessBase": 160,
+                      "weaknessList": [
+                        "Physical",
+                        "Fire",
+                        "Ice"
+                      ],
+                      "resistances": {
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 957065.64864
+                    }
+                  ],
+                  [
+                    {
+                      "name": "Harbinger of Death: Swarm Nightmare",
+                      "id": 3024030,
+                      "image": 3024030,
+                      "rank": "LittleBoss",
+                      "attackBase": 616.22208,
+                      "defBase": 1119.99993,
+                      "hpBase": 4785328.2432,
+                      "speedBase": 190.08,
+                      "critDMG": 0.2,
+                      "effectRES": 0.4,
+                      "ehr": 0.336,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Fire",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 643.18928,
+                      "toughnessBase": 200,
                       "weaknessList": [
                         "Physical",
                         "Fire",
@@ -3666,78 +7883,10 @@ let mocSchedule = [
                         "Quantum": 0.2,
                         "Imaginary": 0.2
                       },
-                      "resistancesDebuff": {},
-                      "compSUM": 1076698.85472
-                    },
-                    {
-                      "name": "\"Tomorrow in Harmonious Chords\"",
-                      "id": 3003040,
-                      "image": 3003040,
-                      "rank": "Elite",
-                      "attackBase": 616.22208,
-                      "defBase": 1119.99993,
-                      "hpBase": 717799.23648,
-                      "speedBase": 132,
-                      "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.336,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 643.18928,
-                      "toughnessBase": 100,
-                      "weaknessList": [
-                        "Physical",
-                        "Fire",
-                        "Thunder"
-                      ],
-                      "resistances": {
-                        "Ice": 0.2,
-                        "Wind": 0.2,
-                        "Quantum": 0.2,
-                        "Imaginary": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 717799.23648
-                    }
-                  ],
-                  [
-                    {
-                      "name": "Paramount Bliss Inverted: Illwish Archlotus",
-                      "id": 5024010,
-                      "image": 5024010,
-                      "rank": "LittleBoss",
-                      "attackBase": 616.22208,
-                      "defBase": 1119.99993,
-                      "hpBase": 2871196.94592,
-                      "speedBase": 190.08,
-                      "critDMG": 0.2,
-                      "effectRES": 0.4,
-                      "ehr": 0.336,
-                      "delay": 0.5,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Thunder",
-                      "hpBars": 2,
-                      "compEN": 1,
-                      "compACT": 643.18928,
-                      "toughnessBase": 240,
-                      "weaknessList": [
-                        "Physical",
-                        "Thunder",
-                        "Imaginary"
-                      ],
-                      "resistances": {
-                        "Fire": 0.4,
-                        "Ice": 0.4,
-                        "Wind": 0.4,
-                        "Quantum": 0.4
-                      },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
                       },
-                      "compSUM": 5742393.89184
+                      "compSUM": 4785328.2432
                     }
                   ]
                 ],
@@ -3746,37 +7895,72 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1",
-                  "_CreateBattleEvent": "30147"
+                  "_CreateBattleEvent": "30148"
                 },
-                "highSTSUM": 6819092.74656,
-                "aoeSUM": 7536891.983039999
+                "highSTSUM": 5862027.097920001,
+                "aoeSUM": 6819092.74656
               }
             ]
           }
         }
       },
       "12": {
-        "floorName": "undefined",
+        "floorName": "Crossing the Afterlife (XII)",
         "cycleCount": 30,
         "sides": 2,
         "stageDataObject": {
           "stage1": {
             "ids": [
-              30124121
+              30125121
             ],
             "stageDataArray": [
               {
-                "stageName": "Stellaron Hunter: Sam",
+                "stageName": "@SparxiConOfficial",
+                "corruptionID": 3,
+                "corruptionBuff": {
+                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+                  "realModifierNamne": "ChallengePeakBattle_GluttonyAbility_LV3",
+                  "BEKey": 1912336050,
+                  "name": "undefined",
+                  "desc": "undefined",
+                  "battleDesc": null,
+                  "buffType": "",
+                  "params": [
+                    0.65,
+                    0.3,
+                    0.5,
+                    1,
+                    0.5
+                  ]
+                },
+                "corruptionDesc": "The contaminated monsters have obtained the power of \"Voracity.\" Upon taking killing blow, they will not be defeated, but will instead immediately restore a certain percentage of their HP.\\nDealing DMG to them can continuously suppress their Max HP. Once suppressed to a certain percentage, the enemy can be completely defeated.",
+                "corruptionParams": [
+                  0.6,
+                  0.8,
+                  1,
+                  3,
+                  1.44
+                ],
+                "corruptionEnemies": [
+                  {
+                    "ID": 5014010,
+                    "params": []
+                  },
+                  {
+                    "ID": 8003010,
+                    "params": []
+                  }
+                ],
                 "enemyLevel": 95,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
                     "realModifierNamne": null,
-                    "BEKey": 30147,
+                    "BEKey": 30148,
                     "actualParams": [
-                      0.8,
-                      1
+                      1,
+                      20
                     ]
                   }
                 ],
@@ -3784,14 +7968,14 @@ let mocSchedule = [
                 "enemyList": [
                   [
                     {
-                      "name": "Memory Zone Meme \"Shell of Faded Rage\"",
-                      "id": 3013010,
-                      "image": 3013010,
+                      "name": "Daybreak Squadron: Dawnlance",
+                      "id": 5013060,
+                      "image": 5013060,
                       "rank": "Elite",
                       "attackBase": 625.5117,
                       "defBase": 1149.9999,
-                      "hpBase": 3177336.0255,
-                      "speedBase": 145.2,
+                      "hpBase": 3404288.59875,
+                      "speedBase": 158.4,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
                       "ehr": 0.36,
@@ -3801,29 +7985,29 @@ let mocSchedule = [
                       "hpBars": 1,
                       "compEN": 1,
                       "compACT": 2440.35025,
-                      "toughnessBase": 120,
+                      "toughnessBase": 160,
                       "weaknessList": [
-                        "Thunder",
-                        "Quantum",
-                        "Imaginary"
+                        "Physical",
+                        "Fire",
+                        "Quantum"
                       ],
                       "resistances": {
-                        "Physical": 0.2,
-                        "Fire": 0.2,
                         "Ice": 0.2,
-                        "Wind": 0.2
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Imaginary": 0.8
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 3177336.0255
+                      "compSUM": 3404288.59875
                     },
                     {
-                      "name": "Frigid Prowler",
-                      "id": 1023020,
-                      "image": 1023020,
+                      "name": "Ice Out of Space",
+                      "id": 8003010,
+                      "image": 8003010,
                       "rank": "Elite",
                       "attackBase": 625.5117,
                       "defBase": 1149.9999,
-                      "hpBase": 2723430.879,
+                      "hpBase": 2269525.7325,
                       "speedBase": 132,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
@@ -3837,56 +8021,56 @@ let mocSchedule = [
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Fire",
-                        "Thunder",
+                        "Wind",
                         "Quantum"
                       ],
                       "resistances": {
                         "Physical": 0.2,
                         "Ice": 0.4,
-                        "Wind": 0.2,
+                        "Thunder": 0.2,
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL_Frozen": 1
                       },
-                      "compSUM": 2723430.879
+                      "compSUM": 2269525.7325
                     }
                   ],
                   [
                     {
-                      "name": "Stellaron Hunter: Sam",
-                      "id": 3024020,
-                      "image": 3024020,
+                      "name": "@SparxiConOfficial",
+                      "id": 5014010,
+                      "image": 5014010,
                       "rank": "LittleBoss",
                       "attackBase": 625.5117,
                       "defBase": 1149.9999,
-                      "hpBase": 11347628.6625,
+                      "hpBase": 9645484.363125,
                       "speedBase": 158.4,
                       "critDMG": 0.2,
                       "effectRES": 0.4,
                       "ehr": 0.36,
-                      "delay": 1,
+                      "delay": 0.5,
                       "toughnessBars": 1,
-                      "toughnessElement": "Fire",
-                      "hpBars": 1,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 2,
                       "compEN": 1,
                       "compACT": 2440.35025,
-                      "toughnessBase": 200,
+                      "toughnessBase": 320,
                       "weaknessList": [
-                        "Thunder",
+                        "Fire",
                         "Quantum",
                         "Imaginary"
                       ],
                       "resistances": {
                         "Physical": 0.2,
-                        "Fire": 0.2,
                         "Ice": 0.2,
+                        "Thunder": 0.2,
                         "Wind": 0.2
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
                       },
-                      "compSUM": 11347628.6625
+                      "compSUM": 19290968.72625
                     }
                   ]
                 ],
@@ -3895,30 +8079,176 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1",
-                  "_CreateBattleEvent": "30147"
+                  "_CreateBattleEvent": "30148"
                 },
-                "highSTSUM": 14524964.688,
-                "aoeSUM": 17248395.567
+                "highSTSUM": 22695257.325,
+                "aoeSUM": 24964783.0575
               }
             ]
           },
           "stage2": {
             "ids": [
-              30124122
+              30125122
             ],
             "stageDataArray": [
               {
-                "stageName": "Alloy Mechatron: King Pom-Pom",
+                "stageName": "First Genius, Entelechy, Zandar",
                 "enemyLevel": 95,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
                   {
                     "realModifierNamne": null,
-                    "BEKey": 30147,
+                    "BEKey": 30148,
                     "actualParams": [
-                      0.8,
-                      1
+                      1,
+                      20
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  [
+                    {
+                      "name": "Silvermane Lieutenant",
+                      "id": 1003010,
+                      "image": 1003010,
+                      "rank": "Elite",
+                      "attackBase": 625.5117,
+                      "defBase": 1149.9999,
+                      "hpBase": 2269525.7325,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.36,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 2440.35025,
+                      "toughnessBase": 80,
+                      "weaknessList": [
+                        "Physical",
+                        "Ice",
+                        "Quantum"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Thunder": 0.2,
+                        "Wind": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 2269525.7325
+                    },
+                    {
+                      "name": "The Ascended",
+                      "id": 2023030,
+                      "image": 2023030,
+                      "rank": "Elite",
+                      "attackBase": 625.5117,
+                      "defBase": 1149.9999,
+                      "hpBase": 2496478.30575,
+                      "speedBase": 158.4,
+                      "critDMG": 0.2,
+                      "effectRES": 0.3,
+                      "ehr": 0.36,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Physical",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 2440.35025,
+                      "toughnessBase": 140,
+                      "weaknessList": [
+                        "Physical",
+                        "Ice",
+                        "Thunder"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Wind": 0.4,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {},
+                      "compSUM": 2496478.30575
+                    }
+                  ],
+                  [
+                    {
+                      "name": "First Genius, Entelechy, Zandar",
+                      "id": 4044010,
+                      "image": 4044010,
+                      "rank": "LittleBoss",
+                      "attackBase": 625.5117,
+                      "defBase": 1149.9999,
+                      "hpBase": 27234308.79,
+                      "speedBase": 211.2,
+                      "critDMG": 0.2,
+                      "effectRES": 0.4,
+                      "ehr": 0.36,
+                      "delay": 1,
+                      "toughnessBars": 1,
+                      "toughnessElement": "Quantum",
+                      "hpBars": 1,
+                      "compEN": 1,
+                      "compACT": 2440.35025,
+                      "toughnessBase": 200,
+                      "weaknessList": [
+                        "Physical",
+                        "Ice",
+                        "Wind"
+                      ],
+                      "resistances": {
+                        "Fire": 0.2,
+                        "Thunder": 0.2,
+                        "Quantum": 0.2,
+                        "Imaginary": 0.2
+                      },
+                      "resistancesDebuff": {
+                        "STAT_CTRL": 0.5
+                      },
+                      "compSUM": 27234308.79
+                    }
+                  ]
+                ],
+                "scalarElite": 164,
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_CreateBattleEvent": "30148"
+                },
+                "highSTSUM": 29730787.09575,
+                "aoeSUM": 32000312.82825
+              }
+            ]
+          }
+        }
+      },
+      "13": {
+        "floorName": "STARWARD",
+        "sides": 1,
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30125123
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Murata Graphia, Founding Artist",
+                "enemyLevel": 95,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30148,
+                    "actualParams": [
+                      1,
+                      20
                     ]
                   }
                 ],
@@ -3932,7 +8262,7 @@ let mocSchedule = [
                       "rank": "Elite",
                       "attackBase": 625.5117,
                       "defBase": 1149.9999,
-                      "hpBase": 3404288.59875,
+                      "hpBase": 3875651.6355,
                       "speedBase": 158.4,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
@@ -3942,7 +8272,7 @@ let mocSchedule = [
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 2440.35025,
+                      "compACT": 2778.2449,
                       "toughnessBase": 160,
                       "weaknessList": [
                         "Physical",
@@ -3956,121 +8286,8 @@ let mocSchedule = [
                         "Quantum": 0.8
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 3404288.59875
+                      "compSUM": 3875651.6355
                     },
-                    {
-                      "name": "Daybreak Squadron: Cinderborne",
-                      "id": 5013070,
-                      "image": 5013070,
-                      "rank": "Elite",
-                      "attackBase": 625.5117,
-                      "defBase": 1149.9999,
-                      "hpBase": 3404288.59875,
-                      "speedBase": 158.4,
-                      "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.36,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 2440.35025,
-                      "toughnessBase": 160,
-                      "weaknessList": [
-                        "Fire",
-                        "Quantum",
-                        "Imaginary"
-                      ],
-                      "resistances": {
-                        "Physical": 0.8,
-                        "Ice": 0.2,
-                        "Thunder": 0.2,
-                        "Wind": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 3404288.59875
-                    }
-                  ],
-                  [
-                    {
-                      "name": "Alloy Mechatron: King Pom-Pom",
-                      "id": 5014020,
-                      "image": 5014020,
-                      "rank": "LittleBoss",
-                      "attackBase": 625.5117,
-                      "defBase": 1149.9999,
-                      "hpBase": 8510721.496875,
-                      "speedBase": 158.4,
-                      "critDMG": 0.2,
-                      "effectRES": 0.4,
-                      "ehr": 0.36,
-                      "delay": 0.5,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Quantum",
-                      "hpBars": 2,
-                      "compEN": 1,
-                      "compACT": 2440.35025,
-                      "toughnessBase": 240,
-                      "weaknessList": [
-                        "Fire",
-                        "Thunder",
-                        "Imaginary"
-                      ],
-                      "resistances": {
-                        "Physical": 0.2,
-                        "Ice": 0.2,
-                        "Wind": 0.2,
-                        "Quantum": 0.2
-                      },
-                      "resistancesDebuff": {
-                        "STAT_CTRL": 0.5
-                      },
-                      "compSUM": 17021442.99375
-                    }
-                  ]
-                ],
-                "scalarElite": 164,
-                "scalarHard": 3,
-                "configData": {
-                  "_Wave": "2",
-                  "_IsEliteBattle": "1",
-                  "_CreateBattleEvent": "30147"
-                },
-                "highSTSUM": 20425731.592499997,
-                "aoeSUM": 23830020.191249996
-              }
-            ]
-          }
-        }
-      },
-      "13": {
-        "floorName": "STARWARD",
-        "sides": 1,
-        "stageDataObject": {
-          "stage1": {
-            "ids": [
-              30124123
-            ],
-            "stageDataArray": [
-              {
-                "stageName": "Harbinger of Death: Swarm Nightmare",
-                "enemyLevel": 95,
-                "modifiersToAdd": [],
-                "buffOverride": null,
-                "battleEventAbilities": [
-                  {
-                    "realModifierNamne": null,
-                    "BEKey": 30147,
-                    "actualParams": [
-                      0.8,
-                      1
-                    ]
-                  }
-                ],
-                "stageType": "Challenge",
-                "enemyList": [
-                  [
                     {
                       "name": "\"Present Inebriated in Revelry\"",
                       "id": 3003050,
@@ -4103,109 +8320,43 @@ let mocSchedule = [
                       },
                       "resistancesDebuff": {},
                       "compSUM": 3100521.3084
-                    },
-                    {
-                      "name": "\"Tomorrow in Harmonious Chords\"",
-                      "id": 3003040,
-                      "image": 3003040,
-                      "rank": "Elite",
-                      "attackBase": 625.5117,
-                      "defBase": 1149.9999,
-                      "hpBase": 3100521.3084,
-                      "speedBase": 132,
-                      "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.36,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 2778.2449,
-                      "toughnessBase": 100,
-                      "weaknessList": [
-                        "Physical",
-                        "Fire",
-                        "Thunder"
-                      ],
-                      "resistances": {
-                        "Ice": 0.2,
-                        "Wind": 0.2,
-                        "Quantum": 0.2,
-                        "Imaginary": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 3100521.3084
-                    },
-                    {
-                      "name": "\"Past Confined and Caged\"",
-                      "id": 3003030,
-                      "image": 3003030,
-                      "rank": "Elite",
-                      "attackBase": 625.5117,
-                      "defBase": 1149.9999,
-                      "hpBase": 3100521.3084,
-                      "speedBase": 132,
-                      "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.36,
-                      "delay": 1,
-                      "toughnessBars": 1,
-                      "toughnessElement": "Physical",
-                      "hpBars": 1,
-                      "compEN": 1,
-                      "compACT": 2778.2449,
-                      "toughnessBase": 100,
-                      "weaknessList": [
-                        "Fire",
-                        "Thunder",
-                        "Imaginary"
-                      ],
-                      "resistances": {
-                        "Physical": 0.2,
-                        "Ice": 0.2,
-                        "Wind": 0.2,
-                        "Quantum": 0.2
-                      },
-                      "resistancesDebuff": {},
-                      "compSUM": 3100521.3084
                     }
                   ],
                   [
                     {
-                      "name": "Harbinger of Death: Swarm Nightmare",
-                      "id": 3024030,
-                      "image": 3024030,
+                      "name": "Murata Graphia, Founding Artist",
+                      "id": 5014030,
+                      "image": 5014030,
                       "rank": "LittleBoss",
                       "attackBase": 625.5117,
                       "defBase": 1149.9999,
-                      "hpBase": 20670142.056,
-                      "speedBase": 190.08,
+                      "hpBase": 8397245.21025,
+                      "speedBase": 158.4,
                       "critDMG": 0.2,
                       "effectRES": 0.4,
                       "ehr": 0.36,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Fire",
-                      "hpBars": 1,
+                      "hpBars": 2,
                       "compEN": 1,
                       "compACT": 2778.2449,
-                      "toughnessBase": 200,
+                      "toughnessBase": 360,
                       "weaknessList": [
-                        "Physical",
                         "Fire",
-                        "Wind"
+                        "Thunder",
+                        "Quantum"
                       ],
                       "resistances": {
-                        "Ice": 0.2,
-                        "Thunder": 0.2,
-                        "Quantum": 0.2,
-                        "Imaginary": 0.2
+                        "Physical": 0.4,
+                        "Ice": 0.4,
+                        "Wind": 0.4,
+                        "Imaginary": 0.4
                       },
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
                       },
-                      "compSUM": 20670142.056
+                      "compSUM": 16794490.4205
                     }
                   ]
                 ],
@@ -4214,10 +8365,10 @@ let mocSchedule = [
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1",
-                  "_CreateBattleEvent": "30147"
+                  "_CreateBattleEvent": "30148"
                 },
-                "highSTSUM": 23770663.364400003,
-                "aoeSUM": 29971705.981200002
+                "highSTSUM": 20670142.055999998,
+                "aoeSUM": 23770663.3644
               }
             ]
           },
@@ -4611,7 +8762,7 @@ let mocSchedule = [
             "stageDataArray": [
               {
                 "stageName": "Rocking Rebel",
-                "enemyLevel": 72,
+                "enemyLevel": 70,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
@@ -4632,19 +8783,19 @@ let mocSchedule = [
                       "id": 5012030,
                       "image": 5012030,
                       "rank": "MinionLv2",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 25582.502775,
+                      "attackBase": 435.804984,
+                      "defBase": 899.99994,
+                      "hpBase": 22084.517025,
                       "speedBase": 110,
                       "critDMG": 0.2,
-                      "effectRES": 0.188,
-                      "ehr": 0.176,
+                      "effectRES": 0.18,
+                      "ehr": 0.16,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 110.03227,
+                      "compACT": 94.98717,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Physical",
@@ -4658,26 +8809,26 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 25582.502775
+                      "compSUM": 22084.517025
                     },
                     {
                       "name": "Rocking Rebel",
                       "id": 5013010,
                       "image": 5013010,
                       "rank": "Elite",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 184194.01998,
+                      "attackBase": 435.804984,
+                      "defBase": 899.99994,
+                      "hpBase": 159008.52258,
                       "speedBase": 145.2,
                       "critDMG": 0.2,
-                      "effectRES": 0.288,
-                      "ehr": 0.176,
+                      "effectRES": 0.28,
+                      "ehr": 0.16,
                       "delay": 0.25,
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 110.03227,
+                      "compACT": 94.98717,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Physical",
@@ -4691,7 +8842,7 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 184194.01998
+                      "compSUM": 159008.52258
                     },
                     0
                   ],
@@ -4701,19 +8852,19 @@ let mocSchedule = [
                       "id": 5013010,
                       "image": 5013010,
                       "rank": "Elite",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 184194.01998,
+                      "attackBase": 435.804984,
+                      "defBase": 899.99994,
+                      "hpBase": 159008.52258,
                       "speedBase": 145.2,
                       "critDMG": 0.2,
-                      "effectRES": 0.288,
-                      "ehr": 0.176,
+                      "effectRES": 0.28,
+                      "ehr": 0.16,
                       "delay": 0.25,
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 110.03227,
+                      "compACT": 94.98717,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Physical",
@@ -4727,26 +8878,26 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 184194.01998
+                      "compSUM": 159008.52258
                     },
                     {
                       "name": "Lady of Crashing Waves",
                       "id": 4053010,
                       "image": 4053010,
                       "rank": "Elite",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 153495.01665,
+                      "attackBase": 435.804984,
+                      "defBase": 899.99994,
+                      "hpBase": 132507.10215,
                       "speedBase": 158.4,
                       "critDMG": 0.2,
-                      "effectRES": 0.288,
-                      "ehr": 0.176,
+                      "effectRES": 0.28,
+                      "ehr": 0.16,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 110.03227,
+                      "compACT": 94.98717,
                       "toughnessBase": 180,
                       "weaknessList": [
                         "Physical",
@@ -4760,7 +8911,7 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 153495.01665
+                      "compSUM": 132507.10215
                     }
                   ]
                 ],
@@ -4771,8 +8922,8 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_CreateBattleEvent": "30147"
                 },
-                "highSTSUM": 368388.03996,
-                "aoeSUM": 573048.06216
+                "highSTSUM": 318017.04516,
+                "aoeSUM": 494693.18136
               }
             ]
           },
@@ -4783,7 +8934,7 @@ let mocSchedule = [
             "stageDataArray": [
               {
                 "stageName": "Disciples of Sanctus Medicus: Shape Shifter",
-                "enemyLevel": 72,
+                "enemyLevel": 70,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
@@ -4804,19 +8955,19 @@ let mocSchedule = [
                       "id": 2022060,
                       "image": 2022060,
                       "rank": "MinionLv2",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 22512.602442,
+                      "attackBase": 435.804984,
+                      "defBase": 899.99994,
+                      "hpBase": 19434.374982,
                       "speedBase": 91.3,
                       "critDMG": 0.2,
-                      "effectRES": 0.188,
-                      "ehr": 0.176,
+                      "effectRES": 0.18,
+                      "ehr": 0.16,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 110.03227,
+                      "compACT": 94.98717,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Physical",
@@ -4830,26 +8981,26 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 22512.602442
+                      "compSUM": 19434.374982
                     },
                     {
                       "name": "Disciples of Sanctus Medicus: Shape Shifter",
                       "id": 2023010,
                       "image": 2023010,
                       "rank": "Elite",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 122796.01332,
+                      "attackBase": 435.804984,
+                      "defBase": 899.99994,
+                      "hpBase": 106005.68172,
                       "speedBase": 132,
                       "critDMG": 0.2,
-                      "effectRES": 0.288,
-                      "ehr": 0.176,
+                      "effectRES": 0.28,
+                      "ehr": 0.16,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 110.03227,
+                      "compACT": 94.98717,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Ice",
@@ -4863,7 +9014,7 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 122796.01332
+                      "compSUM": 106005.68172
                     },
                     0
                   ],
@@ -4873,19 +9024,19 @@ let mocSchedule = [
                       "id": 2023010,
                       "image": 2023010,
                       "rank": "Elite",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 122796.01332,
+                      "attackBase": 435.804984,
+                      "defBase": 899.99994,
+                      "hpBase": 106005.68172,
                       "speedBase": 132,
                       "critDMG": 0.2,
-                      "effectRES": 0.288,
-                      "ehr": 0.176,
+                      "effectRES": 0.28,
+                      "ehr": 0.16,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 110.03227,
+                      "compACT": 94.98717,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Ice",
@@ -4899,26 +9050,26 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 122796.01332
+                      "compSUM": 106005.68172
                     },
                     {
                       "name": "Abundance Sprite: Malefic Ape",
                       "id": 2023020,
                       "image": 2023020,
                       "rank": "Elite",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 122796.01332,
+                      "attackBase": 435.804984,
+                      "defBase": 899.99994,
+                      "hpBase": 106005.68172,
                       "speedBase": 158.4,
                       "critDMG": 0.2,
-                      "effectRES": 0.288,
-                      "ehr": 0.176,
+                      "effectRES": 0.28,
+                      "ehr": 0.16,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 110.03227,
+                      "compACT": 94.98717,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Fire",
@@ -4932,7 +9083,7 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 122796.01332
+                      "compSUM": 106005.68172
                     }
                   ]
                 ],
@@ -4943,8 +9094,8 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_CreateBattleEvent": "30147"
                 },
-                "highSTSUM": 245592.02664,
-                "aoeSUM": 413413.244844
+                "highSTSUM": 212011.36344,
+                "aoeSUM": 356885.795124
               }
             ]
           }
@@ -4962,7 +9113,7 @@ let mocSchedule = [
             "stageDataArray": [
               {
                 "stageName": "Automaton Grizzly",
-                "enemyLevel": 76,
+                "enemyLevel": 73,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
@@ -4983,19 +9134,19 @@ let mocSchedule = [
                       "id": 1002020,
                       "image": 1002020,
                       "rank": "MinionLv2",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 19547.084565,
+                      "attackBase": 470.759724,
+                      "defBase": 929.99991,
+                      "hpBase": 16398.89739,
                       "speedBase": 110,
                       "critDMG": 0.2,
-                      "effectRES": 0.2,
-                      "ehr": 0.208,
+                      "effectRES": 0.192,
+                      "ehr": 0.184,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
+                      "compACT": 117.55482,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Fire",
@@ -5009,26 +9160,26 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 19547.084565
+                      "compSUM": 16398.89739
                     },
                     {
                       "name": "Automaton Grizzly",
                       "id": 1013010,
                       "image": 1013010,
                       "rank": "Elite",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 169408.06623,
+                      "attackBase": 470.759724,
+                      "defBase": 929.99991,
+                      "hpBase": 142123.77738,
                       "speedBase": 132,
                       "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.208,
+                      "effectRES": 0.292,
+                      "ehr": 0.184,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
+                      "compACT": 117.55482,
                       "toughnessBase": 140,
                       "weaknessList": [
                         "Fire",
@@ -5042,7 +9193,7 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 169408.06623
+                      "compSUM": 142123.77738
                     },
                     0
                   ],
@@ -5052,19 +9203,19 @@ let mocSchedule = [
                       "id": 1013010,
                       "image": 1013010,
                       "rank": "Elite",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 169408.06623,
+                      "attackBase": 470.759724,
+                      "defBase": 929.99991,
+                      "hpBase": 142123.77738,
                       "speedBase": 132,
                       "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.208,
+                      "effectRES": 0.292,
+                      "ehr": 0.184,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
+                      "compACT": 117.55482,
                       "toughnessBase": 140,
                       "weaknessList": [
                         "Fire",
@@ -5078,26 +9229,26 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 169408.06623
+                      "compSUM": 142123.77738
                     },
                     {
                       "name": "Cyclonic Swarm Mother",
                       "id": 4053020,
                       "image": 4053020,
                       "rank": "Elite",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 195470.84565,
+                      "attackBase": 470.759724,
+                      "defBase": 929.99991,
+                      "hpBase": 163988.9739,
                       "speedBase": 181.5,
                       "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.208,
+                      "effectRES": 0.292,
+                      "ehr": 0.184,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Quantum",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
+                      "compACT": 117.55482,
                       "toughnessBase": 160,
                       "weaknessList": [
                         "Fire",
@@ -5111,7 +9262,7 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 195470.84565
+                      "compSUM": 163988.9739
                     }
                   ]
                 ],
@@ -5122,8 +9273,8 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_CreateBattleEvent": "30147"
                 },
-                "highSTSUM": 364878.91188,
-                "aoeSUM": 573381.14724
+                "highSTSUM": 306112.75128,
+                "aoeSUM": 481034.32344000007
               }
             ]
           },
@@ -5134,7 +9285,7 @@ let mocSchedule = [
             "stageDataArray": [
               {
                 "stageName": "Dreamjolt Troupe's Beyond Overcooked",
-                "enemyLevel": 76,
+                "enemyLevel": 73,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
@@ -5155,19 +9306,19 @@ let mocSchedule = [
                       "id": 3002020,
                       "image": 3002020,
                       "rank": "MinionLv2",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 29320.6268475,
+                      "attackBase": 470.759724,
+                      "defBase": 929.99991,
+                      "hpBase": 24598.346085,
                       "speedBase": 132,
                       "critDMG": 0.2,
-                      "effectRES": 0.2,
-                      "ehr": 0.208,
+                      "effectRES": 0.192,
+                      "ehr": 0.184,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
+                      "compACT": 117.55482,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Fire",
@@ -5181,26 +9332,26 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 29320.6268475
+                      "compSUM": 24598.346085
                     },
                     {
                       "name": "Dreamjolt Troupe's Beyond Overcooked",
                       "id": 3003010,
                       "image": 3003010,
                       "rank": "Elite",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 234565.01478,
+                      "attackBase": 470.759724,
+                      "defBase": 929.99991,
+                      "hpBase": 196786.76868,
                       "speedBase": 110,
                       "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.208,
+                      "effectRES": 0.292,
+                      "ehr": 0.184,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
+                      "compACT": 117.55482,
                       "toughnessBase": 160,
                       "weaknessList": [
                         "Fire",
@@ -5214,7 +9365,7 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 234565.01478
+                      "compSUM": 196786.76868
                     },
                     0
                   ],
@@ -5224,19 +9375,19 @@ let mocSchedule = [
                       "id": 3003010,
                       "image": 3003010,
                       "rank": "Elite",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 234565.01478,
+                      "attackBase": 470.759724,
+                      "defBase": 929.99991,
+                      "hpBase": 196786.76868,
                       "speedBase": 110,
                       "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.208,
+                      "effectRES": 0.292,
+                      "ehr": 0.184,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
+                      "compACT": 117.55482,
                       "toughnessBase": 160,
                       "weaknessList": [
                         "Fire",
@@ -5250,26 +9401,26 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 234565.01478
+                      "compSUM": 196786.76868
                     },
                     {
                       "name": "Decaying Shadow",
                       "id": 8003040,
                       "image": 8003040,
                       "rank": "Elite",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 130313.8971,
+                      "attackBase": 470.759724,
+                      "defBase": 929.99991,
+                      "hpBase": 109325.9826,
                       "speedBase": 189.2,
                       "critDMG": 0.2,
-                      "effectRES": 0.3,
-                      "ehr": 0.208,
+                      "effectRES": 0.292,
+                      "ehr": 0.184,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
+                      "compACT": 117.55482,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Fire",
@@ -5283,7 +9434,7 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 130313.8971
+                      "compSUM": 109325.9826
                     }
                   ]
                 ],
@@ -5294,8 +9445,8 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_CreateBattleEvent": "30147"
                 },
-                "highSTSUM": 469130.02956,
-                "aoeSUM": 658085.1803550001
+                "highSTSUM": 393573.53736,
+                "aoeSUM": 552096.21213
               }
             ]
           }
@@ -5313,7 +9464,7 @@ let mocSchedule = [
             "stageDataArray": [
               {
                 "stageName": "Howling Casket",
-                "enemyLevel": 80,
+                "enemyLevel": 75,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
@@ -5334,19 +9485,19 @@ let mocSchedule = [
                       "id": 2032020,
                       "image": 2032020,
                       "rank": "MinionLv2",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 34825.514328,
-                      "speedBase": 144,
+                      "attackBase": 494.062902,
+                      "defBase": 950.0001,
+                      "hpBase": 27129.941586,
+                      "speedBase": 132,
                       "critDMG": 0.2,
                       "effectRES": 0.2,
-                      "ehr": 0.24,
+                      "ehr": 0.2,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 145.859901,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Physical",
@@ -5360,26 +9511,26 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 34825.514328
+                      "compSUM": 27129.941586
                     },
                     {
                       "name": "Howling Casket",
                       "id": 2033010,
                       "image": 2033010,
                       "rank": "Elite",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 208953.085968,
-                      "speedBase": 144,
+                      "attackBase": 494.062902,
+                      "defBase": 950.0001,
+                      "hpBase": 162779.649516,
+                      "speedBase": 132,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.24,
+                      "ehr": 0.2,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 145.859901,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Thunder",
@@ -5393,7 +9544,7 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 208953.085968
+                      "compSUM": 162779.649516
                     },
                     0
                   ],
@@ -5403,19 +9554,19 @@ let mocSchedule = [
                       "id": 2033010,
                       "image": 2033010,
                       "rank": "Elite",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 208953.085968,
-                      "speedBase": 144,
+                      "attackBase": 494.062902,
+                      "defBase": 950.0001,
+                      "hpBase": 162779.649516,
+                      "speedBase": 132,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.24,
+                      "ehr": 0.2,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 145.859901,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Thunder",
@@ -5429,26 +9580,26 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 208953.085968
+                      "compSUM": 162779.649516
                     },
                     {
                       "name": "Aurumaton Gatekeeper",
                       "id": 2013010,
                       "image": 2013010,
                       "rank": "Elite",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 174127.57164,
-                      "speedBase": 120,
+                      "attackBase": 494.062902,
+                      "defBase": 950.0001,
+                      "hpBase": 135649.70793,
+                      "speedBase": 110,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.24,
+                      "ehr": 0.2,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 145.859901,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Thunder",
@@ -5462,7 +9613,7 @@ let mocSchedule = [
                         "Imaginary": 0.4
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 174127.57164
+                      "compSUM": 135649.70793
                     }
                   ]
                 ],
@@ -5473,8 +9624,8 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_CreateBattleEvent": "30147"
                 },
-                "highSTSUM": 417906.171936,
-                "aoeSUM": 661684.772232
+                "highSTSUM": 325559.299032,
+                "aoeSUM": 515468.890134
               }
             ]
           },
@@ -5485,7 +9636,7 @@ let mocSchedule = [
             "stageDataArray": [
               {
                 "stageName": "Automaton Direwolf",
-                "enemyLevel": 80,
+                "enemyLevel": 75,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
@@ -5506,19 +9657,19 @@ let mocSchedule = [
                       "id": 1012030,
                       "image": 1012030,
                       "rank": "MinionLv2",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 24377.8600296,
-                      "speedBase": 120,
+                      "attackBase": 494.062902,
+                      "defBase": 950.0001,
+                      "hpBase": 18990.9591102,
+                      "speedBase": 110,
                       "critDMG": 0.2,
                       "effectRES": 0.2,
-                      "ehr": 0.24,
+                      "ehr": 0.2,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 145.859901,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Thunder",
@@ -5532,26 +9683,26 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 24377.8600296
+                      "compSUM": 18990.9591102
                     },
                     {
                       "name": "Automaton Direwolf",
                       "id": 1013020,
                       "image": 1013020,
                       "rank": "Elite",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 191540.328804,
-                      "speedBase": 172.8,
+                      "attackBase": 494.062902,
+                      "defBase": 950.0001,
+                      "hpBase": 149214.678723,
+                      "speedBase": 158.4,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.24,
+                      "ehr": 0.2,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 145.859901,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Ice",
@@ -5565,7 +9716,7 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 191540.328804
+                      "compSUM": 149214.678723
                     },
                     0
                   ],
@@ -5575,19 +9726,19 @@ let mocSchedule = [
                       "id": 1013020,
                       "image": 1013020,
                       "rank": "Elite",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 191540.328804,
-                      "speedBase": 172.8,
+                      "attackBase": 494.062902,
+                      "defBase": 950.0001,
+                      "hpBase": 149214.678723,
+                      "speedBase": 158.4,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.24,
+                      "ehr": 0.2,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 145.859901,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Ice",
@@ -5601,26 +9752,26 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 191540.328804
+                      "compSUM": 149214.678723
                     },
                     {
                       "name": "\"Past Confined and Caged\"",
                       "id": 3003030,
                       "image": 3003030,
                       "rank": "Elite",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 208953.085968,
-                      "speedBase": 120,
+                      "attackBase": 494.062902,
+                      "defBase": 950.0001,
+                      "hpBase": 162779.649516,
+                      "speedBase": 110,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.24,
+                      "ehr": 0.2,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 145.859901,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Fire",
@@ -5634,7 +9785,7 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 208953.085968
+                      "compSUM": 162779.649516
                     }
                   ]
                 ],
@@ -5645,8 +9796,8 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_CreateBattleEvent": "30147"
                 },
-                "highSTSUM": 400493.414772,
-                "aoeSUM": 640789.4636351999
+                "highSTSUM": 311994.328239,
+                "aoeSUM": 499190.9251824
               }
             ]
           }
@@ -5664,7 +9815,7 @@ let mocSchedule = [
             "stageDataArray": [
               {
                 "stageName": "Black Tide's Champion",
-                "enemyLevel": 84,
+                "enemyLevel": 78,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
@@ -5685,19 +9836,19 @@ let mocSchedule = [
                       "id": 4032040,
                       "image": 4032040,
                       "rank": "MinionLv2",
-                      "attackBase": 574.747254,
-                      "defBase": 1040.00001,
-                      "hpBase": 86424.96324,
+                      "attackBase": 529.017624,
+                      "defBase": 980.00007,
+                      "hpBase": 63494.569644,
                       "speedBase": 186,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.272,
+                      "ehr": 0.224,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 232.32517,
+                      "compACT": 170.68432700000002,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Fire",
@@ -5711,26 +9862,26 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 86424.96324
+                      "compSUM": 63494.569644
                     },
                     {
                       "name": "Black Tide's Champion",
                       "id": 4033020,
                       "image": 4033020,
                       "rank": "Elite",
-                      "attackBase": 574.747254,
-                      "defBase": 1040.00001,
-                      "hpBase": 388912.33458,
+                      "attackBase": 529.017624,
+                      "defBase": 980.00007,
+                      "hpBase": 285725.563398,
                       "speedBase": 158.4,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.272,
+                      "ehr": 0.224,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 232.32517,
+                      "compACT": 170.68432700000002,
                       "toughnessBase": 160,
                       "weaknessList": [
                         "Physical",
@@ -5744,7 +9895,7 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 388912.33458
+                      "compSUM": 285725.563398
                     },
                     0
                   ],
@@ -5754,19 +9905,19 @@ let mocSchedule = [
                       "id": 4033020,
                       "image": 4033020,
                       "rank": "Elite",
-                      "attackBase": 574.747254,
-                      "defBase": 1040.00001,
-                      "hpBase": 388912.33458,
+                      "attackBase": 529.017624,
+                      "defBase": 980.00007,
+                      "hpBase": 285725.563398,
                       "speedBase": 158.4,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.272,
+                      "ehr": 0.224,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 232.32517,
+                      "compACT": 170.68432700000002,
                       "toughnessBase": 160,
                       "weaknessList": [
                         "Physical",
@@ -5780,26 +9931,26 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 388912.33458
+                      "compSUM": 285725.563398
                     },
                     {
                       "name": "Decaying Shadow",
                       "id": 8003040,
                       "image": 8003040,
                       "rank": "Elite",
-                      "attackBase": 574.747254,
-                      "defBase": 1040.00001,
-                      "hpBase": 216062.4081,
+                      "attackBase": 529.017624,
+                      "defBase": 980.00007,
+                      "hpBase": 158736.42411,
                       "speedBase": 206.4,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.272,
+                      "ehr": 0.224,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 232.32517,
+                      "compACT": 170.68432700000002,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Fire",
@@ -5813,7 +9964,7 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 216062.4081
+                      "compSUM": 158736.42411
                     }
                   ]
                 ],
@@ -5824,8 +9975,8 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_CreateBattleEvent": "30147"
                 },
-                "highSTSUM": 777824.66916,
-                "aoeSUM": 1166737.00374
+                "highSTSUM": 571451.126796,
+                "aoeSUM": 857176.690194
               }
             ]
           },
@@ -5836,7 +9987,7 @@ let mocSchedule = [
             "stageDataArray": [
               {
                 "stageName": "Silvermane Lieutenant",
-                "enemyLevel": 84,
+                "enemyLevel": 78,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
@@ -5857,19 +10008,19 @@ let mocSchedule = [
                       "id": 1002050,
                       "image": 1002050,
                       "rank": "MinionLv2",
-                      "attackBase": 574.747254,
-                      "defBase": 1040.00001,
-                      "hpBase": 23766.864891,
+                      "attackBase": 529.017624,
+                      "defBase": 980.00007,
+                      "hpBase": 17461.0066521,
                       "speedBase": 120,
                       "critDMG": 0.2,
                       "effectRES": 0.2,
-                      "ehr": 0.272,
+                      "ehr": 0.224,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 232.32517,
+                      "compACT": 170.68432700000002,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Physical",
@@ -5883,26 +10034,26 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 23766.864891
+                      "compSUM": 17461.0066521
                     },
                     {
                       "name": "Silvermane Lieutenant",
                       "id": 1003010,
                       "image": 1003010,
                       "rank": "Elite",
-                      "attackBase": 574.747254,
-                      "defBase": 1040.00001,
-                      "hpBase": 216062.4081,
+                      "attackBase": 529.017624,
+                      "defBase": 980.00007,
+                      "hpBase": 158736.42411,
                       "speedBase": 144,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.272,
+                      "ehr": 0.224,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 232.32517,
+                      "compACT": 170.68432700000002,
                       "toughnessBase": 80,
                       "weaknessList": [
                         "Physical",
@@ -5916,7 +10067,7 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 216062.4081
+                      "compSUM": 158736.42411
                     },
                     0
                   ],
@@ -5926,19 +10077,19 @@ let mocSchedule = [
                       "id": 1003010,
                       "image": 1003010,
                       "rank": "Elite",
-                      "attackBase": 574.747254,
-                      "defBase": 1040.00001,
-                      "hpBase": 216062.4081,
+                      "attackBase": 529.017624,
+                      "defBase": 980.00007,
+                      "hpBase": 158736.42411,
                       "speedBase": 144,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.272,
+                      "ehr": 0.224,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 232.32517,
+                      "compACT": 170.68432700000002,
                       "toughnessBase": 80,
                       "weaknessList": [
                         "Physical",
@@ -5952,26 +10103,26 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 216062.4081
+                      "compSUM": 158736.42411
                     },
                     {
                       "name": "The Ascended",
                       "id": 2023030,
                       "image": 2023030,
                       "rank": "Elite",
-                      "attackBase": 574.747254,
-                      "defBase": 1040.00001,
-                      "hpBase": 237668.64891,
+                      "attackBase": 529.017624,
+                      "defBase": 980.00007,
+                      "hpBase": 174610.066521,
                       "speedBase": 144,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.272,
+                      "ehr": 0.224,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 232.32517,
+                      "compACT": 170.68432700000002,
                       "toughnessBase": 140,
                       "weaknessList": [
                         "Physical",
@@ -5985,7 +10136,7 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 237668.64891
+                      "compSUM": 174610.066521
                     }
                   ]
                 ],
@@ -5996,8 +10147,8 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_CreateBattleEvent": "30147"
                 },
-                "highSTSUM": 453731.05701,
-                "aoeSUM": 717327.1948919999
+                "highSTSUM": 333346.490631,
+                "aoeSUM": 527004.9280452
               }
             ]
           }
@@ -6015,7 +10166,7 @@ let mocSchedule = [
             "stageDataArray": [
               {
                 "stageName": "Black Tide's Corroded Daemon",
-                "enemyLevel": 68,
+                "enemyLevel": 80,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
@@ -6036,19 +10187,19 @@ let mocSchedule = [
                       "id": 4022010,
                       "image": 4022010,
                       "rank": "MinionLv2",
-                      "attackBase": 416.304594,
-                      "defBase": 879.99996,
-                      "hpBase": 24143.14224,
-                      "speedBase": 110,
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": 47489.33772,
+                      "speedBase": 120,
                       "critDMG": 0.2,
-                      "effectRES": 0.272,
-                      "ehr": 0.144,
+                      "effectRES": 0.3,
+                      "ehr": 0.24,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Wind",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 86.53456,
+                      "compACT": 170.21268,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Wind",
@@ -6062,26 +10213,26 @@ let mocSchedule = [
                         "Thunder": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 24143.14224
+                      "compSUM": 47489.33772
                     },
                     {
                       "name": "Black Tide's Corroded Daemon",
                       "id": 4033010,
                       "image": 4033010,
                       "rank": "Elite",
-                      "attackBase": 416.304594,
-                      "defBase": 879.99996,
-                      "hpBase": 112667.99712,
-                      "speedBase": 132,
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": 221616.90936,
+                      "speedBase": 144,
                       "critDMG": 0.2,
-                      "effectRES": 0.272,
-                      "ehr": 0.144,
+                      "effectRES": 0.3,
+                      "ehr": 0.24,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 86.53456,
+                      "compACT": 170.21268,
                       "toughnessBase": 160,
                       "weaknessList": [
                         "Physical",
@@ -6095,7 +10246,7 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 112667.99712
+                      "compSUM": 221616.90936
                     },
                     0
                   ],
@@ -6105,19 +10256,19 @@ let mocSchedule = [
                       "id": 4033010,
                       "image": 4033010,
                       "rank": "Elite",
-                      "attackBase": 416.304594,
-                      "defBase": 879.99996,
-                      "hpBase": 112667.99712,
-                      "speedBase": 132,
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": 221616.90936,
+                      "speedBase": 144,
                       "critDMG": 0.2,
-                      "effectRES": 0.272,
-                      "ehr": 0.144,
+                      "effectRES": 0.3,
+                      "ehr": 0.24,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 86.53456,
+                      "compACT": 170.21268,
                       "toughnessBase": 160,
                       "weaknessList": [
                         "Physical",
@@ -6131,26 +10282,26 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 112667.99712
+                      "compSUM": 221616.90936
                     },
                     {
                       "name": "Guardian Shadow",
                       "id": 8003030,
                       "image": 8003030,
                       "rank": "Elite",
-                      "attackBase": 416.304594,
-                      "defBase": 879.99996,
-                      "hpBase": 88524.85488,
-                      "speedBase": 132,
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": 174127.57164,
+                      "speedBase": 144,
                       "critDMG": 0.2,
-                      "effectRES": 0.272,
-                      "ehr": 0.144,
+                      "effectRES": 0.3,
+                      "ehr": 0.24,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 86.53456,
+                      "compACT": 170.21268,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Physical",
@@ -6164,7 +10315,7 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 88524.85488
+                      "compSUM": 174127.57164
                     }
                   ]
                 ],
@@ -6175,8 +10326,8 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_CreateBattleEvent": "30147"
                 },
-                "highSTSUM": 225335.99424,
-                "aoeSUM": 362147.1336
+                "highSTSUM": 443233.81872,
+                "aoeSUM": 712340.0658
               }
             ]
           },
@@ -6187,7 +10338,7 @@ let mocSchedule = [
             "stageDataArray": [
               {
                 "stageName": "Voidranger: Trampler",
-                "enemyLevel": 68,
+                "enemyLevel": 80,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
@@ -6208,19 +10359,19 @@ let mocSchedule = [
                       "id": 8012010,
                       "image": 8012010,
                       "rank": "MinionLv2",
-                      "attackBase": 416.304594,
-                      "defBase": 879.99996,
-                      "hpBase": 12071.57112,
-                      "speedBase": 110,
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": 23744.66886,
+                      "speedBase": 120,
                       "critDMG": 0.2,
-                      "effectRES": 0.172,
-                      "ehr": 0.144,
+                      "effectRES": 0.2,
+                      "ehr": 0.24,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 86.53456,
+                      "compACT": 170.21268,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Physical",
@@ -6234,26 +10385,26 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 12071.57112
+                      "compSUM": 23744.66886
                     },
                     {
                       "name": "Voidranger: Trampler",
                       "id": 8013010,
                       "image": 8013010,
                       "rank": "Elite",
-                      "attackBase": 416.304594,
-                      "defBase": 879.99996,
-                      "hpBase": 88524.85488,
-                      "speedBase": 110,
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": 174127.57164,
+                      "speedBase": 120,
                       "critDMG": 0.2,
-                      "effectRES": 0.272,
-                      "ehr": 0.144,
+                      "effectRES": 0.3,
+                      "ehr": 0.24,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 86.53456,
+                      "compACT": 170.21268,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Physical",
@@ -6267,7 +10418,7 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 88524.85488
+                      "compSUM": 174127.57164
                     },
                     0
                   ],
@@ -6277,19 +10428,19 @@ let mocSchedule = [
                       "id": 8013010,
                       "image": 8013010,
                       "rank": "Elite",
-                      "attackBase": 416.304594,
-                      "defBase": 879.99996,
-                      "hpBase": 88524.85488,
-                      "speedBase": 110,
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": 174127.57164,
+                      "speedBase": 120,
                       "critDMG": 0.2,
-                      "effectRES": 0.272,
-                      "ehr": 0.144,
+                      "effectRES": 0.3,
+                      "ehr": 0.24,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 86.53456,
+                      "compACT": 170.21268,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Physical",
@@ -6303,26 +10454,26 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 88524.85488
+                      "compSUM": 174127.57164
                     },
                     {
                       "name": "\"Present Inebriated in Revelry\"",
                       "id": 3003050,
                       "image": 3003050,
                       "rank": "Elite",
-                      "attackBase": 416.304594,
-                      "defBase": 879.99996,
-                      "hpBase": 96572.56896,
-                      "speedBase": 132,
+                      "attackBase": 552.320784,
+                      "defBase": 1000.00005,
+                      "hpBase": 189957.35088,
+                      "speedBase": 144,
                       "critDMG": 0.2,
-                      "effectRES": 0.272,
-                      "ehr": 0.144,
+                      "effectRES": 0.3,
+                      "ehr": 0.24,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 86.53456,
+                      "compACT": 170.21268,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Physical",
@@ -6336,7 +10487,7 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 96572.56896
+                      "compSUM": 189957.35088
                     }
                   ]
                 ],
@@ -6347,8 +10498,8 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_CreateBattleEvent": "30147"
                 },
-                "highSTSUM": 185097.42384,
-                "aoeSUM": 297765.42096
+                "highSTSUM": 364084.92252,
+                "aoeSUM": 585701.8318800001
               }
             ]
           }
@@ -6366,7 +10517,7 @@ let mocSchedule = [
             "stageDataArray": [
               {
                 "stageName": "Rocking Rebel",
-                "enemyLevel": 72,
+                "enemyLevel": 82,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
@@ -6387,19 +10538,19 @@ let mocSchedule = [
                       "id": 5012030,
                       "image": 5012030,
                       "rank": "MinionLv2",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 25582.502775,
-                      "speedBase": 110,
+                      "attackBase": 563.422446,
+                      "defBase": 1020.00003,
+                      "hpBase": 44107.451775,
+                      "speedBase": 120,
                       "critDMG": 0.2,
-                      "effectRES": 0.188,
-                      "ehr": 0.176,
+                      "effectRES": 0.2,
+                      "ehr": 0.256,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 110.03227,
+                      "compACT": 189.70947,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Physical",
@@ -6413,26 +10564,26 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 25582.502775
+                      "compSUM": 44107.451775
                     },
                     {
                       "name": "Rocking Rebel",
                       "id": 5013010,
                       "image": 5013010,
                       "rank": "Elite",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 184194.01998,
-                      "speedBase": 145.2,
+                      "attackBase": 563.422446,
+                      "defBase": 1020.00003,
+                      "hpBase": 317573.65278,
+                      "speedBase": 158.4,
                       "critDMG": 0.2,
-                      "effectRES": 0.288,
-                      "ehr": 0.176,
+                      "effectRES": 0.3,
+                      "ehr": 0.256,
                       "delay": 0.25,
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 110.03227,
+                      "compACT": 189.70947,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Physical",
@@ -6446,7 +10597,7 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 184194.01998
+                      "compSUM": 317573.65278
                     },
                     0
                   ],
@@ -6456,19 +10607,19 @@ let mocSchedule = [
                       "id": 5013010,
                       "image": 5013010,
                       "rank": "Elite",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 184194.01998,
-                      "speedBase": 145.2,
+                      "attackBase": 563.422446,
+                      "defBase": 1020.00003,
+                      "hpBase": 317573.65278,
+                      "speedBase": 158.4,
                       "critDMG": 0.2,
-                      "effectRES": 0.288,
-                      "ehr": 0.176,
+                      "effectRES": 0.3,
+                      "ehr": 0.256,
                       "delay": 0.25,
                       "toughnessBars": 1,
                       "toughnessElement": "Imaginary",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 110.03227,
+                      "compACT": 189.70947,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Physical",
@@ -6482,26 +10633,26 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 184194.01998
+                      "compSUM": 317573.65278
                     },
                     {
                       "name": "Lady of Crashing Waves",
                       "id": 4053010,
                       "image": 4053010,
                       "rank": "Elite",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 153495.01665,
-                      "speedBase": 158.4,
+                      "attackBase": 563.422446,
+                      "defBase": 1020.00003,
+                      "hpBase": 264644.71065,
+                      "speedBase": 172.8,
                       "critDMG": 0.2,
-                      "effectRES": 0.288,
-                      "ehr": 0.176,
+                      "effectRES": 0.3,
+                      "ehr": 0.256,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Ice",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 110.03227,
+                      "compACT": 189.70947,
                       "toughnessBase": 180,
                       "weaknessList": [
                         "Physical",
@@ -6515,7 +10666,7 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 153495.01665
+                      "compSUM": 264644.71065
                     }
                   ]
                 ],
@@ -6526,8 +10677,8 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_CreateBattleEvent": "30147"
                 },
-                "highSTSUM": 368388.03996,
-                "aoeSUM": 573048.06216
+                "highSTSUM": 635147.30556,
+                "aoeSUM": 988006.9197600001
               }
             ]
           },
@@ -6538,7 +10689,7 @@ let mocSchedule = [
             "stageDataArray": [
               {
                 "stageName": "Disciples of Sanctus Medicus: Shape Shifter",
-                "enemyLevel": 72,
+                "enemyLevel": 82,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
@@ -6559,19 +10710,19 @@ let mocSchedule = [
                       "id": 2022060,
                       "image": 2022060,
                       "rank": "MinionLv2",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 22512.602442,
-                      "speedBase": 91.3,
+                      "attackBase": 563.422446,
+                      "defBase": 1020.00003,
+                      "hpBase": 38814.557562,
+                      "speedBase": 99.6,
                       "critDMG": 0.2,
-                      "effectRES": 0.188,
-                      "ehr": 0.176,
+                      "effectRES": 0.2,
+                      "ehr": 0.256,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 110.03227,
+                      "compACT": 189.70947,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Physical",
@@ -6585,26 +10736,26 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 22512.602442
+                      "compSUM": 38814.557562
                     },
                     {
                       "name": "Disciples of Sanctus Medicus: Shape Shifter",
                       "id": 2023010,
                       "image": 2023010,
                       "rank": "Elite",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 122796.01332,
-                      "speedBase": 132,
+                      "attackBase": 563.422446,
+                      "defBase": 1020.00003,
+                      "hpBase": 211715.76852,
+                      "speedBase": 144,
                       "critDMG": 0.2,
-                      "effectRES": 0.288,
-                      "ehr": 0.176,
+                      "effectRES": 0.3,
+                      "ehr": 0.256,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 110.03227,
+                      "compACT": 189.70947,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Ice",
@@ -6618,7 +10769,7 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 122796.01332
+                      "compSUM": 211715.76852
                     },
                     0
                   ],
@@ -6628,19 +10779,19 @@ let mocSchedule = [
                       "id": 2023010,
                       "image": 2023010,
                       "rank": "Elite",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 122796.01332,
-                      "speedBase": 132,
+                      "attackBase": 563.422446,
+                      "defBase": 1020.00003,
+                      "hpBase": 211715.76852,
+                      "speedBase": 144,
                       "critDMG": 0.2,
-                      "effectRES": 0.288,
-                      "ehr": 0.176,
+                      "effectRES": 0.3,
+                      "ehr": 0.256,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 110.03227,
+                      "compACT": 189.70947,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Ice",
@@ -6654,26 +10805,26 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 122796.01332
+                      "compSUM": 211715.76852
                     },
                     {
                       "name": "Abundance Sprite: Malefic Ape",
                       "id": 2023020,
                       "image": 2023020,
                       "rank": "Elite",
-                      "attackBase": 459.108144,
-                      "defBase": 919.99992,
-                      "hpBase": 122796.01332,
-                      "speedBase": 158.4,
+                      "attackBase": 563.422446,
+                      "defBase": 1020.00003,
+                      "hpBase": 211715.76852,
+                      "speedBase": 172.8,
                       "critDMG": 0.2,
-                      "effectRES": 0.288,
-                      "ehr": 0.176,
+                      "effectRES": 0.3,
+                      "ehr": 0.256,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 110.03227,
+                      "compACT": 189.70947,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Fire",
@@ -6687,7 +10838,7 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 122796.01332
+                      "compSUM": 211715.76852
                     }
                   ]
                 ],
@@ -6698,8 +10849,8 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_CreateBattleEvent": "30147"
                 },
-                "highSTSUM": 245592.02664,
-                "aoeSUM": 413413.244844
+                "highSTSUM": 423431.53704,
+                "aoeSUM": 712776.4206840001
               }
             ]
           }
@@ -6717,7 +10868,7 @@ let mocSchedule = [
             "stageDataArray": [
               {
                 "stageName": "Automaton Grizzly",
-                "enemyLevel": 76,
+                "enemyLevel": 85,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
@@ -6738,19 +10889,19 @@ let mocSchedule = [
                       "id": 1002020,
                       "image": 1002020,
                       "rank": "MinionLv2",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 19547.084565,
-                      "speedBase": 110,
+                      "attackBase": 580.494708,
+                      "defBase": 1050,
+                      "hpBase": 31075.70913,
+                      "speedBase": 120,
                       "critDMG": 0.2,
                       "effectRES": 0.2,
-                      "ehr": 0.208,
+                      "ehr": 0.28,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
+                      "compACT": 222.76494,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Fire",
@@ -6764,26 +10915,26 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 19547.084565
+                      "compSUM": 31075.70913
                     },
                     {
                       "name": "Automaton Grizzly",
                       "id": 1013010,
                       "image": 1013010,
                       "rank": "Elite",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 169408.06623,
-                      "speedBase": 132,
+                      "attackBase": 580.494708,
+                      "defBase": 1050,
+                      "hpBase": 269322.81246,
+                      "speedBase": 144,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.208,
+                      "ehr": 0.28,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
+                      "compACT": 222.76494,
                       "toughnessBase": 140,
                       "weaknessList": [
                         "Fire",
@@ -6797,7 +10948,7 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 169408.06623
+                      "compSUM": 269322.81246
                     },
                     0
                   ],
@@ -6807,19 +10958,19 @@ let mocSchedule = [
                       "id": 1013010,
                       "image": 1013010,
                       "rank": "Elite",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 169408.06623,
-                      "speedBase": 132,
+                      "attackBase": 580.494708,
+                      "defBase": 1050,
+                      "hpBase": 269322.81246,
+                      "speedBase": 144,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.208,
+                      "ehr": 0.28,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
+                      "compACT": 222.76494,
                       "toughnessBase": 140,
                       "weaknessList": [
                         "Fire",
@@ -6833,26 +10984,26 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 169408.06623
+                      "compSUM": 269322.81246
                     },
                     {
                       "name": "Cyclonic Swarm Mother",
                       "id": 4053020,
                       "image": 4053020,
                       "rank": "Elite",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 195470.84565,
-                      "speedBase": 181.5,
+                      "attackBase": 580.494708,
+                      "defBase": 1050,
+                      "hpBase": 310757.0913,
+                      "speedBase": 198,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.208,
+                      "ehr": 0.28,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Quantum",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
+                      "compACT": 222.76494,
                       "toughnessBase": 160,
                       "weaknessList": [
                         "Fire",
@@ -6866,7 +11017,7 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 195470.84565
+                      "compSUM": 310757.0913
                     }
                   ]
                 ],
@@ -6877,8 +11028,8 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_CreateBattleEvent": "30147"
                 },
-                "highSTSUM": 364878.91188,
-                "aoeSUM": 573381.14724
+                "highSTSUM": 580079.9037599999,
+                "aoeSUM": 911554.1344799999
               }
             ]
           },
@@ -6889,7 +11040,7 @@ let mocSchedule = [
             "stageDataArray": [
               {
                 "stageName": "Dreamjolt Troupe's Beyond Overcooked",
-                "enemyLevel": 76,
+                "enemyLevel": 85,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
@@ -6910,19 +11061,19 @@ let mocSchedule = [
                       "id": 3002020,
                       "image": 3002020,
                       "rank": "MinionLv2",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 29320.6268475,
-                      "speedBase": 132,
+                      "attackBase": 580.494708,
+                      "defBase": 1050,
+                      "hpBase": 46613.563695,
+                      "speedBase": 144,
                       "critDMG": 0.2,
                       "effectRES": 0.2,
-                      "ehr": 0.208,
+                      "ehr": 0.28,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
+                      "compACT": 222.76494,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Fire",
@@ -6936,26 +11087,26 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 29320.6268475
+                      "compSUM": 46613.563695
                     },
                     {
                       "name": "Dreamjolt Troupe's Beyond Overcooked",
                       "id": 3003010,
                       "image": 3003010,
                       "rank": "Elite",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 234565.01478,
-                      "speedBase": 110,
+                      "attackBase": 580.494708,
+                      "defBase": 1050,
+                      "hpBase": 372908.50956,
+                      "speedBase": 120,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.208,
+                      "ehr": 0.28,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
+                      "compACT": 222.76494,
                       "toughnessBase": 160,
                       "weaknessList": [
                         "Fire",
@@ -6969,7 +11120,7 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 234565.01478
+                      "compSUM": 372908.50956
                     },
                     0
                   ],
@@ -6979,19 +11130,19 @@ let mocSchedule = [
                       "id": 3003010,
                       "image": 3003010,
                       "rank": "Elite",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 234565.01478,
-                      "speedBase": 110,
+                      "attackBase": 580.494708,
+                      "defBase": 1050,
+                      "hpBase": 372908.50956,
+                      "speedBase": 120,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.208,
+                      "ehr": 0.28,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
+                      "compACT": 222.76494,
                       "toughnessBase": 160,
                       "weaknessList": [
                         "Fire",
@@ -7005,26 +11156,26 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 234565.01478
+                      "compSUM": 372908.50956
                     },
                     {
                       "name": "Decaying Shadow",
                       "id": 8003040,
                       "image": 8003040,
                       "rank": "Elite",
-                      "attackBase": 505.714446,
-                      "defBase": 960.00009,
-                      "hpBase": 130313.8971,
-                      "speedBase": 189.2,
+                      "attackBase": 580.494708,
+                      "defBase": 1050,
+                      "hpBase": 207171.3942,
+                      "speedBase": 206.4,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.208,
+                      "ehr": 0.28,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 140.12247,
+                      "compACT": 222.76494,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Fire",
@@ -7038,7 +11189,7 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 130313.8971
+                      "compSUM": 207171.3942
                     }
                   ]
                 ],
@@ -7049,8 +11200,8 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_CreateBattleEvent": "30147"
                 },
-                "highSTSUM": 469130.02956,
-                "aoeSUM": 658085.1803550001
+                "highSTSUM": 745817.01912,
+                "aoeSUM": 1046215.54071
               }
             ]
           }
@@ -7068,7 +11219,7 @@ let mocSchedule = [
             "stageDataArray": [
               {
                 "stageName": "Howling Casket",
-                "enemyLevel": 80,
+                "enemyLevel": 88,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
@@ -7089,19 +11240,19 @@ let mocSchedule = [
                       "id": 2032020,
                       "image": 2032020,
                       "rank": "MinionLv2",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 34825.514328,
-                      "speedBase": 144,
+                      "attackBase": 598.084308,
+                      "defBase": 1079.99997,
+                      "hpBase": 53406.893496,
+                      "speedBase": 158.4,
                       "critDMG": 0.2,
                       "effectRES": 0.2,
-                      "ehr": 0.24,
+                      "ehr": 0.304,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 287.13383600000003,
                       "toughnessBase": 30,
                       "weaknessList": [
                         "Physical",
@@ -7115,26 +11266,26 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 34825.514328
+                      "compSUM": 53406.893496
                     },
                     {
                       "name": "Howling Casket",
                       "id": 2033010,
                       "image": 2033010,
                       "rank": "Elite",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 208953.085968,
-                      "speedBase": 144,
+                      "attackBase": 598.084308,
+                      "defBase": 1079.99997,
+                      "hpBase": 320441.360976,
+                      "speedBase": 158.4,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.24,
+                      "ehr": 0.304,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 287.13383600000003,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Thunder",
@@ -7148,7 +11299,7 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 208953.085968
+                      "compSUM": 320441.360976
                     },
                     0
                   ],
@@ -7158,19 +11309,19 @@ let mocSchedule = [
                       "id": 2033010,
                       "image": 2033010,
                       "rank": "Elite",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 208953.085968,
-                      "speedBase": 144,
+                      "attackBase": 598.084308,
+                      "defBase": 1079.99997,
+                      "hpBase": 320441.360976,
+                      "speedBase": 158.4,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.24,
+                      "ehr": 0.304,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 287.13383600000003,
                       "toughnessBase": 120,
                       "weaknessList": [
                         "Thunder",
@@ -7184,26 +11335,26 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 208953.085968
+                      "compSUM": 320441.360976
                     },
                     {
                       "name": "Aurumaton Gatekeeper",
                       "id": 2013010,
                       "image": 2013010,
                       "rank": "Elite",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 174127.57164,
-                      "speedBase": 120,
+                      "attackBase": 598.084308,
+                      "defBase": 1079.99997,
+                      "hpBase": 267034.46748,
+                      "speedBase": 132,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.24,
+                      "ehr": 0.304,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 287.13383600000003,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Thunder",
@@ -7217,7 +11368,7 @@ let mocSchedule = [
                         "Imaginary": 0.4
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 174127.57164
+                      "compSUM": 267034.46748
                     }
                   ]
                 ],
@@ -7228,8 +11379,8 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_CreateBattleEvent": "30147"
                 },
-                "highSTSUM": 417906.171936,
-                "aoeSUM": 661684.772232
+                "highSTSUM": 640882.721952,
+                "aoeSUM": 1014730.976424
               }
             ]
           },
@@ -7240,7 +11391,7 @@ let mocSchedule = [
             "stageDataArray": [
               {
                 "stageName": "Automaton Direwolf",
-                "enemyLevel": 80,
+                "enemyLevel": 88,
                 "modifiersToAdd": [],
                 "buffOverride": null,
                 "battleEventAbilities": [
@@ -7261,19 +11412,19 @@ let mocSchedule = [
                       "id": 1012030,
                       "image": 1012030,
                       "rank": "MinionLv2",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 24377.8600296,
-                      "speedBase": 120,
+                      "attackBase": 598.084308,
+                      "defBase": 1079.99997,
+                      "hpBase": 37384.8254472,
+                      "speedBase": 132,
                       "critDMG": 0.2,
                       "effectRES": 0.2,
-                      "ehr": 0.24,
+                      "ehr": 0.304,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 287.13383600000003,
                       "toughnessBase": 20,
                       "weaknessList": [
                         "Thunder",
@@ -7287,26 +11438,26 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 24377.8600296
+                      "compSUM": 37384.8254472
                     },
                     {
                       "name": "Automaton Direwolf",
                       "id": 1013020,
                       "image": 1013020,
                       "rank": "Elite",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 191540.328804,
-                      "speedBase": 172.8,
+                      "attackBase": 598.084308,
+                      "defBase": 1079.99997,
+                      "hpBase": 293737.914228,
+                      "speedBase": 190.08,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.24,
+                      "ehr": 0.304,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 287.13383600000003,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Ice",
@@ -7320,7 +11471,7 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 191540.328804
+                      "compSUM": 293737.914228
                     },
                     0
                   ],
@@ -7330,19 +11481,19 @@ let mocSchedule = [
                       "id": 1013020,
                       "image": 1013020,
                       "rank": "Elite",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 191540.328804,
-                      "speedBase": 172.8,
+                      "attackBase": 598.084308,
+                      "defBase": 1079.99997,
+                      "hpBase": 293737.914228,
+                      "speedBase": 190.08,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.24,
+                      "ehr": 0.304,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 287.13383600000003,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Ice",
@@ -7356,26 +11507,26 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 191540.328804
+                      "compSUM": 293737.914228
                     },
                     {
                       "name": "\"Past Confined and Caged\"",
                       "id": 3003030,
                       "image": 3003030,
                       "rank": "Elite",
-                      "attackBase": 552.320784,
-                      "defBase": 1000.00005,
-                      "hpBase": 208953.085968,
-                      "speedBase": 120,
+                      "attackBase": 598.084308,
+                      "defBase": 1079.99997,
+                      "hpBase": 320441.360976,
+                      "speedBase": 132,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
-                      "ehr": 0.24,
+                      "ehr": 0.304,
                       "delay": 1,
                       "toughnessBars": 1,
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 187.23394800000003,
+                      "compACT": 287.13383600000003,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Fire",
@@ -7389,7 +11540,7 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 208953.085968
+                      "compSUM": 320441.360976
                     }
                   ]
                 ],
@@ -7400,8 +11551,8 @@ let mocSchedule = [
                   "_IsEliteBattle": "1",
                   "_CreateBattleEvent": "30147"
                 },
-                "highSTSUM": 400493.414772,
-                "aoeSUM": 640789.4636351999
+                "highSTSUM": 614179.2752040001,
+                "aoeSUM": 982686.8403264
               }
             ]
           }
@@ -8307,7 +12458,7 @@ let mocSchedule = [
                       "rank": "Elite",
                       "attackBase": 625.5117,
                       "defBase": 1149.9999,
-                      "hpBase": 3100521.3084,
+                      "hpBase": 3226218.1182,
                       "speedBase": 158.4,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
@@ -8317,7 +12468,7 @@ let mocSchedule = [
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 2778.2449,
+                      "compACT": 2890.8764499999997,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Physical",
@@ -8331,7 +12482,7 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 3100521.3084
+                      "compSUM": 3226218.1182
                     },
                     {
                       "name": "\"Tomorrow in Harmonious Chords\"",
@@ -8340,7 +12491,7 @@ let mocSchedule = [
                       "rank": "Elite",
                       "attackBase": 625.5117,
                       "defBase": 1149.9999,
-                      "hpBase": 3100521.3084,
+                      "hpBase": 3226218.1182,
                       "speedBase": 132,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
@@ -8350,7 +12501,7 @@ let mocSchedule = [
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 2778.2449,
+                      "compACT": 2890.8764499999997,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Physical",
@@ -8364,7 +12515,7 @@ let mocSchedule = [
                         "Imaginary": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 3100521.3084
+                      "compSUM": 3226218.1182
                     },
                     {
                       "name": "\"Past Confined and Caged\"",
@@ -8373,7 +12524,7 @@ let mocSchedule = [
                       "rank": "Elite",
                       "attackBase": 625.5117,
                       "defBase": 1149.9999,
-                      "hpBase": 3100521.3084,
+                      "hpBase": 3226218.1182,
                       "speedBase": 132,
                       "critDMG": 0.2,
                       "effectRES": 0.3,
@@ -8383,7 +12534,7 @@ let mocSchedule = [
                       "toughnessElement": "Physical",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 2778.2449,
+                      "compACT": 2890.8764499999997,
                       "toughnessBase": 100,
                       "weaknessList": [
                         "Fire",
@@ -8397,7 +12548,7 @@ let mocSchedule = [
                         "Quantum": 0.2
                       },
                       "resistancesDebuff": {},
-                      "compSUM": 3100521.3084
+                      "compSUM": 3226218.1182
                     }
                   ],
                   [
@@ -8408,7 +12559,7 @@ let mocSchedule = [
                       "rank": "LittleBoss",
                       "attackBase": 625.5117,
                       "defBase": 1149.9999,
-                      "hpBase": 20670142.056,
+                      "hpBase": 21508120.788,
                       "speedBase": 190.08,
                       "critDMG": 0.2,
                       "effectRES": 0.4,
@@ -8418,7 +12569,7 @@ let mocSchedule = [
                       "toughnessElement": "Fire",
                       "hpBars": 1,
                       "compEN": 1,
-                      "compACT": 2778.2449,
+                      "compACT": 2890.8764499999997,
                       "toughnessBase": 200,
                       "weaknessList": [
                         "Physical",
@@ -8434,19 +12585,19 @@ let mocSchedule = [
                       "resistancesDebuff": {
                         "STAT_CTRL": 0.5
                       },
-                      "compSUM": 20670142.056
+                      "compSUM": 21508120.788
                     }
                   ]
                 ],
-                "scalarElite": 167,
+                "scalarElite": 168,
                 "scalarHard": 3,
                 "configData": {
                   "_Wave": "2",
                   "_IsEliteBattle": "1",
                   "_CreateBattleEvent": "30147"
                 },
-                "highSTSUM": 23770663.364400003,
-                "aoeSUM": 29971705.981200002
+                "highSTSUM": 24734338.9062,
+                "aoeSUM": 31186775.1426
               }
             ]
           },

@@ -12,8 +12,6 @@ const configAbility = {
       "name": "Lock Battle Actions"
     },
     "Unknown EventType2 (Not always an error)[1 false]",
-    "Unknown EventType3 (Not always an error)",
-    "Unknown EventType3 (Not always an error)[1 false]",
     "Unknown EventType1 (Not always an error)[1 false][2 true]",
     {
       "name": "Lock Battle Actions",

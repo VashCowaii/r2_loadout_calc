@@ -186,7 +186,7 @@ const compositeAbilityObject = {
         }
       ],
       "isLightcone": true,
-      "desc": "Increases the wearer's Max HP by #1[i]%. After the wearer uses Ultimate, recovers 1 Skill Point for allies. When entering combat, advances the wearer's action by #2[i]% and grants the wearer \"New Melody,\" lasting for #4[i] turn(s). While the wearer holds \"New Melody,\" all allies' SPD increases by #3[i]%.",
+      "desc": "Increases the wearer's Max HP by #1[i]%. After the wearer uses their Ultimate, recovers 1 Skill Point for allies. When entering combat, advances the wearer's action by #2[i]% and grants the wearer \"New Melody\" for #4[i] turn(s). While the wearer has \"New Melody,\" all allies' SPD increases by #3[i]%.",
       "params": [
         [
           0.3,

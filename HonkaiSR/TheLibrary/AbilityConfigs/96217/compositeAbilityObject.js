@@ -1702,6 +1702,30 @@ const compositeAbilityObject = {
                     "target": "{{Modifier Holder}}"
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-19531616\">G_MortenaxBlade_Ability03_Bonus</a>"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1420064965\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToSelf</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"1123291765\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToOtherMember</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]"
+                },
+                {
+                  "name": "Remove Events/Bonuses",
+                  "to": {
+                    "name": "Target Name",
+                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"917600023\">G_MortenaxBlade_PointB3_DamageUp_Warlock_ToAllLT</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]"
                 }
               ]
             },
@@ -1772,6 +1796,386 @@ const compositeAbilityObject = {
                       ]
                     }
                   }
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Character Path [Anyone]: Change",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Trace Activated",
+                        "conditionList": "PointB3"
+                      },
+                      {
+                        "name": "Eidolon Activated",
+                        "eidolon": 4,
+                        "invertCondition": true
+                      },
+                      {
+                        "name": "Compare: Target List Entities",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members with Unselectables}}.[[removeMemosprite]] - {{Caster}}"
+                        },
+                        "conditions": {
+                          "name": "Target is Pathstrider",
+                          "path": [
+                            "Nihility"
+                          ],
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
+                          }
+                        },
+                        "invertCondition": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1420064965\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToSelf</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]"
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1123291765\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToOtherMember</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]"
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"917600023\">G_MortenaxBlade_PointB3_DamageUp_Warlock_ToAllLT</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]"
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]] - {{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1123291765\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToOtherMember</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (UnusedUnderThisBase_2093) || RETURN",
+                          "displayLines": "UnusedUnderThisBase_2093",
+                          "constants": [],
+                          "variables": [
+                            "UnusedUnderThisBase_2093"
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "name": "Add Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"1420064965\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToSelf</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]",
+                      "valuePerStack": {
+                        "MDF_PropertyValue": {
+                          "operator": "Variables[0] (UnusedUnderThisBase_2093) || Variables[1] (UnusedUnderThisBase_2094) || ADD || RETURN",
+                          "displayLines": "(UnusedUnderThisBase_2093 + UnusedUnderThisBase_2094)",
+                          "constants": [],
+                          "variables": [
+                            "UnusedUnderThisBase_2093",
+                            "UnusedUnderThisBase_2094"
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "AND",
+                        "conditionList": [
+                          {
+                            "name": "Trace Activated",
+                            "conditionList": "PointB3"
+                          },
+                          {
+                            "name": "Eidolon Activated",
+                            "eidolon": 4,
+                            "invertCondition": true
+                          },
+                          {
+                            "name": "Compare: Target List Entities",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{All Team Members with Unselectables}}.[[removeMemosprite]] - {{Caster}}"
+                            },
+                            "conditions": {
+                              "name": "Target is Pathstrider",
+                              "path": [
+                                "Nihility"
+                              ],
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "passed": [
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Modifier Holder}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1420064965\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToSelf</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]"
+                        },
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"1123291765\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToOtherMember</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]"
+                        },
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"917600023\">G_MortenaxBlade_PointB3_DamageUp_Warlock_ToAllLT</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]"
+                        },
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"917600023\">G_MortenaxBlade_PointB3_DamageUp_Warlock_ToAllLT</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]",
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (UnusedUnderThisBase_2093) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_2093",
+                              "constants": [],
+                              "variables": [
+                                "UnusedUnderThisBase_2093"
+                              ]
+                            },
+                            "MDF_PropertyValue2": {
+                              "operator": "Variables[0] (UnusedUnderThisBase_2091) || RETURN",
+                              "displayLines": "UnusedUnderThisBase_2091",
+                              "constants": [],
+                              "variables": [
+                                "UnusedUnderThisBase_2091"
+                              ]
+                            }
+                          }
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "AND",
+                            "conditionList": [
+                              {
+                                "name": "Trace Activated",
+                                "conditionList": "PointB3"
+                              },
+                              {
+                                "name": "Eidolon Activated",
+                                "eidolon": 4
+                              },
+                              {
+                                "name": "Compare: Target List Entities",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{All Team Members with Unselectables}}.[[removeMemosprite]] - {{Caster}}"
+                                },
+                                "conditions": {
+                                  "name": "Target is Pathstrider",
+                                  "path": [
+                                    "Nihility"
+                                  ],
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  }
+                                },
+                                "invertCondition": true
+                              }
+                            ]
+                          },
+                          "passed": [
+                            {
+                              "name": "Remove Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1420064965\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToSelf</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]"
+                            },
+                            {
+                              "name": "Remove Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1123291765\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToOtherMember</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]"
+                            },
+                            {
+                              "name": "Remove Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"917600023\">G_MortenaxBlade_PointB3_DamageUp_Warlock_ToAllLT</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]"
+                            },
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]] - {{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1123291765\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToOtherMember</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] (UnusedUnderThisBase_2093) || Variables[1] (UnusedUnderThisBase_7190) || ADD || RETURN",
+                                  "displayLines": "(UnusedUnderThisBase_2093 + UnusedUnderThisBase_7190)",
+                                  "constants": [],
+                                  "variables": [
+                                    "UnusedUnderThisBase_2093",
+                                    "UnusedUnderThisBase_7190"
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Modifier Holder}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"1420064965\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToSelf</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]",
+                              "valuePerStack": {
+                                "MDF_PropertyValue": {
+                                  "operator": "Variables[0] (UnusedUnderThisBase_2093) || Variables[1] (UnusedUnderThisBase_7190) || ADD || Variables[2] (UnusedUnderThisBase_2094) || ADD || RETURN",
+                                  "displayLines": "((UnusedUnderThisBase_2093 + UnusedUnderThisBase_7190) + UnusedUnderThisBase_2094)",
+                                  "constants": [],
+                                  "variables": [
+                                    "UnusedUnderThisBase_2093",
+                                    "UnusedUnderThisBase_7190",
+                                    "UnusedUnderThisBase_2094"
+                                  ]
+                                }
+                              }
+                            }
+                          ],
+                          "failed": [
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "AND",
+                                "conditionList": [
+                                  {
+                                    "name": "Trace Activated",
+                                    "conditionList": "PointB3"
+                                  },
+                                  {
+                                    "name": "Eidolon Activated",
+                                    "eidolon": 4
+                                  },
+                                  {
+                                    "name": "Compare: Target List Entities",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{All Team Members with Unselectables}}.[[removeMemosprite]] - {{Caster}}"
+                                    },
+                                    "conditions": {
+                                      "name": "Target is Pathstrider",
+                                      "path": [
+                                        "Nihility"
+                                      ],
+                                      "target": {
+                                        "name": "Target Name",
+                                        "target": "{{Parameter Target}}"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              "passed": [
+                                {
+                                  "name": "Remove Events/Bonuses",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Modifier Holder}}"
+                                  },
+                                  "modifier": "<a class=\"gModGreen\" id=\"1420064965\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToSelf</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]"
+                                },
+                                {
+                                  "name": "Remove Events/Bonuses",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                                  },
+                                  "modifier": "<a class=\"gModGreen\" id=\"1123291765\">G_MortenaxBlade_PointB3_DamageUp_NoWarlock_ToOtherMember</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]"
+                                },
+                                {
+                                  "name": "Remove Events/Bonuses",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                                  },
+                                  "modifier": "<a class=\"gModGreen\" id=\"917600023\">G_MortenaxBlade_PointB3_DamageUp_Warlock_ToAllLT</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]"
+                                },
+                                {
+                                  "name": "Add Events/Bonuses",
+                                  "to": {
+                                    "name": "Target Name",
+                                    "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
+                                  },
+                                  "modifier": "<a class=\"gModGreen\" id=\"917600023\">G_MortenaxBlade_PointB3_DamageUp_Warlock_ToAllLT</a>[<span class=\"descriptionNumberColor\">Heart, Refined ad Infinitum</span>]",
+                                  "valuePerStack": {
+                                    "MDF_PropertyValue": {
+                                      "operator": "Variables[0] (UnusedUnderThisBase_2093) || Variables[1] (UnusedUnderThisBase_7190) || ADD || RETURN",
+                                      "displayLines": "(UnusedUnderThisBase_2093 + UnusedUnderThisBase_7190)",
+                                      "constants": [],
+                                      "variables": [
+                                        "UnusedUnderThisBase_2093",
+                                        "UnusedUnderThisBase_7190"
+                                      ]
+                                    },
+                                    "MDF_PropertyValue2": {
+                                      "operator": "Variables[0] (UnusedUnderThisBase_2091) || RETURN",
+                                      "displayLines": "UnusedUnderThisBase_2091",
+                                      "constants": [],
+                                      "variables": [
+                                        "UnusedUnderThisBase_2091"
+                                      ]
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },

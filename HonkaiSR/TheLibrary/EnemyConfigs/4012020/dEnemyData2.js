@@ -281,6 +281,58 @@ let enemyData = {
         "MonsterType_W4_Scholar_00",
         "MGrid_4008"
       ]
+    },
+    "401202008": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Fire",
+        "Ice",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2
+      },
+      "abilities": [
+        1720,
+        1721,
+        1722,
+        1723
+      ],
+      "enemyTag": [
+        "MonsterType_W4_Scholar_00"
+      ],
+      "overrideParams": {
+        "1723": [
+          [
+            "-",
+            "-",
+            "-",
+            0.01,
+            "-",
+            0.02
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      }
     }
   }
 }

@@ -699,6 +699,46 @@ let enemyData = {
         "SummonID01": 2022050,
         "SummonID02": 2022040
       }
+    },
+    "202302018": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Fire",
+        "Ice",
+        "Wind"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Thunder": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        744,
+        745,
+        746,
+        747,
+        748,
+        749
+      ],
+      "abilityOrder": [
+        747,
+        744
+      ],
+      "itNeverEnds": {
+        "SummonID01": 2022050,
+        "SummonID02": 2022040
+      }
     }
   }
 }

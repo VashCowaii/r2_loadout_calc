@@ -238,6 +238,28 @@ const configAbility = {
       ]
     },
     {
+      "name": "IF",
+      "conditions": {
+        "name": "Enemy ID",
+        "ID": 4014022,
+        "target": {
+          "name": "Target Name",
+          "target": "{{Caster}}"
+        },
+        "characterName": "The Giver, Master of Legions, Lance of Fury (Complete)"
+      },
+      "passed": [
+        {
+          "name": "Add Events/Bonuses",
+          "to": {
+            "name": "Target Name",
+            "target": "{{Caster}}"
+          },
+          "modifier": "<a class=\"gModGreen\" id=\"679267987\">Monster_W4_Hearse_NikadoryLifeLink</a>"
+        }
+      ]
+    },
+    {
       "name": "Add Events/Bonuses",
       "to": {
         "name": "Target Name",

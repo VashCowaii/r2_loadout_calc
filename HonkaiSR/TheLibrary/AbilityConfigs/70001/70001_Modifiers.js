@@ -410,6 +410,36 @@ const configAbility = {
             }
           ]
         }
+      ],
+      "variableValueChange": [
+        {
+          "name": "Variable Value Changes",
+          "variableName": "ElationEchoPoint",
+          "valueRanges": [
+            {
+              "name": "Variable Value Range Conditions",
+              "whenValueChanges": [
+                {
+                  "name": "Stack Target Stat Value",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Modifier Holder}}"
+                  },
+                  "statName": "&nbsp;<span class=\"descriptionNumberColor\">CertifiedBanger</span>&nbsp;",
+                  "value": {
+                    "operator": "Variables[0] (ElationEchoPoint) || RETURN",
+                    "displayLines": "ElationEchoPoint",
+                    "constants": [],
+                    "variables": [
+                      "ElationEchoPoint"
+                    ]
+                  },
+                  "isRefresh": true
+                }
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -1852,7 +1882,7 @@ const configAbility = {
           "whenValueChanges": [
             {
               "name": "Declare Custom Variable",
-              "propertyType": "BasePoint",
+              "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;",
               "variableName": "Elation_CurrentPoint"
             },
             {
@@ -1872,12 +1902,25 @@ const configAbility = {
                   },
                   "maxTargets": 1,
                   "conditions": {
-                    "name": "Battle Event ID",
-                    "ID": 70001,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    }
+                    "name": "OR",
+                    "conditionList": [
+                      {
+                        "name": "Battle Event ID",
+                        "ID": 70001,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      },
+                      {
+                        "name": "Battle Event ID",
+                        "ID": 70002,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      }
+                    ]
                   },
                   "ifTargetFound": [
                     {
@@ -2058,7 +2101,7 @@ const configAbility = {
           "whenValueChanges": [
             {
               "name": "Declare Custom Variable",
-              "propertyType": "BasePoint",
+              "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;",
               "variableName": "Elation_CurrentPoint"
             },
             {
@@ -2074,24 +2117,70 @@ const configAbility = {
                   "name": "Find New Target",
                   "from": {
                     "name": "Target Name",
-                    "target": "{{Battle Event List}}"
+                    "target": "{{Player Team All}}"
                   },
                   "maxTargets": 1,
                   "conditions": {
-                    "name": "Battle Event ID",
-                    "ID": 70001,
+                    "name": "Character ID",
+                    "ID": 1511,
                     "target": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
-                    }
+                    },
+                    "characterName": null
                   },
+                  "ifTargetFound": [
+                    {
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Battle Event List}}"
+                      },
+                      "maxTargets": 1,
+                      "conditions": {
+                        "name": "Battle Event ID",
+                        "ID": 70002,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      },
+                      "noTargetFound": [
+                        {
+                          "name": "Add Battle Event",
+                          "teamName": "Neutral Team",
+                          "eventID": 70002,
+                          "canDupe": true,
+                          "variables": null
+                        }
+                      ]
+                    }
+                  ],
                   "noTargetFound": [
                     {
-                      "name": "Add Battle Event",
-                      "teamName": "Neutral Team",
-                      "eventID": 70001,
-                      "canDupe": true,
-                      "variables": null
+                      "name": "Find New Target",
+                      "from": {
+                        "name": "Target Name",
+                        "target": "{{Battle Event List}}"
+                      },
+                      "maxTargets": 1,
+                      "conditions": {
+                        "name": "Battle Event ID",
+                        "ID": 70001,
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        }
+                      },
+                      "noTargetFound": [
+                        {
+                          "name": "Add Battle Event",
+                          "teamName": "Neutral Team",
+                          "eventID": 70001,
+                          "canDupe": true,
+                          "variables": null
+                        }
+                      ]
                     }
                   ]
                 }

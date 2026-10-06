@@ -299,6 +299,95 @@ let enemyData = {
           "-"
         ]
       }
+    },
+    "404401003": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Ice",
+        "Wind"
+      ],
+      "res": {
+        "Fire": 0.2,
+        "Thunder": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "resMod": {
+        "STAT_CTRL": 0.5
+      },
+      "abilities": [
+        2465,
+        2466,
+        2467,
+        2468,
+        2469,
+        2470,
+        2471,
+        2472,
+        2473,
+        2474,
+        2475,
+        2476,
+        2477
+      ],
+      "enemyTag": [
+        "MultiForm"
+      ],
+      "summons": [
+        {
+          "name": "Furiae Warrior",
+          "over": 401201015,
+          "base": 4012010
+        },
+        {
+          "name": "Tide-Eroded Blade",
+          "over": 403201002,
+          "base": 4032010
+        },
+        {
+          "name": "Black Tide's Corroded Axe",
+          "over": 403203002,
+          "base": 4032030
+        }
+      ],
+      "overrideParams": {
+        "2471": [
+          [
+            0.25
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ],
+        "2475": [
+          [
+            "-",
+            0.3
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      }
     }
   }
 }

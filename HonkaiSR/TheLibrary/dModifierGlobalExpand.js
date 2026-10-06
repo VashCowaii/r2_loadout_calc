@@ -162,7 +162,7 @@ let modifiersGlobal = [
     "name": "<a class=\"gModGreen\" id=\"909057422\">Standard_CriticalDamageDown</a>",
     "realName": "CRIT DMG Reduction",
     "aim": "Debuff",
-    "desc": "CRIT DMG -#1[i]%.",
+    "desc": "CRIT DMG decreases by #1[i]%.",
     "type": "CRIT DMG Reduction",
     "perma": false,
     "params": [
@@ -3979,7 +3979,7 @@ let modifiersGlobal = [
     "perma": true
   },
   {
-    "name": "OK",
+    "name": "AetherDivide_AML_Minion04_ExtraTurn",
     "realName": "Antimatter Speed Boost",
     "aim": "Buff",
     "desc": "After using Basic ATK or Skill, immediately takes an extra action. This effect cannot be consecutively triggered.",
@@ -25630,6 +25630,29 @@ let modifiersGlobal = [
     ]
   },
   {
+    "name": "Modifier_FeverTime_431001_LightTeamStanceBreakUp",
+    "realName": "Raging Fire",
+    "aim": "Buff",
+    "desc": "Weakness Break Efficiency increases by #1[i]% and Break Effect increases by #2[i]%.",
+    "type": "Raging Fire",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue1",
+      "MDF_PropertyValue2"
+    ]
+  },
+  {
+    "name": "Modifier_FeverTime_431001_LightTeamBreakDmgUp",
+    "realName": "Raging Fire",
+    "aim": "Buff",
+    "desc": "undefined",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
     "name": "Modifier_Activity_FateRin_Card_Ability_6014",
     "realName": "Vulnerability",
     "aim": "Debuff",
@@ -26243,12 +26266,35 @@ let modifiersGlobal = [
     ]
   },
   {
+    "name": "Modifier_Feixiao_PassiveAbility01_FinalityBattle_Sub2",
+    "realName": "Mark",
+    "aim": "Other",
+    "desc": "Action is delayed after receiving a total of #1[i] attacks. Attacks received: #2[i].",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#Activity_ModifiedSkill_P1_AttackCount",
+      "_Layer"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"777357174\">Enemy_W2_Beast02_BlockDamage_FateRin</a>",
     "realName": "Barrier",
     "aim": "Buff",
     "desc": "%DynamicTargetName nullifies all DMG received except DoTs. This state is dispelled after being attacked.",
     "type": "Barrier",
     "perma": true
+  },
+  {
+    "name": "Modifier_Activity_FinalityBattle_2_Fever_Sub",
+    "realName": "CRIT DMG Boost",
+    "aim": "Buff",
+    "desc": "Each Punchline increases the Elation Skill's CRIT DMG by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#Activity_Stage_P8_CriticalDamage"
+    ]
   },
   {
     "name": "G_MBattleEvent_MortenaxBlade_Eidolon2_ToMember",
@@ -26282,6 +26328,17 @@ let modifiersGlobal = [
     "params": [
       "DV_FantasticStory_PlusAbility_2215_ADF_1",
       "DV_FantasticStory_PlusAbility_2215_ADF_2"
+    ]
+  },
+  {
+    "name": "Modifier_Activity_FinalityBattle_2_Fever",
+    "realName": "undefined",
+    "aim": "Debuff",
+    "desc": "undefined",
+    "type": null,
+    "perma": true,
+    "params": [
+      "#Activity_Stage_P4_DebuffRatio"
     ]
   },
   {
@@ -26327,6 +26384,17 @@ let modifiersGlobal = [
     "perma": true,
     "params": [
       "AttackAddedRatio_633419"
+    ]
+  },
+  {
+    "name": "Sam_FinalityBattle_Ability31_ResistanceDown",
+    "realName": "All-Type RES Reduction",
+    "aim": "Debuff",
+    "desc": "All-Type RES decreases by #1[i]%.",
+    "type": "All-Type RES Reduction",
+    "perma": true,
+    "params": [
+      "#Activity_ModifiedSkill_P12_ResistanceDown"
     ]
   },
   {
@@ -26376,6 +26444,148 @@ let modifiersGlobal = [
     ]
   },
   {
+    "name": "Relic_133_Sub",
+    "realName": "Dreamlit Actor",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[i]%.",
+    "type": "Elation Boost",
+    "perma": true,
+    "params": [
+      "#SkillRelic_133_4_P1_CriticalDamage"
+    ]
+  },
+  {
+    "name": "Relic_134_Sub",
+    "realName": "The Edacious Heretic",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i]%.",
+    "type": "ATK Boost",
+    "perma": true,
+    "params": [
+      "#SkillRelic_134_4_P2_AttackAddRatio"
+    ]
+  },
+  {
+    "name": "Modifier_Activity_FinalityBattle_3_Fever_HealTargetMark",
+    "realName": "Possessed",
+    "aim": "Other",
+    "desc": "When HP reaches its maximum, loses a certain amount of HP and grants the Main Actor a massive amount of HP. After the Main Actor uses a Fusion Ability, transfers this mark to another random non-Main Actor unit.",
+    "type": "Possessed",
+    "perma": true
+  },
+  {
+    "name": "Modifier_Huohuo_Ability41_Part02_FinalityBattle_Enhance",
+    "realName": "Fusion Ability DMG Boost",
+    "aim": "Buff",
+    "desc": "Each stack increases the Fusion Ability DMG multiplier by #1[i]%.",
+    "type": "Fusion Ability DMG Boost",
+    "perma": true,
+    "params": [
+      "#Activity_Stage_P10_DamagePercentageUp"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"1607834073\">Modifier_ChallengePeakBattle_BaseAbility_0022_02</a>",
+    "realName": "Lockdown",
+    "aim": "Other",
+    "desc": "Upon reaching #1[i] stack(s), causes this unit to enter the \"Imprisonment\" state for 1 turn and reduces their Energy by a fixed amount of #2[i]%. All stacks of this effect are cleared at the start of this unit's turn or after a debuff is triggered.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_0022_ADF_1",
+      "ChallengePeakBattle_0022_ADF_2"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-331404368\">Modifier_ChallengePeakBattle_EnhancedAbility_0022_02</a>",
+    "realName": "Lockdown+",
+    "aim": "Other",
+    "desc": "Upon reaching #1[i] stack(s), causes this unit to enter the \"Imprisonment\" state for 1 turn and reduces their Energy by a fixed amount of #2[i]%. All stacks of this effect are cleared at the start of this unit's turn or after a debuff is triggered.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_0022_ADF_1",
+      "ChallengePeakBattle_0022_ADF_2"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-161349092\">Modifier_ChallengePeakBattle_BaseAbility_0023_02</a>",
+    "realName": "Perforation",
+    "aim": "Other",
+    "desc": "When attacking, if the attacked ally target has a Shield, increases DMG dealt by this attack by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_0023_ADF_1"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"1995450957\">Modifier_ChallengePeakBattle_EnhancedAbility_0023_02</a>",
+    "realName": "Perforation+",
+    "aim": "Other",
+    "desc": "When attacking, if the attacked ally target has a Shield, increases DMG dealt by this attack by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_0023_ADF_1"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"1023843531\">Modifier_ChallengePeakBattle_BaseAbility_0024_02</a>",
+    "realName": "Unyielding",
+    "aim": "Other",
+    "desc": "When attacked, gains a Shield equal to #1[i]% of this unit's Max HP.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_0024_ADF_1"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-403267582\">Modifier_ChallengePeakBattle_EnhancedAbility_0024_02</a>",
+    "realName": "Unyielding+",
+    "aim": "Other",
+    "desc": "When attacked, gains a Shield equal to #1[i]% of this unit's Max HP.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_0024_ADF_1"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-902695705\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0027_02</a>",
+    "realName": "Ecstasy Night",
+    "aim": "Other",
+    "desc": "Merrymakes Elation DMG dealt by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_Plugins_0027_ADF_1"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"799376984\">Modifier_ChallengePeakBattle_BaseAbility_Plugins_0028_02</a>",
+    "realName": "Navigator's Oath",
+    "aim": "Other",
+    "desc": "All-Type RES PEN of Skill DMG and Ultimate DMG dealt increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_Plugins_0028_ADF_1"
+    ]
+  },
+  {
+    "name": "Modifier_Kafka_PassiveAbility01_FinalityBattle_DOT",
+    "realName": "Fallen",
+    "aim": "Debuff",
+    "desc": "When #1[i] stacks are reached, this unit takes DMG and simultaneously increases the \"Fallen\" stack count of adjacent units.",
+    "type": "Fallen",
+    "perma": true,
+    "params": [
+      "#Activity_Stage_P6_MaxLayer"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"-1970687453\">Modifier_ChallengePeakBattle_BaseAbility_0025_02_ForShow</a>",
     "realName": "Joint Forces",
     "aim": "Other",
@@ -26409,6 +26619,18 @@ let modifiersGlobal = [
     ]
   },
   {
+    "name": "Modifier_StageAbility_633424_CritDmg",
+    "realName": "Bud in the Wind",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%, up to a max increase of #2[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "_ADF_1",
+      "ADF_2"
+    ]
+  },
+  {
     "name": "<a class=\"gModGreen\" id=\"-1898064779\">Modifier_ChallengePeakBattle_BaseAbility_0026_02</a>",
     "realName": "Unwavering",
     "aim": "Other",
@@ -26420,15 +26642,36 @@ let modifiersGlobal = [
     ]
   },
   {
-    "name": "Modifier_StageAbility_633424_CritDmg",
-    "realName": "Bud in the Wind",
+    "name": "Modifier_FinalityBattle_Sam_PassiveStanceBreakEfficiencyUp",
+    "realName": "Break Efficiency Boost",
     "aim": "Buff",
-    "desc": "CRIT DMG increases by #1[i]%, up to a max increase of #2[i]%.",
+    "desc": "Weakness Break Efficiency increases by #1[i]%.",
+    "type": "Break Efficiency Boost",
+    "perma": true,
+    "params": [
+      "#Activity_ModifiedSkill_P15"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"1007147615\">MStrongChallengeEX_Talent_StageAbility_PLY_094</a>",
+    "realName": "Magic Time",
+    "aim": "Buff",
+    "desc": "Elation increases by #1[i]%.",
     "type": null,
     "perma": true,
     "params": [
-      "_ADF_1",
-      "ADF_2"
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "Relic_133_Sub2",
+    "realName": "Dreamlit Actor",
+    "aim": "Buff",
+    "desc": "CRIT DMG increases by #1[i]%.",
+    "type": "CRIT DMG Boost",
+    "perma": true,
+    "params": [
+      "#SkillRelic_133_4_P4_CriticalDamage"
     ]
   },
   {
@@ -26455,6 +26698,28 @@ let modifiersGlobal = [
       "ADF_2",
       "_ADF_3",
       "ADF_4"
+    ]
+  },
+  {
+    "name": "LC_23055_DamageResistance",
+    "realName": "Ink Splash",
+    "aim": "Buff",
+    "desc": "All-Type RES increases by #1[i]%.",
+    "type": "All-Type RES Boost",
+    "perma": true,
+    "params": [
+      "MDF_PropertyValue"
+    ]
+  },
+  {
+    "name": "LC_23055_Fragile",
+    "realName": "Ink Splash",
+    "aim": "Debuff",
+    "desc": "DMG taken increases by #1[i]%.",
+    "type": "Vulnerability",
+    "perma": false,
+    "params": [
+      "MDF_PropertyValue"
     ]
   },
   {
@@ -26488,6 +26753,73 @@ let modifiersGlobal = [
     "perma": true,
     "params": [
       "MDF_AccumDirtyHPRatio"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-2057597849\">Modifier_ChallengePeakBattle_BaseAbility_0028_02</a>",
+    "realName": "Purify",
+    "aim": "Other",
+    "desc": "At the start of the turn, dispels all DoT effects on this unit, and decreases DoT taken by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "ChallengePeakBattle_0028_ADF_1"
+    ]
+  },
+  {
+    "name": "<a class=\"gModGreen\" id=\"-1618817275\">Monster_Rogue_Gluttony_DamageTakenUp</a>",
+    "realName": "Reposeful Elwood Caress",
+    "aim": "Debuff",
+    "desc": "Due to the Elwood's suppression of restless greed, DMG taken increases by #1[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_DamageTakenUpRatio"
+    ]
+  },
+  {
+    "name": "Standard_Gluttony_BUFF_LV1",
+    "realName": "Aha Be Useful",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i], DEF increases by #2[i], Max HP increases by #3[i], and CRIT DMG increases by #5[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_Param1",
+      "MDF_Param2",
+      "MDF_Param3",
+      "MDF_Param4",
+      "MDF_Param5"
+    ]
+  },
+  {
+    "name": "Standard_Gluttony_BUFF_LV2",
+    "realName": "Aha's Tiny Aid",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i], DEF increases by #2[i], Max HP increases by #3[i], SPD increases by #4[i], and CRIT DMG increases by #5[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_Param1",
+      "MDF_Param2",
+      "MDF_Param3",
+      "MDF_Param4",
+      "MDF_Param5"
+    ]
+  },
+  {
+    "name": "Standard_Gluttony_BUFF_LV3",
+    "realName": "Aha's Big Help",
+    "aim": "Buff",
+    "desc": "ATK increases by #1[i], DEF increases by #2[i], Max HP increases by #3[i], SPD increases by #4[i], and CRIT DMG increases by #5[i]%.",
+    "type": null,
+    "perma": true,
+    "params": [
+      "MDF_Param1",
+      "MDF_Param2",
+      "MDF_Param3",
+      "MDF_Param4",
+      "MDF_Param5"
     ]
   }
 ]

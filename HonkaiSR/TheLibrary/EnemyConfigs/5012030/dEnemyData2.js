@@ -187,6 +187,37 @@ let enemyData = {
           "-"
         ]
       }
+    },
+    "501203005": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Fire",
+        "Thunder"
+      ],
+      "res": {
+        "Ice": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        2636,
+        2637
+      ],
+      "abilityOrder": [
+        2636
+      ]
     }
   }
 }

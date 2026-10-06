@@ -1,6 +1,1029 @@
 const stageTypers = "anom";
 let mocSchedule = [
   {
+    "id": 10,
+    "image": "activityBG/ChallengePeakPanelBanner_4010.png",
+    "realName": "Return to Roots",
+    "buffData": null,
+    "floorData": {
+      "1": {
+        "floorName": "Knight (I)",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30510011
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Alloy Mechatron: King Pom-Pom",
+                "corruptionID": 3,
+                "corruptionBuff": {
+                  "modifierName": "ADV_StageAbility_MazeCommon_Empty",
+                  "realModifierNamne": "ChallengePeakBattle_GluttonyAbility_LV3",
+                  "BEKey": 1912336050,
+                  "name": "undefined",
+                  "desc": "undefined",
+                  "battleDesc": null,
+                  "buffType": "",
+                  "params": [
+                    0.65,
+                    0.3,
+                    0.5,
+                    1,
+                    0.5
+                  ]
+                },
+                "corruptionDesc": "The contaminated monsters have obtained the power of \"Voracity.\" Upon taking killing blow, they will not be defeated, but will instead immediately restore a certain percentage of their HP.\\nDealing DMG to them can continuously suppress their Max HP. Once suppressed to a certain percentage, the enemy can be completely defeated.",
+                "corruptionParams": [
+                  0.6,
+                  0.8,
+                  1,
+                  3,
+                  1.44
+                ],
+                "corruptionEnemies": [
+                  {
+                    "ID": 5014020,
+                    "params": []
+                  },
+                  {
+                    "ID": 5013040,
+                    "params": []
+                  }
+                ],
+                "enemyLevel": 95,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 361,
+                    "enemies": [
+                      {
+                        "name": "Joy Ascendant",
+                        "id": 5023010,
+                        "image": 5023010,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 1256968.098,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "compEN": 1,
+                        "compACT": 2252.631,
+                        "toughnessBase": 140,
+                        "weaknessList": [
+                          "Fire",
+                          "Thunder",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {},
+                        "compSUM": 1256968.098
+                      },
+                      {
+                        "name": "Daybreak Squadron: Azurewing",
+                        "id": 5013040,
+                        "image": 5013040,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 3142420.245,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "compEN": 1,
+                        "compACT": 2252.631,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.8
+                        },
+                        "resistancesDebuff": {},
+                        "compSUM": 3142420.245
+                      }
+                    ],
+                    "totalMax": 2,
+                    "fieldMax": 2,
+                    "abilityName": "",
+                    "abilityKey": null,
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 358,
+                    "enemies": [
+                      {
+                        "name": "Alloy Mechatron: King Pom-Pom",
+                        "id": 5014020,
+                        "image": 5014020,
+                        "rank": "LittleBoss",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 7332313.905,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.36,
+                        "delay": 0.5,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 2,
+                        "compEN": 1,
+                        "compACT": 2102.4556,
+                        "toughnessBase": 240,
+                        "weaknessList": [
+                          "Fire",
+                          "Thunder",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL": 0.5
+                        },
+                        "compSUM": 14664627.81
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "abilityKey": null,
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30510011",
+                  "_CreateBattleEvent": "30502"
+                },
+                "highSTSUM": 17807048.055,
+                "aoeSUM": 19064016.153
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Hemovore",
+            "desc": "At the start of ally targets' turns, they lose #1[i] HP. This effect can be fatal.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0018",
+            "BEKey": 1912336050,
+            "params": [
+              500
+            ]
+          }
+        ]
+      },
+      "2": {
+        "floorName": "Knight (II)",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30510012
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Pollux, Netherwing Husk, Ferry of Souls",
+                "enemyLevel": 95,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 367,
+                    "enemies": [
+                      {
+                        "name": "Daybreak Squadron: Blazeweaver",
+                        "id": 5013050,
+                        "image": 5013050,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 3770904.294,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "compEN": 1,
+                        "compACT": 2703.1572,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Physical",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Fire": 0.8,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {},
+                        "compSUM": 3770904.294
+                      },
+                      {
+                        "name": "Daybreak Squadron: Cinderborne",
+                        "id": 5013070,
+                        "image": 5013070,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 3770904.294,
+                        "speedBase": 158.4,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "compEN": 1,
+                        "compACT": 2703.1572,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Fire",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.8,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {},
+                        "compSUM": 3770904.294
+                      }
+                    ],
+                    "totalMax": 2,
+                    "fieldMax": 2,
+                    "abilityName": "",
+                    "abilityKey": null,
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 349,
+                    "enemies": [
+                      {
+                        "name": "Pollux, Netherwing Husk, Ferry of Souls",
+                        "id": 4014030,
+                        "image": 4014030,
+                        "rank": "LittleBoss",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 9078102.93,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 2,
+                        "compEN": 1,
+                        "compACT": 3003.508,
+                        "toughnessBase": 180,
+                        "weaknessList": [
+                          "Wind",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL": 0.5
+                        },
+                        "compSUM": 18156205.86
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "abilityKey": null,
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30510012",
+                  "_CreateBattleEvent": "30502"
+                },
+                "highSTSUM": 21927110.154,
+                "aoeSUM": 25698014.448
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Confinement+",
+            "desc": "Ally targets initially obtain #1[i] stack(s) of this effect, with each stack decreasing their own DMG by #2[i]%. This effect cannot be dispelled, and 1 stack is removed after each Ultimate used.",
+            "realModifierNamne": "ChallengePeakBattle_EnhancedAbility_0014",
+            "BEKey": 1912336050,
+            "params": [
+              2,
+              0.2
+            ]
+          },
+          {
+            "name": "Enrage",
+            "desc": "After each time an ally target uses their Ultimate, applies 1 stack of this effect to all enemy targets. Each stack increases the enemy target's SPD by #1[i]%, up to a max of #2[i] stack(s). All stacks of this effect are cleared at the start of the enemy target's turn.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0020",
+            "BEKey": 1912336050,
+            "params": [
+              0.3,
+              4
+            ]
+          }
+        ]
+      },
+      "3": {
+        "floorName": "Knight (III)",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30510013
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Harbinger of Death: Swarm Nightmare",
+                "enemyLevel": 95,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30502,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 369,
+                    "enemies": [
+                      {
+                        "name": "Cyclonic Swarm Mother",
+                        "id": 4053020,
+                        "image": 4053020,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 3247167.5865,
+                        "speedBase": 217.8,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 1,
+                        "compEN": 1,
+                        "compACT": 2327.7187,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Fire",
+                          "Ice",
+                          "Thunder"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Wind": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {},
+                        "compSUM": 3247167.5865
+                      },
+                      {
+                        "name": "Abundance Sprite: Malefic Ape",
+                        "id": 2023020,
+                        "image": 2023020,
+                        "rank": "Elite",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 2597734.0692,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "compEN": 1,
+                        "compACT": 2327.7187,
+                        "toughnessBase": 120,
+                        "weaknessList": [
+                          "Fire",
+                          "Ice",
+                          "Wind"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Thunder": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {},
+                        "compSUM": 2597734.0692
+                      }
+                    ],
+                    "totalMax": 2,
+                    "fieldMax": 2,
+                    "abilityName": "",
+                    "abilityKey": null,
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 345,
+                    "enemies": [
+                      {
+                        "name": "Harbinger of Death: Swarm Nightmare",
+                        "id": 3024030,
+                        "image": 3024030,
+                        "rank": "LittleBoss",
+                        "attackBase": 688.06287,
+                        "defBase": 1149.9999,
+                        "hpBase": 13966312.2,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.36,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Fire",
+                        "hpBars": 1,
+                        "compEN": 1,
+                        "compACT": 1877.1924999999999,
+                        "toughnessBase": 200,
+                        "weaknessList": [
+                          "Physical",
+                          "Fire",
+                          "Wind"
+                        ],
+                        "resistances": {
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Quantum": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL": 0.5
+                        },
+                        "compSUM": 13966312.2
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "abilityKey": null,
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30510013",
+                  "_CreateBattleEvent": "30502"
+                },
+                "highSTSUM": 17213479.7865,
+                "aoeSUM": 19811213.8557
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Lockdown",
+            "desc": "After each time an ally target uses an attack, applies 1 stack of this effect. Upon reaching #1[i] stack(s), causes the target to enter the \"Imprisonment\" state for 1 turn and reduces their Energy by a fixed amount of #2[i]%. All stacks of this effect are cleared at the start of the target's turn or after a debuff is triggered.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0022",
+            "BEKey": 1912336050,
+            "params": [
+              6,
+              0.3,
+              0.1,
+              0.2
+            ]
+          }
+        ]
+      },
+      "4": {
+        "floorName": "King in Check",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30510021
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Blood of the Fallen God: Yabuli",
+                "enemyLevel": 100,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30503,
+                    "actualParams": [
+                      0.5,
+                      7,
+                      4,
+                      0.5
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 368,
+                    "enemies": [
+                      {
+                        "name": "Moonlit Pegasus",
+                        "id": 402302001,
+                        "image": 4023020,
+                        "rank": "Elite",
+                        "attackBase": 705.4373106,
+                        "defBase": 1200.00006,
+                        "hpBase": 4904294.4652315,
+                        "speedBase": 132,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.4,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 1,
+                        "compEN": 1.454545,
+                        "compACT": 3295.8978479999996,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Fire",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {},
+                        "compSUM": 4904294.4652315
+                      },
+                      {
+                        "name": "Lighthouse",
+                        "id": 8033020,
+                        "image": 8033020,
+                        "rank": "Elite",
+                        "attackBase": 705.4373106,
+                        "defBase": 1200.00006,
+                        "hpBase": 4291258.998096,
+                        "speedBase": 190.08,
+                        "critDMG": 0.2,
+                        "effectRES": 0.3,
+                        "ehr": 0.4,
+                        "delay": null,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "compEN": 1,
+                        "compACT": 3295.8978479999996,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Fire",
+                          "Wind",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {},
+                        "compSUM": 4291258.998096
+                      }
+                    ],
+                    "totalMax": 2,
+                    "fieldMax": 2,
+                    "abilityName": "",
+                    "abilityKey": null,
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 374,
+                    "enemies": [
+                      {
+                        "name": "Blood of the Fallen God: Yabuli",
+                        "id": 503401002,
+                        "image": 5034010,
+                        "rank": "LittleBoss",
+                        "attackBase": 705.4373106,
+                        "defBase": 1200.00006,
+                        "hpBase": 6389558.434665,
+                        "speedBase": 237.6,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.4,
+                        "delay": null,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 1,
+                        "compEN": 1,
+                        "compACT": 3053.5524179999998,
+                        "toughnessBase": 360,
+                        "weaknessList": [
+                          "Ice",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL": 1
+                        },
+                        "compSUM": 6389558.434665
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "abilityKey": null,
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30510021",
+                  "_CreateBattleEvent": "30503"
+                },
+                "highSTSUM": 11293852.899896499,
+                "aoeSUM": 15585111.897992501
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Hemovore",
+            "desc": "At the start of ally targets' turns, they lose #1[i] HP. This effect can be fatal.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0018",
+            "BEKey": 1912336050,
+            "params": [
+              500
+            ]
+          },
+          {
+            "name": "Perforation",
+            "desc": "When an enemy target uses an attack, if the attacked ally target has a Shield, increases the DMG dealt by the enemy target by #1[i]%.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0023",
+            "BEKey": 1912336050,
+            "params": [
+              2
+            ]
+          }
+        ]
+      },
+      "5": {
+        "floorName": "King in Check: Plight",
+        "stageDataObject": {
+          "stage1": {
+            "ids": [
+              30510022
+            ],
+            "stageDataArray": [
+              {
+                "stageName": "Blood of the Fallen God: Yabuli",
+                "enemyLevel": 120,
+                "modifiersToAdd": [],
+                "buffOverride": null,
+                "battleEventAbilities": [
+                  {
+                    "realModifierNamne": null,
+                    "BEKey": 30504,
+                    "actualParams": [
+                      0.5,
+                      3,
+                      0,
+                      0
+                    ]
+                  }
+                ],
+                "stageType": "Challenge",
+                "enemyList": [
+                  {
+                    "isPF": true,
+                    "scaleElite": 369,
+                    "enemies": [
+                      {
+                        "name": "Moonlit Pegasus",
+                        "id": 402302001,
+                        "image": 4023020,
+                        "rank": "Elite",
+                        "attackBase": 987.6122388,
+                        "defBase": 1200.00006,
+                        "hpBase": 17886250.0335851,
+                        "speedBase": 150,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.5,
+                        "delay": 1,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 1,
+                        "compEN": 1.454545,
+                        "compACT": 12020.33308,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Fire",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {},
+                        "compSUM": 17886250.0335851
+                      },
+                      {
+                        "name": "Lighthouse",
+                        "id": 8033020,
+                        "image": 8033020,
+                        "rank": "Elite",
+                        "attackBase": 987.6122388,
+                        "defBase": 1200.00006,
+                        "hpBase": 15650473.67016,
+                        "speedBase": 216,
+                        "critDMG": 0.2,
+                        "effectRES": 0.4,
+                        "ehr": 0.5,
+                        "delay": null,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Physical",
+                        "hpBars": 1,
+                        "compEN": 1,
+                        "compACT": 12020.33308,
+                        "toughnessBase": 160,
+                        "weaknessList": [
+                          "Fire",
+                          "Wind",
+                          "Quantum"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Ice": 0.2,
+                          "Thunder": 0.2,
+                          "Imaginary": 0.2
+                        },
+                        "resistancesDebuff": {},
+                        "compSUM": 15650473.67016
+                      }
+                    ],
+                    "totalMax": 2,
+                    "fieldMax": 2,
+                    "abilityName": "",
+                    "abilityKey": null,
+                    "params": []
+                  },
+                  {
+                    "isPF": true,
+                    "scaleElite": 375,
+                    "enemies": [
+                      {
+                        "name": "Blood of the Fallen God: Yabuli",
+                        "id": 503401002,
+                        "image": 5034010,
+                        "rank": "LittleBoss",
+                        "attackBase": 897.829308,
+                        "defBase": 1200.00006,
+                        "hpBase": 23529802.0041,
+                        "speedBase": 270,
+                        "critDMG": 0.2,
+                        "effectRES": 0.5,
+                        "ehr": 0.5,
+                        "delay": null,
+                        "toughnessBars": 1,
+                        "toughnessElement": "Quantum",
+                        "hpBars": 1,
+                        "compEN": 1,
+                        "compACT": 11244.82772,
+                        "toughnessBase": 360,
+                        "weaknessList": [
+                          "Ice",
+                          "Quantum",
+                          "Imaginary"
+                        ],
+                        "resistances": {
+                          "Physical": 0.2,
+                          "Fire": 0.2,
+                          "Thunder": 0.2,
+                          "Wind": 0.2
+                        },
+                        "resistancesDebuff": {
+                          "STAT_CTRL": 1
+                        },
+                        "compSUM": 23529802.0041
+                      }
+                    ],
+                    "totalMax": 1,
+                    "fieldMax": 1,
+                    "abilityName": "",
+                    "abilityKey": null,
+                    "params": []
+                  }
+                ],
+                "scalarHard": 3,
+                "configData": {
+                  "_Wave": "2",
+                  "_IsEliteBattle": "1",
+                  "_StageInfiniteGroup": "30510022",
+                  "_CreateBattleEvent": "30504"
+                },
+                "highSTSUM": 41416052.037685096,
+                "aoeSUM": 57066525.7078451
+              }
+            ]
+          },
+          "stage2": {
+            "ids": null,
+            "stageDataArray": []
+          }
+        },
+        "tagList": [
+          {
+            "name": "Hemovore+",
+            "desc": "At the start of ally targets' turns, they lose #1[i] HP. This effect can be fatal.",
+            "realModifierNamne": "ChallengePeakBattle_EnhancedAbility_0018",
+            "BEKey": 1912336050,
+            "params": [
+              1000
+            ]
+          },
+          {
+            "name": "Perforation+",
+            "desc": "When an enemy target uses an attack, if the attacked ally target has a Shield, increases the DMG dealt by the enemy target by #1[i]%.",
+            "realModifierNamne": "ChallengePeakBattle_EnhancedAbility_0023",
+            "BEKey": 1912336050,
+            "params": [
+              4
+            ]
+          },
+          {
+            "name": "Unyielding",
+            "desc": "When an enemy target is attacked, they gain a Shield equal to #1[f1]% of their Max HP.",
+            "realModifierNamne": "ChallengePeakBattle_BaseAbility_0024",
+            "BEKey": 1912336050,
+            "params": [
+              0.01
+            ]
+          }
+        ]
+      }
+    },
+    "kingBuffList": [
+      {
+        "modifierName": "ADV_StageAbility_3033082",
+        "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0027",
+        "BEKey": 1912336050,
+        "name": "Ecstasy Night",
+        "desc": "Merrymakes Elation DMG dealt by the character in position 1 of the ally lineup by #1[i]%.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.5
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_3033083",
+        "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0028",
+        "BEKey": 1912336050,
+        "name": "Navigator's Oath",
+        "desc": "Increases the All-Type RES PEN for the Skill DMG and Ultimate DMG dealt by the character in position 1 of the ally lineup by #1[i]%.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.5
+        ]
+      },
+      {
+        "modifierName": "ADV_StageAbility_3033084",
+        "realModifierNamne": "ChallengePeakBattle_BaseAbility_Plugins_0029",
+        "BEKey": 1912336050,
+        "name": "Endocytosis",
+        "desc": "\"Homeostatic Imbalance\" increases DMG dealt to \"Blood-Brain Barrier\" by #1[i]%.",
+        "battleDesc": null,
+        "buffType": "",
+        "params": [
+          0.5
+        ]
+      }
+    ],
+    "patchName": "4.6"
+  },
+  {
     "id": 9,
     "image": "activityBG/ChallengePeakPanelBanner_4009.png",
     "realName": "Return of the Legion",

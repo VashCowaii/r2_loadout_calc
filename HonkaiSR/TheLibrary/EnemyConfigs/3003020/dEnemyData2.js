@@ -550,6 +550,51 @@ let enemyData = {
         "SummonID01": 3002030
       }
     },
+    "300302012": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Fire",
+        "Imaginary"
+      ],
+      "res": {
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2
+      },
+      "abilities": [
+        1213,
+        1214,
+        1215,
+        1216
+      ],
+      "abilityOrder": [
+        1216,
+        1214,
+        1214
+      ],
+      "summons": [
+        {
+          "name": "Dreamjolt Troupe's Bubble Hound",
+          "over": 3002030,
+          "base": 3002030
+        }
+      ],
+      "itNeverEnds": {
+        "SummonID01": 3002030
+      }
+    },
     "300302013": {
       "name": -1,
       "scaleElite": 1,

@@ -43,10 +43,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3124
+        3142
       ],
       "abilityOrder": [
-        3124
+        3142
       ]
     },
     "801102001": {
@@ -73,10 +73,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3124
+        3142
       ],
       "abilityOrder": [
-        3124
+        3142
       ]
     },
     "801102002": {
@@ -103,10 +103,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3124
+        3142
       ],
       "abilityOrder": [
-        3124
+        3142
       ]
     },
     "801102003": {
@@ -133,10 +133,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3124
+        3142
       ],
       "abilityOrder": [
-        3124
+        3142
       ]
     },
     "801102004": {
@@ -163,10 +163,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3124
+        3142
       ],
       "abilityOrder": [
-        3124
+        3142
       ]
     },
     "801102005": {
@@ -193,10 +193,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3124
+        3142
       ],
       "abilityOrder": [
-        3124
+        3142
       ]
     },
     "801102007": {
@@ -223,10 +223,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3124
+        3142
       ],
       "abilityOrder": [
-        3124
+        3142
       ]
     },
     "801102008": {
@@ -253,10 +253,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3124
+        3142
       ],
       "abilityOrder": [
-        3124
+        3142
       ]
     },
     "801102009": {
@@ -282,10 +282,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3124
+        3142
       ],
       "abilityOrder": [
-        3124
+        3142
       ]
     },
     "801102011": {
@@ -312,10 +312,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3124
+        3142
       ],
       "abilityOrder": [
-        3124
+        3142
       ]
     },
     "801102012": {
@@ -342,10 +342,10 @@ let enemyData = {
         "Imaginary": 0.2
       },
       "abilities": [
-        3124
+        3142
       ],
       "abilityOrder": [
-        3124
+        3142
       ]
     }
   }

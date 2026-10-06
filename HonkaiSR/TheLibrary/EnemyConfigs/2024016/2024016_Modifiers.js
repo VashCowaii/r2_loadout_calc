@@ -1907,19 +1907,19 @@ const configAbility = {
           "haloStatus": true,
           "valuePerStack": {
             "MDF_AllDamageReduce": {
-              "operator": "Variables[0] ({[SkillEX04[0]]}) || RETURN",
-              "displayLines": "{[SkillEX04[0]]}",
+              "operator": "Variables[0] (AbilityEX04_P1_DamageReduceRatio) || RETURN",
+              "displayLines": "AbilityEX04_P1_DamageReduceRatio",
               "constants": [],
               "variables": [
-                "{[SkillEX04[0]]}"
+                "AbilityEX04_P1_DamageReduceRatio"
               ]
             },
             "MDF_AllDamageTypeAddedRatio": {
-              "operator": "Variables[0] ({[SkillEX04[1]]}) || RETURN",
-              "displayLines": "{[SkillEX04[1]]}",
+              "operator": "Variables[0] (AbilityEX04_P2_AllDamageTypeAddedRatio) || RETURN",
+              "displayLines": "AbilityEX04_P2_AllDamageTypeAddedRatio",
               "constants": [],
               "variables": [
-                "{[SkillEX04[1]]}"
+                "AbilityEX04_P2_AllDamageTypeAddedRatio"
               ]
             }
           }
@@ -1975,19 +1975,19 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1640618291\">Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_EX04_Sub</a>",
                   "valuePerStack": {
                     "MDF_AllDamageReduce": {
-                      "operator": "Variables[0] ({[SkillEX04[0]]}) || RETURN",
-                      "displayLines": "{[SkillEX04[0]]}",
+                      "operator": "Variables[0] (AbilityEX04_P1_DamageReduceRatio) || RETURN",
+                      "displayLines": "AbilityEX04_P1_DamageReduceRatio",
                       "constants": [],
                       "variables": [
-                        "{[SkillEX04[0]]}"
+                        "AbilityEX04_P1_DamageReduceRatio"
                       ]
                     },
                     "MDF_AllDamageTypeAddedRatio": {
-                      "operator": "Variables[0] ({[SkillEX04[1]]}) || RETURN",
-                      "displayLines": "{[SkillEX04[1]]}",
+                      "operator": "Variables[0] (AbilityEX04_P2_AllDamageTypeAddedRatio) || RETURN",
+                      "displayLines": "AbilityEX04_P2_AllDamageTypeAddedRatio",
                       "constants": [],
                       "variables": [
-                        "{[SkillEX04[1]]}"
+                        "AbilityEX04_P2_AllDamageTypeAddedRatio"
                       ]
                     }
                   }
@@ -3267,7 +3267,25 @@ const configAbility = {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"1959486176\">Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_EX04</a>"
+                          "modifier": "<a class=\"gModGreen\" id=\"1959486176\">Enemy_W2_Xuanlu_IF_Servant_XuanluPart_Aura_EX04</a>",
+                          "valuePerStack": {
+                            "AbilityEX04_P1_DamageReduceRatio": {
+                              "operator": "Variables[0] ({[SkillEX04[0]]}) || RETURN",
+                              "displayLines": "{[SkillEX04[0]]}",
+                              "constants": [],
+                              "variables": [
+                                "{[SkillEX04[0]]}"
+                              ]
+                            },
+                            "AbilityEX04_P2_AllDamageTypeAddedRatio": {
+                              "operator": "Variables[0] ({[SkillEX04[1]]}) || RETURN",
+                              "displayLines": "{[SkillEX04[1]]}",
+                              "constants": [],
+                              "variables": [
+                                "{[SkillEX04[1]]}"
+                              ]
+                            }
+                          }
                         }
                       ]
                     }

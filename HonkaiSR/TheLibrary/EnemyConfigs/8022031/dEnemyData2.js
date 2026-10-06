@@ -42,10 +42,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        3377,
-        3378,
-        3379,
-        3380
+        3395,
+        3396,
+        3397,
+        3398
       ],
       "abilityOrder": [
         "ABILITY__DOES_NOT_EXIST"
@@ -81,10 +81,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        3377,
-        3378,
-        3379,
-        3380
+        3395,
+        3396,
+        3397,
+        3398
       ],
       "abilityOrder": [
         "ABILITY__DOES_NOT_EXIST"
@@ -120,10 +120,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        3377,
-        3378,
-        3379,
-        3380
+        3395,
+        3396,
+        3397,
+        3398
       ],
       "abilityOrder": [
         "ABILITY__DOES_NOT_EXIST"
@@ -159,10 +159,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        3377,
-        3378,
-        3379,
-        3380
+        3395,
+        3396,
+        3397,
+        3398
       ],
       "abilityOrder": [
         "ABILITY__DOES_NOT_EXIST"
@@ -198,10 +198,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        3377,
-        3378,
-        3379,
-        3380
+        3395,
+        3396,
+        3397,
+        3398
       ],
       "abilityOrder": [
         "ABILITY__DOES_NOT_EXIST"

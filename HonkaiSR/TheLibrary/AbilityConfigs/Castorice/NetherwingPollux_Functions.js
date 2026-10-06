@@ -655,12 +655,156 @@ const configAbility = {
           ],
           "failed": [
             {
-              "name": "Force-Trigger Ability Next-Phase",
-              "ability": "MISSING NAME OBJECT(Or implicit from Context)"
-            },
-            {
-              "name": "Trigger: Ability End",
-              "skipAttackSettle": true
+              "name": "IF",
+              "conditions": {
+                "name": "Has Modifier",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "modifier": "<a class=\"gModGreen\" id=\"-47761406\">Memosprite_CastoriceServant_LifeTime</a>",
+                "invertCondition": true
+              },
+              "passed": [
+                {
+                  "name": "Force-Trigger Ability Next-Phase",
+                  "ability": "MISSING NAME OBJECT(Or implicit from Context)"
+                },
+                {
+                  "name": "Trigger: Ability End",
+                  "skipAttackSettle": true
+                }
+              ],
+              "failed": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Hostile Entities(AOE)}}"
+                    },
+                    "value1": "TeamCharacterCount",
+                    "compareType": ">",
+                    "value2": 0,
+                    "conditions": {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"637823618\">Standard_LockHPThresholdReached_Mark</a>",
+                      "invertCondition": true
+                    }
+                  },
+                  "passed": [
+                    {
+                      "name": "Force-Trigger Ability Next-Phase",
+                      "ability": "MISSING NAME OBJECT(Or implicit from Context)"
+                    },
+                    {
+                      "name": "Trigger: Ability End",
+                      "skipAttackSettle": true
+                    }
+                  ],
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Trace Activated",
+                        "conditionList": "PointB2"
+                      },
+                      "passed": [
+                        {
+                          "name": "Add Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"2103337058\">Memosprite_Castorice_SpeedRatio</a>[<span class=\"descriptionNumberColor\">Inverted Torch</span>]",
+                          "duration": 1,
+                          "valuePerStack": {
+                            "MDF_PropertyValue": {
+                              "operator": "Variables[0] (CastoriceServant_PointB2_SpeedRatio) || RETURN",
+                              "displayLines": "CastoriceServant_PointB2_SpeedRatio",
+                              "constants": [],
+                              "variables": [
+                                "CastoriceServant_PointB2_SpeedRatio"
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "CastoriceServant_BPSkill_Level",
+                        "compareType": "=",
+                        "value2": 1
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "CastoriceServant_BPSkill_Level",
+                        "compareType": "=",
+                        "value2": 2
+                      }
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "CastoriceServant_BPSkill_Level",
+                        "compareType": "=",
+                        "value2": 3
+                      }
+                    },
+                    {
+                      "name": "Use Custom Character Function",
+                      "functionName": "<a class=\"gTempYellow\" id=\"807803738\">Servant_CastoriceServant_AnimEvents</a>"
+                    },
+                    "Trigger: Attack End",
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Eidolon Activated",
+                        "eidolon": 6
+                      },
+                      "passed": [
+                        {
+                          "name": "Remove Events/Bonuses",
+                          "to": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"-902705289\">Memosprite_CastoriceServant_Eidolon6_ForceStanceDamage</a>"
+                        }
+                      ]
+                    },
+                    "Trigger: Ability End",
+                    {
+                      "name": "WAIT FOR",
+                      "condition": {
+                        "name": "Death Animation Completed",
+                        "team": "Enemy Team",
+                        "type": "Team Characters"
+                      }
+                    },
+                    {
+                      "name": "Remove Events/Bonuses",
+                      "to": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"847472600\">Memosprite_CastoriceServant_Flag01</a>"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }

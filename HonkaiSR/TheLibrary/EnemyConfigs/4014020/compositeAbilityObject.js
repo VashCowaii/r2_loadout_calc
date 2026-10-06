@@ -1995,6 +1995,49 @@ const compositeAbilityObject = {
         },
         {
           "name": "Modifier Construction",
+          "for": "<a class=\"gModGreen\" id=\"mod__679267987\">Monster_W4_Hearse_NikadoryLifeLink</a>",
+          "modifierFlags": [
+            "KeepOnDeathrattle"
+          ],
+          "execute": [
+            {
+              "eventTrigger": "When Constructing Modifier",
+              "execute": [
+                {
+                  "name": "Lock HP",
+                  "threshold": 0,
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Nikador: Self}}"
+                  },
+                  "lockHolder": "<a class=\"gModGreen\" id=\"679267987\">Monster_W4_Hearse_NikadoryLifeLink</a>"
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Pre-Death [Owner]",
+              "execute": [
+                {
+                  "name": "Lock HP",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Nikador: Self}}"
+                  },
+                  "lockHolder": "<a class=\"gModGreen\" id=\"679267987\">Monster_W4_Hearse_NikadoryLifeLink</a>"
+                },
+                {
+                  "name": "Force Entity Death",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Nikador: Self}}"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modifier Construction",
           "for": "<a class=\"gModGreen\" id=\"mod__2010268595\">Monster_W4_Hearse_LockHP</a>",
           "execute": [
             {
@@ -2654,6 +2697,28 @@ const compositeAbilityObject = {
                   "summonLocation": "AfterCaster"
                 }
               ]
+            }
+          ]
+        },
+        {
+          "name": "IF",
+          "conditions": {
+            "name": "Enemy ID",
+            "ID": 4014022,
+            "target": {
+              "name": "Target Name",
+              "target": "{{Caster}}"
+            },
+            "characterName": "The Giver, Master of Legions, Lance of Fury (Complete)"
+          },
+          "passed": [
+            {
+              "name": "Add Events/Bonuses",
+              "to": {
+                "name": "Target Name",
+                "target": "{{Caster}}"
+              },
+              "modifier": "<a class=\"gModGreen\" id=\"679267987\">Monster_W4_Hearse_NikadoryLifeLink</a>"
             }
           ]
         },

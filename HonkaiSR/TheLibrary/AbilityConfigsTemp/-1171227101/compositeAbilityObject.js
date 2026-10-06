@@ -2886,21 +2886,157 @@ const compositeAbilityObject = {
                       },
                       "passed": [
                         {
-                          "name": "Add Events/Bonuses",
-                          "to": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
+                          "name": "Define Custom Variable",
+                          "scope": "ContextTaskTemplate",
+                          "variableName": "_FinalMergeMDF",
+                          "value": 0
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "TryMergeMDF",
+                            "compareType": ">",
+                            "value2": 0,
+                            "contextScope": "ContextTaskTemplate"
                           },
-                          "modifier": "<a class=\"gModGreen\" id=\"-1491295670\">MBattleEvent_Elation_ElationEchoPointBonus</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
-                          "valuePerStack": {
-                            "ElationEchoPoint": {
-                              "operator": "Variables[0] (_FinalAddValue) || RETURN",
-                              "displayLines": "_FinalAddValue",
-                              "constants": [],
-                              "variables": [
-                                "_FinalAddValue"
+                          "passed": [
+                            {
+                              "name": "Define Custom Variable with Modifier Values",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "scope": "ContextTaskTemplate",
+                              "valueType": "LifeTime",
+                              "variableName": "_FinalLifeTime",
+                              "modifierName": "<a class=\"gModGreen\" id=\"-1491295670\">MBattleEvent_Elation_ElationEchoPointBonus</a>[<span class=\"descriptionNumberColor\">undefined</span>]"
+                            },
+                            {
+                              "name": "Reconstruct Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "conditions": {
+                                "name": "AND",
+                                "conditionList": [
+                                  {
+                                    "name": "Modifier Was",
+                                    "modifier": "<a class=\"gModGreen\" id=\"-1491295670\">MBattleEvent_Elation_ElationEchoPointBonus</a>[<span class=\"descriptionNumberColor\">undefined</span>]"
+                                  },
+                                  {
+                                    "name": "Compare: Variable",
+                                    "value1": "Modifier_Callback_Value",
+                                    "compareType": "=",
+                                    "value2": {
+                                      "operator": "Variables[0] (_FinalLifeTime) || RETURN",
+                                      "displayLines": "_FinalLifeTime",
+                                      "constants": [],
+                                      "variables": [
+                                        "_FinalLifeTime"
+                                      ]
+                                    },
+                                    "valueType": "LifeTime"
+                                  },
+                                  {
+                                    "name": "Compare: Variable",
+                                    "value1": "SpecialEcho",
+                                    "compareType": "=",
+                                    "value2": {
+                                      "operator": "Variables[0] (SpecialEcho) || RETURN",
+                                      "displayLines": "SpecialEcho",
+                                      "constants": [],
+                                      "variables": [
+                                        "SpecialEcho"
+                                      ]
+                                    }
+                                  }
+                                ]
+                              },
+                              "includeTargetsInLimbo": true,
+                              "execute": [
+                                {
+                                  "name": "IF",
+                                  "conditions": {
+                                    "name": "Compare: Variable",
+                                    "value1": "_FinalMergeMDF",
+                                    "compareType": "=",
+                                    "value2": 0,
+                                    "contextScope": "ContextTaskTemplate"
+                                  },
+                                  "passed": [
+                                    {
+                                      "name": "Adjust Variable Value",
+                                      "adjustmentType": "Add to Value (Default)",
+                                      "variableName": "ElationEchoPoint",
+                                      "on": null,
+                                      "value": {
+                                        "operator": "Variables[0] (_FinalAddValue) || RETURN",
+                                        "displayLines": "_FinalAddValue",
+                                        "constants": [],
+                                        "variables": [
+                                          "_FinalAddValue"
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "name": "Define Custom Variable",
+                                      "scope": "ContextTaskTemplate",
+                                      "variableName": "_FinalMergeMDF",
+                                      "value": 1
+                                    }
+                                  ]
+                                }
                               ]
                             }
+                          ]
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Variable",
+                            "value1": "_FinalMergeMDF",
+                            "compareType": "=",
+                            "value2": 0,
+                            "contextScope": "ContextTaskTemplate"
+                          },
+                          "passed": [
+                            {
+                              "name": "Add Events/Bonuses",
+                              "to": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1491295670\">MBattleEvent_Elation_ElationEchoPointBonus</a>[<span class=\"descriptionNumberColor\">undefined</span>]",
+                              "valuePerStack": {
+                                "ElationEchoPoint": {
+                                  "operator": "Variables[0] (_FinalAddValue) || RETURN",
+                                  "displayLines": "_FinalAddValue",
+                                  "constants": [],
+                                  "variables": [
+                                    "_FinalAddValue"
+                                  ]
+                                },
+                                "SpecialEcho": {
+                                  "operator": "Variables[0] (SpecialEcho) || RETURN",
+                                  "displayLines": "SpecialEcho",
+                                  "constants": [],
+                                  "variables": [
+                                    "SpecialEcho"
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "failed": [
+                        {
+                          "name": "Unknown Elation Event1",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Parameter Target}}"
                           }
                         }
                       ]

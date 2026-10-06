@@ -274,6 +274,10 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
+                  "customSource": {
+                    "name": "Target Name",
+                    "target": "{{Parameter Target}}"
+                  },
                   "punchlineFixed": {
                     "operator": "Variables[0] (20) || RETURN",
                     "displayLines": "20",
@@ -282,6 +286,7 @@ const configAbility = {
                       20
                     ]
                   },
+                  "actionTag": null,
                   "execute": [
                     {
                       "name": "Add Events/Bonuses",

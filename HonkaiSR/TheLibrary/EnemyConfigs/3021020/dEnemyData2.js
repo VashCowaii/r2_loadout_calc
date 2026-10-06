@@ -188,6 +188,40 @@ let enemyData = {
         "Argenti_Totem",
         "MGrid_4007"
       ]
+    },
+    "302102005": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        2.727273,
+        1,
+        60,
+        1,
+        60
+      ],
+      "weak": [
+        "Fire",
+        "Ice"
+      ],
+      "res": {
+        "Fire": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "abilities": [
+        1470,
+        1471
+      ],
+      "abilityOrder": [
+        1470
+      ],
+      "enemyTag": [
+        "Argenti_Totem"
+      ]
     }
   }
 }

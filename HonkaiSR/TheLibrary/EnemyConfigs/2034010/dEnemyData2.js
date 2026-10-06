@@ -192,6 +192,95 @@ let enemyData = {
         "WolfSummon01": 203201003,
         "WolfSummon02": 203202004
       }
+    },
+    "203401003": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        0.545455,
+        1,
+        -40,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Fire",
+        "Wind"
+      ],
+      "res": {
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "resMod": {
+        "STAT_CTRL_Frozen": 0.75,
+        "STAT_Confine": 0.75,
+        "STAT_Entangle": 0.75
+      },
+      "abilities": [
+        923,
+        924,
+        925,
+        926,
+        927,
+        928,
+        929,
+        930
+      ],
+      "enemyTag": [
+        "MonsterType_W2_Lycan"
+      ],
+      "summons": [
+        {
+          "name": "Sableclaw Wolftrooper",
+          "over": 203201004,
+          "base": 2032010
+        },
+        {
+          "name": "Eclipse Wolftrooper",
+          "over": 203202005,
+          "base": 2032020
+        }
+      ],
+      "overrideParams": {
+        "928": [
+          [
+            "-",
+            "-",
+            "-",
+            0.6
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ],
+        "930": [
+          [
+            "-",
+            0.2,
+            0.3
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      },
+      "itNeverEnds": {
+        "WolfSummon01": 203201004,
+        "WolfSummon02": 203202005
+      }
     }
   }
 }

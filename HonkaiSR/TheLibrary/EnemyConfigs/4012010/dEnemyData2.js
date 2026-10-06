@@ -383,6 +383,81 @@ let enemyData = {
         1717,
         1718
       ]
+    },
+    "401201016": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Thunder",
+        "Quantum",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Fire": 0.2,
+        "Ice": 0.2,
+        "Wind": 0.2
+      },
+      "abilities": [
+        1717,
+        1718
+      ]
+    },
+    "401201017": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        100,
+        1,
+        null
+      ],
+      "weak": [
+        "Thunder",
+        "Quantum",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Fire": 0.2,
+        "Ice": 0.2,
+        "Wind": 0.2
+      },
+      "abilities": [
+        1717,
+        1718
+      ],
+      "overrideParams": {
+        "1718": [
+          [
+            "-",
+            "-",
+            "-",
+            0.02,
+            "-",
+            0.01
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      }
     }
   }
 }

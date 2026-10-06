@@ -43,9 +43,9 @@ let enemyData = {
         "STAT_CTRL": 0.5
       },
       "abilities": [
-        3140,
-        3141,
-        3142
+        3158,
+        3159,
+        3160
       ],
       "abilityOrder": [
         "ABILITY__DOES_NOT_EXIST",

@@ -254,7 +254,7 @@ const configAbility = {
           "whenEnteringRange": [
             {
               "name": "Declare Custom Variable",
-              "propertyType": "BasePoint",
+              "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;",
               "variableName": "_CurrentEP"
             },
             {
@@ -329,7 +329,7 @@ const configAbility = {
           "whenValueChanges": [
             {
               "name": "Declare Custom Variable",
-              "propertyType": "BasePoint",
+              "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;",
               "variableName": "_CurrentEP"
             },
             {
@@ -588,7 +588,7 @@ const configAbility = {
           "whenEnteringRange": [
             {
               "name": "Declare Custom Variable",
-              "propertyType": "BasePoint",
+              "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;",
               "variableName": "_CurrentEP"
             },
             {
@@ -663,7 +663,7 @@ const configAbility = {
           "whenValueChanges": [
             {
               "name": "Declare Custom Variable",
-              "propertyType": "BasePoint",
+              "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;",
               "variableName": "_CurrentEP"
             },
             {

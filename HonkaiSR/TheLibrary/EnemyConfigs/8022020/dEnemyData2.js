@@ -45,10 +45,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3365,
-        3366,
-        3367,
-        3368
+        3383,
+        3384,
+        3385,
+        3386
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -82,10 +82,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3365,
-        3366,
-        3367,
-        3368
+        3383,
+        3384,
+        3385,
+        3386
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -116,10 +116,10 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        3365,
-        3366,
-        3367,
-        3368
+        3383,
+        3384,
+        3385,
+        3386
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -153,10 +153,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3365,
-        3366,
-        3367,
-        3368
+        3383,
+        3384,
+        3385,
+        3386
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -190,10 +190,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3365,
-        3366,
-        3367,
-        3368
+        3383,
+        3384,
+        3385,
+        3386
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -227,10 +227,10 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3365,
-        3366,
-        3367,
-        3368
+        3383,
+        3384,
+        3385,
+        3386
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -264,21 +264,74 @@ let enemyData = {
         "STAT_CTRL_Frozen": 0.75
       },
       "abilities": [
-        3365,
-        3366,
-        3367,
-        3368
+        3383,
+        3384,
+        3385,
+        3386
       ],
       "enemyTag": [
         "SW_Minion01",
         "SW_Minion"
       ],
       "overrideParams": {
-        "3368": [
+        "3386": [
           [
             0.15,
             "-",
             0.05
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      }
+    },
+    "802202007": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1.222222,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Fire",
+        "Imaginary"
+      ],
+      "res": {
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2
+      },
+      "resMod": {
+        "STAT_CTRL_Frozen": 0.75
+      },
+      "abilities": [
+        3383,
+        3384,
+        3385,
+        3386
+      ],
+      "enemyTag": [
+        "SW_Minion01",
+        "SW_Minion"
+      ],
+      "overrideParams": {
+        "3386": [
+          [
+            0.2,
+            "-",
+            0.2
           ],
           null,
           null,

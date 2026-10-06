@@ -1225,11 +1225,9 @@ const compositeAbilityObject = {
                   },
                   "passed": [
                     {
-                      "name": "Inject Extra-Turn",
-                      "actionTag": [
-                        "EnergyTrigger_ElationAbility"
-                      ],
-                      "forcedPunchline": {
+                      "name": "Inject Elation Skill Extra-Turn (Default priority)",
+                      "eventType": "AventurineW_00_ElationSkill",
+                      "punchlineFixed": {
                         "operator": "Variables[0] (20) || RETURN",
                         "displayLines": "20",
                         "constants": [],
@@ -1237,16 +1235,10 @@ const compositeAbilityObject = {
                           20
                         ]
                       },
-                      "skillIndex": {
-                        "operator": "Variables[0] (CastElationSkillIndex) || RETURN",
-                        "displayLines": "CastElationSkillIndex",
-                        "constants": [],
-                        "variables": [
-                          "CastElationSkillIndex"
-                        ]
-                      },
-                      "forceAction": true,
-                      "afterInjection": [
+                      "actionTag": [
+                        "EnergyTrigger_ElationAbility"
+                      ],
+                      "execute": [
                         {
                           "name": "Add Events/Bonuses",
                           "to": {
@@ -1375,11 +1367,9 @@ const compositeAbilityObject = {
                       },
                       "passed": [
                         {
-                          "name": "Inject Extra-Turn",
-                          "actionTag": [
-                            "EnergyTrigger_ElationAbility"
-                          ],
-                          "forcedPunchline": {
+                          "name": "Inject Elation Skill Extra-Turn (Default priority)",
+                          "eventType": "AventurineW_00_ElationSkill",
+                          "punchlineFixed": {
                             "operator": "Variables[0] (20) || RETURN",
                             "displayLines": "20",
                             "constants": [],
@@ -1387,16 +1377,10 @@ const compositeAbilityObject = {
                               20
                             ]
                           },
-                          "skillIndex": {
-                            "operator": "Variables[0] (CastElationSkillIndex) || RETURN",
-                            "displayLines": "CastElationSkillIndex",
-                            "constants": [],
-                            "variables": [
-                              "CastElationSkillIndex"
-                            ]
-                          },
-                          "forceAction": true,
-                          "afterInjection": [
+                          "actionTag": [
+                            "EnergyTrigger_ElationAbility"
+                          ],
+                          "execute": [
                             {
                               "name": "Add Events/Bonuses",
                               "to": {
@@ -1476,11 +1460,9 @@ const compositeAbilityObject = {
                       },
                       "passed": [
                         {
-                          "name": "Inject Extra-Turn",
-                          "actionTag": [
-                            "EnergyTrigger_ElationAbility"
-                          ],
-                          "forcedPunchline": {
+                          "name": "Inject Elation Skill Extra-Turn (Default priority)",
+                          "eventType": "AventurineW_00_ElationSkill",
+                          "punchlineFixed": {
                             "operator": "Variables[0] (20) || RETURN",
                             "displayLines": "20",
                             "constants": [],
@@ -1488,16 +1470,10 @@ const compositeAbilityObject = {
                               20
                             ]
                           },
-                          "skillIndex": {
-                            "operator": "Variables[0] (CastElationSkillIndex) || RETURN",
-                            "displayLines": "CastElationSkillIndex",
-                            "constants": [],
-                            "variables": [
-                              "CastElationSkillIndex"
-                            ]
-                          },
-                          "forceAction": true,
-                          "afterInjection": [
+                          "actionTag": [
+                            "EnergyTrigger_ElationAbility"
+                          ],
+                          "execute": [
                             {
                               "name": "Add Events/Bonuses",
                               "to": {
@@ -1721,25 +1697,17 @@ const compositeAbilityObject = {
                   "name": "Add Ability Tag",
                   "skillName": "Skill04",
                   "tag": [
-                    "AssistCaster"
+                    "AssistCaster",
+                    "Elation"
                   ]
                 },
                 {
                   "name": "Add Ability Tag",
                   "skillName": "Skill41",
                   "tag": [
-                    "AssistCaster"
+                    "AssistCaster",
+                    "Elation"
                   ]
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Modifier Holder}}"
-                  },
-                  "scope": "ContextCaster",
-                  "variableName": "CastElationSkillIndex",
-                  "value": 4
                 }
               ]
             }

@@ -324,6 +324,10 @@ let allowedCharacterList = [
     "trimName": "YaoGuang"
   },
   {
+    "fullName": "Pearl",
+    "trimName": "Pearl"
+  },
+  {
     "fullName": "Ashveil",
     "trimName": "Ashveil"
   },
@@ -346,10 +350,6 @@ let allowedCharacterList = [
   {
     "fullName": "Robin • Summeretto",
     "trimName": "RobinSummeretto"
-  },
-  {
-    "fullName": "Summer Songbirds",
-    "trimName": "SummerSongbirds"
   },
   {
     "fullName": "Aventurine • Waveflair",

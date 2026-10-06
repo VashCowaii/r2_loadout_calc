@@ -275,6 +275,56 @@ let enemyData = {
         "SummonID03": 300301303,
         "SummonID04": 300204102
       }
+    },
+    "300402005": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Fire",
+        "Ice",
+        "Thunder",
+        "Imaginary"
+      ],
+      "abilities": [
+        1340,
+        1341,
+        1342,
+        1343
+      ],
+      "enemyTag": [
+        "MonsterType_W3_TheaterCore"
+      ],
+      "summons": [
+        {
+          "name": "Banacademic Office's Charmony BananAdvisor",
+          "over": 3003013,
+          "base": 3003013
+        },
+        {
+          "name": "Banacademic Office's Fortune BananAdvisor",
+          "over": 3002021,
+          "base": 3002021
+        },
+        {
+          "name": "Banacademic Office's Assistanana",
+          "over": 3002011,
+          "base": 3002011
+        },
+        {
+          "name": "Banacademic Office's Dreamweaver BananAdvisor",
+          "over": 3002041,
+          "base": 3002041
+        }
+      ]
     }
   }
 }

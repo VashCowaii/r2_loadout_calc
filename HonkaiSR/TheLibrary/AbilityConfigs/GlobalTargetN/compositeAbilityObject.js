@@ -144,148 +144,6 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
-          "nameTarget": "RobinS: Memos and Fake Partners",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Join Targets",
-              "TargetList": [
-                {
-                  "name": "Target Name",
-                  "target": "{{RobinS: Memosprite}}"
-                },
-                {
-                  "name": "Target Name",
-                  "target": "{{RobinS: Fake Partner 2}}"
-                },
-                {
-                  "name": "Target Name",
-                  "target": "{{RobinS: Fake Partner 3}}"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
-          "nameTarget": "RobinS: Fake Partner 3",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Add Target by Pseudo-Character Partner",
-              "target": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{All Memosprites}}"
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "Character ID",
-                      "ID": 11512,
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "characterName": null
-                    }
-                  }
-                ]
-              },
-              "identifier": "RobinS_PTN03"
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
-          "nameTarget": "RobinS: Fake Partner 2",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Add Target by Pseudo-Character Partner",
-              "target": {
-                "name": "Target Sequence",
-                "Sequence": [
-                  {
-                    "name": "Target Name",
-                    "target": "{{All Memosprites}}"
-                  },
-                  {
-                    "name": "Target Filter",
-                    "conditions": {
-                      "name": "Character ID",
-                      "ID": 11512,
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "characterName": null
-                    }
-                  }
-                ]
-              },
-              "identifier": "RobinS_PTN02"
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
-          "nameTarget": "RobinS: Memosprite",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{All Memosprites}}"
-                },
-                {
-                  "name": "Target Filter",
-                  "conditions": {
-                    "name": "Character ID",
-                    "ID": 11512,
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Parameter Target}}"
-                    },
-                    "characterName": null
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
-          "nameTarget": "RobinS: E1 - HighestHP Enemy",
-          "isTargetOperator": false,
-          "execute": [
-            {
-              "name": "Target Sequence",
-              "Sequence": [
-                {
-                  "name": "Target Name",
-                  "target": "{{Enemy Team All}}"
-                },
-                {
-                  "name": "Sort by Stat",
-                  "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                  "living": true,
-                  "sortByHighest": true
-                },
-                {
-                  "name": "Return Target",
-                  "value": 1
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Target Configuration",
           "nameTarget": "Himeko Nova: Ult Target",
           "isTargetOperator": false,
           "execute": [
@@ -6874,6 +6732,33 @@ const compositeAbilityObject = {
         },
         {
           "name": "Target Configuration",
+          "nameTarget": "Elation: Extra Members",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team All(with Unselectable)V2}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "Has Modifier",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Parameter Target}}"
+                    },
+                    "modifier": "<a class=\"gModGreen\" id=\"1284000426\">Modifier_Standard_ExtraElationAbility</a>"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
           "nameTarget": "Dying Enemies",
           "isTargetOperator": false,
           "execute": [
@@ -6908,6 +6793,49 @@ const compositeAbilityObject = {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Aha Instant: Anomaly Arbitration Standard",
+          "isTargetOperator": false,
+          "execute": [
+            {
+              "name": "Target Sequence",
+              "Sequence": [
+                {
+                  "name": "Target Name",
+                  "target": "{{Player Team All(with Unselectable)V2}}"
+                },
+                {
+                  "name": "Target Filter",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Has Modifier",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "modifier": "<a class=\"gModGreen\" id=\"-1941769548\">ElationTime_PeakBattle_Standard_Mark</a>"
+                      },
+                      {
+                        "name": "Target is Pathstrider",
+                        "path": [
+                          "Elation"
+                        ],
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "invertCondition": true
+                      }
+                    ]
                   }
                 }
               ]
@@ -7285,12 +7213,25 @@ const compositeAbilityObject = {
                         "tag": "ElationTime"
                       },
                       {
-                        "name": "Battle Event ID",
-                        "ID": 70001,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Battle Event ID",
+                            "ID": 70001,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            }
+                          },
+                          {
+                            "name": "Battle Event ID",
+                            "ID": 70002,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            }
+                          }
+                        ],
                         "invertCondition": true
                       },
                       {
@@ -7335,6 +7276,14 @@ const compositeAbilityObject = {
                     {
                       "name": "Target Name",
                       "target": "{{Elation: Currency Wars Himeko Origin}}"
+                    },
+                    {
+                      "name": "Target Name",
+                      "target": "{{Aha Instant: Anomaly Arbitration Standard}}"
+                    },
+                    {
+                      "name": "Target Name",
+                      "target": "{{Elation: Extra Members}}"
                     }
                   ]
                 }
@@ -7368,6 +7317,10 @@ const compositeAbilityObject = {
                     {
                       "name": "Target Name",
                       "target": "{{Elation: Currency Wars Himeko Origin}}"
+                    },
+                    {
+                      "name": "Target Name",
+                      "target": "{{Aha Instant: Anomaly Arbitration Standard}}"
                     }
                   ]
                 }
@@ -9815,6 +9768,43 @@ const compositeAbilityObject = {
                   "target": "{{Current Action Owner}}"
                 },
                 "Adjust Target by Ability Attack Source"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Target Configuration",
+          "nameTarget": "Current Action Target List",
+          "isTargetOperator": false,
+          "math": "Union",
+          "execute": [
+            {
+              "name": "Compute Targets",
+              "type": "Union",
+              "TargetList": [
+                {
+                  "name": "Target Sequence",
+                  "Sequence": [
+                    {
+                      "name": "Target Name",
+                      "target": "{{Current Action Owner}}"
+                    },
+                    {
+                      "name": "Adjust Target by Ability Target"
+                    }
+                  ]
+                },
+                {
+                  "name": "Target Sequence",
+                  "Sequence": [
+                    {
+                      "name": "Target Name",
+                      "target": "{{Current Action Owner}}"
+                    },
+                    "Adjust Target by Ability Sub-Targets"
+                  ]
+                },
+                "Add Target by Current Ability Target"
               ]
             }
           ]

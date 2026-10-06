@@ -471,6 +471,88 @@ let enemyData = {
       "enemyTag": [
         "W2_Kafka"
       ]
+    },
+    "200401011": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1.285714,
+        1,
+        21,
+        1,
+        -90
+      ],
+      "weak": [
+        "Fire",
+        "Wind",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Ice": 0.2,
+        "Thunder": 0.4,
+        "Quantum": 0.2
+      },
+      "resMod": {
+        "STAT_CTRL_Frozen": 0.5
+      },
+      "abilities": [
+        514,
+        515,
+        516,
+        517,
+        518,
+        519
+      ],
+      "abilityOrder": [
+        514
+      ],
+      "enemyTag": [
+        "W2_Kafka"
+      ]
+    },
+    "200401012": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        2.142857,
+        1,
+        21,
+        1,
+        -90
+      ],
+      "weak": [
+        "Physical",
+        "Wind",
+        "Imaginary"
+      ],
+      "res": {
+        "Physical": 0.2,
+        "Ice": 0.2,
+        "Thunder": 0.4,
+        "Quantum": 0.2
+      },
+      "resMod": {
+        "STAT_CTRL_Frozen": 0.5
+      },
+      "abilities": [
+        514,
+        515,
+        516,
+        517,
+        518,
+        519
+      ],
+      "abilityOrder": [
+        514
+      ],
+      "enemyTag": [
+        "W2_Kafka"
+      ]
     }
   }
 }

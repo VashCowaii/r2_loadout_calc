@@ -91,6 +91,83 @@ let enemyData = {
       "itNeverEnds": {
         "CurrentRanger": 1
       }
+    },
+    "501305002": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        0.666667,
+        1,
+        null,
+        1,
+        -120
+      ],
+      "weak": [
+        "Physical",
+        "Quantum",
+        "Imaginary"
+      ],
+      "res": {
+        "Fire": 0.8,
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2
+      },
+      "abilities": [
+        2723,
+        2724,
+        2725,
+        2726,
+        2727
+      ],
+      "enemyTag": [
+        "W5_Ranger"
+      ],
+      "itNeverEnds": {
+        "CurrentRanger": 1
+      }
+    },
+    "501305003": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        0.083333,
+        1,
+        null,
+        1,
+        null
+      ],
+      "weak": [
+        "Physical",
+        "Quantum",
+        "Imaginary"
+      ],
+      "res": {
+        "Fire": 0.8,
+        "Ice": 0.2,
+        "Thunder": 0.2,
+        "Wind": 0.2
+      },
+      "abilities": [
+        2723,
+        2724,
+        2725,
+        2726,
+        2727
+      ],
+      "abilityOrder": [
+        2724
+      ],
+      "enemyTag": [
+        "W5_Ranger"
+      ],
+      "itNeverEnds": {
+        "CurrentRanger": 1
+      }
     }
   }
 }

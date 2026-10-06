@@ -373,7 +373,8 @@ const configAbility = {
       "stackType": "ReplaceByCaster",
       "modifierFlags": [
         "ImmuneDebuff",
-        "SpecialBattleArea"
+        "SpecialBattleArea",
+        "Endurance"
       ],
       "execute": [
         {

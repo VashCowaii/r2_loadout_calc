@@ -42,13 +42,13 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        3361,
-        3362,
-        3363,
-        3364
+        3379,
+        3380,
+        3381,
+        3382
       ],
       "abilityOrder": [
-        3361
+        3379
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -87,13 +87,13 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        3361,
-        3362,
-        3363,
-        3364
+        3379,
+        3380,
+        3381,
+        3382
       ],
       "abilityOrder": [
-        3361
+        3379
       ],
       "enemyTag": [
         "SW_Minion01",
@@ -132,13 +132,13 @@ let enemyData = {
         "Wind": 0.2
       },
       "abilities": [
-        3361,
-        3362,
-        3363,
-        3364
+        3379,
+        3380,
+        3381,
+        3382
       ],
       "abilityOrder": [
-        3361
+        3379
       ],
       "enemyTag": [
         "SW_Minion01",

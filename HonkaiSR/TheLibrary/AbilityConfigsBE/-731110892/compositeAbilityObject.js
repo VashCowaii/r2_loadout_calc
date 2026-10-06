@@ -428,6 +428,36 @@ const compositeAbilityObject = {
                 }
               ]
             }
+          ],
+          "variableValueChange": [
+            {
+              "name": "Variable Value Changes",
+              "variableName": "ElationEchoPoint",
+              "valueRanges": [
+                {
+                  "name": "Variable Value Range Conditions",
+                  "whenValueChanges": [
+                    {
+                      "name": "Stack Target Stat Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Modifier Holder}}"
+                      },
+                      "statName": "&nbsp;<span class=\"descriptionNumberColor\">CertifiedBanger</span>&nbsp;",
+                      "value": {
+                        "operator": "Variables[0] (ElationEchoPoint) || RETURN",
+                        "displayLines": "ElationEchoPoint",
+                        "constants": [],
+                        "variables": [
+                          "ElationEchoPoint"
+                        ]
+                      },
+                      "isRefresh": true
+                    }
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -1870,7 +1900,7 @@ const compositeAbilityObject = {
               "whenValueChanges": [
                 {
                   "name": "Declare Custom Variable",
-                  "propertyType": "BasePoint",
+                  "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;",
                   "variableName": "Elation_CurrentPoint"
                 },
                 {
@@ -1890,12 +1920,25 @@ const compositeAbilityObject = {
                       },
                       "maxTargets": 1,
                       "conditions": {
-                        "name": "Battle Event ID",
-                        "ID": 70001,
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        }
+                        "name": "OR",
+                        "conditionList": [
+                          {
+                            "name": "Battle Event ID",
+                            "ID": 70001,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            }
+                          },
+                          {
+                            "name": "Battle Event ID",
+                            "ID": 70002,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            }
+                          }
+                        ]
                       },
                       "ifTargetFound": [
                         {
@@ -2076,7 +2119,7 @@ const compositeAbilityObject = {
               "whenValueChanges": [
                 {
                   "name": "Declare Custom Variable",
-                  "propertyType": "BasePoint",
+                  "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;",
                   "variableName": "Elation_CurrentPoint"
                 },
                 {
@@ -2092,24 +2135,70 @@ const compositeAbilityObject = {
                       "name": "Find New Target",
                       "from": {
                         "name": "Target Name",
-                        "target": "{{Battle Event List}}"
+                        "target": "{{Player Team All}}"
                       },
                       "maxTargets": 1,
                       "conditions": {
-                        "name": "Battle Event ID",
-                        "ID": 70001,
+                        "name": "Character ID",
+                        "ID": 1511,
                         "target": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        }
+                        },
+                        "characterName": null
                       },
+                      "ifTargetFound": [
+                        {
+                          "name": "Find New Target",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Battle Event List}}"
+                          },
+                          "maxTargets": 1,
+                          "conditions": {
+                            "name": "Battle Event ID",
+                            "ID": 70002,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            }
+                          },
+                          "noTargetFound": [
+                            {
+                              "name": "Add Battle Event",
+                              "teamName": "Neutral Team",
+                              "eventID": 70002,
+                              "canDupe": true,
+                              "variables": null
+                            }
+                          ]
+                        }
+                      ],
                       "noTargetFound": [
                         {
-                          "name": "Add Battle Event",
-                          "teamName": "Neutral Team",
-                          "eventID": 70001,
-                          "canDupe": true,
-                          "variables": null
+                          "name": "Find New Target",
+                          "from": {
+                            "name": "Target Name",
+                            "target": "{{Battle Event List}}"
+                          },
+                          "maxTargets": 1,
+                          "conditions": {
+                            "name": "Battle Event ID",
+                            "ID": 70001,
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Parameter Target}}"
+                            }
+                          },
+                          "noTargetFound": [
+                            {
+                              "name": "Add Battle Event",
+                              "teamName": "Neutral Team",
+                              "eventID": 70001,
+                              "canDupe": true,
+                              "variables": null
+                            }
+                          ]
                         }
                       ]
                     }
@@ -2166,8 +2255,6 @@ const compositeAbilityObject = {
           "name": "Lock Battle Actions"
         },
         "Unknown EventType2 (Not always an error)[1 false]",
-        "Unknown EventType3 (Not always an error)",
-        "Unknown EventType3 (Not always an error)[1 false]",
         "Unknown EventType1 (Not always an error)[1 false][2 true]",
         {
           "name": "Lock Battle Actions",
@@ -2523,45 +2610,8 @@ const compositeAbilityObject = {
           "name": "Lock Battle Actions"
         },
         {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Stage ID",
-                "ID": 205510800,
-                "compareType": ">="
-              },
-              {
-                "name": "Stage ID",
-                "ID": 205510800,
-                "compareType": "<="
-              }
-            ]
-          }
-        },
-        {
           "name": "Lock Battle Actions",
           "isLock": false
-        },
-        {
-          "name": "IF",
-          "conditions": {
-            "name": "AND",
-            "conditionList": [
-              {
-                "name": "Stage ID",
-                "ID": 205510800,
-                "compareType": ">="
-              },
-              {
-                "name": "Stage ID",
-                "ID": 205510800,
-                "compareType": "<="
-              }
-            ],
-            "invertCondition": true
-          }
         },
         {
           "name": "Define Variable with Elation Skill Count",

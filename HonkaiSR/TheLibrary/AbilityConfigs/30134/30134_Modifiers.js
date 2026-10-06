@@ -10,6 +10,60 @@ const configAbility = {
   "parse": [
     {
       "name": "Modifier Construction",
+      "for": "<a class=\"gModGreen\" id=\"mod__-1941769548\">ElationTime_PeakBattle_Standard_Mark</a>",
+      "execute": [
+        {
+          "eventTrigger": "When Stacking/Receiving Modifier",
+          "execute": [
+            {
+              "name": "Add Ability",
+              "abilityName": "CommomAbility_PeakBattle_ElationSkill",
+              "isPool": true
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Aha Instant: Start",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Target is Pathstrider",
+                "path": [
+                  "Elation"
+                ],
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "invertCondition": true
+              }
+            }
+          ]
+        },
+        {
+          "eventTrigger": "Aha Instant: End",
+          "execute": [
+            {
+              "name": "IF",
+              "conditions": {
+                "name": "Target is Pathstrider",
+                "path": [
+                  "Elation"
+                ],
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Modifier Holder}}"
+                },
+                "invertCondition": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modifier Construction",
       "for": "<a class=\"gModGreen\" id=\"mod__-1189881261\">BAttleEventAbility_Weakness_Imaginary</a>",
       "stackType": "ReplaceByCaster",
       "modifierFlags": [

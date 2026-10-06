@@ -1017,6 +1017,82 @@ let enemyData = {
         "SummonID02": 302103006,
         "SummonID03": 302104301
       }
+    },
+    "302401015": {
+      "name": -1,
+      "scaleElite": 1,
+      "stArray": [
+        1,
+        1,
+        1.066667,
+        1,
+        36,
+        1,
+        -120
+      ],
+      "weak": [
+        "Physical",
+        "Fire",
+        "Ice"
+      ],
+      "res": {
+        "Thunder": 0.2,
+        "Wind": 0.2,
+        "Quantum": 0.2,
+        "Imaginary": 0.2
+      },
+      "resMod": {
+        "STAT_CTRL": 0.5
+      },
+      "abilities": [
+        1496,
+        1497,
+        1498,
+        1499,
+        1500,
+        1501
+      ],
+      "enemyTag": [
+        "Monster_Argenti"
+      ],
+      "summons": [
+        {
+          "name": "\"The Honored\"",
+          "over": 302102005,
+          "base": 3021020
+        },
+        {
+          "name": "\"Speartip\"",
+          "over": 302103007,
+          "base": 3021030
+        },
+        {
+          "name": "\"The Shield\"",
+          "over": 302104005,
+          "base": 3021040
+        }
+      ],
+      "overrideParams": {
+        "1498": [
+          [
+            "-",
+            "-",
+            1.5
+          ],
+          null,
+          null,
+          null,
+          null,
+          null,
+          "-",
+          "-"
+        ]
+      },
+      "itNeverEnds": {
+        "SummonID01": 302102005,
+        "SummonID02": 302103007,
+        "SummonID03": 302104005
+      }
     }
   }
 }

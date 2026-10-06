@@ -42,15 +42,15 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2996,
-        2997,
-        2998,
-        2999
+        3014,
+        3015,
+        3016,
+        3017
       ],
       "abilityOrder": [
-        2992,
-        2993,
-        2994
+        3010,
+        3011,
+        3012
       ],
       "enemyTag": [
         "Monster_Minion04"
@@ -80,15 +80,15 @@ let enemyData = {
         "Quantum": 0.2
       },
       "abilities": [
-        2996,
-        2997,
-        2998,
-        2999
+        3014,
+        3015,
+        3016,
+        3017
       ],
       "abilityOrder": [
-        2992,
-        2993,
-        2994
+        3010,
+        3011,
+        3012
       ],
       "enemyTag": [
         "Monster_Minion04"

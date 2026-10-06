@@ -308,12 +308,16 @@ const configAbility = {
         {
           "name": "IF",
           "conditions": {
-            "name": "Has Modifier",
+            "name": "Is Unable to Advance Others",
             "target": {
               "name": "Target Name",
               "target": "{{Caster}}"
             },
-            "modifier": "<a class=\"gModGreen\" id=\"1875337065\">RobinS_Ability03_SpecialGuest</a>[<span class=\"descriptionNumberColor\">Special Guest</span>]",
+            "targetAdvance": {
+              "name": "Target Name",
+              "target": "{{Ability Target(ST)}}"
+            },
+            "changeType": "Bit_Decrease",
             "invertCondition": true
           },
           "passed": [
