@@ -774,7 +774,7 @@ const megaParsingFuckeryPain = {
             <div class="rotationConditionOperatorHeaderInline">Unknown Elation Event1:</div>&nbsp;
         </div>
         <div class="modifierDetailsBox">
-            ${getStandardNameDisplay(initialCounter,parseRef.target,"Target")}
+            ${getStandardNameDisplay(initialCounter,parseRef.target,"Target",true)}
         </div>`;
     },
     "Assign Value to Stat"(parseRef,initialCounter) {

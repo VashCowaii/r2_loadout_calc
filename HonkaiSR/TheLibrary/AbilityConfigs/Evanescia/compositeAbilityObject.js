@@ -189,6 +189,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Inject Elation Skill Extra-Turn (Default priority)",
+                      "actionTag": null,
                       "abortFlags": [
                         "STAT_CTRL",
                         "DisableAction"
@@ -2103,6 +2104,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Inject Elation Skill Extra-Turn (Default priority)",
+                  "actionTag": null,
                   "execute": [
                     {
                       "name": "Add Events/Bonuses",
@@ -2689,141 +2691,6 @@ const compositeAbilityObject = {
               "priorityLevel": -85
             },
             {
-              "eventTrigger": "When Losing Modifier [Anyone]",
-              "execute": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "AND",
-                    "conditionList": [
-                      {
-                        "name": "Modifier Has Flag",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "flagName": "ElationEchoPoint"
-                      },
-                      {
-                        "name": "Trace Activated",
-                        "conditionList": "Best All Blooms"
-                      },
-                      {
-                        "name": "Is Part Of",
-                        "of": {
-                          "name": "Target Name",
-                          "target": "{{All Team Members(Exclude Self)}}"
-                        },
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
-                      }
-                    ]
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Copy",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-228290033\">ParamModifier</a>",
-                      "variable": "ElationEchoPoint",
-                      "target2": null,
-                      "variable2": "ElationEchoTemp"
-                    },
-                    {
-                      "name": "Use Custom Character Function",
-                      "functionName": "<a class=\"gTempYellow\" id=\"818871295\">AddElationEchoPoint</a>",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "variables": {
-                        "AddValue": {
-                          "operator": "Variables[0] (ElationEchoTemp) || Variables[1] (0.5) || MUL || RETURN",
-                          "displayLines": "(ElationEchoTemp * 0.5)",
-                          "constants": [],
-                          "variables": [
-                            "ElationEchoTemp",
-                            0.5
-                          ]
-                        }
-                      }
-                    },
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "variableName": "TotalEchoPointFromTeammate",
-                      "context": "ContextCaster",
-                      "value": {
-                        "operator": "Variables[0] (ElationEchoTemp) || Variables[1] (0.5) || MUL || RETURN",
-                        "displayLines": "(ElationEchoTemp * 0.5)",
-                        "constants": [],
-                        "variables": [
-                          "ElationEchoTemp",
-                          0.5
-                        ]
-                      }
-                    },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Eidolon Activated",
-                        "eidolon": 2
-                      },
-                      "passed": [
-                        {
-                          "name": "Use Custom Character Function",
-                          "functionName": "<a class=\"gTempYellow\" id=\"818871295\">AddElationEchoPoint</a>",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "variables": {
-                            "AddValue": {
-                              "operator": "Variables[0] (ElationEchoTemp) || Variables[1] (0.5) || MUL || Variables[2] (1) || MUL || RETURN",
-                              "displayLines": "((ElationEchoTemp * 0.5) * 1)",
-                              "constants": [],
-                              "variables": [
-                                "ElationEchoTemp",
-                                0.5,
-                                1
-                              ]
-                            }
-                          }
-                        },
-                        {
-                          "name": "Define Custom Variable with Added Value",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "variableName": "TotalEchoPointFromTeammate",
-                          "context": "ContextCaster",
-                          "value": {
-                            "operator": "Variables[0] (ElationEchoTemp) || Variables[1] (0.5) || MUL || Variables[2] (1) || MUL || RETURN",
-                            "displayLines": "((ElationEchoTemp * 0.5) * 1)",
-                            "constants": [],
-                            "variables": [
-                              "ElationEchoTemp",
-                              0.5,
-                              1
-                            ]
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
               "eventTrigger": "Certified Banger Gain [Anyone]: Start",
               "execute": [
                 {
@@ -2980,6 +2847,173 @@ const compositeAbilityObject = {
                                   "_ElationPoint",
                                   0.5,
                                   0.5
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "eventTrigger": "Certified Banger [Anyone]: Removed",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "AND",
+                    "conditionList": [
+                      {
+                        "name": "Trace Activated",
+                        "conditionList": "Best All Blooms"
+                      },
+                      {
+                        "name": "Is Part Of",
+                        "of": {
+                          "name": "Target Name",
+                          "target": "{{All Team Members(Exclude Self)}}"
+                        },
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Parameter Target}}"
+                        },
+                        "mustBeAlive2": true
+                      }
+                    ]
+                  },
+                  "passed": [
+                    {
+                      "name": "Define Custom Variable with Changes to Stats",
+                      "variableName": "ElationEchoTemp"
+                    },
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Variable",
+                        "value1": "ElationEchoTemp",
+                        "compareType": ">",
+                        "value2": 0
+                      },
+                      "passed": [
+                        {
+                          "name": "Declare Custom Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "scope": "CallbackTemporary",
+                          "variableName": "_MergeElationEchoPointMDF"
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": "Unknown Elation CONDITION1 (Not always an error)[2: PierceCost]",
+                          "passed": [
+                            {
+                              "name": "Define Custom Variable",
+                              "variableName": "_MergeElationEchoPointMDF",
+                              "value": 1
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Use Custom Character Function",
+                          "functionName": "<a class=\"gTempYellow\" id=\"818871295\">AddElationEchoPoint</a>",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "variables": {
+                            "AddValue": {
+                              "operator": "Variables[0] (ElationEchoTemp) || Variables[1] (0.5) || MUL || RETURN",
+                              "displayLines": "(ElationEchoTemp * 0.5)",
+                              "constants": [],
+                              "variables": [
+                                "ElationEchoTemp",
+                                0.5
+                              ]
+                            },
+                            "TryMergeMDF": {
+                              "operator": "Variables[0] (_MergeElationEchoPointMDF) || RETURN",
+                              "displayLines": "_MergeElationEchoPointMDF",
+                              "constants": [],
+                              "variables": [
+                                "_MergeElationEchoPointMDF"
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "name": "Define Custom Variable with Added Value",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "variableName": "TotalEchoPointFromTeammate",
+                          "context": "ContextCaster",
+                          "value": {
+                            "operator": "Variables[0] (ElationEchoTemp) || Variables[1] (0.5) || MUL || RETURN",
+                            "displayLines": "(ElationEchoTemp * 0.5)",
+                            "constants": [],
+                            "variables": [
+                              "ElationEchoTemp",
+                              0.5
+                            ]
+                          }
+                        },
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Eidolon Activated",
+                            "eidolon": 2
+                          },
+                          "passed": [
+                            {
+                              "name": "Use Custom Character Function",
+                              "functionName": "<a class=\"gTempYellow\" id=\"818871295\">AddElationEchoPoint</a>",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "variables": {
+                                "AddValue": {
+                                  "operator": "Variables[0] (ElationEchoTemp) || Variables[1] (0.5) || MUL || Variables[2] (1) || MUL || RETURN",
+                                  "displayLines": "((ElationEchoTemp * 0.5) * 1)",
+                                  "constants": [],
+                                  "variables": [
+                                    "ElationEchoTemp",
+                                    0.5,
+                                    1
+                                  ]
+                                },
+                                "TryMergeMDF": {
+                                  "operator": "Variables[0] (_MergeElationEchoPointMDF) || RETURN",
+                                  "displayLines": "_MergeElationEchoPointMDF",
+                                  "constants": [],
+                                  "variables": [
+                                    "_MergeElationEchoPointMDF"
+                                  ]
+                                }
+                              }
+                            },
+                            {
+                              "name": "Define Custom Variable with Added Value",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "variableName": "TotalEchoPointFromTeammate",
+                              "context": "ContextCaster",
+                              "value": {
+                                "operator": "Variables[0] (ElationEchoTemp) || Variables[1] (0.5) || MUL || Variables[2] (1) || MUL || RETURN",
+                                "displayLines": "((ElationEchoTemp * 0.5) * 1)",
+                                "constants": [],
+                                "variables": [
+                                  "ElationEchoTemp",
+                                  0.5,
+                                  1
                                 ]
                               }
                             }
