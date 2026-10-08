@@ -2797,6 +2797,28 @@ const hitSplitters = {
     ],
     "memoSkill3": []
   },
+  "Robin • Summeretto": {
+    "basic": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10,
+          "target": "primary"
+        },
+      }
+    ],
+    "memoSkill": [
+      {
+        "target": {
+          "hitRatio": 1,
+          "energyRatio": 1,
+          "toughness": 10,
+          "target": "all"
+        },
+      }
+    ]
+  },
 
   //PRESERVATION
   "Aventurine": {

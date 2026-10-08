@@ -206,5 +206,8 @@
     "ThunderResistanceDelta": "ResistanceLightningBonus",
     "WindResistanceDelta": "ResistanceWindBonus",
     "QuantumResistanceDelta": "ResistanceQuantumBonus",
-    "ImaginaryResistanceDelta": "ResistanceImaginaryBonus"
+    "ImaginaryResistanceDelta": "ResistanceImaginaryBonus",
+
+
+    "BasePoint": "BasePoint"
 }
