@@ -4705,7 +4705,8 @@ const astralMemberSet = new Set([
     "Sunday",
 ])
 
-
+const localCheckChar = typeof document === "undefined" || document.location.href.includes("cowaii");
+let localInsertionChar = localCheckChar ? {} : turnLogicLocal;
 const turnLogic = {
 
     "Universal": {
@@ -59041,4 +59042,5 @@ const turnLogic = {
         },
         "characterValuesBattle": {},
     },
+    ...localInsertionChar,
 }

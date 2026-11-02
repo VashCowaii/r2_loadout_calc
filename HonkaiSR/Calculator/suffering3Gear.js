@@ -1,6 +1,20 @@
 // const currentWave = generalInfo.currentWave;
 // if (currentWave != 1) {return;}
-
+const localCheckGear = typeof document === "undefined" || document.location.href.includes("cowaii");
+let localInsertionLC = localCheckGear ? {
+    Hunt: {},
+    Abundance: {},
+    Nihility: {},
+    Destruction: {},
+    Harmony: {},
+    Remembrance: {},
+    Preservation: {},
+    Erudition: {},
+    Elation: {},
+    // Hunt: {},
+    // Hunt: {},
+} : turnLogicLightconesLocal;
+let localInsertionRelic = localCheckGear ? {} : turnLogicRelicsLocal;
 const turnLogicLCHunt = {
     // const customName = `${buffName} (${sourceTurn.properName})`;
     // if (!buffNames[customName]) {buffNames[customName] = customName;}
@@ -2039,6 +2053,7 @@ const turnLogicLCHunt = {
             "river": "Darting Arrow (LC)",
         },
     },
+    ...localInsertionLC.Hunt,
 }
 const turnLogicLCAbundance = {
         //5star
@@ -3345,6 +3360,7 @@ const turnLogicLCAbundance = {
             "healBonus": "Cornucopia (LC)",
         },
     },
+    ...localInsertionLC.Abundance,
 }
 const turnLogicLCNihility = {
         //5star
@@ -5925,6 +5941,7 @@ const turnLogicLCNihility = {
             // "dmgStack": "Boundless Choreo (LC)"
         },
     },
+    ...localInsertionLC.Nihility,
 }
 const turnLogicLCDestruction = {
         //5star
@@ -8075,6 +8092,7 @@ const turnLogicLCDestruction = {
             "buff1": "Shattered Home (LC)",
         },
     },
+    ...localInsertionLC.Destruction,
 }
 const turnLogicLCHarmony = {
     //5star
@@ -9904,6 +9922,7 @@ const turnLogicLCHarmony = {
             "buff2": "Mediation [LC]",
         },
     },
+    ...localInsertionLC.Harmony,
 }
 const turnLogicLCRemembrance = {
         //5star
@@ -11420,6 +11439,7 @@ const turnLogicLCRemembrance = {
             "buff1": "Reminiscence (LC)"
         },
     },
+    ...localInsertionLC.Remembrance,
 }
 const turnLogicLCPreservation = {
     //PRESERVATIONN
@@ -12845,6 +12865,7 @@ const turnLogicLCPreservation = {
             "buff1": "Amber (LC)",
         },
     },
+    ...localInsertionLC.Preservation,
 }
 const turnLogicLCErudition = {
     //5star
@@ -14537,6 +14558,7 @@ const turnLogicLCErudition = {
             // "atk": "Sagacity [LC]",
         },
     },
+    ...localInsertionLC.Erudition,
 }
 const turnLogicLCElation = {
     //ELATION
@@ -15548,6 +15570,7 @@ const turnLogicLCElation = {
             "critDMG": "Lingering Tear (LC)",
         },
     },
+    ...localInsertionLC.Elation,
 }
 
 const turnLogicLightcones = {
@@ -21683,4 +21706,5 @@ const turnLogicRelics = {
             },
         }
     },
+    ...turnLogicRelicsLocal,
 }

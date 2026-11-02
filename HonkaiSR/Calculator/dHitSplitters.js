@@ -1,3 +1,5 @@
+const localCheckSplits = typeof document === "undefined" || document.location.href.includes("cowaii");
+let localInsertionSplits = localCheckSplits ? {} : hitSplittersLocal;
 const hitSplitters = {
   //ABUNDANCE
   "Huohuo": {
@@ -4889,7 +4891,8 @@ const hitSplitters = {
         "isAttackLastHit": true
       }
     ]
-  }
+  },
+  ...localInsertionSplits,
 }
 
 //just what I wrote to convert the old hitsplits into the new ones,
