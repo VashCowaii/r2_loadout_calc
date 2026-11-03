@@ -282,10 +282,7 @@ const compositeAbilityObject = {
                     ]
                   },
                   "passed": [
-                    {
-                      "name": "Show VS. Countdown Effect",
-                      "show": false
-                    }
+                    "Show VS. Countdown Effect"
                   ]
                 },
                 {
