@@ -138,12 +138,12 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-298752594\">Standard_CTRL_Frozen</a>[<span class=\"descriptionNumberColor\">Frozen</span>]",
                   "duration": 1,
                   "baseChance": {
-                    "operator": "Variables[0] (ADF_2) || Variables[1] ([object Object]) || ADD || RETURN",
-                    "displayLines": "(ADF_2 + [object Object])",
+                    "operator": "Variables[0] (ADF_2) || Variables[1] (Skill_PercentageMuti_620301) || ADD || RETURN",
+                    "displayLines": "(ADF_2 + Skill_PercentageMuti_620301)",
                     "constants": [],
                     "variables": [
                       "ADF_2",
-                      {}
+                      "Skill_PercentageMuti_620301"
                     ]
                   }
                 },
@@ -173,11 +173,11 @@ const compositeAbilityObject = {
                         ]
                       },
                       "stackLimit": {
-                        "operator": "Variables[0] (Skill_PercentageMuti_620301) || RETURN",
-                        "displayLines": "Skill_PercentageMuti_620301",
+                        "operator": "Variables[0] (UNKNOWN_BE_44) || RETURN",
+                        "displayLines": "UNKNOWN_BE_44",
                         "constants": [],
                         "variables": [
-                          "Skill_PercentageMuti_620301"
+                          "UNKNOWN_BE_44"
                         ]
                       },
                       "valuePerStack": {
@@ -199,11 +199,11 @@ const compositeAbilityObject = {
                           ]
                         },
                         "MDF_MaxLayer": {
-                          "operator": "Variables[0] (Skill_PercentageMuti_620301) || RETURN",
-                          "displayLines": "Skill_PercentageMuti_620301",
+                          "operator": "Variables[0] (UNKNOWN_BE_44) || RETURN",
+                          "displayLines": "UNKNOWN_BE_44",
                           "constants": [],
                           "variables": [
-                            "Skill_PercentageMuti_620301"
+                            "UNKNOWN_BE_44"
                           ]
                         }
                       }
