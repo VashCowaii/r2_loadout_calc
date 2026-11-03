@@ -29,10 +29,20 @@ function getDetailsStringer(detailsArray,initialCounter) {
 
     return detailsStringer ? `<div class="modifierDetailsBox">${detailsStringer}</div>` : "";
 }
+/**
+ * 
+ * @param {*} displayTitle 
+ * @param {*} settingsObject { initialCounter, headerValue, living }
+ * @param {*} detailsArray [][ realValue, displayName, isTarget ]
+ * @returns 
+ */
 function standardDisplay(displayTitle,settingsObject,detailsArray) {
     const initialCounter = settingsObject.initialCounter;
+
+    const headerValue = (settingsObject.headerValue ?? "") + (settingsObject.living ? "(Living)" : "");
+
     return `<div class="actionDetailBody">
-        <div class="rotationConditionOperatorHeaderInline">${displayTitle}:</div>
+        <div class="rotationConditionOperatorHeaderInline">${displayTitle}:</div>${headerValue ? "&nbsp;" + headerValue : ""}
     </div>
     ${detailsArray?.length ? getDetailsStringer(detailsArray,initialCounter) : ""}
     `;
@@ -3843,27 +3853,20 @@ const megaParsingFuckeryPain = {
             [parseRef.modifier,"Modifier"],
             [parseRef.value,"Modifier Value"],
             [parseRef.sortByHighest,"By Highest"],
-        ])
+        ]);
     },
     "Sort by Modifier Variable"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
             "modifier",
             "value",
-            // "sortByHighest",
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Sort by Modifier Variable");
 
-        // initialCounter++;
-        return `<div class="actionDetailBody">
-            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
-        </div>
-        <div class="modifierDetailsBox">
-            ${getStandardNameDisplay(initialCounter,parseRef.modifier,"Modifier")}
-            ${getStandardNameDisplay(initialCounter,parseRef.value,"Modifier Value")}
-
-            ${getStandardNameDisplay(initialCounter,parseRef.sortByHighest,"By Highest")}
-        </div>`;
+        return standardDisplay(parseRef.name,{initialCounter},[
+            [parseRef.modifier,"Modifier"],
+            [parseRef.value,"Modifier Value"],
+        ]);
     },
     "Sort by Stat"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
@@ -3874,14 +3877,9 @@ const megaParsingFuckeryPain = {
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Sort by Stat");
 
-        // initialCounter++;
-        return `<div class="actionDetailBody">
-            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            ${parseRef.stat}${parseRef.living ? "(Living)" : ""}
-        </div>
-        <div class="modifierDetailsBox">
-            ${getStandardNameDisplay(initialCounter,parseRef.sortByHighest,"By Highest")}
-        </div>`;
+        return standardDisplay(parseRef.name,{initialCounter,headerValue: parseRef.stat,living: parseRef.living},[
+            [parseRef.sortByHighest,"By Highest"],
+        ]);
     },
     "Sort by Stat Percentage"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
@@ -3892,14 +3890,9 @@ const megaParsingFuckeryPain = {
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Sort by Stat Percentage");
 
-        // initialCounter++;
-        return `<div class="actionDetailBody">
-            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            ${parseRef.stat}${parseRef.living ? "(Living)" : ""}
-        </div>
-        <div class="modifierDetailsBox">
-            ${getStandardNameDisplay(initialCounter,parseRef.sortByHighest,"By Highest")}
-        </div>`;
+        return standardDisplay(parseRef.name,{initialCounter,headerValue: parseRef.stat,living: parseRef.living},[
+            [parseRef.sortByHighest,"By Highest"],
+        ]);
     },
     "Sort by Lineup Name Index"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
@@ -3911,14 +3904,9 @@ const megaParsingFuckeryPain = {
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Sort by Lineup Name Index");
 
-        // initialCounter++;
-        return `<div class="actionDetailBody">
-            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>&nbsp;
-            ${parseRef.living ? "(Living)" : ""}
-        </div>
-        <div class="modifierDetailsBox">
-            ${getStandardNameDisplay(initialCounter,parseRef.lineupName,"Lineup Name")}
-        </div>`;
+        return standardDisplay(parseRef.name,{initialCounter,headerValue: null,living: parseRef.living},[
+            [parseRef.lineupName,"Lineup Name"],
+        ]);
     },
     "Sort by Modifier Types"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
@@ -13892,34 +13880,7 @@ const megaParsingFuckeryPain = {
 
 
         return mainAbilityString;
-        // `<div class="actionDetailBody2">
-        //     <div class="rotationConditionOperatorHeaderInline">${parseRef.name}</div>&nbsp;
-        //     ${battleEventLinker} ${parseRef.eventType ? `(${parseRef.eventType})` : ""}
-        // </div>
-
-            
-        // <div class="modifierDetailsBox">
-        //     ${getStandardNameDisplay(initialCounter,parseRef.team,"Team")}
-        //     ${getStandardNameDisplay(initialCounter,parseRef.barType,"Bar Type")}
-        //     ${getStandardNameDisplay(initialCounter,parseRef.eventSpeed,"SPD")}
-        //     ${getStandardNameDisplay(initialCounter,parseRef.hardLevelEvent,"Hard Level")}
-        //     ${getStandardNameDisplay(initialCounter,parseRef.eliteGroup,"Elite Group")}
-        //     ${abilityListRow  ? `<div class="actionDetailBody2BattleEventOverrides">
-        //         <div class="rotationConditionOperatorHeaderInline">Ability List:</div>&nbsp;
-        //         ${abilityListRow}
-        //     </div>` : ""}
-
-            
-        //     ${lightconeStatRow  ? `<div class="actionDetailBody2BattleEventOverrides">
-        //         <div class="rotationConditionOperatorHeaderInline">Stat Overrides:</div>&nbsp;
-        //         ${lightconeStatRow}
-        //     </div>` : ""}
-            
-        // </div>
-        // `;
     },
-
-    
     "Achievement"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
             "name",
@@ -13933,9 +13894,7 @@ const megaParsingFuckeryPain = {
             // "overridesArray",
             // "hardLevelEvent",
             // "barType",
-            // "actionDescription",
 
-            // "eventSpeed",
             // "DynamicValues",
             // "stackType",
             // "variableValueChange",
