@@ -258,11 +258,11 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 60005,
+    "beID": 60005,
     "team": "Enemy Team",
     "eventType": "Assist",
-    "abilityList": null,
-    "overridesArray": [
+    "icon": "Monster_9003020.png",
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 465
@@ -276,8 +276,8 @@ const compositeAbilityObject = {
         "value": 1
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
+    "spd": 100,
+    "hardLevel": true,
     "eliteGroup": true,
     "actionDescription": "Deals Fire DMG to all targets"
   }

@@ -449,11 +449,11 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 60045,
+    "beID": 60045,
     "team": "Player Team",
     "eventType": "Assist",
-    "abilityList": null,
-    "overridesArray": [
+    "icon": "BattleEvent_1507Special.png",
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -467,7 +467,7 @@ const compositeAbilityObject = {
         "value": 60
       }
     ],
-    "hardLevelEvent": true,
+    "hardLevel": true,
     "actionDescription": "Deals massive Fire DMG to all enemies."
   }
 }

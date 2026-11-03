@@ -3870,11 +3870,11 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Battle Event Construction",
-          "ID": 31002,
+          "beID": 31002,
           "team": "Neutral Team",
           "eventType": "Assist",
-          "abilityList": null,
-          "overridesArray": [
+          "icon": "BattleEvent_Shenyuan.png",
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
               "value": 100
@@ -3889,20 +3889,28 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30119,
+    "beID": 30119,
     "team": "Neutral Team",
     "eventType": "Challenge Event",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_Month_19"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "After an ally uses their Skill or Ultimate to attack, add <unbreak>#3[i]</unbreak> Hit(s) Per Action to \"Memory Turbulence,\" up to <unbreak>#1[i]</unbreak> extra hits.\\nAt the start of every Cycle, every hit will deal 1 instance of DMG based on the enemy targets' respective Max HP to random enemy targets."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "After an ally uses their Skill or Ultimate to attack, add <unbreak>#3[i]</unbreak> Hit(s) Per Action to \"Memory Turbulence,\" up to <unbreak>#1[i]</unbreak> extra hits.\\nAt the start of every Cycle, every hit will deal 1 instance of DMG based on the enemy targets' respective Max HP to random enemy targets.",
+    "params": [
+      10,
+      0.055,
+      1,
+      1,
+      0.35
+    ]
   }
 }

@@ -8,11 +8,11 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 96083,
+    "beID": 96083,
     "team": "Player Team",
     "eventType": "Assist",
-    "abilityList": null,
-    "overridesArray": [
+    "icon": "1112_BE.png",
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
         "value": 100
@@ -42,8 +42,8 @@ const compositeAbilityObject = {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageAll</span>&nbsp;"
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true
+    "spd": 100,
+    "hardLevel": true
   },
   "noReader": true
 }

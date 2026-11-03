@@ -8,20 +8,24 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 42001,
+    "beID": 42001,
     "team": "Enemy Team",
     "eventType": "Assist",
+    "icon": "BattleEventRogueDlc.png",
     "abilityList": [
       "BattleEventAbility_RogueDLCReinforce"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true
+    "spd": 100,
+    "hardLevel": true,
+    "params": [
+      0.3
+    ]
   },
   "noReader": true
 }

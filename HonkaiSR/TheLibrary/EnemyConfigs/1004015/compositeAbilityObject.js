@@ -2936,14 +2936,15 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Battle Event Construction",
-          "ID": 20001,
+          "beID": 20001,
           "team": "Enemy Team",
           "eventType": "Assist",
+          "icon": "Monster_Flag.png",
           "abilityList": [
             "BattleEventAbility_CocoliaP1_RL",
             "BattleEventAbility_CocoliaP1_RL_Insert"
           ],
-          "overridesArray": [
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
               "value": 100

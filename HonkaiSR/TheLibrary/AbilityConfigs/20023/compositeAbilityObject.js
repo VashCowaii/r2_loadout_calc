@@ -1418,16 +1418,16 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 20023,
+    "beID": 20023,
     "team": "Neutral Team",
     "eventType": "Entity Selection",
-    "abilityList": null,
-    "overridesArray": [
+    "icon": "BattleEvent_W2_Feixiao_PickUp.png",
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
         "value": 100
       }
     ],
-    "hardLevelEvent": true
+    "hardLevel": true
   }
 }

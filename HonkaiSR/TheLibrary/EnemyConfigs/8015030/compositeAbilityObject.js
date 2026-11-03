@@ -11075,13 +11075,14 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Battle Event Construction",
-          "ID": 20050,
+          "beID": 20050,
           "team": "Enemy Team",
           "eventType": "Assist",
+          "icon": "Monster_8015030.png",
           "abilityList": [
             "BattleEventAbility_Monster_W5_AsatPramad_Part03Act00"
           ],
-          "overridesArray": [
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
               "value": 90
@@ -11095,17 +11096,18 @@ const compositeAbilityObject = {
               "value": 120
             }
           ],
-          "hardLevelEvent": true
+          "hardLevel": true
         },
         {
           "name": "Battle Event Construction",
-          "ID": 20051,
+          "beID": 20051,
           "team": "Enemy Team",
           "eventType": "Assist",
+          "icon": "Monster_8015040.png",
           "abilityList": [
             "BattleEventAbility_Monster_W5_AsatPramad_Part03Act01"
           ],
-          "overridesArray": [
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
               "value": 90
@@ -11119,15 +11121,15 @@ const compositeAbilityObject = {
               "value": 140
             }
           ],
-          "hardLevelEvent": true
+          "hardLevel": true
         },
         {
           "name": "Battle Event Construction",
-          "ID": 60044,
+          "beID": 60044,
           "team": "Player Team",
           "eventType": "Assist",
-          "abilityList": null,
-          "overridesArray": [
+          "icon": "BattleEvent_60044.png",
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
               "value": 90
@@ -11141,18 +11143,26 @@ const compositeAbilityObject = {
               "value": 100
             }
           ],
-          "hardLevelEvent": true,
-          "actionDescription": "Deals massive DMG to all enemy targets, applies \"Knockdown\" to Asat Pramad, and causes all ally targets to immediately take action. A \"Knockdown\" countdown appears on the Action Order. At the start of the countdown's turn, Lord of Saṃvartasthāyi, Asat Pramad exits the \"Knockdown\" state and immediately takes action."
+          "hardLevel": true,
+          "actionDescription": "Deals massive DMG to all enemy targets, applies \"Knockdown\" to Asat Pramad, and causes all ally targets to immediately take action. A \"Knockdown\" countdown appears on the Action Order. At the start of the countdown's turn, Lord of Saṃvartasthāyi, Asat Pramad exits the \"Knockdown\" state and immediately takes action.",
+          "params": [
+            0.15,
+            0.3,
+            7,
+            8,
+            0.3
+          ]
         },
         {
           "name": "Battle Event Construction",
-          "ID": 20046,
+          "beID": 20046,
           "team": "Enemy Team",
           "eventType": "Assist",
+          "icon": "BattleEvent_W5_AsatPramad_00_Ultra.png",
           "abilityList": [
             "BattleEventAbility_Monster_W5_AsatPramad_Ultra"
           ],
-          "overridesArray": [
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
               "value": 90
@@ -11166,17 +11176,18 @@ const compositeAbilityObject = {
               "value": 95
             }
           ],
-          "hardLevelEvent": true
+          "hardLevel": true
         },
         {
           "name": "Battle Event Construction",
-          "ID": 20045,
+          "beID": 20045,
           "team": "Enemy Team",
           "eventType": "Assist",
+          "icon": "BattleEvent_W5_AsatPramad_00_SummonMonster.png",
           "abilityList": [
             "BattleEventAbility_Monster_W5_AsatPramad_Summon"
           ],
-          "overridesArray": [
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
               "value": 90
@@ -11190,7 +11201,7 @@ const compositeAbilityObject = {
               "value": 115
             }
           ],
-          "hardLevelEvent": true,
+          "hardLevel": true,
           "actionDescription": "Upon every action, summons \"Comediologist.\""
         }
       ],

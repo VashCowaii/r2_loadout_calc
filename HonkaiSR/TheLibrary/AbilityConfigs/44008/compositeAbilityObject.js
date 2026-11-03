@@ -8,17 +8,17 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 44008,
+    "beID": 44008,
     "team": "Player Team",
     "eventType": "DU Day/Night Event",
-    "abilityList": null,
-    "overridesArray": [
+    "icon": "BattleEvent_FightFest.png",
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "hardLevelEvent": true,
+    "hardLevel": true,
     "actionDescription": "During the Night, greatly increases allies' final DMG dealt and slightly increases enemies' final DMG dealt."
   },
   "noReader": true

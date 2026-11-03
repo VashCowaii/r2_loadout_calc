@@ -482,13 +482,14 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Battle Event Construction",
-          "ID": 96017,
+          "beID": 96017,
           "team": "Player Team",
           "eventType": "Assist",
+          "icon": "BattleEventSilverWolf.png",
           "abilityList": [
             "BattleEvent_SilverWolf_DamageAbility"
           ],
-          "overridesArray": [
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
               "value": 100
@@ -498,8 +499,8 @@ const compositeAbilityObject = {
               "value": 0.5
             }
           ],
-          "eventSpeed": 100,
-          "hardLevelEvent": true
+          "spd": 100,
+          "hardLevel": true
         }
       ],
       "references": []

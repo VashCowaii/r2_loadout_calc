@@ -4456,20 +4456,27 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30126,
+    "beID": 30126,
     "team": "Neutral Team",
     "eventType": "Challenge Event",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_Month_26"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "After every attack launched by an ally, applies 1 stack of \"Memory Imprint\" to all enemies. Enemies with \"Memory Imprint\" take <unbreak>#2[i]%</unbreak> more DMG. This effect stacks up to <unbreak>#1[i]</unbreak> stack(s). When \"Memory Imprint\" stacks to maximum, immediately deals 1 instance of DMG to all enemies based on a certain percentage of each enemy's respective Max HP.\\nWhen enemy targets enter combat and other units in the field currently have \"Memory Imprint,\" the new enemies will receive the same number of \"Memory Imprint\" stacks as those on the field.\\nAt the start of every wave or Cycle, removes \"Memory Imprint\" from all enemies."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "After every attack launched by an ally, applies 1 stack of \"Memory Imprint\" to all enemies. Enemies with \"Memory Imprint\" take <unbreak>#2[i]%</unbreak> more DMG. This effect stacks up to <unbreak>#1[i]</unbreak> stack(s). When \"Memory Imprint\" stacks to maximum, immediately deals 1 instance of DMG to all enemies based on a certain percentage of each enemy's respective Max HP.\\nWhen enemy targets enter combat and other units in the field currently have \"Memory Imprint,\" the new enemies will receive the same number of \"Memory Imprint\" stacks as those on the field.\\nAt the start of every wave or Cycle, removes \"Memory Imprint\" from all enemies.",
+    "params": [
+      6,
+      0.05,
+      0.6,
+      0.15
+    ]
   }
 }

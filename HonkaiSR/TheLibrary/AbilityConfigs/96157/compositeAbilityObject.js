@@ -8,20 +8,21 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 96157,
+    "beID": 96157,
     "team": "Player Team",
     "eventType": "Assist",
+    "barType": 3,
+    "icon": "ChallengeStory_Fever.png",
     "abilityList": [
       "BattleEvent_FantasticStory_BaseAbility_2060"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
         "value": 100
       }
     ],
-    "hardLevelEvent": true,
-    "barType": 3
+    "hardLevel": true
   },
   "noReader": true
 }

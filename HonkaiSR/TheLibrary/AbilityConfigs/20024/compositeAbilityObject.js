@@ -2046,13 +2046,14 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 20024,
+    "beID": 20024,
     "team": "Enemy Team",
     "eventType": "Assist",
+    "icon": "BattleEvent_W4_Theoroi_00_Phase1.png",
     "abilityList": [
       "BattleEventAbility_Monster_W4_Theoroi_Summon"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -2062,8 +2063,8 @@ const compositeAbilityObject = {
         "value": 100
       }
     ],
-    "eventSpeed": 170,
-    "hardLevelEvent": true,
+    "spd": 170,
+    "hardLevel": true,
     "actionDescription": "Generates \"Titankin\" upon taking action."
   }
 }

@@ -233,20 +233,25 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30018,
+    "beID": 30018,
     "team": "Neutral Team",
     "eventType": "Challenge Event",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_New_01"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "Increases DMG dealt by all allies' Ultimate by <unbreak>#1[i]%</unbreak>. At the beginning of each Cycle, all allies regenerate <unbreak>#2[i]</unbreak> Energy."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "Increases DMG dealt by all allies' Ultimate by <unbreak>#1[i]%</unbreak>. At the beginning of each Cycle, all allies regenerate <unbreak>#2[i]</unbreak> Energy.",
+    "params": [
+      0.25,
+      20
+    ]
   }
 }

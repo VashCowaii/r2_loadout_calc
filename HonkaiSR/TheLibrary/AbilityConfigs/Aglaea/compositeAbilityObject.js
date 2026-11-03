@@ -4113,20 +4113,21 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Battle Event Construction",
-          "ID": 11402,
+          "beID": 11402,
           "team": "Player Team",
           "eventType": "Assist",
+          "barType": 1,
+          "icon": "BattleEvent_1402_A.png",
           "abilityList": [
             "Aglaea_PassiveAbility01_BattleEvent"
           ],
-          "overridesArray": [
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
               "value": 100
             }
           ],
-          "hardLevelEvent": true,
-          "barType": 1,
+          "hardLevel": true,
           "actionDescription": "Aglaea is in the \"Supreme Stance\" state, gains the SPD Boost stacks from Garmentmaker's Memosprite Talent, enhances Basic ATK to \"Slash by a Thousandfold Kiss,\" and cannot use Skill. Garmentmaker is immune to Crowd Control debuffs."
         }
       ],

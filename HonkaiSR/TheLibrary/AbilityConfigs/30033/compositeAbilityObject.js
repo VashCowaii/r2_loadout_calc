@@ -291,20 +291,26 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30033,
+    "beID": 30033,
     "team": "Neutral Team",
     "eventType": "Challenge Event",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_Xianzhou_03"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "After an ally uses <color=#f29e38ff>Basic ATK</color>, increases DMG dealt by them and adjacent allies by <unbreak>#3[i]%</unbreak> and reduces their DMG taken by <unbreak>#1[i]%</unbreak> for <unbreak>#2[i]</unbreak> turn(s)."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "After an ally uses <color=#f29e38ff>Basic ATK</color>, increases DMG dealt by them and adjacent allies by <unbreak>#3[i]%</unbreak> and reduces their DMG taken by <unbreak>#1[i]%</unbreak> for <unbreak>#2[i]</unbreak> turn(s).",
+    "params": [
+      0.5,
+      1,
+      0.5
+    ]
   }
 }

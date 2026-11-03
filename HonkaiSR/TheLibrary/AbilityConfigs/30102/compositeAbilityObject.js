@@ -287,20 +287,27 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30102,
+    "beID": 30102,
     "team": "Neutral Team",
     "eventType": "Challenge Event",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_Month_02"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "At the beginning of each Cycle, increases CRIT Rate of all Shielded allies by <unbreak>#1[i]%</unbreak> and their CRIT DMG by <unbreak>#2[i]%</unbreak> for <unbreak>#3[i]</unbreak> turn(s). This effect can stack up to <unbreak>#4[i]</unbreak> times."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "At the beginning of each Cycle, increases CRIT Rate of all Shielded allies by <unbreak>#1[i]%</unbreak> and their CRIT DMG by <unbreak>#2[i]%</unbreak> for <unbreak>#3[i]</unbreak> turn(s). This effect can stack up to <unbreak>#4[i]</unbreak> times.",
+    "params": [
+      0.1,
+      0.2,
+      3,
+      3
+    ]
   }
 }

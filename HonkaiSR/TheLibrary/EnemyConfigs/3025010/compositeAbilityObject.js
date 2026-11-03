@@ -11250,11 +11250,11 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Battle Event Construction",
-          "ID": 60040,
+          "beID": 60040,
           "team": "Player Team",
           "eventType": "Assist",
-          "abilityList": null,
-          "overridesArray": [
+          "icon": "BattleEvent_60012.png",
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
               "value": 90
@@ -11268,16 +11268,16 @@ const compositeAbilityObject = {
               "value": 160
             }
           ],
-          "hardLevelEvent": true,
+          "hardLevel": true,
           "actionDescription": "Deals massive Imaginary DMG to all enemies."
         },
         {
           "name": "Battle Event Construction",
-          "ID": 60039,
+          "beID": 60039,
           "team": "Player Team",
           "eventType": "Assist",
-          "abilityList": null,
-          "overridesArray": [
+          "icon": "BattleEvent_60012.png",
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
               "value": 90
@@ -11291,7 +11291,7 @@ const compositeAbilityObject = {
               "value": 160
             }
           ],
-          "hardLevelEvent": true,
+          "hardLevel": true,
           "actionDescription": "Deals massive Imaginary DMG to all enemies."
         }
       ],

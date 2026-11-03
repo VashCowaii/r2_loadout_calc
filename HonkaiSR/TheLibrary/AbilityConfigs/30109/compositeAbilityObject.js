@@ -250,20 +250,26 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30109,
+    "beID": 30109,
     "team": "Neutral Team",
     "eventType": "Challenge Event",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_Month_09"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "At the start of every Cycle, allies whose current HP percentage is greater than <unbreak>#1[i]%</unbreak> increase their ATK by <unbreak>#2[i]%</unbreak> for <unbreak>#3[i]</unbreak> turn(s)."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "At the start of every Cycle, allies whose current HP percentage is greater than <unbreak>#1[i]%</unbreak> increase their ATK by <unbreak>#2[i]%</unbreak> for <unbreak>#3[i]</unbreak> turn(s).",
+    "params": [
+      0.8,
+      0.5,
+      1
+    ]
   }
 }

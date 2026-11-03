@@ -35,14 +35,15 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 43002,
+    "beID": 43002,
     "team": "Neutral Team",
     "eventType": "Assist",
+    "icon": "HoshinoKami_012.png",
     "abilityList": [
       "BattleEventAbility_RogueDLCRuin_Camera",
       "BattleEventAbility_RogueDLCRuin_Insert"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -52,8 +53,8 @@ const compositeAbilityObject = {
         "value": 18
       }
     ],
-    "eventSpeed": 50,
-    "hardLevelEvent": true,
+    "spd": 50,
+    "hardLevel": true,
     "eliteGroup": true
   },
   "noReader": true

@@ -2916,17 +2916,17 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 20034,
+    "beID": 20034,
     "team": "Neutral Team",
     "eventType": "Entity Selection",
-    "abilityList": null,
-    "overridesArray": [
+    "icon": "BattleEvent_DoubleAreaActive.png",
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
         "value": 100
       }
     ],
-    "hardLevelEvent": true,
+    "hardLevel": true,
     "actionDescription": "Select ally characters to face \"Synergy Duo: Bloodbound Dark Duelist,\" while the unselected characters will face \"Synergy Duo: Ironclad White Guard.\""
   }
 }

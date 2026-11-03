@@ -4805,13 +4805,14 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 60041,
+    "beID": 60041,
     "team": "Neutral Team",
     "eventType": "Assist",
+    "icon": "BattleEventMainStoryTVStation_Negative.png",
     "abilityList": [
       "BattleEventAbility_TVBroadcast_Negative"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -4825,7 +4826,11 @@ const compositeAbilityObject = {
         "value": 144
       }
     ],
-    "hardLevelEvent": true,
-    "actionDescription": "When taking action, decreases the SPD for all ally characters."
+    "hardLevel": true,
+    "actionDescription": "When taking action, decreases the SPD for all ally characters.",
+    "params": [
+      0.3,
+      1.5
+    ]
   }
 }

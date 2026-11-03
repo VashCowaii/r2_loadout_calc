@@ -4337,20 +4337,25 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30133,
+    "beID": 30133,
     "team": "Neutral Team",
     "eventType": "Challenge Event",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_Month_33"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "At the start of each wave or Cycle, summons 2 Trotters onto the field. When defeated, the Trotters deal 1 instance of a set amount of DMG to all Elite or rarer enemies."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "At the start of each wave or Cycle, summons 2 Trotters onto the field. When defeated, the Trotters deal 1 instance of a set amount of DMG to all Elite or rarer enemies.",
+    "params": [
+      1,
+      4.2
+    ]
   }
 }

@@ -8,11 +8,11 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 46213,
+    "beID": 46213,
     "team": "Neutral Team",
     "eventType": "Assist",
-    "abilityList": null,
-    "overridesArray": [
+    "icon": "RogueMagicScepter_Dot_03.png",
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -30,7 +30,7 @@ const compositeAbilityObject = {
         "value": 0.5
       }
     ],
-    "hardLevelEvent": true,
+    "hardLevel": true,
     "actionDescription": "<color=#87e0ffff>\"Blast\"</color> deals Wind DMG that can Blast to random enemy targets and inflicts the special Wind Shear effect \"Turbulence\" to the targets."
   },
   "noReader": true

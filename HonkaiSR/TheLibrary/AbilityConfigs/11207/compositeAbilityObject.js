@@ -8,19 +8,20 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 11207,
+    "beID": 11207,
     "team": "Neutral Team",
     "eventType": "Assist",
+    "icon": "HoshinoKami_001.png",
     "abilityList": [
       "Yukong_Ability02_BattleEvent_Ability"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
         "value": 100
       }
     ],
-    "eventSpeed": 100
+    "spd": 100
   },
   "noReader": true
 }

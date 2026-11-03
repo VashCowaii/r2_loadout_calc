@@ -4135,20 +4135,29 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30146,
+    "beID": 30146,
     "team": "Neutral Team",
     "eventType": "Endgame Countdown",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_Month_46"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "Increases Ultimate and Follow-Up ATK DMG dealt by ally targets by <unbreak>#1[i]%</unbreak>. After an ally character uses an Ultimate or Follow-Up ATK, adds <unbreak>#2[i]</unbreak> Hit(s) Per Action to \"Memory Turbulence,\" stacking up to <unbreak>#3[i]</unbreak> hits.\\nAt the start of each Cycle, each hit of \"Memory Turbulence\" deals 1 instance of True DMG to one random enemy target."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "Increases Ultimate and Follow-Up ATK DMG dealt by ally targets by <unbreak>#1[i]%</unbreak>. After an ally character uses an Ultimate or Follow-Up ATK, adds <unbreak>#2[i]</unbreak> Hit(s) Per Action to \"Memory Turbulence,\" stacking up to <unbreak>#3[i]</unbreak> hits.\\nAt the start of each Cycle, each hit of \"Memory Turbulence\" deals 1 instance of True DMG to one random enemy target.",
+    "params": [
+      0.5,
+      1,
+      15,
+      0.12,
+      0.02,
+      0.012
+    ]
   }
 }

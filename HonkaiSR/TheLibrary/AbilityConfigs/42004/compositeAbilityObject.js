@@ -8,21 +8,22 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 42004,
+    "beID": 42004,
     "team": "Neutral Team",
     "eventType": "Assist",
+    "icon": "HoshinoKami_012.png",
     "abilityList": [
       "BattleEventAbility_RogueDLCHunting_Camera",
       "BattleEventAbility_RogueDLCHunting_Insert"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
+    "spd": 100,
+    "hardLevel": true,
     "eliteGroup": true,
     "actionDescription": "Deals Wind DMG to all enemies based on the ATK of the character on the team with the highest ATK."
   },

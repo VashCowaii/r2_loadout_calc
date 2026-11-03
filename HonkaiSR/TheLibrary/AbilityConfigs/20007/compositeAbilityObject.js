@@ -4513,13 +4513,14 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 20007,
+    "beID": 20007,
     "team": "Enemy Team",
     "eventType": "Assist",
+    "icon": "Monster_2035010.png",
     "abilityList": [
       "BattleEventAbility_W2_Feixiao_00"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
         "value": 100

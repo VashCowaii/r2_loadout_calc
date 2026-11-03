@@ -1129,20 +1129,27 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30115,
+    "beID": 30115,
     "team": "Neutral Team",
     "eventType": "Challenge Event",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_Month_15"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "Summons a Trotter at the beginning of each wave and each Cycle. The Trotter takes <unbreak>#1[i]%</unbreak> increased Skill and Ultimate DMG. When defeated, it inflicts Vulnerability on all enemies, making them take <unbreak>#2[i]%</unbreak> more DMG for <unbreak>#3[i]</unbreak> turns. This effect stacks up to <unbreak>#4[i]</unbreak> times."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "Summons a Trotter at the beginning of each wave and each Cycle. The Trotter takes <unbreak>#1[i]%</unbreak> increased Skill and Ultimate DMG. When defeated, it inflicts Vulnerability on all enemies, making them take <unbreak>#2[i]%</unbreak> more DMG for <unbreak>#3[i]</unbreak> turns. This effect stacks up to <unbreak>#4[i]</unbreak> times.",
+    "params": [
+      2,
+      0.3,
+      2,
+      2
+    ]
   }
 }

@@ -8,11 +8,11 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 46212,
+    "beID": 46212,
     "team": "Neutral Team",
     "eventType": "Assist",
-    "abilityList": null,
-    "overridesArray": [
+    "icon": "RogueMagicScepter_Break_03.png",
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -30,7 +30,7 @@ const compositeAbilityObject = {
         "value": 0.5
       }
     ],
-    "hardLevelEvent": true,
+    "hardLevel": true,
     "actionDescription": "<color=#87e0ffff>\"Blast\"</color> deals Quantum DMG that can Blast to the enemy target with the lowest Toughness and reduces Toughness regardless of Weakness, additionally dealing Break DMG if the target is already Weakness Broken. Also, after the target receives Break DMG, regenerates Energy for all ally targets and advances their action."
   },
   "noReader": true

@@ -8,11 +8,11 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 46209,
+    "beID": 46209,
     "team": "Neutral Team",
     "eventType": "Assist",
-    "abilityList": null,
-    "overridesArray": [
+    "icon": "RogueMagicScepter_Ultimate_02.png",
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -30,7 +30,7 @@ const compositeAbilityObject = {
         "value": 0.5
       }
     ],
-    "hardLevelEvent": true,
+    "hardLevel": true,
     "actionDescription": "<color=#87e0ffff>\"AoE ATK\"</color> deals Fire Ultimate DMG to all enemies and applies a \"Delay Effect\" that activates after taking a set amount of total DMG."
   },
   "noReader": true

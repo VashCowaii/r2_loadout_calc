@@ -7529,27 +7529,28 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Battle Event Construction",
-          "ID": 20023,
+          "beID": 20023,
           "team": "Neutral Team",
           "eventType": "Entity Selection",
-          "abilityList": null,
-          "overridesArray": [
+          "icon": "BattleEvent_W2_Feixiao_PickUp.png",
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
               "value": 100
             }
           ],
-          "hardLevelEvent": true
+          "hardLevel": true
         },
         {
           "name": "Battle Event Construction",
-          "ID": 20021,
+          "beID": 20021,
           "team": "Enemy Team",
           "eventType": "Assist",
+          "icon": "Monster_2035010.png",
           "abilityList": [
             "BattleEventAbility_W2_Feixiao_IF"
           ],
-          "overridesArray": [
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
               "value": 100

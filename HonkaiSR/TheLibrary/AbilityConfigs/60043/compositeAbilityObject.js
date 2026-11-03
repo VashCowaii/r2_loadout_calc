@@ -4852,13 +4852,14 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 60043,
+    "beID": 60043,
     "team": "Neutral Team",
     "eventType": "Assist",
+    "icon": "BattleEventMainStoryTVStation_Positive.png",
     "abilityList": [
       "BattleEventAbility_TVBroadcast_Positive"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -4872,7 +4873,13 @@ const compositeAbilityObject = {
         "value": 144
       }
     ],
-    "hardLevelEvent": true,
-    "actionDescription": "When taking action, grants allies Punchline, while increasing all allies' CRIT DMG and advancing their actions."
+    "hardLevel": true,
+    "actionDescription": "When taking action, grants allies Punchline, while increasing all allies' CRIT DMG and advancing their actions.",
+    "params": [
+      10,
+      0.5,
+      1.5,
+      0.25
+    ]
   }
 }

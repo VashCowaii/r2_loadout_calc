@@ -8,11 +8,12 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 46107,
+    "beID": 46107,
     "team": "Neutral Team",
     "eventType": "Assist",
-    "abilityList": null,
-    "overridesArray": [
+    "barType": 2,
+    "icon": "RogueMagicScepter_Ultimate_06.png",
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -30,8 +31,7 @@ const compositeAbilityObject = {
         "value": 0.5
       }
     ],
-    "hardLevelEvent": true,
-    "barType": 2,
+    "hardLevel": true,
     "actionDescription": "<color=#87e0ffff>\"Blast\"</color> deals Lightning Ultimate DMG that can Blast to the enemy target with the highest HP and applies a \"Delay Effect\" that activates when any enemy target enters the battle."
   },
   "noReader": true

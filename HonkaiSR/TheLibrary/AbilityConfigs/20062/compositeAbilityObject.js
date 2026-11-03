@@ -8,13 +8,14 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 20062,
+    "beID": 20062,
     "team": "Enemy Team",
     "eventType": "Assist",
+    "icon": "BattleEvent_W5_Fallen_Ritual.png",
     "abilityList": [
       "BattleEventAbility_Monster_W5_Fallen_Broken"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -24,7 +25,10 @@ const compositeAbilityObject = {
         "value": 100
       }
     ],
-    "hardLevelEvent": true,
-    "actionDescription": "Deals DMG to the \"Blood-Brain Barrier\" with each action based on the Charge gained."
+    "hardLevel": true,
+    "actionDescription": "Deals DMG to the \"Blood-Brain Barrier\" with each action based on the Charge gained.",
+    "params": [
+      1
+    ]
   }
 }

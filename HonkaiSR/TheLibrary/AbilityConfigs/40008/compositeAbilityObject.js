@@ -8,20 +8,21 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 40008,
+    "beID": 40008,
     "team": "Neutral Team",
     "eventType": "Assist",
+    "icon": "HoshinoKami_003.png",
     "abilityList": [
       "BattleEventAbility_128"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
+    "spd": 100,
+    "hardLevel": true,
     "eliteGroup": true
   },
   "noReader": true

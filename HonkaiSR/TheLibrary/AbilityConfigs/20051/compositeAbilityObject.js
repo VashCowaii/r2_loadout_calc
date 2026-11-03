@@ -5948,13 +5948,14 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 20051,
+    "beID": 20051,
     "team": "Enemy Team",
     "eventType": "Assist",
+    "icon": "Monster_8015040.png",
     "abilityList": [
       "BattleEventAbility_Monster_W5_AsatPramad_Part03Act01"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -5968,6 +5969,6 @@ const compositeAbilityObject = {
         "value": 140
       }
     ],
-    "hardLevelEvent": true
+    "hardLevel": true
   }
 }

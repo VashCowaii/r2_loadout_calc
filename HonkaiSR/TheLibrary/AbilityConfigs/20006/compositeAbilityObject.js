@@ -1033,13 +1033,14 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 20006,
+    "beID": 20006,
     "team": "Neutral Team",
     "eventType": "Assist",
+    "icon": "Monster_Belobog.png",
     "abilityList": [
       "BattleEventAbility_Monster_W1_Gepard_IF_03_SwitchTimer"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -1049,7 +1050,7 @@ const compositeAbilityObject = {
         "value": 100
       }
     ],
-    "eventSpeed": 70,
-    "hardLevelEvent": true
+    "spd": 70,
+    "hardLevel": true
   }
 }

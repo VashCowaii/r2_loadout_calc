@@ -798,13 +798,14 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 60001,
+    "beID": 60001,
     "team": "Player Team",
     "eventType": "Assist",
+    "icon": "Monster_9003020.png",
     "abilityList": [
       "Colossus_PassiveAbility02"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
         "value": 100
@@ -814,7 +815,7 @@ const compositeAbilityObject = {
         "value": 140
       }
     ],
-    "hardLevelEvent": true,
+    "hardLevel": true,
     "actionDescription": "Deals massive Fire DMG to all enemies."
   }
 }

@@ -3892,20 +3892,28 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30139,
+    "beID": 30139,
     "team": "Neutral Team",
     "eventType": "Endgame Countdown",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_Month_39"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "After an ally character uses a Skill to attack or a memosprite attacks, add <unbreak>#1[i]</unbreak> Hit(s) Per Action to \"Memory Turbulence,\" up to <unbreak>#2[i]</unbreak> hits.\\nAt the start of every Cycle, each hit from \"Memory Turbulence\" deals True DMG to a random enemy target 1 time."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "After an ally character uses a Skill to attack or a memosprite attacks, add <unbreak>#1[i]</unbreak> Hit(s) Per Action to \"Memory Turbulence,\" up to <unbreak>#2[i]</unbreak> hits.\\nAt the start of every Cycle, each hit from \"Memory Turbulence\" deals True DMG to a random enemy target 1 time.",
+    "params": [
+      1,
+      10,
+      0.15,
+      0.025,
+      0.015
+    ]
   }
 }

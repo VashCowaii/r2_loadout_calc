@@ -231,17 +231,17 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30505,
+    "beID": 30505,
     "team": "Neutral Team",
     "eventType": "Assist",
-    "abilityList": null,
-    "overridesArray": [
+    "icon": "HoshinoKami_007.png",
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
         "value": 100
       }
     ],
-    "hardLevelEvent": true,
+    "hardLevel": true,
     "actionDescription": "Deals multiple hits of Imaginary Elation DMG to a random enemy target."
   }
 }

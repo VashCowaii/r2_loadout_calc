@@ -253,20 +253,25 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30111,
+    "beID": 30111,
     "team": "Neutral Team",
     "eventType": "Challenge Event",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_Month_11"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "After an ally character uses a Follow-Up ATK, reduces the attacked enemy target's All-Type RES by <unbreak>#1[i]%</unbreak> for <unbreak>#2[i]</unbreak> turn(s)."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "After an ally character uses a Follow-Up ATK, reduces the attacked enemy target's All-Type RES by <unbreak>#1[i]%</unbreak> for <unbreak>#2[i]</unbreak> turn(s).",
+    "params": [
+      0.3,
+      2
+    ]
   }
 }

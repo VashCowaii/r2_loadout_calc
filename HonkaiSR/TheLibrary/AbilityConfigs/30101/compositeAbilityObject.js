@@ -284,20 +284,25 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30101,
+    "beID": 30101,
     "team": "Neutral Team",
     "eventType": "Challenge Event",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_Month_01"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "At the beginning of each Cycle, increases the ATK of the character with the highest HP by <unbreak>#1[i]%</unbreak> until the beginning of the next Cycle. Additionally, restores HP for the character with the lowest HP by <unbreak>#2[i]%</unbreak> of their Max HP."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "At the beginning of each Cycle, increases the ATK of the character with the highest HP by <unbreak>#1[i]%</unbreak> until the beginning of the next Cycle. Additionally, restores HP for the character with the lowest HP by <unbreak>#2[i]%</unbreak> of their Max HP.",
+    "params": [
+      0.35,
+      0.5
+    ]
   }
 }

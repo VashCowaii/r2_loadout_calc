@@ -10,27 +10,28 @@ const configAbility = {
   "parse": [
     {
       "name": "Battle Event Construction",
-      "ID": 20018,
+      "beID": 20018,
       "team": "Neutral Team",
       "eventType": "Entity Selection",
-      "abilityList": null,
-      "overridesArray": [
+      "icon": "BattleEvent_W2_LycanKing_PickUp.png",
+      "statOverrides": [
         {
           "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
           "value": 100
         }
       ],
-      "hardLevelEvent": true
+      "hardLevel": true
     },
     {
       "name": "Battle Event Construction",
-      "ID": 20009,
+      "beID": 20009,
       "team": "Enemy Team",
       "eventType": "Assist",
+      "icon": "BattleEvent_Rage.png",
       "abilityList": [
         "BattleEventAbility_Monster_Lycan_Rage"
       ],
-      "overridesArray": [
+      "statOverrides": [
         {
           "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
           "value": 90
@@ -40,18 +41,19 @@ const configAbility = {
           "value": 100
         }
       ],
-      "eventSpeed": 105,
-      "hardLevelEvent": true
+      "spd": 105,
+      "hardLevel": true
     },
     {
       "name": "Battle Event Construction",
-      "ID": 20008,
+      "beID": 20008,
       "team": "Enemy Team",
       "eventType": "Assist",
+      "icon": "Monster_SummonLycan.png",
       "abilityList": [
         "BattleEventAbility_W2_LycanKing_Summon"
       ],
-      "overridesArray": [
+      "statOverrides": [
         {
           "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
           "value": 90
@@ -61,8 +63,8 @@ const configAbility = {
           "value": 100
         }
       ],
-      "eventSpeed": 105,
-      "hardLevelEvent": true
+      "spd": 105,
+      "hardLevel": true
     }
   ],
   "references": []

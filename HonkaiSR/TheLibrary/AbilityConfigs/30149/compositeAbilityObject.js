@@ -3578,20 +3578,25 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30149,
+    "beID": 30149,
     "team": "Neutral Team",
     "eventType": "Challenge Event",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_Month_49"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "When an ally target uses their Ultimate, they gain <unbreak>#1[i]</unbreak> Punchlines.\\nAt the start of each Cycle, Aha immediately gains 1 extra turn with a fixed <unbreak>#2[i]</unbreak> Punchlines taken into account. This turn does not consume Punchlines."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "When an ally target uses their Ultimate, they gain <unbreak>#1[i]</unbreak> Punchlines.\\nAt the start of each Cycle, Aha immediately gains 1 extra turn with a fixed <unbreak>#2[i]</unbreak> Punchlines taken into account. This turn does not consume Punchlines.",
+    "params": [
+      5,
+      20
+    ]
   }
 }

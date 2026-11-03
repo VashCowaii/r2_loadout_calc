@@ -8,12 +8,11 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 19132,
+    "beID": 19132,
     "team": "Player Team",
     "eventType": "Assist",
-    "abilityList": null,
-    "overridesArray": [],
-    "hardLevelEvent": true
+    "icon": "1204Shadow.png",
+    "hardLevel": true
   },
   "noReader": true
 }

@@ -8,19 +8,20 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 96161,
+    "beID": 96161,
     "team": "Player Team",
     "eventType": "Assist",
+    "icon": "Treasure_Debuff.png",
     "abilityList": [
       "Activity_StarFightActivity_05_CountDown_BEAbility"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
         "value": 100
       }
     ],
-    "hardLevelEvent": true
+    "hardLevel": true
   },
   "noReader": true
 }

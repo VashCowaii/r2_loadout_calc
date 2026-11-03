@@ -524,11 +524,11 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 60020,
+    "beID": 60020,
     "team": "Player Team",
     "eventType": "Assist",
-    "abilityList": null,
-    "overridesArray": [
+    "icon": "BattleEvent_20421076.png",
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -542,7 +542,7 @@ const compositeAbilityObject = {
         "value": 100
       }
     ],
-    "hardLevelEvent": true,
+    "hardLevel": true,
     "actionDescription": "Deals massive Imaginary DMG to all enemies."
   }
 }

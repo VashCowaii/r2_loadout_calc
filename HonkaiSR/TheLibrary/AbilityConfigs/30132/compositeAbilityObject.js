@@ -3896,20 +3896,29 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30132,
+    "beID": 30132,
     "team": "Neutral Team",
     "eventType": "Endgame Countdown",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_Month_32"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "When an enemy target's Weakness is Broken, adds <unbreak>#1[i]</unbreak> hits to \"Memory Turbulence's\" Hits Per Action. If the target is an Elite enemy or rarer, then additionally adds <unbreak>#2[i]</unbreak> hits, up to a max increase of <unbreak>#3[i]</unbreak> hits.\\nAt the start of every Cycle, every hit by \"Memory Turbulence\" deals 1 instance of a set amount of DMG to random enemy targets, and the Hits Per Action is not reset."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "When an enemy target's Weakness is Broken, adds <unbreak>#1[i]</unbreak> hits to \"Memory Turbulence's\" Hits Per Action. If the target is an Elite enemy or rarer, then additionally adds <unbreak>#2[i]</unbreak> hits, up to a max increase of <unbreak>#3[i]</unbreak> hits.\\nAt the start of every Cycle, every hit by \"Memory Turbulence\" deals 1 instance of a set amount of DMG to random enemy targets, and the Hits Per Action is not reset.",
+    "params": [
+      1,
+      1,
+      15,
+      0.15,
+      0.025,
+      0.015
+    ]
   }
 }

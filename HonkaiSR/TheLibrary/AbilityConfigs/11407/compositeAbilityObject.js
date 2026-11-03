@@ -513,12 +513,11 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Battle Event Construction",
-          "ID": 11407,
+          "beID": 11407,
           "team": "Player Team",
           "eventType": "Assist",
-          "abilityList": null,
-          "overridesArray": [],
-          "hardLevelEvent": true
+          "icon": "1407.png",
+          "hardLevel": true
         }
       ],
       "references": []
@@ -528,11 +527,10 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 11407,
+    "beID": 11407,
     "team": "Player Team",
     "eventType": "Assist",
-    "abilityList": null,
-    "overridesArray": [],
-    "hardLevelEvent": true
+    "icon": "1407.png",
+    "hardLevel": true
   }
 }

@@ -3574,20 +3574,25 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30148,
+    "beID": 30148,
     "team": "Neutral Team",
     "eventType": "Challenge Event",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_Month_48"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "The character in position 1 of the ally lineup gains the Elation Skill \"Euphoric Maelstrom,\" dealing <unbreak>#1[i]%</unbreak> Elation DMG of the character's Type to all enemies. At the start of each cycle, Aha immediately gains 1 extra turn, taking into account a fixed <unbreak>#2[i]</unbreak> Punchlines. This turn does not consume Punchlines."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "The character in position 1 of the ally lineup gains the Elation Skill \"Euphoric Maelstrom,\" dealing <unbreak>#1[i]%</unbreak> Elation DMG of the character's Type to all enemies. At the start of each cycle, Aha immediately gains 1 extra turn, taking into account a fixed <unbreak>#2[i]</unbreak> Punchlines. This turn does not consume Punchlines.",
+    "params": [
+      1,
+      20
+    ]
   }
 }

@@ -8,22 +8,23 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 96036,
+    "beID": 96036,
     "team": "Enemy Team",
     "eventType": "Assist",
+    "icon": "Monster_Flag.png",
     "abilityList": [
       "FantasticStory_Big_Ability_0006_Insert",
       "FantasticStory_Big_Ability_0006_Insert_BattleEvent",
       "BattleEventAbility_SummonMonsterInfinite_Camera"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
         "value": 100
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true
+    "spd": 100,
+    "hardLevel": true
   },
   "noReader": true
 }

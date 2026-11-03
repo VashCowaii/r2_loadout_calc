@@ -8,11 +8,12 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 46109,
+    "beID": 46109,
     "team": "Neutral Team",
     "eventType": "Assist",
-    "abilityList": null,
-    "overridesArray": [
+    "barType": 2,
+    "icon": "RogueMagicScepter_Break_04.png",
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -30,8 +31,7 @@ const compositeAbilityObject = {
         "value": 0.5
       }
     ],
-    "hardLevelEvent": true,
-    "barType": 2,
+    "hardLevel": true,
     "actionDescription": "<color=#87e0ffff>\"Bounce\"</color> deals Fire DMG to random enemy targets to reduce Toughness regardless of Weaknesses and additionally deals Break DMG if the target is already Weakness Broken. It also increases SPD for all ally targets, which is stackable."
   },
   "noReader": true

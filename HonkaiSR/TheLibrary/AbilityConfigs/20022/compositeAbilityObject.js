@@ -697,13 +697,14 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 20022,
+    "beID": 20022,
     "team": "Enemy Team",
     "eventType": "Assist",
+    "icon": "BattleEvent_W4_Unicorn_Prepare.png",
     "abilityList": [
       "BattleEventAbility_Monster_W4_Unicorn_01_Summon"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -713,6 +714,6 @@ const compositeAbilityObject = {
         "value": 100
       }
     ],
-    "hardLevelEvent": true
+    "hardLevel": true
   }
 }

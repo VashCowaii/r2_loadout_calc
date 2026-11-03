@@ -3231,11 +3231,11 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Battle Event Construction",
-          "ID": 20032,
+          "beID": 20032,
           "team": "Neutral Team",
           "eventType": "Summon",
-          "abilityList": null,
-          "overridesArray": [
+          "icon": "Monster_5012120.png",
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
               "value": 90
@@ -3249,8 +3249,11 @@ const compositeAbilityObject = {
               "value": 110
             }
           ],
-          "hardLevelEvent": true,
-          "actionDescription": "Ally's \"Alloy Pommy.\"\\nEach time allies gain 1 Punchline, accumulates 1 point of Charge. When the Charge reaches <unbreak>#1[i]</unbreak> points, immediately gains 1 extra turn and enhances Basic ATK.\\nBasic ATK deals Quantum DMG to one designated enemy target and gains Punchlines.\\nEnhanced Basic ATK consumes <unbreak>#1[i]</unbreak> points of Charge, dealing Quantum DMG to one designated enemy target and True DMG equal to a certain percentage of the target's Max HP, and removes 1 stack of the \"Lasting Antibac\" effect from the target."
+          "hardLevel": true,
+          "actionDescription": "Ally's \"Alloy Pommy.\"\\nEach time allies gain 1 Punchline, accumulates 1 point of Charge. When the Charge reaches <unbreak>#1[i]</unbreak> points, immediately gains 1 extra turn and enhances Basic ATK.\\nBasic ATK deals Quantum DMG to one designated enemy target and gains Punchlines.\\nEnhanced Basic ATK consumes <unbreak>#1[i]</unbreak> points of Charge, dealing Quantum DMG to one designated enemy target and True DMG equal to a certain percentage of the target's Max HP, and removes 1 stack of the \"Lasting Antibac\" effect from the target.",
+          "params": [
+            20
+          ]
         }
       ],
       "references": []
@@ -3260,13 +3263,14 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 20033,
+    "beID": 20033,
     "team": "Enemy Team",
     "eventType": "Assist",
+    "icon": "BattleEvent_W5_Pam_00_Summon.png",
     "abilityList": [
       "BattleEventAbility_W5_Pam_Summon"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -3280,7 +3284,7 @@ const compositeAbilityObject = {
         "value": 120
       }
     ],
-    "hardLevelEvent": true,
+    "hardLevel": true,
     "actionDescription": "When taking action, summons an \"Alloy Pommy\" for both ally and enemy teams.\\nAllies can only have 1 \"Alloy Pommy,\" and it cannot be targeted by abilities from either team."
   }
 }

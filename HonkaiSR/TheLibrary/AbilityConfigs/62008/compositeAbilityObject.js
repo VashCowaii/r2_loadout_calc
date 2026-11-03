@@ -8,17 +8,17 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 62008,
+    "beID": 62008,
     "team": "Neutral Team",
     "eventType": "Assist",
-    "abilityList": null,
-    "overridesArray": [
+    "icon": "BattleEvent_TVSeason2.png",
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
         "value": 100
       }
     ],
-    "eventSpeed": 50,
+    "spd": 50,
     "actionDescription": "After any ally target takes action, Shadesever Bow's action advances. During its action, it prioritizes attacking all enemy targets 1 time each, with the remaining attack counts attacking random enemy targets."
   },
   "noReader": true

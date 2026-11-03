@@ -3767,20 +3767,28 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30121,
+    "beID": 30121,
     "team": "Neutral Team",
     "eventType": "Endgame Countdown",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_Month_21"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "After an ally Breaks enemies' Weaknesses or attacks Weakness Broken enemies, add <unbreak>#3[i]</unbreak> Hit(s) Per Action to \"Memory Turbulence,\" up to <unbreak>#1[i]</unbreak> extra hits.\\nAt the start of every Cycle, every hit will deal 1 instance of DMG based on the enemy targets' respective Max HP to random enemy targets."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "After an ally Breaks enemies' Weaknesses or attacks Weakness Broken enemies, add <unbreak>#3[i]</unbreak> Hit(s) Per Action to \"Memory Turbulence,\" up to <unbreak>#1[i]</unbreak> extra hits.\\nAt the start of every Cycle, every hit will deal 1 instance of DMG based on the enemy targets' respective Max HP to random enemy targets.",
+    "params": [
+      10,
+      0.05,
+      1,
+      1,
+      0.3
+    ]
   }
 }

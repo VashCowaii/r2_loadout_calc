@@ -8,20 +8,26 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 49003,
+    "beID": 49003,
     "team": "Neutral Team",
     "eventType": "Turn Prompt",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_RogueRage_Enhance_V2"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true
+    "spd": 100,
+    "hardLevel": true,
+    "params": [
+      0.4,
+      0.15,
+      0.3
+    ]
   },
   "noReader": true
 }

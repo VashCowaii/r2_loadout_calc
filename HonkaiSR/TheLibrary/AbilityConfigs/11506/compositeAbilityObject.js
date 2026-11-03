@@ -398,16 +398,16 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 11506,
+    "beID": 11506,
     "team": "Player Team",
     "eventType": "Assist",
+    "icon": "1506.png",
     "abilityList": [
       "GlobalAbility_SilverWolf999_BattleEvent",
       "GlobalAbility_SilverWolf999_Insert_Part01",
       "GlobalAbility_SilverWolf999_Insert_Part02",
       "GlobalAbility_SilverWolf999_Insert_Camera"
     ],
-    "overridesArray": [],
-    "hardLevelEvent": true
+    "hardLevel": true
   }
 }

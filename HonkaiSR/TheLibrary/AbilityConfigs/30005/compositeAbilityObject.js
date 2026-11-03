@@ -186,20 +186,24 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30005,
+    "beID": 30005,
     "team": "Neutral Team",
     "eventType": "Challenge Event",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_05"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "Increases Lightning DMG dealt by all allies by <unbreak>#1[i]%</unbreak>"
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "Increases Lightning DMG dealt by all allies by <unbreak>#1[i]%</unbreak>",
+    "params": [
+      0.5
+    ]
   }
 }

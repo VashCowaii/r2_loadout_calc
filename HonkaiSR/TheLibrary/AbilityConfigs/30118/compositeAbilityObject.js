@@ -4107,11 +4107,11 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Battle Event Construction",
-          "ID": 31003,
+          "beID": 31003,
           "team": "Neutral Team",
           "eventType": "Assist",
-          "abilityList": null,
-          "overridesArray": [
+          "icon": "BattleEvent_Shenyuan.png",
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
               "value": 100
@@ -4126,20 +4126,26 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30118,
+    "beID": 30118,
     "team": "Neutral Team",
     "eventType": "Challenge Event",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_Month_18"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "When an ally uses their Ultimate, obtain \"Memory Imprint.\" This effect stacks up to <unbreak>#2[i]</unbreak> time(s).\\nAt the start of every Cycle, regenerate Energy to all allies based on the number of \"Memory Imprint\" stacks (Each stack regenerates <unbreak>#3[i]</unbreak> Energy). Energy obtained in this way can exceed allies' Max Energy."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "When an ally uses their Ultimate, obtain \"Memory Imprint.\" This effect stacks up to <unbreak>#2[i]</unbreak> time(s).\\nAt the start of every Cycle, regenerate Energy to all allies based on the number of \"Memory Imprint\" stacks (Each stack regenerates <unbreak>#3[i]</unbreak> Energy). Energy obtained in this way can exceed allies' Max Energy.",
+    "params": [
+      1,
+      10,
+      10
+    ]
   }
 }

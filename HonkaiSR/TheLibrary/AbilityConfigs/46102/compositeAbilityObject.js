@@ -8,11 +8,12 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 46102,
+    "beID": 46102,
     "team": "Neutral Team",
     "eventType": "Assist",
-    "abilityList": null,
-    "overridesArray": [
+    "barType": 2,
+    "icon": "RogueMagicScepter_Follow_04.png",
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -30,8 +31,7 @@ const compositeAbilityObject = {
         "value": 0.5
       }
     ],
-    "hardLevelEvent": true,
-    "barType": 2,
+    "hardLevel": true,
     "actionDescription": "<color=#87e0ffff>\"Bounce\"</color> deals Imaginary Follow-Up ATK DMG to random enemy targets with a chance to CRIT, and also increases the Follow-Up ATK DMG taken by the target. This is stackable."
   },
   "noReader": true

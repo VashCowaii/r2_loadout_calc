@@ -211,13 +211,14 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Battle Event Construction",
-          "ID": 60011,
+          "beID": 60011,
           "team": "Player Team",
           "eventType": "Assist",
+          "icon": "1217.png",
           "abilityList": [
             "MissionBattleEvent60008_Listener"
           ],
-          "overridesArray": [
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
               "value": 90
@@ -227,8 +228,12 @@ const compositeAbilityObject = {
               "value": 120
             }
           ],
-          "eventSpeed": 120,
-          "hardLevelEvent": true
+          "spd": 120,
+          "hardLevel": true,
+          "params": [
+            0.75,
+            0.25
+          ]
         }
       ],
       "references": []
@@ -269,11 +274,11 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 60008,
+    "beID": 60008,
     "team": "Player Team",
     "eventType": "Assist",
-    "abilityList": null,
-    "overridesArray": [
+    "icon": "BE1213_Special.png",
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -283,6 +288,10 @@ const compositeAbilityObject = {
         "value": 120
       }
     ],
-    "hardLevelEvent": true
+    "hardLevel": true,
+    "params": [
+      0.75,
+      0.25
+    ]
   }
 }

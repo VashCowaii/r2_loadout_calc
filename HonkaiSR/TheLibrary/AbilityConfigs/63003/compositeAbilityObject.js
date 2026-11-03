@@ -8,19 +8,24 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 63003,
+    "beID": 63003,
     "team": "Player Team",
     "eventType": "Assist",
+    "icon": "BattleEvent_FinalityBattle.png",
     "abilityList": [
       "Activity_FinalityBattle_1_CountDown63003"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true
+    "spd": 100,
+    "hardLevel": true,
+    "params": [
+      0.4,
+      0.2
+    ]
   }
 }

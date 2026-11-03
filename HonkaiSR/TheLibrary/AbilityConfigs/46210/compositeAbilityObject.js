@@ -8,11 +8,11 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 46210,
+    "beID": 46210,
     "team": "Neutral Team",
     "eventType": "Assist",
-    "abilityList": null,
-    "overridesArray": [
+    "icon": "RogueMagicScepter_Follow_03.png",
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -30,7 +30,7 @@ const compositeAbilityObject = {
         "value": 0.5
       }
     ],
-    "hardLevelEvent": true,
+    "hardLevel": true,
     "actionDescription": "<color=#87e0ffff>\"AoE ATK\"</color> deals Ice Follow-Up ATK DMG to all enemies with a chance to CRIT. Also, targets are more likely to take CRIT Hits when taking DMG and take extra DMG when taking Follow-Up ATK CRIT DMG."
   },
   "noReader": true

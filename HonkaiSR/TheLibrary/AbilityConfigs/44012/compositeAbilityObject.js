@@ -8,14 +8,15 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 44012,
+    "beID": 44012,
     "team": "Neutral Team",
     "eventType": "Assist",
+    "icon": "BE_RogueFormula02.png",
     "abilityList": [
       "StageAbility_673670_Insert",
       "StageAbility_673670_Camera"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90

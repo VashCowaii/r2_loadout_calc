@@ -10,14 +10,15 @@ const configAbility = {
   "parse": [
     {
       "name": "Battle Event Construction",
-      "ID": 20002,
+      "beID": 20002,
       "team": "Enemy Team",
       "eventType": "Assist",
+      "icon": "Monster_MultiMindControl.png",
       "abilityList": [
         "BattleEventAbility_W2_Kafka_RL",
         "BattleEventAbility_W2_Kafka_RL_Insert"
       ],
-      "overridesArray": [
+      "statOverrides": [
         {
           "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
           "value": 100

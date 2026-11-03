@@ -8,13 +8,14 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 20014,
+    "beID": 20014,
     "team": "Enemy Team",
     "eventType": "Assist",
+    "icon": "Monster_SummonLycan.png",
     "abilityList": [
       "BattleEventAbility_WMonster_W4_Theoroi_Summon"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -24,8 +25,8 @@ const compositeAbilityObject = {
         "value": 100
       }
     ],
-    "eventSpeed": 105,
-    "hardLevelEvent": true,
+    "spd": 105,
+    "hardLevel": true,
     "actionDescription": "Generates \"Titankin\" upon taking action."
   },
   "noReader": true

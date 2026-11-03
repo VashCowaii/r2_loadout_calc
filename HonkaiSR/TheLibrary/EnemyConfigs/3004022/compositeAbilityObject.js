@@ -7679,19 +7679,20 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Battle Event Construction",
-          "ID": 20010,
+          "beID": 20010,
           "team": "Enemy Team",
           "eventType": "Assist",
+          "icon": "Monster_3004020.png",
           "abilityList": [
             "Monster_W3_Theater_BattleEvent"
           ],
-          "overridesArray": [
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
               "value": 100
             }
           ],
-          "hardLevelEvent": true
+          "hardLevel": true
         }
       ],
       "references": []

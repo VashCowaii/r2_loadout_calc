@@ -8,11 +8,11 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 46207,
+    "beID": 46207,
     "team": "Neutral Team",
     "eventType": "Assist",
-    "abilityList": null,
-    "overridesArray": [
+    "icon": "1086.png",
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -30,7 +30,7 @@ const compositeAbilityObject = {
         "value": 0.5
       }
     ],
-    "hardLevelEvent": true,
+    "hardLevel": true,
     "actionDescription": "<color=#87e0ffff>\"Focus\"</color> deals Quantum DMG to the enemy target with the most DoT in possession. Every time this DMG is dealt, immediately trigger 1 DoT."
   },
   "noReader": true

@@ -223,20 +223,24 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30112,
+    "beID": 30112,
     "team": "Neutral Team",
     "eventType": "Challenge Event",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_Month_12"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "At the start of each Cycle, all enemies currently inflicted with DoT are immediately dealt DMG equal to <unbreak>#1[i]%</unbreak> of the original DMG from all their DoT effects."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "At the start of each Cycle, all enemies currently inflicted with DoT are immediately dealt DMG equal to <unbreak>#1[i]%</unbreak> of the original DMG from all their DoT effects.",
+    "params": [
+      2
+    ]
   }
 }

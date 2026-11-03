@@ -8,11 +8,12 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 46112,
+    "beID": 46112,
     "team": "Neutral Team",
     "eventType": "Assist",
-    "abilityList": null,
-    "overridesArray": [
+    "barType": 2,
+    "icon": "RogueMagicScepter_Dot_04.png",
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -30,8 +31,7 @@ const compositeAbilityObject = {
         "value": 0.5
       }
     ],
-    "hardLevelEvent": true,
-    "barType": 2,
+    "hardLevel": true,
     "actionDescription": "<color=#87e0ffff>\"Focus\"</color> deals Quantum DMG to the enemy target with the most DoT in possession. Every time this DMG is dealt, immediately trigger 1 DoT."
   },
   "noReader": true

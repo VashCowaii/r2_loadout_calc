@@ -8,13 +8,14 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 44020,
+    "beID": 44020,
     "team": "Neutral Team",
     "eventType": "Assist",
+    "icon": "BattleEvent_EvoLveBuild_3113201.png",
     "abilityList": [
       "StageAbility_676890_Laser_Insert"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
         "value": 100
@@ -26,7 +27,7 @@ const compositeAbilityObject = {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;"
       }
     ],
-    "hardLevelEvent": true,
+    "hardLevel": true,
     "actionDescription": "When taking action, increases the DMG taken by all enemies, deals Ice and Fire DMG to all enemies. This attack delays enemies' actions and ignores Weakness Type to reduce all enemies' Toughness. When Breaking enemies' Weakness, triggers both Ice and Fire Weakness Break effects."
   },
   "noReader": true

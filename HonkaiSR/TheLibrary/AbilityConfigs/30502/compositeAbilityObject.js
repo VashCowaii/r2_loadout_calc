@@ -1320,14 +1320,15 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30502,
+    "beID": 30502,
     "team": "Neutral Team",
     "eventType": "VS. Warning Event",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_SummonMonsterInfinite",
       "BattleEventAbility_ChallengePeakBattle_CountDown"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -1337,8 +1338,14 @@ const compositeAbilityObject = {
         "value": 100
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "Starting from Cycle 3, at the beginning of each Cycle, all allies enter the \"Middlegame Mayhem\" state, which greatly increases their final DMG dealt. This effect can be stacked."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "Starting from Cycle 3, at the beginning of each Cycle, all allies enter the \"Middlegame Mayhem\" state, which greatly increases their final DMG dealt. This effect can be stacked.",
+    "params": [
+      0.5,
+      7,
+      4,
+      0.5
+    ]
   }
 }

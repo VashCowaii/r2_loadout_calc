@@ -217,20 +217,24 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30016,
+    "beID": 30016,
     "team": "Neutral Team",
     "eventType": "Challenge Event",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_Group_01"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "At the beginning of each Cycle, increases the DMG of every ally's next attack by <unbreak>#1[i]%</unbreak>."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "At the beginning of each Cycle, increases the DMG of every ally's next attack by <unbreak>#1[i]%</unbreak>.",
+    "params": [
+      0.5
+    ]
   }
 }

@@ -785,13 +785,14 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Battle Event Construction",
-          "ID": 20052,
+          "beID": 20052,
           "team": "Enemy Team",
           "eventType": "Assist",
+          "icon": "Monster_8015050.png",
           "abilityList": [
             "BattleEventAbility_Monster_W5_AsatPramad_RestartAfterBE"
           ],
-          "overridesArray": [
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
               "value": 90
@@ -805,7 +806,7 @@ const compositeAbilityObject = {
               "value": 100
             }
           ],
-          "hardLevelEvent": true
+          "hardLevel": true
         }
       ],
       "references": []
@@ -876,11 +877,11 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 60044,
+    "beID": 60044,
     "team": "Player Team",
     "eventType": "Assist",
-    "abilityList": null,
-    "overridesArray": [
+    "icon": "BattleEvent_60044.png",
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -894,7 +895,14 @@ const compositeAbilityObject = {
         "value": 100
       }
     ],
-    "hardLevelEvent": true,
-    "actionDescription": "Deals massive DMG to all enemy targets, applies \"Knockdown\" to Asat Pramad, and causes all ally targets to immediately take action. A \"Knockdown\" countdown appears on the Action Order. At the start of the countdown's turn, Lord of Saṃvartasthāyi, Asat Pramad exits the \"Knockdown\" state and immediately takes action."
+    "hardLevel": true,
+    "actionDescription": "Deals massive DMG to all enemy targets, applies \"Knockdown\" to Asat Pramad, and causes all ally targets to immediately take action. A \"Knockdown\" countdown appears on the Action Order. At the start of the countdown's turn, Lord of Saṃvartasthāyi, Asat Pramad exits the \"Knockdown\" state and immediately takes action.",
+    "params": [
+      0.15,
+      0.3,
+      7,
+      8,
+      0.3
+    ]
   }
 }

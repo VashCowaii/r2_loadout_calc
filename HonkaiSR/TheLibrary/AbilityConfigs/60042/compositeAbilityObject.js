@@ -4810,13 +4810,14 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 60042,
+    "beID": 60042,
     "team": "Neutral Team",
     "eventType": "Assist",
+    "icon": "BattleEventMainStoryTVStation_Neutrality.png",
     "abilityList": [
       "BattleEventAbility_TVBroadcast_Neutral"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -4830,7 +4831,11 @@ const compositeAbilityObject = {
         "value": 144
       }
     ],
-    "hardLevelEvent": true,
-    "actionDescription": "When taking action, allies gain Punchline."
+    "hardLevel": true,
+    "actionDescription": "When taking action, allies gain Punchline.",
+    "params": [
+      10,
+      1.5
+    ]
   }
 }

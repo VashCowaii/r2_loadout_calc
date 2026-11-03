@@ -8,18 +8,18 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 100003,
+    "beID": 100003,
     "team": "Neutral Team",
     "eventType": "Assist",
-    "abilityList": null,
-    "overridesArray": [
+    "icon": "FateHojuCaladbolg.png",
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
         "value": 100
       }
     ],
-    "eventSpeed": 130,
-    "hardLevelEvent": true
+    "spd": 130,
+    "hardLevel": true
   },
   "noReader": true
 }

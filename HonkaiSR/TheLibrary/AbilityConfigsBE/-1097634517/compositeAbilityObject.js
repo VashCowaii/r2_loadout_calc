@@ -12684,33 +12684,35 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Battle Event Construction",
-          "ID": 43004,
+          "beID": 43004,
           "team": "Neutral Team",
           "eventType": "Assist",
+          "icon": "HoshinoKami_012.png",
           "abilityList": [
             "BattleEventAbility_RogueDLCAbundance_Camera",
             "BattleEventAbility_RogueDLCAbundance_Insert"
           ],
-          "overridesArray": [
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
               "value": 90
             }
           ],
-          "eventSpeed": 50,
-          "hardLevelEvent": true,
+          "spd": 50,
+          "hardLevel": true,
           "eliteGroup": true
         },
         {
           "name": "Battle Event Construction",
-          "ID": 43003,
+          "beID": 43003,
           "team": "Neutral Team",
           "eventType": "Assist",
+          "icon": "HoshinoKami_012.png",
           "abilityList": [
             "BattleEventAbility_RogueDLCSandworm_Camera",
             "BattleEventAbility_RogueDLCSandworm_Insert"
           ],
-          "overridesArray": [
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
               "value": 90
@@ -12720,20 +12722,21 @@ const compositeAbilityObject = {
               "value": 18
             }
           ],
-          "eventSpeed": 50,
-          "hardLevelEvent": true,
+          "spd": 50,
+          "hardLevel": true,
           "eliteGroup": true
         },
         {
           "name": "Battle Event Construction",
-          "ID": 43002,
+          "beID": 43002,
           "team": "Neutral Team",
           "eventType": "Assist",
+          "icon": "HoshinoKami_012.png",
           "abilityList": [
             "BattleEventAbility_RogueDLCRuin_Camera",
             "BattleEventAbility_RogueDLCRuin_Insert"
           ],
-          "overridesArray": [
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
               "value": 90
@@ -12743,27 +12746,28 @@ const compositeAbilityObject = {
               "value": 18
             }
           ],
-          "eventSpeed": 50,
-          "hardLevelEvent": true,
+          "spd": 50,
+          "hardLevel": true,
           "eliteGroup": true
         },
         {
           "name": "Battle Event Construction",
-          "ID": 43001,
+          "beID": 43001,
           "team": "Neutral Team",
           "eventType": "Assist",
+          "icon": "HoshinoKami_012.png",
           "abilityList": [
             "BattleEventAbility_RogueDLCHunting_Camera",
             "BattleEventAbility_RogueDLCHunting_Insert"
           ],
-          "overridesArray": [
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
               "value": 90
             }
           ],
-          "eventSpeed": 50,
-          "hardLevelEvent": true,
+          "spd": 50,
+          "hardLevel": true,
           "eliteGroup": true
         }
       ],

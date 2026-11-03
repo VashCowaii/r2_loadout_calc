@@ -6097,13 +6097,14 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 20046,
+    "beID": 20046,
     "team": "Enemy Team",
     "eventType": "Assist",
+    "icon": "BattleEvent_W5_AsatPramad_00_Ultra.png",
     "abilityList": [
       "BattleEventAbility_Monster_W5_AsatPramad_Ultra"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -6117,6 +6118,6 @@ const compositeAbilityObject = {
         "value": 95
       }
     ],
-    "hardLevelEvent": true
+    "hardLevel": true
   }
 }

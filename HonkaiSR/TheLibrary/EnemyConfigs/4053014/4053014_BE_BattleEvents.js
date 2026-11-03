@@ -10,13 +10,14 @@ const configAbility = {
   "parse": [
     {
       "name": "Battle Event Construction",
-      "ID": 20020,
+      "beID": 20020,
       "team": "Enemy Team",
       "eventType": "Assist",
+      "icon": "BattleEvent_W4_Manta_WormPassive.png",
       "abilityList": [
         "BattleEventAbility_Monster_W4_Manta_BattleEvent"
       ],
-      "overridesArray": [
+      "statOverrides": [
         {
           "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
           "value": 90
@@ -26,8 +27,8 @@ const configAbility = {
           "value": 100
         }
       ],
-      "eventSpeed": 80,
-      "hardLevelEvent": true
+      "spd": 80,
+      "hardLevel": true
     }
   ],
   "references": []

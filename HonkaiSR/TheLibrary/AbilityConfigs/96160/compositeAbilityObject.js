@@ -8,13 +8,14 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 96160,
+    "beID": 96160,
     "team": "Player Team",
     "eventType": "Assist",
+    "icon": "BE_StarChallenge.png",
     "abilityList": [
       "Activity_StarFightActivity_05_BEAbility"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
         "value": 100
@@ -48,8 +49,8 @@ const compositeAbilityObject = {
         "value": 1
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true
+    "spd": 100,
+    "hardLevel": true
   },
   "noReader": true
 }

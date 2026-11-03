@@ -10,11 +10,11 @@ const configAbility = {
   "parse": [
     {
       "name": "Battle Event Construction",
-      "ID": 11222,
+      "beID": 11222,
       "team": "Player Team",
       "eventType": "Summon",
-      "abilityList": null,
-      "overridesArray": [
+      "icon": "1222_BE.png",
+      "statOverrides": [
         {
           "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
           "value": 100

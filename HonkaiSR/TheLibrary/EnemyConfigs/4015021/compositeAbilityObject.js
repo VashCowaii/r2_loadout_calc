@@ -6213,32 +6213,45 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Battle Event Construction",
-          "ID": 60029,
+          "beID": 60029,
           "team": "Player Team",
           "eventType": "Assist",
+          "icon": "BattleEvent_60024.png",
           "abilityList": [
             "BattleEventAbility_620101_Camera"
           ],
-          "overridesArray": [
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
               "value": 90
             }
           ],
-          "eventSpeed": 100,
-          "hardLevelEvent": true,
+          "spd": 100,
+          "hardLevel": true,
           "eliteGroup": true,
-          "actionDescription": "Removes the \"Tide-Corrosion\" state from all ally targets. Adds \"Flame-Chase\" and \"Eagerness\" to all ally targets and restores HP."
+          "actionDescription": "Removes the \"Tide-Corrosion\" state from all ally targets. Adds \"Flame-Chase\" and \"Eagerness\" to all ally targets and restores HP.",
+          "params": [
+            4,
+            1,
+            2,
+            0,
+            0,
+            4,
+            0.5,
+            0.4,
+            10
+          ]
         },
         {
           "name": "Battle Event Construction",
-          "ID": 20015,
+          "beID": 20015,
           "team": "Enemy Team",
           "eventType": "Assist",
+          "icon": "BattleEvent_DawnsEye_Rognarok.png",
           "abilityList": [
             "BattleEventAbility_Monster_DawnEye_01_Rognarok"
           ],
-          "overridesArray": [
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
               "value": 90
@@ -6248,16 +6261,16 @@ const compositeAbilityObject = {
               "value": 100
             }
           ],
-          "eventSpeed": 167,
-          "hardLevelEvent": true
+          "spd": 167,
+          "hardLevel": true
         },
         {
           "name": "Battle Event Construction",
-          "ID": 60027,
+          "beID": 60027,
           "team": "Player Team",
           "eventType": "Assist",
-          "abilityList": null,
-          "overridesArray": [
+          "icon": "1408_02.png",
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
               "value": 90
@@ -6271,8 +6284,8 @@ const compositeAbilityObject = {
               "value": 100
             }
           ],
-          "eventSpeed": 100,
-          "hardLevelEvent": true,
+          "spd": 100,
+          "hardLevel": true,
           "eliteGroup": true
         }
       ],

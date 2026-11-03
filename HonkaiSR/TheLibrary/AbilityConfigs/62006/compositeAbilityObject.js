@@ -8,13 +8,14 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 62006,
+    "beID": 62006,
     "team": "Neutral Team",
     "eventType": "Countdown Warning",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Activity_LuckyScroll_TimerFirstPart"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -24,9 +25,12 @@ const compositeAbilityObject = {
         "value": 100
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "During the Buff Buildup phase, increase Stage Buff ranks as much as possible by using key enemies' Mutation Mechanic. When the Cycle countdown ends, the current stage will enter the Final Showdown phase."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "During the Buff Buildup phase, increase Stage Buff ranks as much as possible by using key enemies' Mutation Mechanic. When the Cycle countdown ends, the current stage will enter the Final Showdown phase.",
+    "params": [
+      3
+    ]
   },
   "noReader": true
 }

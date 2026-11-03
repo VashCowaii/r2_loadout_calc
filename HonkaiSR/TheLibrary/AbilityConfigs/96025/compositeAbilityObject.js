@@ -62,17 +62,17 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 96025,
+    "beID": 96025,
     "team": "Player Team",
     "eventType": "Item",
-    "abilityList": null,
-    "overridesArray": [
+    "icon": "Treasure_Buff.png",
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
         "value": 100
       }
     ],
-    "hardLevelEvent": true
+    "hardLevel": true
   },
   "noReader": true
 }

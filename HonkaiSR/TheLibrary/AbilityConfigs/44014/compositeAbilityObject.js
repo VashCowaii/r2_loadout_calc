@@ -8,21 +8,22 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 44014,
+    "beID": 44014,
     "team": "Neutral Team",
     "eventType": "Assist",
+    "icon": "BE_RogueMiracle1180.png",
     "abilityList": [
       "StageAbility_633326_Ability",
       "StageAbility_670500_Camera"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 70,
-    "hardLevelEvent": true,
+    "spd": 70,
+    "hardLevel": true,
     "eliteGroup": true,
     "actionDescription": "Deals massive DMG to all allies based on their current HP, and deals minor DMG to enemy targets."
   },

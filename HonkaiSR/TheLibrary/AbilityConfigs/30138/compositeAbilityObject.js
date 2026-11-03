@@ -4152,20 +4152,25 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30138,
+    "beID": 30138,
     "team": "Neutral Team",
     "eventType": "Challenge Event",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_Month_38"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "At the start of every Wave or Cycle, apply \"Memory Imprint\" to an enemy target of elite level or higher. This effect lasts until the start of the next Cycle. \"Memory Imprint\" is a special kind of <color=#f29e38ff>Burn</color> effect. The holders of this effect receive Fire DoT at the start of each turn. When ally targets use their Skill Attacks on a target with \"Memory Imprint,\" they will deal Additional DMG equal to <unbreak>#1[i]%</unbreak> of the attacker's ATK to the target and adjacent targets."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "At the start of every Wave or Cycle, apply \"Memory Imprint\" to an enemy target of elite level or higher. This effect lasts until the start of the next Cycle. \"Memory Imprint\" is a special kind of <color=#f29e38ff>Burn</color> effect. The holders of this effect receive Fire DoT at the start of each turn. When ally targets use their Skill Attacks on a target with \"Memory Imprint,\" they will deal Additional DMG equal to <unbreak>#1[i]%</unbreak> of the attacker's ATK to the target and adjacent targets.",
+    "params": [
+      2.2,
+      1.8
+    ]
   }
 }

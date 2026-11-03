@@ -221,20 +221,25 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30019,
+    "beID": 30019,
     "team": "Neutral Team",
     "eventType": "Challenge Event",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_New_02"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "Increases the DMG dealt by all allies' Skill by <unbreak>#1[i]%</unbreak>. At the beginning of each Cycle, regenerates <unbreak>#2[i]</unbreak> Skill Point(s)."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "Increases the DMG dealt by all allies' Skill by <unbreak>#1[i]%</unbreak>. At the beginning of each Cycle, regenerates <unbreak>#2[i]</unbreak> Skill Point(s).",
+    "params": [
+      0.25,
+      2
+    ]
   }
 }

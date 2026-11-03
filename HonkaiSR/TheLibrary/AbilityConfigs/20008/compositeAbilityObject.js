@@ -1393,13 +1393,14 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 20008,
+    "beID": 20008,
     "team": "Enemy Team",
     "eventType": "Assist",
+    "icon": "Monster_SummonLycan.png",
     "abilityList": [
       "BattleEventAbility_W2_LycanKing_Summon"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -1409,7 +1410,7 @@ const compositeAbilityObject = {
         "value": 100
       }
     ],
-    "eventSpeed": 105,
-    "hardLevelEvent": true
+    "spd": 105,
+    "hardLevel": true
   }
 }

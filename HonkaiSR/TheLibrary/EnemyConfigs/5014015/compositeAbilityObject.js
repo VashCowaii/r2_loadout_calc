@@ -7745,31 +7745,31 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Battle Event Construction",
-          "ID": 20040,
+          "beID": 20040,
           "team": "Neutral Team",
           "eventType": "Entity Selection",
-          "abilityList": null,
-          "overridesArray": [
+          "icon": "BattleEvent_W5_Vtuber_00_CountDown.png",
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
               "value": 100
             }
           ],
-          "hardLevelEvent": true
+          "hardLevel": true
         },
         {
           "name": "Battle Event Construction",
-          "ID": 20039,
+          "beID": 20039,
           "team": "Player Team",
           "eventType": "Assist",
-          "abilityList": null,
-          "overridesArray": [
+          "icon": "BattleEvent_W5_Vtuber_00_CountDown.png",
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
               "value": 40
             }
           ],
-          "hardLevelEvent": true
+          "hardLevel": true
         }
       ],
       "references": []

@@ -1330,15 +1330,16 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30504,
+    "beID": 30504,
     "team": "Neutral Team",
     "eventType": "VS. Warning Event",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_SummonMonsterInfinite",
       "BattleEventAbility_ChallengePeakBattle_CountDown",
       "BattleEventAbility_ChallengePeakBattle_HardBossScreenEffect"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -1348,7 +1349,13 @@ const compositeAbilityObject = {
         "value": 100
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true
+    "spd": 100,
+    "hardLevel": true,
+    "params": [
+      0.5,
+      3,
+      0,
+      0
+    ]
   }
 }

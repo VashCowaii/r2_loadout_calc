@@ -8,11 +8,11 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 63001,
+    "beID": 63001,
     "team": "Neutral Team",
     "eventType": "Elation Gift Box",
-    "abilityList": null,
-    "overridesArray": [
+    "icon": "BattleEvent_ActivityElationBattle_Open.png",
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
         "value": 100

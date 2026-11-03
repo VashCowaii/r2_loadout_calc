@@ -8,14 +8,15 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 44006,
+    "beID": 44006,
     "team": "Neutral Team",
     "eventType": "Assist",
+    "icon": "BE_RogueFormula03.png",
     "abilityList": [
       "StageAbility_670700_Insert",
       "StageAbility_670700_Camera"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -25,7 +26,7 @@ const compositeAbilityObject = {
         "value": 100
       }
     ],
-    "hardLevelEvent": true,
+    "hardLevel": true,
     "eliteGroup": true,
     "actionDescription": "When ally targets gain or consume Skill Points, they will gain 1 Hits Per Action for the next attack. Should their Hits Per Action reach the maximum or when the turn starts, each Hit Per Action deals Wind DMG to a random enemy and grants a Shield for all allies."
   },

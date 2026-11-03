@@ -2180,13 +2180,14 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 20015,
+    "beID": 20015,
     "team": "Enemy Team",
     "eventType": "Assist",
+    "icon": "BattleEvent_DawnsEye_Rognarok.png",
     "abilityList": [
       "BattleEventAbility_Monster_DawnEye_01_Rognarok"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -2196,7 +2197,7 @@ const compositeAbilityObject = {
         "value": 100
       }
     ],
-    "eventSpeed": 167,
-    "hardLevelEvent": true
+    "spd": 167,
+    "hardLevel": true
   }
 }

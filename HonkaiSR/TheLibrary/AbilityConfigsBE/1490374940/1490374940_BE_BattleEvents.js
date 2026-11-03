@@ -10,11 +10,11 @@ const configAbility = {
   "parse": [
     {
       "name": "Battle Event Construction",
-      "ID": 31002,
+      "beID": 31002,
       "team": "Neutral Team",
       "eventType": "Assist",
-      "abilityList": null,
-      "overridesArray": [
+      "icon": "BattleEvent_Shenyuan.png",
+      "statOverrides": [
         {
           "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
           "value": 100
@@ -23,11 +23,11 @@ const configAbility = {
     },
     {
       "name": "Battle Event Construction",
-      "ID": 31003,
+      "beID": 31003,
       "team": "Neutral Team",
       "eventType": "Assist",
-      "abilityList": null,
-      "overridesArray": [
+      "icon": "BattleEvent_Shenyuan.png",
+      "statOverrides": [
         {
           "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
           "value": 100

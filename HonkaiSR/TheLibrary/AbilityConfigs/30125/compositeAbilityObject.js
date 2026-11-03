@@ -4101,20 +4101,28 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30125,
+    "beID": 30125,
     "team": "Neutral Team",
     "eventType": "Challenge Event",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_Month_25"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "Summons a Trotter at the beginning of each wave or each Cycle. The Trotter takes <unbreak>#1[i]%</unbreak> more damage from Basic ATKs and DoTs.\\nWhen the Trotter is defeated and if an enemy is afflicted with <color=#f29e38ff>Bleed</color>, <color=#f29e38ff>Shock</color>, <color=#f29e38ff>Burn</color>, or <color=#f29e38ff>Wind Shear</color>, the DoT it is currently afflicted with will immediately deal damage equal to <unbreak>#5[i]%</unbreak> of the original damage with a high chance to inflict Bleed, Shock, Burn, and Wind Shear on all enemies, lasting for <unbreak>#3[i]</unbreak> turn(s)."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "Summons a Trotter at the beginning of each wave or each Cycle. The Trotter takes <unbreak>#1[i]%</unbreak> more damage from Basic ATKs and DoTs.\\nWhen the Trotter is defeated and if an enemy is afflicted with <color=#f29e38ff>Bleed</color>, <color=#f29e38ff>Shock</color>, <color=#f29e38ff>Burn</color>, or <color=#f29e38ff>Wind Shear</color>, the DoT it is currently afflicted with will immediately deal damage equal to <unbreak>#5[i]%</unbreak> of the original damage with a high chance to inflict Bleed, Shock, Burn, and Wind Shear on all enemies, lasting for <unbreak>#3[i]</unbreak> turn(s).",
+    "params": [
+      2,
+      1,
+      3,
+      0.5,
+      0.5
+    ]
   }
 }

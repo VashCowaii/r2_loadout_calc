@@ -1018,20 +1018,25 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30035,
+    "beID": 30035,
     "team": "Neutral Team",
     "eventType": "Challenge Event",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_Xianzhou_05"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "After an ally <color=#f29e38ff>uses Skill</color> on any ally (including on themselves), dispels 1 <color=#f29e38ff>debuff</color> on the ally which the Skill was used on. For each <color=#f29e38ff>debuff</color> dispelled, increases the DMG dealt by all allies by <unbreak>#1[i]%</unbreak>. This effect can stack up to <unbreak>#2[i]</unbreak> times.\\nDefeating the <color=#f29e38ff>Elite or rarer enemy</color> in the final wave will immediately result in victory."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "After an ally <color=#f29e38ff>uses Skill</color> on any ally (including on themselves), dispels 1 <color=#f29e38ff>debuff</color> on the ally which the Skill was used on. For each <color=#f29e38ff>debuff</color> dispelled, increases the DMG dealt by all allies by <unbreak>#1[i]%</unbreak>. This effect can stack up to <unbreak>#2[i]</unbreak> times.\\nDefeating the <color=#f29e38ff>Elite or rarer enemy</color> in the final wave will immediately result in victory.",
+    "params": [
+      0.2,
+      10
+    ]
   }
 }

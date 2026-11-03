@@ -3922,20 +3922,28 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30143,
+    "beID": 30143,
     "team": "Neutral Team",
     "eventType": "Endgame Countdown",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_Month_43"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "At the start of each wave or Cycle, gains <unbreak>#1[i]</unbreak> Punchline point(s). When obtaining Punchline, adds a corresponding amount of Charge to \"Memory Turbulence,\" stacking up to <unbreak>#2[i]</unbreak> points.\\nAt the start of every Cycle, \"Memory Turbulence\" deals 1 instance of True DMG to enemy targets based on the amount of Charge points."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "At the start of each wave or Cycle, gains <unbreak>#1[i]</unbreak> Punchline point(s). When obtaining Punchline, adds a corresponding amount of Charge to \"Memory Turbulence,\" stacking up to <unbreak>#2[i]</unbreak> points.\\nAt the start of every Cycle, \"Memory Turbulence\" deals 1 instance of True DMG to enemy targets based on the amount of Charge points.",
+    "params": [
+      5,
+      50,
+      0.036,
+      0.0059999996,
+      0.0036000002
+    ]
   }
 }

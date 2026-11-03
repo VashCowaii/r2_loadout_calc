@@ -1669,21 +1669,33 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 60029,
+    "beID": 60029,
     "team": "Player Team",
     "eventType": "Assist",
+    "icon": "BattleEvent_60024.png",
     "abilityList": [
       "BattleEventAbility_620101_Camera"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
+    "spd": 100,
+    "hardLevel": true,
     "eliteGroup": true,
-    "actionDescription": "Removes the \"Tide-Corrosion\" state from all ally targets. Adds \"Flame-Chase\" and \"Eagerness\" to all ally targets and restores HP."
+    "actionDescription": "Removes the \"Tide-Corrosion\" state from all ally targets. Adds \"Flame-Chase\" and \"Eagerness\" to all ally targets and restores HP.",
+    "params": [
+      4,
+      1,
+      2,
+      0,
+      0,
+      4,
+      0.5,
+      0.4,
+      10
+    ]
   }
 }

@@ -5881,13 +5881,14 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 20048,
+    "beID": 20048,
     "team": "Player Team",
     "eventType": "Assist",
+    "icon": "BattleEvent_60012.png",
     "abilityList": [
       "BattleEventAbility_Monster_W5_AsatPramad_MainStoryTrain"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -5901,7 +5902,7 @@ const compositeAbilityObject = {
         "value": 45
       }
     ],
-    "hardLevelEvent": true,
+    "hardLevel": true,
     "actionDescription": "The Express Crew is on the way!"
   }
 }

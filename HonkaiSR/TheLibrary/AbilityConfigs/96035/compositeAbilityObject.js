@@ -63,17 +63,17 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 96035,
+    "beID": 96035,
     "team": "Player Team",
     "eventType": "Item",
-    "abilityList": null,
-    "overridesArray": [
+    "icon": "HoshinoKami_000.png",
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
         "value": 100
       }
     ],
-    "hardLevelEvent": true
+    "hardLevel": true
   },
   "noReader": true
 }

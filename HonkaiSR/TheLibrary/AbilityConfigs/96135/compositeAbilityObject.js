@@ -8,19 +8,20 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 96135,
+    "beID": 96135,
     "team": "Player Team",
     "eventType": "Assist",
+    "icon": "BattleEvent_TrashCan.png",
     "abilityList": [
       "StageSpecialAbility_ActivitySummon_BattEventAbility_Lv4LifeCount"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
         "value": 100
       }
     ],
-    "hardLevelEvent": true
+    "hardLevel": true
   },
   "noReader": true
 }

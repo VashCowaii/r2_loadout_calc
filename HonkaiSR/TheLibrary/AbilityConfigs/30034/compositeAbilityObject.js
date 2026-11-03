@@ -313,20 +313,24 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30034,
+    "beID": 30034,
     "team": "Neutral Team",
     "eventType": "Challenge Event",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_Xianzhou_04"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "After an ally target uses their <color=#f29e38ff>Ultimate</color> or launches a <color=#f29e38ff>Follow-Up ATK</color>, additionally deals a <color=#f29e38ff>set amount of DMG</color> to the attacked enemy target."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "After an ally target uses their <color=#f29e38ff>Ultimate</color> or launches a <color=#f29e38ff>Follow-Up ATK</color>, additionally deals a <color=#f29e38ff>set amount of DMG</color> to the attacked enemy target.",
+    "params": [
+      1.2
+    ]
   }
 }

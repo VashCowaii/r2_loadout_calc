@@ -836,11 +836,11 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 60050,
+    "beID": 60050,
     "team": "Neutral Team",
     "eventType": "Entity Selection",
-    "abilityList": null,
-    "overridesArray": [
+    "icon": "BattleEvent_60033.png",
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
         "value": 100
@@ -850,7 +850,7 @@ const compositeAbilityObject = {
         "value": 1
       }
     ],
-    "eventSpeed": 70,
+    "spd": 70,
     "actionDescription": "When \"Cyrene's Support ♪\" takes action, select an ally character to activate their Ultimate and dispel the \"Action Lock\" state."
   }
 }

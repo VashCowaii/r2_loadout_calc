@@ -8,13 +8,14 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 96001,
+    "beID": 96001,
     "team": "Player Team",
     "eventType": "Stage Entry",
+    "icon": "1204Shadow.png",
     "abilityList": [
       "BattleEventAbility_Vanish_Revert"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
         "value": 100

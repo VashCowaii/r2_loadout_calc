@@ -939,19 +939,23 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 61018,
+    "beID": 61018,
     "team": "Neutral Team",
     "eventType": "DU Countdown Event",
+    "icon": "",
     "abilityList": [
       "BattleEventAbility_SummonMonsterInfinite"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true
+    "spd": 100,
+    "hardLevel": true,
+    "params": [
+      0.5
+    ]
   }
 }

@@ -2024,13 +2024,14 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 20028,
+    "beID": 20028,
     "team": "Enemy Team",
     "eventType": "Assist",
+    "icon": "BattleEvent_W4_Theoroi_00_Phase2.png",
     "abilityList": [
       "BattleEventAbility_Monster_W4_Theoroi_Enhance"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -2040,8 +2041,8 @@ const compositeAbilityObject = {
         "value": 100
       }
     ],
-    "eventSpeed": 210,
-    "hardLevelEvent": true,
+    "spd": 210,
+    "hardLevel": true,
     "actionDescription": "When taking action, enhances Zandar and his next use of \"Query: Prime Mover's Outcome.\""
   }
 }

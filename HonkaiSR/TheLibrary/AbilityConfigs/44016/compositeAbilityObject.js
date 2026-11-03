@@ -8,14 +8,14 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 44016,
+    "beID": 44016,
     "team": "Neutral Team",
     "eventType": "Assist",
+    "icon": "BE_RogueFormula_ShowTime.png",
     "abilityList": [
       "Spotlight_Insert"
     ],
-    "overridesArray": [],
-    "hardLevelEvent": true
+    "hardLevel": true
   },
   "noReader": true
 }

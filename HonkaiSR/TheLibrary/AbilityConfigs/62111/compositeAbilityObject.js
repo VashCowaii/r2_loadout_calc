@@ -8,21 +8,25 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 62111,
+    "beID": 62111,
     "team": "Neutral Team",
     "eventType": "Assist",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_SummonMonsterInfinite",
       "BattleEventAbility_VS_Standard_WaveTimer"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true
+    "spd": 100,
+    "hardLevel": true,
+    "params": [
+      0.5
+    ]
   },
   "noReader": true
 }

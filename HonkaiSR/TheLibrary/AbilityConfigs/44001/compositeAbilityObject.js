@@ -8,14 +8,15 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 44001,
+    "beID": 44001,
     "team": "Neutral Team",
     "eventType": "Assist",
+    "icon": "BattleEvent_RogueFormula01.png",
     "abilityList": [
       "StageAbility_670010_Insert",
       "StageAbility_670010_Camera"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -25,7 +26,7 @@ const compositeAbilityObject = {
         "value": 80
       }
     ],
-    "hardLevelEvent": true,
+    "hardLevel": true,
     "eliteGroup": true,
     "actionDescription": "Each time it takes a turn, absorbs all allies' Shields, reducing their values to 1, and turning the absorbed values into its own Shield. Then, it deals Physical DMG equal to a certain value to all enemies, with a chance to Freeze enemies. When characters take damage, \"Comet Nucleus\"'s Shield will be consumed first. When \"Quake\" DMG is triggered, a portion of \"Comet Nucleus\"'s Shield value will be considered as the character's Shield."
   },

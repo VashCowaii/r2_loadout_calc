@@ -388,14 +388,15 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 11203,
+    "beID": 11203,
     "team": "Neutral Team",
     "eventType": "Summon",
+    "icon": "1204Shadow.png",
     "abilityList": [
       "BattleEventAbility_JingYuan_Passive",
       "BattleEventAbility_JingYuan_Passive_Insert"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
         "value": 100

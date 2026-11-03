@@ -10,17 +10,17 @@ const configAbility = {
   "parse": [
     {
       "name": "Battle Event Construction",
-      "ID": 20040,
+      "beID": 20040,
       "team": "Neutral Team",
       "eventType": "Entity Selection",
-      "abilityList": null,
-      "overridesArray": [
+      "icon": "BattleEvent_W5_Vtuber_00_CountDown.png",
+      "statOverrides": [
         {
           "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
           "value": 100
         }
       ],
-      "hardLevelEvent": true
+      "hardLevel": true
     }
   ],
   "references": []

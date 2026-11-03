@@ -4082,20 +4082,30 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30137,
+    "beID": 30137,
     "team": "Neutral Team",
     "eventType": "Endgame Countdown",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_Month_37"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "After the ally character in position 1 uses their Ultimate, both they and their memosprite will gain \"Memory Imprint,\" lasting for <unbreak>#1[i]</unbreak> turn(s). DMG dealt by targets with \"Memory Imprint\" increases by <unbreak>#2[i]%</unbreak>, and adds <unbreak>#3[i]</unbreak> Hits Per Action to \"Memory Turbulence,\" up to <unbreak>#4[i]</unbreak> Hits.\\nAt the start of each Cycle, \"Memory Turbulence\" deals 1 instance of True DMG to random enemy target with each Hit Per Action."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "After the ally character in position 1 uses their Ultimate, both they and their memosprite will gain \"Memory Imprint,\" lasting for <unbreak>#1[i]</unbreak> turn(s). DMG dealt by targets with \"Memory Imprint\" increases by <unbreak>#2[i]%</unbreak>, and adds <unbreak>#3[i]</unbreak> Hits Per Action to \"Memory Turbulence,\" up to <unbreak>#4[i]</unbreak> Hits.\\nAt the start of each Cycle, \"Memory Turbulence\" deals 1 instance of True DMG to random enemy target with each Hit Per Action.",
+    "params": [
+      1,
+      0.4,
+      2,
+      10,
+      0.12,
+      0.02,
+      0.01
+    ]
   }
 }

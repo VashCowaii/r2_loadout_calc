@@ -10,11 +10,11 @@ const configAbility = {
   "parse": [
     {
       "name": "Battle Event Construction",
-      "ID": 60031,
+      "beID": 60031,
       "team": "Player Team",
       "eventType": "Assist",
-      "abilityList": null,
-      "overridesArray": [
+      "icon": "BattleEvent_60031.png",
+      "statOverrides": [
         {
           "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
           "value": 90
@@ -24,44 +24,44 @@ const configAbility = {
           "value": 8
         }
       ],
-      "hardLevelEvent": true,
+      "hardLevel": true,
       "actionDescription": "Deals massive True DMG to all enemies and greatly reduces \"Amphorean Hatred\"!"
     },
     {
       "name": "Battle Event Construction",
-      "ID": 60035,
+      "beID": 60035,
       "team": "Neutral Team",
       "eventType": "Assist",
-      "abilityList": null,
-      "overridesArray": [
+      "icon": "",
+      "statOverrides": [
         {
           "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
           "value": 90
         }
       ],
-      "hardLevelEvent": true
+      "hardLevel": true
     },
     {
       "name": "Battle Event Construction",
-      "ID": 60033,
+      "beID": 60033,
       "team": "Neutral Team",
       "eventType": "Assist",
-      "abilityList": null,
-      "overridesArray": [
+      "icon": "",
+      "statOverrides": [
         {
           "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
           "value": 90
         }
       ],
-      "hardLevelEvent": true
+      "hardLevel": true
     },
     {
       "name": "Battle Event Construction",
-      "ID": 60032,
+      "beID": 60032,
       "team": "Neutral Team",
       "eventType": "Entity Selection",
-      "abilityList": null,
-      "overridesArray": [
+      "icon": "BattleEvent_60033.png",
+      "statOverrides": [
         {
           "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
           "value": 100
@@ -71,16 +71,16 @@ const configAbility = {
           "value": 70
         }
       ],
-      "hardLevelEvent": true,
+      "hardLevel": true,
       "actionDescription": "When \"Cyrene's Support ♪\" takes action, select an ally character to activate their Ultimate and dispel the \"Action Lock\" state."
     },
     {
       "name": "Battle Event Construction",
-      "ID": 60030,
+      "beID": 60030,
       "team": "Player Team",
       "eventType": "Assist",
-      "abilityList": null,
-      "overridesArray": [
+      "icon": "BattleEvent_60030.png",
+      "statOverrides": [
         {
           "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
           "value": 90
@@ -90,16 +90,16 @@ const configAbility = {
           "value": 8
         }
       ],
-      "hardLevelEvent": true,
+      "hardLevel": true,
       "actionDescription": "Deal massive Ice DMG to one enemy and greatly reduce \"Amphorean Hatred\"!"
     },
     {
       "name": "Battle Event Construction",
-      "ID": 60048,
+      "beID": 60048,
       "team": "Player Team",
       "eventType": "Assist",
-      "abilityList": null,
-      "overridesArray": [
+      "icon": "BattleEvent_60030.png",
+      "statOverrides": [
         {
           "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
           "value": 1
@@ -113,11 +113,11 @@ const configAbility = {
     },
     {
       "name": "Battle Event Construction",
-      "ID": 60050,
+      "beID": 60050,
       "team": "Neutral Team",
       "eventType": "Entity Selection",
-      "abilityList": null,
-      "overridesArray": [
+      "icon": "BattleEvent_60033.png",
+      "statOverrides": [
         {
           "statName": "&nbsp;<span class=\"descriptionNumberColor\">ATKBase</span>&nbsp;",
           "value": 100
@@ -127,7 +127,7 @@ const configAbility = {
           "value": 1
         }
       ],
-      "eventSpeed": 70,
+      "spd": 70,
       "actionDescription": "When \"Cyrene's Support ♪\" takes action, select an ally character to activate their Ultimate and dispel the \"Action Lock\" state."
     }
   ],

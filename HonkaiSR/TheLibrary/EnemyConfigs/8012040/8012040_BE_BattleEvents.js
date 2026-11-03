@@ -10,13 +10,14 @@ const configAbility = {
   "parse": [
     {
       "name": "Battle Event Construction",
-      "ID": 20047,
+      "beID": 20047,
       "team": "Enemy Team",
       "eventType": "Assist",
+      "icon": "BattleEvent_W5_Shell_00_Attack.png",
       "abilityList": [
         "BattleEventAbility_Monster_W5_Shell_Ability01Check"
       ],
-      "overridesArray": [
+      "statOverrides": [
         {
           "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
           "value": 90
@@ -30,7 +31,7 @@ const configAbility = {
           "value": 150
         }
       ],
-      "hardLevelEvent": true,
+      "hardLevel": true,
       "actionDescription": "Whenever \"Comedian Ensemble\" takes action, all \"Comediologists\" will attack simultaneously."
     }
   ],

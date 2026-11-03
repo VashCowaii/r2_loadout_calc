@@ -1035,20 +1035,25 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 30031,
+    "beID": 30031,
     "team": "Neutral Team",
     "eventType": "Challenge Event",
+    "icon": "999.png",
     "abilityList": [
       "BattleEventAbility_Challenge_Xianzhou_01"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true,
-    "actionDescription": "At the start of every Cycle, summon 2 <color=#f29e38ff>Mara-Struck Soldiers</color> or <color=#f29e38ff>Abundance Sprite: Golden Hounds</color>.\\nAfter an enemy target is defeated, deals a <color=#f29e38ff>set amount of DMG</color> to all enemies."
+    "spd": 100,
+    "hardLevel": true,
+    "actionDescription": "At the start of every Cycle, summon 2 <color=#f29e38ff>Mara-Struck Soldiers</color> or <color=#f29e38ff>Abundance Sprite: Golden Hounds</color>.\\nAfter an enemy target is defeated, deals a <color=#f29e38ff>set amount of DMG</color> to all enemies.",
+    "params": [
+      0.5,
+      0.75
+    ]
   }
 }

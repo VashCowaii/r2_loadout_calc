@@ -8,13 +8,14 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 20041,
+    "beID": 20041,
     "team": "Enemy Team",
     "eventType": "Assist",
+    "icon": "BattleEvent_W5_Fallen_Summon.png",
     "abilityList": [
       "BattleEventAbility_Monster_W5_Fallen_Summon"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
@@ -28,7 +29,7 @@ const compositeAbilityObject = {
         "value": 100
       }
     ],
-    "hardLevelEvent": true,
+    "hardLevel": true,
     "actionDescription": "Upon every action, summons \"Frenzied Beast's Seed Germ.\""
   }
 }

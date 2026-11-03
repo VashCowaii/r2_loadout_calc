@@ -8,22 +8,23 @@ const compositeAbilityObject = {
   "isBattleEvent": true,
   "finalData": {
     "name": "Battle Event Construction",
-    "ID": 42003,
+    "beID": 42003,
     "team": "Neutral Team",
     "eventType": "Challenge Event",
+    "icon": "",
     "abilityList": [
       "BattleEventAbility_RogueDLCSummonMonsterEvent02",
       "BattleEventAbility_RogueDLCSummonMonsterEvent02_Insert",
       "BattleEventAbility_SummonMonsterInfinite_Camera"
     ],
-    "overridesArray": [
+    "statOverrides": [
       {
         "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
         "value": 90
       }
     ],
-    "eventSpeed": 100,
-    "hardLevelEvent": true
+    "spd": 100,
+    "hardLevel": true
   },
   "noReader": true
 }

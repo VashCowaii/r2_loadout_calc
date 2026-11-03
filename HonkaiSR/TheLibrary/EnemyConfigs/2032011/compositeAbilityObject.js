@@ -2446,13 +2446,14 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Battle Event Construction",
-          "ID": 20009,
+          "beID": 20009,
           "team": "Enemy Team",
           "eventType": "Assist",
+          "icon": "BattleEvent_Rage.png",
           "abilityList": [
             "BattleEventAbility_Monster_Lycan_Rage"
           ],
-          "overridesArray": [
+          "statOverrides": [
             {
               "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
               "value": 90
@@ -2462,8 +2463,8 @@ const compositeAbilityObject = {
               "value": 100
             }
           ],
-          "eventSpeed": 105,
-          "hardLevelEvent": true
+          "spd": 105,
+          "hardLevel": true
         }
       ],
       "references": []
