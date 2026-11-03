@@ -20,6 +20,24 @@ function getStandardNameDisplay(initialCounter,value,displayName,isTarget) {
     </div>`}`;
 }
 
+function getDetailsStringer(detailsArray,initialCounter) {
+    let detailsStringer = "";
+    for (let detailData of detailsArray) {
+        const [realValue,displayName,isTarget] = detailData;
+        detailsStringer += getStandardNameDisplay(initialCounter,realValue,displayName,isTarget);
+    }
+
+    return detailsStringer ? `<div class="modifierDetailsBox">${detailsStringer}</div>` : "";
+}
+function standardDisplay(displayTitle,settingsObject,detailsArray) {
+    const initialCounter = settingsObject.initialCounter;
+    return `<div class="actionDetailBody">
+        <div class="rotationConditionOperatorHeaderInline">${displayTitle}:</div>
+    </div>
+    ${detailsArray?.length ? getDetailsStringer(detailsArray,initialCounter) : ""}
+    `;
+}
+
 
 
 
@@ -3821,16 +3839,11 @@ const megaParsingFuckeryPain = {
         ])
         megaParsingFuckery.checkKnownKeys(knownKeySet,parseRef,"Sort by Modifier Value");
 
-        // initialCounter++;
-        return `<div class="actionDetailBody">
-            <div class="rotationConditionOperatorHeaderInline">${parseRef.name}:</div>
-        </div>
-        <div class="modifierDetailsBox">
-            ${getStandardNameDisplay(initialCounter,parseRef.modifier,"Modifier")}
-            ${getStandardNameDisplay(initialCounter,parseRef.value,"Modifier Value")}
-
-            ${getStandardNameDisplay(initialCounter,parseRef.sortByHighest,"By Highest")}
-        </div>`;
+        return standardDisplay(parseRef.name,{initialCounter},[
+            [parseRef.modifier,"Modifier"],
+            [parseRef.value,"Modifier Value"],
+            [parseRef.sortByHighest,"By Highest"],
+        ])
     },
     "Sort by Modifier Variable"(parseRef,initialCounter) {
         const knownKeySet = new Set ([
