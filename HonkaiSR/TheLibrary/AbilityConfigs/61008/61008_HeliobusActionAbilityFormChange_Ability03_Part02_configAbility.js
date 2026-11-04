@@ -186,7 +186,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "from": {
+              "targetTakeFrom": {
                 "name": "Target Name",
                 "target": "{{Summoner of Modifier Holder}}"
               }

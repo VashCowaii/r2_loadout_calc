@@ -521,9 +521,7 @@ const configAbility = {
           "passed": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Active: Fast-Forward Animations"
-              }
+              "conditions": "Active: Fast-Forward Animations"
             }
           ]
         }
@@ -809,9 +807,7 @@ const configAbility = {
         },
         {
           "name": "IF",
-          "conditions": {
-            "name": "Active: Fast-Forward Animations"
-          }
+          "conditions": "Active: Fast-Forward Animations"
         },
         {
           "name": "Trigger: Ability End",
@@ -882,9 +878,7 @@ const configAbility = {
         },
         {
           "name": "IF",
-          "conditions": {
-            "name": "Active: Fast-Forward Animations"
-          }
+          "conditions": "Active: Fast-Forward Animations"
         },
         {
           "name": "Add Events/Bonuses",
@@ -924,9 +918,7 @@ const configAbility = {
           "failed": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Active: Fast-Forward Animations"
-              }
+              "conditions": "Active: Fast-Forward Animations"
             }
           ]
         },
@@ -987,9 +979,7 @@ const configAbility = {
           "passed": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Active: Fast-Forward Animations"
-              }
+              "conditions": "Active: Fast-Forward Animations"
             }
           ]
         }

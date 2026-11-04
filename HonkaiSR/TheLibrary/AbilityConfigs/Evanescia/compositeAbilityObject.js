@@ -1393,7 +1393,10 @@ const compositeAbilityObject = {
         },
         {
           "name": "IF",
-          "conditions": "Ability Has a Target [NOT]"
+          "conditions": {
+            "name": "Ability Has a Target",
+            "invertCondition": true
+          }
         },
         {
           "name": "Add Events/Bonuses",
@@ -3802,9 +3805,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "IF",
-          "conditions": {
-            "name": "Active: Fast-Forward Animations"
-          },
+          "conditions": "Active: Fast-Forward Animations",
           "passed": [
             {
               "name": "Define Custom Variable",

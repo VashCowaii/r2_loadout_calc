@@ -3609,9 +3609,7 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Active: Fast-Forward Animations"
-              },
+              "conditions": "Active: Fast-Forward Animations",
               "passed": [
                 {
                   "name": "Use Custom Character Function",
@@ -3693,9 +3691,7 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Active: Fast-Forward Animations"
-              },
+              "conditions": "Active: Fast-Forward Animations",
               "passed": [
                 {
                   "name": "Use Custom Character Function",
@@ -3998,9 +3994,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Active: Fast-Forward Animations"
-              },
+              "conditions": "Active: Fast-Forward Animations",
               "passed": [
                 {
                   "name": "Declare Custom Variable",
@@ -4030,9 +4024,7 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Active: Fast-Forward Animations"
-              },
+              "conditions": "Active: Fast-Forward Animations",
               "passed": [
                 {
                   "name": "Declare Custom Variable",
@@ -4260,9 +4252,7 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "IF",
-          "conditions": {
-            "name": "Active: Fast-Forward Animations"
-          }
+          "conditions": "Active: Fast-Forward Animations"
         }
       ],
       "references": [],
@@ -4294,9 +4284,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "IF",
-          "conditions": {
-            "name": "Active: Fast-Forward Animations"
-          }
+          "conditions": "Active: Fast-Forward Animations"
         },
         {
           "name": "Use Custom Character Function",
@@ -4332,9 +4320,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "IF",
-          "conditions": {
-            "name": "Active: Fast-Forward Animations"
-          }
+          "conditions": "Active: Fast-Forward Animations"
         },
         {
           "name": "Use Custom Character Function",
@@ -4370,9 +4356,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "IF",
-          "conditions": {
-            "name": "Active: Fast-Forward Animations"
-          }
+          "conditions": "Active: Fast-Forward Animations"
         },
         {
           "name": "Use Custom Character Function",
@@ -4408,9 +4392,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "IF",
-          "conditions": {
-            "name": "Active: Fast-Forward Animations"
-          }
+          "conditions": "Active: Fast-Forward Animations"
         },
         {
           "name": "Use Custom Character Function",
@@ -4676,9 +4658,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "IF",
-          "conditions": {
-            "name": "Active: Fast-Forward Animations"
-          },
+          "conditions": "Active: Fast-Forward Animations",
           "passed": [
             {
               "name": "Declare Custom Variable",
@@ -6681,9 +6661,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "IF",
-                  "conditions": {
-                    "name": "Active: Fast-Forward Animations"
-                  }
+                  "conditions": "Active: Fast-Forward Animations"
                 }
               ]
             }
@@ -6969,9 +6947,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "IF",
-              "conditions": {
-                "name": "Active: Fast-Forward Animations"
-              }
+              "conditions": "Active: Fast-Forward Animations"
             },
             {
               "name": "Trigger: Ability End",
@@ -7042,9 +7018,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "IF",
-              "conditions": {
-                "name": "Active: Fast-Forward Animations"
-              }
+              "conditions": "Active: Fast-Forward Animations"
             },
             {
               "name": "Add Events/Bonuses",
@@ -7084,9 +7058,7 @@ const compositeAbilityObject = {
               "failed": [
                 {
                   "name": "IF",
-                  "conditions": {
-                    "name": "Active: Fast-Forward Animations"
-                  }
+                  "conditions": "Active: Fast-Forward Animations"
                 }
               ]
             },
@@ -7147,9 +7119,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "IF",
-                  "conditions": {
-                    "name": "Active: Fast-Forward Animations"
-                  }
+                  "conditions": "Active: Fast-Forward Animations"
                 }
               ]
             }

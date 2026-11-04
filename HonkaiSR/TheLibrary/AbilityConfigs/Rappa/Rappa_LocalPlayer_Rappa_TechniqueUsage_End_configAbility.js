@@ -70,9 +70,7 @@ const configAbility = {
     },
     {
       "name": "IF",
-      "conditions": {
-        "name": "Move Input Active (Overworld)"
-      }
+      "conditions": "Move Input Active (Overworld)"
     },
     {
       "name": "Remove Events/Bonuses",

@@ -1973,9 +1973,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "IF",
-                      "conditions": {
-                        "name": "Active: Fast-Forward Animations"
-                      },
+                      "conditions": "Active: Fast-Forward Animations",
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
@@ -2368,9 +2366,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "IF",
-                      "conditions": {
-                        "name": "Active: Fast-Forward Animations"
-                      },
+                      "conditions": "Active: Fast-Forward Animations",
                       "passed": [
                         {
                           "name": "Add Events/Bonuses",
@@ -4858,9 +4854,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
-                      {
-                        "name": "Technique Modifies Current Wave"
-                      },
+                      "Technique Modifies Current Wave",
                       {
                         "name": "Compare: Variable",
                         "target": {

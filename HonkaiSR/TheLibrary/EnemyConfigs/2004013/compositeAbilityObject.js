@@ -3056,7 +3056,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Use Controlled Ability",
-                      "target": {
+                      "skillFromTarget": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       }

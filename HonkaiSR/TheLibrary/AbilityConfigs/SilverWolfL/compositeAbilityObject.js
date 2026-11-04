@@ -4925,9 +4925,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "IF",
-          "conditions": {
-            "name": "Active: Fast-Forward Animations"
-          }
+          "conditions": "Active: Fast-Forward Animations"
         },
         {
           "name": "Use Custom Character Function",
@@ -5666,9 +5664,7 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "IF",
-          "conditions": {
-            "name": "Active: Fast-Forward Animations"
-          }
+          "conditions": "Active: Fast-Forward Animations"
         },
         {
           "name": "WAIT FOR",
@@ -6094,9 +6090,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "IF",
-          "conditions": {
-            "name": "Active: Fast-Forward Animations"
-          }
+          "conditions": "Active: Fast-Forward Animations"
         },
         {
           "name": "WAIT FOR",

@@ -844,9 +844,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "IF",
-                  "conditions": {
-                    "name": "Is NOT in Auto-Battle State"
-                  }
+                  "conditions": "Is NOT in Auto-Battle State"
                 }
               ]
             },
@@ -1885,9 +1883,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "IF",
-                  "conditions": {
-                    "name": "Technique Modifies Current Wave"
-                  },
+                  "conditions": "Technique Modifies Current Wave",
                   "passed": [
                     {
                       "name": "ATK Scaling DMG",

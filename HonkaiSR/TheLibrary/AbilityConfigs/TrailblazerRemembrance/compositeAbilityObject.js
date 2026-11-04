@@ -1303,9 +1303,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "IF",
-                  "conditions": {
-                    "name": "Technique Modifies Current Wave"
-                  },
+                  "conditions": "Technique Modifies Current Wave",
                   "passed": [
                     {
                       "name": "ATK Scaling DMG",
@@ -1345,9 +1343,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "IF",
-                  "conditions": {
-                    "name": "Technique Modifies Current Wave"
-                  },
+                  "conditions": "Technique Modifies Current Wave",
                   "passed": [
                     {
                       "name": "Action Advance/Delay",

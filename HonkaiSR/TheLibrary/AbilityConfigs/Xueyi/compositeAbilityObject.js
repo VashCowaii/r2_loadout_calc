@@ -1735,9 +1735,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
-                      {
-                        "name": "Technique Modifies Current Wave"
-                      },
+                      "Technique Modifies Current Wave",
                       {
                         "name": "Compare: Variable",
                         "value1": "Wave Count",

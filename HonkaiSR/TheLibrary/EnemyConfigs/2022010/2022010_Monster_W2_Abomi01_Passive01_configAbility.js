@@ -84,9 +84,7 @@ const configAbility = {
           "execute": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Entity is Flying"
-              },
+              "conditions": "Entity is Flying",
               "passed": [
                 {
                   "name": "Declare Custom Variable",

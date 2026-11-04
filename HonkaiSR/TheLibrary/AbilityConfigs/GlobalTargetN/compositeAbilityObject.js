@@ -7648,7 +7648,10 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Hostile Entities(AOE)}}.[[removeMemosprite]]"
                 },
-                "Add Target by Taunt/Aggro"
+                {
+                  "name": "Add Target by Taunt/Aggro",
+                  "useRandomWhenFailed": false
+                }
               ]
             }
           ]
@@ -7665,7 +7668,10 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Hostile Entities(AOE)}}"
                 },
-                "Add Target by Taunt/Aggro"
+                {
+                  "name": "Add Target by Taunt/Aggro",
+                  "useRandomWhenFailed": false
+                }
               ]
             }
           ]

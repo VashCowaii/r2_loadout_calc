@@ -111,15 +111,11 @@ const configAbility = {
             },
             {
               "name": "IF",
-              "conditions": {
-                "name": "Entity is Flying"
-              }
+              "conditions": "Entity is Flying"
             },
             {
               "name": "IF",
-              "conditions": {
-                "name": "Entity is Flying"
-              },
+              "conditions": "Entity is Flying",
               "passed": [
                 {
                   "name": "Declare Custom Variable",
@@ -252,9 +248,7 @@ const configAbility = {
             },
             {
               "name": "IF",
-              "conditions": {
-                "name": "Entity is Flying"
-              },
+              "conditions": "Entity is Flying",
               "passed": [
                 {
                   "name": "Declare Custom Variable",

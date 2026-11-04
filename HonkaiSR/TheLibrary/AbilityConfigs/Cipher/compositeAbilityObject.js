@@ -2317,9 +2317,7 @@ const compositeAbilityObject = {
                         },
                         "includeNonTargets": true
                       },
-                      {
-                        "name": "Technique Modifies Current Wave"
-                      },
+                      "Technique Modifies Current Wave",
                       {
                         "name": "Compare: Variable",
                         "value1": "Wave Count",

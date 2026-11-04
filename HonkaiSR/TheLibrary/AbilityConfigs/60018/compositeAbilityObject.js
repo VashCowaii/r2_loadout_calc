@@ -110,9 +110,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Active: Fast-Forward Animations"
-              }
+              "conditions": "Active: Fast-Forward Animations"
             }
           ]
         },

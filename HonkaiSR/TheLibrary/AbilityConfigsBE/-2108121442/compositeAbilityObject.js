@@ -2056,9 +2056,7 @@ const compositeAbilityObject = {
                       "ifTargetFound": [
                         {
                           "name": "IF",
-                          "conditions": {
-                            "name": "Active: Fast-Forward Animations"
-                          },
+                          "conditions": "Active: Fast-Forward Animations",
                           "passed": [
                             {
                               "name": "IF",
@@ -4022,9 +4020,7 @@ const compositeAbilityObject = {
                       "ifTargetFound": [
                         {
                           "name": "IF",
-                          "conditions": {
-                            "name": "Active: Fast-Forward Animations"
-                          },
+                          "conditions": "Active: Fast-Forward Animations",
                           "passed": [
                             {
                               "name": "IF",
@@ -4331,9 +4327,7 @@ const compositeAbilityObject = {
                       "ifTargetFound": [
                         {
                           "name": "IF",
-                          "conditions": {
-                            "name": "Active: Fast-Forward Animations"
-                          },
+                          "conditions": "Active: Fast-Forward Animations",
                           "passed": [
                             {
                               "name": "IF",

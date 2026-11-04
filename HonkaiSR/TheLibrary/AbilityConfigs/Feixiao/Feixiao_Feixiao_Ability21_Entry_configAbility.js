@@ -183,9 +183,7 @@ const configAbility = {
       "passed": [
         {
           "name": "IF",
-          "conditions": {
-            "name": "Active: Fast-Forward Animations"
-          },
+          "conditions": "Active: Fast-Forward Animations",
           "passed": [
             {
               "name": "Declare Custom Variable",
@@ -215,9 +213,7 @@ const configAbility = {
       "failed": [
         {
           "name": "IF",
-          "conditions": {
-            "name": "Active: Fast-Forward Animations"
-          },
+          "conditions": "Active: Fast-Forward Animations",
           "passed": [
             {
               "name": "Declare Custom Variable",

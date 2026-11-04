@@ -31,9 +31,7 @@ const configAbility = {
           "execute": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Technique Modifies Current Wave"
-              },
+              "conditions": "Technique Modifies Current Wave",
               "passed": [
                 {
                   "name": "ATK Scaling DMG",

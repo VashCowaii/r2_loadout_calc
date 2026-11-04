@@ -121,9 +121,7 @@ const configAbility = {
     },
     {
       "name": "IF",
-      "conditions": {
-        "name": "Active: Fast-Forward Animations"
-      }
+      "conditions": "Active: Fast-Forward Animations"
     },
     {
       "name": "WAIT FOR",

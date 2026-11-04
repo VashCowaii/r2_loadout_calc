@@ -261,9 +261,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "IF",
-                  "conditions": {
-                    "name": "Is NOT in Auto-Battle State"
-                  }
+                  "conditions": "Is NOT in Auto-Battle State"
                 }
               ]
             },
@@ -407,9 +405,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "IF",
-                  "conditions": {
-                    "name": "Is NOT in Auto-Battle State"
-                  }
+                  "conditions": "Is NOT in Auto-Battle State"
                 }
               ]
             },
@@ -904,9 +900,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "IF",
-                  "conditions": {
-                    "name": "Is NOT in Auto-Battle State"
-                  }
+                  "conditions": "Is NOT in Auto-Battle State"
                 }
               ]
             },
@@ -1050,9 +1044,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "IF",
-                  "conditions": {
-                    "name": "Is NOT in Auto-Battle State"
-                  }
+                  "conditions": "Is NOT in Auto-Battle State"
                 }
               ]
             },
@@ -3056,9 +3048,7 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
-                      {
-                        "name": "Technique Modifies Current Wave"
-                      }
+                      "Technique Modifies Current Wave"
                     ]
                   },
                   "passed": [

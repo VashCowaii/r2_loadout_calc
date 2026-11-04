@@ -35,9 +35,7 @@ const configAbility = {
         },
         {
           "name": "IF",
-          "conditions": {
-            "name": "Is Auto-Battle"
-          }
+          "conditions": "Is Auto-Battle"
         }
       ],
       "failed": [

@@ -340,9 +340,7 @@ const compositeAbilityObject = {
                           "afterInjection": [
                             {
                               "name": "IF",
-                              "conditions": {
-                                "name": "Is Current Modifier Active"
-                              },
+                              "conditions": "Is Current Modifier Active",
                               "passed": [
                                 {
                                   "name": "Define Custom Variable",

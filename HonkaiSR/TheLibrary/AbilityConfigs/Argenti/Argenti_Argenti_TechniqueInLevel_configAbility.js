@@ -43,9 +43,7 @@ const configAbility = {
                     "modifier": "<a class=\"gModGreen\" id=\"1904238030\">StageAbility_MazeStandard_EnterBattle_Monster_Modifier</a>",
                     "invertCondition": true
                   },
-                  {
-                    "name": "Technique Modifies Current Wave"
-                  },
+                  "Technique Modifies Current Wave",
                   {
                     "name": "Compare: Variable",
                     "value1": "Wave Count",

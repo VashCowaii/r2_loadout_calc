@@ -3173,9 +3173,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "IF",
-              "conditions": {
-                "name": "Is Auto-Battle"
-              }
+              "conditions": "Is Auto-Battle"
             }
           ],
           "failed": [
@@ -3349,9 +3347,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "IF",
-              "conditions": {
-                "name": "Is Auto-Battle"
-              }
+              "conditions": "Is Auto-Battle"
             }
           ],
           "failed": [
@@ -3467,9 +3463,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "IF",
-          "conditions": {
-            "name": "Is Auto-Battle"
-          },
+          "conditions": "Is Auto-Battle",
           "passed": [
             "Deleted bullshit"
           ],

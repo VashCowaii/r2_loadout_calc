@@ -225,9 +225,7 @@ const configAbility = {
             },
             {
               "name": "IF",
-              "conditions": {
-                "name": "Move Input Active (Overworld)"
-              }
+              "conditions": "Move Input Active (Overworld)"
             }
           ],
           "failed": [
@@ -274,9 +272,7 @@ const configAbility = {
             },
             {
               "name": "IF",
-              "conditions": {
-                "name": "Move Input Active (Overworld)"
-              }
+              "conditions": "Move Input Active (Overworld)"
             }
           ]
         }

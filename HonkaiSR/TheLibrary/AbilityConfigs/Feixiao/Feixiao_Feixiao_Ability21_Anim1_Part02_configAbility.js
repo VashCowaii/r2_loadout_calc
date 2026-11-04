@@ -46,9 +46,7 @@ const configAbility = {
       "failed": [
         {
           "name": "IF",
-          "conditions": {
-            "name": "Active: Fast-Forward Animations"
-          },
+          "conditions": "Active: Fast-Forward Animations",
           "passed": [
             {
               "name": "Use Custom Character Function",

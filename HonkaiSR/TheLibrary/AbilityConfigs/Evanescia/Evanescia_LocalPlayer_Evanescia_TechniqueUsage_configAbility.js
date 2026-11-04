@@ -45,7 +45,10 @@ const configAbility = {
     },
     {
       "name": "IF",
-      "conditions": "Ability Has a Target [NOT]"
+      "conditions": {
+        "name": "Ability Has a Target",
+        "invertCondition": true
+      }
     },
     {
       "name": "Add Events/Bonuses",

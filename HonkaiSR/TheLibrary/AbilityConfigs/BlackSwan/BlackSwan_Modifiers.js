@@ -1945,9 +1945,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "IF",
-                  "conditions": {
-                    "name": "Active: Fast-Forward Animations"
-                  },
+                  "conditions": "Active: Fast-Forward Animations",
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
@@ -2340,9 +2338,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "IF",
-                  "conditions": {
-                    "name": "Active: Fast-Forward Animations"
-                  },
+                  "conditions": "Active: Fast-Forward Animations",
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
