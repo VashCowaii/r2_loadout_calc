@@ -271,7 +271,7 @@ const configAbility = {
                 },
                 {
                   "name": "Lock Target AV",
-                  "on": {
+                  "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   }
@@ -284,7 +284,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Lock Target AV",
-                  "on": {
+                  "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   }

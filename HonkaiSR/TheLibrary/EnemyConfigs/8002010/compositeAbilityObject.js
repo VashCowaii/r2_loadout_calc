@@ -39,7 +39,7 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Weak to Current DMG Hit",
-                    "weakTo": {
+                    "targetAttacker": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },

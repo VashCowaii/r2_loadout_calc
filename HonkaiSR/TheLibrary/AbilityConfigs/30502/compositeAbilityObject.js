@@ -393,7 +393,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Lock Target AV",
-                      "on": {
+                      "target": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       }
@@ -406,7 +406,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Lock Target AV",
-                      "on": {
+                      "target": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
                       }

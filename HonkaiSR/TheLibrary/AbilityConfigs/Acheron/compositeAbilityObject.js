@@ -1436,9 +1436,7 @@ const compositeAbilityObject = {
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
               "execute": [
-                {
-                  "name": "Switch to Action/Ability Context"
-                },
+                "Switch to Action/Ability Context",
                 {
                   "name": "Update Energy Value",
                   "on": {

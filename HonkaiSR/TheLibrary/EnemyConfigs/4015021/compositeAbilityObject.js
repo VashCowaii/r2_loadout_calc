@@ -1252,7 +1252,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Lock Target AV",
-                  "on": {
+                  "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
@@ -1265,7 +1265,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Lock Target AV",
-                  "on": {
+                  "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}.[[getBattleEvents]]"
                   },
@@ -1296,7 +1296,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Lock Target AV",
-                  "on": {
+                  "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   }
@@ -1309,7 +1309,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Lock Target AV",
-                  "on": {
+                  "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}.[[getBattleEvents]]"
                   }
@@ -1373,7 +1373,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Lock Target AV",
-                      "on": {
+                      "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },

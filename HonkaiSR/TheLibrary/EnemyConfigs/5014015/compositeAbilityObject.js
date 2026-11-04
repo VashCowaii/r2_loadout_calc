@@ -236,7 +236,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "IF",
-                  "conditions": "Unknown CONDITON1 ",
+                  "conditions": "Unknown CONDITON1 (Not always an error)",
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
@@ -452,7 +452,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "IF",
-                  "conditions": "Unknown CONDITON1 ",
+                  "conditions": "Unknown CONDITON1 (Not always an error)",
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",
@@ -1011,7 +1011,7 @@ const compositeAbilityObject = {
                             },
                             "modifier": "<a class=\"gModGreen\" id=\"1141771649\">Enemy_W5_Vtuber_InField</a>[<span class=\"descriptionNumberColor\">Epic showdown in progress!</span>]"
                           },
-                          "Unknown CONDITON1 "
+                          "Unknown CONDITON1 (Not always an error)"
                         ]
                       },
                       "passed": [
@@ -1058,7 +1058,10 @@ const compositeAbilityObject = {
                             },
                             "modifier": "<a class=\"gModGreen\" id=\"1334912120\">Enemy_W5_Vtuber_OutField</a>"
                           },
-                          "Unknown CONDITON1 [inverse: true]"
+                          {
+                            "name": "Unknown CONDITON1 (Not always an error)",
+                            "invertCondition": true
+                          }
                         ]
                       },
                       "passed": [

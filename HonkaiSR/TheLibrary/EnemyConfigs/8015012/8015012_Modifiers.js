@@ -1218,7 +1218,7 @@ const configAbility = {
           "conditionList": [
             {
               "name": "Is Weak to Attacker",
-              "weakTo": {
+              "targetAttacker": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
@@ -1287,7 +1287,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Weak to Attacker",
-                    "weakTo": {
+                    "targetAttacker": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },
@@ -1423,7 +1423,7 @@ const configAbility = {
           "conditionList": [
             {
               "name": "Is Weak to Attacker",
-              "weakTo": {
+              "targetAttacker": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
@@ -1492,7 +1492,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "Is Weak to Attacker",
-                    "weakTo": {
+                    "targetAttacker": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
                     },

@@ -3956,7 +3956,7 @@ const compositeAbilityObject = {
               "conditionList": [
                 {
                   "name": "Is Weak to Attacker",
-                  "weakTo": {
+                  "targetAttacker": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
@@ -4155,7 +4155,7 @@ const compositeAbilityObject = {
             "show": "Hide",
             "conditions": {
               "name": "Is Weak to Attacker",
-              "weakTo": {
+              "targetAttacker": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
@@ -5273,7 +5273,7 @@ const compositeAbilityObject = {
               "conditionList": [
                 {
                   "name": "Is Weak to Attacker",
-                  "weakTo": {
+                  "targetAttacker": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
@@ -5702,7 +5702,7 @@ const compositeAbilityObject = {
             "show": "Hide",
             "conditions": {
               "name": "Is Weak to Attacker",
-              "weakTo": {
+              "targetAttacker": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
@@ -7394,7 +7394,7 @@ const compositeAbilityObject = {
             "show": "Hide",
             "conditions": {
               "name": "Is Weak to Attacker",
-              "weakTo": {
+              "targetAttacker": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
@@ -11645,7 +11645,7 @@ const compositeAbilityObject = {
             "skillType": "Ultimate",
             "conditions": {
               "name": "Is Weak to Attacker",
-              "weakTo": {
+              "targetAttacker": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },

@@ -161,7 +161,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Override HP Lost",
-                      "setTo": {
+                      "finalDMGFlat": {
                         "operator": "Variables[0] (MDF_DamagerPerHit) || RETURN",
                         "displayLines": "MDF_DamagerPerHit",
                         "constants": [],
@@ -172,7 +172,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Override HP Lost",
-                      "setTo": {
+                      "finalDMGFlat": {
                         "operator": "Variables[0] (MDF_DamagerPerHit) || Variables[1] (MDF_BeingAttackCountDown) || MUL || RETURN",
                         "displayLines": "(MDF_DamagerPerHit * MDF_BeingAttackCountDown)",
                         "constants": [],
@@ -191,7 +191,7 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Override HP Lost",
-                      "setTo": {
+                      "finalDMGFlat": {
                         "operator": "Variables[0] (MDF_DamagerPerHit) || RETURN",
                         "displayLines": "MDF_DamagerPerHit",
                         "constants": [],

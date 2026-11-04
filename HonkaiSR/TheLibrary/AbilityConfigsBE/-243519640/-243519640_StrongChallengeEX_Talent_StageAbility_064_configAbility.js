@@ -24,7 +24,7 @@ const configAbility = {
         "show": "Hide",
         "conditions": {
           "name": "Is Weak to Attacker",
-          "weakTo": {
+          "targetAttacker": {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },

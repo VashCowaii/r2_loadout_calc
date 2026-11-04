@@ -44,7 +44,7 @@ const configAbility = {
                   },
                   {
                     "name": "Is Weak to Attacker",
-                    "weakTo": {
+                    "targetAttacker": {
                       "name": "Target Name",
                       "target": "{{Marth 7th's Shifu}}"
                     },
@@ -55,7 +55,7 @@ const configAbility = {
                   },
                   {
                     "name": "Is Weak to Attacker",
-                    "weakTo": {
+                    "targetAttacker": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },

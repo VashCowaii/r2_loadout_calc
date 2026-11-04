@@ -2846,7 +2846,10 @@ const compositeAbilityObject = {
                   "conditions": {
                     "name": "AND",
                     "conditionList": [
-                      "Unknown CONDITION3 (Not always an error)[1: true]"
+                      {
+                        "name": "Unknown CONDITION3 (Not always an error)",
+                        "invertCondition": true
+                      }
                     ]
                   },
                   "flagFilter": [

@@ -268,11 +268,11 @@ const configAbility = {
     },
     {
       "name": "Force-Sync AV Link",
-      "from": {
+      "linkHolder": {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "to": {
+      "linkSub": {
         "name": "Target Name",
         "target": "{{Irontomb: Part 1}} + {{Irontomb: Part 2}}"
       }

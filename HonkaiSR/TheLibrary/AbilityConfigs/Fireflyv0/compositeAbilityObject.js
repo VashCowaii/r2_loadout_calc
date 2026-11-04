@@ -3128,7 +3128,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Is Weak to Attacker",
-                  "weakTo": {
+                  "targetAttacker": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
@@ -3193,7 +3193,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Is Weak to Attacker",
-                  "weakTo": {
+                  "targetAttacker": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
@@ -3248,7 +3248,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Is Weak to Attacker",
-                  "weakTo": {
+                  "targetAttacker": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
@@ -3301,7 +3301,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Is Weak to Attacker",
-                  "weakTo": {
+                  "targetAttacker": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },

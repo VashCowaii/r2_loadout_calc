@@ -363,7 +363,7 @@ const configAbility = {
             },
             {
               "name": "Is Weak to Attacker",
-              "weakTo": {
+              "targetAttacker": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
@@ -428,7 +428,7 @@ const configAbility = {
             },
             {
               "name": "Is Weak to Attacker",
-              "weakTo": {
+              "targetAttacker": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
@@ -483,7 +483,7 @@ const configAbility = {
             },
             {
               "name": "Is Weak to Attacker",
-              "weakTo": {
+              "targetAttacker": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
@@ -536,7 +536,7 @@ const configAbility = {
             },
             {
               "name": "Is Weak to Attacker",
-              "weakTo": {
+              "targetAttacker": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },

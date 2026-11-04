@@ -344,11 +344,11 @@ const configAbility = {
             },
             {
               "name": "Force-Sync AV Link",
-              "from": {
+              "linkHolder": {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "to": {
+              "linkSub": {
                 "name": "Target Name",
                 "target": "{{Irontomb: Part 1}} + {{Irontomb: Part 2}}"
               }
@@ -869,7 +869,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Override HP Lost",
-              "setTo": 0.0000010000076
+              "finalDMGFlat": 0.0000010000076
             }
           ]
         },
@@ -4071,11 +4071,11 @@ const configAbility = {
             },
             {
               "name": "Force-Sync AV Link",
-              "from": {
+              "linkHolder": {
                 "name": "Target Name",
                 "target": "{{Irontomb: Core}}"
               },
-              "to": {
+              "linkSub": {
                 "name": "Target Name",
                 "target": "{{Irontomb: Part 1}} + {{Irontomb: Part 2}}"
               }

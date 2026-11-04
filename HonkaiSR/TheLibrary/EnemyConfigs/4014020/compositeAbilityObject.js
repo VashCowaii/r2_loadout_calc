@@ -3189,11 +3189,11 @@ const compositeAbilityObject = {
         },
         {
           "name": "Force-Sync AV Link",
-          "from": {
+          "linkHolder": {
             "name": "Target Name",
             "target": "{{Nikador: Self}}"
           },
-          "to": {
+          "linkSub": {
             "name": "Target Name",
             "target": "{{Caster}}"
           }

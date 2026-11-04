@@ -7627,11 +7627,10 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Add Target by Taunt/Aggro",
-                  "target": {
+                  "sourceTarget": {
                     "name": "Target Name",
                     "target": "{{Battle Event's Caster}}"
-                  },
-                  "useRandomWhenFailed": false
+                  }
                 }
               ]
             }
@@ -7649,10 +7648,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Hostile Entities(AOE)}}.[[removeMemosprite]]"
                 },
-                {
-                  "name": "Add Target by Taunt/Aggro",
-                  "useRandomWhenFailed": true
-                }
+                "Add Target by Taunt/Aggro"
               ]
             }
           ]
@@ -7669,10 +7665,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Hostile Entities(AOE)}}"
                 },
-                {
-                  "name": "Add Target by Taunt/Aggro",
-                  "useRandomWhenFailed": true
-                }
+                "Add Target by Taunt/Aggro"
               ]
             }
           ]
@@ -7689,10 +7682,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Hostile Entities(AOE)}}"
                 },
-                {
-                  "name": "Add Target by Taunt/Aggro",
-                  "useRandomWhenFailed": false
-                }
+                "Add Target by Taunt/Aggro"
               ]
             }
           ]
@@ -8101,9 +8091,7 @@ const compositeAbilityObject = {
           "nameTarget": "Player's Aim Target List",
           "isTargetOperator": false,
           "execute": [
-            {
-              "name": "Add Target by Player's Aim-List"
-            }
+            "Add Target by Player's Aim-List"
           ]
         },
         {
@@ -9871,9 +9859,7 @@ const compositeAbilityObject = {
             {
               "name": "Target Sequence",
               "Sequence": [
-                {
-                  "name": "Add Target by Next Ability Caster"
-                }
+                "Add Target by Next Ability Caster"
               ]
             }
           ]

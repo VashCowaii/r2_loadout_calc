@@ -25,7 +25,7 @@ const configAbility = {
         "skillType": "Ultimate",
         "conditions": {
           "name": "Is Weak to Attacker",
-          "weakTo": {
+          "targetAttacker": {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
           },

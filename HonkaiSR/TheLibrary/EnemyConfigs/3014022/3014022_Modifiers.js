@@ -872,7 +872,7 @@ const configAbility = {
             },
             {
               "name": "Lock Target AV",
-              "on": {
+              "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
@@ -891,7 +891,7 @@ const configAbility = {
             },
             {
               "name": "Lock Target AV",
-              "on": {
+              "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               }
