@@ -290,7 +290,7 @@ const configAbility = {
               "Shuffle Targets",
               {
                 "name": "Return Target",
-                "value": 2
+                "count": 2
               }
             ]
           },
@@ -304,7 +304,7 @@ const configAbility = {
               "Shuffle Targets",
               {
                 "name": "Return Target",
-                "value": 1
+                "count": 1
               }
             ]
           },
@@ -339,7 +339,7 @@ const configAbility = {
               "Shuffle Targets",
               {
                 "name": "Return Target",
-                "value": 1
+                "count": 1
               }
             ]
           },
@@ -353,7 +353,7 @@ const configAbility = {
               "Shuffle Targets",
               {
                 "name": "Return Target",
-                "value": 1
+                "count": 1
               }
             ]
           },
@@ -389,7 +389,7 @@ const configAbility = {
               "Shuffle Targets",
               {
                 "name": "Return Target",
-                "value": 4
+                "count": 4
               }
             ]
           },
@@ -403,7 +403,7 @@ const configAbility = {
               "Shuffle Targets",
               {
                 "name": "Return Target",
-                "value": 1
+                "count": 1
               }
             ]
           },

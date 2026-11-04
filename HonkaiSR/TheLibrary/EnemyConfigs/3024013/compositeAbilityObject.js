@@ -761,7 +761,7 @@ const compositeAbilityObject = {
                               },
                               {
                                 "name": "Return Target",
-                                "value": 1
+                                "count": 1
                               }
                             ]
                           },

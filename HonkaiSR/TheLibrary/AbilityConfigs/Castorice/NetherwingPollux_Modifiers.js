@@ -721,7 +721,7 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Set Netherwing's Ardent Will Stacks",
-                          "display": {
+                          "displayNum": {
                             "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
                             "displayLines": "CastoriceServant_Rank02_Count",
                             "constants": [],
@@ -729,7 +729,7 @@ const configAbility = {
                               "CastoriceServant_Rank02_Count"
                             ]
                           },
-                          "preview": {
+                          "previewNum": {
                             "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
                             "displayLines": "CastoriceServant_Rank02_Count",
                             "constants": [],
@@ -751,7 +751,7 @@ const configAbility = {
                       "passed": [
                         {
                           "name": "Set Netherwing's Ardent Will Stacks",
-                          "display": {
+                          "displayNum": {
                             "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
                             "displayLines": "CastoriceServant_Rank02_Count",
                             "constants": [],
@@ -759,7 +759,7 @@ const configAbility = {
                               "CastoriceServant_Rank02_Count"
                             ]
                           },
-                          "preview": 1
+                          "previewNum": 1
                         }
                       ]
                     }

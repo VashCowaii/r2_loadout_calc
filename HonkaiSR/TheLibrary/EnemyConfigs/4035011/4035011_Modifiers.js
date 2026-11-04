@@ -3368,7 +3368,7 @@ const configAbility = {
             },
             {
               "name": "Divide BossHP into Bars",
-              "barCount": 99999
+              "splitBarCount": 99999
             }
           ]
         }

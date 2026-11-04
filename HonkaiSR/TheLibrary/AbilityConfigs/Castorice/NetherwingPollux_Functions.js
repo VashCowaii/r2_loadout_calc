@@ -54,9 +54,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               }
             },
-            {
-              "name": "Set Netherwing Skill Phase"
-            },
+            "Set Netherwing Skill Phase",
             {
               "name": "IF",
               "conditions": {
@@ -91,9 +89,7 @@ const configAbility = {
                 "target": "{{Caster}}"
               }
             },
-            {
-              "name": "Set Netherwing Skill Phase"
-            },
+            "Set Netherwing Skill Phase",
             {
               "name": "Add Events/Bonuses",
               "to": {

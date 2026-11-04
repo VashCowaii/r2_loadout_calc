@@ -211,7 +211,7 @@ const configAbility = {
             },
             {
               "name": "Set Netherwing's Ardent Will Stacks",
-              "display": {
+              "displayNum": {
                 "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
                 "displayLines": "CastoriceServant_Rank02_Count",
                 "constants": [],
@@ -219,7 +219,7 @@ const configAbility = {
                   "CastoriceServant_Rank02_Count"
                 ]
               },
-              "preview": 0
+              "previewNum": 0
             }
           ],
           "failed": [

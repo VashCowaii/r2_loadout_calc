@@ -837,7 +837,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Return Target",
-                  "value": 1
+                  "count": 1
                 }
               ]
             }
@@ -893,7 +893,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Return Target",
-                  "value": 1
+                  "count": 1
                 }
               ]
             }
@@ -1016,7 +1016,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Return Target",
-                  "value": 1
+                  "count": 1
                 }
               ]
             }
@@ -1080,7 +1080,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Return Target",
-                  "value": 1
+                  "count": 1
                 }
               ]
             }
@@ -1359,7 +1359,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Return Target",
-                  "value": 1
+                  "count": 1
                 }
               ]
             }
@@ -2169,7 +2169,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Return Target",
-                  "value": 1
+                  "count": 1
                 }
               ]
             }
@@ -4218,7 +4218,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Return Target",
-                  "value": 1
+                  "count": 1
                 }
               ]
             }
@@ -4277,7 +4277,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Return Target",
-                  "value": 1
+                  "count": 1
                 }
               ]
             }
@@ -4448,7 +4448,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Return Target",
-                  "value": 3
+                  "count": 3
                 }
               ]
             }
@@ -4606,7 +4606,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Return Target",
-                  "value": 1
+                  "count": 1
                 }
               ]
             }
@@ -4768,7 +4768,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Return Target",
-                  "value": 3
+                  "count": 3
                 }
               ]
             }
@@ -6000,7 +6000,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Return Target",
-                      "value": 2
+                      "count": 2
                     }
                   ]
                 }
@@ -6037,7 +6037,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Return Target",
-                  "value": 1
+                  "count": 1
                 }
               ]
             }
@@ -7503,7 +7503,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Return Target",
-                  "value": 1
+                  "count": 1
                 }
               ]
             }
@@ -9932,7 +9932,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Return Target",
-                  "value": 1
+                  "count": 1
                 }
               ]
             }

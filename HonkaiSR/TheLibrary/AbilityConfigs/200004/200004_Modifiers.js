@@ -873,7 +873,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Set Phainon Action Count",
-                  "value": 0
+                  "count": 0
                 }
               ],
               "failed": [
@@ -889,7 +889,7 @@ const configAbility = {
                 },
                 {
                   "name": "Set Phainon Action Count",
-                  "value": {
+                  "count": {
                     "operator": "Variables[0] (#CL_MDF_BECount) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(#CL_MDF_BECount - 1)",
                     "constants": [
@@ -949,7 +949,7 @@ const configAbility = {
             },
             {
               "name": "Set Phainon Action Count",
-              "value": {
+              "count": {
                 "operator": "Variables[0] (#CL_MDF_BECount) || RETURN",
                 "displayLines": "#CL_MDF_BECount",
                 "constants": [],
@@ -1006,7 +1006,7 @@ const configAbility = {
             },
             {
               "name": "Set Phainon Action Count",
-              "value": {
+              "count": {
                 "operator": "Variables[0] (UnusedUnderThisBase_6080) || Constants[0] (1) || SUB || RETURN",
                 "displayLines": "(UnusedUnderThisBase_6080 - 1)",
                 "constants": [
@@ -1271,7 +1271,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Set Phainon Action Count",
-                  "value": 0
+                  "count": 0
                 }
               ],
               "failed": [
@@ -1287,7 +1287,7 @@ const configAbility = {
                 },
                 {
                   "name": "Set Phainon Action Count",
-                  "value": {
+                  "count": {
                     "operator": "Variables[0] (#CL_MDF_BECount) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(#CL_MDF_BECount - 1)",
                     "constants": [

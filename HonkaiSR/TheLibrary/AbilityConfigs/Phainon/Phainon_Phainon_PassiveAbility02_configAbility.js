@@ -158,7 +158,7 @@ const configAbility = {
           "execute": [
             {
               "name": "Set Phainon Charge Points Preview",
-              "value": 0
+              "previewNum": 0
             }
           ]
         },
@@ -205,7 +205,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Set Phainon Charge Points Preview",
-                  "value": {
+                  "previewNum": {
                     "operator": "Variables[0] (Skill11_EnergyAdd) || RETURN",
                     "displayLines": "Skill11_EnergyAdd",
                     "constants": [],
@@ -226,7 +226,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Set Phainon Charge Points Preview",
-                  "value": {
+                  "previewNum": {
                     "operator": "Variables[0] (_enemyCount) || Variables[1] (Skill21_ExtraEnergyAdd) || ADD || RETURN",
                     "displayLines": "(_enemyCount + Skill21_ExtraEnergyAdd)",
                     "constants": [],
@@ -248,7 +248,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Set Phainon Charge Points Preview",
-                  "value": {
+                  "previewNum": {
                     "operator": "Constants[0] (0) || Variables[0] (Skill22_Energy) || SUB || RETURN",
                     "displayLines": "(0 - Skill22_Energy)",
                     "constants": [
@@ -283,7 +283,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Set Phainon Charge Points Preview",
-                  "value": 0
+                  "previewNum": 0
                 }
               ]
             }

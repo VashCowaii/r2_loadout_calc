@@ -19,7 +19,7 @@ const configAbility = {
       "passed": [
         {
           "name": "Divide BossHP into Bars",
-          "barCount": 30
+          "splitBarCount": 30
         },
         {
           "name": "Set IronTomb Progress",

@@ -2366,7 +2366,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Divide BossHP into Bars",
-          "barCount": {
+          "splitBarCount": {
             "operator": "Variables[0] ({[PassiveSkill03[5]]}) || RETURN",
             "displayLines": "{[PassiveSkill03[5]]}",
             "constants": [],

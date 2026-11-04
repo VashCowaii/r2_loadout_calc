@@ -261,7 +261,7 @@ const configAbility = {
     },
     {
       "name": "Divide BossHP into Bars",
-      "barCount": 15
+      "splitBarCount": 15
     },
     {
       "name": "IF",

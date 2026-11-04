@@ -4982,7 +4982,7 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Set Netherwing's Ardent Will Stacks",
-                              "display": {
+                              "displayNum": {
                                 "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
                                 "displayLines": "CastoriceServant_Rank02_Count",
                                 "constants": [],
@@ -4990,7 +4990,7 @@ const compositeAbilityObject = {
                                   "CastoriceServant_Rank02_Count"
                                 ]
                               },
-                              "preview": {
+                              "previewNum": {
                                 "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
                                 "displayLines": "CastoriceServant_Rank02_Count",
                                 "constants": [],
@@ -5012,7 +5012,7 @@ const compositeAbilityObject = {
                           "passed": [
                             {
                               "name": "Set Netherwing's Ardent Will Stacks",
-                              "display": {
+                              "displayNum": {
                                 "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
                                 "displayLines": "CastoriceServant_Rank02_Count",
                                 "constants": [],
@@ -5020,7 +5020,7 @@ const compositeAbilityObject = {
                                   "CastoriceServant_Rank02_Count"
                                 ]
                               },
-                              "preview": 1
+                              "previewNum": 1
                             }
                           ]
                         }
@@ -5742,16 +5742,15 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Set Netherwing's Ardent Will Stacks",
-              "display": 0,
-              "preview": 0
+              "displayNum": 0,
+              "previewNum": 0
             }
           ],
           "failed": [
             {
               "name": "Set Netherwing's Ardent Will Stacks",
-              "show": false,
-              "display": 0,
-              "preview": 0
+              "displayNum": 0,
+              "previewNum": 0
             }
           ]
         },
@@ -7357,7 +7356,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Set Netherwing's Ardent Will Stacks",
-                  "display": {
+                  "displayNum": {
                     "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
                     "displayLines": "CastoriceServant_Rank02_Count",
                     "constants": [],
@@ -7365,7 +7364,7 @@ const compositeAbilityObject = {
                       "CastoriceServant_Rank02_Count"
                     ]
                   },
-                  "preview": 0
+                  "previewNum": 0
                 }
               ],
               "failed": [
@@ -7926,7 +7925,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Set Netherwing's Ardent Will Stacks",
-                  "display": {
+                  "displayNum": {
                     "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
                     "displayLines": "CastoriceServant_Rank02_Count",
                     "constants": [],
@@ -7934,7 +7933,7 @@ const compositeAbilityObject = {
                       "CastoriceServant_Rank02_Count"
                     ]
                   },
-                  "preview": 0
+                  "previewNum": 0
                 }
               ],
               "failed": [
@@ -8462,7 +8461,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Set Netherwing's Ardent Will Stacks",
-                  "display": {
+                  "displayNum": {
                     "operator": "Variables[0] (CastoriceServant_Rank02_Count) || RETURN",
                     "displayLines": "CastoriceServant_Rank02_Count",
                     "constants": [],
@@ -8470,7 +8469,7 @@ const compositeAbilityObject = {
                       "CastoriceServant_Rank02_Count"
                     ]
                   },
-                  "preview": 0
+                  "previewNum": 0
                 }
               ],
               "failed": [
@@ -9055,9 +9054,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   }
                 },
-                {
-                  "name": "Set Netherwing Skill Phase"
-                },
+                "Set Netherwing Skill Phase",
                 {
                   "name": "IF",
                   "conditions": {
@@ -9092,9 +9089,7 @@ const compositeAbilityObject = {
                     "target": "{{Caster}}"
                   }
                 },
-                {
-                  "name": "Set Netherwing Skill Phase"
-                },
+                "Set Netherwing Skill Phase",
                 {
                   "name": "Add Events/Bonuses",
                   "to": {

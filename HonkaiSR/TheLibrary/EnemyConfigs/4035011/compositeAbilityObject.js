@@ -3410,7 +3410,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Divide BossHP into Bars",
-                  "barCount": 99999
+                  "splitBarCount": 99999
                 }
               ]
             }
@@ -8133,7 +8133,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Divide BossHP into Bars",
-              "barCount": 30
+              "splitBarCount": 30
             },
             {
               "name": "Set IronTomb Progress",

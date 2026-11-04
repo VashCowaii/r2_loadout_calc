@@ -14342,7 +14342,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Return Target",
-                        "value": {
+                        "count": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
                           "displayLines": "#ADF_1",
                           "constants": [],
@@ -14381,7 +14381,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Return Target",
-                        "value": {
+                        "count": {
                           "operator": "Variables[0] (#ADF_3) || RETURN",
                           "displayLines": "#ADF_3",
                           "constants": [],
@@ -14620,7 +14620,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Return Target",
-                        "value": {
+                        "count": {
                           "operator": "Variables[0] (#ADF_1) || RETURN",
                           "displayLines": "#ADF_1",
                           "constants": [],
@@ -14659,7 +14659,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Return Target",
-                        "value": {
+                        "count": {
                           "operator": "Variables[0] (#ADF_3) || RETURN",
                           "displayLines": "#ADF_3",
                           "constants": [],

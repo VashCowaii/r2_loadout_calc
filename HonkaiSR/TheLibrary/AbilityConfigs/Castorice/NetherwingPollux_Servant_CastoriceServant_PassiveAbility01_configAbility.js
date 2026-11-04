@@ -34,16 +34,15 @@ const configAbility = {
       "passed": [
         {
           "name": "Set Netherwing's Ardent Will Stacks",
-          "display": 0,
-          "preview": 0
+          "displayNum": 0,
+          "previewNum": 0
         }
       ],
       "failed": [
         {
           "name": "Set Netherwing's Ardent Will Stacks",
-          "show": false,
-          "display": 0,
-          "preview": 0
+          "displayNum": 0,
+          "previewNum": 0
         }
       ]
     },

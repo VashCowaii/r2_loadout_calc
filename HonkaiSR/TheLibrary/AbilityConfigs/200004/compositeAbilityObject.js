@@ -884,7 +884,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Set Phainon Action Count",
-                      "value": 0
+                      "count": 0
                     }
                   ],
                   "failed": [
@@ -900,7 +900,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Set Phainon Action Count",
-                      "value": {
+                      "count": {
                         "operator": "Variables[0] (#CL_MDF_BECount) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(#CL_MDF_BECount - 1)",
                         "constants": [
@@ -960,7 +960,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Set Phainon Action Count",
-                  "value": {
+                  "count": {
                     "operator": "Variables[0] (#CL_MDF_BECount) || RETURN",
                     "displayLines": "#CL_MDF_BECount",
                     "constants": [],
@@ -1017,7 +1017,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Set Phainon Action Count",
-                  "value": {
+                  "count": {
                     "operator": "Variables[0] (UnusedUnderThisBase_6080) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(UnusedUnderThisBase_6080 - 1)",
                     "constants": [
@@ -1282,7 +1282,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Set Phainon Action Count",
-                      "value": 0
+                      "count": 0
                     }
                   ],
                   "failed": [
@@ -1298,7 +1298,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Set Phainon Action Count",
-                      "value": {
+                      "count": {
                         "operator": "Variables[0] (#CL_MDF_BECount) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(#CL_MDF_BECount - 1)",
                         "constants": [

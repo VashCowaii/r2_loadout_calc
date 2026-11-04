@@ -98,7 +98,7 @@ const configAbility = {
                           },
                           {
                             "name": "Return Target",
-                            "value": 1
+                            "count": 1
                           }
                         ]
                       },
@@ -129,7 +129,7 @@ const configAbility = {
                           "Shuffle Targets",
                           {
                             "name": "Return Target",
-                            "value": 1
+                            "count": 1
                           }
                         ]
                       },

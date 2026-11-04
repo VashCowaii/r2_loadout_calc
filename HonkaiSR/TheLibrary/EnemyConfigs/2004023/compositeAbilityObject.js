@@ -10543,7 +10543,7 @@ const compositeAbilityObject = {
                   "Shuffle Targets",
                   {
                     "name": "Return Target",
-                    "value": 2
+                    "count": 2
                   }
                 ]
               },
@@ -10557,7 +10557,7 @@ const compositeAbilityObject = {
                   "Shuffle Targets",
                   {
                     "name": "Return Target",
-                    "value": 1
+                    "count": 1
                   }
                 ]
               },
@@ -10592,7 +10592,7 @@ const compositeAbilityObject = {
                   "Shuffle Targets",
                   {
                     "name": "Return Target",
-                    "value": 1
+                    "count": 1
                   }
                 ]
               },
@@ -10606,7 +10606,7 @@ const compositeAbilityObject = {
                   "Shuffle Targets",
                   {
                     "name": "Return Target",
-                    "value": 1
+                    "count": 1
                   }
                 ]
               },
@@ -10642,7 +10642,7 @@ const compositeAbilityObject = {
                   "Shuffle Targets",
                   {
                     "name": "Return Target",
-                    "value": 4
+                    "count": 4
                   }
                 ]
               },
@@ -10656,7 +10656,7 @@ const compositeAbilityObject = {
                   "Shuffle Targets",
                   {
                     "name": "Return Target",
-                    "value": 1
+                    "count": 1
                   }
                 ]
               },

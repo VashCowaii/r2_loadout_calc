@@ -1032,7 +1032,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Set Phainon Action Count",
-                      "value": 0
+                      "count": 0
                     }
                   ],
                   "failed": [
@@ -1048,7 +1048,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Set Phainon Action Count",
-                      "value": {
+                      "count": {
                         "operator": "Variables[0] (#CL_MDF_BECount) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(#CL_MDF_BECount - 1)",
                         "constants": [
@@ -1108,7 +1108,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Set Phainon Action Count",
-                  "value": {
+                  "count": {
                     "operator": "Variables[0] (#CL_MDF_BECount) || RETURN",
                     "displayLines": "#CL_MDF_BECount",
                     "constants": [],
@@ -1165,7 +1165,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Set Phainon Action Count",
-                  "value": {
+                  "count": {
                     "operator": "Variables[0] (8) || Constants[0] (1) || SUB || RETURN",
                     "displayLines": "(8 - 1)",
                     "constants": [
@@ -1430,7 +1430,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Set Phainon Action Count",
-                      "value": 0
+                      "count": 0
                     }
                   ],
                   "failed": [
@@ -1446,7 +1446,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Set Phainon Action Count",
-                      "value": {
+                      "count": {
                         "operator": "Variables[0] (#CL_MDF_BECount) || Constants[0] (1) || SUB || RETURN",
                         "displayLines": "(#CL_MDF_BECount - 1)",
                         "constants": [
@@ -3824,7 +3824,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Set Phainon Charge Points Preview",
-                  "value": 0
+                  "previewNum": 0
                 }
               ]
             },
@@ -3871,7 +3871,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Set Phainon Charge Points Preview",
-                      "value": {
+                      "previewNum": {
                         "operator": "Variables[0] (Skill11_EnergyAdd) || RETURN",
                         "displayLines": "Skill11_EnergyAdd",
                         "constants": [],
@@ -3892,7 +3892,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Set Phainon Charge Points Preview",
-                      "value": {
+                      "previewNum": {
                         "operator": "Variables[0] (_enemyCount) || Variables[1] (Skill21_ExtraEnergyAdd) || ADD || RETURN",
                         "displayLines": "(_enemyCount + Skill21_ExtraEnergyAdd)",
                         "constants": [],
@@ -3914,7 +3914,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Set Phainon Charge Points Preview",
-                      "value": {
+                      "previewNum": {
                         "operator": "Constants[0] (0) || Variables[0] (Skill22_Energy) || SUB || RETURN",
                         "displayLines": "(0 - Skill22_Energy)",
                         "constants": [
@@ -3949,7 +3949,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Set Phainon Charge Points Preview",
-                      "value": 0
+                      "previewNum": 0
                     }
                   ]
                 }

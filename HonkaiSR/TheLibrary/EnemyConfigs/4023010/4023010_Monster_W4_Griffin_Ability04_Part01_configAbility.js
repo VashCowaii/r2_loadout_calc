@@ -40,7 +40,7 @@ const configAbility = {
                 },
                 {
                   "name": "Return Target",
-                  "value": 1
+                  "count": 1
                 }
               ]
             }
