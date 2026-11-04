@@ -93,7 +93,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "display": true
+      "show": true
     },
     {
       "name": "Add Events/Bonuses",

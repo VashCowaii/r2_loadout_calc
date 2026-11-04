@@ -57,9 +57,7 @@ const configAbility = {
           "execute": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Event was Triggered by Modifier's Self"
-              },
+              "conditions": "Event was Triggered by Modifier's Self",
               "passed": [
                 {
                   "name": "Define Custom Variable with Varying Data",

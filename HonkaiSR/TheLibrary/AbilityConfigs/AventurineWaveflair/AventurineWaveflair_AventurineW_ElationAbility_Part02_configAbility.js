@@ -127,9 +127,7 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "IF",
-      "conditions": {
-        "name": "In Aha-Instant"
-      }
+      "conditions": "In Aha-Instant"
     },
     "Trigger: Skip Death Handling",
     "Trigger: Ability End"

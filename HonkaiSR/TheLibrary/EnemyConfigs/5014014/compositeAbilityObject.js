@@ -7295,7 +7295,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "display": true
+          "show": true
         },
         {
           "name": "Add Events/Bonuses",
@@ -8653,9 +8653,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "IF",
-                  "conditions": {
-                    "name": "In Aha-Instant"
-                  },
+                  "conditions": "In Aha-Instant",
                   "passed": [
                     {
                       "name": "Inject Ability Use",

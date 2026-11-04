@@ -599,9 +599,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "IF",
-                  "conditions": {
-                    "name": "Is a Crit"
-                  },
+                  "conditions": "Is a Crit",
                   "passed": [
                     {
                       "name": "Add Events/Bonuses",

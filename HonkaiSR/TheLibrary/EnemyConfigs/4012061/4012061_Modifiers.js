@@ -2302,9 +2302,7 @@ const configAbility = {
                               "target": "{{Modifier Holder}}"
                             }
                           },
-                          {
-                            "name": "Current Turn Owner has Pending"
-                          }
+                          "Current Turn Owner has Pending"
                         ]
                       },
                       "passed": [

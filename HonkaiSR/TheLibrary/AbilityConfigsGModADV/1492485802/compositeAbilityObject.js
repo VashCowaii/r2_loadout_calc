@@ -325,9 +325,7 @@ const compositeAbilityObject = {
           "onBattlePrep": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Is Team Leader"
-              },
+              "conditions": "Is Team Leader",
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
@@ -369,9 +367,7 @@ const compositeAbilityObject = {
           "onBattlePrep": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Is Team Leader"
-              },
+              "conditions": "Is Team Leader",
               "passed": [
                 {
                   "name": "IF",
@@ -581,9 +577,7 @@ const compositeAbilityObject = {
           "onBattlePrep": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Is Team Leader"
-              },
+              "conditions": "Is Team Leader",
               "passed": [
                 {
                   "name": "IF",
@@ -793,9 +787,7 @@ const compositeAbilityObject = {
           "onBattlePrep": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Is Team Leader"
-              },
+              "conditions": "Is Team Leader",
               "passed": [
                 {
                   "name": "IF",
@@ -1005,9 +997,7 @@ const compositeAbilityObject = {
           "onBattlePrep": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Is Team Leader"
-              },
+              "conditions": "Is Team Leader",
               "passed": [
                 {
                   "name": "IF",
@@ -1217,9 +1207,7 @@ const compositeAbilityObject = {
           "onBattlePrep": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Is Team Leader"
-              },
+              "conditions": "Is Team Leader",
               "passed": [
                 {
                   "name": "IF",
@@ -1429,9 +1417,7 @@ const compositeAbilityObject = {
           "onBattlePrep": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Is Team Leader"
-              },
+              "conditions": "Is Team Leader",
               "passed": [
                 {
                   "name": "IF",
@@ -1641,9 +1627,7 @@ const compositeAbilityObject = {
           "onBattlePrep": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Is Team Leader"
-              },
+              "conditions": "Is Team Leader",
               "passed": [
                 {
                   "name": "IF",

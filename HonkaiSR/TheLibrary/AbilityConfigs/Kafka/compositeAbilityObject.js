@@ -1948,7 +1948,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target's Attack Targets}}"
                                 },
-                                "source": {
+                                "sourceTarget": {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
@@ -1981,7 +1981,7 @@ const compositeAbilityObject = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}"
                                 },
-                                "source": {
+                                "sourceTarget": {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
                                 },
@@ -2114,7 +2114,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target's Ability Targets}}"
                             },
-                            "source": {
+                            "sourceTarget": {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
@@ -2155,7 +2155,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "source": {
+                            "sourceTarget": {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },

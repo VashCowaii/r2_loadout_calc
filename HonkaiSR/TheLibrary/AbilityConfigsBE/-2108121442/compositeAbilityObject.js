@@ -5828,7 +5828,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
                       },
-                      "display": true
+                      "show": true
                     }
                   ]
                 }

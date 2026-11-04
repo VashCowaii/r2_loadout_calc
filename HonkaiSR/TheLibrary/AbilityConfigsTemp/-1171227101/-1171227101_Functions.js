@@ -153,9 +153,7 @@ const configAbility = {
         },
         {
           "name": "FAILURE IF",
-          "conditions": {
-            "name": "Battle is Over"
-          }
+          "conditions": "Battle is Over"
         },
         "Apply Binding Stage Buff",
         {
@@ -2022,9 +2020,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "IF",
-                  "conditions": {
-                    "name": "Current Turn's Action Phase is Over"
-                  },
+                  "conditions": "Current Turn's Action Phase is Over",
                   "passed": [
                     {
                       "name": "Action Advance/Delay",
@@ -2128,9 +2124,7 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "IF",
-                      "conditions": {
-                        "name": "Current Turn's Action Phase is Over"
-                      },
+                      "conditions": "Current Turn's Action Phase is Over",
                       "passed": [
                         {
                           "name": "Action Advance/Delay",

@@ -2597,9 +2597,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "IF",
-          "conditions": {
-            "name": "In Aha-Instant"
-          },
+          "conditions": "In Aha-Instant",
           "passed": [
             {
               "name": "Mark Entity For Immediate Death",
@@ -2630,9 +2628,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "IF",
-          "conditions": {
-            "name": "In Aha-Instant"
-          },
+          "conditions": "In Aha-Instant",
           "failed": [
             "Deleted bullshit"
           ]
@@ -2716,9 +2712,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "IF",
-          "conditions": {
-            "name": "In Aha-Instant"
-          }
+          "conditions": "In Aha-Instant"
         }
       ],
       "references": [],
@@ -2734,9 +2728,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "IF",
-          "conditions": {
-            "name": "In Aha-Instant"
-          },
+          "conditions": "In Aha-Instant",
           "passed": [
             {
               "name": "Mark Entity For Immediate Death",
@@ -2848,9 +2840,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "IF",
-          "conditions": {
-            "name": "In Aha-Instant"
-          }
+          "conditions": "In Aha-Instant"
         }
       ],
       "references": [],
@@ -2866,9 +2856,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "IF",
-          "conditions": {
-            "name": "In Aha-Instant"
-          },
+          "conditions": "In Aha-Instant",
           "passed": [
             {
               "name": "Mark Entity For Immediate Death",
@@ -2981,9 +2969,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "IF",
-          "conditions": {
-            "name": "In Aha-Instant"
-          }
+          "conditions": "In Aha-Instant"
         }
       ],
       "references": [],
@@ -3309,9 +3295,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "IF",
-          "conditions": {
-            "name": "In Aha-Instant"
-          },
+          "conditions": "In Aha-Instant",
           "passed": [
             {
               "name": "Mark Entity For Immediate Death",
@@ -3342,9 +3326,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "IF",
-          "conditions": {
-            "name": "In Aha-Instant"
-          },
+          "conditions": "In Aha-Instant",
           "failed": [
             "Deleted bullshit"
           ]
@@ -3418,9 +3400,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "IF",
-          "conditions": {
-            "name": "In Aha-Instant"
-          }
+          "conditions": "In Aha-Instant"
         },
         {
           "name": "Declare Custom Variable",
@@ -3575,9 +3555,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "IF",
-          "conditions": {
-            "name": "In Aha-Instant"
-          },
+          "conditions": "In Aha-Instant",
           "passed": [
             {
               "name": "Mark Entity For Immediate Death",
@@ -3608,9 +3586,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "IF",
-          "conditions": {
-            "name": "In Aha-Instant"
-          },
+          "conditions": "In Aha-Instant",
           "failed": [
             "Deleted bullshit"
           ]
@@ -3662,9 +3638,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "IF",
-          "conditions": {
-            "name": "In Aha-Instant"
-          }
+          "conditions": "In Aha-Instant"
         },
         {
           "name": "Declare Custom Variable",
@@ -11203,9 +11177,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "IF",
-          "conditions": {
-            "name": "In Aha-Instant"
-          },
+          "conditions": "In Aha-Instant",
           "passed": [
             {
               "name": "Mark Entity For Immediate Death",
@@ -11256,9 +11228,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "IF",
-          "conditions": {
-            "name": "In Aha-Instant"
-          }
+          "conditions": "In Aha-Instant"
         }
       ],
       "references": [],

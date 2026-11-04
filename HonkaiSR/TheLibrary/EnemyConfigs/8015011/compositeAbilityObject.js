@@ -1477,7 +1477,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "display": true
+          "show": true
         },
         {
           "name": "Declare Custom Variable",
@@ -1644,8 +1644,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          },
-          "display": false
+          }
         },
         {
           "name": "Set Enemy Phase",
@@ -1940,8 +1939,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          },
-          "display": false
+          }
         }
       ],
       "targetObjectData": {

@@ -6372,8 +6372,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{EVENT[RoT] Dark Praetor: Self}}"
-                  },
-                  "display": false
+                  }
                 }
               ]
             },
@@ -6409,7 +6408,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{EVENT[RoT] Light Praetor: 3}}"
                   },
-                  "display": true
+                  "show": true
                 },
                 {
                   "name": "Define Custom Variable",
@@ -6557,8 +6556,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{EVENT[RoT] Light Praetor: 3}}"
-                  },
-                  "display": false
+                  }
                 }
               ]
             },
@@ -6594,7 +6592,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{EVENT[RoT] Dark Praetor: Self}}"
                   },
-                  "display": true
+                  "show": true
                 },
                 {
                   "name": "Define Custom Variable",

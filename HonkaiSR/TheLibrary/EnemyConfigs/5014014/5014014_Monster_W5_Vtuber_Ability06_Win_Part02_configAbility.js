@@ -197,9 +197,7 @@ const configAbility = {
             },
             {
               "name": "IF",
-              "conditions": {
-                "name": "In Aha-Instant"
-              },
+              "conditions": "In Aha-Instant",
               "passed": [
                 {
                   "name": "Inject Ability Use",

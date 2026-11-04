@@ -1644,7 +1644,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "display": true
+                  "show": true
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -3537,7 +3537,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "display": true
+                  "show": true
                 },
                 {
                   "name": "Add Events/Bonuses",

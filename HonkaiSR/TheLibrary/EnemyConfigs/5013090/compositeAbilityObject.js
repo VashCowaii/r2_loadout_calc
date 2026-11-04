@@ -646,8 +646,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          },
-          "display": false
+          }
         },
         {
           "name": "Add Events/Bonuses",

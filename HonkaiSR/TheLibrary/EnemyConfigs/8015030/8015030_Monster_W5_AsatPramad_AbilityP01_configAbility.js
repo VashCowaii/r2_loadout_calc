@@ -11,7 +11,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Caster}}"
       },
-      "display": true
+      "show": true
     },
     {
       "name": "Define Custom Variable with Stat",
@@ -412,7 +412,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "display": true
+              "show": true
             },
             {
               "name": "Preload Battle Event(s)",
@@ -606,7 +606,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Asat Pramad: 2}}"
                   },
-                  "display": true
+                  "show": true
                 },
                 {
                   "name": "Add Events/Bonuses",

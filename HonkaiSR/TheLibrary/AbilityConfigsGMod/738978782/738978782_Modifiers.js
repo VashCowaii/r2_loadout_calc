@@ -1943,9 +1943,7 @@ const configAbility = {
           "execute": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "HP-Share Group is Dead"
-              },
+              "conditions": "HP-Share Group is Dead",
               "passed": [
                 {
                   "name": "Add Ability",

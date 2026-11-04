@@ -17,8 +17,7 @@ const configAbility = {
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"
-      },
-      "display": false
+      }
     },
     {
       "name": "Find New Target",

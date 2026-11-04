@@ -300,7 +300,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
               },
-              "display": true
+              "show": true
             }
           ]
         },

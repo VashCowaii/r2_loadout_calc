@@ -154,9 +154,7 @@ const compositeAbilityObject = {
                     },
                     "value": "TEMP_OBJECT_UNUSED_1"
                   },
-                  {
-                    "name": "Battle Perform Queued"
-                  }
+                  "Battle Perform Queued"
                 ]
               },
               "passed": [
@@ -267,7 +265,8 @@ const compositeAbilityObject = {
                 {
                   "name": "WAIT FOR",
                   "condition": {
-                    "name": "Battle Perform Queued"
+                    "name": "Battle Perform Queued",
+                    "invertCondition": true
                   }
                 },
                 {

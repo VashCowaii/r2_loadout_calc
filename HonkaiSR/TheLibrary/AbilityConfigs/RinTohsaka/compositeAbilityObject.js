@@ -55,9 +55,7 @@ const compositeAbilityObject = {
           "Money Taken": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Is Team Leader"
-              },
+              "conditions": "Is Team Leader",
               "passed": [
                 {
                   "name": "Define Custom Variable",

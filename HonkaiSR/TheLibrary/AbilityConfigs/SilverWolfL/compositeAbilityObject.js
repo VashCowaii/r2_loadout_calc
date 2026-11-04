@@ -2205,9 +2205,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "IF",
-                  "conditions": {
-                    "name": "Battle is Over"
-                  },
+                  "conditions": "Battle is Over",
                   "failed": [
                     {
                       "name": "Use Custom Character Function",
@@ -2248,9 +2246,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "IF",
-                  "conditions": {
-                    "name": "Battle is Over"
-                  },
+                  "conditions": "Battle is Over",
                   "failed": [
                     {
                       "name": "Use Custom Character Function",
@@ -9367,9 +9363,7 @@ const compositeAbilityObject = {
           "parse": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Battle is Over"
-              },
+              "conditions": "Battle is Over",
               "passed": [
                 {
                   "name": "WAIT FOR",

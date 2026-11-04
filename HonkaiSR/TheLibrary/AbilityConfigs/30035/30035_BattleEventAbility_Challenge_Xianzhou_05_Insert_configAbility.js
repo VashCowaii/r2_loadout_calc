@@ -6,9 +6,7 @@ const configAbility = {
   "parse": [
     {
       "name": "IF",
-      "conditions": {
-        "name": "In Aha-Instant"
-      },
+      "conditions": "In Aha-Instant",
       "passed": [
         {
           "name": "Mark Entity For Immediate Death",
@@ -59,9 +57,7 @@ const configAbility = {
     },
     {
       "name": "IF",
-      "conditions": {
-        "name": "In Aha-Instant"
-      }
+      "conditions": "In Aha-Instant"
     }
   ],
   "references": [],

@@ -274,7 +274,7 @@ const configAbility = {
         "name": "Target Name",
         "target": "{{Asat Pramad: 2}}"
       },
-      "display": true
+      "show": true
     },
     {
       "name": "IF",

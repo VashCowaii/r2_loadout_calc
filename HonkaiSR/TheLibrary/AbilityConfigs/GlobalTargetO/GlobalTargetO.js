@@ -888,7 +888,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
                 },
-                "source": {
+                "sourceTarget": {
                   "name": "Target Name",
                   "target": "{{Enemy Team Entity}}"
                 }
@@ -950,7 +950,7 @@ const configAbility = {
       "execute": [
         {
           "name": "Add Target by All Custom Unselectable Targets",
-          "target": {
+          "sourceTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           }
@@ -964,7 +964,7 @@ const configAbility = {
       "execute": [
         {
           "name": "Add Target by All Unselectable Targets",
-          "target": {
+          "sourceTarget": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
           }

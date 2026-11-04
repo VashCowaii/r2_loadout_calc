@@ -2787,9 +2787,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "In Aha-Instant"
-              },
+              "conditions": "In Aha-Instant",
               "passed": [
                 {
                   "name": "Define Modifier-Specific Variable",
@@ -2844,9 +2842,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "In Aha-Instant"
-              },
+              "conditions": "In Aha-Instant",
               "passed": [
                 {
                   "name": "Add Events/Bonuses",
@@ -3230,9 +3226,7 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "IF",
-          "conditions": {
-            "name": "In Aha-Instant"
-          },
+          "conditions": "In Aha-Instant",
           "passed": [
             {
               "name": "Remove Events/Bonuses",
@@ -3416,9 +3410,7 @@ const compositeAbilityObject = {
         "Trigger: Attack End",
         {
           "name": "IF",
-          "conditions": {
-            "name": "In Aha-Instant"
-          }
+          "conditions": "In Aha-Instant"
         },
         "Trigger: Skip Death Handling",
         "Trigger: Ability End"

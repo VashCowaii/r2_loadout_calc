@@ -13,9 +13,7 @@ const configAbility = {
       "passed": [
         {
           "name": "IF",
-          "conditions": {
-            "name": "In Aha-Instant"
-          },
+          "conditions": "In Aha-Instant",
           "passed": [
             {
               "name": "Define Modifier-Specific Variable",
@@ -70,9 +68,7 @@ const configAbility = {
       "passed": [
         {
           "name": "IF",
-          "conditions": {
-            "name": "In Aha-Instant"
-          },
+          "conditions": "In Aha-Instant",
           "passed": [
             {
               "name": "Add Events/Bonuses",
@@ -456,9 +452,7 @@ const configAbility = {
     "Trigger: Attack End",
     {
       "name": "IF",
-      "conditions": {
-        "name": "In Aha-Instant"
-      },
+      "conditions": "In Aha-Instant",
       "passed": [
         {
           "name": "Remove Events/Bonuses",

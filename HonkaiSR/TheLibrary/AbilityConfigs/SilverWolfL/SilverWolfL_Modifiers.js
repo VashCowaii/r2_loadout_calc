@@ -2147,9 +2147,7 @@ const configAbility = {
           "execute": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Battle is Over"
-              },
+              "conditions": "Battle is Over",
               "failed": [
                 {
                   "name": "Use Custom Character Function",
@@ -2190,9 +2188,7 @@ const configAbility = {
           "execute": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Battle is Over"
-              },
+              "conditions": "Battle is Over",
               "failed": [
                 {
                   "name": "Use Custom Character Function",

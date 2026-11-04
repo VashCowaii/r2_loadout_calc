@@ -191,9 +191,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "IF",
-          "conditions": {
-            "name": "Is First Challenge-Battle"
-          }
+          "conditions": "Is First Challenge-Battle"
         }
       ],
       "references": [

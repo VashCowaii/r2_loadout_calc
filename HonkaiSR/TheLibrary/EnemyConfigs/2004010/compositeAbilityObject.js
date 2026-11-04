@@ -702,7 +702,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "display": true
+          "show": true
         },
         {
           "name": "IF",

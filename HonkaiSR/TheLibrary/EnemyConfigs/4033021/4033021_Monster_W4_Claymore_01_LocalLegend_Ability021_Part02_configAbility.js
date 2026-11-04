@@ -154,8 +154,7 @@ const configAbility = {
           "target": {
             "name": "Target Name",
             "target": "{{EVENT[RoT] Light Praetor: 3}}"
-          },
-          "display": false
+          }
         }
       ]
     },
@@ -176,7 +175,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{EVENT[RoT] Dark Praetor: Self}}"
           },
-          "display": true
+          "show": true
         },
         {
           "name": "Define Custom Variable",

@@ -367,7 +367,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "display": true
+                  "show": true
                 },
                 {
                   "name": "Remove Events/Bonuses",

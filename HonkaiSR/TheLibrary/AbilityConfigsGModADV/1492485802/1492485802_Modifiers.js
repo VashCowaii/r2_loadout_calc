@@ -317,9 +317,7 @@ const configAbility = {
       "onBattlePrep": [
         {
           "name": "IF",
-          "conditions": {
-            "name": "Is Team Leader"
-          },
+          "conditions": "Is Team Leader",
           "passed": [
             {
               "name": "Add Events/Bonuses",
@@ -361,9 +359,7 @@ const configAbility = {
       "onBattlePrep": [
         {
           "name": "IF",
-          "conditions": {
-            "name": "Is Team Leader"
-          },
+          "conditions": "Is Team Leader",
           "passed": [
             {
               "name": "IF",
@@ -573,9 +569,7 @@ const configAbility = {
       "onBattlePrep": [
         {
           "name": "IF",
-          "conditions": {
-            "name": "Is Team Leader"
-          },
+          "conditions": "Is Team Leader",
           "passed": [
             {
               "name": "IF",
@@ -785,9 +779,7 @@ const configAbility = {
       "onBattlePrep": [
         {
           "name": "IF",
-          "conditions": {
-            "name": "Is Team Leader"
-          },
+          "conditions": "Is Team Leader",
           "passed": [
             {
               "name": "IF",
@@ -997,9 +989,7 @@ const configAbility = {
       "onBattlePrep": [
         {
           "name": "IF",
-          "conditions": {
-            "name": "Is Team Leader"
-          },
+          "conditions": "Is Team Leader",
           "passed": [
             {
               "name": "IF",
@@ -1209,9 +1199,7 @@ const configAbility = {
       "onBattlePrep": [
         {
           "name": "IF",
-          "conditions": {
-            "name": "Is Team Leader"
-          },
+          "conditions": "Is Team Leader",
           "passed": [
             {
               "name": "IF",
@@ -1421,9 +1409,7 @@ const configAbility = {
       "onBattlePrep": [
         {
           "name": "IF",
-          "conditions": {
-            "name": "Is Team Leader"
-          },
+          "conditions": "Is Team Leader",
           "passed": [
             {
               "name": "IF",
@@ -1633,9 +1619,7 @@ const configAbility = {
       "onBattlePrep": [
         {
           "name": "IF",
-          "conditions": {
-            "name": "Is Team Leader"
-          },
+          "conditions": "Is Team Leader",
           "passed": [
             {
               "name": "IF",

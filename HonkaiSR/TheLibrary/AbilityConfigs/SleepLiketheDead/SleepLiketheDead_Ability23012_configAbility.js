@@ -64,9 +64,7 @@ const configAbility = {
                 "conditionList": [
                   {
                     "name": "NOT",
-                    "condition": {
-                      "name": "Is a Crit"
-                    }
+                    "condition": "Is a Crit"
                   },
                   {
                     "name": "NOT",

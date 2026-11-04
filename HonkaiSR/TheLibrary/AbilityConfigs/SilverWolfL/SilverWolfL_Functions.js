@@ -1824,9 +1824,7 @@ const configAbility = {
       "parse": [
         {
           "name": "IF",
-          "conditions": {
-            "name": "Battle is Over"
-          },
+          "conditions": "Battle is Over",
           "passed": [
             {
               "name": "WAIT FOR",

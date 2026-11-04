@@ -547,7 +547,7 @@ const configAbility = {
             },
             {
               "name": "Filter by Target",
-              "exclude": {
+              "excludeTarget": {
                 "name": "Target Name",
                 "target": "{{Caster's Summoner}}"
               }
@@ -9102,7 +9102,7 @@ const configAbility = {
       "execute": [
         {
           "name": "Add Target by Adventure Team Leader(Started Combat)",
-          "getLatest": true
+          "getLatestLeader": true
         }
       ]
     },
@@ -9121,7 +9121,7 @@ const configAbility = {
       "execute": [
         {
           "name": "Add Target by Adventure Player",
-          "getLatest": true
+          "getLatestLeader": true
         }
       ]
     },

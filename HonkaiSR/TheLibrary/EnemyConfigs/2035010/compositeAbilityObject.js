@@ -3326,8 +3326,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          },
-          "display": false
+          }
         },
         {
           "name": "Find New Target",
@@ -3924,7 +3923,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Caster}}"
               },
-              "display": true
+              "show": true
             }
           ]
         }

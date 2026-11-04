@@ -555,7 +555,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Filter by Target",
-                  "exclude": {
+                  "excludeTarget": {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
                   }
@@ -9110,7 +9110,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Add Target by Adventure Team Leader(Started Combat)",
-              "getLatest": true
+              "getLatestLeader": true
             }
           ]
         },
@@ -9129,7 +9129,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Add Target by Adventure Player",
-              "getLatest": true
+              "getLatestLeader": true
             }
           ]
         },

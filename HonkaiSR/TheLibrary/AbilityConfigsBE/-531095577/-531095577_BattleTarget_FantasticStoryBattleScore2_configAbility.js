@@ -15,9 +15,7 @@ const configAbility = {
     },
     {
       "name": "IF",
-      "conditions": {
-        "name": "Is First Challenge-Battle"
-      }
+      "conditions": "Is First Challenge-Battle"
     }
   ],
   "references": [

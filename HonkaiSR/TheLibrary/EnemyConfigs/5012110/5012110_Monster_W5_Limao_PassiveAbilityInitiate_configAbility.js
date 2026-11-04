@@ -603,7 +603,7 @@ const configAbility = {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "source": {
+                        "sourceTarget": {
                           "name": "Target Name",
                           "target": "{{Enemy Team Entity}}"
                         },
@@ -661,7 +661,7 @@ const configAbility = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}.[[getCreator]]"
                                 },
-                                "source": {
+                                "sourceTarget": {
                                   "name": "Target Name",
                                   "target": "{{Enemy Team Entity}}"
                                 },
@@ -694,7 +694,7 @@ const configAbility = {
                                   "name": "Target Name",
                                   "target": "{{Parameter Target}}.[[getCreator]]"
                                 },
-                                "source": {
+                                "sourceTarget": {
                                   "name": "Target Name",
                                   "target": "{{Enemy Team Entity}}"
                                 },

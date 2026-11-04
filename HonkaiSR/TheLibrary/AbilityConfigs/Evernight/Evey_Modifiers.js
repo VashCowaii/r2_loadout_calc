@@ -1884,9 +1884,7 @@ const configAbility = {
               "passed": [
                 {
                   "name": "IF",
-                  "conditions": {
-                    "name": "Current Turn's Action Phase is Over"
-                  },
+                  "conditions": "Current Turn's Action Phase is Over",
                   "passed": [
                     {
                       "name": "Action Advance/Delay",

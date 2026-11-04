@@ -162,9 +162,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "FAILURE IF",
-              "conditions": {
-                "name": "Battle is Over"
-              }
+              "conditions": "Battle is Over"
             },
             "Apply Binding Stage Buff",
             {
@@ -2031,9 +2029,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "IF",
-                      "conditions": {
-                        "name": "Current Turn's Action Phase is Over"
-                      },
+                      "conditions": "Current Turn's Action Phase is Over",
                       "passed": [
                         {
                           "name": "Action Advance/Delay",
@@ -2137,9 +2133,7 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "IF",
-                          "conditions": {
-                            "name": "Current Turn's Action Phase is Over"
-                          },
+                          "conditions": "Current Turn's Action Phase is Over",
                           "passed": [
                             {
                               "name": "Action Advance/Delay",

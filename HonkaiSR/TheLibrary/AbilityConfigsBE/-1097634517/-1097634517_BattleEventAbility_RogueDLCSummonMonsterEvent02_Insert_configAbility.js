@@ -6,9 +6,7 @@ const configAbility = {
   "parse": [
     {
       "name": "IF",
-      "conditions": {
-        "name": "In Aha-Instant"
-      },
+      "conditions": "In Aha-Instant",
       "passed": [
         {
           "name": "Mark Entity For Immediate Death",
@@ -39,9 +37,7 @@ const configAbility = {
     },
     {
       "name": "IF",
-      "conditions": {
-        "name": "In Aha-Instant"
-      },
+      "conditions": "In Aha-Instant",
       "failed": [
         "Deleted bullshit"
       ]
@@ -115,9 +111,7 @@ const configAbility = {
     },
     {
       "name": "IF",
-      "conditions": {
-        "name": "In Aha-Instant"
-      }
+      "conditions": "In Aha-Instant"
     },
     {
       "name": "Declare Custom Variable",

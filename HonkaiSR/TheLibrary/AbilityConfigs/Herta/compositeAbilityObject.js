@@ -1157,11 +1157,11 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Target Is Hostile",
-                            "target": {
+                            "targetRelative1": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "target2": {
+                            "targetRelative2": {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             }

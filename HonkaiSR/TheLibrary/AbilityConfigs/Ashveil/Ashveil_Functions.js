@@ -33,7 +33,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Ashveil: Parasite Target}}"
                 },
-                "source": {
+                "sourceTarget": {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },
@@ -125,7 +125,7 @@ const configAbility = {
                   "name": "Target Name",
                   "target": "{{Ashveil: Parasite Target}}"
                 },
-                "source": {
+                "sourceTarget": {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 },

@@ -1680,9 +1680,7 @@ const configAbility = {
                     "name": "Skill Type",
                     "skillType": "Elation"
                   },
-                  {
-                    "name": "In Aha-Instant"
-                  }
+                  "In Aha-Instant"
                 ]
               },
               "passed": [
@@ -1699,9 +1697,7 @@ const configAbility = {
           "execute": [
             {
               "name": "IF",
-              "conditions": {
-                "name": "Aha Instant is Paused"
-              },
+              "conditions": "Aha Instant is Paused",
               "passed": [
                 {
                   "name": "Inject Extra-Turn",

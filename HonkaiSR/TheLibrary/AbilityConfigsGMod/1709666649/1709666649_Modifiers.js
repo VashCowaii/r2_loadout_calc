@@ -3331,9 +3331,7 @@ const configAbility = {
                     "compareType": "=",
                     "value2": 0
                   },
-                  {
-                    "name": "Is a Crit"
-                  },
+                  "Is a Crit",
                   {
                     "name": "Random Chance",
                     "chance": {

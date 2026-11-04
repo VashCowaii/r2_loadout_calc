@@ -2201,9 +2201,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "IF",
-          "conditions": {
-            "name": "Battle is Over"
-          }
+          "conditions": "Battle is Over"
         }
       ],
       "references": [],

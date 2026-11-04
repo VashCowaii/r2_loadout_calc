@@ -7216,9 +7216,7 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "IF",
-                      "conditions": {
-                        "name": "Current Turn's Action Phase is Over"
-                      },
+                      "conditions": "Current Turn's Action Phase is Over",
                       "passed": [
                         {
                           "name": "Action Advance/Delay",
@@ -10468,9 +10466,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "IF",
-                  "conditions": {
-                    "name": "Battle is Over"
-                  },
+                  "conditions": "Battle is Over",
                   "failed": [
                     {
                       "name": "Use Custom Character Function",
@@ -10519,9 +10515,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "IF",
-                  "conditions": {
-                    "name": "Battle is Over"
-                  }
+                  "conditions": "Battle is Over"
                 }
               ]
             }
@@ -10550,9 +10544,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "IF",
-                  "conditions": {
-                    "name": "Battle is Over"
-                  }
+                  "conditions": "Battle is Over"
                 }
               ]
             }
@@ -10581,9 +10573,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "IF",
-                  "conditions": {
-                    "name": "Battle is Over"
-                  }
+                  "conditions": "Battle is Over"
                 }
               ]
             }
@@ -10612,9 +10602,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "IF",
-                  "conditions": {
-                    "name": "Battle is Over"
-                  }
+                  "conditions": "Battle is Over"
                 }
               ]
             }

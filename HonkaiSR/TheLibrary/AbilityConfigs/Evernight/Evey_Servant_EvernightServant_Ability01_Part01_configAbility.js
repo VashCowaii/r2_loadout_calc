@@ -104,9 +104,7 @@ const configAbility = {
             },
             {
               "name": "IF",
-              "conditions": {
-                "name": "Battle is Over"
-              },
+              "conditions": "Battle is Over",
               "failed": [
                 {
                   "name": "Use Custom Character Function",
@@ -155,9 +153,7 @@ const configAbility = {
             },
             {
               "name": "IF",
-              "conditions": {
-                "name": "Battle is Over"
-              }
+              "conditions": "Battle is Over"
             }
           ]
         }
@@ -186,9 +182,7 @@ const configAbility = {
             },
             {
               "name": "IF",
-              "conditions": {
-                "name": "Battle is Over"
-              }
+              "conditions": "Battle is Over"
             }
           ]
         }
@@ -217,9 +211,7 @@ const configAbility = {
             },
             {
               "name": "IF",
-              "conditions": {
-                "name": "Battle is Over"
-              }
+              "conditions": "Battle is Over"
             }
           ]
         }
@@ -248,9 +240,7 @@ const configAbility = {
             },
             {
               "name": "IF",
-              "conditions": {
-                "name": "Battle is Over"
-              }
+              "conditions": "Battle is Over"
             }
           ]
         }

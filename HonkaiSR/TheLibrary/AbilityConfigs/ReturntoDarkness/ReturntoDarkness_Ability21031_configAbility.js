@@ -26,9 +26,7 @@ const configAbility = {
               "conditions": {
                 "name": "AND",
                 "conditionList": [
-                  {
-                    "name": "Is a Crit"
-                  },
+                  "Is a Crit",
                   {
                     "name": "Compare: Variable",
                     "target": {

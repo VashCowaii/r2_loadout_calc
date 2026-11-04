@@ -2349,9 +2349,7 @@ const compositeAbilityObject = {
                                   "target": "{{Modifier Holder}}"
                                 }
                               },
-                              {
-                                "name": "Current Turn Owner has Pending"
-                              }
+                              "Current Turn Owner has Pending"
                             ]
                           },
                           "passed": [
@@ -11297,7 +11295,7 @@ const compositeAbilityObject = {
             "name": "Target Name",
             "target": "{{Caster}}"
           },
-          "display": true
+          "show": true
         },
         {
           "name": "Add Events/Bonuses",
