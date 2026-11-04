@@ -554,7 +554,7 @@ const configAbility = {
             },
             {
               "name": "Sort by Physical Positioning",
-              "byHighest": true
+              "sortByHighest": true
             }
           ]
         }
@@ -798,7 +798,7 @@ const configAbility = {
             },
             {
               "name": "Sort by Monster Rank",
-              "byHighest": true
+              "sortByHighest": true
             }
           ]
         }
@@ -974,7 +974,7 @@ const configAbility = {
             },
             {
               "name": "Sort by Monster Rank",
-              "byHighest": true,
+              "sortByHighest": true,
               "maxRank": "Elite"
             },
             {
@@ -1038,7 +1038,7 @@ const configAbility = {
             },
             {
               "name": "Sort by Monster Rank",
-              "byHighest": true,
+              "sortByHighest": true,
               "maxRank": "Elite"
             },
             {
@@ -1317,7 +1317,7 @@ const configAbility = {
             },
             {
               "name": "Sort by Monster Rank",
-              "byHighest": true,
+              "sortByHighest": true,
               "maxRank": "Elite"
             },
             {
@@ -2094,7 +2094,7 @@ const configAbility = {
             {
               "name": "Sort by Modifier Value",
               "modifier": "<a class=\"gModGreen\" id=\"-103304753\">Enemy_SW_Boss_01_IF_MinionsEnhancement</a>[<span class=\"descriptionNumberColor\">Growth Hormones</span>]",
-              "value": "Layer"
+              "valueType": "Stacks"
             },
             {
               "name": "Target Filter",
@@ -3686,9 +3686,7 @@ const configAbility = {
                 "modifier": "<a class=\"gModGreen\" id=\"-753818633\">Monster_W4_IronTombCore_Ability06Mark</a>"
               }
             },
-            {
-              "name": "Sort by Physical Positioning"
-            }
+            "Sort by Physical Positioning"
           ]
         }
       ]
@@ -3716,9 +3714,7 @@ const configAbility = {
                 "modifier": "<a class=\"gModGreen\" id=\"1656056004\">Enemy_W4_IronTombCorePart_Ability02_Mark</a>"
               }
             },
-            {
-              "name": "Sort by Physical Positioning"
-            }
+            "Sort by Physical Positioning"
           ]
         }
       ]
@@ -4064,9 +4060,7 @@ const configAbility = {
                 }
               }
             },
-            {
-              "name": "Sort by Physical Positioning"
-            },
+            "Sort by Physical Positioning",
             {
               "name": "Target Index",
               "indexValue": 3
@@ -4098,9 +4092,7 @@ const configAbility = {
                 }
               }
             },
-            {
-              "name": "Sort by Physical Positioning"
-            },
+            "Sort by Physical Positioning",
             {
               "name": "Target Index",
               "indexValue": 2
@@ -4132,9 +4124,7 @@ const configAbility = {
                 }
               }
             },
-            {
-              "name": "Sort by Physical Positioning"
-            },
+            "Sort by Physical Positioning",
             {
               "name": "Target Index",
               "indexValue": 1
@@ -4166,9 +4156,7 @@ const configAbility = {
                 }
               }
             },
-            {
-              "name": "Sort by Physical Positioning"
-            },
+            "Sort by Physical Positioning",
             {
               "name": "Target Index"
             }
@@ -4385,9 +4373,7 @@ const configAbility = {
                 ]
               }
             },
-            {
-              "name": "Sort by Physical Positioning"
-            }
+            "Sort by Physical Positioning"
           ]
         }
       ]
@@ -4419,9 +4405,7 @@ const configAbility = {
                 }
               }
             },
-            {
-              "name": "Sort by Physical Positioning"
-            }
+            "Sort by Physical Positioning"
           ]
         }
       ]
@@ -4517,9 +4501,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Player Team(Exclude Memosprites)}}.[[living]]"
             },
-            {
-              "name": "Sort by Physical Positioning"
-            },
+            "Sort by Physical Positioning",
             {
               "name": "Target Index",
               "indexValue": 2
@@ -4540,9 +4522,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Player Team(Exclude Memosprites)}}.[[living]]"
             },
-            {
-              "name": "Sort by Physical Positioning"
-            },
+            "Sort by Physical Positioning",
             {
               "name": "Target Index",
               "indexValue": 1
@@ -4563,9 +4543,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Player Team(Exclude Memosprites)}}.[[living]]"
             },
-            {
-              "name": "Sort by Physical Positioning"
-            },
+            "Sort by Physical Positioning",
             {
               "name": "Target Index"
             }
@@ -4879,9 +4857,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Player Team(Exclude Memosprites)}}"
             },
-            {
-              "name": "Sort by Physical Positioning"
-            },
+            "Sort by Physical Positioning",
             {
               "name": "Target Index",
               "indexValue": 2
@@ -4902,9 +4878,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Player Team(Exclude Memosprites)}}"
             },
-            {
-              "name": "Sort by Physical Positioning"
-            },
+            "Sort by Physical Positioning",
             {
               "name": "Target Index",
               "indexValue": 1
@@ -4925,9 +4899,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Player Team(Exclude Memosprites)}}"
             },
-            {
-              "name": "Sort by Physical Positioning"
-            },
+            "Sort by Physical Positioning",
             {
               "name": "Target Index"
             }
@@ -5049,9 +5021,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Player Team All}}"
             },
-            {
-              "name": "Sort by Physical Positioning"
-            },
+            "Sort by Physical Positioning",
             {
               "name": "Target Filter",
               "conditions": {
@@ -6560,7 +6530,7 @@ const configAbility = {
             },
             {
               "name": "Sort by Physical Positioning",
-              "byHighest": true
+              "sortByHighest": true
             }
           ]
         }
@@ -7733,7 +7703,7 @@ const configAbility = {
             },
             {
               "name": "Sort by Physical Positioning",
-              "byHighest": true
+              "sortByHighest": true
             },
             {
               "name": "Target Index",
@@ -7757,7 +7727,7 @@ const configAbility = {
             },
             {
               "name": "Sort by Physical Positioning",
-              "byHighest": true
+              "sortByHighest": true
             },
             {
               "name": "Target Index",
@@ -7781,7 +7751,7 @@ const configAbility = {
             },
             {
               "name": "Sort by Physical Positioning",
-              "byHighest": true
+              "sortByHighest": true
             },
             {
               "name": "Target Index",
@@ -7805,7 +7775,7 @@ const configAbility = {
             },
             {
               "name": "Sort by Physical Positioning",
-              "byHighest": true
+              "sortByHighest": true
             },
             {
               "name": "Target Index",
@@ -7840,7 +7810,7 @@ const configAbility = {
             },
             {
               "name": "Sort by Physical Positioning",
-              "byHighest": true
+              "sortByHighest": true
             },
             {
               "name": "Target Index",
@@ -7864,7 +7834,7 @@ const configAbility = {
             },
             {
               "name": "Sort by Physical Positioning",
-              "byHighest": true
+              "sortByHighest": true
             },
             {
               "name": "Target Index",
@@ -7888,7 +7858,7 @@ const configAbility = {
             },
             {
               "name": "Sort by Physical Positioning",
-              "byHighest": true
+              "sortByHighest": true
             },
             {
               "name": "Target Index",
@@ -7912,7 +7882,7 @@ const configAbility = {
             },
             {
               "name": "Sort by Physical Positioning",
-              "byHighest": true
+              "sortByHighest": true
             },
             {
               "name": "Target Index",
@@ -7936,7 +7906,7 @@ const configAbility = {
             },
             {
               "name": "Sort by Physical Positioning",
-              "byHighest": true
+              "sortByHighest": true
             },
             {
               "name": "Target Index",
@@ -7958,9 +7928,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Enemy Team All}}"
             },
-            {
-              "name": "Sort by Physical Positioning"
-            }
+            "Sort by Physical Positioning"
           ]
         }
       ]
@@ -7979,7 +7947,7 @@ const configAbility = {
             },
             {
               "name": "Sort by Physical Positioning",
-              "byHighest": true
+              "sortByHighest": true
             }
           ]
         }
@@ -7997,9 +7965,7 @@ const configAbility = {
               "name": "Target Name",
               "target": "{{Player Team All}}"
             },
-            {
-              "name": "Sort by Physical Positioning"
-            }
+            "Sort by Physical Positioning"
           ]
         }
       ]
@@ -8018,7 +7984,7 @@ const configAbility = {
             },
             {
               "name": "Sort by Physical Positioning",
-              "byHighest": true
+              "sortByHighest": true
             }
           ]
         }

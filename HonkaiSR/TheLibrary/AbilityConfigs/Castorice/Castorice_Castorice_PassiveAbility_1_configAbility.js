@@ -844,9 +844,9 @@ const configAbility = {
                       },
                       {
                         "name": "Sort by Stat",
-                        "stat": "&nbsp;<span class=\"descriptionNumberColor\">CharacterLevel</span>&nbsp;",
-                        "living": true,
-                        "sortByHighest": true
+                        "statName": "&nbsp;<span class=\"descriptionNumberColor\">CharacterLevel</span>&nbsp;",
+                        "sortByHighest": true,
+                        "living": true
                       }
                     ]
                   },

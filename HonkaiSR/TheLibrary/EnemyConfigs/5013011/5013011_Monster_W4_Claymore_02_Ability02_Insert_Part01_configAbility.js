@@ -36,7 +36,7 @@ const configAbility = {
           },
           {
             "name": "Sort by Physical Positioning",
-            "byHighest": true
+            "sortByHighest": true
           },
           {
             "name": "Filter by Life-State",

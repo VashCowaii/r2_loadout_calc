@@ -371,9 +371,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
                   },
-                  {
-                    "name": "Sort by Elation Participant ID"
-                  }
+                  "Sort by Elation Participant ID"
                 ]
               },
               "ifTargetFound": [

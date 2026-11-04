@@ -244,7 +244,7 @@ const configAbility = {
                       },
                       {
                         "name": "Sort by Stat",
-                        "stat": "&nbsp;<span class=\"descriptionNumberColor\">ShieldValue</span>&nbsp;",
+                        "statName": "&nbsp;<span class=\"descriptionNumberColor\">ShieldValue</span>&nbsp;",
                         "living": true
                       },
                       {
@@ -356,7 +356,7 @@ const configAbility = {
                       },
                       {
                         "name": "Sort by Stat",
-                        "stat": "&nbsp;<span class=\"descriptionNumberColor\">ShieldValue</span>&nbsp;",
+                        "statName": "&nbsp;<span class=\"descriptionNumberColor\">ShieldValue</span>&nbsp;",
                         "living": true
                       },
                       {

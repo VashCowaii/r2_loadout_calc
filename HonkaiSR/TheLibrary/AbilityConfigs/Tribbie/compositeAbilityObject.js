@@ -241,9 +241,9 @@ const compositeAbilityObject = {
                           "Shuffle Targets",
                           {
                             "name": "Sort by Stat",
-                            "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                            "living": true,
-                            "sortByHighest": true
+                            "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                            "sortByHighest": true,
+                            "living": true
                           },
                           {
                             "name": "Return Target",

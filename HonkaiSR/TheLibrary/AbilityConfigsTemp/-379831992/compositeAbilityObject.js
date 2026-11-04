@@ -397,9 +397,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)}}"
                       },
-                      {
-                        "name": "Sort by Physical Positioning"
-                      }
+                      "Sort by Physical Positioning"
                     ]
                   },
                   "maxTargets": {
@@ -457,7 +455,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Sort by Physical Positioning",
-                        "byHighest": true
+                        "sortByHighest": true
                       }
                     ]
                   },

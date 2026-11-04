@@ -78,7 +78,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Sort by Monster Rank",
-                        "byHighest": true
+                        "sortByHighest": true
                       },
                       {
                         "name": "Return Target",
@@ -121,7 +121,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Sort by Monster Rank",
-                        "byHighest": true
+                        "sortByHighest": true
                       },
                       {
                         "name": "Return Target",
@@ -164,7 +164,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Sort by Monster Rank",
-                        "byHighest": true
+                        "sortByHighest": true
                       },
                       {
                         "name": "Return Target",

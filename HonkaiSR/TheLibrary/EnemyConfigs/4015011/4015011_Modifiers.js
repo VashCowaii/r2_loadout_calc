@@ -4553,7 +4553,7 @@ const configAbility = {
                       },
                       {
                         "name": "Sort by Monster Rank",
-                        "byHighest": true
+                        "sortByHighest": true
                       }
                     ]
                   },
@@ -4700,7 +4700,7 @@ const configAbility = {
                       },
                       {
                         "name": "Sort by Monster Rank",
-                        "byHighest": true
+                        "sortByHighest": true
                       }
                     ]
                   },

@@ -1319,7 +1319,7 @@ const configAbility = {
                   "Shuffle Targets",
                   {
                     "name": "Sort by Stat",
-                    "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;",
+                    "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;",
                     "sortByHighest": true
                   },
                   {
@@ -1436,7 +1436,7 @@ const configAbility = {
                   "Shuffle Targets",
                   {
                     "name": "Sort by Stat",
-                    "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;",
+                    "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;",
                     "sortByHighest": true
                   },
                   {

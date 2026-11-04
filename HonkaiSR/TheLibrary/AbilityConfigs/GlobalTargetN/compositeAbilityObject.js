@@ -562,7 +562,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Sort by Physical Positioning",
-                  "byHighest": true
+                  "sortByHighest": true
                 }
               ]
             }
@@ -806,7 +806,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Sort by Monster Rank",
-                  "byHighest": true
+                  "sortByHighest": true
                 }
               ]
             }
@@ -982,7 +982,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Sort by Monster Rank",
-                  "byHighest": true,
+                  "sortByHighest": true,
                   "maxRank": "Elite"
                 },
                 {
@@ -1046,7 +1046,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Sort by Monster Rank",
-                  "byHighest": true,
+                  "sortByHighest": true,
                   "maxRank": "Elite"
                 },
                 {
@@ -1325,7 +1325,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Sort by Monster Rank",
-                  "byHighest": true,
+                  "sortByHighest": true,
                   "maxRank": "Elite"
                 },
                 {
@@ -2102,7 +2102,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Sort by Modifier Value",
                   "modifier": "<a class=\"gModGreen\" id=\"-103304753\">Enemy_SW_Boss_01_IF_MinionsEnhancement</a>[<span class=\"descriptionNumberColor\">Growth Hormones</span>]",
-                  "value": "Layer"
+                  "valueType": "Stacks"
                 },
                 {
                   "name": "Target Filter",
@@ -3694,9 +3694,7 @@ const compositeAbilityObject = {
                     "modifier": "<a class=\"gModGreen\" id=\"-753818633\">Monster_W4_IronTombCore_Ability06Mark</a>"
                   }
                 },
-                {
-                  "name": "Sort by Physical Positioning"
-                }
+                "Sort by Physical Positioning"
               ]
             }
           ]
@@ -3724,9 +3722,7 @@ const compositeAbilityObject = {
                     "modifier": "<a class=\"gModGreen\" id=\"1656056004\">Enemy_W4_IronTombCorePart_Ability02_Mark</a>"
                   }
                 },
-                {
-                  "name": "Sort by Physical Positioning"
-                }
+                "Sort by Physical Positioning"
               ]
             }
           ]
@@ -4072,9 +4068,7 @@ const compositeAbilityObject = {
                     }
                   }
                 },
-                {
-                  "name": "Sort by Physical Positioning"
-                },
+                "Sort by Physical Positioning",
                 {
                   "name": "Target Index",
                   "indexValue": 3
@@ -4106,9 +4100,7 @@ const compositeAbilityObject = {
                     }
                   }
                 },
-                {
-                  "name": "Sort by Physical Positioning"
-                },
+                "Sort by Physical Positioning",
                 {
                   "name": "Target Index",
                   "indexValue": 2
@@ -4140,9 +4132,7 @@ const compositeAbilityObject = {
                     }
                   }
                 },
-                {
-                  "name": "Sort by Physical Positioning"
-                },
+                "Sort by Physical Positioning",
                 {
                   "name": "Target Index",
                   "indexValue": 1
@@ -4174,9 +4164,7 @@ const compositeAbilityObject = {
                     }
                   }
                 },
-                {
-                  "name": "Sort by Physical Positioning"
-                },
+                "Sort by Physical Positioning",
                 {
                   "name": "Target Index"
                 }
@@ -4393,9 +4381,7 @@ const compositeAbilityObject = {
                     ]
                   }
                 },
-                {
-                  "name": "Sort by Physical Positioning"
-                }
+                "Sort by Physical Positioning"
               ]
             }
           ]
@@ -4427,9 +4413,7 @@ const compositeAbilityObject = {
                     }
                   }
                 },
-                {
-                  "name": "Sort by Physical Positioning"
-                }
+                "Sort by Physical Positioning"
               ]
             }
           ]
@@ -4525,9 +4509,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Player Team(Exclude Memosprites)}}.[[living]]"
                 },
-                {
-                  "name": "Sort by Physical Positioning"
-                },
+                "Sort by Physical Positioning",
                 {
                   "name": "Target Index",
                   "indexValue": 2
@@ -4548,9 +4530,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Player Team(Exclude Memosprites)}}.[[living]]"
                 },
-                {
-                  "name": "Sort by Physical Positioning"
-                },
+                "Sort by Physical Positioning",
                 {
                   "name": "Target Index",
                   "indexValue": 1
@@ -4571,9 +4551,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Player Team(Exclude Memosprites)}}.[[living]]"
                 },
-                {
-                  "name": "Sort by Physical Positioning"
-                },
+                "Sort by Physical Positioning",
                 {
                   "name": "Target Index"
                 }
@@ -4887,9 +4865,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Player Team(Exclude Memosprites)}}"
                 },
-                {
-                  "name": "Sort by Physical Positioning"
-                },
+                "Sort by Physical Positioning",
                 {
                   "name": "Target Index",
                   "indexValue": 2
@@ -4910,9 +4886,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Player Team(Exclude Memosprites)}}"
                 },
-                {
-                  "name": "Sort by Physical Positioning"
-                },
+                "Sort by Physical Positioning",
                 {
                   "name": "Target Index",
                   "indexValue": 1
@@ -4933,9 +4907,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Player Team(Exclude Memosprites)}}"
                 },
-                {
-                  "name": "Sort by Physical Positioning"
-                },
+                "Sort by Physical Positioning",
                 {
                   "name": "Target Index"
                 }
@@ -5057,9 +5029,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
                 },
-                {
-                  "name": "Sort by Physical Positioning"
-                },
+                "Sort by Physical Positioning",
                 {
                   "name": "Target Filter",
                   "conditions": {
@@ -6568,7 +6538,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Sort by Physical Positioning",
-                  "byHighest": true
+                  "sortByHighest": true
                 }
               ]
             }
@@ -7741,7 +7711,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Sort by Physical Positioning",
-                  "byHighest": true
+                  "sortByHighest": true
                 },
                 {
                   "name": "Target Index",
@@ -7765,7 +7735,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Sort by Physical Positioning",
-                  "byHighest": true
+                  "sortByHighest": true
                 },
                 {
                   "name": "Target Index",
@@ -7789,7 +7759,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Sort by Physical Positioning",
-                  "byHighest": true
+                  "sortByHighest": true
                 },
                 {
                   "name": "Target Index",
@@ -7813,7 +7783,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Sort by Physical Positioning",
-                  "byHighest": true
+                  "sortByHighest": true
                 },
                 {
                   "name": "Target Index",
@@ -7848,7 +7818,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Sort by Physical Positioning",
-                  "byHighest": true
+                  "sortByHighest": true
                 },
                 {
                   "name": "Target Index",
@@ -7872,7 +7842,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Sort by Physical Positioning",
-                  "byHighest": true
+                  "sortByHighest": true
                 },
                 {
                   "name": "Target Index",
@@ -7896,7 +7866,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Sort by Physical Positioning",
-                  "byHighest": true
+                  "sortByHighest": true
                 },
                 {
                   "name": "Target Index",
@@ -7920,7 +7890,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Sort by Physical Positioning",
-                  "byHighest": true
+                  "sortByHighest": true
                 },
                 {
                   "name": "Target Index",
@@ -7944,7 +7914,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Sort by Physical Positioning",
-                  "byHighest": true
+                  "sortByHighest": true
                 },
                 {
                   "name": "Target Index",
@@ -7966,9 +7936,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
                 },
-                {
-                  "name": "Sort by Physical Positioning"
-                }
+                "Sort by Physical Positioning"
               ]
             }
           ]
@@ -7987,7 +7955,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Sort by Physical Positioning",
-                  "byHighest": true
+                  "sortByHighest": true
                 }
               ]
             }
@@ -8005,9 +7973,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
                 },
-                {
-                  "name": "Sort by Physical Positioning"
-                }
+                "Sort by Physical Positioning"
               ]
             }
           ]
@@ -8026,7 +7992,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Sort by Physical Positioning",
-                  "byHighest": true
+                  "sortByHighest": true
                 }
               ]
             }

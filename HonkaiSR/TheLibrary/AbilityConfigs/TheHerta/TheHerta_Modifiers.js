@@ -1028,12 +1028,12 @@ const configAbility = {
                           },
                           {
                             "name": "Sort by Stat",
-                            "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                            "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                             "sortByHighest": true
                           },
                           {
                             "name": "Sort by Monster Rank",
-                            "byHighest": true
+                            "sortByHighest": true
                           }
                         ]
                       },
@@ -1116,12 +1116,12 @@ const configAbility = {
                               },
                               {
                                 "name": "Sort by Stat",
-                                "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                                "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                                 "sortByHighest": true
                               },
                               {
                                 "name": "Sort by Monster Rank",
-                                "byHighest": true
+                                "sortByHighest": true
                               }
                             ]
                           },
@@ -1208,12 +1208,12 @@ const configAbility = {
                           },
                           {
                             "name": "Sort by Stat",
-                            "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                            "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                             "sortByHighest": true
                           },
                           {
                             "name": "Sort by Monster Rank",
-                            "byHighest": true
+                            "sortByHighest": true
                           }
                         ]
                       },
@@ -1427,12 +1427,12 @@ const configAbility = {
                           },
                           {
                             "name": "Sort by Stat",
-                            "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                            "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                             "sortByHighest": true
                           },
                           {
                             "name": "Sort by Monster Rank",
-                            "byHighest": true
+                            "sortByHighest": true
                           }
                         ]
                       },
@@ -1515,12 +1515,12 @@ const configAbility = {
                               },
                               {
                                 "name": "Sort by Stat",
-                                "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                                "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                                 "sortByHighest": true
                               },
                               {
                                 "name": "Sort by Monster Rank",
-                                "byHighest": true
+                                "sortByHighest": true
                               }
                             ]
                           },
@@ -1607,12 +1607,12 @@ const configAbility = {
                           },
                           {
                             "name": "Sort by Stat",
-                            "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                            "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                             "sortByHighest": true
                           },
                           {
                             "name": "Sort by Monster Rank",
-                            "byHighest": true
+                            "sortByHighest": true
                           }
                         ]
                       },
@@ -2264,12 +2264,12 @@ const configAbility = {
                           },
                           {
                             "name": "Sort by Stat",
-                            "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                            "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                             "sortByHighest": true
                           },
                           {
                             "name": "Sort by Monster Rank",
-                            "byHighest": true
+                            "sortByHighest": true
                           }
                         ]
                       },
@@ -2352,12 +2352,12 @@ const configAbility = {
                               },
                               {
                                 "name": "Sort by Stat",
-                                "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                                "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                                 "sortByHighest": true
                               },
                               {
                                 "name": "Sort by Monster Rank",
-                                "byHighest": true
+                                "sortByHighest": true
                               }
                             ]
                           },
@@ -2444,12 +2444,12 @@ const configAbility = {
                           },
                           {
                             "name": "Sort by Stat",
-                            "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                            "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                             "sortByHighest": true
                           },
                           {
                             "name": "Sort by Monster Rank",
-                            "byHighest": true
+                            "sortByHighest": true
                           }
                         ]
                       },

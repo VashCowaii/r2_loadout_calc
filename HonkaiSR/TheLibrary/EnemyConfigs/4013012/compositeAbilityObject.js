@@ -3709,7 +3709,7 @@ const compositeAbilityObject = {
               },
               {
                 "name": "Sort by Physical Positioning",
-                "byHighest": true
+                "sortByHighest": true
               },
               {
                 "name": "Filter by Life-State",
@@ -3842,9 +3842,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
               },
-              {
-                "name": "Sort by Physical Positioning"
-              },
+              "Sort by Physical Positioning",
               {
                 "name": "Filter by Life-State",
                 "state": "Mask_AliveOnly"

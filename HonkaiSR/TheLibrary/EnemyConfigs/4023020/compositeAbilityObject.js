@@ -1157,9 +1157,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Moonlit Pegasus: Skill04 Target}}"
                       },
-                      {
-                        "name": "Sort by Physical Positioning"
-                      },
+                      "Sort by Physical Positioning",
                       {
                         "name": "Return Target",
                         "count": 1
@@ -1250,7 +1248,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Sort by Physical Positioning",
-                        "byHighest": true
+                        "sortByHighest": true
                       },
                       {
                         "name": "Return Target",
@@ -1445,9 +1443,7 @@ const compositeAbilityObject = {
                         "name": "Target Name",
                         "target": "{{Moonlit Pegasus: Skill04 Target}}"
                       },
-                      {
-                        "name": "Sort by Physical Positioning"
-                      },
+                      "Sort by Physical Positioning",
                       {
                         "name": "Return Target",
                         "count": 1
@@ -1538,7 +1534,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Sort by Physical Positioning",
-                        "byHighest": true
+                        "sortByHighest": true
                       },
                       {
                         "name": "Return Target",
@@ -2013,9 +2009,7 @@ const compositeAbilityObject = {
                 "name": "Target Name",
                 "target": "{{Moonlit Pegasus: Skill03 Target}}"
               },
-              {
-                "name": "Sort by Physical Positioning"
-              }
+              "Sort by Physical Positioning"
             ]
           },
           "maxTargets": 1,
@@ -2054,7 +2048,7 @@ const compositeAbilityObject = {
                   },
                   {
                     "name": "Sort by Physical Positioning",
-                    "byHighest": true
+                    "sortByHighest": true
                   }
                 ]
               },

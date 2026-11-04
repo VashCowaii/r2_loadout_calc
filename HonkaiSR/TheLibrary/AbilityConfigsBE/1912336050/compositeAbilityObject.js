@@ -164,9 +164,7 @@ const compositeAbilityObject = {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
                   },
-                  {
-                    "name": "Sort by Physical Positioning"
-                  }
+                  "Sort by Physical Positioning"
                 ]
               },
               "baseDelay": {
@@ -217,7 +215,7 @@ const compositeAbilityObject = {
                   },
                   {
                     "name": "Sort by Physical Positioning",
-                    "byHighest": true
+                    "sortByHighest": true
                   }
                 ]
               },
@@ -14336,9 +14334,9 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Sort by Stat",
-                        "stat": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
-                        "living": true,
-                        "sortByHighest": true
+                        "statName": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
+                        "sortByHighest": true,
+                        "living": true
                       },
                       {
                         "name": "Return Target",
@@ -14376,7 +14374,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Sort by Stat",
-                        "stat": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
+                        "statName": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
                         "living": true
                       },
                       {
@@ -14614,9 +14612,9 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Sort by Stat",
-                        "stat": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
-                        "living": true,
-                        "sortByHighest": true
+                        "statName": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
+                        "sortByHighest": true,
+                        "living": true
                       },
                       {
                         "name": "Return Target",
@@ -14654,7 +14652,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Sort by Stat",
-                        "stat": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
+                        "statName": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
                         "living": true
                       },
                       {

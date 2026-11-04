@@ -687,7 +687,7 @@ const configAbility = {
                           },
                           {
                             "name": "Sort by Stat",
-                            "stat": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;",
+                            "statName": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;",
                             "sortByHighest": true
                           },
                           {

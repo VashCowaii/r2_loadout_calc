@@ -1355,7 +1355,7 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Sort by Stat",
-                            "stat": "&nbsp;<span class=\"descriptionNumberColor\">ShieldValue</span>&nbsp;",
+                            "statName": "&nbsp;<span class=\"descriptionNumberColor\">ShieldValue</span>&nbsp;",
                             "living": true
                           },
                           {
@@ -1467,7 +1467,7 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Sort by Stat",
-                            "stat": "&nbsp;<span class=\"descriptionNumberColor\">ShieldValue</span>&nbsp;",
+                            "statName": "&nbsp;<span class=\"descriptionNumberColor\">ShieldValue</span>&nbsp;",
                             "living": true
                           },
                           {

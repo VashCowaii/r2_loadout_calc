@@ -2386,7 +2386,7 @@ const configAbility = {
                       {
                         "name": "Sort by Modifier Value",
                         "modifier": "<a class=\"gModGreen\" id=\"-1367812201\">TheHerta_Passive_MagicMark</a>[<span class=\"descriptionNumberColor\">Interpretation</span>]",
-                        "value": "Layer",
+                        "valueType": "Stacks",
                         "sortByHighest": true
                       }
                     ]
@@ -3037,12 +3037,12 @@ const configAbility = {
                       "Shuffle Targets",
                       {
                         "name": "Sort by Stat",
-                        "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
+                        "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
                         "sortByHighest": true
                       },
                       {
                         "name": "Sort by Monster Rank",
-                        "byHighest": true
+                        "sortByHighest": true
                       }
                     ]
                   },

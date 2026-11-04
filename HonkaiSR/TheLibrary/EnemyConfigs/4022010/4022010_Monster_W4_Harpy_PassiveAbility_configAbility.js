@@ -47,7 +47,7 @@ const configAbility = {
                   },
                   {
                     "name": "Sort by Monster Rank",
-                    "byHighest": true
+                    "sortByHighest": true
                   },
                   {
                     "name": "Return Target",
@@ -90,7 +90,7 @@ const configAbility = {
                   },
                   {
                     "name": "Sort by Monster Rank",
-                    "byHighest": true
+                    "sortByHighest": true
                   },
                   {
                     "name": "Return Target",
@@ -133,7 +133,7 @@ const configAbility = {
                   },
                   {
                     "name": "Sort by Monster Rank",
-                    "byHighest": true
+                    "sortByHighest": true
                   },
                   {
                     "name": "Return Target",

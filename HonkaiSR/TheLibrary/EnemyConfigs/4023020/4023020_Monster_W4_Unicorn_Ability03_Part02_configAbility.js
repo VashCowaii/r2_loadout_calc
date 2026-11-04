@@ -118,9 +118,7 @@ const configAbility = {
             "name": "Target Name",
             "target": "{{Moonlit Pegasus: Skill03 Target}}"
           },
-          {
-            "name": "Sort by Physical Positioning"
-          }
+          "Sort by Physical Positioning"
         ]
       },
       "maxTargets": 1,
@@ -159,7 +157,7 @@ const configAbility = {
               },
               {
                 "name": "Sort by Physical Positioning",
-                "byHighest": true
+                "sortByHighest": true
               }
             ]
           },

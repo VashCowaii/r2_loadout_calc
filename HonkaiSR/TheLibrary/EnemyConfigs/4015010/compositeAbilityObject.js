@@ -2713,7 +2713,7 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Sort by Monster Rank",
-                            "byHighest": true
+                            "sortByHighest": true
                           }
                         ]
                       },
@@ -2860,7 +2860,7 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Sort by Monster Rank",
-                            "byHighest": true
+                            "sortByHighest": true
                           }
                         ]
                       },

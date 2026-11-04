@@ -1194,9 +1194,7 @@ const compositeAbilityObject = {
                               "name": "Target Name",
                               "target": "{{Player Team All}}"
                             },
-                            {
-                              "name": "Sort by Physical Positioning"
-                            },
+                            "Sort by Physical Positioning",
                             {
                               "name": "Target Index",
                               "indexValue": 1
@@ -1247,7 +1245,7 @@ const compositeAbilityObject = {
                             },
                             {
                               "name": "Sort by Physical Positioning",
-                              "byHighest": true
+                              "sortByHighest": true
                             },
                             {
                               "name": "Target Index",

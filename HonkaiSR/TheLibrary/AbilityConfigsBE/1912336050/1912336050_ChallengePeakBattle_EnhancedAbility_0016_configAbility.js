@@ -101,9 +101,9 @@ const configAbility = {
                   },
                   {
                     "name": "Sort by Stat",
-                    "stat": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
-                    "living": true,
-                    "sortByHighest": true
+                    "statName": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
+                    "sortByHighest": true,
+                    "living": true
                   },
                   {
                     "name": "Return Target",
@@ -141,7 +141,7 @@ const configAbility = {
                   },
                   {
                     "name": "Sort by Stat",
-                    "stat": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
+                    "statName": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
                     "living": true
                   },
                   {

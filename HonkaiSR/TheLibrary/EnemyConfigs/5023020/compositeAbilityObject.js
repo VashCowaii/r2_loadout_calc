@@ -56,7 +56,7 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Sort by Stat",
-                        "stat": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;",
+                        "statName": "&nbsp;<span class=\"descriptionNumberColor\">AttackSUM</span>&nbsp;",
                         "sortByHighest": true
                       },
                       {

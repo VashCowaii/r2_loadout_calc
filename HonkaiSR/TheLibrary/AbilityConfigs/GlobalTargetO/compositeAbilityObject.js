@@ -21,9 +21,7 @@ const compositeAbilityObject = {
           "nameTarget": "sortByLineup",
           "isTargetOperator": true,
           "execute": [
-            {
-              "name": "Sort by Physical Positioning"
-            }
+            "Sort by Physical Positioning"
           ]
         },
         {
@@ -31,9 +29,7 @@ const compositeAbilityObject = {
           "nameTarget": "sortByEnemyRank",
           "isTargetOperator": true,
           "execute": [
-            {
-              "name": "Sort by Monster Rank"
-            }
+            "Sort by Monster Rank"
           ]
         },
         {
@@ -75,7 +71,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Sort by Stat",
-              "stat": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;"
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">DamageBreakSUM</span>&nbsp;"
             }
           ]
         },
@@ -86,7 +82,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Sort by Stat",
-              "stat": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessMax</span>&nbsp;"
             }
           ]
         },
@@ -97,7 +93,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Sort by Stat Percentage",
-              "stat": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessCurrent%</span>&nbsp;"
+              "statPercentName": "&nbsp;<span class=\"descriptionNumberColor\">ToughnessCurrent%</span>&nbsp;"
             }
           ]
         },
@@ -108,7 +104,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Sort by Stat",
-              "stat": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">CurrentToughness</span>&nbsp;"
             }
           ]
         },
@@ -119,7 +115,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Sort by Stat",
-              "stat": "&nbsp;<span class=\"descriptionNumberColor\">ShieldValue</span>&nbsp;"
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">ShieldValue</span>&nbsp;"
             }
           ]
         },
@@ -130,7 +126,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Sort by Stat",
-              "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
             }
           ]
         },
@@ -141,7 +137,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Sort by Stat Percentage",
-              "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent%</span>&nbsp;"
+              "statPercentName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent%</span>&nbsp;"
             }
           ]
         },
@@ -152,7 +148,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Sort by Stat",
-              "stat": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
+              "statName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
             }
           ]
         },

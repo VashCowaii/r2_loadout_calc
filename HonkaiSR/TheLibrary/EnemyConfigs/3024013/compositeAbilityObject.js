@@ -756,7 +756,7 @@ const compositeAbilityObject = {
                               },
                               {
                                 "name": "Sort by Stat",
-                                "stat": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;",
+                                "statName": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;",
                                 "sortByHighest": true
                               },
                               {
@@ -5484,7 +5484,7 @@ const compositeAbilityObject = {
                   },
                   {
                     "name": "Sort by Physical Positioning",
-                    "byHighest": true
+                    "sortByHighest": true
                   }
                 ]
               },

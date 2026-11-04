@@ -46,9 +46,7 @@ const configAbility = {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
               },
-              {
-                "name": "Sort by Physical Positioning"
-              }
+              "Sort by Physical Positioning"
             ]
           },
           "baseDelay": {
@@ -99,7 +97,7 @@ const configAbility = {
               },
               {
                 "name": "Sort by Physical Positioning",
-                "byHighest": true
+                "sortByHighest": true
               }
             ]
           },
