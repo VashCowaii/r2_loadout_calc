@@ -3173,10 +3173,7 @@ const compositeAbilityObject = {
           "show": "HideCustom",
           "forceDisplayUltButton": true
         },
-        {
-          "name": "Toggle View Mode",
-          "enable": false
-        },
+        "Toggle View Mode",
         {
           "name": "IF",
           "conditions": {

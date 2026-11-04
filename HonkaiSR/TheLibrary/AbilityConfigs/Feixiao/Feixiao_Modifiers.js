@@ -833,10 +833,7 @@ const configAbility = {
         {
           "eventTrigger": "When Constructing Modifier",
           "execute": [
-            {
-              "name": "Toggle View Mode",
-              "enable": false
-            },
+            "Toggle View Mode",
             {
               "name": "Define Custom Variable",
               "variableName": "ComboHitCount",
