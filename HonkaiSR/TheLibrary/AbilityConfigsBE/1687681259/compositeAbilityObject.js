@@ -5663,7 +5663,7 @@ const compositeAbilityObject = {
                   "DV_TargetDebuffCountMax"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Find New Target",
                   "from": {

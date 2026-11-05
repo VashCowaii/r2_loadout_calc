@@ -898,7 +898,7 @@ const configAbility = {
                   ]
                 }
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Define Custom Variable",
                   "variableName": "_TMP_VAL",
@@ -925,7 +925,7 @@ const configAbility = {
                   "_TMP_VAL"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -1297,7 +1297,7 @@ const configAbility = {
                   ]
                 }
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Define Custom Variable",
                   "variableName": "_TMP_VAL",
@@ -1324,7 +1324,7 @@ const configAbility = {
                   "_TMP_VAL"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -2134,7 +2134,7 @@ const configAbility = {
                   ]
                 }
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Define Custom Variable",
                   "variableName": "_TMP_VAL",
@@ -2161,7 +2161,7 @@ const configAbility = {
                   "_TMP_VAL"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "IF",
                   "conditions": {

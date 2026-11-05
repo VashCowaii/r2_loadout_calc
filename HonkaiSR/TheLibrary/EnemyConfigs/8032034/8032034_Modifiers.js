@@ -2400,7 +2400,7 @@ const configAbility = {
                                       "MDF_MaxLoopCount_RL"
                                     ]
                                   },
-                                  "Event": [
+                                  "execute": [
                                     {
                                       "name": "Define Custom Variable",
                                       "variableName": "MDF_DiceResult",
@@ -2456,7 +2456,7 @@ const configAbility = {
                                           "MDF_MaxLoopCount_RL"
                                         ]
                                       },
-                                      "Event": [
+                                      "execute": [
                                         {
                                           "name": "Define Custom Variable",
                                           "variableName": "MDF_DiceResult",
@@ -2517,7 +2517,7 @@ const configAbility = {
                                               "MDF_MaxLoopCount_RL"
                                             ]
                                           },
-                                          "Event": [
+                                          "execute": [
                                             {
                                               "name": "Define Custom Variable",
                                               "variableName": "MDF_DiceResult",
@@ -2578,7 +2578,7 @@ const configAbility = {
                                                   "MDF_MaxLoopCount_RL"
                                                 ]
                                               },
-                                              "Event": [
+                                              "execute": [
                                                 {
                                                   "name": "Define Custom Variable",
                                                   "variableName": "MDF_DiceResult",
@@ -2639,7 +2639,7 @@ const configAbility = {
                                                       "MDF_MaxLoopCount_RL"
                                                     ]
                                                   },
-                                                  "Event": [
+                                                  "execute": [
                                                     {
                                                       "name": "Define Custom Variable",
                                                       "variableName": "MDF_DiceResult",
@@ -2688,7 +2688,7 @@ const configAbility = {
                                                       "MDF_MaxLoopCount_RL"
                                                     ]
                                                   },
-                                                  "Event": [
+                                                  "execute": [
                                                     {
                                                       "name": "Define Custom Variable",
                                                       "variableName": "MDF_DiceResult",

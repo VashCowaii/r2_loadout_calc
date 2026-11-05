@@ -517,7 +517,7 @@ const configAbility = {
                   "MDF_AddValue"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Adjust Variable Value",
                   "adjustmentType": "Add to Value (Default)",

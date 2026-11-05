@@ -535,7 +535,7 @@ const compositeAbilityObject = {
               "DeathCount"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Define Custom Variable with Stat",
               "target": {

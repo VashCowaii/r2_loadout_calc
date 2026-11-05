@@ -440,7 +440,7 @@ const configAbility = {
                       "DamageUpFlag"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {
@@ -501,7 +501,7 @@ const configAbility = {
                       "DamageUpFlag"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {
@@ -600,7 +600,7 @@ const configAbility = {
                       "DamageUpFlag"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {
@@ -661,7 +661,7 @@ const configAbility = {
                       "DamageUpFlag"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {

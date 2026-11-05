@@ -1367,7 +1367,7 @@ const compositeAbilityObject = {
         "Ability Start",
         {
           "name": "Looped Event",
-          "Event": [
+          "execute": [
             "Move to Next Listed Target",
             {
               "name": "Declare Custom Variable",
@@ -1836,7 +1836,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 5,
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {

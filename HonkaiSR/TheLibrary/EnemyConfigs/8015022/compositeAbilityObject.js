@@ -609,7 +609,7 @@ const compositeAbilityObject = {
                               "FlowerLevel"
                             ]
                           },
-                          "Event": [
+                          "execute": [
                             {
                               "name": "Add Events/Bonuses",
                               "to": {
@@ -659,7 +659,7 @@ const compositeAbilityObject = {
                               "FlowerLevel"
                             ]
                           },
-                          "Event": [
+                          "execute": [
                             {
                               "name": "Add Events/Bonuses",
                               "to": {
@@ -10843,7 +10843,7 @@ const compositeAbilityObject = {
               "Skill02Count"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {

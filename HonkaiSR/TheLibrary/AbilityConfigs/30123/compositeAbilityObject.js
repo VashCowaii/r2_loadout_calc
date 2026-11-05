@@ -2929,7 +2929,7 @@ const compositeAbilityObject = {
                       "BattleEvent_P1_ADF"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Find New Target",
                       "from": {
@@ -3024,7 +3024,7 @@ const compositeAbilityObject = {
                       "BattleEvent_P1_ADF"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Find New Target",
                       "from": {

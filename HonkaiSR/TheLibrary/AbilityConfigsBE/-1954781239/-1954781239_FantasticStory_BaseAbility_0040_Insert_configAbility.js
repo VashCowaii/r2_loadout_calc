@@ -192,7 +192,7 @@ const configAbility = {
           "ADF_2_get"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Find New Target",
           "from": {

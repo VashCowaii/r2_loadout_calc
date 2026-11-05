@@ -280,7 +280,7 @@ const configAbility = {
           "CastoriceBPLoopMax"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Define Custom Variable",
           "variableName": "CastoriceBPLoop",

@@ -217,7 +217,7 @@ const configAbility = {
                   "EnergyLayer"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "IF",
                   "conditions": {

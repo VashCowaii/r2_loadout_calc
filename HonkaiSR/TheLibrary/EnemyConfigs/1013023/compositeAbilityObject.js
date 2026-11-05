@@ -4279,7 +4279,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 5,
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {
@@ -4351,7 +4351,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 5,
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {

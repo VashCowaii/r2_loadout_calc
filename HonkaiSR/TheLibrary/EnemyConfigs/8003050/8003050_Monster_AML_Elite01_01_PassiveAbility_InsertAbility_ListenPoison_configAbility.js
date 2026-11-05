@@ -14,7 +14,7 @@ const configAbility = {
           "Monster_AML_Elite01_01_DOTHitCounter"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Add Events/Bonuses",
           "to": {

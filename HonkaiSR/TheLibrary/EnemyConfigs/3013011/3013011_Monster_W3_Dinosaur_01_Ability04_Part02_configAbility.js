@@ -28,7 +28,7 @@ const configAbility = {
               "UnusedUnderThisBase_10372"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Add Events/Bonuses",
               "to": {

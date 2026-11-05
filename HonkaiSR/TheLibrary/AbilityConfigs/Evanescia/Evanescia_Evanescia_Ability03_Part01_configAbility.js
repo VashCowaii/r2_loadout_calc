@@ -91,7 +91,7 @@ const configAbility = {
           "ENEMIES_OBJECT_UNUSED__249"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Define Custom Variable",
           "variableName": "_index",

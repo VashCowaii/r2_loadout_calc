@@ -14,7 +14,7 @@ const configAbility = {
           "FlowerPower"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Find New Target",
           "from": {

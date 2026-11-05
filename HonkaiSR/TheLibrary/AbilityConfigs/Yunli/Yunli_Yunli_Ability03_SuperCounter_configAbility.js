@@ -23,7 +23,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": 7,
-      "Event": [
+      "execute": [
         {
           "name": "ATK Scaling DMG",
           "target": {
@@ -230,7 +230,7 @@ const configAbility = {
           "MDF_LoopCount"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Find New Target",
           "from": {

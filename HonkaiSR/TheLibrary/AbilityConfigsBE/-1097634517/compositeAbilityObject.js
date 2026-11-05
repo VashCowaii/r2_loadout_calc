@@ -916,7 +916,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 5,
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -1047,7 +1047,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 5,
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -1184,7 +1184,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 5,
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -1315,7 +1315,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 5,
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -2353,7 +2353,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 7,
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {
@@ -2392,7 +2392,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 1,
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {
@@ -2643,7 +2643,7 @@ const compositeAbilityObject = {
               }
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Update Next Wave Enemy",
               "context": "ContextAbility",
@@ -2770,7 +2770,7 @@ const compositeAbilityObject = {
               }
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Update Next Wave Enemy",
               "context": "ContextAbility",
@@ -2899,7 +2899,7 @@ const compositeAbilityObject = {
               }
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Update Next Wave Enemy",
               "context": "ContextAbility",
@@ -3355,7 +3355,7 @@ const compositeAbilityObject = {
               "SummonCount"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "IF",
               "conditions": {
@@ -3615,7 +3615,7 @@ const compositeAbilityObject = {
               "SummonCount"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Create Enemies",
               "delayPercent": 0.5,

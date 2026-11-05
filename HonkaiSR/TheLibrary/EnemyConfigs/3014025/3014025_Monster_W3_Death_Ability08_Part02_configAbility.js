@@ -57,7 +57,7 @@ const configAbility = {
               }
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "IF",
               "conditions": {

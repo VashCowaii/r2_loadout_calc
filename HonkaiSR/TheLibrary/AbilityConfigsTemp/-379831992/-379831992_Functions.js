@@ -673,7 +673,7 @@ const configAbility = {
                   "MDF_CoinDrop"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Define Variable with Random Value",
                   "variableName": "#CL_CoinRandomRotY",
@@ -721,7 +721,7 @@ const configAbility = {
                   "MDF_OrbDrop"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Random Event",
                   "odds": [
@@ -776,7 +776,7 @@ const configAbility = {
                   "MDF_Orb2Drop"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Random Event",
                   "odds": [
@@ -831,7 +831,7 @@ const configAbility = {
                   "MDF_Orb3Drop"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Random Event",
                   "odds": [
@@ -886,7 +886,7 @@ const configAbility = {
                   "MDF_Orb4Drop"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Random Event",
                   "odds": [
@@ -963,7 +963,7 @@ const configAbility = {
                   "MDF_CoinDrop"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Define Variable with Random Value",
                   "variableName": "#CL_CoinRandomRotY",
@@ -1011,7 +1011,7 @@ const configAbility = {
                   "MDF_OrbDrop"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Random Event",
                   "odds": [
@@ -1066,7 +1066,7 @@ const configAbility = {
                   "MDF_Orb2Drop"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Random Event",
                   "odds": [
@@ -1121,7 +1121,7 @@ const configAbility = {
                   "MDF_Orb3Drop"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Random Event",
                   "odds": [
@@ -1176,7 +1176,7 @@ const configAbility = {
                   "MDF_Orb4Drop"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Random Event",
                   "odds": [

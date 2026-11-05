@@ -4065,7 +4065,7 @@ const compositeAbilityObject = {
               "Skill07ArmorCount"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -4229,7 +4229,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 5,
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {
@@ -4259,7 +4259,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 10,
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {
@@ -4914,7 +4914,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 8,
-          "Event": [
+          "execute": [
             {
               "name": "Random Event",
               "odds": [
@@ -5072,7 +5072,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 7,
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {
@@ -5102,7 +5102,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 1,
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {

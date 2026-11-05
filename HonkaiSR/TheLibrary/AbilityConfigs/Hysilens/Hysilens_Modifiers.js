@@ -1450,7 +1450,7 @@ const configAbility = {
                       "MDF_DotHitCount"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "Scoring_Hars_Count",
@@ -1900,7 +1900,7 @@ const configAbility = {
                       "MDF_DotHitCount"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "Scoring_Hars_Count",

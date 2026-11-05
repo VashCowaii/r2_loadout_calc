@@ -900,7 +900,7 @@ const compositeAbilityObject = {
                       "MDF_Layer"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Inject Extra-Turn",
                       "actionTag": null,

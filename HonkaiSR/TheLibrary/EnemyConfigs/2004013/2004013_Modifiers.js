@@ -2655,7 +2655,7 @@ const configAbility = {
                       "MDF_LoopCount"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "IF",
                       "conditions": {

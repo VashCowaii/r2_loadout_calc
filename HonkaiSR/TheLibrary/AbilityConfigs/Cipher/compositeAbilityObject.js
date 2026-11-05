@@ -149,7 +149,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": 99999,
-              "Event": [
+              "execute": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -173,8 +173,7 @@ const compositeAbilityObject = {
           "modifierTasks": [
             {
               "name": "Looped Event",
-              "maxLoops": 99999,
-              "Event": []
+              "maxLoops": 99999
             }
           ],
           "onCreation": [

@@ -3019,7 +3019,7 @@ const compositeAbilityObject = {
                           "BattleEventAbility_Challenge_Month_24_Count"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Find New Target",
                           "from": {

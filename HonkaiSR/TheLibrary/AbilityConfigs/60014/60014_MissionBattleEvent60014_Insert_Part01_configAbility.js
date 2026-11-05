@@ -74,7 +74,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": 9,
-      "Event": [
+      "execute": [
         {
           "name": "Find New Target",
           "from": {

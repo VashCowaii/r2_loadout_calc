@@ -24,7 +24,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": 8,
-      "Event": [
+      "execute": [
         {
           "name": "Random Event",
           "odds": [

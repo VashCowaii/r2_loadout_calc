@@ -2048,7 +2048,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 2,
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -2162,7 +2162,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 2,
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -3953,7 +3953,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 2,
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {

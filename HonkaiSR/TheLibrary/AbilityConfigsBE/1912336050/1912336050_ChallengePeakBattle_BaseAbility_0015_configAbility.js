@@ -191,7 +191,7 @@ const configAbility = {
                       "MDF_BPCost"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {

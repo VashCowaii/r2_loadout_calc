@@ -668,7 +668,7 @@ const configAbility = {
                       ]
                     }
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "SkillP01_EnhanceInsertBuffStack",

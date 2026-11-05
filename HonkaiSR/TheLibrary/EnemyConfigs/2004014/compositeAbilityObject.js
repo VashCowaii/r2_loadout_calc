@@ -5234,7 +5234,7 @@ const compositeAbilityObject = {
                           "MDF_LoopCount"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "IF",
                           "conditions": {
@@ -6782,7 +6782,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 4,
-          "Event": [
+          "execute": [
             {
               "name": "IF",
               "conditions": {
@@ -10264,7 +10264,7 @@ const compositeAbilityObject = {
                   "MDF_StackCount"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {

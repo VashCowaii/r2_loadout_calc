@@ -66,7 +66,7 @@ const configAbility = {
           "SummonCount"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Create Enemies",
           "delayPercent": 0.5,

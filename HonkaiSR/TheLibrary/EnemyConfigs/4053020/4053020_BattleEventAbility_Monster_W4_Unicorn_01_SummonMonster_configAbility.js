@@ -62,7 +62,7 @@ const configAbility = {
               "DarkTeamCount"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "SWITCH",
               "switchValue": {

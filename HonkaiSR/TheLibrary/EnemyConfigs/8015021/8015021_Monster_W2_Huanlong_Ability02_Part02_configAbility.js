@@ -90,7 +90,7 @@ const configAbility = {
           "Skill02Count"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Find New Target",
           "from": {

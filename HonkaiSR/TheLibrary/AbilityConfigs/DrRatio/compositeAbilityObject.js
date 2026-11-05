@@ -1769,7 +1769,7 @@ const compositeAbilityObject = {
                   "_DebuffCount"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {
@@ -3279,7 +3279,7 @@ const compositeAbilityObject = {
                 "compareType": ">=",
                 "value2": 1
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Define Custom Variable",
                   "variableName": "_DebuffCount",
@@ -3411,7 +3411,7 @@ const compositeAbilityObject = {
                 "compareType": ">=",
                 "value2": 1
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Define Custom Variable",
                   "variableName": "_EffDebuffCount",

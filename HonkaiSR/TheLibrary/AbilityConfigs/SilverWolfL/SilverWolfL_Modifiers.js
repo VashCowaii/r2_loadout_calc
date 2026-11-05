@@ -593,7 +593,7 @@ const configAbility = {
                       "MDF_Layer"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Inject Ability Use",
                       "conditionActive": {
@@ -1875,7 +1875,7 @@ const configAbility = {
                       "_bpChange"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "IF",
                       "conditions": {

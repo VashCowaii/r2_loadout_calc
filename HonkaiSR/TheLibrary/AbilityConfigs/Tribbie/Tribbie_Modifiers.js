@@ -337,7 +337,7 @@ const configAbility = {
                           "MDF_Count"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "ATK Scaling DMG",
                           "target": {

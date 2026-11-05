@@ -1786,7 +1786,7 @@ const compositeAbilityObject = {
                           "ModifierLayers"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "IF",
                           "conditions": {

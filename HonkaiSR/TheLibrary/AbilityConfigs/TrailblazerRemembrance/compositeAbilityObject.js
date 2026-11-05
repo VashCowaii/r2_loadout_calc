@@ -4111,7 +4111,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 4,
-          "Event": [
+          "execute": [
             {
               "name": "Define Custom Variable",
               "variableName": "_index",

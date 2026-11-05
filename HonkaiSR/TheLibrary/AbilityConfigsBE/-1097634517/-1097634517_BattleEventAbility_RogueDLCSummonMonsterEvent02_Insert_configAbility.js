@@ -66,7 +66,7 @@ const configAbility = {
           "SummonCount"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "IF",
           "conditions": {

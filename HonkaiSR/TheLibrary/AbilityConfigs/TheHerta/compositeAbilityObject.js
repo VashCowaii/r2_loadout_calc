@@ -922,7 +922,7 @@ const compositeAbilityObject = {
                       ]
                     }
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "_TMP_VAL",
@@ -949,7 +949,7 @@ const compositeAbilityObject = {
                       "_TMP_VAL"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -1321,7 +1321,7 @@ const compositeAbilityObject = {
                       ]
                     }
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "_TMP_VAL",
@@ -1348,7 +1348,7 @@ const compositeAbilityObject = {
                       "_TMP_VAL"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -2158,7 +2158,7 @@ const compositeAbilityObject = {
                       ]
                     }
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "_TMP_VAL",
@@ -2185,7 +2185,7 @@ const compositeAbilityObject = {
                       "_TMP_VAL"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -5853,7 +5853,7 @@ const compositeAbilityObject = {
                       "_Exec_Layer"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Find New Target",
                       "from": {
@@ -6521,7 +6521,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Looped Event",
                   "maxLoops": 1,
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Find New Target",
                       "from": {

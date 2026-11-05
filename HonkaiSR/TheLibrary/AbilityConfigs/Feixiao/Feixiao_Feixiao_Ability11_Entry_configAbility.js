@@ -124,14 +124,14 @@ const configAbility = {
     },
     {
       "name": "Looped Event",
-      "maxLoops": 99,
       "conditions": {
         "name": "Compare: Variable",
         "value1": "Combo1_Loop_Index",
         "compareType": ">",
         "value2": 4
       },
-      "Event": [
+      "maxLoops": 99,
+      "execute": [
         {
           "name": "Define Custom Variable",
           "variableName": "Combo1_Loop_Index",

@@ -606,7 +606,7 @@ const compositeAbilityObject = {
                       "MDF_Layer"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {

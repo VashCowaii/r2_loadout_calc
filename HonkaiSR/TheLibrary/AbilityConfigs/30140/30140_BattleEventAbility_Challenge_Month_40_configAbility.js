@@ -229,7 +229,7 @@ const configAbility = {
                           "MDF_SummonCount"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "ATK Scaling DMG",
                           "target": {
@@ -282,7 +282,7 @@ const configAbility = {
                               "MDF_SummonCount"
                             ]
                           },
-                          "Event": [
+                          "execute": [
                             {
                               "name": "ATK Scaling DMG",
                               "target": {
@@ -323,7 +323,7 @@ const configAbility = {
                               "MDF_SummonCount"
                             ]
                           },
-                          "Event": [
+                          "execute": [
                             {
                               "name": "ATK Scaling DMG",
                               "target": {

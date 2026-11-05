@@ -2959,7 +2959,7 @@ const compositeAbilityObject = {
                   4
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Find New Target",
                   "from": {

@@ -142,7 +142,7 @@ const configAbility = {
                   "MDF_Layer"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {
@@ -217,7 +217,7 @@ const configAbility = {
                   "MDF_Layer"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {
@@ -302,7 +302,7 @@ const configAbility = {
                   "MDF_Layer"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {
@@ -377,7 +377,7 @@ const configAbility = {
                   "MDF_Layer"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {
@@ -462,7 +462,7 @@ const configAbility = {
                   "MDF_Layer"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {
@@ -532,7 +532,7 @@ const configAbility = {
                   "MDF_Layer"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {

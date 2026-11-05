@@ -811,7 +811,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 3,
-          "Event": [
+          "execute": [
             {
               "name": "Add Events/Bonuses",
               "to": {
@@ -1493,7 +1493,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 5,
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {
@@ -1889,7 +1889,7 @@ const compositeAbilityObject = {
               "Boss_Cocolia_IceValue"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Add Events/Bonuses",
               "to": {

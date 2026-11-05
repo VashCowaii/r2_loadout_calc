@@ -51,7 +51,7 @@ const configAbility = {
         "compareType": ">",
         "value2": 0
       },
-      "Event": [
+      "execute": [
         {
           "name": "Shot Fired"
         },
@@ -110,7 +110,7 @@ const configAbility = {
         "compareType": ">",
         "value2": 0
       },
-      "Event": [
+      "execute": [
         {
           "name": "Shot Fired"
         },
@@ -169,7 +169,7 @@ const configAbility = {
         "compareType": ">",
         "value2": 0
       },
-      "Event": [
+      "execute": [
         {
           "name": "Shot Fired"
         },
@@ -262,7 +262,7 @@ const configAbility = {
         "compareType": ">",
         "value2": 1
       },
-      "Event": [
+      "execute": [
         {
           "name": "Shot Fired",
           "execute": [

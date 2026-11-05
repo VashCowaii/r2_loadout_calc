@@ -155,7 +155,7 @@ const configAbility = {
                       "BattleEventAbility_Challenge_Month_21_Count"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Find New Target",
                       "from": {

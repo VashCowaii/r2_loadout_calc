@@ -651,7 +651,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Looped Event",
                   "maxLoops": 2,
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {
@@ -732,7 +732,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Looped Event",
                       "maxLoops": 2,
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Add Events/Bonuses",
                           "to": {
@@ -790,7 +790,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Looped Event",
                           "maxLoops": 2,
-                          "Event": [
+                          "execute": [
                             {
                               "name": "Add Events/Bonuses",
                               "to": {
@@ -839,7 +839,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Looped Event",
                           "maxLoops": 2,
-                          "Event": [
+                          "execute": [
                             {
                               "name": "Add Events/Bonuses",
                               "to": {

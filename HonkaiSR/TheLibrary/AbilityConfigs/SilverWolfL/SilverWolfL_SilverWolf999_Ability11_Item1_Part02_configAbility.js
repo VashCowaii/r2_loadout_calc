@@ -53,7 +53,7 @@ const configAbility = {
           "UNKNOWN_SW999_OBJECT[5]"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "IF",
           "conditions": {

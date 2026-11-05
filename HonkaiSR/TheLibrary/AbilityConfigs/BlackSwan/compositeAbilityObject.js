@@ -4546,7 +4546,7 @@ const compositeAbilityObject = {
               }
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Define Custom Variable",
               "variableName": "_loop_count",
@@ -5194,8 +5194,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Looped Event",
-          "maxLoops": 6,
-          "Event": []
+          "maxLoops": 6
         },
         {
           "name": "Add Events/Bonuses",
@@ -5577,7 +5576,7 @@ const compositeAbilityObject = {
                       "parameter[0]_AddLayer"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "IF",
                       "conditions": {

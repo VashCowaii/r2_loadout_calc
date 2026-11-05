@@ -2227,7 +2227,7 @@ const compositeAbilityObject = {
               2
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {

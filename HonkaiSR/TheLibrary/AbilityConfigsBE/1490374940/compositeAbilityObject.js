@@ -3464,7 +3464,7 @@ const compositeAbilityObject = {
                           "MDF_Count"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Find New Target",
                           "from": {
@@ -4052,7 +4052,7 @@ const compositeAbilityObject = {
                           "MDF_Count"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Find New Target",
                           "from": {
@@ -5256,7 +5256,7 @@ const compositeAbilityObject = {
                           "MDF_Count"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Find New Target",
                           "from": {
@@ -6164,7 +6164,7 @@ const compositeAbilityObject = {
                           "MDF_Count"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Find New Target",
                           "from": {
@@ -6786,7 +6786,7 @@ const compositeAbilityObject = {
                               "MDF_SummonCount"
                             ]
                           },
-                          "Event": [
+                          "execute": [
                             {
                               "name": "ATK Scaling DMG",
                               "target": {
@@ -6839,7 +6839,7 @@ const compositeAbilityObject = {
                                   "MDF_SummonCount"
                                 ]
                               },
-                              "Event": [
+                              "execute": [
                                 {
                                   "name": "ATK Scaling DMG",
                                   "target": {
@@ -6880,7 +6880,7 @@ const compositeAbilityObject = {
                                   "MDF_SummonCount"
                                 ]
                               },
-                              "Event": [
+                              "execute": [
                                 {
                                   "name": "ATK Scaling DMG",
                                   "target": {
@@ -7219,7 +7219,7 @@ const compositeAbilityObject = {
                           "MDF_Count"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Find New Target",
                           "from": {
@@ -8520,7 +8520,7 @@ const compositeAbilityObject = {
                           "MDF_Count"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Find New Target",
                           "from": {
@@ -9006,7 +9006,7 @@ const compositeAbilityObject = {
                               "MDF_DmgCount"
                             ]
                           },
-                          "Event": [
+                          "execute": [
                             {
                               "name": "ATK Scaling DMG",
                               "target": {
@@ -9059,7 +9059,7 @@ const compositeAbilityObject = {
                                   "MDF_DmgCount"
                                 ]
                               },
-                              "Event": [
+                              "execute": [
                                 {
                                   "name": "ATK Scaling DMG",
                                   "target": {
@@ -9100,7 +9100,7 @@ const compositeAbilityObject = {
                                   "MDF_DmgCount"
                                 ]
                               },
-                              "Event": [
+                              "execute": [
                                 {
                                   "name": "ATK Scaling DMG",
                                   "target": {
@@ -9654,7 +9654,7 @@ const compositeAbilityObject = {
                           "MDF_Count"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Find New Target",
                           "from": {
@@ -11335,7 +11335,7 @@ const compositeAbilityObject = {
                           "MDF_Count"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Find New Target",
                           "from": {
@@ -11794,7 +11794,7 @@ const compositeAbilityObject = {
                           "MDF_Count"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Find New Target",
                           "from": {
@@ -13258,7 +13258,7 @@ const compositeAbilityObject = {
                           "MDF_Count"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Find New Target",
                           "from": {
@@ -17387,7 +17387,7 @@ const compositeAbilityObject = {
                           "BattleEventAbility_Challenge_Month_24_Count"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Find New Target",
                           "from": {
@@ -17981,7 +17981,7 @@ const compositeAbilityObject = {
                       "BattleEvent_P1_ADF"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Find New Target",
                       "from": {
@@ -18075,7 +18075,7 @@ const compositeAbilityObject = {
                       "BattleEvent_P1_ADF"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Find New Target",
                       "from": {
@@ -19171,7 +19171,7 @@ const compositeAbilityObject = {
                           "BattleEventAbility_Challenge_Month_21_Count"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Find New Target",
                           "from": {
@@ -19808,7 +19808,7 @@ const compositeAbilityObject = {
                           "MDF_Count"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Find New Target",
                           "from": {

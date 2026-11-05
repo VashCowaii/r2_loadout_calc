@@ -532,7 +532,7 @@ const configAbility = {
               "Skill04Count"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Add Events/Bonuses",
               "to": {

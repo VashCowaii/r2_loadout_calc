@@ -269,7 +269,7 @@ const compositeAbilityObject = {
               }
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Update Next Wave Enemy",
               "context": "ContextAbility",

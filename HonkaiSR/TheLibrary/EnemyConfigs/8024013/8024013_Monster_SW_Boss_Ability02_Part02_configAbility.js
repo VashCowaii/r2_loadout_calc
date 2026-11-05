@@ -8,7 +8,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": 8,
-      "Event": [
+      "execute": [
         {
           "name": "IF",
           "conditions": {

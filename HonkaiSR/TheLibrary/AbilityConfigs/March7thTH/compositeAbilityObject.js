@@ -3784,7 +3784,7 @@ const compositeAbilityObject = {
                   "Skill11_HitCount"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"78809812\">Deal_Loop_Hit</a>"
@@ -3846,7 +3846,7 @@ const compositeAbilityObject = {
                   "Skill11_HitCount"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"78809812\">Deal_Loop_Hit</a>"
@@ -4372,7 +4372,7 @@ const compositeAbilityObject = {
               }
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Define Custom Variable",
               "scope": "ContextCaster",

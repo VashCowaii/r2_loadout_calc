@@ -67,7 +67,7 @@ const configAbility = {
                   "BattleEvent_P1_ADF"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Find New Target",
                   "from": {
@@ -161,7 +161,7 @@ const configAbility = {
                   "BattleEvent_P1_ADF"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Find New Target",
                   "from": {

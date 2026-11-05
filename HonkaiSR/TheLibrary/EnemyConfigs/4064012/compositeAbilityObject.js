@@ -3507,7 +3507,7 @@ const compositeAbilityObject = {
                   "Summon_Deathrattle"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {

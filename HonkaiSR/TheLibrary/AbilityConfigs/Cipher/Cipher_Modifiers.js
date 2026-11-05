@@ -124,7 +124,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": 99999,
-          "Event": [
+          "execute": [
             {
               "name": "IF",
               "conditions": {
@@ -148,8 +148,7 @@ const configAbility = {
       "modifierTasks": [
         {
           "name": "Looped Event",
-          "maxLoops": 99999,
-          "Event": []
+          "maxLoops": 99999
         }
       ],
       "onCreation": [

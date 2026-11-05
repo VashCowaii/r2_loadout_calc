@@ -2816,7 +2816,7 @@ const compositeAbilityObject = {
               2
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Add Events/Bonuses",
               "to": {
@@ -3596,7 +3596,7 @@ const compositeAbilityObject = {
               2
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Add Events/Bonuses",
               "to": {

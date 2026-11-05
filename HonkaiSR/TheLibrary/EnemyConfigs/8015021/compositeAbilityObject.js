@@ -6823,7 +6823,7 @@ const compositeAbilityObject = {
               "Skill02Count"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {

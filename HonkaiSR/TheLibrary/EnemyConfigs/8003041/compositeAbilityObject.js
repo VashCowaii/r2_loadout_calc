@@ -1418,7 +1418,7 @@ const compositeAbilityObject = {
                       "EnergyLayer"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -6286,7 +6286,7 @@ const compositeAbilityObject = {
               "EnergyLayer"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "IF",
               "conditions": {

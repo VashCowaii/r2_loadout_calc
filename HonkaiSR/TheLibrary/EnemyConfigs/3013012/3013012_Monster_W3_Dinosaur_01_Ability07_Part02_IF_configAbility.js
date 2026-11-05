@@ -75,7 +75,7 @@ const configAbility = {
           "Monster_W3_Dinosaur_01_Skill07_SumTime"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Random Event",
           "odds": [

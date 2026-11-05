@@ -109,7 +109,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": 15,
-      "Event": [
+      "execute": [
         {
           "name": "ATK Scaling DMG",
           "target": {
@@ -152,7 +152,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": 5,
-      "Event": [
+      "execute": [
         {
           "name": "ATK Scaling DMG",
           "target": {

@@ -68,7 +68,7 @@ const configAbility = {
           }
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Define Custom Variable",
           "variableName": "_loop_count",

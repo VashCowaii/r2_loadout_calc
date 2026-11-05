@@ -48,7 +48,7 @@ const configAbility = {
           }
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Update Next Wave Enemy",
           "context": "ContextAbility",

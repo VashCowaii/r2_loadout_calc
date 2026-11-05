@@ -87,7 +87,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": 1,
-      "Event": [
+      "execute": [
         {
           "name": "Find New Target",
           "from": {
@@ -200,7 +200,7 @@ const configAbility = {
           "Skill04Count"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Find New Target",
           "from": {

@@ -5425,7 +5425,7 @@ const compositeAbilityObject = {
               "AttackCount"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {

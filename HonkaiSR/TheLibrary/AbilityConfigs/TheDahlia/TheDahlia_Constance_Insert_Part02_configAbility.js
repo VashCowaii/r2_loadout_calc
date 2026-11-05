@@ -205,7 +205,7 @@ const configAbility = {
           "ADF_BounceCount"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Use Custom Character Function",
           "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",

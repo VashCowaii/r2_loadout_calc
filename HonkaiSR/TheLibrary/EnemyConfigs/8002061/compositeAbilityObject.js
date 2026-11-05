@@ -1165,7 +1165,7 @@ const compositeAbilityObject = {
               "Huimie_BeHitCounter"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {

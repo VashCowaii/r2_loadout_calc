@@ -3091,7 +3091,7 @@ const compositeAbilityObject = {
                               "MDF_SummonCount"
                             ]
                           },
-                          "Event": [
+                          "execute": [
                             {
                               "name": "ATK Scaling DMG",
                               "target": {
@@ -3144,7 +3144,7 @@ const compositeAbilityObject = {
                                   "MDF_SummonCount"
                                 ]
                               },
-                              "Event": [
+                              "execute": [
                                 {
                                   "name": "ATK Scaling DMG",
                                   "target": {
@@ -3185,7 +3185,7 @@ const compositeAbilityObject = {
                                   "MDF_SummonCount"
                                 ]
                               },
-                              "Event": [
+                              "execute": [
                                 {
                                   "name": "ATK Scaling DMG",
                                   "target": {

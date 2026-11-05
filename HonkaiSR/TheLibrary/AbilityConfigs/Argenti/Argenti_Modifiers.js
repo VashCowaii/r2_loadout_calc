@@ -255,7 +255,7 @@ const configAbility = {
                   1
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "IF",
                   "conditions": {

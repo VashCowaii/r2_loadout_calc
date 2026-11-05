@@ -850,7 +850,7 @@ const configAbility = {
                       "MDF_BPGap1"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "IF",
                       "conditions": {

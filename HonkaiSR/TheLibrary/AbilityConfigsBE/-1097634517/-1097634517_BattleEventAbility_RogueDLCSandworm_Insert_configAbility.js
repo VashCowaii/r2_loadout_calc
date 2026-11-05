@@ -11,7 +11,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": 5,
-      "Event": [
+      "execute": [
         {
           "name": "Find New Target",
           "from": {
@@ -142,7 +142,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": 5,
-      "Event": [
+      "execute": [
         {
           "name": "Find New Target",
           "from": {
@@ -279,7 +279,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": 5,
-      "Event": [
+      "execute": [
         {
           "name": "Find New Target",
           "from": {
@@ -410,7 +410,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": 5,
-      "Event": [
+      "execute": [
         {
           "name": "Find New Target",
           "from": {

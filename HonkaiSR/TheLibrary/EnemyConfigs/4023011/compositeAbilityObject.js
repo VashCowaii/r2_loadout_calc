@@ -1570,7 +1570,7 @@ const compositeAbilityObject = {
               "_MascotCounts"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"1587865992\">W4_Griffin_LocalLegend_Summon</a>"
@@ -1717,7 +1717,7 @@ const compositeAbilityObject = {
               "FREEVAR"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"1587865992\">W4_Griffin_LocalLegend_Summon</a>"
@@ -2091,7 +2091,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 4,
-          "Event": [
+          "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"1587865992\">W4_Griffin_LocalLegend_Summon</a>"

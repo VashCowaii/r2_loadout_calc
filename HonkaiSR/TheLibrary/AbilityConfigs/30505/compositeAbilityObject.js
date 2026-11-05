@@ -84,7 +84,7 @@ const compositeAbilityObject = {
               "Ability01_P1_HitCount"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {

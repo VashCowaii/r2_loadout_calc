@@ -686,7 +686,7 @@ const configAbility = {
                       "MDF_Loop"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Find New Target",
                       "from": {
@@ -2433,7 +2433,7 @@ const configAbility = {
                       "MDF_Layer"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Inject Extra-Turn",
                       "actionTag": [
@@ -3082,7 +3082,7 @@ const configAbility = {
                           "MDF_Layer"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Add Events/Bonuses",
                           "to": {
@@ -4674,7 +4674,7 @@ const configAbility = {
                       "MDF_Layer"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Find New Target",
                       "from": {

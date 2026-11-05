@@ -555,7 +555,7 @@ const configAbility = {
                           "FlowerLevel"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Add Events/Bonuses",
                           "to": {
@@ -605,7 +605,7 @@ const configAbility = {
                           "FlowerLevel"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Add Events/Bonuses",
                           "to": {

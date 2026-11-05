@@ -22,7 +22,7 @@ const configAbility = {
           "Huimie_BeHitCounter"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "ATK Scaling DMG",
           "target": {

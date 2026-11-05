@@ -187,7 +187,7 @@ const configAbility = {
           "Skill03_Hit_Count"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Define Custom Variable",
           "variableName": "_current_hit_count",

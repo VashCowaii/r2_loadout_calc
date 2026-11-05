@@ -22,7 +22,7 @@ const configAbility = {
           "Boss_Cocolia_IceValue"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Add Events/Bonuses",
           "to": {

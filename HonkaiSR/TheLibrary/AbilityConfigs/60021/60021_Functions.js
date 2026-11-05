@@ -19,13 +19,11 @@ const configAbility = {
         },
         {
           "name": "Looped Event",
-          "maxLoops": 8,
-          "Event": []
+          "maxLoops": 8
         },
         {
           "name": "Looped Event",
-          "maxLoops": 8,
-          "Event": []
+          "maxLoops": 8
         },
         {
           "name": "Call Parameter Sequence",

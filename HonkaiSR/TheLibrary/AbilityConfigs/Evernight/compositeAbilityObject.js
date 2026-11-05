@@ -10030,7 +10030,7 @@ const compositeAbilityObject = {
               ]
             }
           },
-          "Event": [
+          "execute": [
             {
               "name": "Define Custom Variable",
               "variableName": "S01_T_PTN",

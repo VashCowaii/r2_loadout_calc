@@ -155,7 +155,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": 3,
-              "Event": [
+              "execute": [
                 {
                   "name": "Consume",
                   "consumeFrom": "MaxHP",
@@ -193,7 +193,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": 1,
-              "Event": [
+              "execute": [
                 {
                   "name": "Consume",
                   "consumeFrom": "MaxHP",
@@ -231,7 +231,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": 2,
-              "Event": [
+              "execute": [
                 {
                   "name": "Consume",
                   "consumeFrom": "MaxHP",

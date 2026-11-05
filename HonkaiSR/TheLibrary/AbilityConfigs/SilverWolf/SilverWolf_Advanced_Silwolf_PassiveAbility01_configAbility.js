@@ -203,7 +203,7 @@ const configAbility = {
                               "_DebuffCountForRank04"
                             ]
                           },
-                          "Event": [
+                          "execute": [
                             {
                               "name": "ATK Scaling DMG",
                               "target": {

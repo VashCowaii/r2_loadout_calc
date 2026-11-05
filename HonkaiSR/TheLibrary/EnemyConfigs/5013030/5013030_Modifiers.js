@@ -2874,7 +2874,7 @@ const configAbility = {
                           "MDF_ElationDamageExtraColorCount"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Use Custom Character Function",
                           "functionName": "<a class=\"gTempYellow\" id=\"883191705\">TaskList_Monster_W5_Peacock_Ability01_ColorlessState_GetColor</a>"

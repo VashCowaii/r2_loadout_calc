@@ -43,7 +43,7 @@ const configAbility = {
                   "parameter[0]_AddLayer"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "IF",
                   "conditions": {

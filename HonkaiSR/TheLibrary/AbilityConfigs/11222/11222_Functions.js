@@ -269,7 +269,7 @@ const configAbility = {
               "UnusedUnderThisBase_5761"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {

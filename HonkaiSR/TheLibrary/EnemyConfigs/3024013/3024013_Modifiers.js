@@ -663,7 +663,7 @@ const configAbility = {
                       "MDF_IF_BOSS_AllPowerFlag"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Find New Target",
                       "from": {

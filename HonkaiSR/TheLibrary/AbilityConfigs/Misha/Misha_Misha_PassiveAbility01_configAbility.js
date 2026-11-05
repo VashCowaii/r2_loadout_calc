@@ -236,7 +236,7 @@ const configAbility = {
                       "_BPAddValue"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Update Energy",
                       "on": {

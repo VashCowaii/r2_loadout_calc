@@ -732,7 +732,7 @@ const compositeAbilityObject = {
                           "MDF_IF_BOSS_AllPowerFlag"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Find New Target",
                           "from": {
@@ -3501,7 +3501,7 @@ const compositeAbilityObject = {
               "FlowerPower"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -4464,7 +4464,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 2,
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -5472,7 +5472,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 4,
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -5532,7 +5532,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 4,
-          "Event": [
+          "execute": [
             {
               "name": "Remove Events/Bonuses",
               "to": {
@@ -5551,7 +5551,7 @@ const compositeAbilityObject = {
                   "_TargetNum"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Find New Target",
                   "from": {

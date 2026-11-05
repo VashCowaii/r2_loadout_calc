@@ -172,7 +172,7 @@ const configAbility = {
           2
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Add Events/Bonuses",
           "to": {

@@ -279,7 +279,7 @@ const compositeAbilityObject = {
                       1
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -1085,7 +1085,7 @@ const compositeAbilityObject = {
                   2
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {
@@ -1304,7 +1304,7 @@ const compositeAbilityObject = {
               6
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -1392,7 +1392,7 @@ const compositeAbilityObject = {
               6
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",

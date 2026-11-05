@@ -563,7 +563,7 @@ const compositeAbilityObject = {
                   "DarkTeamCount"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "SWITCH",
                   "switchValue": {
@@ -1222,7 +1222,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": 4,
-              "Event": [
+              "execute": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -1645,7 +1645,7 @@ const compositeAbilityObject = {
                   "SummonCount"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -1837,7 +1837,7 @@ const compositeAbilityObject = {
                   "{[PassiveSkill01[1]]}"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -2260,7 +2260,7 @@ const compositeAbilityObject = {
                   "{[PassiveSkill01[1]]}"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "IF",
                   "conditions": {

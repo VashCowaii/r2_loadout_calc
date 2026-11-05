@@ -509,7 +509,7 @@ const compositeAbilityObject = {
                       "MDF_Layer"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Inject Extra-Turn",
                       "actionTag": null,
@@ -2320,8 +2320,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Looped Event",
-          "maxLoops": 5,
-          "Event": []
+          "maxLoops": 5
         },
         {
           "name": "Use Custom Character Function",
@@ -2431,7 +2430,7 @@ const compositeAbilityObject = {
               "_Rank06_ExtraDamage"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"-1984031563\">Sparxie_ElationAbility_Single</a>"
@@ -3280,8 +3279,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Looped Event",
-              "maxLoops": 3,
-              "Event": []
+              "maxLoops": 3
             },
             {
               "name": "ATK Scaling DMG",
@@ -3404,7 +3402,7 @@ const compositeAbilityObject = {
                   "_SkillUseCount"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",

@@ -377,7 +377,7 @@ const compositeAbilityObject = {
                           "MDF_Layer"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Add Events/Bonuses",
                           "to": {
@@ -3118,7 +3118,7 @@ const compositeAbilityObject = {
               "ADF_LoopCount"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Define Custom Variable with Added Value",
               "target": {

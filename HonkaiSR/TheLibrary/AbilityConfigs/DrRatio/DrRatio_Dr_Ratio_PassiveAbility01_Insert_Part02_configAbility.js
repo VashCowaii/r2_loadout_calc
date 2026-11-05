@@ -261,7 +261,7 @@ const configAbility = {
               "_DebuffCount"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {

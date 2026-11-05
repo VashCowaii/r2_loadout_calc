@@ -119,7 +119,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": 4,
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -876,7 +876,7 @@ const configAbility = {
                   "Skill04BombCount"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Find New Target",
                   "from": {
@@ -984,7 +984,7 @@ const configAbility = {
                   "Skill04BombCount"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {

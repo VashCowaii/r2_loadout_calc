@@ -263,7 +263,7 @@ const compositeAbilityObject = {
                           "DamageUpFlag"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Add Events/Bonuses",
                           "to": {
@@ -324,7 +324,7 @@ const compositeAbilityObject = {
                           "DamageUpFlag"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Add Events/Bonuses",
                           "to": {
@@ -423,7 +423,7 @@ const compositeAbilityObject = {
                           "DamageUpFlag"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Add Events/Bonuses",
                           "to": {
@@ -484,7 +484,7 @@ const compositeAbilityObject = {
                           "DamageUpFlag"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Add Events/Bonuses",
                           "to": {
@@ -3292,7 +3292,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 5,
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {

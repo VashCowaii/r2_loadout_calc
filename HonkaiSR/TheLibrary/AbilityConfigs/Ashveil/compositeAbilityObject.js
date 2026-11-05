@@ -695,7 +695,7 @@ const compositeAbilityObject = {
                           ]
                         }
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "SkillP01_EnhanceInsertBuffStack",
@@ -2667,14 +2667,14 @@ const compositeAbilityObject = {
         "Deleted bullshit",
         {
           "name": "Looped Event",
-          "maxLoops": 1,
           "conditions": {
             "name": "Compare: Variable",
             "value1": "Ashveil_NeedContinueInsert",
             "compareType": "=",
             "value2": 1
           },
-          "Event": [
+          "maxLoops": 1,
+          "execute": [
             {
               "name": "Define Custom Variable",
               "variableName": "Ashveil_NeedContinueInsert",
@@ -2707,7 +2707,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Looped Event",
                   "maxLoops": 10,
-                  "Event": [
+                  "execute": [
                     {
                       "name": "ATK Scaling DMG",
                       "target": {
@@ -2857,7 +2857,7 @@ const compositeAbilityObject = {
             "compareType": "=",
             "value2": 1
           },
-          "Event": [
+          "execute": [
             {
               "name": "Define Custom Variable",
               "variableName": "Ashveil_NeedContinueInsert",
@@ -2899,7 +2899,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Looped Event",
                       "maxLoops": 10,
-                      "Event": [
+                      "execute": [
                         {
                           "name": "ATK Scaling DMG",
                           "target": {
@@ -3223,7 +3223,7 @@ const compositeAbilityObject = {
                         {
                           "name": "Looped Event",
                           "maxLoops": 10,
-                          "Event": [
+                          "execute": [
                             {
                               "name": "ATK Scaling DMG",
                               "target": {
@@ -3640,7 +3640,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": 10,
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {
@@ -4399,7 +4399,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 15,
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {
@@ -4442,7 +4442,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 5,
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {

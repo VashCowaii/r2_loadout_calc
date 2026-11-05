@@ -2497,7 +2497,7 @@ const compositeAbilityObject = {
                       "LightTeamCount"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -3099,7 +3099,7 @@ const compositeAbilityObject = {
                   }
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "IF",
                   "conditions": {

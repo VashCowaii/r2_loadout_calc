@@ -2626,7 +2626,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Looped Event",
                       "maxLoops": 4,
-                      "Event": [
+                      "execute": [
                         {
                           "name": "IF",
                           "conditions": {
@@ -2674,7 +2674,7 @@ const compositeAbilityObject = {
                     {
                       "name": "Looped Event",
                       "maxLoops": 4,
-                      "Event": [
+                      "execute": [
                         {
                           "name": "IF",
                           "conditions": {

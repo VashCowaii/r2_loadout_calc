@@ -2034,7 +2034,7 @@ const compositeAbilityObject = {
               "SummonLayer"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Define Custom Variable",
               "variableName": "SummonCount",
@@ -2629,7 +2629,7 @@ const compositeAbilityObject = {
               "EnhanceCount"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Add Events/Bonuses",
               "to": {
@@ -2992,7 +2992,7 @@ const compositeAbilityObject = {
               "EnhanceCount"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -3416,7 +3416,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 1,
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -3481,7 +3481,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 1,
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -3598,7 +3598,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 8,
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -4684,7 +4684,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 1,
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -4749,7 +4749,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 1,
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -4866,7 +4866,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 8,
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {

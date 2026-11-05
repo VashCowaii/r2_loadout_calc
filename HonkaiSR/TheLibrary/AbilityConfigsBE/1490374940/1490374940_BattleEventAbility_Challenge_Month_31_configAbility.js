@@ -182,7 +182,7 @@ const configAbility = {
                       "MDF_Count"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Find New Target",
                       "from": {

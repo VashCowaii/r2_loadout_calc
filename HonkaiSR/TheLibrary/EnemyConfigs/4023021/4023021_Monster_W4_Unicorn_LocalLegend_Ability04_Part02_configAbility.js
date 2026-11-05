@@ -310,7 +310,7 @@ const configAbility = {
                   "_TargetCount"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {
@@ -355,7 +355,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": 2,
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {

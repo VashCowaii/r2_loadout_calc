@@ -11420,7 +11420,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 1,
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -11514,7 +11514,7 @@ const compositeAbilityObject = {
               "Skill04Count"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -12944,7 +12944,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 1,
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -13057,7 +13057,7 @@ const compositeAbilityObject = {
               "Skill04Count"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {

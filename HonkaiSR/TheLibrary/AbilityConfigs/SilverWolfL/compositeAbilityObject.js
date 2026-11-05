@@ -651,7 +651,7 @@ const compositeAbilityObject = {
                           "MDF_Layer"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Inject Ability Use",
                           "conditionActive": {
@@ -1933,7 +1933,7 @@ const compositeAbilityObject = {
                           "_bpChange"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "IF",
                           "conditions": {
@@ -4487,7 +4487,7 @@ const compositeAbilityObject = {
               6
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
@@ -6183,7 +6183,7 @@ const compositeAbilityObject = {
               "UNKNOWN_SW999_OBJECT[5]"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "IF",
               "conditions": {
@@ -8761,6 +8761,13 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Looped Event",
+                  "conditions": {
+                    "name": "Enemies Still Alive",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    }
+                  },
                   "maxLoops": {
                     "operator": "Variables[0] (TDF_MaxShootCount) || RETURN",
                     "displayLines": "TDF_MaxShootCount",
@@ -8769,14 +8776,7 @@ const compositeAbilityObject = {
                       "TDF_MaxShootCount"
                     ]
                   },
-                  "conditions": {
-                    "name": "Enemies Still Alive",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    }
-                  },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "SW999 Test Data",
                       "value": {

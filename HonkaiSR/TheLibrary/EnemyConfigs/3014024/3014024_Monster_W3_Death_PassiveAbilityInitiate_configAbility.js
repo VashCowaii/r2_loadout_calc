@@ -536,7 +536,7 @@ const configAbility = {
                   "LightTeamCount"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "IF",
                   "conditions": {

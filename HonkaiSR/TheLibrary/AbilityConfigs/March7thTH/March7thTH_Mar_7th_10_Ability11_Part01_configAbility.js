@@ -54,7 +54,7 @@ const configAbility = {
           }
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Define Custom Variable",
           "scope": "ContextCaster",

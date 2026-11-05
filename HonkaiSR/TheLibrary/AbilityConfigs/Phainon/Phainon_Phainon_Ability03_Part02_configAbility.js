@@ -45,7 +45,7 @@ const configAbility = {
           8
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Add Battle Event",
           "teamName": "Player Team",

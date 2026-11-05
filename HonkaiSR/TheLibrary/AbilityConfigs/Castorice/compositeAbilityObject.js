@@ -5181,7 +5181,7 @@ const compositeAbilityObject = {
               "CastoriceServant_LoopCount"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
@@ -6878,7 +6878,7 @@ const compositeAbilityObject = {
               "CastoriceServant_LoopCount"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
@@ -7421,7 +7421,7 @@ const compositeAbilityObject = {
               "CastoriceBPLoopMax"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Define Custom Variable",
               "variableName": "CastoriceBPLoop",
@@ -7990,7 +7990,7 @@ const compositeAbilityObject = {
               "CastoriceBPLoopMax"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Define Custom Variable",
               "variableName": "CastoriceBPLoop",
@@ -8526,7 +8526,7 @@ const compositeAbilityObject = {
               "CastoriceBPLoopMax"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Define Custom Variable",
               "variableName": "CastoriceBPLoop",

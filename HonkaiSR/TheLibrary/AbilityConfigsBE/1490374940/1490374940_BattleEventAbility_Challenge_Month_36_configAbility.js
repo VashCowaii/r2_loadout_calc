@@ -266,7 +266,7 @@ const configAbility = {
                           "MDF_DmgCount"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "ATK Scaling DMG",
                           "target": {
@@ -319,7 +319,7 @@ const configAbility = {
                               "MDF_DmgCount"
                             ]
                           },
-                          "Event": [
+                          "execute": [
                             {
                               "name": "ATK Scaling DMG",
                               "target": {
@@ -360,7 +360,7 @@ const configAbility = {
                               "MDF_DmgCount"
                             ]
                           },
-                          "Event": [
+                          "execute": [
                             {
                               "name": "ATK Scaling DMG",
                               "target": {

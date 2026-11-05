@@ -2268,7 +2268,7 @@ const compositeAbilityObject = {
                   "parameter[0]_AddValue"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "IF",
                   "conditions": {

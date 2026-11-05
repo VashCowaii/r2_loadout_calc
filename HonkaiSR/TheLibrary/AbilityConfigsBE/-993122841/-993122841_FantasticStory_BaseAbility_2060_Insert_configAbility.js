@@ -63,7 +63,7 @@ const configAbility = {
           "DV_FantasticStory_BaseAbility_BirdAttackCount"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Find New Target",
           "from": {

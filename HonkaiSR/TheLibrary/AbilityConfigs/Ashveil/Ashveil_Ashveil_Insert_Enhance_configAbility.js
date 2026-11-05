@@ -91,7 +91,7 @@ const configAbility = {
         "compareType": "=",
         "value2": 1
       },
-      "Event": [
+      "execute": [
         {
           "name": "Define Custom Variable",
           "variableName": "Ashveil_NeedContinueInsert",
@@ -133,7 +133,7 @@ const configAbility = {
                 {
                   "name": "Looped Event",
                   "maxLoops": 10,
-                  "Event": [
+                  "execute": [
                     {
                       "name": "ATK Scaling DMG",
                       "target": {
@@ -457,7 +457,7 @@ const configAbility = {
                     {
                       "name": "Looped Event",
                       "maxLoops": 10,
-                      "Event": [
+                      "execute": [
                         {
                           "name": "ATK Scaling DMG",
                           "target": {

@@ -81,7 +81,7 @@ const configAbility = {
           "EnhanceCount"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Add Events/Bonuses",
           "to": {
@@ -444,7 +444,7 @@ const configAbility = {
           "EnhanceCount"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Find New Target",
           "from": {

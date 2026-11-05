@@ -41,8 +41,7 @@ const configAbility = {
       "passed": [
         {
           "name": "Looped Event",
-          "maxLoops": 3,
-          "Event": []
+          "maxLoops": 3
         },
         {
           "name": "ATK Scaling DMG",
@@ -165,7 +164,7 @@ const configAbility = {
               "_SkillUseCount"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",

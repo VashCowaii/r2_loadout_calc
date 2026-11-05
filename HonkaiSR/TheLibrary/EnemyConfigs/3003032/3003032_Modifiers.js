@@ -65,7 +65,7 @@ const configAbility = {
                   "{[Skill04[0]]}"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {

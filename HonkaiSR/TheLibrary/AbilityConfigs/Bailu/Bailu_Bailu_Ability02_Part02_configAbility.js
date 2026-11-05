@@ -174,7 +174,7 @@ const configAbility = {
           2
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Find New Target",
           "from": {

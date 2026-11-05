@@ -7,7 +7,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": 3,
-      "Event": [
+      "execute": [
         {
           "name": "Add Events/Bonuses",
           "to": {

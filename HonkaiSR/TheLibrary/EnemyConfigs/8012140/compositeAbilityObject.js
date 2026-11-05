@@ -170,7 +170,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Looped Event",
-          "Event": [
+          "execute": [
             "Move to Next Listed Target",
             {
               "name": "ATK Scaling DMG",

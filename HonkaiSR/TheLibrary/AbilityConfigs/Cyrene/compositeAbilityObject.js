@@ -263,8 +263,7 @@ const compositeAbilityObject = {
           "modifierTasks": [
             {
               "name": "Looped Event",
-              "maxLoops": 999,
-              "Event": []
+              "maxLoops": 999
             }
           ],
           "onCreation": [
@@ -2968,7 +2967,7 @@ const compositeAbilityObject = {
               "EnemyCount"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -4760,7 +4759,7 @@ const compositeAbilityObject = {
                           "MDF_Loop"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Find New Target",
                           "from": {
@@ -6507,7 +6506,7 @@ const compositeAbilityObject = {
                           "MDF_Layer"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Inject Extra-Turn",
                           "actionTag": [
@@ -7156,7 +7155,7 @@ const compositeAbilityObject = {
                               "MDF_Layer"
                             ]
                           },
-                          "Event": [
+                          "execute": [
                             {
                               "name": "Add Events/Bonuses",
                               "to": {
@@ -8748,7 +8747,7 @@ const compositeAbilityObject = {
                           "MDF_Layer"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Find New Target",
                           "from": {
@@ -11625,7 +11624,7 @@ const compositeAbilityObject = {
               "HitCount"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",

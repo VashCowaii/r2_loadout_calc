@@ -2700,7 +2700,7 @@ const compositeAbilityObject = {
                   "SummonMonsterCount"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {
@@ -3364,7 +3364,7 @@ const compositeAbilityObject = {
                   "SummonMonsterCount"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {
@@ -3677,7 +3677,7 @@ const compositeAbilityObject = {
                   "SummonMonsterCount"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {
@@ -3859,7 +3859,7 @@ const compositeAbilityObject = {
                   "SummonMonsterCount"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {
@@ -4014,7 +4014,7 @@ const compositeAbilityObject = {
                   "SummonMonsterCount"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {

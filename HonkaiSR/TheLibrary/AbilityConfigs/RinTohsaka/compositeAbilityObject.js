@@ -957,7 +957,7 @@ const compositeAbilityObject = {
                       "MDF_Layer"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Inject Extra-Turn",
                       "actionTag": null,
@@ -2833,7 +2833,7 @@ const compositeAbilityObject = {
                               "_BPAddValue"
                             ]
                           },
-                          "Event": [
+                          "execute": [
                             {
                               "name": "Adjust Variable Value",
                               "adjustmentType": "Add to Value (Default)",
@@ -3063,7 +3063,7 @@ const compositeAbilityObject = {
                                   "_BPAddValue"
                                 ]
                               },
-                              "Event": [
+                              "execute": [
                                 {
                                   "name": "Adjust Variable Value",
                                   "adjustmentType": "Add to Value (Default)",
@@ -4450,7 +4450,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": 3,
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {
@@ -4544,7 +4544,7 @@ const compositeAbilityObject = {
                   }
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -4677,7 +4677,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Looped Event",
                   "maxLoops": 1,
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
@@ -4772,7 +4772,6 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Looped Event",
-              "maxLoops": 333,
               "conditions": {
                 "name": "Compare: Variable",
                 "value1": "CurrentSkillPoints",
@@ -4786,7 +4785,8 @@ const compositeAbilityObject = {
                   ]
                 }
               },
-              "Event": [
+              "maxLoops": 333,
+              "execute": [
                 {
                   "name": "Skill Points Modification",
                   "adjustmentValue": -1,
@@ -4842,7 +4842,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": 3,
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {
@@ -4953,7 +4953,7 @@ const compositeAbilityObject = {
                   }
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -5099,7 +5099,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Looped Event",
                   "maxLoops": 1,
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",

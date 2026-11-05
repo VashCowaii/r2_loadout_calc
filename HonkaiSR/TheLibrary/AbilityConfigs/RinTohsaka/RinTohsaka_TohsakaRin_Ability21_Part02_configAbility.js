@@ -63,7 +63,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": 3,
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {
@@ -157,7 +157,7 @@ const configAbility = {
               }
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "IF",
               "conditions": {
@@ -290,7 +290,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": 1,
-              "Event": [
+              "execute": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
@@ -385,7 +385,6 @@ const configAbility = {
       "failed": [
         {
           "name": "Looped Event",
-          "maxLoops": 333,
           "conditions": {
             "name": "Compare: Variable",
             "value1": "CurrentSkillPoints",
@@ -399,7 +398,8 @@ const configAbility = {
               ]
             }
           },
-          "Event": [
+          "maxLoops": 333,
+          "execute": [
             {
               "name": "Skill Points Modification",
               "adjustmentValue": -1,
@@ -455,7 +455,7 @@ const configAbility = {
         {
           "name": "Looped Event",
           "maxLoops": 3,
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {
@@ -566,7 +566,7 @@ const configAbility = {
               }
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "IF",
               "conditions": {
@@ -712,7 +712,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": 1,
-              "Event": [
+              "execute": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",

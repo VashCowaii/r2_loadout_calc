@@ -152,7 +152,7 @@ const compositeAbilityObject = {
                       "MDF_Layer"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "ATK Scaling DMG",
                       "target": {
@@ -227,7 +227,7 @@ const compositeAbilityObject = {
                       "MDF_Layer"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "ATK Scaling DMG",
                       "target": {
@@ -312,7 +312,7 @@ const compositeAbilityObject = {
                       "MDF_Layer"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "ATK Scaling DMG",
                       "target": {
@@ -387,7 +387,7 @@ const compositeAbilityObject = {
                       "MDF_Layer"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "ATK Scaling DMG",
                       "target": {
@@ -472,7 +472,7 @@ const compositeAbilityObject = {
                       "MDF_Layer"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "ATK Scaling DMG",
                       "target": {
@@ -542,7 +542,7 @@ const compositeAbilityObject = {
                       "MDF_Layer"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "ATK Scaling DMG",
                       "target": {

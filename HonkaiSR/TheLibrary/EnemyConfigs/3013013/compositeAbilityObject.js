@@ -432,7 +432,7 @@ const compositeAbilityObject = {
               "Monster_W3_Dinosaur_01_Skill07_SumTime"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Random Event",
               "odds": [
@@ -1457,7 +1457,7 @@ const compositeAbilityObject = {
                   "{[Skill04[0]]}"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {

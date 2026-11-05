@@ -960,7 +960,7 @@ const compositeAbilityObject = {
                           "_BPAddValue"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Update Energy",
                           "on": {
@@ -1307,7 +1307,7 @@ const compositeAbilityObject = {
               "Skill03_Hit_Count"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Define Custom Variable",
               "variableName": "_current_hit_count",

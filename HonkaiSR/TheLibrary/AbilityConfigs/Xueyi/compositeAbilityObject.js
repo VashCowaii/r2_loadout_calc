@@ -870,7 +870,7 @@ const compositeAbilityObject = {
                           "_Passive_LoopCount"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Add Events/Bonuses",
                           "to": {

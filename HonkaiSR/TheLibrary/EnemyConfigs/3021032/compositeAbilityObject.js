@@ -1481,7 +1481,7 @@ const compositeAbilityObject = {
                   "_TargetNum"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Find New Target",
                   "from": {
@@ -1578,7 +1578,7 @@ const compositeAbilityObject = {
                   "_TargetNum"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Find New Target",
                   "from": {

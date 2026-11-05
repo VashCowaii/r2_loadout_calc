@@ -1230,6 +1230,13 @@ const configAbility = {
             },
             {
               "name": "Looped Event",
+              "conditions": {
+                "name": "Enemies Still Alive",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                }
+              },
               "maxLoops": {
                 "operator": "Variables[0] (TDF_MaxShootCount) || RETURN",
                 "displayLines": "TDF_MaxShootCount",
@@ -1238,14 +1245,7 @@ const configAbility = {
                   "TDF_MaxShootCount"
                 ]
               },
-              "conditions": {
-                "name": "Enemies Still Alive",
-                "target": {
-                  "name": "Target Name",
-                  "target": "{{Caster}}"
-                }
-              },
-              "Event": [
+              "execute": [
                 {
                   "name": "SW999 Test Data",
                   "value": {

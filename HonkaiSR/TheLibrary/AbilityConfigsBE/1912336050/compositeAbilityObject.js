@@ -839,7 +839,7 @@ const compositeAbilityObject = {
               "Ability01_P1_HitCount"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -14980,7 +14980,7 @@ const compositeAbilityObject = {
                           "MDF_BPCost"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Add Events/Bonuses",
                           "to": {

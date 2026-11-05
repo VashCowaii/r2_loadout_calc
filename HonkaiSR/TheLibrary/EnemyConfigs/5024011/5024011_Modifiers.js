@@ -1758,7 +1758,7 @@ const configAbility = {
                       "ModifierLayers"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "IF",
                       "conditions": {

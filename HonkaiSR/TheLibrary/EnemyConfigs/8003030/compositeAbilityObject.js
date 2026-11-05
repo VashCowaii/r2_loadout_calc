@@ -1968,7 +1968,7 @@ const compositeAbilityObject = {
               "{[Skill06[1]]}"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {

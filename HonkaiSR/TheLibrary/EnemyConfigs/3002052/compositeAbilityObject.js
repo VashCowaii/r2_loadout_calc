@@ -539,7 +539,7 @@ const compositeAbilityObject = {
                           "MDF_CurrentLayer"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "MDF_AttackAddRatioCurrent",

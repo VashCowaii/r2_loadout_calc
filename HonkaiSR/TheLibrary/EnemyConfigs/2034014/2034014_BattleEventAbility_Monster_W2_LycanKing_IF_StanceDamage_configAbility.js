@@ -65,7 +65,7 @@ const configAbility = {
           "LycanDieCount"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Add Events/Bonuses",
           "to": {

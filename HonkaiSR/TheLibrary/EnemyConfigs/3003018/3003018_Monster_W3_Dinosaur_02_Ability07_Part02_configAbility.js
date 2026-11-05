@@ -53,7 +53,7 @@ const configAbility = {
           "ENEMIES_OBJECT_UNUSED__116"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Find New Target",
           "from": {
@@ -287,7 +287,7 @@ const configAbility = {
                   "CurrentLockCount"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Find New Target",
                   "from": {
@@ -417,7 +417,7 @@ const configAbility = {
                   "CurrentLockCount"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Find New Target",
                   "from": {

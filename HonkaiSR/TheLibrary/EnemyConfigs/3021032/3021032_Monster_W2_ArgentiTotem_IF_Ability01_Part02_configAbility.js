@@ -62,7 +62,7 @@ const configAbility = {
               "_TargetNum"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -159,7 +159,7 @@ const configAbility = {
               "_TargetNum"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {

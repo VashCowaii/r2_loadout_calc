@@ -1026,7 +1026,7 @@ const compositeAbilityObject = {
                           4
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Define Custom Variable",
                           "variableName": "MDF_AttackCount",

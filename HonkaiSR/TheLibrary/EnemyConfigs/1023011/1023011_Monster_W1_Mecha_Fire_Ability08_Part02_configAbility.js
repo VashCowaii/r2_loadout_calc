@@ -54,7 +54,7 @@ const configAbility = {
           "LightTeam_Count"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Find New Target",
           "from": {

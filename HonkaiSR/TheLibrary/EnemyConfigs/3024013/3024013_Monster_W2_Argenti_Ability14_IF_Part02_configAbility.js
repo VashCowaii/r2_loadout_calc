@@ -33,7 +33,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": 4,
-      "Event": [
+      "execute": [
         {
           "name": "Find New Target",
           "from": {
@@ -93,7 +93,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": 4,
-      "Event": [
+      "execute": [
         {
           "name": "Remove Events/Bonuses",
           "to": {
@@ -112,7 +112,7 @@ const configAbility = {
               "_TargetNum"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {

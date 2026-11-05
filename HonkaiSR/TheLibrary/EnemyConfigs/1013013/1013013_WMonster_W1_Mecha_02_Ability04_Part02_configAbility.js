@@ -7,7 +7,7 @@ const configAbility = {
     "Ability Start",
     {
       "name": "Looped Event",
-      "Event": [
+      "execute": [
         "Move to Next Listed Target",
         {
           "name": "Declare Custom Variable",

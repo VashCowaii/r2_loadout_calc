@@ -208,7 +208,7 @@ const configAbility = {
                   "EnemyCount"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Find New Target",
                   "from": {

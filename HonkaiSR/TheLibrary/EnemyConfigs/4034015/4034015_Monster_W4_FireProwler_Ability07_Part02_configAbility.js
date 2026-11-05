@@ -202,7 +202,7 @@ const configAbility = {
           "AttackCount"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "ATK Scaling DMG",
           "target": {

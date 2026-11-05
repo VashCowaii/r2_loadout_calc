@@ -635,7 +635,7 @@ const compositeAbilityObject = {
                       "MDF_Layer"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {
@@ -7899,7 +7899,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": 3,
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {
@@ -7931,7 +7931,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": 3,
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {
@@ -7965,7 +7965,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": 3,
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {
@@ -8080,7 +8080,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": 3,
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {
@@ -8115,7 +8115,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": 3,
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {
@@ -8258,7 +8258,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 3,
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {
@@ -8290,7 +8290,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 3,
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {

@@ -60,7 +60,7 @@ const configAbility = {
           10
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Find New Target",
           "from": {

@@ -219,7 +219,7 @@ const configAbility = {
           }
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "IF",
           "conditions": {
@@ -576,7 +576,7 @@ const configAbility = {
               "HitCount"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Trigger Modifier Event",
               "target": {

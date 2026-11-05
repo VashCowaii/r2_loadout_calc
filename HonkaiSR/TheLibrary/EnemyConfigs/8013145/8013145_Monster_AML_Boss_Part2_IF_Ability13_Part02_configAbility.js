@@ -81,7 +81,7 @@ const configAbility = {
           "invertCondition": true
         }
       },
-      "Event": [
+      "execute": [
         {
           "name": "Find New Target",
           "from": {

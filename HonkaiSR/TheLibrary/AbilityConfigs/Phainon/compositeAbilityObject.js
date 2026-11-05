@@ -4753,7 +4753,7 @@ const compositeAbilityObject = {
               "Count"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
@@ -5127,7 +5127,7 @@ const compositeAbilityObject = {
               "Count"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
@@ -5460,7 +5460,7 @@ const compositeAbilityObject = {
               4
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
@@ -7018,7 +7018,7 @@ const compositeAbilityObject = {
                   8
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Add Battle Event",
                   "teamName": "Player Team",
@@ -7363,7 +7363,7 @@ const compositeAbilityObject = {
               8
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Add Battle Event",
               "teamName": "Player Team",
@@ -7818,7 +7818,7 @@ const compositeAbilityObject = {
                   "parameter[0]_AddValue"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "IF",
                   "conditions": {

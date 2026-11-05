@@ -3415,7 +3415,7 @@ const compositeAbilityObject = {
                   "FireBallCount"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {

@@ -539,7 +539,7 @@ const compositeAbilityObject = {
                       "MDF_AddValue"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Adjust Variable Value",
                       "adjustmentType": "Add to Value (Default)",
@@ -2082,7 +2082,7 @@ const compositeAbilityObject = {
               }
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "IF",
               "conditions": {
@@ -2439,7 +2439,7 @@ const compositeAbilityObject = {
                   "HitCount"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Trigger Modifier Event",
                   "target": {

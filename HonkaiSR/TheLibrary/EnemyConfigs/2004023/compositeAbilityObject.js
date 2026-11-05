@@ -10125,7 +10125,7 @@ const compositeAbilityObject = {
               "Monster_W2_Yanqing_00_IF_Skill01_AssistMark01"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {
@@ -10182,7 +10182,7 @@ const compositeAbilityObject = {
               "Monster_W2_Yanqing_00_IF_Skill01_AssistMark02"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {
@@ -10215,7 +10215,7 @@ const compositeAbilityObject = {
               "Monster_W2_Yanqing_00_IF_Skill01_AssistMark03"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {

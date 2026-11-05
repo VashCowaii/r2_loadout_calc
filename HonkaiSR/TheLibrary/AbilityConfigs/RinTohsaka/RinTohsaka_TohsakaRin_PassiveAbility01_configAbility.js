@@ -638,7 +638,7 @@ const configAbility = {
                           "_BPAddValue"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Adjust Variable Value",
                           "adjustmentType": "Add to Value (Default)",
@@ -868,7 +868,7 @@ const configAbility = {
                               "_BPAddValue"
                             ]
                           },
-                          "Event": [
+                          "execute": [
                             {
                               "name": "Adjust Variable Value",
                               "adjustmentType": "Add to Value (Default)",

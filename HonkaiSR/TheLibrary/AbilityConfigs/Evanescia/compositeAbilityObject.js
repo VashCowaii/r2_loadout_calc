@@ -1556,7 +1556,7 @@ const compositeAbilityObject = {
                       "EnemyCount"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Find New Target",
                       "from": {
@@ -3467,8 +3467,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Looped Event",
-          "maxLoops": 8,
-          "Event": []
+          "maxLoops": 8
         }
       ],
       "references": [],
@@ -3668,7 +3667,7 @@ const compositeAbilityObject = {
               "LoopCount"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
@@ -3864,7 +3863,7 @@ const compositeAbilityObject = {
               "ENEMIES_OBJECT_UNUSED__249"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Define Custom Variable",
               "variableName": "_index",

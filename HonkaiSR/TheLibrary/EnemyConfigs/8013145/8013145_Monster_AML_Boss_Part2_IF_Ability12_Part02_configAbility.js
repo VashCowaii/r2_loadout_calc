@@ -25,7 +25,7 @@ const configAbility = {
     {
       "name": "Looped Event",
       "maxLoops": 4,
-      "Event": [
+      "execute": [
         {
           "name": "ATK Scaling DMG",
           "target": {
@@ -105,7 +105,7 @@ const configAbility = {
           "invertCondition": true
         }
       },
-      "Event": [
+      "execute": [
         {
           "name": "Find New Target",
           "from": {

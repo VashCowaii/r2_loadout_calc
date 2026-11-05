@@ -69,7 +69,7 @@ const configAbility = {
               "SummonMonsterCount"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {

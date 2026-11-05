@@ -872,7 +872,7 @@ const compositeAbilityObject = {
                           "MDF_BPGap1"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "IF",
                           "conditions": {

@@ -113,7 +113,7 @@ const configAbility = {
           "ATKCount"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Use Custom Character Function",
           "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",
@@ -289,7 +289,7 @@ const configAbility = {
           "UltraATKCount"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Looped Event",
           "maxLoops": {
@@ -300,7 +300,7 @@ const configAbility = {
               "ATKCount"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"247970287\">Bounce_SelectTarget</a>",

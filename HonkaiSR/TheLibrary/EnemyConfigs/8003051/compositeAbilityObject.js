@@ -246,7 +246,7 @@ const compositeAbilityObject = {
               "Monster_AML_Elite01_01_DOTHitCounter"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Add Events/Bonuses",
               "to": {
@@ -568,7 +568,7 @@ const compositeAbilityObject = {
                       "Monster_AML_Elite01_01_DOTHitCounter"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {
@@ -1222,7 +1222,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Looped Event",
-              "Event": [
+              "execute": [
                 "Move to Next Listed Target",
                 {
                   "name": "IF",
@@ -1556,7 +1556,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Looped Event",
-          "Event": [
+          "execute": [
             "Move to Next Listed Target",
             {
               "name": "IF",

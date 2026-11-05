@@ -252,7 +252,7 @@ const configAbility = {
               "MDF_StackCount"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Add Events/Bonuses",
               "to": {

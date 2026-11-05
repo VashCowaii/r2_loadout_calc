@@ -194,7 +194,7 @@ const configAbility = {
             "compareType": ">=",
             "value2": 1
           },
-          "Event": [
+          "execute": [
             {
               "name": "Define Custom Variable",
               "variableName": "_DebuffCount",
@@ -326,7 +326,7 @@ const configAbility = {
             "compareType": ">=",
             "value2": 1
           },
-          "Event": [
+          "execute": [
             {
               "name": "Define Custom Variable",
               "variableName": "_EffDebuffCount",

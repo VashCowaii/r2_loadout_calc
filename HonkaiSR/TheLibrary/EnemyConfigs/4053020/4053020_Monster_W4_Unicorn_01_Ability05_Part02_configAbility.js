@@ -39,7 +39,7 @@ const configAbility = {
               "{[PassiveSkill01[1]]}"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "IF",
               "conditions": {
@@ -462,7 +462,7 @@ const configAbility = {
               "{[PassiveSkill01[1]]}"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "IF",
               "conditions": {

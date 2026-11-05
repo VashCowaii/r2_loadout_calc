@@ -46,7 +46,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": 2,
-              "Event": [
+              "execute": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {
@@ -127,7 +127,7 @@ const configAbility = {
                 {
                   "name": "Looped Event",
                   "maxLoops": 2,
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {
@@ -185,7 +185,7 @@ const configAbility = {
                     {
                       "name": "Looped Event",
                       "maxLoops": 2,
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Add Events/Bonuses",
                           "to": {
@@ -234,7 +234,7 @@ const configAbility = {
                     {
                       "name": "Looped Event",
                       "maxLoops": 2,
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Add Events/Bonuses",
                           "to": {

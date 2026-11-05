@@ -6,8 +6,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Looped Event",
-      "maxLoops": 6,
-      "Event": []
+      "maxLoops": 6
     },
     {
       "name": "Add Events/Bonuses",

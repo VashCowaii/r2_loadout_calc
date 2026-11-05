@@ -123,7 +123,7 @@ const configAbility = {
           "ADF_LoopCount"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Define Custom Variable with Added Value",
           "target": {

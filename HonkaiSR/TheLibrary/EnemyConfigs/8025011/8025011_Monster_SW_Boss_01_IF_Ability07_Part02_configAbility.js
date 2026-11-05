@@ -94,7 +94,7 @@ const configAbility = {
           "Skill07ArmorCount"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Find New Target",
           "from": {

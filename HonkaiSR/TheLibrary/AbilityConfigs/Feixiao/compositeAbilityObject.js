@@ -3932,14 +3932,14 @@ const compositeAbilityObject = {
         },
         {
           "name": "Looped Event",
-          "maxLoops": 99,
           "conditions": {
             "name": "Compare: Variable",
             "value1": "Combo2_Loop_Index",
             "compareType": ">",
             "value2": 2
           },
-          "Event": [
+          "maxLoops": 99,
+          "execute": [
             {
               "name": "Define Custom Variable",
               "variableName": "Combo2_Loop_Index",
@@ -4607,14 +4607,14 @@ const compositeAbilityObject = {
         },
         {
           "name": "Looped Event",
-          "maxLoops": 99,
           "conditions": {
             "name": "Compare: Variable",
             "value1": "Combo1_Loop_Index",
             "compareType": ">",
             "value2": 4
           },
-          "Event": [
+          "maxLoops": 99,
+          "execute": [
             {
               "name": "Define Custom Variable",
               "variableName": "Combo1_Loop_Index",
@@ -5824,7 +5824,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 2,
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {

@@ -3906,7 +3906,7 @@ const compositeAbilityObject = {
               "ENEMIES_OBJECT_UNUSED__116"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -4140,7 +4140,7 @@ const compositeAbilityObject = {
                       "CurrentLockCount"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Find New Target",
                       "from": {
@@ -4270,7 +4270,7 @@ const compositeAbilityObject = {
                       "CurrentLockCount"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Find New Target",
                       "from": {

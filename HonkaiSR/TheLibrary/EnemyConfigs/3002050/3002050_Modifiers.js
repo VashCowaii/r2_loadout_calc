@@ -523,7 +523,7 @@ const configAbility = {
                       "MDF_CurrentLayer"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_AttackAddRatioCurrent",

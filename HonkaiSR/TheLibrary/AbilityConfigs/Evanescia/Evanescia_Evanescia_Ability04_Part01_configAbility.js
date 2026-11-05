@@ -27,8 +27,7 @@ const configAbility = {
     },
     {
       "name": "Looped Event",
-      "maxLoops": 8,
-      "Event": []
+      "maxLoops": 8
     }
   ],
   "references": [],

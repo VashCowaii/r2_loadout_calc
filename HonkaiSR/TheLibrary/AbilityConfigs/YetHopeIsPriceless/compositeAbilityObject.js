@@ -138,7 +138,7 @@ const compositeAbilityObject = {
                           4
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "IF",
                           "conditions": {

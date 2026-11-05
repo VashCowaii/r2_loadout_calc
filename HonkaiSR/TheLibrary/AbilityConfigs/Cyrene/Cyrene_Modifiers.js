@@ -204,8 +204,7 @@ const configAbility = {
       "modifierTasks": [
         {
           "name": "Looped Event",
-          "maxLoops": 999,
-          "Event": []
+          "maxLoops": 999
         }
       ],
       "onCreation": [

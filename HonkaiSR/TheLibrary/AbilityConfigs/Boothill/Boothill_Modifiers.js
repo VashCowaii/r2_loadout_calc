@@ -780,7 +780,7 @@ const configAbility = {
                   "_break_count"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {

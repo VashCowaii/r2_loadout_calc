@@ -2849,7 +2849,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 7,
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {
@@ -3056,7 +3056,7 @@ const compositeAbilityObject = {
               "MDF_LoopCount"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {

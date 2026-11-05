@@ -4613,7 +4613,7 @@ const compositeAbilityObject = {
               "LycanDieCount"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Add Events/Bonuses",
               "to": {

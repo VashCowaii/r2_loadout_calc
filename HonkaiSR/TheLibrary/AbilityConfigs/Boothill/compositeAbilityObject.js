@@ -808,7 +808,7 @@ const compositeAbilityObject = {
                       "_break_count"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {

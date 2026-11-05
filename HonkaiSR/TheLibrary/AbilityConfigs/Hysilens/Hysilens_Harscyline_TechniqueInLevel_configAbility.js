@@ -49,7 +49,7 @@ const configAbility = {
                       2
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "<a class=\"gTempYellow\" id=\"1526500029\">Harscyline_RandomDOT_Maze</a>"

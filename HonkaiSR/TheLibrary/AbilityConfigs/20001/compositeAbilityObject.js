@@ -244,7 +244,7 @@ const compositeAbilityObject = {
                           "DamageUpFlag"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Add Events/Bonuses",
                           "to": {
@@ -305,7 +305,7 @@ const compositeAbilityObject = {
                           "DamageUpFlag"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Add Events/Bonuses",
                           "to": {
@@ -404,7 +404,7 @@ const compositeAbilityObject = {
                           "DamageUpFlag"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Add Events/Bonuses",
                           "to": {
@@ -465,7 +465,7 @@ const compositeAbilityObject = {
                           "DamageUpFlag"
                         ]
                       },
-                      "Event": [
+                      "execute": [
                         {
                           "name": "Add Events/Bonuses",
                           "to": {

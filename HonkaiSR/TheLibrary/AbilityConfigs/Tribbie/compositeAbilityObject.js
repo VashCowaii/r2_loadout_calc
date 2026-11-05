@@ -358,7 +358,7 @@ const compositeAbilityObject = {
                               "MDF_Count"
                             ]
                           },
-                          "Event": [
+                          "execute": [
                             {
                               "name": "ATK Scaling DMG",
                               "target": {

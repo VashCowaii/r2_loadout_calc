@@ -53,7 +53,7 @@ const configAbility = {
           "SummonLayer"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Define Custom Variable",
           "variableName": "SummonCount",

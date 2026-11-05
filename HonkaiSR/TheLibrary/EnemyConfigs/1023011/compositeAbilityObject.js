@@ -482,7 +482,7 @@ const compositeAbilityObject = {
               "LightTeam_Count"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {
@@ -893,7 +893,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Looped Event",
-          "Event": [
+          "execute": [
             "Move to Next Listed Target",
             {
               "name": "IF",

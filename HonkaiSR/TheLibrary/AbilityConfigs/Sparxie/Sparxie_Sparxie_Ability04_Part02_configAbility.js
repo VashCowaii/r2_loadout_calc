@@ -6,8 +6,7 @@ const configAbility = {
   "parse": [
     {
       "name": "Looped Event",
-      "maxLoops": 5,
-      "Event": []
+      "maxLoops": 5
     },
     {
       "name": "Use Custom Character Function",
@@ -117,7 +116,7 @@ const configAbility = {
           "_Rank06_ExtraDamage"
         ]
       },
-      "Event": [
+      "execute": [
         {
           "name": "Use Custom Character Function",
           "functionName": "<a class=\"gTempYellow\" id=\"-1984031563\">Sparxie_ElationAbility_Single</a>"

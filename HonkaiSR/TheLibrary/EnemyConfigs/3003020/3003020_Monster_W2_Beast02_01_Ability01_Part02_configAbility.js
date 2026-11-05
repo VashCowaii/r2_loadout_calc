@@ -186,7 +186,7 @@ const configAbility = {
               "FireBallCount"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "ATK Scaling DMG",
               "target": {

@@ -781,7 +781,7 @@ const configAbility = {
                   "MDF_Count"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -878,7 +878,7 @@ const configAbility = {
                       "MDF_Count"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "IF",
                       "conditions": {

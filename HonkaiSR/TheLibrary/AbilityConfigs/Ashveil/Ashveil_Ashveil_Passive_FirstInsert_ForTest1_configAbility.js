@@ -8,14 +8,14 @@ const configAbility = {
     "Deleted bullshit",
     {
       "name": "Looped Event",
-      "maxLoops": 1,
       "conditions": {
         "name": "Compare: Variable",
         "value1": "Ashveil_NeedContinueInsert",
         "compareType": "=",
         "value2": 1
       },
-      "Event": [
+      "maxLoops": 1,
+      "execute": [
         {
           "name": "Define Custom Variable",
           "variableName": "Ashveil_NeedContinueInsert",
@@ -48,7 +48,7 @@ const configAbility = {
             {
               "name": "Looped Event",
               "maxLoops": 10,
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {

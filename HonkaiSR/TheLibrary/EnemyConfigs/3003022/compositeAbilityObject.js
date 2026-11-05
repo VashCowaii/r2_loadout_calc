@@ -1817,7 +1817,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": 4,
-              "Event": [
+              "execute": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -2511,7 +2511,7 @@ const compositeAbilityObject = {
                   "FireBallCount"
                 ]
               },
-              "Event": [
+              "execute": [
                 {
                   "name": "ATK Scaling DMG",
                   "target": {

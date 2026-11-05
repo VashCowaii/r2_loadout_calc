@@ -85,7 +85,7 @@ const configAbility = {
               "W3_Sunday_00_StanceCountDown_Counter"
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Add Events/Bonuses",
               "to": {

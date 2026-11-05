@@ -638,7 +638,7 @@ const compositeAbilityObject = {
               }
             ]
           },
-          "Event": [
+          "execute": [
             {
               "name": "Update Next Wave Enemy",
               "context": "ContextAbility",
@@ -793,7 +793,7 @@ const compositeAbilityObject = {
         {
           "name": "Looped Event",
           "maxLoops": 9,
-          "Event": [
+          "execute": [
             {
               "name": "Find New Target",
               "from": {

@@ -473,7 +473,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Looped Event",
                   "maxLoops": 4,
-                  "Event": [
+                  "execute": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -2041,7 +2041,7 @@ const compositeAbilityObject = {
             {
               "name": "Looped Event",
               "maxLoops": 4,
-              "Event": [
+              "execute": [
                 {
                   "name": "Find New Target",
                   "from": {
@@ -2798,7 +2798,7 @@ const compositeAbilityObject = {
                       "Skill04BombCount"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "Find New Target",
                       "from": {
@@ -2906,7 +2906,7 @@ const compositeAbilityObject = {
                       "Skill04BombCount"
                     ]
                   },
-                  "Event": [
+                  "execute": [
                     {
                       "name": "ATK Scaling DMG",
                       "target": {
