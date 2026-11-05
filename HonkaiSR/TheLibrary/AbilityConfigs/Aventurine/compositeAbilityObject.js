@@ -1583,7 +1583,7 @@ const compositeAbilityObject = {
           "abilityValueChange": [
             {
               "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DEFSUM</span>&nbsp;",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",

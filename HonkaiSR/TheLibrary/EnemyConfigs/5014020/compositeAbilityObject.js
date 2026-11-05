@@ -2072,7 +2072,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "MDF_dirty_part_num",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -3352,7 +3352,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "MDF_MonsterNum",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",

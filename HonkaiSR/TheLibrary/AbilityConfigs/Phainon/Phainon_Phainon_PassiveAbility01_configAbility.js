@@ -280,7 +280,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "CurOverflowSpecialSP",
-          "from": "ContextCaster",
+          "scope": "ContextCaster",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -404,7 +404,7 @@ const configAbility = {
       "abilityValueChange": [
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -473,7 +473,7 @@ const configAbility = {
         },
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

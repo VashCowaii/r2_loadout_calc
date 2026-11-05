@@ -138,7 +138,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "_Part1_Alive",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -288,7 +288,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "_Part2_Alive",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -438,7 +438,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "_Part3_Alive",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",

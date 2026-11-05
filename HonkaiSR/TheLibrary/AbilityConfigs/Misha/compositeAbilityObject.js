@@ -1002,7 +1002,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "EnergyBar_ExtraUltraAttack",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",

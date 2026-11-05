@@ -2751,7 +2751,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "BattleScoreCount",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -3047,7 +3047,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "_EntityScore",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -3608,7 +3608,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "_EntityScore",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -3855,7 +3855,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "MDF_AddStore",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

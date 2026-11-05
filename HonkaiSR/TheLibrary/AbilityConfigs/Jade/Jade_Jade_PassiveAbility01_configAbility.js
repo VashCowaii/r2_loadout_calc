@@ -908,7 +908,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "_RateLayer",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

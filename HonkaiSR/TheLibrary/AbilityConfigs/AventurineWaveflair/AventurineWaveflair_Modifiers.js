@@ -812,7 +812,7 @@ const configAbility = {
       "abilityValueChange": [
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -831,7 +831,7 @@ const configAbility = {
         },
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -850,7 +850,7 @@ const configAbility = {
         },
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">SpeedConverted</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">SpeedConverted</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -1042,7 +1042,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "MDF_CastNum",
-          "from": "ContextCaster",
+          "scope": "ContextCaster",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -1788,7 +1788,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "MDF_Layer",
-          "from": "ContextCaster",
+          "scope": "ContextCaster",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

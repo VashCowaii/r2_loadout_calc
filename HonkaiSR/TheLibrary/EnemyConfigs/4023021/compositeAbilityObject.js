@@ -48,7 +48,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "W4_Unicorn_00_Debuff_Resolve",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",

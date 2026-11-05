@@ -2510,7 +2510,7 @@ const compositeAbilityObject = {
           "abilityValueChange": [
             {
               "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">EffectHitRate</span>&nbsp;",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",

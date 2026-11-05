@@ -820,7 +820,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "_EnergyBar_CurrentValue",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

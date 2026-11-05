@@ -468,7 +468,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "EnergyBar_CurEnergy",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

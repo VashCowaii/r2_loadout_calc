@@ -1329,7 +1329,7 @@ const compositeAbilityObject = {
           "abilityValueChange": [
             {
               "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -1509,7 +1509,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",

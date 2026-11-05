@@ -167,7 +167,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "charVar_1",
-          "from": "ContextCaster",
+          "scope": "ContextCaster",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

@@ -2489,7 +2489,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "Jingliu_MoonFlag",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -2582,7 +2582,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "Jingliu_FullMoonFlag",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

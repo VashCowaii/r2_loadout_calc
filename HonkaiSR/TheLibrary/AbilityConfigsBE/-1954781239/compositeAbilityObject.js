@@ -1933,7 +1933,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "DV_FantasticStory_BaseAbility_0050_CountSum",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -3443,7 +3443,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "DV_FantasticStory_BaseAbility_0040_CountSum",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -5523,7 +5523,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "DV_FantasticStory_BaseAbility_0030_DamageSum",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -5741,7 +5741,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "DV_FantasticStory_PlusAbility_0034_InsertAtkCount",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",

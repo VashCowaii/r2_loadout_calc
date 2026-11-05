@@ -86,7 +86,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "EXSkill01",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

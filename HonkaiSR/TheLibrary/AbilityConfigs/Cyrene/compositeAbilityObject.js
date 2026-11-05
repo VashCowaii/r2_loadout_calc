@@ -613,7 +613,7 @@ const compositeAbilityObject = {
           "abilityValueChange": [
             {
               "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -628,7 +628,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -643,7 +643,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -2576,7 +2576,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "CurSpecialSP",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -2621,7 +2621,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "CurOverflowSpecialSP",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -2649,7 +2649,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "SpecialSPNeed",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -2727,7 +2727,7 @@ const compositeAbilityObject = {
           "abilityValueChange": [
             {
               "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -2749,7 +2749,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -2826,7 +2826,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecialOverflow</span>&nbsp;",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecialOverflow</span>&nbsp;",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -4319,7 +4319,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "DanHengPT_ExtraDamageCount",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -6675,7 +6675,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "Memosprite_CyreneServant_AmazingBonus_Mydeimos[Counter]",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -7325,7 +7325,7 @@ const compositeAbilityObject = {
           "abilityValueChange": [
             {
               "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -7340,7 +7340,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -7355,7 +7355,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -7370,7 +7370,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -8054,7 +8054,7 @@ const compositeAbilityObject = {
           "abilityValueChange": [
             {
               "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">MaxSpecialEnergy</span>&nbsp;",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">MaxSpecialEnergy</span>&nbsp;",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -9184,7 +9184,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "CurAmazingCount",
-              "from": "ContextOwner"
+              "scope": "ContextOwner"
             }
           ]
         },
@@ -9657,7 +9657,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "CurSpecialSP",
-              "from": "ContextOwner"
+              "scope": "ContextOwner"
             }
           ]
         }

@@ -1326,7 +1326,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "CanUseUltra_IF",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

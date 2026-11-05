@@ -321,7 +321,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "CurEnergy",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -461,7 +461,7 @@ const configAbility = {
       "abilityValueChange": [
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

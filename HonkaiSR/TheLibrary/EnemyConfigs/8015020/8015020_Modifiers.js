@@ -493,7 +493,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "Phase1_BattlePerform",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -598,7 +598,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "Phase2_BattlePerform",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

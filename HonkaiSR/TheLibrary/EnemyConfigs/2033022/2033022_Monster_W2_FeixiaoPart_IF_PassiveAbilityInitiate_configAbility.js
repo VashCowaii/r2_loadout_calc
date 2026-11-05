@@ -496,7 +496,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "_TurnCount",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

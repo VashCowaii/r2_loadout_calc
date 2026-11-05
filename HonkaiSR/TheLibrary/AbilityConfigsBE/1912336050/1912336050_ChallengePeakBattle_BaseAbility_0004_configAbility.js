@@ -229,7 +229,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "_Elite_Num",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

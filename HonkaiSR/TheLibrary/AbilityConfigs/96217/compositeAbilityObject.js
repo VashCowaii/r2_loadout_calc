@@ -2337,7 +2337,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "G_EnergyCount",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",

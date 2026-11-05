@@ -3649,7 +3649,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "MDF_RestEnergy",
-              "from": "ContextCaster",
+              "scope": "ContextCaster",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",

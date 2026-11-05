@@ -245,7 +245,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "DanHengPT_ExtraDamageCount",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -2601,7 +2601,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "Memosprite_CyreneServant_AmazingBonus_Mydeimos[Counter]",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -3251,7 +3251,7 @@ const configAbility = {
       "abilityValueChange": [
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HP%</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -3266,7 +3266,7 @@ const configAbility = {
         },
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPFlat</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -3281,7 +3281,7 @@ const configAbility = {
         },
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPBase</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -3296,7 +3296,7 @@ const configAbility = {
         },
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">CritRateBase</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -3980,7 +3980,7 @@ const configAbility = {
       "abilityValueChange": [
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">MaxSpecialEnergy</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">MaxSpecialEnergy</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

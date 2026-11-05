@@ -89,7 +89,7 @@ const configAbility = {
       "abilityValueChange": [
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ShieldValue</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">ShieldValue</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

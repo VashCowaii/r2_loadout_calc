@@ -326,7 +326,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "_Partner_Count",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -499,7 +499,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "_Partner_Count",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

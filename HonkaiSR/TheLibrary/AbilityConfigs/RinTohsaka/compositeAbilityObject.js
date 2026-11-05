@@ -3126,7 +3126,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "EnergyBar_GemNum_Shadow",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -3724,7 +3724,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "EnergyBar_GemNum",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",

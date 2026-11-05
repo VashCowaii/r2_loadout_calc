@@ -7060,7 +7060,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "Weakness_CountDown",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",

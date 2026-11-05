@@ -117,7 +117,7 @@ const configAbility = {
       "abilityValueChange": [
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -153,7 +153,7 @@ const configAbility = {
         },
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -168,7 +168,7 @@ const configAbility = {
         },
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -1676,7 +1676,7 @@ const configAbility = {
       "abilityValueChange": [
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">Speed</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -1695,7 +1695,7 @@ const configAbility = {
         },
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">SPD%</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -1714,7 +1714,7 @@ const configAbility = {
         },
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">SPDFlat</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

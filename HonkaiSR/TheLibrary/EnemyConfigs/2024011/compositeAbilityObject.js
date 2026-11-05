@@ -2024,7 +2024,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "CanUseUltra",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",

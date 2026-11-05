@@ -827,7 +827,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "DV_FantasticStory_BaseAbility_0040_CountSum",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

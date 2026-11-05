@@ -147,7 +147,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "Huohuo_Rank02_ReviveCount",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -1391,7 +1391,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "Huohuo_Passive_DispelCount",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -1417,7 +1417,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "Huohuo_Passive_HotCount",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",

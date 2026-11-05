@@ -3569,7 +3569,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "_Current_Layer",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",

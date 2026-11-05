@@ -793,7 +793,7 @@ const compositeAbilityObject = {
           "abilityValueChange": [
             {
               "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyMax</span>&nbsp;",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -921,7 +921,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "Avatar_Gilgamesh_00_KingCount",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -1046,7 +1046,7 @@ const compositeAbilityObject = {
           "abilityValueChange": [
             {
               "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrent</span>&nbsp;",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -1227,7 +1227,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "Saber_Chain",
-              "from": "ContextCaster",
+              "scope": "ContextCaster",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",

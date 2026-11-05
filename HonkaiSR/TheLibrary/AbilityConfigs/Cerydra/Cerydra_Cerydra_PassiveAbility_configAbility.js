@@ -940,7 +940,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "DV_CurrentPoint",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

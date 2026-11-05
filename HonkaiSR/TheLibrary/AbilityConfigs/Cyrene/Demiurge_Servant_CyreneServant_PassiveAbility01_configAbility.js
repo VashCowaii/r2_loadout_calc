@@ -136,7 +136,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "CurAmazingCount",
-          "from": "ContextOwner"
+          "scope": "ContextOwner"
         }
       ]
     },
@@ -609,7 +609,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "CurSpecialSP",
-          "from": "ContextOwner"
+          "scope": "ContextOwner"
         }
       ]
     }

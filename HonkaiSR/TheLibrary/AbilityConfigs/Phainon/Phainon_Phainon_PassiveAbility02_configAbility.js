@@ -294,7 +294,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "Skill22_Energy",
-          "from": "ContextCaster",
+          "scope": "ContextCaster",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

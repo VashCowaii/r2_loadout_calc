@@ -641,7 +641,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "CurSpecialSP",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -686,7 +686,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "CurOverflowSpecialSP",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -714,7 +714,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "SpecialSPNeed",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -792,7 +792,7 @@ const configAbility = {
       "abilityValueChange": [
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -814,7 +814,7 @@ const configAbility = {
         },
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -891,7 +891,7 @@ const configAbility = {
         },
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecialOverflow</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecialOverflow</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

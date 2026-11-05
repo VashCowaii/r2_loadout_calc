@@ -257,7 +257,7 @@ const compositeAbilityObject = {
           "abilityValueChange": [
             {
               "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -272,7 +272,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -659,7 +659,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "DV_CurrentPoint",
-              "from": "ContextCaster",
+              "scope": "ContextCaster",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -733,7 +733,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "Rank01toRank00",
-              "from": "ContextCaster",
+              "scope": "ContextCaster",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -745,7 +745,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "_RemoveFlag",
-              "from": "ContextCaster",
+              "scope": "ContextCaster",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -2034,7 +2034,7 @@ const compositeAbilityObject = {
           "abilityValueChange": [
             {
               "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">ATKFlat</span>&nbsp;",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -2049,7 +2049,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">ATK%</span>&nbsp;",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -2064,7 +2064,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">AttackConverted</span>&nbsp;",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -3443,7 +3443,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "DV_CurrentPoint",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",

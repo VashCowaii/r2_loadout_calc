@@ -2217,7 +2217,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "LMRatio",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",

@@ -143,7 +143,7 @@ const configAbility = {
       "abilityValueChange": [
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DEF%</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -195,7 +195,7 @@ const configAbility = {
         },
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">DEFFlat</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DEFFlat</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -247,7 +247,7 @@ const configAbility = {
         },
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">DEFConverted</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">DEFConverted</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

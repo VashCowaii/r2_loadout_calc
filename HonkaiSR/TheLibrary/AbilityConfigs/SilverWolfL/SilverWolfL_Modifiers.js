@@ -406,7 +406,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "CurScore",
-          "from": "ContextCaster",
+          "scope": "ContextCaster",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -1296,7 +1296,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "CurScore",
-          "from": "ContextCaster",
+          "scope": "ContextCaster",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -1654,7 +1654,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "UltraAttackCount",
-          "from": "ContextCaster",
+          "scope": "ContextCaster",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -2311,7 +2311,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "UltraAttackCount",
-          "from": "ContextCaster",
+          "scope": "ContextCaster",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

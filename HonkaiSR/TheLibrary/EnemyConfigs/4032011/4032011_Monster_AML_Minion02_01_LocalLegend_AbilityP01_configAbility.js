@@ -149,7 +149,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "MDF_IsNegative",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

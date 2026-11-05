@@ -65,7 +65,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "AML_Boss_00_Part_EnhancementLevel",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",

@@ -3960,7 +3960,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "Skill22_Energy",
-              "from": "ContextCaster",
+              "scope": "ContextCaster",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -4375,7 +4375,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "CurOverflowSpecialSP",
-              "from": "ContextCaster",
+              "scope": "ContextCaster",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -4499,7 +4499,7 @@ const compositeAbilityObject = {
           "abilityValueChange": [
             {
               "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -4568,7 +4568,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">SPDBase</span>&nbsp;",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",

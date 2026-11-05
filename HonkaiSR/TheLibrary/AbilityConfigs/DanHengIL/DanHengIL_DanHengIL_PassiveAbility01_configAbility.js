@@ -498,7 +498,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "Flag_AttackCount",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -604,7 +604,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "BPExChange",
-          "from": "ContextCaster",
+          "scope": "ContextCaster",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

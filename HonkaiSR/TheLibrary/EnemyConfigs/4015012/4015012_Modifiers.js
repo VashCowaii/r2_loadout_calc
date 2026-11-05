@@ -172,7 +172,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "Sunny_Temperature",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

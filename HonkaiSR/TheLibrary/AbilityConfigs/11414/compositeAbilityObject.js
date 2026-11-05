@@ -57,7 +57,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "DanHengPT_ExtraDamageCount",
-              "from": "ContextOwner",
+              "scope": "ContextOwner",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",

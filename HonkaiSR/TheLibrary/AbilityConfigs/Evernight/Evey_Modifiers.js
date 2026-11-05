@@ -628,7 +628,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "S02_ExtraRatio",
-          "from": "ContextCaster",
+          "scope": "ContextCaster",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -735,7 +735,7 @@ const configAbility = {
       "abilityValueChange": [
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">CritDamageBase</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

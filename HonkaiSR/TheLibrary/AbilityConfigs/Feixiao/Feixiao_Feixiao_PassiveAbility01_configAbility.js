@@ -695,7 +695,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "ComboAttackCount",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -728,7 +728,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "Passive_AttackCount",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -806,7 +806,7 @@ const configAbility = {
       "abilityValueChange": [
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">EnergyCurrentSpecial</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

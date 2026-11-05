@@ -236,7 +236,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "EnergyBar_ATKCount",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -375,7 +375,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "EnergyBar_ATKCount",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

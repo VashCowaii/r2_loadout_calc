@@ -1697,7 +1697,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "ENEMIES_OBJECT_UNUSED__106",
-              "from": "ContextCaster",
+              "scope": "ContextCaster",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -1915,7 +1915,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "ENEMIES_OBJECT_UNUSED__107",
-              "from": "ContextCaster",
+              "scope": "ContextCaster",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -1948,7 +1948,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "ENEMIES_OBJECT_UNUSED__108",
-              "from": "ContextCaster",
+              "scope": "ContextCaster",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -2423,7 +2423,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "_WorldErosion02",
-              "from": "ContextCaster",
+              "scope": "ContextCaster",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -3702,7 +3702,7 @@ const compositeAbilityObject = {
           "abilityValueChange": [
             {
               "name": "Ability Value Changes",
-              "variableName": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;",
+              "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">ActionDelay</span>&nbsp;",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -4711,7 +4711,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "_WorldErosionIndex",
-              "from": "ContextCaster",
+              "scope": "ContextCaster",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -4746,7 +4746,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "_WorldErosion02",
-              "from": "ContextCaster",
+              "scope": "ContextCaster",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
@@ -5692,7 +5692,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Changes",
               "variableName": "_CorePartBreakCount",
-              "from": "ContextCaster",
+              "scope": "ContextCaster",
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",

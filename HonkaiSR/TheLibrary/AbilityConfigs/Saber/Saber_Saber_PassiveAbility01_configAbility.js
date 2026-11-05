@@ -734,7 +734,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "DV_SurgePoint",
-          "from": "ContextOwner",
+          "scope": "ContextOwner",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

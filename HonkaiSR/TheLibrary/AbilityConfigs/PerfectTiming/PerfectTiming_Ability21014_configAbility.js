@@ -117,7 +117,7 @@ const configAbility = {
       "abilityValueChange": [
         {
           "name": "Ability Value Changes",
-          "variableName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
+          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">EffectRES</span>&nbsp;",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",

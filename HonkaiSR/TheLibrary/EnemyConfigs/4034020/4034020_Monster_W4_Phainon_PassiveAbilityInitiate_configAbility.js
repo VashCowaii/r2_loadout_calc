@@ -271,7 +271,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "ENEMIES_OBJECT_UNUSED__173",
-          "from": "ContextCaster",
+          "scope": "ContextCaster",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -314,7 +314,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "ENEMIES_OBJECT_UNUSED__174",
-          "from": "ContextCaster",
+          "scope": "ContextCaster",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -357,7 +357,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "_BanUltra",
-          "from": "ContextCaster",
+          "scope": "ContextCaster",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
@@ -385,7 +385,7 @@ const configAbility = {
         {
           "name": "Variable Value Changes",
           "variableName": "ENEMIES_OBJECT_UNUSED__107",
-          "from": "ContextCaster",
+          "scope": "ContextCaster",
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
