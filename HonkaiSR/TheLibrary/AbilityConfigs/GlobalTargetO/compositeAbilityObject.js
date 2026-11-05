@@ -425,7 +425,8 @@ const compositeAbilityObject = {
           "isTargetOperator": true,
           "execute": [
             {
-              "name": "Adjust Target by Ability Target"
+              "name": "Adjust Target by Ability Target",
+              "errorIfFailed": false
             }
           ]
         },

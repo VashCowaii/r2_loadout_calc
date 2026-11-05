@@ -9742,7 +9742,8 @@ const configAbility = {
                   "target": "{{Current Action Owner}}"
                 },
                 {
-                  "name": "Adjust Target by Ability Target"
+                  "name": "Adjust Target by Ability Target",
+                  "errorIfFailed": false
                 }
               ]
             },
