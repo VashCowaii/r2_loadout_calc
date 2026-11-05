@@ -4964,7 +4964,7 @@ const configAbility = {
                   "name": "Action Advance/Delay",
                   "target": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Battle Event List}}"
@@ -5501,7 +5501,7 @@ const configAbility = {
               "name": "Find New Target",
               "from": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"

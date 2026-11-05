@@ -7587,26 +7587,24 @@ const compositeAbilityObject = {
           "options": [
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 2
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill02"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Define Custom Variable",
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 2
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill02"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,
@@ -7627,65 +7625,63 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Choose Ability Target",
-                      "skillName": "Skill10",
-                      "target": {
-                        "name": "Create Selection List",
-                        "passed": [
-                          {
-                            "name": "Select by Modifier Name",
-                            "modifier": "<a class=\"gModGreen\" id=\"1835614679\">Enemy_W1_CocoliaP2_IF_Rel_TargetLock01</a>",
-                            "target": null,
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Select by Modifier Name",
-                            "modifier": "<a class=\"gModGreen\" id=\"1852392298\">Enemy_W1_CocoliaP2_IF_Rel_TargetLock02</a>",
-                            "target": null,
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Select by Modifier Name",
-                            "modifier": "<a class=\"gModGreen\" id=\"1869169917\">Enemy_W1_CocoliaP2_IF_Rel_TargetLock03</a>",
-                            "target": null,
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Select by Modifier Name",
-                            "modifier": "<a class=\"gModGreen\" id=\"1751726584\">Enemy_W1_CocoliaP2_IF_Rel_TargetLock04</a>",
-                            "target": null,
-                            "invertCondition": true
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 3
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
-                      "variableName": "AccumulateFlag",
-                      "value": 1
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill10"
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Choose Ability Target",
+                    "skillName": "Skill10",
+                    "target": {
+                      "name": "Create Selection List",
+                      "passed": [
+                        {
+                          "name": "Select by Modifier Name",
+                          "modifier": "<a class=\"gModGreen\" id=\"1835614679\">Enemy_W1_CocoliaP2_IF_Rel_TargetLock01</a>",
+                          "target": null,
+                          "invertCondition": true
+                        },
+                        {
+                          "name": "Select by Modifier Name",
+                          "modifier": "<a class=\"gModGreen\" id=\"1852392298\">Enemy_W1_CocoliaP2_IF_Rel_TargetLock02</a>",
+                          "target": null,
+                          "invertCondition": true
+                        },
+                        {
+                          "name": "Select by Modifier Name",
+                          "modifier": "<a class=\"gModGreen\" id=\"1869169917\">Enemy_W1_CocoliaP2_IF_Rel_TargetLock03</a>",
+                          "target": null,
+                          "invertCondition": true
+                        },
+                        {
+                          "name": "Select by Modifier Name",
+                          "modifier": "<a class=\"gModGreen\" id=\"1751726584\">Enemy_W1_CocoliaP2_IF_Rel_TargetLock04</a>",
+                          "target": null,
+                          "invertCondition": true
+                        }
+                      ]
                     }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                  },
+                  {
+                    "name": "Define Custom Variable",
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 3
+                  },
+                  {
+                    "name": "Define Custom Variable",
+                    "scope": "TargetEntity",
+                    "variableName": "AccumulateFlag",
+                    "value": 1
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill10"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,
@@ -7706,41 +7702,39 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Choose Ability Target",
-                      "skillName": "Skill06",
-                      "target": {
-                        "name": "Select by Modifier Name",
-                        "modifier": "<a class=\"gModGreen\" id=\"1281838321\">Enemy_W1_CocoliaP2_Ability10_TargetLock</a>[<span class=\"descriptionNumberColor\">Harbinger of Annihilation</span>]",
-                        "target": null
-                      }
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 5
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
-                      "variableName": "AccumulateFlag",
-                      "value": 0
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill06"
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Choose Ability Target",
+                    "skillName": "Skill06",
+                    "target": {
+                      "name": "Select by Modifier Name",
+                      "modifier": "<a class=\"gModGreen\" id=\"1281838321\">Enemy_W1_CocoliaP2_Ability10_TargetLock</a>[<span class=\"descriptionNumberColor\">Harbinger of Annihilation</span>]",
+                      "target": null
                     }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                  },
+                  {
+                    "name": "Define Custom Variable",
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 5
+                  },
+                  {
+                    "name": "Define Custom Variable",
+                    "scope": "TargetEntity",
+                    "variableName": "AccumulateFlag",
+                    "value": 0
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill06"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,
@@ -7761,26 +7755,24 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 12
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill11"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Define Custom Variable",
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 12
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill11"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,
@@ -7801,70 +7793,68 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill07",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Choose Ability Target",
-                      "skillName": "Skill07",
-                      "target": {
-                        "name": "Create Selection List",
-                        "passed": [
-                          {
-                            "name": "Select by Modifier Name",
-                            "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
-                            "target": null,
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Select by Modifier Name",
-                            "modifier": "<a class=\"gModGreen\" id=\"1835614679\">Enemy_W1_CocoliaP2_IF_Rel_TargetLock01</a>",
-                            "target": null,
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Select by Modifier Name",
-                            "modifier": "<a class=\"gModGreen\" id=\"1852392298\">Enemy_W1_CocoliaP2_IF_Rel_TargetLock02</a>",
-                            "target": null,
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Select by Modifier Name",
-                            "modifier": "<a class=\"gModGreen\" id=\"1869169917\">Enemy_W1_CocoliaP2_IF_Rel_TargetLock03</a>",
-                            "target": null,
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Select by Modifier Name",
-                            "modifier": "<a class=\"gModGreen\" id=\"1751726584\">Enemy_W1_CocoliaP2_IF_Rel_TargetLock04</a>",
-                            "target": null,
-                            "invertCondition": true
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 12
-                    },
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "Monster_W1_CocoliaP2_00_SummonRecord",
-                      "value": 0
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill07"
+              "optionName": "UseSkill07",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Choose Ability Target",
+                    "skillName": "Skill07",
+                    "target": {
+                      "name": "Create Selection List",
+                      "passed": [
+                        {
+                          "name": "Select by Modifier Name",
+                          "modifier": "<a class=\"gModGreen\" id=\"1997760414\">Standard_Confine</a>[<span class=\"descriptionNumberColor\">Imprisonment</span>]",
+                          "target": null,
+                          "invertCondition": true
+                        },
+                        {
+                          "name": "Select by Modifier Name",
+                          "modifier": "<a class=\"gModGreen\" id=\"1835614679\">Enemy_W1_CocoliaP2_IF_Rel_TargetLock01</a>",
+                          "target": null,
+                          "invertCondition": true
+                        },
+                        {
+                          "name": "Select by Modifier Name",
+                          "modifier": "<a class=\"gModGreen\" id=\"1852392298\">Enemy_W1_CocoliaP2_IF_Rel_TargetLock02</a>",
+                          "target": null,
+                          "invertCondition": true
+                        },
+                        {
+                          "name": "Select by Modifier Name",
+                          "modifier": "<a class=\"gModGreen\" id=\"1869169917\">Enemy_W1_CocoliaP2_IF_Rel_TargetLock03</a>",
+                          "target": null,
+                          "invertCondition": true
+                        },
+                        {
+                          "name": "Select by Modifier Name",
+                          "modifier": "<a class=\"gModGreen\" id=\"1751726584\">Enemy_W1_CocoliaP2_IF_Rel_TargetLock04</a>",
+                          "target": null,
+                          "invertCondition": true
+                        }
+                      ]
                     }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                  },
+                  {
+                    "name": "Define Custom Variable",
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 12
+                  },
+                  {
+                    "name": "Define Custom Variable",
+                    "variableName": "Monster_W1_CocoliaP2_00_SummonRecord",
+                    "value": 0
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill07"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,
@@ -7885,36 +7875,34 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill08",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 13
+              "optionName": "UseSkill08",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
-                      "variableName": "AccumulateFlag",
-                      "value": 1
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill08"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 13
+                  },
+                  {
+                    "name": "Define Custom Variable",
+                    "scope": "TargetEntity",
+                    "variableName": "AccumulateFlag",
+                    "value": 1
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill08"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,
@@ -7935,36 +7923,34 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill09",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 11
+              "optionName": "UseSkill09",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
-                      "variableName": "AccumulateFlag",
-                      "value": 0
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill09"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 11
+                  },
+                  {
+                    "name": "Define Custom Variable",
+                    "scope": "TargetEntity",
+                    "variableName": "AccumulateFlag",
+                    "value": 0
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill09"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,

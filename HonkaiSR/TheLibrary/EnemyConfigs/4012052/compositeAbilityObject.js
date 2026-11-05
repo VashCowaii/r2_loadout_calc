@@ -2746,20 +2746,18 @@ const compositeAbilityObject = {
           "options": [
             {
               "name": "HANDLER OPTION",
-              "option": "Decision02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill04"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+              "optionName": "Decision02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill04"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,

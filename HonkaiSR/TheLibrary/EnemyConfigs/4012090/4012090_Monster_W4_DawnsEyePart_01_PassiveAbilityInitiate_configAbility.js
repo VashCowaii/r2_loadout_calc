@@ -122,7 +122,7 @@ const configAbility = {
                         "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Sequence",
-                          "Sequence": [
+                          "TargetList": [
                             {
                               "name": "Target Name",
                               "target": "{{Enemy Team All(with Unselectable)}}"
@@ -177,7 +177,7 @@ const configAbility = {
                         "state": "Mask_AliveOnly",
                         "target": {
                           "name": "Target Sequence",
-                          "Sequence": [
+                          "TargetList": [
                             {
                               "name": "Target Name",
                               "target": "{{Enemy Team All(with Unselectable)}}"

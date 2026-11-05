@@ -3225,7 +3225,7 @@ const compositeAbilityObject = {
           "name": "Force Entity Death",
           "target": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Battle Event List}}"

@@ -301,7 +301,7 @@ const compositeAbilityObject = {
                         "name": "Compare: Target",
                         "target": {
                           "name": "Target Sequence",
-                          "Sequence": [
+                          "TargetList": [
                             {
                               "name": "Target Name",
                               "target": "{{Parameter Target 2}}"

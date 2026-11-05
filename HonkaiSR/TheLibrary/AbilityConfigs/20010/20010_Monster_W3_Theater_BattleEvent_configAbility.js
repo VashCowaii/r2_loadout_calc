@@ -147,7 +147,7 @@ const configAbility = {
                   "name": "Trigger Ability",
                   "from": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"

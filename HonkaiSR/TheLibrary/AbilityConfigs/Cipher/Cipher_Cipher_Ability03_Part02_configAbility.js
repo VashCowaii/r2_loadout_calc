@@ -255,7 +255,7 @@ const configAbility = {
           "name": "ATK Scaling DMG",
           "target": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{ST and Blast}}"

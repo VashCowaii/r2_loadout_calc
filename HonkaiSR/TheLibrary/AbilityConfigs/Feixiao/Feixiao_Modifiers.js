@@ -78,7 +78,7 @@ const configAbility = {
             "name": "Compare: Target Count",
             "target": {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Add Target by Summoned Units",
                   "target": {
@@ -112,7 +112,7 @@ const configAbility = {
             "name": "Compare: Target Count",
             "target": {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Add Target by Summoned Units",
                   "target": {

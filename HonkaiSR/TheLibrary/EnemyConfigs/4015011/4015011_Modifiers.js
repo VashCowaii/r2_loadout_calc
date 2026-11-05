@@ -4544,7 +4544,7 @@ const configAbility = {
                   "name": "Find New Target",
                   "from": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
@@ -4691,7 +4691,7 @@ const configAbility = {
                   "name": "Find New Target",
                   "from": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
@@ -4983,7 +4983,7 @@ const configAbility = {
               },
               {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{All Unselectable Targets}}"
@@ -5276,7 +5276,7 @@ const configAbility = {
               },
               {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{All Unselectable Targets}}"
@@ -6012,7 +6012,7 @@ const configAbility = {
                 "TargetList": [
                   {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Enemy Team All(with Unselectable)}}"
@@ -6061,7 +6061,7 @@ const configAbility = {
                   },
                   {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Enemy Team All(with Unselectable)}}"

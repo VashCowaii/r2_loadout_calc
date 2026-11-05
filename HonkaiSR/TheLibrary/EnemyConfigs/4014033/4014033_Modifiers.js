@@ -293,7 +293,7 @@ const configAbility = {
                     "name": "Compare: Target Count",
                     "target": {
                       "name": "Target Sequence",
-                      "Sequence": [
+                      "TargetList": [
                         {
                           "name": "Target Name",
                           "target": "{{Player Team(Exclude Memosprites)}}"
@@ -1087,7 +1087,7 @@ const configAbility = {
                     "name": "Compare: Target Count",
                     "target": {
                       "name": "Target Sequence",
-                      "Sequence": [
+                      "TargetList": [
                         {
                           "name": "Target Name",
                           "target": "{{Enemy Team All}}"

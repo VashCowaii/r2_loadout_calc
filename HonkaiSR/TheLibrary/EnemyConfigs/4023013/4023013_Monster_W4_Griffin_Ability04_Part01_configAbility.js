@@ -33,7 +33,7 @@ const configAbility = {
             },
             "target2": {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"

@@ -130,7 +130,7 @@ const configAbility = {
         "name": "Has Modifier",
         "target": {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             {
               "name": "Target Name",
               "target": "{{Enemy Team All}}"
@@ -175,7 +175,7 @@ const configAbility = {
         "name": "Has Modifier",
         "target": {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             {
               "name": "Target Name",
               "target": "{{Enemy Team All}}"
@@ -220,7 +220,7 @@ const configAbility = {
         "name": "Has Modifier",
         "target": {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             {
               "name": "Target Name",
               "target": "{{Enemy Team All}}"
@@ -265,7 +265,7 @@ const configAbility = {
         "name": "Has Modifier",
         "target": {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             {
               "name": "Target Name",
               "target": "{{Enemy Team All}}"
@@ -367,7 +367,7 @@ const configAbility = {
         "name": "Has Modifier",
         "target": {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             {
               "name": "Target Name",
               "target": "{{Enemy Team All}}"
@@ -436,7 +436,7 @@ const configAbility = {
         "name": "Has Modifier",
         "target": {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             {
               "name": "Target Name",
               "target": "{{Enemy Team All}}"
@@ -505,7 +505,7 @@ const configAbility = {
         "name": "Has Modifier",
         "target": {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             {
               "name": "Target Name",
               "target": "{{Enemy Team All}}"
@@ -574,7 +574,7 @@ const configAbility = {
         "name": "Has Modifier",
         "target": {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             {
               "name": "Target Name",
               "target": "{{Enemy Team All}}"

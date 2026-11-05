@@ -1334,20 +1334,18 @@ const compositeAbilityObject = {
           "options": [
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill04",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill04"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+              "optionName": "UseSkill04",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill04"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,
@@ -1365,20 +1363,18 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill05",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill05"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+              "optionName": "UseSkill05",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill05"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,
@@ -1394,20 +1390,18 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill06",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill06"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+              "optionName": "UseSkill06",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill06"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,

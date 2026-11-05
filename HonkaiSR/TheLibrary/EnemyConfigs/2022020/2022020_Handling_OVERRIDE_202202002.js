@@ -25,32 +25,30 @@ const configAbility = {
       "options": [
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill01",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Choose Ability Target",
-                  "skillName": "Skill01",
-                  "target": {
-                    "name": "Select by Modifier Name",
-                    "modifier": "<a class=\"gModGreen\" id=\"-1875575825\">Monster_W2_Abomi02_Mark</a>[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]",
-                    "target": null,
-                    "invertCondition": true,
-                    "tieBreakWithRandom": true
-                  }
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill01"
+          "optionName": "UseSkill01",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Choose Ability Target",
+                "skillName": "Skill01",
+                "target": {
+                  "name": "Select by Modifier Name",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1875575825\">Monster_W2_Abomi02_Mark</a>[<span class=\"descriptionNumberColor\">Spur of Thunderwoe</span>]",
+                  "target": null,
+                  "invertCondition": true,
+                  "tieBreakWithRandom": true
                 }
-              ]
-            }
-          ],
-          "weight": 0.8,
-          "type": "DefaultDSE",
-          "check": [
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill01"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionWeight": 0.8,
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.9,
@@ -92,21 +90,19 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill02",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill02"
-                }
-              ]
-            }
-          ],
-          "weight": 0.9,
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "UseSkill02",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill02"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionWeight": 0.9,
+          "optionCheck": [
             {
               "name": "Check Ability Use Value",
               "skillName": "Skill02",

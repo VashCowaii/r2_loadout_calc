@@ -168,7 +168,7 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "target": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Player Team(Exclude Memosprites)}}"
@@ -217,7 +217,7 @@ const compositeAbilityObject = {
                           "name": "Define Custom Variable",
                           "target": {
                             "name": "Target Sequence",
-                            "Sequence": [
+                            "TargetList": [
                               {
                                 "name": "Target Name",
                                 "target": "{{Player Team(Exclude Memosprites)}}-{{EVENT[RoT] Dark Praetor: Selected Target}}"
@@ -252,7 +252,7 @@ const compositeAbilityObject = {
                           "name": "Define Custom Variable",
                           "target": {
                             "name": "Target Sequence",
-                            "Sequence": [
+                            "TargetList": [
                               {
                                 "name": "Target Name",
                                 "target": "{{Player Team(Exclude Memosprites)}}-{{EVENT[RoT] Dark Praetor: Selected Target}}"

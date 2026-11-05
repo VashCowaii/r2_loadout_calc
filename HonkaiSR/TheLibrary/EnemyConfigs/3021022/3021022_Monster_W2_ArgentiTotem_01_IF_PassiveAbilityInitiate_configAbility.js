@@ -71,7 +71,7 @@ const configAbility = {
                   "name": "Compare: Ability Value",
                   "target": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{All Team Members}}"

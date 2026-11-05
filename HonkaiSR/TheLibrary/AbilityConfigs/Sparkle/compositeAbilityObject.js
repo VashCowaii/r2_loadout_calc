@@ -2358,7 +2358,7 @@ const compositeAbilityObject = {
                   "name": "Add Events/Bonuses",
                   "to": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{All Team Members(Exclude Self)}}"
@@ -2581,7 +2581,7 @@ const compositeAbilityObject = {
               "name": "Add Events/Bonuses",
               "to": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{All Team Members(Exclude Self)}}"
@@ -2868,7 +2868,7 @@ const compositeAbilityObject = {
               "name": "Add Events/Bonuses",
               "to": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{All Team Members(Exclude Self)}}"

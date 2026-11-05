@@ -504,7 +504,7 @@ const configAbility = {
       "execute": [
         {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             "Adjust Target by Battle-Events Created",
             {
               "name": "Target Filter",
@@ -578,7 +578,7 @@ const configAbility = {
       "execute": [
         {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             "Adjust Target by Summoned Minions",
             {
               "name": "Target Filter",
@@ -635,7 +635,7 @@ const configAbility = {
       "execute": [
         {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             "Adjust Target by Battle-Events Created",
             {
               "name": "Target Filter",
@@ -778,7 +778,7 @@ const configAbility = {
                 },
                 "target2": {
                   "name": "Target Sequence",
-                  "Sequence": [
+                  "TargetList": [
                     {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
@@ -799,7 +799,7 @@ const configAbility = {
       "execute": [
         {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             "Adjust Target by Battle-Events Created",
             {
               "name": "Target Filter",
@@ -811,7 +811,7 @@ const configAbility = {
                 },
                 "target2": {
                   "name": "Target Sequence",
-                  "Sequence": [
+                  "TargetList": [
                     {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
@@ -1011,7 +1011,7 @@ const configAbility = {
       "execute": [
         {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             {
               "name": "Target Name",
               "target": "{{Parameter Target List}}"

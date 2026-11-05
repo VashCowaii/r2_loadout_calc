@@ -104,7 +104,7 @@ const configAbility = {
             "TargetList": [
               {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[addBattleEvents]]"
@@ -145,7 +145,7 @@ const configAbility = {
               },
               {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"

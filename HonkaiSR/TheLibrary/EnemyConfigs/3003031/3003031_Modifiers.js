@@ -67,7 +67,7 @@ const configAbility = {
                     "name": "Is Entity Type",
                     "target": {
                       "name": "Target Sequence",
-                      "Sequence": [
+                      "TargetList": [
                         {
                           "name": "Target Name",
                           "target": "{{Player Team All}}"

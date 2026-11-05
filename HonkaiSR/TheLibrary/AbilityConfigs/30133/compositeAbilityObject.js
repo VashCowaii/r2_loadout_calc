@@ -1833,7 +1833,7 @@ const compositeAbilityObject = {
               },
               "target": {
                 "name": "Compute Targets",
-                "type": "Intersect",
+                "operationType": "Intersect",
                 "TargetList": [
                   {
                     "name": "Target Name",
@@ -2927,7 +2927,7 @@ const compositeAbilityObject = {
                       "name": "Find New Target",
                       "from": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"

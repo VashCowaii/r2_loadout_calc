@@ -330,7 +330,7 @@ const compositeAbilityObject = {
                                   },
                                   "abilityTarget": {
                                     "name": "Target Sequence",
-                                    "Sequence": [
+                                    "TargetList": [
                                       {
                                         "name": "Target Name",
                                         "target": "{{Player Team All}}"
@@ -397,7 +397,7 @@ const compositeAbilityObject = {
                           },
                           "abilityTarget": {
                             "name": "Target Sequence",
-                            "Sequence": [
+                            "TargetList": [
                               {
                                 "name": "Target Name",
                                 "target": "{{Player Team All}}"

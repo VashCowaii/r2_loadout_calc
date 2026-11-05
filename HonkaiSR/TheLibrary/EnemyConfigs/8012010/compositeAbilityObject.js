@@ -624,29 +624,27 @@ const compositeAbilityObject = {
           "options": [
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill01",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Choose Ability Target",
-                      "skillName": "Skill01",
-                      "target": {
-                        "name": "Select by Modifier Name",
-                        "modifier": "Enemy_AML_Minion03_Target[<span class=\"descriptionNumberColor\">Lock On</span>]",
-                        "target": null
-                      }
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
+              "optionName": "UseSkill01",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Choose Ability Target",
+                    "skillName": "Skill01",
+                    "target": {
+                      "name": "Select by Modifier Name",
+                      "modifier": "Enemy_AML_Minion03_Target[<span class=\"descriptionNumberColor\">Lock On</span>]",
+                      "target": null
                     }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Value",
                   "skillName": "Skill01",
@@ -658,29 +656,27 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Choose Ability Target",
-                      "skillName": "Skill02",
-                      "target": {
-                        "name": "Select by Modifier Name",
-                        "modifier": "Enemy_AML_Minion03_Target[<span class=\"descriptionNumberColor\">Lock On</span>]",
-                        "target": null
-                      }
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill02"
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Choose Ability Target",
+                    "skillName": "Skill02",
+                    "target": {
+                      "name": "Select by Modifier Name",
+                      "modifier": "Enemy_AML_Minion03_Target[<span class=\"descriptionNumberColor\">Lock On</span>]",
+                      "target": null
                     }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill02"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Value",
                   "skillName": "Skill02",
@@ -722,29 +718,27 @@ const compositeAbilityObject = {
           "options": [
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill01",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Choose Ability Target",
-                      "skillName": "Skill01",
-                      "target": {
-                        "name": "Select by Modifier Name",
-                        "modifier": "Enemy_AML_Minion03_Target[<span class=\"descriptionNumberColor\">Lock On</span>]",
-                        "target": null
-                      }
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
+              "optionName": "UseSkill01",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Choose Ability Target",
+                    "skillName": "Skill01",
+                    "target": {
+                      "name": "Select by Modifier Name",
+                      "modifier": "Enemy_AML_Minion03_Target[<span class=\"descriptionNumberColor\">Lock On</span>]",
+                      "target": null
                     }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Value",
                   "skillName": "Skill01",
@@ -756,29 +750,27 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Choose Ability Target",
-                      "skillName": "Skill02",
-                      "target": {
-                        "name": "Select by Modifier Name",
-                        "modifier": "Enemy_AML_Minion03_Target[<span class=\"descriptionNumberColor\">Lock On</span>]",
-                        "target": null
-                      }
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill02"
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Choose Ability Target",
+                    "skillName": "Skill02",
+                    "target": {
+                      "name": "Select by Modifier Name",
+                      "modifier": "Enemy_AML_Minion03_Target[<span class=\"descriptionNumberColor\">Lock On</span>]",
+                      "target": null
                     }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill02"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Value",
                   "skillName": "Skill02",

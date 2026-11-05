@@ -512,7 +512,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 "Adjust Target by Battle-Events Created",
                 {
                   "name": "Target Filter",
@@ -586,7 +586,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 "Adjust Target by Summoned Minions",
                 {
                   "name": "Target Filter",
@@ -643,7 +643,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 "Adjust Target by Battle-Events Created",
                 {
                   "name": "Target Filter",
@@ -786,7 +786,7 @@ const compositeAbilityObject = {
                     },
                     "target2": {
                       "name": "Target Sequence",
-                      "Sequence": [
+                      "TargetList": [
                         {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
@@ -807,7 +807,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 "Adjust Target by Battle-Events Created",
                 {
                   "name": "Target Filter",
@@ -819,7 +819,7 @@ const compositeAbilityObject = {
                     },
                     "target2": {
                       "name": "Target Sequence",
-                      "Sequence": [
+                      "TargetList": [
                         {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
@@ -1019,7 +1019,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Parameter Target List}}"

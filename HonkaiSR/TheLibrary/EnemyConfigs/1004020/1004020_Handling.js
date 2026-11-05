@@ -25,39 +25,37 @@ const configAbility = {
       "options": [
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill01",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Gepard_AICounter",
-                  "value": 2
+          "optionName": "UseSkill01",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Choose Ability Target",
-                  "skillName": "Skill01",
-                  "target": {
-                    "name": "Select by Modifier Name",
-                    "modifier": "<a class=\"gModGreen\" id=\"-2038076408\">Monster_Gepard_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Aggravate</span>]",
-                    "target": null
-                  }
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill01"
+                "scope": "TargetEntity",
+                "variableName": "Gepard_AICounter",
+                "value": 2
+              },
+              {
+                "name": "Choose Ability Target",
+                "skillName": "Skill01",
+                "target": {
+                  "name": "Select by Modifier Name",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2038076408\">Monster_Gepard_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Aggravate</span>]",
+                  "target": null
                 }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill01"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -73,30 +71,28 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill03",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Gepard_AICounter",
-                  "value": 5
+          "optionName": "UseSkill03",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill03"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                "scope": "TargetEntity",
+                "variableName": "Gepard_AICounter",
+                "value": 5
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill03"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -117,30 +113,28 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill12",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Gepard_AICounter",
-                  "value": 4
+          "optionName": "UseSkill12",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill12"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                "scope": "TargetEntity",
+                "variableName": "Gepard_AICounter",
+                "value": 4
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill12"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -156,39 +150,37 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill02",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Gepard_AICounter",
-                  "value": 3
+          "optionName": "UseSkill02",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Choose Ability Target",
-                  "skillName": "Skill02",
-                  "target": {
-                    "name": "Select by Modifier Name",
-                    "modifier": "<a class=\"gModGreen\" id=\"-2038076408\">Monster_Gepard_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Aggravate</span>]",
-                    "target": null
-                  }
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill02"
+                "scope": "TargetEntity",
+                "variableName": "Gepard_AICounter",
+                "value": 3
+              },
+              {
+                "name": "Choose Ability Target",
+                "skillName": "Skill02",
+                "target": {
+                  "name": "Select by Modifier Name",
+                  "modifier": "<a class=\"gModGreen\" id=\"-2038076408\">Monster_Gepard_Attack_Sign</a>[<span class=\"descriptionNumberColor\">Aggravate</span>]",
+                  "target": null
                 }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill02"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -204,30 +196,28 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill04",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Gepard_AICounter",
-                  "value": 1
+          "optionName": "UseSkill04",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill04"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                "scope": "TargetEntity",
+                "variableName": "Gepard_AICounter",
+                "value": 1
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill04"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,

@@ -275,101 +275,99 @@ const compositeAbilityObject = {
           "options": [
             {
               "name": "HANDLER OPTION",
-              "option": "Decision01",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Ability Use Limit",
-                        "skillName": "Skill02",
-                        "value1": {
-                          "operator": "Variables[0] (FREEVAR) || RETURN",
-                          "displayLines": "FREEVAR",
-                          "constants": [],
-                          "variables": [
-                            "FREEVAR"
-                          ]
-                        }
-                      },
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Compare: Target Count",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{EVENT[RoT] Noontide Gryphon: Partner}}"
-                            },
-                            "compareType": ">",
-                            "value2": 0,
-                            "livingTargets": true
+              "optionName": "Decision01",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Compare: Ability Use Limit",
+                      "skillName": "Skill02",
+                      "value1": {
+                        "operator": "Variables[0] (FREEVAR) || RETURN",
+                        "displayLines": "FREEVAR",
+                        "constants": [],
+                        "variables": [
+                          "FREEVAR"
+                        ]
+                      }
+                    },
+                    "passed": [
+                      {
+                        "name": "IF",
+                        "conditions": {
+                          "name": "Compare: Target Count",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{EVENT[RoT] Noontide Gryphon: Partner}}"
                           },
-                          "passed": [
-                            {
-                              "name": "Random Event",
-                              "odds": [
-                                0.5,
-                                0.5
-                              ],
-                              "execute": [
-                                {
-                                  "name": "Choose Ability Target",
-                                  "skillName": "Skill02",
+                          "compareType": ">",
+                          "value2": 0,
+                          "livingTargets": true
+                        },
+                        "passed": [
+                          {
+                            "name": "Random Event",
+                            "odds": [
+                              0.5,
+                              0.5
+                            ],
+                            "execute": [
+                              {
+                                "name": "Choose Ability Target",
+                                "skillName": "Skill02",
+                                "target": {
+                                  "name": "Select by Target Pool",
                                   "target": {
-                                    "name": "Select by Target Pool",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Caster's Summoner}}"
-                                    }
-                                  }
-                                },
-                                {
-                                  "name": "Choose Ability Target",
-                                  "skillName": "Skill02",
-                                  "target": {
-                                    "name": "Select by Target Pool",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{EVENT[RoT] Noontide Gryphon: Partner}}"
-                                    }
+                                    "name": "Target Name",
+                                    "target": "{{Caster's Summoner}}"
                                   }
                                 }
-                              ]
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Choose Ability Target",
-                              "skillName": "Skill02",
-                              "target": {
-                                "name": "Select by Target Pool",
+                              },
+                              {
+                                "name": "Choose Ability Target",
+                                "skillName": "Skill02",
                                 "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Caster's Summoner}}"
+                                  "name": "Select by Target Pool",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{EVENT[RoT] Noontide Gryphon: Partner}}"
+                                  }
                                 }
                               }
+                            ]
+                          }
+                        ],
+                        "failed": [
+                          {
+                            "name": "Choose Ability Target",
+                            "skillName": "Skill02",
+                            "target": {
+                              "name": "Select by Target Pool",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Caster's Summoner}}"
+                              }
                             }
-                          ]
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill02"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill01"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill02"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE"
             }
           ]
         }

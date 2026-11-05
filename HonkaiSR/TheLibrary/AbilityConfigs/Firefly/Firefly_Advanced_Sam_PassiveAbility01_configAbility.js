@@ -297,7 +297,7 @@ const configAbility = {
         "show": "Hide",
         "target": {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             {
               "name": "Target Name",
               "target": "{{Battle Event List}}"
@@ -616,7 +616,7 @@ const configAbility = {
               "name": "Force Entity Death",
               "target": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Battle Event List}}"

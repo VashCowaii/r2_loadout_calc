@@ -82,7 +82,7 @@ const compositeAbilityObject = {
             "show": "Hide",
             "target": {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"

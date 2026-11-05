@@ -8089,77 +8089,75 @@ const compositeAbilityObject = {
           "options": [
             {
               "name": "HANDLER OPTION GROUP",
-              "option": "new phase",
-              "goal": [
+              "optionGroupName": "new phase",
+              "optionGroupGoal": [
                 {
                   "name": "HANDLER OPTION",
-                  "option": "Decision01",
-                  "goal": [
-                    {
-                      "name": "Sequence Event",
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
+                  "optionName": "Decision01",
+                  "optionGoal": {
+                    "name": "Sequence Event",
+                    "passed": [
+                      {
+                        "name": "Declare Custom Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "scope": "TargetEntity",
+                        "variableName": "AIFlag",
+                        "value": 2
+                      },
+                      {
+                        "name": "IF",
+                        "conditions": {
+                          "name": "Compare: Variable",
                           "target": {
                             "name": "Target Name",
-                            "target": "{{Caster}}"
+                            "target": "{{Player Team All}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 2
-                        },
-                        {
-                          "name": "IF",
+                          "value1": "TeamCharacterCount",
+                          "compareType": ">",
+                          "value2": 0,
                           "conditions": {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Player Team All}}"
-                            },
-                            "value1": "TeamCharacterCount",
-                            "compareType": ">",
-                            "value2": 0,
-                            "conditions": {
-                              "name": "OR",
-                              "conditionList": [
-                                {
-                                  "name": "Has Modifier",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
+                            "name": "OR",
+                            "conditionList": [
+                              {
+                                "name": "Has Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
                                 },
-                                {
-                                  "name": "Has Modifier",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]"
-                                }
-                              ]
-                            }
-                          },
-                          "passed": [
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill03"
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill01"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "weight": 0.5,
-                  "type": "DefaultDSE",
-                  "check": [
+                                "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
+                              },
+                              {
+                                "name": "Has Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
+                                "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]"
+                              }
+                            ]
+                          }
+                        },
+                        "passed": [
+                          {
+                            "name": "Use Ability Option",
+                            "skillName": "Skill03"
+                          }
+                        ],
+                        "failed": [
+                          {
+                            "name": "Use Ability Option",
+                            "skillName": "Skill01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "scoreType": "DefaultDSE",
+                  "optionWeight": 0.5,
+                  "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
                       "passedValue": 0.5,
@@ -8179,31 +8177,29 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "HANDLER OPTION",
-                  "option": "Decision01",
-                  "goal": [
-                    {
-                      "name": "Sequence Event",
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 3
+                  "optionName": "Decision01",
+                  "optionGoal": {
+                    "name": "Sequence Event",
+                    "passed": [
+                      {
+                        "name": "Declare Custom Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
                         },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill04"
-                        }
-                      ]
-                    }
-                  ],
-                  "weight": 0.5,
-                  "type": "DefaultDSE",
-                  "check": [
+                        "scope": "TargetEntity",
+                        "variableName": "AIFlag",
+                        "value": 3
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill04"
+                      }
+                    ]
+                  },
+                  "scoreType": "DefaultDSE",
+                  "optionWeight": 0.5,
+                  "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
                       "passedValue": 0.5,
@@ -8223,73 +8219,71 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "HANDLER OPTION",
-                  "option": "Decision01",
-                  "goal": [
-                    {
-                      "name": "Sequence Event",
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
+                  "optionName": "Decision01",
+                  "optionGoal": {
+                    "name": "Sequence Event",
+                    "passed": [
+                      {
+                        "name": "Declare Custom Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "scope": "TargetEntity",
+                        "variableName": "AIFlag",
+                        "value": 4
+                      },
+                      {
+                        "name": "IF",
+                        "conditions": {
+                          "name": "Compare: Variable",
                           "target": {
                             "name": "Target Name",
-                            "target": "{{Caster}}"
+                            "target": "{{Player Team All}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 4
-                        },
-                        {
-                          "name": "IF",
+                          "value1": "TeamCharacterCount",
+                          "compareType": ">",
+                          "value2": 0,
                           "conditions": {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Player Team All}}"
-                            },
-                            "value1": "TeamCharacterCount",
-                            "compareType": ">",
-                            "value2": 0,
-                            "conditions": {
-                              "name": "OR",
-                              "conditionList": [
-                                {
-                                  "name": "Has Modifier",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
+                            "name": "OR",
+                            "conditionList": [
+                              {
+                                "name": "Has Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
                                 },
-                                {
-                                  "name": "Has Modifier",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]"
-                                }
-                              ]
-                            }
-                          },
-                          "passed": [
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill03"
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill01"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "weight": 0.5,
-                  "type": "DefaultDSE",
-                  "check": [
+                                "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
+                              },
+                              {
+                                "name": "Has Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
+                                "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]"
+                              }
+                            ]
+                          }
+                        },
+                        "passed": [
+                          {
+                            "name": "Use Ability Option",
+                            "skillName": "Skill03"
+                          }
+                        ],
+                        "failed": [
+                          {
+                            "name": "Use Ability Option",
+                            "skillName": "Skill01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "scoreType": "DefaultDSE",
+                  "optionWeight": 0.5,
+                  "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
                       "passedValue": 0.5,
@@ -8309,60 +8303,58 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "HANDLER OPTION",
-                  "option": "Decision01",
-                  "goal": [
-                    {
-                      "name": "Sequence Event",
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Has Modifier",
+                  "optionName": "Decision01",
+                  "optionGoal": {
+                    "name": "Sequence Event",
+                    "passed": [
+                      {
+                        "name": "IF",
+                        "conditions": {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
+                          },
+                          "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                        },
+                        "passed": [
+                          {
+                            "name": "Declare Custom Variable",
                             "target": {
                               "name": "Target Name",
                               "target": "{{Caster}}"
                             },
-                            "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                            "scope": "TargetEntity",
+                            "variableName": "AIFlag",
+                            "value": 4
                           },
-                          "passed": [
-                            {
-                              "name": "Declare Custom Variable",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "scope": "TargetEntity",
-                              "variableName": "AIFlag",
-                              "value": 4
+                          {
+                            "name": "Use Ability Option",
+                            "skillName": "Skill01"
+                          }
+                        ],
+                        "failed": [
+                          {
+                            "name": "Declare Custom Variable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
                             },
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill01"
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Declare Custom Variable",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "scope": "TargetEntity",
-                              "variableName": "AIFlag",
-                              "value": 5
-                            },
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill05"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "weight": 0.5,
-                  "type": "DefaultDSE",
-                  "check": [
+                            "scope": "TargetEntity",
+                            "variableName": "AIFlag",
+                            "value": 5
+                          },
+                          {
+                            "name": "Use Ability Option",
+                            "skillName": "Skill05"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "scoreType": "DefaultDSE",
+                  "optionWeight": 0.5,
+                  "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
                       "passedValue": 0.5,
@@ -8382,31 +8374,29 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "HANDLER OPTION",
-                  "option": "Decision01",
-                  "goal": [
-                    {
-                      "name": "Sequence Event",
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 1
+                  "optionName": "Decision01",
+                  "optionGoal": {
+                    "name": "Sequence Event",
+                    "passed": [
+                      {
+                        "name": "Declare Custom Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
                         },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill06"
-                        }
-                      ]
-                    }
-                  ],
-                  "weight": 0.5,
-                  "type": "DefaultDSE",
-                  "check": [
+                        "scope": "TargetEntity",
+                        "variableName": "AIFlag",
+                        "value": 1
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill06"
+                      }
+                    ]
+                  },
+                  "scoreType": "DefaultDSE",
+                  "optionWeight": 0.5,
+                  "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
                       "passedValue": 0.5,
@@ -8426,73 +8416,71 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "HANDLER OPTION",
-                  "option": "Decision01",
-                  "goal": [
-                    {
-                      "name": "Sequence Event",
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
+                  "optionName": "Decision01",
+                  "optionGoal": {
+                    "name": "Sequence Event",
+                    "passed": [
+                      {
+                        "name": "Declare Custom Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "scope": "TargetEntity",
+                        "variableName": "AIFlag",
+                        "value": 4
+                      },
+                      {
+                        "name": "IF",
+                        "conditions": {
+                          "name": "Compare: Variable",
                           "target": {
                             "name": "Target Name",
-                            "target": "{{Caster}}"
+                            "target": "{{Player Team All}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 4
-                        },
-                        {
-                          "name": "IF",
+                          "value1": "TeamCharacterCount",
+                          "compareType": ">",
+                          "value2": 0,
                           "conditions": {
-                            "name": "Compare: Variable",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Player Team All}}"
-                            },
-                            "value1": "TeamCharacterCount",
-                            "compareType": ">",
-                            "value2": 0,
-                            "conditions": {
-                              "name": "OR",
-                              "conditionList": [
-                                {
-                                  "name": "Has Modifier",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
+                            "name": "OR",
+                            "conditionList": [
+                              {
+                                "name": "Has Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
                                 },
-                                {
-                                  "name": "Has Modifier",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]"
-                                }
-                              ]
-                            }
-                          },
-                          "passed": [
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill03"
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill04"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "weight": 0.5,
-                  "type": "DefaultDSE",
-                  "check": [
+                                "modifier": "<a class=\"gModGreen\" id=\"-799865287\">Monster_W5_Ripper_Parasitism_FantasticStory</a>[<span class=\"descriptionNumberColor\">Happiness</span>]"
+                              },
+                              {
+                                "name": "Has Modifier",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Parameter Target}}"
+                                },
+                                "modifier": "<a class=\"gModGreen\" id=\"-70072093\">Monster_W5_Ripper_Flesh</a>[<span class=\"descriptionNumberColor\">Happiness Puppet</span>]"
+                              }
+                            ]
+                          }
+                        },
+                        "passed": [
+                          {
+                            "name": "Use Ability Option",
+                            "skillName": "Skill03"
+                          }
+                        ],
+                        "failed": [
+                          {
+                            "name": "Use Ability Option",
+                            "skillName": "Skill04"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "scoreType": "DefaultDSE",
+                  "optionWeight": 0.5,
+                  "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
                       "passedValue": 0.5,
@@ -8511,7 +8499,7 @@ const compositeAbilityObject = {
                   ]
                 }
               ],
-              "type": "DefaultDSE"
+              "scoreType": "DefaultDSE"
             }
           ]
         }

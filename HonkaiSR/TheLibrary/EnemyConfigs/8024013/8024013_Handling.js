@@ -25,31 +25,29 @@ const configAbility = {
       "options": [
         {
           "name": "HANDLER OPTION",
-          "option": "Decision01",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "AIFlag",
-                  "value": 2
+          "optionName": "Decision01",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill01"
-                }
-              ]
-            }
-          ],
-          "weight": 0.5,
-          "type": "DefaultDSE",
-          "check": [
+                "scope": "TargetEntity",
+                "variableName": "AIFlag",
+                "value": 2
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill01"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionWeight": 0.5,
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -76,47 +74,45 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "Decision01",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "AIFlag",
-                  "value": 3
+          "optionName": "Decision01",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Choose Ability Target",
-                  "skillName": "Skill02",
-                  "target": {
+                "scope": "TargetEntity",
+                "variableName": "AIFlag",
+                "value": 3
+              },
+              {
+                "name": "Choose Ability Target",
+                "skillName": "Skill02",
+                "target": {
+                  "name": "Select by Modifier Name",
+                  "modifier": "WMonster_TY_Elite01_DOT_Poison",
+                  "target": null,
+                  "tieBreakWithRandom": true,
+                  "max": 1,
+                  "sortOperator": {
                     "name": "Select by Modifier Name",
                     "modifier": "WMonster_TY_Elite01_DOT_Poison",
-                    "target": null,
-                    "tieBreakWithRandom": true,
-                    "max": 1,
-                    "sortOperator": {
-                      "name": "Select by Modifier Name",
-                      "modifier": "WMonster_TY_Elite01_DOT_Poison",
-                      "target": null
-                    }
+                    "target": null
                   }
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill02"
                 }
-              ]
-            }
-          ],
-          "weight": 0.5,
-          "type": "DefaultDSE",
-          "check": [
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill02"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionWeight": 0.5,
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -143,31 +139,29 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "Decision01",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "AIFlag",
-                  "value": 4
+          "optionName": "Decision01",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill03"
-                }
-              ]
-            }
-          ],
-          "weight": 0.5,
-          "type": "DefaultDSE",
-          "check": [
+                "scope": "TargetEntity",
+                "variableName": "AIFlag",
+                "value": 4
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill03"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionWeight": 0.5,
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -194,60 +188,58 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "Decision01",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
+          "optionName": "Decision01",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "IF",
+                "conditions": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                },
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 4
                   },
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 4
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ],
+                "failed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 5
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill05"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "weight": 0.5,
-          "type": "DefaultDSE",
-          "check": [
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 5
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill05"
+                  }
+                ]
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionWeight": 0.5,
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -274,60 +266,58 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "Decision01",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
+          "optionName": "Decision01",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "scope": "TargetEntity",
+                "variableName": "AIFlag",
+                "value": 6
+              },
+              {
+                "name": "IF",
+                "conditions": {
+                  "name": "Compare: Variable",
                   "target": {
                     "name": "Target Name",
-                    "target": "{{Caster}}"
+                    "target": "{{All Team Members(Exclude Self)}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "AIFlag",
-                  "value": 6
-                },
-                {
-                  "name": "IF",
+                  "value1": "TeamCharacterCount",
+                  "compareType": "<",
+                  "value2": 1,
                   "conditions": {
-                    "name": "Compare: Variable",
+                    "name": "Check Boolean Value",
                     "target": {
                       "name": "Target Name",
-                      "target": "{{All Team Members(Exclude Self)}}"
+                      "target": "{{Parameter Target}}"
                     },
-                    "value1": "TeamCharacterCount",
-                    "compareType": "<",
-                    "value2": 1,
-                    "conditions": {
-                      "name": "Check Boolean Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "value": "ENEMIES_OBJECT_UNUSED__63"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill07"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill06"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "weight": 0.5,
-          "type": "DefaultDSE",
-          "check": [
+                    "value": "ENEMIES_OBJECT_UNUSED__63"
+                  }
+                },
+                "passed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill07"
+                  }
+                ],
+                "failed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill06"
+                  }
+                ]
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionWeight": 0.5,
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -354,47 +344,45 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "Decision01",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "AIFlag",
-                  "value": 1
+          "optionName": "Decision01",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Choose Ability Target",
-                  "skillName": "Skill02",
-                  "target": {
+                "scope": "TargetEntity",
+                "variableName": "AIFlag",
+                "value": 1
+              },
+              {
+                "name": "Choose Ability Target",
+                "skillName": "Skill02",
+                "target": {
+                  "name": "Select by Modifier Name",
+                  "modifier": "WMonster_TY_Elite01_DOT_Poison",
+                  "target": null,
+                  "tieBreakWithRandom": true,
+                  "max": 1,
+                  "sortOperator": {
                     "name": "Select by Modifier Name",
                     "modifier": "WMonster_TY_Elite01_DOT_Poison",
-                    "target": null,
-                    "tieBreakWithRandom": true,
-                    "max": 1,
-                    "sortOperator": {
-                      "name": "Select by Modifier Name",
-                      "modifier": "WMonster_TY_Elite01_DOT_Poison",
-                      "target": null
-                    }
+                    "target": null
                   }
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill02"
                 }
-              ]
-            }
-          ],
-          "weight": 0.5,
-          "type": "DefaultDSE",
-          "check": [
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill02"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionWeight": 0.5,
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,

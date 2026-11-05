@@ -98,7 +98,7 @@ const configAbility = {
               "name": "Find New Target",
               "from": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Join Targets",
                     "TargetList": [
@@ -137,7 +137,7 @@ const configAbility = {
                     },
                     "partOf": {
                       "name": "Target Sequence",
-                      "Sequence": [
+                      "TargetList": [
                         {
                           "name": "Join Targets",
                           "TargetList": [
@@ -268,7 +268,7 @@ const configAbility = {
                           "name": "Find New Target",
                           "from": {
                             "name": "Target Sequence",
-                            "Sequence": [
+                            "TargetList": [
                               {
                                 "name": "Join Targets",
                                 "TargetList": [
@@ -308,7 +308,7 @@ const configAbility = {
                                 },
                                 "partOf": {
                                   "name": "Target Sequence",
-                                  "Sequence": [
+                                  "TargetList": [
                                     {
                                       "name": "Join Targets",
                                       "TargetList": [

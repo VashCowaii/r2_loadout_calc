@@ -1172,37 +1172,35 @@ const compositeAbilityObject = {
           "options": [
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Choose Ability Target",
-                      "skillName": "Skill02",
-                      "target": {
-                        "name": "Create Selection List",
-                        "passed": [
-                          {
-                            "name": "Select by Target Pool",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{EVENT[RoT] Light Praetor: Light Characters}}"
-                            }
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Choose Ability Target",
+                    "skillName": "Skill02",
+                    "target": {
+                      "name": "Create Selection List",
+                      "passed": [
+                        {
+                          "name": "Select by Target Pool",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{EVENT[RoT] Light Praetor: Light Characters}}"
                           }
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill02"
+                        }
+                      ]
                     }
-                  ]
-                }
-              ],
-              "weight": 0.8,
-              "type": "DefaultDSE",
-              "check": [
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill02"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionWeight": 0.8,
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Value",
                   "skillName": "Skill02",

@@ -291,7 +291,7 @@ const configAbility = {
                   "advanceType": "Set",
                   "target": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
@@ -316,7 +316,7 @@ const configAbility = {
                   "advanceType": "Set",
                   "target": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
@@ -341,7 +341,7 @@ const configAbility = {
                   "advanceType": "Set",
                   "target": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
@@ -365,7 +365,7 @@ const configAbility = {
                   "name": "Trigger Ability",
                   "from": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"

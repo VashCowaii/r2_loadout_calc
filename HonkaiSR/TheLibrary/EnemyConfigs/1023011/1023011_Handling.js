@@ -25,30 +25,28 @@ const configAbility = {
       "options": [
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill01",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_W1_Mecha_Fire_AICounter_01",
-                  "value": 2
+          "optionName": "UseSkill01",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill01"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                "scope": "TargetEntity",
+                "variableName": "Monster_W1_Mecha_Fire_AICounter_01",
+                "value": 2
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill01"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -64,49 +62,47 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill02",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
+          "optionName": "UseSkill02",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "scope": "TargetEntity",
+                "variableName": "Monster_W1_Mecha_Fire_AICounter_01",
+                "value": 3
+              },
+              {
+                "name": "IF",
+                "conditions": {
+                  "name": "Has Modifier",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_W1_Mecha_Fire_AICounter_01",
-                  "value": 3
+                  "modifier": "<a class=\"gModGreen\" id=\"188036182\">Monster_W1_Mecha_Fire_Burning</a>[<span class=\"descriptionNumberColor\">Mania</span>]"
                 },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"188036182\">Monster_W1_Mecha_Fire_Burning</a>[<span class=\"descriptionNumberColor\">Mania</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill02"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill06"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                "passed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill02"
+                  }
+                ],
+                "failed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill06"
+                  }
+                ]
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -122,30 +118,28 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill07",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_W1_Mecha_Fire_AICounter_01",
-                  "value": 4
+          "optionName": "UseSkill07",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill09"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                "scope": "TargetEntity",
+                "variableName": "Monster_W1_Mecha_Fire_AICounter_01",
+                "value": 4
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill09"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -161,59 +155,57 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill08",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
+          "optionName": "UseSkill08",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "scope": "TargetEntity",
+                "variableName": "Monster_W1_Mecha_Fire_AICounter_01",
+                "value": 5
+              },
+              {
+                "name": "IF",
+                "conditions": {
+                  "name": "Compare: Variable",
                   "target": {
                     "name": "Target Name",
-                    "target": "{{Caster}}"
+                    "target": "{{Hostile Entities(AOE)}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_W1_Mecha_Fire_AICounter_01",
-                  "value": 5
-                },
-                {
-                  "name": "IF",
+                  "value1": "TeamCharacterCount",
+                  "compareType": ">=",
+                  "value2": 1,
                   "conditions": {
-                    "name": "Compare: Variable",
+                    "name": "Has Modifier",
                     "target": {
                       "name": "Target Name",
-                      "target": "{{Hostile Entities(AOE)}}"
+                      "target": "{{Parameter Target}}"
                     },
-                    "value1": "TeamCharacterCount",
-                    "compareType": ">=",
-                    "value2": 1,
-                    "conditions": {
-                      "name": "Has Modifier",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill08"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill07"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                    "modifier": "<a class=\"gModGreen\" id=\"-1990407757\">Standard_DOT_Burn</a>[<span class=\"descriptionNumberColor\">Burn</span>]"
+                  }
+                },
+                "passed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill08"
+                  }
+                ],
+                "failed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill07"
+                  }
+                ]
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -229,30 +221,28 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill07",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_W1_Mecha_Fire_AICounter_01",
-                  "value": 2
+          "optionName": "UseSkill07",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill06"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                "scope": "TargetEntity",
+                "variableName": "Monster_W1_Mecha_Fire_AICounter_01",
+                "value": 2
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill06"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,

@@ -1999,7 +1999,7 @@ const compositeAbilityObject = {
                   },
                   "abilityTarget": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
@@ -2373,7 +2373,7 @@ const compositeAbilityObject = {
                       "advanceType": "Set",
                       "target": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
@@ -2398,7 +2398,7 @@ const compositeAbilityObject = {
                       "advanceType": "Set",
                       "target": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
@@ -2423,7 +2423,7 @@ const compositeAbilityObject = {
                       "advanceType": "Set",
                       "target": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
@@ -2447,7 +2447,7 @@ const compositeAbilityObject = {
                       "name": "Trigger Ability",
                       "from": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"

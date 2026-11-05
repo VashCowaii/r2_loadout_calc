@@ -23,7 +23,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All(with Unselectable)V2}}"
@@ -51,7 +51,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
@@ -122,7 +122,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}"
@@ -149,7 +149,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{All Team Members}}.[[removeMemosprite]]"
@@ -173,7 +173,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}"
@@ -200,7 +200,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{All Team Members with Unselectables}}"
@@ -238,7 +238,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Himeko Nova}}"
@@ -287,7 +287,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}"
@@ -325,7 +325,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Attack Targets of Modifier Holder}}.[[living]]"
@@ -397,7 +397,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All(with Unselectable)}}.[[living]]"
@@ -424,7 +424,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All(with Unselectable)V2}}"
@@ -452,7 +452,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -479,7 +479,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All(with Unselectable)V2}}.[[getMemosprite]]"
@@ -507,7 +507,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
@@ -535,7 +535,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Search",
                   "entityType": "Avatar",
@@ -595,7 +595,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Target Sequence",
-                  "Sequence": [
+                  "TargetList": [
                     {
                       "name": "Target Name",
                       "target": "{{Player Team All}}"
@@ -695,7 +695,7 @@ const compositeAbilityObject = {
               "TargetList": [
                 {
                   "name": "Target Sequence",
-                  "Sequence": [
+                  "TargetList": [
                     {
                       "name": "Target Name",
                       "target": "{{All Memosprites}}"
@@ -740,7 +740,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{All Memosprites}}"
@@ -767,7 +767,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}} + {{Player Team Unselectables}}"
@@ -795,7 +795,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Hostile Entities(AOE)}}"
@@ -819,7 +819,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{All Team Members with Unselectables}}"
@@ -850,7 +850,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Hostile Entities(AOE)}}"
@@ -874,7 +874,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All(with Unselectable)}}"
@@ -906,7 +906,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}"
@@ -933,7 +933,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{All Team Members with Unselectables}}"
@@ -960,10 +960,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Sequence",
-                  "Sequence": [
+                  "TargetList": [
                     {
                       "name": "Target Name",
                       "target": "{{Enemy Team All}}"
@@ -1029,7 +1029,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -1093,7 +1093,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Selector",
                   "conditions": {
@@ -1127,7 +1127,7 @@ const compositeAbilityObject = {
                     },
                     "targetPass": {
                       "name": "Target Sequence",
-                      "Sequence": [
+                      "TargetList": [
                         {
                           "name": "Target Name",
                           "target": "{{Current Action Target List}}"
@@ -1145,7 +1145,7 @@ const compositeAbilityObject = {
                         "name": "Is Part Of Team",
                         "target": {
                           "name": "Target Sequence",
-                          "Sequence": [
+                          "TargetList": [
                             {
                               "name": "Target Name",
                               "target": "{{Current Action Owner}}"
@@ -1171,11 +1171,11 @@ const compositeAbilityObject = {
                         },
                         "targetPass": {
                           "name": "Compute Targets",
-                          "type": "Union",
+                          "operationType": "Union",
                           "TargetList": [
                             {
                               "name": "Target Sequence",
-                              "Sequence": [
+                              "TargetList": [
                                 {
                                   "name": "Target Name",
                                   "target": "{{Current Action Owner}}"
@@ -1204,11 +1204,11 @@ const compositeAbilityObject = {
                           },
                           "targetPass": {
                             "name": "Compute Targets",
-                            "type": "Union",
+                            "operationType": "Union",
                             "TargetList": [
                               {
                                 "name": "Target Sequence",
-                                "Sequence": [
+                                "TargetList": [
                                   {
                                     "name": "Target Name",
                                     "target": "{{Current Action Owner}}"
@@ -1227,11 +1227,11 @@ const compositeAbilityObject = {
                           },
                           "targetFail": {
                             "name": "Compute Targets",
-                            "type": "Union",
+                            "operationType": "Union",
                             "TargetList": [
                               {
                                 "name": "Target Sequence",
-                                "Sequence": [
+                                "TargetList": [
                                   {
                                     "name": "Target Name",
                                     "target": "{{Current Action Owner}}"
@@ -1252,7 +1252,7 @@ const compositeAbilityObject = {
                       },
                       "targetFail": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
@@ -1290,7 +1290,7 @@ const compositeAbilityObject = {
                     },
                     "targetPass": {
                       "name": "Target Sequence",
-                      "Sequence": [
+                      "TargetList": [
                         {
                           "name": "Target Name",
                           "target": "{{Current Action Target List}}"
@@ -1304,7 +1304,7 @@ const compositeAbilityObject = {
                     },
                     "targetFail": {
                       "name": "Target Sequence",
-                      "Sequence": [
+                      "TargetList": [
                         {
                           "name": "Target Name",
                           "target": "{{Enemy Team All}}"
@@ -1372,7 +1372,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{All Team Members with Unselectables}}"
@@ -1399,7 +1399,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Hostile Entities(AOE)}}"
@@ -1426,7 +1426,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{All Unselectable Targets, All Team Members}}"
@@ -1453,7 +1453,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Hostile Entities(AOE)}}"
@@ -1520,7 +1520,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}"
@@ -1547,7 +1547,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}"
@@ -1574,7 +1574,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -1601,7 +1601,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -1621,7 +1621,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{All Team Members with Unselectables}}"
@@ -1648,7 +1648,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}"
@@ -1675,7 +1675,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{All Team Members with Unselectables}}"
@@ -1702,7 +1702,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -1730,7 +1730,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team Entity}}"
@@ -1758,7 +1758,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}"
@@ -1869,7 +1869,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}"
@@ -1896,7 +1896,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}"
@@ -1923,7 +1923,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}"
@@ -1970,7 +1970,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}"
@@ -1997,7 +1997,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}"
@@ -2044,7 +2044,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -2084,10 +2084,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Sequence",
-                  "Sequence": [
+                  "TargetList": [
                     {
                       "name": "Target Name",
                       "target": "{{Enemy Team All}}"
@@ -2182,7 +2182,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Join Targets",
                   "TargetList": [
@@ -2218,7 +2218,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Join Targets",
                   "TargetList": [
@@ -2254,7 +2254,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Join Targets",
                   "TargetList": [
@@ -2290,7 +2290,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Join Targets",
                   "TargetList": [
@@ -2326,7 +2326,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Join Targets",
                   "TargetList": [
@@ -2362,7 +2362,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Join Targets",
                   "TargetList": [
@@ -2398,7 +2398,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All(with Unselectable)}}"
@@ -2425,7 +2425,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All(with Unselectable)}}"
@@ -2452,7 +2452,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All(with Unselectable)}}"
@@ -2499,7 +2499,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -2526,7 +2526,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All(with Unselectable)V2}}"
@@ -2553,7 +2553,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}"
@@ -2604,7 +2604,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -2631,7 +2631,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -2658,7 +2658,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -2685,7 +2685,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -2712,7 +2712,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -2739,7 +2739,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -2766,7 +2766,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -2793,7 +2793,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -2844,7 +2844,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -2895,7 +2895,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -2922,7 +2922,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -2949,7 +2949,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -2983,7 +2983,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -3010,7 +3010,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -3037,7 +3037,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}"
@@ -3064,7 +3064,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Every Battle Entity}}"
@@ -3185,7 +3185,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Every Battle Entity}}"
@@ -3302,7 +3302,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All(with Unselectable)}}"
@@ -3329,7 +3329,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All(with Unselectable)}}"
@@ -3356,7 +3356,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -3388,7 +3388,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All(with Unselectable)}}"
@@ -3415,7 +3415,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -3442,7 +3442,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Every Battle Entity}}"
@@ -3470,7 +3470,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -3499,7 +3499,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -3548,7 +3548,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -3595,7 +3595,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -3622,7 +3622,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All(with Unselectable)}}"
@@ -3651,7 +3651,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{All Memosprites}}"
@@ -3678,7 +3678,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -3706,7 +3706,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -3734,7 +3734,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}"
@@ -3761,7 +3761,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}"
@@ -3788,7 +3788,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}"
@@ -3815,7 +3815,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Every Battle Entity}}"
@@ -3855,7 +3855,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}"
@@ -3882,7 +3882,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}"
@@ -3909,7 +3909,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}"
@@ -3936,7 +3936,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{All Unselectable Targets}}"
@@ -3965,7 +3965,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -3994,7 +3994,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -4023,7 +4023,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Every Battle Entity}}"
@@ -4052,7 +4052,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team(Exclude Memosprites)}}"
@@ -4084,7 +4084,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team(Exclude Memosprites)}}"
@@ -4116,7 +4116,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team(Exclude Memosprites)}}"
@@ -4148,7 +4148,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team(Exclude Memosprites)}}"
@@ -4179,10 +4179,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Sequence",
-                  "Sequence": [
+                  "TargetList": [
                     {
                       "name": "Target Name",
                       "target": "{{Player Team(Exclude Memosprites)}}"
@@ -4219,10 +4219,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Sequence",
-                  "Sequence": [
+                  "TargetList": [
                     {
                       "name": "Target Name",
                       "target": "{{Player Team(Exclude Memosprites)}}"
@@ -4278,7 +4278,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -4305,7 +4305,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Every Battle Entity}}"
@@ -4332,7 +4332,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -4393,7 +4393,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -4425,7 +4425,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All(Right to Left)}}.[[removeUnselectable]].[[living]]"
@@ -4445,7 +4445,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team(Exclude Memosprites)}}.[[living]]"
@@ -4465,7 +4465,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team(Exclude Memosprites)}}.[[living]]"
@@ -4485,7 +4485,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team(Exclude Memosprites)}}.[[living]]"
@@ -4504,7 +4504,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team(Exclude Memosprites)}}.[[living]]"
@@ -4525,7 +4525,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team(Exclude Memosprites)}}.[[living]]"
@@ -4546,7 +4546,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team(Exclude Memosprites)}}.[[living]]"
@@ -4566,7 +4566,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -4597,7 +4597,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -4626,7 +4626,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -4655,7 +4655,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -4708,7 +4708,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -4739,7 +4739,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All(Left to Right)}}.[[removeUnselectable]].[[living]]"
@@ -4759,7 +4759,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -4786,7 +4786,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{All Memosprites}}"
@@ -4814,7 +4814,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -4841,7 +4841,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team(Exclude Memosprites)}}"
@@ -4860,7 +4860,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team(Exclude Memosprites)}}"
@@ -4881,7 +4881,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team(Exclude Memosprites)}}"
@@ -4902,7 +4902,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team(Exclude Memosprites)}}"
@@ -4922,7 +4922,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -4949,7 +4949,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -4976,7 +4976,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -5024,7 +5024,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -5076,7 +5076,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -5103,7 +5103,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All(with Unselectable)}}"
@@ -5146,7 +5146,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All(with Unselectable)}}"
@@ -5173,7 +5173,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -5260,7 +5260,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -5303,7 +5303,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}"
@@ -5330,7 +5330,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -5370,7 +5370,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -5410,7 +5410,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Every Battle Entity}}"
@@ -5437,7 +5437,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Every Battle Entity}}"
@@ -5477,7 +5477,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Every Battle Entity}}"
@@ -5509,7 +5509,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Every Battle Entity}}"
@@ -5549,7 +5549,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Every Battle Entity}}"
@@ -5576,7 +5576,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Every Battle Entity}}"
@@ -5603,7 +5603,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -5630,7 +5630,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -5681,7 +5681,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 "Add Target by Ability Target",
                 {
                   "name": "Adjust Target by Adjacent Targets",
@@ -5699,7 +5699,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 "Add Target by Ability Target",
                 {
                   "name": "Adjust Target by Adjacent Targets",
@@ -5717,7 +5717,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -5744,7 +5744,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -5764,7 +5764,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -5816,7 +5816,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -5858,7 +5858,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{All Unselectable Targets}}"
@@ -5885,7 +5885,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Hostile Entities(AOE)}}"
@@ -5914,7 +5914,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -5948,7 +5948,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Target Sequence",
-                  "Sequence": [
+                  "TargetList": [
                     {
                       "name": "Target Name",
                       "target": "{{Hostile Entities(AOE)}}"
@@ -5985,7 +5985,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{All Unselectable Targets}}"
@@ -6020,7 +6020,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team Unselectables}}"
@@ -6047,7 +6047,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Every Battle Entity}}"
@@ -6074,7 +6074,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Nebula Devourer: Self}}"
@@ -6094,7 +6094,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Nebula Devourer: Self}}"
@@ -6114,7 +6114,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Nebula Devourer: Self}}"
@@ -6154,7 +6154,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -6198,7 +6198,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{All Unselectable Targets}}"
@@ -6236,7 +6236,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -6263,7 +6263,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -6290,7 +6290,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -6317,7 +6317,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -6344,7 +6344,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -6371,7 +6371,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -6398,7 +6398,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -6429,7 +6429,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All(with Unselectable)}}"
@@ -6473,7 +6473,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -6520,7 +6520,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -6551,7 +6551,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -6614,7 +6614,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{All Unselectable Targets}}"
@@ -6641,7 +6641,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{All Unselectable Targets}}"
@@ -6680,7 +6680,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}"
@@ -6707,7 +6707,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All(with Unselectable)V2}}"
@@ -6747,7 +6747,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Aha Instant: All Targets}}"
@@ -6776,7 +6776,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All(with Unselectable)V2}}"
@@ -6819,7 +6819,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All(with Unselectable)V2}} + {{Currency Wars Full Activated Role OffFieldList}}"
@@ -6860,7 +6860,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All(with Unselectable)V2}} + {{Currency Wars Full Activated Role OffFieldList}}"
@@ -6901,7 +6901,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Aha Instant: All Targets}} - {{Player Team All(with Unselectable)V2}}"
@@ -6930,7 +6930,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Aha Instant: All Targets}} - {{Currency Wars Full Activated OffFieldList}}"
@@ -6959,7 +6959,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 "Add Target by Aha Instant's All Targets"
               ]
             }
@@ -6972,7 +6972,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}"
@@ -6999,7 +6999,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}} - {{Currency Wars Full Activated OffFieldList}}"
@@ -7026,7 +7026,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Currency Wars Full Activated OffFieldList}}"
@@ -7055,7 +7055,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All(with Unselectable)V2}}"
@@ -7097,7 +7097,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All(with Unselectable)V2}}"
@@ -7126,7 +7126,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -7155,7 +7155,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Join Targets",
                   "TargetList": [
@@ -7227,7 +7227,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Join Targets",
                   "TargetList": [
@@ -7268,7 +7268,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Join Targets",
                   "TargetList": [
@@ -7341,7 +7341,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}.[[livingOrLimbo]]"
@@ -7395,7 +7395,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Battle Event List}}.[[livingOrLimbo]]"
@@ -7455,7 +7455,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All(with Unselectable)V2}}.[[removeMemosprite]]"
@@ -7501,7 +7501,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Target Sequence",
-                  "Sequence": [
+                  "TargetList": [
                     {
                       "name": "Target Name",
                       "target": "{{All Unselectable Targets}}"
@@ -7580,10 +7580,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Sequence",
-                  "Sequence": [
+                  "TargetList": [
                     {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
@@ -7620,7 +7620,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Hostile Entities(AOE)}}"
@@ -7643,7 +7643,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Hostile Entities(AOE)}}.[[removeMemosprite]]"
@@ -7663,7 +7663,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Hostile Entities(AOE)}}"
@@ -7683,7 +7683,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Hostile Entities(AOE)}}"
@@ -7700,7 +7700,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}.[[removeMemosprite]]"
@@ -7724,7 +7724,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -7748,7 +7748,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}.[[livingOrLimbo]]"
@@ -7772,7 +7772,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}.[[livingOrLimbo]]"
@@ -7796,7 +7796,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}.[[removeMemosprite]]"
@@ -7831,7 +7831,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}.[[removeMemosprite]]"
@@ -7855,7 +7855,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -7879,7 +7879,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}.[[removeMemosprite]]"
@@ -7903,7 +7903,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -7927,7 +7927,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -7944,7 +7944,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team All}}"
@@ -7964,7 +7964,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -7981,7 +7981,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -8107,7 +8107,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team Entity}}"
@@ -8143,7 +8143,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -8216,7 +8216,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 "Add Target by Current Modifier Holder",
                 "Adjust Target by Adjacent Targets"
               ]
@@ -8322,7 +8322,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -8362,7 +8362,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
@@ -8382,7 +8382,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
@@ -8399,7 +8399,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Join Targets",
                   "TargetList": [
@@ -8428,7 +8428,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Ability Target(ST)}}"
@@ -8445,7 +8445,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
@@ -8462,7 +8462,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
@@ -8479,7 +8479,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -8575,7 +8575,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Target Sequence",
-                  "Sequence": [
+                  "TargetList": [
                     {
                       "name": "Target Name",
                       "target": "{{Ability Target(ST)}}"
@@ -8774,7 +8774,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{All Unselectable Targets}}"
@@ -8801,7 +8801,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{All Unselectable Targets}}"
@@ -8912,7 +8912,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -9047,7 +9047,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Current Action Owner}}"
@@ -9142,7 +9142,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
@@ -9162,7 +9162,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
@@ -9182,7 +9182,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
@@ -9202,7 +9202,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
@@ -9311,7 +9311,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -9328,7 +9328,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Parameter Target 2}}"
@@ -9345,7 +9345,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
@@ -9362,7 +9362,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -9387,7 +9387,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
@@ -9404,7 +9404,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
@@ -9421,7 +9421,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
@@ -9438,7 +9438,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
@@ -9455,7 +9455,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Parameter Target}}"
@@ -9504,7 +9504,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 "Add Target by Target hit by Projectile",
                 "Adjust Target by Adjacent Targets"
               ]
@@ -9538,7 +9538,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -9558,7 +9558,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -9578,7 +9578,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 "Add Target by Ability Target",
                 {
                   "name": "Adjust Target by Adjacent Targets",
@@ -9595,7 +9595,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 "Add Target by Ability Target",
                 {
                   "name": "Adjust Target by Adjacent Targets",
@@ -9623,7 +9623,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 "Add Target by Ability Target",
                 "Adjust Target by Adjacent Targets"
               ]
@@ -9637,7 +9637,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
@@ -9654,7 +9654,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -9671,7 +9671,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -9688,7 +9688,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -9705,7 +9705,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Current Action Owner}}"
@@ -9722,7 +9722,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Current Action Owner}}"
@@ -9740,11 +9740,11 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Compute Targets",
-              "type": "Union",
+              "operationType": "Union",
               "TargetList": [
                 {
                   "name": "Target Sequence",
-                  "Sequence": [
+                  "TargetList": [
                     {
                       "name": "Target Name",
                       "target": "{{Current Action Owner}}"
@@ -9756,7 +9756,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Target Sequence",
-                  "Sequence": [
+                  "TargetList": [
                     {
                       "name": "Target Name",
                       "target": "{{Current Action Owner}}"
@@ -9776,7 +9776,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -9793,7 +9793,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
@@ -9810,7 +9810,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -9827,7 +9827,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -9847,7 +9847,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -9864,7 +9864,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 "Add Target by Next Ability Caster"
               ]
             }
@@ -9877,7 +9877,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Search",
                   "entityType": "Avatar",
@@ -9951,7 +9951,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -9968,7 +9968,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -9985,7 +9985,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Modifier Holder}}"
@@ -10005,7 +10005,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -10026,7 +10026,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -10044,10 +10044,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Sequence",
-                  "Sequence": [
+                  "TargetList": [
                     {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}"
@@ -10084,7 +10084,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -10165,7 +10165,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{All Team Members}}"
@@ -10199,7 +10199,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -10219,7 +10219,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -10236,7 +10236,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team All}}"
@@ -10256,7 +10256,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Enemy Team Entity}}"
@@ -10317,7 +10317,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{All Memosprites}}"
@@ -10367,7 +10367,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Player Team Entity}}"

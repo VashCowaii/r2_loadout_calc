@@ -17,7 +17,7 @@ const configAbility = {
       "name": "Declare Custom Variable",
       "target": {
         "name": "Target Sequence",
-        "Sequence": [
+        "TargetList": [
           {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
@@ -44,7 +44,7 @@ const configAbility = {
       "advanceType": "Set",
       "target": {
         "name": "Target Sequence",
-        "Sequence": [
+        "TargetList": [
           {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"

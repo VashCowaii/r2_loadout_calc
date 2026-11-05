@@ -35,7 +35,7 @@ const configAbility = {
         "name": "Compare: Target Count",
         "target": {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             {
               "name": "Target Name",
               "target": "{{Adventure Enemy NPCs}}"
@@ -67,7 +67,7 @@ const configAbility = {
           "name": "Find New Target",
           "from": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Adventure Enemy NPCs}}"

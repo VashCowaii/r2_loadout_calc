@@ -32,7 +32,7 @@ const configAbility = {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{All Team Members(Exclude Self)}}"
@@ -84,7 +84,7 @@ const configAbility = {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{All Team Members(Exclude Self)}}"

@@ -10,7 +10,7 @@ const configAbility = {
         "name": "Compare: Target Count",
         "target": {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             {
               "name": "Target Name",
               "target": "{{Every Battle Entity}}"
@@ -96,7 +96,7 @@ const configAbility = {
         "name": "Compare: Target Count",
         "target": {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             {
               "name": "Target Name",
               "target": "{{Every Battle Entity}}"

@@ -157,7 +157,7 @@ const configAbility = {
                   "name": "Define Custom Variable",
                   "target": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Player Team(Exclude Memosprites)}}"
@@ -206,7 +206,7 @@ const configAbility = {
                       "name": "Define Custom Variable",
                       "target": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Player Team(Exclude Memosprites)}}-{{EVENT[RoT] Dark Praetor: Selected Target}}"
@@ -241,7 +241,7 @@ const configAbility = {
                       "name": "Define Custom Variable",
                       "target": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Player Team(Exclude Memosprites)}}-{{EVENT[RoT] Dark Praetor: Selected Target}}"

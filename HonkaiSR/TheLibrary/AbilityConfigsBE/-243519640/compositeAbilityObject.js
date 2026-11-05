@@ -8728,7 +8728,7 @@ const compositeAbilityObject = {
                             },
                             "target": {
                               "name": "Target Sequence",
-                              "Sequence": [
+                              "TargetList": [
                                 {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"
@@ -11164,7 +11164,7 @@ const compositeAbilityObject = {
                             },
                             "target": {
                               "name": "Target Sequence",
-                              "Sequence": [
+                              "TargetList": [
                                 {
                                   "name": "Target Name",
                                   "target": "{{Modifier Holder}}"

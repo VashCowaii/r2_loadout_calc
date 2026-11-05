@@ -20,30 +20,28 @@ const configAbility = {
       "options": [
         {
           "name": "HANDLER OPTION",
-          "option": "Decision01",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "AIFlag",
-                  "value": 2
+          "optionName": "Decision01",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill02"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                "scope": "TargetEntity",
+                "variableName": "AIFlag",
+                "value": 2
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill02"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 1,
@@ -59,20 +57,18 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "Decision02",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill01"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "Decision02",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill01"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 1,
@@ -91,7 +87,7 @@ const configAbility = {
                 "name": "Has Modifier",
                 "target": {
                   "name": "Target Sequence",
-                  "Sequence": [
+                  "TargetList": [
                     {
                       "name": "Target Name",
                       "target": "{{Enemy Team All}}"
@@ -117,20 +113,18 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "Decision03",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill03"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "Decision03",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill03"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 1,
@@ -149,7 +143,7 @@ const configAbility = {
                 "name": "Has Modifier",
                 "target": {
                   "name": "Target Sequence",
-                  "Sequence": [
+                  "TargetList": [
                     {
                       "name": "Target Name",
                       "target": "{{Enemy Team All}}"

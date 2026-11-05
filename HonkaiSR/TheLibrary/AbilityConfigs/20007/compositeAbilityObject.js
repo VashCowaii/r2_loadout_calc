@@ -3124,7 +3124,7 @@ const compositeAbilityObject = {
             "name": "Compare: Variable",
             "target": {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -3210,7 +3210,7 @@ const compositeAbilityObject = {
               "name": "Add Events/Bonuses",
               "to": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -3281,7 +3281,7 @@ const compositeAbilityObject = {
                 "name": "Compare: Variable",
                 "target": {
                   "name": "Target Sequence",
-                  "Sequence": [
+                  "TargetList": [
                     {
                       "name": "Target Name",
                       "target": "{{Caster}}"
@@ -3358,7 +3358,7 @@ const compositeAbilityObject = {
                   "name": "Remove Events/Bonuses",
                   "to": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Caster}}"
@@ -3406,7 +3406,7 @@ const compositeAbilityObject = {
                   "name": "Add Events/Bonuses",
                   "to": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Caster}}"
@@ -3464,7 +3464,7 @@ const compositeAbilityObject = {
                   "name": "Find New Target",
                   "from": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Caster}}"
@@ -3569,7 +3569,7 @@ const compositeAbilityObject = {
                           "name": "Add Events/Bonuses",
                           "to": {
                             "name": "Target Sequence",
-                            "Sequence": [
+                            "TargetList": [
                               {
                                 "name": "Target Name",
                                 "target": "{{Caster}}"
@@ -3741,7 +3741,7 @@ const compositeAbilityObject = {
                         "name": "Compare: Variable",
                         "target": {
                           "name": "Target Sequence",
-                          "Sequence": [
+                          "TargetList": [
                             {
                               "name": "Target Name",
                               "target": "{{Caster}}"
@@ -3833,7 +3833,7 @@ const compositeAbilityObject = {
                             "name": "Compare: Variable",
                             "target": {
                               "name": "Target Sequence",
-                              "Sequence": [
+                              "TargetList": [
                                 {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
@@ -3932,7 +3932,7 @@ const compositeAbilityObject = {
                         "name": "Compare: Variable",
                         "target": {
                           "name": "Target Sequence",
-                          "Sequence": [
+                          "TargetList": [
                             {
                               "name": "Target Name",
                               "target": "{{Caster}}"
@@ -4024,7 +4024,7 @@ const compositeAbilityObject = {
                             "name": "Compare: Variable",
                             "target": {
                               "name": "Target Sequence",
-                              "Sequence": [
+                              "TargetList": [
                                 {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
@@ -4123,7 +4123,7 @@ const compositeAbilityObject = {
                         "name": "Compare: Variable",
                         "target": {
                           "name": "Target Sequence",
-                          "Sequence": [
+                          "TargetList": [
                             {
                               "name": "Target Name",
                               "target": "{{Caster}}"
@@ -4215,7 +4215,7 @@ const compositeAbilityObject = {
                             "name": "Compare: Variable",
                             "target": {
                               "name": "Target Sequence",
-                              "Sequence": [
+                              "TargetList": [
                                 {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"
@@ -4314,7 +4314,7 @@ const compositeAbilityObject = {
                         "name": "Compare: Variable",
                         "target": {
                           "name": "Target Sequence",
-                          "Sequence": [
+                          "TargetList": [
                             {
                               "name": "Target Name",
                               "target": "{{Caster}}"
@@ -4414,7 +4414,7 @@ const compositeAbilityObject = {
                             "name": "Compare: Variable",
                             "target": {
                               "name": "Target Sequence",
-                              "Sequence": [
+                              "TargetList": [
                                 {
                                   "name": "Target Name",
                                   "target": "{{Caster}}"

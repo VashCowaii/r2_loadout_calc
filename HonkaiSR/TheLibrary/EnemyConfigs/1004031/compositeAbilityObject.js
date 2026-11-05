@@ -904,31 +904,29 @@ const compositeAbilityObject = {
           "options": [
             {
               "name": "HANDLER OPTION",
-              "option": "Decision1-1",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "Bronya_AICounter_Act1",
-                      "value": 2
+              "optionName": "Decision1-1",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
-                    }
-                  ]
-                }
-              ],
-              "weight": 0.5,
-              "type": "DefaultDSE",
-              "check": [
+                    "scope": "TargetEntity",
+                    "variableName": "Bronya_AICounter_Act1",
+                    "value": 2
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionWeight": 0.5,
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -949,53 +947,51 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "Decision1-2",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "Bronya_AICounter_Act1",
-                      "value": 3
+              "optionName": "Decision1-2",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "Choose Ability Target",
-                      "skillName": "Skill02",
-                      "target": {
-                        "name": "Create Selection List",
-                        "passed": [
-                          {
-                            "name": "Select by Target Pool",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            },
-                            "invertCondition": true
+                    "scope": "TargetEntity",
+                    "variableName": "Bronya_AICounter_Act1",
+                    "value": 3
+                  },
+                  {
+                    "name": "Choose Ability Target",
+                    "skillName": "Skill02",
+                    "target": {
+                      "name": "Create Selection List",
+                      "passed": [
+                        {
+                          "name": "Select by Target Pool",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
                           },
-                          {
-                            "name": "Select by Unique Identifier",
-                            "uniqueName": "W1_Ice",
-                            "invertCondition": true
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill02"
+                          "invertCondition": true
+                        },
+                        {
+                          "name": "Select by Unique Identifier",
+                          "uniqueName": "W1_Ice",
+                          "invertCondition": true
+                        }
+                      ]
                     }
-                  ]
-                }
-              ],
-              "weight": 0.5,
-              "type": "DefaultDSE",
-              "check": [
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill02"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionWeight": 0.5,
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -1026,31 +1022,29 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "Decision1-3",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "Bronya_AICounter_Act1",
-                      "value": 4
+              "optionName": "Decision1-3",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill04"
-                    }
-                  ]
-                }
-              ],
-              "weight": 0.5,
-              "type": "DefaultDSE",
-              "check": [
+                    "scope": "TargetEntity",
+                    "variableName": "Bronya_AICounter_Act1",
+                    "value": 4
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill04"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionWeight": 0.5,
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -1071,53 +1065,51 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "Decision1-4",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "Bronya_AICounter_Act1",
-                      "value": 1
+              "optionName": "Decision1-4",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "Choose Ability Target",
-                      "skillName": "Skill02",
-                      "target": {
-                        "name": "Create Selection List",
-                        "passed": [
-                          {
-                            "name": "Select by Target Pool",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            },
-                            "invertCondition": true
+                    "scope": "TargetEntity",
+                    "variableName": "Bronya_AICounter_Act1",
+                    "value": 1
+                  },
+                  {
+                    "name": "Choose Ability Target",
+                    "skillName": "Skill02",
+                    "target": {
+                      "name": "Create Selection List",
+                      "passed": [
+                        {
+                          "name": "Select by Target Pool",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
                           },
-                          {
-                            "name": "Select by Unique Identifier",
-                            "uniqueName": "W1_Ice",
-                            "invertCondition": true
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill02"
+                          "invertCondition": true
+                        },
+                        {
+                          "name": "Select by Unique Identifier",
+                          "uniqueName": "W1_Ice",
+                          "invertCondition": true
+                        }
+                      ]
                     }
-                  ]
-                }
-              ],
-              "weight": 0.5,
-              "type": "DefaultDSE",
-              "check": [
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill02"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionWeight": 0.5,
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,

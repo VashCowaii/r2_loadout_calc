@@ -25,41 +25,39 @@ const configAbility = {
       "options": [
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill01",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "W2_Valkyrie02_00_AICounter",
-                  "context": "TargetEntity",
-                  "value": 1,
-                  "max": 8
+          "optionName": "UseSkill01",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable with Added Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Choose Ability Target",
-                  "skillName": "Skill04",
-                  "target": {
-                    "name": "Select by Modifier Name",
-                    "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
-                    "target": null,
-                    "invertCondition": true
-                  }
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill02"
+                "variableName": "W2_Valkyrie02_00_AICounter",
+                "context": "TargetEntity",
+                "value": 1,
+                "max": 8
+              },
+              {
+                "name": "Choose Ability Target",
+                "skillName": "Skill04",
+                "target": {
+                  "name": "Select by Modifier Name",
+                  "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
+                  "target": null,
+                  "invertCondition": true
                 }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill02"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -80,61 +78,59 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill02",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable with Added Value",
+          "optionName": "UseSkill02",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable with Added Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "variableName": "W2_Valkyrie02_00_AICounter",
+                "context": "TargetEntity",
+                "value": 1,
+                "max": 8
+              },
+              {
+                "name": "IF",
+                "conditions": {
+                  "name": "Compare: Variable",
                   "target": {
                     "name": "Target Name",
-                    "target": "{{Caster}}"
+                    "target": "{{Caster's Minions}}"
                   },
-                  "variableName": "W2_Valkyrie02_00_AICounter",
-                  "context": "TargetEntity",
-                  "value": 1,
-                  "max": 8
+                  "value1": "TeamCharacterCount",
+                  "compareType": "<=",
+                  "value2": 1
                 },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
+                "passed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill05"
+                  }
+                ],
+                "failed": [
+                  {
+                    "name": "Choose Ability Target",
+                    "skillName": "Skill04",
                     "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster's Minions}}"
-                    },
-                    "value1": "TeamCharacterCount",
-                    "compareType": "<=",
-                    "value2": 1
+                      "name": "Select by Modifier Name",
+                      "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
+                      "target": null
+                    }
                   },
-                  "passed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill05"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Choose Ability Target",
-                      "skillName": "Skill04",
-                      "target": {
-                        "name": "Select by Modifier Name",
-                        "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
-                        "target": null
-                      }
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ]
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -155,41 +151,39 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill02-2",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "W2_Valkyrie02_00_AICounter",
-                  "context": "TargetEntity",
-                  "value": 1,
-                  "max": 8
+          "optionName": "UseSkill02-2",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable with Added Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Choose Ability Target",
-                  "skillName": "Skill04",
-                  "target": {
-                    "name": "Select by Modifier Name",
-                    "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
-                    "target": null,
-                    "invertCondition": true
-                  }
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill02"
+                "variableName": "W2_Valkyrie02_00_AICounter",
+                "context": "TargetEntity",
+                "value": 1,
+                "max": 8
+              },
+              {
+                "name": "Choose Ability Target",
+                "skillName": "Skill04",
+                "target": {
+                  "name": "Select by Modifier Name",
+                  "modifier": "<a class=\"gModGreen\" id=\"221482818\">Standard_Unstable</a>[<span class=\"descriptionNumberColor\">Reverberation</span>]",
+                  "target": null,
+                  "invertCondition": true
                 }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill02"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -210,30 +204,28 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill03",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Valkyrie02_00_AICounter",
-                  "value": 1
+          "optionName": "UseSkill03",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill03"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                "scope": "TargetEntity",
+                "variableName": "W2_Valkyrie02_00_AICounter",
+                "value": 1
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill03"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -254,48 +246,46 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill04",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Choose Ability Target",
-                  "skillName": "Skill04",
-                  "target": {
-                    "name": "Select by Modifier Name",
-                    "modifier": "<a class=\"gModGreen\" id=\"-1513487927\">Enemy_W2_Valkyrie02_Ability04_Target</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
-                    "target": null
-                  }
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Valkyrie Skill Target}}"
-                    },
-                    "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
-                  },
-                  "passed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill04"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill06"
-                    }
-                  ]
+          "optionName": "UseSkill04",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Choose Ability Target",
+                "skillName": "Skill04",
+                "target": {
+                  "name": "Select by Modifier Name",
+                  "modifier": "<a class=\"gModGreen\" id=\"-1513487927\">Enemy_W2_Valkyrie02_Ability04_Target</a>[<span class=\"descriptionNumberColor\">Lock On</span>]",
+                  "target": null
                 }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+              },
+              {
+                "name": "IF",
+                "conditions": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Valkyrie Skill Target}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"-315004140\">Standard_Shake</a>[<span class=\"descriptionNumberColor\">Strong Reverberation</span>]"
+                },
+                "passed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill04"
+                  }
+                ],
+                "failed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill06"
+                  }
+                ]
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.75,

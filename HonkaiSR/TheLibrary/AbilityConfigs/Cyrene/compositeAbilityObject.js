@@ -5309,7 +5309,7 @@ const compositeAbilityObject = {
               "name": "Add Sub-Events/Bonuses",
               "to": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]].[[removeMemosprite]]"
@@ -9343,7 +9343,7 @@ const compositeAbilityObject = {
                         "name": "Compare: Target Count",
                         "target": {
                           "name": "Target Sequence",
-                          "Sequence": [
+                          "TargetList": [
                             {
                               "name": "Target Name",
                               "target": "{{Player Team All}}.[[removeMemosprite]]"
@@ -10489,7 +10489,7 @@ const compositeAbilityObject = {
               "name": "Add Events/Bonuses",
               "to": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}"
@@ -10540,7 +10540,7 @@ const compositeAbilityObject = {
               "name": "Add Events/Bonuses",
               "to": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}"
@@ -11709,7 +11709,7 @@ const compositeAbilityObject = {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}"
@@ -11760,7 +11760,7 @@ const compositeAbilityObject = {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}"

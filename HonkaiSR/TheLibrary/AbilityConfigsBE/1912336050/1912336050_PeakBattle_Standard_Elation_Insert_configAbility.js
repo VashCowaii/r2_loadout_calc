@@ -41,7 +41,7 @@ const configAbility = {
           "functionName": "<a class=\"gTempYellow\" id=\"-603009472\">T_GridFight_Equipment_Emblem_2012_TriggerHit</a>",
           "overrideParamEntity": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
@@ -90,7 +90,7 @@ const configAbility = {
           "functionName": "<a class=\"gTempYellow\" id=\"-603009472\">T_GridFight_Equipment_Emblem_2012_TriggerHit</a>",
           "overrideParamEntity": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"

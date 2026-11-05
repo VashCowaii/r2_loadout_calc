@@ -2479,31 +2479,29 @@ const compositeAbilityObject = {
           "options": [
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill01",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "Monster_XP_Elite02_00_AIFlag",
-                      "value": 2
+              "optionName": "UseSkill01",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
-                    }
-                  ]
-                }
-              ],
-              "weight": 0.5,
-              "type": "DefaultDSE",
-              "check": [
+                    "scope": "TargetEntity",
+                    "variableName": "Monster_XP_Elite02_00_AIFlag",
+                    "value": 2
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionWeight": 0.5,
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -2519,376 +2517,374 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill03",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "IF",
+              "optionName": "UseSkill03",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Compare: Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
+                      "value1": "TeamCharacterCount",
+                      "compareType": ">",
+                      "value2": 0,
                       "conditions": {
-                        "name": "Compare: Variable",
+                        "name": "Has Modifier",
                         "target": {
                           "name": "Target Name",
-                          "target": "{{Hostile Entities(AOE)}}"
+                          "target": "{{Parameter Target}}"
                         },
-                        "value1": "TeamCharacterCount",
-                        "compareType": ">",
-                        "value2": 0,
-                        "conditions": {
-                          "name": "Has Modifier",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-634944090\">Monster_XP_Elite02_Edict01</a>[<span class=\"descriptionNumberColor\">Ban</span>]"
-                        }
+                        "modifier": "<a class=\"gModGreen\" id=\"-634944090\">Monster_XP_Elite02_Edict01</a>[<span class=\"descriptionNumberColor\">Ban</span>]"
+                      }
+                    },
+                    "passed": [
+                      {
+                        "name": "Declare Custom Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "scope": "TargetEntity",
+                        "variableName": "Monster_XP_Elite02_00_AIFlag",
+                        "value": 3
                       },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill02"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "IF",
+                        "conditions": {
+                          "name": "Compare: Variable",
                           "target": {
                             "name": "Target Name",
-                            "target": "{{Caster}}"
+                            "target": "{{Hostile Entities(AOE)}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "Monster_XP_Elite02_00_AIFlag",
-                          "value": 3
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill02"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "IF",
+                          "value1": "TeamCharacterCount",
+                          "compareType": ">",
+                          "value2": 0,
                           "conditions": {
-                            "name": "Compare: Variable",
+                            "name": "Has Modifier",
                             "target": {
                               "name": "Target Name",
-                              "target": "{{Hostile Entities(AOE)}}"
+                              "target": "{{Parameter Target}}"
                             },
-                            "value1": "TeamCharacterCount",
-                            "compareType": ">",
-                            "value2": 0,
-                            "conditions": {
-                              "name": "Has Modifier",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-651721709\">Monster_XP_Elite02_Edict02</a>[<span class=\"descriptionNumberColor\">Ban</span>]"
-                            }
+                            "modifier": "<a class=\"gModGreen\" id=\"-651721709\">Monster_XP_Elite02_Edict02</a>[<span class=\"descriptionNumberColor\">Ban</span>]"
+                          }
+                        },
+                        "passed": [
+                          {
+                            "name": "Declare Custom Variable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "scope": "TargetEntity",
+                            "variableName": "Monster_XP_Elite02_00_AIFlag",
+                            "value": 3
                           },
-                          "passed": [
-                            {
-                              "name": "Declare Custom Variable",
+                          {
+                            "name": "Use Ability Option",
+                            "skillName": "Skill02"
+                          }
+                        ],
+                        "failed": [
+                          {
+                            "name": "IF",
+                            "conditions": {
+                              "name": "Compare: Variable",
                               "target": {
                                 "name": "Target Name",
-                                "target": "{{Caster}}"
+                                "target": "{{Hostile Entities(AOE)}}"
                               },
-                              "scope": "TargetEntity",
-                              "variableName": "Monster_XP_Elite02_00_AIFlag",
-                              "value": 3
-                            },
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill02"
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "IF",
+                              "value1": "TeamCharacterCount",
+                              "compareType": ">",
+                              "value2": 0,
                               "conditions": {
-                                "name": "Compare: Variable",
+                                "name": "Has Modifier",
                                 "target": {
                                   "name": "Target Name",
-                                  "target": "{{Hostile Entities(AOE)}}"
+                                  "target": "{{Parameter Target}}"
                                 },
-                                "value1": "TeamCharacterCount",
-                                "compareType": ">",
-                                "value2": 0,
+                                "modifier": "<a class=\"gModGreen\" id=\"-668499328\">Monster_XP_Elite02_Edict03</a>[<span class=\"descriptionNumberColor\">Ban</span>]"
+                              }
+                            },
+                            "passed": [
+                              {
+                                "name": "Declare Custom Variable",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
+                                "scope": "TargetEntity",
+                                "variableName": "Monster_XP_Elite02_00_AIFlag",
+                                "value": 3
+                              },
+                              {
+                                "name": "Use Ability Option",
+                                "skillName": "Skill02"
+                              }
+                            ],
+                            "failed": [
+                              {
+                                "name": "IF",
                                 "conditions": {
                                   "name": "Has Modifier",
                                   "target": {
                                     "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-668499328\">Monster_XP_Elite02_Edict03</a>[<span class=\"descriptionNumberColor\">Ban</span>]"
-                                }
-                              },
-                              "passed": [
-                                {
-                                  "name": "Declare Custom Variable",
-                                  "target": {
-                                    "name": "Target Name",
                                     "target": "{{Caster}}"
                                   },
-                                  "scope": "TargetEntity",
-                                  "variableName": "Monster_XP_Elite02_00_AIFlag",
-                                  "value": 3
+                                  "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
                                 },
-                                {
-                                  "name": "Use Ability Option",
-                                  "skillName": "Skill02"
-                                }
-                              ],
-                              "failed": [
-                                {
-                                  "name": "IF",
-                                  "conditions": {
-                                    "name": "Has Modifier",
+                                "passed": [
+                                  {
+                                    "name": "IF",
+                                    "conditions": {
+                                      "name": "Compare: Variable",
+                                      "target": {
+                                        "name": "Target Name",
+                                        "target": "{{All Team Members}}"
+                                      },
+                                      "value1": "TeamCharacterCount",
+                                      "compareType": "<=",
+                                      "value2": 1
+                                    },
+                                    "passed": [
+                                      {
+                                        "name": "IF",
+                                        "conditions": {
+                                          "name": "Compare: Variable",
+                                          "value1": "CurrentSkillPoints",
+                                          "compareType": "<=",
+                                          "value2": 2
+                                        },
+                                        "passed": [
+                                          {
+                                            "name": "Use Ability Option",
+                                            "skillName": "Skill05"
+                                          }
+                                        ],
+                                        "failed": [
+                                          {
+                                            "name": "IF",
+                                            "conditions": {
+                                              "name": "Random Chance",
+                                              "chance": 0.5
+                                            },
+                                            "passed": [
+                                              {
+                                                "name": "Use Ability Option",
+                                                "skillName": "Skill04"
+                                              }
+                                            ],
+                                            "failed": [
+                                              {
+                                                "name": "Use Ability Option",
+                                                "skillName": "Skill05"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "failed": [
+                                      {
+                                        "name": "IF",
+                                        "conditions": {
+                                          "name": "Random Chance",
+                                          "chance": 0.7
+                                        },
+                                        "passed": [
+                                          {
+                                            "name": "Use Ability Option",
+                                            "skillName": "Skill03"
+                                          }
+                                        ],
+                                        "failed": [
+                                          {
+                                            "name": "IF",
+                                            "conditions": {
+                                              "name": "Compare: Variable",
+                                              "value1": "CurrentSkillPoints",
+                                              "compareType": "<=",
+                                              "value2": 2
+                                            },
+                                            "passed": [
+                                              {
+                                                "name": "Use Ability Option",
+                                                "skillName": "Skill05"
+                                              }
+                                            ],
+                                            "failed": [
+                                              {
+                                                "name": "IF",
+                                                "conditions": {
+                                                  "name": "Random Chance",
+                                                  "chance": 0.5
+                                                },
+                                                "passed": [
+                                                  {
+                                                    "name": "Use Ability Option",
+                                                    "skillName": "Skill04"
+                                                  }
+                                                ],
+                                                "failed": [
+                                                  {
+                                                    "name": "Use Ability Option",
+                                                    "skillName": "Skill05"
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "Declare Custom Variable",
                                     "target": {
                                       "name": "Target Name",
                                       "target": "{{Caster}}"
                                     },
-                                    "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                                    "scope": "TargetEntity",
+                                    "variableName": "Monster_XP_Elite02_00_AIFlag",
+                                    "value": 4
+                                  }
+                                ],
+                                "failed": [
+                                  {
+                                    "name": "Declare Custom Variable",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Caster}}"
+                                    },
+                                    "scope": "TargetEntity",
+                                    "variableName": "Monster_XP_Elite02_00_AIFlag",
+                                    "value": 3
                                   },
-                                  "passed": [
-                                    {
-                                      "name": "IF",
-                                      "conditions": {
-                                        "name": "Compare: Variable",
-                                        "target": {
-                                          "name": "Target Name",
-                                          "target": "{{All Team Members}}"
-                                        },
-                                        "value1": "TeamCharacterCount",
-                                        "compareType": "<=",
-                                        "value2": 1
-                                      },
-                                      "passed": [
-                                        {
-                                          "name": "IF",
-                                          "conditions": {
-                                            "name": "Compare: Variable",
-                                            "value1": "CurrentSkillPoints",
-                                            "compareType": "<=",
-                                            "value2": 2
-                                          },
-                                          "passed": [
-                                            {
-                                              "name": "Use Ability Option",
-                                              "skillName": "Skill05"
-                                            }
-                                          ],
-                                          "failed": [
-                                            {
-                                              "name": "IF",
-                                              "conditions": {
-                                                "name": "Random Chance",
-                                                "chance": 0.5
-                                              },
-                                              "passed": [
-                                                {
-                                                  "name": "Use Ability Option",
-                                                  "skillName": "Skill04"
-                                                }
-                                              ],
-                                              "failed": [
-                                                {
-                                                  "name": "Use Ability Option",
-                                                  "skillName": "Skill05"
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      "failed": [
-                                        {
-                                          "name": "IF",
-                                          "conditions": {
-                                            "name": "Random Chance",
-                                            "chance": 0.7
-                                          },
-                                          "passed": [
-                                            {
-                                              "name": "Use Ability Option",
-                                              "skillName": "Skill03"
-                                            }
-                                          ],
-                                          "failed": [
-                                            {
-                                              "name": "IF",
-                                              "conditions": {
-                                                "name": "Compare: Variable",
-                                                "value1": "CurrentSkillPoints",
-                                                "compareType": "<=",
-                                                "value2": 2
-                                              },
-                                              "passed": [
-                                                {
-                                                  "name": "Use Ability Option",
-                                                  "skillName": "Skill05"
-                                                }
-                                              ],
-                                              "failed": [
-                                                {
-                                                  "name": "IF",
-                                                  "conditions": {
-                                                    "name": "Random Chance",
-                                                    "chance": 0.5
-                                                  },
-                                                  "passed": [
-                                                    {
-                                                      "name": "Use Ability Option",
-                                                      "skillName": "Skill04"
-                                                    }
-                                                  ],
-                                                  "failed": [
-                                                    {
-                                                      "name": "Use Ability Option",
-                                                      "skillName": "Skill05"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "name": "Declare Custom Variable",
+                                  {
+                                    "name": "IF",
+                                    "conditions": {
+                                      "name": "Compare: Variable",
                                       "target": {
                                         "name": "Target Name",
-                                        "target": "{{Caster}}"
+                                        "target": "{{All Team Members}}"
                                       },
-                                      "scope": "TargetEntity",
-                                      "variableName": "Monster_XP_Elite02_00_AIFlag",
-                                      "value": 4
-                                    }
-                                  ],
-                                  "failed": [
-                                    {
-                                      "name": "Declare Custom Variable",
-                                      "target": {
-                                        "name": "Target Name",
-                                        "target": "{{Caster}}"
-                                      },
-                                      "scope": "TargetEntity",
-                                      "variableName": "Monster_XP_Elite02_00_AIFlag",
-                                      "value": 3
+                                      "value1": "TeamCharacterCount",
+                                      "compareType": "<=",
+                                      "value2": 1
                                     },
-                                    {
-                                      "name": "IF",
-                                      "conditions": {
-                                        "name": "Compare: Variable",
-                                        "target": {
-                                          "name": "Target Name",
-                                          "target": "{{All Team Members}}"
+                                    "passed": [
+                                      {
+                                        "name": "IF",
+                                        "conditions": {
+                                          "name": "Compare: Variable",
+                                          "value1": "CurrentSkillPoints",
+                                          "compareType": "<=",
+                                          "value2": 2
                                         },
-                                        "value1": "TeamCharacterCount",
-                                        "compareType": "<=",
-                                        "value2": 1
-                                      },
-                                      "passed": [
-                                        {
-                                          "name": "IF",
-                                          "conditions": {
-                                            "name": "Compare: Variable",
-                                            "value1": "CurrentSkillPoints",
-                                            "compareType": "<=",
-                                            "value2": 2
-                                          },
-                                          "passed": [
-                                            {
-                                              "name": "Use Ability Option",
-                                              "skillName": "Skill05"
-                                            }
-                                          ],
-                                          "failed": [
-                                            {
-                                              "name": "IF",
-                                              "conditions": {
-                                                "name": "Random Chance",
-                                                "chance": 0.5
-                                              },
-                                              "passed": [
-                                                {
-                                                  "name": "Use Ability Option",
-                                                  "skillName": "Skill04"
-                                                }
-                                              ],
-                                              "failed": [
-                                                {
-                                                  "name": "Use Ability Option",
-                                                  "skillName": "Skill05"
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      "failed": [
-                                        {
-                                          "name": "IF",
-                                          "conditions": {
-                                            "name": "Random Chance",
-                                            "chance": 0.7
-                                          },
-                                          "passed": [
-                                            {
-                                              "name": "Use Ability Option",
-                                              "skillName": "Skill03"
-                                            }
-                                          ],
-                                          "failed": [
-                                            {
-                                              "name": "IF",
-                                              "conditions": {
-                                                "name": "Compare: Variable",
-                                                "value1": "CurrentSkillPoints",
-                                                "compareType": "<=",
-                                                "value2": 2
-                                              },
-                                              "passed": [
-                                                {
-                                                  "name": "Use Ability Option",
-                                                  "skillName": "Skill05"
-                                                }
-                                              ],
-                                              "failed": [
-                                                {
-                                                  "name": "IF",
-                                                  "conditions": {
-                                                    "name": "Random Chance",
-                                                    "chance": 0.5
-                                                  },
-                                                  "passed": [
-                                                    {
-                                                      "name": "Use Ability Option",
-                                                      "skillName": "Skill04"
-                                                    }
-                                                  ],
-                                                  "failed": [
-                                                    {
-                                                      "name": "Use Ability Option",
-                                                      "skillName": "Skill05"
-                                                    }
-                                                  ]
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                                        "passed": [
+                                          {
+                                            "name": "Use Ability Option",
+                                            "skillName": "Skill05"
+                                          }
+                                        ],
+                                        "failed": [
+                                          {
+                                            "name": "IF",
+                                            "conditions": {
+                                              "name": "Random Chance",
+                                              "chance": 0.5
+                                            },
+                                            "passed": [
+                                              {
+                                                "name": "Use Ability Option",
+                                                "skillName": "Skill04"
+                                              }
+                                            ],
+                                            "failed": [
+                                              {
+                                                "name": "Use Ability Option",
+                                                "skillName": "Skill05"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "failed": [
+                                      {
+                                        "name": "IF",
+                                        "conditions": {
+                                          "name": "Random Chance",
+                                          "chance": 0.7
+                                        },
+                                        "passed": [
+                                          {
+                                            "name": "Use Ability Option",
+                                            "skillName": "Skill03"
+                                          }
+                                        ],
+                                        "failed": [
+                                          {
+                                            "name": "IF",
+                                            "conditions": {
+                                              "name": "Compare: Variable",
+                                              "value1": "CurrentSkillPoints",
+                                              "compareType": "<=",
+                                              "value2": 2
+                                            },
+                                            "passed": [
+                                              {
+                                                "name": "Use Ability Option",
+                                                "skillName": "Skill05"
+                                              }
+                                            ],
+                                            "failed": [
+                                              {
+                                                "name": "IF",
+                                                "conditions": {
+                                                  "name": "Random Chance",
+                                                  "chance": 0.5
+                                                },
+                                                "passed": [
+                                                  {
+                                                    "name": "Use Ability Option",
+                                                    "skillName": "Skill04"
+                                                  }
+                                                ],
+                                                "failed": [
+                                                  {
+                                                    "name": "Use Ability Option",
+                                                    "skillName": "Skill05"
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -2904,247 +2900,245 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill03",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "IF",
+              "optionName": "UseSkill03",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Compare: Variable",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Hostile Entities(AOE)}}"
+                      },
+                      "value1": "TeamCharacterCount",
+                      "compareType": ">",
+                      "value2": 0,
                       "conditions": {
-                        "name": "Compare: Variable",
+                        "name": "Has Modifier",
                         "target": {
                           "name": "Target Name",
-                          "target": "{{Hostile Entities(AOE)}}"
+                          "target": "{{Parameter Target}}"
                         },
-                        "value1": "TeamCharacterCount",
-                        "compareType": ">",
-                        "value2": 0,
-                        "conditions": {
-                          "name": "Has Modifier",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Parameter Target}}"
-                          },
-                          "modifier": "<a class=\"gModGreen\" id=\"-634944090\">Monster_XP_Elite02_Edict01</a>[<span class=\"descriptionNumberColor\">Ban</span>]"
-                        }
+                        "modifier": "<a class=\"gModGreen\" id=\"-634944090\">Monster_XP_Elite02_Edict01</a>[<span class=\"descriptionNumberColor\">Ban</span>]"
+                      }
+                    },
+                    "passed": [
+                      {
+                        "name": "Declare Custom Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "scope": "TargetEntity",
+                        "variableName": "Monster_XP_Elite02_00_AIFlag",
+                        "value": 4
                       },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill01"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "IF",
+                        "conditions": {
+                          "name": "Compare: Variable",
                           "target": {
                             "name": "Target Name",
-                            "target": "{{Caster}}"
+                            "target": "{{Hostile Entities(AOE)}}"
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "Monster_XP_Elite02_00_AIFlag",
-                          "value": 4
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill01"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "IF",
+                          "value1": "TeamCharacterCount",
+                          "compareType": ">",
+                          "value2": 0,
                           "conditions": {
-                            "name": "Compare: Variable",
+                            "name": "Has Modifier",
                             "target": {
                               "name": "Target Name",
-                              "target": "{{Hostile Entities(AOE)}}"
+                              "target": "{{Parameter Target}}"
                             },
-                            "value1": "TeamCharacterCount",
-                            "compareType": ">",
-                            "value2": 0,
-                            "conditions": {
-                              "name": "Has Modifier",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "modifier": "<a class=\"gModGreen\" id=\"-651721709\">Monster_XP_Elite02_Edict02</a>[<span class=\"descriptionNumberColor\">Ban</span>]"
-                            }
+                            "modifier": "<a class=\"gModGreen\" id=\"-651721709\">Monster_XP_Elite02_Edict02</a>[<span class=\"descriptionNumberColor\">Ban</span>]"
+                          }
+                        },
+                        "passed": [
+                          {
+                            "name": "Declare Custom Variable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "scope": "TargetEntity",
+                            "variableName": "Monster_XP_Elite02_00_AIFlag",
+                            "value": 4
                           },
-                          "passed": [
-                            {
-                              "name": "Declare Custom Variable",
+                          {
+                            "name": "Use Ability Option",
+                            "skillName": "Skill01"
+                          }
+                        ],
+                        "failed": [
+                          {
+                            "name": "IF",
+                            "conditions": {
+                              "name": "Compare: Variable",
                               "target": {
                                 "name": "Target Name",
-                                "target": "{{Caster}}"
+                                "target": "{{Hostile Entities(AOE)}}"
                               },
-                              "scope": "TargetEntity",
-                              "variableName": "Monster_XP_Elite02_00_AIFlag",
-                              "value": 4
-                            },
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill01"
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "IF",
+                              "value1": "TeamCharacterCount",
+                              "compareType": ">",
+                              "value2": 0,
                               "conditions": {
-                                "name": "Compare: Variable",
+                                "name": "Has Modifier",
                                 "target": {
                                   "name": "Target Name",
-                                  "target": "{{Hostile Entities(AOE)}}"
+                                  "target": "{{Parameter Target}}"
                                 },
-                                "value1": "TeamCharacterCount",
-                                "compareType": ">",
-                                "value2": 0,
-                                "conditions": {
-                                  "name": "Has Modifier",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Parameter Target}}"
-                                  },
-                                  "modifier": "<a class=\"gModGreen\" id=\"-668499328\">Monster_XP_Elite02_Edict03</a>[<span class=\"descriptionNumberColor\">Ban</span>]"
-                                }
+                                "modifier": "<a class=\"gModGreen\" id=\"-668499328\">Monster_XP_Elite02_Edict03</a>[<span class=\"descriptionNumberColor\">Ban</span>]"
+                              }
+                            },
+                            "passed": [
+                              {
+                                "name": "Declare Custom Variable",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
+                                "scope": "TargetEntity",
+                                "variableName": "Monster_XP_Elite02_00_AIFlag",
+                                "value": 4
                               },
-                              "passed": [
-                                {
-                                  "name": "Declare Custom Variable",
+                              {
+                                "name": "Use Ability Option",
+                                "skillName": "Skill01"
+                              }
+                            ],
+                            "failed": [
+                              {
+                                "name": "Declare Custom Variable",
+                                "target": {
+                                  "name": "Target Name",
+                                  "target": "{{Caster}}"
+                                },
+                                "scope": "TargetEntity",
+                                "variableName": "Monster_XP_Elite02_00_AIFlag",
+                                "value": 4
+                              },
+                              {
+                                "name": "IF",
+                                "conditions": {
+                                  "name": "Compare: Variable",
                                   "target": {
                                     "name": "Target Name",
-                                    "target": "{{Caster}}"
+                                    "target": "{{All Team Members}}"
                                   },
-                                  "scope": "TargetEntity",
-                                  "variableName": "Monster_XP_Elite02_00_AIFlag",
-                                  "value": 4
+                                  "value1": "TeamCharacterCount",
+                                  "compareType": "<=",
+                                  "value2": 1
                                 },
-                                {
-                                  "name": "Use Ability Option",
-                                  "skillName": "Skill01"
-                                }
-                              ],
-                              "failed": [
-                                {
-                                  "name": "Declare Custom Variable",
-                                  "target": {
-                                    "name": "Target Name",
-                                    "target": "{{Caster}}"
-                                  },
-                                  "scope": "TargetEntity",
-                                  "variableName": "Monster_XP_Elite02_00_AIFlag",
-                                  "value": 4
-                                },
-                                {
-                                  "name": "IF",
-                                  "conditions": {
-                                    "name": "Compare: Variable",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{All Team Members}}"
+                                "passed": [
+                                  {
+                                    "name": "IF",
+                                    "conditions": {
+                                      "name": "Compare: Variable",
+                                      "value1": "CurrentSkillPoints",
+                                      "compareType": "<=",
+                                      "value2": 2
                                     },
-                                    "value1": "TeamCharacterCount",
-                                    "compareType": "<=",
-                                    "value2": 1
-                                  },
-                                  "passed": [
-                                    {
-                                      "name": "IF",
-                                      "conditions": {
-                                        "name": "Compare: Variable",
-                                        "value1": "CurrentSkillPoints",
-                                        "compareType": "<=",
-                                        "value2": 2
-                                      },
-                                      "passed": [
-                                        {
-                                          "name": "Use Ability Option",
-                                          "skillName": "Skill05"
-                                        }
-                                      ],
-                                      "failed": [
-                                        {
-                                          "name": "IF",
-                                          "conditions": {
-                                            "name": "Random Chance",
-                                            "chance": 0.5
-                                          },
-                                          "passed": [
-                                            {
-                                              "name": "Use Ability Option",
-                                              "skillName": "Skill04"
-                                            }
-                                          ],
-                                          "failed": [
-                                            {
-                                              "name": "Use Ability Option",
-                                              "skillName": "Skill05"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ],
-                                  "failed": [
-                                    {
-                                      "name": "IF",
-                                      "conditions": {
-                                        "name": "Random Chance",
-                                        "chance": 0.4
-                                      },
-                                      "passed": [
-                                        {
-                                          "name": "Use Ability Option",
-                                          "skillName": "Skill03"
-                                        }
-                                      ],
-                                      "failed": [
-                                        {
-                                          "name": "IF",
-                                          "conditions": {
-                                            "name": "Compare: Variable",
-                                            "value1": "CurrentSkillPoints",
-                                            "compareType": "<=",
-                                            "value2": 2
-                                          },
-                                          "passed": [
-                                            {
-                                              "name": "Use Ability Option",
-                                              "skillName": "Skill05"
-                                            }
-                                          ],
-                                          "failed": [
-                                            {
-                                              "name": "IF",
-                                              "conditions": {
-                                                "name": "Random Chance",
-                                                "chance": 0.5
-                                              },
-                                              "passed": [
-                                                {
-                                                  "name": "Use Ability Option",
-                                                  "skillName": "Skill04"
-                                                }
-                                              ],
-                                              "failed": [
-                                                {
-                                                  "name": "Use Ability Option",
-                                                  "skillName": "Skill05"
-                                                }
-                                              ]
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                                    "passed": [
+                                      {
+                                        "name": "Use Ability Option",
+                                        "skillName": "Skill05"
+                                      }
+                                    ],
+                                    "failed": [
+                                      {
+                                        "name": "IF",
+                                        "conditions": {
+                                          "name": "Random Chance",
+                                          "chance": 0.5
+                                        },
+                                        "passed": [
+                                          {
+                                            "name": "Use Ability Option",
+                                            "skillName": "Skill04"
+                                          }
+                                        ],
+                                        "failed": [
+                                          {
+                                            "name": "Use Ability Option",
+                                            "skillName": "Skill05"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "failed": [
+                                  {
+                                    "name": "IF",
+                                    "conditions": {
+                                      "name": "Random Chance",
+                                      "chance": 0.4
+                                    },
+                                    "passed": [
+                                      {
+                                        "name": "Use Ability Option",
+                                        "skillName": "Skill03"
+                                      }
+                                    ],
+                                    "failed": [
+                                      {
+                                        "name": "IF",
+                                        "conditions": {
+                                          "name": "Compare: Variable",
+                                          "value1": "CurrentSkillPoints",
+                                          "compareType": "<=",
+                                          "value2": 2
+                                        },
+                                        "passed": [
+                                          {
+                                            "name": "Use Ability Option",
+                                            "skillName": "Skill05"
+                                          }
+                                        ],
+                                        "failed": [
+                                          {
+                                            "name": "IF",
+                                            "conditions": {
+                                              "name": "Random Chance",
+                                              "chance": 0.5
+                                            },
+                                            "passed": [
+                                              {
+                                                "name": "Use Ability Option",
+                                                "skillName": "Skill04"
+                                              }
+                                            ],
+                                            "failed": [
+                                              {
+                                                "name": "Use Ability Option",
+                                                "skillName": "Skill05"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -3160,60 +3154,58 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                    },
+                    "passed": [
+                      {
+                        "name": "Declare Custom Variable",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                        "scope": "TargetEntity",
+                        "variableName": "Monster_XP_Elite02_00_AIFlag",
+                        "value": 6
                       },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "Monster_XP_Elite02_00_AIFlag",
-                          "value": 6
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill01"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Declare Custom Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
                         },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill01"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "Monster_XP_Elite02_00_AIFlag",
-                          "value": 5
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill02"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "weight": 0.5,
-              "type": "DefaultDSE",
-              "check": [
+                        "scope": "TargetEntity",
+                        "variableName": "Monster_XP_Elite02_00_AIFlag",
+                        "value": 5
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill02"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionWeight": 0.5,
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -3241,60 +3233,58 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill06",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
+              "optionName": "UseSkill06",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                    },
+                    "passed": [
+                      {
+                        "name": "Declare Custom Variable",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                        "scope": "TargetEntity",
+                        "variableName": "Monster_XP_Elite02_00_AIFlag",
+                        "value": 6
                       },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "Monster_XP_Elite02_00_AIFlag",
-                          "value": 6
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill02"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Declare Custom Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
                         },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill02"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "Monster_XP_Elite02_00_AIFlag",
-                          "value": 5
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill06"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "weight": 0.5,
-              "type": "DefaultDSE",
-              "check": [
+                        "scope": "TargetEntity",
+                        "variableName": "Monster_XP_Elite02_00_AIFlag",
+                        "value": 5
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill06"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionWeight": 0.5,
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -3322,31 +3312,29 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill01",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "Monster_XP_Elite02_00_AIFlag",
-                      "value": 6
+              "optionName": "UseSkill01",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
-                    }
-                  ]
-                }
-              ],
-              "weight": 0.5,
-              "type": "DefaultDSE",
-              "check": [
+                    "scope": "TargetEntity",
+                    "variableName": "Monster_XP_Elite02_00_AIFlag",
+                    "value": 6
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionWeight": 0.5,
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -3374,31 +3362,29 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "Monster_XP_Elite02_00_AIFlag",
-                      "value": 6
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill02"
-                    }
-                  ]
-                }
-              ],
-              "weight": 0.5,
-              "type": "DefaultDSE",
-              "check": [
+                    "scope": "TargetEntity",
+                    "variableName": "Monster_XP_Elite02_00_AIFlag",
+                    "value": 6
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill02"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionWeight": 0.5,
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -3426,31 +3412,29 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill06",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "Monster_XP_Elite02_00_AIFlag",
-                      "value": 1
+              "optionName": "UseSkill06",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill06"
-                    }
-                  ]
-                }
-              ],
-              "weight": 0.5,
-              "type": "DefaultDSE",
-              "check": [
+                    "scope": "TargetEntity",
+                    "variableName": "Monster_XP_Elite02_00_AIFlag",
+                    "value": 1
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill06"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionWeight": 0.5,
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,

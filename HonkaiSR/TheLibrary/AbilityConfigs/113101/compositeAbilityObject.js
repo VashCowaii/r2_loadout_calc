@@ -75,7 +75,7 @@ const compositeAbilityObject = {
                   "name": "Find New Target",
                   "from": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Battle Event List}}"
@@ -100,7 +100,7 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable with Stat",
                       "target": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Battle Event List}}"
@@ -142,7 +142,7 @@ const compositeAbilityObject = {
                           "triggerName": "Status_Status2",
                           "target": {
                             "name": "Target Sequence",
-                            "Sequence": [
+                            "TargetList": [
                               {
                                 "name": "Target Name",
                                 "target": "{{Battle Event List}}"
@@ -1359,7 +1359,7 @@ const compositeAbilityObject = {
                       "name": "Action Advance/Delay",
                       "target": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Battle Event List}}"

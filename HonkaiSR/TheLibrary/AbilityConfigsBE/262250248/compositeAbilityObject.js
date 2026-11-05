@@ -96,7 +96,7 @@ const compositeAbilityObject = {
                   "name": "Trigger: Break",
                   "target": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"

@@ -373,7 +373,7 @@ const configAbility = {
     "stateFilter": "AliveOrLimbo",
     "filter": {
       "name": "Target Sequence",
-      "Sequence": [
+      "TargetList": [
         {
           "name": "Target Name",
           "target": "{{Hostile Entities(AOE)}}"

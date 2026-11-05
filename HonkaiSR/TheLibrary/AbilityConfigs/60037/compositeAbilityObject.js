@@ -361,7 +361,7 @@ const compositeAbilityObject = {
               "name": "Add Sub-Events/Bonuses",
               "to": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable, exclude Netherwing)}}.[[removeBattleEvents]]"

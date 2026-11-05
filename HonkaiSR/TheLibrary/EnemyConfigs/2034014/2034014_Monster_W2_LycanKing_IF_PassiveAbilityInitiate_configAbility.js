@@ -1434,7 +1434,7 @@ const configAbility = {
               "name": "Force Entity Death",
               "target": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}} + {{Enemy Team Unselectables}}"

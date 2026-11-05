@@ -13,122 +13,120 @@ const configAbility = {
       "options": [
         {
           "name": "HANDLER OPTION GROUP",
-          "option": "Phase01",
-          "goal": [
+          "optionGroupName": "Phase01",
+          "optionGroupGoal": [
             {
               "name": "HANDLER OPTION",
-              "option": "指挥",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "AND",
-                        "conditionList": [
-                          {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Level Entity}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"1270842428\">Enemy_SW_Minion01_03_CommandMarkLevel</a>",
-                            "invertCondition": true
+              "optionName": "指挥",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "AND",
+                      "conditionList": [
+                        {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Level Entity}}"
                           },
-                          {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Level Entity}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"-173051125\">Enemy_SW_Minion01_03_CommandMarkLevelCD</a>",
-                            "invertCondition": true
+                          "modifier": "<a class=\"gModGreen\" id=\"1270842428\">Enemy_SW_Minion01_03_CommandMarkLevel</a>",
+                          "invertCondition": true
+                        },
+                        {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Level Entity}}"
                           },
-                          {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"-1665795245\">Enemy_SW_Minion01_03_CommandMarkDarkTeam</a>",
-                            "invertCondition": true
+                          "modifier": "<a class=\"gModGreen\" id=\"-173051125\">Enemy_SW_Minion01_03_CommandMarkLevelCD</a>",
+                          "invertCondition": true
+                        },
+                        {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
                           },
-                          {
-                            "name": "Compare: Target Count",
-                            "target": {
-                              "name": "Target Sequence",
-                              "Sequence": [
-                                {
-                                  "name": "Target Name",
-                                  "target": "{{Enemy Team All}}"
-                                },
-                                {
-                                  "name": "Target Filter",
-                                  "conditions": {
-                                    "name": "Check Boolean Value",
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "value": "SW_Minion01_03"
-                                  }
+                          "modifier": "<a class=\"gModGreen\" id=\"-1665795245\">Enemy_SW_Minion01_03_CommandMarkDarkTeam</a>",
+                          "invertCondition": true
+                        },
+                        {
+                          "name": "Compare: Target Count",
+                          "target": {
+                            "name": "Target Sequence",
+                            "TargetList": [
+                              {
+                                "name": "Target Name",
+                                "target": "{{Enemy Team All}}"
+                              },
+                              {
+                                "name": "Target Filter",
+                                "conditions": {
+                                  "name": "Check Boolean Value",
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
+                                  "value": "SW_Minion01_03"
                                 }
-                              ]
-                            },
-                            "compareType": ">=",
-                            "value2": 2
-                          }
-                        ]
-                      },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
+                              }
+                            ]
                           },
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 1
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill02"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 1
-                        },
-                        {
-                          "name": "Choose Ability Target",
-                          "skillName": "Skill01",
-                          "target": {
-                            "name": "Select by Modifier Name",
-                            "modifier": "<a class=\"gModGreen\" id=\"-360637105\">Enemy_SW_Minion01_03_CommandMarkTarget</a>[<span class=\"descriptionNumberColor\">Shadow of the Grand Fair</span>]",
-                            "target": null,
-                            "max": 1
-                          }
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill01"
+                          "compareType": ">=",
+                          "value2": 2
                         }
                       ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                    },
+                    "passed": [
+                      {
+                        "name": "Declare Custom Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "scope": "TargetEntity",
+                        "variableName": "AIFlag",
+                        "value": 1
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill02"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Declare Custom Variable",
+                        "target": {
+                          "name": "Target Name",
+                          "target": "{{Caster}}"
+                        },
+                        "scope": "TargetEntity",
+                        "variableName": "AIFlag",
+                        "value": 1
+                      },
+                      {
+                        "name": "Choose Ability Target",
+                        "skillName": "Skill01",
+                        "target": {
+                          "name": "Select by Modifier Name",
+                          "modifier": "<a class=\"gModGreen\" id=\"-360637105\">Enemy_SW_Minion01_03_CommandMarkTarget</a>[<span class=\"descriptionNumberColor\">Shadow of the Grand Fair</span>]",
+                          "target": null,
+                          "max": 1
+                        }
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,
@@ -147,8 +145,8 @@ const configAbility = {
               ]
             }
           ],
-          "type": "DefaultDSE",
-          "check": [
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 1,

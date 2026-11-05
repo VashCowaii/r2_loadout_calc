@@ -2092,7 +2092,7 @@ const compositeAbilityObject = {
           "name": "Define Custom Variable with Copy",
           "target": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}"

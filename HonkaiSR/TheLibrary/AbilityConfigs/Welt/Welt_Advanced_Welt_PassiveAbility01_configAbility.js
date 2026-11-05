@@ -302,7 +302,7 @@ const configAbility = {
         "show": "Hide",
         "target": {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             {
               "name": "Target Name",
               "target": "{{Hostile Entities(AOE)}}"
@@ -342,7 +342,7 @@ const configAbility = {
         "show": "Hide",
         "target": {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             {
               "name": "Target Name",
               "target": "{{Hostile Entities(AOE)}}"
@@ -388,7 +388,7 @@ const configAbility = {
         "show": "Hide",
         "target": {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             {
               "name": "Target Name",
               "target": "{{Hostile Entities(AOE)}}"

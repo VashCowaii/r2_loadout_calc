@@ -25,86 +25,84 @@ const configAbility = {
       "options": [
         {
           "name": "HANDLER OPTION",
-          "option": "Charge",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
+          "optionName": "Charge",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "IF",
+                "conditions": {
+                  "name": "Compare: Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  "value1": "TeamCharacterCount",
+                  "compareType": ">=",
+                  "value2": 4
+                },
+                "passed": [
+                  {
+                    "name": "Define Custom Variable with Added Value",
                     "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "variableName": "AIFlag",
+                    "context": "TargetEntity",
+                    "value": 1
+                  },
+                  {
+                    "name": "Find New Target",
+                    "from": {
                       "name": "Target Name",
                       "target": "{{All Team Members(Exclude Self)}}"
                     },
-                    "value1": "TeamCharacterCount",
-                    "compareType": ">=",
-                    "value2": 4
+                    "searchRandom": true,
+                    "maxTargets": 1,
+                    "conditions": {
+                      "name": "Check Boolean Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "value": "Sword_FirstFlag"
+                    },
+                    "ifTargetFound": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill04"
+                      }
+                    ],
+                    "noTargetFound": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill02"
+                      }
+                    ]
+                  }
+                ],
+                "failed": [
+                  {
+                    "name": "Define Custom Variable with Added Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "variableName": "AIFlag",
+                    "context": "TargetEntity",
+                    "value": 1
                   },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "AIFlag",
-                      "context": "TargetEntity",
-                      "value": 1
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{All Team Members(Exclude Self)}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "Sword_FirstFlag"
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill04"
-                        }
-                      ],
-                      "noTargetFound": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill02"
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "AIFlag",
-                      "context": "TargetEntity",
-                      "value": 1
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill03"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill03"
+                  }
+                ]
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -132,30 +130,28 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "Charge",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "AIFlag",
-                  "context": "TargetEntity",
-                  "value": 1
+          "optionName": "Charge",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable with Added Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill01"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                "variableName": "AIFlag",
+                "context": "TargetEntity",
+                "value": 1
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill01"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -183,86 +179,84 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "Charge",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
+          "optionName": "Charge",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "IF",
+                "conditions": {
+                  "name": "Compare: Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  "value1": "TeamCharacterCount",
+                  "compareType": "<",
+                  "value2": 1
+                },
+                "passed": [
+                  {
+                    "name": "Define Custom Variable with Added Value",
                     "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "variableName": "AIFlag",
+                    "context": "TargetEntity",
+                    "value": 1
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill02"
+                  }
+                ],
+                "failed": [
+                  {
+                    "name": "Define Custom Variable with Added Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "variableName": "AIFlag",
+                    "context": "TargetEntity",
+                    "value": 1
+                  },
+                  {
+                    "name": "Find New Target",
+                    "from": {
                       "name": "Target Name",
                       "target": "{{All Team Members(Exclude Self)}}"
                     },
-                    "value1": "TeamCharacterCount",
-                    "compareType": "<",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
+                    "searchRandom": true,
+                    "maxTargets": 1,
+                    "conditions": {
+                      "name": "Check Boolean Value",
                       "target": {
                         "name": "Target Name",
-                        "target": "{{Caster}}"
+                        "target": "{{Parameter Target}}"
                       },
-                      "variableName": "AIFlag",
-                      "context": "TargetEntity",
-                      "value": 1
+                      "value": "Sword_FirstFlag"
                     },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill02"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "variableName": "AIFlag",
-                      "context": "TargetEntity",
-                      "value": 1
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{All Team Members(Exclude Self)}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "Sword_FirstFlag"
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill04"
-                        }
-                      ],
-                      "noTargetFound": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill02"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                    "ifTargetFound": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill04"
+                      }
+                    ],
+                    "noTargetFound": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill02"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -290,30 +284,28 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "Charge",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "AIFlag",
-                  "context": "TargetEntity",
-                  "value": 1
+          "optionName": "Charge",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable with Added Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill05"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                "variableName": "AIFlag",
+                "context": "TargetEntity",
+                "value": 1
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill05"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -341,30 +333,28 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "Charge",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "AIFlag",
-                  "context": "TargetEntity",
-                  "value": 1
+          "optionName": "Charge",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable with Added Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill01"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                "variableName": "AIFlag",
+                "context": "TargetEntity",
+                "value": 1
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill01"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -392,30 +382,28 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "Charge",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "AIFlag",
-                  "context": "TargetEntity",
-                  "value": 1
+          "optionName": "Charge",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable with Added Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill02"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                "variableName": "AIFlag",
+                "context": "TargetEntity",
+                "value": 1
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill02"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -443,86 +431,84 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "Charge",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
+          "optionName": "Charge",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "IF",
+                "conditions": {
+                  "name": "Compare: Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  "value1": "TeamCharacterCount",
+                  "compareType": ">=",
+                  "value2": 4
+                },
+                "passed": [
+                  {
+                    "name": "Define Custom Variable with Added Value",
                     "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "variableName": "AIFlag",
+                    "context": "TargetEntity",
+                    "value": 1
+                  },
+                  {
+                    "name": "Find New Target",
+                    "from": {
                       "name": "Target Name",
                       "target": "{{All Team Members(Exclude Self)}}"
                     },
-                    "value1": "TeamCharacterCount",
-                    "compareType": ">=",
-                    "value2": 4
+                    "searchRandom": true,
+                    "maxTargets": 1,
+                    "conditions": {
+                      "name": "Check Boolean Value",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Parameter Target}}"
+                      },
+                      "value": "Sword_FirstFlag"
+                    },
+                    "ifTargetFound": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill04"
+                      }
+                    ],
+                    "noTargetFound": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill02"
+                      }
+                    ]
+                  }
+                ],
+                "failed": [
+                  {
+                    "name": "Define Custom Variable with Added Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
+                    },
+                    "variableName": "AIFlag",
+                    "context": "TargetEntity",
+                    "value": 1
                   },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "variableName": "AIFlag",
-                      "context": "TargetEntity",
-                      "value": 1
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{All Team Members(Exclude Self)}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "Sword_FirstFlag"
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill04"
-                        }
-                      ],
-                      "noTargetFound": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill02"
-                        }
-                      ]
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "AIFlag",
-                      "context": "TargetEntity",
-                      "value": 1
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill03"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill03"
+                  }
+                ]
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -550,30 +536,28 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "Charge",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "AIFlag",
-                  "context": "TargetEntity",
-                  "value": 1
+          "optionName": "Charge",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable with Added Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill01"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                "variableName": "AIFlag",
+                "context": "TargetEntity",
+                "value": 1
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill01"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -601,86 +585,84 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "Charge",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
+          "optionName": "Charge",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "IF",
+                "conditions": {
+                  "name": "Compare: Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  "value1": "TeamCharacterCount",
+                  "compareType": "<",
+                  "value2": 1
+                },
+                "passed": [
+                  {
+                    "name": "Define Custom Variable with Added Value",
                     "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "variableName": "AIFlag",
+                    "context": "TargetEntity",
+                    "value": 1
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ],
+                "failed": [
+                  {
+                    "name": "Define Custom Variable with Added Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "variableName": "AIFlag",
+                    "context": "TargetEntity",
+                    "value": 1
+                  },
+                  {
+                    "name": "Find New Target",
+                    "from": {
                       "name": "Target Name",
                       "target": "{{All Team Members(Exclude Self)}}"
                     },
-                    "value1": "TeamCharacterCount",
-                    "compareType": "<",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
+                    "searchRandom": true,
+                    "maxTargets": 1,
+                    "conditions": {
+                      "name": "Check Boolean Value",
                       "target": {
                         "name": "Target Name",
-                        "target": "{{Caster}}"
+                        "target": "{{Parameter Target}}"
                       },
-                      "variableName": "AIFlag",
-                      "context": "TargetEntity",
-                      "value": 1
+                      "value": "Sword_FirstFlag"
                     },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "variableName": "AIFlag",
-                      "context": "TargetEntity",
-                      "value": 1
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{All Team Members(Exclude Self)}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "Sword_FirstFlag"
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill04"
-                        }
-                      ],
-                      "noTargetFound": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill01"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                    "ifTargetFound": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill04"
+                      }
+                    ],
+                    "noTargetFound": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -708,30 +690,28 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "Charge",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "AIFlag",
-                  "context": "TargetEntity",
-                  "value": 1
+          "optionName": "Charge",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable with Added Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill02"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                "variableName": "AIFlag",
+                "context": "TargetEntity",
+                "value": 1
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill02"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -759,30 +739,28 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "Charge",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "AIFlag",
-                  "context": "TargetEntity",
-                  "value": 1
+          "optionName": "Charge",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable with Added Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill01"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                "variableName": "AIFlag",
+                "context": "TargetEntity",
+                "value": 1
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill01"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -810,30 +788,28 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "Charge",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "AIFlag",
-                  "value": 1
+          "optionName": "Charge",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill05"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                "scope": "TargetEntity",
+                "variableName": "AIFlag",
+                "value": 1
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill05"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -861,61 +837,59 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "Charge",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
+          "optionName": "Charge",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "IF",
+                "conditions": {
+                  "name": "Compare: Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  "value1": "TeamCharacterCount",
+                  "compareType": ">=",
+                  "value2": 4
+                },
+                "passed": [
+                  {
+                    "name": "Define Custom Variable with Added Value",
                     "target": {
                       "name": "Target Name",
-                      "target": "{{All Team Members(Exclude Self)}}"
+                      "target": "{{Modifier Holder}}"
                     },
-                    "value1": "TeamCharacterCount",
-                    "compareType": ">=",
-                    "value2": 4
+                    "variableName": "AIFlag",
+                    "context": "TargetEntity",
+                    "value": 1
                   },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "AIFlag",
-                      "context": "TargetEntity",
-                      "value": 1
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ],
+                "failed": [
+                  {
+                    "name": "Define Custom Variable with Added Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Modifier Holder}}"
                     },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Modifier Holder}}"
-                      },
-                      "variableName": "AIFlag",
-                      "context": "TargetEntity",
-                      "value": 1
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill07"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                    "variableName": "AIFlag",
+                    "context": "TargetEntity",
+                    "value": 1
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill07"
+                  }
+                ]
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -943,86 +917,84 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "Charge",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
+          "optionName": "Charge",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "IF",
+                "conditions": {
+                  "name": "Compare: Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  "value1": "TeamCharacterCount",
+                  "compareType": "<",
+                  "value2": 1
+                },
+                "passed": [
+                  {
+                    "name": "Define Custom Variable with Added Value",
                     "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "variableName": "AIFlag",
+                    "context": "TargetEntity",
+                    "value": 1
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ],
+                "failed": [
+                  {
+                    "name": "Define Custom Variable with Added Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "variableName": "AIFlag",
+                    "context": "TargetEntity",
+                    "value": 1
+                  },
+                  {
+                    "name": "Find New Target",
+                    "from": {
                       "name": "Target Name",
                       "target": "{{All Team Members(Exclude Self)}}"
                     },
-                    "value1": "TeamCharacterCount",
-                    "compareType": "<",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
+                    "searchRandom": true,
+                    "maxTargets": 1,
+                    "conditions": {
+                      "name": "Check Boolean Value",
                       "target": {
                         "name": "Target Name",
-                        "target": "{{Caster}}"
+                        "target": "{{Parameter Target}}"
                       },
-                      "variableName": "AIFlag",
-                      "context": "TargetEntity",
-                      "value": 1
+                      "value": "Sword_FirstFlag"
                     },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "variableName": "AIFlag",
-                      "context": "TargetEntity",
-                      "value": 1
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{All Team Members(Exclude Self)}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "Sword_FirstFlag"
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill04"
-                        }
-                      ],
-                      "noTargetFound": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill01"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                    "ifTargetFound": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill04"
+                      }
+                    ],
+                    "noTargetFound": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -1050,30 +1022,28 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "Charge",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "AIFlag",
-                  "context": "TargetEntity",
-                  "value": 1
+          "optionName": "Charge",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable with Added Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill02"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                "variableName": "AIFlag",
+                "context": "TargetEntity",
+                "value": 1
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill02"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -1101,30 +1071,28 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "Charge",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable with Added Value",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "AIFlag",
-                  "context": "TargetEntity",
-                  "value": 1
+          "optionName": "Charge",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable with Added Value",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill05"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                "variableName": "AIFlag",
+                "context": "TargetEntity",
+                "value": 1
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill05"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -1152,86 +1120,84 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "Charge",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
+          "optionName": "Charge",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "IF",
+                "conditions": {
+                  "name": "Compare: Variable",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{All Team Members(Exclude Self)}}"
+                  },
+                  "value1": "TeamCharacterCount",
+                  "compareType": "<",
+                  "value2": 1
+                },
+                "passed": [
+                  {
+                    "name": "Define Custom Variable with Added Value",
                     "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "variableName": "AIFlag",
+                    "context": "TargetEntity",
+                    "value": 1
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ],
+                "failed": [
+                  {
+                    "name": "Define Custom Variable with Added Value",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
+                    },
+                    "variableName": "AIFlag",
+                    "context": "TargetEntity",
+                    "value": 1
+                  },
+                  {
+                    "name": "Find New Target",
+                    "from": {
                       "name": "Target Name",
                       "target": "{{All Team Members(Exclude Self)}}"
                     },
-                    "value1": "TeamCharacterCount",
-                    "compareType": "<",
-                    "value2": 1
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
+                    "searchRandom": true,
+                    "maxTargets": 1,
+                    "conditions": {
+                      "name": "Check Boolean Value",
                       "target": {
                         "name": "Target Name",
-                        "target": "{{Caster}}"
+                        "target": "{{Parameter Target}}"
                       },
-                      "variableName": "AIFlag",
-                      "context": "TargetEntity",
-                      "value": 1
+                      "value": "Sword_FirstFlag"
                     },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Define Custom Variable with Added Value",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "variableName": "AIFlag",
-                      "context": "TargetEntity",
-                      "value": 1
-                    },
-                    {
-                      "name": "Find New Target",
-                      "from": {
-                        "name": "Target Name",
-                        "target": "{{All Team Members(Exclude Self)}}"
-                      },
-                      "searchRandom": true,
-                      "maxTargets": 1,
-                      "conditions": {
-                        "name": "Check Boolean Value",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Parameter Target}}"
-                        },
-                        "value": "Sword_FirstFlag"
-                      },
-                      "ifTargetFound": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill04"
-                        }
-                      ],
-                      "noTargetFound": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill01"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                    "ifTargetFound": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill04"
+                      }
+                    ],
+                    "noTargetFound": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill01"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -1259,30 +1225,28 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "Charge",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "AIFlag",
-                  "value": 1
+          "optionName": "Charge",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill05"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+                "scope": "TargetEntity",
+                "variableName": "AIFlag",
+                "value": 1
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill05"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,

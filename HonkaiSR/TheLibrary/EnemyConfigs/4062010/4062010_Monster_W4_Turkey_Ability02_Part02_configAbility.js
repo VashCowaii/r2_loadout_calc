@@ -29,7 +29,7 @@ const configAbility = {
               "name": "Trigger Ability",
               "from": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Parameter Target List}}"
@@ -60,7 +60,7 @@ const configAbility = {
               "name": "Trigger Ability",
               "from": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Parameter Target List}}"
@@ -92,7 +92,7 @@ const configAbility = {
               "name": "Trigger Ability",
               "from": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Parameter Target List}}"
@@ -124,7 +124,7 @@ const configAbility = {
               "name": "Trigger Ability",
               "from": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Parameter Target List}}"
@@ -156,7 +156,7 @@ const configAbility = {
               "name": "Trigger Ability",
               "from": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Parameter Target List}}"

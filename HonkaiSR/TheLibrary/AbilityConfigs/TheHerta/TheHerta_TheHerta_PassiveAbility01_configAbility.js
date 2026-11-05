@@ -2002,7 +2002,7 @@ const configAbility = {
                   "show": "Hide",
                   "target": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Player's Aim Primary-Target}}"
@@ -2022,7 +2022,7 @@ const configAbility = {
                   "show": "Hide",
                   "target": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
@@ -2052,7 +2052,7 @@ const configAbility = {
                                   "name": "Is Part Of",
                                   "of": {
                                     "name": "Target Sequence",
-                                    "Sequence": [
+                                    "TargetList": [
                                       {
                                         "name": "Target Name",
                                         "target": "{{Player's Aim Primary-Target}}"
@@ -2070,7 +2070,7 @@ const configAbility = {
                                   "name": "Is Part Of",
                                   "of": {
                                     "name": "Target Sequence",
-                                    "Sequence": [
+                                    "TargetList": [
                                       {
                                         "name": "Target Name",
                                         "target": "{{Player's Aim Primary-Target}}"
@@ -2080,7 +2080,7 @@ const configAbility = {
                                   },
                                   "target": {
                                     "name": "Target Sequence",
-                                    "Sequence": [
+                                    "TargetList": [
                                       {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
@@ -2109,7 +2109,7 @@ const configAbility = {
                   "show": "Hide",
                   "target": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"
@@ -2362,7 +2362,7 @@ const configAbility = {
                   "name": "Find New Target",
                   "from": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Attack Targets of Modifier Holder}}"
@@ -2584,7 +2584,7 @@ const configAbility = {
               "name": "Add Events/Bonuses",
               "to": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Battle Event List}}"
@@ -2825,7 +2825,7 @@ const configAbility = {
               "name": "Add Events/Bonuses",
               "to": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
@@ -3029,7 +3029,7 @@ const configAbility = {
                   "name": "Find New Target",
                   "from": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"

@@ -2173,7 +2173,7 @@ const compositeAbilityObject = {
               "name": "Add Sub-Events/Bonuses",
               "to": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Enemy Team All(with Unselectable)}}"
@@ -2208,7 +2208,7 @@ const compositeAbilityObject = {
               "name": "Add Sub-Events/Bonuses",
               "to": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Enemy Team All(with Unselectable)}}"

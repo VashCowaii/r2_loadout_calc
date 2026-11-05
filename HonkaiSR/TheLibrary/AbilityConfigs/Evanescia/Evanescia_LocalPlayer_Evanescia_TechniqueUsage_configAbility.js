@@ -72,7 +72,7 @@ const configAbility = {
           "name": "Define Custom Variable with Team Count",
           "target": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Adventure Enemy NPCs}}"
@@ -118,7 +118,7 @@ const configAbility = {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Adventure Enemy NPCs}}"
@@ -145,7 +145,7 @@ const configAbility = {
           "name": "Find New Target",
           "from": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Adventure Enemy NPCs}}"
@@ -213,7 +213,7 @@ const configAbility = {
                   "name": "Find New Target",
                   "from": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Adventure Enemy NPCs}}"

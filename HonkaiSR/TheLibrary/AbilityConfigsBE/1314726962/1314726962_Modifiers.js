@@ -1626,7 +1626,7 @@ const configAbility = {
           "name": "Add Sub-Events/Bonuses",
           "to": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Battle Event List}}"

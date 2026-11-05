@@ -183,7 +183,7 @@ const configAbility = {
               "name": "Find New Target",
               "from": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Battle Event List}}"
@@ -208,7 +208,7 @@ const configAbility = {
                   "name": "Define Custom Variable with Stat",
                   "target": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Battle Event List}}"
@@ -250,7 +250,7 @@ const configAbility = {
                       "triggerName": "Status_Status2",
                       "target": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Battle Event List}}"

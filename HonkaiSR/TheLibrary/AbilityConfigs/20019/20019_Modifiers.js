@@ -1990,7 +1990,7 @@ const configAbility = {
               },
               "abilityTarget": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"

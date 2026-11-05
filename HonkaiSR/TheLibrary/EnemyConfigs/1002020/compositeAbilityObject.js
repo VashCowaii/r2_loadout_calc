@@ -319,21 +319,19 @@ const compositeAbilityObject = {
           "options": [
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill01",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
-                    }
-                  ]
-                }
-              ],
-              "weight": 0.8,
-              "type": "DefaultDSE",
-              "check": [
+              "optionName": "UseSkill01",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionWeight": 0.8,
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Value",
                   "skillName": "Skill01",
@@ -345,50 +343,48 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Choose Ability Target",
-                      "skillName": "Skill02",
-                      "target": {
-                        "name": "Create Selection List",
-                        "passed": [
-                          {
-                            "name": "Select by Target Pool",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{All Team Members(Exclude Self)}}"
-                            }
-                          },
-                          {
-                            "name": "Select by Enemy ID",
-                            "idList": [
-                              1002020
-                            ],
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Select by Modifier Name",
-                            "modifier": "<a class=\"gModGreen\" id=\"-1281886828\">Monster_W1_Soldier01_03_Bonus</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
-                            "target": null,
-                            "invertCondition": true
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Choose Ability Target",
+                    "skillName": "Skill02",
+                    "target": {
+                      "name": "Create Selection List",
+                      "passed": [
+                        {
+                          "name": "Select by Target Pool",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{All Team Members(Exclude Self)}}"
                           }
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill02"
+                        },
+                        {
+                          "name": "Select by Enemy ID",
+                          "idList": [
+                            1002020
+                          ],
+                          "invertCondition": true
+                        },
+                        {
+                          "name": "Select by Modifier Name",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1281886828\">Monster_W1_Soldier01_03_Bonus</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+                          "target": null,
+                          "invertCondition": true
+                        }
+                      ]
                     }
-                  ]
-                }
-              ],
-              "weight": 0.9,
-              "type": "DefaultDSE",
-              "check": [
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill02"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionWeight": 0.9,
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.9,
@@ -472,21 +468,19 @@ const compositeAbilityObject = {
           "options": [
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill01",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
-                    }
-                  ]
-                }
-              ],
-              "weight": 0.8,
-              "type": "DefaultDSE",
-              "check": [
+              "optionName": "UseSkill01",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionWeight": 0.8,
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Value",
                   "skillName": "Skill01",
@@ -498,50 +492,48 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Choose Ability Target",
-                      "skillName": "Skill02",
-                      "target": {
-                        "name": "Create Selection List",
-                        "passed": [
-                          {
-                            "name": "Select by Target Pool",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{All Team Members(Exclude Self)}}"
-                            }
-                          },
-                          {
-                            "name": "Select by Enemy ID",
-                            "idList": [
-                              1002020
-                            ],
-                            "invertCondition": true
-                          },
-                          {
-                            "name": "Select by Modifier Name",
-                            "modifier": "<a class=\"gModGreen\" id=\"-1281886828\">Monster_W1_Soldier01_03_Bonus</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
-                            "target": null,
-                            "invertCondition": true
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Choose Ability Target",
+                    "skillName": "Skill02",
+                    "target": {
+                      "name": "Create Selection List",
+                      "passed": [
+                        {
+                          "name": "Select by Target Pool",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{All Team Members(Exclude Self)}}"
                           }
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill02"
+                        },
+                        {
+                          "name": "Select by Enemy ID",
+                          "idList": [
+                            1002020
+                          ],
+                          "invertCondition": true
+                        },
+                        {
+                          "name": "Select by Modifier Name",
+                          "modifier": "<a class=\"gModGreen\" id=\"-1281886828\">Monster_W1_Soldier01_03_Bonus</a>[<span class=\"descriptionNumberColor\">ATK Boost</span>]",
+                          "target": null,
+                          "invertCondition": true
+                        }
+                      ]
                     }
-                  ]
-                }
-              ],
-              "weight": 0.9,
-              "type": "DefaultDSE",
-              "check": [
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill02"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionWeight": 0.9,
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.9,

@@ -150,7 +150,7 @@ const configAbility = {
                         },
                         "target": {
                           "name": "Target Sequence",
-                          "Sequence": [
+                          "TargetList": [
                             {
                               "name": "Target Name",
                               "target": "{{Modifier Holder}}"

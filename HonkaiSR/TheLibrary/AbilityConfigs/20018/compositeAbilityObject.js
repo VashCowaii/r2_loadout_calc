@@ -476,7 +476,7 @@ const compositeAbilityObject = {
                         "name": "Has Modifier",
                         "target": {
                           "name": "Target Sequence",
-                          "Sequence": [
+                          "TargetList": [
                             {
                               "name": "Target Name",
                               "target": "{{Enemy Team All}}"
@@ -876,7 +876,7 @@ const compositeAbilityObject = {
                             "name": "Has Flag",
                             "target": {
                               "name": "Target Sequence",
-                              "Sequence": [
+                              "TargetList": [
                                 {
                                   "name": "Target Name",
                                   "target": "{{Enemy Team All}}"
@@ -2558,7 +2558,7 @@ const compositeAbilityObject = {
                   },
                   "healer": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
@@ -3160,7 +3160,7 @@ const compositeAbilityObject = {
                   "name": "Define Custom Variable with Added Value",
                   "target": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
@@ -3454,7 +3454,7 @@ const compositeAbilityObject = {
                     "name": "Has Flag",
                     "target": {
                       "name": "Target Sequence",
-                      "Sequence": [
+                      "TargetList": [
                         {
                           "name": "Target Name",
                           "target": "{{Enemy Team All}}"
@@ -3543,7 +3543,7 @@ const compositeAbilityObject = {
                     "name": "Has Flag",
                     "target": {
                       "name": "Target Sequence",
-                      "Sequence": [
+                      "TargetList": [
                         {
                           "name": "Target Name",
                           "target": "{{Enemy Team All}}"
@@ -3735,7 +3735,7 @@ const compositeAbilityObject = {
                 "TargetList": [
                   {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)V2}}.[[addBattleEvents]]"
@@ -3776,7 +3776,7 @@ const compositeAbilityObject = {
                   },
                   {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}"
@@ -3941,7 +3941,7 @@ const compositeAbilityObject = {
                 "name": "Compare: Target Count",
                 "target": {
                   "name": "Target Sequence",
-                  "Sequence": [
+                  "TargetList": [
                     {
                       "name": "Target Name",
                       "target": "{{Enemy Team All}}"
@@ -4278,7 +4278,7 @@ const compositeAbilityObject = {
                     "name": "Compare: Target Count",
                     "target": {
                       "name": "Target Sequence",
-                      "Sequence": [
+                      "TargetList": [
                         {
                           "name": "Target Name",
                           "target": "{{Enemy Team All}}"

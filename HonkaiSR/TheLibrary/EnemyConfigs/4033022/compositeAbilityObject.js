@@ -183,7 +183,7 @@ const compositeAbilityObject = {
                       "name": "Define Custom Variable",
                       "target": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Player Team(Exclude Memosprites)}}"
@@ -232,7 +232,7 @@ const compositeAbilityObject = {
                           "name": "Define Custom Variable",
                           "target": {
                             "name": "Target Sequence",
-                            "Sequence": [
+                            "TargetList": [
                               {
                                 "name": "Target Name",
                                 "target": "{{Player Team(Exclude Memosprites)}}-{{EVENT[RoT] Dark Praetor: Selected Target}}"
@@ -267,7 +267,7 @@ const compositeAbilityObject = {
                           "name": "Define Custom Variable",
                           "target": {
                             "name": "Target Sequence",
-                            "Sequence": [
+                            "TargetList": [
                               {
                                 "name": "Target Name",
                                 "target": "{{Player Team(Exclude Memosprites)}}-{{EVENT[RoT] Dark Praetor: Selected Target}}"
@@ -3303,7 +3303,7 @@ const compositeAbilityObject = {
             "name": "Compare: Target Count",
             "target": {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Every Battle Entity}}"
@@ -3389,7 +3389,7 @@ const compositeAbilityObject = {
             "name": "Compare: Target Count",
             "target": {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Every Battle Entity}}"
@@ -5411,78 +5411,76 @@ const compositeAbilityObject = {
           "options": [
             {
               "name": "HANDLER OPTION",
-              "option": "Decision01",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "HP_Bars_Remaining",
-                        "compareType": "=",
-                        "value2": 2
-                      },
-                      "passed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 2
-                        }
-                      ]
+              "optionName": "Decision01",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Compare: Variable",
+                      "value1": "HP_Bars_Remaining",
+                      "compareType": "=",
+                      "value2": 2
                     },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Target Count",
+                    "passed": [
+                      {
+                        "name": "Declare Custom Variable",
                         "target": {
                           "name": "Target Name",
-                          "target": "{{EVENT[RoT] Dark Praetor: Dark Summons}}"
+                          "target": "{{Caster}}"
                         },
-                        "compareType": "=",
-                        "value2": 0,
-                        "livingTargets": true
+                        "scope": "TargetEntity",
+                        "variableName": "AIFlag",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Compare: Target Count",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{EVENT[RoT] Dark Praetor: Dark Summons}}"
                       },
-                      "passed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill05"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Choose Ability Target",
-                          "skillName": "Skill03",
-                          "target": {
-                            "name": "Create Selection List",
-                            "passed": [
-                              {
-                                "name": "Select by Target Pool",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{EVENT[RoT] Dark Praetor: Dark Characters}}"
-                                }
+                      "compareType": "=",
+                      "value2": 0,
+                      "livingTargets": true
+                    },
+                    "passed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill05"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Choose Ability Target",
+                        "skillName": "Skill03",
+                        "target": {
+                          "name": "Create Selection List",
+                          "passed": [
+                            {
+                              "name": "Select by Target Pool",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{EVENT[RoT] Dark Praetor: Dark Characters}}"
                               }
-                            ]
-                          }
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill03"
+                            }
+                          ]
                         }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill03"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -5497,29 +5495,27 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "Decision04",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "variableName": "AIFlag",
-                      "value": 3
+              "optionName": "Decision04",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill04"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                    "variableName": "AIFlag",
+                    "value": 3
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill04"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -5534,30 +5530,28 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "Decision05",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 1
+              "optionName": "Decision05",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 1
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,

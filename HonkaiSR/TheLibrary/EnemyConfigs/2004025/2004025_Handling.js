@@ -25,26 +25,24 @@ const configAbility = {
       "options": [
         {
           "name": "HANDLER OPTION",
-          "option": "1-1",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 2
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill02"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "1-1",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 2
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill02"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -71,26 +69,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "1-2",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 1
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill01"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "1-2",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 1
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill01"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -117,26 +113,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "2-1-1",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 2
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill02"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "2-1-1",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 2
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill02"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -163,26 +157,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "2-2",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 3
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill04"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "2-2",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 3
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill04"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -209,26 +201,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "2-3-1",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 4
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill02"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "2-3-1",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 4
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill02"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -265,26 +255,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "2-3-2",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 4
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill04"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "2-3-2",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 4
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill04"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -321,26 +309,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "2-4",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 5
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill05"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "2-4",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 5
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill05"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -367,26 +353,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "2-5",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 6
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill06"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "2-5",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 6
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill06"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -413,26 +397,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "2-6",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 1
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill02"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "2-6",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 1
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill02"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -459,26 +441,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "9-1-1",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 92
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill02"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "9-1-1",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 92
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill02"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -505,26 +485,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "9-2-2",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 93
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill04"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "9-2-2",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 93
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill04"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -551,26 +529,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "9-2-3-1",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 94
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill02"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "9-2-3-1",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 94
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill02"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -607,26 +583,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "9-2-3-2",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 94
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill04"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "9-2-3-2",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 94
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill04"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -663,26 +637,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "9-2-4",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 95
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill04"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "9-2-4",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 95
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill04"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -709,26 +681,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "9-2-5",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 96
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill02"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "9-2-5",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 96
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill02"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -755,26 +725,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "9-2-6",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 97
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill05"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "9-2-6",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 97
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill05"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -801,26 +769,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "9-2-7",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 1
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill06"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "9-2-7",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 1
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill06"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -847,26 +813,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "3-1-1",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 2
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill02"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "3-1-1",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 2
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill02"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -893,26 +857,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "3-2",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 3
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill04"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "3-2",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 3
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill04"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -939,26 +901,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "3-3-1",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 4
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill02"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "3-3-1",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 4
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill02"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -995,26 +955,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "3-3-2",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 4
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill04"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "3-3-2",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 4
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill04"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -1051,26 +1009,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "3-4",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 5
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill05"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "3-4",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 5
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill05"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -1097,26 +1053,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "3-5",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 6
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill06"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "3-5",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 6
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill06"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -1143,26 +1097,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "3-6",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 1
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill02"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "3-6",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 1
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill02"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -1189,26 +1141,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "4-7",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 100
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill01"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "4-7",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 100
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill01"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -1229,26 +1179,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "4-8",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 102
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill05"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "4-8",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 102
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill05"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,
@@ -1269,26 +1217,24 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "4-9",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Define Custom Variable",
-                  "scope": "TargetEntity",
-                  "variableName": "W2_Yanqing_00_AICounter",
-                  "value": 101
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill06"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "4-9",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Define Custom Variable",
+                "scope": "TargetEntity",
+                "variableName": "W2_Yanqing_00_AICounter",
+                "value": 101
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill06"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.4,

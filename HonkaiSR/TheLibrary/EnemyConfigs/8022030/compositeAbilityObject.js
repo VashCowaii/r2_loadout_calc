@@ -391,51 +391,49 @@ const compositeAbilityObject = {
           "options": [
             {
               "name": "HANDLER OPTION",
-              "option": "Decision01",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 1
+              "optionName": "Decision01",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "Choose Ability Target",
-                      "skillName": "Skill01",
-                      "target": {
-                        "name": "Create Selection List",
-                        "listType": "OR",
-                        "passed": [
-                          {
-                            "name": "Select by Modifier Name",
-                            "modifier": "<a class=\"gModGreen\" id=\"2065489118\">Standard_Entangle</a>[<span class=\"descriptionNumberColor\">Entanglement</span>]",
-                            "target": null
-                          },
-                          {
-                            "name": "Select by Modifier Name",
-                            "modifier": "WMonster_SW_Minion01_02_Ability01Target",
-                            "target": null
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 1
+                  },
+                  {
+                    "name": "Choose Ability Target",
+                    "skillName": "Skill01",
+                    "target": {
+                      "name": "Create Selection List",
+                      "listType": "OR",
+                      "passed": [
+                        {
+                          "name": "Select by Modifier Name",
+                          "modifier": "<a class=\"gModGreen\" id=\"2065489118\">Standard_Entangle</a>[<span class=\"descriptionNumberColor\">Entanglement</span>]",
+                          "target": null
+                        },
+                        {
+                          "name": "Select by Modifier Name",
+                          "modifier": "WMonster_SW_Minion01_02_Ability01Target",
+                          "target": null
+                        }
+                      ]
                     }
-                  ]
-                }
-              ],
-              "weight": 0.5,
-              "type": "DefaultDSE",
-              "check": [
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionWeight": 0.5,
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,

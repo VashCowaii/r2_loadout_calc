@@ -891,7 +891,7 @@ const configAbility = {
                   "name": "Force Entity Death",
                   "target": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{All Unselectable Targets}}"
@@ -916,7 +916,7 @@ const configAbility = {
                   "name": "Force Entity Death",
                   "target": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{All Unselectable Targets}}"

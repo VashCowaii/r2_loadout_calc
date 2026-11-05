@@ -3721,7 +3721,7 @@ const compositeAbilityObject = {
               "name": "Trigger Ability",
               "from": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
@@ -3762,7 +3762,7 @@ const compositeAbilityObject = {
               "name": "Trigger Ability",
               "from": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
@@ -3803,7 +3803,7 @@ const compositeAbilityObject = {
               "name": "Trigger Ability",
               "from": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
@@ -3983,7 +3983,7 @@ const compositeAbilityObject = {
                       "name": "Add Events/Bonuses",
                       "to": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
@@ -4205,7 +4205,7 @@ const compositeAbilityObject = {
                               "name": "Add Events/Bonuses",
                               "to": {
                                 "name": "Target Sequence",
-                                "Sequence": [
+                                "TargetList": [
                                   {
                                     "name": "Target Name",
                                     "target": "{{Enemy Team All}}"
@@ -4344,7 +4344,7 @@ const compositeAbilityObject = {
                               "name": "Add Events/Bonuses",
                               "to": {
                                 "name": "Target Sequence",
-                                "Sequence": [
+                                "TargetList": [
                                   {
                                     "name": "Target Name",
                                     "target": "{{Enemy Team All}}"
@@ -4926,51 +4926,49 @@ const compositeAbilityObject = {
           "options": [
             {
               "name": "HANDLER OPTION",
-              "option": "Skill01",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+              "optionName": "Skill01",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
                       },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 1
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill09"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 0
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill07"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                      "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                    },
+                    "passed": [
+                      {
+                        "name": "Define Custom Variable",
+                        "scope": "TargetEntity",
+                        "variableName": "AIFlag",
+                        "value": 1
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill09"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Define Custom Variable",
+                        "scope": "TargetEntity",
+                        "variableName": "AIFlag",
+                        "value": 0
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill07"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,
@@ -4998,51 +4996,49 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "Skill01",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{Caster}}"
-                        },
-                        "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+              "optionName": "Skill01",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
                       },
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 1
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill09"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 0
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill07"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                      "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                    },
+                    "passed": [
+                      {
+                        "name": "Define Custom Variable",
+                        "scope": "TargetEntity",
+                        "variableName": "AIFlag",
+                        "value": 1
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill09"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Define Custom Variable",
+                        "scope": "TargetEntity",
+                        "variableName": "AIFlag",
+                        "value": 0
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill07"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,
@@ -5070,26 +5066,24 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "Skill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 1
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill04"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+              "optionName": "Skill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Define Custom Variable",
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 1
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill04"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,
@@ -5117,26 +5111,24 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "Skill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 0
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill02"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+              "optionName": "Skill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Define Custom Variable",
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 0
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill02"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,

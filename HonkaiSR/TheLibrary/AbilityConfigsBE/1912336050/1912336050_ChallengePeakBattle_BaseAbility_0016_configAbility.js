@@ -94,7 +94,7 @@ const configAbility = {
               "name": "Add Events/Bonuses",
               "to": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Player Team All}}.[[removeMemosprite]].[[removeBattleEvents]]"
@@ -134,7 +134,7 @@ const configAbility = {
               "name": "Add Events/Bonuses",
               "to": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Player Team All}}.[[removeMemosprite]].[[removeBattleEvents]]"

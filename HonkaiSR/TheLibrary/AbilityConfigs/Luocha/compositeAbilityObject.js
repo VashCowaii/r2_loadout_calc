@@ -872,7 +872,7 @@ const compositeAbilityObject = {
           "name": "Find New Target",
           "from": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Join Targets",
                 "TargetList": [
@@ -912,7 +912,7 @@ const compositeAbilityObject = {
                 },
                 "partOf": {
                   "name": "Target Sequence",
-                  "Sequence": [
+                  "TargetList": [
                     {
                       "name": "Join Targets",
                       "TargetList": [
@@ -1709,7 +1709,7 @@ const compositeAbilityObject = {
                   "name": "Find New Target",
                   "from": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Join Targets",
                         "TargetList": [
@@ -1748,7 +1748,7 @@ const compositeAbilityObject = {
                         },
                         "partOf": {
                           "name": "Target Sequence",
-                          "Sequence": [
+                          "TargetList": [
                             {
                               "name": "Join Targets",
                               "TargetList": [
@@ -1879,7 +1879,7 @@ const compositeAbilityObject = {
                               "name": "Find New Target",
                               "from": {
                                 "name": "Target Sequence",
-                                "Sequence": [
+                                "TargetList": [
                                   {
                                     "name": "Join Targets",
                                     "TargetList": [
@@ -1919,7 +1919,7 @@ const compositeAbilityObject = {
                                     },
                                     "partOf": {
                                       "name": "Target Sequence",
-                                      "Sequence": [
+                                      "TargetList": [
                                         {
                                           "name": "Join Targets",
                                           "TargetList": [

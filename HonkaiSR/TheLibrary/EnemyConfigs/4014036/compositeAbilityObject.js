@@ -187,7 +187,7 @@ const compositeAbilityObject = {
                         "name": "Compare: Target Count",
                         "target": {
                           "name": "Target Sequence",
-                          "Sequence": [
+                          "TargetList": [
                             {
                               "name": "Target Name",
                               "target": "{{Player Team(Exclude Memosprites)}}"
@@ -981,7 +981,7 @@ const compositeAbilityObject = {
                         "name": "Compare: Target Count",
                         "target": {
                           "name": "Target Sequence",
-                          "Sequence": [
+                          "TargetList": [
                             {
                               "name": "Target Name",
                               "target": "{{Enemy Team All}}"
@@ -10375,24 +10375,22 @@ const compositeAbilityObject = {
           "options": [
             {
               "name": "HANDLER OPTION GROUP",
-              "option": "Monster_W4_Pollux_00_IF_DecisionGroup_Phase1_Normal",
-              "goal": [
+              "optionGroupName": "Monster_W4_Pollux_00_IF_DecisionGroup_Phase1_Normal",
+              "optionGroupGoal": [
                 {
                   "name": "HANDLER OPTION",
-                  "option": "UseSkill01",
-                  "goal": [
-                    {
-                      "name": "Sequence Event",
-                      "passed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill01"
-                        }
-                      ]
-                    }
-                  ],
-                  "type": "DefaultDSE",
-                  "check": [
+                  "optionName": "UseSkill01",
+                  "optionGoal": {
+                    "name": "Sequence Event",
+                    "passed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill01"
+                      }
+                    ]
+                  },
+                  "scoreType": "DefaultDSE",
+                  "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
                       "passedValue": 0.5,
@@ -10409,25 +10407,23 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "HANDLER OPTION",
-                  "option": "UseSkill03",
-                  "goal": [
-                    {
-                      "name": "Sequence Event",
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "AIFlag",
-                          "value": 2
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill03"
-                        }
-                      ]
-                    }
-                  ],
-                  "type": "DefaultDSE",
-                  "check": [
+                  "optionName": "UseSkill03",
+                  "optionGoal": {
+                    "name": "Sequence Event",
+                    "passed": [
+                      {
+                        "name": "Define Custom Variable",
+                        "variableName": "AIFlag",
+                        "value": 2
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill03"
+                      }
+                    ]
+                  },
+                  "scoreType": "DefaultDSE",
+                  "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
                       "passedValue": 0.5,
@@ -10457,25 +10453,23 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "HANDLER OPTION",
-                  "option": "UseSkill02",
-                  "goal": [
-                    {
-                      "name": "Sequence Event",
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "AIFlag",
-                          "value": 1
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill02"
-                        }
-                      ]
-                    }
-                  ],
-                  "type": "DefaultDSE",
-                  "check": [
+                  "optionName": "UseSkill02",
+                  "optionGoal": {
+                    "name": "Sequence Event",
+                    "passed": [
+                      {
+                        "name": "Define Custom Variable",
+                        "variableName": "AIFlag",
+                        "value": 1
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill02"
+                      }
+                    ]
+                  },
+                  "scoreType": "DefaultDSE",
+                  "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
                       "passedValue": 0.5,
@@ -10504,8 +10498,8 @@ const compositeAbilityObject = {
                   ]
                 }
               ],
-              "type": "DefaultDSE",
-              "check": [
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,
@@ -10534,85 +10528,83 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION GROUP",
-              "option": "Monster_W4_Pollux_00_IF_DecisionGroup_Phase1_Strengthen",
-              "goal": [
+              "optionGroupName": "Monster_W4_Pollux_00_IF_DecisionGroup_Phase1_Strengthen",
+              "optionGroupGoal": [
                 {
                   "name": "HANDLER OPTION",
-                  "option": "UseSkill01",
-                  "goal": [
-                    {
-                      "name": "Sequence Event",
-                      "passed": [
-                        {
-                          "name": "IF",
+                  "optionName": "UseSkill01",
+                  "optionGoal": {
+                    "name": "Sequence Event",
+                    "passed": [
+                      {
+                        "name": "IF",
+                        "conditions": {
+                          "name": "Compare: Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster's Minions}}"
+                          },
+                          "value1": "TeamCharacterCount",
+                          "compareType": ">=",
+                          "value2": 1,
                           "conditions": {
-                            "name": "Compare: Variable",
+                            "name": "Has Flag",
                             "target": {
                               "name": "Target Name",
-                              "target": "{{Caster's Minions}}"
+                              "target": "{{Parameter Target}}"
                             },
-                            "value1": "TeamCharacterCount",
-                            "compareType": ">=",
-                            "value2": 1,
+                            "flagName": "Break"
+                          }
+                        },
+                        "passed": [
+                          {
+                            "name": "IF",
                             "conditions": {
-                              "name": "Has Flag",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "flagName": "Break"
-                            }
-                          },
-                          "passed": [
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Compare: Variable",
-                                "value1": "AIFlagSkill04",
-                                "compareType": "=",
-                                "value2": 0
-                              },
-                              "passed": [
-                                {
-                                  "name": "Define Custom Variable",
-                                  "variableName": "AIFlagSkill04",
-                                  "value": 1
-                                },
-                                {
-                                  "name": "Use Ability Option",
-                                  "skillName": "Skill04"
-                                }
-                              ],
-                              "failed": [
-                                {
-                                  "name": "Define Custom Variable",
-                                  "variableName": "AIFlagSkill04",
-                                  "value": 0
-                                },
-                                {
-                                  "name": "Use Ability Option",
-                                  "skillName": "Skill01"
-                                }
-                              ]
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "AIFlagSkill04",
-                              "value": 0
+                              "name": "Compare: Variable",
+                              "value1": "AIFlagSkill04",
+                              "compareType": "=",
+                              "value2": 0
                             },
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill01"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "type": "DefaultDSE",
-                  "check": [
+                            "passed": [
+                              {
+                                "name": "Define Custom Variable",
+                                "variableName": "AIFlagSkill04",
+                                "value": 1
+                              },
+                              {
+                                "name": "Use Ability Option",
+                                "skillName": "Skill04"
+                              }
+                            ],
+                            "failed": [
+                              {
+                                "name": "Define Custom Variable",
+                                "variableName": "AIFlagSkill04",
+                                "value": 0
+                              },
+                              {
+                                "name": "Use Ability Option",
+                                "skillName": "Skill01"
+                              }
+                            ]
+                          }
+                        ],
+                        "failed": [
+                          {
+                            "name": "Define Custom Variable",
+                            "variableName": "AIFlagSkill04",
+                            "value": 0
+                          },
+                          {
+                            "name": "Use Ability Option",
+                            "skillName": "Skill01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "scoreType": "DefaultDSE",
+                  "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
                       "passedValue": 0.5,
@@ -10629,25 +10621,23 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "HANDLER OPTION",
-                  "option": "UseSkill03",
-                  "goal": [
-                    {
-                      "name": "Sequence Event",
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "AIFlag",
-                          "value": 2
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill03"
-                        }
-                      ]
-                    }
-                  ],
-                  "type": "DefaultDSE",
-                  "check": [
+                  "optionName": "UseSkill03",
+                  "optionGoal": {
+                    "name": "Sequence Event",
+                    "passed": [
+                      {
+                        "name": "Define Custom Variable",
+                        "variableName": "AIFlag",
+                        "value": 2
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill03"
+                      }
+                    ]
+                  },
+                  "scoreType": "DefaultDSE",
+                  "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
                       "passedValue": 0.5,
@@ -10677,25 +10667,23 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "HANDLER OPTION",
-                  "option": "UseSkill02",
-                  "goal": [
-                    {
-                      "name": "Sequence Event",
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "AIFlag",
-                          "value": 1
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill02"
-                        }
-                      ]
-                    }
-                  ],
-                  "type": "DefaultDSE",
-                  "check": [
+                  "optionName": "UseSkill02",
+                  "optionGoal": {
+                    "name": "Sequence Event",
+                    "passed": [
+                      {
+                        "name": "Define Custom Variable",
+                        "variableName": "AIFlag",
+                        "value": 1
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill02"
+                      }
+                    ]
+                  },
+                  "scoreType": "DefaultDSE",
+                  "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
                       "passedValue": 0.5,
@@ -10724,8 +10712,8 @@ const compositeAbilityObject = {
                   ]
                 }
               ],
-              "type": "DefaultDSE",
-              "check": [
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,
@@ -10753,24 +10741,22 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION GROUP",
-              "option": "Monster_W4_Pollux_00_IF_DecisionGroup_Phase2_Normal",
-              "goal": [
+              "optionGroupName": "Monster_W4_Pollux_00_IF_DecisionGroup_Phase2_Normal",
+              "optionGroupGoal": [
                 {
                   "name": "HANDLER OPTION",
-                  "option": "UseSkill01",
-                  "goal": [
-                    {
-                      "name": "Sequence Event",
-                      "passed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill01"
-                        }
-                      ]
-                    }
-                  ],
-                  "type": "DefaultDSE",
-                  "check": [
+                  "optionName": "UseSkill01",
+                  "optionGoal": {
+                    "name": "Sequence Event",
+                    "passed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill01"
+                      }
+                    ]
+                  },
+                  "scoreType": "DefaultDSE",
+                  "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
                       "passedValue": 0.5,
@@ -10787,25 +10773,23 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "HANDLER OPTION",
-                  "option": "UseSkill03",
-                  "goal": [
-                    {
-                      "name": "Sequence Event",
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "AIFlag",
-                          "value": 2
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill03"
-                        }
-                      ]
-                    }
-                  ],
-                  "type": "DefaultDSE",
-                  "check": [
+                  "optionName": "UseSkill03",
+                  "optionGoal": {
+                    "name": "Sequence Event",
+                    "passed": [
+                      {
+                        "name": "Define Custom Variable",
+                        "variableName": "AIFlag",
+                        "value": 2
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill03"
+                      }
+                    ]
+                  },
+                  "scoreType": "DefaultDSE",
+                  "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
                       "passedValue": 0.5,
@@ -10835,25 +10819,23 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "HANDLER OPTION",
-                  "option": "UseSkill02",
-                  "goal": [
-                    {
-                      "name": "Sequence Event",
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "AIFlag",
-                          "value": 1
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill02"
-                        }
-                      ]
-                    }
-                  ],
-                  "type": "DefaultDSE",
-                  "check": [
+                  "optionName": "UseSkill02",
+                  "optionGoal": {
+                    "name": "Sequence Event",
+                    "passed": [
+                      {
+                        "name": "Define Custom Variable",
+                        "variableName": "AIFlag",
+                        "value": 1
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill02"
+                      }
+                    ]
+                  },
+                  "scoreType": "DefaultDSE",
+                  "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
                       "passedValue": 0.5,
@@ -10882,8 +10864,8 @@ const compositeAbilityObject = {
                   ]
                 }
               ],
-              "type": "DefaultDSE",
-              "check": [
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,
@@ -10912,53 +10894,51 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION GROUP",
-              "option": "Monster_W4_Pollux_00_IF_DecisionGroup_Phase2_Strengthen",
-              "goal": [
+              "optionGroupName": "Monster_W4_Pollux_00_IF_DecisionGroup_Phase2_Strengthen",
+              "optionGroupGoal": [
                 {
                   "name": "HANDLER OPTION",
-                  "option": "UseSkill06",
-                  "goal": [
-                    {
-                      "name": "Sequence Event",
-                      "passed": [
-                        {
-                          "name": "IF",
-                          "conditions": {
-                            "name": "Has Modifier",
-                            "target": {
-                              "name": "Target Name",
-                              "target": "{{Caster}}"
-                            },
-                            "modifier": "<a class=\"gModGreen\" id=\"-822435931\">Enemy_W4_Pollux_IF_UltraReadyMark</a>"
+                  "optionName": "UseSkill06",
+                  "optionGoal": {
+                    "name": "Sequence Event",
+                    "passed": [
+                      {
+                        "name": "IF",
+                        "conditions": {
+                          "name": "Has Modifier",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster}}"
                           },
-                          "passed": [
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "AIFlag",
-                              "value": 3
-                            },
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill01"
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "AIFlag",
-                              "value": 1
-                            },
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill06"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "type": "DefaultDSE",
-                  "check": [
+                          "modifier": "<a class=\"gModGreen\" id=\"-822435931\">Enemy_W4_Pollux_IF_UltraReadyMark</a>"
+                        },
+                        "passed": [
+                          {
+                            "name": "Define Custom Variable",
+                            "variableName": "AIFlag",
+                            "value": 3
+                          },
+                          {
+                            "name": "Use Ability Option",
+                            "skillName": "Skill01"
+                          }
+                        ],
+                        "failed": [
+                          {
+                            "name": "Define Custom Variable",
+                            "variableName": "AIFlag",
+                            "value": 1
+                          },
+                          {
+                            "name": "Use Ability Option",
+                            "skillName": "Skill06"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "scoreType": "DefaultDSE",
+                  "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
                       "passedValue": 0.5,
@@ -10974,81 +10954,79 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "HANDLER OPTION",
-                  "option": "UseSkill01",
-                  "goal": [
-                    {
-                      "name": "Sequence Event",
-                      "passed": [
-                        {
-                          "name": "IF",
+                  "optionName": "UseSkill01",
+                  "optionGoal": {
+                    "name": "Sequence Event",
+                    "passed": [
+                      {
+                        "name": "IF",
+                        "conditions": {
+                          "name": "Compare: Variable",
+                          "target": {
+                            "name": "Target Name",
+                            "target": "{{Caster's Minions}}"
+                          },
+                          "value1": "TeamCharacterCount",
+                          "compareType": ">=",
+                          "value2": 1,
                           "conditions": {
-                            "name": "Compare: Variable",
+                            "name": "Has Flag",
                             "target": {
                               "name": "Target Name",
-                              "target": "{{Caster's Minions}}"
+                              "target": "{{Parameter Target}}"
                             },
-                            "value1": "TeamCharacterCount",
-                            "compareType": ">=",
-                            "value2": 1,
+                            "flagName": "Break"
+                          }
+                        },
+                        "passed": [
+                          {
+                            "name": "IF",
                             "conditions": {
-                              "name": "Has Flag",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Parameter Target}}"
-                              },
-                              "flagName": "Break"
-                            }
-                          },
-                          "passed": [
-                            {
-                              "name": "IF",
-                              "conditions": {
-                                "name": "Compare: Variable",
-                                "value1": "AIFlagSkill04",
-                                "compareType": "=",
-                                "value2": 0
-                              },
-                              "passed": [
-                                {
-                                  "name": "Define Custom Variable",
-                                  "variableName": "AIFlagSkill04",
-                                  "value": 1
-                                },
-                                {
-                                  "name": "Use Ability Option",
-                                  "skillName": "Skill04"
-                                }
-                              ],
-                              "failed": [
-                                {
-                                  "name": "Define Custom Variable",
-                                  "variableName": "AIFlagSkill04",
-                                  "value": 0
-                                },
-                                {
-                                  "name": "Use Ability Option",
-                                  "skillName": "Skill01"
-                                }
-                              ]
-                            }
-                          ],
-                          "failed": [
-                            {
-                              "name": "Define Custom Variable",
-                              "variableName": "AIFlagSkill04",
-                              "value": 0
+                              "name": "Compare: Variable",
+                              "value1": "AIFlagSkill04",
+                              "compareType": "=",
+                              "value2": 0
                             },
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill01"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "type": "DefaultDSE",
-                  "check": [
+                            "passed": [
+                              {
+                                "name": "Define Custom Variable",
+                                "variableName": "AIFlagSkill04",
+                                "value": 1
+                              },
+                              {
+                                "name": "Use Ability Option",
+                                "skillName": "Skill04"
+                              }
+                            ],
+                            "failed": [
+                              {
+                                "name": "Define Custom Variable",
+                                "variableName": "AIFlagSkill04",
+                                "value": 0
+                              },
+                              {
+                                "name": "Use Ability Option",
+                                "skillName": "Skill01"
+                              }
+                            ]
+                          }
+                        ],
+                        "failed": [
+                          {
+                            "name": "Define Custom Variable",
+                            "variableName": "AIFlagSkill04",
+                            "value": 0
+                          },
+                          {
+                            "name": "Use Ability Option",
+                            "skillName": "Skill01"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "scoreType": "DefaultDSE",
+                  "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
                       "passedValue": 0.5,
@@ -11065,25 +11043,23 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "HANDLER OPTION",
-                  "option": "UseSkill03",
-                  "goal": [
-                    {
-                      "name": "Sequence Event",
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "AIFlag",
-                          "value": 2
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill03"
-                        }
-                      ]
-                    }
-                  ],
-                  "type": "DefaultDSE",
-                  "check": [
+                  "optionName": "UseSkill03",
+                  "optionGoal": {
+                    "name": "Sequence Event",
+                    "passed": [
+                      {
+                        "name": "Define Custom Variable",
+                        "variableName": "AIFlag",
+                        "value": 2
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill03"
+                      }
+                    ]
+                  },
+                  "scoreType": "DefaultDSE",
+                  "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
                       "passedValue": 0.5,
@@ -11113,25 +11089,23 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "HANDLER OPTION",
-                  "option": "UseSkill02",
-                  "goal": [
-                    {
-                      "name": "Sequence Event",
-                      "passed": [
-                        {
-                          "name": "Define Custom Variable",
-                          "variableName": "AIFlag",
-                          "value": 3
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill02"
-                        }
-                      ]
-                    }
-                  ],
-                  "type": "DefaultDSE",
-                  "check": [
+                  "optionName": "UseSkill02",
+                  "optionGoal": {
+                    "name": "Sequence Event",
+                    "passed": [
+                      {
+                        "name": "Define Custom Variable",
+                        "variableName": "AIFlag",
+                        "value": 3
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill02"
+                      }
+                    ]
+                  },
+                  "scoreType": "DefaultDSE",
+                  "optionCheck": [
                     {
                       "name": "Check Ability Use Condition",
                       "passedValue": 0.5,
@@ -11160,8 +11134,8 @@ const compositeAbilityObject = {
                   ]
                 }
               ],
-              "type": "DefaultDSE",
-              "check": [
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,

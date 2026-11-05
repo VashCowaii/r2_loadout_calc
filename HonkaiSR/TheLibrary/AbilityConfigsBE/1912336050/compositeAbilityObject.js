@@ -159,7 +159,7 @@ const compositeAbilityObject = {
               "functionName": "<a class=\"gTempYellow\" id=\"-603009472\">T_GridFight_Equipment_Emblem_2012_TriggerHit</a>",
               "overrideParamEntity": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
@@ -208,7 +208,7 @@ const compositeAbilityObject = {
               "functionName": "<a class=\"gTempYellow\" id=\"-603009472\">T_GridFight_Equipment_Emblem_2012_TriggerHit</a>",
               "overrideParamEntity": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
@@ -6811,7 +6811,7 @@ const compositeAbilityObject = {
               "name": "Add Sub-Events/Bonuses",
               "to": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable, exclude Netherwing)}}.[[removeBattleEvents]]"
@@ -7433,7 +7433,7 @@ const compositeAbilityObject = {
               "name": "Add Sub-Events/Bonuses",
               "to": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable, exclude Netherwing)}}.[[removeBattleEvents]]"
@@ -7767,7 +7767,7 @@ const compositeAbilityObject = {
               "name": "Add Sub-Events/Bonuses",
               "to": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable, exclude Netherwing)}}.[[removeBattleEvents]]"
@@ -14327,7 +14327,7 @@ const compositeAbilityObject = {
                   "name": "Add Events/Bonuses",
                   "to": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Player Team All}}.[[removeMemosprite]].[[removeBattleEvents]]"
@@ -14367,7 +14367,7 @@ const compositeAbilityObject = {
                   "name": "Add Events/Bonuses",
                   "to": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Player Team All}}.[[removeMemosprite]].[[removeBattleEvents]]"
@@ -14605,7 +14605,7 @@ const compositeAbilityObject = {
                   "name": "Add Events/Bonuses",
                   "to": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Player Team All}}.[[removeMemosprite]].[[removeBattleEvents]]"
@@ -14645,7 +14645,7 @@ const compositeAbilityObject = {
                   "name": "Add Events/Bonuses",
                   "to": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Player Team All}}.[[removeMemosprite]].[[removeBattleEvents]]"

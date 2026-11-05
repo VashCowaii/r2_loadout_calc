@@ -113,7 +113,7 @@ const configAbility = {
       "name": "Find New Target",
       "from": {
         "name": "Target Sequence",
-        "Sequence": [
+        "TargetList": [
           {
             "name": "Target Name",
             "target": "{{Moonlit Pegasus: Skill03 Target}}"
@@ -150,7 +150,7 @@ const configAbility = {
           "name": "Find New Target",
           "from": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Moonlit Pegasus: Skill03 Target}}"

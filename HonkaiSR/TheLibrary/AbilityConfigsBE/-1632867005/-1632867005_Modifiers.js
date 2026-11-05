@@ -169,7 +169,7 @@ const configAbility = {
                   "name": "Update Energy",
                   "on": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Battle Event List}}"

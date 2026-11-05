@@ -130,7 +130,7 @@ const compositeAbilityObject = {
                 "name": "Compare: Target Count",
                 "target": {
                   "name": "Target Sequence",
-                  "Sequence": [
+                  "TargetList": [
                     {
                       "name": "Add Target by Summoned Units",
                       "target": {
@@ -164,7 +164,7 @@ const compositeAbilityObject = {
                 "name": "Compare: Target Count",
                 "target": {
                   "name": "Target Sequence",
-                  "Sequence": [
+                  "TargetList": [
                     {
                       "name": "Add Target by Summoned Units",
                       "target": {
@@ -4158,7 +4158,7 @@ const compositeAbilityObject = {
         "stateFilter": "AliveOrLimbo",
         "filter": {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             {
               "name": "Target Name",
               "target": "{{Hostile Entities(AOE)}}"
@@ -4856,7 +4856,7 @@ const compositeAbilityObject = {
         "stateFilter": "AliveOrLimbo",
         "filter": {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             {
               "name": "Target Name",
               "target": "{{Hostile Entities(AOE)}}"

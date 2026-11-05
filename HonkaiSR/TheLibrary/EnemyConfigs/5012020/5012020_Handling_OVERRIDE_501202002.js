@@ -13,191 +13,189 @@ const configAbility = {
       "options": [
         {
           "name": "HANDLER OPTION GROUP",
-          "option": "Phase01",
-          "goal": [
+          "optionGroupName": "Phase01",
+          "optionGroupGoal": [
             {
               "name": "HANDLER OPTION",
-              "option": "指挥",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Has Modifier",
+              "optionName": "指挥",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Has Modifier",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{Caster}}"
+                      },
+                      "modifier": "<a class=\"gModGreen\" id=\"-1776333049\">Enemy_W2_Beast01_05_HasBoss</a>",
+                      "invertCondition": true
+                    },
+                    "passed": [
+                      {
+                        "name": "Find New Target",
+                        "from": {
+                          "name": "Target Name",
+                          "target": "{{Enemy Team All}}"
+                        },
+                        "maxTargets": 1,
+                        "conditions": {
+                          "name": "AND",
+                          "conditionList": [
+                            {
+                              "name": "Compare: Monster Rank",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "compareType": "<=",
+                              "value2": 3
+                            },
+                            {
+                              "name": "Has Modifier",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "modifier": "<a class=\"gModGreen\" id=\"-1253957657\">Enemy_W2_Beast01_05_Boss</a>[<span class=\"descriptionNumberColor\">Fealty</span>]",
+                              "invertCondition": true
+                            },
+                            {
+                              "name": "Check Boolean Value",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "value": "UNKNOWN_OBJECT_BOOLEAN_-1541420090",
+                              "invertCondition": true
+                            },
+                            {
+                              "name": "Compare: Target",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "target2": {
+                                "name": "Target Name",
+                                "target": "{{Caster}}"
+                              },
+                              "invertCondition": true
+                            }
+                          ]
+                        },
+                        "ifTargetFound": [
+                          {
+                            "name": "Declare Custom Variable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "scope": "TargetEntity",
+                            "variableName": "AIFlag",
+                            "value": 1
+                          },
+                          {
+                            "name": "Choose Ability Target",
+                            "skillName": "Skill02",
+                            "target": {
+                              "name": "Create Selection List",
+                              "passed": [
+                                {
+                                  "name": "Select by Target Pool",
+                                  "target": {
+                                    "name": "Target Sequence",
+                                    "TargetList": [
+                                      {
+                                        "name": "Target Name",
+                                        "target": "{{Enemy Team All}} - {{Caster}}"
+                                      },
+                                      {
+                                        "name": "Target Filter",
+                                        "conditions": {
+                                          "name": "AND",
+                                          "conditionList": [
+                                            {
+                                              "name": "Compare: Monster Rank",
+                                              "target": {
+                                                "name": "Target Name",
+                                                "target": "{{Parameter Target}}"
+                                              },
+                                              "compareType": "<=",
+                                              "value2": 3
+                                            },
+                                            {
+                                              "name": "Check Boolean Value",
+                                              "target": {
+                                                "name": "Target Name",
+                                                "target": "{{Parameter Target}}"
+                                              },
+                                              "value": "UNKNOWN_OBJECT_BOOLEAN_-1541420090",
+                                              "invertCondition": true
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    ]
+                                  }
+                                },
+                                {
+                                  "name": "Select by Modifier Name",
+                                  "modifier": "<a class=\"gModGreen\" id=\"-1253957657\">Enemy_W2_Beast01_05_Boss</a>[<span class=\"descriptionNumberColor\">Fealty</span>]",
+                                  "target": null,
+                                  "invertCondition": true
+                                },
+                                {
+                                  "name": "Select by Target Rank",
+                                  "compareType": "Max"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "name": "Use Ability Option",
+                            "skillName": "Skill02"
+                          }
+                        ],
+                        "noTargetFound": [
+                          {
+                            "name": "Declare Custom Variable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "scope": "TargetEntity",
+                            "variableName": "AIFlag",
+                            "value": 1
+                          },
+                          {
+                            "name": "Use Ability Option",
+                            "skillName": "Skill01"
+                          }
+                        ]
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Declare Custom Variable",
                         "target": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "modifier": "<a class=\"gModGreen\" id=\"-1776333049\">Enemy_W2_Beast01_05_HasBoss</a>",
-                        "invertCondition": true
+                        "scope": "TargetEntity",
+                        "variableName": "AIFlag",
+                        "value": 1
                       },
-                      "passed": [
-                        {
-                          "name": "Find New Target",
-                          "from": {
-                            "name": "Target Name",
-                            "target": "{{Enemy Team All}}"
-                          },
-                          "maxTargets": 1,
-                          "conditions": {
-                            "name": "AND",
-                            "conditionList": [
-                              {
-                                "name": "Compare: Monster Rank",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "compareType": "<=",
-                                "value2": 3
-                              },
-                              {
-                                "name": "Has Modifier",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "modifier": "<a class=\"gModGreen\" id=\"-1253957657\">Enemy_W2_Beast01_05_Boss</a>[<span class=\"descriptionNumberColor\">Fealty</span>]",
-                                "invertCondition": true
-                              },
-                              {
-                                "name": "Check Boolean Value",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "value": "UNKNOWN_OBJECT_BOOLEAN_-1541420090",
-                                "invertCondition": true
-                              },
-                              {
-                                "name": "Compare: Target",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "target2": {
-                                  "name": "Target Name",
-                                  "target": "{{Caster}}"
-                                },
-                                "invertCondition": true
-                              }
-                            ]
-                          },
-                          "ifTargetFound": [
-                            {
-                              "name": "Declare Custom Variable",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "scope": "TargetEntity",
-                              "variableName": "AIFlag",
-                              "value": 1
-                            },
-                            {
-                              "name": "Choose Ability Target",
-                              "skillName": "Skill02",
-                              "target": {
-                                "name": "Create Selection List",
-                                "passed": [
-                                  {
-                                    "name": "Select by Target Pool",
-                                    "target": {
-                                      "name": "Target Sequence",
-                                      "Sequence": [
-                                        {
-                                          "name": "Target Name",
-                                          "target": "{{Enemy Team All}} - {{Caster}}"
-                                        },
-                                        {
-                                          "name": "Target Filter",
-                                          "conditions": {
-                                            "name": "AND",
-                                            "conditionList": [
-                                              {
-                                                "name": "Compare: Monster Rank",
-                                                "target": {
-                                                  "name": "Target Name",
-                                                  "target": "{{Parameter Target}}"
-                                                },
-                                                "compareType": "<=",
-                                                "value2": 3
-                                              },
-                                              {
-                                                "name": "Check Boolean Value",
-                                                "target": {
-                                                  "name": "Target Name",
-                                                  "target": "{{Parameter Target}}"
-                                                },
-                                                "value": "UNKNOWN_OBJECT_BOOLEAN_-1541420090",
-                                                "invertCondition": true
-                                              }
-                                            ]
-                                          }
-                                        }
-                                      ]
-                                    }
-                                  },
-                                  {
-                                    "name": "Select by Modifier Name",
-                                    "modifier": "<a class=\"gModGreen\" id=\"-1253957657\">Enemy_W2_Beast01_05_Boss</a>[<span class=\"descriptionNumberColor\">Fealty</span>]",
-                                    "target": null,
-                                    "invertCondition": true
-                                  },
-                                  {
-                                    "name": "Select by Target Rank",
-                                    "compareType": "Max"
-                                  }
-                                ]
-                              }
-                            },
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill02"
-                            }
-                          ],
-                          "noTargetFound": [
-                            {
-                              "name": "Declare Custom Variable",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "scope": "TargetEntity",
-                              "variableName": "AIFlag",
-                              "value": 1
-                            },
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill01"
-                            }
-                          ]
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Declare Custom Variable",
-                          "target": {
-                            "name": "Target Name",
-                            "target": "{{Caster}}"
-                          },
-                          "scope": "TargetEntity",
-                          "variableName": "AIFlag",
-                          "value": 1
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill01"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,
@@ -216,8 +214,8 @@ const configAbility = {
               ]
             }
           ],
-          "type": "DefaultDSE",
-          "check": [
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 1,

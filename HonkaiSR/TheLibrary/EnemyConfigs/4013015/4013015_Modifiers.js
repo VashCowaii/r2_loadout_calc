@@ -2910,7 +2910,7 @@ const configAbility = {
                   "name": "Define Custom Variable with Team Count",
                   "target": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Hostile Entities(AOE)}}"

@@ -418,7 +418,7 @@ const configAbility = {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}"
@@ -469,7 +469,7 @@ const configAbility = {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Player Team All(with Unselectable)V2}}"

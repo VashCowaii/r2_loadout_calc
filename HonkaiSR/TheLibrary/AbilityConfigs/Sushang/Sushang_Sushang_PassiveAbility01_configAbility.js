@@ -285,7 +285,7 @@ const configAbility = {
           "name": "Compare: Target Count",
           "target": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"
@@ -336,7 +336,7 @@ const configAbility = {
           "name": "Compare: Target Count",
           "target": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Hostile Entities(AOE)}}"

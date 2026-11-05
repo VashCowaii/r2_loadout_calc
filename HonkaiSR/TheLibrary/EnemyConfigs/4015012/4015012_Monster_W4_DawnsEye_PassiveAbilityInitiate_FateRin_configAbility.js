@@ -599,7 +599,7 @@ const configAbility = {
                 "TargetList": [
                   {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Enemy Team All(with Unselectable)}}"
@@ -648,7 +648,7 @@ const configAbility = {
                   },
                   {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Enemy Team All(with Unselectable)}}"

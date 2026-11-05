@@ -1323,7 +1323,7 @@ const compositeAbilityObject = {
                   "name": "Find New Target",
                   "from": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}.[[livingOrLimbo]]"
@@ -1440,7 +1440,7 @@ const compositeAbilityObject = {
                   "name": "Find New Target",
                   "from": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Enemy Team All}}.[[livingOrLimbo]]"
@@ -1538,7 +1538,7 @@ const compositeAbilityObject = {
                         },
                         "target": {
                           "name": "Target Sequence",
-                          "Sequence": [
+                          "TargetList": [
                             {
                               "name": "Target Name",
                               "target": "{{Enemy Team All}}"
@@ -1589,7 +1589,7 @@ const compositeAbilityObject = {
                         },
                         "target": {
                           "name": "Target Sequence",
-                          "Sequence": [
+                          "TargetList": [
                             {
                               "name": "Target Name",
                               "target": "{{Enemy Team All}}"
@@ -2803,7 +2803,7 @@ const compositeAbilityObject = {
               "name": "Find New Target",
               "from": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}.[[livingOrLimbo]]"
@@ -3248,7 +3248,7 @@ const compositeAbilityObject = {
                       "name": "Find New Target",
                       "from": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}.[[livingOrLimbo]]"
@@ -3300,7 +3300,7 @@ const compositeAbilityObject = {
                       "name": "Find New Target",
                       "from": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}.[[livingOrLimbo]]"
@@ -3370,7 +3370,7 @@ const compositeAbilityObject = {
                       "name": "Find New Target",
                       "from": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}.[[livingOrLimbo]]"
@@ -3428,7 +3428,7 @@ const compositeAbilityObject = {
                       "name": "Find New Target",
                       "from": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}.[[livingOrLimbo]]"
@@ -4760,7 +4760,7 @@ const compositeAbilityObject = {
               "name": "ATK Scaling DMG",
               "target": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{ST and Blast}}"

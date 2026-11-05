@@ -38,7 +38,7 @@ const configAbility = {
       },
       "inherentTarget": {
         "name": "Target Sequence",
-        "Sequence": [
+        "TargetList": [
           {
             "name": "Target Name",
             "target": "{{Player Team All}}"

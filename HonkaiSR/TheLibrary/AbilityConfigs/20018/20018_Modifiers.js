@@ -465,7 +465,7 @@ const configAbility = {
                     "name": "Has Modifier",
                     "target": {
                       "name": "Target Sequence",
-                      "Sequence": [
+                      "TargetList": [
                         {
                           "name": "Target Name",
                           "target": "{{Enemy Team All}}"
@@ -865,7 +865,7 @@ const configAbility = {
                         "name": "Has Flag",
                         "target": {
                           "name": "Target Sequence",
-                          "Sequence": [
+                          "TargetList": [
                             {
                               "name": "Target Name",
                               "target": "{{Enemy Team All}}"
@@ -2547,7 +2547,7 @@ const configAbility = {
               },
               "healer": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
@@ -3149,7 +3149,7 @@ const configAbility = {
               "name": "Define Custom Variable with Added Value",
               "target": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
@@ -3443,7 +3443,7 @@ const configAbility = {
                 "name": "Has Flag",
                 "target": {
                   "name": "Target Sequence",
-                  "Sequence": [
+                  "TargetList": [
                     {
                       "name": "Target Name",
                       "target": "{{Enemy Team All}}"
@@ -3532,7 +3532,7 @@ const configAbility = {
                 "name": "Has Flag",
                 "target": {
                   "name": "Target Sequence",
-                  "Sequence": [
+                  "TargetList": [
                     {
                       "name": "Target Name",
                       "target": "{{Enemy Team All}}"

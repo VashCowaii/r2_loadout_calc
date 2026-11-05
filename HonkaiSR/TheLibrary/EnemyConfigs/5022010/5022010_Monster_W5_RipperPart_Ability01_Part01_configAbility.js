@@ -28,7 +28,7 @@ const configAbility = {
     "primaryTarget": "Select Ally Target",
     "filter": {
       "name": "Target Sequence",
-      "Sequence": [
+      "TargetList": [
         {
           "name": "Target Name",
           "target": "{{Enemy Team All}}"

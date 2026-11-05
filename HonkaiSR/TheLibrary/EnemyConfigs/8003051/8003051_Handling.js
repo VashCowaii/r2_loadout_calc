@@ -25,51 +25,49 @@ const configAbility = {
       "options": [
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill03",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_AML_Elite01_01_AICounter_01",
-                  "value": 4
+          "optionName": "UseSkill03",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_AML_Elite01_01_AICounter_02",
-                  "value": 1
+                "scope": "TargetEntity",
+                "variableName": "Monster_AML_Elite01_01_AICounter_01",
+                "value": 4
+              },
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Choose Ability Target",
-                  "skillName": "Skill03",
-                  "target": {
-                    "name": "Select by Modifier Name",
-                    "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
-                    "target": null,
-                    "invertCondition": true
-                  }
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill03"
+                "scope": "TargetEntity",
+                "variableName": "Monster_AML_Elite01_01_AICounter_02",
+                "value": 1
+              },
+              {
+                "name": "Choose Ability Target",
+                "skillName": "Skill03",
+                "target": {
+                  "name": "Select by Modifier Name",
+                  "modifier": "<a class=\"gModGreen\" id=\"-868837614\">Standard_DOT_Poison</a>[<span class=\"descriptionNumberColor\">Wind Shear</span>]",
+                  "target": null,
+                  "invertCondition": true
                 }
-              ]
-            }
-          ],
-          "weight": 0.5,
-          "type": "DefaultDSE",
-          "check": [
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill03"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionWeight": 0.5,
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -97,80 +95,78 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill04",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Has Modifier",
+          "optionName": "UseSkill04",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "IF",
+                "conditions": {
+                  "name": "Has Modifier",
+                  "target": {
+                    "name": "Target Name",
+                    "target": "{{Caster}}"
+                  },
+                  "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                },
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
                     "target": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "modifier": "<a class=\"gModGreen\" id=\"763823194\">OneMore</a>"
+                    "scope": "TargetEntity",
+                    "variableName": "Monster_AML_Elite01_01_AICounter_01",
+                    "value": 4
                   },
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "Monster_AML_Elite01_01_AICounter_01",
-                      "value": 4
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "Monster_AML_Elite01_01_AICounter_02",
-                      "value": 1
+                    "scope": "TargetEntity",
+                    "variableName": "Monster_AML_Elite01_01_AICounter_02",
+                    "value": 1
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill03"
+                  }
+                ],
+                "failed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill03"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "Monster_AML_Elite01_01_AICounter_01",
-                      "value": 5
+                    "scope": "TargetEntity",
+                    "variableName": "Monster_AML_Elite01_01_AICounter_01",
+                    "value": 5
+                  },
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "Monster_AML_Elite01_01_AICounter_02",
-                      "value": 2
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill04"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "weight": 0.9,
-          "type": "DefaultDSE",
-          "check": [
+                    "scope": "TargetEntity",
+                    "variableName": "Monster_AML_Elite01_01_AICounter_02",
+                    "value": 2
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill04"
+                  }
+                ]
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionWeight": 0.9,
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -198,70 +194,68 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill05",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
+          "optionName": "UseSkill05",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "scope": "TargetEntity",
+                "variableName": "Monster_AML_Elite01_01_AICounter_01",
+                "value": 1
+              },
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "scope": "TargetEntity",
+                "variableName": "Monster_AML_Elite01_01_AICounter_02",
+                "value": 3
+              },
+              {
+                "name": "IF",
+                "conditions": {
+                  "name": "Compare: Variable",
                   "target": {
                     "name": "Target Name",
-                    "target": "{{Caster}}"
+                    "target": "{{Player Team All}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_AML_Elite01_01_AICounter_01",
-                  "value": 1
-                },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_AML_Elite01_01_AICounter_02",
-                  "value": 3
-                },
-                {
-                  "name": "IF",
+                  "value1": "TeamCharacterCount",
+                  "compareType": ">=",
+                  "value2": 1,
                   "conditions": {
-                    "name": "Compare: Variable",
+                    "name": "Has Modifier",
                     "target": {
                       "name": "Target Name",
-                      "target": "{{Player Team All}}"
+                      "target": "{{Parameter Target}}"
                     },
-                    "value1": "TeamCharacterCount",
-                    "compareType": ">=",
-                    "value2": 1,
-                    "conditions": {
-                      "name": "Has Modifier",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Parameter Target}}"
-                      },
-                      "modifier": "<a class=\"gModGreen\" id=\"-940158065\">Enemy_AML_Elite01_01_DOTAim</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
-                    }
-                  },
-                  "passed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill05"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill06"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "weight": 0.5,
-          "type": "DefaultDSE",
-          "check": [
+                    "modifier": "<a class=\"gModGreen\" id=\"-940158065\">Enemy_AML_Elite01_01_DOTAim</a>[<span class=\"descriptionNumberColor\">Lock On</span>]"
+                  }
+                },
+                "passed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill05"
+                  }
+                ],
+                "failed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill06"
+                  }
+                ]
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionWeight": 0.5,
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -289,62 +283,60 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill01",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
+          "optionName": "UseSkill01",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "scope": "TargetEntity",
+                "variableName": "Monster_AML_Elite01_01_AICounter_01",
+                "value": 3
+              },
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
+                },
+                "scope": "TargetEntity",
+                "variableName": "Monster_AML_Elite01_01_AICounter_02",
+                "value": 1
+              },
+              {
+                "name": "IF",
+                "conditions": {
+                  "name": "Compare: Variable",
                   "target": {
                     "name": "Target Name",
-                    "target": "{{Caster}}"
+                    "target": "{{Caster's Minions}}"
                   },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_AML_Elite01_01_AICounter_01",
-                  "value": 3
+                  "value1": "TeamCharacterCount",
+                  "compareType": "<=",
+                  "value2": 2
                 },
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "scope": "TargetEntity",
-                  "variableName": "Monster_AML_Elite01_01_AICounter_02",
-                  "value": 1
-                },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "target": {
-                      "name": "Target Name",
-                      "target": "{{Caster's Minions}}"
-                    },
-                    "value1": "TeamCharacterCount",
-                    "compareType": "<=",
-                    "value2": 2
-                  },
-                  "passed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill09"
-                    }
-                  ],
-                  "failed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill09"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "weight": 0.9,
-          "type": "DefaultDSE",
-          "check": [
+                "passed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill09"
+                  }
+                ],
+                "failed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill09"
+                  }
+                ]
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionWeight": 0.9,
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,

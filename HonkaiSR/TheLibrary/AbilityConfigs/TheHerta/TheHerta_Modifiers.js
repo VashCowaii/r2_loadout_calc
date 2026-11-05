@@ -932,7 +932,7 @@ const configAbility = {
                     "name": "Compare: Target List Entities",
                     "target": {
                       "name": "Target Sequence",
-                      "Sequence": [
+                      "TargetList": [
                         {
                           "name": "Target Name",
                           "target": "{{Enemy Team All}}"
@@ -992,7 +992,7 @@ const configAbility = {
                       "name": "Find New Target",
                       "from": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
@@ -1080,7 +1080,7 @@ const configAbility = {
                           "name": "Find New Target",
                           "from": {
                             "name": "Target Sequence",
-                            "Sequence": [
+                            "TargetList": [
                               {
                                 "name": "Target Name",
                                 "target": "{{Enemy Team All}}"
@@ -1172,7 +1172,7 @@ const configAbility = {
                       "name": "Find New Target",
                       "from": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
@@ -1331,7 +1331,7 @@ const configAbility = {
                     "name": "Compare: Target List Entities",
                     "target": {
                       "name": "Target Sequence",
-                      "Sequence": [
+                      "TargetList": [
                         {
                           "name": "Target Name",
                           "target": "{{Enemy Team All}}"
@@ -1391,7 +1391,7 @@ const configAbility = {
                       "name": "Find New Target",
                       "from": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
@@ -1479,7 +1479,7 @@ const configAbility = {
                           "name": "Find New Target",
                           "from": {
                             "name": "Target Sequence",
-                            "Sequence": [
+                            "TargetList": [
                               {
                                 "name": "Target Name",
                                 "target": "{{Enemy Team All}}"
@@ -1571,7 +1571,7 @@ const configAbility = {
                       "name": "Find New Target",
                       "from": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
@@ -2168,7 +2168,7 @@ const configAbility = {
                     "name": "Compare: Target List Entities",
                     "target": {
                       "name": "Target Sequence",
-                      "Sequence": [
+                      "TargetList": [
                         {
                           "name": "Target Name",
                           "target": "{{Enemy Team All}}"
@@ -2228,7 +2228,7 @@ const configAbility = {
                       "name": "Find New Target",
                       "from": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
@@ -2316,7 +2316,7 @@ const configAbility = {
                           "name": "Find New Target",
                           "from": {
                             "name": "Target Sequence",
-                            "Sequence": [
+                            "TargetList": [
                               {
                                 "name": "Target Name",
                                 "target": "{{Enemy Team All}}"
@@ -2408,7 +2408,7 @@ const configAbility = {
                       "name": "Find New Target",
                       "from": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
@@ -2698,7 +2698,7 @@ const configAbility = {
               "name": "Add Events/Bonuses",
               "to": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"

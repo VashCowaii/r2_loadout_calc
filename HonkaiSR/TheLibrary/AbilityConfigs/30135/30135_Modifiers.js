@@ -1818,7 +1818,7 @@ const configAbility = {
           },
           "target": {
             "name": "Compute Targets",
-            "type": "Intersect",
+            "operationType": "Intersect",
             "TargetList": [
               {
                 "name": "Target Name",

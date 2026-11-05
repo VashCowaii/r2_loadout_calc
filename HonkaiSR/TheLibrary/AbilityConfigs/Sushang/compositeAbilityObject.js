@@ -1115,7 +1115,7 @@ const compositeAbilityObject = {
               "name": "Compare: Target Count",
               "target": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"
@@ -1166,7 +1166,7 @@ const compositeAbilityObject = {
               "name": "Compare: Target Count",
               "target": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Hostile Entities(AOE)}}"

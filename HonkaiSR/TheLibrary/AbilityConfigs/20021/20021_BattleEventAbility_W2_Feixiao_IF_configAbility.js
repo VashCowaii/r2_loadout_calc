@@ -152,7 +152,7 @@ const configAbility = {
         "name": "Compare: Variable",
         "target": {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             {
               "name": "Target Name",
               "target": "{{Caster}}"
@@ -228,7 +228,7 @@ const configAbility = {
           "name": "Add Events/Bonuses",
           "to": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Caster}}"
@@ -289,7 +289,7 @@ const configAbility = {
             "name": "Compare: Variable",
             "target": {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster}}"
@@ -356,7 +356,7 @@ const configAbility = {
               "name": "Remove Events/Bonuses",
               "to": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -404,7 +404,7 @@ const configAbility = {
               "name": "Add Events/Bonuses",
               "to": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -452,7 +452,7 @@ const configAbility = {
               "name": "Find New Target",
               "from": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Caster}}"
@@ -557,7 +557,7 @@ const configAbility = {
                       "name": "Add Events/Bonuses",
                       "to": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Caster}}"
@@ -729,7 +729,7 @@ const configAbility = {
                     "name": "Compare: Variable",
                     "target": {
                       "name": "Target Sequence",
-                      "Sequence": [
+                      "TargetList": [
                         {
                           "name": "Target Name",
                           "target": "{{Caster}}"
@@ -821,7 +821,7 @@ const configAbility = {
                         "name": "Compare: Variable",
                         "target": {
                           "name": "Target Sequence",
-                          "Sequence": [
+                          "TargetList": [
                             {
                               "name": "Target Name",
                               "target": "{{Caster}}"
@@ -920,7 +920,7 @@ const configAbility = {
                     "name": "Compare: Variable",
                     "target": {
                       "name": "Target Sequence",
-                      "Sequence": [
+                      "TargetList": [
                         {
                           "name": "Target Name",
                           "target": "{{Caster}}"
@@ -1012,7 +1012,7 @@ const configAbility = {
                         "name": "Compare: Variable",
                         "target": {
                           "name": "Target Sequence",
-                          "Sequence": [
+                          "TargetList": [
                             {
                               "name": "Target Name",
                               "target": "{{Caster}}"
@@ -1111,7 +1111,7 @@ const configAbility = {
                     "name": "Compare: Variable",
                     "target": {
                       "name": "Target Sequence",
-                      "Sequence": [
+                      "TargetList": [
                         {
                           "name": "Target Name",
                           "target": "{{Caster}}"
@@ -1203,7 +1203,7 @@ const configAbility = {
                         "name": "Compare: Variable",
                         "target": {
                           "name": "Target Sequence",
-                          "Sequence": [
+                          "TargetList": [
                             {
                               "name": "Target Name",
                               "target": "{{Caster}}"
@@ -1302,7 +1302,7 @@ const configAbility = {
                     "name": "Compare: Variable",
                     "target": {
                       "name": "Target Sequence",
-                      "Sequence": [
+                      "TargetList": [
                         {
                           "name": "Target Name",
                           "target": "{{Caster}}"
@@ -1402,7 +1402,7 @@ const configAbility = {
                         "name": "Compare: Variable",
                         "target": {
                           "name": "Target Sequence",
-                          "Sequence": [
+                          "TargetList": [
                             {
                               "name": "Target Name",
                               "target": "{{Caster}}"

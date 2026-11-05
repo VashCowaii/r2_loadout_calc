@@ -1646,7 +1646,7 @@ const compositeAbilityObject = {
               "name": "Add Sub-Events/Bonuses",
               "to": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Battle Event List}}"
@@ -3808,7 +3808,7 @@ const compositeAbilityObject = {
                                   "name": "Define Custom Variable with Stat",
                                   "target": {
                                     "name": "Target Sequence",
-                                    "Sequence": [
+                                    "TargetList": [
                                       {
                                         "name": "Target Name",
                                         "target": "{{Battle Event List}}"

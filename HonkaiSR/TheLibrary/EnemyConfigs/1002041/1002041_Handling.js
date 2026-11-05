@@ -25,29 +25,27 @@ const configAbility = {
       "options": [
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill01",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Choose Ability Target",
-                  "skillName": "Skill01",
-                  "target": {
-                    "name": "Select by Modifier Name",
-                    "modifier": "Monster_Gepard_Attack_Sign[<span class=\"descriptionNumberColor\">Aggravate</span>]",
-                    "target": null
-                  }
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill01"
+          "optionName": "UseSkill01",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Choose Ability Target",
+                "skillName": "Skill01",
+                "target": {
+                  "name": "Select by Modifier Name",
+                  "modifier": "Monster_Gepard_Attack_Sign[<span class=\"descriptionNumberColor\">Aggravate</span>]",
+                  "target": null
                 }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill01"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Value",
               "skillName": "Skill01",

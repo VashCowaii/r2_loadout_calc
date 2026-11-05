@@ -91,7 +91,7 @@ const configAbility = {
                       "abilityName": "Monster_W5_Shell_Ability01_Part01",
                       "abilitySource": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Parameter Target List}}"
@@ -121,7 +121,7 @@ const configAbility = {
                       "abilityName": "Monster_W5_Shell_Ability01Multi_Part01",
                       "abilitySource": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Parameter Target List}}"

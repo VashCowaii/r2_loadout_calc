@@ -800,7 +800,7 @@ const configAbility = {
               "name": "Find New Target",
               "from": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "({{Modifier Holder}} + {{All Team Members with Unselectable Team Members(Exclude Self)}}).[[addBattleEvents]]"
@@ -1190,7 +1190,7 @@ const configAbility = {
               "name": "Add to Team Target Grouping",
               "target": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Player Team Entity}}"
@@ -1393,7 +1393,7 @@ const configAbility = {
               "name": "Remove from Team Target Grouping",
               "target": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Player Team Entity}}"

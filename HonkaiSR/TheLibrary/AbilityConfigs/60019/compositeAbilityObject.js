@@ -235,7 +235,7 @@ const compositeAbilityObject = {
           },
           "defender": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
@@ -273,7 +273,7 @@ const compositeAbilityObject = {
           },
           "defender": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
@@ -339,7 +339,7 @@ const compositeAbilityObject = {
           },
           "defender": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
@@ -377,7 +377,7 @@ const compositeAbilityObject = {
           },
           "defender": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
@@ -443,7 +443,7 @@ const compositeAbilityObject = {
           },
           "defender": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
@@ -481,7 +481,7 @@ const compositeAbilityObject = {
           },
           "defender": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
@@ -547,7 +547,7 @@ const compositeAbilityObject = {
           },
           "defender": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
@@ -585,7 +585,7 @@ const compositeAbilityObject = {
           },
           "defender": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
@@ -651,7 +651,7 @@ const compositeAbilityObject = {
           },
           "defender": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
@@ -689,7 +689,7 @@ const compositeAbilityObject = {
           },
           "defender": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
@@ -755,7 +755,7 @@ const compositeAbilityObject = {
           },
           "defender": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
@@ -793,7 +793,7 @@ const compositeAbilityObject = {
           },
           "defender": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"

@@ -264,7 +264,7 @@ const configAbility = {
       "name": "Find New Target",
       "from": {
         "name": "Target Sequence",
-        "Sequence": [
+        "TargetList": [
           {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
@@ -316,7 +316,7 @@ const configAbility = {
       "name": "Trigger Ability",
       "from": {
         "name": "Target Sequence",
-        "Sequence": [
+        "TargetList": [
           {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
@@ -341,7 +341,7 @@ const configAbility = {
       "name": "Find New Target",
       "from": {
         "name": "Target Sequence",
-        "Sequence": [
+        "TargetList": [
           {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
@@ -394,7 +394,7 @@ const configAbility = {
       "name": "Trigger Ability",
       "from": {
         "name": "Target Sequence",
-        "Sequence": [
+        "TargetList": [
           {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
@@ -419,7 +419,7 @@ const configAbility = {
       "name": "Find New Target",
       "from": {
         "name": "Target Sequence",
-        "Sequence": [
+        "TargetList": [
           {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
@@ -472,7 +472,7 @@ const configAbility = {
       "name": "Trigger Ability",
       "from": {
         "name": "Target Sequence",
-        "Sequence": [
+        "TargetList": [
           {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
@@ -497,7 +497,7 @@ const configAbility = {
       "name": "Trigger Ability",
       "from": {
         "name": "Target Sequence",
-        "Sequence": [
+        "TargetList": [
           {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
@@ -522,7 +522,7 @@ const configAbility = {
       "name": "Find New Target",
       "from": {
         "name": "Target Sequence",
-        "Sequence": [
+        "TargetList": [
           {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
@@ -575,7 +575,7 @@ const configAbility = {
       "name": "Trigger Ability",
       "from": {
         "name": "Target Sequence",
-        "Sequence": [
+        "TargetList": [
           {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
@@ -600,7 +600,7 @@ const configAbility = {
       "name": "Trigger Ability",
       "from": {
         "name": "Target Sequence",
-        "Sequence": [
+        "TargetList": [
           {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
@@ -625,7 +625,7 @@ const configAbility = {
       "name": "Trigger Ability",
       "from": {
         "name": "Target Sequence",
-        "Sequence": [
+        "TargetList": [
           {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
@@ -650,7 +650,7 @@ const configAbility = {
       "name": "Trigger Ability",
       "from": {
         "name": "Target Sequence",
-        "Sequence": [
+        "TargetList": [
           {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"

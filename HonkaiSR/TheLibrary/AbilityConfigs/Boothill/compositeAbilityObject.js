@@ -3925,7 +3925,7 @@ const compositeAbilityObject = {
         "badTarget": "Cannot select this target with Fanning the Hammer",
         "filter": {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             {
               "name": "Target Name",
               "target": "{{Hostile Entities(AOE)}}"

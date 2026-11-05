@@ -121,7 +121,7 @@ const configAbility = {
               "name": "ATK Scaling DMG",
               "target": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Moonlit Pegasus: Skill04 Target}}"
@@ -210,7 +210,7 @@ const configAbility = {
               "name": "ATK Scaling DMG",
               "target": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Moonlit Pegasus: Skill04 Target}}"
@@ -315,7 +315,7 @@ const configAbility = {
                   "name": "ATK Scaling DMG",
                   "target": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Moonlit Pegasus: Skill04 Target}}"
@@ -407,7 +407,7 @@ const configAbility = {
               "name": "ATK Scaling DMG",
               "target": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Moonlit Pegasus: Skill04 Target}}"
@@ -496,7 +496,7 @@ const configAbility = {
               "name": "ATK Scaling DMG",
               "target": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Moonlit Pegasus: Skill04 Target}}"

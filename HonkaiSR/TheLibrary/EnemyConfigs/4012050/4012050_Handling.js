@@ -25,51 +25,49 @@ const configAbility = {
       "options": [
         {
           "name": "HANDLER OPTION GROUP",
-          "option": "Monster_W4_Mascot_00_DecisionGroup_Mode1",
-          "goal": [
+          "optionGroupName": "Monster_W4_Mascot_00_DecisionGroup_Mode1",
+          "optionGroupGoal": [
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkillCondition01",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag"
+              "optionName": "UseSkillCondition01",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "ForwardReverseFlag",
-                        "compareType": "=",
-                        "value2": 0,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill02"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill03"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag"
+                  },
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Compare: Variable",
+                      "value1": "ForwardReverseFlag",
+                      "compareType": "=",
+                      "value2": 0,
+                      "contextScope": "TargetEntity"
+                    },
+                    "passed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill02"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill03"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,
@@ -98,47 +96,45 @@ const configAbility = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkillCondition02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag"
+              "optionName": "UseSkillCondition02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "ForwardReverseFlag",
-                        "compareType": "=",
-                        "value2": 0,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill03"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill01"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag"
+                  },
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Compare: Variable",
+                      "value1": "ForwardReverseFlag",
+                      "compareType": "=",
+                      "value2": 0,
+                      "contextScope": "TargetEntity"
+                    },
+                    "passed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill03"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,
@@ -167,47 +163,45 @@ const configAbility = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkillCondition03",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag"
+              "optionName": "UseSkillCondition03",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "value1": "ForwardReverseFlag",
-                        "compareType": "=",
-                        "value2": 0,
-                        "contextScope": "TargetEntity"
-                      },
-                      "passed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill01"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill02"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag"
+                  },
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Compare: Variable",
+                      "value1": "ForwardReverseFlag",
+                      "compareType": "=",
+                      "value2": 0,
+                      "contextScope": "TargetEntity"
+                    },
+                    "passed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill01"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill02"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,
@@ -235,8 +229,8 @@ const configAbility = {
               ]
             }
           ],
-          "type": "DefaultDSE",
-          "check": [
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 1,
@@ -251,181 +245,179 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION GROUP",
-          "option": "Monster_W4_Mascot_00_DecisionGroup_Mode2",
-          "goal": [
+          "optionGroupName": "Monster_W4_Mascot_00_DecisionGroup_Mode2",
+          "optionGroupGoal": [
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkillCondition01",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag"
+              "optionName": "UseSkillCondition01",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "SWITCH",
-                      "switchValue": {
-                        "operator": "Variables[0] (ForwardReverseFlag) || RETURN",
-                        "displayLines": "ForwardReverseFlag",
-                        "constants": [],
-                        "variables": [
-                          "ForwardReverseFlag"
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag"
+                  },
+                  {
+                    "name": "SWITCH",
+                    "switchValue": {
+                      "operator": "Variables[0] (Sequence_i) || RETURN",
+                      "displayLines": "Sequence_i",
+                      "constants": [],
+                      "variables": [
+                        "Sequence_i"
+                      ]
+                    },
+                    "caseEvents": [
+                      {
+                        "name": "SWITCH CONDITON",
+                        "caseValueIs": 1,
+                        "execute": [
+                          {
+                            "name": "Declare Custom Variable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "scope": "TargetEntity",
+                            "variableName": "Sequence_i",
+                            "value": 2
+                          },
+                          {
+                            "name": "Use Ability Option",
+                            "skillName": "Skill01"
+                          }
                         ]
                       },
-                      "caseEvents": [
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 1,
-                          "execute": [
-                            {
-                              "name": "Declare Custom Variable",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "scope": "TargetEntity",
-                              "variableName": "Sequence_i",
-                              "value": 2
+                      {
+                        "name": "SWITCH CONDITON",
+                        "caseValueIs": 2,
+                        "execute": [
+                          {
+                            "name": "Declare Custom Variable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
                             },
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill01"
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 2,
-                          "execute": [
-                            {
-                              "name": "Declare Custom Variable",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "scope": "TargetEntity",
-                              "variableName": "Sequence_i",
-                              "value": 2
+                            "scope": "TargetEntity",
+                            "variableName": "Sequence_i",
+                            "value": 2
+                          },
+                          {
+                            "name": "Use Ability Option",
+                            "skillName": "Skill02"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "SWITCH CONDITON",
+                        "caseValueIs": 3,
+                        "execute": [
+                          {
+                            "name": "Declare Custom Variable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
                             },
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill02"
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 3,
-                          "execute": [
-                            {
-                              "name": "Declare Custom Variable",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "scope": "TargetEntity",
-                              "variableName": "Sequence_i",
-                              "value": 2
+                            "scope": "TargetEntity",
+                            "variableName": "Sequence_i",
+                            "value": 2
+                          },
+                          {
+                            "name": "Use Ability Option",
+                            "skillName": "Skill03"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "SWITCH CONDITON",
+                        "caseValueIs": 0,
+                        "execute": [
+                          {
+                            "name": "SWITCH",
+                            "switchValue": {
+                              "operator": "Variables[0] (ForwardReverseFlag) || RETURN",
+                              "displayLines": "ForwardReverseFlag",
+                              "constants": [],
+                              "variables": [
+                                "ForwardReverseFlag"
+                              ]
                             },
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill03"
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 0,
-                          "execute": [
-                            {
-                              "name": "SWITCH",
-                              "switchValue": {
-                                "operator": "Variables[0] (AIFlag) || RETURN",
-                                "displayLines": "AIFlag",
-                                "constants": [],
-                                "variables": [
-                                  "AIFlag"
+                            "caseEvents": [
+                              {
+                                "name": "SWITCH CONDITON",
+                                "caseValueIs": 1,
+                                "execute": [
+                                  {
+                                    "name": "Declare Custom Variable",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Caster}}"
+                                    },
+                                    "scope": "TargetEntity",
+                                    "variableName": "Sequence_i",
+                                    "value": 1
+                                  },
+                                  {
+                                    "name": "Use Ability Option",
+                                    "skillName": "Skill01"
+                                  }
                                 ]
                               },
-                              "caseEvents": [
-                                {
-                                  "name": "SWITCH CONDITON",
-                                  "caseValueIs": 1,
-                                  "execute": [
-                                    {
-                                      "name": "Declare Custom Variable",
-                                      "target": {
-                                        "name": "Target Name",
-                                        "target": "{{Caster}}"
-                                      },
-                                      "scope": "TargetEntity",
-                                      "variableName": "Sequence_i",
-                                      "value": 1
+                              {
+                                "name": "SWITCH CONDITON",
+                                "caseValueIs": 2,
+                                "execute": [
+                                  {
+                                    "name": "Declare Custom Variable",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Caster}}"
                                     },
-                                    {
-                                      "name": "Use Ability Option",
-                                      "skillName": "Skill01"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "name": "SWITCH CONDITON",
-                                  "caseValueIs": 2,
-                                  "execute": [
-                                    {
-                                      "name": "Declare Custom Variable",
-                                      "target": {
-                                        "name": "Target Name",
-                                        "target": "{{Caster}}"
-                                      },
-                                      "scope": "TargetEntity",
-                                      "variableName": "Sequence_i",
-                                      "value": 1
+                                    "scope": "TargetEntity",
+                                    "variableName": "Sequence_i",
+                                    "value": 1
+                                  },
+                                  {
+                                    "name": "Use Ability Option",
+                                    "skillName": "Skill02"
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "SWITCH CONDITON",
+                                "caseValueIs": 3,
+                                "execute": [
+                                  {
+                                    "name": "Declare Custom Variable",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Caster}}"
                                     },
-                                    {
-                                      "name": "Use Ability Option",
-                                      "skillName": "Skill02"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "name": "SWITCH CONDITON",
-                                  "caseValueIs": 3,
-                                  "execute": [
-                                    {
-                                      "name": "Declare Custom Variable",
-                                      "target": {
-                                        "name": "Target Name",
-                                        "target": "{{Caster}}"
-                                      },
-                                      "scope": "TargetEntity",
-                                      "variableName": "Sequence_i",
-                                      "value": 1
-                                    },
-                                    {
-                                      "name": "Use Ability Option",
-                                      "skillName": "Skill03"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                                    "scope": "TargetEntity",
+                                    "variableName": "Sequence_i",
+                                    "value": 1
+                                  },
+                                  {
+                                    "name": "Use Ability Option",
+                                    "skillName": "Skill03"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,
@@ -441,177 +433,175 @@ const configAbility = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkillCondition02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag"
+              "optionName": "UseSkillCondition02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "SWITCH",
-                      "switchValue": {
-                        "operator": "Variables[0] (Sequence_i) || RETURN",
-                        "displayLines": "Sequence_i",
-                        "constants": [],
-                        "variables": [
-                          "Sequence_i"
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag"
+                  },
+                  {
+                    "name": "SWITCH",
+                    "switchValue": {
+                      "operator": "Variables[0] (AIFlag) || RETURN",
+                      "displayLines": "AIFlag",
+                      "constants": [],
+                      "variables": [
+                        "AIFlag"
+                      ]
+                    },
+                    "caseEvents": [
+                      {
+                        "name": "SWITCH CONDITON",
+                        "caseValueIs": 1,
+                        "execute": [
+                          {
+                            "name": "Declare Custom Variable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "scope": "TargetEntity",
+                            "variableName": "Sequence_i",
+                            "value": 3
+                          },
+                          {
+                            "name": "Use Ability Option",
+                            "skillName": "Skill01"
+                          }
                         ]
                       },
-                      "caseEvents": [
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 1,
-                          "execute": [
-                            {
-                              "name": "Declare Custom Variable",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "scope": "TargetEntity",
-                              "variableName": "Sequence_i",
-                              "value": 3
+                      {
+                        "name": "SWITCH CONDITON",
+                        "caseValueIs": 2,
+                        "execute": [
+                          {
+                            "name": "Declare Custom Variable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
                             },
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill01"
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 2,
-                          "execute": [
-                            {
-                              "name": "Declare Custom Variable",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "scope": "TargetEntity",
-                              "variableName": "Sequence_i",
-                              "value": 3
+                            "scope": "TargetEntity",
+                            "variableName": "Sequence_i",
+                            "value": 3
+                          },
+                          {
+                            "name": "Use Ability Option",
+                            "skillName": "Skill02"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "SWITCH CONDITON",
+                        "caseValueIs": 3,
+                        "execute": [
+                          {
+                            "name": "Declare Custom Variable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
                             },
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill02"
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 3,
-                          "execute": [
-                            {
-                              "name": "Declare Custom Variable",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "scope": "TargetEntity",
-                              "variableName": "Sequence_i",
-                              "value": 3
+                            "scope": "TargetEntity",
+                            "variableName": "Sequence_i",
+                            "value": 3
+                          },
+                          {
+                            "name": "Use Ability Option",
+                            "skillName": "Skill03"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "SWITCH CONDITON",
+                        "caseValueIs": 0,
+                        "execute": [
+                          {
+                            "name": "SWITCH",
+                            "switchValue": {
+                              "operator": "Variables[0] (ForwardReverseFlag) || RETURN",
+                              "displayLines": "ForwardReverseFlag",
+                              "constants": [],
+                              "variables": [
+                                "ForwardReverseFlag"
+                              ]
                             },
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill03"
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 0,
-                          "execute": [
-                            {
-                              "name": "SWITCH",
-                              "switchValue": {
-                                "operator": "Variables[0] (AIFlag) || RETURN",
-                                "displayLines": "AIFlag",
-                                "constants": [],
-                                "variables": [
-                                  "AIFlag"
+                            "caseEvents": [
+                              {
+                                "name": "SWITCH CONDITON",
+                                "caseValueIs": 1,
+                                "execute": [
+                                  {
+                                    "name": "Declare Custom Variable",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Caster}}"
+                                    },
+                                    "scope": "TargetEntity",
+                                    "variableName": "Sequence_i",
+                                    "value": 1
+                                  },
+                                  {
+                                    "name": "Use Ability Option",
+                                    "skillName": "Skill01"
+                                  }
                                 ]
                               },
-                              "caseEvents": [
-                                {
-                                  "name": "SWITCH CONDITON",
-                                  "caseValueIs": 1,
-                                  "execute": [
-                                    {
-                                      "name": "Declare Custom Variable",
-                                      "target": {
-                                        "name": "Target Name",
-                                        "target": "{{Caster}}"
-                                      },
-                                      "scope": "TargetEntity",
-                                      "variableName": "Sequence_i",
-                                      "value": 1
+                              {
+                                "name": "SWITCH CONDITON",
+                                "caseValueIs": 2,
+                                "execute": [
+                                  {
+                                    "name": "Declare Custom Variable",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Caster}}"
                                     },
-                                    {
-                                      "name": "Use Ability Option",
-                                      "skillName": "Skill01"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "name": "SWITCH CONDITON",
-                                  "caseValueIs": 2,
-                                  "execute": [
-                                    {
-                                      "name": "Declare Custom Variable",
-                                      "target": {
-                                        "name": "Target Name",
-                                        "target": "{{Caster}}"
-                                      },
-                                      "scope": "TargetEntity",
-                                      "variableName": "Sequence_i",
-                                      "value": 1
+                                    "scope": "TargetEntity",
+                                    "variableName": "Sequence_i",
+                                    "value": 1
+                                  },
+                                  {
+                                    "name": "Use Ability Option",
+                                    "skillName": "Skill02"
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "SWITCH CONDITON",
+                                "caseValueIs": 3,
+                                "execute": [
+                                  {
+                                    "name": "Declare Custom Variable",
+                                    "target": {
+                                      "name": "Target Name",
+                                      "target": "{{Caster}}"
                                     },
-                                    {
-                                      "name": "Use Ability Option",
-                                      "skillName": "Skill02"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "name": "SWITCH CONDITON",
-                                  "caseValueIs": 3,
-                                  "execute": [
-                                    {
-                                      "name": "Declare Custom Variable",
-                                      "target": {
-                                        "name": "Target Name",
-                                        "target": "{{Caster}}"
-                                      },
-                                      "scope": "TargetEntity",
-                                      "variableName": "Sequence_i",
-                                      "value": 1
-                                    },
-                                    {
-                                      "name": "Use Ability Option",
-                                      "skillName": "Skill03"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                                    "scope": "TargetEntity",
+                                    "variableName": "Sequence_i",
+                                    "value": 1
+                                  },
+                                  {
+                                    "name": "Use Ability Option",
+                                    "skillName": "Skill03"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,
@@ -627,98 +617,96 @@ const configAbility = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkillCondition03",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag"
+              "optionName": "UseSkillCondition03",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "SWITCH",
-                      "switchValue": {
-                        "operator": "Variables[0] (AIFlag) || RETURN",
-                        "displayLines": "AIFlag",
-                        "constants": [],
-                        "variables": [
-                          "AIFlag"
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag"
+                  },
+                  {
+                    "name": "SWITCH",
+                    "switchValue": {
+                      "operator": "Variables[0] (ForwardReverseFlag) || RETURN",
+                      "displayLines": "ForwardReverseFlag",
+                      "constants": [],
+                      "variables": [
+                        "ForwardReverseFlag"
+                      ]
+                    },
+                    "caseEvents": [
+                      {
+                        "name": "SWITCH CONDITON",
+                        "caseValueIs": 1,
+                        "execute": [
+                          {
+                            "name": "Declare Custom Variable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
+                            },
+                            "scope": "TargetEntity",
+                            "variableName": "Sequence_i",
+                            "value": 1
+                          },
+                          {
+                            "name": "Use Ability Option",
+                            "skillName": "Skill01"
+                          }
                         ]
                       },
-                      "caseEvents": [
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 1,
-                          "execute": [
-                            {
-                              "name": "Declare Custom Variable",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "scope": "TargetEntity",
-                              "variableName": "Sequence_i",
-                              "value": 1
+                      {
+                        "name": "SWITCH CONDITON",
+                        "caseValueIs": 2,
+                        "execute": [
+                          {
+                            "name": "Declare Custom Variable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
                             },
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill01"
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 2,
-                          "execute": [
-                            {
-                              "name": "Declare Custom Variable",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "scope": "TargetEntity",
-                              "variableName": "Sequence_i",
-                              "value": 1
+                            "scope": "TargetEntity",
+                            "variableName": "Sequence_i",
+                            "value": 1
+                          },
+                          {
+                            "name": "Use Ability Option",
+                            "skillName": "Skill02"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "SWITCH CONDITON",
+                        "caseValueIs": 3,
+                        "execute": [
+                          {
+                            "name": "Declare Custom Variable",
+                            "target": {
+                              "name": "Target Name",
+                              "target": "{{Caster}}"
                             },
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill02"
-                            }
-                          ]
-                        },
-                        {
-                          "name": "SWITCH CONDITON",
-                          "caseValueIs": 3,
-                          "execute": [
-                            {
-                              "name": "Declare Custom Variable",
-                              "target": {
-                                "name": "Target Name",
-                                "target": "{{Caster}}"
-                              },
-                              "scope": "TargetEntity",
-                              "variableName": "Sequence_i",
-                              "value": 1
-                            },
-                            {
-                              "name": "Use Ability Option",
-                              "skillName": "Skill03"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                            "scope": "TargetEntity",
+                            "variableName": "Sequence_i",
+                            "value": 1
+                          },
+                          {
+                            "name": "Use Ability Option",
+                            "skillName": "Skill03"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,
@@ -745,8 +733,8 @@ const configAbility = {
               ]
             }
           ],
-          "type": "DefaultDSE",
-          "check": [
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 1,

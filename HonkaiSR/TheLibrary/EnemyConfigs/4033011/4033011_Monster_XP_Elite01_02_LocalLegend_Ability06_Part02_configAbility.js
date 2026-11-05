@@ -20,7 +20,7 @@ const configAbility = {
             "name": "Compare: Target Count",
             "target": {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster's Minions}}"
@@ -109,7 +109,7 @@ const configAbility = {
                 "name": "Compare: Target Count",
                 "target": {
                   "name": "Target Sequence",
-                  "Sequence": [
+                  "TargetList": [
                     {
                       "name": "Target Name",
                       "target": "{{Caster's Minions}}"
@@ -175,7 +175,7 @@ const configAbility = {
             "name": "Compare: Target Count",
             "target": {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster's Minions}}"
@@ -239,7 +239,7 @@ const configAbility = {
             "name": "Compare: Target Count",
             "target": {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster's Minions}}"
@@ -310,7 +310,7 @@ const configAbility = {
             "name": "Compare: Target Count",
             "target": {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster's Minions}}"
@@ -374,7 +374,7 @@ const configAbility = {
             "name": "Compare: Target Count",
             "target": {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster's Minions}}"
@@ -438,7 +438,7 @@ const configAbility = {
             "name": "Compare: Target Count",
             "target": {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster's Minions}}"
@@ -502,7 +502,7 @@ const configAbility = {
             "name": "Compare: Target Count",
             "target": {
               "name": "Target Sequence",
-              "Sequence": [
+              "TargetList": [
                 {
                   "name": "Target Name",
                   "target": "{{Caster's Minions}}"

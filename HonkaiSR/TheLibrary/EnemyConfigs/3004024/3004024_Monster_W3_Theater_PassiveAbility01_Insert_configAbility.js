@@ -215,7 +215,7 @@ const configAbility = {
         "name": "Has Modifier",
         "target": {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             {
               "name": "Target Name",
               "target": "{{Enemy Team All}}"
@@ -240,7 +240,7 @@ const configAbility = {
           "name": "Define Custom Variable",
           "target": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
@@ -266,7 +266,7 @@ const configAbility = {
           "name": "Define Custom Variable",
           "target": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
@@ -292,7 +292,7 @@ const configAbility = {
           "name": "Remove Events/Bonuses",
           "to": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
@@ -318,7 +318,7 @@ const configAbility = {
           "name": "Define Custom Variable",
           "target": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"

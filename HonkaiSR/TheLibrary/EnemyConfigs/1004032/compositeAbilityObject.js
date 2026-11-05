@@ -2977,68 +2977,66 @@ const compositeAbilityObject = {
           "options": [
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 3
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Sequence",
-                          "Sequence": [
-                            {
-                              "name": "Target Name",
-                              "target": "{{All Team Members(Exclude Self)}}"
-                            },
-                            {
-                              "name": "Target Filter",
-                              "conditions": {
-                                "name": "Enemy ID",
-                                "ID": 100203010,
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "characterName": "Silvermane Cannoneer"
-                              }
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 3
+                  },
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Compare: Variable",
+                      "target": {
+                        "name": "Target Sequence",
+                        "TargetList": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{All Team Members(Exclude Self)}}"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "Enemy ID",
+                              "ID": 100203010,
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "characterName": "Silvermane Cannoneer"
                             }
-                          ]
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": "<",
-                        "value2": 3
+                          }
+                        ]
                       },
-                      "passed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill03"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill04"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                      "value1": "TeamCharacterCount",
+                      "compareType": "<",
+                      "value2": 3
+                    },
+                    "passed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill03"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill04"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -3066,96 +3064,94 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 4
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Sequence",
-                          "Sequence": [
-                            {
-                              "name": "Target Name",
-                              "target": "{{All Team Members(Exclude Self)}}"
-                            },
-                            {
-                              "name": "Target Filter",
-                              "conditions": {
-                                "name": "Enemy ID",
-                                "ID": 100203010,
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "characterName": "Silvermane Cannoneer"
-                              }
-                            }
-                          ]
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": ">=",
-                        "value2": 1
-                      },
-                      "passed": [
-                        {
-                          "name": "Choose Ability Target",
-                          "skillName": "Skill02",
-                          "target": {
-                            "name": "Select by Target Pool",
-                            "target": {
-                              "name": "Target Sequence",
-                              "Sequence": [
-                                {
-                                  "name": "Target Name",
-                                  "target": "{{All Team Members(Exclude Self)}}"
-                                },
-                                {
-                                  "name": "Target Filter",
-                                  "conditions": {
-                                    "name": "Enemy ID",
-                                    "ID": 100203010,
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "characterName": "Silvermane Cannoneer"
-                                  }
-                                }
-                              ]
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 4
+                  },
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Compare: Variable",
+                      "target": {
+                        "name": "Target Sequence",
+                        "TargetList": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{All Team Members(Exclude Self)}}"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "Enemy ID",
+                              "ID": 100203010,
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "characterName": "Silvermane Cannoneer"
                             }
                           }
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill02"
+                        ]
+                      },
+                      "value1": "TeamCharacterCount",
+                      "compareType": ">=",
+                      "value2": 1
+                    },
+                    "passed": [
+                      {
+                        "name": "Choose Ability Target",
+                        "skillName": "Skill02",
+                        "target": {
+                          "name": "Select by Target Pool",
+                          "target": {
+                            "name": "Target Sequence",
+                            "TargetList": [
+                              {
+                                "name": "Target Name",
+                                "target": "{{All Team Members(Exclude Self)}}"
+                              },
+                              {
+                                "name": "Target Filter",
+                                "conditions": {
+                                  "name": "Enemy ID",
+                                  "ID": 100203010,
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
+                                  "characterName": "Silvermane Cannoneer"
+                                }
+                              }
+                            ]
+                          }
                         }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill04"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill02"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill04"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -3183,68 +3179,66 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 5
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Sequence",
-                          "Sequence": [
-                            {
-                              "name": "Target Name",
-                              "target": "{{All Team Members(Exclude Self)}}"
-                            },
-                            {
-                              "name": "Target Filter",
-                              "conditions": {
-                                "name": "Enemy ID",
-                                "ID": 100203010,
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "characterName": "Silvermane Cannoneer"
-                              }
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 5
+                  },
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Compare: Variable",
+                      "target": {
+                        "name": "Target Sequence",
+                        "TargetList": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{All Team Members(Exclude Self)}}"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "Enemy ID",
+                              "ID": 100203010,
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "characterName": "Silvermane Cannoneer"
                             }
-                          ]
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": "<",
-                        "value2": 3
+                          }
+                        ]
                       },
-                      "passed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill03"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill04"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                      "value1": "TeamCharacterCount",
+                      "compareType": "<",
+                      "value2": 3
+                    },
+                    "passed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill03"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill04"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -3272,30 +3266,28 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 6
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 6
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -3323,30 +3315,28 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 7
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 7
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -3374,96 +3364,94 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 2
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Sequence",
-                          "Sequence": [
-                            {
-                              "name": "Target Name",
-                              "target": "{{All Team Members(Exclude Self)}}"
-                            },
-                            {
-                              "name": "Target Filter",
-                              "conditions": {
-                                "name": "Enemy ID",
-                                "ID": 100203010,
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "characterName": "Silvermane Cannoneer"
-                              }
-                            }
-                          ]
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": ">=",
-                        "value2": 1
-                      },
-                      "passed": [
-                        {
-                          "name": "Choose Ability Target",
-                          "skillName": "Skill02",
-                          "target": {
-                            "name": "Select by Target Pool",
-                            "target": {
-                              "name": "Target Sequence",
-                              "Sequence": [
-                                {
-                                  "name": "Target Name",
-                                  "target": "{{All Team Members(Exclude Self)}}"
-                                },
-                                {
-                                  "name": "Target Filter",
-                                  "conditions": {
-                                    "name": "Enemy ID",
-                                    "ID": 100203010,
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "characterName": "Silvermane Cannoneer"
-                                  }
-                                }
-                              ]
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 2
+                  },
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Compare: Variable",
+                      "target": {
+                        "name": "Target Sequence",
+                        "TargetList": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{All Team Members(Exclude Self)}}"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "Enemy ID",
+                              "ID": 100203010,
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "characterName": "Silvermane Cannoneer"
                             }
                           }
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill02"
+                        ]
+                      },
+                      "value1": "TeamCharacterCount",
+                      "compareType": ">=",
+                      "value2": 1
+                    },
+                    "passed": [
+                      {
+                        "name": "Choose Ability Target",
+                        "skillName": "Skill02",
+                        "target": {
+                          "name": "Select by Target Pool",
+                          "target": {
+                            "name": "Target Sequence",
+                            "TargetList": [
+                              {
+                                "name": "Target Name",
+                                "target": "{{All Team Members(Exclude Self)}}"
+                              },
+                              {
+                                "name": "Target Filter",
+                                "conditions": {
+                                  "name": "Enemy ID",
+                                  "ID": 100203010,
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
+                                  "characterName": "Silvermane Cannoneer"
+                                }
+                              }
+                            ]
+                          }
                         }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill04"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill02"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill04"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -3491,68 +3479,66 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 13
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Sequence",
-                          "Sequence": [
-                            {
-                              "name": "Target Name",
-                              "target": "{{All Team Members(Exclude Self)}}"
-                            },
-                            {
-                              "name": "Target Filter",
-                              "conditions": {
-                                "name": "Enemy ID",
-                                "ID": 100203010,
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "characterName": "Silvermane Cannoneer"
-                              }
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 13
+                  },
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Compare: Variable",
+                      "target": {
+                        "name": "Target Sequence",
+                        "TargetList": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{All Team Members(Exclude Self)}}"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "Enemy ID",
+                              "ID": 100203010,
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "characterName": "Silvermane Cannoneer"
                             }
-                          ]
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": "<",
-                        "value2": 3
+                          }
+                        ]
                       },
-                      "passed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill03"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill04"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                      "value1": "TeamCharacterCount",
+                      "compareType": "<",
+                      "value2": 3
+                    },
+                    "passed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill03"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill04"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -3580,96 +3566,94 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 14
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Sequence",
-                          "Sequence": [
-                            {
-                              "name": "Target Name",
-                              "target": "{{All Team Members(Exclude Self)}}"
-                            },
-                            {
-                              "name": "Target Filter",
-                              "conditions": {
-                                "name": "Enemy ID",
-                                "ID": 100203010,
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "characterName": "Silvermane Cannoneer"
-                              }
-                            }
-                          ]
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": ">=",
-                        "value2": 1
-                      },
-                      "passed": [
-                        {
-                          "name": "Choose Ability Target",
-                          "skillName": "Skill02",
-                          "target": {
-                            "name": "Select by Target Pool",
-                            "target": {
-                              "name": "Target Sequence",
-                              "Sequence": [
-                                {
-                                  "name": "Target Name",
-                                  "target": "{{All Team Members(Exclude Self)}}"
-                                },
-                                {
-                                  "name": "Target Filter",
-                                  "conditions": {
-                                    "name": "Enemy ID",
-                                    "ID": 100203010,
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "characterName": "Silvermane Cannoneer"
-                                  }
-                                }
-                              ]
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 14
+                  },
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Compare: Variable",
+                      "target": {
+                        "name": "Target Sequence",
+                        "TargetList": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{All Team Members(Exclude Self)}}"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "Enemy ID",
+                              "ID": 100203010,
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "characterName": "Silvermane Cannoneer"
                             }
                           }
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill02"
+                        ]
+                      },
+                      "value1": "TeamCharacterCount",
+                      "compareType": ">=",
+                      "value2": 1
+                    },
+                    "passed": [
+                      {
+                        "name": "Choose Ability Target",
+                        "skillName": "Skill02",
+                        "target": {
+                          "name": "Select by Target Pool",
+                          "target": {
+                            "name": "Target Sequence",
+                            "TargetList": [
+                              {
+                                "name": "Target Name",
+                                "target": "{{All Team Members(Exclude Self)}}"
+                              },
+                              {
+                                "name": "Target Filter",
+                                "conditions": {
+                                  "name": "Enemy ID",
+                                  "ID": 100203010,
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
+                                  "characterName": "Silvermane Cannoneer"
+                                }
+                              }
+                            ]
+                          }
                         }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill04"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill02"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill04"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -3697,30 +3681,28 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 12
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill04"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 12
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill04"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -3748,68 +3730,66 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 3
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Sequence",
-                          "Sequence": [
-                            {
-                              "name": "Target Name",
-                              "target": "{{All Team Members(Exclude Self)}}"
-                            },
-                            {
-                              "name": "Target Filter",
-                              "conditions": {
-                                "name": "Enemy ID",
-                                "ID": 100203010,
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "characterName": "Silvermane Cannoneer"
-                              }
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 3
+                  },
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Compare: Variable",
+                      "target": {
+                        "name": "Target Sequence",
+                        "TargetList": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{All Team Members(Exclude Self)}}"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "Enemy ID",
+                              "ID": 100203010,
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "characterName": "Silvermane Cannoneer"
                             }
-                          ]
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": "<",
-                        "value2": 3
+                          }
+                        ]
                       },
-                      "passed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill03"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill04"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                      "value1": "TeamCharacterCount",
+                      "compareType": "<",
+                      "value2": 3
+                    },
+                    "passed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill03"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill04"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -3837,96 +3817,94 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 4
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Sequence",
-                          "Sequence": [
-                            {
-                              "name": "Target Name",
-                              "target": "{{All Team Members(Exclude Self)}}"
-                            },
-                            {
-                              "name": "Target Filter",
-                              "conditions": {
-                                "name": "Enemy ID",
-                                "ID": 100203010,
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "characterName": "Silvermane Cannoneer"
-                              }
-                            }
-                          ]
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": ">=",
-                        "value2": 1
-                      },
-                      "passed": [
-                        {
-                          "name": "Choose Ability Target",
-                          "skillName": "Skill02",
-                          "target": {
-                            "name": "Select by Target Pool",
-                            "target": {
-                              "name": "Target Sequence",
-                              "Sequence": [
-                                {
-                                  "name": "Target Name",
-                                  "target": "{{All Team Members(Exclude Self)}}"
-                                },
-                                {
-                                  "name": "Target Filter",
-                                  "conditions": {
-                                    "name": "Enemy ID",
-                                    "ID": 100203010,
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "characterName": "Silvermane Cannoneer"
-                                  }
-                                }
-                              ]
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 4
+                  },
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Compare: Variable",
+                      "target": {
+                        "name": "Target Sequence",
+                        "TargetList": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{All Team Members(Exclude Self)}}"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "Enemy ID",
+                              "ID": 100203010,
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "characterName": "Silvermane Cannoneer"
                             }
                           }
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill02"
+                        ]
+                      },
+                      "value1": "TeamCharacterCount",
+                      "compareType": ">=",
+                      "value2": 1
+                    },
+                    "passed": [
+                      {
+                        "name": "Choose Ability Target",
+                        "skillName": "Skill02",
+                        "target": {
+                          "name": "Select by Target Pool",
+                          "target": {
+                            "name": "Target Sequence",
+                            "TargetList": [
+                              {
+                                "name": "Target Name",
+                                "target": "{{All Team Members(Exclude Self)}}"
+                              },
+                              {
+                                "name": "Target Filter",
+                                "conditions": {
+                                  "name": "Enemy ID",
+                                  "ID": 100203010,
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
+                                  "characterName": "Silvermane Cannoneer"
+                                }
+                              }
+                            ]
+                          }
                         }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill01"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill02"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill01"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -3954,30 +3932,28 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 5
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill05"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 5
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill05"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -4005,68 +3981,66 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 6
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Sequence",
-                          "Sequence": [
-                            {
-                              "name": "Target Name",
-                              "target": "{{All Team Members(Exclude Self)}}"
-                            },
-                            {
-                              "name": "Target Filter",
-                              "conditions": {
-                                "name": "Enemy ID",
-                                "ID": 100203010,
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "characterName": "Silvermane Cannoneer"
-                              }
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 6
+                  },
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Compare: Variable",
+                      "target": {
+                        "name": "Target Sequence",
+                        "TargetList": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{All Team Members(Exclude Self)}}"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "Enemy ID",
+                              "ID": 100203010,
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "characterName": "Silvermane Cannoneer"
                             }
-                          ]
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": "<",
-                        "value2": 3
+                          }
+                        ]
                       },
-                      "passed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill03"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill04"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                      "value1": "TeamCharacterCount",
+                      "compareType": "<",
+                      "value2": 3
+                    },
+                    "passed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill03"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill04"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -4094,30 +4068,28 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 7
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 7
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -4145,96 +4117,94 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 2
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Sequence",
-                          "Sequence": [
-                            {
-                              "name": "Target Name",
-                              "target": "{{All Team Members(Exclude Self)}}"
-                            },
-                            {
-                              "name": "Target Filter",
-                              "conditions": {
-                                "name": "Enemy ID",
-                                "ID": 100203010,
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "characterName": "Silvermane Cannoneer"
-                              }
-                            }
-                          ]
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": ">=",
-                        "value2": 1
-                      },
-                      "passed": [
-                        {
-                          "name": "Choose Ability Target",
-                          "skillName": "Skill02",
-                          "target": {
-                            "name": "Select by Target Pool",
-                            "target": {
-                              "name": "Target Sequence",
-                              "Sequence": [
-                                {
-                                  "name": "Target Name",
-                                  "target": "{{All Team Members(Exclude Self)}}"
-                                },
-                                {
-                                  "name": "Target Filter",
-                                  "conditions": {
-                                    "name": "Enemy ID",
-                                    "ID": 100203010,
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "characterName": "Silvermane Cannoneer"
-                                  }
-                                }
-                              ]
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 2
+                  },
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Compare: Variable",
+                      "target": {
+                        "name": "Target Sequence",
+                        "TargetList": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{All Team Members(Exclude Self)}}"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "Enemy ID",
+                              "ID": 100203010,
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "characterName": "Silvermane Cannoneer"
                             }
                           }
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill02"
+                        ]
+                      },
+                      "value1": "TeamCharacterCount",
+                      "compareType": ">=",
+                      "value2": 1
+                    },
+                    "passed": [
+                      {
+                        "name": "Choose Ability Target",
+                        "skillName": "Skill02",
+                        "target": {
+                          "name": "Select by Target Pool",
+                          "target": {
+                            "name": "Target Sequence",
+                            "TargetList": [
+                              {
+                                "name": "Target Name",
+                                "target": "{{All Team Members(Exclude Self)}}"
+                              },
+                              {
+                                "name": "Target Filter",
+                                "conditions": {
+                                  "name": "Enemy ID",
+                                  "ID": 100203010,
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
+                                  "characterName": "Silvermane Cannoneer"
+                                }
+                              }
+                            ]
+                          }
                         }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill04"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill02"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill04"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -4262,68 +4232,66 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 13
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Sequence",
-                          "Sequence": [
-                            {
-                              "name": "Target Name",
-                              "target": "{{All Team Members(Exclude Self)}}"
-                            },
-                            {
-                              "name": "Target Filter",
-                              "conditions": {
-                                "name": "Enemy ID",
-                                "ID": 100203010,
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "characterName": "Silvermane Cannoneer"
-                              }
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 13
+                  },
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Compare: Variable",
+                      "target": {
+                        "name": "Target Sequence",
+                        "TargetList": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{All Team Members(Exclude Self)}}"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "Enemy ID",
+                              "ID": 100203010,
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "characterName": "Silvermane Cannoneer"
                             }
-                          ]
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": "<",
-                        "value2": 3
+                          }
+                        ]
                       },
-                      "passed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill03"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill04"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                      "value1": "TeamCharacterCount",
+                      "compareType": "<",
+                      "value2": 3
+                    },
+                    "passed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill03"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill04"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -4351,96 +4319,94 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 14
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Sequence",
-                          "Sequence": [
-                            {
-                              "name": "Target Name",
-                              "target": "{{All Team Members(Exclude Self)}}"
-                            },
-                            {
-                              "name": "Target Filter",
-                              "conditions": {
-                                "name": "Enemy ID",
-                                "ID": 100203010,
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "characterName": "Silvermane Cannoneer"
-                              }
-                            }
-                          ]
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": ">=",
-                        "value2": 1
-                      },
-                      "passed": [
-                        {
-                          "name": "Choose Ability Target",
-                          "skillName": "Skill02",
-                          "target": {
-                            "name": "Select by Target Pool",
-                            "target": {
-                              "name": "Target Sequence",
-                              "Sequence": [
-                                {
-                                  "name": "Target Name",
-                                  "target": "{{All Team Members(Exclude Self)}}"
-                                },
-                                {
-                                  "name": "Target Filter",
-                                  "conditions": {
-                                    "name": "Enemy ID",
-                                    "ID": 100203010,
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "characterName": "Silvermane Cannoneer"
-                                  }
-                                }
-                              ]
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 14
+                  },
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Compare: Variable",
+                      "target": {
+                        "name": "Target Sequence",
+                        "TargetList": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{All Team Members(Exclude Self)}}"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "Enemy ID",
+                              "ID": 100203010,
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "characterName": "Silvermane Cannoneer"
                             }
                           }
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill02"
+                        ]
+                      },
+                      "value1": "TeamCharacterCount",
+                      "compareType": ">=",
+                      "value2": 1
+                    },
+                    "passed": [
+                      {
+                        "name": "Choose Ability Target",
+                        "skillName": "Skill02",
+                        "target": {
+                          "name": "Select by Target Pool",
+                          "target": {
+                            "name": "Target Sequence",
+                            "TargetList": [
+                              {
+                                "name": "Target Name",
+                                "target": "{{All Team Members(Exclude Self)}}"
+                              },
+                              {
+                                "name": "Target Filter",
+                                "conditions": {
+                                  "name": "Enemy ID",
+                                  "ID": 100203010,
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
+                                  "characterName": "Silvermane Cannoneer"
+                                }
+                              }
+                            ]
+                          }
                         }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill04"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill02"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill04"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -4468,30 +4434,28 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 15
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill05"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 15
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill05"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -4519,68 +4483,66 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 16
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Sequence",
-                          "Sequence": [
-                            {
-                              "name": "Target Name",
-                              "target": "{{All Team Members(Exclude Self)}}"
-                            },
-                            {
-                              "name": "Target Filter",
-                              "conditions": {
-                                "name": "Enemy ID",
-                                "ID": 100203010,
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "characterName": "Silvermane Cannoneer"
-                              }
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 16
+                  },
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Compare: Variable",
+                      "target": {
+                        "name": "Target Sequence",
+                        "TargetList": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{All Team Members(Exclude Self)}}"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "Enemy ID",
+                              "ID": 100203010,
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "characterName": "Silvermane Cannoneer"
                             }
-                          ]
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": "<",
-                        "value2": 3
+                          }
+                        ]
                       },
-                      "passed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill03"
-                        }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill04"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                      "value1": "TeamCharacterCount",
+                      "compareType": "<",
+                      "value2": 3
+                    },
+                    "passed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill03"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill04"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -4608,96 +4570,94 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 17
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Sequence",
-                          "Sequence": [
-                            {
-                              "name": "Target Name",
-                              "target": "{{All Team Members(Exclude Self)}}"
-                            },
-                            {
-                              "name": "Target Filter",
-                              "conditions": {
-                                "name": "Enemy ID",
-                                "ID": 100203010,
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "characterName": "Silvermane Cannoneer"
-                              }
-                            }
-                          ]
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": ">=",
-                        "value2": 1
-                      },
-                      "passed": [
-                        {
-                          "name": "Choose Ability Target",
-                          "skillName": "Skill02",
-                          "target": {
-                            "name": "Select by Target Pool",
-                            "target": {
-                              "name": "Target Sequence",
-                              "Sequence": [
-                                {
-                                  "name": "Target Name",
-                                  "target": "{{All Team Members(Exclude Self)}}"
-                                },
-                                {
-                                  "name": "Target Filter",
-                                  "conditions": {
-                                    "name": "Enemy ID",
-                                    "ID": 100203010,
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "characterName": "Silvermane Cannoneer"
-                                  }
-                                }
-                              ]
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 17
+                  },
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Compare: Variable",
+                      "target": {
+                        "name": "Target Sequence",
+                        "TargetList": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{All Team Members(Exclude Self)}}"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "Enemy ID",
+                              "ID": 100203010,
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "characterName": "Silvermane Cannoneer"
                             }
                           }
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill02"
+                        ]
+                      },
+                      "value1": "TeamCharacterCount",
+                      "compareType": ">=",
+                      "value2": 1
+                    },
+                    "passed": [
+                      {
+                        "name": "Choose Ability Target",
+                        "skillName": "Skill02",
+                        "target": {
+                          "name": "Select by Target Pool",
+                          "target": {
+                            "name": "Target Sequence",
+                            "TargetList": [
+                              {
+                                "name": "Target Name",
+                                "target": "{{All Team Members(Exclude Self)}}"
+                              },
+                              {
+                                "name": "Target Filter",
+                                "conditions": {
+                                  "name": "Enemy ID",
+                                  "ID": 100203010,
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
+                                  "characterName": "Silvermane Cannoneer"
+                                }
+                              }
+                            ]
+                          }
                         }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill04"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill02"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill04"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -4725,30 +4685,28 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Declare Custom Variable",
-                      "target": {
-                        "name": "Target Name",
-                        "target": "{{Caster}}"
-                      },
-                      "scope": "TargetEntity",
-                      "variableName": "AIFlag",
-                      "value": 12
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Declare Custom Variable",
+                    "target": {
+                      "name": "Target Name",
+                      "target": "{{Caster}}"
                     },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                    "scope": "TargetEntity",
+                    "variableName": "AIFlag",
+                    "value": 12
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -4776,86 +4734,84 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "IF",
-                      "conditions": {
-                        "name": "Compare: Variable",
-                        "target": {
-                          "name": "Target Sequence",
-                          "Sequence": [
-                            {
-                              "name": "Target Name",
-                              "target": "{{All Team Members(Exclude Self)}}"
-                            },
-                            {
-                              "name": "Target Filter",
-                              "conditions": {
-                                "name": "Enemy ID",
-                                "ID": 100203010,
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{Parameter Target}}"
-                                },
-                                "characterName": "Silvermane Cannoneer"
-                              }
-                            }
-                          ]
-                        },
-                        "value1": "TeamCharacterCount",
-                        "compareType": ">=",
-                        "value2": 1
-                      },
-                      "passed": [
-                        {
-                          "name": "Choose Ability Target",
-                          "skillName": "Skill02",
-                          "target": {
-                            "name": "Select by Target Pool",
-                            "target": {
-                              "name": "Target Sequence",
-                              "Sequence": [
-                                {
-                                  "name": "Target Name",
-                                  "target": "{{All Team Members(Exclude Self)}}"
-                                },
-                                {
-                                  "name": "Target Filter",
-                                  "conditions": {
-                                    "name": "Enemy ID",
-                                    "ID": 100203010,
-                                    "target": {
-                                      "name": "Target Name",
-                                      "target": "{{Parameter Target}}"
-                                    },
-                                    "characterName": "Silvermane Cannoneer"
-                                  }
-                                }
-                              ]
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "IF",
+                    "conditions": {
+                      "name": "Compare: Variable",
+                      "target": {
+                        "name": "Target Sequence",
+                        "TargetList": [
+                          {
+                            "name": "Target Name",
+                            "target": "{{All Team Members(Exclude Self)}}"
+                          },
+                          {
+                            "name": "Target Filter",
+                            "conditions": {
+                              "name": "Enemy ID",
+                              "ID": 100203010,
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{Parameter Target}}"
+                              },
+                              "characterName": "Silvermane Cannoneer"
                             }
                           }
-                        },
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill02"
+                        ]
+                      },
+                      "value1": "TeamCharacterCount",
+                      "compareType": ">=",
+                      "value2": 1
+                    },
+                    "passed": [
+                      {
+                        "name": "Choose Ability Target",
+                        "skillName": "Skill02",
+                        "target": {
+                          "name": "Select by Target Pool",
+                          "target": {
+                            "name": "Target Sequence",
+                            "TargetList": [
+                              {
+                                "name": "Target Name",
+                                "target": "{{All Team Members(Exclude Self)}}"
+                              },
+                              {
+                                "name": "Target Filter",
+                                "conditions": {
+                                  "name": "Enemy ID",
+                                  "ID": 100203010,
+                                  "target": {
+                                    "name": "Target Name",
+                                    "target": "{{Parameter Target}}"
+                                  },
+                                  "characterName": "Silvermane Cannoneer"
+                                }
+                              }
+                            ]
+                          }
                         }
-                      ],
-                      "failed": [
-                        {
-                          "name": "Use Ability Option",
-                          "skillName": "Skill03"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                      },
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill02"
+                      }
+                    ],
+                    "failed": [
+                      {
+                        "name": "Use Ability Option",
+                        "skillName": "Skill03"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,

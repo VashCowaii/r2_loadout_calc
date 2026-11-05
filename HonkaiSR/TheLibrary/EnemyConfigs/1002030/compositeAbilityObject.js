@@ -1129,20 +1129,18 @@ const compositeAbilityObject = {
           "options": [
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill01",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+              "optionName": "UseSkill01",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Value",
                   "skillName": "Skill01",
@@ -1154,20 +1152,18 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill01-2",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+              "optionName": "UseSkill01-2",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -1184,73 +1180,71 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Choose Ability Target",
-                      "skillName": "Skill02",
-                      "target": {
-                        "name": "Create Selection List",
-                        "listType": "OR",
-                        "passed": [
-                          {
-                            "name": "Create Selection List",
-                            "passed": [
-                              {
-                                "name": "Select by Target Pool",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{All Team Members(Exclude Self)}}"
-                                }
-                              },
-                              {
-                                "name": "Select by Enemy ID",
-                                "idList": [
-                                  1002030
-                                ],
-                                "invertCondition": true
-                              },
-                              {
-                                "name": "Select by Modifier Name",
-                                "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]",
-                                "target": null,
-                                "invertCondition": true
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Choose Ability Target",
+                    "skillName": "Skill02",
+                    "target": {
+                      "name": "Create Selection List",
+                      "listType": "OR",
+                      "passed": [
+                        {
+                          "name": "Create Selection List",
+                          "passed": [
+                            {
+                              "name": "Select by Target Pool",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{All Team Members(Exclude Self)}}"
                               }
-                            ]
-                          },
-                          {
-                            "name": "Create Selection List",
-                            "passed": [
-                              {
-                                "name": "Select by Target Pool",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{All Team Members(Exclude Self)}}"
-                                }
-                              },
-                              {
-                                "name": "Select by Modifier Name",
-                                "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]",
-                                "target": null,
-                                "invertCondition": true
+                            },
+                            {
+                              "name": "Select by Enemy ID",
+                              "idList": [
+                                1002030
+                              ],
+                              "invertCondition": true
+                            },
+                            {
+                              "name": "Select by Modifier Name",
+                              "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]",
+                              "target": null,
+                              "invertCondition": true
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Create Selection List",
+                          "passed": [
+                            {
+                              "name": "Select by Target Pool",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{All Team Members(Exclude Self)}}"
                               }
-                            ]
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill02"
+                            },
+                            {
+                              "name": "Select by Modifier Name",
+                              "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]",
+                              "target": null,
+                              "invertCondition": true
+                            }
+                          ]
+                        }
+                      ]
                     }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill02"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,
@@ -1317,20 +1311,18 @@ const compositeAbilityObject = {
           "options": [
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill01",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+              "optionName": "UseSkill01",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Value",
                   "skillName": "Skill01",
@@ -1342,20 +1334,18 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill01-2",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+              "optionName": "UseSkill01-2",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -1372,73 +1362,71 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Choose Ability Target",
-                      "skillName": "Skill02",
-                      "target": {
-                        "name": "Create Selection List",
-                        "listType": "OR",
-                        "passed": [
-                          {
-                            "name": "Create Selection List",
-                            "passed": [
-                              {
-                                "name": "Select by Target Pool",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{All Team Members(Exclude Self)}}"
-                                }
-                              },
-                              {
-                                "name": "Select by Enemy ID",
-                                "idList": [
-                                  1002030
-                                ],
-                                "invertCondition": true
-                              },
-                              {
-                                "name": "Select by Modifier Name",
-                                "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]",
-                                "target": null,
-                                "invertCondition": true
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Choose Ability Target",
+                    "skillName": "Skill02",
+                    "target": {
+                      "name": "Create Selection List",
+                      "listType": "OR",
+                      "passed": [
+                        {
+                          "name": "Create Selection List",
+                          "passed": [
+                            {
+                              "name": "Select by Target Pool",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{All Team Members(Exclude Self)}}"
                               }
-                            ]
-                          },
-                          {
-                            "name": "Create Selection List",
-                            "passed": [
-                              {
-                                "name": "Select by Target Pool",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{All Team Members(Exclude Self)}}"
-                                }
-                              },
-                              {
-                                "name": "Select by Modifier Name",
-                                "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]",
-                                "target": null,
-                                "invertCondition": true
+                            },
+                            {
+                              "name": "Select by Enemy ID",
+                              "idList": [
+                                1002030
+                              ],
+                              "invertCondition": true
+                            },
+                            {
+                              "name": "Select by Modifier Name",
+                              "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]",
+                              "target": null,
+                              "invertCondition": true
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Create Selection List",
+                          "passed": [
+                            {
+                              "name": "Select by Target Pool",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{All Team Members(Exclude Self)}}"
                               }
-                            ]
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill02"
+                            },
+                            {
+                              "name": "Select by Modifier Name",
+                              "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]",
+                              "target": null,
+                              "invertCondition": true
+                            }
+                          ]
+                        }
+                      ]
                     }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill02"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,
@@ -1505,20 +1493,18 @@ const compositeAbilityObject = {
           "options": [
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill01",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+              "optionName": "UseSkill01",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Value",
                   "skillName": "Skill01",
@@ -1530,20 +1516,18 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill01-2",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+              "optionName": "UseSkill01-2",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -1560,73 +1544,71 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Choose Ability Target",
-                      "skillName": "Skill02",
-                      "target": {
-                        "name": "Create Selection List",
-                        "listType": "OR",
-                        "passed": [
-                          {
-                            "name": "Create Selection List",
-                            "passed": [
-                              {
-                                "name": "Select by Target Pool",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{All Team Members(Exclude Self)}}"
-                                }
-                              },
-                              {
-                                "name": "Select by Enemy ID",
-                                "idList": [
-                                  1002030
-                                ],
-                                "invertCondition": true
-                              },
-                              {
-                                "name": "Select by Modifier Name",
-                                "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]",
-                                "target": null,
-                                "invertCondition": true
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Choose Ability Target",
+                    "skillName": "Skill02",
+                    "target": {
+                      "name": "Create Selection List",
+                      "listType": "OR",
+                      "passed": [
+                        {
+                          "name": "Create Selection List",
+                          "passed": [
+                            {
+                              "name": "Select by Target Pool",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{All Team Members(Exclude Self)}}"
                               }
-                            ]
-                          },
-                          {
-                            "name": "Create Selection List",
-                            "passed": [
-                              {
-                                "name": "Select by Target Pool",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{All Team Members(Exclude Self)}}"
-                                }
-                              },
-                              {
-                                "name": "Select by Modifier Name",
-                                "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]",
-                                "target": null,
-                                "invertCondition": true
+                            },
+                            {
+                              "name": "Select by Enemy ID",
+                              "idList": [
+                                1002030
+                              ],
+                              "invertCondition": true
+                            },
+                            {
+                              "name": "Select by Modifier Name",
+                              "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]",
+                              "target": null,
+                              "invertCondition": true
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Create Selection List",
+                          "passed": [
+                            {
+                              "name": "Select by Target Pool",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{All Team Members(Exclude Self)}}"
                               }
-                            ]
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill02"
+                            },
+                            {
+                              "name": "Select by Modifier Name",
+                              "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]",
+                              "target": null,
+                              "invertCondition": true
+                            }
+                          ]
+                        }
+                      ]
                     }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill02"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,
@@ -1693,20 +1675,18 @@ const compositeAbilityObject = {
           "options": [
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill01",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+              "optionName": "UseSkill01",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Value",
                   "skillName": "Skill01",
@@ -1718,20 +1698,18 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill01-2",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill01"
-                    }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+              "optionName": "UseSkill01-2",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill01"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 0.5,
@@ -1748,73 +1726,71 @@ const compositeAbilityObject = {
             },
             {
               "name": "HANDLER OPTION",
-              "option": "UseSkill02",
-              "goal": [
-                {
-                  "name": "Sequence Event",
-                  "passed": [
-                    {
-                      "name": "Choose Ability Target",
-                      "skillName": "Skill02",
-                      "target": {
-                        "name": "Create Selection List",
-                        "listType": "OR",
-                        "passed": [
-                          {
-                            "name": "Create Selection List",
-                            "passed": [
-                              {
-                                "name": "Select by Target Pool",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{All Team Members(Exclude Self)}}"
-                                }
-                              },
-                              {
-                                "name": "Select by Enemy ID",
-                                "idList": [
-                                  1002030
-                                ],
-                                "invertCondition": true
-                              },
-                              {
-                                "name": "Select by Modifier Name",
-                                "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]",
-                                "target": null,
-                                "invertCondition": true
+              "optionName": "UseSkill02",
+              "optionGoal": {
+                "name": "Sequence Event",
+                "passed": [
+                  {
+                    "name": "Choose Ability Target",
+                    "skillName": "Skill02",
+                    "target": {
+                      "name": "Create Selection List",
+                      "listType": "OR",
+                      "passed": [
+                        {
+                          "name": "Create Selection List",
+                          "passed": [
+                            {
+                              "name": "Select by Target Pool",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{All Team Members(Exclude Self)}}"
                               }
-                            ]
-                          },
-                          {
-                            "name": "Create Selection List",
-                            "passed": [
-                              {
-                                "name": "Select by Target Pool",
-                                "target": {
-                                  "name": "Target Name",
-                                  "target": "{{All Team Members(Exclude Self)}}"
-                                }
-                              },
-                              {
-                                "name": "Select by Modifier Name",
-                                "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]",
-                                "target": null,
-                                "invertCondition": true
+                            },
+                            {
+                              "name": "Select by Enemy ID",
+                              "idList": [
+                                1002030
+                              ],
+                              "invertCondition": true
+                            },
+                            {
+                              "name": "Select by Modifier Name",
+                              "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]",
+                              "target": null,
+                              "invertCondition": true
+                            }
+                          ]
+                        },
+                        {
+                          "name": "Create Selection List",
+                          "passed": [
+                            {
+                              "name": "Select by Target Pool",
+                              "target": {
+                                "name": "Target Name",
+                                "target": "{{All Team Members(Exclude Self)}}"
                               }
-                            ]
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "name": "Use Ability Option",
-                      "skillName": "Skill02"
+                            },
+                            {
+                              "name": "Select by Modifier Name",
+                              "modifier": "<a class=\"gModGreen\" id=\"-929204023\">Enemy_W1_Soldier04_AbilityP01_Supported</a>[<span class=\"descriptionNumberColor\">Reinforced</span>]",
+                              "target": null,
+                              "invertCondition": true
+                            }
+                          ]
+                        }
+                      ]
                     }
-                  ]
-                }
-              ],
-              "type": "DefaultDSE",
-              "check": [
+                  },
+                  {
+                    "name": "Use Ability Option",
+                    "skillName": "Skill02"
+                  }
+                ]
+              },
+              "scoreType": "DefaultDSE",
+              "optionCheck": [
                 {
                   "name": "Check Ability Use Condition",
                   "passedValue": 1,

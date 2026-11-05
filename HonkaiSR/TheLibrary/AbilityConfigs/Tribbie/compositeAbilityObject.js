@@ -221,7 +221,7 @@ const compositeAbilityObject = {
                       "name": "Find New Target",
                       "from": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Enemy Team All(with Unselectable)}}"
@@ -275,7 +275,7 @@ const compositeAbilityObject = {
                           "name": "Find New Target",
                           "from": {
                             "name": "Target Sequence",
-                            "Sequence": [
+                            "TargetList": [
                               {
                                 "name": "Target Name",
                                 "target": "{{Enemy Team All(with Unselectable)}}"

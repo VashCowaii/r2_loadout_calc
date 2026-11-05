@@ -1833,7 +1833,7 @@ const compositeAbilityObject = {
               },
               "target": {
                 "name": "Compute Targets",
-                "type": "Intersect",
+                "operationType": "Intersect",
                 "TargetList": [
                   {
                     "name": "Target Name",

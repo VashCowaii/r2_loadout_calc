@@ -25,55 +25,53 @@ const configAbility = {
       "options": [
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill01",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "Monster_W1_Soldier01_03_AICounter_01",
-                    "compareType": "=",
-                    "value2": 5,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "Monster_W1_Soldier01_03_AICounter_01",
-                      "value": 3
-                    }
-                  ]
+          "optionName": "UseSkill01",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "IF",
+                "conditions": {
+                  "name": "Compare: Variable",
+                  "value1": "Monster_W1_Soldier01_03_AICounter_01",
+                  "compareType": "=",
+                  "value2": 5,
+                  "contextScope": "TargetEntity"
                 },
-                {
-                  "name": "IF",
-                  "conditions": {
-                    "name": "Compare: Variable",
-                    "value1": "Monster_W1_Soldier01_03_AICounter_01",
-                    "compareType": "=",
-                    "value2": 6,
-                    "contextScope": "TargetEntity"
-                  },
-                  "passed": [
-                    {
-                      "name": "Define Custom Variable",
-                      "variableName": "Monster_W1_Soldier01_03_AICounter_01",
-                      "value": 4
-                    }
-                  ]
+                "passed": [
+                  {
+                    "name": "Define Custom Variable",
+                    "variableName": "Monster_W1_Soldier01_03_AICounter_01",
+                    "value": 3
+                  }
+                ]
+              },
+              {
+                "name": "IF",
+                "conditions": {
+                  "name": "Compare: Variable",
+                  "value1": "Monster_W1_Soldier01_03_AICounter_01",
+                  "compareType": "=",
+                  "value2": 6,
+                  "contextScope": "TargetEntity"
                 },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill01"
-                }
-              ]
-            }
-          ],
-          "weight": 0.5,
-          "type": "DefaultDSE",
-          "check": [
+                "passed": [
+                  {
+                    "name": "Define Custom Variable",
+                    "variableName": "Monster_W1_Soldier01_03_AICounter_01",
+                    "value": 4
+                  }
+                ]
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill01"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionWeight": 0.5,
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -108,36 +106,34 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill02",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Choose Ability Target",
-                  "skillName": "Skill02",
-                  "target": {
-                    "name": "Select by Enemy ID",
-                    "idList": [
-                      101201012
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "Monster_W1_Soldier01_03_AICounter_01",
-                  "value": 0
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill02"
+          "optionName": "UseSkill02",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Choose Ability Target",
+                "skillName": "Skill02",
+                "target": {
+                  "name": "Select by Enemy ID",
+                  "idList": [
+                    101201012
+                  ]
                 }
-              ]
-            }
-          ],
-          "weight": 0.99,
-          "type": "DefaultDSE",
-          "check": [
+              },
+              {
+                "name": "Define Custom Variable",
+                "variableName": "Monster_W1_Soldier01_03_AICounter_01",
+                "value": 0
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill02"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionWeight": 0.99,
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.99,
@@ -153,36 +149,34 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill02",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Choose Ability Target",
-                  "skillName": "Skill02",
-                  "target": {
-                    "name": "Select by Enemy ID",
-                    "idList": [
-                      101201014
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "Monster_W1_Soldier01_03_AICounter_01",
-                  "value": 1
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill02"
+          "optionName": "UseSkill02",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Choose Ability Target",
+                "skillName": "Skill02",
+                "target": {
+                  "name": "Select by Enemy ID",
+                  "idList": [
+                    101201014
+                  ]
                 }
-              ]
-            }
-          ],
-          "weight": 0.99,
-          "type": "DefaultDSE",
-          "check": [
+              },
+              {
+                "name": "Define Custom Variable",
+                "variableName": "Monster_W1_Soldier01_03_AICounter_01",
+                "value": 1
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill02"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionWeight": 0.99,
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.99,
@@ -198,36 +192,34 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill02",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Choose Ability Target",
-                  "skillName": "Skill02",
-                  "target": {
-                    "name": "Select by Enemy ID",
-                    "idList": [
-                      101201012
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "Monster_W1_Soldier01_03_AICounter_01",
-                  "value": 5
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill02"
+          "optionName": "UseSkill02",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Choose Ability Target",
+                "skillName": "Skill02",
+                "target": {
+                  "name": "Select by Enemy ID",
+                  "idList": [
+                    101201012
+                  ]
                 }
-              ]
-            }
-          ],
-          "weight": 0.99,
-          "type": "DefaultDSE",
-          "check": [
+              },
+              {
+                "name": "Define Custom Variable",
+                "variableName": "Monster_W1_Soldier01_03_AICounter_01",
+                "value": 5
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill02"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionWeight": 0.99,
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.99,
@@ -243,36 +235,34 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill02",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Choose Ability Target",
-                  "skillName": "Skill02",
-                  "target": {
-                    "name": "Select by Enemy ID",
-                    "idList": [
-                      101201014
-                    ]
-                  }
-                },
-                {
-                  "name": "Define Custom Variable",
-                  "variableName": "Monster_W1_Soldier01_03_AICounter_01",
-                  "value": 6
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill02"
+          "optionName": "UseSkill02",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Choose Ability Target",
+                "skillName": "Skill02",
+                "target": {
+                  "name": "Select by Enemy ID",
+                  "idList": [
+                    101201014
+                  ]
                 }
-              ]
-            }
-          ],
-          "weight": 0.99,
-          "type": "DefaultDSE",
-          "check": [
+              },
+              {
+                "name": "Define Custom Variable",
+                "variableName": "Monster_W1_Soldier01_03_AICounter_01",
+                "value": 6
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill02"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionWeight": 0.99,
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.99,

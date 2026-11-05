@@ -271,7 +271,7 @@ const configAbility = {
           "name": "Trigger Ability",
           "from": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{All Team Members(Exclude Self)}}"
@@ -296,7 +296,7 @@ const configAbility = {
           },
           "inherentTarget": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
@@ -320,7 +320,7 @@ const configAbility = {
           "name": "Trigger Ability",
           "from": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{All Team Members(Exclude Self)}}"
@@ -345,7 +345,7 @@ const configAbility = {
           },
           "inherentTarget": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
@@ -370,7 +370,7 @@ const configAbility = {
           "name": "Trigger Ability",
           "from": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{All Team Members(Exclude Self)}}"
@@ -395,7 +395,7 @@ const configAbility = {
           },
           "inherentTarget": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"

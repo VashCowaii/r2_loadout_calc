@@ -20,50 +20,48 @@ const configAbility = {
       "options": [
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill01",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Declare Custom Variable",
-                  "target": {
-                    "name": "Target Name",
-                    "target": "{{Caster}}"
-                  },
-                  "variableName": "AIFlag",
-                  "value": 2
+          "optionName": "UseSkill01",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Declare Custom Variable",
+                "target": {
+                  "name": "Target Name",
+                  "target": "{{Caster}}"
                 },
-                {
-                  "name": "Choose Ability Target",
-                  "skillName": "Skill01",
-                  "target": {
-                    "name": "Create Selection List",
-                    "passed": [
-                      {
-                        "name": "Select by Target Pool",
-                        "target": {
-                          "name": "Target Name",
-                          "target": "{{All Team Members(Exclude Self)}}"
-                        }
-                      },
-                      {
-                        "name": "Select by Modifier Name",
-                        "modifier": "<a class=\"gModGreen\" id=\"831434835\">MModifier_Monster_W4_Scholar_LocalLegend_Selected</a>",
-                        "target": null
+                "variableName": "AIFlag",
+                "value": 2
+              },
+              {
+                "name": "Choose Ability Target",
+                "skillName": "Skill01",
+                "target": {
+                  "name": "Create Selection List",
+                  "passed": [
+                    {
+                      "name": "Select by Target Pool",
+                      "target": {
+                        "name": "Target Name",
+                        "target": "{{All Team Members(Exclude Self)}}"
                       }
-                    ]
-                  }
-                },
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill01"
+                    },
+                    {
+                      "name": "Select by Modifier Name",
+                      "modifier": "<a class=\"gModGreen\" id=\"831434835\">MModifier_Monster_W4_Scholar_LocalLegend_Selected</a>",
+                      "target": null
+                    }
+                  ]
                 }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+              },
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill01"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,
@@ -78,20 +76,18 @@ const configAbility = {
         },
         {
           "name": "HANDLER OPTION",
-          "option": "UseSkill01",
-          "goal": [
-            {
-              "name": "Sequence Event",
-              "passed": [
-                {
-                  "name": "Use Ability Option",
-                  "skillName": "Skill02"
-                }
-              ]
-            }
-          ],
-          "type": "DefaultDSE",
-          "check": [
+          "optionName": "UseSkill01",
+          "optionGoal": {
+            "name": "Sequence Event",
+            "passed": [
+              {
+                "name": "Use Ability Option",
+                "skillName": "Skill02"
+              }
+            ]
+          },
+          "scoreType": "DefaultDSE",
+          "optionCheck": [
             {
               "name": "Check Ability Use Condition",
               "passedValue": 0.5,

@@ -129,7 +129,7 @@ const configAbility = {
         "name": "Compare: Target Count",
         "target": {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             {
               "name": "Target Name",
               "target": "{{Caster's Minions}}"
@@ -273,7 +273,7 @@ const configAbility = {
                   "name": "Find New Target",
                   "from": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Player Team(Exclude Memosprites)}}"
@@ -311,7 +311,7 @@ const configAbility = {
                   "name": "Find New Target",
                   "from": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Player Team(Exclude Memosprites)}}"
@@ -487,7 +487,7 @@ const configAbility = {
                       "name": "Find New Target",
                       "from": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Player Team(Exclude Memosprites)}}"
@@ -571,7 +571,7 @@ const configAbility = {
                       "name": "Find New Target",
                       "from": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Player Team(Exclude Memosprites)}}"
@@ -814,7 +814,7 @@ const configAbility = {
                       "name": "Find New Target",
                       "from": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Player Team(Exclude Memosprites)}}"
@@ -898,7 +898,7 @@ const configAbility = {
                       "name": "Find New Target",
                       "from": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Player Team(Exclude Memosprites)}}"
@@ -1141,7 +1141,7 @@ const configAbility = {
                       "name": "Find New Target",
                       "from": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Player Team(Exclude Memosprites)}}"
@@ -1224,7 +1224,7 @@ const configAbility = {
                       "name": "Find New Target",
                       "from": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Player Team(Exclude Memosprites)}}"

@@ -147,7 +147,7 @@ const configAbility = {
         "name": "Compare: Target Count",
         "target": {
           "name": "Target Sequence",
-          "Sequence": [
+          "TargetList": [
             {
               "name": "Target Name",
               "target": "{{Enemy Team All(with Unselectable)}}"

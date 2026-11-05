@@ -2467,7 +2467,7 @@ const compositeAbilityObject = {
                   "forceAction": true,
                   "castTarget": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"

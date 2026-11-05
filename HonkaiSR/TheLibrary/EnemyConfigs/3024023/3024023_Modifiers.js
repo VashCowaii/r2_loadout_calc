@@ -36,7 +36,7 @@ const configAbility = {
                   "name": "Find New Target",
                   "from": {
                     "name": "Compute Targets",
-                    "type": "Minus",
+                    "operationType": "Minus",
                     "TargetList": [
                       {
                         "name": "Target Name",

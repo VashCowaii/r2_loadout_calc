@@ -956,7 +956,7 @@ const compositeAbilityObject = {
                         "name": "Compare: Target List Entities",
                         "target": {
                           "name": "Target Sequence",
-                          "Sequence": [
+                          "TargetList": [
                             {
                               "name": "Target Name",
                               "target": "{{Enemy Team All}}"
@@ -1016,7 +1016,7 @@ const compositeAbilityObject = {
                           "name": "Find New Target",
                           "from": {
                             "name": "Target Sequence",
-                            "Sequence": [
+                            "TargetList": [
                               {
                                 "name": "Target Name",
                                 "target": "{{Enemy Team All}}"
@@ -1104,7 +1104,7 @@ const compositeAbilityObject = {
                               "name": "Find New Target",
                               "from": {
                                 "name": "Target Sequence",
-                                "Sequence": [
+                                "TargetList": [
                                   {
                                     "name": "Target Name",
                                     "target": "{{Enemy Team All}}"
@@ -1196,7 +1196,7 @@ const compositeAbilityObject = {
                           "name": "Find New Target",
                           "from": {
                             "name": "Target Sequence",
-                            "Sequence": [
+                            "TargetList": [
                               {
                                 "name": "Target Name",
                                 "target": "{{Enemy Team All}}"
@@ -1355,7 +1355,7 @@ const compositeAbilityObject = {
                         "name": "Compare: Target List Entities",
                         "target": {
                           "name": "Target Sequence",
-                          "Sequence": [
+                          "TargetList": [
                             {
                               "name": "Target Name",
                               "target": "{{Enemy Team All}}"
@@ -1415,7 +1415,7 @@ const compositeAbilityObject = {
                           "name": "Find New Target",
                           "from": {
                             "name": "Target Sequence",
-                            "Sequence": [
+                            "TargetList": [
                               {
                                 "name": "Target Name",
                                 "target": "{{Enemy Team All}}"
@@ -1503,7 +1503,7 @@ const compositeAbilityObject = {
                               "name": "Find New Target",
                               "from": {
                                 "name": "Target Sequence",
-                                "Sequence": [
+                                "TargetList": [
                                   {
                                     "name": "Target Name",
                                     "target": "{{Enemy Team All}}"
@@ -1595,7 +1595,7 @@ const compositeAbilityObject = {
                           "name": "Find New Target",
                           "from": {
                             "name": "Target Sequence",
-                            "Sequence": [
+                            "TargetList": [
                               {
                                 "name": "Target Name",
                                 "target": "{{Enemy Team All}}"
@@ -2192,7 +2192,7 @@ const compositeAbilityObject = {
                         "name": "Compare: Target List Entities",
                         "target": {
                           "name": "Target Sequence",
-                          "Sequence": [
+                          "TargetList": [
                             {
                               "name": "Target Name",
                               "target": "{{Enemy Team All}}"
@@ -2252,7 +2252,7 @@ const compositeAbilityObject = {
                           "name": "Find New Target",
                           "from": {
                             "name": "Target Sequence",
-                            "Sequence": [
+                            "TargetList": [
                               {
                                 "name": "Target Name",
                                 "target": "{{Enemy Team All}}"
@@ -2340,7 +2340,7 @@ const compositeAbilityObject = {
                               "name": "Find New Target",
                               "from": {
                                 "name": "Target Sequence",
-                                "Sequence": [
+                                "TargetList": [
                                   {
                                     "name": "Target Name",
                                     "target": "{{Enemy Team All}}"
@@ -2432,7 +2432,7 @@ const compositeAbilityObject = {
                           "name": "Find New Target",
                           "from": {
                             "name": "Target Sequence",
-                            "Sequence": [
+                            "TargetList": [
                               {
                                 "name": "Target Name",
                                 "target": "{{Enemy Team All}}"
@@ -2722,7 +2722,7 @@ const compositeAbilityObject = {
                   "name": "Add Events/Bonuses",
                   "to": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Player Team All(with Unselectable)V2}}.[[removeBattleEvents]]"
@@ -5498,7 +5498,7 @@ const compositeAbilityObject = {
                       "show": "Hide",
                       "target": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Player's Aim Primary-Target}}"
@@ -5518,7 +5518,7 @@ const compositeAbilityObject = {
                       "show": "Hide",
                       "target": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Hostile Entities(AOE)}}"
@@ -5548,7 +5548,7 @@ const compositeAbilityObject = {
                                       "name": "Is Part Of",
                                       "of": {
                                         "name": "Target Sequence",
-                                        "Sequence": [
+                                        "TargetList": [
                                           {
                                             "name": "Target Name",
                                             "target": "{{Player's Aim Primary-Target}}"
@@ -5566,7 +5566,7 @@ const compositeAbilityObject = {
                                       "name": "Is Part Of",
                                       "of": {
                                         "name": "Target Sequence",
-                                        "Sequence": [
+                                        "TargetList": [
                                           {
                                             "name": "Target Name",
                                             "target": "{{Player's Aim Primary-Target}}"
@@ -5576,7 +5576,7 @@ const compositeAbilityObject = {
                                       },
                                       "target": {
                                         "name": "Target Sequence",
-                                        "Sequence": [
+                                        "TargetList": [
                                           {
                                             "name": "Target Name",
                                             "target": "{{Parameter Target}}"
@@ -5605,7 +5605,7 @@ const compositeAbilityObject = {
                       "show": "Hide",
                       "target": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Hostile Entities(AOE)}}"
@@ -5858,7 +5858,7 @@ const compositeAbilityObject = {
                       "name": "Find New Target",
                       "from": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Attack Targets of Modifier Holder}}"
@@ -6080,7 +6080,7 @@ const compositeAbilityObject = {
                   "name": "Add Events/Bonuses",
                   "to": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Battle Event List}}"
@@ -6321,7 +6321,7 @@ const compositeAbilityObject = {
                   "name": "Add Events/Bonuses",
                   "to": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{Player Team All}}"
@@ -6525,7 +6525,7 @@ const compositeAbilityObject = {
                       "name": "Find New Target",
                       "from": {
                         "name": "Target Sequence",
-                        "Sequence": [
+                        "TargetList": [
                           {
                             "name": "Target Name",
                             "target": "{{Enemy Team All}}"
@@ -6686,7 +6686,7 @@ const compositeAbilityObject = {
           "name": "Find New Target",
           "from": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
@@ -6745,7 +6745,7 @@ const compositeAbilityObject = {
               "name": "Find New Target",
               "from": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
@@ -6829,7 +6829,7 @@ const compositeAbilityObject = {
           "name": "Find New Target",
           "from": {
             "name": "Target Sequence",
-            "Sequence": [
+            "TargetList": [
               {
                 "name": "Target Name",
                 "target": "{{Enemy Team All}}"
@@ -7336,7 +7336,7 @@ const compositeAbilityObject = {
                   "name": "Find New Target",
                   "from": {
                     "name": "Target Sequence",
-                    "Sequence": [
+                    "TargetList": [
                       {
                         "name": "Target Name",
                         "target": "{{ST and Blast}}"
@@ -8256,7 +8256,7 @@ const compositeAbilityObject = {
               "name": "Add Events/Bonuses",
               "to": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
@@ -8410,7 +8410,7 @@ const compositeAbilityObject = {
               "name": "Add Events/Bonuses",
               "to": {
                 "name": "Target Sequence",
-                "Sequence": [
+                "TargetList": [
                   {
                     "name": "Target Name",
                     "target": "{{Enemy Team All}}"
