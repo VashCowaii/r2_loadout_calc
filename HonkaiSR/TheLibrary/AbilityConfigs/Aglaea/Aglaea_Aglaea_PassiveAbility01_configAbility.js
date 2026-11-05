@@ -156,6 +156,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
@@ -224,8 +225,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -80
+          ]
         }
       ]
     }

@@ -319,6 +319,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
@@ -348,8 +349,7 @@ const compositeAbilityObject = {
                     }
                   }
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }

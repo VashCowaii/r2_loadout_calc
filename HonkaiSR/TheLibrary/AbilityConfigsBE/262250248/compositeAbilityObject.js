@@ -2959,6 +2959,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -2968,8 +2969,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-759863582\">BoxingGym_SPRecovery</a>"
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         }
@@ -3610,6 +3610,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "IF",
@@ -3634,8 +3635,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         }
@@ -3664,6 +3664,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "IF",
@@ -3684,8 +3685,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         }
@@ -3714,6 +3714,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Find New Target",
@@ -3738,8 +3739,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         }
@@ -4024,6 +4024,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Find New Target",
@@ -4055,8 +4056,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         }
@@ -4405,6 +4405,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "IF",
@@ -4423,8 +4424,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         }
@@ -4453,6 +4453,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Find New Target",
@@ -4473,8 +4474,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         }

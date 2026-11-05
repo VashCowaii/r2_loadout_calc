@@ -275,13 +275,13 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -55,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"-1400233758\">SilverWolf999_Eidolon2InsertRetarget</a>"
                 }
-              ],
-              "priorityLevel": -55
+              ]
             },
             {
               "eventTrigger": "Custom Event",
@@ -533,13 +533,13 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -55,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"-180588390\">SilverWolf999_InsertRetarget</a>"
                 }
-              ],
-              "priorityLevel": -55
+              ]
             },
             {
               "eventTrigger": "Custom Event",
@@ -808,10 +808,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": 200,
               "execute": [
                 "Modifier Deletes Itself"
-              ],
-              "priorityLevel": 200
+              ]
             }
           ]
         },
@@ -840,13 +840,13 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -55,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"-180588390\">SilverWolf999_InsertRetarget</a>"
                 }
-              ],
-              "priorityLevel": -55
+              ]
             },
             {
               "eventTrigger": "Custom Event",
@@ -3305,6 +3305,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -93,
               "execute": [
                 {
                   "name": "Add Battle Event",
@@ -3313,8 +3314,7 @@ const compositeAbilityObject = {
                   "variables": null
                 },
                 "Modifier Deletes Itself"
-              ],
-              "priorityLevel": -93
+              ]
             }
           ]
         }
@@ -3873,6 +3873,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -55,
               "execute": [
                 {
                   "name": "Inject Ability Use",
@@ -3890,8 +3891,7 @@ const compositeAbilityObject = {
                   "showInActionOrder": true,
                   "allowAbilityTriggers": false
                 }
-              ],
-              "priorityLevel": -55
+              ]
             }
           ]
         }

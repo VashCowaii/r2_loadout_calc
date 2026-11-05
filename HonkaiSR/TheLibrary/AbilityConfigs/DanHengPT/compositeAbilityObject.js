@@ -1299,6 +1299,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -55,
               "execute": [
                 {
                   "name": "Update Ability Properties",
@@ -1338,8 +1339,7 @@ const compositeAbilityObject = {
                   "afterInjection": [],
                   "runsAfterBattleEnd": true
                 }
-              ],
-              "priorityLevel": -55
+              ]
             }
           ]
         }
@@ -2361,6 +2361,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -2391,8 +2392,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ],
           "variableValueChange": [

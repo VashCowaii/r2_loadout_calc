@@ -14,6 +14,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": 100,
           "execute": [
             {
               "name": "Remove Events/Bonuses",
@@ -59,8 +60,7 @@ const configAbility = {
               "trigger": "SpEff_Trigger"
             },
             "Modifier Deletes Itself"
-          ],
-          "priorityLevel": 100
+          ]
         }
       ]
     },

@@ -317,13 +317,13 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": -11,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"-1083830155\">W4_Claymore_01_LocalLegend_WhiteMonst</a>"
                 }
-              ],
-              "priorityLevel": -11
+              ]
             },
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -360,13 +360,13 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": -11,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"1927449491\">W4_Claymore_01_LocalLegend_BlackMonst</a>"
                 }
-              ],
-              "priorityLevel": -11
+              ]
             },
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1220,6 +1220,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "IF",
@@ -1296,8 +1297,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             },
             {
               "eventTrigger": "When Modifier is Added [Owner]",
@@ -1805,6 +1805,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "IF",
@@ -1929,8 +1930,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         },
@@ -1940,6 +1940,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "IF",
@@ -2189,8 +2190,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         },
@@ -2364,6 +2364,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "IF",
@@ -2488,8 +2489,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         },
@@ -2499,6 +2499,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "IF",
@@ -2744,8 +2745,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         },
@@ -2809,6 +2809,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Inject Ability Use",
@@ -2818,8 +2819,7 @@ const compositeAbilityObject = {
                   "showInActionOrder": true,
                   "allowAbilityTriggers": false
                 }
-              ],
-              "priorityLevel": -90
+              ]
             },
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -4587,6 +4587,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "IF",
@@ -4714,8 +4715,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             },
             {
               "eventTrigger": "Being Attacked [Owner]: End",

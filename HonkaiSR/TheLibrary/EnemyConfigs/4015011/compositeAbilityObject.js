@@ -1015,6 +1015,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -50,
               "execute": [
                 {
                   "name": "IF",
@@ -1076,8 +1077,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -50
+              ]
             }
           ]
         },
@@ -4888,6 +4888,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": -10,
               "execute": [
                 {
                   "name": "Define Custom Variable with Copy",
@@ -4936,8 +4937,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"735847061\">Modifier_Monster_W4_DawnsEye_WheaterSunnyUIController</a>",
                   "casterAssign": "TargetSelf"
                 }
-              ],
-              "priorityLevel": -10
+              ]
             }
           ]
         },
@@ -6055,6 +6055,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
@@ -6278,8 +6279,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         }
@@ -7492,6 +7492,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Find New Target",
@@ -7588,8 +7589,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         }

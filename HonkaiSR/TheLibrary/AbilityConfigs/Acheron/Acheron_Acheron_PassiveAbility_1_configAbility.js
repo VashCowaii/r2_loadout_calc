@@ -183,6 +183,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -210,8 +211,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-67963083\">Acheron_Eidolon4_Listen_OnCharacterCreate</a>"
             }
-          ],
-          "priorityLevel": -80
+          ]
         }
       ]
     },
@@ -525,6 +525,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -542,8 +543,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-318443993\">Acheron_DebuffSpecialMark01_Empty</a>"
             }
-          ],
-          "priorityLevel": -80
+          ]
         },
         {
           "eventTrigger": "When Stacking Modifier Instance [Anyone]",

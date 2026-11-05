@@ -3275,13 +3275,13 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"-712201001\">Month_40_AddModifier</a>"
                 }
-              ],
-              "priorityLevel": -90
+              ]
             },
             {
               "eventTrigger": "Battle Event/Summon Created [Anyone]",

@@ -21,6 +21,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "Assign Target Battle-Location",
@@ -30,8 +31,7 @@ const configAbility = {
               },
               "row": 1
             }
-          ],
-          "priorityLevel": -90
+          ]
         }
       ]
     }

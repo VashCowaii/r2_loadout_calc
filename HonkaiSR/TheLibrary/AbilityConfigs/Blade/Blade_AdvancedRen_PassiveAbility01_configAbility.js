@@ -148,6 +148,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Dealt Damage while Crowd/Mind Controlled [Anyone]",
+          "priorityLevel": -100,
           "execute": [
             {
               "name": "IF",
@@ -172,8 +173,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -100
+          ]
         },
         {
           "eventTrigger": "Dealt Damage (END) while Crowd/Mind Controlled [Anyone]",
@@ -547,6 +547,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Define Custom Variable",
@@ -570,8 +571,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -80
+          ]
         },
         {
           "eventTrigger": "Custom Event",

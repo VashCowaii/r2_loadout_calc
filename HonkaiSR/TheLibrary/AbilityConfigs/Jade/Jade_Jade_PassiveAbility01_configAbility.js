@@ -657,6 +657,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -666,8 +667,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"477418814\">Jade_Passive_contract</a>"
             }
-          ],
-          "priorityLevel": -80
+          ]
         },
         {
           "eventTrigger": "Custom Event",

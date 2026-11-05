@@ -189,13 +189,13 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"-1047911609\">Harscyline_PointB3_Sub</a>"
             }
-          ],
-          "priorityLevel": -80
+          ]
         }
       ],
       "modifierFunctions": [
@@ -500,6 +500,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "IF",
@@ -570,8 +571,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -80
+          ]
         }
       ]
     }

@@ -2108,6 +2108,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -2142,8 +2143,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         },
@@ -2153,6 +2153,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -60,
               "execute": [
                 {
                   "name": "IF",
@@ -2294,8 +2295,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -60
+              ]
             }
           ]
         }
@@ -2681,6 +2681,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -2690,8 +2691,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-200121332\">Rappa_Break_Modifier</a>"
                 }
-              ],
-              "priorityLevel": -80
+              ]
             },
             {
               "eventTrigger": "Ultimate Prep-Phase [Anyone]",

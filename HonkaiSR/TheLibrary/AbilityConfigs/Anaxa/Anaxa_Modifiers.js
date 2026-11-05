@@ -252,13 +252,13 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -55,
           "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"1862868553\">Anaxa_InsertRetarget</a>"
             }
-          ],
-          "priorityLevel": -55
+          ]
         },
         {
           "eventTrigger": "Custom Event",
@@ -462,6 +462,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": 200,
           "execute": [
             {
               "name": "IF",
@@ -482,8 +483,7 @@ const configAbility = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "priorityLevel": 200
+          ]
         },
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

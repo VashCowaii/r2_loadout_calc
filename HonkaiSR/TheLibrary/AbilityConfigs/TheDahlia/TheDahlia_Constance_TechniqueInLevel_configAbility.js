@@ -39,6 +39,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
+          "priorityLevel": 100,
           "execute": [
             {
               "name": "Use Custom Character Function",
@@ -102,8 +103,7 @@ const configAbility = {
               ]
             },
             "Modifier Deletes Itself"
-          ],
-          "priorityLevel": 100
+          ]
         },
         {
           "eventTrigger": "When Modifier is Added [Owner]",
@@ -197,6 +197,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -59,
           "execute": [
             {
               "name": "Find New Target",
@@ -225,8 +226,7 @@ const configAbility = {
               ]
             },
             "Modifier Deletes Itself"
-          ],
-          "priorityLevel": -59
+          ]
         }
       ]
     },
@@ -236,6 +236,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "IF",
@@ -311,8 +312,7 @@ const configAbility = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "priorityLevel": -80
+          ]
         }
       ]
     }

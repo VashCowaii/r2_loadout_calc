@@ -242,7 +242,7 @@ const configAbility = {
                 "value2": 1,
                 "contextScope": "TargetEntity"
               },
-              "execute": [
+              "runIfPass": [
                 {
                   "name": "Define Custom Variable",
                   "variableName": "W3_Sunday_00_Skill09_Round",

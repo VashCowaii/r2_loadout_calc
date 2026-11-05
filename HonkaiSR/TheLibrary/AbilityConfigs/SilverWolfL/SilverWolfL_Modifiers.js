@@ -217,13 +217,13 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -55,
           "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"-1400233758\">SilverWolf999_Eidolon2InsertRetarget</a>"
             }
-          ],
-          "priorityLevel": -55
+          ]
         },
         {
           "eventTrigger": "Custom Event",
@@ -475,13 +475,13 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -55,
           "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"-180588390\">SilverWolf999_InsertRetarget</a>"
             }
-          ],
-          "priorityLevel": -55
+          ]
         },
         {
           "eventTrigger": "Custom Event",
@@ -750,10 +750,10 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": 200,
           "execute": [
             "Modifier Deletes Itself"
-          ],
-          "priorityLevel": 200
+          ]
         }
       ]
     },
@@ -782,13 +782,13 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -55,
           "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"-180588390\">SilverWolf999_InsertRetarget</a>"
             }
-          ],
-          "priorityLevel": -55
+          ]
         },
         {
           "eventTrigger": "Custom Event",

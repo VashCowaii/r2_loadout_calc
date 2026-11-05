@@ -14,6 +14,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -55,
           "execute": [
             {
               "name": "Inject Ability Use",
@@ -45,8 +46,7 @@ const configAbility = {
               "modifierName": "<a class=\"gModGreen\" id=\"-675119017\">MAssistant_Trigger_OnAfterTechniqueUsage</a>",
               "function": "Add"
             }
-          ],
-          "priorityLevel": -55
+          ]
         }
       ]
     },

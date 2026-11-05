@@ -2643,6 +2643,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Attack DMG End [Owner]",
+              "priorityLevel": -100,
               "execute": [
                 {
                   "name": "IF",
@@ -2750,8 +2751,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -100
+              ]
             },
             {
               "eventTrigger": "Being Attacked [Owner]: End",
@@ -2957,6 +2957,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -79,
               "execute": [
                 {
                   "name": "IF",
@@ -3145,8 +3146,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -79
+              ]
             }
           ]
         }
@@ -3187,6 +3187,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -3215,8 +3216,7 @@ const compositeAbilityObject = {
                   }
                 },
                 "Modifier Deletes Itself"
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }
@@ -3248,6 +3248,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -3276,8 +3277,7 @@ const compositeAbilityObject = {
                   }
                 },
                 "Modifier Deletes Itself"
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }
@@ -4964,6 +4964,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -4992,8 +4993,7 @@ const compositeAbilityObject = {
                   }
                 },
                 "Modifier Deletes Itself"
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }

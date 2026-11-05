@@ -1451,6 +1451,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -1506,8 +1507,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         },
@@ -2700,6 +2700,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -60,
               "execute": [
                 {
                   "name": "IF",
@@ -2852,8 +2853,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-115192964\">Acheron_TechniqueWeakType_BUFF</a>"
                 }
-              ],
-              "priorityLevel": -60
+              ]
             }
           ]
         }
@@ -3050,6 +3050,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -3077,8 +3078,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-67963083\">Acheron_Eidolon4_Listen_OnCharacterCreate</a>"
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         },
@@ -3392,6 +3392,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -3409,8 +3410,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-318443993\">Acheron_DebuffSpecialMark01_Empty</a>"
                 }
-              ],
-              "priorityLevel": -80
+              ]
             },
             {
               "eventTrigger": "When Stacking Modifier Instance [Anyone]",

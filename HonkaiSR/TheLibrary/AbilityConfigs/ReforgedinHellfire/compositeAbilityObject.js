@@ -198,14 +198,14 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Define Custom Variable",
                   "variableName": "_WaveConut",
                   "value": 0
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }

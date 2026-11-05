@@ -1091,6 +1091,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Dealt Damage while Crowd/Mind Controlled [Anyone]",
+          "priorityLevel": -100,
           "execute": [
             {
               "name": "IF",
@@ -1115,8 +1116,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -100
+          ]
         },
         {
           "eventTrigger": "Dealt Damage (END) while Crowd/Mind Controlled [Anyone]",
@@ -1237,6 +1237,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Receiving Heal Start [Owner]",
+          "priorityLevel": 200,
           "execute": [
             {
               "name": "Define Custom Variable with Healing",
@@ -1262,8 +1263,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": 200
+          ]
         },
         {
           "eventTrigger": "Receiving Heal End [Owner]",

@@ -143,6 +143,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "IF",
@@ -200,8 +201,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -90
+          ]
         }
       ]
     },
@@ -674,6 +674,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -45,
           "execute": [
             {
               "name": "Dispel Debuffs",
@@ -697,8 +698,7 @@ const configAbility = {
               "canHitNonTargets": true,
               "allowAbilityTriggers": false
             }
-          ],
-          "priorityLevel": -45
+          ]
         }
       ]
     },
@@ -3396,6 +3396,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": -10,
           "execute": [
             {
               "name": "SWITCH",
@@ -3550,8 +3551,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1205689073\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP</a>"
             }
-          ],
-          "priorityLevel": -10
+          ]
         },
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

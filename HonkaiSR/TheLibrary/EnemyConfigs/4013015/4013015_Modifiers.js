@@ -137,6 +137,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "IF",
@@ -261,8 +262,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -90
+          ]
         }
       ]
     },
@@ -272,6 +272,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "IF",
@@ -517,8 +518,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -90
+          ]
         }
       ]
     },
@@ -582,6 +582,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "Inject Ability Use",
@@ -591,8 +592,7 @@ const configAbility = {
               "showInActionOrder": true,
               "allowAbilityTriggers": false
             }
-          ],
-          "priorityLevel": -90
+          ]
         },
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -2360,6 +2360,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "IF",
@@ -2487,8 +2488,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -90
+          ]
         },
         {
           "eventTrigger": "Being Attacked [Owner]: End",

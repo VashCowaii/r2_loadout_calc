@@ -1519,6 +1519,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -50,
               "execute": [
                 {
                   "name": "Dispel Debuffs",
@@ -1875,8 +1876,7 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "PartDecisionFlag"
                 }
-              ],
-              "priorityLevel": -50
+              ]
             },
             {
               "eventTrigger": "End Broken State [Owner]",

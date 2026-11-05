@@ -80,6 +80,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": -10,
           "execute": [
             {
               "name": "Update Energy",
@@ -106,8 +107,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1409864339\">M_BlackSwan_DOT_Eidolon4_HaveAddedSP</a>"
             },
             "Modifier Deletes Itself"
-          ],
-          "priorityLevel": -10
+          ]
         }
       ]
     },
@@ -390,6 +390,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": 90,
           "execute": [
             {
               "name": "Define Custom Variable with Modifier Values",
@@ -1248,8 +1249,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": 90
+          ]
         },
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1576,6 +1576,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": -10,
           "execute": [
             {
               "name": "Update Energy",
@@ -1593,8 +1594,7 @@ const configAbility = {
               },
               "isFixed": "* ERR"
             }
-          ],
-          "priorityLevel": -10
+          ]
         }
       ]
     },
@@ -1730,6 +1730,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": 90,
           "execute": [
             {
               "name": "Define Custom Variable",
@@ -2147,8 +2148,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1945456695\">M_Advanced_BlackSwan_ForbidEffectFlag</a>"
             }
-          ],
-          "priorityLevel": 90
+          ]
         },
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",

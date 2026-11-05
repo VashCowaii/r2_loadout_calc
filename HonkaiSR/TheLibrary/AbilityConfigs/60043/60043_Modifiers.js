@@ -1275,6 +1275,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": 100,
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -1358,8 +1359,7 @@ const configAbility = {
                 }
               }
             }
-          ],
-          "priorityLevel": 100
+          ]
         }
       ]
     },
@@ -2223,6 +2223,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": 100,
           "execute": [
             {
               "name": "IF",
@@ -2328,8 +2329,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": 100
+          ]
         },
         {
           "eventTrigger": "Turn [Owner]: Action-End Phase",
@@ -2859,6 +2859,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": 100,
           "execute": [
             {
               "name": "IF",
@@ -2985,8 +2986,7 @@ const configAbility = {
               "variableName": "SummonOrder",
               "value": 0
             }
-          ],
-          "priorityLevel": 100
+          ]
         },
         {
           "eventTrigger": "Turn [Owner]: Action-End Phase",
@@ -3365,6 +3365,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "IF",
@@ -3489,8 +3490,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -90
+          ]
         }
       ]
     },

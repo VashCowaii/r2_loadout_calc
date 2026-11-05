@@ -132,6 +132,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
+          "priorityLevel": 100,
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -152,8 +153,7 @@ const configAbility = {
               },
               "casterAssign": "TargetSelf"
             }
-          ],
-          "priorityLevel": 100
+          ]
         }
       ]
     },

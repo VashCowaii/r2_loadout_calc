@@ -69,6 +69,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": -12,
           "execute": [
             {
               "name": "IF",
@@ -152,8 +153,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -12
+          ]
         },
         {
           "eventTrigger": "Turn [Anyone]: End",

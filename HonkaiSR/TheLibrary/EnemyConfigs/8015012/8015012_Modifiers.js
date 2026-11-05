@@ -2038,6 +2038,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "Remove Events/Bonuses",
@@ -2129,8 +2130,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -90
+          ]
         }
       ]
     },

@@ -1022,6 +1022,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -1080,8 +1081,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -90
+          ]
         }
       ]
     },

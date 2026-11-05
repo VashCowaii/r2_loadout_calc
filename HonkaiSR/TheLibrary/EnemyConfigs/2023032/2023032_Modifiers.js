@@ -3430,6 +3430,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "IF",
@@ -3529,8 +3530,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -90
+          ]
         }
       ]
     },
@@ -4194,6 +4194,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -45,
           "execute": [
             {
               "name": "Dispel Debuffs",
@@ -4217,8 +4218,7 @@ const configAbility = {
               "canHitNonTargets": true,
               "allowAbilityTriggers": false
             }
-          ],
-          "priorityLevel": -45
+          ]
         }
       ]
     },

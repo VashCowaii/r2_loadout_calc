@@ -169,6 +169,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -270,8 +271,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         },
@@ -1143,13 +1143,13 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -55,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"1560090957\">AventurineW_InsertElationAbilitylRetarget</a>"
                 }
-              ],
-              "priorityLevel": -55
+              ]
             },
             {
               "eventTrigger": "Custom Event",
@@ -2453,6 +2453,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -60,
               "execute": [
                 {
                   "name": "IF",
@@ -2540,8 +2541,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -60
+              ]
             }
           ]
         }

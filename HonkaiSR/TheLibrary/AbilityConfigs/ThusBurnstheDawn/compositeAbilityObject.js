@@ -74,10 +74,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": 200,
               "execute": [
                 "Modifier Deletes Itself"
-              ],
-              "priorityLevel": 200
+              ]
             },
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -140,6 +140,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -159,8 +160,7 @@ const compositeAbilityObject = {
                     }
                   }
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }

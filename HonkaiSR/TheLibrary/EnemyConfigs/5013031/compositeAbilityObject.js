@@ -2056,7 +2056,7 @@ const compositeAbilityObject = {
                               }
                             ]
                           },
-                          "execute": [
+                          "runIfPass": [
                             {
                               "name": "Adjust Target Stats",
                               "modifiedValuesArray": [
@@ -2098,7 +2098,7 @@ const compositeAbilityObject = {
                               }
                             ]
                           },
-                          "execute": [
+                          "runIfPass": [
                             {
                               "name": "Adjust Target Stats",
                               "modifiedValuesArray": [
@@ -2140,7 +2140,7 @@ const compositeAbilityObject = {
                               }
                             ]
                           },
-                          "execute": [
+                          "runIfPass": [
                             {
                               "name": "Adjust Target Stats",
                               "modifiedValuesArray": [
@@ -2182,7 +2182,7 @@ const compositeAbilityObject = {
                               }
                             ]
                           },
-                          "execute": [
+                          "runIfPass": [
                             {
                               "name": "Adjust Target Stats",
                               "modifiedValuesArray": [
@@ -2224,7 +2224,7 @@ const compositeAbilityObject = {
                               }
                             ]
                           },
-                          "execute": [
+                          "runIfPass": [
                             {
                               "name": "Adjust Target Stats",
                               "modifiedValuesArray": [
@@ -2266,7 +2266,7 @@ const compositeAbilityObject = {
                               }
                             ]
                           },
-                          "execute": [
+                          "runIfPass": [
                             {
                               "name": "Adjust Target Stats",
                               "modifiedValuesArray": [
@@ -2308,7 +2308,7 @@ const compositeAbilityObject = {
                               }
                             ]
                           },
-                          "execute": [
+                          "runIfPass": [
                             {
                               "name": "Adjust Target Stats",
                               "modifiedValuesArray": [

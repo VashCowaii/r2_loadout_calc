@@ -41,13 +41,13 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -55,
           "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"-715058594\">Constance_InsertRetargetSelf</a>"
             }
-          ],
-          "priorityLevel": -55
+          ]
         },
         {
           "eventTrigger": "Custom Event",
@@ -192,10 +192,10 @@ const configAbility = {
         },
         {
           "eventTrigger": "Turn [Owner]: Action-End Phase",
+          "priorityLevel": 100,
           "execute": [
             "Modifier Deletes Itself"
-          ],
-          "priorityLevel": 100
+          ]
         },
         {
           "eventTrigger": "When Stacking/Receiving Modifier",

@@ -316,6 +316,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Assign Target Battle-Location",
@@ -325,8 +326,7 @@ const compositeAbilityObject = {
                   },
                   "row": 1
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         }

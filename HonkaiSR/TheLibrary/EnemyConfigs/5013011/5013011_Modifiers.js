@@ -18,6 +18,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": 100,
           "execute": [
             {
               "name": "Find New Target",
@@ -143,8 +144,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": 100
+          ]
         }
       ]
     },

@@ -158,6 +158,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -70,
           "execute": [
             {
               "name": "IF",
@@ -200,8 +201,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -70
+          ]
         }
       ]
     },
@@ -1202,6 +1202,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -55,
           "execute": [
             {
               "name": "IF",
@@ -1282,8 +1283,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -55
+          ]
         },
         {
           "eventTrigger": "When Modifier is Added [Owner]",

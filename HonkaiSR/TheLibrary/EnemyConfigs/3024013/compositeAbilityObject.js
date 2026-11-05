@@ -3588,6 +3588,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
@@ -3684,8 +3685,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             },
             {
               "eventTrigger": "Pre-Death [Owner]",

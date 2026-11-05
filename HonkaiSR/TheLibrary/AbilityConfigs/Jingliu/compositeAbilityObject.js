@@ -2000,6 +2000,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Declare Custom Variable",
@@ -2019,8 +2020,7 @@ const compositeAbilityObject = {
                   "scope": "TargetEntity",
                   "variableName": "BeingAttack"
                 }
-              ],
-              "priorityLevel": -80
+              ]
             },
             {
               "eventTrigger": "Custom Event",
@@ -3231,6 +3231,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -3317,8 +3318,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }

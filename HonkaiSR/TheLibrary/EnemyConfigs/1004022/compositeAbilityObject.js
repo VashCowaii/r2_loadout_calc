@@ -1072,6 +1072,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Force Entity Death",
@@ -1211,8 +1212,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         },
@@ -2194,6 +2194,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -45,
               "execute": [
                 {
                   "name": "IF",
@@ -2242,8 +2243,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -45
+              ]
             }
           ]
         }

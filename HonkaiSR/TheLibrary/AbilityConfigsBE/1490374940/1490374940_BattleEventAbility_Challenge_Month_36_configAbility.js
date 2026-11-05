@@ -406,6 +406,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -415,8 +416,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1413445617\">Modifier_BattleEventAbility_Challenge_Month_36_sub</a>"
             }
-          ],
-          "priorityLevel": -90
+          ]
         }
       ]
     }

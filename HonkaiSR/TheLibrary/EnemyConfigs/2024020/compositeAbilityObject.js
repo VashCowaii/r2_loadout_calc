@@ -419,6 +419,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Trigger Ability",
@@ -429,8 +430,7 @@ const compositeAbilityObject = {
                   "ability": "Monster_Fuyan_Born_Part02",
                   "isTrigger": true
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         },

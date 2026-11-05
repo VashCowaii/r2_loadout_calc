@@ -439,6 +439,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
+          "priorityLevel": 100,
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -459,8 +460,7 @@ const configAbility = {
               },
               "casterAssign": "TargetSelf"
             }
-          ],
-          "priorityLevel": 100
+          ]
         },
         {
           "eventTrigger": "When Modifier is Added [Owner]",
@@ -506,6 +506,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Attack DMG End [Owner]",
+          "priorityLevel": 100,
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -526,8 +527,7 @@ const configAbility = {
               },
               "casterAssign": "TargetSelf"
             }
-          ],
-          "priorityLevel": 100
+          ]
         }
       ]
     },
@@ -1269,6 +1269,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -1288,8 +1289,7 @@ const configAbility = {
                 }
               }
             }
-          ],
-          "priorityLevel": -80
+          ]
         },
         {
           "eventTrigger": "When Modifier is Added [Anyone]",
@@ -1453,6 +1453,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "IF",
@@ -1481,8 +1482,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -80
+          ]
         },
         {
           "eventTrigger": "Created Shield [Anyone]",
@@ -1659,6 +1659,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "IF",
@@ -1695,8 +1696,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -80
+          ]
         }
       ]
     }

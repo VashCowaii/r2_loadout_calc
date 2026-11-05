@@ -1093,13 +1093,13 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -55,
           "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"1853725951\">Ashveil_InsertRetargetSelf_Enhance</a>"
             }
-          ],
-          "priorityLevel": -55
+          ]
         },
         {
           "eventTrigger": "Custom Event",
@@ -1228,13 +1228,13 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -55,
           "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"99569822\">Ashveil_InsertRetargetSelf</a>"
             }
-          ],
-          "priorityLevel": -55
+          ]
         },
         {
           "eventTrigger": "Custom Event",
@@ -1481,13 +1481,13 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"-178840964\">Ashveil_Ability02_DebuffTransfer</a>"
             }
-          ],
-          "priorityLevel": -80
+          ]
         },
         {
           "eventTrigger": "Custom Event",

@@ -44,6 +44,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -70,
               "execute": [
                 {
                   "name": "Inject Ability Use",
@@ -61,8 +62,7 @@ const compositeAbilityObject = {
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }
-              ],
-              "priorityLevel": -70
+              ]
             }
           ]
         },

@@ -1729,6 +1729,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Aha Instant: Start",
+              "priorityLevel": 100,
               "execute": [
                 "Unknown EventType1 (Not always an error)",
                 {
@@ -1780,11 +1781,11 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": 100
+              ]
             },
             {
               "eventTrigger": "Aha Instant: End",
+              "priorityLevel": -100,
               "execute": [
                 {
                   "name": "Override Priority Tags",
@@ -1862,8 +1863,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -100
+              ]
             },
             {
               "eventTrigger": "Aha Instant: End (Pending)",
@@ -2033,6 +2033,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "IF",
@@ -2101,8 +2102,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ],
           "elationValueChange": [

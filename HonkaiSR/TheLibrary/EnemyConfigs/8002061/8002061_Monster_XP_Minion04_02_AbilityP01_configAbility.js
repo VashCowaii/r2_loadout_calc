@@ -94,6 +94,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -55,
           "execute": [
             {
               "name": "Exit Broken-State",
@@ -118,8 +119,7 @@ const configAbility = {
               "showInActionOrder": true,
               "allowAbilityTriggers": false
             }
-          ],
-          "priorityLevel": -55
+          ]
         }
       ]
     }

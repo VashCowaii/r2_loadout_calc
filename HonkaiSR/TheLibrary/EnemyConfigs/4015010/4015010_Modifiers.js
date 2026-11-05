@@ -2941,6 +2941,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": -10,
           "execute": [
             {
               "name": "Define Custom Variable with Copy",
@@ -2989,8 +2990,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"735847061\">Modifier_Monster_W4_DawnsEye_WheaterSunnyUIController</a>",
               "casterAssign": "TargetSelf"
             }
-          ],
-          "priorityLevel": -10
+          ]
         }
       ]
     },
@@ -4108,6 +4108,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "Remove Events/Bonuses",
@@ -4331,8 +4332,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -90
+          ]
         }
       ]
     }

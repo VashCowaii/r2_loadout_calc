@@ -71,6 +71,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Find New Target",
@@ -117,8 +118,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1634329483\">M_Anaxa_Eidolon2_Bonus_OnCharacterCreate</a>"
             },
             "Modifier Deletes Itself"
-          ],
-          "priorityLevel": -80
+          ]
         }
       ]
     }

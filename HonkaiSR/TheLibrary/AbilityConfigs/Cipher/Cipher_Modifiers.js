@@ -620,13 +620,13 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -55,
           "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"-2003903269\">Cipher_InsertRetargetSelf</a>"
             }
-          ],
-          "priorityLevel": -55
+          ]
         },
         {
           "eventTrigger": "Custom Event",

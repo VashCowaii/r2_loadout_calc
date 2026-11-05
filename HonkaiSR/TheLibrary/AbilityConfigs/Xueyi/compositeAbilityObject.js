@@ -243,13 +243,13 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"1730434775\">Xueyi_CheckBreakDamageAddedRatioChange</a>"
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ],
           "modifierFunctions": [
@@ -1729,6 +1729,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -60,
               "execute": [
                 {
                   "name": "IF",
@@ -1794,8 +1795,7 @@ const compositeAbilityObject = {
                     "Trigger: Attack End"
                   ]
                 }
-              ],
-              "priorityLevel": -60
+              ]
             }
           ]
         }
@@ -2333,6 +2333,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": 999999,
               "execute": [
                 {
                   "name": "IF",
@@ -2394,8 +2395,7 @@ const compositeAbilityObject = {
                   "variableName": "_Xueyi_OnEnterBattle_Flag",
                   "value": 0
                 }
-              ],
-              "priorityLevel": 999999
+              ]
             },
             {
               "eventTrigger": "Batch: Enemy Arrival",
@@ -2673,6 +2673,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -2778,8 +2779,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             },
             {
               "eventTrigger": "Custom Event",

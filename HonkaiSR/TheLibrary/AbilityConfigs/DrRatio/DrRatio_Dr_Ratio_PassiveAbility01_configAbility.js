@@ -157,6 +157,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -202,8 +203,7 @@ const configAbility = {
               }
             },
             "Modifier Deletes Itself"
-          ],
-          "priorityLevel": -80
+          ]
         }
       ]
     },
@@ -787,6 +787,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -814,8 +815,7 @@ const configAbility = {
                 }
               }
             }
-          ],
-          "priorityLevel": -80
+          ]
         },
         {
           "eventTrigger": "Custom Event",

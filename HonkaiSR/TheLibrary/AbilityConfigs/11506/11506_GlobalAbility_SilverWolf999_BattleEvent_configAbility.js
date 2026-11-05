@@ -159,6 +159,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -93,
           "execute": [
             {
               "name": "Assign Global Buff State",
@@ -174,8 +175,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"294189746\">GlobalAbility_SilverWolf999_BattleEvent_Listener</a>"
             }
-          ],
-          "priorityLevel": -93
+          ]
         },
         {
           "eventTrigger": "When Modifier is Added [Owner]",

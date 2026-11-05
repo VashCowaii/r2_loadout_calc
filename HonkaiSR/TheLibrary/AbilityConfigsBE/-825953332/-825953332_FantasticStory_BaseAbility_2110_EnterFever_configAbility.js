@@ -122,6 +122,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "IF",
@@ -161,8 +162,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -90
+          ]
         },
         {
           "eventTrigger": "When Modifier is Added [Owner]",

@@ -204,13 +204,13 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -55,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"1558019774\">MortenaxBlade_InsertRetarget</a>"
                 }
-              ],
-              "priorityLevel": -55
+              ]
             },
             {
               "eventTrigger": "Custom Event",
@@ -2208,6 +2208,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -2241,8 +2242,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             },
             {
               "eventTrigger": "Being Attacked [Owner]: End",
@@ -2916,6 +2916,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -2968,8 +2969,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }
@@ -4033,6 +4033,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -4098,8 +4099,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             },
             {
               "eventTrigger": "Leave Battle"

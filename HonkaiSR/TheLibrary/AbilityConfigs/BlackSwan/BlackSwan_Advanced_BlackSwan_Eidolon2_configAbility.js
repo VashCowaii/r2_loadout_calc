@@ -70,6 +70,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Use Custom Character Function",
@@ -106,8 +107,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1069012711\">Advanced_BlackSwan_Eidolon2_AddDotOnCreate</a>"
             },
             "Modifier Deletes Itself"
-          ],
-          "priorityLevel": -80
+          ]
         }
       ]
     }

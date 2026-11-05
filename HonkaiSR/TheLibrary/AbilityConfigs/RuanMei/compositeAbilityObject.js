@@ -1735,6 +1735,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -55,
               "execute": [
                 {
                   "name": "Update Ability Properties",
@@ -1754,8 +1755,7 @@ const compositeAbilityObject = {
                   "afterInjection": [],
                   "runsAfterBattleEnd": true
                 }
-              ],
-              "priorityLevel": -55
+              ]
             }
           ]
         }
@@ -2334,6 +2334,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -2426,8 +2427,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"402849385\">RuanMei_Passive_ListenBeingBreakOrHit</a>"
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }
@@ -3336,10 +3336,10 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": 10001,
               "execute": [
                 "Modifier Deletes Itself"
-              ],
-              "priorityLevel": 10001
+              ]
             },
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -3472,6 +3472,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": 10001,
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
@@ -3482,8 +3483,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"319066734\">RuanMei_Maze_Modifier_StanceBreakAdd</a>"
                 },
                 "Modifier Deletes Itself"
-              ],
-              "priorityLevel": 10001
+              ]
             }
           ]
         },
@@ -3506,6 +3506,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -3615,8 +3616,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }

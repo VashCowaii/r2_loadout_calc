@@ -172,13 +172,13 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -55,
           "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"1558019774\">MortenaxBlade_InsertRetarget</a>"
             }
-          ],
-          "priorityLevel": -55
+          ]
         },
         {
           "eventTrigger": "Custom Event",
@@ -2176,6 +2176,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "IF",
@@ -2209,8 +2210,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -80
+          ]
         },
         {
           "eventTrigger": "Being Attacked [Owner]: End",

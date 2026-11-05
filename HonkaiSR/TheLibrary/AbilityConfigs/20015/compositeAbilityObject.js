@@ -966,6 +966,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -50,
               "execute": [
                 {
                   "name": "IF",
@@ -1027,8 +1028,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -50
+              ]
             }
           ]
         },

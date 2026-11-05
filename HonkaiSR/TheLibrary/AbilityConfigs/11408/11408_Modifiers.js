@@ -435,13 +435,13 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -55,
           "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"262452933\">Phainon_InsertRetarget</a>"
             }
-          ],
-          "priorityLevel": -55
+          ]
         },
         {
           "eventTrigger": "Custom Event",
@@ -2086,6 +2086,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -2108,8 +2109,7 @@ const configAbility = {
               "showInActionOrder": true,
               "allowAbilityTriggers": false
             }
-          ],
-          "priorityLevel": -80
+          ]
         },
         {
           "eventTrigger": "Attack DMG End [Owner]",
@@ -2162,13 +2162,13 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -55,
           "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"-471089353\">function_Phainon_UltraEndCheck</a>"
             }
-          ],
-          "priorityLevel": -55
+          ]
         },
         {
           "eventTrigger": "Custom Event",

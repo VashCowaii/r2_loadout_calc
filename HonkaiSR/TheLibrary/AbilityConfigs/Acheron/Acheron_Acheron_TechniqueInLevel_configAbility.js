@@ -62,6 +62,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -60,
           "execute": [
             {
               "name": "IF",
@@ -214,8 +215,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-115192964\">Acheron_TechniqueWeakType_BUFF</a>"
             }
-          ],
-          "priorityLevel": -60
+          ]
         }
       ]
     }

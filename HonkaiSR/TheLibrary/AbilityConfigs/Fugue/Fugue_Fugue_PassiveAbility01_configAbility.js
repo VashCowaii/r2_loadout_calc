@@ -683,6 +683,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Find New Target",
@@ -776,8 +777,7 @@ const configAbility = {
                 }
               }
             }
-          ],
-          "priorityLevel": -80
+          ]
         }
       ]
     },

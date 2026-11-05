@@ -150,10 +150,10 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Attack DMG End [Owner]",
+          "priorityLevel": -100,
           "execute": [
             "Modifier Deletes Itself"
-          ],
-          "priorityLevel": -100
+          ]
         },
         {
           "eventTrigger": "Apply Modifier [From Owner] (Success)",
@@ -643,6 +643,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -85,
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -652,8 +653,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-25137602\">_M_Constance_Tree03_AddWeaknessListener_DuringAttack</a>"
             }
-          ],
-          "priorityLevel": -85
+          ]
         },
         {
           "eventTrigger": "Ultimate Prep-Phase [Owner]",

@@ -3004,6 +3004,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "IF",
@@ -3039,8 +3040,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -80
+          ]
         }
       ]
     },
@@ -3053,6 +3053,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": -12,
           "execute": [
             "Increment Cycles Counter",
             {
@@ -3127,8 +3128,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -12
+          ]
         },
         {
           "eventTrigger": "Enter Battle",

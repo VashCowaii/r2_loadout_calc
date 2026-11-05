@@ -172,6 +172,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "Find New Target",
@@ -238,8 +239,7 @@ const configAbility = {
               "value": 1
             },
             "Modifier Deletes Itself"
-          ],
-          "priorityLevel": -90
+          ]
         },
         {
           "eventTrigger": "Pre-Death [Owner]",
@@ -463,6 +463,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "IF",
@@ -591,8 +592,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -90
+          ]
         }
       ]
     },
@@ -1139,6 +1139,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "Find New Target",
@@ -1205,8 +1206,7 @@ const configAbility = {
               "value": 1
             },
             "Modifier Deletes Itself"
-          ],
-          "priorityLevel": -90
+          ]
         },
         {
           "eventTrigger": "Pre-Death [Owner]",

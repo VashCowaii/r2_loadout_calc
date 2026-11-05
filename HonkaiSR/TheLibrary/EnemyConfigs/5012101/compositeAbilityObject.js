@@ -26,6 +26,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": 100,
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
@@ -71,8 +72,7 @@ const compositeAbilityObject = {
                   "trigger": "SpEff_Trigger"
                 },
                 "Modifier Deletes Itself"
-              ],
-              "priorityLevel": 100
+              ]
             }
           ]
         },

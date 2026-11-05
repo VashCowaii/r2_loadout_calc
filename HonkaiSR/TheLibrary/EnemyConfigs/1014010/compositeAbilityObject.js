@@ -201,6 +201,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Find New Target",
@@ -267,8 +268,7 @@ const compositeAbilityObject = {
                   "value": 1
                 },
                 "Modifier Deletes Itself"
-              ],
-              "priorityLevel": -90
+              ]
             },
             {
               "eventTrigger": "Pre-Death [Owner]",

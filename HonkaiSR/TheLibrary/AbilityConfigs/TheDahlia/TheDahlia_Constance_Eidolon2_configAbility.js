@@ -70,6 +70,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Find New Target",
@@ -115,8 +116,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"1789407747\">Constance_Eidolon2_Bonus_OnCharacterCreate</a>"
             },
             "Modifier Deletes Itself"
-          ],
-          "priorityLevel": -80
+          ]
         }
       ]
     }

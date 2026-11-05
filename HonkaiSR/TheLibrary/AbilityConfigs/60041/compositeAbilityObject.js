@@ -1286,6 +1286,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": 100,
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -1369,8 +1370,7 @@ const compositeAbilityObject = {
                     }
                   }
                 }
-              ],
-              "priorityLevel": 100
+              ]
             }
           ]
         },
@@ -2234,6 +2234,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": 100,
               "execute": [
                 {
                   "name": "IF",
@@ -2339,8 +2340,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": 100
+              ]
             },
             {
               "eventTrigger": "Turn [Owner]: Action-End Phase",
@@ -2870,6 +2870,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": 100,
               "execute": [
                 {
                   "name": "IF",
@@ -2996,8 +2997,7 @@ const compositeAbilityObject = {
                   "variableName": "SummonOrder",
                   "value": 0
                 }
-              ],
-              "priorityLevel": 100
+              ]
             },
             {
               "eventTrigger": "Turn [Owner]: Action-End Phase",
@@ -3376,6 +3376,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "IF",
@@ -3500,8 +3501,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         },

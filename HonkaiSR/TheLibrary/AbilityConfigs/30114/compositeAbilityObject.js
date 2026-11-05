@@ -408,6 +408,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -45,
               "execute": [
                 "Deleted bullshit",
                 {
@@ -428,8 +429,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -45
+              ]
             }
           ]
         }

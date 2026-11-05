@@ -50,6 +50,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -90,
           "execute": [
             "Deleted bullshit",
             {
@@ -67,8 +68,7 @@ const configAbility = {
               "canHitNonTargets": true,
               "allowAbilityTriggers": false
             }
-          ],
-          "priorityLevel": -90
+          ]
         },
         {
           "eventTrigger": "Leave Battle"

@@ -180,6 +180,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -70,
               "execute": [
                 {
                   "name": "IF",
@@ -222,8 +223,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -70
+              ]
             }
           ]
         },
@@ -1224,6 +1224,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -55,
               "execute": [
                 {
                   "name": "IF",
@@ -1304,8 +1305,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -55
+              ]
             },
             {
               "eventTrigger": "When Modifier is Added [Owner]",
@@ -2176,6 +2176,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -2271,8 +2272,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }

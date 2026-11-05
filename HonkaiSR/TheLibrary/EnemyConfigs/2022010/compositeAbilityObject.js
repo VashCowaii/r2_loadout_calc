@@ -122,6 +122,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -50,
               "execute": [
                 {
                   "name": "Change Entity Turn-State",
@@ -246,8 +247,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -50
+              ]
             },
             {
               "eventTrigger": "Fatal Damage [Owner]: Start",
@@ -889,6 +889,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -45,
               "execute": [
                 {
                   "name": "Inject Ability Use",
@@ -906,8 +907,7 @@ const compositeAbilityObject = {
                   ],
                   "allowAbilityTriggers": false
                 }
-              ],
-              "priorityLevel": -45
+              ]
             }
           ]
         },

@@ -2616,6 +2616,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Attack DMG End [Owner]",
+          "priorityLevel": -100,
           "execute": [
             {
               "name": "IF",
@@ -2723,8 +2724,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -100
+          ]
         },
         {
           "eventTrigger": "Being Attacked [Owner]: End",
@@ -2930,6 +2930,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -79,
           "execute": [
             {
               "name": "IF",
@@ -3118,8 +3119,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -79
+          ]
         }
       ]
     }

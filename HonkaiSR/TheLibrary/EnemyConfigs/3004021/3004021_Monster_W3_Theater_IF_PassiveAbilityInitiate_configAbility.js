@@ -268,6 +268,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "IF",
@@ -372,8 +373,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -90
+          ]
         }
       ]
     },
@@ -516,6 +516,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -91,
           "execute": [
             {
               "name": "Create Enemies",
@@ -810,8 +811,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -91
+          ]
         },
         {
           "eventTrigger": "Weakness Break [Anyone]"

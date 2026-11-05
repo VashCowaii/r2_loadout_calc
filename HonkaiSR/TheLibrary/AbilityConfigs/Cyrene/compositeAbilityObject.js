@@ -1882,6 +1882,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -1920,8 +1921,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }
@@ -2333,6 +2333,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -2546,8 +2547,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             },
             {
               "eventTrigger": "Leave Battle"
@@ -6426,13 +6426,13 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -55,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"-546409943\">Memosprite_CyreneServant_AmazingBonus_Mydeimos_InsertActionCheck</a>"
                 }
-              ],
-              "priorityLevel": -55
+              ]
             },
             {
               "eventTrigger": "Custom Event",
@@ -7048,13 +7048,13 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -55,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"-2119618893\">_T_Cyrene_Player_InsertRetarget</a>"
                 }
-              ],
-              "priorityLevel": -55
+              ]
             },
             {
               "eventTrigger": "Custom Event",
@@ -8906,13 +8906,13 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -55,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"301160822\">_T_Cyrene_Eidolon1_EnergyCheck</a>"
                 }
-              ],
-              "priorityLevel": -55
+              ]
             },
             {
               "eventTrigger": "Custom Event",

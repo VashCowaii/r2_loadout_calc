@@ -114,6 +114,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -133,8 +134,7 @@ const compositeAbilityObject = {
                     }
                   }
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         },
@@ -1451,6 +1451,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": 91,
               "execute": [
                 {
                   "name": "IF",
@@ -1523,8 +1524,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": 91
+              ]
             },
             {
               "eventTrigger": "Pre-Death [Owner]"
@@ -1670,6 +1670,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": -11,
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
@@ -1694,8 +1695,7 @@ const compositeAbilityObject = {
                   "variableName": "MDF_CanTriggerDot",
                   "value": 1
                 }
-              ],
-              "priorityLevel": -11
+              ]
             },
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -3042,6 +3042,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -3071,8 +3072,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }
@@ -3275,13 +3275,13 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"-1047911609\">Harscyline_PointB3_Sub</a>"
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ],
           "modifierFunctions": [
@@ -3586,6 +3586,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -3656,8 +3657,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }
@@ -4122,6 +4122,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -70,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
@@ -4133,8 +4134,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -70
+              ]
             }
           ]
         }

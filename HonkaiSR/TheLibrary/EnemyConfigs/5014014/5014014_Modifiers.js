@@ -2868,6 +2868,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": -11,
           "execute": [
             {
               "name": "Reconstruct Modifier",
@@ -2905,8 +2906,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -11
+          ]
         },
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3050,6 +3050,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": -11,
           "execute": [
             {
               "name": "Reconstruct Modifier",
@@ -3121,8 +3122,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -11
+          ]
         },
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3546,6 +3546,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -100,
           "execute": [
             {
               "name": "IF",
@@ -3570,8 +3571,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -100
+          ]
         },
         {
           "eventTrigger": "Action Start [Anyone]",

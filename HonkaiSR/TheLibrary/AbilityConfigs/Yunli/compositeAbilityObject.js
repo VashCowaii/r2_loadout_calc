@@ -1964,6 +1964,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": 10001,
               "execute": [
                 {
                   "name": "IF",
@@ -2025,8 +2026,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": 10001
+              ]
             },
             {
               "eventTrigger": "Custom Event",

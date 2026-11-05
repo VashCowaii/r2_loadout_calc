@@ -454,6 +454,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
+              "priorityLevel": 100,
               "execute": [
                 {
                   "name": "IF",
@@ -537,8 +538,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": 100
+              ]
             }
           ]
         },
@@ -1664,7 +1664,47 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Sound stuff nobody cares about"
+              "eventTrigger": "Sound stuff nobody cares about",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Parameter String",
+                    "compareType": "=",
+                    "value2": "soundevent_marker_vo_avatar_advantage02_sam_start"
+                  },
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Parameter String",
+                        "compareType": "=",
+                        "value2": "soundevent_marker_vo_avatar_turn_begin02_sam_01_start"
+                      },
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Parameter String",
+                            "compareType": "=",
+                            "value2": "soundevent_marker_vo_avatar_turn_begin02_sam_02_start"
+                          },
+                          "failed": [
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "Compare: Parameter String",
+                                "compareType": "=",
+                                "value2": "soundevent_marker_vo_avatar_waiting02_sam_start"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             },
             {
               "eventTrigger": "Sound stuff nobody cares about"
@@ -2639,6 +2679,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -60,
               "execute": [
                 {
                   "name": "IF",
@@ -2711,8 +2752,7 @@ const compositeAbilityObject = {
                     "Trigger: Attack End"
                   ]
                 }
-              ],
-              "priorityLevel": -60
+              ]
             }
           ]
         },
@@ -2722,6 +2762,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -2739,8 +2780,7 @@ const compositeAbilityObject = {
                     ]
                   }
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }
@@ -3745,6 +3785,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -3799,8 +3840,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             },
             {
               "eventTrigger": "Energy Change",
@@ -4839,6 +4879,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -70,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
@@ -4850,8 +4891,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -70
+              ]
             }
           ]
         }

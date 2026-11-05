@@ -21,6 +21,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -30,8 +31,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-759863582\">BoxingGym_SPRecovery</a>"
             }
-          ],
-          "priorityLevel": -90
+          ]
         }
       ]
     }

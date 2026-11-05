@@ -49,10 +49,10 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": 200,
           "execute": [
             "Modifier Deletes Itself"
-          ],
-          "priorityLevel": 200
+          ]
         },
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -115,6 +115,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -134,8 +135,7 @@ const configAbility = {
                 }
               }
             }
-          ],
-          "priorityLevel": -80
+          ]
         }
       ]
     }

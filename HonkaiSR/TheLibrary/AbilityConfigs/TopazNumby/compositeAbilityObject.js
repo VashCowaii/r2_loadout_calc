@@ -1875,6 +1875,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -1895,8 +1896,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }
@@ -2824,6 +2824,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -2833,8 +2834,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"786181068\">Topaz_Ultimate_Listen_ModifyBEAction</a>"
                 }
-              ],
-              "priorityLevel": -80
+              ]
             },
             {
               "eventTrigger": "When Modifier is Added [Anyone]",

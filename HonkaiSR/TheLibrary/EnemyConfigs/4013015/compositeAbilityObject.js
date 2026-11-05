@@ -156,6 +156,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "IF",
@@ -280,8 +281,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         },
@@ -291,6 +291,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "IF",
@@ -536,8 +537,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         },
@@ -601,6 +601,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Inject Ability Use",
@@ -610,8 +611,7 @@ const compositeAbilityObject = {
                   "showInActionOrder": true,
                   "allowAbilityTriggers": false
                 }
-              ],
-              "priorityLevel": -90
+              ]
             },
             {
               "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -2379,6 +2379,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "IF",
@@ -2506,8 +2507,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             },
             {
               "eventTrigger": "Being Attacked [Owner]: End",

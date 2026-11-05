@@ -108,6 +108,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": -10,
               "execute": [
                 {
                   "name": "Update Energy",
@@ -134,8 +135,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1409864339\">M_BlackSwan_DOT_Eidolon4_HaveAddedSP</a>"
                 },
                 "Modifier Deletes Itself"
-              ],
-              "priorityLevel": -10
+              ]
             }
           ]
         },
@@ -418,6 +418,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": 90,
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
@@ -1276,8 +1277,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": 90
+              ]
             },
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1604,6 +1604,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": -10,
               "execute": [
                 {
                   "name": "Update Energy",
@@ -1621,8 +1622,7 @@ const compositeAbilityObject = {
                   },
                   "isFixed": "* ERR"
                 }
-              ],
-              "priorityLevel": -10
+              ]
             }
           ]
         },
@@ -1758,6 +1758,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": 90,
               "execute": [
                 {
                   "name": "Define Custom Variable",
@@ -2175,8 +2176,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1945456695\">M_Advanced_BlackSwan_ForbidEffectFlag</a>"
                 }
-              ],
-              "priorityLevel": 90
+              ]
             },
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",
@@ -2558,6 +2558,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
@@ -2599,8 +2600,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-465998500\">Advanced_BlackSwan_Trace03_SubListener</a>"
                 },
                 "Modifier Deletes Itself"
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }
@@ -2761,6 +2761,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
@@ -2825,8 +2826,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1372749734\">M_Advanced_BlackSwan_Trace02_AfterEnterBattleListener</a>"
                 },
                 "Modifier Deletes Itself"
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }
@@ -3153,6 +3153,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
@@ -3189,8 +3190,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1069012711\">Advanced_BlackSwan_Eidolon2_AddDotOnCreate</a>"
                 },
                 "Modifier Deletes Itself"
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }
@@ -4848,6 +4848,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -55,
               "execute": [
                 {
                   "name": "IF",
@@ -4894,8 +4895,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -55
+              ]
             }
           ]
         }

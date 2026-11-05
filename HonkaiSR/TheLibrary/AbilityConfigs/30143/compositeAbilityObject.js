@@ -3140,6 +3140,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Trigger Ability",
@@ -3166,8 +3167,7 @@ const compositeAbilityObject = {
                   },
                   "adjustment": "Add"
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ],
           "elationValueChange": [

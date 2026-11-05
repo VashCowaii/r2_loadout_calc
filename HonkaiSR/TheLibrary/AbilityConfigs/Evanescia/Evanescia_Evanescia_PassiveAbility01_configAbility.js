@@ -356,6 +356,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -85,
           "execute": [
             {
               "name": "Define Custom Variable",
@@ -419,8 +420,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -85
+          ]
         },
         {
           "eventTrigger": "Certified Banger Gain [Anyone]: Start",

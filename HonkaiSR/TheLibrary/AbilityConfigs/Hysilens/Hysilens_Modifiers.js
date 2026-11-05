@@ -91,6 +91,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -110,8 +111,7 @@ const configAbility = {
                 }
               }
             }
-          ],
-          "priorityLevel": -80
+          ]
         }
       ]
     },
@@ -1428,6 +1428,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": 91,
           "execute": [
             {
               "name": "IF",
@@ -1500,8 +1501,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": 91
+          ]
         },
         {
           "eventTrigger": "Pre-Death [Owner]"
@@ -1647,6 +1647,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": -11,
           "execute": [
             {
               "name": "Remove Events/Bonuses",
@@ -1671,8 +1672,7 @@ const configAbility = {
               "variableName": "MDF_CanTriggerDot",
               "value": 1
             }
-          ],
-          "priorityLevel": -11
+          ]
         },
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",

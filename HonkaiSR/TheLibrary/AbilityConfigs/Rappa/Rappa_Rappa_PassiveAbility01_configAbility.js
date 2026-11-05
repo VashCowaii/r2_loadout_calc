@@ -372,6 +372,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -381,8 +382,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-200121332\">Rappa_Break_Modifier</a>"
             }
-          ],
-          "priorityLevel": -80
+          ]
         },
         {
           "eventTrigger": "Ultimate Prep-Phase [Anyone]",

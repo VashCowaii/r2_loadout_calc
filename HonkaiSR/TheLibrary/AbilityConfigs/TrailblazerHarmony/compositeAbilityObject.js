@@ -603,6 +603,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Attack DMG End [Owner]",
+              "priorityLevel": 100,
               "execute": [
                 {
                   "name": "IF",
@@ -775,8 +776,7 @@ const compositeAbilityObject = {
                   },
                   "casterAssign": "TargetSelf"
                 }
-              ],
-              "priorityLevel": 100
+              ]
             }
           ]
         },
@@ -851,6 +851,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Attack DMG End [Owner]",
+              "priorityLevel": 100,
               "execute": [
                 {
                   "name": "IF",
@@ -1023,8 +1024,7 @@ const compositeAbilityObject = {
                   },
                   "casterAssign": "TargetSelf"
                 }
-              ],
-              "priorityLevel": 100
+              ]
             }
           ]
         },
@@ -1840,6 +1840,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -1878,8 +1879,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }

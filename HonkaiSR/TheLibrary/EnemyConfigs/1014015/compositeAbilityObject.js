@@ -206,6 +206,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Find New Target",
@@ -272,8 +273,7 @@ const compositeAbilityObject = {
                   "value": 1
                 },
                 "Modifier Deletes Itself"
-              ],
-              "priorityLevel": -90
+              ]
             },
             {
               "eventTrigger": "Pre-Death [Owner]",
@@ -497,6 +497,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "IF",
@@ -625,8 +626,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         },
@@ -1173,6 +1173,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Find New Target",
@@ -1239,8 +1240,7 @@ const compositeAbilityObject = {
                   "value": 1
                 },
                 "Modifier Deletes Itself"
-              ],
-              "priorityLevel": -90
+              ]
             },
             {
               "eventTrigger": "Pre-Death [Owner]",

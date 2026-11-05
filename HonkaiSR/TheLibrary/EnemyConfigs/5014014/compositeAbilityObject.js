@@ -2910,6 +2910,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": -11,
               "execute": [
                 {
                   "name": "Reconstruct Modifier",
@@ -2947,8 +2948,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -11
+              ]
             },
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3092,6 +3092,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": -11,
               "execute": [
                 {
                   "name": "Reconstruct Modifier",
@@ -3163,8 +3164,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -11
+              ]
             },
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -3588,6 +3588,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -100,
               "execute": [
                 {
                   "name": "IF",
@@ -3612,8 +3613,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -100
+              ]
             },
             {
               "eventTrigger": "Action Start [Anyone]",
@@ -7470,6 +7470,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "IF",
@@ -7689,8 +7690,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             },
             {
               "eventTrigger": "Pre-Death [Owner]",

@@ -177,6 +177,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -186,8 +187,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1937701279\">PlayerBoy_30_Halo_ListenSPChange</a>"
             }
-          ],
-          "priorityLevel": -80
+          ]
         }
       ],
       "variableValueChange": [

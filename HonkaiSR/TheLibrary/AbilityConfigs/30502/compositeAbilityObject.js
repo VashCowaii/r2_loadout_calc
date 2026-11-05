@@ -221,6 +221,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": -12,
               "execute": [
                 "Increment Cycles Counter",
                 {
@@ -359,8 +360,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -12
+              ]
             },
             {
               "eventTrigger": "Action End [Anyone]",

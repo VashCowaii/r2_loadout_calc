@@ -425,6 +425,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Trigger Ability",
@@ -435,8 +436,7 @@ const compositeAbilityObject = {
                   "ability": "Monster_Fuyan_Born_Part02",
                   "isTrigger": true
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         },
@@ -990,6 +990,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "IF",
@@ -1294,8 +1295,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         },
@@ -2173,6 +2173,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Trigger Ability",
@@ -2206,8 +2207,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         }

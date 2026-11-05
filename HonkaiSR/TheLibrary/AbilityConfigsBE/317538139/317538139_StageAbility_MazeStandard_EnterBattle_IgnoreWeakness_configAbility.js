@@ -25,6 +25,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -70,
           "execute": [
             {
               "name": "SWITCH",
@@ -173,8 +174,7 @@ const configAbility = {
               ],
               "defaultEvents": []
             }
-          ],
-          "priorityLevel": -70
+          ]
         }
       ]
     }

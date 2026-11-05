@@ -416,6 +416,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "IF",
@@ -500,8 +501,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         },
@@ -511,6 +511,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "IF",
@@ -568,8 +569,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         },
@@ -2848,6 +2848,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "IF",
@@ -2905,8 +2906,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         },
@@ -3379,6 +3379,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -45,
               "execute": [
                 {
                   "name": "Dispel Debuffs",
@@ -3402,8 +3403,7 @@ const compositeAbilityObject = {
                   "canHitNonTargets": true,
                   "allowAbilityTriggers": false
                 }
-              ],
-              "priorityLevel": -45
+              ]
             }
           ]
         },
@@ -6101,6 +6101,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": -10,
               "execute": [
                 {
                   "name": "SWITCH",
@@ -6255,8 +6256,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1205689073\">Enemy_W4_Pollux_IF_AbilityP01_NegativeBlood_Target_LockHP</a>"
                 }
-              ],
-              "priorityLevel": -10
+              ]
             },
             {
               "eventTrigger": "When Stacking/Receiving Modifier",

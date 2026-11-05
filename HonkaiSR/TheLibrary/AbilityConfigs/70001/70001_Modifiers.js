@@ -1711,6 +1711,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Aha Instant: Start",
+          "priorityLevel": 100,
           "execute": [
             "Unknown EventType1 (Not always an error)",
             {
@@ -1762,11 +1763,11 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": 100
+          ]
         },
         {
           "eventTrigger": "Aha Instant: End",
+          "priorityLevel": -100,
           "execute": [
             {
               "name": "Override Priority Tags",
@@ -1844,8 +1845,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -100
+          ]
         },
         {
           "eventTrigger": "Aha Instant: End (Pending)",
@@ -2015,6 +2015,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "IF",
@@ -2083,8 +2084,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -90
+          ]
         }
       ],
       "elationValueChange": [

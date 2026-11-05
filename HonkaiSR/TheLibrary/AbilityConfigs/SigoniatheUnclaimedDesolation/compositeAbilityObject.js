@@ -183,6 +183,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -192,8 +193,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1869246844\">Relic_313_Sub</a>"
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }

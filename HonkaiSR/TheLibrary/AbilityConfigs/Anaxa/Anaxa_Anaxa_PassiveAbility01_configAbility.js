@@ -453,6 +453,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": 100,
           "execute": [
             {
               "name": "IF",
@@ -511,8 +512,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": 100
+          ]
         },
         {
           "eventTrigger": "Deal Damage End [Owner]: Hit",

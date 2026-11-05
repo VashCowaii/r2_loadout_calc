@@ -101,6 +101,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -50,
           "execute": [
             {
               "name": "Change Entity Turn-State",
@@ -225,8 +226,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -50
+          ]
         },
         {
           "eventTrigger": "Fatal Damage [Owner]: Start",

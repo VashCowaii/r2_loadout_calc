@@ -1283,6 +1283,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "Force Entity Death",
@@ -1437,8 +1438,7 @@ const configAbility = {
               "allowAbilityTriggers": false
             },
             "Modifier Deletes Itself"
-          ],
-          "priorityLevel": -90
+          ]
         }
       ]
     },

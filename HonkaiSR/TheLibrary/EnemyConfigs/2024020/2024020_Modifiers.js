@@ -399,6 +399,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "Trigger Ability",
@@ -409,8 +410,7 @@ const configAbility = {
               "ability": "Monster_Fuyan_Born_Part02",
               "isTrigger": true
             }
-          ],
-          "priorityLevel": -90
+          ]
         }
       ]
     },

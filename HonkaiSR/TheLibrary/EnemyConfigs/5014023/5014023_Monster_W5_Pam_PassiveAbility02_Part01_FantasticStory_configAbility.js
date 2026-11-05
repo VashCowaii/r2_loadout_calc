@@ -86,6 +86,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -45,
           "execute": [
             {
               "name": "Inject Ability Use",
@@ -98,8 +99,7 @@ const configAbility = {
               "canHitNonTargets": true,
               "allowAbilityTriggers": false
             }
-          ],
-          "priorityLevel": -45
+          ]
         }
       ]
     },

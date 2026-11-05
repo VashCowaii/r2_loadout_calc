@@ -411,6 +411,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Find New Target",
@@ -499,8 +500,7 @@ const compositeAbilityObject = {
                     }
                   }
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }

@@ -67,13 +67,13 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -55,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"-715058594\">Constance_InsertRetargetSelf</a>"
                 }
-              ],
-              "priorityLevel": -55
+              ]
             },
             {
               "eventTrigger": "Custom Event",
@@ -218,10 +218,10 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Turn [Owner]: Action-End Phase",
+              "priorityLevel": 100,
               "execute": [
                 "Modifier Deletes Itself"
-              ],
-              "priorityLevel": 100
+              ]
             },
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -963,10 +963,10 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
+              "priorityLevel": -100,
               "execute": [
                 "Modifier Deletes Itself"
-              ],
-              "priorityLevel": -100
+              ]
             },
             {
               "eventTrigger": "Apply Modifier [From Owner] (Success)",
@@ -1456,6 +1456,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -85,
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -1465,8 +1466,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-25137602\">_M_Constance_Tree03_AddWeaknessListener_DuringAttack</a>"
                 }
-              ],
-              "priorityLevel": -85
+              ]
             },
             {
               "eventTrigger": "Ultimate Prep-Phase [Owner]",
@@ -1683,6 +1683,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Find New Target",
@@ -1728,8 +1729,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1789407747\">Constance_Eidolon2_Bonus_OnCharacterCreate</a>"
                 },
                 "Modifier Deletes Itself"
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }
@@ -2074,6 +2074,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
+              "priorityLevel": 100,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
@@ -2137,8 +2138,7 @@ const compositeAbilityObject = {
                   ]
                 },
                 "Modifier Deletes Itself"
-              ],
-              "priorityLevel": 100
+              ]
             },
             {
               "eventTrigger": "When Modifier is Added [Owner]",
@@ -2232,6 +2232,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -59,
               "execute": [
                 {
                   "name": "Find New Target",
@@ -2260,8 +2261,7 @@ const compositeAbilityObject = {
                   ]
                 },
                 "Modifier Deletes Itself"
-              ],
-              "priorityLevel": -59
+              ]
             }
           ]
         },
@@ -2271,6 +2271,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -2346,8 +2347,7 @@ const compositeAbilityObject = {
                     "Modifier Deletes Itself"
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }
@@ -3345,6 +3345,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
+              "priorityLevel": 100,
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -3365,8 +3366,7 @@ const compositeAbilityObject = {
                   },
                   "casterAssign": "TargetSelf"
                 }
-              ],
-              "priorityLevel": 100
+              ]
             },
             {
               "eventTrigger": "When Modifier is Added [Owner]",
@@ -3412,6 +3412,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Attack DMG End [Owner]",
+              "priorityLevel": 100,
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -3432,8 +3433,7 @@ const compositeAbilityObject = {
                   },
                   "casterAssign": "TargetSelf"
                 }
-              ],
-              "priorityLevel": 100
+              ]
             }
           ]
         },
@@ -4175,6 +4175,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -4194,8 +4195,7 @@ const compositeAbilityObject = {
                     }
                   }
                 }
-              ],
-              "priorityLevel": -80
+              ]
             },
             {
               "eventTrigger": "When Modifier is Added [Anyone]",
@@ -4359,6 +4359,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -4387,8 +4388,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             },
             {
               "eventTrigger": "Created Shield [Anyone]",
@@ -4565,6 +4565,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -4601,8 +4602,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }

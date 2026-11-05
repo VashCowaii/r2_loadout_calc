@@ -1874,6 +1874,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -60,
               "execute": [
                 {
                   "name": "IF",
@@ -1964,8 +1965,7 @@ const compositeAbilityObject = {
                     "Trigger: Attack End"
                   ]
                 }
-              ],
-              "priorityLevel": -60
+              ]
             }
           ]
         }
@@ -2396,6 +2396,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Dealt Damage while Crowd/Mind Controlled [Anyone]",
+              "priorityLevel": -100,
               "execute": [
                 {
                   "name": "IF",
@@ -2420,8 +2421,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -100
+              ]
             },
             {
               "eventTrigger": "Dealt Damage (END) while Crowd/Mind Controlled [Anyone]",
@@ -2795,6 +2795,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Define Custom Variable",
@@ -2818,8 +2819,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             },
             {
               "eventTrigger": "Custom Event",

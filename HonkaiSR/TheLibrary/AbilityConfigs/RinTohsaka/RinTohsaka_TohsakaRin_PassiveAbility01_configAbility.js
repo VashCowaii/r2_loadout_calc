@@ -398,6 +398,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "IF",
@@ -436,8 +437,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -80
+          ]
         }
       ]
     },
@@ -977,6 +977,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "IF",
@@ -1075,8 +1076,7 @@ const configAbility = {
                 "Deleted bullshit"
               ]
             }
-          ],
-          "priorityLevel": -80
+          ]
         },
         {
           "eventTrigger": "Batch: Enemy Arrival",
@@ -1157,6 +1157,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "IF",
@@ -1242,8 +1243,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -80
+          ]
         }
       ]
     },
@@ -1289,13 +1289,13 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": 10001,
           "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"-2068213753\">TohsakaRin_CheckAbility21</a>"
             }
-          ],
-          "priorityLevel": 10001
+          ]
         },
         {
           "eventTrigger": "Extra Action/Turn [Owner]: Start ",

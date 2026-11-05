@@ -209,6 +209,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -218,8 +219,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"790849499\">Advanced_Kafka_PointB1_Sub</a>"
             }
-          ],
-          "priorityLevel": -80
+          ]
         }
       ]
     }

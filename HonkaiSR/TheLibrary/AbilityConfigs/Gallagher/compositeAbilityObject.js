@@ -73,13 +73,13 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"-1349711870\">Gallagher_CheckBreakDamageAddedRatioChange</a>"
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ],
           "modifierFunctions": [
@@ -920,6 +920,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -60,
               "execute": [
                 {
                   "name": "IF",
@@ -1077,8 +1078,7 @@ const compositeAbilityObject = {
                     "Trigger: Attack End"
                   ]
                 }
-              ],
-              "priorityLevel": -60
+              ]
             }
           ]
         },
@@ -1088,6 +1088,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -1132,8 +1133,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }
@@ -1315,6 +1315,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -1351,8 +1352,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         },

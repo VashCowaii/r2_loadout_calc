@@ -1327,6 +1327,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Force Entity Death",
@@ -1481,8 +1482,7 @@ const compositeAbilityObject = {
                   "allowAbilityTriggers": false
                 },
                 "Modifier Deletes Itself"
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         },
@@ -4073,6 +4073,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Dispel Debuffs",
@@ -4194,8 +4195,7 @@ const compositeAbilityObject = {
                     "Modifier Deletes Itself"
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         }

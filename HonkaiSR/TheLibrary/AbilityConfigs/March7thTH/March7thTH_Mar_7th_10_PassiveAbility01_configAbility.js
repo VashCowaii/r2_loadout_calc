@@ -159,6 +159,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": 100,
           "execute": [
             {
               "name": "IF",
@@ -213,8 +214,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": 100
+          ]
         },
         {
           "eventTrigger": "Ability Use [Anyone]: End",
@@ -301,13 +301,13 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": 999999,
           "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"1630889366\">Mar_7th_10_GetEnhance</a>"
             }
-          ],
-          "priorityLevel": 999999
+          ]
         },
         {
           "eventTrigger": "Custom Event",

@@ -583,6 +583,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Attack DMG End [Owner]",
+          "priorityLevel": 100,
           "execute": [
             {
               "name": "IF",
@@ -755,8 +756,7 @@ const configAbility = {
               },
               "casterAssign": "TargetSelf"
             }
-          ],
-          "priorityLevel": 100
+          ]
         }
       ]
     },
@@ -831,6 +831,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Attack DMG End [Owner]",
+          "priorityLevel": 100,
           "execute": [
             {
               "name": "IF",
@@ -1003,8 +1004,7 @@ const configAbility = {
               },
               "casterAssign": "TargetSelf"
             }
-          ],
-          "priorityLevel": 100
+          ]
         }
       ]
     },

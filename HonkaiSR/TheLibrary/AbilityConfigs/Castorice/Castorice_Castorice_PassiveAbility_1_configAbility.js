@@ -504,14 +504,14 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": 10001,
           "execute": [
             {
               "name": "Define Custom Variable",
               "variableName": "Castorice_RefreshMaxSpecialSPFlag",
               "value": 1
             }
-          ],
-          "priorityLevel": 10001
+          ]
         }
       ]
     },
@@ -759,6 +759,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "IF",
@@ -797,8 +798,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -80
+          ]
         },
         {
           "eventTrigger": "Leave Battle"

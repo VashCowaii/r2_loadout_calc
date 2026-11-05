@@ -338,6 +338,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -81,
           "execute": [
             {
               "name": "IF",
@@ -375,8 +376,7 @@ const configAbility = {
                 "Modifier Deletes Itself"
               ]
             }
-          ],
-          "priorityLevel": -81
+          ]
         }
       ]
     }

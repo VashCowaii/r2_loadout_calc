@@ -1372,6 +1372,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -55,
               "execute": [
                 {
                   "name": "Exit Broken-State",
@@ -1396,8 +1397,7 @@ const compositeAbilityObject = {
                   "showInActionOrder": true,
                   "allowAbilityTriggers": false
                 }
-              ],
-              "priorityLevel": -55
+              ]
             }
           ]
         }

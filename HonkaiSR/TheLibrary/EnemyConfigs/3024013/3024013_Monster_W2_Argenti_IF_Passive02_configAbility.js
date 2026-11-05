@@ -30,6 +30,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "Use Custom Character Function",
@@ -126,8 +127,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -90
+          ]
         },
         {
           "eventTrigger": "Pre-Death [Owner]",

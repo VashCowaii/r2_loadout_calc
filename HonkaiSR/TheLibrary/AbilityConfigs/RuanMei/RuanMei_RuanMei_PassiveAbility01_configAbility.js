@@ -565,6 +565,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "IF",
@@ -657,8 +658,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"402849385\">RuanMei_Passive_ListenBeingBreakOrHit</a>"
             }
-          ],
-          "priorityLevel": -80
+          ]
         }
       ]
     }

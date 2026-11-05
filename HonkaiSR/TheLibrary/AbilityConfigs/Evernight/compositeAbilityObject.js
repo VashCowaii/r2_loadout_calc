@@ -1133,6 +1133,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Dealt Damage while Crowd/Mind Controlled [Anyone]",
+              "priorityLevel": -100,
               "execute": [
                 {
                   "name": "IF",
@@ -1157,8 +1158,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -100
+              ]
             },
             {
               "eventTrigger": "Dealt Damage (END) while Crowd/Mind Controlled [Anyone]",
@@ -1279,6 +1279,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Receiving Heal Start [Owner]",
+              "priorityLevel": 200,
               "execute": [
                 {
                   "name": "Define Custom Variable with Healing",
@@ -1304,8 +1305,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": 200
+              ]
             },
             {
               "eventTrigger": "Receiving Heal End [Owner]",
@@ -2073,6 +2073,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -2302,8 +2303,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }
@@ -3121,6 +3121,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -92,
               "execute": [
                 {
                   "name": "IF",
@@ -3149,8 +3150,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -92
+              ]
             }
           ]
         },
@@ -3163,6 +3163,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -3225,8 +3226,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         },
@@ -6417,6 +6417,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Dealt Damage while Crowd/Mind Controlled [Anyone]",
+              "priorityLevel": -100,
               "execute": [
                 {
                   "name": "IF",
@@ -6441,8 +6442,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -100
+              ]
             },
             {
               "eventTrigger": "Dealt Damage (END) while Crowd/Mind Controlled [Anyone]",
@@ -6563,6 +6563,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Receiving Heal Start [Owner]",
+              "priorityLevel": 200,
               "execute": [
                 {
                   "name": "Define Custom Variable with Healing",
@@ -6588,8 +6589,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": 200
+              ]
             },
             {
               "eventTrigger": "Receiving Heal End [Owner]",

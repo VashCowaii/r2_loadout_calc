@@ -448,6 +448,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -457,8 +458,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"786181068\">Topaz_Ultimate_Listen_ModifyBEAction</a>"
             }
-          ],
-          "priorityLevel": -80
+          ]
         },
         {
           "eventTrigger": "When Modifier is Added [Anyone]",

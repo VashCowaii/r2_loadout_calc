@@ -2910,6 +2910,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
@@ -2998,8 +2999,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         },
@@ -3009,6 +3009,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
@@ -3184,8 +3185,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         },
@@ -3195,6 +3195,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -91,
               "execute": [
                 {
                   "name": "Create Enemies",
@@ -3435,8 +3436,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-538347270\">Enemy_W3_Sunday_SaveModel</a>"
                 }
-              ],
-              "priorityLevel": -91
+              ]
             }
           ]
         },
@@ -3446,6 +3446,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -91,
               "execute": [
                 {
                   "name": "Create Enemies",
@@ -3696,8 +3697,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1393344138\">Enemy_W3_Sunday_BreakBonus_Boss</a>"
                 }
-              ],
-              "priorityLevel": -91
+              ]
             }
           ]
         },
@@ -6326,7 +6326,7 @@ const compositeAbilityObject = {
                     "value2": 1,
                     "contextScope": "TargetEntity"
                   },
-                  "execute": [
+                  "runIfPass": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "W3_Sunday_00_Skill09_Round",

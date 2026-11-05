@@ -28,6 +28,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Update Energy",
@@ -45,8 +46,7 @@ const configAbility = {
               },
               "isFixed": "* ERR"
             }
-          ],
-          "priorityLevel": -80
+          ]
         }
       ]
     }

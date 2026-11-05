@@ -1844,6 +1844,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -45,
               "execute": [
                 {
                   "name": "Dispel Debuffs",
@@ -1866,8 +1867,7 @@ const compositeAbilityObject = {
                   "priorityTag": "EnemyBattleCry",
                   "allowAbilityTriggers": false
                 }
-              ],
-              "priorityLevel": -45
+              ]
             }
           ]
         },
@@ -2839,6 +2839,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "IF",
@@ -2974,8 +2975,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         },

@@ -3012,6 +3012,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Waiting in Limbo [Owner]",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -3047,8 +3048,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         },
@@ -3061,6 +3061,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": -12,
               "execute": [
                 "Increment Cycles Counter",
                 {
@@ -3135,8 +3136,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -12
+              ]
             },
             {
               "eventTrigger": "Enter Battle",

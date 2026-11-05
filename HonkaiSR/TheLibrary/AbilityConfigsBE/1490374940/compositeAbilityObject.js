@@ -3157,6 +3157,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "IF",
@@ -3187,8 +3188,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         }
@@ -4970,6 +4970,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Trigger Ability",
@@ -4996,8 +4997,7 @@ const compositeAbilityObject = {
                   },
                   "adjustment": "Add"
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ],
           "elationValueChange": [
@@ -5638,6 +5638,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Trigger Ability",
@@ -5664,8 +5665,7 @@ const compositeAbilityObject = {
                   },
                   "adjustmentType": "+"
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ],
           "variableValueChange": [
@@ -6374,6 +6374,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -6393,8 +6394,7 @@ const compositeAbilityObject = {
                     }
                   }
                 }
-              ],
-              "priorityLevel": -90
+              ]
             },
             {
               "eventTrigger": "Weakness Break [Anyone]",
@@ -6970,13 +6970,13 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"-712201001\">Month_40_AddModifier</a>"
                 }
-              ],
-              "priorityLevel": -90
+              ]
             },
             {
               "eventTrigger": "Battle Event/Summon Created [Anyone]",
@@ -7957,6 +7957,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
@@ -8161,8 +8162,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         }
@@ -8688,6 +8688,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -8731,8 +8732,7 @@ const compositeAbilityObject = {
                     }
                   }
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         }
@@ -9146,6 +9146,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -9155,8 +9156,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"-1413445617\">Modifier_BattleEventAbility_Challenge_Month_36_sub</a>"
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         }
@@ -9902,6 +9902,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -9961,8 +9962,7 @@ const compositeAbilityObject = {
                     }
                   }
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         }
@@ -10861,6 +10861,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 "Deleted bullshit",
                 {
@@ -11219,8 +11220,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         }
@@ -14647,6 +14647,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 "Deleted bullshit",
                 {
@@ -14995,8 +14996,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         }
@@ -17200,6 +17200,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 "Deleted bullshit",
                 {
@@ -17220,8 +17221,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         }
@@ -20808,6 +20808,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -90,
               "execute": [
                 {
                   "name": "Find New Target",
@@ -20868,8 +20869,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -90
+              ]
             }
           ]
         }

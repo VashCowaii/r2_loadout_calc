@@ -1639,6 +1639,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -1666,8 +1667,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"1871788715\">M_Silwolf_Eidolon2_Bonus_OnCharacterCreate</a>"
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }
@@ -2103,6 +2103,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -70,
               "execute": [
                 {
                   "name": "IF",
@@ -2145,8 +2146,7 @@ const compositeAbilityObject = {
                     "Trigger: Attack End"
                   ]
                 }
-              ],
-              "priorityLevel": -70
+              ]
             }
           ]
         }
@@ -2578,6 +2578,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -2717,8 +2718,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }

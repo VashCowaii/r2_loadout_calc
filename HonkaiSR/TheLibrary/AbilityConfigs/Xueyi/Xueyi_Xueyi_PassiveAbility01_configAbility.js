@@ -116,6 +116,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": 999999,
           "execute": [
             {
               "name": "IF",
@@ -177,8 +178,7 @@ const configAbility = {
               "variableName": "_Xueyi_OnEnterBattle_Flag",
               "value": 0
             }
-          ],
-          "priorityLevel": 999999
+          ]
         },
         {
           "eventTrigger": "Batch: Enemy Arrival",
@@ -456,6 +456,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -561,8 +562,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -80
+          ]
         },
         {
           "eventTrigger": "Custom Event",

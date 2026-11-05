@@ -36,10 +36,10 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": 10001,
           "execute": [
             "Modifier Deletes Itself"
-          ],
-          "priorityLevel": 10001
+          ]
         },
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",
@@ -172,6 +172,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": 10001,
           "execute": [
             {
               "name": "Remove Events/Bonuses",
@@ -182,8 +183,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"319066734\">RuanMei_Maze_Modifier_StanceBreakAdd</a>"
             },
             "Modifier Deletes Itself"
-          ],
-          "priorityLevel": 10001
+          ]
         }
       ]
     },
@@ -206,6 +206,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "IF",
@@ -315,8 +316,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -80
+          ]
         }
       ]
     }

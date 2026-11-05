@@ -29,6 +29,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -60,
           "execute": [
             {
               "name": "IF",
@@ -90,8 +91,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -60
+          ]
         }
       ]
     }

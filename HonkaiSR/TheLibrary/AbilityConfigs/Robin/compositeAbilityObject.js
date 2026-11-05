@@ -2008,6 +2008,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -2046,8 +2047,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"979681608\">Robin_Ability03AreaRefresh</a>"
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }
@@ -2377,6 +2377,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Update Energy",
@@ -2394,8 +2395,7 @@ const compositeAbilityObject = {
                   },
                   "isFixed": "* ERR"
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }

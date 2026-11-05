@@ -114,6 +114,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": 90,
               "execute": [
                 {
                   "name": "Define Custom Variable",
@@ -396,8 +397,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": 90
+              ]
             },
             {
               "eventTrigger": "When Stacking/Receiving Modifier"
@@ -829,6 +829,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": 90,
               "execute": [
                 {
                   "name": "Define Custom Variable",
@@ -1111,8 +1112,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": 90
+              ]
             },
             {
               "eventTrigger": "Receiving Heal End [Owner]",

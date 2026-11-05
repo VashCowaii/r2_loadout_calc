@@ -88,6 +88,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -60,
           "execute": [
             {
               "name": "Define Custom Variable with Stage Wave Count",
@@ -179,8 +180,7 @@ const configAbility = {
               ]
             },
             "Trigger: Attack End"
-          ],
-          "priorityLevel": -60
+          ]
         }
       ]
     }

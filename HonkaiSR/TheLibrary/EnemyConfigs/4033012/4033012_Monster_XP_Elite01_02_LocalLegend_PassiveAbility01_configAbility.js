@@ -888,6 +888,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "Inject Ability Use",
@@ -897,8 +898,7 @@ const configAbility = {
               "showInActionOrder": true,
               "allowAbilityTriggers": false
             }
-          ],
-          "priorityLevel": -90
+          ]
         },
         {
           "eventTrigger": "Being Weakness Broken: End [Owner]",

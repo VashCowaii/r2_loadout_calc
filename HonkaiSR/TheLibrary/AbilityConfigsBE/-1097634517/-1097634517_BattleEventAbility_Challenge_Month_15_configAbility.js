@@ -282,6 +282,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -45,
           "execute": [
             "Deleted bullshit",
             {
@@ -302,8 +303,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -45
+          ]
         }
       ]
     }

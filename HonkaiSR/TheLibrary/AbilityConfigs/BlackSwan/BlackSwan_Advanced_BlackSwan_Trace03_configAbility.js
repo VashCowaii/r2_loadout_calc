@@ -128,6 +128,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
@@ -169,8 +170,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-465998500\">Advanced_BlackSwan_Trace03_SubListener</a>"
             },
             "Modifier Deletes Itself"
-          ],
-          "priorityLevel": -80
+          ]
         }
       ]
     }

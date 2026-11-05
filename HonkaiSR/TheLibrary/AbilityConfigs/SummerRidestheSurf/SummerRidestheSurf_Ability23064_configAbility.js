@@ -244,14 +244,14 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Skill Points Modification",
               "adjustmentValue": 1,
               "adjustmentType": "+"
             }
-          ],
-          "priorityLevel": -80
+          ]
         }
       ]
     }

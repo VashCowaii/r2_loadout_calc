@@ -1978,6 +1978,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Declare Custom Variable",
@@ -1997,8 +1998,7 @@ const configAbility = {
               "scope": "TargetEntity",
               "variableName": "BeingAttack"
             }
-          ],
-          "priorityLevel": -80
+          ]
         },
         {
           "eventTrigger": "Custom Event",

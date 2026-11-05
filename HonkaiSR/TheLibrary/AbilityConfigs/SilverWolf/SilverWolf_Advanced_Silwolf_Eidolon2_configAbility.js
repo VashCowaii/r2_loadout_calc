@@ -129,6 +129,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -156,8 +157,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"1871788715\">M_Silwolf_Eidolon2_Bonus_OnCharacterCreate</a>"
             }
-          ],
-          "priorityLevel": -80
+          ]
         }
       ]
     }

@@ -199,6 +199,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": 200,
           "execute": [
             {
               "name": "Remove Events/Bonuses",
@@ -208,8 +209,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"2022067398\">M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark</a>"
             }
-          ],
-          "priorityLevel": 200
+          ]
         }
       ]
     },
@@ -236,6 +236,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": -11,
           "execute": [
             {
               "name": "Add Events/Bonuses",
@@ -245,8 +246,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"2022067398\">M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark</a>"
             }
-          ],
-          "priorityLevel": -11
+          ]
         },
         {
           "eventTrigger": "Take Damage Start [Owner]: Any",

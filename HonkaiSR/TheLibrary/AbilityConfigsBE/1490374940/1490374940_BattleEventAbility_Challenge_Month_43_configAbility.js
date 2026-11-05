@@ -276,6 +276,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "Trigger Ability",
@@ -302,8 +303,7 @@ const configAbility = {
               },
               "adjustment": "Add"
             }
-          ],
-          "priorityLevel": -90
+          ]
         }
       ],
       "elationValueChange": [

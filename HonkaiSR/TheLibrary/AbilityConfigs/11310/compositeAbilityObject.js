@@ -347,6 +347,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Attack DMG End [Owner]",
+              "priorityLevel": 100,
               "execute": [
                 {
                   "name": "IF",
@@ -430,8 +431,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": 100
+              ]
             }
           ]
         },
@@ -1387,7 +1387,47 @@ const compositeAbilityObject = {
               ]
             },
             {
-              "eventTrigger": "Sound stuff nobody cares about"
+              "eventTrigger": "Sound stuff nobody cares about",
+              "execute": [
+                {
+                  "name": "IF",
+                  "conditions": {
+                    "name": "Compare: Parameter String",
+                    "compareType": "=",
+                    "value2": "soundevent_marker_vo_avatar_advantage02_sam_start"
+                  },
+                  "failed": [
+                    {
+                      "name": "IF",
+                      "conditions": {
+                        "name": "Compare: Parameter String",
+                        "compareType": "=",
+                        "value2": "soundevent_marker_vo_avatar_turn_begin02_sam_01_start"
+                      },
+                      "failed": [
+                        {
+                          "name": "IF",
+                          "conditions": {
+                            "name": "Compare: Parameter String",
+                            "compareType": "=",
+                            "value2": "soundevent_marker_vo_avatar_turn_begin02_sam_02_start"
+                          },
+                          "failed": [
+                            {
+                              "name": "IF",
+                              "conditions": {
+                                "name": "Compare: Parameter String",
+                                "compareType": "=",
+                                "value2": "soundevent_marker_vo_avatar_waiting02_sam_start"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             },
             {
               "eventTrigger": "Sound stuff nobody cares about"

@@ -399,6 +399,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "Trigger Ability",
@@ -409,8 +410,7 @@ const configAbility = {
               "ability": "Monster_Fuyan_Born_Part02",
               "isTrigger": true
             }
-          ],
-          "priorityLevel": -90
+          ]
         }
       ]
     },
@@ -964,6 +964,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "IF",
@@ -1268,8 +1269,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -90
+          ]
         }
       ]
     },
@@ -2147,6 +2147,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "Trigger Ability",
@@ -2180,8 +2181,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -90
+          ]
         }
       ]
     }

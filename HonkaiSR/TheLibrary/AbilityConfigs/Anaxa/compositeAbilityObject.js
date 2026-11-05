@@ -279,13 +279,13 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -55,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"1862868553\">Anaxa_InsertRetarget</a>"
                 }
-              ],
-              "priorityLevel": -55
+              ]
             },
             {
               "eventTrigger": "Custom Event",
@@ -489,6 +489,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": 200,
               "execute": [
                 {
                   "name": "IF",
@@ -509,8 +510,7 @@ const compositeAbilityObject = {
                     "Modifier Deletes Itself"
                   ]
                 }
-              ],
-              "priorityLevel": 200
+              ]
             },
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1001,6 +1001,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -1181,8 +1182,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }
@@ -1328,6 +1328,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Find New Target",
@@ -1374,8 +1375,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"1634329483\">M_Anaxa_Eidolon2_Bonus_OnCharacterCreate</a>"
                 },
                 "Modifier Deletes Itself"
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }
@@ -1850,6 +1850,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -2118,8 +2119,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }
@@ -2586,6 +2586,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": 100,
               "execute": [
                 {
                   "name": "IF",
@@ -2644,8 +2645,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": 100
+              ]
             },
             {
               "eventTrigger": "Deal Damage End [Owner]: Hit",

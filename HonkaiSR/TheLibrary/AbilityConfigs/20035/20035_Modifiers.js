@@ -121,6 +121,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": 90,
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
@@ -181,8 +182,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": 90
+          ]
         },
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -281,6 +281,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": 90,
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
@@ -341,8 +342,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": 90
+          ]
         },
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -441,6 +441,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Turn [Owner]: Pre-action Phase",
+          "priorityLevel": 90,
           "execute": [
             {
               "name": "Define Custom Variable with Stat",
@@ -496,8 +497,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": 90
+          ]
         },
         {
           "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1058,6 +1058,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "IF",
@@ -1155,8 +1156,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -90
+          ]
         }
       ]
     }

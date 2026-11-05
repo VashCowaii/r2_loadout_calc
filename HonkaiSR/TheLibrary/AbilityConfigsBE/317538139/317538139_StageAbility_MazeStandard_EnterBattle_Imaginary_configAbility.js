@@ -25,6 +25,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -70,
           "execute": [
             {
               "name": "Use Custom Character Function",
@@ -36,8 +37,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -70
+          ]
         }
       ]
     }

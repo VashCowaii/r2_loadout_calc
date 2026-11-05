@@ -106,6 +106,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": -10,
               "execute": [
                 {
                   "name": "Update Energy",
@@ -132,8 +133,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1409864339\">M_BlackSwan_DOT_Eidolon4_HaveAddedSP</a>"
                 },
                 "Modifier Deletes Itself"
-              ],
-              "priorityLevel": -10
+              ]
             }
           ]
         },
@@ -416,6 +416,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": 90,
               "execute": [
                 {
                   "name": "Define Custom Variable with Modifier Values",
@@ -1274,8 +1275,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": 90
+              ]
             },
             {
               "eventTrigger": "When Stacking/Receiving Modifier",
@@ -1640,6 +1640,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Define Custom Variable with Stat",
@@ -1669,8 +1670,7 @@ const compositeAbilityObject = {
                     }
                   }
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ],
           "abilityValueChange": [
@@ -2108,6 +2108,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -2266,8 +2267,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             },
             {
               "eventTrigger": "When Stacking Modifier Instance [Anyone]",
@@ -4092,6 +4092,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -4111,8 +4112,7 @@ const compositeAbilityObject = {
                     }
                   }
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }
@@ -4762,6 +4762,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -55,
               "execute": [
                 {
                   "name": "IF",
@@ -4809,8 +4810,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -55
+              ]
             }
           ]
         }
@@ -5023,6 +5023,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": 200,
               "execute": [
                 {
                   "name": "Remove Events/Bonuses",
@@ -5032,8 +5033,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"2022067398\">M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark</a>"
                 }
-              ],
-              "priorityLevel": 200
+              ]
             }
           ]
         },
@@ -5060,6 +5060,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Turn [Owner]: Pre-action Phase",
+              "priorityLevel": -11,
               "execute": [
                 {
                   "name": "Add Events/Bonuses",
@@ -5069,8 +5070,7 @@ const compositeAbilityObject = {
                   },
                   "modifier": "<a class=\"gModGreen\" id=\"2022067398\">M_BlackSwan_P01_ListenAddPoison_SubOnEnemy_Part1Mark</a>"
                 }
-              ],
-              "priorityLevel": -11
+              ]
             },
             {
               "eventTrigger": "Take Damage Start [Owner]: Any",

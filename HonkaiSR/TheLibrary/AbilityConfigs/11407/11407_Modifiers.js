@@ -125,6 +125,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -69,
           "execute": [
             {
               "name": "IF",
@@ -192,8 +193,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -69
+          ]
         }
       ]
     },

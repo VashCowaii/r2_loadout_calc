@@ -1808,6 +1808,7 @@ const configAbility = {
         },
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "Remove Events/Bonuses",
@@ -1905,8 +1906,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -90
+          ]
         }
       ]
     },
@@ -5061,6 +5061,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "Remove Events/Bonuses",
@@ -5149,8 +5150,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -90
+          ]
         }
       ]
     },
@@ -5160,6 +5160,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Waiting in Limbo [Owner]",
+          "priorityLevel": -90,
           "execute": [
             {
               "name": "Remove Events/Bonuses",
@@ -5335,8 +5336,7 @@ const configAbility = {
                 }
               ]
             }
-          ],
-          "priorityLevel": -90
+          ]
         }
       ]
     },
@@ -5346,6 +5346,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -91,
           "execute": [
             {
               "name": "Create Enemies",
@@ -5586,8 +5587,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-538347270\">Enemy_W3_Sunday_SaveModel</a>"
             }
-          ],
-          "priorityLevel": -91
+          ]
         }
       ]
     },
@@ -5597,6 +5597,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -91,
           "execute": [
             {
               "name": "Create Enemies",
@@ -5847,8 +5848,7 @@ const configAbility = {
               },
               "modifier": "<a class=\"gModGreen\" id=\"-1393344138\">Enemy_W3_Sunday_BreakBonus_Boss</a>"
             }
-          ],
-          "priorityLevel": -91
+          ]
         }
       ]
     },

@@ -1903,6 +1903,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -81,
               "execute": [
                 {
                   "name": "IF",
@@ -1940,8 +1941,7 @@ const compositeAbilityObject = {
                     "Modifier Deletes Itself"
                   ]
                 }
-              ],
-              "priorityLevel": -81
+              ]
             }
           ]
         }
@@ -2459,14 +2459,14 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": 10001,
               "execute": [
                 {
                   "name": "Define Custom Variable",
                   "variableName": "Castorice_RefreshMaxSpecialSPFlag",
                   "value": 1
                 }
-              ],
-              "priorityLevel": 10001
+              ]
             }
           ]
         },
@@ -2714,6 +2714,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -2752,8 +2753,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             },
             {
               "eventTrigger": "Leave Battle"
@@ -5500,6 +5500,7 @@ const compositeAbilityObject = {
             },
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -80,
               "execute": [
                 {
                   "name": "IF",
@@ -5538,8 +5539,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -80
+              ]
             }
           ]
         }

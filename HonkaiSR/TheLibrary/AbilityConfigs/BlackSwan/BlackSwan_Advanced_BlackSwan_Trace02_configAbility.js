@@ -150,6 +150,7 @@ const configAbility = {
       "execute": [
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Use Custom Character Function",
@@ -214,8 +215,7 @@ const configAbility = {
               "modifier": "<a class=\"gModGreen\" id=\"-1372749734\">M_Advanced_BlackSwan_Trace02_AfterEnterBattleListener</a>"
             },
             "Modifier Deletes Itself"
-          ],
-          "priorityLevel": -80
+          ]
         }
       ]
     }

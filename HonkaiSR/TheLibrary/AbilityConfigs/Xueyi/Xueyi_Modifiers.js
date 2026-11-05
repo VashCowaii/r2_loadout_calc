@@ -220,13 +220,13 @@ const configAbility = {
         },
         {
           "eventTrigger": "Enter Battle",
+          "priorityLevel": -80,
           "execute": [
             {
               "name": "Use Custom Character Function",
               "functionName": "<a class=\"gTempYellow\" id=\"1730434775\">Xueyi_CheckBreakDamageAddedRatioChange</a>"
             }
-          ],
-          "priorityLevel": -80
+          ]
         }
       ],
       "modifierFunctions": [

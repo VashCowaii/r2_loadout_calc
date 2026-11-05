@@ -115,6 +115,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -70,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
@@ -126,8 +127,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -70
+              ]
             }
           ]
         }
@@ -160,6 +160,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -70,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
@@ -171,8 +172,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -70
+              ]
             }
           ]
         }
@@ -205,6 +205,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -70,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
@@ -216,8 +217,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -70
+              ]
             }
           ]
         }
@@ -250,6 +250,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -70,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
@@ -261,8 +262,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -70
+              ]
             }
           ]
         }
@@ -295,6 +295,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -70,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
@@ -306,8 +307,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -70
+              ]
             }
           ]
         }
@@ -340,6 +340,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -70,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
@@ -351,8 +352,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -70
+              ]
             }
           ]
         }
@@ -385,6 +385,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -70,
               "execute": [
                 {
                   "name": "Use Custom Character Function",
@@ -396,8 +397,7 @@ const compositeAbilityObject = {
                     }
                   ]
                 }
-              ],
-              "priorityLevel": -70
+              ]
             }
           ]
         }
@@ -430,6 +430,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "eventTrigger": "Enter Battle",
+              "priorityLevel": -70,
               "execute": [
                 {
                   "name": "SWITCH",
@@ -578,8 +579,7 @@ const compositeAbilityObject = {
                   ],
                   "defaultEvents": []
                 }
-              ],
-              "priorityLevel": -70
+              ]
             }
           ]
         }
