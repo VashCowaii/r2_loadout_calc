@@ -131,7 +131,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": 3,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_ReviveCount",
@@ -1375,7 +1375,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": 7,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_DispelCount",
@@ -1401,7 +1401,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": 5,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {

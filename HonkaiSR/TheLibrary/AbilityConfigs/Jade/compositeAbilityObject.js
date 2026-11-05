@@ -2614,7 +2614,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": 99,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {

@@ -5005,7 +5005,7 @@ const compositeAbilityObject = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": 999,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable with Changes to Stats",
                   "variableName": "MDF_TeamSharePoint_Delta"
@@ -5685,7 +5685,7 @@ const compositeAbilityObject = {
                     ]
                   },
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Show Attack Time",
                       "time": {
@@ -5700,7 +5700,7 @@ const compositeAbilityObject = {
                       "show": true
                     }
                   ],
-                  "whenLeavingRange": [
+                  "leavingRange": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_Count",
@@ -5714,7 +5714,7 @@ const compositeAbilityObject = {
                       }
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Show Attack Time",
                       "time": {
@@ -6504,7 +6504,7 @@ const compositeAbilityObject = {
                     ]
                   },
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Show Attack Time",
                       "time": {
@@ -6519,7 +6519,7 @@ const compositeAbilityObject = {
                       "show": true
                     }
                   ],
-                  "whenLeavingRange": [
+                  "leavingRange": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_Count",
@@ -6533,7 +6533,7 @@ const compositeAbilityObject = {
                       }
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Show Attack Time",
                       "time": {
@@ -13049,7 +13049,7 @@ const compositeAbilityObject = {
                     ]
                   },
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Find New Target",
                       "from": {
@@ -13096,7 +13096,7 @@ const compositeAbilityObject = {
                       ]
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Find New Target",
                       "from": {
@@ -15596,7 +15596,7 @@ const compositeAbilityObject = {
                     ]
                   },
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Find New Target",
                       "from": {
@@ -15643,7 +15643,7 @@ const compositeAbilityObject = {
                       ]
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Find New Target",
                       "from": {
@@ -16545,7 +16545,7 @@ const compositeAbilityObject = {
                     ]
                   },
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Remove Events/Bonuses",
                       "to": {
@@ -16591,7 +16591,7 @@ const compositeAbilityObject = {
                       ]
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Find New Target",
                       "from": {

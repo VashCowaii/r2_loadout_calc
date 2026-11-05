@@ -238,7 +238,7 @@ const configAbility = {
               "minValue": 0,
               "maxValue": 99,
               "includeMaxValueInRange": true,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "IF",
                   "conditions": {

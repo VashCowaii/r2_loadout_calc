@@ -104,7 +104,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "maxValue": 0,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Remove Events/Bonuses",
                       "to": {
@@ -115,7 +115,7 @@ const compositeAbilityObject = {
                       "onlyRemoveOwnersInstance": true
                     }
                   ],
-                  "whenLeavingRange": [
+                  "leavingRange": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {

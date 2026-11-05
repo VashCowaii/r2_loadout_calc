@@ -3175,7 +3175,7 @@ const compositeAbilityObject = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": 999,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable with Changes to Stats",
                   "variableName": "MDF_TeamSharePoint_Delta"

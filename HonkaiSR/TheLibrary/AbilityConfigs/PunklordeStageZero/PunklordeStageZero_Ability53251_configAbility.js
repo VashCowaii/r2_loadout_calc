@@ -217,7 +217,7 @@ const configAbility = {
                   0.8
                 ]
               },
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -289,7 +289,7 @@ const configAbility = {
                   0.8
                 ]
               },
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "IF",
                   "conditions": {

@@ -187,7 +187,7 @@ const configAbility = {
                   1.5
                 ]
               },
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {
@@ -217,7 +217,7 @@ const configAbility = {
                   2.5
                 ]
               },
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {
@@ -249,7 +249,7 @@ const configAbility = {
                   2.5
                 ]
               },
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {

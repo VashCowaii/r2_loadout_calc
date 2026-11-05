@@ -3663,7 +3663,7 @@ const compositeAbilityObject = {
                     ]
                   },
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
@@ -3677,7 +3677,7 @@ const compositeAbilityObject = {
                       "priorState": "Active"
                     }
                   ],
-                  "whenLeavingRange": [
+                  "leavingRange": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
@@ -3691,7 +3691,7 @@ const compositeAbilityObject = {
                       "priorState": "Normal"
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {

@@ -6072,7 +6072,7 @@ const compositeAbilityObject = {
                     ]
                   },
                   "includeMaxValueInRange": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {
@@ -9551,7 +9551,7 @@ const compositeAbilityObject = {
                     ]
                   },
                   "includeMaxValueInRange": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {
@@ -12971,7 +12971,7 @@ const compositeAbilityObject = {
                     ]
                   },
                   "includeMaxValueInRange": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {

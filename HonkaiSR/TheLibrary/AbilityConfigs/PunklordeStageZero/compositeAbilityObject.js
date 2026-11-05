@@ -225,7 +225,7 @@ const compositeAbilityObject = {
                       0.8
                     ]
                   },
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -297,7 +297,7 @@ const compositeAbilityObject = {
                       0.8
                     ]
                   },
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {

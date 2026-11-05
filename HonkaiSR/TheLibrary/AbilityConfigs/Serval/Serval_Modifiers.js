@@ -91,7 +91,7 @@ const configAbility = {
                   "Serval_Ran06_Judge_MaxSP"
                 ]
               },
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {
@@ -101,7 +101,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"731548834\">Serval_Eidolon6_Check</a>[<span class=\"descriptionNumberColor\">DMG Boost</span>]"
                 }
               ],
-              "whenLeavingRange": [
+              "leavingRange": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {

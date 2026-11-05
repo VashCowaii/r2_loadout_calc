@@ -2480,7 +2480,7 @@ const compositeAbilityObject = {
                     ]
                   },
                   "maxValue": 9999,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {
@@ -2513,7 +2513,7 @@ const compositeAbilityObject = {
                       }
                     }
                   ],
-                  "whenLeavingRange": [
+                  "leavingRange": [
                     {
                       "name": "Remove Events/Bonuses",
                       "to": {

@@ -1826,7 +1826,7 @@ const compositeAbilityObject = {
                   "minValue": 0,
                   "maxValue": 99,
                   "includeMaxValueInRange": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -2080,7 +2080,7 @@ const compositeAbilityObject = {
                   "minValue": 0,
                   "maxValue": 99,
                   "includeMaxValueInRange": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -2585,7 +2585,7 @@ const compositeAbilityObject = {
                   "minValue": 0,
                   "maxValue": 99,
                   "includeMaxValueInRange": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -2621,7 +2621,7 @@ const compositeAbilityObject = {
                   "minValue": 0,
                   "maxValue": 99,
                   "includeMaxValueInRange": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -3481,7 +3481,7 @@ const compositeAbilityObject = {
                   "minValue": 0,
                   "maxValue": 99,
                   "includeMaxValueInRange": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "IF",
                       "conditions": {

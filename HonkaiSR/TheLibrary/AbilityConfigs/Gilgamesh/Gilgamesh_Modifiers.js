@@ -765,7 +765,7 @@ const configAbility = {
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"-793216758\">Gilgamesh_Tree03_RefreshAura</a>"
@@ -895,7 +895,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": 99,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable with Changes to Stats",
                   "variableName": "_KingChangeValue",
@@ -1018,7 +1018,7 @@ const configAbility = {
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable with Changes to Stats",
                   "variableName": "MDF_TempSPChange"
@@ -1209,7 +1209,7 @@ const configAbility = {
                 ]
               },
               "includeMaxValueInRange": true,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "IF",
                   "conditions": {

@@ -504,7 +504,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 1,
               "maxValue": 99,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {
@@ -551,7 +551,7 @@ const configAbility = {
                   }
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {
@@ -608,7 +608,7 @@ const configAbility = {
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Modify Skill-Point Extras",
                   "target": {

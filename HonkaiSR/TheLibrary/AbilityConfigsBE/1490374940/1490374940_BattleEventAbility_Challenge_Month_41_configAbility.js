@@ -766,7 +766,7 @@ const configAbility = {
                 ]
               },
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Show Attack Time",
                   "time": {
@@ -781,7 +781,7 @@ const configAbility = {
                   "show": true
                 }
               ],
-              "whenLeavingRange": [
+              "leavingRange": [
                 {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_Count",
@@ -795,7 +795,7 @@ const configAbility = {
                   }
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Show Attack Time",
                   "time": {

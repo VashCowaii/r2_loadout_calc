@@ -227,7 +227,7 @@ const compositeAbilityObject = {
                   "minValue": 0,
                   "maxValue": 999,
                   "includeMaxValueInRange": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable with Changes to Stats",
                       "variableName": "MDF_TemperatureChangeDelta"

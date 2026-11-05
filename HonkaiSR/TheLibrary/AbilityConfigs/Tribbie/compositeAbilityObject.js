@@ -727,7 +727,7 @@ const compositeAbilityObject = {
                   "minValue": 0,
                   "maxValue": 1000000000,
                   "includeMaxValueInRange": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Stack Target Stat Value",
                       "target": {
@@ -867,7 +867,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": 1000000000,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_TotalHPChange",
@@ -974,7 +974,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": 1000000000,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_TotalHPChange",

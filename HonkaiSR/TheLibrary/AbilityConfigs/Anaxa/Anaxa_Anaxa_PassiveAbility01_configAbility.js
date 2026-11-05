@@ -347,7 +347,7 @@ const configAbility = {
                 ]
               },
               "maxValue": 9999,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {
@@ -380,7 +380,7 @@ const configAbility = {
                   }
                 }
               ],
-              "whenLeavingRange": [
+              "leavingRange": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {

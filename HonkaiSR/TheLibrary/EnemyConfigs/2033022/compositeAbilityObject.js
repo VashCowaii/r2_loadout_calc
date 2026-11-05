@@ -1590,7 +1590,7 @@ const compositeAbilityObject = {
                   "minValue": 0,
                   "maxValue": 4,
                   "includeMaxValueInRange": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable with Team Count",
                       "target": {
@@ -1652,7 +1652,7 @@ const compositeAbilityObject = {
                   "minValue": 1,
                   "maxValue": 3,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "UI Display Event",
                       "popUpText": "Inflict Weakness Break on the parts to reduce the boss's Toughness"

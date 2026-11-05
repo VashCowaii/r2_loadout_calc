@@ -249,7 +249,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": 9999999,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -711,7 +711,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -3039,7 +3039,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": 9999999,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable with Changes to Stats",
                       "variableName": "Castorice_DeltaAdd"
@@ -3101,7 +3101,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "triggerClampedChanges": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "<a class=\"gTempYellow\" id=\"-272315266\">Castorice_CheckCurrentSpecialSPChange</a>"
@@ -3118,7 +3118,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "triggerClampedChanges": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "<a class=\"gTempYellow\" id=\"-272315266\">Castorice_CheckCurrentSpecialSPChange</a>"
@@ -4290,7 +4290,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Stack Target Stat Value",
                       "target": {
@@ -6320,7 +6320,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
                       "target": {
@@ -6341,7 +6341,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "IF",
                       "conditions": {

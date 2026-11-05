@@ -537,7 +537,7 @@ const configAbility = {
               "minValue": 0,
               "maxValue": 9999999,
               "includeMaxValueInRange": true,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Stack Target Stat Value",
                   "target": {
@@ -632,7 +632,7 @@ const configAbility = {
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
                   "target": {
@@ -739,7 +739,7 @@ const configAbility = {
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
                   "target": {

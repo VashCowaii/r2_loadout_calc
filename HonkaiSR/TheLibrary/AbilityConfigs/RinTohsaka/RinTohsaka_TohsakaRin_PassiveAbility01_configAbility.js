@@ -937,13 +937,13 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": -999,
               "maxValue": 0.5,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "enhancedColor": "False"
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "enhancedColor": "False"
@@ -954,13 +954,13 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0.5,
               "maxValue": 9999,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "enhancedColor": "True"
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "enhancedColor": "True"
@@ -1542,7 +1542,7 @@ const configAbility = {
                   "EnergyBar_MaxGemNum"
                 ]
               },
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -1661,7 +1661,7 @@ const configAbility = {
                   ]
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -1728,7 +1728,7 @@ const configAbility = {
               },
               "maxValue": 999,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -1803,7 +1803,7 @@ const configAbility = {
                   "value": 10
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "IF",
                   "conditions": {

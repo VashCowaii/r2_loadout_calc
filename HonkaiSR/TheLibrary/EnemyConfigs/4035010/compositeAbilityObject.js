@@ -141,7 +141,7 @@ const compositeAbilityObject = {
                   "minValue": 67,
                   "maxValue": 100,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "IronTombCore_BattleScore2_Flag",
@@ -1360,7 +1360,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": 0.1,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -1410,7 +1410,7 @@ const compositeAbilityObject = {
                   "minValue": 0,
                   "maxValue": 999999,
                   "includeMaxValueInRange": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
                       "target": {
@@ -1498,7 +1498,7 @@ const compositeAbilityObject = {
                   "minValue": 0,
                   "maxValue": 0,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -2402,7 +2402,7 @@ const compositeAbilityObject = {
                   "minValue": 0,
                   "maxValue": 2,
                   "includeMaxValueInRange": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -2437,7 +2437,7 @@ const compositeAbilityObject = {
                   "minValue": 0,
                   "maxValue": 100,
                   "includeMaxValueInRange": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Set IronTomb Progress",
                       "display": {
@@ -2813,7 +2813,7 @@ const compositeAbilityObject = {
                   "minValue": 100,
                   "maxValue": 100,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -3383,7 +3383,7 @@ const compositeAbilityObject = {
                   "minValue": 0,
                   "maxValue": 0,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Remove Events/Bonuses",
                       "to": {
@@ -3417,7 +3417,7 @@ const compositeAbilityObject = {
                   "minValue": 1,
                   "maxValue": 1,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Remove Events/Bonuses",
                       "to": {
@@ -3451,7 +3451,7 @@ const compositeAbilityObject = {
                   "minValue": 2,
                   "maxValue": 2,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Remove Events/Bonuses",
                       "to": {

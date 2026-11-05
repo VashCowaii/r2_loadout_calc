@@ -1084,7 +1084,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": 9999999,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable with Changes to Stats",
                   "variableName": "Castorice_DeltaAdd"
@@ -1146,7 +1146,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "triggerClampedChanges": true,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"-272315266\">Castorice_CheckCurrentSpecialSPChange</a>"
@@ -1163,7 +1163,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "triggerClampedChanges": true,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"-272315266\">Castorice_CheckCurrentSpecialSPChange</a>"

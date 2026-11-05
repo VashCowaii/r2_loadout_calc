@@ -200,7 +200,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": 999,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "IF",
                   "conditions": {

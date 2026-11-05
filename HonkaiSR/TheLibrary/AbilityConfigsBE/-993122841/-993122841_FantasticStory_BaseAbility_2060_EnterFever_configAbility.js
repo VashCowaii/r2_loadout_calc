@@ -250,7 +250,7 @@ const configAbility = {
               },
               "maxValue": 1000000000,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "IF",
                   "conditions": {

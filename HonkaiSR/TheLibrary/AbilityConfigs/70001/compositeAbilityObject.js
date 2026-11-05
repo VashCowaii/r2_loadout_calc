@@ -433,7 +433,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Stack Target Stat Value",
                       "target": {
@@ -515,7 +515,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": 1000000000,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {
@@ -525,7 +525,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-636762237\">MBattleEvent_Elation_BaseSpeedNeedRefresh</a>"
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {
@@ -1890,7 +1890,7 @@ const compositeAbilityObject = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": 9999,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Declare Custom Variable",
                   "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;",
@@ -2109,7 +2109,7 @@ const compositeAbilityObject = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": 9999,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Declare Custom Variable",
                   "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;",

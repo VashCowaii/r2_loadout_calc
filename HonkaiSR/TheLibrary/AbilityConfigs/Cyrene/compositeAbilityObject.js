@@ -617,7 +617,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "<a class=\"gTempYellow\" id=\"1194720287\">Cyrene_PointB3_CheckSpeed</a>"
@@ -632,7 +632,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "<a class=\"gTempYellow\" id=\"1194720287\">Cyrene_PointB3_CheckSpeed</a>"
@@ -647,7 +647,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "<a class=\"gTempYellow\" id=\"1194720287\">Cyrene_PointB3_CheckSpeed</a>"
@@ -2580,7 +2580,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
@@ -2625,7 +2625,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
@@ -2653,7 +2653,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -2733,7 +2733,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "triggerClampedChanges": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
                       "target": {
@@ -2762,7 +2762,7 @@ const compositeAbilityObject = {
                       "SpecialSPNeed"
                     ]
                   },
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {
@@ -2772,7 +2772,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"1534801198\">Cyrene_Ability03_LackOfSP</a>"
                     }
                   ],
-                  "whenLeavingRange": [
+                  "leavingRange": [
                     {
                       "name": "Remove Events/Bonuses",
                       "to": {
@@ -2832,7 +2832,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "triggerClampedChanges": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
                       "target": {
@@ -4323,7 +4323,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable with Copy",
                       "target": {
@@ -6679,7 +6679,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -7329,7 +7329,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "<a class=\"gTempYellow\" id=\"445891682\">_T_AmazingBonus_Player_AttackSyncer</a>"
@@ -7344,7 +7344,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "<a class=\"gTempYellow\" id=\"445891682\">_T_AmazingBonus_Player_AttackSyncer</a>"
@@ -7359,7 +7359,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "<a class=\"gTempYellow\" id=\"445891682\">_T_AmazingBonus_Player_AttackSyncer</a>"
@@ -7374,7 +7374,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
                       "target": {
@@ -7542,7 +7542,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Stack Target Stat Value",
                       "target": {
@@ -7570,7 +7570,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Stack Target Stat Value",
                       "target": {
@@ -7815,7 +7815,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Stack Target Stat Value",
                       "target": {
@@ -7860,7 +7860,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Stack Target Stat Value",
                       "target": {
@@ -8058,7 +8058,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
                       "target": {

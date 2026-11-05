@@ -332,7 +332,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_CreatFlag",

@@ -298,7 +298,7 @@ const configAbility = {
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -358,7 +358,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 1,
               "maxValue": 99,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {
@@ -384,7 +384,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1504968507\">Phainon_Ability22_Disable</a>"
                 }
               ],
-              "whenLeavingRange": [
+              "leavingRange": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {

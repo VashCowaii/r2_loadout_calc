@@ -237,7 +237,7 @@ const configAbility = {
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"1980210861\">Cerydra_Template_PromotionEidolon0</a>"
@@ -252,7 +252,7 @@ const configAbility = {
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"1980210861\">Cerydra_Template_PromotionEidolon0</a>"
@@ -649,7 +649,7 @@ const configAbility = {
                 ]
               },
               "includeMaxValueInRange": true,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -727,7 +727,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 1,
               "maxValue": 99,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Define Custom Variable",
                   "variableName": "Rank01toRank00",
@@ -2014,7 +2014,7 @@ const configAbility = {
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"285180959\">Cerydra_PointB1_CriticalCriticalDamageAddedRatio</a>"
@@ -2029,7 +2029,7 @@ const configAbility = {
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"285180959\">Cerydra_PointB1_CriticalCriticalDamageAddedRatio</a>"
@@ -2044,7 +2044,7 @@ const configAbility = {
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"285180959\">Cerydra_PointB1_CriticalCriticalDamageAddedRatio</a>"

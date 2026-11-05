@@ -585,7 +585,7 @@ const compositeAbilityObject = {
                   "minValue": 0,
                   "maxValue": 9999999,
                   "includeMaxValueInRange": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Stack Target Stat Value",
                       "target": {
@@ -680,7 +680,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
                       "target": {
@@ -787,7 +787,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
                       "target": {
@@ -2649,7 +2649,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": -999,
                   "maxValue": 99999,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
@@ -2662,7 +2662,7 @@ const compositeAbilityObject = {
                       }
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
@@ -2829,7 +2829,7 @@ const compositeAbilityObject = {
                       16
                     ]
                   },
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Remove Events/Bonuses",
                       "to": {
@@ -2855,7 +2855,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"683715754\">Memosprite_EvernightServant_TriggerNormal</a>"
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Remove Events/Bonuses",
                       "to": {
@@ -2893,7 +2893,7 @@ const compositeAbilityObject = {
                     ]
                   },
                   "maxValue": 99999,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Dispel Debuffs",
                       "target": {
@@ -2946,7 +2946,7 @@ const compositeAbilityObject = {
                       ]
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Dispel Debuffs",
                       "target": {
@@ -5869,7 +5869,7 @@ const compositeAbilityObject = {
                   "minValue": 0,
                   "maxValue": 9999999,
                   "includeMaxValueInRange": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Stack Target Stat Value",
                       "target": {
@@ -5964,7 +5964,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
                       "target": {
@@ -6071,7 +6071,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
                       "target": {
@@ -8222,7 +8222,7 @@ const compositeAbilityObject = {
                       "_Partner_CountThresHold"
                     ]
                   },
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -8235,7 +8235,7 @@ const compositeAbilityObject = {
                       }
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -8272,7 +8272,7 @@ const compositeAbilityObject = {
                       "_Partner_CountThresHold"
                     ]
                   },
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -8285,7 +8285,7 @@ const compositeAbilityObject = {
                       }
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -8323,7 +8323,7 @@ const compositeAbilityObject = {
                       "_Partner_CountThresHold"
                     ]
                   },
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -8336,7 +8336,7 @@ const compositeAbilityObject = {
                       }
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -8374,7 +8374,7 @@ const compositeAbilityObject = {
                       "_Partner_CountThresHold"
                     ]
                   },
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -8387,7 +8387,7 @@ const compositeAbilityObject = {
                       }
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -8415,7 +8415,7 @@ const compositeAbilityObject = {
                     ]
                   },
                   "maxValue": 9999,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -8428,7 +8428,7 @@ const compositeAbilityObject = {
                       }
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -8540,7 +8540,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": -999,
                   "maxValue": 99999,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Define Custom Variable",
                       "target": {
@@ -8558,7 +8558,7 @@ const compositeAbilityObject = {
                       }
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable",
                       "target": {

@@ -416,7 +416,7 @@ const compositeAbilityObject = {
                   "MDF_ThresholdValue"
                 ]
               },
-              "whenLeavingRange": [
+              "leavingRange": [
                 {
                   "name": "Find New Target",
                   "from": {
@@ -483,7 +483,7 @@ const compositeAbilityObject = {
                 ]
               },
               "maxValue": 9999,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Find New Target",
                   "from": {

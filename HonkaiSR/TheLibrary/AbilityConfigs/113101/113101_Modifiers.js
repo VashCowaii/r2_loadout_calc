@@ -1536,7 +1536,7 @@ const configAbility = {
                   "UnusedUnderThisBase_6581"
                 ]
               },
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -1555,7 +1555,7 @@ const configAbility = {
                   ]
                 }
               ],
-              "whenLeavingRange": [
+              "leavingRange": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {

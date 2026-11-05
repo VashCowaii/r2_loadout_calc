@@ -1353,7 +1353,7 @@ const compositeAbilityObject = {
                   "minValue": 0,
                   "maxValue": 1,
                   "includeMaxValueInRange": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "IF",
                       "conditions": {

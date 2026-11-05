@@ -159,7 +159,7 @@ const configAbility = {
               "minValue": 0,
               "maxValue": 0,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {
@@ -175,7 +175,7 @@ const configAbility = {
               "minValue": 1,
               "maxValue": 1,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Scholar_01_LocalLegend_Ability01_Part01",

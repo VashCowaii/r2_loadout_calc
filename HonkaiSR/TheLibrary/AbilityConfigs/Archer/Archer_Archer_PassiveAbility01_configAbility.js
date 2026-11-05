@@ -1090,7 +1090,7 @@ const configAbility = {
                 ]
               },
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
@@ -1104,7 +1104,7 @@ const configAbility = {
                   "priorState": "Active"
                 }
               ],
-              "whenLeavingRange": [
+              "leavingRange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
@@ -1118,7 +1118,7 @@ const configAbility = {
                   "priorState": "Normal"
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {

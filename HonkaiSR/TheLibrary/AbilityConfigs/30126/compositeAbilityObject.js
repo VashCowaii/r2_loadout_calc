@@ -3583,7 +3583,7 @@ const compositeAbilityObject = {
                     ]
                   },
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Remove Events/Bonuses",
                       "to": {
@@ -3629,7 +3629,7 @@ const compositeAbilityObject = {
                       ]
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Find New Target",
                       "from": {

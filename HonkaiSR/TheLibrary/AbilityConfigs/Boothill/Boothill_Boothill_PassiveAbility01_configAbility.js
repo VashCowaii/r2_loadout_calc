@@ -247,7 +247,7 @@ const configAbility = {
                 ]
               },
               "includeMaxValueInRange": true,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Assign Value to Stat",
                   "variableName": "Avatar_1315_Enhance",

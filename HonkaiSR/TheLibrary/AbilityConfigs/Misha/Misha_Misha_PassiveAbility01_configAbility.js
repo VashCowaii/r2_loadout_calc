@@ -292,7 +292,7 @@ const configAbility = {
                 ]
               },
               "includeMaxValueInRange": true,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Modifier Variable",
                   "target": {

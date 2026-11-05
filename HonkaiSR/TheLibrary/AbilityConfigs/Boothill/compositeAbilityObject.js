@@ -1505,7 +1505,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": -999,
                   "maxValue": 999,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
                       "target": {
@@ -2490,7 +2490,7 @@ const compositeAbilityObject = {
                     ]
                   },
                   "includeMaxValueInRange": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Assign Value to Stat",
                       "variableName": "Avatar_1315_Enhance",

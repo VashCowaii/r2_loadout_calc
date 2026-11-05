@@ -706,7 +706,7 @@ const configAbility = {
               "minValue": 0,
               "maxValue": 1000000000,
               "includeMaxValueInRange": true,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Stack Target Stat Value",
                   "target": {
@@ -846,7 +846,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": 1000000000,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_TotalHPChange",
@@ -953,7 +953,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": 1000000000,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable",
                   "variableName": "MDF_TotalHPChange",

@@ -4282,7 +4282,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "triggerClampedChanges": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "<a class=\"gTempYellow\" id=\"492194909\">Acheron_CheckCurrentSpecialSPChange</a>"

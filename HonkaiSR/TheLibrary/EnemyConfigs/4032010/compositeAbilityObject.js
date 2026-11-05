@@ -589,7 +589,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": 1000000000,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable with HP%",
                       "target": {
@@ -660,7 +660,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": 1000000000,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable with HP%",
                       "target": {
@@ -731,7 +731,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": 1000000000,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable with HP%",
                       "target": {
@@ -1427,7 +1427,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": 1,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "<a class=\"gTempYellow\" id=\"1966517473\">TaskList_Standard_RallyHP_ListenDirtyHPChange</a>"
@@ -1444,7 +1444,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": 1000000000,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "<a class=\"gTempYellow\" id=\"1966517473\">TaskList_Standard_RallyHP_ListenDirtyHPChange</a>"
@@ -1461,7 +1461,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": 1000000000,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "<a class=\"gTempYellow\" id=\"-1785562897\">TaskList_Standard_RallyHP_ListenMaxHPChange</a>"
@@ -1478,7 +1478,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": 1000000000,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "<a class=\"gTempYellow\" id=\"-1785562897\">TaskList_Standard_RallyHP_ListenMaxHPChange</a>"
@@ -1495,7 +1495,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": 1000000000,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "<a class=\"gTempYellow\" id=\"-1785562897\">TaskList_Standard_RallyHP_ListenMaxHPChange</a>"

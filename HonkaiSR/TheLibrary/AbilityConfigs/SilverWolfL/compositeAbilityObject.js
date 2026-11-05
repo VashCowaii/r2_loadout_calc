@@ -468,7 +468,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable with Changes to Stats",
                       "variableName": "_tmp_changeValue"
@@ -1367,7 +1367,7 @@ const compositeAbilityObject = {
                       60
                     ]
                   },
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "SW999 Score Data",
                       "rating": "S",
@@ -1389,7 +1389,7 @@ const compositeAbilityObject = {
                       }
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "SW999 Score Data",
                       "rating": "S",
@@ -1432,7 +1432,7 @@ const compositeAbilityObject = {
                       60
                     ]
                   },
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "SW999 Score Data",
                       "rating": "SS",
@@ -1455,7 +1455,7 @@ const compositeAbilityObject = {
                       }
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "SW999 Score Data",
                       "rating": "SS",
@@ -1499,7 +1499,7 @@ const compositeAbilityObject = {
                     ],
                     "variables": []
                   },
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "SW999 Score Data",
                       "rating": "SSS",
@@ -1716,7 +1716,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "SW999 Test Data 2",
                       "value": {
@@ -2373,7 +2373,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "<a class=\"gTempYellow\" id=\"439718011\">function_SilverWolf999_CheckUltraEnd</a>"
@@ -2697,7 +2697,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {
@@ -2716,7 +2716,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {
@@ -2735,7 +2735,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {
@@ -4225,7 +4225,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "<a class=\"gTempYellow\" id=\"161763618\">_T_SilverWolf999_StackPropertyByScore</a>"
@@ -4298,7 +4298,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
                       "target": {
@@ -4331,7 +4331,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
                       "target": {
@@ -4364,7 +4364,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "<a class=\"gTempYellow\" id=\"161763618\">_T_SilverWolf999_StackPropertyByScore</a>"
@@ -4420,7 +4420,7 @@ const compositeAbilityObject = {
           "elationValueChange": [
             {
               "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable with Changes to Stats",
                   "variableName": "_epChange"

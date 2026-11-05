@@ -279,7 +279,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": 1,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Declare Custom Variable",
                   "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;",
@@ -344,7 +344,7 @@ const compositeAbilityObject = {
                   ]
                 }
               ],
-              "whenLeavingRange": [
+              "leavingRange": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {
@@ -354,7 +354,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"416920765\">Sparxie_Eidolon1_Sub01</a>"
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Declare Custom Variable",
                   "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;",
@@ -613,7 +613,7 @@ const compositeAbilityObject = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": 1,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Declare Custom Variable",
                   "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;",
@@ -678,7 +678,7 @@ const compositeAbilityObject = {
                   ]
                 }
               ],
-              "whenLeavingRange": [
+              "leavingRange": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {
@@ -688,7 +688,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-1399447832\">Sparxie_Trace03_Sub01</a>"
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Declare Custom Variable",
                   "propertyType": "&nbsp;<span class=\"descriptionNumberColor\">BasePoint</span>&nbsp;",
@@ -1086,7 +1086,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "<a class=\"gTempYellow\" id=\"-333844863\">Sparxie_Trace01_Sub</a>"
@@ -1101,7 +1101,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Use Custom Character Function",
                       "functionName": "<a class=\"gTempYellow\" id=\"-333844863\">Sparxie_Trace01_Sub</a>"
@@ -1414,7 +1414,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "IF",
                       "conditions": {

@@ -2350,7 +2350,7 @@ const compositeAbilityObject = {
                       "G_EPMax"
                     ]
                   },
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
@@ -2364,7 +2364,7 @@ const compositeAbilityObject = {
                       "priorState": "Normal"
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
@@ -2389,7 +2389,7 @@ const compositeAbilityObject = {
                       "G_EPMax"
                     ]
                   },
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
@@ -2407,7 +2407,7 @@ const compositeAbilityObject = {
                       "functionName": "<a class=\"gTempYellow\" id=\"349219986\">MortenaxBlade_TrytoPlayAutoBP</a>"
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {

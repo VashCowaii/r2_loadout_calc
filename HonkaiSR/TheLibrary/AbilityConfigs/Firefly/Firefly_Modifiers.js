@@ -1653,7 +1653,7 @@ const configAbility = {
                   1.5
                 ]
               },
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -1672,7 +1672,7 @@ const configAbility = {
                   ]
                 }
               ],
-              "whenLeavingRange": [
+              "leavingRange": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {

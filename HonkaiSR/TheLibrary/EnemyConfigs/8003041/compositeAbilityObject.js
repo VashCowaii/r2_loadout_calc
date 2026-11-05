@@ -319,7 +319,7 @@ const compositeAbilityObject = {
                   "minValue": -2,
                   "maxValue": -2,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -497,7 +497,7 @@ const compositeAbilityObject = {
                   "minValue": -1,
                   "maxValue": -1,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Define Custom Variable",
                       "target": {
@@ -529,7 +529,7 @@ const compositeAbilityObject = {
                   "minValue": 0,
                   "maxValue": 0,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Define Custom Variable",
                       "target": {
@@ -561,7 +561,7 @@ const compositeAbilityObject = {
                   "minValue": 1,
                   "maxValue": 1,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -622,7 +622,7 @@ const compositeAbilityObject = {
                   "minValue": 2,
                   "maxValue": 2,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -683,7 +683,7 @@ const compositeAbilityObject = {
                   "minValue": 3,
                   "maxValue": 3,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -744,7 +744,7 @@ const compositeAbilityObject = {
                   "minValue": 4,
                   "maxValue": 4,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -805,7 +805,7 @@ const compositeAbilityObject = {
                   "minValue": 5,
                   "maxValue": 5,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -866,7 +866,7 @@ const compositeAbilityObject = {
                   "minValue": 6,
                   "maxValue": 6,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -927,7 +927,7 @@ const compositeAbilityObject = {
                   "minValue": 7,
                   "maxValue": 7,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -988,7 +988,7 @@ const compositeAbilityObject = {
                   "minValue": 8,
                   "maxValue": 8,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -1049,7 +1049,7 @@ const compositeAbilityObject = {
                   "minValue": 9,
                   "maxValue": 9,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {

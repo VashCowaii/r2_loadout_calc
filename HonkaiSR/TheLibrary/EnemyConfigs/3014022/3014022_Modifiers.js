@@ -71,7 +71,7 @@ const configAbility = {
               "minValue": 1,
               "maxValue": 10,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Divide HP Bar into Segments",
                   "target": {

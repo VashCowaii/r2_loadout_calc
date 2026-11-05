@@ -128,7 +128,7 @@ const configAbility = {
               "minValue": 15,
               "maxValue": 9999,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Achievement",
                   "matchTags": true,
@@ -712,7 +712,7 @@ const configAbility = {
               "minValue": 3,
               "maxValue": 3,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Achievement",
                   "matchTags": true,

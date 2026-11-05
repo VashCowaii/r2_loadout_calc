@@ -142,7 +142,7 @@ const configAbility = {
                   1.5
                 ]
               },
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {
@@ -152,7 +152,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1965028940\">LC_23027_Sub</a>[<span class=\"descriptionNumberColor\">SPD Boost</span>]"
                 }
               ],
-              "whenLeavingRange": [
+              "leavingRange": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {

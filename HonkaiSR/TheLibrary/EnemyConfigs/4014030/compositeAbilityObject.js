@@ -4378,7 +4378,7 @@ const compositeAbilityObject = {
                   "minValue": 1,
                   "maxValue": 1,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -4407,7 +4407,7 @@ const compositeAbilityObject = {
                       ]
                     }
                   ],
-                  "whenLeavingRange": [
+                  "leavingRange": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "_ReadyToCharge",

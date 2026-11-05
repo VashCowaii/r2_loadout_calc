@@ -105,7 +105,7 @@ const configAbility = {
               "minValue": 1,
               "maxValue": 99,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Set Target Parameter",
                   "readTarget": {
@@ -178,7 +178,7 @@ const configAbility = {
                   ]
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Set Target Parameter",
                   "readTarget": {
@@ -257,7 +257,7 @@ const configAbility = {
               "minValue": 0,
               "maxValue": 0,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {

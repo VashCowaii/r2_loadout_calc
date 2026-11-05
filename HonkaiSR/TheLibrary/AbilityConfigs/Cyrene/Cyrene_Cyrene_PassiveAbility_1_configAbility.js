@@ -645,7 +645,7 @@ const configAbility = {
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
@@ -690,7 +690,7 @@ const configAbility = {
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
@@ -718,7 +718,7 @@ const configAbility = {
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -798,7 +798,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "triggerClampedChanges": true,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
                   "target": {
@@ -827,7 +827,7 @@ const configAbility = {
                   "SpecialSPNeed"
                 ]
               },
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {
@@ -837,7 +837,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"1534801198\">Cyrene_Ability03_LackOfSP</a>"
                 }
               ],
-              "whenLeavingRange": [
+              "leavingRange": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {
@@ -897,7 +897,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "triggerClampedChanges": true,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
                   "target": {

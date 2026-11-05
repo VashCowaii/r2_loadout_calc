@@ -1021,7 +1021,7 @@ const compositeAbilityObject = {
                   "minValue": 0,
                   "maxValue": 99999,
                   "includeMaxValueInRange": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Stack Target Stat Value",
                       "target": {
@@ -2433,7 +2433,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Find New Target",
                       "from": {

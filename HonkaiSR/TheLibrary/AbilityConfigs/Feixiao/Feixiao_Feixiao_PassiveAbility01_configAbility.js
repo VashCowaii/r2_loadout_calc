@@ -709,7 +709,7 @@ const configAbility = {
                 ]
               },
               "includeMaxValueInRange": true,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "activeCount": {
@@ -735,7 +735,7 @@ const configAbility = {
               "minValue": 0,
               "maxValue": 99,
               "includeMaxValueInRange": true,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -820,7 +820,7 @@ const configAbility = {
                 ]
               },
               "includeMaxValueInRange": true,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
                   "target": {

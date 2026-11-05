@@ -5988,7 +5988,7 @@ const configAbility = {
               "minValue": 1,
               "maxValue": 1,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -6009,7 +6009,7 @@ const configAbility = {
                   ]
                 }
               ],
-              "whenLeavingRange": [
+              "leavingRange": [
                 {
                   "name": "Define Custom Variable",
                   "variableName": "_ReadyToCharge",

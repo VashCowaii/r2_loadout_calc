@@ -715,7 +715,7 @@ const configAbility = {
                 ]
               },
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Find New Target",
                   "from": {
@@ -762,7 +762,7 @@ const configAbility = {
                   ]
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Find New Target",
                   "from": {

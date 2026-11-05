@@ -1947,7 +1947,7 @@ const compositeAbilityObject = {
                     ]
                   },
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Set Battle Track Progress",
                       "progress": {
@@ -1972,7 +1972,7 @@ const compositeAbilityObject = {
                       }
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Set Battle Track Progress",
                       "progress": {
@@ -2017,7 +2017,7 @@ const compositeAbilityObject = {
                     ]
                   },
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Set Battle Track Progress",
                       "progress": {
@@ -2042,7 +2042,7 @@ const compositeAbilityObject = {
                       }
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Set Battle Track Progress",
                       "progress": {
@@ -2087,7 +2087,7 @@ const compositeAbilityObject = {
                     ]
                   },
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Set Battle Track Progress",
                       "progress": {
@@ -2112,7 +2112,7 @@ const compositeAbilityObject = {
                       }
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Set Battle Track Progress",
                       "progress": {
@@ -2150,7 +2150,7 @@ const compositeAbilityObject = {
                   },
                   "maxValue": 1000000000,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Set Battle Track Progress",
                       "progress": 1,
@@ -2220,7 +2220,7 @@ const compositeAbilityObject = {
                       ]
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Set Battle Track Progress",
                       "progress": 1,
@@ -3457,7 +3457,7 @@ const compositeAbilityObject = {
                     ]
                   },
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -3520,7 +3520,7 @@ const compositeAbilityObject = {
                       ]
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -3603,7 +3603,7 @@ const compositeAbilityObject = {
                     ]
                   },
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -3666,7 +3666,7 @@ const compositeAbilityObject = {
                       ]
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -3749,7 +3749,7 @@ const compositeAbilityObject = {
                     ]
                   },
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -3812,7 +3812,7 @@ const compositeAbilityObject = {
                       ]
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -3888,7 +3888,7 @@ const compositeAbilityObject = {
                   },
                   "maxValue": 1000000000,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Set Battle Track Progress",
                       "progress": 1,
@@ -3958,7 +3958,7 @@ const compositeAbilityObject = {
                       ]
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Set Battle Track Progress",
                       "progress": 1,
@@ -5557,7 +5557,7 @@ const compositeAbilityObject = {
                     ]
                   },
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -5588,7 +5588,7 @@ const compositeAbilityObject = {
                     ]
                   },
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -5612,7 +5612,7 @@ const compositeAbilityObject = {
                   },
                   "maxValue": 1000000000,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "DV_FantasticStory_BaseAbility_0030_TriggerDamageFlag",
@@ -5760,7 +5760,7 @@ const compositeAbilityObject = {
                   "minValue": 3,
                   "maxValue": 3,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "DV_FantasticStory_PlusAbility_0034_InsertAtkCount",

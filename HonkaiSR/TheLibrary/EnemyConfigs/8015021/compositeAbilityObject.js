@@ -558,7 +558,7 @@ const compositeAbilityObject = {
                   "minValue": 1,
                   "maxValue": 1,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Dispel Debuffs",
                       "target": {
@@ -663,7 +663,7 @@ const compositeAbilityObject = {
                   "minValue": 1,
                   "maxValue": 1,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Change Entity Turn-State",
                       "target": {
@@ -679,7 +679,7 @@ const compositeAbilityObject = {
                   "minValue": 2,
                   "maxValue": 2,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Dispel Debuffs",
                       "target": {

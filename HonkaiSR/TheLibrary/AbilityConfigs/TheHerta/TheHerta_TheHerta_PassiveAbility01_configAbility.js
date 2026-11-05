@@ -2213,7 +2213,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": -999,
               "maxValue": 1,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {
@@ -2223,7 +2223,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"-612445396\">TheHerta_SKL21</a>[<span class=\"descriptionNumberColor\">Inspiration</span>]"
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {
@@ -2238,7 +2238,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 1,
               "maxValue": 999,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {
@@ -2264,7 +2264,7 @@ const configAbility = {
                   }
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {

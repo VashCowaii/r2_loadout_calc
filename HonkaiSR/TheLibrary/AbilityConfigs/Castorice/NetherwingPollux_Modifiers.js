@@ -33,7 +33,7 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Stack Target Stat Value",
                   "target": {

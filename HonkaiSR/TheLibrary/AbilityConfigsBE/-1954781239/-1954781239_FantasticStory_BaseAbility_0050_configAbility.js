@@ -700,7 +700,7 @@ const configAbility = {
                 ]
               },
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Set Battle Track Progress",
                   "progress": {
@@ -725,7 +725,7 @@ const configAbility = {
                   }
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Set Battle Track Progress",
                   "progress": {
@@ -770,7 +770,7 @@ const configAbility = {
                 ]
               },
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Set Battle Track Progress",
                   "progress": {
@@ -795,7 +795,7 @@ const configAbility = {
                   }
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Set Battle Track Progress",
                   "progress": {
@@ -840,7 +840,7 @@ const configAbility = {
                 ]
               },
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Set Battle Track Progress",
                   "progress": {
@@ -865,7 +865,7 @@ const configAbility = {
                   }
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Set Battle Track Progress",
                   "progress": {
@@ -903,7 +903,7 @@ const configAbility = {
               },
               "maxValue": 1000000000,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Set Battle Track Progress",
                   "progress": 1,
@@ -973,7 +973,7 @@ const configAbility = {
                   ]
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Set Battle Track Progress",
                   "progress": 1,

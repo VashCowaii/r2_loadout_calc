@@ -7073,7 +7073,7 @@ const compositeAbilityObject = {
                   "minValue": 1,
                   "maxValue": 1,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {
@@ -7093,7 +7093,7 @@ const compositeAbilityObject = {
                   "minValue": 2,
                   "maxValue": 2,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "UI Display Event",
                       "popUpText": "Enemy Weaknesses will be reset after the boss takes 2 actions!"
@@ -7105,7 +7105,7 @@ const compositeAbilityObject = {
                   "minValue": 3,
                   "maxValue": 3,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "UI Display Event",
                       "popUpText": "Enemy Weaknesses will be reset after the boss takes 3 actions!"
@@ -7117,7 +7117,7 @@ const compositeAbilityObject = {
                   "minValue": 4,
                   "maxValue": 4,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "UI Display Event",
                       "popUpText": "Enemy Weaknesses will be reset after the boss takes 4 actions!"
@@ -7129,7 +7129,7 @@ const compositeAbilityObject = {
                   "minValue": 5,
                   "maxValue": 5,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "UI Display Event",
                       "popUpText": "Enemy Weaknesses will be reset after the boss takes 5 actions!"
@@ -7141,7 +7141,7 @@ const compositeAbilityObject = {
                   "minValue": 6,
                   "maxValue": 6,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "UI Display Event",
                       "popUpText": "Enemy Weaknesses will be reset after the boss takes 6 actions!"
@@ -7153,7 +7153,7 @@ const compositeAbilityObject = {
                   "minValue": 7,
                   "maxValue": 7,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "UI Display Event",
                       "popUpText": "Enemy Weaknesses will be reset after the boss takes 7 actions!"

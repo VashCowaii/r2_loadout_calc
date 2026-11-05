@@ -3015,7 +3015,7 @@ const compositeAbilityObject = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": 999,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -3659,7 +3659,7 @@ const compositeAbilityObject = {
                   },
                   "maxValue": 1000000000,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "DV_FantasticStory_BaseAbility_TriggerFlag",

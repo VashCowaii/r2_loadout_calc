@@ -552,7 +552,7 @@ const configAbility = {
               "minValue": 12,
               "maxValue": 9999,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Achievement",
                   "matchTags": true,
@@ -848,7 +848,7 @@ const configAbility = {
               "minValue": 0,
               "maxValue": 100,
               "includeMaxValueInRange": true,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"-1159891085\">Modifier_SpecialBattleAbility_DeathCountDown_Monster_CalNumber</a>"
@@ -1409,7 +1409,7 @@ const configAbility = {
               "minValue": 0,
               "maxValue": 100,
               "includeMaxValueInRange": true,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"354133831\">WModifier_SpecialBattleAbility_DeathCountDown_CalNumber</a>"
@@ -1430,7 +1430,7 @@ const configAbility = {
                 ]
               },
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -1488,7 +1488,7 @@ const configAbility = {
                 ]
               },
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -1544,7 +1544,7 @@ const configAbility = {
               },
               "maxValue": 99,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -1600,7 +1600,7 @@ const configAbility = {
               },
               "maxValue": 99,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -1656,7 +1656,7 @@ const configAbility = {
               "minValue": 1,
               "maxValue": 1,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Define Custom Variable with Added Value",
                   "target": {

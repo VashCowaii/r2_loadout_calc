@@ -232,7 +232,7 @@ const configAbility = {
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"161763618\">_T_SilverWolf999_StackPropertyByScore</a>"
@@ -305,7 +305,7 @@ const configAbility = {
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
                   "target": {
@@ -338,7 +338,7 @@ const configAbility = {
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
                   "target": {
@@ -371,7 +371,7 @@ const configAbility = {
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"161763618\">_T_SilverWolf999_StackPropertyByScore</a>"
@@ -427,7 +427,7 @@ const configAbility = {
       "elationValueChange": [
         {
           "name": "Variable Value Range Conditions",
-          "whenValueChanges": [
+          "onChange": [
             {
               "name": "Define Custom Variable with Changes to Stats",
               "variableName": "_epChange"

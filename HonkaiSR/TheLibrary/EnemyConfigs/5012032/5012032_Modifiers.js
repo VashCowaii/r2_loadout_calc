@@ -403,7 +403,7 @@ const configAbility = {
               "MDF_ThresholdValue"
             ]
           },
-          "whenLeavingRange": [
+          "leavingRange": [
             {
               "name": "Find New Target",
               "from": {
@@ -470,7 +470,7 @@ const configAbility = {
             ]
           },
           "maxValue": 9999,
-          "whenValueChanges": [
+          "onChange": [
             {
               "name": "Find New Target",
               "from": {

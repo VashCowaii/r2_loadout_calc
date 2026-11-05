@@ -68,7 +68,7 @@ const compositeAbilityObject = {
                   10
                 ]
               },
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {
@@ -78,7 +78,7 @@ const compositeAbilityObject = {
                   "modifier": "<a class=\"gModGreen\" id=\"-72440750\">LC_20024_Sub</a>[<span class=\"descriptionNumberColor\">CRIT DMG Boost</span>]"
                 }
               ],
-              "whenLeavingRange": [
+              "leavingRange": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {

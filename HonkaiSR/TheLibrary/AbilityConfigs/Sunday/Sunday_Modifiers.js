@@ -1001,7 +1001,7 @@ const configAbility = {
               "minValue": 0,
               "maxValue": 99999,
               "includeMaxValueInRange": true,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Stack Target Stat Value",
                   "target": {

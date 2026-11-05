@@ -166,7 +166,7 @@ const compositeAbilityObject = {
                       2400
                     ]
                   },
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Remove Events/Bonuses",
                       "to": {
@@ -196,7 +196,7 @@ const compositeAbilityObject = {
                       3600
                     ]
                   },
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {
@@ -227,7 +227,7 @@ const compositeAbilityObject = {
                       3600
                     ]
                   },
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {

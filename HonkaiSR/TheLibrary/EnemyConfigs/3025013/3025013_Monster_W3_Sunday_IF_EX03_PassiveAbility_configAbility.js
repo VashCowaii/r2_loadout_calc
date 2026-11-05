@@ -142,7 +142,7 @@ const configAbility = {
               "minValue": 1,
               "maxValue": 1,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {
@@ -162,7 +162,7 @@ const configAbility = {
               "minValue": 2,
               "maxValue": 2,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "UI Display Event",
                   "popUpText": "Enemy Weaknesses will be reset after the boss takes 2 actions!"
@@ -174,7 +174,7 @@ const configAbility = {
               "minValue": 3,
               "maxValue": 3,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "UI Display Event",
                   "popUpText": "Enemy Weaknesses will be reset after the boss takes 3 actions!"
@@ -186,7 +186,7 @@ const configAbility = {
               "minValue": 4,
               "maxValue": 4,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "UI Display Event",
                   "popUpText": "Enemy Weaknesses will be reset after the boss takes 4 actions!"
@@ -198,7 +198,7 @@ const configAbility = {
               "minValue": 5,
               "maxValue": 5,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "UI Display Event",
                   "popUpText": "Enemy Weaknesses will be reset after the boss takes 5 actions!"
@@ -210,7 +210,7 @@ const configAbility = {
               "minValue": 6,
               "maxValue": 6,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "UI Display Event",
                   "popUpText": "Enemy Weaknesses will be reset after the boss takes 6 actions!"
@@ -222,7 +222,7 @@ const configAbility = {
               "minValue": 7,
               "maxValue": 7,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "UI Display Event",
                   "popUpText": "Enemy Weaknesses will be reset after the boss takes 7 actions!"

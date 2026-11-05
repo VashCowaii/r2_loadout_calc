@@ -165,7 +165,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable with Copy",
                       "target": {
@@ -2413,7 +2413,7 @@ const compositeAbilityObject = {
                     ]
                   },
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
@@ -2427,7 +2427,7 @@ const compositeAbilityObject = {
                       "priorState": "Active"
                     }
                   ],
-                  "whenLeavingRange": [
+                  "leavingRange": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
@@ -2441,7 +2441,7 @@ const compositeAbilityObject = {
                       "priorState": "Normal"
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
@@ -2467,7 +2467,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
                       "target": {
@@ -2526,7 +2526,7 @@ const compositeAbilityObject = {
                 {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
                       "target": {

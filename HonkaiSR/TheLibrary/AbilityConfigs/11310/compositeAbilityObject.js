@@ -1408,7 +1408,7 @@ const compositeAbilityObject = {
                       "UnusedUnderThisBase_6581"
                     ]
                   },
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -1427,7 +1427,7 @@ const compositeAbilityObject = {
                       ]
                     }
                   ],
-                  "whenLeavingRange": [
+                  "leavingRange": [
                     {
                       "name": "Remove Events/Bonuses",
                       "to": {

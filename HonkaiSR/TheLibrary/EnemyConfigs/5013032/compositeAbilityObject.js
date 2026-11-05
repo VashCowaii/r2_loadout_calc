@@ -2502,7 +2502,7 @@ const compositeAbilityObject = {
                   "minValue": 0,
                   "maxValue": 7,
                   "includeMaxValueInRange": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {
@@ -3849,7 +3849,7 @@ const compositeAbilityObject = {
                   "minValue": 0,
                   "maxValue": 7,
                   "includeMaxValueInRange": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "value": {

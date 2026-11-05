@@ -169,7 +169,7 @@ const compositeAbilityObject = {
                       0.3
                     ]
                   },
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Remove Events/Bonuses",
                       "to": {
@@ -180,7 +180,7 @@ const compositeAbilityObject = {
                       "onlyRemoveOwnersInstance": true
                     }
                   ],
-                  "whenLeavingRange": [
+                  "leavingRange": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {

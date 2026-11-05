@@ -347,7 +347,7 @@ const configAbility = {
               "minValue": 1,
               "maxValue": 1,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Define Custom Variable",
                   "target": {
@@ -958,7 +958,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": 1000000000,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Define Custom Variable with Stat",
                   "target": {
@@ -1118,7 +1118,7 @@ const configAbility = {
                   ]
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
                   "target": {

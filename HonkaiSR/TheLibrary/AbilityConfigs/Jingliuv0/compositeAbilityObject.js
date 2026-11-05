@@ -2180,7 +2180,7 @@ const compositeAbilityObject = {
                   "minValue": 1,
                   "maxValue": 1,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Add Events/Bonuses",
                       "to": {
@@ -2190,7 +2190,7 @@ const compositeAbilityObject = {
                       "modifier": "<a class=\"gModGreen\" id=\"-1865477749\">Jingliu_Transfer_PreShow</a>"
                     }
                   ],
-                  "whenLeavingRange": [
+                  "leavingRange": [
                     {
                       "name": "Remove Events/Bonuses",
                       "to": {

@@ -716,7 +716,7 @@ const configAbility = {
               "minValue": -99,
               "maxValue": -1,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Find New Target",
                   "from": {
@@ -796,7 +796,7 @@ const configAbility = {
                   }
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {
@@ -840,7 +840,7 @@ const configAbility = {
               "minValue": 0,
               "maxValue": 0,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {
@@ -864,7 +864,7 @@ const configAbility = {
               "minValue": 1,
               "maxValue": 99,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Find New Target",
                   "from": {
@@ -942,7 +942,7 @@ const configAbility = {
                   }
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {
@@ -1851,7 +1851,7 @@ const configAbility = {
               "minValue": 1,
               "maxValue": 1,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Dispel Debuffs",
                   "target": {
@@ -1956,7 +1956,7 @@ const configAbility = {
               "minValue": 1,
               "maxValue": 1,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Change Entity Turn-State",
                   "target": {
@@ -1972,7 +1972,7 @@ const configAbility = {
               "minValue": 2,
               "maxValue": 2,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Dispel Debuffs",
                   "target": {

@@ -278,7 +278,7 @@ const configAbility = {
               "minValue": 1,
               "maxValue": 1,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Phainon_PassiveInsert01",
@@ -296,7 +296,7 @@ const configAbility = {
               "minValue": 2,
               "maxValue": 2,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Phainon_PassiveInsert02",
@@ -321,7 +321,7 @@ const configAbility = {
               "minValue": 1,
               "maxValue": 1,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Phainon_PassiveInsert01",
@@ -339,7 +339,7 @@ const configAbility = {
               "minValue": 2,
               "maxValue": 2,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Inject Ability Use",
                   "abilityName": "Monster_W4_Phainon_PassiveInsert02",
@@ -364,7 +364,7 @@ const configAbility = {
               "minValue": 1,
               "maxValue": 1,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {
@@ -392,7 +392,7 @@ const configAbility = {
               "minValue": 1,
               "maxValue": 1,
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {

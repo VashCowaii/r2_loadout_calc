@@ -144,7 +144,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": 0.5,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "PartAliveNumber",
@@ -198,7 +198,7 @@ const compositeAbilityObject = {
                       ]
                     }
                   ],
-                  "whenLeavingRange": [
+                  "leavingRange": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "PartAliveNumber",
@@ -294,7 +294,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": 0.5,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "PartAliveNumber",
@@ -348,7 +348,7 @@ const compositeAbilityObject = {
                       ]
                     }
                   ],
-                  "whenLeavingRange": [
+                  "leavingRange": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "PartAliveNumber",
@@ -444,7 +444,7 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0,
                   "maxValue": 0.5,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "PartAliveNumber",
@@ -498,7 +498,7 @@ const compositeAbilityObject = {
                       ]
                     }
                   ],
-                  "whenLeavingRange": [
+                  "leavingRange": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "PartAliveNumber",

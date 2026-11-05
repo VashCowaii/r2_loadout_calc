@@ -123,7 +123,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": -999,
               "maxValue": 999,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
                   "target": {

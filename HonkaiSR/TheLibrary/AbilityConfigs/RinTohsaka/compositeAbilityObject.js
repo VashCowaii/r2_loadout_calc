@@ -3132,13 +3132,13 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": -999,
                   "maxValue": 0.5,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "enhancedColor": "False"
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "enhancedColor": "False"
@@ -3149,13 +3149,13 @@ const compositeAbilityObject = {
                   "name": "Variable Value Range Conditions",
                   "minValue": 0.5,
                   "maxValue": 9999,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "enhancedColor": "True"
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Update Displayed Energy Bar",
                       "enhancedColor": "True"
@@ -3737,7 +3737,7 @@ const compositeAbilityObject = {
                       "EnergyBar_MaxGemNum"
                     ]
                   },
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -3856,7 +3856,7 @@ const compositeAbilityObject = {
                       ]
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -3923,7 +3923,7 @@ const compositeAbilityObject = {
                   },
                   "maxValue": 999,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -3998,7 +3998,7 @@ const compositeAbilityObject = {
                       "value": 10
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "IF",
                       "conditions": {

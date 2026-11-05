@@ -181,7 +181,7 @@ const configAbility = {
                   "_Partner_CountThresHold"
                 ]
               },
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -194,7 +194,7 @@ const configAbility = {
                   }
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -231,7 +231,7 @@ const configAbility = {
                   "_Partner_CountThresHold"
                 ]
               },
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -244,7 +244,7 @@ const configAbility = {
                   }
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -282,7 +282,7 @@ const configAbility = {
                   "_Partner_CountThresHold"
                 ]
               },
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -295,7 +295,7 @@ const configAbility = {
                   }
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -333,7 +333,7 @@ const configAbility = {
                   "_Partner_CountThresHold"
                 ]
               },
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -346,7 +346,7 @@ const configAbility = {
                   }
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -374,7 +374,7 @@ const configAbility = {
                 ]
               },
               "maxValue": 9999,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -387,7 +387,7 @@ const configAbility = {
                   }
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -499,7 +499,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": -999,
               "maxValue": 99999,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Define Custom Variable",
                   "target": {
@@ -517,7 +517,7 @@ const configAbility = {
                   }
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable",
                   "target": {

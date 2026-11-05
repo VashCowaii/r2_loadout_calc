@@ -674,7 +674,7 @@ const configAbility = {
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -937,7 +937,7 @@ const configAbility = {
               "minValue": 0,
               "maxValue": 999,
               "triggerClampedChanges": true,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
                   "target": {

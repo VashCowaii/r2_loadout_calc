@@ -410,7 +410,7 @@ const configAbility = {
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable with Changes to Stats",
                   "variableName": "_tmp_changeValue"
@@ -1309,7 +1309,7 @@ const configAbility = {
                   60
                 ]
               },
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "SW999 Score Data",
                   "rating": "S",
@@ -1331,7 +1331,7 @@ const configAbility = {
                   }
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "SW999 Score Data",
                   "rating": "S",
@@ -1374,7 +1374,7 @@ const configAbility = {
                   60
                 ]
               },
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "SW999 Score Data",
                   "rating": "SS",
@@ -1397,7 +1397,7 @@ const configAbility = {
                   }
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "SW999 Score Data",
                   "rating": "SS",
@@ -1441,7 +1441,7 @@ const configAbility = {
                 ],
                 "variables": []
               },
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "SW999 Score Data",
                   "rating": "SSS",
@@ -1658,7 +1658,7 @@ const configAbility = {
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "SW999 Test Data 2",
                   "value": {
@@ -2315,7 +2315,7 @@ const configAbility = {
           "valueRanges": [
             {
               "name": "Variable Value Range Conditions",
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Use Custom Character Function",
                   "functionName": "<a class=\"gTempYellow\" id=\"439718011\">function_SilverWolf999_CheckUltraEnd</a>"

@@ -2345,7 +2345,7 @@ const configAbility = {
                   "G_EPMax"
                 ]
               },
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
@@ -2359,7 +2359,7 @@ const configAbility = {
                   "priorState": "Normal"
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
@@ -2384,7 +2384,7 @@ const configAbility = {
                   "G_EPMax"
                 ]
               },
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
@@ -2402,7 +2402,7 @@ const configAbility = {
                   "functionName": "<a class=\"gTempYellow\" id=\"349219986\">MortenaxBlade_TrytoPlayAutoBP</a>"
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {

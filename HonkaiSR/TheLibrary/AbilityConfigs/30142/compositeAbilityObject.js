@@ -3393,7 +3393,7 @@ const compositeAbilityObject = {
                     ]
                   },
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Show Attack Time",
                       "time": {
@@ -3408,7 +3408,7 @@ const compositeAbilityObject = {
                       "show": true
                     }
                   ],
-                  "whenLeavingRange": [
+                  "leavingRange": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "MDF_Count",
@@ -3422,7 +3422,7 @@ const compositeAbilityObject = {
                       }
                     }
                   ],
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Show Attack Time",
                       "time": {

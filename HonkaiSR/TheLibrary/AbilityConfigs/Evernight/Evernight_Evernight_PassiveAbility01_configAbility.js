@@ -332,7 +332,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": -999,
               "maxValue": 99999,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
@@ -345,7 +345,7 @@ const configAbility = {
                   }
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
@@ -512,7 +512,7 @@ const configAbility = {
                   16
                 ]
               },
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {
@@ -538,7 +538,7 @@ const configAbility = {
                   "modifier": "<a class=\"gModGreen\" id=\"683715754\">Memosprite_EvernightServant_TriggerNormal</a>"
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {
@@ -576,7 +576,7 @@ const configAbility = {
                 ]
               },
               "maxValue": 99999,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Dispel Debuffs",
                   "target": {
@@ -629,7 +629,7 @@ const configAbility = {
                   ]
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Dispel Debuffs",
                   "target": {

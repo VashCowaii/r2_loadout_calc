@@ -642,7 +642,7 @@ const configAbility = {
                 ]
               },
               "includeMaxValueInRange": true,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
@@ -656,7 +656,7 @@ const configAbility = {
                   "priorState": "Active"
                 }
               ],
-              "whenLeavingRange": [
+              "leavingRange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
@@ -670,7 +670,7 @@ const configAbility = {
                   "priorState": "Normal"
                 }
               ],
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
@@ -696,7 +696,7 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
                   "target": {
@@ -755,7 +755,7 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
                   "target": {

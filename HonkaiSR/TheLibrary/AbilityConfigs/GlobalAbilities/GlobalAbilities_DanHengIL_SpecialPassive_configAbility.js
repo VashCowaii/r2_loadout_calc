@@ -92,7 +92,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 1,
               "maxValue": 2,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -119,7 +119,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 2,
               "maxValue": 3,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "IF",
                   "conditions": {
@@ -146,7 +146,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 3,
               "maxValue": 4,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "IF",
                   "conditions": {

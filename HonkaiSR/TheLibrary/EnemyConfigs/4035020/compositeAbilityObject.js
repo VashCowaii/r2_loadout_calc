@@ -195,7 +195,7 @@ const compositeAbilityObject = {
                   "minValue": 1,
                   "maxValue": 2,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -212,7 +212,7 @@ const compositeAbilityObject = {
                   "minValue": 3,
                   "maxValue": 3,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "IF",
                       "conditions": {

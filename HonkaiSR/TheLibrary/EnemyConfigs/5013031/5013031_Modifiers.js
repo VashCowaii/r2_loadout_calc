@@ -2481,7 +2481,7 @@ const configAbility = {
               "minValue": 0,
               "maxValue": 7,
               "includeMaxValueInRange": true,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {
@@ -3828,7 +3828,7 @@ const configAbility = {
               "minValue": 0,
               "maxValue": 7,
               "includeMaxValueInRange": true,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Update Displayed Energy Bar",
                   "value": {

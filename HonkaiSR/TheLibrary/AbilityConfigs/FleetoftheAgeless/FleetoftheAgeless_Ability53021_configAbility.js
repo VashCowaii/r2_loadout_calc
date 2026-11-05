@@ -161,7 +161,7 @@ const configAbility = {
                   120
                 ]
               },
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Remove Events/Bonuses",
                   "to": {
@@ -181,7 +181,7 @@ const configAbility = {
                   "onlyRemoveOwnersInstance": true
                 }
               ],
-              "whenLeavingRange": [
+              "leavingRange": [
                 {
                   "name": "Add Events/Bonuses",
                   "to": {

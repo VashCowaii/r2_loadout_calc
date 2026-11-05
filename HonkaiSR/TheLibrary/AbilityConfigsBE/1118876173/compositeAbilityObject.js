@@ -3470,7 +3470,7 @@ const compositeAbilityObject = {
                   },
                   "maxValue": 1000000000,
                   "includeMaxValueInRange": true,
-                  "whenEnteringRange": [
+                  "enteringRange": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "DV_FantasticStory_BaseAbility_TriggerFlag",

@@ -823,7 +823,7 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": 1,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
                   "target": {
@@ -875,7 +875,7 @@ const configAbility = {
             {
               "name": "Variable Value Range Conditions",
               "minValue": 1,
-              "whenValueChanges": [
+              "onChange": [
                 {
                   "name": "Define Custom Variable with Stat",
                   "target": {

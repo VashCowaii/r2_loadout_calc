@@ -702,7 +702,7 @@ const compositeAbilityObject = {
               "valueRanges": [
                 {
                   "name": "Variable Value Range Conditions",
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -965,7 +965,7 @@ const compositeAbilityObject = {
                   "minValue": 0,
                   "maxValue": 999,
                   "triggerClampedChanges": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable with Stat",
                       "target": {
@@ -3042,7 +3042,7 @@ const compositeAbilityObject = {
                   "minValue": 0,
                   "maxValue": 9999,
                   "includeMaxValueInRange": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "IF",
                       "conditions": {
@@ -3091,7 +3091,7 @@ const compositeAbilityObject = {
                   "minValue": 0,
                   "maxValue": 999,
                   "triggerClampedChanges": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "old_EvanesciaSP",
@@ -3220,7 +3220,7 @@ const compositeAbilityObject = {
                   "minValue": 0,
                   "maxValue": 9999,
                   "triggerClampedChanges": true,
-                  "whenValueChanges": [
+                  "onChange": [
                     {
                       "name": "Define Custom Variable",
                       "variableName": "old_EvanesciaEnergy",

@@ -118,7 +118,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": 0.5,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Define Custom Variable",
                   "variableName": "PartAliveNumber",
@@ -172,7 +172,7 @@ const configAbility = {
                   ]
                 }
               ],
-              "whenLeavingRange": [
+              "leavingRange": [
                 {
                   "name": "Define Custom Variable",
                   "variableName": "PartAliveNumber",
@@ -268,7 +268,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": 0.5,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Define Custom Variable",
                   "variableName": "PartAliveNumber",
@@ -322,7 +322,7 @@ const configAbility = {
                   ]
                 }
               ],
-              "whenLeavingRange": [
+              "leavingRange": [
                 {
                   "name": "Define Custom Variable",
                   "variableName": "PartAliveNumber",
@@ -418,7 +418,7 @@ const configAbility = {
               "name": "Variable Value Range Conditions",
               "minValue": 0,
               "maxValue": 0.5,
-              "whenEnteringRange": [
+              "enteringRange": [
                 {
                   "name": "Define Custom Variable",
                   "variableName": "PartAliveNumber",
@@ -472,7 +472,7 @@ const configAbility = {
                   ]
                 }
               ],
-              "whenLeavingRange": [
+              "leavingRange": [
                 {
                   "name": "Define Custom Variable",
                   "variableName": "PartAliveNumber",
