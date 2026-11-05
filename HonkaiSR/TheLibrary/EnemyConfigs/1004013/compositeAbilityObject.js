@@ -4386,8 +4386,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Enemy Team All}}"
-          },
-          "stayInTeam": false
+          }
         },
         {
           "name": "Create Enemies",
@@ -4421,8 +4420,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Recently Summoned Enemies}}"
-          },
-          "stayInTeam": false
+          }
         },
         {
           "name": "Inject Ability Use",

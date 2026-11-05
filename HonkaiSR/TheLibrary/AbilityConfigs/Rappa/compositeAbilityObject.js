@@ -59,7 +59,7 @@ const compositeAbilityObject = {
           "onRemoval": [
             {
               "name": "Remove Overworld Entity",
-              "summon": {
+              "targetSummonEntity": {
                 "name": "Add Target by Summoned Units",
                 "target": {
                   "name": "Target Name",
@@ -1899,7 +1899,7 @@ const compositeAbilityObject = {
         "Submit Technique Use",
         {
           "name": "Remove Overworld Entity",
-          "summon": {
+          "targetSummonEntity": {
             "name": "Add Target by Summoned Units",
             "target": {
               "name": "Target Name",
@@ -1985,7 +1985,7 @@ const compositeAbilityObject = {
         "Submit Technique Use",
         {
           "name": "Remove Overworld Entity",
-          "summon": {
+          "targetSummonEntity": {
             "name": "Add Target by Summoned Units",
             "target": {
               "name": "Target Name",
@@ -2033,7 +2033,7 @@ const compositeAbilityObject = {
           "onBattle": [
             {
               "name": "Remove Overworld Entity",
-              "summon": {
+              "targetSummonEntity": {
                 "name": "Add Target by Summoned Units",
                 "target": {
                   "name": "Target Name",

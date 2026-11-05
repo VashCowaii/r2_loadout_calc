@@ -118,7 +118,7 @@ const compositeAbilityObject = {
           "onRemoval": [
             {
               "name": "Remove Overworld Entity",
-              "summon": {
+              "targetSummonEntity": {
                 "name": "Add Target by Summoned Units",
                 "target": {
                   "name": "Target Name",
@@ -131,7 +131,7 @@ const compositeAbilityObject = {
           "onStageExit": [
             {
               "name": "Remove Overworld Entity",
-              "summon": {
+              "targetSummonEntity": {
                 "name": "Add Target by Summoned Units",
                 "target": {
                   "name": "Target Name",
@@ -4116,7 +4116,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Preload Battle Event(s)",
-          "eventID": [
+          "beID": [
             11408
           ]
         },

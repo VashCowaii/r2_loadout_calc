@@ -32,8 +32,7 @@ const configAbility = {
       "target": {
         "name": "Target Name",
         "target": "{{Caster's Minions}}"
-      },
-      "stayInTeam": false
+      }
     },
     {
       "name": "Mark Entity For Immediate Death",

@@ -92,7 +92,7 @@ const compositeAbilityObject = {
           "onStageExit": [
             {
               "name": "Remove Overworld Entity",
-              "summon": {
+              "targetSummonEntity": {
                 "name": "Add Target by Summoned Units",
                 "target": {
                   "name": "Target Name",
@@ -109,7 +109,7 @@ const compositeAbilityObject = {
               "passed": [
                 {
                   "name": "Remove Overworld Entity",
-                  "summon": {
+                  "targetSummonEntity": {
                     "name": "Add Target by Summoned Units",
                     "target": {
                       "name": "Target Name",
@@ -124,7 +124,7 @@ const compositeAbilityObject = {
           "onAbilityReset": [
             {
               "name": "Remove Overworld Entity",
-              "summon": {
+              "targetSummonEntity": {
                 "name": "Add Target by Summoned Units",
                 "target": {
                   "name": "Target Name",
@@ -190,7 +190,7 @@ const compositeAbilityObject = {
           "onRemoval": [
             {
               "name": "Remove Overworld Entity",
-              "summon": {
+              "targetSummonEntity": {
                 "name": "Add Target by Summoned Units",
                 "target": {
                   "name": "Target Name",
@@ -3600,7 +3600,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Remove Overworld Entity",
-              "summon": {
+              "targetSummonEntity": {
                 "name": "Add Target by Summoned Units",
                 "target": {
                   "name": "Target Name",

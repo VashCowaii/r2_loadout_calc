@@ -718,8 +718,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "stayInTeam": false
+                  }
                 }
               ]
             },

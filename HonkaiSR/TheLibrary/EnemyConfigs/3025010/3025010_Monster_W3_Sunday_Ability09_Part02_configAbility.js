@@ -352,7 +352,7 @@ const configAbility = {
                 },
                 {
                   "name": "Preload Battle Event(s)",
-                  "eventID": [
+                  "beID": [
                     60039,
                     60040
                   ]

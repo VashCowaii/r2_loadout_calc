@@ -2416,7 +2416,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Preload Battle Event(s)",
-              "eventID": [
+              "beID": [
                 20025
               ]
             }
@@ -2424,7 +2424,7 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Preload Battle Event(s)",
-              "eventID": [
+              "beID": [
                 20010
               ]
             }
@@ -2770,8 +2770,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "stayInTeam": false
+                  }
                 },
                 {
                   "name": "Boss Bar Display",

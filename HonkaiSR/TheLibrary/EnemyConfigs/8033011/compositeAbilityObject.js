@@ -394,8 +394,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "stayInTeam": false
+              }
             },
             {
               "name": "Remove Events/Bonuses",
@@ -1183,8 +1182,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  },
-                  "stayInTeam": false
+                  }
                 },
                 {
                   "name": "Remove Events/Bonuses",

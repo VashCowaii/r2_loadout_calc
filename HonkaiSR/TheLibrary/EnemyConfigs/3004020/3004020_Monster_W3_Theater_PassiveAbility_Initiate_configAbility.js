@@ -110,7 +110,7 @@ const configAbility = {
       "passed": [
         {
           "name": "Preload Battle Event(s)",
-          "eventID": [
+          "beID": [
             20025
           ]
         }
@@ -118,7 +118,7 @@ const configAbility = {
       "failed": [
         {
           "name": "Preload Battle Event(s)",
-          "eventID": [
+          "beID": [
             20010
           ]
         }
@@ -464,8 +464,7 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "stayInTeam": false
+              }
             },
             {
               "name": "Boss Bar Display",

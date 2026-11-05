@@ -215,8 +215,7 @@ const configAbility = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target List}}"
-                  },
-                  "stayInTeam": false
+                  }
                 },
                 {
                   "name": "Trigger Joint-Attack Ability",
@@ -463,8 +462,7 @@ const configAbility = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target List}}"
-                  },
-                  "stayInTeam": false
+                  }
                 },
                 {
                   "name": "Trigger Joint-Attack Ability",
@@ -869,8 +867,7 @@ const configAbility = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target List}}"
-                  },
-                  "stayInTeam": false
+                  }
                 },
                 {
                   "name": "Trigger Joint-Attack Ability",
@@ -1037,8 +1034,7 @@ const configAbility = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target List}}"
-                  },
-                  "stayInTeam": false
+                  }
                 },
                 {
                   "name": "Trigger Joint-Attack Ability",

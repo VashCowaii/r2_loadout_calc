@@ -835,8 +835,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "stayInTeam": false
+                  }
                 },
                 {
                   "name": "IF",
@@ -996,8 +995,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "stayInTeam": false
+                  }
                 },
                 {
                   "name": "IF",
@@ -1155,8 +1153,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "stayInTeam": false
+                  }
                 },
                 {
                   "name": "IF",
@@ -1314,8 +1311,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "stayInTeam": false
+                  }
                 },
                 {
                   "name": "IF",

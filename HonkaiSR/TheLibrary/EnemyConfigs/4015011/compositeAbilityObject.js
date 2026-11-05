@@ -6994,7 +6994,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Preload Battle Event(s)",
-          "eventID": [
+          "beID": [
             20015,
             60029
           ]
@@ -8450,7 +8450,7 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Preload Battle Event(s)",
-              "eventID": [
+              "beID": [
                 20015,
                 60037
               ]
@@ -8459,7 +8459,7 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Preload Battle Event(s)",
-              "eventID": [
+              "beID": [
                 20015,
                 60029
               ]

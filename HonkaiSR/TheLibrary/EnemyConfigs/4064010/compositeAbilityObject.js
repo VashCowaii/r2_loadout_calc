@@ -1720,7 +1720,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Preload Battle Event(s)",
-              "eventID": [
+              "beID": [
                 20038
               ]
             },
@@ -1793,7 +1793,7 @@ const compositeAbilityObject = {
             },
             {
               "name": "Preload Battle Event(s)",
-              "eventID": [
+              "beID": [
                 20030
               ]
             },

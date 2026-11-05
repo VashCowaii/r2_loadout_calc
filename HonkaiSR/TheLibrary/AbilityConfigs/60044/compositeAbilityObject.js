@@ -112,8 +112,7 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      },
-                      "stayInTeam": false
+                      }
                     }
                   ]
                 },
@@ -587,7 +586,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Preload Battle Event(s)",
-          "eventID": [
+          "beID": [
             20052
           ]
         },

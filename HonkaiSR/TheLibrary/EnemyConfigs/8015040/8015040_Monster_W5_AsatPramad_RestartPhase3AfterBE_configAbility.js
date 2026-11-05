@@ -147,16 +147,14 @@ const configAbility = {
       "target": {
         "name": "Target Name",
         "target": "{{Asat Pramad: 0}}"
-      },
-      "stayInTeam": false
+      }
     },
     {
       "name": "Remove from Team Target Grouping",
       "target": {
         "name": "Target Name",
         "target": "{{Asat Pramad: 1}}"
-      },
-      "stayInTeam": false
+      }
     },
     {
       "name": "IF",

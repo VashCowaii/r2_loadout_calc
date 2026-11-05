@@ -4001,7 +4001,7 @@ const compositeAbilityObject = {
       "parse": [
         {
           "name": "Preload Battle Event(s)",
-          "eventID": [
+          "beID": [
             20005
           ]
         },

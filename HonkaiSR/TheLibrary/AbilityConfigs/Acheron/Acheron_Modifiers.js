@@ -33,7 +33,7 @@ const configAbility = {
       "onRemoval": [
         {
           "name": "Remove Overworld Entity",
-          "summon": {
+          "targetSummonEntity": {
             "name": "Add Target by Summoned Units",
             "target": {
               "name": "Target Name",
@@ -46,7 +46,7 @@ const configAbility = {
       "onStageExit": [
         {
           "name": "Remove Overworld Entity",
-          "summon": {
+          "targetSummonEntity": {
             "name": "Add Target by Summoned Units",
             "target": {
               "name": "Target Name",

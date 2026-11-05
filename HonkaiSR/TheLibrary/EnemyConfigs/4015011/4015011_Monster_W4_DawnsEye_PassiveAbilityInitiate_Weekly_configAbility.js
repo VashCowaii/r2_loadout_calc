@@ -21,7 +21,7 @@ const configAbility = {
       "passed": [
         {
           "name": "Preload Battle Event(s)",
-          "eventID": [
+          "beID": [
             20015,
             60037
           ]
@@ -30,7 +30,7 @@ const configAbility = {
       "failed": [
         {
           "name": "Preload Battle Event(s)",
-          "eventID": [
+          "beID": [
             20015,
             60029
           ]

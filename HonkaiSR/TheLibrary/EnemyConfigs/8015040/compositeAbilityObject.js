@@ -2007,16 +2007,14 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Asat Pramad: 0}}"
-          },
-          "stayInTeam": false
+          }
         },
         {
           "name": "Remove from Team Target Grouping",
           "target": {
             "name": "Target Name",
             "target": "{{Asat Pramad: 1}}"
-          },
-          "stayInTeam": false
+          }
         },
         {
           "name": "IF",
@@ -2724,8 +2722,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "stayInTeam": false
+              }
             }
           ]
         },
@@ -2923,16 +2920,14 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Asat Pramad: 0}}"
-          },
-          "stayInTeam": false
+          }
         },
         {
           "name": "Remove from Team Target Grouping",
           "target": {
             "name": "Target Name",
             "target": "{{Asat Pramad: 1}}"
-          },
-          "stayInTeam": false
+          }
         },
         {
           "name": "Create Shared HP Group",
@@ -3073,7 +3068,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Preload Battle Event(s)",
-          "eventID": [
+          "beID": [
             20050,
             20051
           ]
@@ -3205,7 +3200,7 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Preload Battle Event(s)",
-              "eventID": [
+              "beID": [
                 60044
               ]
             },
@@ -3524,7 +3519,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Preload Battle Event(s)",
-          "eventID": [
+          "beID": [
             20046
           ]
         },
@@ -3902,8 +3897,7 @@ const compositeAbilityObject = {
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
-                          },
-                          "stayInTeam": false
+                          }
                         },
                         {
                           "name": "Use Custom Character Function",
@@ -3935,8 +3929,7 @@ const compositeAbilityObject = {
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
-                          },
-                          "stayInTeam": false
+                          }
                         },
                         {
                           "name": "Use Custom Character Function",
@@ -4039,7 +4032,7 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Preload Battle Event(s)",
-                  "eventID": [
+                  "beID": [
                     20045
                   ]
                 },
@@ -4201,16 +4194,14 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Asat Pramad: 0}}"
-                      },
-                      "stayInTeam": false
+                      }
                     },
                     {
                       "name": "Remove from Team Target Grouping",
                       "target": {
                         "name": "Target Name",
                         "target": "{{Asat Pramad: 1}}"
-                      },
-                      "stayInTeam": false
+                      }
                     },
                     {
                       "name": "Create Shared HP Group",
@@ -4269,7 +4260,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Preload Battle Event(s)",
-                      "eventID": [
+                      "beID": [
                         20046
                       ]
                     },
@@ -4326,7 +4317,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Preload Battle Event(s)",
-                      "eventID": [
+                      "beID": [
                         20050,
                         20051
                       ]
@@ -4415,7 +4406,7 @@ const compositeAbilityObject = {
                     },
                     {
                       "name": "Preload Battle Event(s)",
-                      "eventID": [
+                      "beID": [
                         60044
                       ]
                     },

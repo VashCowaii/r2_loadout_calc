@@ -1564,7 +1564,7 @@ const compositeAbilityObject = {
           "failed": [
             {
               "name": "Preload Battle Event(s)",
-              "eventID": [
+              "beID": [
                 20008
               ]
             },

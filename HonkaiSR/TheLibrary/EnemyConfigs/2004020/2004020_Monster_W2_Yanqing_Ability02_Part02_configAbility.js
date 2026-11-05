@@ -58,8 +58,7 @@ const configAbility = {
           "target": {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
-          },
-          "stayInTeam": false
+          }
         }
       ]
     },

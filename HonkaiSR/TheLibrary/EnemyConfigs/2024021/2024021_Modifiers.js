@@ -806,8 +806,7 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "stayInTeam": false
+              }
             },
             {
               "name": "IF",
@@ -967,8 +966,7 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "stayInTeam": false
+              }
             },
             {
               "name": "IF",
@@ -1126,8 +1124,7 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "stayInTeam": false
+              }
             },
             {
               "name": "IF",
@@ -1285,8 +1282,7 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "stayInTeam": false
+              }
             },
             {
               "name": "IF",

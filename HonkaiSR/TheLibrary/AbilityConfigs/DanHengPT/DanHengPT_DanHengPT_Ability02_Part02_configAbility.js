@@ -443,15 +443,15 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Change Battle Event Owner",
-                      "eventName": {
+                      "targetBE": {
                         "name": "Target Name",
                         "target": "{{Souldragon}}"
                       },
-                      "assignOwner": {
+                      "targetOwner": {
                         "name": "Target Name",
                         "target": "{{Ability Target(ST)}}"
                       },
-                      "variables": {
+                      "valuePerStack": {
                         "MDF_Ability03_DamagePercentage": {
                           "operator": "Variables[0] (0.8) || RETURN",
                           "displayLines": "0.8",
@@ -498,15 +498,15 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Change Battle Event Owner",
-                      "eventName": {
+                      "targetBE": {
                         "name": "Target Name",
                         "target": "{{Souldragon}}"
                       },
-                      "assignOwner": {
+                      "targetOwner": {
                         "name": "Target Name",
                         "target": "{{Ability Target(ST)}}"
                       },
-                      "variables": {
+                      "valuePerStack": {
                         "MDF_Ability03_DamagePercentage": {
                           "operator": "Variables[0] (0.8) || RETURN",
                           "displayLines": "0.8",
@@ -559,15 +559,15 @@ const configAbility = {
                   "passed": [
                     {
                       "name": "Change Battle Event Owner",
-                      "eventName": {
+                      "targetBE": {
                         "name": "Target Name",
                         "target": "{{Souldragon}}"
                       },
-                      "assignOwner": {
+                      "targetOwner": {
                         "name": "Target Name",
                         "target": "{{Ability Target(ST)}}"
                       },
-                      "variables": {
+                      "valuePerStack": {
                         "MDF_Ability03_DamagePercentage": {
                           "operator": "Variables[0] (0.8) || RETURN",
                           "displayLines": "0.8",
@@ -607,15 +607,15 @@ const configAbility = {
                   "failed": [
                     {
                       "name": "Change Battle Event Owner",
-                      "eventName": {
+                      "targetBE": {
                         "name": "Target Name",
                         "target": "{{Souldragon}}"
                       },
-                      "assignOwner": {
+                      "targetOwner": {
                         "name": "Target Name",
                         "target": "{{Ability Target(ST)}}"
                       },
-                      "variables": {
+                      "valuePerStack": {
                         "MDF_Ability03_DamagePercentage": {
                           "operator": "Variables[0] (0.8) || RETURN",
                           "displayLines": "0.8",

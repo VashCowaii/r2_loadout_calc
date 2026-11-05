@@ -2853,8 +2853,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          },
-          "stayInTeam": false
+          }
         },
         {
           "name": "IF",

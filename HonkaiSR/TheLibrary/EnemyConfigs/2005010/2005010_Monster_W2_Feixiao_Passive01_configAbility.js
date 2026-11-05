@@ -333,7 +333,7 @@ const configAbility = {
   "whenAdded": [
     {
       "name": "Preload Battle Event(s)",
-      "eventID": [
+      "beID": [
         20007
       ]
     },

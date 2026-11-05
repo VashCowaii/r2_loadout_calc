@@ -1393,8 +1393,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "stayInTeam": false
+                  }
                 }
               ]
             },
@@ -2633,8 +2632,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster's Minions}}"
-                  },
-                  "stayInTeam": false
+                  }
                 },
                 {
                   "name": "Force Entity Death",
@@ -5261,8 +5259,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  },
-                  "stayInTeam": false
+                  }
                 },
                 {
                   "name": "IF",
@@ -5481,8 +5478,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
-          },
-          "stayInTeam": false
+          }
         },
         {
           "name": "Force Entity Death",
@@ -5991,8 +5987,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
-          },
-          "stayInTeam": false
+          }
         },
         {
           "name": "Mark Entity For Immediate Death",
@@ -6839,8 +6834,7 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target List}}"
-                      },
-                      "stayInTeam": false
+                      }
                     },
                     {
                       "name": "Trigger Joint-Attack Ability",
@@ -7087,8 +7081,7 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target List}}"
-                      },
-                      "stayInTeam": false
+                      }
                     },
                     {
                       "name": "Trigger Joint-Attack Ability",
@@ -7493,8 +7486,7 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target List}}"
-                      },
-                      "stayInTeam": false
+                      }
                     },
                     {
                       "name": "Trigger Joint-Attack Ability",
@@ -7661,8 +7653,7 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target List}}"
-                      },
-                      "stayInTeam": false
+                      }
                     },
                     {
                       "name": "Trigger Joint-Attack Ability",
@@ -8144,8 +8135,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
-          },
-          "stayInTeam": false
+          }
         },
         {
           "name": "Remove Events/Bonuses",
@@ -8714,8 +8704,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
-          },
-          "stayInTeam": false
+          }
         },
         {
           "name": "Mark Entity For Immediate Death",
@@ -9131,8 +9120,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
-          },
-          "stayInTeam": false
+          }
         },
         {
           "name": "Mark Entity For Immediate Death",
@@ -9449,8 +9437,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Caster's Minions}}"
-          },
-          "stayInTeam": false
+          }
         },
         {
           "name": "Mark Entity For Immediate Death",

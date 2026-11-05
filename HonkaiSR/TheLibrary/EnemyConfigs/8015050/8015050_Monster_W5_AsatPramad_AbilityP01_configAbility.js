@@ -279,8 +279,7 @@ const configAbility = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      },
-                      "stayInTeam": false
+                      }
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -312,8 +311,7 @@ const configAbility = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      },
-                      "stayInTeam": false
+                      }
                     },
                     {
                       "name": "Use Custom Character Function",
@@ -416,7 +414,7 @@ const configAbility = {
             },
             {
               "name": "Preload Battle Event(s)",
-              "eventID": [
+              "beID": [
                 20045
               ]
             },
@@ -578,16 +576,14 @@ const configAbility = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Asat Pramad: 0}}"
-                  },
-                  "stayInTeam": false
+                  }
                 },
                 {
                   "name": "Remove from Team Target Grouping",
                   "target": {
                     "name": "Target Name",
                     "target": "{{Asat Pramad: 1}}"
-                  },
-                  "stayInTeam": false
+                  }
                 },
                 {
                   "name": "Create Shared HP Group",
@@ -646,7 +642,7 @@ const configAbility = {
                 },
                 {
                   "name": "Preload Battle Event(s)",
-                  "eventID": [
+                  "beID": [
                     20046
                   ]
                 },
@@ -703,7 +699,7 @@ const configAbility = {
                 },
                 {
                   "name": "Preload Battle Event(s)",
-                  "eventID": [
+                  "beID": [
                     20050,
                     20051
                   ]
@@ -792,7 +788,7 @@ const configAbility = {
                 },
                 {
                   "name": "Preload Battle Event(s)",
-                  "eventID": [
+                  "beID": [
                     60044
                   ]
                 },

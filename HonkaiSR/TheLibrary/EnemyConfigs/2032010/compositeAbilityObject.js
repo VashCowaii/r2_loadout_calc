@@ -296,7 +296,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Preload Battle Event(s)",
-                  "eventID": [
+                  "beID": [
                     20009
                   ]
                 },

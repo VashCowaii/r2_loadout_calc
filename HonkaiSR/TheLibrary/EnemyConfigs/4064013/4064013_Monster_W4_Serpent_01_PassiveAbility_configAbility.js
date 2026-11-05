@@ -76,7 +76,7 @@ const configAbility = {
         },
         {
           "name": "Preload Battle Event(s)",
-          "eventID": [
+          "beID": [
             20038
           ]
         },
@@ -149,7 +149,7 @@ const configAbility = {
         },
         {
           "name": "Preload Battle Event(s)",
-          "eventID": [
+          "beID": [
             20030
           ]
         },

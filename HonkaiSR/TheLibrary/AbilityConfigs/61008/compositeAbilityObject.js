@@ -165,8 +165,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
-          },
-          "stayInTeam": false
+          }
         },
         {
           "name": "Entity Exit Stage",

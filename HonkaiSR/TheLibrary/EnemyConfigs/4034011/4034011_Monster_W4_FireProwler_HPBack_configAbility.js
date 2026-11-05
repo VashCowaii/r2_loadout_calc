@@ -194,8 +194,7 @@ const configAbility = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  },
-                  "stayInTeam": false
+                  }
                 },
                 {
                   "name": "Create Enemies",

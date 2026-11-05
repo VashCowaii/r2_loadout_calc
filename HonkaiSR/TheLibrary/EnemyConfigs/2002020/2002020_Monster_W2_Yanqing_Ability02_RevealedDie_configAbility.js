@@ -90,8 +90,7 @@ const configAbility = {
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"
-      },
-      "stayInTeam": false
+      }
     },
     {
       "name": "IF",

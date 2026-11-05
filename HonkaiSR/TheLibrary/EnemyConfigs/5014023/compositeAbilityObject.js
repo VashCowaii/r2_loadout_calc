@@ -2873,8 +2873,7 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      },
-                      "stayInTeam": false
+                      }
                     }
                   ]
                 }
@@ -2903,8 +2902,7 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      },
-                      "stayInTeam": false
+                      }
                     }
                   ]
                 }
@@ -2938,8 +2936,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  },
-                  "stayInTeam": false
+                  }
                 }
               ]
             }
@@ -2967,8 +2964,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "stayInTeam": false
+              }
             }
           ]
         }
@@ -3713,8 +3709,7 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      },
-                      "stayInTeam": false
+                      }
                     }
                   ]
                 }
@@ -3743,8 +3738,7 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      },
-                      "stayInTeam": false
+                      }
                     }
                   ]
                 }
@@ -3778,8 +3772,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  },
-                  "stayInTeam": false
+                  }
                 }
               ]
             },
@@ -3922,8 +3915,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "stayInTeam": false
+              }
             }
           ]
         }

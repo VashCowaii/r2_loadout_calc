@@ -1374,8 +1374,7 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "stayInTeam": false
+              }
             }
           ]
         },
@@ -2529,8 +2528,7 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Caster's Minions}}"
-              },
-              "stayInTeam": false
+              }
             },
             {
               "name": "Force Entity Death",

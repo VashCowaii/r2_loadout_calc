@@ -1798,7 +1798,7 @@ const compositeAbilityObject = {
         },
         {
           "name": "Preload Battle Event(s)",
-          "eventID": [
+          "beID": [
             11414
           ]
         },
@@ -3301,15 +3301,15 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Change Battle Event Owner",
-                          "eventName": {
+                          "targetBE": {
                             "name": "Target Name",
                             "target": "{{Souldragon}}"
                           },
-                          "assignOwner": {
+                          "targetOwner": {
                             "name": "Target Name",
                             "target": "{{Ability Target(ST)}}"
                           },
-                          "variables": {
+                          "valuePerStack": {
                             "MDF_Ability03_DamagePercentage": {
                               "operator": "Variables[0] (0.8) || RETURN",
                               "displayLines": "0.8",
@@ -3356,15 +3356,15 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Change Battle Event Owner",
-                          "eventName": {
+                          "targetBE": {
                             "name": "Target Name",
                             "target": "{{Souldragon}}"
                           },
-                          "assignOwner": {
+                          "targetOwner": {
                             "name": "Target Name",
                             "target": "{{Ability Target(ST)}}"
                           },
-                          "variables": {
+                          "valuePerStack": {
                             "MDF_Ability03_DamagePercentage": {
                               "operator": "Variables[0] (0.8) || RETURN",
                               "displayLines": "0.8",
@@ -3417,15 +3417,15 @@ const compositeAbilityObject = {
                       "passed": [
                         {
                           "name": "Change Battle Event Owner",
-                          "eventName": {
+                          "targetBE": {
                             "name": "Target Name",
                             "target": "{{Souldragon}}"
                           },
-                          "assignOwner": {
+                          "targetOwner": {
                             "name": "Target Name",
                             "target": "{{Ability Target(ST)}}"
                           },
-                          "variables": {
+                          "valuePerStack": {
                             "MDF_Ability03_DamagePercentage": {
                               "operator": "Variables[0] (0.8) || RETURN",
                               "displayLines": "0.8",
@@ -3465,15 +3465,15 @@ const compositeAbilityObject = {
                       "failed": [
                         {
                           "name": "Change Battle Event Owner",
-                          "eventName": {
+                          "targetBE": {
                             "name": "Target Name",
                             "target": "{{Souldragon}}"
                           },
-                          "assignOwner": {
+                          "targetOwner": {
                             "name": "Target Name",
                             "target": "{{Ability Target(ST)}}"
                           },
-                          "variables": {
+                          "valuePerStack": {
                             "MDF_Ability03_DamagePercentage": {
                               "operator": "Variables[0] (0.8) || RETURN",
                               "displayLines": "0.8",

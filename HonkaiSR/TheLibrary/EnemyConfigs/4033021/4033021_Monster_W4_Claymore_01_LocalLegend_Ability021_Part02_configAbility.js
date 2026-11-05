@@ -97,8 +97,7 @@ const configAbility = {
       "target": {
         "name": "Target Name",
         "target": "{{EVENT[RoT] Dark Praetor: Dark Summons}} + {{EVENT[RoT] Light Praetor: Light Summons}}"
-      },
-      "stayInTeam": false
+      }
     },
     {
       "name": "Mark Entity For Immediate Death",

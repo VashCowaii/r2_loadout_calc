@@ -574,8 +574,7 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "stayInTeam": false
+              }
             },
             "Modifier Deletes Itself"
           ]
@@ -588,8 +587,7 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "stayInTeam": false
+              }
             },
             "Modifier Deletes Itself"
           ]
@@ -602,8 +600,7 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "stayInTeam": false
+              }
             },
             "Modifier Deletes Itself"
           ]
@@ -616,8 +613,7 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "stayInTeam": false
+              }
             },
             "Modifier Deletes Itself"
           ]
@@ -630,8 +626,7 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "stayInTeam": false
+              }
             },
             "Modifier Deletes Itself"
           ]

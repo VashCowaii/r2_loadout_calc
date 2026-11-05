@@ -340,8 +340,7 @@ const compositeAbilityObject = {
                           "target": {
                             "name": "Target Name",
                             "target": "{{Caster's Minions}}"
-                          },
-                          "stayInTeam": false
+                          }
                         },
                         {
                           "name": "Inject Ability Use",
