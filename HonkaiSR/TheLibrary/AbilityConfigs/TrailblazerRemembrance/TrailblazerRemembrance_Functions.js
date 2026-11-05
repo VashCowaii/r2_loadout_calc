@@ -59,7 +59,7 @@ const configAbility = {
                   ]
                 }
               },
-              "afterSummon": [
+              "afterSummoning": [
                 {
                   "name": "Update Ability Binding",
                   "target": {

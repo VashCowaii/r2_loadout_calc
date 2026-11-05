@@ -2264,7 +2264,7 @@ const compositeAbilityObject = {
                       ]
                     }
                   },
-                  "afterSummon": [
+                  "afterSummoning": [
                     {
                       "name": "Update Ability Binding",
                       "target": {
