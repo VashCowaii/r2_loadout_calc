@@ -20,13 +20,11 @@ const configAbility = {
       "passed": [
         {
           "name": "Set Enhanced-State",
-          "type": "YukongV2"
+          "stateType": "YukongV2"
         }
       ],
       "failed": [
-        {
-          "name": "Set Enhanced-State"
-        }
+        "Set Enhanced-State"
       ]
     },
     {
@@ -95,7 +93,7 @@ const configAbility = {
   "whenAdded": [
     {
       "name": "Set Enhanced-State",
-      "type": "YukongV2"
+      "stateType": "YukongV2"
     },
     {
       "name": "Add Events/Bonuses",

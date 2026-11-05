@@ -538,8 +538,8 @@ const compositeAbilityObject = {
               "TargetList": [
                 {
                   "name": "Target Search",
-                  "entityType": "Avatar",
-                  "teamType": "Player Team",
+                  "team": "Player Team",
+                  "entityType": "Character",
                   "livingState": "Mask_AliveOnly"
                 },
                 {
@@ -575,8 +575,8 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Search",
-              "entityType": "Avatar",
-              "teamType": "Player Team",
+              "team": "Player Team",
+              "entityType": "Character",
               "livingState": "Mask_AliveOnly"
             }
           ]
@@ -6734,8 +6734,8 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Search",
-              "entityType": "Mask_TeamCharacters",
-              "teamType": "Enemy Team",
+              "team": "Enemy Team",
+              "entityType": "Team Characters",
               "livingState": "Bit_Dying"
             }
           ]
@@ -7305,6 +7305,8 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Search",
+              "entityType": "Battle Event",
+              "livingState": "Mask_AliveOrLimbo",
               "conditions": {
                 "name": "AND",
                 "conditionList": [
@@ -7328,9 +7330,7 @@ const compositeAbilityObject = {
                     }
                   }
                 ]
-              },
-              "entityType": "BattleEvent",
-              "livingState": "Mask_AliveOrLimbo"
+              }
             }
           ]
         },
@@ -7435,6 +7435,8 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Search",
+              "entityType": "Battle Event",
+              "livingState": "Mask_AliveOrLimbo",
               "conditions": {
                 "name": "Is Entity a Battle Event/Summon",
                 "target": {
@@ -7442,9 +7444,7 @@ const compositeAbilityObject = {
                   "target": "{{Parameter Target}}"
                 },
                 "expectedType": "Memosprite[Battle Event]"
-              },
-              "entityType": "BattleEvent",
-              "livingState": "Mask_AliveOrLimbo"
+              }
             }
           ]
         },
@@ -7549,7 +7549,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Search",
-              "entityType": "Battle_AllEntity"
+              "entityType": "All Battle Entities"
             }
           ]
         },
@@ -8339,6 +8339,8 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Search",
+              "entityType": "Memosprite",
+              "livingState": "Mask_AliveOrLimbo",
               "conditions": {
                 "name": "Compare: Target",
                 "target": {
@@ -8349,9 +8351,7 @@ const compositeAbilityObject = {
                   "name": "Target Name",
                   "target": "{{Caster}}"
                 }
-              },
-              "entityType": "Servant",
-              "livingState": "Mask_AliveOrLimbo"
+              }
             }
           ]
         },
@@ -9259,7 +9259,7 @@ const compositeAbilityObject = {
           "execute": [
             {
               "name": "Target Search",
-              "entityType": "Servant",
+              "entityType": "Memosprite",
               "livingState": "Mask_AliveOrLimbo"
             }
           ]
@@ -9880,8 +9880,8 @@ const compositeAbilityObject = {
               "TargetList": [
                 {
                   "name": "Target Search",
-                  "entityType": "Avatar",
-                  "teamType": "Player Team",
+                  "team": "Player Team",
+                  "entityType": "Character",
                   "livingState": "Mask_AliveOnly"
                 },
                 {

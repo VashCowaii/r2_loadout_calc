@@ -2569,13 +2569,11 @@ const compositeAbilityObject = {
           "passed": [
             {
               "name": "Set Enhanced-State",
-              "type": "YukongV2"
+              "stateType": "YukongV2"
             }
           ],
           "failed": [
-            {
-              "name": "Set Enhanced-State"
-            }
+            "Set Enhanced-State"
           ]
         },
         {
@@ -2644,7 +2642,7 @@ const compositeAbilityObject = {
       "whenAdded": [
         {
           "name": "Set Enhanced-State",
-          "type": "YukongV2"
+          "stateType": "YukongV2"
         },
         {
           "name": "Add Events/Bonuses",

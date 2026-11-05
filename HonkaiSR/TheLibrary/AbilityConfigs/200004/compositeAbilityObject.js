@@ -274,7 +274,7 @@ const compositeAbilityObject = {
               "execute": [
                 {
                   "name": "Assign DEPARTED(Modifier: Standard_Departed)",
-                  "groupName": "MuteEntityAction"
+                  "groupNameType": "MuteEntityAction"
                 }
               ]
             }

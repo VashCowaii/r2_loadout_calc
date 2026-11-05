@@ -3428,7 +3428,7 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Assign DEPARTED(Modifier: Standard_Departed)",
-                  "groupName": "MuteEntityAction"
+                  "groupNameType": "MuteEntityAction"
                 }
               ]
             }
@@ -3607,7 +3607,7 @@ const configAbility = {
               "failed": [
                 {
                   "name": "Assign DEPARTED(Modifier: Standard_Departed)",
-                  "groupName": "MuteEntityAction"
+                  "groupNameType": "MuteEntityAction"
                 }
               ]
             }

@@ -4398,8 +4398,8 @@ const compositeAbilityObject = {
           "name": "Remove Events/Bonuses",
           "to": {
             "name": "Target Search",
-            "entityType": 6,
-            "teamType": "Enemy Team"
+            "team": "Enemy Team",
+            "entityType": "Boss[?]"
           },
           "modifier": "<a class=\"gModGreen\" id=\"-1273749278\">Acheron_PassiveFlag01</a>[<span class=\"descriptionNumberColor\">Crimson Knot</span>]"
         },

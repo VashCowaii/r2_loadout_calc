@@ -3472,7 +3472,7 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Assign DEPARTED(Modifier: Standard_Departed)",
-                      "groupName": "MuteEntityAction"
+                      "groupNameType": "MuteEntityAction"
                     }
                   ]
                 }
@@ -3651,7 +3651,7 @@ const compositeAbilityObject = {
                   "failed": [
                     {
                       "name": "Assign DEPARTED(Modifier: Standard_Departed)",
-                      "groupName": "MuteEntityAction"
+                      "groupNameType": "MuteEntityAction"
                     }
                   ]
                 }

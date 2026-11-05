@@ -50,8 +50,8 @@ const compositeAbilityObject = {
                     "TargetList": [
                       {
                         "name": "Target Search",
-                        "entityType": "Avatar",
-                        "teamType": "Player Team",
+                        "team": "Player Team",
+                        "entityType": "Character",
                         "livingState": "Mask_AliveOnly"
                       },
                       {
