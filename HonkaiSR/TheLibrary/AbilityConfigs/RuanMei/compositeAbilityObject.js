@@ -1958,11 +1958,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Base Break Damage",
-                      "target": {
+                      "variableName": "_BreakBaseDamage",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
-                      },
-                      "variableName": "_BreakBaseDamage"
+                      }
                     },
                     {
                       "name": "Define Custom Variable with Stat",
@@ -3354,11 +3354,11 @@ const compositeAbilityObject = {
                   "passed": [
                     {
                       "name": "Define Custom Variable with Base Break Damage",
-                      "target": {
+                      "variableName": "BreakBaseDamage",
+                      "readTarget": {
                         "name": "Target Name",
                         "target": "{{Caster}}"
-                      },
-                      "variableName": "BreakBaseDamage"
+                      }
                     },
                     {
                       "name": "Define Custom Variable with Stat",

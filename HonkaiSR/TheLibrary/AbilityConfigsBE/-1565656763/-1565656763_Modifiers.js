@@ -608,11 +608,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Base Break Damage",
-                  "target": {
+                  "variableName": "CasterBreakBaseDamage",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
-                  },
-                  "variableName": "CasterBreakBaseDamage"
+                  }
                 },
                 {
                   "name": "Add Events/Bonuses",
@@ -1778,11 +1778,11 @@ const configAbility = {
               "passed": [
                 {
                   "name": "Define Custom Variable with Base Break Damage",
-                  "target": {
+                  "variableName": "CasterBreakBaseDamage",
+                  "readTarget": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
-                  },
-                  "variableName": "CasterBreakBaseDamage"
+                  }
                 },
                 {
                   "name": "Add Events/Bonuses",
