@@ -149,7 +149,7 @@ const configAbility = {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "flagNames": [
+                  "modifierTagList": [
                     "STAT_SheepStatus_SummonObjects"
                   ]
                 },

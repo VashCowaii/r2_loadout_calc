@@ -2056,8 +2056,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Asat Pramad: 0}} + {{Asat Pramad: 1}} + {{Asat Pramad: 2}}"
-          },
-          "flagNames": []
+          }
         },
         {
           "name": "Add Events/Bonuses",
@@ -2185,8 +2184,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  },
-                  "flagNames": []
+                  }
                 }
               ]
             },
@@ -2275,8 +2273,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
-                  },
-                  "flagNames": []
+                  }
                 }
               ]
             },
@@ -10021,8 +10018,7 @@ const compositeAbilityObject = {
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
-                          },
-                          "flagNames": []
+                          }
                         }
                       ]
                     }

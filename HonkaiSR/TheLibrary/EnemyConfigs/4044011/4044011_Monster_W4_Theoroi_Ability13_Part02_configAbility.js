@@ -116,8 +116,7 @@ const configAbility = {
       "target": {
         "name": "Target Name",
         "target": "{{Zandar: Skill13 Target}}"
-      },
-      "flagNames": []
+      }
     },
     {
       "name": "IF",

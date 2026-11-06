@@ -63,8 +63,7 @@ const configAbility = {
       "target": {
         "name": "Target Name",
         "target": "{{Hostile Entities(AOE)}}"
-      },
-      "flagNames": []
+      }
     },
     {
       "name": "Remove Events/Bonuses",

@@ -2394,8 +2394,7 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Player Team All}}"
-              },
-              "flagNames": []
+              }
             }
           ]
         },
@@ -2619,8 +2618,7 @@ const configAbility = {
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
-                          },
-                          "flagNames": []
+                          }
                         }
                       ]
                     }

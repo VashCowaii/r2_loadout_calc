@@ -561,8 +561,7 @@ const configAbility = {
           "target": {
             "name": "Target Name",
             "target": "{{Nikador: Self}}"
-          },
-          "flagNames": []
+          }
         }
       ]
     },

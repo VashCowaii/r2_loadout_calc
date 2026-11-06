@@ -19,8 +19,7 @@ const configAbility = {
       "target": {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
-      },
-      "flagNames": []
+      }
     },
     {
       "name": "Update Displayed Energy Bar",

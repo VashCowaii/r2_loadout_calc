@@ -34,8 +34,7 @@ const configAbility = {
       "target": {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
-      },
-      "flagNames": []
+      }
     },
     {
       "name": "Exit Broken-State",

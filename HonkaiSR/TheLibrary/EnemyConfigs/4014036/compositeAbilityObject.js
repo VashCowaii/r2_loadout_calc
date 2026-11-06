@@ -453,8 +453,7 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Caster}} + {{Caster's Minions}}"
-                      },
-                      "flagNames": []
+                      }
                     },
                     {
                       "name": "Remove Events/Bonuses",
@@ -937,8 +936,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "flagNames": []
+                  }
                 },
                 {
                   "name": "IF",
@@ -3224,8 +3222,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "flagNames": []
+                  }
                 }
               ]
             }
@@ -5201,8 +5198,7 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
-                      },
-                      "flagNames": []
+                      }
                     }
                   ]
                 }
@@ -7420,8 +7416,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Caster}} + {{Caster's Minions}}"
-          },
-          "flagNames": []
+          }
         },
         {
           "name": "Remove Events/Bonuses",

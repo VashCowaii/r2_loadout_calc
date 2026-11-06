@@ -333,8 +333,7 @@ const configAbility = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  },
-                  "flagNames": []
+                  }
                 },
                 {
                   "name": "Force Entity Death",

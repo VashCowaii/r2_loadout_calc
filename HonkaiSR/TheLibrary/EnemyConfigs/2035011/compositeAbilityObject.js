@@ -2433,8 +2433,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Player Team All}}"
-                  },
-                  "flagNames": []
+                  }
                 }
               ]
             },
@@ -2658,8 +2657,7 @@ const compositeAbilityObject = {
                               "target": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
-                              },
-                              "flagNames": []
+                              }
                             }
                           ]
                         }
@@ -5157,8 +5155,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
+              }
             }
           ]
         },
@@ -7110,8 +7107,7 @@ const compositeAbilityObject = {
                               "target": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
-                              },
-                              "flagNames": []
+                              }
                             }
                           ]
                         },
@@ -7411,8 +7407,7 @@ const compositeAbilityObject = {
                               "target": {
                                 "name": "Target Name",
                                 "target": "{{Parameter Target}}"
-                              },
-                              "flagNames": []
+                              }
                             }
                           ]
                         },
@@ -7840,8 +7835,7 @@ const compositeAbilityObject = {
                                       "target": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
-                                      },
-                                      "flagNames": []
+                                      }
                                     }
                                   ]
                                 },
@@ -8134,8 +8128,7 @@ const compositeAbilityObject = {
                                       "target": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
-                                      },
-                                      "flagNames": []
+                                      }
                                     }
                                   ]
                                 },
@@ -8458,8 +8451,7 @@ const compositeAbilityObject = {
                                           "target": {
                                             "name": "Target Name",
                                             "target": "{{Parameter Target}}"
-                                          },
-                                          "flagNames": []
+                                          }
                                         }
                                       ]
                                     },
@@ -8764,8 +8756,7 @@ const compositeAbilityObject = {
                                           "target": {
                                             "name": "Target Name",
                                             "target": "{{Parameter Target}}"
-                                          },
-                                          "flagNames": []
+                                          }
                                         }
                                       ]
                                     },
@@ -9072,8 +9063,7 @@ const compositeAbilityObject = {
                                           "target": {
                                             "name": "Target Name",
                                             "target": "{{Parameter Target}}"
-                                          },
-                                          "flagNames": []
+                                          }
                                         }
                                       ]
                                     },
@@ -9373,8 +9363,7 @@ const compositeAbilityObject = {
                                           "target": {
                                             "name": "Target Name",
                                             "target": "{{Parameter Target}}"
-                                          },
-                                          "flagNames": []
+                                          }
                                         }
                                       ]
                                     },
@@ -9701,8 +9690,7 @@ const compositeAbilityObject = {
                                       "target": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
-                                      },
-                                      "flagNames": []
+                                      }
                                     }
                                   ]
                                 },
@@ -10002,8 +9990,7 @@ const compositeAbilityObject = {
                                       "target": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
-                                      },
-                                      "flagNames": []
+                                      }
                                     }
                                   ]
                                 },
@@ -10326,8 +10313,7 @@ const compositeAbilityObject = {
                                           "target": {
                                             "name": "Target Name",
                                             "target": "{{Parameter Target}}"
-                                          },
-                                          "flagNames": []
+                                          }
                                         }
                                       ]
                                     },
@@ -10627,8 +10613,7 @@ const compositeAbilityObject = {
                                           "target": {
                                             "name": "Target Name",
                                             "target": "{{Parameter Target}}"
-                                          },
-                                          "flagNames": []
+                                          }
                                         }
                                       ]
                                     },
@@ -10935,8 +10920,7 @@ const compositeAbilityObject = {
                                           "target": {
                                             "name": "Target Name",
                                             "target": "{{Parameter Target}}"
-                                          },
-                                          "flagNames": []
+                                          }
                                         }
                                       ]
                                     },
@@ -11236,8 +11220,7 @@ const compositeAbilityObject = {
                                           "target": {
                                             "name": "Target Name",
                                             "target": "{{Parameter Target}}"
-                                          },
-                                          "flagNames": []
+                                          }
                                         }
                                       ]
                                     },

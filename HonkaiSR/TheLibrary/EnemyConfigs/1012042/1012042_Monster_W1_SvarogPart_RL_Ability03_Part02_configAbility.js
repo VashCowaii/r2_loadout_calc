@@ -90,8 +90,7 @@ const configAbility = {
       "target": {
         "name": "Target Name",
         "target": "{{Ability Target(ST)}}"
-      },
-      "flagNames": []
+      }
     },
     {
       "name": "Add Events/Bonuses",

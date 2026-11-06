@@ -1078,8 +1078,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  },
-                  "flagNames": []
+                  }
                 },
                 {
                   "name": "Mark Entity For Immediate Death",
@@ -1807,8 +1806,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
+              }
             }
           ]
         },
@@ -3212,8 +3210,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  },
-                  "flagNames": []
+                  }
                 },
                 {
                   "name": "Mark Entity For Immediate Death",

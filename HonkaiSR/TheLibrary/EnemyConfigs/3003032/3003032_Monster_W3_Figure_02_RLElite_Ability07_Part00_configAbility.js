@@ -54,8 +54,7 @@ const configAbility = {
       "target": {
         "name": "Target Name",
         "target": "{{Modifier Holder}}"
-      },
-      "flagNames": []
+      }
     },
     {
       "name": "Remove Events/Bonuses",

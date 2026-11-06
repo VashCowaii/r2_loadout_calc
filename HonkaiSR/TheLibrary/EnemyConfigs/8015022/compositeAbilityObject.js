@@ -4459,8 +4459,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
+              }
             },
             {
               "name": "Mark Entity For Immediate Death",
@@ -4489,9 +4488,7 @@ const compositeAbilityObject = {
           },
           "icon": "Monster_8015022.png"
         },
-        {
-          "name": "Apply Boss Phase Change Data"
-        },
+        "Apply Boss Phase Change Data",
         {
           "name": "Use Custom Character Function",
           "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"
@@ -4878,8 +4875,7 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      },
-                      "flagNames": []
+                      }
                     },
                     {
                       "name": "Force Entity Death",
@@ -5993,8 +5989,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
+              }
             },
             {
               "name": "Mark Entity For Immediate Death",
@@ -8393,8 +8388,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
+              }
             },
             {
               "name": "Mark Entity For Immediate Death",

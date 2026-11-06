@@ -3887,8 +3887,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Zandar: Skill13 Target}}"
-          },
-          "flagNames": []
+          }
         },
         {
           "name": "IF",
@@ -5107,8 +5106,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Ability Target(ST)}}"
-          },
-          "flagNames": []
+          }
         },
         {
           "name": "IF",

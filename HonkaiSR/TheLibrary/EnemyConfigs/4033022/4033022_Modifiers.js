@@ -1696,8 +1696,7 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "flagNames": []
+              }
             },
             {
               "name": "Inject Ability Use",

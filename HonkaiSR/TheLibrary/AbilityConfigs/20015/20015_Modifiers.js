@@ -293,8 +293,7 @@ const configAbility = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Modifier Holder}}"
-              },
-              "flagNames": []
+              }
             }
           ]
         },
@@ -1779,8 +1778,7 @@ const configAbility = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  },
-                  "flagNames": []
+                  }
                 },
                 {
                   "name": "IF",

@@ -51,8 +51,8 @@ const configAbility = {
                     "skillName": "Skill01",
                     "target": {
                       "name": "Select by Target Stat",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;",
-                      "compareType": "Max"
+                      "compareType": "Max",
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPMax</span>&nbsp;"
                     }
                   }
                 ]
@@ -139,8 +139,8 @@ const configAbility = {
                         "skillName": "Skill05",
                         "target": {
                           "name": "Select by Target Stat",
-                          "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                          "compareType": "MinRatio"
+                          "compareType": "MinRatio",
+                          "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                         }
                       },
                       {

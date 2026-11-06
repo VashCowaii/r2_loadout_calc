@@ -3244,8 +3244,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "flagNames": []
+                  }
                 }
               ]
             }
@@ -6542,8 +6541,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{All Team Members(Exclude Self)}}"
-              },
-              "flagNames": []
+              }
             }
           ]
         }
@@ -7632,8 +7630,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "flagNames": []
+          }
         },
         {
           "name": "Dispel Debuffs",
@@ -11566,8 +11563,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "flagNames": []
+          }
         },
         {
           "name": "Find New Target",

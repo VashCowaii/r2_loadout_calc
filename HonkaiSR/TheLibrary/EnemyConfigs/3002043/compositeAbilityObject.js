@@ -1151,8 +1151,7 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Modifier Holder}}"
-                      },
-                      "flagNames": []
+                      }
                     },
                     {
                       "name": "Define Custom Variable",

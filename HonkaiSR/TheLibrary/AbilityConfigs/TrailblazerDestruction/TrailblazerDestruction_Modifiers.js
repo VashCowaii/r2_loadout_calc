@@ -39,9 +39,7 @@ const configAbility = {
               "skillSlot": "Skill",
               "enableSecondaryType": "ControlSkill02"
             },
-            {
-              "name": "Update Ult Alt Display"
-            }
+            "Update Ult Alt Display"
           ]
         },
         {

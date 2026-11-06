@@ -1029,8 +1029,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "flagNames": []
+                  }
                 }
               ]
             }
@@ -8574,8 +8573,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "flagNames": []
+          }
         },
         {
           "name": "Remove Events/Bonuses",
@@ -8840,8 +8838,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "flagNames": []
+          }
         },
         "Trigger: Ability End"
       ],
@@ -9518,8 +9515,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "flagNames": []
+          }
         },
         "Trigger: Ability End"
       ],
@@ -9639,8 +9635,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "flagNames": []
+          }
         },
         {
           "name": "Find New Target",

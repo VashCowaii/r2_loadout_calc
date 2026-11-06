@@ -2349,7 +2349,7 @@ const compositeAbilityObject = {
                           },
                           {
                             "name": "Compare: Energy Tags",
-                            "flagNames": [
+                            "tagList": [
                               "ActiveSkillAdd"
                             ]
                           }

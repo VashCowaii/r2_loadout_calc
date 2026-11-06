@@ -2823,8 +2823,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          },
-          "flagNames": []
+          }
         },
         {
           "name": "Remove Events/Bonuses",

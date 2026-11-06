@@ -1228,8 +1228,7 @@ const compositeAbilityObject = {
                                   "target": {
                                     "name": "Target Name",
                                     "target": "{{Caster's Minions}}"
-                                  },
-                                  "flagNames": []
+                                  }
                                 },
                                 {
                                   "name": "Mark Entity For Immediate Death",
@@ -2169,8 +2168,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster's Minions}}"
-                  },
-                  "flagNames": []
+                  }
                 },
                 {
                   "name": "Mark Entity For Immediate Death",

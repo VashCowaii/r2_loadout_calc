@@ -85,7 +85,7 @@ const configAbility = {
                       },
                       {
                         "name": "Compare: Energy Tags",
-                        "flagNames": [
+                        "tagList": [
                           "ActiveSkillAdd"
                         ]
                       }

@@ -1309,8 +1309,7 @@ const compositeAbilityObject = {
                               "target": {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
-                              },
-                              "flagNames": []
+                              }
                             },
                             {
                               "name": "Inject Ability Use",
@@ -1515,8 +1514,7 @@ const compositeAbilityObject = {
                                   "target": {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
-                                  },
-                                  "flagNames": []
+                                  }
                                 },
                                 {
                                   "name": "IF",
@@ -1871,8 +1869,7 @@ const compositeAbilityObject = {
                               "target": {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
-                              },
-                              "flagNames": []
+                              }
                             },
                             {
                               "name": "IF",
@@ -2119,8 +2116,7 @@ const compositeAbilityObject = {
                                   "target": {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
-                                  },
-                                  "flagNames": []
+                                  }
                                 },
                                 {
                                   "name": "IF",

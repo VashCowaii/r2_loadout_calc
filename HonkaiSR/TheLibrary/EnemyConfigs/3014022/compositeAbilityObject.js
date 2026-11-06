@@ -1056,8 +1056,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "flagNames": []
+                  }
                 }
               ]
             },
@@ -1170,8 +1169,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "flagNames": []
+                  }
                 }
               ]
             },

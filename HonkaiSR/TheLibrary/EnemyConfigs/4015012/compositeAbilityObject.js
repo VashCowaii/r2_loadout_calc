@@ -4010,8 +4010,7 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      },
-                      "flagNames": []
+                      }
                     },
                     {
                       "name": "IF",
@@ -4498,8 +4497,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          },
-          "flagNames": []
+          }
         }
       ],
       "targetObjectData": {
@@ -6609,8 +6607,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
+              }
             },
             {
               "name": "IF",
@@ -6678,8 +6675,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
+              }
             },
             {
               "name": "IF",
@@ -7143,8 +7139,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
+              }
             },
             {
               "name": "IF",
@@ -7212,8 +7207,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
+              }
             },
             {
               "name": "IF",
@@ -8308,8 +8302,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
+              }
             },
             {
               "name": "IF",
@@ -8377,8 +8370,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
+              }
             },
             {
               "name": "IF",
@@ -8748,8 +8740,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
+              }
             },
             {
               "name": "IF",
@@ -8817,8 +8808,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
+              }
             },
             {
               "name": "IF",
@@ -9058,8 +9048,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
+              }
             },
             {
               "name": "IF",
@@ -9338,8 +9327,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
+              }
             },
             {
               "name": "IF",
@@ -9999,8 +9987,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
+              }
             },
             {
               "name": "IF",
@@ -10733,8 +10720,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
+              }
             },
             {
               "name": "IF",

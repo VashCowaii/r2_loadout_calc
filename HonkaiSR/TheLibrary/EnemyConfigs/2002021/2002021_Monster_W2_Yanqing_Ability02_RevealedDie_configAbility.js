@@ -60,8 +60,7 @@ const configAbility = {
       "target": {
         "name": "Target Name",
         "target": "{{Caster}}"
-      },
-      "flagNames": []
+      }
     },
     {
       "name": "Remove Events/Bonuses",

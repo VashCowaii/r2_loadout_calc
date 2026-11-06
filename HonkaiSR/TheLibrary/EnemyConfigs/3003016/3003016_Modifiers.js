@@ -1287,8 +1287,7 @@ const configAbility = {
                           "target": {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
-                          },
-                          "flagNames": []
+                          }
                         },
                         {
                           "name": "Inject Ability Use",
@@ -1493,8 +1492,7 @@ const configAbility = {
                               "target": {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
-                              },
-                              "flagNames": []
+                              }
                             },
                             {
                               "name": "IF",
@@ -1849,8 +1847,7 @@ const configAbility = {
                           "target": {
                             "name": "Target Name",
                             "target": "{{Modifier Holder}}"
-                          },
-                          "flagNames": []
+                          }
                         },
                         {
                           "name": "IF",
@@ -2097,8 +2094,7 @@ const configAbility = {
                               "target": {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
-                              },
-                              "flagNames": []
+                              }
                             },
                             {
                               "name": "IF",
@@ -3596,8 +3592,7 @@ const configAbility = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "flagNames": []
+                  }
                 },
                 {
                   "name": "Define Custom Variable",

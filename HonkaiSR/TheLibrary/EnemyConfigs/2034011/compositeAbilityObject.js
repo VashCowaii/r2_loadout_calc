@@ -635,8 +635,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Ability Target(ST)}}"
-              },
-              "flagNames": []
+              }
             }
           ]
         },

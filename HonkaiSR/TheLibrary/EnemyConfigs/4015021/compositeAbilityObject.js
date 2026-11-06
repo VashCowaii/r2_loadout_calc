@@ -1237,8 +1237,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
-                  },
-                  "flagNames": []
+                  }
                 }
               ]
             },
@@ -2723,8 +2722,7 @@ const compositeAbilityObject = {
                       "target": {
                         "name": "Target Name",
                         "target": "{{Parameter Target}}"
-                      },
-                      "flagNames": []
+                      }
                     },
                     {
                       "name": "IF",
@@ -2943,8 +2941,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
+              }
             },
             {
               "name": "IF",
@@ -3026,8 +3023,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Caster}}"
-          },
-          "flagNames": []
+          }
         },
         {
           "name": "Set HP Value",
@@ -5003,8 +4999,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
+              }
             },
             {
               "name": "IF",
@@ -5072,8 +5067,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
+              }
             },
             {
               "name": "IF",
@@ -5290,8 +5284,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
+              }
             },
             {
               "name": "IF",
@@ -5359,8 +5352,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
+              }
             },
             {
               "name": "IF",
@@ -5520,8 +5512,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
+              }
             },
             {
               "name": "IF",
@@ -5827,8 +5818,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
+              }
             },
             {
               "name": "IF",

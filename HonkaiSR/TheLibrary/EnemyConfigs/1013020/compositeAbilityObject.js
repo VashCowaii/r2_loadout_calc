@@ -2140,8 +2140,8 @@ const compositeAbilityObject = {
                     "skillName": "Skill11",
                     "target": {
                       "name": "Select by Target Stat",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                      "compareType": "MaxRatio"
+                      "compareType": "MaxRatio",
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                     }
                   },
                   {
@@ -2377,8 +2377,8 @@ const compositeAbilityObject = {
                     "skillName": "Skill11",
                     "target": {
                       "name": "Select by Target Stat",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                      "compareType": "MaxRatio"
+                      "compareType": "MaxRatio",
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                     }
                   },
                   {
@@ -2614,8 +2614,8 @@ const compositeAbilityObject = {
                     "skillName": "Skill11",
                     "target": {
                       "name": "Select by Target Stat",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                      "compareType": "MaxRatio"
+                      "compareType": "MaxRatio",
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                     }
                   },
                   {

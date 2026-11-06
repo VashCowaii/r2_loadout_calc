@@ -346,8 +346,7 @@ const configAbility = {
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
-                          },
-                          "flagNames": []
+                          }
                         }
                       ]
                     },
@@ -647,8 +646,7 @@ const configAbility = {
                           "target": {
                             "name": "Target Name",
                             "target": "{{Parameter Target}}"
-                          },
-                          "flagNames": []
+                          }
                         }
                       ]
                     },
@@ -1076,8 +1074,7 @@ const configAbility = {
                                   "target": {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
-                                  },
-                                  "flagNames": []
+                                  }
                                 }
                               ]
                             },
@@ -1370,8 +1367,7 @@ const configAbility = {
                                   "target": {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
-                                  },
-                                  "flagNames": []
+                                  }
                                 }
                               ]
                             },
@@ -1694,8 +1690,7 @@ const configAbility = {
                                       "target": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
-                                      },
-                                      "flagNames": []
+                                      }
                                     }
                                   ]
                                 },
@@ -2000,8 +1995,7 @@ const configAbility = {
                                       "target": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
-                                      },
-                                      "flagNames": []
+                                      }
                                     }
                                   ]
                                 },
@@ -2308,8 +2302,7 @@ const configAbility = {
                                       "target": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
-                                      },
-                                      "flagNames": []
+                                      }
                                     }
                                   ]
                                 },
@@ -2609,8 +2602,7 @@ const configAbility = {
                                       "target": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
-                                      },
-                                      "flagNames": []
+                                      }
                                     }
                                   ]
                                 },
@@ -2937,8 +2929,7 @@ const configAbility = {
                                   "target": {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
-                                  },
-                                  "flagNames": []
+                                  }
                                 }
                               ]
                             },
@@ -3238,8 +3229,7 @@ const configAbility = {
                                   "target": {
                                     "name": "Target Name",
                                     "target": "{{Parameter Target}}"
-                                  },
-                                  "flagNames": []
+                                  }
                                 }
                               ]
                             },
@@ -3562,8 +3552,7 @@ const configAbility = {
                                       "target": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
-                                      },
-                                      "flagNames": []
+                                      }
                                     }
                                   ]
                                 },
@@ -3863,8 +3852,7 @@ const configAbility = {
                                       "target": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
-                                      },
-                                      "flagNames": []
+                                      }
                                     }
                                   ]
                                 },
@@ -4171,8 +4159,7 @@ const configAbility = {
                                       "target": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
-                                      },
-                                      "flagNames": []
+                                      }
                                     }
                                   ]
                                 },
@@ -4472,8 +4459,7 @@ const configAbility = {
                                       "target": {
                                         "name": "Target Name",
                                         "target": "{{Parameter Target}}"
-                                      },
-                                      "flagNames": []
+                                      }
                                     }
                                   ]
                                 },

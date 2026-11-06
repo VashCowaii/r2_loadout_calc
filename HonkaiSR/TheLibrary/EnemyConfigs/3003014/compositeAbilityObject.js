@@ -1313,8 +1313,7 @@ const compositeAbilityObject = {
                               "target": {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
-                              },
-                              "flagNames": []
+                              }
                             },
                             {
                               "name": "Inject Ability Use",
@@ -1519,8 +1518,7 @@ const compositeAbilityObject = {
                                   "target": {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
-                                  },
-                                  "flagNames": []
+                                  }
                                 },
                                 {
                                   "name": "IF",
@@ -1875,8 +1873,7 @@ const compositeAbilityObject = {
                               "target": {
                                 "name": "Target Name",
                                 "target": "{{Modifier Holder}}"
-                              },
-                              "flagNames": []
+                              }
                             },
                             {
                               "name": "IF",
@@ -2123,8 +2120,7 @@ const compositeAbilityObject = {
                                   "target": {
                                     "name": "Target Name",
                                     "target": "{{Modifier Holder}}"
-                                  },
-                                  "flagNames": []
+                                  }
                                 },
                                 {
                                   "name": "IF",
@@ -2804,8 +2800,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
-          },
-          "flagNames": []
+          }
         },
         {
           "name": "Declare Custom Variable",
@@ -2979,8 +2974,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
-          },
-          "flagNames": []
+          }
         },
         {
           "name": "Remove Events/Bonuses",
@@ -3166,8 +3160,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
-          },
-          "flagNames": []
+          }
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -3518,8 +3511,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
-          },
-          "flagNames": []
+          }
         },
         {
           "name": "Update Displayed Energy Bar",
@@ -3929,8 +3921,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
-          },
-          "flagNames": []
+          }
         },
         {
           "name": "Remove Events/Bonuses",

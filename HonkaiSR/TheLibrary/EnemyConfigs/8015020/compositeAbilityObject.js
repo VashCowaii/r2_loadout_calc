@@ -3057,8 +3057,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Parameter Target}}"
-              },
-              "flagNames": []
+              }
             },
             {
               "name": "Mark Entity For Immediate Death",
@@ -3087,9 +3086,7 @@ const compositeAbilityObject = {
           },
           "icon": "Monster_8015022.png"
         },
-        {
-          "name": "Apply Boss Phase Change Data"
-        },
+        "Apply Boss Phase Change Data",
         {
           "name": "IF",
           "conditions": {
@@ -3380,8 +3377,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "flagNames": []
+          }
         },
         {
           "name": "Mark Entity For Immediate Death",

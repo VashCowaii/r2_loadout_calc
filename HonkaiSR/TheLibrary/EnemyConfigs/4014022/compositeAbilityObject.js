@@ -3991,8 +3991,7 @@ const compositeAbilityObject = {
               "target": {
                 "name": "Target Name",
                 "target": "{{Nikador: Self}}"
-              },
-              "flagNames": []
+              }
             }
           ]
         },

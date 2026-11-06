@@ -80,9 +80,7 @@ const configAbility = {
       },
       "modifier": "<a class=\"gModGreen\" id=\"784141078\">PlayerWarrior_Ultimate_Transform</a>"
     },
-    {
-      "name": "Update Ult Alt Display"
-    },
+    "Update Ult Alt Display",
     "Trigger: Ability End"
   ],
   "references": [],

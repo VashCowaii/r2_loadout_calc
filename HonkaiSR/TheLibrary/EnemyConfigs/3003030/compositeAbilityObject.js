@@ -842,8 +842,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
-          },
-          "flagNames": []
+          }
         },
         {
           "name": "Exit Broken-State",
@@ -1086,8 +1085,7 @@ const compositeAbilityObject = {
           "target": {
             "name": "Target Name",
             "target": "{{Modifier Holder}}"
-          },
-          "flagNames": []
+          }
         },
         {
           "name": "Remove Events/Bonuses",

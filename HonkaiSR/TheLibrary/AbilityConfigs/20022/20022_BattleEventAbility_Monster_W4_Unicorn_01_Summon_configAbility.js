@@ -63,8 +63,7 @@ const configAbility = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Caster's Summoner}}"
-                  },
-                  "flagNames": []
+                  }
                 }
               ]
             },

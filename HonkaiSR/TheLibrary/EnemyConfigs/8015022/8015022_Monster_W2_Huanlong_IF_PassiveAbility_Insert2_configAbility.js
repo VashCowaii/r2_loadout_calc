@@ -68,8 +68,7 @@ const configAbility = {
           "target": {
             "name": "Target Name",
             "target": "{{Parameter Target}}"
-          },
-          "flagNames": []
+          }
         },
         {
           "name": "Mark Entity For Immediate Death",
@@ -98,9 +97,7 @@ const configAbility = {
       },
       "icon": "Monster_8015022.png"
     },
-    {
-      "name": "Apply Boss Phase Change Data"
-    },
+    "Apply Boss Phase Change Data",
     {
       "name": "Use Custom Character Function",
       "functionName": "<a class=\"gTempYellow\" id=\"542143301\">Monster_ChangePhase</a>"

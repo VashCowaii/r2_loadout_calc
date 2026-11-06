@@ -53,8 +53,7 @@ const configAbility = {
           "target": {
             "name": "Target Name",
             "target": "{{All Team Members(Exclude Self)}}"
-          },
-          "flagNames": []
+          }
         }
       ]
     }

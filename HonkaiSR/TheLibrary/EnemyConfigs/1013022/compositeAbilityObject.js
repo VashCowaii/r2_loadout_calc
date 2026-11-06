@@ -2415,8 +2415,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  },
-                  "flagNames": []
+                  }
                 },
                 {
                   "name": "Mark Entity For Immediate Death",
@@ -2925,8 +2924,7 @@ const compositeAbilityObject = {
                   "target": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  },
-                  "flagNames": []
+                  }
                 },
                 {
                   "name": "Mark Entity For Immediate Death",
@@ -5361,8 +5359,8 @@ const compositeAbilityObject = {
                     "skillName": "Skill11",
                     "target": {
                       "name": "Select by Target Stat",
-                      "value": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;",
-                      "compareType": "MaxRatio"
+                      "compareType": "MaxRatio",
+                      "propertyName": "&nbsp;<span class=\"descriptionNumberColor\">HPCurrent</span>&nbsp;"
                     }
                   },
                   {
