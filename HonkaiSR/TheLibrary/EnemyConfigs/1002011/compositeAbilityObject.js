@@ -263,9 +263,7 @@ const compositeAbilityObject = {
               "optionGoal": {
                 "name": "Sequence Event",
                 "execute": [
-                  {
-                    "name": "Use Sequence Ability Option"
-                  }
+                  "Use Sequence Ability Option"
                 ]
               },
               "scoreType": "DefaultDSE",
