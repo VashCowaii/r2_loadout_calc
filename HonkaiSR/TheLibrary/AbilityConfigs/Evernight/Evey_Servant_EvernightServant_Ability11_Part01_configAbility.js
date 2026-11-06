@@ -45,15 +45,14 @@ const configAbility = {
           "name": "IF",
           "conditions": {
             "name": "Is Part Of",
-            "of": {
+            "target1": {
               "name": "Target Name",
               "target": "{{Hostile Entities(AOE)}}"
             },
-            "target": {
+            "target2": {
               "name": "Target Name",
               "target": "{{Asat Pramad: 0}} + {{Asat Pramad: 1}} + {{Asat Pramad: 2}}"
-            },
-            "mustBeAlive2": true
+            }
           }
         },
         {
@@ -125,15 +124,14 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of",
-                "of": {
+                "target1": {
                   "name": "Target Name",
                   "target": "{{Hostile Entities(AOE)}}"
                 },
-                "target": {
+                "target2": {
                   "name": "Target Name",
                   "target": "{{Asat Pramad: 0}} + {{Asat Pramad: 1}} + {{Asat Pramad: 2}}"
-                },
-                "mustBeAlive2": true
+                }
               }
             }
           ],
@@ -142,15 +140,14 @@ const configAbility = {
               "name": "IF",
               "conditions": {
                 "name": "Is Part Of",
-                "of": {
+                "target1": {
                   "name": "Target Name",
                   "target": "{{Hostile Entities(AOE)}}"
                 },
-                "target": {
+                "target2": {
                   "name": "Target Name",
                   "target": "{{Asat Pramad: 0}} + {{Asat Pramad: 1}} + {{Asat Pramad: 2}}"
-                },
-                "mustBeAlive2": true
+                }
               }
             }
           ]

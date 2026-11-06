@@ -149,15 +149,14 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "mustBeAlive2": true,
                         "invertCondition": true
                       },
                       {
@@ -172,27 +171,25 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Is Part Of",
-                            "of": {
+                            "target1": {
                               "name": "Target Name",
                               "target": "{{Parameter Target's Ability Targets}}"
                             },
-                            "target": {
+                            "target2": {
                               "name": "Target Name",
                               "target": "{{Caster}}"
-                            },
-                            "mustBeAlive2": true
+                            }
                           },
                           {
                             "name": "Is Part Of",
-                            "of": {
+                            "target1": {
                               "name": "Target Name",
                               "target": "{{Parameter Target's Ability Sub-Targets}}"
                             },
-                            "target": {
+                            "target2": {
                               "name": "Target Name",
                               "target": "{{Caster}}"
-                            },
-                            "mustBeAlive2": true
+                            }
                           }
                         ]
                       }

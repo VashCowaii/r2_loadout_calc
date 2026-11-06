@@ -78,15 +78,14 @@ const compositeAbilityObject = {
                       "name": "IF",
                       "conditions": {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Far Left Player Entity(no Memosprite)}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       },
                       "failed": [
                         {

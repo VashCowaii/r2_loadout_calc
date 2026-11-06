@@ -2239,15 +2239,14 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Caster's Memosprite}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "mustBeAlive2": true,
                         "invertCondition": true
                       }
                     ]

@@ -646,15 +646,14 @@ const compositeAbilityObject = {
                         "conditionList": [
                           {
                             "name": "Is Part Of",
-                            "of": {
+                            "target1": {
                               "name": "Target Name",
                               "target": "{{Parameter Target}}"
                             },
-                            "target": {
+                            "target2": {
                               "name": "Target Name",
                               "target": "{{All Team Members with Unselectables}}.[[addMemoAndSummon]]"
-                            },
-                            "mustBeAlive2": true
+                            }
                           },
                           {
                             "name": "Compare: Ability Value",
@@ -830,15 +829,14 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{All Memosprites}} - {{Caster}}.[[getMemosprite]]"
-                        },
-                        "mustBeAlive2": true
+                        }
                       },
                       {
                         "name": "Is Part Of Team",
@@ -907,15 +905,14 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{All Memosprites}} - {{Caster}}.[[getMemosprite]]"
-                        },
-                        "mustBeAlive2": true
+                        }
                       },
                       {
                         "name": "Is Part Of Team",
@@ -2742,15 +2739,14 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}.[[getMemosprite]] | {{Modifier Holder}}.[[getSummoner]]"
-                        },
-                        "mustBeAlive2": true
+                        }
                       }
                     ]
                   },
@@ -3924,15 +3920,14 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Is Part Of",
-                  "of": {
+                  "target1": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "target": {
+                  "target2": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
                   },
-                  "mustBeAlive2": true,
                   "invertCondition": true
                 }
               ]

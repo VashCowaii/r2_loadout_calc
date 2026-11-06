@@ -143,15 +143,14 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Ability Target List}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{All Team Members}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       },
                       {
                         "name": "NOT",

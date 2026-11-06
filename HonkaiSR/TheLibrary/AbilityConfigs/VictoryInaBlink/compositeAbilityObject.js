@@ -82,15 +82,14 @@ const compositeAbilityObject = {
                   "name": "IF",
                   "conditions": {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Modifier Holder}}.[[getAbilityTarget]]"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{All Team Members}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   },
                   "passed": [
                     {
@@ -137,15 +136,14 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}.[[getSummoner]]"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       }
                     ]
                   },

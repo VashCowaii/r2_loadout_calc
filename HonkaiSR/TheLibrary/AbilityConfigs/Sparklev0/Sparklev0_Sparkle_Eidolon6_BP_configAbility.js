@@ -92,15 +92,14 @@ const configAbility = {
       "name": "IF",
       "conditions": {
         "name": "Is Part Of",
-        "of": {
+        "target1": {
           "name": "Target Name",
           "target": "{{Ability Target(ST)}}"
         },
-        "target": {
+        "target2": {
           "name": "Target Name",
           "target": "{{Caster}}"
         },
-        "mustBeAlive2": true,
         "invertCondition": true
       },
       "passed": [

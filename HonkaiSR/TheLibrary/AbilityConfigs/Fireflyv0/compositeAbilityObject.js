@@ -3180,15 +3180,14 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Is Part Of",
-                  "of": {
+                  "target1": {
                     "name": "Target Name",
                     "target": "{{Player's Aim Sub-Targets}}"
                   },
-                  "target": {
+                  "target2": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  },
-                  "mustBeAlive2": true
+                  }
                 }
               ]
             },
@@ -3244,15 +3243,14 @@ const compositeAbilityObject = {
                 },
                 {
                   "name": "Is Part Of",
-                  "of": {
+                  "target1": {
                     "name": "Target Name",
                     "target": "{{Player's Aim Sub-Targets}}"
                   },
-                  "target": {
+                  "target2": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  },
-                  "mustBeAlive2": true
+                  }
                 }
               ]
             },

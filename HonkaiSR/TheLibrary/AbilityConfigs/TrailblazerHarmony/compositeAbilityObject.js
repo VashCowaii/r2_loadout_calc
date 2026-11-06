@@ -297,15 +297,14 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Player's Aim Target List}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       },
                       {
                         "name": "Has Flag",
@@ -345,15 +344,14 @@ const compositeAbilityObject = {
                     "conditionList": [
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Modifier Holder}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Player's Aim Target List}}"
                         },
-                        "mustBeAlive2": true,
                         "invertCondition": true
                       },
                       {

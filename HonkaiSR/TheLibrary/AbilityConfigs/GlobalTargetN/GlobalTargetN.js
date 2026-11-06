@@ -7589,15 +7589,14 @@ const configAbility = {
                 "name": "NOT",
                 "condition": {
                   "name": "Is Part Of",
-                  "of": {
+                  "target1": {
                     "name": "Get Prior Entity Defined by Index",
                     "index": 1
                   },
-                  "target": {
+                  "target2": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  },
-                  "mustBeAlive2": true
+                  }
                 }
               }
             }
@@ -10054,15 +10053,14 @@ const configAbility = {
                 "name": "NOT",
                 "condition": {
                   "name": "Is Part Of",
-                  "of": {
+                  "target1": {
                     "name": "Target Name",
                     "target": "{{Modifier Holder}}"
                   },
-                  "target": {
+                  "target2": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  },
-                  "mustBeAlive2": true
+                  }
                 }
               }
             }
@@ -10100,28 +10098,26 @@ const configAbility = {
                   },
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "mustBeAlive2": true,
                     "invertCondition": true
                   },
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{All Team Members}}"
                     },
-                    "mustBeAlive2": true,
                     "invertCondition": true
                   }
                 ]
@@ -10169,15 +10165,14 @@ const configAbility = {
                 "name": "NOT",
                 "condition": {
                   "name": "Is Part Of",
-                  "of": {
+                  "target1": {
                     "name": "Target Name",
                     "target": "{{Caster}}"
                   },
-                  "target": {
+                  "target2": {
                     "name": "Target Name",
                     "target": "{{Parameter Target}}"
-                  },
-                  "mustBeAlive2": true
+                  }
                 }
               }
             }

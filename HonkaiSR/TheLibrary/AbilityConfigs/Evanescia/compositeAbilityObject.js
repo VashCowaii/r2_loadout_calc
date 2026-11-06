@@ -232,12 +232,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "target": "Add Target by Current Extra-Turn Source",
-                        "mustBeAlive2": true
+                        "target2": "Add Target by Current Extra-Turn Source"
                       }
                     ]
                   },
@@ -265,12 +264,11 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{Caster}}"
                         },
-                        "target": "Add Target by Current Extra-Turn Source",
-                        "mustBeAlive2": true
+                        "target2": "Add Target by Current Extra-Turn Source"
                       }
                     ]
                   },
@@ -2703,15 +2701,14 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{All Team Members(Exclude Self)}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       }
                     ]
                   },
@@ -2871,15 +2868,14 @@ const compositeAbilityObject = {
                       },
                       {
                         "name": "Is Part Of",
-                        "of": {
+                        "target1": {
                           "name": "Target Name",
                           "target": "{{All Team Members(Exclude Self)}}"
                         },
-                        "target": {
+                        "target2": {
                           "name": "Target Name",
                           "target": "{{Parameter Target}}"
-                        },
-                        "mustBeAlive2": true
+                        }
                       }
                     ]
                   },

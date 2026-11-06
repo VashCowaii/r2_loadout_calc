@@ -299,12 +299,11 @@ const configAbility = {
                   },
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "target": "Add Target by Current Extra-Turn Source",
-                    "mustBeAlive2": true
+                    "target2": "Add Target by Current Extra-Turn Source"
                   }
                 ]
               },
@@ -332,12 +331,11 @@ const configAbility = {
                   },
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
                     },
-                    "target": "Add Target by Current Extra-Turn Source",
-                    "mustBeAlive2": true
+                    "target2": "Add Target by Current Extra-Turn Source"
                   }
                 ]
               },

@@ -145,15 +145,14 @@ const configAbility = {
                   },
                   {
                     "name": "Is Part Of",
-                    "of": {
+                    "target1": {
                       "name": "Target Name",
                       "target": "{{Parameter Target}}.[[getSummoner]]"
                     },
-                    "target": {
+                    "target2": {
                       "name": "Target Name",
                       "target": "{{Caster}}"
-                    },
-                    "mustBeAlive2": true
+                    }
                   }
                 ]
               },
